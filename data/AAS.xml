@@ -1,0 +1,5914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.1 http://www.ivoa.net/xml/VOTable/v1.2"
+    xmlns="http://www.ivoa.net/xml/VOTable/v1.2">
+    <DESCRIPTION>AAS Facility Name List</DESCRIPTION>
+    <RESOURCE>
+        <DESCRIPTION> Extracted from http://aas.org/aastex/facility-keywords on Wed 27th May 2015. </DESCRIPTION>
+        <TABLE>
+            <FIELD datatype="char" arraysize="*" ID="name" name="Name" ucd="meta.id">
+                <DESCRIPTION>Full Facility Name</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="id" name="ID" ucd="meta.id">
+                <DESCRIPTION>Abbreviated ID</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="location" name="Location" ucd="meta.id">
+                <DESCRIPTION>Facility Location</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="gamma" name="Gamma-Ray" ucd="meta.id">
+                <DESCRIPTION>Facility has Gamma-Ray observing capability (above 120
+                    keV)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="xray" name="X-Ray" ucd="meta.id">
+                <DESCRIPTION>Facility has X-Ray observing capability (0.1 - 100 Angstroms or 0.12 -
+                    120 keV)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="uv" name="Ultraviolet" ucd="meta.id">
+                <DESCRIPTION>Facility has Ultraviolet observing capability (100 - 3000 Angstroms or
+                    1.2 - 120 eV)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="optical" name="Optical" ucd="meta.id">
+                <DESCRIPTION>Facility has Optical observing capability (3000 - 10,000 Angstroms or
+                    0.3 - 1 micron)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="ir" name="Infrared" ucd="meta.id">
+                <DESCRIPTION>Facility has Infrared observing capability (1 - 100
+                    microns)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="mm" name="Millimeter" ucd="meta.id">
+                <DESCRIPTION>Facility has Millimeter observing capability (0.1 - 10 millimeters or
+                    3000 - 30 GHz)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="radio" name="Radio" ucd="meta.id">
+                <DESCRIPTION>Facility has Radio observing capability (below 30 GHz)</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="particles" name="Particles" ucd="meta.id">
+                <DESCRIPTION>Facility has Neutrinos, particles, and gravitational waves observing
+                    capability</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="solar" name="Solar" ucd="meta.id">
+                <DESCRIPTION>Facility has solar observing capability</DESCRIPTION>
+            </FIELD>
+            <DATA>
+                <TABLEDATA>
+                               <TR>
+                <TD>NASA's Solar Radiation and Climate Experiment</TD>
+                <TD>SORCE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Panchromatic Robotic Optical Monitoring and Polarimetry Telescopes at Cerro
+                    Tololo Inter-American Observatory</TD>
+                <TD>CTIO:PROMPT</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>2MASS Telescope at Cerro Tololo Inter-American Observatory</TD>
+                <TD>CTIO:2MASS</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>2MASS Telescope at Fred Lawrence Whipple Observatory</TD>
+                <TD>FLWO:2MASS</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>IAA-CSIC Observatorio de Sierra Nevada's 1.5m Telescope</TD>
+                <TD>OSN:1.5m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>IAA-CSIC Observatorio de Sierra Nevada's 0.9m Telescope</TD>
+                <TD>OSN:0.9m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>IAA-CSIC Observatorio de Sierra Nevada's 0.6m Telescope</TD>
+                <TD>OSN:0.6m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio Astronomico Nacional's 2.1m Telescope</TD>
+                <TD>OANSPM:2.1m</TD>
+                <TD>North America &amp; Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio Astronomico Nacional's 0.84m Telescope</TD>
+                <TD>OANSPM:0.8m</TD>
+                <TD>North America &amp; Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio Astronomico Nacional's Harold Johnson Telescope</TD>
+                <TD>OANSPM:HJT</TD>
+                <TD>North America &amp; Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Vainu Bappu Observatory 1m Zeiss Telescope</TD>
+                <TD>VBO:1m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Vainu Bappu Observatory 2.3m Vainu Bappu Telescope</TD>
+                <TD>VBT</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>ANU Siding Spring Observatory 1.3m Skymapper Telescope</TD>
+                <TD>Skymapper</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Advanced Composition Explorer satellite</TD>
+                <TD>ACE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Advanced Electro Optical System</TD>
+                <TD>AEOS</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Advanced Research and Global Observation Satellite</TD>
+                <TD>ARGOS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Advanced Satellite for Cosmology and Astrophysics</TD>
+                <TD>ASCA</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The ANU 2.3m Advanced Technology Telescope at Siding Spring Observatory</TD>
+                <TD>ATT</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Akari (ASTRO-F)</TD>
+                <TD>Akari</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Allen Telescope Array</TD>
+                <TD>ATA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>American Association of Variable Star Observers International Database</TD>
+                <TD>AAVSO</TD>
+                <TD>Earth</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Anglo-Australian Telescope</TD>
+                <TD>AAT</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Antarctic Muon and Neutrino Detector Array</TD>
+                <TD>AMANDA</TD>
+                <TD>Antarctica</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Antarctic Submillimeter Telescope and Remote Observatory</TD>
+                <TD>AST/RO</TD>
+                <TD>Antarctica</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Arcminute MicroKelvin Imager</TD>
+                <TD>AMI</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Arecibo observatory</TD>
+                <TD>Arecibo</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ariel V satellite</TD>
+                <TD>ArielV</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Arizona Radio Observatory's 12m telescope at Kitt Peak</TD>
+                <TD>ARO:12m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Arizona Radio Observatory's Sub-millimeter Telescope</TD>
+                <TD>ARO:SMT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Array of Low Energy X-ray Imaging Sensors satellite</TD>
+                <TD>ALEXIS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Asiago Observatory's Copernico Telescope</TD>
+                <TD>Asiago:Copernico</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Asiago Observatory's Galilei Telescope</TD>
+                <TD>Asiago:Galilei</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Asiago Observatory's Schmidt Telescope</TD>
+                <TD>Asiago:Schmidt</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Astromomische Nederlandse Satelliet</TD>
+                <TD>ANS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Astrophysical Research Consortium Telescope</TD>
+                <TD>ARC</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Atacama Large Millimeter Array</TD>
+                <TD>ALMA</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Atacama Pathfinder Experiment</TD>
+                <TD>APEX</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Atacama Submillimeter Telescope Experiment</TD>
+                <TD>ASTE</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Australia Telescope Compact Array</TD>
+                <TD>ATCA</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lick Observatory Automated Planet Finder</TD>
+                <TD>APF</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Balloon Observations Of Millimetric Extragalactic Radiation ANd Geophysics</TD>
+                <TD>BOOMERANG</TD>
+                <TD>Airborne</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Balloon-borne Large Aperture Submillimeter Telescope</TD>
+                <TD>BLAST</TD>
+                <TD>Airborne</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Beijing Astronomical Observatory's 1.26 meter Telescope</TD>
+                <TD>Beijing:1.26m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Beijing Astronomical Observatory's 2.16 meter Telescope</TD>
+                <TD>Beijing:2.16m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Beijing Astronomical Observatory's 7 meter Solar Radio Telescope</TD>
+                <TD>Beijing:7m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Beijing Astronomical Observatory's Meter-wave aperture Synthesis Radio
+                    Telescope</TD>
+                <TD>Beijing:MSRT</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>BeppoSAX X-ray satellite</TD>
+                <TD>BeppoSAX</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Berkeley Illinois Maryland Array</TD>
+                <TD>BIMA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Big Bear Solar Observatory</TD>
+                <TD>Big Bear Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Bohyunsan Optical Astronomy Observatory's 1.8 Meter Telescope</TD>
+                <TD>BOAO:1.8m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Bolshoi Azimuthal Telescope</TD>
+                <TD>BAT</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Brigham Young University 0.4 m telescope</TD>
+                <TD>BYU:0.4m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Brigham Young University 0.9 m telescope</TD>
+                <TD>BYU:0.9m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Brigham Young University Remote Observatory for Variable Object Research
+                    telescope</TD>
+                <TD>ROVOR</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Broad-Band X-Ray Telescope</TD>
+                <TD>BBXRT</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Byurakan Astrophysical Observatory's 2.6 meter telescope</TD>
+                <TD>BAO:2.6m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>CANGAROO atmospheric Cherenkov telescopes</TD>
+                <TD>CANGAROO</TD>
+                <TD>Australia</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>COsmic Background Explorer satellite</TD>
+                <TD>COBE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Calar Alto Observatory's 1.2 meter Telescope</TD>
+                <TD>CAO:1.2m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Calar Alto Observatory's 2.2 meter Telescope</TD>
+                <TD>CAO:2.2m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Calar Alto Observatory's 3.5 meter Telescope</TD>
+                <TD>CAO:3.5m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Calar Alto Observatory's Schmidt Telescope</TD>
+                <TD>CAO:Schmidt</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Caltech Millimeter Array</TD>
+                <TD>CMA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Caltech Submillimeter Observatory</TD>
+                <TD>CSO</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cambridge Low-Frequency Sythesis Telescope</TD>
+                <TD>CLFST</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cambridge Optical Aperture Synthesis Telescope</TD>
+                <TD>COAST</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Canada-France-Hawaii Telescope</TD>
+                <TD>CFHT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cassini-Huygens</TD>
+                <TD>Cassini</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ceduna Radio Observatorys telescope</TD>
+                <TD>Ceduna Radio Observatory</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Center for High Angular Resolution Astronomy interferometer</TD>
+                <TD>CHARA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cerro Tololo Inter-American Observatory's 0.9 meter Telescope</TD>
+                <TD>CTIO:0.9m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cerro Tololo Inter-American Observatory's 1.0 meter Telescope</TD>
+                <TD>CTIO:1.0m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cerro Tololo Inter-American Observatory's 1.3 meter Telescope</TD>
+                <TD>CTIO:1.3m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cerro Tololo Inter-American Observatory's 1.5 meter Telescope</TD>
+                <TD>CTIO:1.5m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cerro Tololo Inter-American Observatory's 4 meter Blanco Telescope</TD>
+                <TD>Blanco</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Chandra X-ray Observatory satellite</TD>
+                <TD>CXO</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Cosmic Infrared Background Experiment (CIBER) sounding rocket</TD>
+                <TD>CIBER</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Combined Array for Research in Millimeter-Wave Astronomy</TD>
+                <TD>CARMA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Compton Gamma Ray Observatory satellite</TD>
+                <TD>CGRO</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Copernicus (Orbiting Astronomical Observatory 3) satellite</TD>
+                <TD>Copernicus</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cos-B Satellite</TD>
+                <TD>Cos-B</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cosmic Background imager</TD>
+                <TD>CBI</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Cosmic Hot Interstellar Plasma Spectrometer satellite</TD>
+                <TD>CHIPS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Crimean Astrophysical Observatory's 1.25 meter Telescope</TD>
+                <TD>CrAO:1.25m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Crimean Astrophysical Observatory's 22 meter Radio Telescope</TD>
+                <TD>CrAO:22m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Crimean Astrophysical Observatory's Gamma Telescope</TD>
+                <TD>CrAO:Gamma</TD>
+                <TD>Europe</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Crimean Astrophysical Observatory's Solar Tower</TD>
+                <TD>CrAO:Solar tower</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Crimean Astrophysical Observatory's meter Shajn Telescope</TD>
+                <TD>CrAO:Shajn</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Danish 1.54m telescope at European Southern Observatory</TD>
+                <TD>Danish 1.54m Telescope</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>David Dunlap Observatory's 1.88 meter telescope</TD>
+                <TD>Dunlap Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Defense Meteorological Satellite Program</TD>
+                <TD>DMSP</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Diffuse X-ray Spectrometer</TD>
+                <TD>DXS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Dominion Astrophysical Observatory's 1.22 meter Telescope</TD>
+                <TD>DAO:1.22m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Dominion Astrophysical Observatory's 1.85 meter Telescope</TD>
+                <TD>DAO:1.85m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Dominion Radio Astrophysical Observatory's 26 meter Telescope</TD>
+                <TD>DRAO:26m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Dominion Radio Astrophysical Observatory's Synthesis Telescope</TD>
+                <TD>DRAO:Synthesis Telescope</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Du Pont Telescope</TD>
+                <TD>Du Pont</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Dunn Solar Telescope</TD>
+                <TD>Dunn</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Dutch Open Telescope</TD>
+                <TD>DOT</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>EUropean REtrievable CArrier satellite</TD>
+                <TD>EURECA</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Effelsberg Radio Telescope</TD>
+                <TD>Effelsberg</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Einstein (High Energy Astronomy Observatory 2) satellite</TD>
+                <TD>Einstein</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European Southern Observatory's 1.52 meter Telescope</TD>
+                <TD>ESO:1.52m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European Southern Observatory's 3.6 meter Telescope</TD>
+                <TD>ESO:3.6m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European Southern Observatory's 4.1 meter Visible and Infrared Survey Telescope
+                    for Astronomy</TD>
+                <TD>ESO:VISTA</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European Space Agency's Herschel space observatory</TD>
+                <TD>Herschel</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European Space Agency's Planck space observatory</TD>
+                <TD>Planck</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European Space Agency's X-ray Observatory satellite</TD>
+                <TD>EXOSAT</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>European VLBI Network</TD>
+                <TD>EVN</TD>
+                <TD>Earth</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Evans Solar Facility</TD>
+                <TD>Evans</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>The millimeter and submillimeter VLBI Event Horizon Telescope</TD>
+                <TD>EHT</TD>
+                <TD>Earth</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Expanded Very Large Array</TD>
+                <TD>EVLA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Extreme UltraViolet Explorer satellite</TD>
+                <TD>EUVE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fan Mountain Observatory 10 inch Cooke Astrograph</TD>
+                <TD>FMO:Astrograph</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fan Mountain Observatory 31 inch Tinsley Cassegrain Reflector</TD>
+                <TD>FMO:31in</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fan Mountain Observatory 40 inch Baker Schmidt Astrometric Reflector</TD>
+                <TD>FMO:40in</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Far Ultraviolet Space Telescope</TD>
+                <TD>FAUST</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Far Ultraviolet Spectroscopic Explorer satellite</TD>
+                <TD>FUSE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fast Auroral SnapshoT explorer satellite</TD>
+                <TD>FAST</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Faulkes Telescope North</TD>
+                <TD>FTN</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Faulkes Telescope South</TD>
+                <TD>FTS</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fermi Gamma-Ray Space Telescope (formerly GLAST)</TD>
+                <TD>Fermi</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Five College Radio Astronomy Observatory's Telescope</TD>
+                <TD>FCRAO</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fred Lawrence Whipple Observatory's 1.2 meter Telescope</TD>
+                <TD>FLWO:1.2m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fred Lawrence Whipple Observatory's 1.5 meter Telescope</TD>
+                <TD>FLWO:1.5m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Fred Lawrence Whipple Observatory's 10 meter atmospheric Cherenkov
+                    observatory</TD>
+                <TD>FLWO:10m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>GREGOR 1.5 meter Solar telescope</TD>
+                <TD>Gregor</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Galaxy Evolution Explorer satellite</TD>
+                <TD>GALEX</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Gamma Ray Imaging Platform</TD>
+                <TD>GRIP</TD>
+                <TD>Airborne</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Gemini South Telescope</TD>
+                <TD>Gemini:South</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Geostationary Operational Environmetal Satellite</TD>
+                <TD>GOES</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Giant Meter-wave Radio Telescope</TD>
+                <TD>GMRT</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Deep Space Network Goldstone Solar System Radar</TD>
+                <TD>GSSR</TD>
+                <TD>North America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Gillett Gemini North Telescope</TD>
+                <TD>Gemini:Gillett</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ginga X-ray satellite</TD>
+                <TD>Ginga</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Global Oscillation Network Group</TD>
+                <TD>GONG</TD>
+                <TD>Earth</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Gran Telescopio CANARIAS 10.4m telescope (GRANTECAN)</TD>
+                <TD>GTC</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Granat X-ray satellite</TD>
+                <TD>GRANAT</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Green Bank 42.6 meter Telescope</TD>
+                <TD>GBO:42.6m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Green Bank Interferometer</TD>
+                <TD>GBI</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Green Bank Telescope</TD>
+                <TD>GBT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>HALCA VLBI Space Observatory Program satellite</TD>
+                <TD>HALCA</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Hakucho X-ray satellite</TD>
+                <TD>Hakucho</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Hartebeesthoek Radio Astronomy Observatory 26m radio telescope</TD>
+                <TD>HartRAO:26m</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Haystack Observatory's radio telescope</TD>
+                <TD>Haystack Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The High Elevation Antarctic Terahertz Telescope (HEAT)</TD>
+                <TD>HEAT</TD>
+                <TD>Antarctica</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Heinrich Hertz Submillimeter Telescope</TD>
+                <TD>HHT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>High Altitude Observatory</TD>
+                <TD>HAO</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>High Energy Astronomy Observatory 1 satellite</TD>
+                <TD>HEAO-1</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>High Energy Astronomy Observatory 3 satellite</TD>
+                <TD>HEAO-3</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>High Energy Gamma Ray Astronomy Experiment</TD>
+                <TD>HEGRA</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>High Energy Stereoscopic System</TD>
+                <TD>HESS</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>High Energy Transient Explorer 2 satellite</TD>
+                <TD>HETE-2</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Hilltop Dome Facility</TD>
+                <TD>Hilltop</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Himalayan Chandra Telescope</TD>
+                <TD>HCT</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Hinode (Solar-B)</TD>
+                <TD>Hinode</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Hinotori solar mission (Astro-A)</TD>
+                <TD>Hinotori</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Hipparcos Space Astrometry Mission satellite</TD>
+                <TD>HIPPARCOS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Hopkins Ultraviolet Telescope</TD>
+                <TD>HUT</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Hubble Space Telescope satellite</TD>
+                <TD>HST</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>INAF Istituto di Radioastronomia 32m Medicina Radio Telescope</TD>
+                <TD>Medicina:32m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>INAF Istituto di Radioastronomia 32m Noto Radio Telescope</TD>
+                <TD>Noto:32m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Improved Solar Observing Optical Network</TD>
+                <TD>ISOON</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>InfraRed Astronomical Satellite</TD>
+                <TD>IRAS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Infrared Optical Telescope Array</TD>
+                <TD>IOTA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Infrared Space Observatory satellite</TD>
+                <TD>ISO</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Infrared Spatial Interferometer</TD>
+                <TD>ISI</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Infrared Survey Facility</TD>
+                <TD>IRSF</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Infrared Telescope Facility</TD>
+                <TD>IRTF</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Institute de Radioastronomie Millimetrique 30 meter telescope</TD>
+                <TD>IRAM:30m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Institute de Radioastronomie Millimetrique Interferometer</TD>
+                <TD>IRAM:Interferometer</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Instituut voor Sterrenkunde and Katholieke Universiteit Leuven Mercator 1.2m
+                    Telescope</TD>
+                <TD>Mercator1.2m</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>International Gamma-Ray Astrophysics Laboratory satellite</TD>
+                <TD>INTEGRAL</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>International Ultraviolet Explorer</TD>
+                <TD>IUE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Isaac Newton Group's Isaac Newton Telescope</TD>
+                <TD>ING:Newton</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Isaac Newton Group's Jacobus Kapteyn Telescope</TD>
+                <TD>ING:Kapteyn</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Isaac Newton Group's William Herschel Telescope</TD>
+                <TD>ING:Herschel</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Italian Space Agency Astro-rivelatore Gamma ad Immagini LEggero satellite</TD>
+                <TD>AGILE</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>JAXA Monitor of All-sky X-ray Image experiment</TD>
+                <TD>MAXI</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Japanese VLBI Network</TD>
+                <TD>JVN</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>James Clerk Maxwell Telescope</TD>
+                <TD>JCMT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>James Webb Space Telescope</TD>
+                <TD>JWST</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>KECK I Telescope</TD>
+                <TD>Keck:I</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>KECK II Telescope</TD>
+                <TD>Keck:II</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Kashima Space Research Center's 34 meter Radio</TD>
+                <TD>Kashima:34m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Katzman Automatic Imaging Telescope</TD>
+                <TD>KAIT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Kitt Peak National Observatory Coude Feed Telescope</TD>
+                <TD>KPNO:CFT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Kitt Peak National Observatory's 2.1 meter Telescope</TD>
+                <TD>KPNO:2.1m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Kitt Peak National Observatory's 4 meter Mayall Telescope</TD>
+                <TD>Mayall</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Kitt Peak Vacuum Telescope</TD>
+                <TD>KPVT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Kolner Observatiorium fur Submm-Astronomie's telescope</TD>
+                <TD>KOSMA</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Koronas solar activity monitor satellites</TD>
+                <TD>Koronas</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Kuiper Airborne Observatory</TD>
+                <TD>KAO</TD>
+                <TD>Airborne</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>LPL Spacewatch 1.8 meter Spacewatch Telescope</TD>
+                <TD>Spacewatch:1.8m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Laboratorio Nacional de Astrofisica's 0.6 meter Boller and Chivens
+                    Telescope</TD>
+                <TD>LNA:BC0.6m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Laboratorio Nacional de Astrofisica's 0.6 meter Zeiss Jena Telescope</TD>
+                <TD>LNA:ZJ0.6m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Laboratorio Nacional de Astrofisica's 1.6 meter Perkin-Elmer Telescope</TD>
+                <TD>LNA:1.6m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Large Binocular Telescope Observatory</TD>
+                <TD>LBT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Las Cumbres Observatory Global Telescope</TD>
+                <TD>LCOGT</TD>
+                <TD>Earth</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Laser Interferometer Gravitational-Wave Observatory</TD>
+                <TD>LIGO</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Leander McCormick Observatory 26-Inch Alvan Clark Refractor</TD>
+                <TD>LMO:Clark</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lick Observatory's 1m Nickel Telescope</TD>
+                <TD>Nickel</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lick Observatory's 3m Shane Telescope</TD>
+                <TD>Shane</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Liverpool 2 meter telesope at Observatorio del Roque de los Muchachos</TD>
+                <TD>Liverpool:2m</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Loiano Observatory's 0.6m Telescope</TD>
+                <TD>Loiano:0.6m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Loiano Observatory's Cassini 1.52m Telescope</TD>
+                <TD>Loiano:1.52m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lovell Telescope</TD>
+                <TD>Lovell</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lowell Observatory Near Earth Object Search Telescope</TD>
+                <TD>LONEOS</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lowell Observatory's 0.8 meter Telescope</TD>
+                <TD>LO:0.8m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lowell Observatory's 42in Hall Telescope</TD>
+                <TD>Hall</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lowell Observatory's 72in Perkins Telescope</TD>
+                <TD>Perkins</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Lowell Observatory's 4.3-m Discovery Channel Telescope</TD>
+                <TD>DCT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>MAXIMA ballon experiment</TD>
+                <TD>MAXIMA</TD>
+                <TD>Airborne</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>MDM Observatory's 1m McGraw-Hill Telescope</TD>
+                <TD>McGraw-Hill</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>MDM Observatory's 2.4m Hiltner Telescope</TD>
+                <TD>Hiltner</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>MMT at Fred Lawrence Whipple Observatory</TD>
+                <TD>MMT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Magellan I Walter Baade Telescope</TD>
+                <TD>Magellan:Baade</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Magellan II Landon Clay Telescope</TD>
+                <TD>Magellan:Clay</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Maidanak Observatory's 1.5 Meter Telescope</TD>
+                <TD>Maidanak:1.5m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Major Atmospheric Gamma Imaging Cherenkov Telescope</TD>
+                <TD>MAGIC</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Manastash Ridge Observatory</TD>
+                <TD>Manastash Ridge Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mark III Interferometer</TD>
+                <TD>Mark III interferometer</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mark III Interferometer</TD>
+                <TD>Mark III interferometer</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>NASA 2001 Mars Odyssey Orbiter</TD>
+                <TD>Odyssey</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Massachusetts Institute of Technology, George R. Wallace, Jr., Astrophysical
+                    Observatory 16 inch telescope</TD>
+                <TD>MIT:WAO:0.41m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Massachusetts Institute of Technology, George R. Wallace, Jr., Astrophysical
+                    Observatory 24 inch telescope</TD>
+                <TD>MIT:WAO:0.61m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mauritius Observatory/Mauritius Radio Telescope</TD>
+                <TD>Mauritius Observatory</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Max Planck Gesellschaft 2.2 meter Telescope at European Southern
+                    Observatory</TD>
+                <TD>Max Planck:2.2m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>McDonald Observatory's 0.8 meter Telescope</TD>
+                <TD>McD:0.8m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>McDonald Observatory's 2.1m Otto Struve Telescope</TD>
+                <TD>Struve</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>McDonald Observatory's 2.7m Harlan J. Smith Telescope</TD>
+                <TD>Smith</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>McDonald Observatory's Hobby-Eberly Telescope</TD>
+                <TD>HET</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>McMath-Pierce Solar Telescope</TD>
+                <TD>McMath-Pierce</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>NASA MErcury Surface, Space ENvironment, GEochemistry, and Ranging (MESSENGER)
+                    mission</TD>
+                <TD>MESSENGER</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Metsahovi Radio Observatory's Radio Telescope</TD>
+                <TD>Metsahovi Radio Observatory</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Microvariability and Oscillations of STars</TD>
+                <TD>MOST</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Midcourse Space Experiment</TD>
+                <TD>MSX</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Milagro Gamma Ray Observatory's Milagrito Telescope</TD>
+                <TD>Milagrito Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Molonglo Observatory Synthesis Telescope</TD>
+                <TD>Molonglo Observatory</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mopra Radio Telescope</TD>
+                <TD>Mopra</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Pleasant Radio Observatory's 14 meter telescope</TD>
+                <TD>MtPO:14m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Pleasant Radio Observatory's 26 meter telescope</TD>
+                <TD>MtPO:26m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Stromlo's 1.3 meter Telescope</TD>
+                <TD>MtS:1.3m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Stromlo's 1.9 meter Telescope</TD>
+                <TD>MtS:1.9m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Wilson's 1.5 meter Telescope</TD>
+                <TD>MtW:1.5m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Wilson's 100 inch Hooker Telescope</TD>
+                <TD>Hooker</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mount Wilson's 18 meter Solar Tower</TD>
+                <TD>MtW:18m solar tower</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Mount Wilson's 46 meter Solar Tower</TD>
+                <TD>MtW:46m solar tower</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Mt Abu InfraRed Observatory 0.5 meter telescope</TD>
+                <TD>MIRO:0.5m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mt Abu InfraRed Observatory 1.2 meter telescope</TD>
+                <TD>MIRO:1.2m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mt. Canopus Observatory 0.4m Telescope</TD>
+                <TD>MtCanopus:0.4m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mt. Canopus Observatory 1m Telescope</TD>
+                <TD>MtCanopus:1m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mt. Fuji 1.2 meter submillimeter-wave telescope</TD>
+                <TD>MtFuji:1.2m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mt. John University Observatory 1.8m Telescope</TD>
+                <TD>MtJohn:1.8m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Mt. John University Observatory 1m Telescope</TD>
+                <TD>MtJohn:1m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Multi-Element Radio-Linked Interferometer Network Array</TD>
+                <TD>MERLIN</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Murchison Widefield Array (formerly Mileura Widefield Array)</TD>
+                <TD>MWA</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>NASA's Solar Terrestrial Relations Observatory</TD>
+                <TD>STEREO</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD>neutrinos, particles, and gravitational waves </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>NASA's solar WIND satellite</TD>
+                <TD>WIND</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Nagoya University 4m millimeter telescope</TD>
+                <TD>NU:4m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Nancay Radio Heliograph Array</TD>
+                <TD>NRHA</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Nancay Radio Telescope</TD>
+                <TD>NRT</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>National Radio Astronomy Observatory 12 meter telescope</TD>
+                <TD>NRAO:12m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Navy Prototype Optical Interferometer</TD>
+                <TD>NPOI</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>New Mexico State University 1 meter Telescope</TD>
+                <TD>NMSU:1m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>New Techology Telescope</TD>
+                <TD>NTT</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Newton X-Ray Multimirror Mission satellite</TD>
+                <TD>XMM</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Nobeyama 45m Telescope</TD>
+                <TD>No:45m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Nobeyama Millimeter Array</TD>
+                <TD>NoMA</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Nobeyama Radio Heliograph</TD>
+                <TD>NoRH</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Nobeyama Radio Polarimeters</TD>
+                <TD>NoRP</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Nordic Optical Telescope</TD>
+                <TD>NOT</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Norfolk State University 0.6 meter Rapid Response Robotic Telescope (RRRT) at
+                    Fan Mountain Observatory</TD>
+                <TD>FMO:RRRT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Northern Cross Radio Telescope Array</TD>
+                <TD>NCRTA</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatoire Midi-Pyrenees's 2m Bernard Lyot Telescope</TD>
+                <TD>TBL</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatoire de Haute-Provence's 0.8 meter Telescope</TD>
+                <TD>OHP:0.8m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatoire de Haute-Provence's 1.2 meter Telescope</TD>
+                <TD>OHP:1.2m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatoire de Haute-Provence's 1.52 meter Telescope</TD>
+                <TD>OHP:1.52m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatoire de Haute-Provence's 1.93 meter Telescope</TD>
+                <TD>OHP:1.93m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio Astrofisico Guillermo Haro's telescope</TD>
+                <TD>Haro Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio del Teide's 0.8 meter Telescope</TD>
+                <TD>OT:0.8m</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio del Teide's 1.52m Carlos Sanchez Telescope</TD>
+                <TD>Sanchez</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Observatorio del Teide's Gregory Coude Telescope</TD>
+                <TD>OT:GCT</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Odin Astronomical and Atmospheric Satellite</TD>
+                <TD>Odin</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Onsala Space Observatory's 20 meter Telescope</TD>
+                <TD>OSO:20m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Onsala Space Observatory's 25 meter Telescope</TD>
+                <TD>OSO:25m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ooty Radio Telescope</TD>
+                <TD>Ooty</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Orbiting Solar Observatory 7 satellite</TD>
+                <TD>OSO7</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Orbiting Solar Observatory 8 satellite</TD>
+                <TD>OSO8</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Orbiting and Retrievable Far and Extreme Ultraviolet Spectrometer satellite</TD>
+                <TD>ORFEUS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Osaka Prefecture University 1.85 m millimeter-submillimeter telescope</TD>
+                <TD>OPU:1.85m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Owens Valley Radio Observatory's 40 meter Telescope</TD>
+                <TD>OVRO:40m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Owens Valley Radio Observatory's Solar Array</TD>
+                <TD>OVRO:SA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>P78-1 space test Program spacecraft</TD>
+                <TD>P78-1</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>PRoject for On-Board Autonomy 2 satellite</TD>
+                <TD>PROBA2</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Palomar Observatory's 1.2 meter Samuel Oschin Telescope</TD>
+                <TD>PO:1.2m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Palomar Observatory's 1.5 meter Telescope</TD>
+                <TD>PO:1.5m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Palomar Observatory's 5.1m Hale Telescope</TD>
+                <TD>Hale</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Palomar Testbed Interferometer</TD>
+                <TD>PO:PTI</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Panoramic Survey Telescope and Rapid Response System Telescope #1
+                    (Pan-STARRS)</TD>
+                <TD>PS1</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Parkes Radio Telescope</TD>
+                <TD>Parkes</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Pioneer Venus Orbiter</TD>
+                <TD>PVO</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Planet Search Telescope, Sherlock</TD>
+                <TD>PO:Sherlock</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Planet Search Telescope, Sleuth</TD>
+                <TD>PO:Sleuth</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>ROentgen Satellite</TD>
+                <TD>ROSAT</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD>millimeter</TD>
+                <TD>radio</TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Radio Telescope of the Acadamey of Sciences</TD>
+                <TD>RATAN</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Ramaty High Energy Solar Spectroscopic Imager satellite</TD>
+                <TD>RHESSI</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Receiver Lab Telescope</TD>
+                <TD>RLT</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ritter Observatory's Telescope</TD>
+                <TD>Ritter Observatory</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Rossi X-ray Timing Explorer</TD>
+                <TD>RXTE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ryle Radio Telescope</TD>
+                <TD>Ryle</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>SUNRISE balloon-borne solar observatory</TD>
+                <TD>SUNRISE</TD>
+                <TD>Airborne</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Siding Springs Observatory's 1 meter Telescope</TD>
+                <TD>SSO:1m</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Skinakas Observatory 1.3 meter Telescope</TD>
+                <TD>Skinakas:1.3m</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Sloan Digital Sky Survey Telescope</TD>
+                <TD>Sloan</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Small Astronomy Satellite 2</TD>
+                <TD>SAS2</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Small Astronomy Satellite 3</TD>
+                <TD>SAS3</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Sobaeksan Optical Astronomy Observatory</TD>
+                <TD>SOAO:0.61m</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Solar Anomalous and Magnetospheric Particle EXplorer</TD>
+                <TD>SAMPEX</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Solar Dynamics Observatory</TD>
+                <TD>SDO</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Solar Heliospheric Observatory satellite</TD>
+                <TD>SOHO</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Solar Maximum Mission satellite</TD>
+                <TD>SMM</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Solar Tower Atmospheric Cerenkov Effect Experiment</TD>
+                <TD>STACEE</TD>
+                <TD>North America and Hawaii</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>South Africa Astronomical Observatory's 0.5 meter Telescope</TD>
+                <TD>SAAO:0.5m</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>South Africa Astronomical Observatory's 0.75 meter Telescope</TD>
+                <TD>SAAO:0.75m</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>South Africa Astronomical Observatory's 1.9m Radclifffe Telescope</TD>
+                <TD>Radcliffe</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>South Africa Astronomical Observatory's 1m Elizabeth Telescope</TD>
+                <TD>Elizabeth</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>South Pole Telescope</TD>
+                <TD>SPT</TD>
+                <TD>Antarctica</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Southeastern Association for Reasearch in Astronomy Telescope</TD>
+                <TD>SARA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Southern African Large Telescope</TD>
+                <TD>SALT</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Soviet Gamma observatory</TD>
+                <TD>Gamma</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>RadioAstron Space Radio Telescope (Spektr-R)</TD>
+                <TD>SRT</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Spitzer Space Telescope satellite</TD>
+                <TD>Spitzer</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Stardust, NASA's comet sample return mission</TD>
+                <TD>Stardust</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Starfire Optical Range's 1.5 meter telescope</TD>
+                <TD>SOR:1.5m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Starfire Optical Range's 3.5 meter telescope</TD>
+                <TD>SOR:3.5m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Steward Observatory 0.9 meter Spacewatch Telescope</TD>
+                <TD>Spacewatch:0.9m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Steward Observatory 2.3 meter Bok Telescope</TD>
+                <TD>Bok</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Steward Observatory's 0.6 meter Super-LOTIS Telescope</TD>
+                <TD>SO:Super-LOTIS</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Steward Observatory's 1.5 meter Kuiper Telescope</TD>
+                <TD>SO:Kuiper</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Steward Observatory's 1.5 meter NASA Telescope</TD>
+                <TD>SO:1.5m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Stratospheric Observatory For Infrared Astronomy</TD>
+                <TD>SOFIA</TD>
+                <TD>Airborne</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>SubMillimeter Array</TD>
+                <TD>SMA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Subaru Telescope</TD>
+                <TD>Subaru</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Submillimeter Wave Astronomy Satellite</TD>
+                <TD>SWAS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Sunyaev-Zeldovich Array</TD>
+                <TD>SZA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>SuperWASP extra-solar planet detection program</TD>
+                <TD>SuperWASP</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Suzaku (ASTRO-EII)</TD>
+                <TD>Suzaku</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Swedish 1 meter Solar Telescope</TD>
+                <TD>SST</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Swedish Vacuum Solar Telescope</TD>
+                <TD>SVST</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Swedish-ESO Submillimeter Telescope</TD>
+                <TD>SEST</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Swift Gamma-Ray Burst Mission</TD>
+                <TD>Swift</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Swope Telescope</TD>
+                <TD>Swope</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Synoptic Optical Long Term Investigations of the Sun</TD>
+                <TD>SOLIS</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>TD-1A (Thor-Delta 1A satellite)</TD>
+                <TD>TD-1A</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>THEMIS Telescope</TD>
+                <TD>THEMIS</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Telescopea Action Rapide pour les Objets Transitoires, Rapid Action Telescope
+                    for Transient Objects: Calern Observatory</TD>
+                <TD>TAROT-Calern</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Telescopea Action Rapide pour les Objets Transitoires, Rapid Action Telescope
+                    for Transient Objects: ESO</TD>
+                <TD>TAROT-ESO</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Telescopio Nazionale Galileo</TD>
+                <TD>TNG</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Tenma Xray satellite</TD>
+                <TD>Tenma</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Tennessee State University 2-m Automatic Spectroscopic Telescope</TD>
+                <TD>TSU:AST</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The All Sky Automated Survey</TD>
+                <TD>ASAS</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Burrell Schmidt of the Warner and Swasey Observatory, Case Western Reserve
+                    University</TD>
+                <TD>CWRU:Schmidt</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The German-British 600m Armlength Gravitational Wave Detector</TD>
+                <TD>GEO600</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Infrared Telescope in Space</TD>
+                <TD>IRTS</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The International Rosetta Mission</TD>
+                <TD>Rosetta</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD>millimeter</TD>
+                <TD>radio</TD>
+                <TD>neutrinos, particles, and gravitational waves </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Keck Interferometer</TD>
+                <TD>Keck: Interferometer</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Kepler Mission</TD>
+                <TD>Kepler</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Long Wavelength Array</TD>
+                <TD>LWA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The NuSTAR (Nuclear Spectroscopic Telescope Array) mission</TD>
+                <TD>NuSTAR</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Southern Astrophysical Research Telescope</TD>
+                <TD>SOAR</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Swiss Euler 1.2m Telescope</TD>
+                <TD>Euler1.2m</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The Very Large Telescope Interferometer</TD>
+                <TD>VLTI</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>The plateau Observatory's Dome A Chinese Small Telescope array</TD>
+                <TD>DOME A:CSTAR</TD>
+                <TD>Antarctica</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Thuringer Landessternwarte 2 meter Telescope</TD>
+                <TD>TLS</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Transition Region and Coronal Explorer</TD>
+                <TD>TRACE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>ULYSSES heliospheric mission</TD>
+                <TD>ULYSSES</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>US Naval Observatory 1.3 meter telescope</TD>
+                <TD>USNO:1.3m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>US Naval Observatory 40 inch Ritchey-Chretien telescope</TD>
+                <TD>USNO:40in</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>US Naval Observatory 61 inch Kaj A. Strand Astrometric Reflector</TD>
+                <TD>USNO:61in</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>US Naval Observatory Ron Stone 8 inch transit telescope</TD>
+                <TD>USNO:Stone8in</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Uhuru (Small Astronomical Satellite 1)</TD>
+                <TD>Uhuru</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Ultraviolet Imaging Telescope</TD>
+                <TD>UIT</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>United Kingdom Infrared Telescope</TD>
+                <TD>UKIRT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>United Kingdom Schmidt Telescope</TD>
+                <TD>UKST</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>University of Hawaii 2.2 meter Telescope</TD>
+                <TD>UH:2.2m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>University of Michigan Radio Astronomy Observatory 26m telescope at Peach
+                    Mountain</TD>
+                <TD>UMRAO</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Uppsala Schmidt Telescope</TD>
+                <TD>Uppsala Schmidt</TD>
+                <TD>Australia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Vacuum Newtonian Telescope</TD>
+                <TD>VNT</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Vacuum Tower Telescope</TD>
+                <TD>VTT</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+            </TR>
+            <TR>
+                <TD>Vatican Advanced Technology Telescope</TD>
+                <TD>VATT</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Energetic Radiation Imaging Telescope Array System</TD>
+                <TD>VERITAS</TD>
+                <TD>North America and Hawaii</TD>
+                <TD>gamma-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>National Astronomical Observatory of Japan's VLBI Exploration of Radio
+                    Astrometry</TD>
+                <TD>VERA</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Large Array</TD>
+                <TD>VLA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Large Telescope (Antu)</TD>
+                <TD>VLT:Antu</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Large Telescope (Kueyen)</TD>
+                <TD>VLT:Kueyen</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Large Telescope (Melipal)</TD>
+                <TD>VLT:Melipal</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Large Telescope (Yepun)</TD>
+                <TD>VLT:Yepun</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Long Baseline Array</TD>
+                <TD>VLBA</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Very Small Array</TD>
+                <TD>VSA</TD>
+                <TD>Africa and Canary Islands</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Viper submillimeter Telescope</TD>
+                <TD>Viper</TD>
+                <TD>Antarctica</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Virgo Interferometer at the European Gravitational Observatory</TD>
+                <TD>EGO:Virgo</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>neutrinos, particles, and gravitational waves</TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Voyager I satellite</TD>
+                <TD>Voyager I</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Voyager II satellite</TD>
+                <TD>Voyager II</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>WIYN 0.9m Observatory at Kitt Peak National Observatory</TD>
+                <TD>WIYN:0.9m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Westerbork Synthesis Radio Telescope</TD>
+                <TD>WSRT</TD>
+                <TD>Europe</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Whole Earth Blazar Telescope</TD>
+                <TD>WEBT</TD>
+                <TD>Earth</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD>milimeter</TD>
+                <TD>radio</TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wide-field Infrared Survey Explorer</TD>
+                <TD>WISE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wilkinson Microwave Anisotropy Probe</TD>
+                <TD>WMAP</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>millimeter</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Williams College Hopkins Observatory 0.6m telescope</TD>
+                <TD>WCHO:0.6m</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wisconsin H-Alpha Mapper</TD>
+                <TD>WHAM</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wisconsin Ultraviolet PhotoPolarimter Experiment</TD>
+                <TD>WUPPE</TD>
+                <TD>Space</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>ultraviolet</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wisconsin-Indiana-Yale-NOAO Telescope</TD>
+                <TD>WIYN</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wise Observatory's Telescope</TD>
+                <TD>Wise Observatory</TD>
+                <TD>Asia</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Wyoming Infrared Observatory</TD>
+                <TD>WIRO</TD>
+                <TD>North America and Hawaii</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Yale-AURA-Lisbon-Ohio State Telescope</TD>
+                <TD>YALO</TD>
+                <TD>South America</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>optical</TD>
+                <TD>infrared</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+            </TR>
+            <TR>
+                <TD>Yohkoh Gamma and X-ray solar satellite (Solar-A)</TD>
+                <TD>Yohkoh</TD>
+                <TD>Space</TD>
+                <TD>gamma-ray</TD>
+                <TD>x-ray</TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD> </TD>
+                <TD>solar</TD>
+                </TR>
+                </TABLEDATA>
+            </DATA>
+        </TABLE>
+    </RESOURCE>
+</VOTABLE>
