@@ -27,7 +27,7 @@ def setDataDir(dir):
 	global datadir 
 	datadir = dir
 
-# eplace single measurementType value with respective UCD
+# replace single measurementType value with respective UCD
 def translateUCD(MeasurementType):
 	if ( MeasurementType2UCD.has_key ( MeasurementType.lower() ) ):
 		return MeasurementType2UCD[ MeasurementType.lower() ]
