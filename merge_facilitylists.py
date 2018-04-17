@@ -26,15 +26,15 @@ precision = 3
 def load_all_lists(dir): # see parsers defined in file parsers.py
 	setDataDir(dir)
 	data = {}
-	#data.update(load_aas_list())
-	#data.update(load_ppi_list())
-	#data.update(load_ads_list())
-	#data.update(load_nssdc_list()) 
-	#data.update(load_xephem_list())
-	#data.update(load_naif_list())
+	data.update(load_aas_list())
+	data.update(load_ppi_list())
+	data.update(load_ads_list())
+	data.update(load_nssdc_list()) 
+	data.update(load_xephem_list())
+	data.update(load_naif_list())
 	data.update(load_mpc_list())
-	#data.update(load_iraf_list())
-	#data.update(load_dsn_list())
+	data.update(load_iraf_list())
+	data.update(load_dsn_list())
 	data.update(load_existing_json("https://matrix.oeaw.ac.at/getModifiedRecords.php?magic=ep2020_tap")) # load json from URL, example
 	#data.update(load_existing_json("matrix_json_export_20170731.json")) # load json from file in data directory, example
 	
@@ -419,7 +419,7 @@ def merge_doubles (list):
 							print "\n"
 							
 							while True:
-								cmd = raw_input ('Type "m" to merge, "i" to ignore and "s" to save merged file and resume later, or "?" followed by the object id for information: ' )
+								cmd = raw_input ('Type "m" to merge, "i" to ignore and "s" to save merged file and resume later, or "?" followed by the object id for information ("*" can be used at the end of object name for matching): ' )
 
 								if  ( cmd == 's' or cmd == 'm' or cmd == 'i' ): break
 
@@ -434,7 +434,8 @@ def merge_doubles (list):
 									else:
 										found = False
 										for obj_id in list:
-											if str(obj_id).startswith(cmd_arr[1]):										
+											o_name = str(cmd_arr[1])
+											if ( ( o_name.endswith("*") and str(obj_id).startswith(o_name[:-1]) ) or ( o_name.endswith("*") and str(obj_id) == cmd_arr[1][:-1] ) or ( str(obj_id) == o_name ) ):									
 												print ("\n** Object: " + obj_id + " **")
 												print json.dumps( list[obj_id], indent=2 )
 												print ("\n")
