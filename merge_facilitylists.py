@@ -26,13 +26,13 @@ precision = 3
 def load_all_lists(dir): # see parsers defined in file parsers.py
 	setDataDir(dir)
 	data = {}
-	data.update(load_aas_list())
+	#data.update(load_aas_list())
 	#data.update(load_ppi_list())
 	#data.update(load_ads_list())
-	#data.update(load_nssdc_list())
+	data.update(load_nssdc_list())
 	#data.update(load_xephem_list())
-	#data.update(load_naif_list())
-	data.update(load_mpc_list())
+	data.update(load_naif_list())
+	#data.update(load_mpc_list())
 	#data.update(load_iraf_list())
 	#data.update(load_dsn_list())
 	#data.update(load_existing_json("https://matrix.oeaw.ac.at/getModifiedRecords.php?magic=ep2020_tap")) # load json from URL, example
