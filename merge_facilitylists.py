@@ -1,61 +1,11 @@
 from datetime import datetime
 from parsers import *
+from conf.config import *
 from pprint import pprint
 
 import json, pickle, copy, re, sys, os.path
 
-# ***************** SCRIPT CONFIGURATION - change with care... ******************
-
-# filenames
-result_file_name = 'merged_list.json'
-log_file_name = 'name_merge.log'
-fuzzy_hints_file_name = 'fuzzy_merge.log'
-partial_hints_file_name = 'partial_merge.log'
-
-# directories
-conf_dir = "conf/"
-logs_dir = "logs/"
-output_dir = "output/"
-data_dir = "data/"
-
-# precision of longitude/latitude comparison
-precision = 3
-
-# *******************************************************************************
-
-def load_all_lists(dir): # see parsers defined in file parsers.py
-	setDataDir(dir)
-	data = {}
-	#data.update(load_aas_list())
-	#data.update(load_ppi_list())
-	#data.update(load_ads_list())
-	data.update(load_nssdc_list())
-	#data.update(load_xephem_list())
-	data.update(load_naif_list())
-	#data.update(load_mpc_list())
-	#data.update(load_iraf_list())
-	#data.update(load_dsn_list())
-	#data.update(load_existing_json("https://matrix.oeaw.ac.at/getModifiedRecords.php?magic=ep2020_tap")) # load json from URL, example
-	#data.update(load_existing_json("matrix_json_export_20170731.json")) # load json from file in data directory, example
-
-	return data
-
-# command line inputs
-fuzzy = False
-interactive = False
-partial = False
-for arg in sys.argv:
-	if arg == "-f" or arg == "-fuzzy": fuzzy = True
-	if arg == "-i" or arg == "-interactive": interactive = True
-	if arg == "-p" or arg == "-partial": partial = True
-
-if (fuzzy and partial):
-	print "Options 'f' or 'fuzzy' and 'p' or 'partial' can not be used at the same time!"
-	sys.exit()
-
-if (interactive and not (fuzzy or partial)):
-	print "Option 'i' or 'interactive' can only be used in conjunction with 'f' ('fuzzy') or 'p' ('partial') !"
-	sys.exit()
+# ********************************** See conf/config.py for configurations of constants, parsers and inputs! **********************************
 
 # constants for property names
 altname_str = 'alternateName'
@@ -81,6 +31,53 @@ sin_str = 'sin'
 
 tmp_checked_file_name = '_checked_.json'
 _checked_ = {}
+
+# command line inputs
+fuzzy = False
+interactive = False
+partial = False
+update = False
+for arg in sys.argv:
+	if ( arg == "-f" or arg == "-fuzzy" ): fuzzy = True
+	if ( arg == "-i" or arg == "-interactive" ): interactive = True
+	if ( arg == "-p" or arg == "-partial" ): partial = True
+	if ( arg == "-u" or arg == "-update" ): update = True
+
+def load_all_lists(dir): # see parsers defined in file parsers.py
+	setDataDir(dir)
+	if (update):
+		print ( "Using previously merged list in file '" + result_file_name + "'. This list will be udpated with supplied data..." )
+		if os.path.isfile(output_dir + result_file_name):
+			with open(output_dir + result_file_name) as results_file:
+				data = json.load(results_file)
+		else:
+			print ( "\nERROR: File '" + result_file_name + "' could not be found! Thus no list to update..." )
+			sys.exit()
+		print ("Removing previously merged entries in input file(s)...")
+
+	else:
+		data = {}
+
+	# calling all configured parsers, reading all configured lists from files and/or web services
+	for input in configured_inputs:
+		if (input.startswith('http:') or input.startswith('https:') or input.endswith('.json') ):
+			update_list( data, load_existing_json(input) )
+		else:
+			try:
+				update_list( data, globals()[input]() )
+			except:
+				print "WARNING: Could not call parser function '" + input + "()': " + str(sys.exc_info()[0])
+
+	return data
+
+
+if (fuzzy and partial):
+	print "Options 'f' or 'fuzzy' and 'p' or 'partial' can not be used at the same time!"
+	sys.exit()
+
+if (interactive and not (fuzzy or partial)):
+	print "Option 'i' or 'interactive' can only be used in conjunction with 'f' ('fuzzy') or 'p' ('partial') !"
+	sys.exit()
 
 def remove_entries (list, entries):
 	for elem in entries:
@@ -120,6 +117,76 @@ def save_checked_file(num_merged):
 	checked_file.write( json.dumps ( _checked_ ) )
 	checked_file.close()
 
+def update_list(existing_list, new_list):
+	# This functions removes all entries in configured input lists that already exist in merged_list.json when parameter '-update' is given.
+	# Without parameter "-update" new_list is simply added to the existing list for further merging.
+	# When two entries are equal wrt altname(s) but NOT equal wrt other included data (location,...), the updated information is ignored!
+	# Since all previously added enteries from a certain list are "overwritten" (i.e. existing entries are kept!), the entries of the new list only have to be compared with MERGED entries.
+	if (len(new_list) == 0):
+		print "WARNING: list with zero length included, will be ignored."
+		return
+
+	if (update):
+		# prepare list wih all entries of original list that contain at least one altname derrived of the same athority as new_list for comparing
+		authority = new_list.itervalues().next()[altname_str][0][auth_str]
+		compare_list = []
+		cleaned_new_list = {}
+		for entry in existing_list:
+			if entry in new_list:
+				if existing_list[entry] == new_list[entry]:
+					del new_list[entry]
+				else:
+					while True:
+						print "\nWARNING: object in updated list from authority '" + authority + "' shares same key (" + entry + ") as in exsiting list but differs regading content: \n"
+						print "<<<<<<< Existing Object:"
+						print json.dumps( existing_list[entry], indent=2 )
+						print ">>>>>>> New Object:"
+						print json.dumps( new_list[entry], indent=2 )
+						cmd = raw_input ("Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:")
+
+						if (cmd.upper() == "O"):
+							del new_list[entry]
+							print "Old entry in existing list is kept."
+							break
+						elif (cmd.upper() == "N"):
+							existing_list[entry] = new_list[entry]
+							del new_list[entry]
+							print "Entry in existing list is overwritten with entry in new list."
+							break
+						else:
+							print "Input not valid! Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:"
+
+			for alt_name in existing_list[entry][altname_str]:
+				if (alt_name[auth_str] == authority):
+					compare_list.append(existing_list[entry])
+					break
+
+		for new_entry in new_list:
+			add_entry = True
+			for compare_entry in compare_list:
+				all_altnames_included = True
+				for new_alt_name in new_list[new_entry][altname_str]:
+					if ( not(altname_in_entry(new_alt_name, compare_entry)) ):
+						all_altnames_included = False
+						break
+				if (all_altnames_included):
+					add_entry = False
+
+			if (add_entry):
+				cleaned_new_list[new_entry] = new_list[new_entry]
+
+		existing_list.update(cleaned_new_list)
+	else:
+		existing_list.update(new_list)
+
+def altname_in_entry(altname, entry):
+	# checks if altname is equal to at least one of the altnames of entry
+	for existing_altname in entry[altname_str]:
+		if ( existing_altname == altname ):
+			return True
+
+	return False
+
 def merge_entries(doubles_array, list, logfile):
 	log_text_1 = "* WARNING: differing values for property '"
 	log_text_2 = "' for object: '"
@@ -147,7 +214,8 @@ def merge_entries(doubles_array, list, logfile):
 				merged_entry[altname_str]= []
 
 			for name in entry[altname_str]:
-				merged_entry[altname_str].append ( name )
+				if ( not(altname_in_entry(name, merged_entry) ) ):
+					merged_entry[altname_str].append ( name )
 
 		# merge target list
 		if entry.has_key(targetlist_str):
@@ -414,9 +482,9 @@ def merge_doubles (list):
 							print "\n"
 
 							while True:
-								cmd = raw_input ('Type "m" to merge, "i" to ignore and "s" to save merged file and resume later, or "?" followed by the object id for information ("*" can be used at the end of object name for matching): ' )
+								cmd = raw_input ("Type 'm' to merge, 'i' to ignore, 'd' to defer decision, 's' to save merged file and resume later or '?' followed by the object id for information ('*' can be used at the end of object name for matching): " )
 
-								if  ( cmd == 's' or cmd == 'm' or cmd == 'i' ): break
+								if  ( cmd in ["s", "i", "m", "d" ] ): break
 
 								if cmd == '':
 									print ( "\n" + hints_str )
@@ -450,6 +518,11 @@ def merge_doubles (list):
 							if cmd == 'i': # ignore
 								_checked_[ name_index[checked_key]['obj'] + name_index[key]['obj'] ] = True
 								print ( "Ignored." )
+								print ( "\n----------------------------------------------------------------------------\n" )
+								continue
+
+							if cmd == "d": # defer
+								print ( "\nDecision is deferred - possibly related objects will be presented again in the next iteration." )
 								print ( "\n----------------------------------------------------------------------------\n" )
 								continue
 
@@ -496,6 +569,7 @@ def merge_doubles (list):
 					for altname in list[rec][altname_str]:
 						if altname.has_key(name_str):
 							words = re.split( '[\s#-:;\\/\(\)\[\]\?\*,\._]', altname[name_str] )
+							words = set(words) # remove dubilcates of words, so every word is unique and only mentioned once
 							for word in words:
 								upper_word = word.upper()
 								if len(upper_word) > 2 and not( stopwords.has_key(upper_word) ) and not( _checked_.has_key("partial_check::" + upper_word ) ):
@@ -549,13 +623,13 @@ def merge_doubles (list):
 
 					while True:
 						try:
-							cmd = raw_input ("Please provide the ids of objects to be merged separated by blanks (e.g. '1 2'), 'a' to merge all objects, 'i' to ignore matches for term '" + word + "' or 's' to save and continue later. Use ? and object id for information: " )
+							cmd = raw_input ( "Please provide the ids of objects to be merged separated by blanks (e.g. '1 2'), 'a' to merge all objects, 'i' to ignore matches for term '" + word + "', 'd' to defer decision or 's' to save and continue later. Use '?' and object number for detailed information: " )
 
 							if cmd == '':
 								print ( "\n" + hints_str )
 								continue
 
-							if  ( cmd == "s" or cmd == "i" or cmd == "a"): break
+							if  ( cmd in ["s", "i", "a", "d" ] ): break
 
 							if ( cmd.startswith("?") ):
 								cmd_arr = cmd.split()
@@ -590,6 +664,11 @@ def merge_doubles (list):
 						print ( "\n----------------------------------------------------------------------------\n" )
 						continue
 
+					if cmd == "d": # defer
+						print ( "Matches for term '" + word + "' are deferred and will be presented again in the next iteration." )
+						print ( "\n----------------------------------------------------------------------------\n" )
+						continue
+
 					if cmd == "s": # save
 						print ( "Data and list of ignored terms saved." )
 						# save "_checked_" file
@@ -619,7 +698,8 @@ def merge_doubles (list):
 						print ( str(len(to_be_merged)) + " objects merged." )
 
 					if not(all_merged):
-						if raw_input ("Ignore remaining matches on term '" + word + "'? (y/n): ") == "y" or "Y":
+						cmd = raw_input ("Ignore remaining matches on term '" + word + "'? (y/n): ")
+						if cmd == "y" or cmd == "Y":
 							_checked_[ "partial_check::" + word.upper() ] = True
 							print ( "All remaining matches for term '" + word + "' ignored." )
 
@@ -637,7 +717,7 @@ def merge_doubles (list):
 	return list
 
 if fuzzy or partial:
-	print ( "Using merged list in file '" + result_file_name + "'." )
+	print ( "Using previously merged list in file '" + result_file_name + "'." )
 	if os.path.isfile(output_dir + result_file_name):
 		with open(output_dir + result_file_name) as results_file:
 			lists = json.load(results_file)
