@@ -1,5 +1,5 @@
 from datetime import datetime
-from parsers import *
+from conf.parsers import *
 from conf.config import *
 from pprint import pprint
 
