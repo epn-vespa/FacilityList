@@ -1,3 +1,17 @@
+"""
+Available parsers in this file:
+- load_aas_list
+- load_ppi_list
+- load_ads_list
+- load_nssdc_list
+- load_xephem_list
+- load_naif_list
+- load_mpc_gavo_list
+- load_mpc_list
+- load_iraf_list
+- load_dsn_list
+"""
+
 from astropy.io import votable
 from urllib2 import URLError, HTTPError
 import json, os.path, urllib2
@@ -459,7 +473,4 @@ def load_dsn_list():
 
 		data[authority+":"+title] = data_tmp
 
-	return data
-
-def load_harvard_list():
-    
+	return data    
