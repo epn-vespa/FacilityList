@@ -13,10 +13,10 @@
             "items": {
                 "type": "object",
                 "required": [
-                    "authorityName"
+                    "namingAuthority"
                 ],
                 "properties": {
-                    "authorityName": {
+                    "namingAuthority": {
                         "description": "Naming authority",
                         "type": "string"
                     },
