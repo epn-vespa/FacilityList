@@ -19,6 +19,8 @@ precision = 3
 # ***************** In case of json files or URLs to web services returning JSON in the required format just add the name of the json file
 # ***************** or the URL of respective web service.
 # example: 'load_xephem_list', 'load_naif_list', 'matrix_json_export_20170731.json', 'load_ads_list'
-configured_inputs = [\
-'load_iraf_list' \
+configured_inputs = [
+    'load_iraf_list',
+    'load_telwiserep_list',
+    'load_aas_list',
 ]
