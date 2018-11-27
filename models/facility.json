@@ -34,7 +34,7 @@
         "facilityType": {
             "description": "Type of Facility",
             "type": "string",
-            "enum": ["spacecraft", "observatory"]
+            "enum": ["spacecraft", "observatory", "balloon"]
         },
         "location": {
             "description": "Location of the Facility",
@@ -48,13 +48,20 @@
                     "description": "Name of the country",
                     "type": "string"
                 },
+                "place": {
+                    "description": "Named location",
+                    "type": "string"  
+                },
                 "coordinates": {
                     "description": "Coordinates of the Facility",
                     "type": "object",
                     "properties": {
                         "lat": {
                             "description": "Latitude coordinate of the Facility",
-                            "type": "string"
+                            "AnyOf": [
+                                {"type": "string"},
+                                {"type": "number"}
+                            ]
                         },
                         "lon": {
                             "description": "Longitude coordinate of the Facility",
