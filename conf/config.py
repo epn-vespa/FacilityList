@@ -23,4 +23,5 @@ configured_inputs = [
     'load_iraf_list',
     'load_telwiserep_list',
     'load_aas_list',
+    'load_mpc_gavo_list'
 ]

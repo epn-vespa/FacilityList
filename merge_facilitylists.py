@@ -319,9 +319,9 @@ def merge_entries(doubles_array, list, logfile):
                 merged_entry[referenceurl_str] = []
 
             for elem in entry[referenceurl_str]:
-                if ( not(merged_refurls.has_key(elem)) ):
+                if ( not(merged_refurls.has_key(elem['url'])) ):
                     merged_entry[referenceurl_str].append(elem)
-                    merged_refurls[elem] = True
+                    merged_refurls[elem['url']] = True
 
         # merge launch date
         if entry.has_key(launchdate_str):
