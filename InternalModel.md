@@ -13,7 +13,7 @@ The Observatory descriptor follows the model described in the [models/facility.j
 The expected properties are:
 * `alternateName`: (list) A list of all alternate names dictionaries (see below)
 * `facilityType`: (str) A string containing either `spacecraft`or `observatory`
-* `location`: (dict) A dictionary containing `continent`, `country`, `place` and/or `coordinates`. The `coordinates` property is a dictionary with `lat` (latitude), `lon` (longitude), `alt` (altitude), `sin` (rho sin(phi) parallax coordinate), `cos` (rho cos(phi) parallax coordinate) and/or `tz` (time zone) properties.
+* `location`: (dict) A dictionary containing `continent`, `country`, `place` and/or `coordinates`. The `coordinates` property is a dictionary with `lat` (latitude), `lon` (longitude), `alt` (altitude), `sin` (_ρ sin(φ)_ parallax coordinate), `cos` (_ρ cos(φ)_ parallax coordinate) and/or `tz` (time zone) properties.
 * `measurementType`: (list) A list of string items (following IVOA UCD specification).
 * `targetList`: (list) A list of string items with target names.
 * `facilityGroup`: (str) A named group to which the Facility belongs to.
