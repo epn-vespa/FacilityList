@@ -22,7 +22,7 @@ The expected properties are:
 * `launchDate`: (str) A string containing the launch date for a spacecraft.
 
 Each `alternateName` object contins the following attributes:
-* `authorityName`: (str) a naming authority
+* `namingAuthority`: (str) a naming authority
 * `name`: (str) a name for the Facility
 * `id`: (str) an ID for the Facility
 
