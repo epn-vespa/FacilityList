@@ -7,7 +7,8 @@ Put all your input files here.
 - AstroWeb: [html](Astroweb.html)
 - DSN (Deep Space Network) [text](DSN.txt)
 - NAIF [votable](NAIF.xml)
-- 
+- Minor Planet Center from IAU [txt](IAU-MPC.txt) list
+- IRAF list ([txt](IRAF.txt) or [votable](IRAF.xml))
 
 In order to be processed by the merging scripts, every input file needs a respective parser function 
 in [parser.py](../parsers.py) module.
