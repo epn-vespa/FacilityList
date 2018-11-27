@@ -519,7 +519,7 @@ def load_telwiserep_list():
             else:
                 data_tmp['facilityGroup'] = items[8]
 
-            data_tmp['referenceURL'] = items[7]
+            data_tmp['referenceURL'] = [items[7]]
 
             data[authority+":"+id] = data_tmp
 
