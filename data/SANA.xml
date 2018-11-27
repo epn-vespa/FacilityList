@@ -1,0 +1,1094 @@
+<VOTABLE version='1.2'  
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://www.ivoa.net/xml/VOTable/v1.1 http://www.ivoa.net/xml/VOTable/v1.2'  
+	xmlns='http://www.ivoa.net/xml/VOTable/v1.2'>
+<DESCRIPTION>CCSDS/SANA Spacecraft List</DESCRIPTION>
+<RESOURCE>
+<DESCRIPTION>
+Note: VERSION 1 (VN=00); SCID = 10 Bits; GSCID = VN.SCID = 12 Bits<br/>
+VERSION 2 (VN=01); SCID=8 Bits; GSCID = VN.SCID<br/>
+VALID FOR TLM. VALID ALSO FOR TC ONLY IF AOS-VCDU.<br/>
+VERSION 3 (VN=10); SCID = 10 Bits; GSCID = VN.SCID = 12 Bits<br/>
+<br/>
+The representatives authorized to request spacecraft identifiers are listed in the <a href="/r/agency_representatives">Agency Representatives</a> registry.
+</DESCRIPTION>
+<TABLE name='CCSDS/SANA Spacecraft List'>
+<PARAM name="created" ucd="time.epoch" value="2010-04-30"/>
+<PARAM name="updated" ucd="time.epoch" value="2014-09-26"/>
+<PARAM name="authority" value="ccsds.sls.slp"/>
+<FIELD datatype='char' arraysize="*" ID='name' name='Name' ucd='meta.id'>
+<DESCRIPTION>SANA Name of Spacecraft</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='gscid' name='SANA ID' ucd='meta.id'>
+<DESCRIPTION>SANA ID of Spacecraft</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='requestor_name' name='Requestor Name' ucd='meta.id'>
+<DESCRIPTION>Name of Requestor</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='requestor_affl' name='Requestor Affiliation' ucd='meta.id'>
+<DESCRIPTION>Affiliation of Requestor</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='requestor_ctry' name='Requestor Country' ucd='meta.id'>
+<DESCRIPTION>Country of Requestor</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='create_date' name='Creation Date' ucd='time.epoch'>
+<DESCRIPTION>Date of Creation</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='assigner' name='Assigner Name' ucd='meta.id'>
+<DESCRIPTION>Name of Assigner</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='version' name='Version' ucd='meta.number'>
+<DESCRIPTION>Version number</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='status' name='Status' ucd='meta.code'>
+<DESCRIPTION>Status</DESCRIPTION></FIELD>
+<FIELD datatype='char' arraysize="*" ID='channels' name='Channels' ucd='meta.code'>
+<DESCRIPTION>Communication Channels (TC=Telecommand;TLM=Telemetry)</DESCRIPTION></FIELD>
+<DATA><TABLEDATA>
+<TR><TD>ASTRO-SPAS</TD><TD>001</TD><TD>G.F. Block</TD><TD>ESA ESTEC</TD><TD>EU</TD><TD>1990-01-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRO-SPAS Sim.</TD><TD>002</TD><TD>G.F. Block</TD><TD>ESA ESTEC</TD><TD>EU</TD><TD>1990-01-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>ERS-2</TD><TD>003</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-11-30</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ERS-2 Simulator</TD><TD>004</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2012-11-30</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>CHANDRA</TD><TD>005</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2004-11-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>KOMPSAT-1</TD><TD>006</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>1996-06-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>FUSE</TD><TD>007</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-06-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SBSS</TD><TD>008</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>METOP1 S-)</TD><TD>00B</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>METOP2 S-)</TD><TD>00C</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>METOP3 S-)</TD><TD>00D</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>METOP-SIM</TD><TD>00E</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>EUTELSAT-F1(S-)</TD><TD>00F</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EUTELSAT-F1(Ku)</TD><TD>010</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EUTELSAT-F2(S-)</TD><TD>011</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUTELSAT-F2(Ku)</TD><TD>012</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EUTELSAT-F3(S-)</TD><TD>013</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUTELSAT-F3(Ku)</TD><TD>014</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SOHO</TD><TD>015</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1992-03-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SOHO-Simulator</TD><TD>016</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1992-03-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EUTELSAT-SIM(Ku)</TD><TD>017</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SESAT-F1</TD><TD>018</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SESAT-SIM</TD><TD>019</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARIANE 5</TD><TD>01A</TD><TD>R. Simo-Pons</TD><TD>CNES</TD><TD>FR</TD><TD>1992-03-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EUTELSAT-SIM(Ku)</TD><TD>01B</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOTBIRD-5</TD><TD>01C</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>STARDUST</TD><TD>01D</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-11-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DS-1 Flight</TD><TD>01E</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-11-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TRANSMED SCIENTIFIC BALLOON</TD><TD>01F</TD><TD>Orazio Cosentino</TD><TD>ASI</TD><TD>IT</TD><TD>1996-11-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-1</TD><TD>020</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-2</TD><TD>021</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MSP 01-Orbiter Simulator</TD><TD>022</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-3</TD><TD>023</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRACE-A</TD><TD>024</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRACE-B</TD><TD>025</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Nimbus 7</TD><TD>026</TD><TD>F. Akers</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1983-05-02</TD><TD>JIV</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>NILESAT-1</TD><TD>027</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASIASTAR</TD><TD>028</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1998-01-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AFRISTAR</TD><TD>029</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CARIBSTAR</TD><TD>02A</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1998-01-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ST-1</TD><TD>02B</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRA 2B</TD><TD>02C</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NPOESS C5</TD><TD>02D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MUSES-C</TD><TD>02E</TD><TD>Tsutomu Shigeta</TD><TD>ISAS JAXA</TD><TD>JP</TD><TD>2012-07-31</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD>TC</TD></TR>
+<TR><TD>GENESIS Flight</TD><TD>02F</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-4</TD><TD>030</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-5</TD><TD>031</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-6</TD><TD>032</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-6 Duplicate</TD><TD>033</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2005-05-22</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FEDSAT</TD><TD>034</TD><TD>Richard Jacobsen</TD><TD>CSIRO</TD><TD>AU</TD><TD>1999-07-27</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MSP 01-Orbiter Flight</TD><TD>035</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GENESIS Simulator</TD><TD>036</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MARS-EXP-ORB</TD><TD>037</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-05-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SLATS</TD><TD>038</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-18</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>NEMO-A</TD><TD>039</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-04-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Space Telescope</TD><TD>03A</TD><TD>G.M. Levin</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1980-03-21</TD><TD>JIV</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>MSL98 (SIM)</TD><TD>03C</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1996-12-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>INTELSAT K-TV</TD><TD>03D</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-10-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JUNO</TD><TD>03D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-11-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>OCO-2</TD><TD>03E</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-02-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>JUNO,sim</TD><TD>03F</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-11-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>NEMO-B</TD><TD>040</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>1999-04-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-7</TD><TD>041</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-8</TD><TD>042</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W1R</TD><TD>043</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-04-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NILESAT 2</TD><TD>044</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-04-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>WORLDSTAR 4</TD><TD>045</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-04-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DI-IMPACTOR</TD><TD>046</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRAVITY PROBE-B</TD><TD>047</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-06-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>PICASSO-CENA</TD><TD>048</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>1999-03-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PICASSO-CENA,SIM</TD><TD>049</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>1999-03-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MRO</TD><TD>04A</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2002-08-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SDO</TD><TD>04B</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MSL</TD><TD>04C</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>GLAST</TD><TD>04D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2003-08-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DSCOVR</TD><TD>04E</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-08-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ORBVIEW-5</TD><TD>04F</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-12-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SELENE</TD><TD>050</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2009-07-31</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>CASSINI ITL</TD><TD>051</TD><TD>R. Kee</TD><TD>NASA JPL</TD><TD>US</TD><TD>1997-01-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>Cassini</TD><TD>052</TD><TD>James N. Scott</TD><TD>NASA</TD><TD>US</TD><TD>1991-09-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-9</TD><TD>053</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PHOENIX Flight</TD><TD>054</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-02-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LANDSAT-7(CTIU-1)</TD><TD>055</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-09-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>LANDSAT-7(CTIU-2)</TD><TD>056</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-09-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ATV-10</TD><TD>057</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-11</TD><TD>058</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PHOENIX Simulation</TD><TD>059</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-02-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ERS-1</TD><TD>05A</TD><TD>G.F. Block</TD><TD>ESA ESTEC</TD><TD>EU</TD><TD>1986-06-11</TD><TD>JIV</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPIRALE 1</TD><TD>05B</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ACE</TD><TD>05C</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1997-01-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NPOESS C6</TD><TD>05D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ST5-2</TD><TD>05E</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2001-05-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE12</TD><TD>05F</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-12-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-12</TD><TD>060</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATV-SIM</TD><TD>061</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-09-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NEW HORIZON</TD><TD>062</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2003-02-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ALOS</TD><TD>063</TD><TD>Tsukasa Mito</TD><TD>NASDA</TD><TD>JP</TD><TD>2012-06-01</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>COSMO-SkyMed1</TD><TD>064</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-03-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RESSAT</TD><TD>065</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1998-11-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PROBA</TD><TD>066</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1998-11-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SICRAL</TD><TD>067</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1998-10-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT-1</TD><TD>068</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2010-12-17</TD><TD></TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>EURASIASAT</TD><TD>069</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-02-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE12 fl</TD><TD>06A</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-12-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE14 sim</TD><TD>06B</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-12-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE14 fl</TD><TD>06C</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-12-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FBM</TD><TD>06D</TD><TD>Eduardo Whitaker Bergamini</TD><TD>INPE</TD><TD>BR</TD><TD>2000-12-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HISPASAT-1D</TD><TD>06E</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-12-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HISPASAT 1D,Sim</TD><TD>06F</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-12-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EURASIASAT(SIM)</TD><TD>070</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1999-02-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HISPASAT1C</TD><TD>071</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1998-10-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HISPASAT(SIM)</TD><TD>072</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1998-10-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ORION F2</TD><TD>073</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1998-03-27</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MSL98 Flight</TD><TD>074</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1996-12-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ORBVIEW-4</TD><TD>075</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-09-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>COSMO-SkyMed3</TD><TD>076</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-03-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUTELSATW4</TD><TD>077</TD><TD>Erhard Jabs</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>1998-03-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MSO98 (SIM)</TD><TD>078</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-12-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>INTEGRAL</TD><TD>079</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1998-03-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>WINDS</TD><TD>07A</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>NPOESS C1</TD><TD>07B</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>NPOESS C2</TD><TD>07C</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>NPOESS C3</TD><TD>07D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>NPOESS C4</TD><TD>07E</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MSO98</TD><TD>07F</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1996-12-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JASON-1</TD><TD>080</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>JASON-1(SIM)</TD><TD>081</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>COROT</TD><TD>082</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-08-08</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>COROT (SIM)</TD><TD>083</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-08-08</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>AGORA</TD><TD>084</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2004-09-28</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AGORA-Backup</TD><TD>085</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2004-09-28</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>QUICKSCAT</TD><TD>086</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1998-01-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARBSAT2 PFM</TD><TD>087</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARBSAT2 FM2</TD><TD>088</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-07-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT2 SIM</TD><TD>089</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-07-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EO-1</TD><TD>089</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1997-12-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>AIM</TD><TD>08A</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-02-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DSN-1</TD><TD>08B</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DI (Flyby) Fl</TD><TD>08C</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>ARTEMIS (SIM)</TD><TD>08D</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-02-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>ARTEMIS</TD><TD>08E</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-02-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>TRACE</TD><TD>08F</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1995-02-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-A</TD><TD>090</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-B</TD><TD>091</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-C</TD><TD>092</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-D</TD><TD>093</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-Spare</TD><TD>094</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-A Sim</TD><TD>095</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Cluster-B Sim</TD><TD>096</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1996-12-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROSETTA</TD><TD>097</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-01-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROSETTA (SIM)</TD><TD>098</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-02-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>WIRE</TD><TD>099</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1995-10-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EOS-PM</TD><TD>09A</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>1999-07-27</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ST5-3</TD><TD>09B</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-05-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ST3COMB-T</TD><TD>09C</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NPP</TD><TD>09D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2002-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MSL SIM</TD><TD>09E</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EUROPA ORB. Flight</TD><TD>09F</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUROPA-ORBIT,SIM</TD><TD>0A0</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTI</TD><TD>0A1</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-01-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MTI</TD><TD>0A2</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1996-01-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SORCE</TD><TD>0A3</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-02-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ATLANTIC BIRD 1</TD><TD>0A4</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-02-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MAP</TD><TD>0A5</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1998-08-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LRO</TD><TD>0A5</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-02-03</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IMAGE</TD><TD>0A6</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-08-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HESSI</TD><TD>0A7</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GLORY</TD><TD>0A8</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EOS-AM-1(CTIU-1)</TD><TD>0A9</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-02-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EOS-AM-1(CTIU-2)</TD><TD>0AA</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-02-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DI (Flyby) Sim</TD><TD>0AB</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>ST3COMB-F</TD><TD>0AC</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOTBIRD7</TD><TD>0AD</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLUTO-KEIPER</TD><TD>0AE</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLUTO-KEIPER,SIM</TD><TD>0AF</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SAMPEX</TD><TD>0B0</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1992-06-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRAIL-A</TD><TD>0B1</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-10-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SAX,Sim</TD><TD>0B2</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-08-31</TD><TD></TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>FAST</TD><TD>0B3</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1992-12-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NUSTAR</TD><TD>0B4</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-06-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRAIL-B</TD><TD>0B5</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-10-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SWAS</TD><TD>0B6</TD><TD>James N. Scott</TD><TD>NASA</TD><TD>US</TD><TD>1993-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HUYGENS</TD><TD>0B7</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1993-02-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HUYGENS</TD><TD>0B8</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1993-02-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HUYGENS</TD><TD>0B9</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1993-04-28</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GOSAT</TD><TD>0BA</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2006-01-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SOLAR PROBE</TD><TD>0BB</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NI-ALPHA 310</TD><TD>0BC</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SOLARPROBE, SIM</TD><TD>0BD</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPACE INTFER</TD><TD>0BE</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPACE INTFER,SIM</TD><TD>0BF</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SUPERBIRD 7</TD><TD>0C0</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2006-03-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>XMM</TD><TD>0C1</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-09-19</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>XMM(SIM)</TD><TD>0C2</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-09-19</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>ASTRA 1K</TD><TD>0C3</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-02-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NEAR</TD><TD>0C4</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>OERSTED</TD><TD>0C5</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1993-11-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>OERSTED-SIM</TD><TD>0C6</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1993-11-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DI-IMPACTOR</TD><TD>0C7</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CONTOUR</TD><TD>0C8</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RADARSAT</TD><TD>0C9</TD><TD>W. E. Threinen</TD><TD>CSA</TD><TD>CA</TD><TD>1990-08-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MAVEN</TD><TD>0CA</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2009-07-15</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DAWN Fl</TD><TD>0CB</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2003-06-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EOS-AURA</TD><TD>0CC</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ST3COLL-F</TD><TD>0CD</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NI-ALPHA 359</TD><TD>0CE</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ST3COLL-T</TD><TD>0CF</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MRO,Sim</TD><TD>0D0</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2002-08-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SNOE</TD><TD>0D1</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SIRIUS 2</TD><TD>0D2</TD><TD>L. Jonasson</TD><TD>SSC</TD><TD>SE</TD><TD>2012-03-06</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SIRIUS2(SIM)</TD><TD>0D3</TD><TD>L. Jonasson</TD><TD>SSC</TD><TD>SE</TD><TD>2012-03-06</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>INTELSAT K-TV</TD><TD>0D4</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-10-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GALEX</TD><TD>0D4</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>1999-08-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CORIOLIS</TD><TD>0D5</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-09-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ASTRA 1K(SIM)</TD><TD>0D6</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-02-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PICARD</TD><TD>0D7</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-08-08</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DEMETER</TD><TD>0D8</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PIC+DEM_SIM</TD><TD>0D9</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-08-08</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOTBIRD 6</TD><TD>0DA</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-03-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NEW BIRD</TD><TD>0DB</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-03-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOMPSAT-2</TD><TD>0DC</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2000-05-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>INMARSAT 4F1</TD><TD>0DD</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>INMARSAT 4F2</TD><TD>0DE</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>INMARSAT 4F3</TD><TD>0DF</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ST5-1</TD><TD>0E0</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 2(SIM)</TD><TD>0E1</TD><TD>Erhard Jabs</TD><TD>ESA</TD><TD>EU</TD><TD>1997-07-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPIRALE 2</TD><TD>0E2</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KEPLER-Fl</TD><TD>0E3</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2002-12-13</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPIRALE-Sim</TD><TD>0E4</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STELLATsim</TD><TD>0E5</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-10-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KEPLER-Sim</TD><TD>0E6</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2002-12-13</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DSN-1</TD><TD>0E7</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ETS-VIII</TD><TD>0E8</TD><TD>Tsukasa Mito</TD><TD>NASDA</TD><TD>JP</TD><TD>1997-09-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>STELLATfl</TD><TD>0E9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-10-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STEREO-AHEAD(2)</TD><TD>0EA</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STEREO-BEHIND(2)</TD><TD>0EB</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MESSENGER</TD><TD>0EC</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SCISAT</TD><TD>0ED</TD><TD>A. Bastikar</TD><TD>CSA</TD><TD>CA</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SMART 1</TD><TD>0EE</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KATE</TD><TD>0EF</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOT BIRD 2</TD><TD>0F0</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HOT BIRD 3</TD><TD>0F1</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HOT BIRD 4</TD><TD>0F2</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HOTBIRD (SW SIM)</TD><TD>0F3</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>HOTBIRD (HW SIM)</TD><TD>0F4</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1995-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>DAWN Sim</TD><TD>0F5</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2003-06-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ST-2</TD><TD>0F6</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2009-01-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ROCSAT-2</TD><TD>0F7</TD><TD>G-S. Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2001-05-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SYRACUSE-3B</TD><TD>0F7</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-06-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTSAT-2</TD><TD>0F8</TD><TD>Ryuichi Nagashima</TD><TD>NASDA</TD><TD>JP</TD><TD>2002-07-23</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>CRYOSAT X-band</TD><TD>0F9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CRYOSAT</TD><TD>0FA</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2000-08-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SWIFT</TD><TD>0FB</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2000-10-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MERS-1-Sim</TD><TD>0FC</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MERS-1-Fl</TD><TD>0FD</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MERS-2-Fl</TD><TD>0FE</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MERS-2-Sim</TD><TD>0FF</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EO-1</TD><TD>101</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1997-12-07</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ASNARO</TD><TD>102</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-08-06</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>PROCYON</TD><TD>103</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-11-26</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRIS</TD><TD>104</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2010-11-02</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EDRS-C</TD><TD>105</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2014-01-30</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRO-H</TD><TD>110</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-11-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>QZS-1</TD><TD>111</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-05-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLANET-C</TD><TD>114</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-11-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DSN-2</TD><TD>11B</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-10-03</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ACYGNUS (COTS)</TD><TD>11C</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2009-11-20</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>DSN-2</TD><TD>11F</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-12-09</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>COSMO-SkyMed4</TD><TD>120</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-03-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>COSMO-SkyMed2</TD><TD>121</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-03-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRACE-A</TD><TD>124</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-26</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GRACE-B</TD><TD>125</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-26</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GPM</TD><TD>128</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SPRINT-A</TD><TD>130</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-10-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MMS 1</TD><TD>131</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MMS 2</TD><TD>132</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MMS 3</TD><TD>133</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MMS 4</TD><TD>134</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>LADEE</TD><TD>135</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-03-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EXPRESS-AM4</TD><TD>13C</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2012-02-08</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>MSG-1</TD><TD>141</TD><TD>R. Wolf</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>1996-02-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MSG-2</TD><TD>142</TD><TD>R. Wolf</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>1996-02-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MSG-3</TD><TD>143</TD><TD>R. Wolf</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>1996-02-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MSG-4</TD><TD>144</TD><TD>R. Wolf</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>1996-02-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ORB-5</TD><TD>145</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ORB-6</TD><TD>146</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ORB-7</TD><TD>147</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ORB-8</TD><TD>148</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>JCSat-14</TD><TD>14C</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-10-23</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SELENE</TD><TD>14F</TD><TD>Ryuichi Nagashima</TD><TD>NASDA</TD><TD>JP</TD><TD>2002-03-04</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>THEMIS SIM</TD><TD>150</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEMIS A</TD><TD>151</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEMIS B</TD><TD>152</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEMIS C</TD><TD>153</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEMIS D</TD><TD>154</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEMIS E</TD><TD>155</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEMIS Spare</TD><TD>156</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-09-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RASCOMQAF-1</TD><TD>157</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-10-27</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RSACOMQAF-1(Sim)</TD><TD>158</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-10-27</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AGILE</TD><TD>159</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2003-11-19</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TURKSAT-4A</TD><TD>15A</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-31</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EXPRESS-AM4R</TD><TD>15B</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2012-02-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TURKSAT-4B</TD><TD>15C</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-31</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>KOREASAT-5</TD><TD>160</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2003-11-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOREASAT-5,Sim</TD><TD>161</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2003-11-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 4A</TD><TD>162</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-12-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 4B</TD><TD>163</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-12-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SKYNET 5A</TD><TD>164</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-12-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SKYNET 5B</TD><TD>165</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-12-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOTBIRD 8</TD><TD>166</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-12-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT-5</TD><TD>168</TD><TD>S.K. Kang</TD><TD>NSPO</TD><TD>TW</TD><TD>2010-12-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>QUESS</TD><TD>16E</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CINEMA</TD><TD>170</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-01-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>XTE</TD><TD>173</TD><TD>James N. Scott</TD><TD>NASA</TD><TD>US</TD><TD>1993-12-30</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GeoEye-2</TD><TD>178</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-11-02</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>GeoEye-3</TD><TD>179</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-11-02</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>FY-4</TD><TD>17F</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-06-24</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV/EM</TD><TD>180</TD><TD>Akio Yamamoto</TD><TD>JAXA OSFO</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>SERVIS 2</TD><TD>181</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-30</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GOSAT-2</TD><TD>182</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-08-05</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>GCOM-W1</TD><TD>187</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>GCOM-C1</TD><TD>188</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-DM</TD><TD>190</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-01</TD><TD>191</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-02</TD><TD>192</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-03</TD><TD>193</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-04</TD><TD>194</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-05</TD><TD>195</TD><TD>Akio Yamamoto</TD><TD>JAXA OSFO</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-06</TD><TD>196</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-07</TD><TD>197</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-08</TD><TD>198</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HTV-09</TD><TD>199</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>JPSS-1</TD><TD>19F</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-09-06</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>CHINASAT9</TD><TD>1A1</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2005-07-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRA-1M</TD><TD>1A2</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2005-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CHINASAT9sim</TD><TD>1A4</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2005-07-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ESSAIM-A</TD><TD>1A5</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ESSAIM-B</TD><TD>1A6</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ESSAIM-C</TD><TD>1A7</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ESSAIM-D</TD><TD>1A9</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ESSAIM-SIM</TD><TD>1AA</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PARASOL</TD><TD>1AB</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-03-12</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MICROSCOPE</TD><TD>1AC</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SMOS</TD><TD>1AD</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SMOS-Sim</TD><TD>1AE</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JASON-2</TD><TD>1AF</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JASON-2,Sim</TD><TD>1B1</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Roue-I-A</TD><TD>1B2</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Roue-I-B</TD><TD>1B3</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRA-2G</TD><TD>1B4</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-05-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROUE-I-D</TD><TD>1B5</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MEGHATROPIQUEs</TD><TD>1B6</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MEGHATROPIQUES_Sim</TD><TD>1B7</TD><TD>Roland Ivarnez</TD><TD>CNES</TD><TD>FR</TD><TD>2001-06-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE1i</TD><TD>1B8</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-07-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE1i-Sim</TD><TD>1B9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-07-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ERG</TD><TD>1BE</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-08-12</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>STRV-1C</TD><TD>1C0</TD><TD>J. Zhou</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2003-01-15</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GE2i</TD><TD>1C1</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-07-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE3i</TD><TD>1C2</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-07-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE4i</TD><TD>1C3</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-07-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SERVIS1-ATTC</TD><TD>1C4</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-07-27</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SERVIS1</TD><TD>1C5</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-07-27</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SERVIS1</TD><TD>1C6</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-07-27</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>W3A-1</TD><TD>1C9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ICESAT</TD><TD>1CE</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2010-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>W3A-2</TD><TD>1D1</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE2i(Sim)</TD><TD>1D2</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE3i(Sim)</TD><TD>1D3</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE4i(Sim)</TD><TD>1D6</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRA-2F</TD><TD>1D7</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-05-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE2E</TD><TD>1D8</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-01-07</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ASTRA-2E</TD><TD>1D9</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-05-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GE3E</TD><TD>1DA</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-01-07</TD><TD>RP</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SYRACUS3 (Fl)</TD><TD>1DB</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SYRACUS3</TD><TD>1DD</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2001-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RADARSAT 2A</TD><TD>1DE</TD><TD>A. Bastikar</TD><TD>CSA</TD><TD>CA</TD><TD>2002-02-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RADARSAT 2B</TD><TD>1DF</TD><TD>A. Bastikar</TD><TD>CSA</TD><TD>CA</TD><TD>2002-02-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ABRIXAS</TD><TD>1E1</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2014-03-27</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>CHAMP</TD><TD>1E2</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2014-03-27</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>TIMED</TD><TD>1E3</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1997-09-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ABRIXAS(Flt)</TD><TD>1E4</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2014-03-27</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>PROBA-2</TD><TD>1E5</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HERSCHEL</TD><TD>1E6</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLANCK</TD><TD>1E9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HPAVM</TD><TD>1EA</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HERSCHEL,sim</TD><TD>1EB</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLANCK,sim</TD><TD>1EC</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ICON</TD><TD>1ED</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-11-16</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>GOCE-FM</TD><TD>1F3</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-04-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOCE-EM</TD><TD>1F4</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-04-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOCE-SIM</TD><TD>1F5</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-04-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STAR ONE C1</TD><TD>1F6</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STAR ONE C1 (Sim)</TD><TD>1F7</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-06-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CRYOSAT (Sim)</TD><TD>1F9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LDCM</TD><TD>1FA</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-07-03</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>Quasi-Zenith Satellite 2</TD><TD>1FC</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-06-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>Quasi-Zenith Satellite 3</TD><TD>1FD</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-06-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>Quasi-Zenith Satellite 4</TD><TD>1FE</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-06-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>AEOLUS-X</TD><TD>200</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2005-06-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AEOLUS-S Sim</TD><TD>201</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2005-06-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSTB-V2</TD><TD>202</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2004-04-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT299</TD><TD>203</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLEIADES HR-1A</TD><TD>204</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2004-07-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLEIADES HR-1A Sim</TD><TD>205</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2004-07-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>PLEIADES HR-1B</TD><TD>206</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2004-07-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLEIADES HR-1B Sim</TD><TD>207</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2004-07-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD></TD></TR>
+<TR><TD>HOTBIRD7A</TD><TD>208</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2004-08-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GALAXY 17</TD><TD>209</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2004-09-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TET-1-FM</TD><TD>20A</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2009-02-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TET-1-EM</TD><TD>20B</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2009-02-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JASON-3</TD><TD>20C</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JASON-3sim</TD><TD>20D</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TARANIS</TD><TD>20E</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 5C</TD><TD>20F</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GALAXY 17 Sim</TD><TD>210</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2004-09-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ANIK-F3</TD><TD>211</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2004-09-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THEOS</TD><TD>212</TD><TD>Chanchai Peanvijarnpong</TD><TD>GISTDA</TD><TD>TH</TD><TD>2004-12-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STAR ONE C-2</TD><TD>213</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2005-04-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SKYNET 5C</TD><TD>214</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2005-05-04</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CHANDRAYAAN-1</TD><TD>215</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2010-02-12</TD><TD></TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>W3B</TD><TD>216</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-12-22</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PAZ</TD><TD>217</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2009-03-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMOS5</TD><TD>218</TD><TD>Anatoly Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2009-04-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AB7</TD><TD>219</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-06-02</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PROBA-V</TD><TD>21A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-06-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPOT6 (sc)</TD><TD>21B</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-07-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPOT7 (sc)</TD><TD>21C</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-07-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CHIBIS-M</TD><TD>21D</TD><TD>R. Nazirov</TD><TD>IKI</TD><TD>RU</TD><TD>2009-07-20</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ALOS-2</TD><TD>21E</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2009-09-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ARSAT-1</TD><TD>21F</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2009-11-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W3C</TD><TD>220</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EarthCare (EFM)</TD><TD>221</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EarthCare (EQM)</TD><TD>222</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EarthCare (FM model)</TD><TD>223</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EarthCare (FM Prime)</TD><TD>224</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EnMAP(Prim)</TD><TD>225</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2009-12-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EnMAP(Back)</TD><TD>226</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2009-12-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EarthCare (STB)</TD><TD>227</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SARAL</TD><TD>228</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2009-12-10</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-1 (EFM)</TD><TD>229</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-1 (EQM)</TD><TD>22A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-1 (FM A model)</TD><TD>22B</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-1 (FM A Prime)</TD><TD>22C</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-1 (FM B model)</TD><TD>22D</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-1 (FM B Prime)</TD><TD>22E</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-1 (STB)</TD><TD>22F</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ADS-1B</TD><TD>230</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-01-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-2 (EFM)</TD><TD>231</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-2 (EQM)</TD><TD>232</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-2 (FM A model)</TD><TD>233</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-2 (FM A Prime)</TD><TD>234</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-2 (FM B model)</TD><TD>235</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-2 (FM B Prime)</TD><TD>236</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-2 (STB)</TD><TD>237</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W6A</TD><TD>238</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-3 (EFM)</TD><TD>239</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-3 (EQM)</TD><TD>23A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-3 (FM A model)</TD><TD>23B</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-3 (FM A Prime)</TD><TD>23C</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-3 (FM B model)</TD><TD>23D</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sentinel-3 (FM B Prime)</TD><TD>23E</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-18</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-3 (STB)</TD><TD>23F</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2009-09-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>APSTAR-7</TD><TD>240</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2009-12-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>APSTAR-7</TD><TD>241</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2009-12-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TELKOM-3</TD><TD>242</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2010-02-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CHANDRAYAAN-2</TD><TD>243</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2010-02-24</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROVER-1</TD><TD>244</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2010-02-24</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROVER-2</TD><TD>245</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2010-02-24</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SKYNET-5D</TD><TD>246</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-06-15</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W-5A</TD><TD>247</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-06-15</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOMPSAT-3A</TD><TD>248</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2010-07-22</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>KOMPSAT-3A</TD><TD>249</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2010-07-22</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>IXV</TD><TD>24A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SES-6</TD><TD>24B</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>APSTAR-7B/CS12</TD><TD>24C</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2010-11-15</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>APSTAR-7B/CS12</TD><TD>24D</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2010-11-15</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUROBIRD-2A</TD><TD>24E</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-12-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>DZZ-HR</TD><TD>24F</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-01-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-R(A)</TD><TD>250</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>YAMAL-402</TD><TD>251</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2011-01-19</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>INGENIO FM</TD><TD>252</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2011-02-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>INGENIO EQM</TD><TD>253</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2011-02-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SICRAL 2</TD><TD>254</TD><TD>M. Calabrese</TD><TD>ASI</TD><TD>IT</TD><TD>2011-02-22</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HAYABUSA 2</TD><TD>255</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-04-27</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>RCM-1</TD><TD>256</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2010-05-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RCM-2</TD><TD>257</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2010-05-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RCM-3</TD><TD>258</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2010-05-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>VNREDSAT-1</TD><TD>259</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-05-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W3D</TD><TD>25A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2011-06-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>BIROS</TD><TD>25B</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2011-06-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>BIROS-EM</TD><TD>25C</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2011-06-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FLYINGLAPTOP</TD><TD>25D</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2011-08-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMAZONIA 1</TD><TD>25E</TD><TD>Eduardo Whitaker Bergamini</TD><TD>INPE</TD><TD>BR</TD><TD>2011-08-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-R(B)</TD><TD>25F</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>OPTUS-10</TD><TD>260</TD><TD>W. Horne</TD><TD>NASA</TD><TD>US</TD><TD>2011-09-02</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GSAT201</TD><TD>261</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT202</TD><TD>262</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT203</TD><TD>263</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT204</TD><TD>264</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT205</TD><TD>265</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT206</TD><TD>266</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT207</TD><TD>267</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT208</TD><TD>268</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT209</TD><TD>269</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT210</TD><TD>26A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT211</TD><TD>26B</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT212</TD><TD>26C</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT213</TD><TD>26D</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT214</TD><TD>26E</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Himawari-8</TD><TD>26F</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-10-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>Himawari-9</TD><TD>270</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-10-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>CSO-1-S</TD><TD>271</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MEASAT-3B</TD><TD>272</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>E3B</TD><TD>273</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2011-10-18</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KAZSAT-3</TD><TD>274</TD><TD>Kaziev Baglan Nurlanovich</TD><TD>NSARK</TD><TD>KZ</TD><TD>2011-11-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATHENAFIDUS</TD><TD>275</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-11-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ATHENAF-sim</TD><TD>276</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-11-28</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CSO-1-Ssim</TD><TD>277</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>M3MSAT</TD><TD>278</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2011-12-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DIRECTV-15</TD><TD>279</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-01-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRNSS-1A</TD><TD>27A</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRNSS-1B</TD><TD>27B</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRNSS-1C</TD><TD>27C</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRNSS-1D</TD><TD>27D</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRNSS-1E</TD><TD>27E</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRNSS-1F</TD><TD>27F</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRNSS-1G</TD><TD>280</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2011-11-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>O3BMODEL 9</TD><TD>281</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-01-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-S(A)</TD><TD>282</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3BMODEL10</TD><TD>283</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-01-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3BMODEL11</TD><TD>284</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-01-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3BMODEL12</TD><TD>285</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-01-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SGDC</TD><TD>286</TD><TD>Eduardo Whitaker Bergamini</TD><TD>INPE</TD><TD>BR</TD><TD>2014-06-09</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EXPRESS-AT2</TD><TD>287</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2012-01-31</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CSO-3-S</TD><TD>288</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EXPRESS-AM7</TD><TD>289</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2012-02-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SOLO</TD><TD>28A</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-04-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CSO-3-Ssim</TD><TD>28B</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LYBID</TD><TD>28C</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2012-04-18</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-S(B)</TD><TD>28D</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EB9B</TD><TD>28E</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2012-05-21</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EXOMARS2016O</TD><TD>28F</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-06-21</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HODOYOSHI-3</TD><TD>290</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>CSO-2-S</TD><TD>291</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HODOYOSHI3</TD><TD>292</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HODOYOSHI4</TD><TD>293</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>HODOYOSHI4</TD><TD>294</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>UNIFORM-1</TD><TD>295</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EXPRESS-AT1</TD><TD>296</TD><TD>A. Shilov</TD><TD>RFSA</TD><TD>RU</TD><TD>2012-01-31</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CSO-2-S</TD><TD>297</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>UNIFORM-1</TD><TD>298</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>AMAZONIA1B</TD><TD>299</TD><TD>Eduardo Whitaker Bergamini</TD><TD>INPE</TD><TD>BR</TD><TD>2012-07-20</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MOM</TD><TD>29A</TD><TD>L. Srinivasan</TD><TD>ISRO</TD><TD>IN</TD><TD>2012-08-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTG-I1</TD><TD>29B</TD><TD>M. Dreis</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>2012-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTG-S1</TD><TD>29C</TD><TD>M. Dreis</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>2012-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTG-I2</TD><TD>29D</TD><TD>M. Dreis</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>2012-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTG-I3</TD><TD>29E</TD><TD>M. Dreis</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>2012-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTG-S2</TD><TD>29F</TD><TD>M. Dreis</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>2012-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTG-I4</TD><TD>2A0</TD><TD>M. Dreis</TD><TD>EUMETSAT</TD><TD>EU</TD><TD>2012-11-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CHINASAT 6B</TD><TD>2A1</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2005-11-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CHINASAT 6B,sim</TD><TD>2A2</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2005-11-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CASSIOPE</TD><TD>2A3</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2005-12-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARSAT-2</TD><TD>2A4</TD><TD>William Horne</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-03-31</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>T-1</TD><TD>2A5</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-08-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>X-SAT</TD><TD>2A6</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-03-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IBEX</TD><TD>2A7</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-08-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ST8</TD><TD>2A8</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-10-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMOS 6</TD><TD>2A9</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-11-07</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PRISMA</TD><TD>2AA</TD><TD>Lennart Marcus</TD><TD>SSC</TD><TD>SE</TD><TD>2006-07-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TURKSAT 3A</TD><TD>2AB</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-04-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TURKSAT3A,sim</TD><TD>2AC</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-04-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMOS 3</TD><TD>2AD</TD><TD>Moshe Galil</TD><TD>ISRAEL MOC</TD><TD>IL</TD><TD>2006-04-28</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRA-5B</TD><TD>2AE</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2010-05-11</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CIEL-2</TD><TD>2AF</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-06-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 6B</TD><TD>2B0</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2012-11-13</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TURKMENISTANNSSC</TD><TD>2B1</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2013-01-21</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ABS-2</TD><TD>2B2</TD><TD>W. Horne</TD><TD>NASA</TD><TD>US</TD><TD>2011-02-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GRACE-FO-A</TD><TD>2B3</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2013-02-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRACE-FO-B</TD><TD>2B4</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2013-02-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRACE-FO -sim</TD><TD>2B5</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2013-02-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-U(A)</TD><TD>2B6</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUTELSAT 8WB</TD><TD>2B7</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2013-03-21</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CSO-Stests</TD><TD>2B8</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-U(B)</TD><TD>2B9</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>STAR ONE C2(Sim)</TD><TD>2BA</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-02-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SICRAL 1B</TD><TD>2BB</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2006-02-02</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NIMIQ-4</TD><TD>2BC</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-03-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SWARM-C</TD><TD>2BD</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2011-07-18</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SWARM-A</TD><TD>2BE</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2011-07-18</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SWARM-B</TD><TD>2BF</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2011-07-18</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0220</TD><TD>2C0</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0221</TD><TD>2C1</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0222</TD><TD>2C2</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMU 1</TD><TD>2C3</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2013-04-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SKYBRASIL-1</TD><TD>2C4</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2013-05-29</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0215</TD><TD>2C5</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0216</TD><TD>2C6</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0217</TD><TD>2C7</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0218</TD><TD>2C8</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0219</TD><TD>2C9</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-09-04</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SWARM-EM</TD><TD>2CA</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-03-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DSN-1</TD><TD>2CB</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-14</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>DSN-1</TD><TD>2CC</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-28</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>POPSAT-HIP1</TD><TD>2CD</TD><TD>John G. Garrett</TD><TD></TD><TD></TD><TD>2013-07-10</TD><TD></TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ScatSat-1</TD><TD>2CE</TD><TD>Mr. L. Srinivasan</TD><TD>ISTRAC</TD><TD>IN</TD><TD>2014-07-04</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TELSTAR 12N</TD><TD>2CF</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2013-08-30</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Jupiter-2</TD><TD>2D0</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-03-10</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SENTINEL-5 PRECU</TD><TD>2D1</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-12-06</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SES-10</TD><TD>2D2</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-02-26</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TESS</TD><TD>2D3</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>EUTELSAT 65 WEST A</TD><TD>2D4</TD><TD>Mr. Manfred Lugert</TD><TD>ESA</TD><TD>DE</TD><TD>2014-07-08</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ASTRA 1N</TD><TD>2D5</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2008-09-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SENTINEL-5 P-sim</TD><TD>2D6</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2012-12-06</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOREASAT-5A</TD><TD>2D7</TD><TD>Dr. Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2014-08-04</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOREASAT-7</TD><TD>2D8</TD><TD>Dr. Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2014-08-04</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JCSat-15</TD><TD>2D9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-08-26</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ISDLA-1</TD><TD>2DA</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-04-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>JCSat-16</TD><TD>2DB</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-08-27</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ECHOSTAR-105</TD><TD>2DC</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-08</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MN35-A</TD><TD>2DD</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-11</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MN35-B (S-band)</TD><TD>2DE</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-12</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EUTELSAT-172B</TD><TD>2DF</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-16</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SES-12</TD><TD>2E0</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-02</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EMISAT</TD><TD>2E1</TD><TD>Mr. L. Srinivasan</TD><TD>ISTRAC</TD><TD>IN</TD><TD>2014-09-26</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-T(A)</TD><TD>2E4</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOES-T(B)</TD><TD>2EB</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-10-05</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ECHOSTAR-18</TD><TD>2EC</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-10-17</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>APSTAR6</TD><TD>2F1</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>APSTARS6(Sim)</TD><TD>2F2</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMAZONAS-A</TD><TD>2F3</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMAZONAS-B</TD><TD>2F4</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-11-30</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TERRASAR-X</TD><TD>2F5</TD><TD>Manfred Drexler</TD><TD>DLR</TD><TD>DE</TD><TD>2003-07-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TER*-X Sim</TD><TD>2F6</TD><TD>Manfred Drexler</TD><TD>DLR</TD><TD>DE</TD><TD>2003-07-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SYRACUSE-3B,sim</TD><TD>2F7</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EDDINGTON</TD><TD>2F8</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-07-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CRYOSAT(RF-SC)</TD><TD>2F9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2002-07-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FASTSAT</TD><TD>2FA</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2009-02-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TANDEM-X</TD><TD>301</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2006-12-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TANDEM-Xsim</TD><TD>302</TD><TD>Martin Pilgram</TD><TD>DLR</TD><TD>DE</TD><TD>2006-12-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LISA-PF</TD><TD>303</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-12-12</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOT BIRD 10</TD><TD>304</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-12-31</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRA 3B</TD><TD>305</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2007-03-17</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W2A</TD><TD>306</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2007-06-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W7</TD><TD>307</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2007-06-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>AMAZONAS2</TD><TD>308</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2007-06-05</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>COMSATBw1</TD><TD>309</TD><TD>Martin Pilgram</TD><TD>DLR RB-OD</TD><TD>DE</TD><TD>2007-07-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>COMSATBw2</TD><TD>310</TD><TD>Martin Pilgram</TD><TD>DLR RB-OD</TD><TD>DE</TD><TD>2007-07-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HYLAS</TD><TD>311</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-08-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 5A</TD><TD>312</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT 5B</TD><TD>313</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GAIA(AVM)sim(</TD><TD>314</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GAIA</TD><TD>315</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0104</TD><TD>316</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THOR 6 sim</TD><TD>317</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>THOR 6</TD><TD>318</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2007-10-26</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NBNCO-1A</TD><TD>31A</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-07-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NBNCO-1B</TD><TD>31B</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-07-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>PALAPA-D</TD><TD>320</TD><TD>Ph. Boiroux</TD><TD>ESA</TD><TD>EU</TD><TD>2008-01-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PALAPA-Dsim</TD><TD>321</TD><TD>Ph. Boiroux</TD><TD>ESA</TD><TD>EU</TD><TD>2008-01-15</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOMPSAT-5</TD><TD>322</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2008-01-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>PACE-NCKU</TD><TD>323</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2013-06-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KOMPSAT-3</TD><TD>324</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2008-01-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>KOMPSAT-3</TD><TD>326</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2008-01-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>YAHSAT-Y1A</TD><TD>327</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-03-10</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KaSAT</TD><TD>328</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-03-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NEOSsat</TD><TD>329</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2008-03-14</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>BEPICOLOMBO</TD><TD>330</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-04-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>BEPICOLOMBO</TD><TD>331</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-04-16</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>YAHSAT-Y1B</TD><TD>332</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-05-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>YAHSAT-Y1B</TD><TD>333</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-07-09</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ALPHASAT</TD><TD>334</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-09-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ALPHASAT-sim</TD><TD>335</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-09-22</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>YAHSAT-Y1A</TD><TD>336</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-10-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IKAROS</TD><TD>337</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>MMO</TD><TD>338</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>ARGOS on SARAL</TD><TD>339</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-08-08</TD><TD>SANA</TD><TD>1</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>AMOS4</TD><TD>340</TD><TD>Maoz Omer</TD><TD>ISRAEL AI</TD><TD>IL</TD><TD>2008-11-11</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SSOT</TD><TD>341</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2008-11-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RQ1R</TD><TD>342</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2008-11-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RQ1R sim</TD><TD>343</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2008-11-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NILESAT</TD><TD>344</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2008-11-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NILESATsim</TD><TD>345</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2008-11-25</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SOCRATES</TD><TD>350</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-01-08</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRIDIUM-101</TD><TD>351</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-102</TD><TD>352</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-103</TD><TD>353</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-104</TD><TD>354</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-105</TD><TD>355</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-106</TD><TD>356</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-107</TD><TD>357</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-108</TD><TD>358</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-109</TD><TD>359</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-03</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-110</TD><TD>360</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-111</TD><TD>361</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-112</TD><TD>362</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-113</TD><TD>363</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-114</TD><TD>364</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-115</TD><TD>365</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>YAHSAT-Y1A</TD><TD>366</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2008-10-07</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-117</TD><TD>367</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-118</TD><TD>368</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-119</TD><TD>369</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-116</TD><TD>36A</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT7 T1</TD><TD>371</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2014-02-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT7 T2</TD><TD>372</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2014-02-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT7 T3</TD><TD>373</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2014-02-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT7 T4</TD><TD>374</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2014-02-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT7 T5</TD><TD>375</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2014-02-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>FORMOSAT7 T6</TD><TD>376</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2014-02-19</TD><TD>SANA</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SDS-4</TD><TD>378</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-03-16</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC</TD></TR>
+<TR><TD>IRIDIUM-120</TD><TD>380</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-121</TD><TD>381</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-122</TD><TD>382</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-123</TD><TD>383</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-124</TD><TD>384</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-125</TD><TD>385</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-126</TD><TD>386</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-127</TD><TD>387</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-128</TD><TD>388</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-129</TD><TD>389</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-130</TD><TD>390</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-131</TD><TD>391</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-132</TD><TD>392</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-133</TD><TD>393</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-134</TD><TD>394</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-135</TD><TD>395</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-136</TD><TD>396</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-137</TD><TD>397</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-138</TD><TD>398</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-139</TD><TD>399</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-04-23</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CIEL-2Sim</TD><TD>3A1</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-06-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>COMS</TD><TD>3A2</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2006-06-29</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>HOTBIRD 9</TD><TD>3A3</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-07-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0199</TD><TD>3A4</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0101</TD><TD>3A5</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0102</TD><TD>3A6</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GSAT0103</TD><TD>3A7</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-09-14</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>W2M</TD><TD>3A8</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-08-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ARABSAT4R</TD><TD>3A9</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2006-08-06</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ALSAT-2A</TD><TD>3AA</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2006-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ALSAT-2B</TD><TD>3AB</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2006-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ELISA-A</TD><TD>3AC</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2006-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ELISA-D</TD><TD>3AD</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2006-10-20</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ELISA-B</TD><TD>3AE</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2006-10-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ELISA-C</TD><TD>3AF</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2006-10-24</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model1</TD><TD>3B1</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model2</TD><TD>3B2</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model3</TD><TD>3B3</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model4</TD><TD>3B4</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model5</TD><TD>3B5</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model6</TD><TD>3B6</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model7</TD><TD>3B7</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>O3B model8</TD><TD>3B8</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-10-12</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GEMS</TD><TD>3B9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-03-19</TD><TD>JGG</TD><TD>1</TD><TD>Returned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-140</TD><TD>3C0</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-141</TD><TD>3C1</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-142</TD><TD>3C2</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-143</TD><TD>3C3</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-144</TD><TD>3C4</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-145</TD><TD>3C5</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-146</TD><TD>3C6</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-147</TD><TD>3C7</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-148</TD><TD>3C8</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-149</TD><TD>3C9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-150</TD><TD>3D0</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-151</TD><TD>3D1</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-152</TD><TD>3D2</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-153</TD><TD>3D3</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-154</TD><TD>3D4</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-155</TD><TD>3D5</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-156</TD><TD>3D6</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-157</TD><TD>3D7</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-158</TD><TD>3D8</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-159</TD><TD>3D9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-05-01</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ISDLA-2</TD><TD>3DA</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-04-09</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>IRIDIUM-160</TD><TD>3E0</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-161</TD><TD>3E1</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-162</TD><TD>3E2</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-163</TD><TD>3E3</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-164</TD><TD>3E4</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-165</TD><TD>3E5</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-166</TD><TD>3E6</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-167</TD><TD>3E7</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-168</TD><TD>3E8</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-169</TD><TD>3E9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-170</TD><TD>3EA</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-171</TD><TD>3EB</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IRIDIUM-172</TD><TD>3EC</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2013-06-26</TD><TD>JGG</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT3,Fl1</TD><TD>3F1</TD><TD>Guey-Shin Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2003-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT3,Fl2</TD><TD>3F2</TD><TD>G-S. Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2003-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT3,Fl3</TD><TD>3F3</TD><TD>G-S. Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2003-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT4,Fl4</TD><TD>3F4</TD><TD>G-S. Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2003-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT5,Fl5</TD><TD>3F5</TD><TD>G-S. Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2003-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT6,Fl6</TD><TD>3F6</TD><TD>G-S. Chang</TD><TD>NSPO</TD><TD>TW</TD><TD>2003-01-18</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>VENUS_EXPRS</TD><TD>3F7</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>2003-02-08</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ANIK-F1R</TD><TD>3F8</TD><TD>Nicolas Bobrinsky</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2003-04-25</TD><TD>RP</TD><TD>1</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TESS</TD><TD>101</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ASNARO</TD><TD>102</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-08-06</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GLOBE</TD><TD>103</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-09-16</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>IRIS</TD><TD>104</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2010-11-02</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ASTRO E2</TD><TD>105</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-09-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CHANDRA</TD><TD>106</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2004-11-17</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>WISE</TD><TD>107</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-11-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LUNAR-A</TD><TD>108</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-07-31</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>KOMPSAT-1</TD><TD>109</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>1996-06-05</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>FUSE</TD><TD>10A</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1996-06-24</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>METOP1 X-)</TD><TD>10B</TD><TD>Hans K. Uhrig</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>METOP2 -X)</TD><TD>10C</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>METOP3 -X)</TD><TD>10D</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>METOP-SIM (X-)</TD><TD>10E</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1996-07-01</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ISSA-JEM</TD><TD>10F</TD><TD>Tsukasa Mito</TD><TD>NASDA</TD><TD>JP</TD><TD>1997-05-03</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ASTRO-H</TD><TD>110</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-11-26</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>QZS-1</TD><TD>111</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-05-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>LCROSS</TD><TD>112</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2007-06-06</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLANET-C</TD><TD>113</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-11-14</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MPCV</TD><TD>114</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-05-30</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LANDSAT7</TD><TD>115</TD><TD>Joseph Deskevich</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-09-01</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KOMPSAT-5</TD><TD>116</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2008-01-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ISS-COF(Col.Or.F)</TD><TD>117</TD><TD>Nicolas Bobrinsky</TD><TD>ESA</TD><TD>EU</TD><TD>1998-07-14</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Sp.St.Freedom(ISS)</TD><TD>118</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1992-03-27</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TOMS-EP-1</TD><TD>119</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1992-06-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TOMS-EP-2</TD><TD>11A</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1992-06-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DSN-2</TD><TD>11B</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-10-03</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ACYGNUS</TD><TD>11C</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2009-11-20</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>METEOR-3M-1</TD><TD>11D</TD><TD>O.D. Sokolov</TD><TD>RSA</TD><TD>RU</TD><TD>1996-07-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ALOS-2</TD><TD>11E</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2009-09-03</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>DSN-2 (Mission)</TD><TD>11F</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-12-09</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>YH-1</TD><TD>120</TD><TD>Huixian Sun</TD><TD>CAS CSSAR</TD><TD>CN</TD><TD>2012-11-26</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SPOT-6 (Payload)</TD><TD>121</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-07-03</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KOMPSAT-3</TD><TD>122</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2008-01-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KOMPSAT-3</TD><TD>123</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2008-01-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GRACE-A</TD><TD>124</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-07</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GRACE-B</TD><TD>125</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-07</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>IKAROS</TD><TD>126</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MMO</TD><TD>127</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GPM</TD><TD>128</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ARGOS on SARAL</TD><TD>128</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2008-11-13</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SJ-10</TD><TD>129</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EOS-AM-1(TM)</TD><TD>12A</TD><TD>James N. Scott</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1994-02-02</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CYGNSS-3</TD><TD>12B</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CYGNSS-4</TD><TD>12C</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NPOESS C5</TD><TD>12D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MUSES-C</TD><TD>12E</TD><TD>Tsutomu Shigeta</TD><TD>ISAS JAXA</TD><TD>JP</TD><TD>2012-07-31</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD>TLM</TD></TR>
+<TR><TD>CYGNSS-5</TD><TD>12F</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPRINT-A</TD><TD>130</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-10-25</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MMS 1</TD><TD>131</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MMS 2</TD><TD>132</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MMS 3</TD><TD>133</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MMS 4</TD><TD>134</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2008-12-04</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>LADEE</TD><TD>135</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2009-10-28</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CYGNSS-6</TD><TD>136</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CYGNSS-7</TD><TD>137</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SLATS</TD><TD>138</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-18</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NEMO DOWN</TD><TD>139</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-04-11</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SOCRATES</TD><TD>13A</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-01-08</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ASTRO-F</TD><TD>13B</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-01</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>EXPRESS AM4</TD><TD>13C</TD><TD>A. Shilov</TD><TD>RFSA TSNIIMASH</TD><TD>RU</TD><TD>2009-04-17</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>JUNO</TD><TD>13D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-11-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>OCO-2</TD><TD>13E</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-02-23</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>JUNO,sim</TD><TD>13F</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-11-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>OSIRIS-REX</TD><TD>140</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-10-11</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SPOT-7 (Payload)</TD><TD>141</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-07-03</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-1 (EQM)</TD><TD>142</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-1 (FM-A Prime)</TD><TD>143</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-1 (FM-B Prime)</TD><TD>144</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ORB-5</TD><TD>145</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ORB-6</TD><TD>146</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ORB-7</TD><TD>147</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ORB-8</TD><TD>148</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2011-12-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CYGNSS-8</TD><TD>149</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MRO (Fl)</TD><TD>14A</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2003-02-12</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SDO</TD><TD>14B</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MSL</TD><TD>14C</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-10-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GLAST</TD><TD>14D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2003-08-09</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CE-5T1</TD><TD>14E</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ORBVIEW-5</TD><TD>14F</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-12-23</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SELENE</TD><TD>150</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2009-07-31</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>TOPSAT</TD><TD>151</TD><TD>P. Allan</TD><TD>RAL</TD><TD>UK</TD><TD>2002-03-09</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-2 (EQM)</TD><TD>152</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-2 (FM-A, Prime)</TD><TD>153</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-2 (FM-B Prime)</TD><TD>154</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KOMPSAT-3A</TD><TD>155</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2010-07-22</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>RCM-1</TD><TD>156</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2010-05-28</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>RCM-2</TD><TD>157</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2010-05-28</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>RCM-3</TD><TD>158</TD><TD>Leo Hartman</TD><TD>CSA</TD><TD>CA</TD><TD>2010-05-28</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HY-2</TD><TD>159</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2010-08-04</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>TURKSAT-4A</TD><TD>15A</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-31</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CEP-5</TD><TD>15B</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>TURKSAT-4B</TD><TD>15C</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-31</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NPOESS C6</TD><TD>15D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CEZ-5</TD><TD>15E</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>PLEIADES HR-1A</TD><TD>15F</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2005-05-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>DZZ-HR</TD><TD>160</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-01-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>INGENIO X-BAND</TD><TD>161</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2011-02-11</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HAYABUSA 2</TD><TD>162</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-04-27</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ALOS</TD><TD>163</TD><TD>Tsukasa Mito</TD><TD>NASDA</TD><TD>JP</TD><TD>2012-06-01</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Himawari-8</TD><TD>164</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-10-13</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Himawari-9</TD><TD>165</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-10-13</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CSO-1-X</TD><TD>166</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CEF-5</TD><TD>167</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ROCSAT-1</TD><TD>168</TD><TD>Shan Kuo Yang</TD><TD>NSPO</TD><TD>TW</TD><TD>2010-12-17</TD><TD></TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>XTE</TD><TD>169</TD><TD>James N. Scott</TD><TD>NASA</TD><TD>US</TD><TD>1993-11-19</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RBSP PROBE1</TD><TD>16A</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-03-31</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>RBSP PROBE2</TD><TD>16B</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-03-31</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CEG-5</TD><TD>16C</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SDS-4</TD><TD>16D</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2010-03-16</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>QUESS</TD><TD>16E</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PLEIADES HR-1B</TD><TD>16F</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2005-05-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SLS</TD><TD>170</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-12-06</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>USERS SEM</TD><TD>171</TD><TD>RP</TD><TD></TD><TD></TD><TD>1998-04-27</TD><TD></TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>USERS REM</TD><TD>172</TD><TD>RP</TD><TD></TD><TD></TD><TD>1998-04-27</TD><TD></TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>CEF-5T1</TD><TD>173</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-05-22</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ORBVIEW-3</TD><TD>174</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-03-01</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ORBVIEW-4</TD><TD>175</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-09-02</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>METEOR3/TOMS5</TD><TD>176</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1998-09-02</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SDS-1</TD><TD>177</TD><TD>Junjiro Nakahara</TD><TD>JAXA OSFO</TD><TD>JP</TD><TD>2008-02-17</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GeoEye-2</TD><TD>178</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-11-02</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GeoEye-3</TD><TD>179</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2010-11-02</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>WINDS</TD><TD>17A</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NPOESS C1</TD><TD>17B</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NPOESS C2</TD><TD>17C</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NPOESS C3</TD><TD>17D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>NPOESS C4</TD><TD>17E</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>FY-4</TD><TD>17F</TD><TD>Rusheng Zhang</TD><TD>CNSA</TD><TD>CN</TD><TD>2014-06-24</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV/EM</TD><TD>180</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SERVIS-2</TD><TD>181</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2011-08-30</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GOSAT-2</TD><TD>182</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-08-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MN35-A (X band)</TD><TD>183</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-11</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MN35-B (X band)</TD><TD>184</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2014-09-12</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Mars 2020</TD><TD>186</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-04-23</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GCOM-W1</TD><TD>187</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GCOM-C1</TD><TD>188</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2008-10-08</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EO-1</TD><TD>189</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1997-12-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>AIM</TD><TD>18A</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-02-07</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>DSN-1</TD><TD>18B</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-DM</TD><TD>190</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-01</TD><TD>191</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-02</TD><TD>192</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-03</TD><TD>193</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-04</TD><TD>194</TD><TD>Akio Yamamoto</TD><TD>JAXA OSFO</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-05</TD><TD>195</TD><TD>Akio Yamamoto</TD><TD>JAXA OSFO</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-06</TD><TD>196</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-07</TD><TD>197</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-08</TD><TD>198</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HTV-09</TD><TD>199</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>EOS-PM (DOWNLINK)</TD><TD>19A</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-07-27</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>NPP</TD><TD>19D</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2002-09-30</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MSL-SIM</TD><TD>19E</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-10-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>JPSS-1</TD><TD>19F</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-09-06</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SOLAR-B</TD><TD>1A0</TD><TD>Takahiro Yamada</TD><TD>ISAS</TD><TD>JP</TD><TD>2002-09-24</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ADEOS 2</TD><TD>1A2</TD><TD>Akio Yamamoto</TD><TD>JAXA/OSFO</TD><TD>JP</TD><TD>2004-05-31</TD><TD>RP</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SORCE</TD><TD>1A3</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2000-02-18</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>MAP</TD><TD>1A5</TD><TD>Joseph Deskevich</TD><TD>NASA</TD><TD>US</TD><TD>1998-08-14</TD><TD>RP</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>CE-3-X</TD><TD>1A6</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2012-06-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CSO-2-X</TD><TD>1A7</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GLORY</TD><TD>1A8</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2005-07-20</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CE-3-Z</TD><TD>1A9</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2012-06-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>JWST, Fl</TD><TD>1AA</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-06-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CE-4-X</TD><TD>1AB</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2012-06-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CE-4-Z</TD><TD>1AC</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2012-06-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HODOYOSHI-1</TD><TD>1AD</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HODOYOSHI-3</TD><TD>1AE</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>HODOYOSHI-4</TD><TD>1AF</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GRAIL-A</TD><TD>1B1</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-10-07</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ROUE-Intfer-A</TD><TD>1B2</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ROUE-Intfer-B</TD><TD>1B3</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ROUE-Intfer-C</TD><TD>1B4</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2009-03-05</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>GRAIL-B</TD><TD>1B5</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-10-07</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CSO-3-X</TD><TD>1B6</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>UNIFORM-1</TD><TD>1B7</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2012-06-29</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Dove 3</TD><TD>1B8</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-08-02</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Dove 4</TD><TD>1B9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-08-02</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>GOSAT</TD><TD>1BA</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2006-01-25</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>JWST,Sim</TD><TD>1BB</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-06-21</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>InSight</TD><TD>1BD</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-10-15</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ERG</TD><TD>1BE</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-08-12</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SUPERBIRD 7</TD><TD>1C0</TD><TD>Junjiro Nakahara</TD><TD>JAXA OSFO</TD><TD>JP</TD><TD>2006-03-06</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CSO-Xtestset</TD><TD>1C1</TD><TD>Jean-Marc Soula</TD><TD>CNES</TD><TD>FR</TD><TD>2011-10-17</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>C2V2</TD><TD>1C2</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-02-11</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>COMS-MPDR</TD><TD>1C3</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2006-06-29</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SERVIS1-ATTC</TD><TD>1C4</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-07-27</TD><TD>RP</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SERVIS1</TD><TD>1C5</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-07-27</TD><TD>RP</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>SERVIS1</TD><TD>1C6</TD><TD>Junjiro Nakahara</TD><TD>JAXA</TD><TD>JP</TD><TD>2007-07-27</TD><TD>RP</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>ENVISAT</TD><TD>1C7</TD><TD>Hans K. Uhrig</TD><TD>ESA</TD><TD>EU</TD><TD>1993-11-16</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CONTOUR</TD><TD>1C8</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-07-27</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>DSN-1</TD><TD>1C9</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-14</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>MAVEN</TD><TD>1CA</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2009-07-15</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>USERS REM</TD><TD>1CB</TD><TD>Akio Yamamoto</TD><TD>JAXA</TD><TD>JP</TD><TD>2004-01-09</TD><TD>RP</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>EOS-AURA</TD><TD>1CC</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2001-02-17</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SMAP</TD><TD>1CD</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2010-07-01</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ICESAT2</TD><TD>1CE</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-11-13</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MRO (Sim)</TD><TD>1D0</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2003-02-12</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SENTINEL-5 PRECU</TD><TD>1D1</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2012-12-06</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>DOVE 2</TD><TD>1D2</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-03-06</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SHUTTLE-OV103</TD><TD>1D3</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>GALEX</TD><TD>1D4</TD><TD>Badri Younes</TD><TD>NASA GSFC</TD><TD>US</TD><TD>1999-08-25</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTSAT 1R</TD><TD>1D5</TD><TD>Tsuguhiko Katagi</TD><TD>NASDA</TD><TD>JP</TD><TD>2001-12-04</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>SENTINEL-5 P-sim</TD><TD>1D6</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-12-06</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>COSMO-SKYMED-1</TD><TD>1D7</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-05-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>COSMO-SKYMED-2</TD><TD>1D8</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-05-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>COSMO-SKYMED-3</TD><TD>1D9</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-05-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>COSMO-SKYMED4</TD><TD>1DA</TD><TD>Loredana Bruca</TD><TD>ASI</TD><TD>IT</TD><TD>2004-05-22</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SENTINEL-5 PRECU</TD><TD>1DB</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-11-26</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KOMPSAT-2</TD><TD>1DC</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2000-05-09</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>TRITON-1</TD><TD>1DD</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2013-01-21</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>FUNcube-1</TD><TD>1DE</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2013-01-21</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Delfi-n3xt</TD><TD>1DF</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2013-01-21</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>COMS-PAYLOADS</TD><TD>1E0</TD><TD>Eunsup Sim</TD><TD>KARI</TD><TD>KR</TD><TD>2006-06-29</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KEPLER</TD><TD>1E1</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>POPSAT-HIP1</TD><TD>1E2</TD><TD>Gian Yi-Hsen</TD><TD>OSTIN</TD><TD>SG</TD><TD>2013-07-10</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>KEPLER-Fl</TD><TD>1E3</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SHUTTLE-OV104</TD><TD>1E4</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>PROCYON</TD><TD>1E5</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-11-26</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>KEPLER-Sim</TD><TD>1E6</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>DSN-1</TD><TD>1E7</TD><TD>Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2013-06-28</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ETS-VIII</TD><TD>1E8</TD><TD>Tsukasa Mito</TD><TD>NASDA</TD><TD>JP</TD><TD>1997-09-24</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CHANG'E-2</TD><TD>1E9</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2009-01-14</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>FASTSAT</TD><TD>1EA</TD><TD>Roger D. Porter</TD><TD>NASA</TD><TD>US</TD><TD>2009-06-01</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Dark Matter Particle Explore</TD><TD>1EB</TD><TD>Huixian Sun</TD><TD>CAS</TD><TD>CN</TD><TD>2014-02-15</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Flock 1</TD><TD>1EC</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-03-10</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>ICON</TD><TD>1ED</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-11-16</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>RADARSAT 2A</TD><TD>1EE</TD><TD>A. Bastikar</TD><TD>CSA</TD><TD>CA</TD><TD>2002-03-30</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>RADARSAT 2B</TD><TD>1EF</TD><TD>A. Bastikar</TD><TD>CSA</TD><TD>CA</TD><TD>2002-03-30</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>TAN CE-1</TD><TD>1F1</TD><TD>Zhao Heping</TD><TD>CAST</TD><TD>CN</TD><TD>2009-01-29</TD><TD>JGG</TD><TD>2</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Sentinel-3 (EQM)</TD><TD>1F2</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-3 (FM A Prime)</TD><TD>1F3</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Sentinel-3 (FM B Prime)</TD><TD>1F4</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2010-05-12</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SHUTTLE-OV105</TD><TD>1F5</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2004-03-15</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>ST-2</TD><TD>1F6</TD><TD>Kaneaki Narita</TD><TD>JAXA</TD><TD>JP</TD><TD>2009-01-08</TD><TD>JGG</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>CYGNSS-1</TD><TD>1F7</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MTSAT-2</TD><TD>1F8</TD><TD>Ryuichi Nagashima</TD><TD>NASDA</TD><TD>JP</TD><TD>2002-07-23</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CYGNSS-2</TD><TD>1F9</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-05-05</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>LDCM</TD><TD>1FA</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2008-07-03</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>SWIFT</TD><TD>1FB</TD><TD>Badri Younes</TD><TD>NASA</TD><TD>US</TD><TD>2000-10-18</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Quasi-Zenith Satellite 2</TD><TD>1FC</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-06-19</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Quasi-Zenith Satellite 3</TD><TD>1FD</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-06-19</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Quasi-Zenith Satellite 4</TD><TD>1FE</TD><TD>Mr. Tsutomu Shigeta</TD><TD>JAXA</TD><TD>JP</TD><TD>2014-06-19</TD><TD>SANA</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>LRO</TD><TD>1FF</TD><TD>Roger D. Porter</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2006-02-03</TD><TD>RP</TD><TD>2</TD><TD>Assigned</TD><TD>TLM</TD></TR>
+<TR><TD>Pocket Spacecraft Fleet</TD><TD>801</TD><TD>Dr. Peter M. Allan</TD><TD>UKSA</TD><TD>UK</TD><TD>2014-09-12</TD><TD>SANA</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>M01O</TD><TD>835</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-06-27</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MRO</TD><TD>84A</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-06-27</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MSL</TD><TD>84C</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-06-27</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>PHX</TD><TD>854</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-07-17</TD><TD>JGG</TD><TD>3</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>Mars 2020</TD><TD>886</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-04-23</TD><TD>SANA</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>InSight Prox-1</TD><TD>8BD</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2014-02-18</TD><TD>SANA</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MAVEN</TD><TD>8CA</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-06-27</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MER1</TD><TD>8FD</TD><TD>Vincent Scott Galbraith</TD><TD>NASA GSFC</TD><TD>US</TD><TD>2012-06-27</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>MER2</TD><TD>8FE</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2012-07-17</TD><TD>JGG</TD><TD>3</TD><TD>Returned</TD><TD></TD></TR>
+<TR><TD>EXOMARS2016E</TD><TD>A8E</TD><TD>Manfred Norbert Lugert</TD><TD>ESA ESOC</TD><TD>EU</TD><TD>2012-06-21</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>EXOMARS2016O</TD><TD>A8F</TD><TD>Manfred Norbert Lugert</TD><TD>ESA</TD><TD>EU</TD><TD>2012-06-21</TD><TD>JGG</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Eagle-1</TD><TD>AE1</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-11-04</TD><TD>SANA</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>Eagle-2</TD><TD>AE2</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-11-04</TD><TD>SANA</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+<TR><TD>CXBN</TD><TD>AE3</TD><TD>Vincent Scott Galbraith</TD><TD>NASA</TD><TD>US</TD><TD>2013-11-04</TD><TD>SANA</TD><TD>3</TD><TD>Assigned</TD><TD>TC,TLM</TD></TR>
+</TABLEDATA></DATA></TABLE></RESOURCE>
+</VOTABLE>
