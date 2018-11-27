@@ -3,7 +3,7 @@
 Put all your input files here. 
 
 - AAS [votable](AAS.xml), extracted from [[AAS web portal](http://journals.aas.org/authors/aastex/facility.html)] on May 27th 2015.
-- ADS: [text](ADS_facilities.txt)
+- ADS: [text](ADS_facilities.txt), also available as [votable](harvard.xml)
 - AstroWeb: [html](Astroweb.html)
 - DSN (Deep Space Network) [text](DSN.txt)
 - NAIF [votable](NAIF.xml)
