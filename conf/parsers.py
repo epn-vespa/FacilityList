@@ -461,5 +461,14 @@ def load_dsn_list():
 
 	return data
 
-def load_harvard_list():
-    
+def load_telwiserep_list()
+    authority = 'wiserep'
+    list_file = datadir + 'Tel_WISERep.dat'
+    with open(list_file, 'r') as data_file:
+        input = data_file.readlines()
+
+    data = {}
+    for record in input:
+        data_tmp = {}
+        
+
