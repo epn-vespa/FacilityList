@@ -1,6 +1,7 @@
 from astropy.io import votable
 from urllib2 import URLError, HTTPError
 import json, os.path, urllib2
+import pyvo
 
 # directory containing raw input lists
 # is usually overwritten via setDataDir, but "data/" is default
@@ -286,6 +287,49 @@ def load_naif_list():
 		id_count += 1
 
 	return data
+
+def load_list_from_tap(tap_url, schema_name):
+    service = pyvo.dal.TAPService(tap_url)
+    query = "SELECT * from {}".format(schema_name)
+    return service.search(query)
+
+
+def load_mpc_gavo_list():
+    authority = 'iau-mpc-gavo'
+    tap_url = "http://dc.zah.uni-heidelberg.de/tap"
+    schema_name = "obscode.data"
+    input = load_list_from_tap(tap_url, schema_name)
+
+    data = {}
+    for record in input:
+        data_tmp = {}
+        data_tmp['alternateName'] = []
+
+        title = record['code']
+        obs_lon = record['long']
+        obs_cos = record['cosphip']
+        obs_sin = record['sinphip']
+        obs_gd_lat = record['gdlat']
+        obs_gc_lat = record['gclat']
+        obs_height = record['height']
+        obs_name = record['name']
+
+        data_tmp['facilityType'] = 'observatory'
+        data_tmp['location'] = {}
+        data_tmp['location']['coordinates'] = {}
+        data_tmp['location']['coordinates']['lon'] = obs_lon
+        data_tmp['location']['coordinates']['lat'] = obs_gc_lat  # We use Geocentric latitude here
+        data_tmp['location']['coordinates']['alt'] = obs_height
+
+        altname_tmp = {}
+        altname_tmp['namingAuthority'] = authority
+        altname_tmp['id'] = title
+        altname_tmp['name'] = obs_name
+        data_tmp['alternateName'].append(altname_tmp)
+        data[authority+":"+title] = data_tmp
+
+    return data
+
 
 def load_mpc_list():
 	authority = 'iau-mpc'
