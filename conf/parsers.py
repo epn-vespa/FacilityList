@@ -10,6 +10,7 @@ Available parsers in this file:
 - load_mpc_list
 - load_iraf_list
 - load_dsn_list
+- load_telwiserep_list
 """
 
 from astropy.io import votable
@@ -30,11 +31,11 @@ MeasurementType2UCD = {
 	"microwaves"		: "em.mm.200-400GHz",
 	"microwave"			: "em.mm.200-400GHz",
 	"infrared"			: "em.IR",
-	"submillimeter"		: "submillimeter", # UCD?
-	"ultraviolet"		: "em.UV",
+	"submillimeter"		: "em.mm",
+    "ultraviolet"		: "em.UV",
 	"radiowaves"		: "em.radio",
 	"x-ray"				: "em.X-ray",
-	"particles"			: "particles", # UCD?
+	"particles"			: "phys.particle",
 	"millimeter"		: "em.mm"
 }
 
@@ -475,14 +476,51 @@ def load_dsn_list():
 
 	return data
 
-def load_telwiserep_list()
+def load_telwiserep_list():
     authority = 'wiserep'
     list_file = datadir + 'Tel_WISERep.dat'
+
     with open(list_file, 'r') as data_file:
         input = data_file.readlines()
 
     data = {}
     for record in input:
-        data_tmp = {}
-        
-	return data
+
+        if record.startswith('#'):
+            pass
+        else:
+            data_tmp = {}
+            items = [cur.strip() for cur in record.split('|')]
+            id = items[0]
+            title = items[1]
+
+            altname_tmp = {}
+            altname_tmp['namingAuthority'] = authority
+            altname_tmp['id'] = id
+            altname_tmp['name'] = title
+            data_tmp['alternateName'] = [altname_tmp]
+
+            altname_tmp = {}
+            altname_tmp['namingAuthority'] = authority
+            altname_tmp['id'] = id
+            altname_tmp['name'] = items[2]
+            data_tmp['alternateName'].append(altname_tmp)
+
+            data_tmp['location'] = {}
+            data_tmp['location']['coordinates'] = {}
+            data_tmp['location']['coordinates']['lat'] = float(items[3])
+            data_tmp['location']['coordinates']['lon'] = float(items[4])
+            if items[5] != "":
+                data_tmp['location']['coordinates']['alt'] = float(items[5])
+
+            data_tmp['facilityType'] = 'observatory'
+            if items[8] == "Satellite/Spacecraft":
+                data_tmp['facilityType'] = 'spacecraft'
+            else:
+                data_tmp['facilityGroup'] = items[8]
+
+            data_tmp['referenceURL'] = items[7]
+
+            data[authority+":"+id] = data_tmp
+
+    return data
