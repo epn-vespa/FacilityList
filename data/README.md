@@ -8,8 +8,9 @@ Put all your input files here.
 - DSN: Deep Space Network - [text](DSN.txt)
 - IAU-MPC: Minor Planet Center from IAU -  [txt](IAU-MPC.txt) list
 - IRAF: [txt](IRAF.txt) or [votable](IRAF.xml)
-- NAIF: NASA Navigation and Acillary Inforamtion Facility - [votable](NAIF.xml)
+- NAIF: NASA Navigation and Ancillary Information Facility - [votable](NAIF.xml)
 - NSSDC: National Space Science Data Centre - [votable](NSSDC.xml)
+- SANA: CCSDS/SANA Spacecraft List - [xml](SANA-orig.xml) or [votable](SANA.xml)
 
 In order to be processed by the merging scripts, every input file needs a respective parser function 
 in [parser.py](../parsers.py) module.
