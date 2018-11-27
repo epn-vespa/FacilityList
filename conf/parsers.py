@@ -44,6 +44,11 @@ def replaceUCDinJSON(input_obj):
 				input_obj[obj]["measurementType"][n] = translateUCD(type)
 	return input_obj
 
+def fetch_list_from_tap(tap_url, schema_name):
+    service = pyvo.dal.TAPService(tap_url)
+    query = "SELECT * from {}".format(schema_name)
+    return service.search(query)
+
 def load_existing_json(file):
 	if ( file.startswith('http://') or file.startswith('https://') ):
 		# URL (web service) has been provided
@@ -288,17 +293,11 @@ def load_naif_list():
 
 	return data
 
-def load_list_from_tap(tap_url, schema_name):
-    service = pyvo.dal.TAPService(tap_url)
-    query = "SELECT * from {}".format(schema_name)
-    return service.search(query)
-
-
 def load_mpc_gavo_list():
     authority = 'iau-mpc-gavo'
     tap_url = "http://dc.zah.uni-heidelberg.de/tap"
     schema_name = "obscode.data"
-    input = load_list_from_tap(tap_url, schema_name)
+    input = fetch_list_from_tap(tap_url, schema_name)
 
     data = {}
     for record in input:
@@ -461,3 +460,6 @@ def load_dsn_list():
 		data[authority+":"+title] = data_tmp
 
 	return data
+
+def load_harvard_list():
+    
