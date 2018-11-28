@@ -19,6 +19,7 @@ import json
 import os.path
 import urllib2
 import pyvo
+import consts
 
 # directory containing raw input lists
 # is usually overwritten via setDataDir, but "data/" is default
@@ -49,7 +50,7 @@ def setDataDir(dir):
 
 # replace single measurementType value with respective UCD
 def translateUCD(MeasurementType):
-    if (MeasurementType2UCD.has_key(MeasurementType.lower())):
+    if MeasurementType2UCD.has_key(MeasurementType.lower()):
         return MeasurementType2UCD[MeasurementType.lower()]
     else:
         return MeasurementType
@@ -59,9 +60,9 @@ def translateUCD(MeasurementType):
 def replaceUCDinJSON(input_obj):
     print "Replacing values in 'measurementType' with respective UCD..."
     for obj in input_obj:
-        if "measurementType" in input_obj[obj]:
-            for n, type in enumerate(input_obj[obj]["measurementType"]):
-                input_obj[obj]["measurementType"][n] = translateUCD(type)
+        if consts.MEASUREMENT_TYPE in input_obj[obj]:
+            for n, type in enumerate(input_obj[obj][consts.MEASUREMENT_TYPE]):
+                input_obj[obj][consts.MEASUREMENT_TYPE][n] = translateUCD(type)
     return input_obj
 
 
@@ -93,7 +94,7 @@ def load_existing_json(file):
 
 
 """
-The following functions are the load_*_list() 
+The following functions are the load_****_list() 
 """
 
 
@@ -107,29 +108,29 @@ def load_aas_list():
     data = dict()
     for irec in range(nlines):
         data_tmp = dict()
-        data_tmp['alternateName'] = []
+        data_tmp[consts.ALTERNATE_NAME] = []
         altname_tmp = dict()
 
         title = input['ID'][irec].strip()
-        altname_tmp['name'] = input['Name'][irec].strip()
-        altname_tmp['id'] = title
-        altname_tmp['namingAuthority'] = authority
-        data_tmp['alternateName'].append(altname_tmp)
+        altname_tmp[consts.NAME] = input['Name'][irec].strip()
+        altname_tmp[consts.ID] = title
+        altname_tmp[consts.NAMING_AUTHORITY] = authority
+        data_tmp[consts.ALTERNATE_NAME].append(altname_tmp)
         if input['Location'][irec] == 'Space':
-            data_tmp['facilityType'] = 'spacecraft'
+            data_tmp[consts.FACILITY_TYPE] = 'spacecraft'
         else:
-            data_tmp['facilityType'] = 'observatory'
-            data_tmp['location'] = dict()
-            data_tmp['location']['continent'] = input['Location'][irec].strip()
+            data_tmp[consts.FACILITY_TYPE] = 'observatory'
+            data_tmp[consts.LOCATION] = dict()
+            data_tmp[consts.LOCATION][consts.CONTINENT] = input['Location'][irec].strip()
         for otype in obsRangeTypes:
             if input[otype][irec].strip() != "\xc2\xa0":
-                if data_tmp.has_key('measurementType'):
-                    data_tmp['measurementType'].append(translateUCD(otype))
+                if consts.MEASUREMENT_TYPE in data_tmp.keys():
+                    data_tmp[consts.MEASUREMENT_TYPE].append(translateUCD(otype))
                 else:
-                    data_tmp['measurementType'] = [translateUCD(otype)]
+                    data_tmp[consts.MEASUREMENT_TYPE] = [translateUCD(otype)]
         if input['Solar'][irec].strip() != "\xc2\xa0":
-            data_tmp['targetList'] = []
-            data_tmp['targetList'].append('Sun')
+            data_tmp[consts.TARGET_LIST] = []
+            data_tmp[consts.TARGET_LIST].append('Sun')
         data[authority+":"+title] = data_tmp
     return data
 
@@ -260,13 +261,15 @@ def load_xephem_list():
             data_tmp['alternateName'] = []
 
             items = record.split(';')
-            if ',' in items[0]:
-                rec_tmp = items[0].split(',')
-                rec_name = rec_tmp[0].strip()
-                rec_location = ', '.join(rec_tmp[1:]).strip()
-            else:
-                rec_name = items[0]
-                rec_location = ''
+            rec_name = items[0]
+# Removing detection of location.country
+#            if ',' in items[0]:
+#                rec_tmp = items[0].split(',')
+#                rec_name = rec_tmp[0].strip()
+#                rec_location = ', '.join(rec_tmp[1:]).strip()
+#            else:
+#                rec_name = items[0]
+#                rec_location = ''
 
             rec_lat_txt = items[1].strip().split(' ')
             rec_lat = float(rec_lat_txt[0])+float(rec_lat_txt[1])/60.+float(rec_lat_txt[2])/3600.
@@ -286,8 +289,8 @@ def load_xephem_list():
             data_tmp['alternateName'].append(altname_tmp)
             data_tmp['facilityType'] = 'observatory'
             data_tmp['location'] = dict()
-            if rec_location != '':
-                data_tmp['location']['country'] = rec_location
+#            if rec_location != '':
+#                data_tmp['location']['country'] = rec_location
             data_tmp['location']['coordinates'] = dict()
             data_tmp['location']['coordinates']['lat'] = rec_lat
             data_tmp['location']['coordinates']['lon'] = rec_lon
@@ -339,21 +342,21 @@ def load_mpc_gavo_list():
         data_tmp = dict()
         data_tmp['alternateName'] = []
 
-        title = record['code']
-        obs_lon = record['long']
-        obs_cos = record['cosphip']
-        obs_sin = record['sinphip']
-        obs_gd_lat = record['gdlat']
-        obs_gc_lat = record['gclat']
-        obs_height = record['height']
-        obs_name = record['name']
+        title = str(record['code'])
+        obs_lon = float(record['long'])
+        obs_cos = float(record['cosphip'])
+        obs_sin = float(record['sinphip'])
+        obs_gd_lat = float(record['gdlat'])
+        obs_gc_lat = float(record['gclat'])
+        obs_height = float(record['height'])
+        obs_name = str(record['name'])
 
         data_tmp['facilityType'] = 'observatory'
         data_tmp['location'] = dict()
         data_tmp['location']['coordinates'] = dict()
-        data_tmp['location']['coordinates']['lon'] = float(obs_lon)
-        data_tmp['location']['coordinates']['lat'] = float(obs_gc_lat)  # We use Geocentric latitude here
-        data_tmp['location']['coordinates']['alt'] = float(obs_height)
+        data_tmp['location']['coordinates']['lon'] = obs_lon
+        data_tmp['location']['coordinates']['lat'] = obs_gc_lat  # We use Geocentric latitude here
+        data_tmp['location']['coordinates']['alt'] = obs_height
 
         altname_tmp = dict()
         altname_tmp['namingAuthority'] = authority
