@@ -165,13 +165,15 @@ def altname_in_entry(altname, entry):
 			return True
 			
 	return False
-		
-def merge_entries(doubles_array, list, logfile):
+	
+
+def merge_entries(doubles_array, list, logfile, check_only=False):
 	log_text_1 = "* WARNING: differing values for property '"
 	log_text_2 = "' for object: '"
 	
 	merged_entry = {}
 	entry_array = []
+	is_identical = True
 	
 	double_strings = ""
 	for double in doubles_array:
@@ -214,6 +216,7 @@ def merge_entries(doubles_array, list, logfile):
 				merged_entry[KEY_STR_FACILITY_TYPE] = entry[KEY_STR_FACILITY_TYPE]
 			elif entry[KEY_STR_FACILITY_TYPE] != merged_entry[KEY_STR_FACILITY_TYPE]:
 				write(logfile, log_text_1 + KEY_STR_FACILITY_TYPE + log_text_2 + entry['original_id'] + "'")
+				is_identical = False
 		
 		# merge facility group
 		if entry.has_key(KEY_STR_FACILITY_GROUP):
@@ -222,6 +225,7 @@ def merge_entries(doubles_array, list, logfile):
 				merged_entry[KEY_STR_FACILITY_GROUP] = entry[KEY_STR_FACILITY_GROUP]
 			elif entry[KEY_STR_FACILITY_GROUP] != merged_entry[KEY_STR_FACILITY_GROUP]:
 				write(logfile, log_text_1 + KEY_STR_FACILITY_GROUP + log_text_2 + entry['original_id'] + "'")
+				is_identical = False
 				
 		# merge location
 		if entry.has_key(KEY_STR_LOCATION):
@@ -234,12 +238,14 @@ def merge_entries(doubles_array, list, logfile):
 					merged_entry[KEY_STR_LOCATION][KEY_STR_CONTINENT] = entry[KEY_STR_LOCATION][KEY_STR_CONTINENT]
 				elif entry[KEY_STR_LOCATION][KEY_STR_CONTINENT] != merged_entry[KEY_STR_LOCATION][KEY_STR_CONTINENT]:
 					write(logfile, log_text_1 + KEY_STR_CONTINENT + log_text_2 + entry['original_id'] + "'")
+					is_identical = False
 			
 			if entry[KEY_STR_LOCATION].has_key(KEY_STR_COUNTRY):
 				if not(merged_entry[KEY_STR_LOCATION].has_key(KEY_STR_COUNTRY)):
 					merged_entry[KEY_STR_LOCATION][KEY_STR_COUNTRY] = entry[KEY_STR_LOCATION][KEY_STR_COUNTRY]
 				elif entry[KEY_STR_LOCATION][KEY_STR_COUNTRY] != merged_entry[KEY_STR_LOCATION][KEY_STR_COUNTRY]:
 					write(logfile, log_text_1 + KEY_STR_COUNTRY + log_text_2 + entry['original_id'] + "'")
+					is_identical = False
 	
 			if entry[KEY_STR_LOCATION].has_key(KEY_STR_COORDINATES):
 				if not(merged_entry[KEY_STR_LOCATION].has_key(KEY_STR_COORDINATES)):
@@ -251,36 +257,42 @@ def merge_entries(doubles_array, list, logfile):
 							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]
 						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]:
 							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_LAT + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]) + ")")
+							is_identical = False
 
 					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_LON):
 						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_LON)):
 							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]
 						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]:
 							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_LON + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]) + ")")
+							is_identical = False
 					
 					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_ALT):
 						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_ALT)):
 							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]
 						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]:
 							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_ALT + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]) + ")")
+							is_identical = False
 
 					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_TZ):
 						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_TZ)):
 							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]
 						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]:
 							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_TZ + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]) + ")")
+							is_identical = False
 
 					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_SIN):
 						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_SIN)):
 							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]
 						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]:
 							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_SIN + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]) + ")")
+							is_identical = False
 
 					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_COS):
 						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_COS)):
 							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]
 						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]:
 							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_COS + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]) + ")")
+							is_identical = False
 			
 		# merge measurement type
 		if entry.has_key(KEY_STR_MEASUREMENT_TYPE):
@@ -310,8 +322,12 @@ def merge_entries(doubles_array, list, logfile):
 				merged_entry[KEY_STR_LAUNCH_DATE] = entry[KEY_STR_LAUNCH_DATE]
 			elif entry[KEY_STR_LAUNCH_DATE] != merged_entry[KEY_STR_LAUNCH_DATE]:
 				write(logfile, log_text_1 + KEY_STR_LAUNCH_DATE + "' for merged object: '" + entry['original_id'] + "'")
-		
-	return merged_entry	
+				is_identical = False
+
+	if (check_only):
+		return is_identical
+	else:
+		return merged_entry	
 						
 def merge_doubles (list):
 		
@@ -324,7 +340,7 @@ def merge_doubles (list):
 	else:
 		merged_counter = 0
 		
-	if not(fuzzy) and not(partial):	# no flags provided, simpole merge of identical names/ids
+	if not(fuzzy) and not(partial):	# no flags provided, simple merge of identical names/ids
 		log_file = open( logs_dir + log_file_name, 'w' )
 
 		print ( "Calculating doubles for alternate names/ids..." )
@@ -368,22 +384,31 @@ def merge_doubles (list):
 			if not(found):
 				united_doubles_list.append(entry)		
 
-		print ( "Merging dublicate entries for names/ids..." )
+		print ( "Merging dublicate entries for names/ids...\n" )
 
 		log_file.write("\n********************** NAME AND ID MERGES **********************\n\n")
+
 		# remove doubles in names, id
 		for doubles in united_doubles_list:
-			merged_name = "merged" + str(merged_counter)
-												
+
+			# check for differences and ask user first if any exist priot to merging
+			if ( not(merge_entries(doubles, list, None, True)) ):
+				while True:
+					cmd = raw_input ( "Are you sure you want to merge objects " + ", ".join(doubles) + " with same name/id but differences as shown above? (y/n): " ).lower()
+					if  ( cmd in ["y", "n"] ): break
+				if cmd == "n": continue
+			
+			# now actually do the merge 
 			merged_entry = merge_entries(doubles, list, log_file)
-			list[merged_name] = merged_entry
+			list["merged_" + str(merged_counter)] = merged_entry
 			merged_counter = merged_counter + 1
 			remove_entries(list, doubles)
 			log_file.write("\n")
+			print "Objects " + " and ".join(doubles) + " have been merged.\n"
 		
 		log_file.write("\n\n********************** LOCATION MERGES (precision " + str(precision) + ") **********************\n")
 				
-		print ( "Calculating doubles for locations..." )
+		print ( "\nCalculating doubles for locations...\n" )
 		for rec in list:		
 			# index for longitude, latitude
 			if list[rec].has_key('location') and list[rec]['location'].has_key('coordinates') and list[rec]['location']['coordinates'].has_key('lon') and list[rec]['location']['coordinates'].has_key('lat'):
@@ -392,17 +417,28 @@ def merge_doubles (list):
 					lon_lat_index[lon_lat_str].append (rec)
 				else:
 					lon_lat_index[lon_lat_str] = [rec]
-				
-		print ( "Merging dublicate entries for locations..." )
-			
-		# remove doubles in location
+							
+		# merge doubles in location
 		for rec in lon_lat_index:
 			if len( lon_lat_index[rec] ) > 1:
+				# let user confirm all location merges and show
+				are_equal = merge_entries(lon_lat_index[rec], list, None, True)
+				while True:
+					confirm_str = "Objects " + " and ".join(lon_lat_index[rec]) + " have a similar location (precission " + str(precision) + "). Do you want to merge these objects with different names"
+					if not(are_equal): confirm_str = confirm_str + " and further differences as shown above"
+					confirm_str = confirm_str + "? (y/n): "
+					cmd = raw_input ( confirm_str ).lower()
+					if  ( cmd in ["y", "n"] ): break
+				if cmd == "n":
+					print "\n"
+					continue
+
 				merged_entry = merge_entries(lon_lat_index[rec], list, log_file)
 				list["merged_" + str(merged_counter)] = merged_entry
 				merged_counter = merged_counter + 1
 				remove_entries(list, lon_lat_index[rec])
 				log_file.write("\n")
+				print "Objects " + " and ".join(lon_lat_index[rec]) + " have been merged.\n"
 
 		log_file.close()
 		
