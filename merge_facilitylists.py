@@ -107,7 +107,7 @@ def update_list(existing_list, new_list):
 		
 	if (update):
 		# prepare list wih all entries of original list that contain at least one altname derrived of the same athority as new_list for comparing
-		authority = new_list.itervalues().next()[KEY_STR_ALTERNATE_NAME][0][STR_NAMING_AUTHORITY]
+		authority = new_list.itervalues().next()[KEY_STR_ALTERNATE_NAME][0][KEY_STR_NAMING_AUTHORITY]
 		compare_list = []
 		cleaned_new_list = {}
 		for entry in existing_list:
@@ -136,7 +136,7 @@ def update_list(existing_list, new_list):
 							print "Input not valid! Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:"
 					
 			for alt_name in existing_list[entry][KEY_STR_ALTERNATE_NAME]:
-				if (alt_name[STR_NAMING_AUTHORITY] == authority):
+				if (alt_name[KEY_STR_NAMING_AUTHORITY] == authority):
 					compare_list.append(existing_list[entry])
 					break
 		
@@ -425,7 +425,7 @@ def merge_doubles (list):
 				if list[rec].has_key(KEY_STR_ALTERNATE_NAME):
 					for altname in list[rec][KEY_STR_ALTERNATE_NAME]:
 						if altname.has_key(KEY_STR_NAME):
-							name_index[altname[KEY_STR_NAME]] = {'auth':altname[STR_NAMING_AUTHORITY], 'obj':rec, 'cln': re.sub ('[/\-*+#,\s\.\'\"]', '', altname[KEY_STR_NAME]).upper()} # match will be case INsensitive!
+							name_index[altname[KEY_STR_NAME]] = {'auth':altname[KEY_STR_NAMING_AUTHORITY], 'obj':rec, 'cln': re.sub ('[/\-*+#,\s\.\'\"]', '', altname[KEY_STR_NAME]).upper()} # match will be case INsensitive!
 			
 			print ( 'Searching for fuzzy matches...\n' )					
 			num_hints = 0
@@ -555,15 +555,15 @@ def merge_doubles (list):
 									if partial_index.has_key(upper_word):
 										
 										if partial_index[upper_word].has_key(rec):
-											partial_index[upper_word][rec].append([altname[KEY_STR_NAME], altname[STR_NAMING_AUTHORITY]])
+											partial_index[upper_word][rec].append([altname[KEY_STR_NAME], altname[KEY_STR_NAMING_AUTHORITY]])
 										else:	
-											partial_index[upper_word][rec] = [[altname[KEY_STR_NAME], altname[STR_NAMING_AUTHORITY]]]
+											partial_index[upper_word][rec] = [[altname[KEY_STR_NAME], altname[KEY_STR_NAMING_AUTHORITY]]]
 											partial_index[upper_word]["mult"] = True
 											found_matches = True
 										
 									else:
 										partial_index[upper_word] = {}
-										partial_index[upper_word][rec] = [[altname[KEY_STR_NAME], altname[STR_NAMING_AUTHORITY]]]
+										partial_index[upper_word][rec] = [[altname[KEY_STR_NAME], altname[KEY_STR_NAMING_AUTHORITY]]]
 										partial_index[upper_word]["mult"] = False
 
 			if not(found_matches): break # no more double matches in partial search for names were found, exit loop
