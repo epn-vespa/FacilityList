@@ -1,33 +1,12 @@
 from datetime import datetime
 from conf.parsers import *
 from conf.config import *
+from conf.consts import *
 from pprint import pprint
 
 import json, pickle, copy, re, sys, os.path
 
 # ********************************** See conf/config.py for configurations of constants, parsers and inputs! **********************************
-
-# constants for property names
-altname_str = 'alternateName'
-name_str = 'name'
-id_str = 'id'
-auth_str = 'namingAuthority'
-targetlist_str = 'targetList'
-facilitytype_str = 'facilityType'
-facilitygroup_str = 'facilityGroup'
-location_str = 'location'
-continent_str = 'continent'
-country_str = 'country'
-coordinates_str = 'coordinates'
-measurementtype_str = 'measurementType'
-referenceurl_str = 'referenceURL'
-launchdate_str = 'launchDate'
-lon_str = 'lon'
-lat_str = 'lat'
-alt_str = 'alt'
-tz_str = 'tz'
-cos_str = 'cos'
-sin_str = 'sin'	
 
 tmp_checked_file_name = '_checked_.json'
 _checked_ = {}
@@ -128,7 +107,7 @@ def update_list(existing_list, new_list):
 		
 	if (update):
 		# prepare list wih all entries of original list that contain at least one altname derrived of the same athority as new_list for comparing
-		authority = new_list.itervalues().next()[altname_str][0][auth_str]
+		authority = new_list.itervalues().next()[KEY_STR_ALTERNATE_NAME][0][STR_NAMING_AUTHORITY]
 		compare_list = []
 		cleaned_new_list = {}
 		for entry in existing_list:
@@ -156,8 +135,8 @@ def update_list(existing_list, new_list):
 						else:
 							print "Input not valid! Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:"
 					
-			for alt_name in existing_list[entry][altname_str]:
-				if (alt_name[auth_str] == authority):
+			for alt_name in existing_list[entry][KEY_STR_ALTERNATE_NAME]:
+				if (alt_name[STR_NAMING_AUTHORITY] == authority):
 					compare_list.append(existing_list[entry])
 					break
 		
@@ -165,7 +144,7 @@ def update_list(existing_list, new_list):
 			add_entry = True
 			for compare_entry in compare_list:
 				all_altnames_included = True
-				for new_alt_name in new_list[new_entry][altname_str]:
+				for new_alt_name in new_list[new_entry][KEY_STR_ALTERNATE_NAME]:
 					if ( not(altname_in_entry(new_alt_name, compare_entry)) ):
 						all_altnames_included = False
 						break
@@ -181,7 +160,7 @@ def update_list(existing_list, new_list):
 	
 def altname_in_entry(altname, entry):
 	# checks if altname is equal to at least one of the altnames of entry
-	for existing_altname in entry[altname_str]:				
+	for existing_altname in entry[KEY_STR_ALTERNATE_NAME]:
 		if ( existing_altname == altname ):
 			return True
 			
@@ -209,128 +188,128 @@ def merge_entries(doubles_array, list, logfile):
 	for entry in entry_array:
 		
 		# merge alternate names
-		if entry.has_key(altname_str):
+		if entry.has_key(KEY_STR_ALTERNATE_NAME):
 			
-			if not(merged_entry.has_key(altname_str)):
-				merged_entry[altname_str]= []
+			if not(merged_entry.has_key(KEY_STR_ALTERNATE_NAME)):
+				merged_entry[KEY_STR_ALTERNATE_NAME]= []
 
-			for name in entry[altname_str]:
+			for name in entry[KEY_STR_ALTERNATE_NAME]:
 				if ( not(altname_in_entry(name, merged_entry) ) ): 
-					merged_entry[altname_str].append ( name )
+					merged_entry[KEY_STR_ALTERNATE_NAME].append (name)
 
 		# merge target list
-		if entry.has_key(targetlist_str):
+		if entry.has_key(KEY_STR_TARGET_LIST):
 
-			if not(merged_entry.has_key(targetlist_str)):
-				merged_entry[targetlist_str]= copy.copy(entry[targetlist_str])
+			if not(merged_entry.has_key(KEY_STR_TARGET_LIST)):
+				merged_entry[KEY_STR_TARGET_LIST]= copy.copy(entry[KEY_STR_TARGET_LIST])
 			else:
-				for target in entry[targetlist_str]:
-					if not(target in merged_entry[targetlist_str]):
-						merged_entry[targetlist_str].append(target)
+				for target in entry[KEY_STR_TARGET_LIST]:
+					if not(target in merged_entry[KEY_STR_TARGET_LIST]):
+						merged_entry[KEY_STR_TARGET_LIST].append(target)
 	
 		# merge facility type
-		if entry.has_key(facilitytype_str):
+		if entry.has_key(KEY_STR_FACILITY_TYPE):
 		
-			if not(merged_entry.has_key(facilitytype_str)):
-				merged_entry[facilitytype_str] = entry[facilitytype_str]
-			elif entry[facilitytype_str] != merged_entry[facilitytype_str]:
-				write(logfile,  log_text_1 + facilitytype_str + log_text_2 + entry['original_id'] + "'")
+			if not(merged_entry.has_key(KEY_STR_FACILITY_TYPE)):
+				merged_entry[KEY_STR_FACILITY_TYPE] = entry[KEY_STR_FACILITY_TYPE]
+			elif entry[KEY_STR_FACILITY_TYPE] != merged_entry[KEY_STR_FACILITY_TYPE]:
+				write(logfile, log_text_1 + KEY_STR_FACILITY_TYPE + log_text_2 + entry['original_id'] + "'")
 		
 		# merge facility group
-		if entry.has_key(facilitygroup_str):
+		if entry.has_key(KEY_STR_FACILITY_GROUP):
 		
-			if not(merged_entry.has_key(facilitygroup_str)):
-				merged_entry[facilitygroup_str] = entry[facilitygroup_str]
-			elif entry[facilitygroup_str] != merged_entry[facilitygroup_str]:
-				write(logfile,  log_text_1 + facilitygroup_str + log_text_2 +entry['original_id'] + "'")
+			if not(merged_entry.has_key(KEY_STR_FACILITY_GROUP)):
+				merged_entry[KEY_STR_FACILITY_GROUP] = entry[KEY_STR_FACILITY_GROUP]
+			elif entry[KEY_STR_FACILITY_GROUP] != merged_entry[KEY_STR_FACILITY_GROUP]:
+				write(logfile, log_text_1 + KEY_STR_FACILITY_GROUP + log_text_2 + entry['original_id'] + "'")
 				
 		# merge location
-		if entry.has_key(location_str):
+		if entry.has_key(KEY_STR_LOCATION):
 
-			if not(merged_entry.has_key(location_str)):
-				merged_entry[location_str] = {}
+			if not(merged_entry.has_key(KEY_STR_LOCATION)):
+				merged_entry[KEY_STR_LOCATION] = {}
 
-			if entry[location_str].has_key(continent_str):
-				if not(merged_entry[location_str].has_key(continent_str)):
-					merged_entry[location_str][continent_str] = entry[location_str][continent_str]
-				elif entry[location_str][continent_str] != merged_entry[location_str][continent_str]:
-					write(logfile,  log_text_1 + continent_str + log_text_2 +entry['original_id'] + "'")
+			if entry[KEY_STR_LOCATION].has_key(KEY_STR_CONTINENT):
+				if not(merged_entry[KEY_STR_LOCATION].has_key(KEY_STR_CONTINENT)):
+					merged_entry[KEY_STR_LOCATION][KEY_STR_CONTINENT] = entry[KEY_STR_LOCATION][KEY_STR_CONTINENT]
+				elif entry[KEY_STR_LOCATION][KEY_STR_CONTINENT] != merged_entry[KEY_STR_LOCATION][KEY_STR_CONTINENT]:
+					write(logfile, log_text_1 + KEY_STR_CONTINENT + log_text_2 + entry['original_id'] + "'")
 			
-			if entry[location_str].has_key(country_str):
-				if not(merged_entry[location_str].has_key(country_str)):
-					merged_entry[location_str][country_str] = entry[location_str][country_str]
-				elif entry[location_str][country_str] != merged_entry[location_str][country_str]:
-					write(logfile, log_text_1 + country_str + log_text_2 + entry['original_id'] + "'")
+			if entry[KEY_STR_LOCATION].has_key(KEY_STR_COUNTRY):
+				if not(merged_entry[KEY_STR_LOCATION].has_key(KEY_STR_COUNTRY)):
+					merged_entry[KEY_STR_LOCATION][KEY_STR_COUNTRY] = entry[KEY_STR_LOCATION][KEY_STR_COUNTRY]
+				elif entry[KEY_STR_LOCATION][KEY_STR_COUNTRY] != merged_entry[KEY_STR_LOCATION][KEY_STR_COUNTRY]:
+					write(logfile, log_text_1 + KEY_STR_COUNTRY + log_text_2 + entry['original_id'] + "'")
 	
-			if entry[location_str].has_key(coordinates_str):
-				if not(merged_entry[location_str].has_key(coordinates_str)):
-					merged_entry[location_str][coordinates_str] = entry[location_str][coordinates_str]					
+			if entry[KEY_STR_LOCATION].has_key(KEY_STR_COORDINATES):
+				if not(merged_entry[KEY_STR_LOCATION].has_key(KEY_STR_COORDINATES)):
+					merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES]
 				else:
 
-					if entry[location_str][coordinates_str].has_key(lat_str):
-						if not(merged_entry[location_str][coordinates_str].has_key(lat_str)):
-							merged_entry[location_str][coordinates_str][lat_str] = entry[location_str][coordinates_str][lat_str]
-						elif merged_entry[location_str][coordinates_str][lat_str] != entry[location_str][coordinates_str][lat_str]:
-							write(logfile, log_text_1 + coordinates_str + "." + lat_str + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[location_str][coordinates_str][lat_str]) + " vs. " + str(entry[location_str][coordinates_str][lat_str]) + ")")
+					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_LAT):
+						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_LAT)):
+							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]
+						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]:
+							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_LAT + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LAT]) + ")")
 
-					if entry[location_str][coordinates_str].has_key(lon_str):
-						if not(merged_entry[location_str][coordinates_str].has_key(lon_str)):
-							merged_entry[location_str][coordinates_str][lon_str] = entry[location_str][coordinates_str][lon_str]
-						elif merged_entry[location_str][coordinates_str][lon_str] != entry[location_str][coordinates_str][lon_str]:
-							write(logfile, log_text_1 + coordinates_str + "." + lon_str + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[location_str][coordinates_str][lon_str]) + " vs. " + str(entry[location_str][coordinates_str][lon_str]) + ")")
+					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_LON):
+						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_LON)):
+							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]
+						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]:
+							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_LON + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_LON]) + ")")
 					
-					if entry[location_str][coordinates_str].has_key(alt_str):
-						if not(merged_entry[location_str][coordinates_str].has_key(alt_str)):
-							merged_entry[location_str][coordinates_str][alt_str] = entry[location_str][coordinates_str][alt_str]
-						elif merged_entry[location_str][coordinates_str][alt_str] != entry[location_str][coordinates_str][alt_str]:
-							write(logfile, log_text_1 + coordinates_str + "." + alt_str + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[location_str][coordinates_str][alt_str]) + " vs. " + str(entry[location_str][coordinates_str][alt_str]) + ")")
+					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_ALT):
+						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_ALT)):
+							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]
+						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]:
+							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_ALT + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_ALT]) + ")")
 
-					if entry[location_str][coordinates_str].has_key(tz_str):
-						if not(merged_entry[location_str][coordinates_str].has_key(tz_str)):
-							merged_entry[location_str][coordinates_str][tz_str] = entry[location_str][coordinates_str][tz_str]
-						elif merged_entry[location_str][coordinates_str][tz_str] != entry[location_str][coordinates_str][tz_str]:
-							write(logfile, log_text_1 + coordinates_str + "." + tz_str + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[location_str][coordinates_str][tz_str]) + " vs. " + str(entry[location_str][coordinates_str][tz_str]) + ")")
+					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_TZ):
+						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_TZ)):
+							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]
+						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]:
+							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_TZ + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_TZ]) + ")")
 
-					if entry[location_str][coordinates_str].has_key(sin_str):
-						if not(merged_entry[location_str][coordinates_str].has_key(sin_str)):
-							merged_entry[location_str][coordinates_str][sin_str] = entry[location_str][coordinates_str][sin_str]
-						elif merged_entry[location_str][coordinates_str][sin_str] != entry[location_str][coordinates_str][sin_str]:
-							write(logfile, log_text_1 + coordinates_str + "." + sin_str + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[location_str][coordinates_str][sin_str]) + " vs. " + str(entry[location_str][coordinates_str][sin_str]) + ")")
+					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_SIN):
+						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_SIN)):
+							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]
+						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]:
+							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_SIN + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_SIN]) + ")")
 
-					if entry[location_str][coordinates_str].has_key(cos_str):
-						if not(merged_entry[location_str][coordinates_str].has_key(cos_str)):
-							merged_entry[location_str][coordinates_str][cos_str] = entry[location_str][coordinates_str][cos_str]
-						elif merged_entry[location_str][coordinates_str][cos_str] != entry[location_str][coordinates_str][cos_str]:
-							write(logfile, log_text_1 + coordinates_str + "." + cos_str + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[location_str][coordinates_str][cos_str]) + " vs. " + str(entry[location_str][coordinates_str][cos_str]) + ")")
+					if entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_COS):
+						if not(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES].has_key(KEY_STR_COS)):
+							merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS] = entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]
+						elif merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS] != entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]:
+							write(logfile, log_text_1 + KEY_STR_COORDINATES + "." + KEY_STR_COS + log_text_2 + entry['original_id'] + "' (" + str(merged_entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]) + " vs. " + str(entry[KEY_STR_LOCATION][KEY_STR_COORDINATES][KEY_STR_COS]) + ")")
 			
 		# merge measurement type
-		if entry.has_key(measurementtype_str):
+		if entry.has_key(KEY_STR_MEASUREMENT_TYPE):
 
-			if not(merged_entry.has_key(measurementtype_str)):
-				merged_entry[measurementtype_str] = copy.copy(entry[measurementtype_str])
+			if not(merged_entry.has_key(KEY_STR_MEASUREMENT_TYPE)):
+				merged_entry[KEY_STR_MEASUREMENT_TYPE] = copy.copy(entry[KEY_STR_MEASUREMENT_TYPE])
 			else:
-				for elem in entry[measurementtype_str]:
-					if not(elem in merged_entry[measurementtype_str]):
-						merged_entry[measurementtype_str].append(elem)
+				for elem in entry[KEY_STR_MEASUREMENT_TYPE]:
+					if not(elem in merged_entry[KEY_STR_MEASUREMENT_TYPE]):
+						merged_entry[KEY_STR_MEASUREMENT_TYPE].append(elem)
 
 		# merge reference urls
-		if entry.has_key(referenceurl_str):
+		if entry.has_key(KEY_STR_REFERENCE_URL):
 			
-			if not(merged_entry.has_key(referenceurl_str)):
-				merged_entry[referenceurl_str] = []
+			if not(merged_entry.has_key(KEY_STR_REFERENCE_URL)):
+				merged_entry[KEY_STR_REFERENCE_URL] = []
 
-			for elem in entry[referenceurl_str]:
+			for elem in entry[KEY_STR_REFERENCE_URL]:
 				if ( not(merged_refurls.has_key(elem['url'])) ):
-					merged_entry[referenceurl_str].append(elem)
+					merged_entry[KEY_STR_REFERENCE_URL].append(elem)
 					merged_refurls[elem['url']] = True;
 						
 		# merge launch date
-		if entry.has_key(launchdate_str):
+		if entry.has_key(KEY_STR_LAUNCH_DATE):
 		
-			if not(merged_entry.has_key(launchdate_str)):
-				merged_entry[launchdate_str] = entry[launchdate_str]
-			elif entry[launchdate_str] != merged_entry[launchdate_str]:
-				write(logfile, log_text_1 + launchdate_str + "' for merged object: '" + entry['original_id'] + "'" )
+			if not(merged_entry.has_key(KEY_STR_LAUNCH_DATE)):
+				merged_entry[KEY_STR_LAUNCH_DATE] = entry[KEY_STR_LAUNCH_DATE]
+			elif entry[KEY_STR_LAUNCH_DATE] != merged_entry[KEY_STR_LAUNCH_DATE]:
+				write(logfile, log_text_1 + KEY_STR_LAUNCH_DATE + "' for merged object: '" + entry['original_id'] + "'")
 		
 	return merged_entry	
 						
@@ -351,26 +330,26 @@ def merge_doubles (list):
 		print ( "Calculating doubles for alternate names/ids..." )
 		for rec in list:		
 			# index for names, ids
-			if list[rec].has_key(altname_str):
-				for altname in list[rec][altname_str]:
+			if list[rec].has_key(KEY_STR_ALTERNATE_NAME):
+				for altname in list[rec][KEY_STR_ALTERNATE_NAME]:
 					
 					# add id to index
-					if altname.has_key(id_str):
-						if name_id_index.has_key(altname[id_str]):
-							if not ( rec in name_id_index[altname[id_str]] ):
-								name_id_index[altname[id_str]].append(rec)
+					if altname.has_key(KEY_STR_ID):
+						if name_id_index.has_key(altname[KEY_STR_ID]):
+							if not (rec in name_id_index[altname[KEY_STR_ID]]):
+								name_id_index[altname[KEY_STR_ID]].append(rec)
 						else:
-							name_id_index[altname[id_str]] = [rec]
-						cur_id = altname[id_str];
+							name_id_index[altname[KEY_STR_ID]] = [rec]
+						cur_id = altname[KEY_STR_ID];
 					else: cur_id = '___##NOT!SET##___'
 					
 					# add name to index
-					if altname.has_key(name_str) and altname[name_str] != cur_id:
-						if name_id_index.has_key(altname[name_str]):
-							if not ( rec in name_id_index[altname[name_str]] ):
-								name_id_index[altname[name_str]].append(rec)
+					if altname.has_key(KEY_STR_NAME) and altname[KEY_STR_NAME] != cur_id:
+						if name_id_index.has_key(altname[KEY_STR_NAME]):
+							if not (rec in name_id_index[altname[KEY_STR_NAME]]):
+								name_id_index[altname[KEY_STR_NAME]].append(rec)
 						else:
-							name_id_index[altname[name_str]] = [rec]
+							name_id_index[altname[KEY_STR_NAME]] = [rec]
 		
 		name_id_doubles = [];
 		#only remember those that actually store doubles
@@ -443,10 +422,10 @@ def merge_doubles (list):
 			name_index = {}
 			for rec in list:		
 				# index for names
-				if list[rec].has_key(altname_str):
-					for altname in list[rec][altname_str]:
-						if altname.has_key(name_str):
-							name_index[altname[name_str]] = { 'auth':altname[auth_str], 'obj':rec, 'cln': re.sub ('[/\-*+#,\s\.\'\"]', '', altname[name_str]).upper() } # match will be case INsensitive!
+				if list[rec].has_key(KEY_STR_ALTERNATE_NAME):
+					for altname in list[rec][KEY_STR_ALTERNATE_NAME]:
+						if altname.has_key(KEY_STR_NAME):
+							name_index[altname[KEY_STR_NAME]] = {'auth':altname[STR_NAMING_AUTHORITY], 'obj':rec, 'cln': re.sub ('[/\-*+#,\s\.\'\"]', '', altname[KEY_STR_NAME]).upper()} # match will be case INsensitive!
 			
 			print ( 'Searching for fuzzy matches...\n' )					
 			num_hints = 0
@@ -565,10 +544,10 @@ def merge_doubles (list):
 			
 			for rec in list:		
 				# partial index for names
-				if list[rec].has_key(altname_str):
-					for altname in list[rec][altname_str]:
-						if altname.has_key(name_str):
-							words = re.split( '[\s#-:;\\/\(\)\[\]\?\*,\._]', altname[name_str] )
+				if list[rec].has_key(KEY_STR_ALTERNATE_NAME):
+					for altname in list[rec][KEY_STR_ALTERNATE_NAME]:
+						if altname.has_key(KEY_STR_NAME):
+							words = re.split( '[\s#-:;\\/\(\)\[\]\?\*,\._]', altname[KEY_STR_NAME])
 							words = set(words) # remove dubilcates of words, so every word is unique and only mentioned once
 							for word in words:
 								upper_word = word.upper()
@@ -576,15 +555,15 @@ def merge_doubles (list):
 									if partial_index.has_key(upper_word):
 										
 										if partial_index[upper_word].has_key(rec):
-											partial_index[upper_word][rec].append( [altname[name_str], altname[auth_str]] )
+											partial_index[upper_word][rec].append([altname[KEY_STR_NAME], altname[STR_NAMING_AUTHORITY]])
 										else:	
-											partial_index[upper_word][rec] = [ [altname[name_str], altname[auth_str]] ]
+											partial_index[upper_word][rec] = [[altname[KEY_STR_NAME], altname[STR_NAMING_AUTHORITY]]]
 											partial_index[upper_word]["mult"] = True
 											found_matches = True
 										
 									else:
 										partial_index[upper_word] = {}
-										partial_index[upper_word][rec] = [ [altname[name_str], altname[auth_str]] ]
+										partial_index[upper_word][rec] = [[altname[KEY_STR_NAME], altname[STR_NAMING_AUTHORITY]]]
 										partial_index[upper_word]["mult"] = False
 
 			if not(found_matches): break # no more double matches in partial search for names were found, exit loop

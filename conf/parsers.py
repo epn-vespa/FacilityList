@@ -60,9 +60,9 @@ def translateUCD(MeasurementType):
 def replaceUCDinJSON(input_obj):
     print "Replacing values in 'measurementType' with respective UCD..."
     for obj in input_obj:
-        if consts.MEASUREMENT_TYPE in input_obj[obj]:
-            for n, type in enumerate(input_obj[obj][consts.MEASUREMENT_TYPE]):
-                input_obj[obj][consts.MEASUREMENT_TYPE][n] = translateUCD(type)
+        if consts.KEY_STR_MEASUREMENT_TYPE in input_obj[obj]:
+            for n, type in enumerate(input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE]):
+                input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE][n] = translateUCD(type)
     return input_obj
 
 
@@ -108,29 +108,29 @@ def load_aas_list():
     data = dict()
     for irec in range(nlines):
         data_tmp = dict()
-        data_tmp[consts.ALTERNATE_NAME] = []
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
         altname_tmp = dict()
 
         title = input['ID'][irec].strip()
-        altname_tmp[consts.NAME] = input['Name'][irec].strip()
-        altname_tmp[consts.ID] = title
-        altname_tmp[consts.NAMING_AUTHORITY] = authority
-        data_tmp[consts.ALTERNATE_NAME].append(altname_tmp)
+        altname_tmp[consts.KEY_STR_NAME] = input['Name'][irec].strip()
+        altname_tmp[consts.KEY_STR_ID] = title
+        altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
         if input['Location'][irec] == 'Space':
-            data_tmp[consts.FACILITY_TYPE] = 'spacecraft'
+            data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
         else:
-            data_tmp[consts.FACILITY_TYPE] = 'observatory'
-            data_tmp[consts.LOCATION] = dict()
-            data_tmp[consts.LOCATION][consts.CONTINENT] = input['Location'][irec].strip()
+            data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'observatory'
+            data_tmp[consts.KEY_STR_LOCATION] = dict()
+            data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_CONTINENT] = input['Location'][irec].strip()
         for otype in obsRangeTypes:
             if input[otype][irec].strip() != "\xc2\xa0":
-                if consts.MEASUREMENT_TYPE in data_tmp.keys():
-                    data_tmp[consts.MEASUREMENT_TYPE].append(translateUCD(otype))
+                if consts.KEY_STR_MEASUREMENT_TYPE in data_tmp.keys():
+                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE].append(translateUCD(otype))
                 else:
-                    data_tmp[consts.MEASUREMENT_TYPE] = [translateUCD(otype)]
+                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE] = [translateUCD(otype)]
         if input['Solar'][irec].strip() != "\xc2\xa0":
-            data_tmp[consts.TARGET_LIST] = []
-            data_tmp[consts.TARGET_LIST].append('Sun')
+            data_tmp[consts.KEY_STR_TARGET_LIST] = []
+            data_tmp[consts.KEY_STR_TARGET_LIST].append('Sun')
         data[authority+":"+title] = data_tmp
     return data
 
