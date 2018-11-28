@@ -23,7 +23,7 @@ import consts
 
 # directory containing raw input lists
 # is usually overwritten via setDataDir, but "data/" is default
-datadir = "data/"
+data_dir = "data/"
 
 # add all values that occur in "MeasurementType" here that ought to be replaced by their corresponding UCD
 MeasurementType2UCD = {
@@ -43,26 +43,26 @@ MeasurementType2UCD = {
 }
 
 
-def setDataDir(dir):
-    global datadir
-    datadir = dir
+def set_data_dir(directory):
+    global data_dir
+    data_dir = directory
 
 
 # replace single measurementType value with respective UCD
-def translateUCD(MeasurementType):
-    if MeasurementType2UCD.has_key(MeasurementType.lower()):
-        return MeasurementType2UCD[MeasurementType.lower()]
+def translate_ucd(measurement_type):
+    if measurement_type.lower() in MeasurementType2UCD.keys():
+        return MeasurementType2UCD[measurement_type.lower()]
     else:
-        return MeasurementType
+        return measurement_type
 
 
 # replace all measurementType values of a given object
-def replaceUCDinJSON(input_obj):
+def replace_ucd_in_json(input_obj):
     print "Replacing values in 'measurementType' with respective UCD..."
     for obj in input_obj:
         if consts.KEY_STR_MEASUREMENT_TYPE in input_obj[obj]:
-            for n, type in enumerate(input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE]):
-                input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE][n] = translateUCD(type)
+            for mt_index, mt_value in enumerate(input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE]):
+                input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE][mt_index] = translate_ucd(mt_value)
     return input_obj
 
 
@@ -76,20 +76,20 @@ def load_existing_json(file):
     if file.startswith('http://') or file.startswith('https://'):
         # URL (web service) has been provided
         try:
-            print ( "Retrieving data from web service: " + file )
+            print("Retrieving data from web service: " + file)
             response = urllib2.urlopen(urllib2.Request(file))
-            return replaceUCDinJSON( json.load(response) )
-        except ( URLError, HTTPError ) as e:
+            return replace_ucd_in_json(json.load(response))
+        except (URLError, HTTPError) as e:
             print "ERROR reading data from web service:"
-            print e.reason
+            print(e.reason)
             return {}
     else:
         # filename has been provided
-        if os.path.isfile(datadir + file):
-            print ( "Loading existing JSON file: " + file )
-            return replaceUCDinJSON( json.load(open(datadir + file) ) )
+        if os.path.isfile(data_dir + file):
+            print("Loading existing JSON file: " + file)
+            return replace_ucd_in_json(json.load(open(data_dir + file)))
         else:
-            print ("WARNING: JSON file '" + file + "' does not exist!")
+            print("WARNING: JSON file '" + file + "' does not exist!")
             return {}
 
 
@@ -100,7 +100,7 @@ The following functions are the load_****_list()
 
 def load_aas_list():
     authority = 'aas'
-    list_file = datadir + 'AAS.xml'
+    list_file = data_dir + 'AAS.xml'
     input = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
     nlines = len(input['ID'])
 
@@ -125,9 +125,9 @@ def load_aas_list():
         for otype in obsRangeTypes:
             if input[otype][irec].strip() != "\xc2\xa0":
                 if consts.KEY_STR_MEASUREMENT_TYPE in data_tmp.keys():
-                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE].append(translateUCD(otype))
+                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE].append(translate_ucd(otype))
                 else:
-                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE] = [translateUCD(otype)]
+                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE] = [translate_ucd(otype)]
         if input['Solar'][irec].strip() != "\xc2\xa0":
             data_tmp[consts.KEY_STR_TARGET_LIST] = []
             data_tmp[consts.KEY_STR_TARGET_LIST].append('Sun')
@@ -137,7 +137,7 @@ def load_aas_list():
 
 def load_ppi_list():
     authority = 'pds-ppi'
-    list_file = datadir + 'pds-ppi-spacecraft.json'
+    list_file = data_dir + 'pds-ppi-spacecraft.json'
     with open(list_file) as data_file:
         input = json.load(data_file)
 
@@ -191,7 +191,7 @@ def load_ppi_list():
 
 def load_ads_list():
     authority = 'ads'
-    list_file = datadir + 'ADS_facilities.txt'
+    list_file = data_dir + 'ADS_facilities.txt'
     with open(list_file,'r') as data_file:
         input = data_file.readlines()
 
@@ -217,7 +217,7 @@ def load_ads_list():
 
 def load_nssdc_list():
     authority = 'nssdc'
-    list_file = datadir + 'NSSDC.xml'
+    list_file = data_dir + 'NSSDC.xml'
     input = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
     nlines = len(input['name'])
 
@@ -249,7 +249,7 @@ def load_nssdc_list():
 
 def load_xephem_list():
     authority = 'xephem'
-    list_file = datadir + 'xephem_sites.txt'
+    list_file = data_dir + 'xephem_sites.txt'
     with open(list_file, 'r') as data_file:
         input_list = data_file.readlines()
 
@@ -305,7 +305,7 @@ def load_xephem_list():
 def load_naif_list():
     id_count = 0;
     authority = 'naif'
-    list_file = datadir + 'NAIF.xml'
+    list_file = data_dir + 'NAIF.xml'
     input = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
     nlines = len(input['NAIF ID'])
 
@@ -370,7 +370,7 @@ def load_mpc_gavo_list():
 
 def load_mpc_list():
     authority = 'iau-mpc'
-    list_file = datadir + 'IAU-MPC.txt'
+    list_file = data_dir + 'IAU-MPC.txt'
     with open(list_file,'r') as data_file:
         input = data_file.readlines()
 
@@ -408,7 +408,7 @@ def load_mpc_list():
 
 def load_iraf_list():
     authority = 'iraf'
-    list_file = datadir + 'IRAF.txt'
+    list_file = data_dir + 'IRAF.txt'
     with open(list_file,'r') as data_file:
         input = data_file.readlines()
 
@@ -478,7 +478,7 @@ def load_iraf_list():
 
 def load_dsn_list():
     authority = 'dsn'
-    list_file = datadir + 'DSN.txt'
+    list_file = data_dir + 'DSN.txt'
     with open(list_file,'r') as data_file:
         input = data_file.readlines()
 
@@ -504,7 +504,7 @@ def load_dsn_list():
 
 def load_telwiserep_list():
     authority = 'wiserep'
-    list_file = datadir + 'Tel_WISERep.dat'
+    list_file = data_dir + 'Tel_WISERep.dat'
 
     with open(list_file, 'r') as data_file:
         input = data_file.readlines()
