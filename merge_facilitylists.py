@@ -23,7 +23,7 @@ for arg in sys.argv:
 	if ( arg == "-u" or arg == "-update" ): update = True
 
 def load_all_lists(dir): # see parsers defined in file parsers.py
-	setDataDir(dir)
+	set_data_dir(dir)
 	if (update):
 		print ( "Using previously merged list in file '" + result_file_name + "'. This list will be udpated with supplied data..." )
 		if os.path.isfile(output_dir + result_file_name):
