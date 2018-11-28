@@ -72,12 +72,12 @@ def fetch_list_from_tap(tap_url, schema_name):
     return service.search(query)
 
 
-def load_existing_json(file):
-    if file.startswith('http://') or file.startswith('https://'):
+def load_existing_json(json_file):
+    if json_file.startswith('http://') or json_file.startswith('https://'):
         # URL (web service) has been provided
         try:
-            print("Retrieving data from web service: " + file)
-            response = urllib2.urlopen(urllib2.Request(file))
+            print("Retrieving data from web service: " + json_file)
+            response = urllib2.urlopen(urllib2.Request(json_file))
             return replace_ucd_in_json(json.load(response))
         except (URLError, HTTPError) as e:
             print "ERROR reading data from web service:"
@@ -85,11 +85,11 @@ def load_existing_json(file):
             return {}
     else:
         # filename has been provided
-        if os.path.isfile(data_dir + file):
-            print("Loading existing JSON file: " + file)
-            return replace_ucd_in_json(json.load(open(data_dir + file)))
+        if os.path.isfile(data_dir + json_file):
+            print("Loading existing JSON file: " + json_file)
+            return replace_ucd_in_json(json.load(open(data_dir + json_file)))
         else:
-            print("WARNING: JSON file '" + file + "' does not exist!")
+            print("WARNING: JSON file '" + json_file + "' does not exist!")
             return {}
 
 
@@ -99,39 +99,70 @@ The following functions are the load_****_list()
 
 
 def load_aas_list():
-    authority = 'aas'
-    list_file = data_dir + 'AAS.xml'
-    input = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
-    nlines = len(input['ID'])
+    """
+    This function loads the AAS list in VOTable format as available from=
+    https://raw.githubusercontent.com/epn-vespa/FacilityList/master/data/AAS.xml
+    :return data: (dict)
+    """
 
-    obsRangeTypes = ['Gamma-Ray','X-Ray','Ultraviolet','Optical','Infrared','Millimeter','Radio','Particles']
+    # Authority name for this list
+    authority = 'aas'
+
+    # Data file
+    list_file = data_dir + 'AAS.xml'
+
+    # Loading data as a VOTable
+    input_data = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
+
+    # List with observation ranges
+    obs_range_types = ['Gamma-Ray', 'X-Ray', 'Ultraviolet', 'Optical', 'Infrared', 'Millimeter', 'Radio', 'Particles']
+
+    # Initializing data dictionary
     data = dict()
-    for irec in range(nlines):
+
+    # Iterating on records ofinput list
+    for record in input_data:
+
+        # Initializing temporary dictionaries for this record
         data_tmp = dict()
         data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
         altname_tmp = dict()
 
-        title = input['ID'][irec].strip()
-        altname_tmp[consts.KEY_STR_NAME] = input['Name'][irec].strip()
+        # record title is ID column here
+        title = record['ID'].strip()
+
+        # Alternate_name element
+        altname_tmp[consts.KEY_STR_NAME] = record['Name'].strip()
         altname_tmp[consts.KEY_STR_ID] = title
         altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
         data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
-        if input['Location'][irec] == 'Space':
+
+        # Location (space, airborne or ground), with continent on ground
+        if record['Location'] == 'Space':
             data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
+        elif record['Location'] == 'Airborne':
+            data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'airborne'
         else:
             data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'observatory'
             data_tmp[consts.KEY_STR_LOCATION] = dict()
-            data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_CONTINENT] = input['Location'][irec].strip()
-        for otype in obsRangeTypes:
-            if input[otype][irec].strip() != "\xc2\xa0":
+            data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_CONTINENT] = record['Location'].\
+                strip().replace('&', 'and')  # Quick fix for continent names containing '&'
+
+        # Observation Range
+        for obs_type in obs_range_types:
+            if record[obs_type].strip() != "\xc2\xa0":
                 if consts.KEY_STR_MEASUREMENT_TYPE in data_tmp.keys():
-                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE].append(translate_ucd(otype))
+                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE].append(translate_ucd(obs_type))
                 else:
-                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE] = [translate_ucd(otype)]
-        if input['Solar'][irec].strip() != "\xc2\xa0":
-            data_tmp[consts.KEY_STR_TARGET_LIST] = []
-            data_tmp[consts.KEY_STR_TARGET_LIST].append('Sun')
+                    data_tmp[consts.KEY_STR_MEASUREMENT_TYPE] = [translate_ucd(obs_type)]
+
+        # Special case if the Solar keyword is
+        if record['Solar'].strip() != "\xc2\xa0":
+            data_tmp[consts.KEY_STR_TARGET_LIST] = ['Sun']
+
+        # adding temporary record to main data dictionary
         data[authority+":"+title] = data_tmp
+
     return data
 
 
@@ -139,10 +170,10 @@ def load_ppi_list():
     authority = 'pds-ppi'
     list_file = data_dir + 'pds-ppi-spacecraft.json'
     with open(list_file) as data_file:
-        input = json.load(data_file)
+        input_data = json.load(data_file)
 
     data = dict()
-    for record in input['response']['docs']:
+    for record in input_data['response']['docs']:
         current_sc = authority+":"+record['SPACECRAFT_NAME'][0]
 
         if current_sc not in data.keys():
