@@ -384,7 +384,8 @@ def merge_doubles (list):
 			if not(found):
 				united_doubles_list.append(entry)		
 
-		print ( "Merging dublicate entries for names/ids...\n" )
+		print ( "Merging dublicate entries for names/ids..." )
+		
 
 		log_file.write("\n********************** NAME AND ID MERGES **********************\n\n")
 
@@ -396,7 +397,9 @@ def merge_doubles (list):
 				while True:
 					cmd = raw_input ( "Are you sure you want to merge objects " + ", ".join(doubles) + " with same name/id but differences as shown above? (y/n): " ).lower()
 					if  ( cmd in ["y", "n"] ): break
-				if cmd == "n": continue
+				if cmd == "n":
+					print ( "\n----------------------------------------------------------------------------\n" )
+					continue
 			
 			# now actually do the merge 
 			merged_entry = merge_entries(doubles, list, log_file)
@@ -404,7 +407,9 @@ def merge_doubles (list):
 			merged_counter = merged_counter + 1
 			remove_entries(list, doubles)
 			log_file.write("\n")
-			print "Objects " + " and ".join(doubles) + " have been merged.\n"
+			print "Objects " + " and ".join(doubles) + " have been merged."
+			print ( "\n----------------------------------------------------------------------------\n" )
+
 		
 		log_file.write("\n\n********************** LOCATION MERGES (precision " + str(precision) + ") **********************\n")
 				
@@ -430,7 +435,7 @@ def merge_doubles (list):
 					cmd = raw_input ( confirm_str ).lower()
 					if  ( cmd in ["y", "n"] ): break
 				if cmd == "n":
-					print "\n"
+					print ( "\n----------------------------------------------------------------------------\n" )
 					continue
 
 				merged_entry = merge_entries(lon_lat_index[rec], list, log_file)
@@ -438,7 +443,9 @@ def merge_doubles (list):
 				merged_counter = merged_counter + 1
 				remove_entries(list, lon_lat_index[rec])
 				log_file.write("\n")
-				print "Objects " + " and ".join(lon_lat_index[rec]) + " have been merged.\n"
+				print "Objects " + " and ".join(lon_lat_index[rec]) + " have been merged."
+				print ( "\n----------------------------------------------------------------------------\n" )
+
 
 		log_file.close()
 		
