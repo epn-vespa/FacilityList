@@ -1,16 +1,16 @@
 """
 Available parsers in this file:
 - load_aas_list
-- load_ppi_list
 - load_ads_list
-- load_nssdc_list
-- load_xephem_list
-- load_naif_list
+- load_dsn_list
+- load_iraf_list
 - load_mpc_gavo_list
 - load_mpc_list
-- load_iraf_list
-- load_dsn_list
+- load_naif_list
+- load_nssdc_list
+- load_ppi_list
 - load_telwiserep_list
+- load_xephem_list
 """
 
 from astropy.io import votable
@@ -594,7 +594,8 @@ def load_telwiserep_list():
             if items[8] == "Satellite/Spacecraft":
                 data_tmp['facilityType'] = 'spacecraft'
             else:
-                data_tmp['facilityGroup'] = [items[8]]
+                if items[8] != "":
+                    data_tmp['facilityGroup'] = [items[8]]
 
             data_tmp['referenceURL'] = []
             refurl_tmp = dict()
