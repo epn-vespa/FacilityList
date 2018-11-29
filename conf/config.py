@@ -20,8 +20,6 @@ precision = 3
 # ***************** or the URL of respective web service.
 # example: 'load_xephem_list', 'load_naif_list', 'matrix_json_export_20170731.json', 'load_ads_list'
 configured_inputs = [
-    'load_iraf_list',
-    'load_telwiserep_list',
     'load_aas_list',
-    'load_mpc_gavo_list'
+    'load_ads_list'
 ]
