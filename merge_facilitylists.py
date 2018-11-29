@@ -4,7 +4,7 @@ from conf.config import *
 from conf.consts import *
 from pprint import pprint
 
-import json, pickle, copy, re, sys, os.path
+import json, pickle, copy, re, sys, os.path, uuid
 
 # ********************************** See conf/config.py for configurations of constants, parsers and inputs! **********************************
 
@@ -89,9 +89,8 @@ def trunc(num):
 	else:
 		return '.'.join([sp[0], sp[1][:precision]])
 	
-def save_checked_file(num_merged):
+def save_checked_file():
 	_checked_['_timestamp_'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-	_checked_['merged_counter'] = num_merged
 	checked_file = open( output_dir + tmp_checked_file_name, 'w')
 	checked_file.write( json.dumps ( _checked_ ) )
 	checked_file.close()
@@ -327,18 +326,18 @@ def merge_entries(doubles_array, list, logfile, check_only=False):
 	if (check_only):
 		return is_identical
 	else:
-		return merged_entry	
+		return merged_entry
 						
+def generate_merged_id():
+	return str(uuid.uuid4())
+	
 def merge_doubles (list):
 		
 	# indices of names and ids and locations
 	name_id_index = {}
 	lon_lat_index ={}
 	
-	if _checked_.has_key('merged_counter'): 
-		merged_counter = int(_checked_['merged_counter'])
-	else:
-		merged_counter = 0
+	merged_counter = 0 # only used for num of merged objects in pass 1 since merged_ids are randomized
 		
 	if not(fuzzy) and not(partial):	# no flags provided, simple merge of identical names/ids
 		log_file = open( logs_dir + log_file_name, 'w' )
@@ -397,11 +396,13 @@ def merge_doubles (list):
 				while True:
 					cmd = raw_input ( "Are you sure you want to merge objects " + ", ".join(doubles) + " with same name/id but differences as shown above? (y/n): " ).lower()
 					if  ( cmd in ["y", "n"] ): break
-				if cmd == "n": continue
+				if cmd == "n":
+					print ( "\n----------------------------------------------------------------------------\n" )
+					continue
 			
 			# now actually do the merge 
 			merged_entry = merge_entries(doubles, list, log_file)
-			list["merged_" + str(merged_counter)] = merged_entry
+			list["merged_" + generate_merged_id()] = merged_entry
 			merged_counter = merged_counter + 1
 			remove_entries(list, doubles)
 			log_file.write("\n")
@@ -437,7 +438,7 @@ def merge_doubles (list):
 					continue
 
 				merged_entry = merge_entries(lon_lat_index[rec], list, log_file)
-				list["merged_" + str(merged_counter)] = merged_entry
+				list["merged_" + generate_merged_id()] = merged_entry
 				merged_counter = merged_counter + 1
 				remove_entries(list, lon_lat_index[rec])
 				log_file.write("\n")
@@ -530,8 +531,7 @@ def merge_doubles (list):
 							
 							if cmd == 'm': # merge
 								if merged_entry != None:
-									list["merged_fuzzy_" + str(merged_counter)] = merged_entry
-									merged_counter = merged_counter + 1
+									list["merged_fuzzy_" + generate_merged_id()] = merged_entry
 									remove_entries(list, [name_index[checked_key]['obj'], name_index[key]['obj']])
 									print ( "Objects merged." )
 							
@@ -548,7 +548,7 @@ def merge_doubles (list):
 								
 							if cmd == 's': # save
 								print ( "Data and list of ignored objects saved." )
-								save_checked_file(merged_counter)
+								save_checked_file()
 								return list
 							
 							print ( "\n----------------------------------------------------------------------------\n" )
@@ -560,7 +560,7 @@ def merge_doubles (list):
 			print ( str(num_hints) + " hints created regarding objects that could be related in file '" + fuzzy_hints_file_name + "'" )
 			if (num_ignored): print ( str(num_ignored) + " entries skipped since they were previously ignored in interactive mode." )
 		else:
-			save_checked_file(merged_counter)
+			save_checked_file()
 			print ( "No (further) candidate objects found, " + str(num_ignored) + " ignored." )
 			
 	# "partial" search for similar keys in id/names...
@@ -692,7 +692,7 @@ def merge_doubles (list):
 					if cmd == "s": # save
 						print ( "Data and list of ignored terms saved." )
 						# save "_checked_" file
-						save_checked_file(merged_counter)
+						save_checked_file()
 						return list
 
 					all_merged = False
@@ -712,8 +712,7 @@ def merge_doubles (list):
 					merged_entry = merge_entries(to_be_merged, list, False)
 					
 					if merged_entry != None:
-						list["merged_partial_" + str(merged_counter)] = merged_entry
-						merged_counter = merged_counter + 1
+						list["merged_partial_" + generate_merged_id()] = merged_entry
 						remove_entries(list, to_be_merged)
 						print ( str(len(to_be_merged)) + " objects merged." )
 					
@@ -731,7 +730,7 @@ def merge_doubles (list):
 		if not(interactive): 
 			print ( str(num_hints) + " hints created regarding objects that could be related in file '" + partial_hints_file_name + "'" )
 		else:
-			save_checked_file(merged_counter)
+			save_checked_file()
 			print ( "No (further) candidate objects found." )
 
 	return list			
