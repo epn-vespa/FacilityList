@@ -4,7 +4,10 @@ The NASA/NAIF team is maintaining orbital and pointing information for
 space missions, using the NASA/SPICE library.
 
 More info:
-[https://naif.jpl.nasa.gov/naif/]
+[https://naif.jpl.nasa.gov/naif/](https://naif.jpl.nasa.gov/naif/)
+
+## Parser
+The parser script is available in [conf/parsers.py](../../conf/parsers.py), using the `load_naif_list()` function.
 
 ## Known Issues
 
