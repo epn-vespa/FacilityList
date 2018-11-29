@@ -97,6 +97,22 @@ def load_existing_json(json_file):
             return {}
 
 
+def parse_text(input_file):
+    with open(input_file,'r') as data_file:
+        input_data = data_file.readlines()
+    return input_data
+
+
+def parse_votable(input_file):
+    return votable.parse(input_file).get_first_table().to_table(use_names_over_ids=True)
+
+
+def parse_json(input_file):
+    with open(input_file) as data_file:
+        input_data = json.load(data_file)
+    return input_data
+
+
 """
 The following functions are the load_****_list() 
 """
@@ -116,7 +132,7 @@ def load_aas_list():
     list_file = data_dir + 'AAS.xml'
 
     # Loading data as a VOTable
-    input_data = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
+    input_data = parse_votable(list_file)
 
     # List with observation ranges
     obs_range_types = ['Gamma-Ray', 'X-Ray', 'Ultraviolet', 'Optical', 'Infrared', 'Millimeter', 'Radio', 'Particles']
@@ -184,8 +200,7 @@ def load_ppi_list():
     list_file = data_dir + 'pds-ppi-spacecraft.json'
 
     # Loading data as a JSON file
-    with open(list_file) as data_file:
-        input_data = json.load(data_file)
+    input_data = parse_json(list_file)
 
     # Initializing data dictionary
     data = dict()
@@ -244,11 +259,10 @@ def load_ppi_list():
 def load_ads_list():
     authority = 'ads'
     list_file = data_dir + 'ADS_facilities.txt'
-    with open(list_file,'r') as data_file:
-        input = data_file.readlines()
+    input_data = parse_text(list_file)
 
     data = dict()
-    for record in input:
+    for record in input_data:
         data_tmp = dict()
         data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
         title = record[0:16].strip()
@@ -270,7 +284,7 @@ def load_ads_list():
 def load_nssdc_list():
     authority = 'nssdc'
     list_file = data_dir + 'NSSDC.xml'
-    input_data = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
+    input_data = parse_votable(list_file)
 
     data = dict()
 
@@ -304,12 +318,10 @@ def load_xephem_list():
     authority = 'xephem'
 
     list_file = data_dir + 'xephem_sites.txt'
-    with open(list_file, 'r') as data_file:
-        input_list = data_file.readlines()
-
+    input_data = parse_text(list_file)
     data = dict()
 
-    for record in input_list:
+    for record in input_data:
         if record[0] != '#':
             record = ' '.join(record.split())
             data_tmp = dict()
@@ -360,19 +372,20 @@ def load_xephem_list():
 def load_naif_list():
     id_count = 0
     authority = 'naif'
-    list_file = data_dir + 'NAIF.xml'
-    input_data = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
+    list_file = data_dir + 'NAIF/naif.txt'
+    input_data = parse_text(list_file)
 
     data = dict()
 
     for record in input_data:
 
+        items = [item.strip() for item in record.split()]
         data_tmp = dict()
         data_tmp['alternateName'] = []
         altname_tmp = dict()
 
-        title = record['NAIF ID'].strip()
-        altname_tmp['name'] = record['NAIF name'].strip()
+        title = items[0]
+        altname_tmp['name'] = ' '.join(items[1:]).strip("'")
         altname_tmp['id'] = title
         altname_tmp['namingAuthority'] = authority
 
@@ -426,11 +439,11 @@ def load_mpc_gavo_list():
 def load_mpc_list():
     authority = 'iau-mpc'
     list_file = data_dir + 'IAU-MPC.txt'
-    with open(list_file,'r') as data_file:
-        input = data_file.readlines()
+
+    input_data = parse_text(list_file)
 
     data = dict()
-    for record in input[1:]:
+    for record in input_data[1:]:
         data_tmp = dict()
         data_tmp['alternateName'] = []
 
@@ -464,14 +477,14 @@ def load_mpc_list():
 def load_iraf_list():
     authority = 'iraf'
     list_file = data_dir + 'IRAF.txt'
-    with open(list_file,'r') as data_file:
-        input = data_file.readlines()
 
-    nlines = len(input)
+    input_data = parse_text(list_file)
+
+    nlines = len(input_data)
     data = dict()
 
     for irec in range(nlines):
-        record = input[irec]
+        record = input_data[irec]
         if record[0:3] == 'obs':
             data_tmp = dict()
             data_tmp['alternateName'] = []
@@ -484,16 +497,16 @@ def load_iraf_list():
 
             for i in range(5):
                 iirec = irec+i+1
-                if input[iirec][1:4] == 'nam':
-                    obs_name = input[iirec].split(' = ')[1].strip().strip('"')
-                if input[iirec][1:4] == 'lon':
-                    obs_lon = input[iirec].split(' = ')[1].strip()
-                if input[iirec][1:4] == 'lat':
-                    obs_lat = input[iirec].split(' = ')[1].strip()
-                if input[iirec][1:4] == 'alt':
-                    obs_alt = float(input[iirec].split(' = ')[1].strip())
-                if input[iirec][1:4] == 'tim':
-                    obs_tz = float(input[iirec].split(' = ')[1].strip())
+                if input_data[iirec][1:4] == 'nam':
+                    obs_name = input_data[iirec].split(' = ')[1].strip().strip('"')
+                if input_data[iirec][1:4] == 'lon':
+                    obs_lon = input_data[iirec].split(' = ')[1].strip()
+                if input_data[iirec][1:4] == 'lat':
+                    obs_lat = input_data[iirec].split(' = ')[1].strip()
+                if input_data[iirec][1:4] == 'alt':
+                    obs_alt = float(input_data[iirec].split(' = ')[1].strip())
+                if input_data[iirec][1:4] == 'tim':
+                    obs_tz = float(input_data[iirec].split(' = ')[1].strip())
 
             altname_tmp = dict()
             altname_tmp['namingAuthority'] = authority
@@ -534,11 +547,11 @@ def load_iraf_list():
 def load_dsn_list():
     authority = 'dsn'
     list_file = data_dir + 'DSN.txt'
-    with open(list_file,'r') as data_file:
-        input = data_file.readlines()
+
+    input_data = parse_text(list_file)
 
     data = dict()
-    for record in input:
+    for record in input_data:
         data_tmp = dict()
         data_tmp['alternateName'] = []
         rec_items = record.strip().split()
@@ -561,11 +574,10 @@ def load_telwiserep_list():
     authority = 'wiserep'
     list_file = data_dir + 'Tel_WISERep.dat'
 
-    with open(list_file, 'r') as data_file:
-        input = data_file.readlines()
+    input_data = parse_text(list_file)
 
     data = dict()
-    for record in input:
+    for record in input_data:
 
         if record.startswith('#'):
             pass
