@@ -120,7 +120,7 @@ def load_aas_list():
     # Initializing data dictionary
     data = dict()
 
-    # Iterating on records ofinput list
+    # Iterating on records of the input list
     for record in input_data:
 
         # Initializing temporary dictionaries for this record
@@ -167,42 +167,59 @@ def load_aas_list():
 
 
 def load_ppi_list():
+    """
+    This function loads the PDS/PPI list in JSON format
+    This list is curated, and thus multiple spacecraft appear several times: an initial pre-merge is done on the fly
+    :return data: (dict)
+    """
+
+    # Authority name for this list
     authority = 'pds-ppi'
+
+    # Data file
     list_file = data_dir + 'pds-ppi-spacecraft.json'
+
+    # Loading data as a JSON file
     with open(list_file) as data_file:
         input_data = json.load(data_file)
 
+    # Initializing data dictionary
     data = dict()
+
+    # Iterating on records of the input list
     for record in input_data['response']['docs']:
+
+        # Current record spacecraft name
         current_sc = authority+":"+record['SPACECRAFT_NAME'][0]
 
+        # if the current spacecraft object is not in the existing data dictionary, initialize it
         if current_sc not in data.keys():
             data[current_sc] = dict()
-            data[current_sc]['alternateName'] = []
-            data[current_sc]['facilityGroup'] = []
-            data[current_sc]['instrumentList'] = []
-            data[current_sc]['targetList'] = []
-            data[current_sc]['facilityType'] = 'spacecraft'
+            data[current_sc][consts.KEY_STR_ALTERNATE_NAME] = []
+            data[current_sc][consts.KEY_STR_FACILITY_GROUP] = []
+            data[current_sc][consts.KEY_STR_INSTRUMENT_LIST] = []
+            data[current_sc][consts.KEY_STR_TARGET_LIST] = []
+            data[current_sc][consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
 
         if 'SPACECRAFT_NAME' in record.keys():
             for altname_item in record['SPACECRAFT_NAME']:
                 altname_tmp_list = []
-                for item in data[current_sc]['alternateName']:
-                    altname_tmp_list.append(item['name'])
+                for item in data[current_sc][consts.KEY_STR_ALTERNATE_NAME]:
+                    altname_tmp_list.append(item[consts.KEY_STR_NAME])
                 if altname_item not in altname_tmp_list:
                     altname_tmp = dict()
-                    altname_tmp['name'] = altname_item
-                    altname_tmp['namingAuthority'] = authority
-                    data[current_sc]['alternateName'].append(altname_tmp)
+                    altname_tmp[consts.KEY_STR_NAME] = altname_item
+                    altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
+                    data[current_sc][consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
 
         if 'MISSION_NAME' in record.keys():
-            if record['MISSION_NAME'] not in data[current_sc]['facilityGroup']:
-                data[current_sc]['facilityGroup'].append(record['MISSION_NAME'])
+            if record['MISSION_NAME'] not in data[current_sc][consts.KEY_STR_FACILITY_GROUP]:
+                data[current_sc][consts.KEY_STR_FACILITY_GROUP].append(record['MISSION_NAME'])
 
         if 'INSTRUMENT_NAME' in record.keys():
             for instrum_item in record['INSTRUMENT_NAME']:
                 instrum_tmp_list = []
-                for item in data[current_sc]['instrumentList']:
+                for item in data[current_sc][consts.KEY_STR_INSTRUMENT_LIST]:
                     instrum_tmp_list.append(item['name'])
                 if instrum_item not in instrum_tmp_list:
                     ii = record['INSTRUMENT_NAME'].index(instrum_item)
@@ -214,8 +231,8 @@ def load_ppi_list():
         if 'TARGET_NAME' in record.keys():
             for target_item in record['TARGET_NAME']:
                 target_item = target_item.strip()
-                if target_item not in data[current_sc]['targetList']:
-                    data[current_sc]['targetList'].append(target_item)
+                if target_item not in data[current_sc][consts.KEY_STR_TARGET_LIST]:
+                    data[current_sc][consts.KEY_STR_TARGET_LIST].append(target_item)
 
     return data
 
@@ -229,19 +246,19 @@ def load_ads_list():
     data = dict()
     for record in input:
         data_tmp = dict()
-        data_tmp['alternateName'] = []
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
         title = record[0:16].strip()
         altname_tmp = dict()
-        altname_tmp['namingAuthority'] = authority
-        altname_tmp['id'] = title
-        altname_tmp['name'] = record[16:].strip()
-        data_tmp['alternateName'].append(altname_tmp)
+        altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
+        altname_tmp[consts.KEY_STR_ID] = title
+        altname_tmp[consts.KEY_STR_NAME] = record[16:].strip()
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
         if '/' in record[16:]:
-            data_tmp['facilityGroup'] = record[16:].split('/')[0]
+            data_tmp[consts.KEY_STR_FACILITY_GROUP] = [record[16:].split('/')[0]]
         if title[0:3] == 'Sa.':
-            data_tmp['facilityType'] = 'spacecraft'
+            data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
         else:
-            data_tmp['facilityType'] = 'observatory'
+            data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'observatory'
         data[authority+":"+title] = data_tmp
     return data
 
@@ -249,29 +266,29 @@ def load_ads_list():
 def load_nssdc_list():
     authority = 'nssdc'
     list_file = data_dir + 'NSSDC.xml'
-    input = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
-    nlines = len(input['name'])
+    input_data = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
 
     data = dict()
-    for irec in range(nlines):
+
+    for record in input_data:
         data_tmp = dict()
-        data_tmp['alternateName'] = []
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
         altname_tmp = dict()
 
-        title = input['NSSDC id'][irec]
-        altname_tmp['name'] = input['name'][irec]
-        altname_tmp['id'] = title
-        altname_tmp['namingAuthority'] = authority
-        data_tmp['alternateName'].append(altname_tmp)
+        title = record['NSSDC id']
+        altname_tmp[consts.KEY_STR_NAME] = record['name']
+        altname_tmp[consts.KEY_STR_ID] = title
+        altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
 
-        data_tmp['referenceURL'] = []
+        data_tmp[consts.KEY_STR_REFERENCE_URL] = []
         refurl_tmp = dict()
-        refurl_tmp['url'] = input['URL'][irec]
+        refurl_tmp['url'] = record['URL']
         refurl_tmp['title'] = 'NSSDC catalog entry'
-        data_tmp['referenceURL'].append(refurl_tmp)
-        data_tmp['facilityType'] = 'spacecraft'
-        if input['Launch date'][irec] != "":
-            data_tmp['launchDate'] = input['Launch date'][irec]
+        data_tmp[consts.KEY_STR_REFERENCE_URL].append(refurl_tmp)
+        data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
+        if record[consts.KEY_STR_LAUNCH_DATE] != "":
+            data_tmp[consts.KEY_STR_LAUNCH_DATE] = record['Launch date']
 
         data[authority+":"+title] = data_tmp
 
@@ -279,17 +296,20 @@ def load_nssdc_list():
 
 
 def load_xephem_list():
+
     authority = 'xephem'
+
     list_file = data_dir + 'xephem_sites.txt'
     with open(list_file, 'r') as data_file:
         input_list = data_file.readlines()
 
     data = dict()
+
     for record in input_list:
         if record[0] != '#':
             record = ' '.join(record.split())
             data_tmp = dict()
-            data_tmp['alternateName'] = []
+            data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
 
             items = record.split(';')
             rec_name = items[0]
@@ -315,18 +335,18 @@ def load_xephem_list():
 
             title = rec_name.strip()
             altname_tmp = dict()
-            altname_tmp['name'] = title
-            altname_tmp['namingAuthority'] = authority
-            data_tmp['alternateName'].append(altname_tmp)
-            data_tmp['facilityType'] = 'observatory'
-            data_tmp['location'] = dict()
+            altname_tmp[consts.KEY_STR_NAME] = title
+            altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
+            data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
+            data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'observatory'
+            data_tmp[consts.KEY_STR_LOCATION] = dict()
 #            if rec_location != '':
 #                data_tmp['location']['country'] = rec_location
-            data_tmp['location']['coordinates'] = dict()
-            data_tmp['location']['coordinates']['lat'] = rec_lat
-            data_tmp['location']['coordinates']['lon'] = rec_lon
+            data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_COORDINATES] = dict()
+            data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_COORDINATES][consts.KEY_STR_LAT] = rec_lat
+            data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_COORDINATES][consts.KEY_STR_LON] = rec_lon
             if rec_alt != -1.:
-                data_tmp['location']['coordinates']['alt'] = rec_alt
+                data_tmp[consts.KEY_STR_LOCATION][consts.KEY_STR_COORDINATES][consts.KEY_STR_ALT] = rec_alt
 
             data[authority+":"+title] = data_tmp
 
@@ -334,21 +354,21 @@ def load_xephem_list():
 
 
 def load_naif_list():
-    id_count = 0;
+    id_count = 0
     authority = 'naif'
     list_file = data_dir + 'NAIF.xml'
-    input = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
-    nlines = len(input['NAIF ID'])
+    input_data = votable.parse(list_file).get_first_table().to_table(use_names_over_ids=True)
 
     data = dict()
-    for irec in range(nlines):
+
+    for record in input_data:
 
         data_tmp = dict()
         data_tmp['alternateName'] = []
         altname_tmp = dict()
 
-        title = input['NAIF ID'][irec].strip()
-        altname_tmp['name'] = input['NAIF name'][irec].strip()
+        title = record['NAIF ID'].strip()
+        altname_tmp['name'] = record['NAIF name'].strip()
         altname_tmp['id'] = title
         altname_tmp['namingAuthority'] = authority
 
@@ -574,7 +594,7 @@ def load_telwiserep_list():
             if items[8] == "Satellite/Spacecraft":
                 data_tmp['facilityType'] = 'spacecraft'
             else:
-                data_tmp['facilityGroup'] = items[8]
+                data_tmp['facilityGroup'] = [items[8]]
 
             data_tmp['referenceURL'] = []
             refurl_tmp = dict()
@@ -585,3 +605,4 @@ def load_telwiserep_list():
             data[authority+":"+id] = data_tmp
 
     return data
+
