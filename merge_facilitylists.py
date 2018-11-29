@@ -221,10 +221,13 @@ def merge_entries(doubles_array, list, logfile, check_only=False):
 		if entry.has_key(KEY_STR_FACILITY_GROUP):
 		
 			if not(merged_entry.has_key(KEY_STR_FACILITY_GROUP)):
-				merged_entry[KEY_STR_FACILITY_GROUP] = entry[KEY_STR_FACILITY_GROUP]
-			elif entry[KEY_STR_FACILITY_GROUP] != merged_entry[KEY_STR_FACILITY_GROUP]:
-				write(logfile, log_text_1 + KEY_STR_FACILITY_GROUP + log_text_2 + entry['original_id'] + "'")
-				is_identical = False
+				merged_entry[KEY_STR_FACILITY_GROUP] = copy.copy(entry[KEY_STR_FACILITY_GROUP])
+			else:
+				for elem in entry[KEY_STR_FACILITY_GROUP]:
+					if not(elem in merged_entry[KEY_STR_FACILITY_GROUP]):
+						merged_entry[KEY_STR_FACILITY_GROUP].append(elem)
+						write(logfile, log_text_1 + KEY_STR_FACILITY_GROUP + log_text_2 + entry['original_id'] + "' (" + elem + ")")
+						is_identical = False
 				
 		# merge location
 		if entry.has_key(KEY_STR_LOCATION):
@@ -406,7 +409,7 @@ def merge_doubles (list):
 			merged_counter = merged_counter + 1
 			remove_entries(list, doubles)
 			log_file.write("\n")
-			print "Objects " + " and ".join(doubles) + " have been merged."
+			print "Objects " + ", ".join(doubles) + " have been merged."
 			print ( "\n----------------------------------------------------------------------------\n" )
 
 		
@@ -428,7 +431,7 @@ def merge_doubles (list):
 				# let user confirm all location merges and show
 				are_equal = merge_entries(lon_lat_index[rec], list, None, True)
 				while True:
-					confirm_str = "Objects " + " and ".join(lon_lat_index[rec]) + " have a similar location (precission " + str(precision) + "). Do you want to merge these objects with different names"
+					confirm_str = "Objects " + ", ".join(lon_lat_index[rec]) + " have a similar location (precission " + str(precision) + "). Do you want to merge these objects with different names"
 					if not(are_equal): confirm_str = confirm_str + " and further differences as shown above"
 					confirm_str = confirm_str + "? (y/n): "
 					cmd = raw_input ( confirm_str ).lower()
@@ -442,7 +445,7 @@ def merge_doubles (list):
 				merged_counter = merged_counter + 1
 				remove_entries(list, lon_lat_index[rec])
 				log_file.write("\n")
-				print "Objects " + " and ".join(lon_lat_index[rec]) + " have been merged."
+				print "Objects " + ", ".join(lon_lat_index[rec]) + " have been merged."
 				print ( "\n----------------------------------------------------------------------------\n" )
 
 
