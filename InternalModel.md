@@ -18,7 +18,7 @@ The expected properties are:
 * `targetList`: (list) A list of string items with target names.
 * `facilityGroup`: (str) A named group to which the Facility belongs to.
 * `instrumentList`: (list) A list of string items with instrument names.
-* `referenceURL`: (str) A string containing URL to a reference website of documentation.
+* `referenceURL`: (str) A list of string items containing URL to a reference website(s) or documentation.
 * `launchDate`: (str) A string containing the launch date for a spacecraft.
 
 Each `alternateName` object contins the following attributes:
