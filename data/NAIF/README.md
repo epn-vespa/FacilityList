@@ -6,6 +6,9 @@ space missions, using the NASA/SPICE library.
 More info:
 [https://naif.jpl.nasa.gov/naif/](https://naif.jpl.nasa.gov/naif/)
 
+## Identifiers
+The NAIF/SPICE identifiers are avaialble from [https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/naif_ids.html](NAIF IDs page)
+
 ## Parser
 The parser script is available in [conf/parsers.py](../../conf/parsers.py), using the `load_naif_list()` function.
 
