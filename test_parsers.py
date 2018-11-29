@@ -26,6 +26,13 @@ def facility_schema_validate(record):
     jsonschema.validate(record, schema_data)
 
 
+def validate_json_file(input_file):
+    with open(input_file, 'r') as f:
+        input_data = json.load(f)
+        for key, value in input_data.iteritems():
+            facility_schema_validate(value)
+
+
 class test_parsers_output(unittest.TestCase):
     """
     Test case for parsers output()
@@ -36,3 +43,4 @@ class test_parsers_output(unittest.TestCase):
             data = cur_function()
             for key, value in data.iteritems():
                 self.assertRaises(jsonschema.ValidationError, facility_schema_validate(value))
+
