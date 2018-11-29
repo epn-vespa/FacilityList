@@ -21,6 +21,10 @@ import urllib2
 import pyvo
 import consts
 
+import warnings
+from astropy.utils.exceptions import AstropyWarning
+warnings.simplefilter('ignore', category=AstropyWarning)
+
 # directory containing raw input lists
 # is usually overwritten via setDataDir, but "data/" is default
 data_dir = "data/"
@@ -287,7 +291,7 @@ def load_nssdc_list():
         refurl_tmp['title'] = 'NSSDC catalog entry'
         data_tmp[consts.KEY_STR_REFERENCE_URL].append(refurl_tmp)
         data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
-        if record[consts.KEY_STR_LAUNCH_DATE] != "":
+        if record['Launch date'] != "":
             data_tmp[consts.KEY_STR_LAUNCH_DATE] = record['Launch date']
 
         data[authority+":"+title] = data_tmp
