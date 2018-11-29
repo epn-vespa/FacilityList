@@ -34,7 +34,7 @@
         "facilityType": {
             "description": "Type of Facility",
             "type": "string",
-            "enum": ["spacecraft", "observatory", "balloon"]
+            "enum": ["spacecraft", "observatory", "balloon", "airborne"]
         },
         "location": {
             "description": "Location of the Facility",
@@ -65,23 +65,38 @@
                         },
                         "lon": {
                             "description": "Longitude coordinate of the Facility",
-                            "type": "string"
+                            "AnyOf": [
+                                {"type": "string"},
+                                {"type": "number"}
+                            ]
                         },
                         "alt": {
                             "description": "Altitude coordinate of the Facility",
-                            "type": "string"
+                            "AnyOf": [
+                                {"type": "string"},
+                                {"type": "number"}
+                            ]
                         }, 
                         "sin": {
                             "description": "Sin coordinate of the Facility",
-                            "type": "string"
+                            "AnyOf": [
+                                {"type": "string"},
+                                {"type": "number"}
+                            ]
                         }, 
                         "cos": {
                             "description": "Cos coordinate of the Facility",
-                            "type": "string"
+                            "AnyOf": [
+                                {"type": "string"},
+                                {"type": "number"}
+                            ]
                         },
                         "tz": {
                             "description": "Time Zone of the Facility",
-                            "type": "string"
+                            "AnyOf": [
+                                {"type": "string"},
+                                {"type": "number"}
+                            ]
                         }
                     }
                 }
@@ -103,19 +118,49 @@
         },
         "facilityGroup": {
             "description": "Group of Facilities to which belongs the Facilty",
-            "type": "string"
-        },
-        "instrumentList": {
-            "description": "List of instruments for this facility",
             "type": "array",
             "items": {
                 "type": "string"
             }
         },
+        "instrumentList": {
+            "description": "List of instruments for this facility",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Identifier of the instrument",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Name of the instrument",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Instrument type",
+                        "type": "string"
+                    }
+                }
+            }
+        },
         "referenceURL": {
             "description": "Reference URL for the Facility",
-            "type": "string",
-            "format": "uri-reference"
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "URL title",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "URL of the resource",
+                        "type": "string",
+                        "format": "uri-reference"
+                    }
+                }
+            }
         },
         "launchDate": {
             "description": "Launch date for a spacecraft Facility",
