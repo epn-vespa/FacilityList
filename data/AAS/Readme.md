@@ -11,8 +11,6 @@ More info:
 The data is available in the [AAS.xml](AAS.xml) file, retrieved on 2022-02-01.
 
 ## Parser
-The parser script is available in [conf/parsers.py](../../conf/parsers.py), using the `load_naif_list()` function.
-
 
 ## Known Issues
 
