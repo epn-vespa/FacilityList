@@ -1,4 +1,4 @@
-# IRAF IRAF (Image Reduction and Analysis Facility) 
+# IRAF (Image Reduction and Analysis Facility) 
 
 IRAF (Image Reduction and Analysis Facility) is a collection of software written at the National Optical Astronomy Observatory (NOAO) geared towards the reduction of astronomical images in pixel array form.
 
