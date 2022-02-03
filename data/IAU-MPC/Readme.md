@@ -8,7 +8,7 @@ More info:
 ## Identifiers
 SANA identifiers are avaialble from [minorplanetcenter.net/data, Observatory Codes section](https://www.minorplanetcenter.net/iau/lists/ObsCodes.html)
 
-The data is available in the [AU-MPC.txt](SAU-MPC.txt) file, retrieved on 2022-02-03.
+The data is available in the [AU-MPC.txt](IAU-MPC.txt) file, retrieved on 2022-02-03.
 
 
 ## Parser
