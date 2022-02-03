@@ -8,8 +8,8 @@ More info:
 ## Identifiers
 SANA identifiers are avaialble from [sanaregistry.org/r, spacecraftid section](https://sanaregistry.org/r/spacecraftid/?per_page=500)
 
-The data is available in the [SANA-orig.xml](SANA-orig.xml) & [SANA.xml](SANA.xml) file, retrieved on 2022-02-03.
-SANA.xml version is not updated
+The data is available in the [spacecraft-202202031331.csv](spacecraft-202202031331.csv) & [spacecraft-202202031333.json](spacecraft-202202031333.json) & [spacecraft-202202031331.xml](spacecraft-202202031331.xml) file, retrieved on 2022-02-03.
+
 
 ## Parser
 
