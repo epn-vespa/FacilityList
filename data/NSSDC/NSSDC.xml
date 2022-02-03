@@ -28,340 +28,339 @@ Launch Date (YYYY-MM-DD)
 </DESCRIPTION>
 </FIELD>
 <DATA><TABLEDATA>
-
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-011A">1962 Lambda 1</a></td><td>1962-011A</td><td>1962-04-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-021A">1962 Phi 1</a></td><td>1962-021A</td><td>1962-05-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-031A">1964-031A</a></td><td>1964-031A</td><td>1964-06-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-083C">1964-083C</a></td><td>1964-083C</td><td>1964-12-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-054A">1971-054A</a></td><td>1971-054A</td><td>1971-06-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1999-022A">ABRIXAS</a></td><td>1999-022A</td><td>1999-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=AFP-675">AFP-675</a></td><td>AFP-675</td><td>1990-07-19</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=AFP-888">AFP-888</a></td><td>AFP-888</td><td>1990-07-19</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2007-013A">AGILE</a></td><td>2007-013A</td><td>2007-04-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2006-005A">Akari</a></td><td>2006-005A</td><td>2006-02-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1993-026A">Alexis</a></td><td>1993-026A</td><td>1993-04-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-049A">Alouette 1</a></td><td>1962-049A</td><td>1962-09-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-098A">Alouette 2</a></td><td>1965-098A</td><td>1965-11-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1974-070A">ANS</a></td><td>1974-070A</td><td>1974-08-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-008A">Apollo 14 Command and Service Module (CSM)</a></td><td>1971-008A</td><td>1971-01-31</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-063A">Apollo 15 Command and Service Module (CSM)</a></td><td>1971-063A</td><td>1971-07-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-031A">Apollo 16 Command and Service Module (CSM)</a></td><td>1972-031A</td><td>1972-04-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-031C">Apollo 16 Lunar Module /ALSEP</a></td><td>1972-031C</td><td>1972-04-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-096A">Apollo 17 Command and Service Module (CSM)</a></td><td>1972-096A</td><td>1972-12-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-015A">Ariel 1</a></td><td>1962-015A</td><td>1962-04-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-015A">Ariel 2</a></td><td>1964-015A</td><td>1964-03-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-042A">Ariel 3</a></td><td>1967-042A</td><td>1967-05-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-109A">Ariel 4</a></td><td>1971-109A</td><td>1971-12-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1974-077A">Ariel 5</a></td><td>1974-077A</td><td>1974-10-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1979-047A">Ariel 6</a></td><td>1979-047A</td><td>1979-06-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1993-011A">ASCA</a></td><td>1993-011A</td><td>1993-02-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1975-066A">ASTP-Apollo</a></td><td>1975-066A</td><td>1975-07-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ASTRO-1">Astro 1</a></td><td>ASTRO-1</td><td>1990-12-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ASTRO-2">Astro 2</a></td><td>ASTRO-2</td><td>1995-03-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1987-012A">Astro-C</a></td><td>1987-012A</td><td>1987-02-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2016-012A">Astro-H</a></td><td>2016-012A</td><td>2016-02-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ASTRMAG">Astromag FF</a></td><td>ASTRMAG</td><td>2005-01-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1983-020A">ASTRON</a></td><td>1983-020A</td><td>1983-03-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2015-052A">Astrosat</a></td><td>2015-052A</td><td>2015-09-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ATLAS1">Atlas 1 / STS 45</a></td><td>ATLAS1</td><td>1992-03-24</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=BEAM">Beam</a></td><td>BEAM</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1979-051A">Bhaskara</a></td><td>1979-051A</td><td>1979-06-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2014-033L">Brite Totonto</a></td><td>2014-033L</td><td>2014-06-19</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-009F">BRITE-A</a></td><td>2013-009F</td><td>2013-02-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-066R">BRITE-PL</a></td><td>2013-066R</td><td>2013-11-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2014-049B">BRITE-PL 2</a></td><td>2014-049B</td><td>2014-08-19</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-009G">BRITE-U</a></td><td>2013-009G</td><td>2013-02-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1997-061A">Cassini</a></td><td>1997-061A</td><td>1997-10-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=CHALNGR">Challenger</a></td><td>CHALNGR</td><td>1986-01-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1999-040B">Chandra X-ray Observatory</a></td><td>1999-040B</td><td>1999-07-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2003-002B">CHIPS</a></td><td>2003-002B</td><td>2003-01-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1989-089A">COBE</a></td><td>1989-089A</td><td>1989-11-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1991-027B">Compton Gamma-Ray Observatory</a></td><td>1991-027B</td><td>1991-04-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2006-063A">COROT</a></td><td>2006-063A</td><td>2006-12-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=CORSA">CORSA</a></td><td>CORSA</td><td>1976-02-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=COS-A">COS-A</a></td><td>COS-A</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1975-072A">COS-B</a></td><td>1975-072A</td><td>1975-08-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-028A">Cosmos   31</a></td><td>1964-028A</td><td>1964-06-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-080A">Cosmos   51</a></td><td>1964-080A</td><td>1964-12-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-061A">Cosmos  166</a></td><td>1967-061A</td><td>1967-06-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-033A">Cosmos  215</a></td><td>1968-033A</td><td>1968-04-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-056A">Cosmos  230</a></td><td>1968-056A</td><td>1968-07-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-105A">Cosmos  461</a></td><td>1971-105A</td><td>1971-12-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1973-033A">Cosmos  561</a></td><td>1973-033A</td><td>1973-05-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1975-041A">Cosmos  731</a></td><td>1975-041A</td><td>1975-05-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1976-096A">Cosmos  856</a></td><td>1976-096A</td><td>1976-09-22</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-043A">Cosmos  914</a></td><td>1977-043A</td><td>1977-05-31</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1978-121A">Cosmos 1066</a></td><td>1978-121A</td><td>1978-12-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2021-088D">CUTE-LASP</a></td><td>2021-088D</td><td>2021-09-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2012-048E">CXBN</a></td><td>2012-048E</td><td>2012-09-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1998067LM">CXBN 2</a></td><td>1998067LM</td><td>2017-05-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2015-078A">DAMPE</a></td><td>2015-078A</td><td>2015-12-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1959-003A">Discoverer  2</a></td><td>1959-003A</td><td>1959-04-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1959-005A">Discoverer  5</a></td><td>1959-005A</td><td>1959-08-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1959-005B">Discoverer  5 Capsule</a></td><td>1959-005B</td><td>1959-08-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1959-006A">Discoverer  6</a></td><td>1959-006A</td><td>1959-08-19</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1959-011A">Discoverer  8</a></td><td>1959-011A</td><td>1959-11-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=DISC9">Discoverer  9</a></td><td>DISC9</td><td>1960-02-04</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1960-008A">Discoverer 13</a></td><td>1960-008A</td><td>1960-08-10</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1960-012A">Discoverer 15</a></td><td>1960-012A</td><td>1960-09-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=DISC16">Discoverer 16</a></td><td>DISC16</td><td>1960-10-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1960-015A">Discoverer 17</a></td><td>1960-015A</td><td>1960-11-12</td>
-</tr><tr><td><a href="/nmc/spacecraft/display.action?id=1960-018A">Discoverer 18</a></td><td>1960-018A</td><td>1960-12-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-014A">Discoverer 25</a></td><td>1961-014A</td><td>1961-06-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-016A">Discoverer 26</a></td><td>1961-016A</td><td>1961-07-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=DISC27">Discoverer 27</a></td><td>DISC27</td><td>1961-07-22</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=DISC28">Discoverer 28</a></td><td>DISC28</td><td>1961-08-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-023A">Discoverer 29</a></td><td>1961-023A</td><td>1961-08-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-024A">Discoverer 30</a></td><td>1961-024A</td><td>1961-09-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-026A">Discoverer 31</a></td><td>1961-026A</td><td>1961-09-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-027A">Discoverer 32</a></td><td>1961-027A</td><td>1961-10-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=DISC33">Discoverer 33</a></td><td>DISC33</td><td>1961-10-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-029A">Discoverer 34</a></td><td>1961-029A</td><td>1961-11-05</td>
-</tr><tr><td><a href="/nmc/spacecraft/display.action?id=1961-030A">Discoverer 35</a></td><td>1961-030A</td><td>1961-11-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-034A">Discoverer 36</a></td><td>1961-034A</td><td>1961-12-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-005A">Discoverer 38</a></td><td>1962-005A</td><td>1962-02-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1976-091A">DMSP 5D-1/F01</a></td><td>1976-091A</td><td>1976-09-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-044A">DMSP 5D-1/F02</a></td><td>1977-044A</td><td>1977-06-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1978-042A">DMSP 5D-1/F03</a></td><td>1978-042A</td><td>1978-05-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1982-118A">DMSP 5D-2/F06</a></td><td>1982-118A</td><td>1982-12-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1983-113A">DMSP 5D-2/F07</a></td><td>1983-113A</td><td>1983-11-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1987-053A">DMSP 5D-2/F08</a></td><td>1987-053A</td><td>1987-06-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1988-006A">DMSP 5D-2/F09</a></td><td>1988-006A</td><td>1988-02-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-105A">DMSP 5D-2/F10</a></td><td>1990-105A</td><td>1990-12-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1991-082A">DMSP 5D-2/F11</a></td><td>1991-082A</td><td>1991-11-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2003-031C">Dtusat</a></td><td>2003-031C</td><td>2003-06-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=DXS">DXS</a></td><td>DXS</td><td>1993-01-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=EGRET">EGRET</a></td><td>EGRET</td><td>1979-01-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=EOM-A">EOM-A</a></td><td>EOM-A</td><td>1985-11-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-046A">ERS  2</a></td><td>1962-046A</td><td>1962-09-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ERS3">ERS  3</a></td><td>ERS3</td><td>1962-12-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-058C">ERS 17</a></td><td>1965-058C</td><td>1965-07-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-040C">ERS 18</a></td><td>1967-040C</td><td>1967-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-040E">ERS 27</a></td><td>1967-040E</td><td>1967-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-041A">ESRO 2</a></td><td>1968-041A</td><td>1968-05-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ESRO2A">ESRO 2A</a></td><td>ESRO2A</td><td>1967-05-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1992-049B">EURECA 1</a></td><td>1992-049B</td><td>1992-08-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1992-031A">EUVE</a></td><td>1992-031A</td><td>1992-06-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1983-051A">EXOSAT</a></td><td>1983-051A</td><td>1983-05-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1958-003A">Explorer  3</a></td><td>1958-003A</td><td>1958-03-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-058A">Explorer 33</a></td><td>1966-058A</td><td>1966-07-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2008-029A">Fermi Gamma-ray Space Telescope</a></td><td>2008-029A</td><td>2008-06-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1999-035A">FUSE</a></td><td>1999-035A</td><td>1999-06-24</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-074A">Gaia</a></td><td>2013-074A</td><td>2013-12-19</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2003-017A">GALEX</a></td><td>2003-017A</td><td>2003-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1989-084B">Galileo Orbiter</a></td><td>1989-084B</td><td>1989-10-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-058A">Gamma 1</a></td><td>1990-058A</td><td>1990-07-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2020-094A">GECAM A</a></td><td>2020-094A</td><td>2020-12-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2020-094B">GECAM B</a></td><td>2020-094B</td><td>2020-12-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-068A">Gemini  5</a></td><td>1965-068A</td><td>1965-08-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-020A">Gemini  8</a></td><td>1966-020A</td><td>1966-03-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-047A">Gemini  9A</a></td><td>1966-047A</td><td>1966-06-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-066A">Gemini 10</a></td><td>1966-066A</td><td>1966-07-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-081A">Gemini 11</a></td><td>1966-081A</td><td>1966-09-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=GRAVR-A">GP-A</a></td><td>GRAVR-A</td><td>1976-06-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1989-096A">Granat</a></td><td>1989-096A</td><td>1989-12-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=GRASP">GRASP</a></td><td>GRASP</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2004-014A">Gravity Probe B</a></td><td>2004-014A</td><td>2004-04-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1979-014A">Hakucho</a></td><td>1979-014A</td><td>1979-02-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1997-005A">HALCA</a></td><td>1997-005A</td><td>1997-02-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1998067NX">HaloSat</a></td><td>1998067NX</td><td>2018-07-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-075A">HEAO 1</a></td><td>1977-075A</td><td>1977-08-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1978-103A">HEAO 2</a></td><td>1978-103A</td><td>1978-11-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1979-082A">HEAO 3</a></td><td>1979-082A</td><td>1979-09-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1974-097A">Helios-A</a></td><td>1974-097A</td><td>1974-12-10</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1976-003A">Helios-B</a></td><td>1976-003A</td><td>1976-01-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2009-026A">Herschel Space Observatory</a></td><td>2009-026A</td><td>2009-05-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-061A">HETE 1</a></td><td>1996-061A</td><td>1996-11-04</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2000-061A">HETE 2</a></td><td>2000-061A</td><td>2000-10-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1989-062B">Hipparcos</a></td><td>1989-062B</td><td>1989-08-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-049A">Hisaki</a></td><td>2013-049A</td><td>2013-09-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-037B">HST</a></td><td>1990-037B</td><td>1990-04-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2017-034A">HXTM</a></td><td>2017-034A</td><td>2017-06-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1991-031B">IBSS</a></td><td>1991-031B</td><td>1991-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-051A">IE-A</a></td><td>1964-051A</td><td>1964-08-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2021-121A">Imaging X-Ray Polarimetry Explorer (IXPE)</a></td><td>2021-121A</td><td>2021-12-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-019A">IMP-I</a></td><td>1971-019A</td><td>1971-03-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2002-048A">INTEGRAL</a></td><td>2002-048A</td><td>2002-10-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1983-004A">IRAS</a></td><td>1983-004A</td><td>1983-01-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-017A">IRS-P3</a></td><td>1996-017A</td><td>1996-03-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-102A">ISEE 1</a></td><td>1977-102A</td><td>1977-10-22</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1978-079A">ISEE 3</a></td><td>1978-079A</td><td>1978-08-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-009A">ISIS 1</a></td><td>1969-009A</td><td>1969-01-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-024A">ISIS 2</a></td><td>1971-024A</td><td>1971-04-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1995-062A">ISO</a></td><td>1995-062A</td><td>1995-11-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=ISPNASA">ISPM/NASA</a></td><td>ISPNASA</td><td>1985-03-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1978-012A">IUE</a></td><td>1978-012A</td><td>1978-01-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2021-130A">James Webb Space Telescope (JWST)</a></td><td>2021-130A</td><td>2021-12-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2003-042G">Kaistsat 4</a></td><td>2003-042G</td><td>2003-09-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2009-011A">Kepler</a></td><td>2009-011A</td><td>2009-03-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-022A">KH-4 9036</a></td><td>1962-022A</td><td>1962-06-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-027A">KH-4 9038</a></td><td>1962-027A</td><td>1962-06-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-034A">KH-4 9041</a></td><td>1962-034A</td><td>1962-08-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-069A">KH-4 9050</a></td><td>1962-069A</td><td>1962-12-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1963-042A">KH-5 9059A</a></td><td>1963-042A</td><td>1963-10-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-048A">KRISTALL</a></td><td>1990-048A</td><td>1990-05-31</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2012-006A">LARES</a></td><td>2012-006A</td><td>2012-02-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=LAS">LAS</a></td><td>LAS</td><td></td></tr><tr>
-<td><a href="/nmc/spacecraft/display.action?id=LOMNSOV">Lomonosov</a></td><td>LOMNSOV</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-041A">Mariner  2</a></td><td>1962-041A</td><td>1962-08-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-077A">Mariner  4</a></td><td>1964-077A</td><td>1964-11-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-060A">Mariner  5</a></td><td>1967-060A</td><td>1967-06-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-014A">Mariner  6</a></td><td>1969-014A</td><td>1969-02-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-030A">Mariner  7</a></td><td>1969-030A</td><td>1969-03-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-051A">Mariner  9</a></td><td>1971-051A</td><td>1971-05-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1973-085A">Mariner 10</a></td><td>1973-085A</td><td>1973-11-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=MARINH">Mariner-H</a></td><td>MARINH</td><td>1971-05-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1992-063A">Mars Observer</a></td><td>1992-063A</td><td>1992-09-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2017-036P">Max Valier Sat</a></td><td>2017-036P</td><td>2017-06-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=MIDAS1">MIDAS  1</a></td><td>MIDAS1</td><td>1960-02-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1960-006A">MIDAS  2</a></td><td>1960-006A</td><td>1960-05-24</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-018A">MIDAS  3</a></td><td>1961-018A</td><td>1961-07-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-028A">MIDAS  4</a></td><td>1961-028A</td><td>1961-10-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-010A">MIDAS  5</a></td><td>1962-010A</td><td>1962-04-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1997-018A">Minisat 01</a></td><td>1997-018A</td><td>1997-04-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2003-031D">MOST</a></td><td>2003-031D</td><td>2003-06-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-024A">MSX</a></td><td>1996-024A</td><td>1996-04-24</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-009D">NEOSAT</a></td><td>2013-009D</td><td>2013-02-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2012-031A">NuSTAR</a></td><td>2012-031A</td><td>2012-06-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-031A">OAO 1</a></td><td>1966-031A</td><td>1966-04-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-110A">OAO 2</a></td><td>1968-110A</td><td>1968-12-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-065A">OAO 3</a></td><td>1972-065A</td><td>1972-08-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=OAO-B">OAO-B</a></td><td>OAO-B</td><td>1970-11-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2001-007A">Odin</a></td><td>2001-007A</td><td>2001-02-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-054A">OGO 1</a></td><td>1964-054A</td><td>1964-09-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-049A">OGO 3</a></td><td>1966-049A</td><td>1966-06-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-073A">OGO 4</a></td><td>1967-073A</td><td>1967-07-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-014A">OGO 5</a></td><td>1968-014A</td><td>1968-03-04</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1993-058C">ORFEUS-SPAS I</a></td><td>1993-058C</td><td>1993-09-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-065B">ORFEUS-SPAS II</a></td><td>1996-065B</td><td>1996-11-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-006A">OSO 1</a></td><td>1962-006A</td><td>1962-03-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-007A">OSO 2</a></td><td>1965-007A</td><td>1965-02-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-020A">OSO 3</a></td><td>1967-020A</td><td>1967-03-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-100A">OSO 4</a></td><td>1967-100A</td><td>1967-10-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-006A">OSO 5</a></td><td>1969-006A</td><td>1969-01-22</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-068A">OSO 6</a></td><td>1969-068A</td><td>1969-08-09</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-083A">OSO 7</a></td><td>1971-083A</td><td>1971-09-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1975-057A">OSO 8</a></td><td>1975-057A</td><td>1975-06-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=OSO-C">OSO-C</a></td><td>OSO-C</td><td>1965-08-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=OSO-J">OSO-J</a></td><td>OSO-J</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=OV1-7">OV1- 7</a></td><td>OV1-7</td><td>1966-07-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-111A">OV1- 9</a></td><td>1966-111A</td><td>1966-12-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-111B">OV1-10</a></td><td>1966-111B</td><td>1966-12-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-026A">OV1-13</a></td><td>1968-026A</td><td>1968-04-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-026B">OV1-14</a></td><td>1968-026B</td><td>1968-04-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-025A">OV1-17</a></td><td>1969-025A</td><td>1969-03-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-025B">OV1-18</a></td><td>1969-025B</td><td>1969-03-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-025C">OV1-19</a></td><td>1969-025C</td><td>1969-03-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-072A">OV1-86</a></td><td>1967-072A</td><td>1967-07-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-081A">OV2-5</a></td><td>1968-081A</td><td>1968-09-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-120A">OV3-6</a></td><td>1967-120A</td><td>1967-12-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-046C">OV5-9</a></td><td>1969-046C</td><td>1969-05-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2018-004W">PicSat</a></td><td>2018-004W</td><td>2018-01-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-105A">Pioneer  6</a></td><td>1965-105A</td><td>1965-12-16</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1966-075A">Pioneer  7</a></td><td>1966-075A</td><td>1966-08-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-123A">Pioneer  8</a></td><td>1967-123A</td><td>1967-12-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-100A">Pioneer  9</a></td><td>1968-100A</td><td>1968-11-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-012A">Pioneer 10</a></td><td>1972-012A</td><td>1972-03-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1973-019A">Pioneer 11</a></td><td>1973-019A</td><td>1973-04-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=PIONX">Pioneer P-3</a></td><td>PIONX</td><td>1959-11-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=PIONE">Pioneer-E</a></td><td>PIONE</td><td>1969-08-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2009-026B">Planck</a></td><td>2009-026B</td><td>2009-05-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2009-059B">PROBA 2</a></td><td>2009-059B</td><td>2009-11-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1975-122A">Prognoz  4</a></td><td>1975-122A</td><td>1975-12-22</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1976-112A">Prognoz  5</a></td><td>1976-112A</td><td>1976-11-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-093A">Prognoz  6</a></td><td>1977-093A</td><td>1977-09-22</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1978-101A">Prognoz  7</a></td><td>1978-101A</td><td>1978-10-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1980-103A">Prognoz  8</a></td><td>1980-103A</td><td>1980-12-25</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=QUASAT">QUASAT</a></td><td>QUASAT</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1968-055A">RAE-A</a></td><td>1968-055A</td><td>1968-07-04</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1973-039A">RAE-B</a></td><td>1973-039A</td><td>1973-06-10</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-012A">Ranger 4</a></td><td>1962-012A</td><td>1962-04-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-055A">Ranger 5</a></td><td>1962-055A</td><td>1962-10-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=REGTTAA">Regatta-A</a></td><td>REGTTAA</td><td>1993-01-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=RELICT2">Relict 2</a></td><td>RELICT2</td><td>1994-01-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-049A">ROSAT</a></td><td>1990-049A</td><td>1990-06-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1961-013A">S 15 (Explorer 11)</a></td><td>1961-013A</td><td>1961-04-27</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-089A">S71-2</a></td><td>1971-089A</td><td>1971-10-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-061B">SAC-B</a></td><td>1996-061B</td><td>1996-11-04</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1962-016A">SAMOS  7</a></td><td>1962-016A</td><td>1962-04-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1992-038A">SAMPEX</a></td><td>1992-038A</td><td>1992-07-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1991-050E">SARA</a></td><td>1991-050E</td><td>1991-07-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-091A">SAS-B</a></td><td>1972-091A</td><td>1972-11-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1975-037A">SAS-C</a></td><td>1975-037A</td><td>1975-05-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-027A">SAX</a></td><td>1996-027A</td><td>1996-04-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1995-011A">SFU</a></td><td>1995-011A</td><td>1995-03-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=OSS-2">SHEAL-A</a></td><td>OSS-2</td><td>1992-09-03</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-080A">Shinsei</a></td><td>1971-080A</td><td>1971-09-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-049A">SIGNE 3</a></td><td>1977-049A</td><td>1977-06-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2001-035B">SimpleSat 1</a></td><td>2001-035B</td><td>2001-08-10</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1973-027A">Skylab</a></td><td>1973-027A</td><td>1973-05-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1980-014A">SMM</a></td><td>1980-014A</td><td>1980-02-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1976-023C">SOLRAD 11A</a></td><td>1976-023C</td><td>1976-03-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1976-023D">SOLRAD 11B</a></td><td>1976-023D</td><td>1976-03-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=SRD-11C">SOLRAD 11C</a></td><td>SRD-11C</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1973-103A">Soyuz 13</a></td><td>1973-103A</td><td>1973-12-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=SHUTTLE">Space Shuttle</a></td><td>SHUTTLE</td><td>1980-06-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=SPLABD2">Spacelab-D2</a></td><td>SPLABD2</td><td>1993-04-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1997-073B">Spartan 201-4</a></td><td>1997-073B</td><td>1997-11-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1995-004B">Spartan 204</a></td><td>1995-004B</td><td>1995-02-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1996-032B">Spartan 207</a></td><td>1996-032B</td><td>1996-05-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=SPATN-H">Spartan Halley</a></td><td>SPATN-H</td><td>1986-01-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=SPECXGM">Spectrum-X-Gamma</a></td><td>SPECXGM</td><td>2010-12-31</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2011-037A">Spektr R</a></td><td>2011-037A</td><td>2011-07-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2019-040A">Spektr-RG</a></td><td>2019-040A</td><td>2019-07-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2003-038A">Spitzer Space Telescope</a></td><td>2003-038A</td><td>2003-08-25</td>
-</tr><tr><td><a href="/nmc/spacecraft/display.action?id=1958-004B">Sputnik  3</a></td><td>1958-004B</td><td>1958-05-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1992-028A">SROSS 3</a></td><td>1992-028A</td><td>1992-05-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1994-027A">SROSS C2</a></td><td>1994-027A</td><td>1994-05-04</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1979-017A">STP P78-1</a></td><td>1979-017A</td><td>1979-02-24</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1979-007A">STP P78-2</a></td><td>1979-007A</td><td>1979-01-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=P80-2">STP P80-2</a></td><td>P80-2</td><td>1981-01-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1983-116A">STS   9/Spacelab 1</a></td><td>1983-116A</td><td>1983-11-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-106A">STS  35/Astro 1</a></td><td>1990-106A</td><td>1990-12-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1992-015A">STS  45</a></td><td>1992-015A</td><td>1992-03-24</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1993-058A">STS  51</a></td><td>1993-058A</td><td>1993-09-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1985-063A">STS  51F/Spacelab 2</a></td><td>1985-063A</td><td>1985-07-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1993-003A">STS  54</a></td><td>1993-003A</td><td>1993-01-13</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1993-027A">STS  55</a></td><td>1993-027A</td><td>1993-04-26</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1995-007A">STS  67/Astro 2</a></td><td>1995-007A</td><td>1995-03-02</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1997-004A">STS  82</a></td><td>1997-004A</td><td>1997-02-11</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1997-039A">STS  85</a></td><td>1997-039A</td><td>1997-08-07</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1999-040A">STS  93</a></td><td>1999-040A</td><td>1999-07-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1998-064A">STS  95</a></td><td>1998-064A</td><td>1998-10-29</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=STORE">STS/STORE</a></td><td>STORE</td><td></td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-003A">STSAT 2C</a></td><td>2013-003A</td><td>2013-01-31</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2013-066G">STSAT-3</a></td><td>2013-066G</td><td>2013-11-21</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2005-025A">Suzaku</a></td><td>2005-025A</td><td>2005-07-10</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1998-071A">SWAS</a></td><td>1998-071A</td><td>1998-12-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2004-047A">Swift</a></td><td>2004-047A</td><td>2004-11-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1972-014A">TD 1A</a></td><td>1972-014A</td><td>1972-03-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1983-011A">Tenma</a></td><td>1983-011A</td><td>1983-02-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1971-030A">Tournesol</a></td><td>1971-030A</td><td>1971-04-15</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2018-038A">Transiting Exoplanet Survey Satellite (TESS)</a></td><td>2018-038A</td><td>2018-04-18</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2014-070E">Tsubame</a></td><td>2014-070E</td><td>2014-11-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=TYVAK-61C">TYVAK-61C</a></td><td>TYVAK-61C</td><td>2018-01-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1991-063B">UARS</a></td><td>1991-063B</td><td>1991-09-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1970-107A">Uhuru</a></td><td>1970-107A</td><td>1970-12-12</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1990-090B">Ulysses</a></td><td>1990-090B</td><td>1990-10-06</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1963-039A">Vela  1A</a></td><td>1963-039A</td><td>1963-10-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1963-039C">Vela  1B</a></td><td>1963-039C</td><td>1963-10-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-040A">Vela  2A</a></td><td>1964-040A</td><td>1964-07-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1964-040B">Vela  2B</a></td><td>1964-040B</td><td>1964-07-17</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-058A">Vela  3A</a></td><td>1965-058A</td><td>1965-07-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1965-058B">Vela  3B</a></td><td>1965-058B</td><td>1965-07-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-040A">Vela  4A</a></td><td>1967-040A</td><td>1967-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1967-040B">Vela  4B</a></td><td>1967-040B</td><td>1967-04-28</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-046D">Vela  5A</a></td><td>1969-046D</td><td>1969-05-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1969-046E">Vela  5B</a></td><td>1969-046E</td><td>1969-05-23</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1970-027A">Vela  6A</a></td><td>1970-027A</td><td>1970-04-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1970-027B">Vela  6B</a></td><td>1970-027B</td><td>1970-04-08</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-084A">Voyager 1</a></td><td>1977-084A</td><td>1977-09-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1977-076A">Voyager 2</a></td><td>1977-076A</td><td>1977-08-20</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1994-071A">Wind</a></td><td>1994-071A</td><td>1994-11-01</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1999-011A">WIRE</a></td><td>1999-011A</td><td>1999-03-05</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2009-071A">WISE/NEOWISE</a></td><td>2009-071A</td><td>2009-12-14</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=2001-027A">WMAP</a></td><td>2001-027A</td><td>2001-06-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1995-074A">X-Ray Timing Explorer</a></td><td>1995-074A</td><td>1995-12-30</td></tr>
-<tr><td><a href="/nmc/spacecraft/display.action?id=1999-066A">XMM-Newton</a></td><td>1999-066A</td><td>1999-12-10</td></tr>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-011A</TD><TD>1962 Lambda 1</TD><TD>1962-011A</TD><TD>1962-04-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-021A</TD><TD>1962 Phi 1</TD><TD>1962-021A</TD><TD>1962-05-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-031A</TD><TD>1964-031A</TD><TD>1964-031A</TD><TD>1964-06-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-083C</TD><TD>1964-083C</TD><TD>1964-083C</TD><TD>1964-12-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-054A</TD><TD>1971-054A</TD><TD>1971-054A</TD><TD>1971-06-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-022A</TD><TD>ABRIXAS</TD><TD>1999-022A</TD><TD>1999-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=AFP-675</TD><TD>AFP-675</TD><TD>AFP-675</TD><TD>1990-07-19</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=AFP-888</TD><TD>AFP-888</TD><TD>AFP-888</TD><TD>1990-07-19</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-013A</TD><TD>AGILE</TD><TD>2007-013A</TD><TD>2007-04-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-005A</TD><TD>Akari</TD><TD>2006-005A</TD><TD>2006-02-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1993-026A</TD><TD>Alexis</TD><TD>1993-026A</TD><TD>1993-04-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-049A</TD><TD>Alouette 1</TD><TD>1962-049A</TD><TD>1962-09-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-098A</TD><TD>Alouette 2</TD><TD>1965-098A</TD><TD>1965-11-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1974-070A</TD><TD>ANS</TD><TD>1974-070A</TD><TD>1974-08-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-008A</TD><TD>Apollo 14 Command and Service Module (CSM)</TD><TD>1971-008A</TD><TD>1971-01-31</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063A</TD><TD>Apollo 15 Command and Service Module (CSM)</TD><TD>1971-063A</TD><TD>1971-07-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-031A</TD><TD>Apollo 16 Command and Service Module (CSM)</TD><TD>1972-031A</TD><TD>1972-04-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-031C</TD><TD>Apollo 16 Lunar Module /ALSEP</TD><TD>1972-031C</TD><TD>1972-04-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-096A</TD><TD>Apollo 17 Command and Service Module (CSM)</TD><TD>1972-096A</TD><TD>1972-12-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-015A</TD><TD>Ariel 1</TD><TD>1962-015A</TD><TD>1962-04-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-015A</TD><TD>Ariel 2</TD><TD>1964-015A</TD><TD>1964-03-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-042A</TD><TD>Ariel 3</TD><TD>1967-042A</TD><TD>1967-05-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-109A</TD><TD>Ariel 4</TD><TD>1971-109A</TD><TD>1971-12-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1974-077A</TD><TD>Ariel 5</TD><TD>1974-077A</TD><TD>1974-10-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-047A</TD><TD>Ariel 6</TD><TD>1979-047A</TD><TD>1979-06-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1993-011A</TD><TD>ASCA</TD><TD>1993-011A</TD><TD>1993-02-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-066A</TD><TD>ASTP-Apollo</TD><TD>1975-066A</TD><TD>1975-07-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ASTRO-1</TD><TD>Astro 1</TD><TD>ASTRO-1</TD><TD>1990-12-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ASTRO-2</TD><TD>Astro 2</TD><TD>ASTRO-2</TD><TD>1995-03-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1987-012A</TD><TD>Astro-C</TD><TD>1987-012A</TD><TD>1987-02-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-012A</TD><TD>Astro-H</TD><TD>2016-012A</TD><TD>2016-02-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ASTRMAG</TD><TD>Astromag FF</TD><TD>ASTRMAG</TD><TD>2005-01-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-020A</TD><TD>ASTRON</TD><TD>1983-020A</TD><TD>1983-03-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2015-052A</TD><TD>Astrosat</TD><TD>2015-052A</TD><TD>2015-09-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ATLAS1</TD><TD>Atlas 1 / STS 45</TD><TD>ATLAS1</TD><TD>1992-03-24</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=BEAM</TD><TD>Beam</TD><TD>BEAM</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-051A</TD><TD>Bhaskara</TD><TD>1979-051A</TD><TD>1979-06-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2014-033L</TD><TD>Brite Totonto</TD><TD>2014-033L</TD><TD>2014-06-19</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-009F</TD><TD>BRITE-A</TD><TD>2013-009F</TD><TD>2013-02-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-066R</TD><TD>BRITE-PL</TD><TD>2013-066R</TD><TD>2013-11-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2014-049B</TD><TD>BRITE-PL 2</TD><TD>2014-049B</TD><TD>2014-08-19</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-009G</TD><TD>BRITE-U</TD><TD>2013-009G</TD><TD>2013-02-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-061A</TD><TD>Cassini</TD><TD>1997-061A</TD><TD>1997-10-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=CHALNGR</TD><TD>Challenger</TD><TD>CHALNGR</TD><TD>1986-01-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-040B</TD><TD>Chandra X-ray Observatory</TD><TD>1999-040B</TD><TD>1999-07-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-002B</TD><TD>CHIPS</TD><TD>2003-002B</TD><TD>2003-01-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-089A</TD><TD>COBE</TD><TD>1989-089A</TD><TD>1989-11-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1991-027B</TD><TD>Compton Gamma-Ray Observatory</TD><TD>1991-027B</TD><TD>1991-04-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-063A</TD><TD>COROT</TD><TD>2006-063A</TD><TD>2006-12-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=CORSA</TD><TD>CORSA</TD><TD>CORSA</TD><TD>1976-02-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=COS-A</TD><TD>COS-A</TD><TD>COS-A</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-072A</TD><TD>COS-B</TD><TD>1975-072A</TD><TD>1975-08-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-028A</TD><TD>Cosmos   31</TD><TD>1964-028A</TD><TD>1964-06-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-080A</TD><TD>Cosmos   51</TD><TD>1964-080A</TD><TD>1964-12-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-061A</TD><TD>Cosmos  166</TD><TD>1967-061A</TD><TD>1967-06-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-033A</TD><TD>Cosmos  215</TD><TD>1968-033A</TD><TD>1968-04-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-056A</TD><TD>Cosmos  230</TD><TD>1968-056A</TD><TD>1968-07-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-105A</TD><TD>Cosmos  461</TD><TD>1971-105A</TD><TD>1971-12-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-033A</TD><TD>Cosmos  561</TD><TD>1973-033A</TD><TD>1973-05-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-041A</TD><TD>Cosmos  731</TD><TD>1975-041A</TD><TD>1975-05-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-096A</TD><TD>Cosmos  856</TD><TD>1976-096A</TD><TD>1976-09-22</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-043A</TD><TD>Cosmos  914</TD><TD>1977-043A</TD><TD>1977-05-31</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-121A</TD><TD>Cosmos 1066</TD><TD>1978-121A</TD><TD>1978-12-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-088D</TD><TD>CUTE-LASP</TD><TD>2021-088D</TD><TD>2021-09-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2012-048E</TD><TD>CXBN</TD><TD>2012-048E</TD><TD>2012-09-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998067LM</TD><TD>CXBN 2</TD><TD>1998067LM</TD><TD>2017-05-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2015-078A</TD><TD>DAMPE</TD><TD>2015-078A</TD><TD>2015-12-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1959-003A</TD><TD>Discoverer  2</TD><TD>1959-003A</TD><TD>1959-04-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1959-005A</TD><TD>Discoverer  5</TD><TD>1959-005A</TD><TD>1959-08-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1959-005B</TD><TD>Discoverer  5 Capsule</TD><TD>1959-005B</TD><TD>1959-08-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1959-006A</TD><TD>Discoverer  6</TD><TD>1959-006A</TD><TD>1959-08-19</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1959-011A</TD><TD>Discoverer  8</TD><TD>1959-011A</TD><TD>1959-11-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DISC9</TD><TD>Discoverer  9</TD><TD>DISC9</TD><TD>1960-02-04</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1960-008A</TD><TD>Discoverer 13</TD><TD>1960-008A</TD><TD>1960-08-10</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1960-012A</TD><TD>Discoverer 15</TD><TD>1960-012A</TD><TD>1960-09-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DISC16</TD><TD>Discoverer 16</TD><TD>DISC16</TD><TD>1960-10-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1960-015A</TD><TD>Discoverer 17</TD><TD>1960-015A</TD><TD>1960-11-12</TD>
+</TR><TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1960-018A</TD><TD>Discoverer 18</TD><TD>1960-018A</TD><TD>1960-12-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-014A</TD><TD>Discoverer 25</TD><TD>1961-014A</TD><TD>1961-06-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-016A</TD><TD>Discoverer 26</TD><TD>1961-016A</TD><TD>1961-07-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DISC27</TD><TD>Discoverer 27</TD><TD>DISC27</TD><TD>1961-07-22</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DISC28</TD><TD>Discoverer 28</TD><TD>DISC28</TD><TD>1961-08-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-023A</TD><TD>Discoverer 29</TD><TD>1961-023A</TD><TD>1961-08-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-024A</TD><TD>Discoverer 30</TD><TD>1961-024A</TD><TD>1961-09-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-026A</TD><TD>Discoverer 31</TD><TD>1961-026A</TD><TD>1961-09-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-027A</TD><TD>Discoverer 32</TD><TD>1961-027A</TD><TD>1961-10-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DISC33</TD><TD>Discoverer 33</TD><TD>DISC33</TD><TD>1961-10-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-029A</TD><TD>Discoverer 34</TD><TD>1961-029A</TD><TD>1961-11-05</TD>
+</TR><TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-030A</TD><TD>Discoverer 35</TD><TD>1961-030A</TD><TD>1961-11-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-034A</TD><TD>Discoverer 36</TD><TD>1961-034A</TD><TD>1961-12-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-005A</TD><TD>Discoverer 38</TD><TD>1962-005A</TD><TD>1962-02-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-091A</TD><TD>DMSP 5D-1/F01</TD><TD>1976-091A</TD><TD>1976-09-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-044A</TD><TD>DMSP 5D-1/F02</TD><TD>1977-044A</TD><TD>1977-06-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-042A</TD><TD>DMSP 5D-1/F03</TD><TD>1978-042A</TD><TD>1978-05-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1982-118A</TD><TD>DMSP 5D-2/F06</TD><TD>1982-118A</TD><TD>1982-12-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-113A</TD><TD>DMSP 5D-2/F07</TD><TD>1983-113A</TD><TD>1983-11-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1987-053A</TD><TD>DMSP 5D-2/F08</TD><TD>1987-053A</TD><TD>1987-06-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1988-006A</TD><TD>DMSP 5D-2/F09</TD><TD>1988-006A</TD><TD>1988-02-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-105A</TD><TD>DMSP 5D-2/F10</TD><TD>1990-105A</TD><TD>1990-12-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1991-082A</TD><TD>DMSP 5D-2/F11</TD><TD>1991-082A</TD><TD>1991-11-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-031C</TD><TD>Dtusat</TD><TD>2003-031C</TD><TD>2003-06-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DXS</TD><TD>DXS</TD><TD>DXS</TD><TD>1993-01-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EGRET</TD><TD>EGRET</TD><TD>EGRET</TD><TD>1979-01-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EOM-A</TD><TD>EOM-A</TD><TD>EOM-A</TD><TD>1985-11-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-046A</TD><TD>ERS  2</TD><TD>1962-046A</TD><TD>1962-09-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ERS3</TD><TD>ERS  3</TD><TD>ERS3</TD><TD>1962-12-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-058C</TD><TD>ERS 17</TD><TD>1965-058C</TD><TD>1965-07-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-040C</TD><TD>ERS 18</TD><TD>1967-040C</TD><TD>1967-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-040E</TD><TD>ERS 27</TD><TD>1967-040E</TD><TD>1967-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-041A</TD><TD>ESRO 2</TD><TD>1968-041A</TD><TD>1968-05-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ESRO2A</TD><TD>ESRO 2A</TD><TD>ESRO2A</TD><TD>1967-05-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-049B</TD><TD>EURECA 1</TD><TD>1992-049B</TD><TD>1992-08-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-031A</TD><TD>EUVE</TD><TD>1992-031A</TD><TD>1992-06-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-051A</TD><TD>EXOSAT</TD><TD>1983-051A</TD><TD>1983-05-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1958-003A</TD><TD>Explorer  3</TD><TD>1958-003A</TD><TD>1958-03-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-058A</TD><TD>Explorer 33</TD><TD>1966-058A</TD><TD>1966-07-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2008-029A</TD><TD>Fermi Gamma-ray Space Telescope</TD><TD>2008-029A</TD><TD>2008-06-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-035A</TD><TD>FUSE</TD><TD>1999-035A</TD><TD>1999-06-24</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-074A</TD><TD>Gaia</TD><TD>2013-074A</TD><TD>2013-12-19</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-017A</TD><TD>GALEX</TD><TD>2003-017A</TD><TD>2003-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-084B</TD><TD>Galileo Orbiter</TD><TD>1989-084B</TD><TD>1989-10-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-058A</TD><TD>Gamma 1</TD><TD>1990-058A</TD><TD>1990-07-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-094A</TD><TD>GECAM A</TD><TD>2020-094A</TD><TD>2020-12-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-094B</TD><TD>GECAM B</TD><TD>2020-094B</TD><TD>2020-12-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-068A</TD><TD>Gemini  5</TD><TD>1965-068A</TD><TD>1965-08-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-020A</TD><TD>Gemini  8</TD><TD>1966-020A</TD><TD>1966-03-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-047A</TD><TD>Gemini  9A</TD><TD>1966-047A</TD><TD>1966-06-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-066A</TD><TD>Gemini 10</TD><TD>1966-066A</TD><TD>1966-07-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-081A</TD><TD>Gemini 11</TD><TD>1966-081A</TD><TD>1966-09-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=GRAVR-A</TD><TD>GP-A</TD><TD>GRAVR-A</TD><TD>1976-06-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-096A</TD><TD>Granat</TD><TD>1989-096A</TD><TD>1989-12-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=GRASP</TD><TD>GRASP</TD><TD>GRASP</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-014A</TD><TD>Gravity Probe B</TD><TD>2004-014A</TD><TD>2004-04-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-014A</TD><TD>Hakucho</TD><TD>1979-014A</TD><TD>1979-02-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-005A</TD><TD>HALCA</TD><TD>1997-005A</TD><TD>1997-02-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998067NX</TD><TD>HaloSat</TD><TD>1998067NX</TD><TD>2018-07-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-075A</TD><TD>HEAO 1</TD><TD>1977-075A</TD><TD>1977-08-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-103A</TD><TD>HEAO 2</TD><TD>1978-103A</TD><TD>1978-11-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-082A</TD><TD>HEAO 3</TD><TD>1979-082A</TD><TD>1979-09-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1974-097A</TD><TD>Helios-A</TD><TD>1974-097A</TD><TD>1974-12-10</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-003A</TD><TD>Helios-B</TD><TD>1976-003A</TD><TD>1976-01-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-026A</TD><TD>Herschel Space Observatory</TD><TD>2009-026A</TD><TD>2009-05-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-061A</TD><TD>HETE 1</TD><TD>1996-061A</TD><TD>1996-11-04</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-061A</TD><TD>HETE 2</TD><TD>2000-061A</TD><TD>2000-10-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-062B</TD><TD>Hipparcos</TD><TD>1989-062B</TD><TD>1989-08-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-049A</TD><TD>Hisaki</TD><TD>2013-049A</TD><TD>2013-09-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-037B</TD><TD>HST</TD><TD>1990-037B</TD><TD>1990-04-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2017-034A</TD><TD>HXTM</TD><TD>2017-034A</TD><TD>2017-06-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1991-031B</TD><TD>IBSS</TD><TD>1991-031B</TD><TD>1991-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-051A</TD><TD>IE-A</TD><TD>1964-051A</TD><TD>1964-08-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-121A</TD><TD>Imaging X-Ray Polarimetry Explorer (IXPE)</TD><TD>2021-121A</TD><TD>2021-12-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-019A</TD><TD>IMP-I</TD><TD>1971-019A</TD><TD>1971-03-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2002-048A</TD><TD>INTEGRAL</TD><TD>2002-048A</TD><TD>2002-10-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-004A</TD><TD>IRAS</TD><TD>1983-004A</TD><TD>1983-01-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-017A</TD><TD>IRS-P3</TD><TD>1996-017A</TD><TD>1996-03-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-102A</TD><TD>ISEE 1</TD><TD>1977-102A</TD><TD>1977-10-22</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-079A</TD><TD>ISEE 3</TD><TD>1978-079A</TD><TD>1978-08-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-009A</TD><TD>ISIS 1</TD><TD>1969-009A</TD><TD>1969-01-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-024A</TD><TD>ISIS 2</TD><TD>1971-024A</TD><TD>1971-04-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1995-062A</TD><TD>ISO</TD><TD>1995-062A</TD><TD>1995-11-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=ISPNASA</TD><TD>ISPM/NASA</TD><TD>ISPNASA</TD><TD>1985-03-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-012A</TD><TD>IUE</TD><TD>1978-012A</TD><TD>1978-01-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A</TD><TD>James Webb Space Telescope (JWST)</TD><TD>2021-130A</TD><TD>2021-12-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-042G</TD><TD>Kaistsat 4</TD><TD>2003-042G</TD><TD>2003-09-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-011A</TD><TD>Kepler</TD><TD>2009-011A</TD><TD>2009-03-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-022A</TD><TD>KH-4 9036</TD><TD>1962-022A</TD><TD>1962-06-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-027A</TD><TD>KH-4 9038</TD><TD>1962-027A</TD><TD>1962-06-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-034A</TD><TD>KH-4 9041</TD><TD>1962-034A</TD><TD>1962-08-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-069A</TD><TD>KH-4 9050</TD><TD>1962-069A</TD><TD>1962-12-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1963-042A</TD><TD>KH-5 9059A</TD><TD>1963-042A</TD><TD>1963-10-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-048A</TD><TD>KRISTALL</TD><TD>1990-048A</TD><TD>1990-05-31</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2012-006A</TD><TD>LARES</TD><TD>2012-006A</TD><TD>2012-02-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=LAS</TD><TD>LAS</TD><TD>LAS</TD><TD></TD></TR><TR>
+<TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=LOMNSOV</TD><TD>Lomonosov</TD><TD>LOMNSOV</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-041A</TD><TD>Mariner  2</TD><TD>1962-041A</TD><TD>1962-08-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-077A</TD><TD>Mariner  4</TD><TD>1964-077A</TD><TD>1964-11-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-060A</TD><TD>Mariner  5</TD><TD>1967-060A</TD><TD>1967-06-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-014A</TD><TD>Mariner  6</TD><TD>1969-014A</TD><TD>1969-02-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-030A</TD><TD>Mariner  7</TD><TD>1969-030A</TD><TD>1969-03-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-051A</TD><TD>Mariner  9</TD><TD>1971-051A</TD><TD>1971-05-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-085A</TD><TD>Mariner 10</TD><TD>1973-085A</TD><TD>1973-11-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=MARINH</TD><TD>Mariner-H</TD><TD>MARINH</TD><TD>1971-05-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-063A</TD><TD>Mars Observer</TD><TD>1992-063A</TD><TD>1992-09-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2017-036P</TD><TD>Max Valier Sat</TD><TD>2017-036P</TD><TD>2017-06-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=MIDAS1</TD><TD>MIDAS  1</TD><TD>MIDAS1</TD><TD>1960-02-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1960-006A</TD><TD>MIDAS  2</TD><TD>1960-006A</TD><TD>1960-05-24</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-018A</TD><TD>MIDAS  3</TD><TD>1961-018A</TD><TD>1961-07-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-028A</TD><TD>MIDAS  4</TD><TD>1961-028A</TD><TD>1961-10-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-010A</TD><TD>MIDAS  5</TD><TD>1962-010A</TD><TD>1962-04-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-018A</TD><TD>Minisat 01</TD><TD>1997-018A</TD><TD>1997-04-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-031D</TD><TD>MOST</TD><TD>2003-031D</TD><TD>2003-06-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-024A</TD><TD>MSX</TD><TD>1996-024A</TD><TD>1996-04-24</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-009D</TD><TD>NEOSAT</TD><TD>2013-009D</TD><TD>2013-02-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2012-031A</TD><TD>NuSTAR</TD><TD>2012-031A</TD><TD>2012-06-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-031A</TD><TD>OAO 1</TD><TD>1966-031A</TD><TD>1966-04-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-110A</TD><TD>OAO 2</TD><TD>1968-110A</TD><TD>1968-12-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-065A</TD><TD>OAO 3</TD><TD>1972-065A</TD><TD>1972-08-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=OAO-B</TD><TD>OAO-B</TD><TD>OAO-B</TD><TD>1970-11-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-007A</TD><TD>Odin</TD><TD>2001-007A</TD><TD>2001-02-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-054A</TD><TD>OGO 1</TD><TD>1964-054A</TD><TD>1964-09-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-049A</TD><TD>OGO 3</TD><TD>1966-049A</TD><TD>1966-06-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-073A</TD><TD>OGO 4</TD><TD>1967-073A</TD><TD>1967-07-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-014A</TD><TD>OGO 5</TD><TD>1968-014A</TD><TD>1968-03-04</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1993-058C</TD><TD>ORFEUS-SPAS I</TD><TD>1993-058C</TD><TD>1993-09-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-065B</TD><TD>ORFEUS-SPAS II</TD><TD>1996-065B</TD><TD>1996-11-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-006A</TD><TD>OSO 1</TD><TD>1962-006A</TD><TD>1962-03-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-007A</TD><TD>OSO 2</TD><TD>1965-007A</TD><TD>1965-02-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-020A</TD><TD>OSO 3</TD><TD>1967-020A</TD><TD>1967-03-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-100A</TD><TD>OSO 4</TD><TD>1967-100A</TD><TD>1967-10-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-006A</TD><TD>OSO 5</TD><TD>1969-006A</TD><TD>1969-01-22</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-068A</TD><TD>OSO 6</TD><TD>1969-068A</TD><TD>1969-08-09</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-083A</TD><TD>OSO 7</TD><TD>1971-083A</TD><TD>1971-09-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-057A</TD><TD>OSO 8</TD><TD>1975-057A</TD><TD>1975-06-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=OSO-C</TD><TD>OSO-C</TD><TD>OSO-C</TD><TD>1965-08-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=OSO-J</TD><TD>OSO-J</TD><TD>OSO-J</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=OV1-7</TD><TD>OV1- 7</TD><TD>OV1-7</TD><TD>1966-07-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-111A</TD><TD>OV1- 9</TD><TD>1966-111A</TD><TD>1966-12-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-111B</TD><TD>OV1-10</TD><TD>1966-111B</TD><TD>1966-12-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-026A</TD><TD>OV1-13</TD><TD>1968-026A</TD><TD>1968-04-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-026B</TD><TD>OV1-14</TD><TD>1968-026B</TD><TD>1968-04-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-025A</TD><TD>OV1-17</TD><TD>1969-025A</TD><TD>1969-03-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-025B</TD><TD>OV1-18</TD><TD>1969-025B</TD><TD>1969-03-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-025C</TD><TD>OV1-19</TD><TD>1969-025C</TD><TD>1969-03-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-072A</TD><TD>OV1-86</TD><TD>1967-072A</TD><TD>1967-07-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-081A</TD><TD>OV2-5</TD><TD>1968-081A</TD><TD>1968-09-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-120A</TD><TD>OV3-6</TD><TD>1967-120A</TD><TD>1967-12-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-046C</TD><TD>OV5-9</TD><TD>1969-046C</TD><TD>1969-05-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-004W</TD><TD>PicSat</TD><TD>2018-004W</TD><TD>2018-01-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-105A</TD><TD>Pioneer  6</TD><TD>1965-105A</TD><TD>1965-12-16</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-075A</TD><TD>Pioneer  7</TD><TD>1966-075A</TD><TD>1966-08-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-123A</TD><TD>Pioneer  8</TD><TD>1967-123A</TD><TD>1967-12-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-100A</TD><TD>Pioneer  9</TD><TD>1968-100A</TD><TD>1968-11-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A</TD><TD>Pioneer 10</TD><TD>1972-012A</TD><TD>1972-03-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-019A</TD><TD>Pioneer 11</TD><TD>1973-019A</TD><TD>1973-04-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=PIONX</TD><TD>Pioneer P-3</TD><TD>PIONX</TD><TD>1959-11-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=PIONE</TD><TD>Pioneer-E</TD><TD>PIONE</TD><TD>1969-08-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-026B</TD><TD>Planck</TD><TD>2009-026B</TD><TD>2009-05-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-059B</TD><TD>PROBA 2</TD><TD>2009-059B</TD><TD>2009-11-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-122A</TD><TD>Prognoz  4</TD><TD>1975-122A</TD><TD>1975-12-22</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-112A</TD><TD>Prognoz  5</TD><TD>1976-112A</TD><TD>1976-11-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-093A</TD><TD>Prognoz  6</TD><TD>1977-093A</TD><TD>1977-09-22</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-101A</TD><TD>Prognoz  7</TD><TD>1978-101A</TD><TD>1978-10-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1980-103A</TD><TD>Prognoz  8</TD><TD>1980-103A</TD><TD>1980-12-25</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=QUASAT</TD><TD>QUASAT</TD><TD>QUASAT</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-055A</TD><TD>RAE-A</TD><TD>1968-055A</TD><TD>1968-07-04</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-039A</TD><TD>RAE-B</TD><TD>1973-039A</TD><TD>1973-06-10</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-012A</TD><TD>Ranger 4</TD><TD>1962-012A</TD><TD>1962-04-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-055A</TD><TD>Ranger 5</TD><TD>1962-055A</TD><TD>1962-10-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=REGTTAA</TD><TD>Regatta-A</TD><TD>REGTTAA</TD><TD>1993-01-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=RELICT2</TD><TD>Relict 2</TD><TD>RELICT2</TD><TD>1994-01-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-049A</TD><TD>ROSAT</TD><TD>1990-049A</TD><TD>1990-06-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1961-013A</TD><TD>S 15 (Explorer 11)</TD><TD>1961-013A</TD><TD>1961-04-27</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-089A</TD><TD>S71-2</TD><TD>1971-089A</TD><TD>1971-10-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-061B</TD><TD>SAC-B</TD><TD>1996-061B</TD><TD>1996-11-04</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-016A</TD><TD>SAMOS  7</TD><TD>1962-016A</TD><TD>1962-04-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-038A</TD><TD>SAMPEX</TD><TD>1992-038A</TD><TD>1992-07-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1991-050E</TD><TD>SARA</TD><TD>1991-050E</TD><TD>1991-07-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-091A</TD><TD>SAS-B</TD><TD>1972-091A</TD><TD>1972-11-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-037A</TD><TD>SAS-C</TD><TD>1975-037A</TD><TD>1975-05-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-027A</TD><TD>SAX</TD><TD>1996-027A</TD><TD>1996-04-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1995-011A</TD><TD>SFU</TD><TD>1995-011A</TD><TD>1995-03-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=OSS-2</TD><TD>SHEAL-A</TD><TD>OSS-2</TD><TD>1992-09-03</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-080A</TD><TD>Shinsei</TD><TD>1971-080A</TD><TD>1971-09-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-049A</TD><TD>SIGNE 3</TD><TD>1977-049A</TD><TD>1977-06-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-035B</TD><TD>SimpleSat 1</TD><TD>2001-035B</TD><TD>2001-08-10</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-027A</TD><TD>Skylab</TD><TD>1973-027A</TD><TD>1973-05-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1980-014A</TD><TD>SMM</TD><TD>1980-014A</TD><TD>1980-02-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-023C</TD><TD>SOLRAD 11A</TD><TD>1976-023C</TD><TD>1976-03-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-023D</TD><TD>SOLRAD 11B</TD><TD>1976-023D</TD><TD>1976-03-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=SRD-11C</TD><TD>SOLRAD 11C</TD><TD>SRD-11C</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-103A</TD><TD>Soyuz 13</TD><TD>1973-103A</TD><TD>1973-12-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=SHUTTLE</TD><TD>Space Shuttle</TD><TD>SHUTTLE</TD><TD>1980-06-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=SPLABD2</TD><TD>Spacelab-D2</TD><TD>SPLABD2</TD><TD>1993-04-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-073B</TD><TD>Spartan 201-4</TD><TD>1997-073B</TD><TD>1997-11-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1995-004B</TD><TD>Spartan 204</TD><TD>1995-004B</TD><TD>1995-02-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-032B</TD><TD>Spartan 207</TD><TD>1996-032B</TD><TD>1996-05-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=SPATN-H</TD><TD>Spartan Halley</TD><TD>SPATN-H</TD><TD>1986-01-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=SPECXGM</TD><TD>Spectrum-X-Gamma</TD><TD>SPECXGM</TD><TD>2010-12-31</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-037A</TD><TD>Spektr R</TD><TD>2011-037A</TD><TD>2011-07-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2019-040A</TD><TD>Spektr-RG</TD><TD>2019-040A</TD><TD>2019-07-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-038A</TD><TD>Spitzer Space Telescope</TD><TD>2003-038A</TD><TD>2003-08-25</TD>
+</TR><TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1958-004B</TD><TD>Sputnik  3</TD><TD>1958-004B</TD><TD>1958-05-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-028A</TD><TD>SROSS 3</TD><TD>1992-028A</TD><TD>1992-05-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1994-027A</TD><TD>SROSS C2</TD><TD>1994-027A</TD><TD>1994-05-04</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-017A</TD><TD>STP P78-1</TD><TD>1979-017A</TD><TD>1979-02-24</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-007A</TD><TD>STP P78-2</TD><TD>1979-007A</TD><TD>1979-01-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=P80-2</TD><TD>STP P80-2</TD><TD>P80-2</TD><TD>1981-01-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-116A</TD><TD>STS   9/Spacelab 1</TD><TD>1983-116A</TD><TD>1983-11-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-106A</TD><TD>STS  35/Astro 1</TD><TD>1990-106A</TD><TD>1990-12-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-015A</TD><TD>STS  45</TD><TD>1992-015A</TD><TD>1992-03-24</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1993-058A</TD><TD>STS  51</TD><TD>1993-058A</TD><TD>1993-09-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1985-063A</TD><TD>STS  51F/Spacelab 2</TD><TD>1985-063A</TD><TD>1985-07-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1993-003A</TD><TD>STS  54</TD><TD>1993-003A</TD><TD>1993-01-13</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1993-027A</TD><TD>STS  55</TD><TD>1993-027A</TD><TD>1993-04-26</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1995-007A</TD><TD>STS  67/Astro 2</TD><TD>1995-007A</TD><TD>1995-03-02</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-004A</TD><TD>STS  82</TD><TD>1997-004A</TD><TD>1997-02-11</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-039A</TD><TD>STS  85</TD><TD>1997-039A</TD><TD>1997-08-07</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-040A</TD><TD>STS  93</TD><TD>1999-040A</TD><TD>1999-07-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-064A</TD><TD>STS  95</TD><TD>1998-064A</TD><TD>1998-10-29</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=STORE</TD><TD>STS/STORE</TD><TD>STORE</TD><TD></TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-003A</TD><TD>STSAT 2C</TD><TD>2013-003A</TD><TD>2013-01-31</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-066G</TD><TD>STSAT-3</TD><TD>2013-066G</TD><TD>2013-11-21</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-025A</TD><TD>Suzaku</TD><TD>2005-025A</TD><TD>2005-07-10</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-071A</TD><TD>SWAS</TD><TD>1998-071A</TD><TD>1998-12-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-047A</TD><TD>Swift</TD><TD>2004-047A</TD><TD>2004-11-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-014A</TD><TD>TD 1A</TD><TD>1972-014A</TD><TD>1972-03-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-011A</TD><TD>Tenma</TD><TD>1983-011A</TD><TD>1983-02-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-030A</TD><TD>Tournesol</TD><TD>1971-030A</TD><TD>1971-04-15</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-038A</TD><TD>Transiting Exoplanet Survey Satellite (TESS)</TD><TD>2018-038A</TD><TD>2018-04-18</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2014-070E</TD><TD>Tsubame</TD><TD>2014-070E</TD><TD>2014-11-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=TYVAK-61C</TD><TD>TYVAK-61C</TD><TD>TYVAK-61C</TD><TD>2018-01-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1991-063B</TD><TD>UARS</TD><TD>1991-063B</TD><TD>1991-09-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1970-107A</TD><TD>Uhuru</TD><TD>1970-107A</TD><TD>1970-12-12</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-090B</TD><TD>Ulysses</TD><TD>1990-090B</TD><TD>1990-10-06</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1963-039A</TD><TD>Vela  1A</TD><TD>1963-039A</TD><TD>1963-10-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1963-039C</TD><TD>Vela  1B</TD><TD>1963-039C</TD><TD>1963-10-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-040A</TD><TD>Vela  2A</TD><TD>1964-040A</TD><TD>1964-07-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-040B</TD><TD>Vela  2B</TD><TD>1964-040B</TD><TD>1964-07-17</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-058A</TD><TD>Vela  3A</TD><TD>1965-058A</TD><TD>1965-07-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-058B</TD><TD>Vela  3B</TD><TD>1965-058B</TD><TD>1965-07-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-040A</TD><TD>Vela  4A</TD><TD>1967-040A</TD><TD>1967-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-040B</TD><TD>Vela  4B</TD><TD>1967-040B</TD><TD>1967-04-28</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-046D</TD><TD>Vela  5A</TD><TD>1969-046D</TD><TD>1969-05-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-046E</TD><TD>Vela  5B</TD><TD>1969-046E</TD><TD>1969-05-23</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1970-027A</TD><TD>Vela  6A</TD><TD>1970-027A</TD><TD>1970-04-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1970-027B</TD><TD>Vela  6B</TD><TD>1970-027B</TD><TD>1970-04-08</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A</TD><TD>Voyager 1</TD><TD>1977-084A</TD><TD>1977-09-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A</TD><TD>Voyager 2</TD><TD>1977-076A</TD><TD>1977-08-20</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1994-071A</TD><TD>Wind</TD><TD>1994-071A</TD><TD>1994-11-01</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-011A</TD><TD>WIRE</TD><TD>1999-011A</TD><TD>1999-03-05</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-071A</TD><TD>WISE/NEOWISE</TD><TD>2009-071A</TD><TD>2009-12-14</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-027A</TD><TD>WMAP</TD><TD>2001-027A</TD><TD>2001-06-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1995-074A</TD><TD>X-Ray Timing Explorer</TD><TD>1995-074A</TD><TD>1995-12-30</TD></TR>
+<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-066A</TD><TD>XMM-Newton</TD><TD>1999-066A</TD><TD>1999-12-10</TD></TR>
 </TABLEDATA></DATA></TABLE></RESOURCE>
 </VOTABLE>
