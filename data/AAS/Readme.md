@@ -12,6 +12,4 @@ The data is available in the [AAS.xml](AAS.xml) file, retrieved on 2022-02-01.
 
 ## Parser
 
-## Known Issues
 
-### Space mission with same ID
