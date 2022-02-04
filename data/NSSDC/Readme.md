@@ -12,6 +12,3 @@ The data is available in the [NSSDC.xml](NSSDC.xml) file, retrieved on 2022-02-0
 
 ## Parser
 
-## Known Issues
-
-### Space mission with same ID

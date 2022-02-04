@@ -12,6 +12,4 @@ The data is available in the [xephem_sites.txt](xephem_sites.txt) file, retrieve
 
 ## Parser
 
-## Known Issues
 
-### Space mission with same ID

@@ -12,6 +12,3 @@ The data is available in the [Astroweb.xml](Astroweb.xml) file, retrieved on 202
 
 ## Parser
 
-## Known Issues
-
-### Space mission with same ID

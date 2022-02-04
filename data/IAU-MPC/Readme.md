@@ -13,6 +13,3 @@ The data is available in the [IAU-MPC.txt](IAU-MPC.txt) file, retrieved on 2022-
 
 ## Parser
 
-## Known Issues
-
-### Space mission with same ID

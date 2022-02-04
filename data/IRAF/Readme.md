@@ -13,6 +13,3 @@ XML version is not updated
 
 ## Parser
 
-## Known Issues
-
-### Space mission with same ID
