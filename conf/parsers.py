@@ -14,10 +14,10 @@ Available parsers in this file:
 """
 
 from astropy.io import votable
-from urllib2 import URLError, HTTPError
+from urllib.error import URLError, HTTPError
 import json
 import os.path
-import urllib2
+import urllib
 import pyvo
 import consts
 
@@ -62,7 +62,7 @@ def translate_ucd(measurement_type):
 
 # replace all measurementType values of a given object
 def replace_ucd_in_json(input_obj):
-    print "Replacing values in 'measurementType' with respective UCD..."
+    print("Replacing values in 'measurementType' with respective UCD...")
     for obj in input_obj:
         if consts.KEY_STR_MEASUREMENT_TYPE in input_obj[obj]:
             for mt_index, mt_value in enumerate(input_obj[obj][consts.KEY_STR_MEASUREMENT_TYPE]):
@@ -81,10 +81,10 @@ def load_existing_json(json_file):
         # URL (web service) has been provided
         try:
             print("Retrieving data from web service: " + json_file)
-            response = urllib2.urlopen(urllib2.Request(json_file))
+            response = urllib.request.urlopen(urllib.request.Request(json_file))
             return replace_ucd_in_json(json.load(response))
         except (URLError, HTTPError) as e:
-            print "ERROR reading data from web service:"
+            print("ERROR reading data from web service:")
             print(e.reason)
             return {}
     else:
@@ -121,7 +121,7 @@ The following functions are the load_****_list()
 def load_aas_list():
     """
     This function loads the AAS list in VOTable format as available from=
-    https://raw.githubusercontent.com/epn-vespa/FacilityList/master/data/AAS.xml
+    https://raw.githubusercontent.com/epn-vespa/FacilityList/master/data/AAS/AAS.xml
     :return data: (dict)
     """
 
@@ -129,7 +129,7 @@ def load_aas_list():
     authority = 'aas'
 
     # Data file
-    list_file = data_dir + 'AAS.xml'
+    list_file = data_dir + 'AAS/AAS.xml'
 
     # Loading data as a VOTable
     input_data = parse_votable(list_file)
@@ -146,17 +146,21 @@ def load_aas_list():
         # Initializing temporary dictionaries for this record
         data_tmp = dict()
         data_tmp[consts.KEY_STR_ALTERNATE_NAME] = []
-        altname_tmp = dict()
-
+        
         # record title is ID column here
         title = record['ID'].strip()
 
-        # Alternate_name element
+        # Alternate_name elements
+        altname_tmp = dict()
         altname_tmp[consts.KEY_STR_NAME] = record['Name'].strip()
-        altname_tmp[consts.KEY_STR_ID] = title
         altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
         data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
-
+        
+        altname_tmp = dict()
+        altname_tmp[consts.KEY_STR_NAME] = record['ID'].strip()
+        altname_tmp[consts.KEY_STR_NAMING_AUTHORITY] = authority
+        data_tmp[consts.KEY_STR_ALTERNATE_NAME].append(altname_tmp)
+                
         # Location (space, airborne or ground), with continent on ground
         if record['Location'] == 'Space':
             data_tmp[consts.KEY_STR_FACILITY_TYPE] = 'spacecraft'
