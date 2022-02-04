@@ -49,6 +49,12 @@
             <FIELD datatype="char" arraysize="*" ID="solar" name="Solar" ucd="meta.id">
                 <DESCRIPTION>Facility has solar observing capability</DESCRIPTION>
             </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="archive" name="Archive/Database" ucd="meta.id">
+                <DESCRIPTION>Archive/Database</DESCRIPTION>
+            </FIELD>
+            <FIELD datatype="char" arraysize="*" ID="compute" name="Compute" ucd="meta.id">
+                <DESCRIPTION>Computational Center</DESCRIPTION>
+            </FIELD>
             <DATA>
                 <TABLEDATA> <TR>
                                             <TD>NASA's Polarimeter to UNify the Corona and Heliosphere (PUNCH) mission</TD>
