@@ -13,6 +13,3 @@ The data is available in the [spacecraft-202202031331.csv](spacecraft-2022020313
 
 ## Parser
 
-## Known Issues
-
-### Space mission with same ID
