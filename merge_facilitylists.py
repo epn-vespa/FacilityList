@@ -45,17 +45,17 @@ def load_all_lists(dir): # see parsers defined in file parsers.py
 			try:
 				update_list( data, globals()[input]() )
 			except:
-				print "WARNING: Could not call parser function '" + input + "()': " + str(sys.exc_info()[0]) 
+				print ("WARNING: Could not call parser function '" + input + "()': " + str(sys.exc_info()[0])) 
 				
 	return data
 
 
 if (fuzzy and partial):
-	print "Options 'f' or 'fuzzy' and 'p' or 'partial' can not be used at the same time!"
+	print ("Options 'f' or 'fuzzy' and 'p' or 'partial' can not be used at the same time!")
 	sys.exit()
 
 if (interactive and not (fuzzy or partial)):
-	print "Option 'i' or 'interactive' can only be used in conjunction with 'f' ('fuzzy') or 'p' ('partial') !"
+	print ("Option 'i' or 'interactive' can only be used in conjunction with 'f' ('fuzzy') or 'p' ('partial') !")
 	sys.exit()
 	
 def remove_entries (list, entries):
@@ -101,7 +101,7 @@ def update_list(existing_list, new_list):
 	# When two entries are equal wrt altname(s) but NOT equal wrt other included data (location,...), the updated information is ignored!
 	# Since all previously added enteries from a certain list are "overwritten" (i.e. existing entries are kept!), the entries of the new list only have to be compared with MERGED entries.
 	if (len(new_list) == 0):
-		print "WARNING: list with zero length included, will be ignored."
+		print ("WARNING: list with zero length included, will be ignored.")
 		return
 		
 	if (update):
@@ -115,24 +115,24 @@ def update_list(existing_list, new_list):
 					del new_list[entry]
 				else:
 					while True:
-						print "\nWARNING: object in updated list from authority '" + authority + "' shares same key (" + entry + ") as in exsiting list but differs regading content: \n"
-						print "<<<<<<< Existing Object:"
-						print json.dumps( existing_list[entry], indent=2 )
-						print ">>>>>>> New Object:"
-						print json.dumps( new_list[entry], indent=2 )
+						print ("\nWARNING: object in updated list from authority '" + authority + "' shares same key (" + entry + ") as in exsiting list but differs regading content: \n")
+						print ("<<<<<<< Existing Object:")
+						print (json.dumps( existing_list[entry], indent=2 ))
+						print (">>>>>>> New Object:")
+						print (json.dumps( new_list[entry], indent=2 ))
 						cmd = raw_input ("Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:")
 						
 						if (cmd.upper() == "O"):
 							del new_list[entry]
-							print "Old entry in existing list is kept."
+							print ("Old entry in existing list is kept.")
 							break
 						elif (cmd.upper() == "N"):
 							existing_list[entry] = new_list[entry]
 							del new_list[entry]
-							print "Entry in existing list is overwritten with entry in new list."
+							print ("Entry in existing list is overwritten with entry in new list.")
 							break
 						else:
-							print "Input not valid! Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:"
+							print ("Input not valid! Type 'o' to keep the OLD object in existing list or 'n' to overwrite with NEW object in updated list:")
 					
 			for alt_name in existing_list[entry][KEY_STR_ALTERNATE_NAME]:
 				if (alt_name[KEY_STR_NAMING_AUTHORITY] == authority):
@@ -409,7 +409,7 @@ def merge_doubles (list):
 			merged_counter = merged_counter + 1
 			remove_entries(list, doubles)
 			log_file.write("\n")
-			print "Objects " + ", ".join(doubles) + " have been merged."
+			print ("Objects " + ", ".join(doubles) + " have been merged.")
 			print ( "\n----------------------------------------------------------------------------\n" )
 
 		
@@ -445,7 +445,7 @@ def merge_doubles (list):
 				merged_counter = merged_counter + 1
 				remove_entries(list, lon_lat_index[rec])
 				log_file.write("\n")
-				print "Objects " + ", ".join(lon_lat_index[rec]) + " have been merged."
+				print( "Objects " + ", ".join(lon_lat_index[rec]) + " have been merged.")
 				print ( "\n----------------------------------------------------------------------------\n" )
 
 
@@ -503,7 +503,7 @@ def merge_doubles (list):
 						else:
 							print ( hints_str.encode(sys.stdout.encoding, errors='replace') )
 							merged_entry = merge_entries([name_index[checked_key]['obj'], name_index[key]['obj']], list, None)
-							print "\n"
+							print( "\n")
 							
 							while True:
 								cmd = raw_input ("Type 'm' to merge, 'i' to ignore, 'd' to defer decision, 's' to save merged file and resume later or '?' followed by the object id for information ('*' can be used at the end of object name for matching): " )
@@ -517,20 +517,20 @@ def merge_doubles (list):
 								if ( cmd.startswith("?") ):
 									cmd_arr = cmd.split()
 									if len(cmd_arr) != 2:
-										print "\n'?' must be followed by at least on blank and a valid object id (as listed above), e.g. '? xyz:abc'!\n"
+										print ("\n'?' must be followed by at least on blank and a valid object id (as listed above), e.g. '? xyz:abc'!\n")
 									else:
 										found = False
 										for obj_id in list:
 											o_name = str(cmd_arr[1])
 											if ( ( o_name.endswith("*") and str(obj_id).startswith(o_name[:-1]) ) or ( o_name.endswith("*") and str(obj_id) == cmd_arr[1][:-1] ) or ( str(obj_id) == o_name ) ):									
 												print ("\n** Object: " + obj_id + " **")
-												print json.dumps( list[obj_id], indent=2 )
+												print (json.dumps( list[obj_id], indent=2 ))
 												print ("\n")
 												found = True
 												break
 
 										if not(found):
-											print "\nAn object with id '" + cmd_arr[1] + "' does not exist!\n"
+											print ("\nAn object with id '" + cmd_arr[1] + "' does not exist!\n")
 							
 							if cmd == 'm': # merge
 								if merged_entry != None:
@@ -642,7 +642,7 @@ def merge_doubles (list):
 					print ( hints_str.encode(sys.stdout.encoding, errors='replace') )
 					
 					merged_entry = merge_entries(merge_candidates, list, None)
-					print "\n"
+					print ("\n")
 					
 					while True:
 						try:
@@ -657,22 +657,22 @@ def merge_doubles (list):
 							if ( cmd.startswith("?") ):
 								cmd_arr = cmd.split()
 								if len(cmd_arr) != 2 or int(cmd_arr[1]) < 1 or int(cmd_arr[1]) > len(merge_candidates):
-									print "\n'?' must be followed by at least on blank and a valid object id (as listed above), e.g. '? 2'!"
+									print ("\n'?' must be followed by at least on blank and a valid object id (as listed above), e.g. '? 2'!")
 								else:
 									obj_id = merge_candidates[int(cmd_arr[1])-1]
 									print ("\n** Object: " + obj_id + " **")
-									print json.dumps( list[obj_id], indent=2 )
+									print (json.dumps( list[obj_id], indent=2 ))
 									print ("\n")
 							else:	
 								input_ids = cmd.split()
 								ids_valid = True							
 								if len(input_ids) < 2:
-									print "\nERROR: Please provide at least two ids to be merged!"
+									print ("\nERROR: Please provide at least two ids to be merged!")
 									ids_valid = False
 								
 								for id in input_ids:
 									if int(id) > obj_num:
-										print "\nERROR: Please only provide numbers between 1 and " + str(obj_num) + "!"
+										print ("\nERROR: Please only provide numbers between 1 and " + str(obj_num) + "!")
 										ids_valid = False
 								if ids_valid:
 									break								
@@ -754,7 +754,7 @@ else:
 	if os.path.isfile(output_dir + tmp_checked_file_name) and raw_input ("Delete temporary file '" + tmp_checked_file_name + "'? (Y/N): ") == "Y":
 		os.remove (output_dir + tmp_checked_file_name)
 		print ("Temporary file '" + tmp_checked_file_name + " deleted!")
-	print "Parsing lists..."
+	print ("Parsing lists...")
 	lists = load_all_lists(data_dir)
 
 merged_data = merge_doubles ( lists )
