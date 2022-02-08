@@ -1,10 +1,9 @@
-# Python3 code implementing web scraping using lxml
+# Python3 code implementing web scraping using lxml & Beautifulsoup
 import httplib2
 import requests
 #import urllib3
 from bs4 import BeautifulSoup, SoupStrainer
 import urllib 
-
 from lxml import html
 
  
@@ -98,8 +97,6 @@ for link in xml_links :
         # tant pis, on met un petit message mais pas grave pour le moment, on pourra gérer cette partie plus tard
         print( link_url + " :  pas de balise <type>")
         pass
-#f = open("pds1.txt", "w")
-#f.write(link['href'])
-#f.close()
+
     
         
