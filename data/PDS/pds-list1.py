@@ -96,13 +96,14 @@ for link in xml_links :
     try :
         title_text=soup.title.string
         logical_identifier =soup.logical_identifier.string
+        naif_host_id=soup.naif_host_id.string
         
-        #print( link_url + " :  titre  " + title_text + " logical identifier :  " + logical_identifier)
+        #print( link_url + " :  titre  " + title_text + " logical identifier :  " + logical_identifier+ "naif_host_id" + naif_host_id)
     except AttributeError :
         # S'il n'existe pas de balise type
         pass
         #print( link_url + " :  pas de balise <Title>")
-    result_elt={ "link_url" : link_url, "title" : title_text, " logical_identifier" : logical_identifier }
+    result_elt={ "link_url" : link_url, "title" : title_text, " logical_identifier" : logical_identifier, "naif_host_id " : naif_host_id }
     print ("result_elt :" , result_elt)
     result.append( result_elt )
     
