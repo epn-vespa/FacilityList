@@ -3,7 +3,8 @@ import httplib2
 import requests
 #import urllib3
 from bs4 import BeautifulSoup, SoupStrainer
-import urllib 
+import urllib
+import json
 from lxml import html
 
  
@@ -72,13 +73,14 @@ def get_links_pds(pds_url_f) :
 links = get_links_pds(pds_url)
 # on reconstruit une liste dont les éléments sont ceux de links qui se terminent par ".xml"
 xml_links = [ link for link in links if link.endswith(".xml") ]
-print(xml_links)
+
+result=[]
 for link in xml_links :
     
     link_url=f'{pds_url}{link}'
     # f'texte{variable}' renvoie une chaine de caracteres
     # contenant 'texte' et (le résultat de la conversion en chaine de caractes de) ma_variable
-
+    print(link_url)
     http = httplib2.Http()
     status, response = http.request(link_url)
     
@@ -86,17 +88,28 @@ for link in xml_links :
 
     parser = 'html.parser'
     soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
-    with open(link,"w") as output_file :
-        output_file.write(soup.prettify())
+    #with open(link,"w") as output_file :
+        #output_file.write(soup.prettify())
+    
+    
     # lecture de la premiere balise <type>
     try :
-        type_text=soup.type.string
-        print( link_url + " :  <type> est " + type_text)
+        title_text=soup.title.string
+        logical_identifier =soup.logical_identifier.string
+        naif_host_id=soup.naif_host_id.string
+        
+        #print( link_url + " :  titre  " + title_text + " logical identifier :  " + logical_identifier+ "naif_host_id" + naif_host_id)
     except AttributeError :
         # S'il n'existe pas de balise type
-        # tant pis, on met un petit message mais pas grave pour le moment, on pourra gérer cette partie plus tard
-        print( link_url + " :  pas de balise <type>")
         pass
+        #print( link_url + " :  pas de balise <Title>")
+    result_elt={ "link_url" : link_url, "title" : title_text, " logical_identifier" : logical_identifier, "naif_host_id " : naif_host_id }
+    print ("result_elt :" , result_elt)
+    result.append( result_elt )
+    
+with open("pds-test-list.json", "w") as f :
+    f.write(json.dumps( result, indent=4 ))
+
 
     
         
