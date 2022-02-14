@@ -23,7 +23,7 @@
                 <DESCRIPTION>Facility has X-Ray observing capability (0.1 - 100 Angstroms or 0.12 -
                     120 keV)</DESCRIPTION>
             </FIELD>
-            <FIELD datatype="char" arraysize="*" ID="uv" name="Ultraviolet" ucd="meta.id">
+            <FIELD datatype="char" array-size="*" ID="uv" name="Ultraviolet" ucd="meta.id">
                 <DESCRIPTION>Facility has Ultraviolet observing capability (100 - 3000 Angstroms or
                     1.2 - 120 eV)</DESCRIPTION>
             </FIELD>
