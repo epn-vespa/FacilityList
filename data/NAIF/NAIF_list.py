@@ -16,20 +16,20 @@ tree = etree.parse(input_file)
 print(tree)
 print("tree.getroot() =", tree.getroot())
 root = tree.getroot()
-print("root.findall ('./RESOURCE/TABLE/DATA/') =",root.findall ('./RESOURCE/TABLE/DATA/'))
+print("root.findall ('./TABLEDATA') =",root.findall ('./TABLEDATA'))
 print("root.xpath('.') =", root.xpath('.'))
 print("root.items() =", root.items())
 for k in root.keys() :
     print("root[" + k + "] =", root.get(k))
 print("root.tag =", root.tag)
 print("element_path(root) =", element_path(root))
-print('root.findall("RESOURCE") =', root.findall("RESOURCE"))
-print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE"))
+print('root.findall("TABLEDATA") =', root.findall("TABLEDATA"))
+print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.3}TABLEDATA") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.3}TABLEDATA"))
     
 for child in root.iterchildren() :
     print(element_path(child))
-TAG="{http://www.ivoa.net/xml/VOTable/v1.2}"
-findall_path='./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'DATA'
+TAG="{http://www.ivoa.net/xml/VOTable/v1.3}"
+findall_path='./'+ TAG + 'TABLEDATA'
 print("root.findall(findall_path) =", root.findall(findall_path))
 print("element_path(root.findall(findall_path)) =", element_path(root.findall(findall_path)[0]))
 
@@ -38,8 +38,8 @@ print("element_path(root.findall(findall_path)) =", element_path(root.findall(fi
 print()
 print("### get table fields :")
 print()
-fields=root.findall('./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'FIELD')
-fields_descriptions=[ x.find( TAG + "DESCRIPTION" ).text for x in fields ]
+fields=root.findall('./'+ TAG + 'FIELD')
+fields_descriptions=[ x.find( TAG + "FIELD" ).text for x in fields ]
 fields_descriptions=[ x.replace("\n                   ","") for x in fields_descriptions  ]
 for description in fields_descriptions :
     print(description)
@@ -48,7 +48,7 @@ for description in fields_descriptions :
 print()
 print("### get table data :")
 print()
-table_data = root.findall('./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'DATA/' + TAG + "TABLEDATA")[0]
+table_data = root.findall('./' + TAG + "TABLEDATA")[0]
 print("element_path(table_data) = ", element_path(table_data))
 
 rows_list=[]
