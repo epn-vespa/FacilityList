@@ -2,34 +2,42 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:schemaLocation='http://www.ivoa.net/xml/VOTable/v1.1 http://www.ivoa.net/xml/VOTable/v1.2' 
 	xmlns='http://www.ivoa.net/xml/VOTable/v1.2'>
-<DESCRIPTION>NASA NSSDC Master Catalog - Spacecraft listing</DESCRIPTION>
-<RESOURCE>
-<DESCRIPTION>
-</DESCRIPTION>
-<TABLE name='NASA NSSDC spacecraft List'>
-<FIELD datatype='char' arraysize="*" ID='nssdc_url' name='URL' ucd='meta.ref.url'>
-<DESCRIPTION>
+	<DESCRIPTION>NASA NSSDC Master Catalog - Spacecraft listing</DESCRIPTION>
+	<RESOURCE>
+	  <DESCRIPTION>
+	  </DESCRIPTION>
+	  <TABLE name='NASA NSSDC spacecraft List'>
+		<FIELD datatype='char' arraysize="*" ID='nssdc_url' name='URL' ucd='meta.ref.url'>
+	   	     <DESCRIPTION>
 URL of the dedicated NSSDC Description web page
-</DESCRIPTION>
-</FIELD>
-<FIELD datatype='char' arraysize="*" ID='nssdc_name' name='name' ucd='meta.id'>
-<DESCRIPTION>
+	  	     </DESCRIPTION>
+		</FIELD>
+		<FIELD datatype='char' arraysize="*" ID='nssdc_name' name='name' ucd='meta.id'>
+                     <DESCRIPTION>
 Name of Spacecraft
-</DESCRIPTION>
-</FIELD>
-<FIELD datatype='char' arraysize="*" ID='nssdc_id' name='NSSDC id' ucd='meta.id'>
-<DESCRIPTION>
+                     </DESCRIPTION>
+		</FIELD>
+                <FIELD datatype='char' arraysize="*" ID='nssdc_id' name='NSSDC id' ucd='meta.id'>
+                     <DESCRIPTION>
 NSSDC ID
-</DESCRIPTION>
-</FIELD>
-<FIELD datatype='char' arraysize="*" ID='date' name='Launch date' ucd='time.epoch'>
-<DESCRIPTION>
+                     </DESCRIPTION>
+		</FIELD>
+		<FIELD datatype='char' arraysize="*" ID='date' name='Launch date' ucd='time.epoch'>
+		     <DESCRIPTION>
 Launch Date (YYYY-MM-DD)
-</DESCRIPTION>
-</FIELD>
-<DATA><TABLEDATA>
-<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-011A</TD><TD>1962 Lambda 1</TD><TD>1962-011A</TD><TD>1962-04-18</TD></TR>
-<TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-021A</TD><TD>1962 Phi 1</TD><TD>1962-021A</TD><TD>1962-05-30</TD></TR>
+                     </DESCRIPTION>
+		</FIELD>
+		<DATA>
+		    <TABLEDATA> <TR>
+					<TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-011A</TD><TD>1962 Lambda 1
+					</TD>
+					<TD>1962-011A</TD><TD>1962-04-18
+					</TD> 
+				</TR>
+				<TR>
+					<TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-021A		</TD> 
+					<TD>1962 Phi 1</TD><TD>1962-021A</TD><TD>1962-05-30			</TD>
+				</TR>
 <TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-031A</TD><TD>1964-031A</TD><TD>1964-031A</TD><TD>1964-06-18</TD></TR>
 <TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1964-083C</TD><TD>1964-083C</TD><TD>1964-083C</TD><TD>1964-12-13</TD></TR>
 <TR><TD>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-054A</TD><TD>1971-054A</TD><TD>1971-054A</TD><TD>1971-06-08</TD></TR>
