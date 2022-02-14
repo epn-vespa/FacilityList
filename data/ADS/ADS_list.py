@@ -25,6 +25,7 @@ for k in root.keys() :
 #print("element_path(root) =", element_path(root))
 #print('root.findall("RESOURCE") =', root.findall("RESOURCE"))
 #print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE"))
+    
 for child in root.iterchildren() :
     print(element_path(child))
 TAG="{http://www.ivoa.net/xml/VOTable/v1.2}"
