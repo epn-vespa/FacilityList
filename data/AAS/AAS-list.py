@@ -1,4 +1,3 @@
-
 import lxml
 from lxml import etree
 import json
