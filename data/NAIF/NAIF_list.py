@@ -7,8 +7,15 @@ def element_path(xmltreeelement):
     try :
         r = element_path(xmltreeelement.getparent())
     except AttributeError: return xmltreeelement.tag
-    return r + "/" + xmltreeelement.tag()
- 
+    try :
+        r += "/" + xmltreeelement.tag()
+    except TypeError :
+        try :
+            r += "/" + type(xmltreeelement.tag()).__name__
+        except TypeError :
+            r += "/" + type(xmltreeelement.tag).__name__
+    return r
+
 input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/NAIF.xml"
 output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/NAIF.json"
  
@@ -16,20 +23,20 @@ tree = etree.parse(input_file)
 print(tree)
 print("tree.getroot() =", tree.getroot())
 root = tree.getroot()
-print("root.findall ('./TABLEDATA') =",root.findall ('./TABLEDATA'))
+print("root.findall ('./RESOURCE/TABLE/DATA/') =",root.findall ('./RESOURCE/TABLE/DATA/'))
 print("root.xpath('.') =", root.xpath('.'))
 print("root.items() =", root.items())
 for k in root.keys() :
     print("root[" + k + "] =", root.get(k))
 print("root.tag =", root.tag)
 print("element_path(root) =", element_path(root))
-print('root.findall("TABLEDATA") =', root.findall("TABLEDATA"))
-print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.3}TABLEDATA") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.3}TABLEDATA"))
-    
+print('root.findall("RESOURCE") =', root.findall("RESOURCE"))
+print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE"))
 for child in root.iterchildren() :
     print(element_path(child))
-TAG="{http://www.ivoa.net/xml/VOTable/v1.3}"
-findall_path='./'+ TAG + 'TABLEDATA'
+TAG=root.tag.replace("VOTABLE","")
+print("found TAG : " + TAG)
+findall_path='./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'DATA'
 print("root.findall(findall_path) =", root.findall(findall_path))
 print("element_path(root.findall(findall_path)) =", element_path(root.findall(findall_path)[0]))
 
@@ -38,9 +45,12 @@ print("element_path(root.findall(findall_path)) =", element_path(root.findall(fi
 print()
 print("### get table fields :")
 print()
-fields=root.findall('./'+ TAG + 'FIELD')
-fields_descriptions=[ x.find( TAG + "FIELD" ).text for x in fields ]
-fields_descriptions=[ x.replace("\n                   ","") for x in fields_descriptions  ]
+fields=root.findall('./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'FIELD')
+try :
+    fields_descriptions=[ x.find( TAG + "DESCRIPTION" ).text.strip() for x in fields ]
+except AttributeError :
+    fields_descriptions=[ x.get("name").strip() for x in fields ]
+
 for description in fields_descriptions :
     print(description)
 
@@ -48,7 +58,7 @@ for description in fields_descriptions :
 print()
 print("### get table data :")
 print()
-table_data = root.findall('./' + TAG + "TABLEDATA")[0]
+table_data = root.findall('./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'DATA/' + TAG + "TABLEDATA")[0]
 print("element_path(table_data) = ", element_path(table_data))
 
 rows_list=[]
@@ -58,7 +68,7 @@ for tr in table_data.findall( TAG + "TR" ) :
     row = {}
     for i , f in enumerate(tr.findall( TAG + "TD" )) :
         if f.text is None : continue # skip to next field if field is empty
-        row[fields_descriptions[i]] = f.text
+        row[fields_descriptions[i]] = f.text.strip()
     rows_list.append(row)
 print(json.dumps(rows_list, indent=4))
 
