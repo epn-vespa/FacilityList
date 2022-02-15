@@ -70,6 +70,8 @@ for tr in table_data.findall( TAG + "TR" ) :
         if f.text is None : continue # skip to next field if field is empty
         row[fields_descriptions[i]] = f.text.strip()
     rows_list.append(row)
+    
+    
 print(json.dumps(rows_list, indent=4))
 
 with open(output_file,"w") as out_f:
