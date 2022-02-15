@@ -1,258 +1,258 @@
 <?xml version='1.0'?>
 <VOTABLE version="1.4"
- xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
-<!--
- !  VOTable written by STIL version 4.0-5 (uk.ac.starlink.votable.VOTableWriter)
- !  at 2022-02-04T12:53:28
- !-->
-<RESOURCE>
-<TABLE name="IRAF Observatory List" nrows="28">
-<FIELD ID="obscode" arraysize="*" datatype="char" name="Obs Code" ucd="meta.id">
-<DESCRIPTION>IRAF Observatory Code</DESCRIPTION>
-</FIELD>
-<FIELD ID="obsname" arraysize="*" datatype="char" name="Obs Name" ucd="meta.id">
-<DESCRIPTION>IRAF Observatory Name</DESCRIPTION>
-</FIELD>
-<FIELD ID="longitude" datatype="float" name="longitude" ucd="pos.earth.lon">
-<DESCRIPTION>Observatory Longitude</DESCRIPTION>
-</FIELD>
-<FIELD ID="latitude" datatype="float" name="latitude" ucd="pos.earth.lat">
-<DESCRIPTION>Observatory Latitude</DESCRIPTION>
-</FIELD>
-<FIELD ID="altitude" datatype="float" name="altitude" ucd="pos.bodyrc.alt">
-<DESCRIPTION>Observatory Altitude</DESCRIPTION>
-</FIELD>
-<FIELD ID="timezone" datatype="float" name="time zone" ucd="meta.code;pos.earth.lon">
-<DESCRIPTION>Observatory Time Zone</DESCRIPTION>
-</FIELD>
-<DATA>
-<TABLEDATA>
-  <TR>
-    <TD>kpno</TD>
-    <TD>Kitt Peak National Observatory</TD>
-    <TD>111.6</TD>
-    <TD>31.96333</TD>
-    <TD>2120.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>ctio</TD>
-    <TD>Cerro Tololo Interamerican Observatory</TD>
-    <TD>70.815</TD>
-    <TD>-30.165277</TD>
-    <TD>2215.0</TD>
-    <TD>4.0</TD>
-  </TR>
-  <TR>
-    <TD>eso</TD>
-    <TD>European Southern Observatory</TD>
-    <TD>70.73</TD>
-    <TD>-29.256666</TD>
-    <TD>2347.0</TD>
-    <TD>4.0</TD>
-  </TR>
-  <TR>
-    <TD>lick</TD>
-    <TD>Lick Observatory</TD>
-    <TD>121.63666</TD>
-    <TD>37.34333</TD>
-    <TD>1290.0</TD>
-    <TD>8.0</TD>
-  </TR>
-  <TR>
-    <TD>mmto</TD>
-    <TD>Multiple Mirror Telescope Observatory</TD>
-    <TD>110.885</TD>
-    <TD>31.68833</TD>
-    <TD>2600.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>mmt</TD>
-    <TD>Whipple Observatory</TD>
-    <TD>110.885</TD>
-    <TD>31.68833</TD>
-    <TD>2608.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>flwo</TD>
-    <TD>Whipple Observatory</TD>
-    <TD>110.8775</TD>
-    <TD>31.680944</TD>
-    <TD>2320.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>cfht</TD>
-    <TD>Canada-France-Hawaii Telescope</TD>
-    <TD>155.47166</TD>
-    <TD>19.82666</TD>
-    <TD>4215.0</TD>
-    <TD>10.0</TD>
-  </TR>
-  <TR>
-    <TD>lapalma</TD>
-    <TD>Roque de los Muchachos, La Palma</TD>
-    <TD>17.88</TD>
-    <TD>28.75833</TD>
-    <TD>2327.0</TD>
-    <TD>0.0</TD>
-  </TR>
-  <TR>
-    <TD>mso</TD>
-    <TD>Mt. Stromlo Observatory</TD>
-    <TD>210.97566</TD>
-    <TD>-35.32065</TD>
-    <TD>767.0</TD>
-    <TD>-10.0</TD>
-  </TR>
-  <TR>
-    <TD>sso</TD>
-    <TD>Siding Spring Observatory</TD>
-    <TD>210.93881</TD>
-    <TD>-31.273361</TD>
-    <TD>1149.0</TD>
-    <TD>-10.0</TD>
-  </TR>
-  <TR>
-    <TD>aao</TD>
-    <TD>Anglo-Australian Observatory</TD>
-    <TD>210.93391</TD>
-    <TD>-31.277039</TD>
-    <TD>1164.0</TD>
-    <TD>-10.0</TD>
-  </TR>
-  <TR>
-    <TD>mcdonald</TD>
-    <TD>McDonald Observatory</TD>
-    <TD>104.02167</TD>
-    <TD>30.671667</TD>
-    <TD>2075.0</TD>
-    <TD>6.0</TD>
-  </TR>
-  <TR>
-    <TD>lco</TD>
-    <TD>Las Campanas Observatory</TD>
-    <TD>70.70167</TD>
-    <TD>-29.003334</TD>
-    <TD>2282.0</TD>
-    <TD>4.0</TD>
-  </TR>
-  <TR>
-    <TD>mtbigelow</TD>
-    <TD>Catalina Observatory: 61 inch telescope</TD>
-    <TD>110.73167</TD>
-    <TD>32.583332</TD>
-    <TD>2510.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>dao</TD>
-    <TD>Dominion Astrophysical Observatory</TD>
-    <TD>123.416664</TD>
-    <TD>48.521667</TD>
-    <TD>229.0</TD>
-    <TD>8.0</TD>
-  </TR>
-  <TR>
-    <TD>spm</TD>
-    <TD>Observatorio Astronomico Nacional, San Pedro Martir</TD>
-    <TD>115.486946</TD>
-    <TD>31.029167</TD>
-    <TD>2830.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>tona</TD>
-    <TD>Observatorio Astronomico Nacional, Tonantzintla</TD>
-    <TD>98.31389</TD>
-    <TD>19.032778</TD>
-    <TD>8.0</TD>
-    <TD>NaN</TD>
-  </TR>
-  <TR>
-    <TD>Palomar</TD>
-    <TD>The Hale Telescope</TD>
-    <TD>116.863</TD>
-    <TD>33.356</TD>
-    <TD>1706.0</TD>
-    <TD>8.0</TD>
-  </TR>
-  <TR>
-    <TD>mdm</TD>
-    <TD>Michigan-Dartmouth-MIT Observatory</TD>
-    <TD>11.616667</TD>
-    <TD>31.95</TD>
-    <TD>1938.5</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>NOV</TD>
-    <TD>National Observatory of Venezuela</TD>
-    <TD>70.86667</TD>
-    <TD>8.79</TD>
-    <TD>3610.0</TD>
-    <TD>4.0</TD>
-  </TR>
-  <TR>
-    <TD>bmo</TD>
-    <TD>Black Moshannon Observatory</TD>
-    <TD>78.005</TD>
-    <TD>40.921665</TD>
-    <TD>738.0</TD>
-    <TD>5.0</TD>
-  </TR>
-  <TR>
-    <TD>BAO</TD>
-    <TD>Beijing XingLong Observatory</TD>
-    <TD>242.425</TD>
-    <TD>43.393333</TD>
-    <TD>950.0</TD>
-    <TD>-8.0</TD>
-  </TR>
-  <TR>
-    <TD>keck</TD>
-    <TD>W. M. Keck Observatory</TD>
-    <TD>155.47833</TD>
-    <TD>19.828333</TD>
-    <TD>4160.0</TD>
-    <TD>10.0</TD>
-  </TR>
-  <TR>
-    <TD>ekar</TD>
-    <TD>Mt. Ekar 182 cm. Telescope</TD>
-    <TD>348.41885</TD>
-    <TD>45.848587</TD>
-    <TD>1413.69</TD>
-    <TD>-1.0</TD>
-  </TR>
-  <TR>
-    <TD>apo</TD>
-    <TD>Apache Point Observatory</TD>
-    <TD>105.82</TD>
-    <TD>32.78</TD>
-    <TD>2798.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>lowell</TD>
-    <TD>Lowell Observatory</TD>
-    <TD>111.535</TD>
-    <TD>35.09667</TD>
-    <TD>2198.0</TD>
-    <TD>7.0</TD>
-  </TR>
-  <TR>
-    <TD>vbo</TD>
-    <TD>Vainu Bappu Observatory</TD>
-    <TD>281.1734</TD>
-    <TD>12.57666</TD>
-    <TD>725.0</TD>
-    <TD>-5.5</TD>
-  </TR>
-</TABLEDATA>
-</DATA>
-</TABLE>
-</RESOURCE>
+         xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+    <!--
+     !  VOTable written by STIL version 4.0-5 (uk.ac.starlink.votable.VOTableWriter)
+     !  at 2022-02-04T12:53:28
+     !-->
+    <RESOURCE>
+        <TABLE name="IRAF Observatory List" nrows="28">
+            <FIELD ID="obscode" arraysize="*" datatype="char" name="Obs Code" ucd="meta.id">
+                <DESCRIPTION>IRAF Observatory Code</DESCRIPTION>
+            </FIELD>
+            <FIELD ID="obsname" arraysize="*" datatype="char" name="Obs Name" ucd="meta.id">
+                <DESCRIPTION>IRAF Observatory Name</DESCRIPTION>
+            </FIELD>
+            <FIELD ID="longitude" datatype="float" name="longitude" ucd="pos.earth.lon">
+                <DESCRIPTION>Observatory Longitude</DESCRIPTION>
+            </FIELD>
+            <FIELD ID="latitude" datatype="float" name="latitude" ucd="pos.earth.lat">
+                <DESCRIPTION>Observatory Latitude</DESCRIPTION>
+            </FIELD>
+            <FIELD ID="altitude" datatype="float" name="altitude" ucd="pos.bodyrc.alt">
+                <DESCRIPTION>Observatory Altitude</DESCRIPTION>
+            </FIELD>
+            <FIELD ID="timezone" datatype="float" name="time zone" ucd="meta.code;pos.earth.lon">
+                <DESCRIPTION>Observatory Time Zone</DESCRIPTION>
+            </FIELD>
+            <DATA>
+                <TABLEDATA>
+                    <TR>
+                        <TD>kpno</TD>
+                        <TD>Kitt Peak National Observatory</TD>
+                        <TD>111.6</TD>
+                        <TD>31.96333</TD>
+                        <TD>2120.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>ctio</TD>
+                        <TD>Cerro Tololo Interamerican Observatory</TD>
+                        <TD>70.815</TD>
+                        <TD>-30.165277</TD>
+                        <TD>2215.0</TD>
+                        <TD>4.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>eso</TD>
+                        <TD>European Southern Observatory</TD>
+                        <TD>70.73</TD>
+                        <TD>-29.256666</TD>
+                        <TD>2347.0</TD>
+                        <TD>4.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>lick</TD>
+                        <TD>Lick Observatory</TD>
+                        <TD>121.63666</TD>
+                        <TD>37.34333</TD>
+                        <TD>1290.0</TD>
+                        <TD>8.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>mmto</TD>
+                        <TD>Multiple Mirror Telescope Observatory</TD>
+                        <TD>110.885</TD>
+                        <TD>31.68833</TD>
+                        <TD>2600.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>mmt</TD>
+                        <TD>Whipple Observatory</TD>
+                        <TD>110.885</TD>
+                        <TD>31.68833</TD>
+                        <TD>2608.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>flwo</TD>
+                        <TD>Whipple Observatory</TD>
+                        <TD>110.8775</TD>
+                        <TD>31.680944</TD>
+                        <TD>2320.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>cfht</TD>
+                        <TD>Canada-France-Hawaii Telescope</TD>
+                        <TD>155.47166</TD>
+                        <TD>19.82666</TD>
+                        <TD>4215.0</TD>
+                        <TD>10.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>lapalma</TD>
+                        <TD>Roque de los Muchachos, La Palma</TD>
+                        <TD>17.88</TD>
+                        <TD>28.75833</TD>
+                        <TD>2327.0</TD>
+                        <TD>0.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>mso</TD>
+                        <TD>Mt. Stromlo Observatory</TD>
+                        <TD>210.97566</TD>
+                        <TD>-35.32065</TD>
+                        <TD>767.0</TD>
+                        <TD>-10.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>sso</TD>
+                        <TD>Siding Spring Observatory</TD>
+                        <TD>210.93881</TD>
+                        <TD>-31.273361</TD>
+                        <TD>1149.0</TD>
+                        <TD>-10.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>aao</TD>
+                        <TD>Anglo-Australian Observatory</TD>
+                        <TD>210.93391</TD>
+                        <TD>-31.277039</TD>
+                        <TD>1164.0</TD>
+                        <TD>-10.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>mcdonald</TD>
+                        <TD>McDonald Observatory</TD>
+                        <TD>104.02167</TD>
+                        <TD>30.671667</TD>
+                        <TD>2075.0</TD>
+                        <TD>6.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>lco</TD>
+                        <TD>Las Campanas Observatory</TD>
+                        <TD>70.70167</TD>
+                        <TD>-29.003334</TD>
+                        <TD>2282.0</TD>
+                        <TD>4.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>mtbigelow</TD>
+                        <TD>Catalina Observatory: 61 inch telescope</TD>
+                        <TD>110.73167</TD>
+                        <TD>32.583332</TD>
+                        <TD>2510.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>dao</TD>
+                        <TD>Dominion Astrophysical Observatory</TD>
+                        <TD>123.416664</TD>
+                        <TD>48.521667</TD>
+                        <TD>229.0</TD>
+                        <TD>8.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>spm</TD>
+                        <TD>Observatorio Astronomico Nacional, San Pedro Martir</TD>
+                        <TD>115.486946</TD>
+                        <TD>31.029167</TD>
+                        <TD>2830.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>tona</TD>
+                        <TD>Observatorio Astronomico Nacional, Tonantzintla</TD>
+                        <TD>98.31389</TD>
+                        <TD>19.032778</TD>
+                        <TD>8.0</TD>
+                        <TD>NaN</TD>
+                    </TR>
+                    <TR>
+                        <TD>Palomar</TD>
+                        <TD>The Hale Telescope</TD>
+                        <TD>116.863</TD>
+                        <TD>33.356</TD>
+                        <TD>1706.0</TD>
+                        <TD>8.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>mdm</TD>
+                        <TD>Michigan-Dartmouth-MIT Observatory</TD>
+                        <TD>11.616667</TD>
+                        <TD>31.95</TD>
+                        <TD>1938.5</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>NOV</TD>
+                        <TD>National Observatory of Venezuela</TD>
+                        <TD>70.86667</TD>
+                        <TD>8.79</TD>
+                        <TD>3610.0</TD>
+                        <TD>4.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>bmo</TD>
+                        <TD>Black Moshannon Observatory</TD>
+                        <TD>78.005</TD>
+                        <TD>40.921665</TD>
+                        <TD>738.0</TD>
+                        <TD>5.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>BAO</TD>
+                        <TD>Beijing XingLong Observatory</TD>
+                        <TD>242.425</TD>
+                        <TD>43.393333</TD>
+                        <TD>950.0</TD>
+                        <TD>-8.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>keck</TD>
+                        <TD>W. M. Keck Observatory</TD>
+                        <TD>155.47833</TD>
+                        <TD>19.828333</TD>
+                        <TD>4160.0</TD>
+                        <TD>10.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>ekar</TD>
+                        <TD>Mt. Ekar 182 cm. Telescope</TD>
+                        <TD>348.41885</TD>
+                        <TD>45.848587</TD>
+                        <TD>1413.69</TD>
+                        <TD>-1.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>apo</TD>
+                        <TD>Apache Point Observatory</TD>
+                        <TD>105.82</TD>
+                        <TD>32.78</TD>
+                        <TD>2798.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>lowell</TD>
+                        <TD>Lowell Observatory</TD>
+                        <TD>111.535</TD>
+                        <TD>35.09667</TD>
+                        <TD>2198.0</TD>
+                        <TD>7.0</TD>
+                    </TR>
+                    <TR>
+                        <TD>vbo</TD>
+                        <TD>Vainu Bappu Observatory</TD>
+                        <TD>281.1734</TD>
+                        <TD>12.57666</TD>
+                        <TD>725.0</TD>
+                        <TD>-5.5</TD>
+                    </TR>
+                </TABLEDATA>
+            </DATA>
+        </TABLE>
+    </RESOURCE>
 </VOTABLE>
