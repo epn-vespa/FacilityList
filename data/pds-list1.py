@@ -35,7 +35,7 @@ from lxml import html
 
 
 # l'url de la page PDS a scrapper
-pds_url = 'https://pds.nasa.gov/data/pds4/context-pds4/instrument_host/'
+pds_url = 'http://cdsweb.u-strasbg.fr/astroWeb/astroweb/telescope.html'
 
 # la fonction get_links_pds prend en argument l'url de la page à scrapper,
 # et renvoie la liste des noeuds <a> dont l'attribut href est non-nul.
