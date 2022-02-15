@@ -1,0 +1,226 @@
+[
+    {
+        "IRAF Observatory Code": "kpno",
+        "IRAF Observatory Name": "Kitt Peak National Observatory",
+        "Observatory Longitude": "111.6",
+        "Observatory Latitude": "31.96333",
+        "Observatory Altitude": "2120.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "ctio",
+        "IRAF Observatory Name": "Cerro Tololo Interamerican Observatory",
+        "Observatory Longitude": "70.815",
+        "Observatory Latitude": "-30.165277",
+        "Observatory Altitude": "2215.0",
+        "Observatory Time Zone": "4.0"
+    },
+    {
+        "IRAF Observatory Code": "eso",
+        "IRAF Observatory Name": "European Southern Observatory",
+        "Observatory Longitude": "70.73",
+        "Observatory Latitude": "-29.256666",
+        "Observatory Altitude": "2347.0",
+        "Observatory Time Zone": "4.0"
+    },
+    {
+        "IRAF Observatory Code": "lick",
+        "IRAF Observatory Name": "Lick Observatory",
+        "Observatory Longitude": "121.63666",
+        "Observatory Latitude": "37.34333",
+        "Observatory Altitude": "1290.0",
+        "Observatory Time Zone": "8.0"
+    },
+    {
+        "IRAF Observatory Code": "mmto",
+        "IRAF Observatory Name": "Multiple Mirror Telescope Observatory",
+        "Observatory Longitude": "110.885",
+        "Observatory Latitude": "31.68833",
+        "Observatory Altitude": "2600.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "mmt",
+        "IRAF Observatory Name": "Whipple Observatory",
+        "Observatory Longitude": "110.885",
+        "Observatory Latitude": "31.68833",
+        "Observatory Altitude": "2608.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "flwo",
+        "IRAF Observatory Name": "Whipple Observatory",
+        "Observatory Longitude": "110.8775",
+        "Observatory Latitude": "31.680944",
+        "Observatory Altitude": "2320.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "cfht",
+        "IRAF Observatory Name": "Canada-France-Hawaii Telescope",
+        "Observatory Longitude": "155.47166",
+        "Observatory Latitude": "19.82666",
+        "Observatory Altitude": "4215.0",
+        "Observatory Time Zone": "10.0"
+    },
+    {
+        "IRAF Observatory Code": "lapalma",
+        "IRAF Observatory Name": "Roque de los Muchachos, La Palma",
+        "Observatory Longitude": "17.88",
+        "Observatory Latitude": "28.75833",
+        "Observatory Altitude": "2327.0",
+        "Observatory Time Zone": "0.0"
+    },
+    {
+        "IRAF Observatory Code": "mso",
+        "IRAF Observatory Name": "Mt. Stromlo Observatory",
+        "Observatory Longitude": "210.97566",
+        "Observatory Latitude": "-35.32065",
+        "Observatory Altitude": "767.0",
+        "Observatory Time Zone": "-10.0"
+    },
+    {
+        "IRAF Observatory Code": "sso",
+        "IRAF Observatory Name": "Siding Spring Observatory",
+        "Observatory Longitude": "210.93881",
+        "Observatory Latitude": "-31.273361",
+        "Observatory Altitude": "1149.0",
+        "Observatory Time Zone": "-10.0"
+    },
+    {
+        "IRAF Observatory Code": "aao",
+        "IRAF Observatory Name": "Anglo-Australian Observatory",
+        "Observatory Longitude": "210.93391",
+        "Observatory Latitude": "-31.277039",
+        "Observatory Altitude": "1164.0",
+        "Observatory Time Zone": "-10.0"
+    },
+    {
+        "IRAF Observatory Code": "mcdonald",
+        "IRAF Observatory Name": "McDonald Observatory",
+        "Observatory Longitude": "104.02167",
+        "Observatory Latitude": "30.671667",
+        "Observatory Altitude": "2075.0",
+        "Observatory Time Zone": "6.0"
+    },
+    {
+        "IRAF Observatory Code": "lco",
+        "IRAF Observatory Name": "Las Campanas Observatory",
+        "Observatory Longitude": "70.70167",
+        "Observatory Latitude": "-29.003334",
+        "Observatory Altitude": "2282.0",
+        "Observatory Time Zone": "4.0"
+    },
+    {
+        "IRAF Observatory Code": "mtbigelow",
+        "IRAF Observatory Name": "Catalina Observatory: 61 inch telescope",
+        "Observatory Longitude": "110.73167",
+        "Observatory Latitude": "32.583332",
+        "Observatory Altitude": "2510.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "dao",
+        "IRAF Observatory Name": "Dominion Astrophysical Observatory",
+        "Observatory Longitude": "123.416664",
+        "Observatory Latitude": "48.521667",
+        "Observatory Altitude": "229.0",
+        "Observatory Time Zone": "8.0"
+    },
+    {
+        "IRAF Observatory Code": "spm",
+        "IRAF Observatory Name": "Observatorio Astronomico Nacional, San Pedro Martir",
+        "Observatory Longitude": "115.486946",
+        "Observatory Latitude": "31.029167",
+        "Observatory Altitude": "2830.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "tona",
+        "IRAF Observatory Name": "Observatorio Astronomico Nacional, Tonantzintla",
+        "Observatory Longitude": "98.31389",
+        "Observatory Latitude": "19.032778",
+        "Observatory Altitude": "8.0",
+        "Observatory Time Zone": "NaN"
+    },
+    {
+        "IRAF Observatory Code": "Palomar",
+        "IRAF Observatory Name": "The Hale Telescope",
+        "Observatory Longitude": "116.863",
+        "Observatory Latitude": "33.356",
+        "Observatory Altitude": "1706.0",
+        "Observatory Time Zone": "8.0"
+    },
+    {
+        "IRAF Observatory Code": "mdm",
+        "IRAF Observatory Name": "Michigan-Dartmouth-MIT Observatory",
+        "Observatory Longitude": "11.616667",
+        "Observatory Latitude": "31.95",
+        "Observatory Altitude": "1938.5",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "NOV",
+        "IRAF Observatory Name": "National Observatory of Venezuela",
+        "Observatory Longitude": "70.86667",
+        "Observatory Latitude": "8.79",
+        "Observatory Altitude": "3610.0",
+        "Observatory Time Zone": "4.0"
+    },
+    {
+        "IRAF Observatory Code": "bmo",
+        "IRAF Observatory Name": "Black Moshannon Observatory",
+        "Observatory Longitude": "78.005",
+        "Observatory Latitude": "40.921665",
+        "Observatory Altitude": "738.0",
+        "Observatory Time Zone": "5.0"
+    },
+    {
+        "IRAF Observatory Code": "BAO",
+        "IRAF Observatory Name": "Beijing XingLong Observatory",
+        "Observatory Longitude": "242.425",
+        "Observatory Latitude": "43.393333",
+        "Observatory Altitude": "950.0",
+        "Observatory Time Zone": "-8.0"
+    },
+    {
+        "IRAF Observatory Code": "keck",
+        "IRAF Observatory Name": "W. M. Keck Observatory",
+        "Observatory Longitude": "155.47833",
+        "Observatory Latitude": "19.828333",
+        "Observatory Altitude": "4160.0",
+        "Observatory Time Zone": "10.0"
+    },
+    {
+        "IRAF Observatory Code": "ekar",
+        "IRAF Observatory Name": "Mt. Ekar 182 cm. Telescope",
+        "Observatory Longitude": "348.41885",
+        "Observatory Latitude": "45.848587",
+        "Observatory Altitude": "1413.69",
+        "Observatory Time Zone": "-1.0"
+    },
+    {
+        "IRAF Observatory Code": "apo",
+        "IRAF Observatory Name": "Apache Point Observatory",
+        "Observatory Longitude": "105.82",
+        "Observatory Latitude": "32.78",
+        "Observatory Altitude": "2798.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "lowell",
+        "IRAF Observatory Name": "Lowell Observatory",
+        "Observatory Longitude": "111.535",
+        "Observatory Latitude": "35.09667",
+        "Observatory Altitude": "2198.0",
+        "Observatory Time Zone": "7.0"
+    },
+    {
+        "IRAF Observatory Code": "vbo",
+        "IRAF Observatory Name": "Vainu Bappu Observatory",
+        "Observatory Longitude": "281.1734",
+        "Observatory Latitude": "12.57666",
+        "Observatory Altitude": "725.0",
+        "Observatory Time Zone": "-5.5"
+    }
+]
