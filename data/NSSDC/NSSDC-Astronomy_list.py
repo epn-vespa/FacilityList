@@ -9,8 +9,8 @@ def element_path(xmltreeelement):
     except AttributeError: return xmltreeelement.tag
     return r + "/" + xmltreeelement.tag
  
-input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_Astronomy.xml"
-output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_Astronomy.json"
+input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_Space-Physics.xml"
+output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_Space-Physics.json"
  
 tree = etree.parse(input_file)
 print(tree)
