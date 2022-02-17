@@ -208,7 +208,7 @@ def load_ppi_list():
 
     # Initializing data dictionary
     data = dict()
-
+    
     # Iterating on records of the input list
     for record in input_data['response']['docs']:
 
@@ -262,7 +262,7 @@ def load_ppi_list():
 
 def load_ads_list():
     authority = 'ads'
-    list_file = data_dir + 'ADS_facilities.txt'
+    list_file = data_dir + 'ADS/ADS_facilities.txt'
     input_data = parse_text(list_file)
 
     data = dict()
@@ -287,7 +287,7 @@ def load_ads_list():
 
 def load_nssdc_list():
     authority = 'nssdc'
-    list_file = data_dir + 'NSSDC.xml'
+    list_file = data_dir + 'NSSDC/NSSDC.xml'
     input_data = parse_votable(list_file)
 
     data = dict()
@@ -321,7 +321,7 @@ def load_xephem_list():
 
     authority = 'xephem'
 
-    list_file = data_dir + 'xephem_sites.txt'
+    list_file = data_dir + 'xephem_sites/xephem_sites.txt'
     input_data = parse_text(list_file)
     data = dict()
 
@@ -442,7 +442,7 @@ def load_mpc_gavo_list():
 
 def load_mpc_list():
     authority = 'iau-mpc'
-    list_file = data_dir + 'IAU-MPC.txt'
+    list_file = data_dir + 'IAU-MPC/IAU-MPC.txt'
 
     input_data = parse_text(list_file)
 
@@ -474,13 +474,13 @@ def load_mpc_list():
         altname_tmp['name'] = name
         data_tmp['alternateName'].append(altname_tmp)
         data[authority+":"+title] = data_tmp
-
+        
     return data
 
 
 def load_iraf_list():
     authority = 'iraf'
-    list_file = data_dir + 'IRAF.txt'
+    list_file = data_dir + 'IRAF/IRAF.txt'
 
     input_data = parse_text(list_file)
 
@@ -550,7 +550,7 @@ def load_iraf_list():
 
 def load_dsn_list():
     authority = 'dsn'
-    list_file = data_dir + 'DSN.txt'
+    list_file = data_dir + 'DSN/DSN.txt'
 
     input_data = parse_text(list_file)
 
