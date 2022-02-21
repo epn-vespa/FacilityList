@@ -1,0 +1,2768 @@
+[
+    {
+        "Name": "ATCA Narrabri, Australia",
+        "Latitude": "30 18 52 S",
+        "Longitude": "149 34  1 E",
+        "Elev": "210.8"
+    },
+    {
+        "Name": "Aberdeen, Scotland",
+        "Latitude": "57 12 25 N",
+        "Longitude": "02 11 92 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Abilene, Texas",
+        "Latitude": "32 27  5 N",
+        "Longitude": "99 43 51 W",
+        "Elev": "521.2"
+    },
+    {
+        "Name": "Adelaide SA, Australia",
+        "Latitude": "34 55  0 S",
+        "Longitude": "138 35  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Akron, Ohio",
+        "Latitude": "41  5  0 N",
+        "Longitude": "81 30 44 W",
+        "Elev": "266.4"
+    },
+    {
+        "Name": "Albany, New York",
+        "Latitude": "42 39  1 N",
+        "Longitude": "73 45  1 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Albuquerque, New Mexico",
+        "Latitude": "35  5  1 N",
+        "Longitude": "106 39  5 W",
+        "Elev": "1507.2"
+    },
+    {
+        "Name": "Alice Springs, NT, Australia",
+        "Latitude": "23 48 30 S",
+        "Longitude": "133 54  3 E",
+        "Elev": "1789"
+    },
+    {
+        "Name": "Allegheny Observatory",
+        "Latitude": "40 29  0 N",
+        "Longitude": "80  1  0 W",
+        "Elev": "380"
+    },
+    {
+        "Name": "Allentown, Pennsylvania",
+        "Latitude": "40 36 11 N",
+        "Longitude": "75 28  6 W",
+        "Elev": "77.7"
+    },
+    {
+        "Name": "Altoona, Pennsylvania",
+        "Latitude": "40 30 55 N",
+        "Longitude": "78 24  3 W",
+        "Elev": "359.7"
+    },
+    {
+        "Name": "Amarillo, Texas",
+        "Latitude": "35 12 27 N",
+        "Longitude": "101 50  4 W",
+        "Elev": "1123.2"
+    },
+    {
+        "Name": "Amsterdam, Netherlands",
+        "Latitude": "52 22  0 N",
+        "Longitude": "04 54  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Anchorage, Alaska",
+        "Latitude": "61 10  0 N",
+        "Longitude": "149 59  0 W",
+        "Elev": "36.0"
+    },
+    {
+        "Name": "Anglo-Australian Observatory",
+        "Latitude": "31 16 38 S",
+        "Longitude": "149  3 58 E",
+        "Elev": "1164"
+    },
+    {
+        "Name": "Ann Arbor, Michigan",
+        "Latitude": "42 16 59 N",
+        "Longitude": "83 44 52 W",
+        "Elev": "268.2"
+    },
+    {
+        "Name": "Antwerp, Belgium",
+        "Latitude": "51 10 16 N",
+        "Longitude": "04 24 21 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Archenhold-Sternwarte",
+        "Latitude": "52 29  0 N",
+        "Longitude": "13 29  0 E",
+        "Elev": "41"
+    },
+    {
+        "Name": "Arlington, Virginia",
+        "Latitude": "38 52  0 N",
+        "Longitude": "77  7  0 W",
+        "Elev": "9.1"
+    },
+    {
+        "Name": "Asheville, North Carolina",
+        "Latitude": "35 35 42 N",
+        "Longitude": "82 33 26 W",
+        "Elev": "605.0"
+    },
+    {
+        "Name": "Ashland, Kentucky",
+        "Latitude": "38 28 36 N",
+        "Longitude": "82 38 23 W",
+        "Elev": "163.4"
+    },
+    {
+        "Name": "Astronomisches Inst. Univ. Obs.",
+        "Latitude": "48 14  0 N",
+        "Longitude": "16 20  0 E",
+        "Elev": "241"
+    },
+    {
+        "Name": "Astrophys. Research Consortium (ARC)",
+        "Latitude": "32 47  0 N",
+        "Longitude": "105 49  0 W",
+        "Elev": "2800"
+    },
+    {
+        "Name": "Athens, Greece",
+        "Latitude": "37 58  0 N",
+        "Longitude": "23 44  0 E",
+        "Elev": "91.4"
+    },
+    {
+        "Name": "Atlanta, Georgia",
+        "Latitude": "33 45 10 N",
+        "Longitude": "84 23 37 W",
+        "Elev": "320.0"
+    },
+    {
+        "Name": "Atlantic City, New Jersey",
+        "Latitude": "39 21 32 N",
+        "Longitude": "74 25 53 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "Augusta, Georgia",
+        "Latitude": "33 28 20 N",
+        "Longitude": "81 58  0 W",
+        "Elev": "43.6"
+    },
+    {
+        "Name": "Augusta, Maine",
+        "Latitude": "44 18 53 N",
+        "Longitude": "69 46 29 W",
+        "Elev": "13.7"
+    },
+    {
+        "Name": "Austin, Texas",
+        "Latitude": "30 16  9 N",
+        "Longitude": "97 44 37 W",
+        "Elev": "153.9"
+    },
+    {
+        "Name": "Bakersfield, California",
+        "Latitude": "35 22 31 N",
+        "Longitude": "119  1 18 W",
+        "Elev": "121.9"
+    },
+    {
+        "Name": "Baltimore, Maryland",
+        "Latitude": "39 17 36 N",
+        "Longitude": "76 36 45 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Bangkok, Thailand",
+        "Latitude": "13 44  0 N",
+        "Longitude": "100 30  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Bangor, Maine",
+        "Latitude": "44 48 13 N",
+        "Longitude": "68 46 18 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Barcelona, Spain",
+        "Latitude": "41 23  0 N",
+        "Longitude": "02  9  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Baton Rouge, Louisiana",
+        "Latitude": "30 26 58 N",
+        "Longitude": "91 11  0 W",
+        "Elev": "17.4"
+    },
+    {
+        "Name": "Battle Creek, Michigan",
+        "Latitude": "42 18 58 N",
+        "Longitude": "85 10 48 W",
+        "Elev": "249.9"
+    },
+    {
+        "Name": "Batumi, Georgia",
+        "Latitude": "43 40  0 N",
+        "Longitude": "40  0  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Bay City, Michigan",
+        "Latitude": "43 36  4 N",
+        "Longitude": "83 53 15 W",
+        "Elev": "181.4"
+    },
+    {
+        "Name": "Beaumont, Texas",
+        "Latitude": "30  5 20 N",
+        "Longitude": "94  6  9 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Beijing, China",
+        "Latitude": "39 54  0 N",
+        "Longitude": "116 28  0 E",
+        "Elev": "182.9"
+    },
+    {
+        "Name": "Belfast, Northern Ireland",
+        "Latitude": "54 35  0 N",
+        "Longitude": "05 50  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Bellingham, Washington",
+        "Latitude": "48 45 34 N",
+        "Longitude": "122 28 36 W",
+        "Elev": "18.3"
+    },
+    {
+        "Name": "Bentley WA, Australia",
+        "Latitude": "31 58 43 S",
+        "Longitude": "115 48 55 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Berkeley, California",
+        "Latitude": "37 52 10 N",
+        "Longitude": "122 16 17 W",
+        "Elev": "12.2"
+    },
+    {
+        "Name": "Berlin, Germany",
+        "Latitude": "52 32  0 N",
+        "Longitude": "13 25  0 E",
+        "Elev": "33.5"
+    },
+    {
+        "Name": "Bethlehem, Pennsylvania",
+        "Latitude": "40 37 16 N",
+        "Longitude": "75 22 34 W",
+        "Elev": "71.6"
+    },
+    {
+        "Name": "Billings, Montana",
+        "Latitude": "45 47  0 N",
+        "Longitude": "108 30  4 W",
+        "Elev": "951.0"
+    },
+    {
+        "Name": "Biloxi, Mississippi",
+        "Latitude": "30 23 48 N",
+        "Longitude": "88 53  0 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Binghamton, New York",
+        "Latitude": "42  6  3 N",
+        "Longitude": "75 54 47 W",
+        "Elev": "263.7"
+    },
+    {
+        "Name": "Birmingham, Alabama",
+        "Latitude": "33 31  1 N",
+        "Longitude": "86 48 36 W",
+        "Elev": "182.9"
+    },
+    {
+        "Name": "Bismarck, North Dakota",
+        "Latitude": "46 48 23 N",
+        "Longitude": "100 47 17 W",
+        "Elev": "510.2"
+    },
+    {
+        "Name": "Bloomington, Illinois",
+        "Latitude": "40 28 58 N",
+        "Longitude": "88 59 36 W",
+        "Elev": "243.8"
+    },
+    {
+        "Name": "Bogota, Columbia",
+        "Latitude": "04 38  0 N",
+        "Longitude": "74  5  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Boise, Idaho",
+        "Latitude": "43 37  7 N",
+        "Longitude": "116 11 58 W",
+        "Elev": "824.2"
+    },
+    {
+        "Name": "Bombay, India",
+        "Latitude": "19  5  3 N",
+        "Longitude": "72 51  3 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Bonn, Germany",
+        "Latitude": "50 40  0 N",
+        "Longitude": "07  6  0 E",
+        "Elev": "50.0"
+    },
+    {
+        "Name": "Boston, Massachusetts",
+        "Latitude": "42 21 24 N",
+        "Longitude": "71  3 25 W",
+        "Elev": "6.4"
+    },
+    {
+        "Name": "Bowling Green, Kentucky",
+        "Latitude": "36 59 41 N",
+        "Longitude": "86 26 33 W",
+        "Elev": "155.4"
+    },
+    {
+        "Name": "Bratislava, Slovak Republic",
+        "Latitude": "48 10  0 N",
+        "Longitude": "17  7  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Brattleboro, Vermont",
+        "Latitude": "42 51  6 N",
+        "Longitude": "72 33 48 W",
+        "Elev": "91.4"
+    },
+    {
+        "Name": "Bridgeport, Connecticut",
+        "Latitude": "41 10 49 N",
+        "Longitude": "73 11 22 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "Brisbane Qld, Australia",
+        "Latitude": "27 30  0 S",
+        "Longitude": "153  0  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Brockton, Massachusetts",
+        "Latitude": "42  5  2 N",
+        "Longitude": "71  1 25 W",
+        "Elev": "39.6"
+    },
+    {
+        "Name": "Brownsville, Texas",
+        "Latitude": "25 54  7 N",
+        "Longitude": "97 29 58 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Brussels, Belgium",
+        "Latitude": "50 50 20 N",
+        "Longitude": "04 38 12 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Budapest, Hungary",
+        "Latitude": "47 30  0 N",
+        "Longitude": "19  5  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Buenos Aires, Argentina",
+        "Latitude": "34 34  0 S",
+        "Longitude": "58  3  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Buffalo, New York",
+        "Latitude": "42 52 52 N",
+        "Longitude": "78 52 21 W",
+        "Elev": "178.3"
+    },
+    {
+        "Name": "Burlington, Vermont",
+        "Latitude": "44 28 34 N",
+        "Longitude": "73 12 46 W",
+        "Elev": "33.5"
+    },
+    {
+        "Name": "Butte, Montana",
+        "Latitude": "46  1  6 N",
+        "Longitude": "112 32 11 W",
+        "Elev": "1757.2"
+    },
+    {
+        "Name": "Buxton, North Carolina",
+        "Latitude": "35 15 45 N",
+        "Longitude": "75 33 40 W",
+        "Elev": "2.0"
+    },
+    {
+        "Name": "Byurakan Astrophysical Obs.",
+        "Latitude": "40 20  0 N",
+        "Longitude": "44 30  0 E",
+        "Elev": "1450"
+    },
+    {
+        "Name": "Byurakan Observatory",
+        "Latitude": "40 20  0 N",
+        "Longitude": "44 18  0 E",
+        "Elev": "1500"
+    },
+    {
+        "Name": "Cairo, Egypt",
+        "Latitude": "31 15  0 N",
+        "Longitude": "31  3  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Calar Alto Observatory",
+        "Latitude": "37 13  0 N",
+        "Longitude": "2 32  0 W",
+        "Elev": "2168"
+    },
+    {
+        "Name": "Calar-Alto-Schmidtspiegel",
+        "Latitude": "37 13  0 N",
+        "Longitude": "2 32  0 W",
+        "Elev": "2168"
+    },
+    {
+        "Name": "Cambridge, England",
+        "Latitude": "52 10  0 N",
+        "Longitude": "00  6  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Cambridge, Massachusetts",
+        "Latitude": "42 22  1 N",
+        "Longitude": "71  6 22 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Camden, New Jersey",
+        "Latitude": "39 56 41 N",
+        "Longitude": "75  7 14 W",
+        "Elev": "9.1"
+    },
+    {
+        "Name": "Canada-France-Hawaii Tel. (CFHT)",
+        "Latitude": "19 49 36 N",
+        "Longitude": "155 28 18 W",
+        "Elev": "4200"
+    },
+    {
+        "Name": "Canberra ACT, Australia",
+        "Latitude": "35 14 24 S",
+        "Longitude": "149  7 12 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Canton, Ohio",
+        "Latitude": "40 47 50 N",
+        "Longitude": "81 22 37 W",
+        "Elev": "313.9"
+    },
+    {
+        "Name": "Capetown, South Africa",
+        "Latitude": "33 56  0 S",
+        "Longitude": "18 22 15 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Carson City, Nevada",
+        "Latitude": "39 10  0 N",
+        "Longitude": "119 46  0 W",
+        "Elev": "1426.5"
+    },
+    {
+        "Name": "Casey Observatory, AAT",
+        "Latitude": "66 12  0 S",
+        "Longitude": "110 21  0 E",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Catalina Observatory, Mt. Bigelow",
+        "Latitude": "32 25  0 N",
+        "Longitude": "110 43 54 W",
+        "Elev": "2510"
+    },
+    {
+        "Name": "Cedar Rapids, Iowa",
+        "Latitude": "41 58  1 N",
+        "Longitude": "91 39 53 W",
+        "Elev": "222.5"
+    },
+    {
+        "Name": "Central Islip, New York",
+        "Latitude": "40 47 24 N",
+        "Longitude": "73 12  0 W",
+        "Elev": "24.4"
+    },
+    {
+        "Name": "Cerro Tololo Inter-American Obs.",
+        "Latitude": "30  9 54 S",
+        "Longitude": "70 48 54 W",
+        "Elev": "2215"
+    },
+    {
+        "Name": "Champaign, Illinois",
+        "Latitude": "40  7  5 N",
+        "Longitude": "88 14 48 W",
+        "Elev": "225.6"
+    },
+    {
+        "Name": "Charleston, South Carolina",
+        "Latitude": "32 46 35 N",
+        "Longitude": "79 55 53 W",
+        "Elev": "2.7"
+    },
+    {
+        "Name": "Charleston, West Virginia",
+        "Latitude": "38 21  1 N",
+        "Longitude": "81 37 52 W",
+        "Elev": "183.2"
+    },
+    {
+        "Name": "Charlotte, North Carolina",
+        "Latitude": "35 13 44 N",
+        "Longitude": "80 50 45 W",
+        "Elev": "219.5"
+    },
+    {
+        "Name": "Chattanooga, Tennessee",
+        "Latitude": "35  2 41 N",
+        "Longitude": "85 18 32 W",
+        "Elev": "205.7"
+    },
+    {
+        "Name": "Cheyenne, Wyoming",
+        "Latitude": "41  8  9 N",
+        "Longitude": "104 49  7 W",
+        "Elev": "1859.3"
+    },
+    {
+        "Name": "Chicago, Illinois",
+        "Latitude": "41 52 28 N",
+        "Longitude": "87 38 22 W",
+        "Elev": "181.4"
+    },
+    {
+        "Name": "Cincinnatti, Ohio",
+        "Latitude": "39  6  7 N",
+        "Longitude": "84 30 35 W",
+        "Elev": "271.6"
+    },
+    {
+        "Name": "Cleveland, Ohio",
+        "Latitude": "41 29 51 N",
+        "Longitude": "81 41 50 W",
+        "Elev": "201.2"
+    },
+    {
+        "Name": "Cologne, Germany",
+        "Latitude": "50 53  0 N",
+        "Longitude": "06 58  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Colorado Springs, Colorado",
+        "Latitude": "38 50  7 N",
+        "Longitude": "104 49 16 W",
+        "Elev": "1822.7"
+    },
+    {
+        "Name": "Columbia, Missouri",
+        "Latitude": "38 57  3 N",
+        "Longitude": "92 19 46 W",
+        "Elev": "222.5"
+    },
+    {
+        "Name": "Columbia, South Carolina",
+        "Latitude": "34  0  2 N",
+        "Longitude": "81  2  0 W",
+        "Elev": "57.9"
+    },
+    {
+        "Name": "Columbus Project",
+        "Latitude": "32 42  0 N",
+        "Longitude": "109 51  0 W",
+        "Elev": "3170"
+    },
+    {
+        "Name": "Columbus, Georgia",
+        "Latitude": "32 28  7 N",
+        "Longitude": "84 59 24 W",
+        "Elev": "80.8"
+    },
+    {
+        "Name": "Columbus, Ohio",
+        "Latitude": "39 57 47 N",
+        "Longitude": "83  0 17 W",
+        "Elev": "237.8"
+    },
+    {
+        "Name": "Concord, New Hampshire",
+        "Latitude": "43 12 22 N",
+        "Longitude": "71 32 25 W",
+        "Elev": "88.4"
+    },
+    {
+        "Name": "Corpus Christi, Texas",
+        "Latitude": "27 47 51 N",
+        "Longitude": "97 23 45 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Crete, Greece",
+        "Latitude": "35 20  0 N",
+        "Longitude": "25  9  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Crimean Astrophysical Obs.",
+        "Latitude": "44 44  0 N",
+        "Longitude": "34  0  0 E",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Dallas, Texas",
+        "Latitude": "32 47  9 N",
+        "Longitude": "96 47 37 W",
+        "Elev": "132.6"
+    },
+    {
+        "Name": "Darwin, NT, Australia",
+        "Latitude": "12 24 58 S",
+        "Longitude": "130 52 53 E",
+        "Elev": "100"
+    },
+    {
+        "Name": "Davenport, Iowa",
+        "Latitude": "41 31 19 N",
+        "Longitude": "90 34 33 W",
+        "Elev": "179.8"
+    },
+    {
+        "Name": "Davis Observatory, AAT",
+        "Latitude": "68 35  0 S",
+        "Longitude": "77 58  0 E",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Dayton, Ohio",
+        "Latitude": "39 45 32 N",
+        "Longitude": "84 11 43 W",
+        "Elev": "307.6"
+    },
+    {
+        "Name": "Daytona Beach, Florida",
+        "Latitude": "29 12 44 N",
+        "Longitude": "81  1 10 W",
+        "Elev": "2.1"
+    },
+    {
+        "Name": "Decatur, Illinois",
+        "Latitude": "39 50 42 N",
+        "Longitude": "88 56 47 W",
+        "Elev": "207.9"
+    },
+    {
+        "Name": "Denver, Colorado",
+        "Latitude": "39 44 58 N",
+        "Longitude": "104 59 22 W",
+        "Elev": "1609.3"
+    },
+    {
+        "Name": "Des Moines, Iowa",
+        "Latitude": "41 35 14 N",
+        "Longitude": "93 37  0 W",
+        "Elev": "245.4"
+    },
+    {
+        "Name": "Detroit, Michigan",
+        "Latitude": "42 19 48 N",
+        "Longitude": "83  2 57 W",
+        "Elev": "211.3"
+    },
+    {
+        "Name": "Dodge City, Kansas",
+        "Latitude": "37 45 17 N",
+        "Longitude": "100  1  9 W",
+        "Elev": "755.9"
+    },
+    {
+        "Name": "Dominion Astrophysical Observatory",
+        "Latitude": "48 31 18 N",
+        "Longitude": "123 25  0 W",
+        "Elev": "229"
+    },
+    {
+        "Name": "Dublin, Ireland",
+        "Latitude": "53 18 56 N",
+        "Longitude": "06 14 21 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Dubuque, Iowa",
+        "Latitude": "42 29 55 N",
+        "Longitude": "90 40  8 W",
+        "Elev": "189.0"
+    },
+    {
+        "Name": "Duluth, Minnesota",
+        "Latitude": "46 46 56 N",
+        "Longitude": "92  6 24 W",
+        "Elev": "185.9"
+    },
+    {
+        "Name": "Durham, North Carolina",
+        "Latitude": "36  0  0 N",
+        "Longitude": "78 54 45 W",
+        "Elev": "123.4"
+    },
+    {
+        "Name": "ESO 1-meter Schmidt Telescope",
+        "Latitude": "29 15  0 S",
+        "Longitude": "70 44  0 W",
+        "Elev": "2318"
+    },
+    {
+        "Name": "Eau Claire, Wisconsin",
+        "Latitude": "44 48 31 N",
+        "Longitude": "91 29 49 W",
+        "Elev": "240.8"
+    },
+    {
+        "Name": "Edinburgh, Scotland",
+        "Latitude": "55 55  0 N",
+        "Longitude": "03 10  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Edmonton Alberta, Canada",
+        "Latitude": "53 33 47 N",
+        "Longitude": "113 36 48 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Effelsberg 100m Radiotelescope",
+        "Latitude": "50 31 36 N",
+        "Longitude": "06 51 18 E",
+        "Elev": "369"
+    },
+    {
+        "Name": "El Paso, Texas",
+        "Latitude": "31 45 36 N",
+        "Longitude": "106 29 11 W",
+        "Elev": "1126.2"
+    },
+    {
+        "Name": "Elizabeth, New Jersey",
+        "Latitude": "40 39 43 N",
+        "Longitude": "74 12 59 W",
+        "Elev": "6.4"
+    },
+    {
+        "Name": "Enid, Oklahoma",
+        "Latitude": "36 23 40 N",
+        "Longitude": "97 52 35 W",
+        "Elev": "378.0"
+    },
+    {
+        "Name": "Erie, Pennsylvania",
+        "Latitude": "42  7 15 N",
+        "Longitude": "80  4 57 W",
+        "Elev": "208.8"
+    },
+    {
+        "Name": "Eugene, Oregon",
+        "Latitude": "44  3 16 N",
+        "Longitude": "123  5 30 W",
+        "Elev": "128.6"
+    },
+    {
+        "Name": "Eureka, California",
+        "Latitude": "40 48  8 N",
+        "Longitude": "124  9 46 W",
+        "Elev": "13.7"
+    },
+    {
+        "Name": "European Southern Observatory (NTT)",
+        "Latitude": "29 15 24 S",
+        "Longitude": "70 43 48 W",
+        "Elev": "2347"
+    },
+    {
+        "Name": "European Southern Observatory (VLT)",
+        "Latitude": "24 51  0 S",
+        "Longitude": "70 27  0 W",
+        "Elev": "2640"
+    },
+    {
+        "Name": "Evansville, Indiana",
+        "Latitude": "37 58 20 N",
+        "Longitude": "87 34 21 W",
+        "Elev": "117.3"
+    },
+    {
+        "Name": "Fall River, Massachusetts",
+        "Latitude": "41 42  6 N",
+        "Longitude": "71  9 18 W",
+        "Elev": "12.2"
+    },
+    {
+        "Name": "Fargo, North Dakota",
+        "Latitude": "46 52 30 N",
+        "Longitude": "96 47 18 W",
+        "Elev": "274.3"
+    },
+    {
+        "Name": "Flagstaff, Arizona",
+        "Latitude": "35 11 36 N",
+        "Longitude": "111 39  6 W",
+        "Elev": "2103.1"
+    },
+    {
+        "Name": "Flint, Michigan",
+        "Latitude": "43  0 50 N",
+        "Longitude": "83 41 33 W",
+        "Elev": "228.6"
+    },
+    {
+        "Name": "Fort Smith, Arkansas",
+        "Latitude": "35 23 10 N",
+        "Longitude": "94 25 36 W",
+        "Elev": "134.1"
+    },
+    {
+        "Name": "Fort Wayne, Indiana",
+        "Latitude": "41  4 21 N",
+        "Longitude": "85  8 26 W",
+        "Elev": "240.8"
+    },
+    {
+        "Name": "Fort Worth, Texas",
+        "Latitude": "32 44 55 N",
+        "Longitude": "97 19 44 W",
+        "Elev": "204.2"
+    },
+    {
+        "Name": "Frankfurt, Germany",
+        "Latitude": "50  3  0 N",
+        "Longitude": "08 24  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Fresno, California",
+        "Latitude": "36 44 12 N",
+        "Longitude": "119 47 11 W",
+        "Elev": "86.9"
+    },
+    {
+        "Name": "Gadsden, Alabama",
+        "Latitude": "34  0 57 N",
+        "Longitude": "86  0 41 W",
+        "Elev": "169.2"
+    },
+    {
+        "Name": "Gainesville, Florida",
+        "Latitude": "29 38 56 N",
+        "Longitude": "82 19 19 W",
+        "Elev": "53.3"
+    },
+    {
+        "Name": "Gallup, New Mexico",
+        "Latitude": "35 31 30 N",
+        "Longitude": "108 44 30 W",
+        "Elev": "1993.4"
+    },
+    {
+        "Name": "Galveston, Texas",
+        "Latitude": "29 18 10 N",
+        "Longitude": "94 47 43 W",
+        "Elev": "1.5"
+    },
+    {
+        "Name": "Gary, Indiana",
+        "Latitude": "41 36 12 N",
+        "Longitude": "87 20 19 W",
+        "Elev": "179.8"
+    },
+    {
+        "Name": "Gemini Telescope (north)",
+        "Latitude": "19 49  0 N",
+        "Longitude": "155 28  0 W",
+        "Elev": "4100"
+    },
+    {
+        "Name": "Gemini Telescope (south)",
+        "Latitude": "30 21  0 S",
+        "Longitude": "70 49  0 W",
+        "Elev": "2725"
+    },
+    {
+        "Name": "Geneva, Switzerland",
+        "Latitude": "46 14  0 N",
+        "Longitude": "06  6  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Grand Junction, Colorado",
+        "Latitude": "39  4  6 N",
+        "Longitude": "108 33 54 W",
+        "Elev": "1399.0"
+    },
+    {
+        "Name": "Grand Rapids, Michigan",
+        "Latitude": "42 58  3 N",
+        "Longitude": "85 40 13 W",
+        "Elev": "185.9"
+    },
+    {
+        "Name": "Great Falls, Montana",
+        "Latitude": "47 29 33 N",
+        "Longitude": "111 18 23 W",
+        "Elev": "1018.0"
+    },
+    {
+        "Name": "Green Bay, Wisconsin",
+        "Latitude": "44 30 48 N",
+        "Longitude": "88  0 50 W",
+        "Elev": "179.8"
+    },
+    {
+        "Name": "Greensboro, North Carolina",
+        "Latitude": "36  4 17 N",
+        "Longitude": "79 47 25 W",
+        "Elev": "255.7"
+    },
+    {
+        "Name": "Greenville, South Carolina",
+        "Latitude": "34 50 50 N",
+        "Longitude": "82 24  1 W",
+        "Elev": "294.4"
+    },
+    {
+        "Name": "Greenwich, England",
+        "Latitude": "51 30  0 N",
+        "Longitude": "00  0  0 W",
+        "Elev": "74.7"
+    },
+    {
+        "Name": "Groton, New York",
+        "Latitude": "42 35 26 N",
+        "Longitude": "72 33 20 W",
+        "Elev": "250.0"
+    },
+    {
+        "Name": "Guatemala City, Guatemala",
+        "Latitude": "14 38  0 N",
+        "Longitude": "90 22  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Gulfport, Mississippi",
+        "Latitude": "30 22  4 N",
+        "Longitude": "89  5 36 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Halifax Nova Scotia, Canada",
+        "Latitude": "44 38 55 N",
+        "Longitude": "63 34 25 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Hamburg, Germany",
+        "Latitude": "53 36  0 N",
+        "Longitude": "09 56  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Hamilton, Ohio",
+        "Latitude": "39 23 59 N",
+        "Longitude": "84 33 47 W",
+        "Elev": "182.9"
+    },
+    {
+        "Name": "Hannover, Germany",
+        "Latitude": "52 22 48 N",
+        "Longitude": "09 42 40 E",
+        "Elev": "50.0"
+    },
+    {
+        "Name": "Harare, Zimbabwe",
+        "Latitude": "17 50  0 S",
+        "Longitude": "31  3  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Harrisburg, Pennsylvania",
+        "Latitude": "40 15 43 N",
+        "Longitude": "76 52 59 W",
+        "Elev": "111.3"
+    },
+    {
+        "Name": "Hartford, Connecticut",
+        "Latitude": "41 46 12 N",
+        "Longitude": "72 40 49 W",
+        "Elev": "12.2"
+    },
+    {
+        "Name": "Helena, Montana",
+        "Latitude": "46 35 33 N",
+        "Longitude": "112  2 24 W",
+        "Elev": "1266.4"
+    },
+    {
+        "Name": "Helsinki, Finland",
+        "Latitude": "60 10  0 N",
+        "Longitude": "24 50  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Hobart Tas, Australia",
+        "Latitude": "42 50  0 S",
+        "Longitude": "147 20  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Holyoke, Massachusetts",
+        "Latitude": "42 12 29 N",
+        "Longitude": "72 36 36 W",
+        "Elev": "35.1"
+    },
+    {
+        "Name": "Honolulu, Hawaii",
+        "Latitude": "21 18 22 N",
+        "Longitude": "157 51 35 W",
+        "Elev": "6.4"
+    },
+    {
+        "Name": "Houston, Texas",
+        "Latitude": "29 45 26 N",
+        "Longitude": "95 21 37 W",
+        "Elev": "12.2"
+    },
+    {
+        "Name": "Huntington, West Virginia",
+        "Latitude": "38 25 12 N",
+        "Longitude": "82 26 33 W",
+        "Elev": "172.2"
+    },
+    {
+        "Name": "Huntsville, Alabama",
+        "Latitude": "34 44 18 N",
+        "Longitude": "86 35 19 W",
+        "Elev": "195.1"
+    },
+    {
+        "Name": "Indianapolis, Indiana",
+        "Latitude": "39 46  7 N",
+        "Longitude": "86  9 46 W",
+        "Elev": "216.4"
+    },
+    {
+        "Name": "Iowa City, Iowa",
+        "Latitude": "41 39 37 N",
+        "Longitude": "91 31 53 W",
+        "Elev": "208.8"
+    },
+    {
+        "Name": "Isaac Newton Telescope (98-inch)",
+        "Latitude": "28 46  0 N",
+        "Longitude": "17 53  0 W",
+        "Elev": "2336"
+    },
+    {
+        "Name": "Jackson, Michigan",
+        "Latitude": "42 14 43 N",
+        "Longitude": "84 24 22 W",
+        "Elev": "286.5"
+    },
+    {
+        "Name": "Jackson, Mississippi",
+        "Latitude": "32 17 56 N",
+        "Longitude": "90 11  6 W",
+        "Elev": "90.8"
+    },
+    {
+        "Name": "Jacksonville, Florida",
+        "Latitude": "30 19 44 N",
+        "Longitude": "81 39 42 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Jakarta, Indonesia",
+        "Latitude": "06 11  0 S",
+        "Longitude": "106 50  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Jersey City, New Jersey",
+        "Latitude": "40 43 50 N",
+        "Longitude": "74  3 56 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Jerusalem, Israel",
+        "Latitude": "31 47  0 N",
+        "Longitude": "35 13  0 E",
+        "Elev": "762.0"
+    },
+    {
+        "Name": "Johannesburg, South Africa",
+        "Latitude": "26 10  0 S",
+        "Longitude": "28  2  0 E",
+        "Elev": "234.7"
+    },
+    {
+        "Name": "Johnstown, Pennsylvania",
+        "Latitude": "40 19 35 N",
+        "Longitude": "78 55  3 W",
+        "Elev": "361.2"
+    },
+    {
+        "Name": "Joplin, Missouri",
+        "Latitude": "37  5 26 N",
+        "Longitude": "94 30  0 W",
+        "Elev": "301.8"
+    },
+    {
+        "Name": "Juneau, Alaska",
+        "Latitude": "58 18 12 N",
+        "Longitude": "134 24 30 W",
+        "Elev": "15.2"
+    },
+    {
+        "Name": "KHBI, Saipan, MI",
+        "Latitude": "15  7 20 N",
+        "Longitude": "145 41 37 E",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Kalamazoo, Michigan",
+        "Latitude": "42 17 29 N",
+        "Longitude": "85 35 14 W",
+        "Elev": "230.1"
+    },
+    {
+        "Name": "Kansas City, Kansas",
+        "Latitude": "39  7  4 N",
+        "Longitude": "94 38 24 W",
+        "Elev": "228.6"
+    },
+    {
+        "Name": "Kansas City, Missouri",
+        "Latitude": "39  7 56 N",
+        "Longitude": "94 35 20 W",
+        "Elev": "228.6"
+    },
+    {
+        "Name": "Karl Schwarzschild Observatorium",
+        "Latitude": "50 59  0 N",
+        "Longitude": "11 43  0 E",
+        "Elev": "331"
+    },
+    {
+        "Name": "Kenosha, Wisconsin",
+        "Latitude": "42 35 43 N",
+        "Longitude": "87 50 11 W",
+        "Elev": "185.9"
+    },
+    {
+        "Name": "Kensington NSW, Australia",
+        "Latitude": "33 52  0 S",
+        "Longitude": "151 13  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Key West, Florida",
+        "Latitude": "24 33 30 N",
+        "Longitude": "81 48 12 W",
+        "Elev": "1.5"
+    },
+    {
+        "Name": "Kiso Observatory",
+        "Latitude": "35 48  0 N",
+        "Longitude": "137 38  0 E",
+        "Elev": "1130"
+    },
+    {
+        "Name": "Kitt Peak National Obs.",
+        "Latitude": "31 58 48 N",
+        "Longitude": "111 36  0 W",
+        "Elev": "2120"
+    },
+    {
+        "Name": "Knoxville, Tennessee",
+        "Latitude": "35 57 39 N",
+        "Longitude": "83 55  7 W",
+        "Elev": "271.3"
+    },
+    {
+        "Name": "Kuala Lumpur, Malaysia",
+        "Latitude": "03  8  0 N",
+        "Longitude": "101 42  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Lafayette, Indiana",
+        "Latitude": "40 25 11 N",
+        "Longitude": "86 53 39 W",
+        "Elev": "167.6"
+    },
+    {
+        "Name": "Lancaster, Pennsylvania",
+        "Latitude": "40  2 25 N",
+        "Longitude": "76 18 29 W",
+        "Elev": "108.2"
+    },
+    {
+        "Name": "Lansing, Michigan",
+        "Latitude": "42 44  1 N",
+        "Longitude": "84 33 15 W",
+        "Elev": "253.0"
+    },
+    {
+        "Name": "Laredo, Texas",
+        "Latitude": "27 30 22 N",
+        "Longitude": "99 30 30 W",
+        "Elev": "134.1"
+    },
+    {
+        "Name": "Large Earth-based Solar Tel. (LEST)",
+        "Latitude": "28 46  0 N",
+        "Longitude": "17 53  0 W",
+        "Elev": "2400"
+    },
+    {
+        "Name": "Las Campanas Observatory",
+        "Latitude": "29  0  0 S",
+        "Longitude": "70 42  0 W",
+        "Elev": "2300"
+    },
+    {
+        "Name": "Las Campanas Observatory",
+        "Latitude": "29  0 12 S",
+        "Longitude": "70 42  6 W",
+        "Elev": "2282"
+    },
+    {
+        "Name": "Las Vegas, Nevada",
+        "Latitude": "36 10 20 N",
+        "Longitude": "115  8 37 W",
+        "Elev": "618.7"
+    },
+    {
+        "Name": "Lawrence, Massachusetts",
+        "Latitude": "42 42 16 N",
+        "Longitude": "71 10  8 W",
+        "Elev": "19.8"
+    },
+    {
+        "Name": "Leander McCormick Observatory",
+        "Latitude": "38  2  0 N",
+        "Longitude": "78 31  0 W",
+        "Elev": "264"
+    },
+    {
+        "Name": "Learmonth Solar Observatory",
+        "Latitude": "22 14  0 S",
+        "Longitude": "114  5  0 E",
+        "Elev": "20"
+    },
+    {
+        "Name": "St. Petersburg, Russia",
+        "Latitude": "59 55  0 N",
+        "Longitude": "30 15  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Lexington, Kentucky",
+        "Latitude": "38  2 50 N",
+        "Longitude": "84 29 46 W",
+        "Elev": "291.1"
+    },
+    {
+        "Name": "Lick Observatory",
+        "Latitude": "37 21  0 N",
+        "Longitude": "121 38  0 W",
+        "Elev": "1290"
+    },
+    {
+        "Name": "Lick Observatory (36-inch)",
+        "Latitude": "37 20  0 N",
+        "Longitude": "121 39  0 W",
+        "Elev": "1290"
+    },
+    {
+        "Name": "Lima, Ohio",
+        "Latitude": "40 44 35 N",
+        "Longitude": "84  6 20 W",
+        "Elev": "263.7"
+    },
+    {
+        "Name": "Lincoln, Nebraska",
+        "Latitude": "40 48 59 N",
+        "Longitude": "96 42 15 W",
+        "Elev": "350.5"
+    },
+    {
+        "Name": "Lisbon, Portugal",
+        "Latitude": "38 43  0 N",
+        "Longitude": "09  8  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Little Rock, Arkansas",
+        "Latitude": "34 44 42 N",
+        "Longitude": "92 16 37 W",
+        "Elev": "87.2"
+    },
+    {
+        "Name": "London, England",
+        "Latitude": "51 30 30 N",
+        "Longitude": "00 11  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Long Beach, California",
+        "Latitude": "33 46 14 N",
+        "Longitude": "118 11 18 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Lorain, Ohio",
+        "Latitude": "41 28  5 N",
+        "Longitude": "82 10 49 W",
+        "Elev": "185.9"
+    },
+    {
+        "Name": "Los Angeles, California",
+        "Latitude": "34  3 15 N",
+        "Longitude": "118 14 28 W",
+        "Elev": "103.6"
+    },
+    {
+        "Name": "Louisville, Kentucky",
+        "Latitude": "38 14 47 N",
+        "Longitude": "85 45 49 W",
+        "Elev": "137.2"
+    },
+    {
+        "Name": "Lowell, Massachusetts",
+        "Latitude": "42 38 25 N",
+        "Longitude": "71 19 14 W",
+        "Elev": "30.5"
+    },
+    {
+        "Name": "Lubbock, Texas",
+        "Latitude": "33 35  5 N",
+        "Longitude": "101 50 33 W",
+        "Elev": "973.8"
+    },
+    {
+        "Name": "Lund, Sweden",
+        "Latitude": "55 69  0 N",
+        "Longitude": "13 18  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Luxembourg, Luxembourg",
+        "Latitude": "49 37  0 N",
+        "Longitude": "06  9  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "MMT",
+        "Latitude": "31 41  0 N",
+        "Longitude": "110 53  0 W",
+        "Elev": "2608"
+    },
+    {
+        "Name": "Macon, Georgia",
+        "Latitude": "32 50 12 N",
+        "Longitude": "83 37 36 W",
+        "Elev": "102.1"
+    },
+    {
+        "Name": "Macquarie Island, AAT",
+        "Latitude": "54 30  0 S",
+        "Longitude": "158 57  0 E",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Madison, Wisconsin",
+        "Latitude": "43  4 23 N",
+        "Longitude": "89 22 55 W",
+        "Elev": "262.1"
+    },
+    {
+        "Name": "Madrid, Spain",
+        "Latitude": "40 25  0 N",
+        "Longitude": "03 42  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Managua, Nicaragua",
+        "Latitude": "13 16  0 N",
+        "Longitude": "87 40  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Manchester, New Hampshire",
+        "Latitude": "42 59 26 N",
+        "Longitude": "71 27 41 W",
+        "Elev": "53.3"
+    },
+    {
+        "Name": "Marshall, Texas",
+        "Latitude": "32 33  0 N",
+        "Longitude": "94 23  0 W",
+        "Elev": "125.0"
+    },
+    {
+        "Name": "Mauna Kea Observatory (NASA IRTF)",
+        "Latitude": "19 50  0 N",
+        "Longitude": "155 28  0 W",
+        "Elev": "4208"
+    },
+    {
+        "Name": "Mawson Observatory, AAT",
+        "Latitude": "67 36  0 S",
+        "Longitude": "62 53  0 E",
+        "Elev": "-1"
+    },
+    {
+        "Name": "McDonald Observatory",
+        "Latitude": "30 40 18 N",
+        "Longitude": "104  1 18 W",
+        "Elev": "2075"
+    },
+    {
+        "Name": "Melbourne Vic, Australia",
+        "Latitude": "37 48  0 S",
+        "Longitude": "144 58  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Memphis, Tennessee",
+        "Latitude": "35  8 46 N",
+        "Longitude": "90  3 13 W",
+        "Elev": "83.8"
+    },
+    {
+        "Name": "Meriden, Connecticut",
+        "Latitude": "41 32  6 N",
+        "Longitude": "72 47 30 W",
+        "Elev": "57.9"
+    },
+    {
+        "Name": "Miami, Florida",
+        "Latitude": "25 46 37 N",
+        "Longitude": "80 11 32 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "Michigan-Dartmouth-MIT Obs.",
+        "Latitude": "31 57  0 N",
+        "Longitude": "111 37  0 W",
+        "Elev": "1938"
+    },
+    {
+        "Name": "Milano, Italy",
+        "Latitude": "45 26 35 N",
+        "Longitude": "09 11  9 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Milwaukee, Wisconsin",
+        "Latitude": "43  2 19 N",
+        "Longitude": "87 54 15 W",
+        "Elev": "193.5"
+    },
+    {
+        "Name": "Minneapolis, Minnesota",
+        "Latitude": "44 58 57 N",
+        "Longitude": "93 15 43 W",
+        "Elev": "248.4"
+    },
+    {
+        "Name": "Minot, North Dakota",
+        "Latitude": "48 14  9 N",
+        "Longitude": "101 17 38 W",
+        "Elev": "472.4"
+    },
+    {
+        "Name": "Mobile, Alabama",
+        "Latitude": "30 41 36 N",
+        "Longitude": "88  2 33 W",
+        "Elev": "1.5"
+    },
+    {
+        "Name": "Moline, Illinois",
+        "Latitude": "41 30 31 N",
+        "Longitude": "90 30 49 W",
+        "Elev": "178.3"
+    },
+    {
+        "Name": "Montgomery, Alabama",
+        "Latitude": "32 22 33 N",
+        "Longitude": "86 18 31 W",
+        "Elev": "48.8"
+    },
+    {
+        "Name": "Montpelier, Vermont",
+        "Latitude": "44 15 36 N",
+        "Longitude": "72 34 41 W",
+        "Elev": "147.8"
+    },
+    {
+        "Name": "Montreal Quebec, Canada",
+        "Latitude": "45 30 24 N",
+        "Longitude": "73 34  2 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Moratuwa, Sri Lanka",
+        "Latitude": "06 45  0 N",
+        "Longitude": "79 55  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Moscow, Russia",
+        "Latitude": "55 45  0 N",
+        "Longitude": "37 42  0 E",
+        "Elev": "120.1"
+    },
+    {
+        "Name": "Mount Wilson Observatory",
+        "Latitude": "34 13  0 N",
+        "Longitude": "118  3  0 W",
+        "Elev": "1742"
+    },
+    {
+        "Name": "Mt. Stromlo Observatory",
+        "Latitude": "35 19 15 S",
+        "Longitude": "149  1 28 E",
+        "Elev": "767"
+    },
+    {
+        "Name": "Multiple Mirrow Telescope Obs.",
+        "Latitude": "31 41  0 N",
+        "Longitude": "110 53  0 W",
+        "Elev": "2608"
+    },
+    {
+        "Name": "Muncie, Indiana",
+        "Latitude": "40 11 28 N",
+        "Longitude": "85 23 16 W",
+        "Elev": "289.6"
+    },
+    {
+        "Name": "Munich, Germany",
+        "Latitude": "48 14  0 N",
+        "Longitude": "11 57  0 E",
+        "Elev": "523"
+    },
+    {
+        "Name": "Nashville, Tennessee",
+        "Latitude": "36  9 33 N",
+        "Longitude": "86 46 55 W",
+        "Elev": "137.2"
+    },
+    {
+        "Name": "Natchez, Mississippi",
+        "Latitude": "31 33 48 N",
+        "Longitude": "91 23 30 W",
+        "Elev": "64.0"
+    },
+    {
+        "Name": "National Astronomy Obs. (Japan)",
+        "Latitude": "19 49  0 N",
+        "Longitude": "155 28  0 W",
+        "Elev": "4215"
+    },
+    {
+        "Name": "New Bedford, Massachusetts",
+        "Latitude": "41 38 13 N",
+        "Longitude": "70 55 41 W",
+        "Elev": "4.6"
+    },
+    {
+        "Name": "New Britain, Connecticut",
+        "Latitude": "41 40  8 N",
+        "Longitude": "72 46 59 W",
+        "Elev": "61.0"
+    },
+    {
+        "Name": "New Delhi, India",
+        "Latitude": "28 38  0 N",
+        "Longitude": "77 12  0 E",
+        "Elev": "234.7"
+    },
+    {
+        "Name": "New Haven, Connecticut",
+        "Latitude": "41 18 25 N",
+        "Longitude": "72 55 30 W",
+        "Elev": "12.2"
+    },
+    {
+        "Name": "New Orleans, Louisiana",
+        "Latitude": "29 56 53 N",
+        "Longitude": "90  4 10 W",
+        "Elev": "1.5"
+    },
+    {
+        "Name": "New York, New York",
+        "Latitude": "40 45  6 N",
+        "Longitude": "73 59 39 W",
+        "Elev": "16.8"
+    },
+    {
+        "Name": "Newark, New Jersey",
+        "Latitude": "40 44 14 N",
+        "Longitude": "74 10 19 W",
+        "Elev": "16.8"
+    },
+    {
+        "Name": "Newcastle NSW, Australia",
+        "Latitude": "32 52  0 S",
+        "Longitude": "151 49  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Niagara Falls, New York",
+        "Latitude": "43  5 34 N",
+        "Longitude": "79  3 26 W",
+        "Elev": "173.7"
+    },
+    {
+        "Name": "Nordic Optical Telescope",
+        "Latitude": "28 45  0 N",
+        "Longitude": "17 53  0 W",
+        "Elev": "2382"
+    },
+    {
+        "Name": "Norfolk, Virginia",
+        "Latitude": "36 51 10 N",
+        "Longitude": "76 17 21 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "North Liberty Radio Observatory",
+        "Latitude": "41 46 17 N",
+        "Longitude": "91 34 26 W",
+        "Elev": "240.0"
+    },
+    {
+        "Name": "OAB, Brera  (MI), Italy",
+        "Latitude": "45 27 59 N",
+        "Longitude": "9 11 30 E",
+        "Elev": "147"
+    },
+    {
+        "Name": "OAB, Merate (LC), Italy",
+        "Latitude": "45 41 54 N",
+        "Longitude": "9 25 45 E",
+        "Elev": "334"
+    },
+    {
+        "Name": "Oakland, California",
+        "Latitude": "37 48  3 N",
+        "Longitude": "122 15 54 W",
+        "Elev": "7.6"
+    },
+    {
+        "Name": "Obs. Astro. Nacional, San Pedro Martir",
+        "Latitude": "31  1 45 N",
+        "Longitude": "115 29 12 W",
+        "Elev": "2830"
+    },
+    {
+        "Name": "Obs. Astro. Nacional, Tonantzintla",
+        "Latitude": "19  1 58 N",
+        "Longitude": "98 18 50 W",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Observatoire Royal de Belgique",
+        "Latitude": "50 48  0 N",
+        "Longitude": "4 21  0 E",
+        "Elev": "105"
+    },
+    {
+        "Name": "Observatoire de Calern",
+        "Latitude": "43 45  0 N",
+        "Longitude": "6 56  0 W",
+        "Elev": "1270"
+    },
+    {
+        "Name": "Observatoire de Nice",
+        "Latitude": "43 43  0 N",
+        "Longitude": "7 18  0 E",
+        "Elev": "372"
+    },
+    {
+        "Name": "Observatoire de Paris",
+        "Latitude": "48 48  0 N",
+        "Longitude": "2 14  0 E",
+        "Elev": "162"
+    },
+    {
+        "Name": "Ogden, Utah",
+        "Latitude": "41 13 31 N",
+        "Longitude": "111 58 21 W",
+        "Elev": "1309.1"
+    },
+    {
+        "Name": "Oklahoma City, Oklahoma",
+        "Latitude": "35 28 26 N",
+        "Longitude": "97 31  4 W",
+        "Elev": "364.2"
+    },
+    {
+        "Name": "Old Royal Observatory",
+        "Latitude": "51 29  0 N",
+        "Longitude": "0  0  0 W",
+        "Elev": "47"
+    },
+    {
+        "Name": "Omaha, Nebraska",
+        "Latitude": "41 15 42 N",
+        "Longitude": "95 56 14 W",
+        "Elev": "317.0"
+    },
+    {
+        "Name": "Orlando, Florida",
+        "Latitude": "28 32 42 N",
+        "Longitude": "81 22 38 W",
+        "Elev": "21.3"
+    },
+    {
+        "Name": "Oschin 48-inch Telescope",
+        "Latitude": "33 21  0 N",
+        "Longitude": "116 51  0 W",
+        "Elev": "1706"
+    },
+    {
+        "Name": "Oslo, Norway",
+        "Latitude": "59 55  0 N",
+        "Longitude": "10 45  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Ottawa Ontario, Canada",
+        "Latitude": "45 24  0 N",
+        "Longitude": "75 39  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Paducah, Kentucky",
+        "Latitude": "37  5 13 N",
+        "Longitude": "88 25 56 W",
+        "Elev": "105.2"
+    },
+    {
+        "Name": "Palomar Observatory (200 inch)",
+        "Latitude": "33 21  0 N",
+        "Longitude": "116 52  0 W",
+        "Elev": "1706"
+    },
+    {
+        "Name": "Paris, France",
+        "Latitude": "48 50 14 N",
+        "Longitude": "02 20 14 E",
+        "Elev": "91.4"
+    },
+    {
+        "Name": "Parkes Radiotelescope, Australia",
+        "Latitude": "33  0  0 S",
+        "Longitude": "148 15 42 E",
+        "Elev": "300"
+    },
+    {
+        "Name": "Pasadena, California",
+        "Latitude": "34  8 44 N",
+        "Longitude": "118  8 41 W",
+        "Elev": "253.0"
+    },
+    {
+        "Name": "Paterson, New Jersey",
+        "Latitude": "40 55  1 N",
+        "Longitude": "74 10 21 W",
+        "Elev": "30.5"
+    },
+    {
+        "Name": "Pensacola, Florida",
+        "Latitude": "30 24 51 N",
+        "Longitude": "87 12 56 W",
+        "Elev": "4.6"
+    },
+    {
+        "Name": "Peoria, Illinois",
+        "Latitude": "40 41 42 N",
+        "Longitude": "89 35 33 W",
+        "Elev": "143.3"
+    },
+    {
+        "Name": "Perth, WA, Australia",
+        "Latitude": "31 56 29 S",
+        "Longitude": "115 57 55 E",
+        "Elev": "67"
+    },
+    {
+        "Name": "Philadelphia, Pennsylvania",
+        "Latitude": "39 56 58 N",
+        "Longitude": "75  9 21 W",
+        "Elev": "30.5"
+    },
+    {
+        "Name": "Phoenix, Arizona",
+        "Latitude": "33 27 12 N",
+        "Longitude": "112  4 28 W",
+        "Elev": "332.2"
+    },
+    {
+        "Name": "Pierre, South Dakota",
+        "Latitude": "44 22 18 N",
+        "Longitude": "100 20 54 W",
+        "Elev": "451.1"
+    },
+    {
+        "Name": "Pittsburgh, Pennsylvania",
+        "Latitude": "40 29 19 N",
+        "Longitude": "80  0  0 W",
+        "Elev": "227.1"
+    },
+    {
+        "Name": "Pittsfield, Massachusetts",
+        "Latitude": "42 26 53 N",
+        "Longitude": "73 15 14 W",
+        "Elev": "309.4"
+    },
+    {
+        "Name": "Pocatello, Idaho",
+        "Latitude": "42 51 38 N",
+        "Longitude": "112 27  1 W",
+        "Elev": "1359.4"
+    },
+    {
+        "Name": "Port Arthur, Texas",
+        "Latitude": "29 52 30 N",
+        "Longitude": "93 56 15 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "Portland, Maine",
+        "Latitude": "43 39 33 N",
+        "Longitude": "70 15 19 W",
+        "Elev": "7.6"
+    },
+    {
+        "Name": "Portland, Oregon",
+        "Latitude": "45 31  6 N",
+        "Longitude": "122 40 35 W",
+        "Elev": "23.5"
+    },
+    {
+        "Name": "Portsmouth, New Hampshire",
+        "Latitude": "43  4 30 N",
+        "Longitude": "70 45 24 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Portsmouth, Virginia",
+        "Latitude": "36 50  7 N",
+        "Longitude": "76 18 14 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "Prague, Czech Republic",
+        "Latitude": "50  5  0 N",
+        "Longitude": "14 24  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Pretoria, South Africa",
+        "Latitude": "26 10  0 S",
+        "Longitude": "28  2  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Providence, Rhode Island",
+        "Latitude": "41 49 32 N",
+        "Longitude": "71 24 41 W",
+        "Elev": "24.4"
+    },
+    {
+        "Name": "Provo, Utah",
+        "Latitude": "40 14  6 N",
+        "Longitude": "111 39 24 W",
+        "Elev": "1386.8"
+    },
+    {
+        "Name": "Pueblo, Colorado",
+        "Latitude": "38 16 17 N",
+        "Longitude": "104 36 33 W",
+        "Elev": "1429.5"
+    },
+    {
+        "Name": "Racine, Wisconsin",
+        "Latitude": "42 43 49 N",
+        "Longitude": "87 47 12 W",
+        "Elev": "192.0"
+    },
+    {
+        "Name": "Radioastrophysical Observatory",
+        "Latitude": "56 47  0 N",
+        "Longitude": "24 24  0 E",
+        "Elev": "75"
+    },
+    {
+        "Name": "Raleigh, North Carolina",
+        "Latitude": "35 46 38 N",
+        "Longitude": "78 38 21 W",
+        "Elev": "111.3"
+    },
+    {
+        "Name": "Rapid City, South Dakota",
+        "Latitude": "44  4 52 N",
+        "Longitude": "103 13 11 W",
+        "Elev": "984.5"
+    },
+    {
+        "Name": "Reading, Pennsylvania",
+        "Latitude": "40 20  9 N",
+        "Longitude": "75 55 40 W",
+        "Elev": "80.8"
+    },
+    {
+        "Name": "Reno, Nevada",
+        "Latitude": "39 31 27 N",
+        "Longitude": "119 48 40 W",
+        "Elev": "1368.6"
+    },
+    {
+        "Name": "Reykjavik, Iceland",
+        "Latitude": "64  7 47 N",
+        "Longitude": "21 56 13 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Richmond, Virginia",
+        "Latitude": "37 32 15 N",
+        "Longitude": "77 26  9 W",
+        "Elev": "48.8"
+    },
+    {
+        "Name": "Rio de Janeiro, Brazil",
+        "Latitude": "22 53 43 S",
+        "Longitude": "43 13 22 W",
+        "Elev": "9.1"
+    },
+    {
+        "Name": "Roanoke, Virginia",
+        "Latitude": "37 16 13 N",
+        "Longitude": "79 56 44 W",
+        "Elev": "275.8"
+    },
+    {
+        "Name": "Rochester, Minnesota",
+        "Latitude": "44  1 21 N",
+        "Longitude": "92 28  3 W",
+        "Elev": "301.8"
+    },
+    {
+        "Name": "Rochester, New York",
+        "Latitude": "43  9 41 N",
+        "Longitude": "77 36 21 W",
+        "Elev": "157.0"
+    },
+    {
+        "Name": "Rockford, Illinois",
+        "Latitude": "42 16  7 N",
+        "Longitude": "89  5 48 W",
+        "Elev": "217.9"
+    },
+    {
+        "Name": "Rome, Italy",
+        "Latitude": "41 53  0 N",
+        "Longitude": "12 30  0 E",
+        "Elev": "29.0"
+    },
+    {
+        "Name": "Roque de los Muchachos, La Palma",
+        "Latitude": "28 45 30 N",
+        "Longitude": "17 52 48 W",
+        "Elev": "2327"
+    },
+    {
+        "Name": "Royal Greenwich Observatory",
+        "Latitude": "50 52  0 N",
+        "Longitude": "20  0 E",
+        "Elev": "34"
+    },
+    {
+        "Name": "Sacramento, California",
+        "Latitude": "38 34 57 N",
+        "Longitude": "121 29 41 W",
+        "Elev": "9.1"
+    },
+    {
+        "Name": "Saginaw, Michigan",
+        "Latitude": "43 25 52 N",
+        "Longitude": "83 56  5 W",
+        "Elev": "181.4"
+    },
+    {
+        "Name": "Saint Cloud, Minnesota",
+        "Latitude": "45 34  0 N",
+        "Longitude": "94 10 24 W",
+        "Elev": "317.0"
+    },
+    {
+        "Name": "Saint Joseph, Missouri",
+        "Latitude": "39 45 57 N",
+        "Longitude": "94 51  2 W",
+        "Elev": "259.1"
+    },
+    {
+        "Name": "Saint Louis, Missouri",
+        "Latitude": "38 37 45 N",
+        "Longitude": "90 12 22 W",
+        "Elev": "138.7"
+    },
+    {
+        "Name": "Saint Lucia Qld, Australia",
+        "Latitude": "27 30  2 S",
+        "Longitude": "153  0 41 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Saint Paul, Minnesota",
+        "Latitude": "44 57 19 N",
+        "Longitude": "93  6  7 W",
+        "Elev": "237.7"
+    },
+    {
+        "Name": "Saint Petersburg, Florida",
+        "Latitude": "27 46 18 N",
+        "Longitude": "82 38 19 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Salem, Oregon",
+        "Latitude": "44 56 24 N",
+        "Longitude": "123  1 59 W",
+        "Elev": "47.2"
+    },
+    {
+        "Name": "Salina, Kansas",
+        "Latitude": "38 50 36 N",
+        "Longitude": "97 36 46 W",
+        "Elev": "374.6"
+    },
+    {
+        "Name": "Salt Lake City, Utah",
+        "Latitude": "40 45 23 N",
+        "Longitude": "111 53 26 W",
+        "Elev": "1338.1"
+    },
+    {
+        "Name": "Salzburg, Austria",
+        "Latitude": "48  3  0 N",
+        "Longitude": "16 37  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "San Angelo, Texas",
+        "Latitude": "31 27 39 N",
+        "Longitude": "100 26  3 W",
+        "Elev": "562.4"
+    },
+    {
+        "Name": "San Antonio, Texas",
+        "Latitude": "29 25 37 N",
+        "Longitude": "98 29  6 W",
+        "Elev": "198.1"
+    },
+    {
+        "Name": "San Bernardino, California",
+        "Latitude": "34  6 30 N",
+        "Longitude": "117 17 28 W",
+        "Elev": "329.2"
+    },
+    {
+        "Name": "San Diego, California",
+        "Latitude": "32 42 53 N",
+        "Longitude": "117  9 21 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "San Francisco, California",
+        "Latitude": "37 46 39 N",
+        "Longitude": "122 24 40 W",
+        "Elev": "19.8"
+    },
+    {
+        "Name": "San Juan, Puerto Rico",
+        "Latitude": "18 28  0 N",
+        "Longitude": "66  7  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "San Jose, California",
+        "Latitude": "37 20 16 N",
+        "Longitude": "121 53 24 W",
+        "Elev": "27.4"
+    },
+    {
+        "Name": "Santa Barbara, California",
+        "Latitude": "34 25 18 N",
+        "Longitude": "119 41 55 W",
+        "Elev": "30.5"
+    },
+    {
+        "Name": "Santa Cruz, California",
+        "Latitude": "36 58 18 N",
+        "Longitude": "122  1 18 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Santa Fe, New Mexico",
+        "Latitude": "35 41 11 N",
+        "Longitude": "105 56 10 W",
+        "Elev": "2118.4"
+    },
+    {
+        "Name": "Santiago, Chile",
+        "Latitude": "33 27  0 S",
+        "Longitude": "70 33  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Santo Domingo, Dominican Republic",
+        "Latitude": "18 30  0 N",
+        "Longitude": "69 57  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Sapporo, Japan",
+        "Latitude": "43  4  0 N",
+        "Longitude": "141 20  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Sarasota, Florida",
+        "Latitude": "27 20  5 N",
+        "Longitude": "82 32 30 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Savannah, Georgia",
+        "Latitude": "32  4 42 N",
+        "Longitude": "81  5 37 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Schenectady, New York",
+        "Latitude": "42 48 42 N",
+        "Longitude": "73 55 42 W",
+        "Elev": "74.7"
+    },
+    {
+        "Name": "Scranton, Pennsylvania",
+        "Latitude": "41 24 32 N",
+        "Longitude": "75 39 46 W",
+        "Elev": "221.0"
+    },
+    {
+        "Name": "Seattle, Washington",
+        "Latitude": "47 36 32 N",
+        "Longitude": "122 20 12 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "Sheboygan, Wisconsin",
+        "Latitude": "43 45  3 N",
+        "Longitude": "87 42 52 W",
+        "Elev": "192.0"
+    },
+    {
+        "Name": "Sheridan, Wyoming",
+        "Latitude": "44 47 55 N",
+        "Longitude": "106 57 10 W",
+        "Elev": "1140.0"
+    },
+    {
+        "Name": "Shreveport, Louisiana",
+        "Latitude": "32 30 46 N",
+        "Longitude": "93 44 58 W",
+        "Elev": "62.2"
+    },
+    {
+        "Name": "Siding Spring Observatory",
+        "Latitude": "31 16 24 S",
+        "Longitude": "149  3 41 E",
+        "Elev": "1149"
+    },
+    {
+        "Name": "Singapore, Singapore",
+        "Latitude": "01 25  0 N",
+        "Longitude": "103 50  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Sioux City, Iowa",
+        "Latitude": "42 29 46 N",
+        "Longitude": "96 24 30 W",
+        "Elev": "338.3"
+    },
+    {
+        "Name": "Sioux Falls, South Dakota",
+        "Latitude": "43 32 35 N",
+        "Longitude": "96 43 35 W",
+        "Elev": "425.2"
+    },
+    {
+        "Name": "Sofia, Bulgaria",
+        "Latitude": "42 40  0 N",
+        "Longitude": "23 18  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Somerville, Massachusetts",
+        "Latitude": "42 23 15 N",
+        "Longitude": "71  6  7 W",
+        "Elev": "4.0"
+    },
+    {
+        "Name": "South Bend, Indiana",
+        "Latitude": "41 40 33 N",
+        "Longitude": "86 15  1 W",
+        "Elev": "216.4"
+    },
+    {
+        "Name": "Space Telescope Science Inst.",
+        "Latitude": "39 18  0 N",
+        "Longitude": "76 37  0 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Spartanburg, South Carolina",
+        "Latitude": "34 57  3 N",
+        "Longitude": "81 56  6 W",
+        "Elev": "266.7"
+    },
+    {
+        "Name": "Special Astrophysical Obs.",
+        "Latitude": "43 39  0 N",
+        "Longitude": "41 26  0 E",
+        "Elev": "2100"
+    },
+    {
+        "Name": "Spokane, Washington",
+        "Latitude": "47 39 32 N",
+        "Longitude": "117 25 33 W",
+        "Elev": "576.1"
+    },
+    {
+        "Name": "Springfield, Illinois",
+        "Latitude": "39 47 58 N",
+        "Longitude": "89 38 51 W",
+        "Elev": "185.9"
+    },
+    {
+        "Name": "Springfield, Massachusetts",
+        "Latitude": "42  6 21 N",
+        "Longitude": "72 35 32 W",
+        "Elev": "25.9"
+    },
+    {
+        "Name": "Springfield, Missouri",
+        "Latitude": "37 13  3 N",
+        "Longitude": "93 17 32 W",
+        "Elev": "396.2"
+    },
+    {
+        "Name": "Springfield, Ohio",
+        "Latitude": "39 55 38 N",
+        "Longitude": "83 48 29 W",
+        "Elev": "298.7"
+    },
+    {
+        "Name": "Stamford, Connecticut",
+        "Latitude": "41  3  9 N",
+        "Longitude": "73 32 24 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Steubenville, Ohio",
+        "Latitude": "40 21 42 N",
+        "Longitude": "80 36 53 W",
+        "Elev": "201.2"
+    },
+    {
+        "Name": "Stockholm, Sweden",
+        "Latitude": "59 35  0 N",
+        "Longitude": "18  6  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Stockton, California",
+        "Latitude": "37 57 30 N",
+        "Longitude": "121 17 16 W",
+        "Elev": "6.1"
+    },
+    {
+        "Name": "Stuttgart, Germany",
+        "Latitude": "48 46  0 N",
+        "Longitude": "09 11  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Superior, Wisconsin",
+        "Latitude": "46 43 14 N",
+        "Longitude": "92  6  7 W",
+        "Elev": "192.0"
+    },
+    {
+        "Name": "Sydney NSW, Australia",
+        "Latitude": "33 52  0 S",
+        "Longitude": "151 12  0 E",
+        "Elev": "7.6"
+    },
+    {
+        "Name": "Syracuse, New York",
+        "Latitude": "43  3  4 N",
+        "Longitude": "76  9 14 W",
+        "Elev": "121.9"
+    },
+    {
+        "Name": "Tacoma, Washington",
+        "Latitude": "47 14 59 N",
+        "Longitude": "122 26 15 W",
+        "Elev": "33.5"
+    },
+    {
+        "Name": "Taipei, Taiwan",
+        "Latitude": "25  2  0 N",
+        "Longitude": "121 31  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Tallahassee, Florida",
+        "Latitude": "30 26 30 N",
+        "Longitude": "84 16 56 W",
+        "Elev": "45.7"
+    },
+    {
+        "Name": "Tallinn, Estonia",
+        "Latitude": "59 27  0 N",
+        "Longitude": "24 45  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Tampa, Florida",
+        "Latitude": "27 56 58 N",
+        "Longitude": "82 27 25 W",
+        "Elev": "4.6"
+    },
+    {
+        "Name": "Telescopio Nazionale Galileo",
+        "Latitude": "28 46  0 N",
+        "Longitude": "17 53  0 W",
+        "Elev": "2400"
+    },
+    {
+        "Name": "Terre Haute, Indiana",
+        "Latitude": "39 28  3 N",
+        "Longitude": "87 24 26 W",
+        "Elev": "151.2"
+    },
+    {
+        "Name": "Texarkana, Texas",
+        "Latitude": "33 25 48 N",
+        "Longitude": "94  2 30 W",
+        "Elev": "98.8"
+    },
+    {
+        "Name": "Tokyo, Japan",
+        "Latitude": "35 45  0 N",
+        "Longitude": "139 45  0 E",
+        "Elev": "9.1"
+    },
+    {
+        "Name": "Toledo, Ohio",
+        "Latitude": "41 39 14 N",
+        "Longitude": "83 32 39 W",
+        "Elev": "208.5"
+    },
+    {
+        "Name": "Topeka, Kansas",
+        "Latitude": "39  3 16 N",
+        "Longitude": "95 40 23 W",
+        "Elev": "283.5"
+    },
+    {
+        "Name": "Toronto Ontario, Canada",
+        "Latitude": "43 39 10 N",
+        "Longitude": "79 23  0 W",
+        "Elev": "91.4"
+    },
+    {
+        "Name": "Torus Observatory",
+        "Latitude": "47 10 58 N",
+        "Longitude": "122  7 57 W",
+        "Elev": "250"
+    },
+    {
+        "Name": "Trenton, New Jersey",
+        "Latitude": "40 13 14 N",
+        "Longitude": "74 46 13 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Tromso, Norway",
+        "Latitude": "69 41  0 N",
+        "Longitude": "18 95  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Troy, New York",
+        "Latitude": "42 43 45 N",
+        "Longitude": "73 40 58 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Tucson, Arizona",
+        "Latitude": "32 13 15 N",
+        "Longitude": "110 58  8 W",
+        "Elev": "728.5"
+    },
+    {
+        "Name": "Tulsa, Oklahoma",
+        "Latitude": "36  9 12 N",
+        "Longitude": "95 59 34 W",
+        "Elev": "245.1"
+    },
+    {
+        "Name": "U. S. Naval Observatory",
+        "Latitude": "38 55  0 N",
+        "Longitude": "77  4  0 W",
+        "Elev": "92"
+    },
+    {
+        "Name": "United Kingdom Infrared Tel. (UKIRT)",
+        "Latitude": "19 50  0 N",
+        "Longitude": "155 28  0 W",
+        "Elev": "4194"
+    },
+    {
+        "Name": "United Kingdom Schmidt Tel. Unit",
+        "Latitude": "31 16  0 S",
+        "Longitude": "149  4  0 E",
+        "Elev": "1145"
+    },
+    {
+        "Name": "Univ. of BC and Laval Univ.",
+        "Latitude": "49  7  0 N",
+        "Longitude": "122 35  0 W",
+        "Elev": "50"
+    },
+    {
+        "Name": "Uppsala University Observatory",
+        "Latitude": "59 30  0 N",
+        "Longitude": "17 36  0 E",
+        "Elev": "33"
+    },
+    {
+        "Name": "Urbana, Illinois",
+        "Latitude": "40  6 42 N",
+        "Longitude": "88 12  6 W",
+        "Elev": "221.0"
+    },
+    {
+        "Name": "Utica, New York",
+        "Latitude": "43  6 12 N",
+        "Longitude": "75 13 33 W",
+        "Elev": "126.5"
+    },
+    {
+        "Name": "Vainu Bappu Observatory",
+        "Latitude": "12 35  0 N",
+        "Longitude": "78 50  0 E",
+        "Elev": "725"
+    },
+    {
+        "Name": "Varna, Bulgaria",
+        "Latitude": "43 12  0 N",
+        "Longitude": "27 57  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Venezuela 1-meter Schmidt",
+        "Latitude": "8 47  0 N",
+        "Longitude": "70 52  0 W",
+        "Elev": "3610"
+    },
+    {
+        "Name": "Versailles, France",
+        "Latitude": "48 50  0 N",
+        "Longitude": "02  7  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Victoria British Columbia, Canada",
+        "Latitude": "48 30  0 N",
+        "Longitude": "123 25  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Vienna, Austria",
+        "Latitude": "48 12  0 N",
+        "Longitude": "16 22  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "W. M. Keck Observatory",
+        "Latitude": "19 49  0 N",
+        "Longitude": "155 28  0 W",
+        "Elev": "4150"
+    },
+    {
+        "Name": "WIYN Observatory",
+        "Latitude": "31 57  0 N",
+        "Longitude": "111 36  0 W",
+        "Elev": "2089"
+    },
+    {
+        "Name": "WSHB, Cyprus Creek, South Carolina, USA",
+        "Latitude": "32 41  2 N",
+        "Longitude": "81  7 51 W",
+        "Elev": "-1"
+    },
+    {
+        "Name": "Waco, Texas",
+        "Latitude": "31 33 12 N",
+        "Longitude": "97  8  0 W",
+        "Elev": "123.4"
+    },
+    {
+        "Name": "Walla Walla, Washington",
+        "Latitude": "46  4  8 N",
+        "Longitude": "118 20 24 W",
+        "Elev": "285.3"
+    },
+    {
+        "Name": "Warsaw, Poland",
+        "Latitude": "52 15  0 N",
+        "Longitude": "21  0  0 E",
+        "Elev": "109.7"
+    },
+    {
+        "Name": "Washington, DC",
+        "Latitude": "38 53 51 N",
+        "Longitude": "77  0 33 W",
+        "Elev": "7.6"
+    },
+    {
+        "Name": "Waterbury, Connecticut",
+        "Latitude": "41 33 13 N",
+        "Longitude": "73  2 31 W",
+        "Elev": "79.2"
+    },
+    {
+        "Name": "Waterloo, Iowa",
+        "Latitude": "42 29 40 N",
+        "Longitude": "92 20 20 W",
+        "Elev": "259.1"
+    },
+    {
+        "Name": "Wellington, New Zealand",
+        "Latitude": "41 17 25 S",
+        "Longitude": "174 46  7 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "West Palm Beach, Florida",
+        "Latitude": "26 42 36 N",
+        "Longitude": "80  3  7 W",
+        "Elev": "4.6"
+    },
+    {
+        "Name": "Wheeling, West Virginia",
+        "Latitude": "40  4  3 N",
+        "Longitude": "80 43 20 W",
+        "Elev": "198.1"
+    },
+    {
+        "Name": "White Plains, New York",
+        "Latitude": "41  2  0 N",
+        "Longitude": "73 45 48 W",
+        "Elev": "67.1"
+    },
+    {
+        "Name": "Wichita Falls, Texas",
+        "Latitude": "33 54 34 N",
+        "Longitude": "98 29 28 W",
+        "Elev": "288.0"
+    },
+    {
+        "Name": "Wichita, Kansas",
+        "Latitude": "37 41 30 N",
+        "Longitude": "97 20 16 W",
+        "Elev": "393.2"
+    },
+    {
+        "Name": "Wilkes-Barre, Pennsylvania",
+        "Latitude": "41 14 32 N",
+        "Longitude": "75 53 17 W",
+        "Elev": "195.1"
+    },
+    {
+        "Name": "William Herschel Telescope",
+        "Latitude": "28 46  0 N",
+        "Longitude": "17 53  0 W",
+        "Elev": "2332"
+    },
+    {
+        "Name": "Wilmington, Delaware",
+        "Latitude": "39 44 46 N",
+        "Longitude": "75 32 51 W",
+        "Elev": "41.1"
+    },
+    {
+        "Name": "Wilmington, North Carolina",
+        "Latitude": "34 14 14 N",
+        "Longitude": "77 56 58 W",
+        "Elev": "10.7"
+    },
+    {
+        "Name": "Winer Mobile Observatory",
+        "Latitude": "31 39 53 N",
+        "Longitude": "110 36 03 W",
+        "Elev": "1515"
+    },
+    {
+        "Name": "Winnipeg Manitoba, Canada",
+        "Latitude": "49 50  0 N",
+        "Longitude": "97  7  0 W",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Winston-Salem, North Carolina",
+        "Latitude": "36  5 52 N",
+        "Longitude": "80 14 42 W",
+        "Elev": "262.1"
+    },
+    {
+        "Name": "Wollongong NSW, Australia",
+        "Latitude": "34 24  0 S",
+        "Longitude": "150 54  0 E",
+        "Elev": "-1.0"
+    },
+    {
+        "Name": "Worcester, Massachusetts",
+        "Latitude": "42 15 37 N",
+        "Longitude": "71 48 17 W",
+        "Elev": "144.8"
+    },
+    {
+        "Name": "Wyoming Infrared Observatory",
+        "Latitude": "41  5 54 N",
+        "Longitude": "105 58 36 W",
+        "Elev": "2943"
+    },
+    {
+        "Name": "Yakima, Washington",
+        "Latitude": "46 36  9 N",
+        "Longitude": "120 30 39 W",
+        "Elev": "323.1"
+    },
+    {
+        "Name": "Yerkes Observatory",
+        "Latitude": "42 34  0 N",
+        "Longitude": "88 33  0 W",
+        "Elev": "334"
+    },
+    {
+        "Name": "Yonkers, New York",
+        "Latitude": "40 55 55 N",
+        "Longitude": "73 53 54 W",
+        "Elev": "3.0"
+    },
+    {
+        "Name": "York, Pennsylvania",
+        "Latitude": "39 57 35 N",
+        "Longitude": "76 43 36 W",
+        "Elev": "112.8"
+    },
+    {
+        "Name": "Youngstown, Ohio",
+        "Latitude": "41  5 57 N",
+        "Longitude": "80 39  2 W",
+        "Elev": "256.0"
+    },
+    {
+        "Name": "Yuma, Arizona",
+        "Latitude": "32 42 54 N",
+        "Longitude": "114 37 24 W",
+        "Elev": "48.8"
+    },
+    {
+        "Name": "Zagreb, Croatia",
+        "Latitude": "45 48 43 N",
+        "Longitude": "15 58 52 E",
+        "Elev": "135"
+    },
+    {
+        "Name": "Zanesville, Ohio",
+        "Latitude": "39 56 18 N",
+        "Longitude": "82  0 30 W",
+        "Elev": "219.5"
+    },
+    {
+        "Name": "Zentralinstitut fur Astrophysik",
+        "Latitude": "52 23  0 N",
+        "Longitude": "13  4  0 E",
+        "Elev": "107"
+    },
+    {
+        "Name": "Zurich, Switzerland",
+        "Latitude": "47 22 40 N",
+        "Longitude": "08 33  4 E",
+        "Elev": "-1.0"
+    }
+]
