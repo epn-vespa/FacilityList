@@ -1,4 +1,4 @@
-Code    Long.   cos    sin Name
+Code  Long.     cos          sin        Name
 000   0.0000    0.62411     +0.77873    Greenwich
 001   0.1542    0.62992     +0.77411    Crowborough
 002   0.62      0.622       +0.781      Rayleigh
@@ -244,12 +244,12 @@ Code    Long.   cos    sin Name
 242   1.6956    0.72681     +0.68460    Varennes
 243   9.4130    0.59572     +0.80050    Umbrella Observatory, Fredenbeck
 244   0.00000   0.000000     0.000000   Geocentric Occultation Observation
-245             Spitzer Space Telescope
+245         x          x          x     Spitzer Space Telescope
 246  14.28476   0.659216    +0.749664   Klet Observatory-KLENOT
-247             Roving Observer
+247   x          x          x           Roving Observer
 248   0.00000   0.000000     0.000000   Hipparcos
-249             SOHO
-250             Hubble Space Telescope
+249   x          x          x           SOHO
+250    x          x          x          Hubble Space Telescope
 251 293.24692   0.949577    +0.312734   Arecibo
 252 243.20512   0.817719    +0.573979   Goldstone DSS 13, Fort Irwin
 253 243.11047   0.815913    +0.576510   Goldstone DSS 14, Fort Irwin
@@ -257,7 +257,7 @@ Code    Long.   cos    sin Name
 255  33.18689   0.705965    +0.705886   Evpatoria
 256 280.16017   0.784451    +0.618320   Green Bank
 257 243.12461   0.816796    +0.575252   Goldstone DSS 25, Fort Irwin
-258             Gaia
+258  x          x          x            Gaia
 259  19.22586   0.349828    +0.933688   EISCAT Tromso UHF
 260 149.0661    0.85560     -0.51626    Siding Spring Observatory-DSS
 261 243.14022   0.836325    +0.546877   Palomar Mountain-DSS
@@ -266,7 +266,6 @@ Code    Long.   cos    sin Name
 267 204.53044   0.941705    +0.337234   New Horizons KBO Search-CFHT
 268 289.30803   0.875516    -0.482342   New Horizons KBO Search-Magellan/Clay
 269 289.30914   0.875510    -0.482349   New Horizons KBO Search-Magellan/Baade
-270             Unistellar Network, Roving Observer
 276  20.38279   0.608295    +0.791076   Plonsk
 277 356.8175    0.56158     +0.82467    Royal Observatory, Blackford Hill, Edinburgh
 278 116.4494    0.76818     +0.63809    Peking, Transit of Venus site
@@ -1220,16 +1219,16 @@ C45  12.40639   0.744413    +0.665514   La Giustiniana
 C46  69.12219   0.576620    +0.814296   Horizon Observatory, Petropavlovsk
 C47  15.2356    0.66017     +0.74871    Nonndorf
 C48 100.9214    0.62235     +0.78051    Sayan Solar Observatory, Irkutsk
-C49                                     STEREO-A
-C50                                     STEREO-B
-C51                                     WISE
-C52                                     Swift
-C53                                     NEOSSat
-C54                                     New Horizons
-C55                                     Kepler
-C56                                     LISA-Pathfinder
-C57                                     TESS
-C59                                     Yangwang-1
+C49        x          x          X      STEREO-A
+C50        x          x          x      STEREO-B
+C51        x          x          x      WISE
+C52        x          x          x      Swift
+C53        x          x          x      NEOSSat
+C54        x          x          x      New Horizons
+C55        x          x          x      Kepler
+C56        x          x          x      LISA-Pathfinder
+C57        x          x          x      TESS
+C59        x          x          x      Yangwang-1
 C60   7.06926   0.634261    +0.770545   Argelander Institute for Astronomy Obs., Bonn
 C61   2.58202   0.658892    +0.749723   Chelles
 C62  11.3467    0.68967     +0.72175    Eurac Observatory, Bolzano
