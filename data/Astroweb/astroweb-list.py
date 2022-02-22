@@ -66,5 +66,5 @@ for i, DL_child in enumerate(DL_node.children) :
 
 
 with open(output_file, "w") as f :
-    f.write(json.dumps( result, indent=4 ))
+    f.write(json.dumps(definitions, indent=4 ))
       
