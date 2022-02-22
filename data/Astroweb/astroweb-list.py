@@ -1,82 +1,70 @@
 import lxml
 from lxml import etree
+from bs4 import BeautifulSoup
 import json
+import re
 
-def element_path(xmltreeelement):
-    # AttributeError: 'NoneType' object has no attribute 'getparent'
-    try :
-        r = element_path(xmltreeelement.getparent())
-    except AttributeError: return xmltreeelement.tag
-    try :
-        r += "/" + xmltreeelement.tag()
-    except TypeError :
-        try :
-            r += "/" + type(xmltreeelement.tag()).__name__
-        except TypeError :
-            r += "/" + type(xmltreeelement.tag).__name__
-    return r
 
 input_file= open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/Astroweb/Astroweb.html', "r")
-output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/Astroweb/Astroweb.json"
+output_file ='/Users/ldebisschop/Documents/GitHub/FacilityList/data/Astroweb/Astroweb.json'
+file = input_file.read()
+parser = 'html.parser' 
+result=[]
+S = BeautifulSoup(file, 'lxml')
 
 
-tree = etree.parse(input_file)
-print(tree)
-#print("tree.getroot() =", tree.getroot())
-root = tree.getroot()
-#print("root.findall ('./RESOURCE/TABLE/DATA/') =",root.findall ('./RESOURCE/TABLE/DATA/'))
-#print("root.xpath('.') =", root.xpath('.'))
-#print("root.items() =", root.items())
-for k in root.keys() :
-    print("root[" + k + "] =", root.get(k))
-print("root.tag =", root.tag)
-print("element_path(root) =", element_path(root))
-print('root.findall("RESOURCE") =', root.findall("RESOURCE"))
-#print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE"))
-for child in root.iterchildren() :
-    print(element_path(child))
-#TAG=root.tag.replace("VOTABLE","")
-#print("found TAG : " + TAG)
-findall_path='./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'DATA'
-print("root.findall(findall_path) =", root.findall(findall_path))
-print("element_path(root.findall(findall_path)) =", element_path(root.findall(findall_path)[0]))
+ 
 
-
-# get table fields
-print()
-print("### get table fields :")
-print()
-fields=root.findall('./' + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'FIELD')
-try :
-    fields_descriptions=[ x.find( TAG + "DESCRIPTION" ).text.strip() for x in fields ]
-except AttributeError :
-    fields_descriptions=[ x.get("name").strip() for x in fields ]
-
-for description in fields_descriptions :
-    print(description)
-
-# get table data
-print()
-print("### get table data :")
-print()
-table_data = root.findall('./'+ TAG + 'RESOURCE/'+ TAG + 'TABLE/'+ TAG + 'DATA/' + TAG + "TABLEDATA")[0]
-print("element_path(table_data) = ", element_path(table_data))
-
-rows_list=[]
-# iterate over tr nodes (lines)
-for tr in table_data.findall( TAG + "TR" ) :
-    # for each line, add an enememt to the rows list
-    row = {}
-    for i , f in enumerate(tr.findall( TAG + "TD" )) :
-        if f.text is None : continue # skip to next field if field is empty
-        row[fields_descriptions[i]] = f.text.strip()
-    rows_list.append(row)
+print(S.body.form)
+DL_node = S.body.dl
+definitions=[] # la liste des definitions et descriptions reconnues
+for i, DL_child in enumerate(DL_node.children) :
+    if DL_child.name == "dt" :
+        # encountered a new definition such as :
+#   <DT>
+#        <A HREF="http://heasarc.gsfc.nasa.goV/docs/heao1/heao1.html">
+#            1st High Energy Astrophysics Observatory
+#        </A>
+#        <!-- OWNER made anonymous -->
+#        (HEAO 1. GSFC. NASA)
+#    </DT>
+        print()
+        print("  # # # # # # # # # # # #")
+        print("  # found new DT node #")
+        print("  # # # # # # # # # # # #")
+        print(DL_child)
+        print()
+        definition={}
+        definition["href"] = DL_child.a["href"]
+        definition["name"] = DL_child.a.text.strip()
+        # on extrait individuellement chaque ligne de texte, sans les espaces et retours a la ligne
+        strings_list=list(DL_child.stripped_strings)
+        print("strings_list = ", strings_list)
+        # dqms certains cas, pas de short name. on verifie donc le nomdre de lignes recuperees
+        if len(strings_list) >= 2 : definition["short_name"]=strings_list[1]
+        
+        print("new definition :", definition)
+        definitions.append(definition)
+        
+    elif DL_child.name == "dd" :
+        # encountered a description for current definition
+        print()
+        print("  - - - - - - - - - - - -")
+        print("  - found new DL node -")
+        print("  - - - - - - - - - - - -")
+        print(DL_child)
+        print()        
+        description = {}
+        
+        # remplir la description
+        
+        # completer la derniere definition appercue
+        definitions[-1]["description"] = description 
     
-    
-print(json.dumps(rows_list, indent=4))
+    if i > 50 : break # remove this line do do the whole file
 
-with open(output_file,"w") as out_f:
-    out_f.write(json.dumps(rows_list, indent=4))
 
-#print("root.values()=",root.values())
 
+with open(output_file, "w") as f :
+    f.write(json.dumps( result, indent=4 ))
+      
