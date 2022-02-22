@@ -35,7 +35,7 @@ for i, DL_child in enumerate(DL_node.children) :
         print(DL_child)
         print()
         definition={}
-        definition["href"] = DL_child.a["href"]
+        definition["link"] = DL_child.a["href"]
         definition["name"] = DL_child.a.text.strip()
         # on extrait individuellement chaque ligne de texte, sans les espaces et retours a la ligne
         strings_list=list(DL_child.stripped_strings)
@@ -61,7 +61,7 @@ for i, DL_child in enumerate(DL_node.children) :
         # completer la derniere definition appercue
         definitions[-1]["description"] = description 
     
-    if i > 50 : break # remove this line do do the whole file
+    #if i > 50 : break # remove this line do do the whole file
 
 
 
