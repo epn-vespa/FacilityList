@@ -6,7 +6,7 @@ More info:
 (https://www.minorplanetcenter.net/iau/mpc.html)
 
 ## Identifiers
-SANA identifiers are avaialble from [minorplanetcenter.net/data, Observatory Codes section](https://www.minorplanetcenter.net/iau/lists/ObsCodes.html)
+IAU-MPC identifiers are avaialble from [minorplanetcenter.net/data, Observatory Codes section](https://www.minorplanetcenter.net/iau/lists/ObsCodes.html)
 
 The data is available in the [IAU-MPC.txt](IAU-MPC.txt) file, retrieved on 2022-02-03.
 
