@@ -1,2202 +1,1452 @@
 [
     {
-        "link": "http://heasarc.gsfc.nasa.goV/docs/heao1/heao1.html",
         "name": "1st High Energy Astrophysics Observatory",
-        "short_name": "(HEAO 1. GSFC. NASA)",
-        "description": {}
+        "short_name": "(HEAO 1. GSFC. NASA)"
     },
     {
-        "link": "http://www.obs-nice.fr/fresnel/gi2t/en/",
         "name": "2-Telescopes Large Interferometer",
-        "short_name": "(GI2T REGAIN)",
-        "description": {}
+        "short_name": "(GI2T REGAIN)"
     },
     {
-        "link": "http://www.astro-f.esac.esa.int/",
-        "name": "AKARI",
-        "description": {}
+        "name": "AKARI"
     },
     {
-        "link": "http://www.area31.org/",
         "name": "AREA31 Radio Observatory",
-        "short_name": "(A31RO)",
-        "description": {}
+        "short_name": "(A31RO)"
     },
     {
-        "link": "http://archive.stsci.edu/astro/",
         "name": "ASTRO Observatory",
-        "short_name": "(ASTRO-1 and ASTRO-2)",
-        "description": {}
+        "short_name": "(ASTRO-1 and ASTRO-2)"
     },
     {
-        "link": "http://www.narrabri.atnf.csiro.au/",
         "name": "ATNF - Australia Telescope Compact Array",
-        "short_name": "(ATCA, Narrabri)",
-        "description": {}
+        "short_name": "(ATCA, Narrabri)"
     },
     {
-        "link": "http://www.atnf.csiro.au/",
         "name": "ATNF - Australia Telescope National Facility",
-        "short_name": "(CSIRO)",
-        "description": {}
+        "short_name": "(CSIRO)"
     },
     {
-        "link": "http://www.narrabri.atnf.csiro.au/mopra",
         "name": "ATNF - Mopra Observatory",
-        "short_name": "(ATNF Mopra)",
-        "description": {}
+        "short_name": "(ATNF Mopra)"
     },
     {
-        "link": "http://www.parkes.atnf.csiro.au/",
         "name": "ATNF - Parkes Observatory",
-        "short_name": "(ATNF Parkes)",
-        "description": {}
+        "short_name": "(ATNF Parkes)"
     },
     {
-        "link": "http://sd-www.jhuapl.edu/AMPTE/ampte_mission.html",
         "name": "Active Magnetospheric Particle Tracer Explorers",
-        "short_name": "(AMPTE)",
-        "description": {}
+        "short_name": "(AMPTE)"
     },
     {
-        "link": "http://adcam.pha.jhu.edu/",
         "name": "Advanced Camera for Surveys",
-        "short_name": "(ACS)",
-        "description": {}
+        "short_name": "(ACS)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/afoe/",
         "name": "Advanced Fiber-Optic Echelle",
-        "short_name": "(AFOE)",
-        "description": {}
+        "short_name": "(AFOE)"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/asca/asca2.html",
         "name": "Advanced Satellite for Cosmology and Astrophysics",
-        "short_name": "(ASCA, ex-Astro-D)",
-        "description": {}
+        "short_name": "(ASCA, ex-Astro-D)"
     },
     {
-        "link": "http://www.maui.afmc.af.mil/",
         "name": "Air Force Maui Optical Station",
-        "short_name": "(AMOS)",
-        "description": {}
+        "short_name": "(AMOS)"
     },
     {
-        "link": "http://www.aao.gov.au/",
         "name": "Anglo-Australian Observatory",
-        "short_name": "(AAO)",
-        "description": {}
+        "short_name": "(AAO)"
     },
     {
-        "link": "http://amanda.berkeley.edu/",
         "name": "Antarctic Muon and Neutrino Detector Array",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://cfa-www.harvard.edu/~adair/AST_RO/",
         "name": "Antarctic Submillimeter Telescope and Remote Observatory",
-        "short_name": "(AST/RO)",
-        "description": {}
+        "short_name": "(AST/RO)"
     },
     {
-        "link": "http://www.apo.nmsu.edu/",
         "name": "Apache Point Observatory",
-        "short_name": "(APO)",
-        "description": {}
+        "short_name": "(APO)"
     },
     {
-        "link": "http://www.naic.edu/",
         "name": "Arecibo Observatory - National Astronomy and Ionosphere Center",
-        "short_name": "(NAIC)",
-        "description": {}
+        "short_name": "(NAIC)"
     },
     {
-        "link": "http://www.astro.noa.gr/ASC_2.3m/ngt_main.htm",
         "name": "Aristarchos 2.3m Telescope Project",
-        "short_name": "(The New Greek Telescope)",
-        "description": {}
+        "short_name": "(The New Greek Telescope)"
     },
     {
-        "link": "http://aro.as.arizona.edu/",
         "name": "Arizona Radio Observatory",
-        "short_name": "(ARO)",
-        "description": {}
+        "short_name": "(ARO)"
     },
     {
-        "link": "http://alexis-www.lanl.gov/",
         "name": "Array of Low Energy X-ray Imaging Sensors",
-        "short_name": "(ALEXIS)",
-        "description": {}
+        "short_name": "(ALEXIS)"
     },
     {
-        "link": "http://aries.ernet.in/",
         "name": "Aryabhatta Research Institute of observational-sciencES",
-        "short_name": "(ARIES)",
-        "description": {}
+        "short_name": "(ARIES)"
     },
     {
-        "link": "http://www.pd.astro.it/asiago",
         "name": "Asiago Observatory",
-        "short_name": "(Padova)",
-        "description": {}
+        "short_name": "(Padova)"
     },
     {
-        "link": "http://www.eso.org/projects/alma/",
         "name": "Atacama Large Millimeter Array - ESO Web site",
-        "short_name": "(ALMA)",
-        "description": {}
+        "short_name": "(ALMA)"
     },
     {
-        "link": "http://www.mma.nrao.edu/",
         "name": "Atacama Large Millimeter Array - NRAO Web site",
-        "short_name": "(ALMA)",
-        "description": {}
+        "short_name": "(ALMA)"
     },
     {
-        "link": "http://www.phys.unsw.edu.au/~mcba/apt.html",
         "name": "Automated Patrol Telescope",
-        "short_name": "(APT)",
-        "description": {}
+        "short_name": "(APT)"
     },
     {
-        "link": "http://www.astro.bas.bg/~aobel/",
-        "name": "Belogradchik Astronomical observatory",
-        "description": {}
+        "name": "Belogradchik Astronomical observatory"
     },
     {
-        "link": "http://www.asdc.asi.it/bepposax/",
         "name": "BeppoSAX Mission",
-        "short_name": "(SAX)",
-        "description": {}
+        "short_name": "(SAX)"
     },
     {
-        "link": "http://bima.astro.umd.edu/",
         "name": "Berkeley Illinois Maryland Association",
-        "short_name": "(BIMA - Hat Creek)",
-        "description": {}
+        "short_name": "(BIMA - Hat Creek)"
     },
     {
-        "link": "http://bigorre.bagn.obs-mip.fr/tbl/indexeh.htm",
         "name": "Bernard Lyot Telescope",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.bbso.njit.edu/",
         "name": "Big Bear Solar Observatory",
-        "short_name": "(BBSO)",
-        "description": {}
+        "short_name": "(BBSO)"
     },
     {
-        "link": "http://www.bigear.org/",
         "name": "Big Ear Radio Observatory Memorial website",
-        "short_name": "(Ohio State University)",
-        "description": {}
+        "short_name": "(Ohio State University)"
     },
     {
-        "link": "http://bison.ph.bham.ac.uk/",
         "name": "Birmingham Solar Oscillations Network",
-        "short_name": "(BiSON)",
-        "description": {}
+        "short_name": "(BiSON)"
     },
     {
-        "link": "http://www.uovs.ac.za/container.php?faculties_id=04&dept_id=NFSK&code=DEPT_DOC&document_id=1349?PHPSESSID=b52d7551b81bc5f170ee6156d436ea9c",
         "name": "Boyden Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.telescope.org/",
         "name": "Bradford Robotic Telescope",
-        "short_name": "(University of Bradford)",
-        "description": {}
+        "short_name": "(University of Bradford)"
     },
     {
-        "link": "http://www.lna.br/Welcom_e.html",
         "name": "Brazil National Laboratory for Astrophysics",
-        "short_name": "(LNA)",
-        "description": {}
+        "short_name": "(LNA)"
     },
     {
-        "link": "http://www.on.br/",
         "name": "Brazil National Observatory",
-        "short_name": "(ON)",
-        "description": {}
+        "short_name": "(ON)"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/bbxrt/bbxrt.html",
         "name": "Broad Band X-ray Telescope",
-        "short_name": "(BBXRT. GSFC. NASA)",
-        "description": {}
+        "short_name": "(BBXRT. GSFC. NASA)"
     },
     {
-        "link": "http://cosmos.astro.uson.mx/webtv/webtv.htm",
         "name": "Broadcast from Carl Sagan Observatory",
-        "short_name": "(ASTRO-USON WebTV)",
-        "description": {}
+        "short_name": "(ASTRO-USON WebTV)"
     },
     {
-        "link": "http://www.eg.bucknell.edu/physics/astronomy/observatory/",
-        "name": "Bucknell University Observatory",
-        "description": {}
+        "name": "Bucknell University Observatory"
     },
     {
-        "link": "http://www.astro.bas.bg/rozhen.html",
         "name": "Bulgaria National Astronomical Observatory \"Rozhen\"",
-        "short_name": "(NAO-Rozhen)",
-        "description": {}
+        "short_name": "(NAO-Rozhen)"
     },
     {
-        "link": "http://www.aras.am/bao.html",
         "name": "Byurakan Astrophysical Observatory",
-        "short_name": "(Armenia)",
-        "description": {}
+        "short_name": "(Armenia)"
     },
     {
-        "link": "http://choruswww.cern.ch/Public/welcome1.html",
         "name": "CERN Hybrid Oscillation Research apparatUS",
-        "short_name": "(CHORUS)",
-        "description": {}
+        "short_name": "(CHORUS)"
     },
     {
-        "link": "http://www.lam.oamp.fr/projets/corot/",
         "name": "COnvection ROtation and planetary Transits - Asteroseismology and Search for Exoplanets",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://lambda.gsfc.nasa.gov/product/cobe/",
         "name": "COsmic Background Explorer",
-        "short_name": "(COBE)",
-        "description": {}
+        "short_name": "(COBE)"
     },
     {
-        "link": "http://www.ca.astro.iT/",
         "name": "Cagliari Astronomical Observatory",
-        "short_name": "(International Latitude Station)",
-        "description": {}
+        "short_name": "(International Latitude Station)"
     },
     {
-        "link": "http://www.caha.es",
         "name": "Calar Alto Astronomical Observatory",
-        "short_name": "(Calar Alto Astronomical Observatory)",
-        "description": {}
+        "short_name": "(Calar Alto Astronomical Observatory)"
     },
     {
-        "link": "http://www.submm.caltech.edu/cso/",
         "name": "Caltech Submillimeter Observatory",
-        "short_name": "(CSO)",
-        "description": {}
+        "short_name": "(CSO)"
     },
     {
-        "link": "http://www.mrao.cam.ac.uk/telescopes/clfst/",
-        "name": "Cambridge LFST",
-        "description": {}
+        "name": "Cambridge LFST"
     },
     {
-        "link": "http://www.mrao.cam.ac.uk/telescopes/coast/",
         "name": "Cambridge Optical Aperture Synthesis Telescope",
-        "short_name": "(COAST)",
-        "description": {}
+        "short_name": "(COAST)"
     },
     {
-        "link": "http://www.mrao.cam.ac.uk/telescopes/ryle/",
-        "name": "Cambridge Ryle Telescope",
-        "description": {}
+        "name": "Cambridge Ryle Telescope"
     },
     {
-        "link": "http://www.cfht.hawaii.edu/",
         "name": "Canada France Hawaii Telescope",
-        "short_name": "(CFHT)",
-        "description": {}
+        "short_name": "(CFHT)"
     },
     {
-        "link": "ftp://ftp.cfht.hawaii.edu/pub/",
         "name": "Canada France Hawaii Telescope (ftp)",
-        "short_name": "(CFHT)",
-        "description": {}
+        "short_name": "(CFHT)"
     },
     {
-        "link": "http://www.castor2.ca",
         "name": "Canadian Satellite Tracking and Orbit Research",
-        "short_name": "(CASTOR Satellite Tracking Project)",
-        "description": {}
+        "short_name": "(CASTOR Satellite Tracking Project)"
     },
     {
-        "link": "http://www.phys.utas.edu.au/physics/opttastr/canopus.htm",
         "name": "Canopus 1 m telescope",
-        "short_name": "(Tasmania)",
-        "description": {}
+        "short_name": "(Tasmania)"
     },
     {
-        "link": "http://www.ast.cam.ac.uk/~dwe/SRF/camc.html",
         "name": "Carlsberg Meridian Telescope",
-        "short_name": "(CMT)",
-        "description": {}
+        "short_name": "(CMT)"
     },
     {
-        "link": "http://www.ociw.edu/",
         "name": "Carnegie Institution Observatories",
-        "short_name": "(OCIW)",
-        "description": {}
+        "short_name": "(OCIW)"
     },
     {
-        "link": "http://www.carterobservatory.org",
         "name": "Carter Observatory",
-        "short_name": "(New Zealand)",
-        "description": {}
+        "short_name": "(New Zealand)"
     },
     {
-        "link": "http://astrwww.astr.cwru.edu/nassau/nassau.html",
         "name": "Case Western Reserve University - Nassau Station Robotic Telescope",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://saturn.jpl.nasa.gov/home/",
         "name": "Cassini-Huygens Mission to Saturn & Titan",
-        "short_name": "(Cassini)",
-        "description": {}
+        "short_name": "(Cassini)"
     },
     {
-        "link": "http://woac.ct.astro.it/index_en.html",
         "name": "Catania Astrophysical Observatory",
-        "short_name": "(INAF-OACt)",
-        "description": {}
+        "short_name": "(INAF-OACt)"
     },
     {
-        "link": "http://www-ra.phys.utas.edu.au/physics_ceduna.html",
         "name": "Ceduna Radio Observatory",
-        "short_name": "(South Australia)",
-        "description": {}
+        "short_name": "(South Australia)"
     },
     {
-        "link": "http://astro.uchicago.edu/cara/",
         "name": "Center for Astrophysical Research in Antarctica",
-        "short_name": "(CARA)",
-        "description": {}
+        "short_name": "(CARA)"
     },
     {
-        "link": "http://www.cea.berkeley.edu/",
         "name": "Center for Extreme Ultraviolet Astrophysics",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.chara.gsu.edu/CHARA/",
         "name": "Center for High Angular Resolution Astronomy",
-        "short_name": "(CHARA Array)",
-        "description": {}
+        "short_name": "(CHARA Array)"
     },
     {
-        "link": "http://www.ctio.noao.edu/ctio.html",
         "name": "Cerro Tololo Interamerican Observatory",
-        "short_name": "(CTIO)",
-        "description": {}
+        "short_name": "(CTIO)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/cfa/mmw/",
         "name": "CfA 1.2 m Millimeter-Wave Telescope",
-        "short_name": "(CfA_mini)",
-        "description": {}
+        "short_name": "(CfA_mini)"
     },
     {
-        "link": "http://chandra.harvard.edu/",
         "name": "Chandra X-ray Observatory",
-        "short_name": "(AXAF)",
-        "description": {}
+        "short_name": "(AXAF)"
     },
     {
-        "link": "http://lpnp90.in2p3.fr/~cat/",
         "name": "Cherenkov Array at Themis",
-        "short_name": "(CAT)",
-        "description": {}
+        "short_name": "(CAT)"
     },
     {
-        "link": "http://www.bao.ac.cn/english/home.asp",
         "name": "China National Astronomical Observatories",
-        "short_name": "(NAOC)",
-        "description": {}
+        "short_name": "(NAOC)"
     },
     {
-        "link": "http://astrowww.phys.uvic.ca/climenhaga/obs/telescope.html",
         "name": "Climenhaga Observatory",
-        "short_name": "(Canada)",
-        "description": {}
+        "short_name": "(Canada)"
     },
     {
-        "link": "http://icrhp9.icrr.u-tokyo.ac.jp/",
         "name": "Collaboration between Australia and Nippon for a Gamma Ray Observatory in the Outback",
-        "short_name": "(CANGAROO)",
-        "description": {}
+        "short_name": "(CANGAROO)"
     },
     {
-        "link": "http://www.mmarray.org/",
         "name": "Combined Array for Research in Millimeter-wave Astronomy Project",
-        "short_name": "(CARMA)",
-        "description": {}
+        "short_name": "(CARMA)"
     },
     {
-        "link": "http://constellation.gsfc.nasa.gov/",
-        "name": "Constellation-X",
-        "description": {}
+        "name": "Constellation-X"
     },
     {
-        "link": "http://www.mrao.cam.ac.uk/telescopes/cat/",
         "name": "Cosmic Anisotropy Telescope",
-        "short_name": "(CAT)",
-        "description": {}
+        "short_name": "(CAT)"
     },
     {
-        "link": "http://www.oa.uj.edu.pl/sol/",
-        "name": "Cracow - Solar radio emission in dm wavelength",
-        "description": {}
+        "name": "Cracow - Solar radio emission in dm wavelength"
     },
     {
-        "link": "http://www.crao.crimea.ua/",
         "name": "Crimean Astrophysical Observatory",
-        "short_name": "(CrAO)",
-        "description": {}
+        "short_name": "(CrAO)"
     },
     {
-        "link": "http://www.astro.ku.dk/~michael/dantel.html",
-        "name": "Danish telescopes around the world",
-        "description": {}
+        "name": "Danish telescopes around the world"
     },
     {
-        "link": "http://www.dmtelescope.org/",
         "name": "Dark Matter Telescope Project",
-        "short_name": "(DMT / LSST)",
-        "description": {}
+        "short_name": "(DMT / LSST)"
     },
     {
-        "link": "http://www.astro.utoronto.ca/DDO/",
         "name": "David Dunlap Observatory, University of Toronto",
-        "short_name": "(DDO)",
-        "description": {}
+        "short_name": "(DDO)"
     },
     {
-        "link": "http://deepspace.jpl.nasa.gov/dsn/index.html",
         "name": "Deep Space Network - Goldstone Deep Space Station",
-        "short_name": "(DSN)",
-        "description": {}
+        "short_name": "(DSN)"
     },
     {
-        "link": "http://www.du.edu/~rstencel/#obs",
         "name": "Denver Univ. Astronomy",
-        "short_name": "(DU)",
-        "description": {}
+        "short_name": "(DU)"
     },
     {
-        "link": "http://www.hia-iha.nrc-cnrc.gc.ca/dao/index_e.html",
         "name": "Dominion Astrophysical Observatory",
-        "short_name": "(DAO)",
-        "description": {}
+        "short_name": "(DAO)"
     },
     {
-        "link": "http://dot.astro.uu.nl/",
         "name": "Dutch Open Telescope",
-        "short_name": "(DOT)",
-        "description": {}
+        "short_name": "(DOT)"
     },
     {
-        "link": "http://www.vilspa.esa.es/",
         "name": "ESA - VILlafranca Satellite Tracking Station, SPAin",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/exosat/exosat.html",
         "name": "ESA's X-ray Observatory",
-        "short_name": "(EXOSAT at GSFC - NASA)",
-        "description": {}
+        "short_name": "(EXOSAT at GSFC - NASA)"
     },
     {
-        "link": "http://www.euso-mission.org/",
         "name": "EUSO - Extreme Universe Space Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.roe.ac.uk/",
         "name": "Edinburgh Royal Observatory",
-        "short_name": "(ROE)",
-        "description": {}
+        "short_name": "(ROE)"
     },
     {
-        "link": "http://www.mpifr-bonn.mpg.de/div/effelsberg/index_e.html",
         "name": "Effelsberg Radio Telescope",
-        "short_name": "(MPIfR)",
-        "description": {}
+        "short_name": "(MPIfR)"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/einstein/heao2.html",
         "name": "Einstein Observatory",
-        "short_name": "(HEAO-2)",
-        "description": {}
+        "short_name": "(HEAO-2)"
     },
     {
-        "link": "http://www.casleo.gov.ar/indexingles.htm",
         "name": "El Leoncito Astronomical Complex",
-        "short_name": "(CASLEO)",
-        "description": {}
+        "short_name": "(CASLEO)"
     },
     {
-        "link": "http://www.iac.es/eno/",
         "name": "European Northern Observatory",
-        "short_name": "(ENO)",
-        "description": {}
+        "short_name": "(ENO)"
     },
     {
-        "link": "http://www.eso.org/",
         "name": "European Southern Observatory",
-        "short_name": "(ESO)",
-        "description": {}
+        "short_name": "(ESO)"
     },
     {
-        "link": "http://www.evlbi.org/",
         "name": "European VLBI Network",
-        "short_name": "(EVN)",
-        "description": {}
+        "short_name": "(EVN)"
     },
     {
-        "link": "http://www.rssd.esa.int/Exosat",
         "name": "European X-ray Observatory Satellite",
-        "short_name": "(EXOSAT at ESTEC, ESA)",
-        "description": {}
+        "short_name": "(EXOSAT at ESTEC, ESA)"
     },
     {
-        "link": "http://origins.jpl.nasa.gov/library/exnps/ExNPS.html",
         "name": "Exploration of Neighboring Planetary Systems",
-        "short_name": "(ExNPS)",
-        "description": {}
+        "short_name": "(ExNPS)"
     },
     {
-        "link": "http://www.eso.org/instruments/fors1/",
         "name": "FOcal Reducer/low dispersion Spectrograph",
-        "short_name": "(FORS, ESO VLT)",
-        "description": {}
+        "short_name": "(FORS, ESO VLT)"
     },
     {
-        "link": "http://www.iap.fr/Fuse/",
         "name": "Far Ultraviolet Spectroscopic Explorer",
-        "short_name": "(FUSE French site)",
-        "description": {}
+        "short_name": "(FUSE French site)"
     },
     {
-        "link": "http://fuse.pha.jhu.edu/",
         "name": "Far Ultraviolet Spectroscopic Explorer",
-        "short_name": "(FUSE)",
-        "description": {}
+        "short_name": "(FUSE)"
     },
     {
-        "link": "http://sunland.gsfc.nasa.gov/smex/fast/",
         "name": "Fast Auroral SnapshoT explorer",
-        "short_name": "(FAST)",
-        "description": {}
+        "short_name": "(FAST)"
     },
     {
-        "link": "http://www.eso.org/instruments/flames/",
         "name": "Fibre Large Area Multi-Element Spectrograph",
-        "short_name": "(FLAMES, ESO VLT)",
-        "description": {}
+        "short_name": "(FLAMES, ESO VLT)"
     },
     {
-        "link": "http://donald.phast.umass.edu/~fcrao/",
         "name": "Five College Radio Astronomy Observatory",
-        "short_name": "(FCRAO)",
-        "description": {}
+        "short_name": "(FCRAO)"
     },
     {
-        "link": "http://wise-obs.tau.ac.il/",
         "name": "Florence and George Wise Observatory",
-        "short_name": "(Wise)",
-        "description": {}
+        "short_name": "(Wise)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/flwo/index.html",
         "name": "Fred Lawrence Whipple Observatory",
-        "short_name": "(FLWO)",
-        "description": {}
+        "short_name": "(FLWO)"
     },
     {
-        "link": "http://www.ovsa.njit.edu/fasr/",
         "name": "Frequency-Agile Solar Radiotelescope",
-        "short_name": "(FASR)",
-        "description": {}
+        "short_name": "(FASR)"
     },
     {
-        "link": "http://aa.usno.navy.mil/FAME/",
         "name": "Full-sky Astrometric Mapping Explorer",
-        "short_name": "(FAME)",
-        "description": {}
+        "short_name": "(FAME)"
     },
     {
-        "link": "http://www.galex.caltech.edu/",
         "name": "GALaxy Evolution EXplorer",
-        "short_name": "(GALEX)",
-        "description": {}
+        "short_name": "(GALEX)"
     },
     {
-        "link": "http://www-glast.stanford.edu/",
         "name": "Gamma-ray Large Area Space Telescope",
-        "short_name": "(GLAST)",
-        "description": {}
+        "short_name": "(GLAST)"
     },
     {
-        "link": "http://gemini.physics.ox.ac.uk/",
         "name": "Gemini - U.K. Support Group",
-        "short_name": "(UKGSG)",
-        "description": {}
+        "short_name": "(UKGSG)"
     },
     {
-        "link": "http://star-www.dur.ac.uk/~jra/gmos.html",
         "name": "Gemini Multiobject Spectrographs",
-        "short_name": "(GMOS)",
-        "description": {}
+        "short_name": "(GMOS)"
     },
     {
-        "link": "http://www.gemini.edu/",
         "name": "Gemini Observatory",
-        "short_name": "(Two 8 m telescopes)",
-        "description": {}
+        "short_name": "(Two 8 m telescopes)"
     },
     {
-        "link": "http://www.ari.uni-heidelberg.de/diva/",
         "name": "German Interferometer for Multi-channel Photometry and Astrometry",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.ncra.tifr.res.in/ncra_hpage/gmrt/gmrt.html",
         "name": "Giant Metrewave Radio Telescope",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/ginga/ginga.html",
         "name": "Ginga",
-        "short_name": "(ex Astro-C)",
-        "description": {}
+        "short_name": "(ex Astro-C)"
     },
     {
-        "link": "http://www.rssd.esa.int/gaia/",
         "name": "Global Astrometric Interferometer for Astrophysics",
-        "short_name": "(GAIA)",
-        "description": {}
+        "short_name": "(GAIA)"
     },
     {
-        "link": "http://gong.nso.edu/",
         "name": "Global Oscillation Network Group",
-        "short_name": "(GONG)",
-        "description": {}
+        "short_name": "(GONG)"
     },
     {
-        "link": "http://www.arcetri.astro.it/irlab/tirgo/",
         "name": "Gornergrat Infrared Telescope",
-        "short_name": "(TIRGO)",
-        "description": {}
+        "short_name": "(TIRGO)"
     },
     {
-        "link": "http://www.gtc.iac.es/",
         "name": "Gran Telescopio Canarias Project",
-        "short_name": "(GTC)",
-        "description": {}
+        "short_name": "(GTC)"
     },
     {
-        "link": "http://www.gb.nrao.edu/",
-        "name": "Green Bank",
-        "description": {}
+        "name": "Green Bank"
     },
     {
-        "link": "http://www.groupeastronomiespa.be",
         "name": "Groupe Astronomie de Spa",
-        "short_name": "(GAS)",
-        "description": {}
+        "short_name": "(GAS)"
     },
     {
-        "link": "http://www.inaoep.mx/~astrofi/cananea/",
         "name": "Guillermo Haro Observatory",
-        "short_name": "(Cananea, Mexico)",
-        "description": {}
+        "short_name": "(Cananea, Mexico)"
     },
     {
-        "link": "http://www.ifa.hawaii.edu/haleakala/",
         "name": "Haleakala Observatories",
-        "short_name": "(Hawaii)",
-        "description": {}
+        "short_name": "(Hawaii)"
     },
     {
-        "link": "http://www.chara.gsu.edu/HLCO/",
         "name": "Hard Labor Creek Observatory",
-        "short_name": "(HLCO)",
-        "description": {}
+        "short_name": "(HLCO)"
     },
     {
-        "link": "http://www.hartrao.ac.za/",
         "name": "Hartebeesthoek Radio Astronomy Observatory",
-        "short_name": "(HartRAO)",
-        "description": {}
+        "short_name": "(HartRAO)"
     },
     {
-        "link": "http://astron.berkeley.edu/~plambeck/technical.html",
         "name": "Hat Creek Radio Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.haystack.mit.edu/",
-        "name": "Haystack Observatory",
-        "description": {}
+        "name": "Haystack Observatory"
     },
     {
-        "link": "http://www.rssd.esa.int/herschel",
         "name": "Herschel Science Centre",
-        "short_name": "(ex-FIRST)",
-        "description": {}
+        "short_name": "(ex-FIRST)"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/corp/observatories.html",
         "name": "High Energy Astrophysics Observatories",
-        "short_name": "(HEASARC. GSFC. NASA)",
-        "description": {}
+        "short_name": "(HEASARC. GSFC. NASA)"
     },
     {
-        "link": "http://www.mpi-hd.mpg.de/hfm/HESS/HESS.html",
         "name": "High Energy Stereoscopic System Project",
-        "short_name": "(HESS)",
-        "description": {}
+        "short_name": "(HESS)"
     },
     {
-        "link": "http://space.mit.edu/HETE/",
         "name": "High Energy Transient Explorer",
-        "short_name": "(HETE-2)",
-        "description": {}
+        "short_name": "(HETE-2)"
     },
     {
-        "link": "http://mamacass.ucsd.edu/hexte/hexte.html",
         "name": "High Energy X-ray Timing Experiment",
-        "short_name": "(HEXTE)",
-        "description": {}
+        "short_name": "(HEXTE)"
     },
     {
-        "link": "http://www.physics.adelaide.edu.au/astrophysics/HiRes.html",
         "name": "High Resolution Fly's Eye Cosmic Ray Detector",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.astro.psu.edu/het/",
         "name": "Hobby Eberly Telescope",
-        "short_name": "(HET)",
-        "description": {}
+        "short_name": "(HET)"
     },
     {
-        "link": "http://www.stsci.edu/hst/",
         "name": "Hubble Space Telescope",
-        "short_name": "(HST)",
-        "description": {}
+        "short_name": "(HST)"
     },
     {
-        "link": "http://www.iac.es/gabinete/orm/orm1.htm",
-        "name": "IAC / Observatorio Roque de los Muchachos",
-        "description": {}
+        "name": "IAC / Observatorio Roque de los Muchachos"
     },
     {
-        "link": "http://www.iac.es/gabinete/oteide/ot1.html",
-        "name": "IAC / Observatorio del Teide",
-        "description": {}
+        "name": "IAC / Observatorio del Teide"
     },
     {
-        "link": "http://www.iki.rssi.ru/interball/",
-        "name": "INTERBALL",
-        "description": {}
+        "name": "INTERBALL"
     },
     {
-        "link": "http://sci.esa.int/science-e/www/area/index.cfm?fareaid=21",
         "name": "INTErnational Gamma-Ray Astrophysics Laboratory",
-        "short_name": "(INTEGRAL)",
-        "description": {}
+        "short_name": "(INTEGRAL)"
     },
     {
-        "link": "http://www.ips.oz.au/",
         "name": "IPS Radio & Space Services",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.iiap.res.in/iao/iao.html",
         "name": "Indian Astronomical Observatory Hanle",
-        "short_name": "(IAO, the world's highest observatory for optical and infrared astronomy)",
-        "description": {}
+        "short_name": "(IAO, the world's highest observatory for optical and infrared astronomy)"
     },
     {
-        "link": "http://sci.esa.int/science-e/www/area/index.cfm?fareaid=28",
         "name": "Infra-Red Space Interferometer DARWIN",
-        "short_name": "(IRSI / DARWIN)",
-        "description": {}
+        "short_name": "(IRSI / DARWIN)"
     },
     {
-        "link": "http://irtfweb.ifa.hawaii.edu",
         "name": "Infra-Red Telescope Facility",
-        "short_name": "(IRTF)",
-        "description": {}
+        "short_name": "(IRTF)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/cfa/oir/Research/irac/firstpage.html",
         "name": "InfraRed Array Camera for Spitzer Space telescope",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://isc.astro.cornell.edu/",
         "name": "InfraRed Spectrograph on Spitzer Space Telescope",
-        "short_name": "(IRS)",
-        "description": {}
+        "short_name": "(IRS)"
     },
     {
-        "link": "http://www.iso.vilspa.esa.es/",
         "name": "Infrared Space Observatory",
-        "short_name": "(ISO)",
-        "description": {}
+        "short_name": "(ISO)"
     },
     {
-        "link": "http://www.ipac.caltech.edu/iso/",
         "name": "Infrared Space Observatory U.S. Support Center",
-        "short_name": "(ISO)",
-        "description": {}
+        "short_name": "(ISO)"
     },
     {
-        "link": "http://www.eso.org/instruments/isaac/",
         "name": "Infrared Spectrometer And Array Camera",
-        "short_name": "(ISAAC, ESO VLT)",
-        "description": {}
+        "short_name": "(ISAAC, ESO VLT)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/cfa/oir/IOTA/",
         "name": "Infrared and Optical Telescope Array",
-        "short_name": "(IOTA)",
-        "description": {}
+        "short_name": "(IOTA)"
     },
     {
-        "link": "http://www.iram.fr",
         "name": "Institut de Radio Astronomie Millim\u00e9trique",
-        "short_name": "(IRAM)",
-        "description": {}
+        "short_name": "(IRAM)"
     },
     {
-        "link": "http://www.iar.unlp.edu.ar/",
         "name": "Instituto Argentino de Radioastronomia",
-        "short_name": "(IAR)",
-        "description": {}
+        "short_name": "(IAR)"
     },
     {
-        "link": "http://www.inaoep.mx/~astrofi/",
         "name": "Instituto Nacional de Astrof\u00edsica, \u00d3ptica y Electr\u00f3nica. Astrophysics Department",
-        "short_name": "(INAOE, Mexico)",
-        "description": {}
+        "short_name": "(INAOE, Mexico)"
     },
     {
-        "link": "http://ice.jpl.nasa.gov/",
         "name": "Interferometry Center of Excellence",
-        "short_name": "(ICE, JPL)",
-        "description": {}
+        "short_name": "(ICE, JPL)"
     },
     {
-        "link": "http://www.atnf.csiro.au/SKA/intmit/",
-        "name": "International Interference Mitigation (for Radio Astronomy)",
-        "description": {}
+        "name": "International Interference Mitigation (for Radio Astronomy)"
     },
     {
-        "link": "http://vela.astro.ulg.ac.be/themes/telins/lmt/",
         "name": "International Liquid Mirror Telescope Project",
-        "short_name": "(ILMT)",
-        "description": {}
+        "short_name": "(ILMT)"
     },
     {
-        "link": "http://phobos.physics.uiowa.edu/",
-        "name": "Iowa Robotic Telescopes Facilities",
-        "description": {}
+        "name": "Iowa Robotic Telescopes Facilities"
     },
     {
-        "link": "http://www.ing.iac.es/",
         "name": "Isaac Newton Group - La Palma",
-        "short_name": "(ING)",
-        "description": {}
+        "short_name": "(ING)"
     },
     {
-        "link": "http://www.jwst.nasa.gov/News/lists/",
         "name": "JWST ListServs",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.jach.Hawaii.edu/JCMT/",
         "name": "James Clerk Maxwell Telescope",
-        "short_name": "(JCMT)",
-        "description": {}
+        "short_name": "(JCMT)"
     },
     {
-        "link": "http://www.jwst.nasa.gov/",
         "name": "James Webb Space Telescope",
-        "short_name": "(JWST, ex-NGST)",
-        "description": {}
+        "short_name": "(JWST, ex-NGST)"
     },
     {
-        "link": "http://jicamarca.ece.cornell.edu/",
         "name": "Jicamarca Radio Observatory",
-        "short_name": "(Peru)",
-        "description": {}
+        "short_name": "(Peru)"
     },
     {
-        "link": "http://www.jb.man.ac.uk/",
         "name": "Jodrell Bank Observatory",
-        "short_name": "(University of Manchester)",
-        "description": {}
+        "short_name": "(University of Manchester)"
     },
     {
-        "link": "http://www.jach.hawaii.edu/",
         "name": "Joint Astronomy Centre",
-        "short_name": "(Hilo, Hawaii)",
-        "description": {}
+        "short_name": "(Hilo, Hawaii)"
     },
     {
-        "link": "http://www.jive.nl",
         "name": "Joint Institute for VLBI in Europe / European VLBI Network",
-        "short_name": "(JIVE / EVN)",
-        "description": {}
+        "short_name": "(JIVE / EVN)"
     },
     {
-        "link": "http://klenot.klet.org/",
         "name": "KLEt Observatory Near Earth and Other unusual objects observations Team and Telescope",
-        "short_name": "(KLENOT)",
-        "description": {}
+        "short_name": "(KLENOT)"
     },
     {
-        "link": "http://www.solobskh.ac.at/",
-        "name": "Kanzelhoehe Solar Observatory",
-        "description": {}
+        "name": "Kanzelhoehe Solar Observatory"
     },
     {
-        "link": "http://www2.keck.hawaii.edu/",
         "name": "Keck Observatory",
-        "short_name": "(CalTech)",
-        "description": {}
+        "short_name": "(CalTech)"
     },
     {
-        "link": "http://www.kis.uni-freiburg.de/kiswwwe.html",
         "name": "Kiepenheuer-Institut f\u00fcr Sonnenphysik",
-        "short_name": "(KIS)",
-        "description": {}
+        "short_name": "(KIS)"
     },
     {
-        "link": "http://www.astro.indiana.edu/facilities/observatories/kirkwood/",
-        "name": "Kirkwood Observatory",
-        "description": {}
+        "name": "Kirkwood Observatory"
     },
     {
-        "link": "http://www.noao.edu/kpno/",
         "name": "Kitt Peak National Observatory",
-        "short_name": "(KPNO)",
-        "description": {}
+        "short_name": "(KPNO)"
     },
     {
-        "link": "http://www.iiap.res.in/kodai/kodai.html",
         "name": "Kodaikanal Solar Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.ph1.uni-koeln.de/gg/",
         "name": "Koelner Observatorium fuer SubMillimeter Astronomie",
-        "short_name": "(KOSMA)",
-        "description": {}
+        "short_name": "(KOSMA)"
     },
     {
-        "link": "http://www.astro.uu.se/history/Kvistaberg.html",
-        "name": "Kvistaberg Observatory",
-        "description": {}
+        "name": "Kvistaberg Observatory"
     },
     {
-        "link": "http://www.lamost.org/",
         "name": "LAMOST Sky Survey Project",
-        "short_name": "(LAMOST)",
-        "description": {}
+        "short_name": "(LAMOST)"
     },
     {
-        "link": "http://www.rssd.esa.int/SA-general/Research/Sax/index.html",
         "name": "LECS Instrument on BeppoSAX",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.ls.eso.org/",
-        "name": "La Silla - ESO Facilities",
-        "description": {}
+        "name": "La Silla - ESO Facilities"
     },
     {
-        "link": "http://webs.wichita.edu/lapo/",
         "name": "Lake Afton Public Observatory",
-        "short_name": "(Wichita State University)",
-        "description": {}
+        "short_name": "(Wichita State University)"
     },
     {
-        "link": "http://star.mpae.gwdg.de/indexe.shtml",
         "name": "Large Angle and Spectrographic Coronagraph for SOHO",
-        "short_name": "(LASCO/SOHO)",
-        "description": {}
+        "short_name": "(LASCO/SOHO)"
     },
     {
-        "link": "http://lbto.org/",
         "name": "Large Binocular Telescope Observatory",
-        "short_name": "(LBT)",
-        "description": {}
+        "short_name": "(LBT)"
     },
     {
-        "link": "http://www.lmtgtm.org/",
         "name": "Large Millimeter Telescope / Gran Telescopio Milim\u00e9trico",
-        "short_name": "(LMT)",
-        "description": {}
+        "short_name": "(LMT)"
     },
     {
-        "link": "http://www.nro.nao.ac.jp/~lmsa/",
         "name": "Large Millimeter and Submillimeter Array Project",
-        "short_name": "(LMSA: ALMA in Japan)",
-        "description": {}
+        "short_name": "(LMSA: ALMA in Japan)"
     },
     {
-        "link": "http://www.llnl.gov/urp/science/lgs_www/lgs.html",
         "name": "Laser Guide Star Adaptive Optics",
-        "short_name": "(LLNL)",
-        "description": {}
+        "short_name": "(LLNL)"
     },
     {
-        "link": "http://www.ligo.caltech.edu/",
         "name": "Laser Interferometer Gravitational-Wave Observatory",
-        "short_name": "(LIGO)",
-        "description": {}
+        "short_name": "(LIGO)"
     },
     {
-        "link": "http://mthamilton.ucolick.org/",
         "name": "Lick Observatory - University of California",
-        "short_name": "(UCOLICK)",
-        "description": {}
+        "short_name": "(UCOLICK)"
     },
     {
-        "link": "http://wood.phy.ulaval.ca/",
         "name": "Liquid Mirrors at Universit\u00e9 Laval",
-        "short_name": "(LM)",
-        "description": {}
+        "short_name": "(LM)"
     },
     {
-        "link": "http://cwis.livjm.ac.uk/astro/",
         "name": "Liverpool John Moores University, Astrophysics Research Institute",
-        "short_name": "(ARI, Liverpool JMU)",
-        "description": {}
+        "short_name": "(ARI, Liverpool JMU)"
     },
     {
-        "link": "http://www.bo.astro.it/loiano/",
-        "name": "Loiano Telescopes - Bologna",
-        "description": {}
+        "name": "Loiano Telescopes - Bologna"
     },
     {
-        "link": "http://www.sr.bham.ac.uk/instrument/legri.html",
         "name": "Low Energy Gamma-Ray Imager",
-        "short_name": "(LEGRI)",
-        "description": {}
+        "short_name": "(LEGRI)"
     },
     {
-        "link": "http://www.lofar.org/",
         "name": "Low Frequency Array",
-        "short_name": "(LOFAR)",
-        "description": {}
+        "short_name": "(LOFAR)"
     },
     {
-        "link": "http://www.astro.lsa.umich.edu/obs/mdm/",
         "name": "MDM Observatory",
-        "short_name": "(MDM Observatory)",
-        "description": {}
+        "short_name": "(MDM Observatory)"
     },
     {
-        "link": "http://monoptec.com",
         "name": "MONOPTEC's Fixed Shutter Dome",
-        "short_name": "(FSD)",
-        "description": {}
+        "short_name": "(FSD)"
     },
     {
-        "link": "http://nis-www.lanl.gov/nis-projects/moxe/",
         "name": "MOnitoring X-ray Experiment",
-        "short_name": "(MOXE)",
-        "description": {}
+        "short_name": "(MOXE)"
     },
     {
-        "link": "http://www.mpe.mpg.de/gamma/COMPTEL/",
         "name": "MPE Garching site for COMPTEL",
-        "short_name": "(onboard Compton Gamma-Ray Observatory)",
-        "description": {}
+        "short_name": "(onboard Compton Gamma-Ray Observatory)"
     },
     {
-        "link": "http://www.mro.nmt.edu/",
         "name": "Magdelena Ridge Observatory Project",
-        "short_name": "(MRO)",
-        "description": {}
+        "short_name": "(MRO)"
     },
     {
-        "link": "http://www.jpl.nasa.gov/magellan/",
-        "name": "Magellan Mission to Venus",
-        "description": {}
+        "name": "Magellan Mission to Venus"
     },
     {
-        "link": "http://www.ifa.hawaii.edu/mko/",
-        "name": "Mauna Kea Observatories",
-        "description": {}
+        "name": "Mauna Kea Observatories"
     },
     {
-        "link": "http://icarus.uom.ac.mu/",
         "name": "Mauritius Radio Telescope",
-        "short_name": "(MRT)",
-        "description": {}
+        "short_name": "(MRT)"
     },
     {
-        "link": "http://www.as.utexas.edu/mcdonald/mcdonald.html",
         "name": "McDonald Observatory",
-        "short_name": "(University of Texas, Austin)",
-        "description": {}
+        "short_name": "(University of Texas, Austin)"
     },
     {
-        "link": "http://www.solar.ifa.hawaii.edu/mees.html",
         "name": "Mees Solar Observatory",
-        "short_name": "(MSO, Hawaii)",
-        "description": {}
+        "short_name": "(MSO, Hawaii)"
     },
     {
-        "link": "http://kurp-www.hut.fi/",
-        "name": "Metsahovi Radio Research Station",
-        "description": {}
+        "name": "Metsahovi Radio Research Station"
     },
     {
-        "link": "http://www.roe.ac.uk/ukatc/projects/michelle/",
-        "name": "Michelle: A mid-infrared spectrometer and imager for the UKIRT and Gemini telescopes",
-        "description": {}
+        "name": "Michelle: A mid-infrared spectrometer and imager for the UKIRT and Gemini telescopes"
     },
     {
-        "link": "http://www.pa.msu.edu/soarmsu/",
         "name": "Michigan State Univ. SOuthern Astrophysical Research Telescope",
-        "short_name": "(SOAR)",
-        "description": {}
+        "short_name": "(SOAR)"
     },
     {
-        "link": "http://bustard.phys.nd.edu/GEST/",
         "name": "Microlensing Planet Finder Project",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.astro.ubc.ca/MOST/",
         "name": "Microvariability and Oscillations of STars",
-        "short_name": "(MOST)",
-        "description": {}
+        "short_name": "(MOST)"
     },
     {
-        "link": "http://cougar.jpl.nasa.gov/mirlin.html",
         "name": "Mid-InfraRed Large-well Imager",
-        "short_name": "(MIRLIN)",
-        "description": {}
+        "short_name": "(MIRLIN)"
     },
     {
-        "link": "http://www.ipac.caltech.edu/ipac/msx/msx.html",
         "name": "Midcourse Space Experiment",
-        "short_name": "(MSX)",
-        "description": {}
+        "short_name": "(MSX)"
     },
     {
-        "link": "http://hyperion.haystack.edu/homepage.html",
         "name": "Millstone Hill Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.msstate.edu/dept/physics/resources/observatory.php",
-        "name": "Mississippi State University - Howell Observatory",
-        "description": {}
+        "name": "Mississippi State University - Howell Observatory"
     },
     {
-        "link": "http://www.itpa.lt/mao/aboutmao.html",
         "name": "Moletai Astronomical Observatory",
-        "short_name": "(MAO)",
-        "description": {}
+        "short_name": "(MAO)"
     },
     {
-        "link": "http://www.physics.usyd.edu.au/astrop/most/",
         "name": "Molonglo Observatory Synthesis Telescope",
-        "short_name": "(MOST)",
-        "description": {}
+        "short_name": "(MOST)"
     },
     {
-        "link": "http://www.mira.org/",
         "name": "Monterey Institute for Research in Astronomy",
-        "short_name": "(MIRA)",
-        "description": {}
+        "short_name": "(MIRA)"
     },
     {
-        "link": "http://www.du.edu/~rstencel/MtEvans/",
         "name": "Mount Evans Meyer-Womble Observatory",
-        "short_name": "(Denver Univ.)",
-        "description": {}
+        "short_name": "(Denver Univ.)"
     },
     {
-        "link": "http://mgpc3.as.arizona.edu/",
         "name": "Mount Graham International Observatory",
-        "short_name": "(MGIO)",
-        "description": {}
+        "short_name": "(MGIO)"
     },
     {
-        "link": "http://mintaka.sdsu.edu/",
-        "name": "Mount Laguna Observatory",
-        "description": {}
+        "name": "Mount Laguna Observatory"
     },
     {
-        "link": "http://www-ra.phys.utas.edu.au/physics_mt_pleasant.html",
         "name": "Mount Pleasant Radio Observatory",
-        "short_name": "(Tasmania)",
-        "description": {}
+        "short_name": "(Tasmania)"
     },
     {
-        "link": "http://msowww.anu.edu.au/observing/",
         "name": "Mount Stromlo and Siding Spring Observatories - Observing facilities",
-        "short_name": "(MSSSO)",
-        "description": {}
+        "short_name": "(MSSSO)"
     },
     {
-        "link": "http://www.as.wsp.krakow.pl/",
         "name": "Mount Suhora Observatory",
-        "short_name": "(Cracow Pedagogical University)",
-        "description": {}
+        "short_name": "(Cracow Pedagogical University)"
     },
     {
-        "link": "http://www.mtwilson.edu/",
-        "name": "Mount Wilson Observatory",
-        "description": {}
+        "name": "Mount Wilson Observatory"
     },
     {
-        "link": "http://www.phys.canterbury.ac.nz/research/mt_john/index.shtml",
         "name": "Mt John (Canterbury) University Observatory",
-        "short_name": "(New Zealand)",
-        "description": {}
+        "short_name": "(New Zealand)"
     },
     {
-        "link": "http://www.jb.man.ac.uk/merlin/",
         "name": "Multi-Element Radio Linked Interferometer Network",
-        "short_name": "(MERLIN - Jodrell Bank)",
-        "description": {}
+        "short_name": "(MERLIN - Jodrell Bank)"
     },
     {
-        "link": "http://mips.as.arizona.edu/",
         "name": "Multiband Imaging Photometer for Spitzer Space Telescope",
-        "short_name": "(MIPS)",
-        "description": {}
+        "short_name": "(MIPS)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/mmt/",
         "name": "Multiple Mirror Telescope Observatory (1)",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.mmto.org/",
         "name": "Multiple Mirror Telescope Observatory (2)",
-        "short_name": "(MMTO)",
-        "description": {}
+        "short_name": "(MMTO)"
     },
     {
-        "link": "http://www.observatory.co.nz/",
-        "name": "Muriwai Beach Observatory NZ",
-        "description": {}
+        "name": "Muriwai Beach Observatory NZ"
     },
     {
-        "link": "http://www.nfo.edu/nfo.html",
-        "name": "NFO's Automatic Radio Linked Telescope",
-        "description": {}
+        "name": "NFO's Automatic Radio Linked Telescope"
     },
     {
-        "link": "http://www.obs-nancay.fr/",
         "name": "Nan\u00e7ay Radio Observatory",
-        "short_name": "(USN)",
-        "description": {}
+        "short_name": "(USN)"
     },
     {
-        "link": "http://www.eso.org/instruments/naos/",
         "name": "Nasmyth Adaptive Optics System - Near-Infrared Imager and Spectrograph",
-        "short_name": "(NAOS-CONICA -- NaCo -- ESO VLT)",
-        "description": {}
+        "short_name": "(NAOS-CONICA -- NaCo -- ESO VLT)"
     },
     {
-        "link": "http://www.oan.es/",
         "name": "National Astronomical Observatory of Spain",
-        "short_name": "(OAN)",
-        "description": {}
+        "short_name": "(OAN)"
     },
     {
-        "link": "http://www.ncra.tifr.res.in/",
         "name": "National Centre for Radio Astrophysics",
-        "short_name": "(NCRA)",
-        "description": {}
+        "short_name": "(NCRA)"
     },
     {
-        "link": "http://www.schoolsobservatory.org.uk/",
-        "name": "National Schools' Observatory",
-        "description": {}
+        "name": "National Schools' Observatory"
     },
     {
-        "link": "http://www.nso.edu/",
         "name": "National Solar Observatory",
-        "short_name": "(NSO, USA)",
-        "description": {}
+        "short_name": "(NSO, USA)"
     },
     {
-        "link": "http://www.nuro.nau.edu/",
         "name": "National Undergraduate Research Observatory",
-        "short_name": "(NURO)",
-        "description": {}
+        "short_name": "(NURO)"
     },
     {
-        "link": "http://nicmosis.as.arizona.edu:8000/NICMOS.html",
         "name": "Near Infrared Camera and Multi-Object Spectrometer",
-        "short_name": "(NICMOS)",
-        "description": {}
+        "short_name": "(NICMOS)"
     },
     {
-        "link": "http://neat.jpl.nasa.gov/",
         "name": "Near-Earth Asteroid Tracking",
-        "short_name": "(NEAT)",
-        "description": {}
+        "short_name": "(NEAT)"
     },
     {
-        "link": "http://brown.nord.nw.ru/nrttlab.htm",
         "name": "New Radio Telescope Technologies Laboratory",
-        "short_name": "(NRTT Lab)",
-        "description": {}
+        "short_name": "(NRTT Lab)"
     },
     {
-        "link": "http://www.nro.nao.ac.jp/index-e.html",
         "name": "Nobeyama Radio Observatory, NAOJ",
-        "short_name": "(NRO)",
-        "description": {}
+        "short_name": "(NRO)"
     },
     {
-        "link": "http://www.not.iac.es/",
         "name": "Nordic Optical Telescope",
-        "short_name": "(NOT, La Palma)",
-        "description": {}
+        "short_name": "(NOT, La Palma)"
     },
     {
-        "link": "http://www.roen.inpe.br/index_e.htm",
         "name": "Northeastern Space Radio Observatory - VLBI antenna",
-        "short_name": "(ROEN)",
-        "description": {}
+        "short_name": "(ROEN)"
     },
     {
-        "link": "http://www.ira.noto.cnr.it/",
         "name": "Noto VLBI Station",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://cfa-www.harvard.edu/cfa/oir/OakRidge/oak.ridge.html",
         "name": "Oak Ridge Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.obs-mip.fr/omp/",
         "name": "Observatoire Midi-Pyrenees",
-        "short_name": "(OMP)",
-        "description": {}
+        "short_name": "(OMP)"
     },
     {
-        "link": "http://www.obs-hp.fr/",
         "name": "Observatoire de Haute-Provence",
-        "short_name": "(OHP)",
-        "description": {}
+        "short_name": "(OHP)"
     },
     {
-        "link": "http://www.astro.umontreal.ca/omm/",
         "name": "Observatoire du Mont M\u00e9gantic",
-        "short_name": "(OMM)",
-        "description": {}
+        "short_name": "(OMM)"
     },
     {
-        "link": "http://www.fisica.ufmg.br/OAP/",
         "name": "Observatorio Astronomico da Serra da Piedade",
-        "short_name": "(OAP, Mainas Gerais, Brazil)",
-        "description": {}
+        "short_name": "(OAP, Mainas Gerais, Brazil)"
     },
     {
-        "link": "http://www.astrosen.unam.mx/",
-        "name": "Observatorio Astron\u00f3mico Nacional",
-        "description": {}
+        "name": "Observatorio Astron\u00f3mico Nacional"
     },
     {
-        "link": "http://www.astro.uni-bonn.de/~webstw/hl.html",
         "name": "Observatorium Hoher List",
-        "short_name": "(Bonn)",
-        "description": {}
+        "short_name": "(Bonn)"
     },
     {
-        "link": "http://www.astro.rug.nl/~omegacam/",
-        "name": "OmegaCAM",
-        "description": {}
+        "name": "OmegaCAM"
     },
     {
-        "link": "http://www.oso.chalmers.se/",
         "name": "Onsala Space Observatory",
-        "short_name": "(OSO)",
-        "description": {}
+        "short_name": "(OSO)"
     },
     {
-        "link": "http://www.gb.nrao.edu/ovlbi/OVLBI.html",
         "name": "Orbiting Very Long Baseline Interferometry",
-        "short_name": "(OVLBI)",
-        "description": {}
+        "short_name": "(OVLBI)"
     },
     {
-        "link": "http://www.eso.org/projects/owl/",
         "name": "OverWhelmingly Large Telescope Project",
-        "short_name": "(OWL)",
-        "description": {}
+        "short_name": "(OWL)"
     },
     {
-        "link": "http://www.ovro.caltech.edu/",
         "name": "Owens Valley Radio Observatory",
-        "short_name": "(OVRO)",
-        "description": {}
+        "short_name": "(OVRO)"
     },
     {
-        "link": "http://www.rssd.esa.int/index.php?project=PLANCK",
         "name": "PLANCK",
-        "short_name": "(ex-COBRAS/SAMBA)",
-        "description": {}
+        "short_name": "(ex-COBRAS/SAMBA)"
     },
     {
-        "link": "http://istp.gsfc.nasa.gov/istp/polar/",
-        "name": "POLAR Spacecraft",
-        "description": {}
+        "name": "POLAR Spacecraft"
     },
     {
-        "link": "http://astro.caltech.edu/observatories/palomar/",
         "name": "Palomar Observatory",
-        "short_name": "(CalTech)",
-        "description": {}
+        "short_name": "(CalTech)"
     },
     {
-        "link": "http://www.astro.caltech.edu/palomar/pti.html",
         "name": "Palomar Testbed Interferometer",
-        "short_name": "(PTI)",
-        "description": {}
+        "short_name": "(PTI)"
     },
     {
-        "link": "http://pan-starrs.ifa.hawaii.edu/public/",
         "name": "Panoramic Survey Telescope & Rapid Response System",
-        "short_name": "(Pan-STARRS)",
-        "description": {}
+        "short_name": "(Pan-STARRS)"
     },
     {
-        "link": "http://www.perkins-observatory.org/",
-        "name": "Perkins Observatory",
-        "description": {}
+        "name": "Perkins Observatory"
     },
     {
-        "link": "http://astro.fisica.unipg.it/",
         "name": "Perugia Univ. Astronomical Observatory & Astrophysics Section",
-        "short_name": "(OAUP)",
-        "description": {}
+        "short_name": "(OAUP)"
     },
     {
-        "link": "http://www.lna.br/opd/opd_e.html",
         "name": "Pico dos Dias Observatory",
-        "short_name": "(OPD)",
-        "description": {}
+        "short_name": "(OPD)"
     },
     {
-        "link": "http://pmo-sun.uoregon.edu/",
         "name": "Pine Mountain Observatory",
-        "short_name": "(University of Oregon)",
-        "description": {}
+        "short_name": "(University of Oregon)"
     },
     {
-        "link": "http://www.anstj.org/astro/index.html",
         "name": "Planet Sciences Association - Astronomy sector",
-        "short_name": "(ex-ANSTJ, France)",
-        "description": {}
+        "short_name": "(ex-ANSTJ, France)"
     },
     {
-        "link": "http://www.prao.psn.ru/",
         "name": "Pushchino Radioastronomy Observatory (PRAO)",
-        "short_name": "(PRAO)",
-        "description": {}
+        "short_name": "(PRAO)"
     },
     {
-        "link": "http://www.sao.ru/ratan/index.html.en",
         "name": "RATAN-600 Radiotelescope",
-        "short_name": "(SAO-Russia)",
-        "description": {}
+        "short_name": "(SAO-Russia)"
     },
     {
-        "link": "http://wave.xray.mpe.mpg.de/rosat/",
-        "name": "ROSAT",
-        "description": {}
+        "name": "ROSAT"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/rosat/rosat3.html",
         "name": "ROentgen SATellite",
-        "short_name": "(ROSAT at GSFC. NASA)",
-        "description": {}
+        "short_name": "(ROSAT at GSFC. NASA)"
     },
     {
-        "link": "http://xte.gsfc.nasa.gov/",
         "name": "RXTE Guest Observer Facility",
-        "short_name": "(GFSC)",
-        "description": {}
+        "short_name": "(GFSC)"
     },
     {
-        "link": "http://kuhep4.phsx.ku.edu/~iceman/",
         "name": "Radio Ice Cherenkov Experiment",
-        "short_name": "(RICE)",
-        "description": {}
+        "short_name": "(RICE)"
     },
     {
-        "link": "http://www.asc.rssi.ru/radioastron/",
         "name": "RadioAstron",
-        "short_name": "(Space VLBI Mission)",
-        "description": {}
+        "short_name": "(Space VLBI Mission)"
     },
     {
-        "link": "http://hesperia.gsfc.nasa.gov/hessi/",
         "name": "Reuven Ramaty High Energy Solar Spectroscopic Imager",
-        "short_name": "(RHESSI, ex-HESSI)",
-        "description": {}
+        "short_name": "(RHESSI, ex-HESSI)"
     },
     {
-        "link": "http://www.moon-cal.org/",
         "name": "Robotic Lunar Observatory",
-        "short_name": "(ROLO)",
-        "description": {}
+        "short_name": "(ROLO)"
     },
     {
-        "link": "http://www.umich.edu/~rotse",
         "name": "Robotic Optical Transient Search Experiment",
-        "short_name": "(ROTSE)",
-        "description": {}
+        "short_name": "(ROTSE)"
     },
     {
-        "link": "http://xte.mit.edu/",
         "name": "Rossi X-Ray Timing Explorer",
-        "short_name": "(RXTE)",
-        "description": {}
+        "short_name": "(RXTE)"
     },
     {
-        "link": "http://www.ucalgary.ca/~milone/rao.html",
         "name": "Rothney Astrophysical Observatory",
-        "short_name": "(RAO)",
-        "description": {}
+        "short_name": "(RAO)"
     },
     {
-        "link": "http://sohowww.nascom.nasa.gov/",
         "name": "SOlar and Heliospheric Observatory",
-        "short_name": "(SOHO)",
-        "description": {}
+        "short_name": "(SOHO)"
     },
     {
-        "link": "http://www.soartelescope.org/",
         "name": "SOuthern Astrophysical Research telescope Project",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.hao.ucar.edu/public/research/stare/stare.html",
         "name": "STellar Astrophysics & Research on Exoplanets",
-        "short_name": "(STARE)",
-        "description": {}
+        "short_name": "(STARE)"
     },
     {
-        "link": "http://subarutelescope.org/",
-        "name": "SUBARU Telescope",
-        "description": {}
+        "name": "SUBARU Telescope"
     },
     {
-        "link": "http://www.usc.es/astro/",
         "name": "Santiago de Compostela Univ. - Ram\u00f3n Mar\u00eda Aller Astronomical Observatory",
-        "short_name": "(AO RMA)",
-        "description": {}
+        "short_name": "(AO RMA)"
     },
     {
-        "link": "http://wwwrc.obs-azur.fr/schmidt/",
-        "name": "Schmidt telescope at Observatoire de la Cote d'Azur",
-        "description": {}
+        "name": "Schmidt telescope at Observatoire de la Cote d'Azur"
     },
     {
-        "link": "http://srao.snu.ac.kr/",
         "name": "Seoul Radio Astronomy Observatory",
-        "short_name": "(SRAO)",
-        "description": {}
+        "short_name": "(SRAO)"
     },
     {
-        "link": "http://sunland.gsfc.nasa.gov/smex/",
         "name": "Small Explorers",
-        "short_name": "(SMEX)",
-        "description": {}
+        "short_name": "(SMEX)"
     },
     {
-        "link": "http://www.lmsal.com/SXT/",
         "name": "Soft X-Ray Telescope onboard Yohkoh Satellite, ISAS, Japan",
-        "short_name": "(description at LMSAL, USA)",
-        "description": {}
+        "short_name": "(description at LMSAL, USA)"
     },
     {
-        "link": "http://serts.gsfc.nasa.gov/",
         "name": "Solar Extreme-ultraviolet Rocket Telescope and Spectrograph",
-        "short_name": "(SERTS)",
-        "description": {}
+        "short_name": "(SERTS)"
     },
     {
-        "link": "http://www.sao.ru/hq/sun/",
-        "name": "Solar Group of RATAN-600",
-        "description": {}
+        "name": "Solar Group of RATAN-600"
     },
     {
-        "link": "http://cosmos.astro.uson.mx/eosdata.htm",
         "name": "Solar Observation Station - Carla Sagan Observatory",
-        "short_name": "(EOS/OCS)",
-        "description": {}
+        "short_name": "(EOS/OCS)"
     },
     {
-        "link": "http://stp.gsfc.nasa.gov/missions/stereo/stereo.htm",
         "name": "Solar TErrestrial RElations Observatory",
-        "short_name": "(STEREO)",
-        "description": {}
+        "short_name": "(STEREO)"
     },
     {
-        "link": "http://www.astro.ucla.edu/~stacee/",
         "name": "Solar Tower Atmospheric Cherenkov Effect Experiment",
-        "short_name": "(STACEE)",
-        "description": {}
+        "short_name": "(STACEE)"
     },
     {
-        "link": "http://www.saao.ac.za/",
         "name": "South African Astronomical Observatory",
-        "short_name": "(SAAO)",
-        "description": {}
+        "short_name": "(SAAO)"
     },
     {
-        "link": "http://astro.fit.edu/sara/sara.html",
         "name": "Southeastern Association for Research in Astronomy",
-        "short_name": "(SARA)",
-        "description": {}
+        "short_name": "(SARA)"
     },
     {
-        "link": "http://www.salt.ac.za/",
         "name": "Southern African Large Telescope Project",
-        "short_name": "(SALT)",
-        "description": {}
+        "short_name": "(SALT)"
     },
     {
-        "link": "http://www.ctio.noao.edu/",
         "name": "Southern Columbia Millimeter Telescope",
-        "short_name": "(1.2 Meter)",
-        "description": {}
+        "short_name": "(1.2 Meter)"
     },
     {
-        "link": "http://sim.jpl.nasa.gov/",
         "name": "Space Interferometry Mission",
-        "short_name": "(SIM)",
-        "description": {}
+        "short_name": "(SIM)"
     },
     {
-        "link": "http://www.sao.ru/Doc-en/Telescopes/",
         "name": "Special Astrophysical Observatory of Russian Academy of Science - Schedules",
-        "short_name": "(SAO RAS)",
-        "description": {}
+        "short_name": "(SAO RAS)"
     },
     {
-        "link": "http://hea-www.harvard.edu/SXG/sxg.shtml",
         "name": "Spectrum-X-Gamma Coordination facility",
-        "short_name": "(SXG. University of Harvard)",
-        "description": {}
+        "short_name": "(SXG. University of Harvard)"
     },
     {
-        "link": "http://www.spitzer.caltech.edu/",
         "name": "Spitzer Space Telescope",
-        "short_name": "(ex-SIRTF)",
-        "description": {}
+        "short_name": "(ex-SIRTF)"
     },
     {
-        "link": "http://www.astron.nl/ska/",
         "name": "Square Kilometer Array - Interferometer radio telescope project",
-        "short_name": "(SKA)",
-        "description": {}
+        "short_name": "(SKA)"
     },
     {
-        "link": "http://www.atnf.csiro.au/SKA/",
         "name": "Square Kilometre Array",
-        "short_name": "(SKA - Australian contribution)",
-        "description": {}
+        "short_name": "(SKA - Australian contribution)"
     },
     {
-        "link": "http://www.astro.uiuc.edu/stardial/",
         "name": "Stardial:an autonomous astronomical camera on the World Wide Web",
-        "short_name": "(Stardial)",
-        "description": {}
+        "short_name": "(Stardial)"
     },
     {
-        "link": "http://stardust.jpl.nasa.gov/",
-        "name": "Stardust",
-        "description": {}
+        "name": "Stardust"
     },
     {
-        "link": "http://www.physics.sfasu.edu/Observatory/obs.htm",
         "name": "Stephen F. Austin State University Observatory",
-        "short_name": "(SFASU)",
-        "description": {}
+        "short_name": "(SFASU)"
     },
     {
-        "link": "http://astro.uchicago.edu/cosmus/projects.html#stereopix",
         "name": "Stereo Photographs of Telescopes and Observatories",
-        "short_name": "(Stereo Telescope Photos)",
-        "description": {}
+        "short_name": "(Stereo Telescope Photos)"
     },
     {
-        "link": "http://www.as.arizona.edu/",
-        "name": "Steward Observatory",
-        "description": {}
+        "name": "Steward Observatory"
     },
     {
-        "link": "http://www.sofia.usra.edu/",
         "name": "Stratospheric Observatory For Infrared Astronomy",
-        "short_name": "(SOFIA)",
-        "description": {}
+        "short_name": "(SOFIA)"
     },
     {
-        "link": "http://sma-www.harvard.edu/",
         "name": "Submillimeter Array",
-        "short_name": "(SMA)",
-        "description": {}
+        "short_name": "(SMA)"
     },
     {
-        "link": "http://lennon.astro.northwestern.edu/Home/welcome.html",
         "name": "Submillimeter Polarimeter for Antarctic Remote Observing",
-        "short_name": "(SPARO)",
-        "description": {}
+        "short_name": "(SPARO)"
     },
     {
-        "link": "http://cfa-www.harvard.edu/srlab/",
         "name": "Submillimeter Receiver Laboratory",
-        "short_name": "(SAO)",
-        "description": {}
+        "short_name": "(SAO)"
     },
     {
-        "link": "http://www.jach.hawaii.edu/JCMT/continuum/",
         "name": "Submillimetre Common-User Bolometer\n            Array for the James Clerk Maxwell Telescope",
-        "short_name": "(SCUBA)",
-        "description": {}
+        "short_name": "(SCUBA)"
     },
     {
-        "link": "http://www.sno.phy.queensu.ca/",
         "name": "Sudbury Neutrino Observatory",
-        "short_name": "(SNO at Queen's University)",
-        "description": {}
+        "short_name": "(SNO at Queen's University)"
     },
     {
-        "link": "http://superdarn.jhuapl.edu/index.html",
         "name": "Super Dual Auroral Radar Network",
-        "short_name": "(SuperDARN)",
-        "description": {}
+        "short_name": "(SuperDARN)"
     },
     {
-        "link": "http://www.phys.washington.edu/~superk/",
-        "name": "Super-Kamiokande",
-        "description": {}
+        "name": "Super-Kamiokande"
     },
     {
-        "link": "http://snap.lbl.gov/",
         "name": "Supernova / Acceleration Probe",
-        "short_name": "(SNAP)",
-        "description": {}
+        "short_name": "(SNAP)"
     },
     {
-        "link": "http://www.solarphysics.kva.se/",
         "name": "Swedish 1-m Solar Telescope",
-        "short_name": "(NSST)",
-        "description": {}
+        "short_name": "(NSST)"
     },
     {
-        "link": "http://www.LS.eso.org/lasilla/Telescopes/SEST/SEST.html",
         "name": "Swedish-ESO SUbmillimetre Telescope",
-        "short_name": "(SEST)",
-        "description": {}
+        "short_name": "(SEST)"
     },
     {
-        "link": "http://swift.gsfc.nasa.gov/",
-        "name": "Swift Gamma Ray Burst Mission",
-        "description": {}
+        "name": "Swift Gamma Ray Burst Mission"
     },
     {
-        "link": "http://www.astrop.physics.usyd.edu.au/SUMSS/",
         "name": "Sydney University Molonglo Sky Survey",
-        "short_name": "(SUMSS)",
-        "description": {}
+        "short_name": "(SUMSS)"
     },
     {
-        "link": "http://www.themis.iac.es/",
         "name": "THEMIS - Heliographic Telescope for the Study of the Magnetism and Instabilities on the Sun",
-        "short_name": "(THEMIS)",
-        "description": {}
+        "short_name": "(THEMIS)"
     },
     {
-        "link": "http://www.trao.re.kr/trao/index_en.html",
         "name": "Taeduk Radio Astronomy Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.aai.ee/",
-        "name": "Tartu Observatory",
-        "description": {}
+        "name": "Tartu Observatory"
     },
     {
-        "link": "http://www.iac.es/ot/indice.html",
         "name": "Teide Observatory",
-        "short_name": "(OT)",
-        "description": {}
+        "short_name": "(OT)"
     },
     {
-        "link": "http://www-ta.icrr.u-tokyo.ac.jp/",
-        "name": "Telescope Array Project",
-        "description": {}
+        "name": "Telescope Array Project"
     },
     {
-        "link": "http://www.tng.iac.es/",
         "name": "Telescopio Nazionale Galileo - Italian National Telescope Galileo",
-        "short_name": "(TNG, La Palma)",
-        "description": {}
+        "short_name": "(TNG, La Palma)"
     },
     {
-        "link": "http://astro.tsuniv.edu/",
         "name": "Tennessee State University 2-m Automatic Spectroscopic Telescope Project",
-        "short_name": "(2-m AST)",
-        "description": {}
+        "short_name": "(2-m AST)"
     },
     {
-        "link": "http://tpf.jpl.nasa.gov/",
         "name": "Terrestrial Planet Finder (Origins of Stars, Planets... and Life)",
-        "short_name": "(TPF)",
-        "description": {}
+        "short_name": "(TPF)"
     },
     {
-        "link": "http://www.eiscat.com/",
         "name": "The European Incoherent SCATter Scientific Association",
-        "short_name": "(EISCAT)",
-        "description": {}
+        "short_name": "(EISCAT)"
     },
     {
-        "link": "http://www.twcac.org/",
         "name": "The Wilderness Center Astronomy Club",
-        "short_name": "(WCAC)",
-        "description": {}
+        "short_name": "(WCAC)"
     },
     {
-        "link": "http://www.tls-tautenburg.de/",
         "name": "Thueringer Landessternwarte Tautenburg",
-        "short_name": "(TLS)",
-        "description": {}
+        "short_name": "(TLS)"
     },
     {
-        "link": "http://www.astro.uni.torun.pl/",
         "name": "Torun Radio Astronomy Observatory",
-        "short_name": "(TRAO)",
-        "description": {}
+        "short_name": "(TRAO)"
     },
     {
-        "link": "http://vestige.lmsal.com/TRACE/",
         "name": "Transition Region And Coronal Explorer",
-        "short_name": "(TRACE)",
-        "description": {}
+        "short_name": "(TRACE)"
     },
     {
-        "link": "http://www.jach.hawaii.edu/UKIRT",
         "name": "UK Infra-Red Telescope",
-        "short_name": "(UKIRT)",
-        "description": {}
+        "short_name": "(UKIRT)"
     },
     {
-        "link": "http://www.aao.gov.au/ukst/",
         "name": "UK Schmidt Telescope - Anglo-Australian Observatory",
-        "short_name": "(UKST / AAO)",
-        "description": {}
+        "short_name": "(UKST / AAO)"
     },
     {
-        "link": "http://www.roe.ac.uk/ifa/wfau/ukstu/ukst.html",
         "name": "UK Schmidt Telescope - Wide Field Astronomy Unit",
-        "short_name": "(UKST)",
-        "description": {}
+        "short_name": "(UKST)"
     },
     {
-        "link": "http://www.sunspot.noao.edu/",
         "name": "USA National Solar Observatory / Sacramento Peak, Sunspot, NM",
-        "short_name": "(NSO/SP)",
-        "description": {}
+        "short_name": "(NSO/SP)"
     },
     {
-        "link": "http://www.prl.ernet.in/~uso/",
         "name": "Udaipur Solar Observatory",
-        "short_name": "(USO)",
-        "description": {}
+        "short_name": "(USO)"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.goV/docs/uhuru/uhuru.html",
         "name": "Uhuru Satellite",
-        "short_name": "(GSFC. NASA)",
-        "description": {}
+        "short_name": "(GSFC. NASA)"
     },
     {
-        "link": "http://archive.stsci.edu/uit/",
         "name": "Ultraviolet Imaging Telescope",
-        "short_name": "(UIT - Archives at STScI MAST)",
-        "description": {}
+        "short_name": "(UIT - Archives at STScI MAST)"
     },
     {
-        "link": "http://helio.esa.int/ulysses/",
         "name": "Ulysses Mission",
-        "short_name": "(ESA and NASA)",
-        "description": {}
+        "short_name": "(ESA and NASA)"
     },
     {
-        "link": "http://www.ucolick.org/",
         "name": "University of California Observatories - Lick Observatory (WWW)",
-        "short_name": "(UCO/Lick)",
-        "description": {}
+        "short_name": "(UCO/Lick)"
     },
     {
-        "link": "http://www.physics.uci.edu/~observat/",
         "name": "University of California, Irvine, Observatory",
-        "short_name": "(UCI Observatory)",
-        "description": {}
+        "short_name": "(UCI Observatory)"
     },
     {
-        "link": "http://www.ifa.hawaii.edu/88inch/88inch.html",
-        "name": "University of Hawaii IfA: 2.2m Telescope",
-        "description": {}
+        "name": "University of Hawaii IfA: 2.2m Telescope"
     },
     {
-        "link": "http://www.astro.louisville.edu/",
-        "name": "University of Louisville - Moore Observatory",
-        "description": {}
+        "name": "University of Louisville - Moore Observatory"
     },
     {
-        "link": "http://www.astro.utoronto.ca/~utso/",
         "name": "University of Toronto Southern Observatory",
-        "short_name": "(UTSO)",
-        "description": {}
+        "short_name": "(UTSO)"
     },
     {
-        "link": "http://www.eso.org/instruments/vimos/",
         "name": "VIsible and IR MultiObject Spectrographs",
-        "short_name": "(VIRMOS)",
-        "description": {}
+        "short_name": "(VIRMOS)"
     },
     {
-        "link": "http://www.vsop.isas.ac.jp/",
         "name": "VLBI Space Observatory Programme",
-        "short_name": "(VSOP)",
-        "description": {}
+        "short_name": "(VSOP)"
     },
     {
-        "link": "http://www.eso.org/instruments/visir/",
         "name": "VLT Imager and Spectrometer for mid Infra Red",
-        "short_name": "(VISIR, ESO VLT)",
-        "description": {}
+        "short_name": "(VISIR, ESO VLT)"
     },
     {
-        "link": "http://oacosf.na.astro.it/vst/",
         "name": "VLT Survey Telescope",
-        "short_name": "(VST)",
-        "description": {}
+        "short_name": "(VST)"
     },
     {
-        "link": "http://www.iiap.res.in/vbo/vbo.html",
         "name": "Vainu Bappu Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://www.cida.ve/",
         "name": "Venezuela Centre for Researches in Astronomy",
-        "short_name": "(CIDA)",
-        "description": {}
+        "short_name": "(CIDA)"
     },
     {
-        "link": "http://www.virac.lv",
         "name": "Ventspils International Radioastronomy Center",
-        "short_name": "(VIRAC)",
-        "description": {}
+        "short_name": "(VIRAC)"
     },
     {
-        "link": "http://www.vla.nrao.edu/",
         "name": "Very Large Array",
-        "short_name": "(VLA)",
-        "description": {}
+        "short_name": "(VLA)"
     },
     {
-        "link": "http://www.eso.org/projects/vlti/",
         "name": "Very Large Telescope Interferometer",
-        "short_name": "(VLTI, ESO)",
-        "description": {}
+        "short_name": "(VLTI, ESO)"
     },
     {
-        "link": "http://www.vlba.nrao.edu/",
         "name": "Very Long Baseline Array",
-        "short_name": "(VLBA)",
-        "description": {}
+        "short_name": "(VLBA)"
     },
     {
-        "link": "http://www.mrao.cam.ac.uk/telescopes/vsa/",
         "name": "Very Small Array",
-        "short_name": "(VSA)",
-        "description": {}
+        "short_name": "(VSA)"
     },
     {
-        "link": "http://www.virgo.infn.it",
         "name": "Virgo Interferometer",
-        "short_name": "(VIRGO)",
-        "description": {}
+        "short_name": "(VIRGO)"
     },
     {
-        "link": "http://www.vista.ac.uk/",
         "name": "Visible and Infrared Survey Telescope for Astronomy",
-        "short_name": "(VISTA)",
-        "description": {}
+        "short_name": "(VISTA)"
     },
     {
-        "link": "http://web99.arc.nasa.gov/~vulcan/",
-        "name": "Vulcan Camera Project",
-        "description": {}
+        "name": "Vulcan Camera Project"
     },
     {
-        "link": "http://www-lep.gsfc.nasa.gov/waves/waves.html",
         "name": "WAVES : The Radio and Plasma Wave Investigation on the WIND Spacecraft",
-        "short_name": "(waves)",
-        "description": {}
+        "short_name": "(waves)"
     },
     {
-        "link": "http://www-istp.gsfc.nasa.gov/istp/wind/",
-        "name": "WIND spacecraft",
-        "description": {}
+        "name": "WIND spacecraft"
     },
     {
-        "link": "http://www.astro.indiana.edu/facilities/observatories/wiyn/",
-        "name": "WIYN, from Indiana University",
-        "description": {}
+        "name": "WIYN, from Indiana University"
     },
     {
-        "link": "http://www.astron.nl/p/observing.htm",
         "name": "Westerbork Synthesis Radio Telescope",
-        "short_name": "(WSRT - ASTRON)",
-        "description": {}
+        "short_name": "(WSRT - ASTRON)"
     },
     {
-        "link": "http://www.to.astro.it/blazars/webt/",
         "name": "Whole Earth Blazar Telescope",
-        "short_name": "(WEBT)",
-        "description": {}
+        "short_name": "(WEBT)"
     },
     {
-        "link": "http://bullwinkle.as.utexas.edu/",
         "name": "Whole Earth Telescope",
-        "short_name": "(WET, site of University of Texas at Austin)",
-        "description": {}
+        "short_name": "(WET, site of University of Texas at Austin)"
     },
     {
-        "link": "http://wet.physics.iastate.edu/",
         "name": "Whole Earth Telescope",
-        "short_name": "(WET)",
-        "description": {}
+        "short_name": "(WET)"
     },
     {
-        "link": "http://www.roe.ac.uk/atc/projects/wfcam/",
         "name": "Wide Field CAMera for UKIRT",
-        "short_name": "(WFCAM)",
-        "description": {}
+        "short_name": "(WFCAM)"
     },
     {
-        "link": "http://www.ipac.caltech.edu/wire/",
         "name": "Wide Field Infrared Explorer",
-        "short_name": "(WIRE)",
-        "description": {}
+        "short_name": "(WIRE)"
     },
     {
-        "link": "http://quake.stanford.edu/~wso/wso.html",
         "name": "Wilcox Solar Observatory",
-        "short_name": "---",
-        "description": {}
+        "short_name": "---"
     },
     {
-        "link": "http://lambda.gsfc.nasa.gov/product/map/",
         "name": "Wilkinson Microwave Anisotropy Probe",
-        "short_name": "(WMAP)",
-        "description": {}
+        "short_name": "(WMAP)"
     },
     {
-        "link": "http://map.gsfc.nasa.gov/",
         "name": "Wilkinson Microwave Anisotropy Probe",
-        "short_name": "(WMAP)",
-        "description": {}
+        "short_name": "(WMAP)"
     },
     {
-        "link": "http://www.winer.org/",
-        "name": "Winer Observatory",
-        "description": {}
+        "name": "Winer Observatory"
     },
     {
-        "link": "http://www.sal.wisc.edu/WUPPE/",
         "name": "Wisconsin Ultraviolet Photo-Polarimeter Experiment",
-        "short_name": "(WUPPE)",
-        "description": {}
+        "short_name": "(WUPPE)"
     },
     {
-        "link": "http://www.aip.de/groups/activity/APT/",
         "name": "Wolfgang-Amadeus, The University of Vienna Twin Automatic Photoelectric Telescope",
-        "short_name": "(APT)",
-        "description": {}
+        "short_name": "(APT)"
     },
     {
-        "link": "http://physics.uwyo.edu/~amonson/wiro/wiro.html",
         "name": "Wyoming Infrared Observatory",
-        "short_name": "(WIRO)",
-        "description": {}
+        "short_name": "(WIRO)"
     },
     {
-        "link": "http://heasarc.gsfc.nasa.gov/docs/xte/XTE.html",
         "name": "X-Ray Timing Explorer",
-        "short_name": "(XTE. GSFC.NASA)",
-        "description": {}
+        "short_name": "(XTE. GSFC.NASA)"
     },
     {
-        "link": "http://www.esa.int/science/xmmnewton",
         "name": "XMM-Newton",
-        "short_name": "(ESA)",
-        "description": {}
+        "short_name": "(ESA)"
     },
     {
-        "link": "http://xmm.vilspa.esa.es/",
         "name": "XMM-Newton Science Operations Centre",
-        "short_name": "(XMM, ESA)",
-        "description": {}
+        "short_name": "(XMM, ESA)"
     },
     {
-        "link": "http://astro.uchicago.edu/yerkes/",
         "name": "Yerkes Observatory",
-        "short_name": "(University of Chicago)",
-        "description": {}
+        "short_name": "(University of Chicago)"
     }
 ]
