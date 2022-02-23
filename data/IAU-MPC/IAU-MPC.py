@@ -14,9 +14,9 @@ with open(file) as f:
         description = list(line.strip().split())
         dic_line ={ 
             "code" : description[0],
-            "Longitude": description[1],
-            "cos" : description[2],
-            "sin" : description[3],
+            #"Longitude": description[1],
+            #"cos" : description[2],
+            #"sin" : description[3],
             "Name": description[4]
             }
             
