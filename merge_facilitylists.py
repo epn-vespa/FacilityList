@@ -1,7 +1,7 @@
 from datetime import datetime
+from conf.consts import *
 from conf.parsers import *
 from conf.config import *
-from conf.consts import *
 from pprint import pprint
 
 import json, pickle, copy, re, sys, os.path, uuid
@@ -21,6 +21,7 @@ for arg in sys.argv:
 	if ( arg == "-i" or arg == "-interactive" ): interactive = True
 	if ( arg == "-p" or arg == "-partial" ): partial = True
 	if ( arg == "-u" or arg == "-update" ): update = True
+
 
 def load_all_lists(dir): # see parsers defined in file parsers.py
 	set_data_dir(dir)
@@ -42,7 +43,7 @@ def load_all_lists(dir): # see parsers defined in file parsers.py
 		if (input.startswith('http:') or input.startswith('https:') or input.endswith('.json') ):
 			update_list( data, load_existing_json(input) )
 		else:
-			try:
+                    try:
 				update_list( data, globals()[input]() )
 			except:
 				print ("WARNING: Could not call parser function '" + input + "()': " + str(sys.exc_info()[0])) 
@@ -348,7 +349,7 @@ def merge_doubles (list):
 		print ( "Calculating doubles for alternate names/ids..." )
 		for rec in list:		
 			# index for names, ids
-			if list[rec].has_key(KEY_STR_ALTERNATE_NAME):
+			if list[rec].has_key(KEY_STR_ALTERNATE_NAMEME):
 				for altname in list[rec][KEY_STR_ALTERNATE_NAME]:
 					
 					# add id to index
