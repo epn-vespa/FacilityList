@@ -103,8 +103,8 @@ for link in xml_links :
         # S'il n'existe pas de balise type
         pass
         #print( link_url + " :  pas de balise <Title>")
-    result_elt={ "link_url" : link_url, "title" : title_text, " logical_identifier" : logical_identifier, "naif_host_id " : naif_host_id }
-    print ("result_elt :" , result_elt)
+    result_elt={ "title" : title_text, " logical_identifier" : logical_identifier, "naif_host_id " : naif_host_id }
+    #print ("result_elt :" , result_elt)
     result.append( result_elt )
     
 with open("pds-test-list.json", "w") as f :
