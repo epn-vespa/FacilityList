@@ -16,9 +16,9 @@ with open(file) as f:
         description = [ x.strip() for x in v ] # liste des elements x de v auquels on apllique la fonction strip
         dic_line ={ 
             "Name" : description[0],
-            "Latitude": description[1],
-            "Longitude" : description[2],
-            "Elev" : description[3]
+            #"Latitude": description[1],
+            #"Longitude" : description[2],
+            #"Elev" : description[3]
             }
             
         my_list.append(dic_line)
