@@ -19,7 +19,7 @@ import json
 import os.path
 import urllib
 import pyvo
-import consts
+from conf import consts
 
 import warnings
 from astropy.utils.exceptions import AstropyWarning
