@@ -1,818 +1,1220 @@
 [
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=AOSO",
         "name": "Advanced OSO",
         "NSSDC id": "AOSO"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1973-101A",
         "name": "AE-C",
-        "NSSDC id": "1973-101A"
+        "NSSDC id": "1973-101A",
+        "Launch date": "1973-12-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-096A",
         "name": "AE-D",
-        "NSSDC id": "1975-096A"
+        "NSSDC id": "1975-096A",
+        "Launch date": "1975-10-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-107A",
         "name": "AE-E",
-        "NSSDC id": "1975-107A"
+        "NSSDC id": "1975-107A",
+        "Launch date": "1975-11-20"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-100A",
         "name": "Aeros-A",
-        "NSSDC id": "1972-100A"
+        "NSSDC id": "1972-100A",
+        "Launch date": "1972-12-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1974-055A",
         "name": "Aeros-B",
-        "NSSDC id": "1974-055A"
+        "NSSDC id": "1974-055A",
+        "Launch date": "1974-07-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1962-049A",
         "name": "Alouette 1",
-        "NSSDC id": "1962-049A"
+        "NSSDC id": "1962-049A",
+        "Launch date": "1962-09-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-098A",
         "name": "Alouette 2",
-        "NSSDC id": "1965-098A"
+        "NSSDC id": "1965-098A",
+        "Launch date": "1965-11-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-031A",
         "name": "Apollo 16 Command and Service Module (CSM)",
-        "NSSDC id": "1972-031A"
+        "NSSDC id": "1972-031A",
+        "Launch date": "1972-04-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1962-015A",
         "name": "Ariel 1",
-        "NSSDC id": "1962-015A"
+        "NSSDC id": "1962-015A",
+        "Launch date": "1962-04-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=ATLAS1",
         "name": "Atlas 1 / STS 45",
-        "NSSDC id": "ATLAS1"
+        "NSSDC id": "ATLAS1",
+        "Launch date": "1992-03-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=ATLAS2",
         "name": "Atlas 2",
-        "NSSDC id": "ATLAS2"
+        "NSSDC id": "ATLAS2",
+        "Launch date": "1993-04-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=ATLAS3",
         "name": "Atlas 3",
-        "NSSDC id": "ATLAS3"
+        "NSSDC id": "ATLAS3",
+        "Launch date": "1994-11-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=ATLAS4",
         "name": "Atlas 4",
         "NSSDC id": "ATLAS4"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-031A",
         "name": "ATS 2",
-        "NSSDC id": "1967-031A"
+        "NSSDC id": "1967-031A",
+        "Launch date": "1967-04-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-069A",
         "name": "ATS 5",
-        "NSSDC id": "1969-069A"
+        "NSSDC id": "1969-069A",
+        "Launch date": "1969-08-12"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-097A",
         "name": "Azur",
-        "NSSDC id": "1969-097A"
+        "NSSDC id": "1969-097A",
+        "Launch date": "1969-11-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2013-055A",
         "name": "Cassiope",
-        "NSSDC id": "2013-055A"
+        "NSSDC id": "2013-055A",
+        "Launch date": "2013-09-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2003-001A",
         "name": "Coriolis",
-        "NSSDC id": "2003-001A"
+        "NSSDC id": "2003-001A",
+        "Launch date": "2003-01-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2001-032A",
         "name": "CORONAS-F",
-        "NSSDC id": "2001-032A"
+        "NSSDC id": "2001-032A",
+        "Launch date": "2001-07-31"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1994-014A",
         "name": "CORONAS-I",
-        "NSSDC id": "1994-014A"
+        "NSSDC id": "1994-014A",
+        "Launch date": "1994-03-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1968-119A",
         "name": "Cosmos 262",
-        "NSSDC id": "1968-119A"
+        "NSSDC id": "1968-119A",
+        "Launch date": "1968-12-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-092A",
         "name": "D2B",
-        "NSSDC id": "1975-092A"
+        "NSSDC id": "1975-092A",
+        "Launch date": "1975-09-27"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1982-118A",
         "name": "DMSP 5D-2/F06",
-        "NSSDC id": "1982-118A"
+        "NSSDC id": "1982-118A",
+        "Launch date": "1982-12-21"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2011-044A",
         "name": "EduSAT",
-        "NSSDC id": "2011-044A"
+        "NSSDC id": "2011-044A",
+        "Launch date": "2011-08-17"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=EOM-A",
         "name": "EOM-A",
-        "NSSDC id": "EOM-A"
+        "NSSDC id": "EOM-A",
+        "Launch date": "1985-11-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=EOSCHEM",
         "name": "EOS-CHEM1",
-        "NSSDC id": "EOSCHEM"
+        "NSSDC id": "EOSCHEM",
+        "Launch date": "2002-01-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1984-108B",
         "name": "ERBS",
-        "NSSDC id": "1984-108B"
+        "NSSDC id": "1984-108B",
+        "Launch date": "1984-10-05"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-058C",
         "name": "ERS 17",
-        "NSSDC id": "1965-058C"
+        "NSSDC id": "1965-058C",
+        "Launch date": "1965-07-20"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-040E",
         "name": "ERS 27",
-        "NSSDC id": "1967-040E"
+        "NSSDC id": "1967-040E",
+        "Launch date": "1967-04-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1968-041A",
         "name": "ESRO 2",
-        "NSSDC id": "1968-041A"
+        "NSSDC id": "1968-041A",
+        "Launch date": "1968-05-17"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=ESRO2A",
         "name": "ESRO 2A",
-        "NSSDC id": "ESRO2A"
+        "NSSDC id": "ESRO2A",
+        "Launch date": "1967-05-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1992-049B",
         "name": "EURECA 1",
-        "NSSDC id": "1992-049B"
+        "NSSDC id": "1992-049B",
+        "Launch date": "1992-08-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1966-058A",
         "name": "Explorer 33",
-        "NSSDC id": "1966-058A"
+        "NSSDC id": "1966-058A",
+        "Launch date": "1966-07-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-070A",
         "name": "Explorer 35",
-        "NSSDC id": "1967-070A"
+        "NSSDC id": "1967-070A",
+        "Launch date": "1967-07-19"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1989-084B",
         "name": "Galileo Orbiter",
-        "NSSDC id": "1989-084B"
+        "NSSDC id": "1989-084B",
+        "Launch date": "1989-10-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2001-034A",
         "name": "Genesis",
-        "NSSDC id": "2001-034A"
+        "NSSDC id": "2001-034A",
+        "Launch date": "2001-08-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2001-034D",
         "name": "Genesis Sample Collection and Return Capsule",
-        "NSSDC id": "2001-034D"
+        "NSSDC id": "2001-034D",
+        "Launch date": "2001-08-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-100A",
         "name": "GOES 1",
-        "NSSDC id": "1975-100A"
+        "NSSDC id": "1975-100A",
+        "Launch date": "1975-10-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1977-048A",
         "name": "GOES 2",
-        "NSSDC id": "1977-048A"
+        "NSSDC id": "1977-048A",
+        "Launch date": "1977-06-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1978-062A",
         "name": "GOES 3",
-        "NSSDC id": "1978-062A"
+        "NSSDC id": "1978-062A",
+        "Launch date": "1978-06-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1980-074A",
         "name": "GOES 4",
-        "NSSDC id": "1980-074A"
+        "NSSDC id": "1980-074A",
+        "Launch date": "1980-09-09"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1981-049A",
         "name": "GOES 5",
-        "NSSDC id": "1981-049A"
+        "NSSDC id": "1981-049A",
+        "Launch date": "1981-05-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1983-041A",
         "name": "GOES 6",
-        "NSSDC id": "1983-041A"
+        "NSSDC id": "1983-041A",
+        "Launch date": "1983-04-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1987-022A",
         "name": "GOES 7",
-        "NSSDC id": "1987-022A"
+        "NSSDC id": "1987-022A",
+        "Launch date": "1987-02-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1994-022A",
         "name": "GOES 8",
-        "NSSDC id": "1994-022A"
+        "NSSDC id": "1994-022A",
+        "Launch date": "1994-04-13"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1995-025A",
         "name": "GOES 9",
-        "NSSDC id": "1995-025A"
+        "NSSDC id": "1995-025A",
+        "Launch date": "1995-05-23"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2000-022A",
         "name": "GOES 11",
-        "NSSDC id": "2000-022A"
+        "NSSDC id": "2000-022A",
+        "Launch date": "2000-05-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2001-031A",
         "name": "GOES 12",
-        "NSSDC id": "2001-031A"
+        "NSSDC id": "2001-031A",
+        "Launch date": "2001-07-23"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=GOES-G",
         "name": "GOES-G",
-        "NSSDC id": "GOES-G"
+        "NSSDC id": "GOES-G",
+        "Launch date": "1986-05-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=GOES-K",
         "name": "GOES-K",
-        "NSSDC id": "GOES-K"
+        "NSSDC id": "GOES-K",
+        "Launch date": "1997-04-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=GOES-M",
         "name": "GOES-M",
-        "NSSDC id": "GOES-M"
+        "NSSDC id": "GOES-M",
+        "Launch date": "2001-07-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=GOES-X",
         "name": "GOES-X",
-        "NSSDC id": "GOES-X"
+        "NSSDC id": "GOES-X",
+        "Launch date": "1991-06-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1974-097A",
         "name": "Helios-A",
-        "NSSDC id": "1974-097A"
+        "NSSDC id": "1974-097A",
+        "Launch date": "1974-12-10"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1976-003A",
         "name": "Helios-B",
-        "NSSDC id": "1976-003A"
+        "NSSDC id": "1976-003A",
+        "Launch date": "1976-01-15"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2006-041A",
         "name": "Hinode",
-        "NSSDC id": "2006-041A"
+        "NSSDC id": "2006-041A",
+        "Launch date": "2006-09-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1981-017A",
         "name": "Hinotori",
-        "NSSDC id": "1981-017A"
+        "NSSDC id": "1981-017A",
+        "Launch date": "1981-02-21"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-073A",
         "name": "IMP-H",
-        "NSSDC id": "1972-073A"
+        "NSSDC id": "1972-073A",
+        "Launch date": "1972-09-23"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1962-067B",
         "name": "Injun 3",
-        "NSSDC id": "1962-067B"
+        "NSSDC id": "1962-067B",
+        "Launch date": "1962-12-13"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1995-039A",
         "name": "Interball Tail Probe",
-        "NSSDC id": "1995-039A"
+        "NSSDC id": "1995-039A",
+        "Launch date": "1995-08-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1970-084A",
         "name": "Intercosmos 4",
-        "NSSDC id": "1970-084A"
+        "NSSDC id": "1970-084A",
+        "Launch date": "1970-10-14"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-047A",
         "name": "Intercosmos 7",
-        "NSSDC id": "1972-047A"
+        "NSSDC id": "1972-047A",
+        "Launch date": "1972-06-30"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1973-022A",
         "name": "Intercosmos 9",
-        "NSSDC id": "1973-022A"
+        "NSSDC id": "1973-022A",
+        "Launch date": "1973-04-19"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1974-034A",
         "name": "Intercosmos 11",
-        "NSSDC id": "1974-034A"
+        "NSSDC id": "1974-034A",
+        "Launch date": "1974-05-17"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1976-076A",
         "name": "Intercosmos 16",
-        "NSSDC id": "1976-076A"
+        "NSSDC id": "1976-076A",
+        "Launch date": "1976-07-27"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2013-033A",
         "name": "Interface Region Imaging Spectrograph (IRIS)",
-        "NSSDC id": "2013-033A"
+        "NSSDC id": "2013-033A",
+        "Launch date": "2013-06-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1978-079A",
         "name": "ISEE 3",
-        "NSSDC id": "1978-079A"
+        "NSSDC id": "1978-079A",
+        "Launch date": "1978-08-12"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=ISPNASA",
         "name": "ISPM/NASA",
-        "NSSDC id": "ISPNASA"
+        "NSSDC id": "ISPNASA",
+        "Launch date": "1985-03-27"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1962-018A",
         "name": "KH-5 9034A",
-        "NSSDC id": "1962-018A"
+        "NSSDC id": "1962-018A",
+        "Launch date": "1962-05-15"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2009-003A",
         "name": "KORONAS-Foton",
-        "NSSDC id": "2009-003A"
+        "NSSDC id": "2009-003A",
+        "Launch date": "2009-01-30"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=LAM4S1",
         "name": "Lambda 4S-1",
-        "NSSDC id": "LAM4S1"
+        "NSSDC id": "LAM4S1",
+        "Launch date": "1966-09-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=LAM4S2",
         "name": "Lambda 4S-2",
-        "NSSDC id": "LAM4S2"
+        "NSSDC id": "LAM4S2",
+        "Launch date": "1966-12-20"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=LAM4S3",
         "name": "Lambda 4S-3",
-        "NSSDC id": "LAM4S3"
+        "NSSDC id": "LAM4S3",
+        "Launch date": "1967-04-13"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=LAM4S4",
         "name": "Lambda 4S-4",
-        "NSSDC id": "LAM4S4"
+        "NSSDC id": "LAM4S4",
+        "Launch date": "1969-09-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1964-077A",
         "name": "Mariner 4",
-        "NSSDC id": "1964-077A"
+        "NSSDC id": "1964-077A",
+        "Launch date": "1964-11-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-014A",
         "name": "Mariner 6",
-        "NSSDC id": "1969-014A"
+        "NSSDC id": "1969-014A",
+        "Launch date": "1969-02-25"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-030A",
         "name": "Mariner 7",
-        "NSSDC id": "1969-030A"
+        "NSSDC id": "1969-030A",
+        "Launch date": "1969-03-27"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-037A",
         "name": "Nimbus 3",
-        "NSSDC id": "1969-037A"
+        "NSSDC id": "1969-037A",
+        "Launch date": "1969-04-14"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1970-025A",
         "name": "Nimbus 4",
-        "NSSDC id": "1970-025A"
+        "NSSDC id": "1970-025A",
+        "Launch date": "1970-04-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1978-098A",
         "name": "Nimbus 7",
-        "NSSDC id": "1978-098A"
+        "NSSDC id": "1978-098A",
+        "Launch date": "1978-10-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=NIMBS-B",
         "name": "Nimbus-B",
-        "NSSDC id": "NIMBS-B"
+        "NSSDC id": "NIMBS-B",
+        "Launch date": "1968-05-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1988-089A",
         "name": "NOAA 11",
-        "NSSDC id": "1988-089A"
+        "NSSDC id": "1988-089A",
+        "Launch date": "1988-09-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1993-050A",
         "name": "NOAA 13",
-        "NSSDC id": "1993-050A"
+        "NSSDC id": "1993-050A",
+        "Launch date": "1993-08-09"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1994-089A",
         "name": "NOAA 14",
-        "NSSDC id": "1994-089A"
+        "NSSDC id": "1994-089A",
+        "Launch date": "1994-12-30"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1998-030A",
         "name": "NOAA 15",
-        "NSSDC id": "1998-030A"
+        "NSSDC id": "1998-030A",
+        "Launch date": "1998-05-13"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2002-032A",
         "name": "NOAA 17",
-        "NSSDC id": "2002-032A"
+        "NSSDC id": "2002-032A",
+        "Launch date": "2002-06-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2005-018A",
         "name": "NOAA 18",
-        "NSSDC id": "2005-018A"
+        "NSSDC id": "2005-018A",
+        "Launch date": "2005-05-20"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1996-001B",
         "name": "OAST Flyer",
-        "NSSDC id": "1996-001B"
+        "NSSDC id": "1996-001B",
+        "Launch date": "1996-01-11"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-081A",
         "name": "OGO 2",
-        "NSSDC id": "1965-081A"
+        "NSSDC id": "1965-081A",
+        "Launch date": "1965-10-14"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1966-049A",
         "name": "OGO 3",
-        "NSSDC id": "1966-049A"
+        "NSSDC id": "1966-049A",
+        "Launch date": "1966-06-07"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-073A",
         "name": "OGO 4",
-        "NSSDC id": "1967-073A"
+        "NSSDC id": "1967-073A",
+        "Launch date": "1967-07-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1968-014A",
         "name": "OGO 5",
-        "NSSDC id": "1968-014A"
+        "NSSDC id": "1968-014A",
+        "Launch date": "1968-03-04"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-051A",
         "name": "OGO 6",
-        "NSSDC id": "1969-051A"
+        "NSSDC id": "1969-051A",
+        "Launch date": "1969-06-05"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1970-011A",
         "name": "Ohsumi",
-        "NSSDC id": "1970-011A"
+        "NSSDC id": "1970-011A",
+        "Launch date": "1970-02-11"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=OSL",
         "name": "OSL",
-        "NSSDC id": "OSL"
+        "NSSDC id": "OSL",
+        "Launch date": "1996-01-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1962-006A",
         "name": "OSO 1",
-        "NSSDC id": "1962-006A"
+        "NSSDC id": "1962-006A",
+        "Launch date": "1962-03-07"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-007A",
         "name": "OSO 2",
-        "NSSDC id": "1965-007A"
+        "NSSDC id": "1965-007A",
+        "Launch date": "1965-02-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-020A",
         "name": "OSO 3",
-        "NSSDC id": "1967-020A"
+        "NSSDC id": "1967-020A",
+        "Launch date": "1967-03-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-100A",
         "name": "OSO 4",
-        "NSSDC id": "1967-100A"
+        "NSSDC id": "1967-100A",
+        "Launch date": "1967-10-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-006A",
         "name": "OSO 5",
-        "NSSDC id": "1969-006A"
+        "NSSDC id": "1969-006A",
+        "Launch date": "1969-01-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-068A",
         "name": "OSO 6",
-        "NSSDC id": "1969-068A"
+        "NSSDC id": "1969-068A",
+        "Launch date": "1969-08-09"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1971-083A",
         "name": "OSO 7",
-        "NSSDC id": "1971-083A"
+        "NSSDC id": "1971-083A",
+        "Launch date": "1971-09-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-057A",
         "name": "OSO 8",
-        "NSSDC id": "1975-057A"
+        "NSSDC id": "1975-057A",
+        "Launch date": "1975-06-21"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=OSO-C",
         "name": "OSO-C",
-        "NSSDC id": "OSO-C"
+        "NSSDC id": "OSO-C",
+        "Launch date": "1965-08-25"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=OSO-J",
         "name": "OSO-J",
         "NSSDC id": "OSO-J"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=OSO-K",
         "name": "OSO-K",
         "NSSDC id": "OSO-K"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=OV1-1",
         "name": "OV1- 1",
-        "NSSDC id": "OV1-1"
+        "NSSDC id": "OV1-1",
+        "Launch date": "1965-01-21"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1966-111B",
         "name": "OV1-10",
-        "NSSDC id": "1966-111B"
+        "NSSDC id": "1966-111B",
+        "Launch date": "1966-12-11"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=OV1-11",
         "name": "OV1-11",
-        "NSSDC id": "OV1-11"
+        "NSSDC id": "OV1-11",
+        "Launch date": "1967-07-27"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1968-059A",
         "name": "OV1-15",
-        "NSSDC id": "1968-059A"
+        "NSSDC id": "1968-059A",
+        "Launch date": "1968-07-11"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-025A",
         "name": "OV1-17",
-        "NSSDC id": "1969-025A"
+        "NSSDC id": "1969-025A",
+        "Launch date": "1969-03-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-046C",
         "name": "OV5-9",
-        "NSSDC id": "1969-046C"
+        "NSSDC id": "1969-046C",
+        "Launch date": "1969-05-23"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2018-065A",
         "name": "Parker Solar Probe",
-        "NSSDC id": "2018-065A"
+        "NSSDC id": "2018-065A",
+        "Launch date": "2018-08-12"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1988-058A",
         "name": "Phobos 1",
-        "NSSDC id": "1988-058A"
+        "NSSDC id": "1988-058A",
+        "Launch date": "1988-07-07"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1988-059A",
         "name": "Phobos 2",
-        "NSSDC id": "1988-059A"
+        "NSSDC id": "1988-059A",
+        "Launch date": "1988-07-12"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2010-028A",
         "name": "Picard",
-        "NSSDC id": "2010-028A"
+        "NSSDC id": "2010-028A",
+        "Launch date": "2010-06-15"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-105A",
         "name": "Pioneer 6",
-        "NSSDC id": "1965-105A"
+        "NSSDC id": "1965-105A",
+        "Launch date": "1965-12-16"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1978-051A",
         "name": "Pioneer Venus Orbiter",
-        "NSSDC id": "1978-051A"
+        "NSSDC id": "1978-051A",
+        "Launch date": "1978-05-20"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2009-059B",
         "name": "PROBA 2",
-        "NSSDC id": "2009-059B"
+        "NSSDC id": "2009-059B",
+        "Launch date": "2009-11-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-029A",
         "name": "Prognoz 1",
-        "NSSDC id": "1972-029A"
+        "NSSDC id": "1972-029A",
+        "Launch date": "1972-04-14"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-046A",
         "name": "Prognoz 2",
-        "NSSDC id": "1972-046A"
+        "NSSDC id": "1972-046A",
+        "Launch date": "1972-06-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-122A",
         "name": "Prognoz 4",
-        "NSSDC id": "1975-122A"
+        "NSSDC id": "1975-122A",
+        "Launch date": "1975-12-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1976-112A",
         "name": "Prognoz 5",
-        "NSSDC id": "1976-112A"
+        "NSSDC id": "1976-112A",
+        "Launch date": "1976-11-25"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1977-093A",
         "name": "Prognoz 6",
-        "NSSDC id": "1977-093A"
+        "NSSDC id": "1977-093A",
+        "Launch date": "1977-09-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1978-101A",
         "name": "Prognoz 7",
-        "NSSDC id": "1978-101A"
+        "NSSDC id": "1978-101A",
+        "Launch date": "1978-10-30"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1980-103A",
         "name": "Prognoz 8",
-        "NSSDC id": "1980-103A"
+        "NSSDC id": "1980-103A",
+        "Launch date": "1980-12-25"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1983-067A",
         "name": "Prognoz 9",
-        "NSSDC id": "1983-067A"
+        "NSSDC id": "1983-067A",
+        "Launch date": "1983-07-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1985-033A",
         "name": "Prognoz 10",
-        "NSSDC id": "1985-033A"
+        "NSSDC id": "1985-033A",
+        "Launch date": "1985-04-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1968-055A",
         "name": "RAE-A",
-        "NSSDC id": "1968-055A"
+        "NSSDC id": "1968-055A",
+        "Launch date": "1968-07-04"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1973-039A",
         "name": "RAE-B",
-        "NSSDC id": "1973-039A"
+        "NSSDC id": "1973-039A",
+        "Launch date": "1973-06-10"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1961-032A",
         "name": "Ranger 2",
-        "NSSDC id": "1961-032A"
+        "NSSDC id": "1961-032A",
+        "Launch date": "1961-11-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1962-001A",
         "name": "Ranger 3",
-        "NSSDC id": "1962-001A"
+        "NSSDC id": "1962-001A",
+        "Launch date": "1962-01-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2002-004A",
         "name": "RHESSI",
-        "NSSDC id": "2002-004A"
+        "NSSDC id": "2002-004A",
+        "Launch date": "2002-02-05"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1974-085C",
         "name": "S3-1",
-        "NSSDC id": "1974-085C"
+        "NSSDC id": "1974-085C",
+        "Launch date": "1974-10-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1996-061B",
         "name": "SAC-B",
-        "NSSDC id": "1996-061B"
+        "NSSDC id": "1996-061B",
+        "Launch date": "1996-11-04"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1992-038A",
         "name": "SAMPEX",
-        "NSSDC id": "1992-038A"
+        "NSSDC id": "1992-038A",
+        "Launch date": "1992-07-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1988-026A",
         "name": "San Marco-D/L",
-        "NSSDC id": "1988-026A"
+        "NSSDC id": "1988-026A",
+        "Launch date": "1988-03-25"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1971-080A",
         "name": "Shinsei",
-        "NSSDC id": "1971-080A"
+        "NSSDC id": "1971-080A",
+        "Launch date": "1971-09-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1977-049A",
         "name": "SIGNE 3",
-        "NSSDC id": "1977-049A"
+        "NSSDC id": "1977-049A",
+        "Launch date": "1977-06-17"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1973-027A",
         "name": "Skylab",
-        "NSSDC id": "1973-027A"
+        "NSSDC id": "1973-027A",
+        "Launch date": "1973-05-14"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1981-100A",
         "name": "SME",
-        "NSSDC id": "1981-100A"
+        "NSSDC id": "1981-100A",
+        "Launch date": "1981-10-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1980-014A",
         "name": "SMM",
-        "NSSDC id": "1980-014A"
+        "NSSDC id": "1980-014A",
+        "Launch date": "1980-02-14"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-011A",
         "name": "SMS 2",
-        "NSSDC id": "1975-011A"
+        "NSSDC id": "1975-011A",
+        "Launch date": "1975-02-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1998-012A",
         "name": "SNOE",
-        "NSSDC id": "1998-012A"
+        "NSSDC id": "1998-012A",
+        "Launch date": "1998-02-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1995-065A",
         "name": "SOHO",
-        "NSSDC id": "1995-065A"
+        "NSSDC id": "1995-065A",
+        "Launch date": "1995-12-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2010-005A",
         "name": "Solar Dynamics Observatory",
-        "NSSDC id": "2010-005A"
+        "NSSDC id": "2010-005A",
+        "Launch date": "2010-02-11"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SOT-1",
         "name": "Solar Optical Telescope",
-        "NSSDC id": "SOT-1"
+        "NSSDC id": "SOT-1",
+        "Launch date": "1991-03-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2020-010A",
         "name": "Solar Orbiter",
-        "NSSDC id": "2020-010A"
+        "NSSDC id": "2020-010A",
+        "Launch date": "2020-02-10"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1960-007B",
         "name": "SOLRAD 1",
-        "NSSDC id": "1960-007B"
+        "NSSDC id": "1960-007B",
+        "Launch date": "1960-06-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SRAD4B",
         "name": "SOLRAD 4B",
-        "NSSDC id": "SRAD4B"
+        "NSSDC id": "SRAD4B",
+        "Launch date": "1962-04-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1963-021C",
         "name": "SOLRAD 6",
-        "NSSDC id": "1963-021C"
+        "NSSDC id": "1963-021C",
+        "Launch date": "1963-06-15"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1964-001D",
         "name": "SOLRAD 7A",
-        "NSSDC id": "1964-001D"
+        "NSSDC id": "1964-001D",
+        "Launch date": "1964-01-11"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-016D",
         "name": "SOLRAD 7B",
-        "NSSDC id": "1965-016D"
+        "NSSDC id": "1965-016D",
+        "Launch date": "1965-03-09"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1965-093A",
         "name": "SOLRAD 8",
-        "NSSDC id": "1965-093A"
+        "NSSDC id": "1965-093A",
+        "Launch date": "1965-11-19"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1968-017A",
         "name": "SOLRAD 9",
-        "NSSDC id": "1968-017A"
+        "NSSDC id": "1968-017A",
+        "Launch date": "1968-03-05"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1971-058A",
         "name": "SOLRAD 10",
-        "NSSDC id": "1971-058A"
+        "NSSDC id": "1971-058A",
+        "Launch date": "1971-07-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1976-023C",
         "name": "SOLRAD 11A",
-        "NSSDC id": "1976-023C"
+        "NSSDC id": "1976-023C",
+        "Launch date": "1976-03-15"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1976-023D",
         "name": "SOLRAD 11B",
-        "NSSDC id": "1976-023D"
+        "NSSDC id": "1976-023D",
+        "Launch date": "1976-03-15"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SRD-11C",
         "name": "SOLRAD 11C",
         "NSSDC id": "SRD-11C"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SRD-2",
         "name": "SOLRAD 2",
-        "NSSDC id": "SRD-2"
+        "NSSDC id": "SRD-2",
+        "Launch date": "1960-11-30"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2003-004A",
         "name": "SORCE",
-        "NSSDC id": "2003-004A"
+        "NSSDC id": "2003-004A",
+        "Launch date": "2003-01-25"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SHUTTLE",
         "name": "Space Shuttle",
-        "NSSDC id": "SHUTTLE"
+        "NSSDC id": "SHUTTLE",
+        "Launch date": "1980-06-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SPLBSOL",
         "name": "Spacelab Solar",
         "NSSDC id": "SPLBSOL"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1994-059B",
         "name": "Spartan 1",
-        "NSSDC id": "1994-059B"
+        "NSSDC id": "1994-059B",
+        "Launch date": "1994-09-13"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1993-023B",
         "name": "Spartan 201-01",
-        "NSSDC id": "1993-023B"
+        "NSSDC id": "1993-023B",
+        "Launch date": "1993-04-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1998-064C",
         "name": "Spartan 201-05",
-        "NSSDC id": "1998-064C"
+        "NSSDC id": "1998-064C",
+        "Launch date": "1998-11-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1995-048B",
         "name": "Spartan 201-3",
-        "NSSDC id": "1995-048B"
+        "NSSDC id": "1995-048B",
+        "Launch date": "1995-09-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1985-048E",
         "name": "Spartan-A",
-        "NSSDC id": "1985-048E"
+        "NSSDC id": "1985-048E",
+        "Launch date": "1985-06-17"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SPATN-B",
         "name": "Spartan-B",
-        "NSSDC id": "SPATN-B"
+        "NSSDC id": "SPATN-B",
+        "Launch date": "1992-07-09"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SPATN-C",
         "name": "Spartan-C",
-        "NSSDC id": "SPATN-C"
+        "NSSDC id": "SPATN-C",
+        "Launch date": "1986-12-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1957-002A",
         "name": "Sputnik 2",
-        "NSSDC id": "1957-002A"
+        "NSSDC id": "1957-002A",
+        "Launch date": "1957-11-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SR4GREB",
         "name": "SR 4/GREB 4",
-        "NSSDC id": "SR4GREB"
+        "NSSDC id": "SR4GREB",
+        "Launch date": "1962-01-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SSBUV04",
         "name": "SSBUV04",
-        "NSSDC id": "SSBUV04"
+        "NSSDC id": "SSBUV04",
+        "Launch date": "1992-03-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SSBUV05",
         "name": "SSBUV05",
-        "NSSDC id": "SSBUV05"
+        "NSSDC id": "SSBUV05",
+        "Launch date": "1993-04-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SSBUV06",
         "name": "SSBUV06",
-        "NSSDC id": "SSBUV06"
+        "NSSDC id": "SSBUV06",
+        "Launch date": "1994-11-03"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2006-047A",
         "name": "STEREO A",
-        "NSSDC id": "2006-047A"
+        "NSSDC id": "2006-047A",
+        "Launch date": "2006-10-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2006-047B",
         "name": "STEREO B",
-        "NSSDC id": "2006-047B"
+        "NSSDC id": "2006-047B",
+        "Launch date": "2006-10-26"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1979-017A",
         "name": "STP P78-1",
-        "NSSDC id": "1979-017A"
+        "NSSDC id": "1979-017A",
+        "Launch date": "1979-02-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=P80-2",
         "name": "STP P80-2",
-        "NSSDC id": "P80-2"
+        "NSSDC id": "P80-2",
+        "Launch date": "1981-01-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1982-022A",
         "name": "STS 3/OSS 1",
-        "NSSDC id": "1982-022A"
+        "NSSDC id": "1982-022A",
+        "Launch date": "1982-03-22"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1983-116A",
         "name": "STS 9/Spacelab 1",
-        "NSSDC id": "1983-116A"
+        "NSSDC id": "1983-116A",
+        "Launch date": "1983-11-28"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1989-084A",
         "name": "STS 34",
-        "NSSDC id": "1989-084A"
+        "NSSDC id": "1989-084A",
+        "Launch date": "1989-10-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1990-090A",
         "name": "STS 41/SSBUV02",
-        "NSSDC id": "1990-090A"
+        "NSSDC id": "1990-090A",
+        "Launch date": "1990-10-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1991-054A",
         "name": "STS 43/SSBUV03",
-        "NSSDC id": "1991-054A"
+        "NSSDC id": "1991-054A",
+        "Launch date": "1991-08-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1992-015A",
         "name": "STS 45",
-        "NSSDC id": "1992-015A"
+        "NSSDC id": "1992-015A",
+        "Launch date": "1992-03-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1985-034A",
         "name": "STS 51B/Spacelab 3",
-        "NSSDC id": "1985-034A"
+        "NSSDC id": "1985-034A",
+        "Launch date": "1985-04-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1985-063A",
         "name": "STS 51F/Spacelab 2",
-        "NSSDC id": "1985-063A"
+        "NSSDC id": "1985-063A",
+        "Launch date": "1985-07-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=SUNLB-A",
         "name": "Sunlab-A",
-        "NSSDC id": "SUNLB-A"
+        "NSSDC id": "SUNLB-A",
+        "Launch date": "1986-07-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1975-014A",
         "name": "Taiyo",
-        "NSSDC id": "1975-014A"
+        "NSSDC id": "1975-014A",
+        "Launch date": "1975-02-24"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1972-014A",
         "name": "TD 1A",
-        "NSSDC id": "1972-014A"
+        "NSSDC id": "1972-014A",
+        "Launch date": "1972-03-12"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1999-026A",
         "name": "TERRIERS",
-        "NSSDC id": "1999-026A"
+        "NSSDC id": "1999-026A",
+        "Launch date": "1999-05-18"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2001-055B",
         "name": "TIMED",
-        "NSSDC id": "2001-055B"
+        "NSSDC id": "2001-055B",
+        "Launch date": "2001-12-07"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1998-020A",
         "name": "TRACE",
-        "NSSDC id": "1998-020A"
+        "NSSDC id": "1998-020A",
+        "Launch date": "1998-04-02"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1991-063B",
         "name": "UARS",
-        "NSSDC id": "1991-063B"
+        "NSSDC id": "1991-063B",
+        "Launch date": "1991-09-12"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=UARS-2",
         "name": "UARS 2",
-        "NSSDC id": "UARS-2"
+        "NSSDC id": "UARS-2",
+        "Launch date": "1989-10-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1990-090B",
         "name": "Ulysses",
-        "NSSDC id": "1990-090B"
+        "NSSDC id": "1990-090B",
+        "Launch date": "1990-10-06"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-046D",
         "name": "Vela 5A",
-        "NSSDC id": "1969-046D"
+        "NSSDC id": "1969-046D",
+        "Launch date": "1969-05-23"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1969-046E",
         "name": "Vela 5B",
-        "NSSDC id": "1969-046E"
+        "NSSDC id": "1969-046E",
+        "Launch date": "1969-05-23"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1970-027A",
         "name": "Vela 6A",
-        "NSSDC id": "1970-027A"
+        "NSSDC id": "1970-027A",
+        "Launch date": "1970-04-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1970-027B",
         "name": "Vela 6B",
-        "NSSDC id": "1970-027B"
+        "NSSDC id": "1970-027B",
+        "Launch date": "1970-04-08"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1994-071A",
         "name": "Wind",
-        "NSSDC id": "1994-071A"
+        "NSSDC id": "1994-071A",
+        "Launch date": "1994-11-01"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1967-118A",
         "name": "WRESAT",
-        "NSSDC id": "1967-118A"
+        "NSSDC id": "1967-118A",
+        "Launch date": "1967-11-29"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=1991-062A",
         "name": "Yohkoh",
-        "NSSDC id": "1991-062A"
+        "NSSDC id": "1991-062A",
+        "Launch date": "1991-08-30"
     },
     {
+        "URL": "https://nssdc.gsfc.nasa.gov//nmc/spacecraft/display.action?id=2011-015B",
         "name": "YouthSat",
-        "NSSDC id": "2011-015B"
+        "NSSDC id": "2011-015B",
+        "Launch date": "2011-04-20"
     }
 ]
