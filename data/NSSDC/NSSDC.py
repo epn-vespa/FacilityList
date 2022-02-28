@@ -1,6 +1,6 @@
 import json
-output_file='/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/new_NSSDC_Planetery-Science.json'
-datadict=json.load(open("NSSDC_Planetery-Science.json"))
+output_file='/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/new_NSSDC_Solar-Physics.json'
+datadict=json.load(open("NSSDC_Solar-Physics.json"))
 
 datadict2 = []
 for e in datadict :
