@@ -3,25 +3,21 @@
         "OID": "1.3.112.4.7.1495",
         "Name": "PVSAT",
         "Abbreviation": "PVSAT"
-
     },
     {
         "OID": "1.3.112.4.7.1524",
         "Name": "SES-23",
         "Abbreviation": "SES-23"
-
     },
     {
         "OID": "1.3.112.4.7.1536",
         "Name": "SARNext-C",
         "Abbreviation": "SNC"
-
     },
     {
         "OID": "1.3.112.4.7.1528",
         "Name": "KSF2-a",
         "Abbreviation": "KSF2-a"
-
     },
     {
         "OID": "1.3.112.4.7.1496",
@@ -97,15 +93,12 @@
         "OID": "1.3.112.4.7.372",
         "Name": "FY-4",
         "Abbreviation": "FY-4",
-        "Aliases": [
-            "FengYun-4"
-        ]
+        "Aliases": ["FengYun-4"]
     },
     {
         "OID": "1.3.112.4.7.1532",
         "Name": "QPS-SAR-3",
         "Abbreviation": "QPS-SAR-3"
-
     },
     {
         "OID": "1.3.112.4.7.1540",
@@ -121,9 +114,7 @@
         "OID": "1.3.112.4.7.1089",
         "Name": "Dark Matter Particle Explore",
         "Abbreviation": "Dark-Matter-Particle-Explore",
-        "Aliases": [
-            "DAMPE"
-        ]
+        "Aliases": ["DAMPE"]
     },
     {
         "OID": "1.3.112.4.7.1533",
@@ -220,9 +211,7 @@
         "OID": "1.3.112.4.7.1505",
         "Name": "E36X",
         "Abbreviation": "E36X",
-        "Aliases": [
-            "E36X"
-        ]
+        "Aliases": ["E36X"]
     },
     {
         "OID": "1.3.112.4.7.1546",
@@ -240,9 +229,7 @@
         "OID": "1.3.112.4.7.1547",
         "Name": "TELKOMSAT HTS 113 BT",
         "Abbreviation": "SATMP-3",
-        "Aliases": [
-            "Merah Putih 3"
-        ]
+        "Aliases": ["Merah Putih 3"]
     },
     {
         "OID": "1.3.112.4.7.1548",
@@ -260,17 +247,13 @@
         "OID": "1.3.112.4.7.1550",
         "Name": "SES-24",
         "Abbreviation": "SES-24",
-        "Aliases": [
-            "ASTRA 1P"
-        ]
+        "Aliases": ["ASTRA 1P"]
     },
     {
         "OID": "1.3.112.4.7.1551",
         "Name": "Russian ISS Segment Service Module",
         "Abbreviation": "SM",
-        "Aliases": [
-            "Zvezda Service Module"
-        ]
+        "Aliases": ["Zvezda Service Module"]
     },
     {
         "OID": "1.3.112.4.7.731",
@@ -282,9 +265,7 @@
         "OID": "1.3.112.4.7.1511",
         "Name": "OPTUS 11",
         "Abbreviation": "OPTUS11",
-        "Aliases": [
-            "OPTUS11"
-        ]
+        "Aliases": ["OPTUS11"]
     },
     {
         "OID": "1.3.112.4.7.1552",
@@ -296,9 +277,7 @@
         "OID": "1.3.112.4.7.1512",
         "Name": "INTELSAT 42",
         "Abbreviation": "IS-42",
-        "Aliases": [
-            "IS-42"
-        ]
+        "Aliases": ["IS-42"]
     },
     {
         "OID": "1.3.112.4.7.1553",
@@ -310,9 +289,7 @@
         "OID": "1.3.112.4.7.1513",
         "Name": "INTELSAT 43",
         "Abbreviation": "IS-43",
-        "Aliases": [
-            "IS-43"
-        ]
+        "Aliases": ["IS-43"]
     },
     {
         "OID": "1.3.112.4.7.1554",
@@ -324,9 +301,7 @@
         "OID": "1.3.112.4.7.1514",
         "Name": "SUPERBIRD 9",
         "Abbreviation": "SB9",
-        "Aliases": [
-            "SB9"
-        ]
+        "Aliases": ["SB9"]
     },
     {
         "OID": "1.3.112.4.7.1555",
@@ -338,9 +313,7 @@
         "OID": "1.3.112.4.7.1515",
         "Name": "Arctic Weather Satellite",
         "Abbreviation": "AWS1",
-        "Aliases": [
-            "AWS"
-        ]
+        "Aliases": ["AWS"]
     },
     {
         "OID": "1.3.112.4.7.1556",
@@ -466,17 +439,13 @@
         "OID": "1.3.112.4.7.1256",
         "Name": "KOMPSAT-7",
         "Abbreviation": "KOrea Multi Purpose SATellite 7",
-        "Aliases": [
-            "KOMPSAT-7"
-        ]
+        "Aliases": ["KOMPSAT-7"]
     },
     {
         "OID": "1.3.112.4.7.1353",
         "Name": "PSLV C49 OP",
         "Abbreviation": "PSLV-C49-OP",
-        "Aliases": [
-            "C49 OP"
-        ]
+        "Aliases": ["C49 OP"]
     },
     {
         "OID": "1.3.112.4.7.1",
@@ -1658,9 +1627,7 @@
         "OID": "1.3.112.4.7.199",
         "Name": "Europa Clipper",
         "Abbreviation": "EUROPA",
-        "Aliases": [
-            "Europa"
-        ]
+        "Aliases": ["Europa"]
     },
     {
         "OID": "1.3.112.4.7.200",
@@ -1852,9 +1819,7 @@
         "OID": "1.3.112.4.7.231",
         "Name": "Solar Probe Plus",
         "Abbreviation": "Solar-Probe-Plus",
-        "Aliases": [
-            "SPP"
-        ]
+        "Aliases": ["SPP"]
     },
     {
         "OID": "1.3.112.4.7.232",
@@ -2340,9 +2305,7 @@
         "OID": "1.3.112.4.7.313",
         "Name": "ORB-9E",
         "Abbreviation": "ORB-9E",
-        "Aliases": [
-            "Cygnus"
-        ]
+        "Aliases": ["Cygnus"]
     },
     {
         "OID": "1.3.112.4.7.314",
@@ -2378,9 +2341,7 @@
         "OID": "1.3.112.4.7.319",
         "Name": "ORB-10E",
         "Abbreviation": "ORB-10E",
-        "Aliases": [
-            "Cygnus"
-        ]
+        "Aliases": ["Cygnus"]
     },
     {
         "OID": "1.3.112.4.7.320",
@@ -2650,33 +2611,25 @@
         "OID": "1.3.112.4.7.366",
         "Name": "OA-11",
         "Abbreviation": "OA-11",
-        "Aliases": [
-            "Cygnus"
-        ]
+        "Aliases": ["Cygnus"]
     },
     {
         "OID": "1.3.112.4.7.367",
         "Name": "OA-12",
         "Abbreviation": "OA-12",
-        "Aliases": [
-            "Cygnus"
-        ]
+        "Aliases": ["Cygnus"]
     },
     {
         "OID": "1.3.112.4.7.368",
         "Name": "OA-13",
         "Abbreviation": "OA-13",
-        "Aliases": [
-            "Cygnus"
-        ]
+        "Aliases": ["Cygnus"]
     },
     {
         "OID": "1.3.112.4.7.369",
         "Name": "OA-14",
         "Abbreviation": "OA-14",
-        "Aliases": [
-            "Cygnus"
-        ]
+        "Aliases": ["Cygnus"]
     },
     {
         "OID": "1.3.112.4.7.370",
@@ -2790,9 +2743,7 @@
         "OID": "1.3.112.4.7.389",
         "Name": "JPSS-1",
         "Abbreviation": "JPSS-1",
-        "Aliases": [
-            "NOAA-20"
-        ]
+        "Aliases": ["NOAA-20"]
     },
     {
         "OID": "1.3.112.4.7.390",
@@ -2894,9 +2845,7 @@
         "OID": "1.3.112.4.7.407",
         "Name": "JPSS-2",
         "Abbreviation": "JPSS-2",
-        "Aliases": [
-            "NOAA-21"
-        ]
+        "Aliases": ["NOAA-21"]
     },
     {
         "OID": "1.3.112.4.7.408",
@@ -2908,9 +2857,7 @@
         "OID": "1.3.112.4.7.409",
         "Name": "JPSS-3",
         "Abbreviation": "JPSS-3",
-        "Aliases": [
-            "NOAA-22"
-        ]
+        "Aliases": ["NOAA-22"]
     },
     {
         "OID": "1.3.112.4.7.410",
@@ -2922,9 +2869,7 @@
         "OID": "1.3.112.4.7.411",
         "Name": "JPSS-4",
         "Abbreviation": "JPSS-4",
-        "Aliases": [
-            "NOAA-23"
-        ]
+        "Aliases": ["NOAA-23"]
     },
     {
         "OID": "1.3.112.4.7.412",
@@ -2972,9 +2917,7 @@
         "OID": "1.3.112.4.7.419",
         "Name": "ASNARO-2 (System)",
         "Abbreviation": "ASNARO-2-System",
-        "Aliases": [
-            "ASNARO-2 (System)"
-        ]
+        "Aliases": ["ASNARO-2 (System)"]
     },
     {
         "OID": "1.3.112.4.7.458",
@@ -3388,9 +3331,7 @@
         "OID": "1.3.112.4.7.488",
         "Name": "euCROPIS",
         "Abbreviation": "euCROPIS",
-        "Aliases": [
-            "EUC"
-        ]
+        "Aliases": ["EUC"]
     },
     {
         "OID": "1.3.112.4.7.489",
@@ -4488,9 +4429,7 @@
         "OID": "1.3.112.4.7.674",
         "Name": "CHEOPS",
         "Abbreviation": "CHEOPS",
-        "Aliases": [
-            "CHEOPS"
-        ]
+        "Aliases": ["CHEOPS"]
     },
     {
         "OID": "1.3.112.4.7.675",
@@ -4664,9 +4603,7 @@
         "OID": "1.3.112.4.7.702",
         "Name": "Es'hail 2",
         "Abbreviation": "Eshail-2",
-        "Aliases": [
-            "Es'hail 2"
-        ]
+        "Aliases": ["Es'hail 2"]
     },
     {
         "OID": "1.3.112.4.7.703",
@@ -4678,17 +4615,13 @@
         "OID": "1.3.112.4.7.704",
         "Name": "GEO-KOMPSAT-2B",
         "Abbreviation": "GEO-KOMPSAT-2B",
-        "Aliases": [
-            "GK2B"
-        ]
+        "Aliases": ["GK2B"]
     },
     {
         "OID": "1.3.112.4.7.705",
         "Name": "GEO-KOMPSAT-2A",
         "Abbreviation": "GEO-KOMPSAT-2A",
-        "Aliases": [
-            "GK2A"
-        ]
+        "Aliases": ["GK2A"]
     },
     {
         "OID": "1.3.112.4.7.706",
@@ -4946,9 +4879,7 @@
         "OID": "1.3.112.4.7.753",
         "Name": "DIRECTV T16",
         "Abbreviation": "DIRECTV-T16",
-        "Aliases": [
-            "T16"
-        ]
+        "Aliases": ["T16"]
     },
     {
         "OID": "1.3.112.4.7.754",
@@ -5008,9 +4939,7 @@
         "OID": "1.3.112.4.7.765",
         "Name": "Bangabandhu",
         "Abbreviation": "Bangabandhu",
-        "Aliases": [
-            "BS1"
-        ]
+        "Aliases": ["BS1"]
     },
     {
         "OID": "1.3.112.4.7.766",
@@ -5040,9 +4969,7 @@
         "OID": "1.3.112.4.7.770",
         "Name": "JDRS",
         "Abbreviation": "JDRS",
-        "Aliases": [
-            "JDRS"
-        ]
+        "Aliases": ["JDRS"]
     },
     {
         "OID": "1.3.112.4.7.771",
@@ -5186,17 +5113,13 @@
         "OID": "1.3.112.4.7.794",
         "Name": "MERLIN",
         "Abbreviation": "MERLIN",
-        "Aliases": [
-            "MERLIN (TT)"
-        ]
+        "Aliases": ["MERLIN (TT)"]
     },
     {
         "OID": "1.3.112.4.7.795",
         "Name": "SWOT",
         "Abbreviation": "SWOT",
-        "Aliases": [
-            "SWOT (TT)"
-        ]
+        "Aliases": ["SWOT (TT)"]
     },
     {
         "OID": "1.3.112.4.7.796",
@@ -5208,9 +5131,7 @@
         "OID": "1.3.112.4.7.797",
         "Name": "LunaH-Map",
         "Abbreviation": "LunaH-Map",
-        "Aliases": [
-            "Lunar Polar Hydrogen Mapper"
-        ]
+        "Aliases": ["Lunar Polar Hydrogen Mapper"]
     },
     {
         "OID": "1.3.112.4.7.798",
@@ -5222,9 +5143,7 @@
         "OID": "1.3.112.4.7.799",
         "Name": "JUICE",
         "Abbreviation": "JUICE",
-        "Aliases": [
-            "JUICE"
-        ]
+        "Aliases": ["JUICE"]
     },
     {
         "OID": "1.3.112.4.7.800",
@@ -5308,17 +5227,13 @@
         "OID": "1.3.112.4.7.813",
         "Name": "Proba-3 CSC",
         "Abbreviation": "Proba-3-CSC",
-        "Aliases": [
-            "Proba-3"
-        ]
+        "Aliases": ["Proba-3"]
     },
     {
         "OID": "1.3.112.4.7.814",
         "Name": "Proba-3 OSC",
         "Abbreviation": "Proba-3-OSC",
-        "Aliases": [
-            "Proba-3"
-        ]
+        "Aliases": ["Proba-3"]
     },
     {
         "OID": "1.3.112.4.7.815",
@@ -5414,9 +5329,7 @@
         "OID": "1.3.112.4.7.830",
         "Name": "Near Earth Asteroid Scout",
         "Abbreviation": "Near-Earth-Asteroid-Scout",
-        "Aliases": [
-            "NEA Scout"
-        ]
+        "Aliases": ["NEA Scout"]
     },
     {
         "OID": "1.3.112.4.7.831",
@@ -5440,9 +5353,7 @@
         "OID": "1.3.112.4.7.834",
         "Name": "CuSP",
         "Abbreviation": "CuSP",
-        "Aliases": [
-            "CubeSat for the observation of Solar Particles"
-        ]
+        "Aliases": ["CubeSat for the observation of Solar Particles"]
     },
     {
         "OID": "1.3.112.4.7.835",
@@ -5514,17 +5425,13 @@
         "OID": "1.3.112.4.7.847",
         "Name": "Oceansat-3",
         "Abbreviation": "Oceansat-3",
-        "Aliases": [
-            "OS3"
-        ]
+        "Aliases": ["OS3"]
     },
     {
         "OID": "1.3.112.4.7.848",
         "Name": "SatKomHan",
         "Abbreviation": "SatKomHan",
-        "Aliases": [
-            "SatKomHan"
-        ]
+        "Aliases": ["SatKomHan"]
     },
     {
         "OID": "1.3.112.4.7.849",
@@ -5602,25 +5509,19 @@
         "OID": "1.3.112.4.7.863",
         "Name": "Pl\u00e9iades-3",
         "Abbreviation": "Pl\u00e9iades-3",
-        "Aliases": [
-            "VHR2020-A"
-        ]
+        "Aliases": ["VHR2020-A"]
     },
     {
         "OID": "1.3.112.4.7.864",
         "Name": "Pl\u00e9iades-4",
         "Abbreviation": "Pl\u00e9iades-4",
-        "Aliases": [
-            "VHR2020-B"
-        ]
+        "Aliases": ["VHR2020-B"]
     },
     {
         "OID": "1.3.112.4.7.865",
         "Name": "Pl\u00e9iades-5",
         "Abbreviation": "Pl\u00e9iades-5",
-        "Aliases": [
-            "VHR2020-C"
-        ]
+        "Aliases": ["VHR2020-C"]
     },
     {
         "OID": "1.3.112.4.7.866",
@@ -5686,9 +5587,7 @@
         "OID": "1.3.112.4.7.876",
         "Name": "Pl\u00e9iades-6",
         "Abbreviation": "Pl\u00e9iades-6",
-        "Aliases": [
-            "VHR2020-D"
-        ]
+        "Aliases": ["VHR2020-D"]
     },
     {
         "OID": "1.3.112.4.7.877",
@@ -6018,9 +5917,7 @@
         "OID": "1.3.112.4.7.931",
         "Name": "Emirates Mars Mission",
         "Abbreviation": "Emirates-Mars-Mission",
-        "Aliases": [
-            "Hope Mission"
-        ]
+        "Aliases": ["Hope Mission"]
     },
     {
         "OID": "1.3.112.4.7.932",
@@ -6728,9 +6625,7 @@
         "OID": "1.3.112.4.7.1058",
         "Name": "Dragon-B",
         "Abbreviation": "Dragon-B",
-        "Aliases": [
-            "Dragon-B (for NASA Commercial Crew Program)"
-        ]
+        "Aliases": ["Dragon-B (for NASA Commercial Crew Program)"]
     },
     {
         "OID": "1.3.112.4.7.1059",
@@ -6820,9 +6715,7 @@
         "OID": "1.3.112.4.7.1072",
         "Name": "Dragon-A",
         "Abbreviation": "Dragon-A",
-        "Aliases": [
-            "NASA Commercial Crew Demo-1"
-        ]
+        "Aliases": ["NASA Commercial Crew Demo-1"]
     },
     {
         "OID": "1.3.112.4.7.1073",
@@ -6954,9 +6847,7 @@
         "OID": "1.3.112.4.7.1098",
         "Name": "Pocket Spacecraft Fleet",
         "Abbreviation": "Pocket-Spacecraft-Fleet",
-        "Aliases": [
-            "PS-FLEET"
-        ]
+        "Aliases": ["PS-FLEET"]
     },
     {
         "OID": "1.3.112.4.7.1099",
@@ -7040,9 +6931,7 @@
         "OID": "1.3.112.4.7.1112",
         "Name": "CXBN-2",
         "Abbreviation": "CXBN-2",
-        "Aliases": [
-            "Cosmic X-Ray Background Nanosatellite-2"
-        ]
+        "Aliases": ["Cosmic X-Ray Background Nanosatellite-2"]
     },
     {
         "OID": "1.3.112.4.7.1113",
@@ -7078,33 +6967,25 @@
         "OID": "1.3.112.4.7.1118",
         "Name": "KPLO",
         "Abbreviation": "KPLO",
-        "Aliases": [
-            "Korea Pathfinder Lunar Orbiter"
-        ]
+        "Aliases": ["Korea Pathfinder Lunar Orbiter"]
     },
     {
         "OID": "1.3.112.4.7.1119",
         "Name": "ALINA",
         "Abbreviation": "ALQ",
-        "Aliases": [
-            "Autonomous Landing and Navigation Module"
-        ]
+        "Aliases": ["Autonomous Landing and Navigation Module"]
     },
     {
         "OID": "1.3.112.4.7.1120",
         "Name": "ALQ-1",
         "Abbreviation": "AL1",
-        "Aliases": [
-            "Audi Lunar Quattro 1"
-        ]
+        "Aliases": ["Audi Lunar Quattro 1"]
     },
     {
         "OID": "1.3.112.4.7.1121",
         "Name": "ALQ-2",
         "Abbreviation": "AL2",
-        "Aliases": [
-            "Audi Lunar Quattro Rover 2"
-        ]
+        "Aliases": ["Audi Lunar Quattro Rover 2"]
     },
     {
         "OID": "1.3.112.4.7.1122",
@@ -7200,9 +7081,7 @@
         "OID": "1.3.112.4.7.1137",
         "Name": "Resourcesat-3",
         "Abbreviation": "RS-3",
-        "Aliases": [
-            "RS-3"
-        ]
+        "Aliases": ["RS-3"]
     },
     {
         "OID": "1.3.112.4.7.1138",
@@ -7913,57 +7792,43 @@
         "OID": "1.3.112.4.7.1265",
         "Name": "Metop-SG A1",
         "Abbreviation": "SGA1",
-        "Aliases": [
-            "SGA1"
-        ]
+        "Aliases": ["SGA1"]
     },
     {
         "OID": "1.3.112.4.7.1266",
         "Name": "Metop-SG A2",
         "Abbreviation": "SGA2",
-        "Aliases": [
-            "SGA2"
-        ]
+        "Aliases": ["SGA2"]
     },
     {
         "OID": "1.3.112.4.7.1267",
         "Name": "Metop-SG A3",
         "Abbreviation": "SGA3",
-        "Aliases": [
-            "SGA3"
-        ]
+        "Aliases": ["SGA3"]
     },
     {
         "OID": "1.3.112.4.7.1268",
         "Name": "Metop-SG B1",
         "Abbreviation": "SGB1",
-        "Aliases": [
-            "SGB1"
-        ]
+        "Aliases": ["SGB1"]
     },
     {
         "OID": "1.3.112.4.7.1269",
         "Name": "Metop-SG B2",
         "Abbreviation": "SGB2",
-        "Aliases": [
-            "SGB2"
-        ]
+        "Aliases": ["SGB2"]
     },
     {
         "OID": "1.3.112.4.7.1270",
         "Name": "Metop-SG B3",
         "Abbreviation": "SGB3",
-        "Aliases": [
-            "SGB3"
-        ]
+        "Aliases": ["SGB3"]
     },
     {
         "OID": "1.3.112.4.7.1271",
         "Name": "SeaHawk-1",
         "Abbreviation": "SHWK1",
-        "Aliases": [
-            "SOCON1"
-        ]
+        "Aliases": ["SOCON1"]
     },
     {
         "OID": "1.3.112.4.7.1272",
@@ -7981,9 +7846,7 @@
         "OID": "1.3.112.4.7.1274",
         "Name": "SeaHawk-2",
         "Abbreviation": "SHWK2",
-        "Aliases": [
-            "SOCON2"
-        ]
+        "Aliases": ["SOCON2"]
     },
     {
         "OID": "1.3.112.4.7.1275",
@@ -8025,9 +7888,7 @@
         "OID": "1.3.112.4.7.1282",
         "Name": "Eye-Sat",
         "Abbreviation": "Eye-Sat",
-        "Aliases": [
-            "EyeSat"
-        ]
+        "Aliases": ["EyeSat"]
     },
     {
         "OID": "1.3.112.4.7.1283",
@@ -8045,9 +7906,7 @@
         "OID": "1.3.112.4.7.1285",
         "Name": "RISAT-2B",
         "Abbreviation": "RISAT-2B",
-        "Aliases": [
-            "R2B"
-        ]
+        "Aliases": ["R2B"]
     },
     {
         "OID": "1.3.112.4.7.1288",
@@ -8119,25 +7978,19 @@
         "OID": "1.3.112.4.7.1299",
         "Name": "CubeL",
         "Abbreviation": "CBL",
-        "Aliases": [
-            "CBL"
-        ]
+        "Aliases": ["CBL"]
     },
     {
         "OID": "1.3.112.4.7.1300",
         "Name": "CAS500-2",
         "Abbreviation": "CAS500-2",
-        "Aliases": [
-            "Compact Advanced Satellite 500-2"
-        ]
+        "Aliases": ["Compact Advanced Satellite 500-2"]
     },
     {
         "OID": "1.3.112.4.7.1301",
         "Name": "THEOS-2",
         "Abbreviation": "THEOS-2",
-        "Aliases": [
-            "THEOS-2"
-        ]
+        "Aliases": ["THEOS-2"]
     },
     {
         "OID": "1.3.112.4.7.1302",
@@ -8197,9 +8050,7 @@
         "OID": "1.3.112.4.7.1311",
         "Name": "Luna-Glob",
         "Abbreviation": "Luna-Glob",
-        "Aliases": [
-            "Luna-25"
-        ]
+        "Aliases": ["Luna-25"]
     },
     {
         "OID": "1.3.112.4.7.1312",
@@ -8229,9 +8080,7 @@
         "OID": "1.3.112.4.7.1316",
         "Name": "MEASAT-3d",
         "Abbreviation": "MEASAT-3d",
-        "Aliases": [
-            "MEASAT-3d"
-        ]
+        "Aliases": ["MEASAT-3d"]
     },
     {
         "OID": "1.3.112.4.7.1317",
@@ -8243,9 +8092,7 @@
         "OID": "1.3.112.4.7.1318",
         "Name": "Harbinger",
         "Abbreviation": "Harbinger",
-        "Aliases": [
-            "ICEYE-X3"
-        ]
+        "Aliases": ["ICEYE-X3"]
     },
     {
         "OID": "1.3.112.4.7.1319",
@@ -8257,9 +8104,7 @@
         "OID": "1.3.112.4.7.1320",
         "Name": "Aditya-L1",
         "Abbreviation": "Aditya-L1",
-        "Aliases": [
-            "Aditya"
-        ]
+        "Aliases": ["Aditya"]
     },
     {
         "OID": "1.3.112.4.7.1322",
@@ -8352,9 +8197,7 @@
         "OID": "1.3.112.4.7.1336",
         "Name": "PSLV C48 PS4",
         "Abbreviation": "PSLV-C48-PS4",
-        "Aliases": [
-            "C48"
-        ]
+        "Aliases": ["C48"]
     },
     {
         "OID": "1.3.112.4.7.1337",
@@ -8432,9 +8275,7 @@
         "OID": "1.3.112.4.7.1352",
         "Name": "KONNECT VHTS",
         "Abbreviation": "KONNECT-VHTS",
-        "Aliases": [
-            "KVHTS"
-        ]
+        "Aliases": ["KVHTS"]
     },
     {
         "OID": "1.3.112.4.7.1354",
@@ -8452,9 +8293,7 @@
         "OID": "1.3.112.4.7.1356",
         "Name": "ASO-S",
         "Abbreviation": "ASO-S",
-        "Aliases": [
-            "KX-07"
-        ]
+        "Aliases": ["KX-07"]
     },
     {
         "OID": "1.3.112.4.7.1357",
@@ -8532,17 +8371,13 @@
         "OID": "1.3.112.4.7.1368",
         "Name": "NESS",
         "Abbreviation": "NESS",
-        "Aliases": [
-            "NESS"
-        ]
+        "Aliases": ["NESS"]
     },
     {
         "OID": "1.3.112.4.7.1369",
         "Name": "NESS-X",
         "Abbreviation": "NESS-X",
-        "Aliases": [
-            "NESS-X"
-        ]
+        "Aliases": ["NESS-X"]
     },
     {
         "OID": "1.3.112.4.7.1370",
@@ -8572,17 +8407,13 @@
         "OID": "1.3.112.4.7.1374",
         "Name": "ASO-S",
         "Abbreviation": "ASO-S0",
-        "Aliases": [
-            "KX-07"
-        ]
+        "Aliases": ["KX-07"]
     },
     {
         "OID": "1.3.112.4.7.1375",
         "Name": "EUTELSAT 10B",
         "Abbreviation": "E10B",
-        "Aliases": [
-            "E10B"
-        ]
+        "Aliases": ["E10B"]
     },
     {
         "OID": "1.3.112.4.7.1376",
@@ -8594,17 +8425,13 @@
         "OID": "1.3.112.4.7.1377",
         "Name": "Einstein Probe",
         "Abbreviation": "EP",
-        "Aliases": [
-            "KX-08"
-        ]
+        "Aliases": ["KX-08"]
     },
     {
         "OID": "1.3.112.4.7.1378",
         "Name": "Einstein Probe",
         "Abbreviation": "EP0",
-        "Aliases": [
-            "KX-08"
-        ]
+        "Aliases": ["KX-08"]
     },
     {
         "OID": "1.3.112.4.7.1379",
@@ -8652,17 +8479,13 @@
         "OID": "1.3.112.4.7.1387",
         "Name": "LICIACube",
         "Abbreviation": "LCC",
-        "Aliases": [
-            "LICIA"
-        ]
+        "Aliases": ["LICIA"]
     },
     {
         "OID": "1.3.112.4.7.1388",
         "Name": "AstroBio CubeSat",
         "Abbreviation": "ABC",
-        "Aliases": [
-            "AstroBio"
-        ]
+        "Aliases": ["AstroBio"]
     },
     {
         "OID": "1.3.112.4.7.1390",
@@ -8704,17 +8527,13 @@
         "OID": "1.3.112.4.7.1396",
         "Name": "ELO 3",
         "Abbreviation": "ELO 3",
-        "Aliases": [
-            "ELO3"
-        ]
+        "Aliases": ["ELO3"]
     },
     {
         "OID": "1.3.112.4.7.1397",
         "Name": "ELO 4",
         "Abbreviation": "ELO 4",
-        "Aliases": [
-            "ELO4"
-        ]
+        "Aliases": ["ELO4"]
     },
     {
         "OID": "1.3.112.4.7.1398",
@@ -8744,9 +8563,7 @@
         "OID": "1.3.112.4.7.1402",
         "Name": "NAOS-01",
         "Abbreviation": "NAOS-01",
-        "Aliases": [
-            "Luxembourg_Earth_Observation_System"
-        ]
+        "Aliases": ["Luxembourg_Earth_Observation_System"]
     },
     {
         "OID": "1.3.112.4.7.1403",
@@ -8818,9 +8635,7 @@
         "OID": "1.3.112.4.7.1415",
         "Name": "GRG-03",
         "Abbreviation": "GRG-03",
-        "Aliases": [
-            "GR3"
-        ]
+        "Aliases": ["GR3"]
     },
     {
         "OID": "1.3.112.4.7.1416",
@@ -8856,9 +8671,7 @@
         "OID": "1.3.112.4.7.1422",
         "Name": "DROR1",
         "Abbreviation": "DR1",
-        "Aliases": [
-            "DROR1"
-        ]
+        "Aliases": ["DROR1"]
     },
     {
         "OID": "1.3.112.4.7.1423",
@@ -8888,33 +8701,25 @@
         "OID": "1.3.112.4.7.1427",
         "Name": "Earth Return Orbiter",
         "Abbreviation": "ERO",
-        "Aliases": [
-            "ERO"
-        ]
+        "Aliases": ["ERO"]
     },
     {
         "OID": "1.3.112.4.7.1428",
         "Name": "Sample Fetch Rover",
         "Abbreviation": "MSFR",
-        "Aliases": [
-            "MSR-SFR"
-        ]
+        "Aliases": ["MSR-SFR"]
     },
     {
         "OID": "1.3.112.4.7.1429",
         "Name": "BADR-8",
         "Abbreviation": "BADR8",
-        "Aliases": [
-            "BADR8"
-        ]
+        "Aliases": ["BADR8"]
     },
     {
         "OID": "1.3.112.4.7.1432",
         "Name": "PLATO (Planetary Transits and Oscillations of stars)",
         "Abbreviation": "PLTO",
-        "Aliases": [
-            "PLATO"
-        ]
+        "Aliases": ["PLATO"]
     },
     {
         "OID": "1.3.112.4.7.1433",
@@ -8965,9 +8770,7 @@
         "OID": "1.3.112.4.7.1445",
         "Name": "PLATINO-1",
         "Abbreviation": "PLT-1,PLT#1,PLT1",
-        "Aliases": [
-            "PLATINO SAR"
-        ]
+        "Aliases": ["PLATINO SAR"]
     },
     {
         "OID": "1.3.112.4.7.1447",
@@ -9045,201 +8848,151 @@
         "OID": "1.3.112.4.7.1459",
         "Name": "KINEIS-1A",
         "Abbreviation": "KIN-1A",
-        "Aliases": [
-            "KIN-1A"
-        ]
+        "Aliases": ["KIN-1A"]
     },
     {
         "OID": "1.3.112.4.7.1460",
         "Name": "KINEIS-1B",
         "Abbreviation": "KIN-1B",
-        "Aliases": [
-            "KIN-1B"
-        ]
+        "Aliases": ["KIN-1B"]
     },
     {
         "OID": "1.3.112.4.7.1461",
         "Name": "KINEIS-1C",
         "Abbreviation": "KIN-1C",
-        "Aliases": [
-            "KIN-1C"
-        ]
+        "Aliases": ["KIN-1C"]
     },
     {
         "OID": "1.3.112.4.7.1462",
         "Name": "KINEIS-1D",
         "Abbreviation": "KIN-1D",
-        "Aliases": [
-            "KIN-1D"
-        ]
+        "Aliases": ["KIN-1D"]
     },
     {
         "OID": "1.3.112.4.7.1463",
         "Name": "KINEIS-1E",
         "Abbreviation": "KIN-1E",
-        "Aliases": [
-            "KIN-1E"
-        ]
+        "Aliases": ["KIN-1E"]
     },
     {
         "OID": "1.3.112.4.7.1464",
         "Name": "KINEIS-2A",
         "Abbreviation": "KIN-2A",
-        "Aliases": [
-            "KIN-2A"
-        ]
+        "Aliases": ["KIN-2A"]
     },
     {
         "OID": "1.3.112.4.7.1465",
         "Name": "KINEIS-2B",
         "Abbreviation": "KIN-2B",
-        "Aliases": [
-            "KIN-2B"
-        ]
+        "Aliases": ["KIN-2B"]
     },
     {
         "OID": "1.3.112.4.7.1466",
         "Name": "KINEIS-2C",
         "Abbreviation": "KIN-2C",
-        "Aliases": [
-            "KIN-2C"
-        ]
+        "Aliases": ["KIN-2C"]
     },
     {
         "OID": "1.3.112.4.7.1467",
         "Name": "KINEIS-2D",
         "Abbreviation": "KIN-2D",
-        "Aliases": [
-            "KIN-2D"
-        ]
+        "Aliases": ["KIN-2D"]
     },
     {
         "OID": "1.3.112.4.7.1468",
         "Name": "KINEIS-2E",
         "Abbreviation": "KIN-2E",
-        "Aliases": [
-            "KIN-2E"
-        ]
+        "Aliases": ["KIN-2E"]
     },
     {
         "OID": "1.3.112.4.7.1469",
         "Name": "KINEIS-3A",
         "Abbreviation": "KIN-3A",
-        "Aliases": [
-            "KIN-3A"
-        ]
+        "Aliases": ["KIN-3A"]
     },
     {
         "OID": "1.3.112.4.7.1470",
         "Name": "KINEIS-3B",
         "Abbreviation": "KIN-3B",
-        "Aliases": [
-            "KIN-3B"
-        ]
+        "Aliases": ["KIN-3B"]
     },
     {
         "OID": "1.3.112.4.7.1471",
         "Name": "KINEIS-3C",
         "Abbreviation": "KIN-3C",
-        "Aliases": [
-            "KIN-3C"
-        ]
+        "Aliases": ["KIN-3C"]
     },
     {
         "OID": "1.3.112.4.7.1472",
         "Name": "KINEIS-3D",
         "Abbreviation": "KIN-3D",
-        "Aliases": [
-            "KIN-3D"
-        ]
+        "Aliases": ["KIN-3D"]
     },
     {
         "OID": "1.3.112.4.7.1473",
         "Name": "KINEIS-3E",
         "Abbreviation": "KIN-3E",
-        "Aliases": [
-            "KIN-3E"
-        ]
+        "Aliases": ["KIN-3E"]
     },
     {
         "OID": "1.3.112.4.7.1474",
         "Name": "KINEIS-4A",
         "Abbreviation": "KIN-4A",
-        "Aliases": [
-            "KIN-4A"
-        ]
+        "Aliases": ["KIN-4A"]
     },
     {
         "OID": "1.3.112.4.7.1475",
         "Name": "KINEIS-4B",
         "Abbreviation": "KIN-4B",
-        "Aliases": [
-            "KIN-4B"
-        ]
+        "Aliases": ["KIN-4B"]
     },
     {
         "OID": "1.3.112.4.7.1476",
         "Name": "KINEIS-4C",
         "Abbreviation": "KIN-4C",
-        "Aliases": [
-            "KIN-4C"
-        ]
+        "Aliases": ["KIN-4C"]
     },
     {
         "OID": "1.3.112.4.7.1477",
         "Name": "KINEIS-4D",
         "Abbreviation": "KIN-4D",
-        "Aliases": [
-            "KIN-4D"
-        ]
+        "Aliases": ["KIN-4D"]
     },
     {
         "OID": "1.3.112.4.7.1478",
         "Name": "KINEIS-4E",
         "Abbreviation": "KIN-4E",
-        "Aliases": [
-            "KIN-4E"
-        ]
+        "Aliases": ["KIN-4E"]
     },
     {
         "OID": "1.3.112.4.7.1479",
         "Name": "KINEIS-5A",
         "Abbreviation": "KIN-5A",
-        "Aliases": [
-            "KIN-5A"
-        ]
+        "Aliases": ["KIN-5A"]
     },
     {
         "OID": "1.3.112.4.7.1480",
         "Name": "KINEIS-5B",
         "Abbreviation": "KIN-5B",
-        "Aliases": [
-            "KIN-5B"
-        ]
+        "Aliases": ["KIN-5B"]
     },
     {
         "OID": "1.3.112.4.7.1481",
         "Name": "KINEIS-5C",
         "Abbreviation": "KIN-5C",
-        "Aliases": [
-            "KIN-5C"
-        ]
+        "Aliases": ["KIN-5C"]
     },
     {
         "OID": "1.3.112.4.7.1482",
         "Name": "KINEIS-5D",
         "Abbreviation": "KIN-5D",
-        "Aliases": [
-            "KIN-5D"
-        ]
+        "Aliases": ["KIN-5D"]
     },
     {
         "OID": "1.3.112.4.7.1483",
         "Name": "KINEIS-5E",
         "Abbreviation": "KIN-5E",
-        "Aliases": [
-            "KIN-5E"
-        ]
+        "Aliases": ["KIN-5E"]
     },
     {
         "OID": "1.3.112.4.7.1484",
@@ -9275,33 +9028,25 @@
         "OID": "1.3.112.4.7.1489",
         "Name": "CO3D1",
         "Abbreviation": "CO3D1",
-        "Aliases": [
-            "S250-O1"
-        ]
+        "Aliases": ["S250-O1"]
     },
     {
         "OID": "1.3.112.4.7.1490",
         "Name": "CO3D2",
         "Abbreviation": "CO3D2",
-        "Aliases": [
-            "S250-O2"
-        ]
+        "Aliases": ["S250-O2"]
     },
     {
         "OID": "1.3.112.4.7.1491",
         "Name": "CO3D3",
         "Abbreviation": "CO3D3",
-        "Aliases": [
-            "S250-O3"
-        ]
+        "Aliases": ["S250-O3"]
     },
     {
         "OID": "1.3.112.4.7.1492",
         "Name": "CO3D4",
         "Abbreviation": "CO3D4",
-        "Aliases": [
-            "S250-O4"
-        ]
+        "Aliases": ["S250-O4"]
     },
     {
         "OID": "1.3.112.4.7.1493",
@@ -9313,8 +9058,6 @@
         "OID": "1.3.112.4.7.1494",
         "Name": "Gaganyaan",
         "Abbreviation": "G1, G2, H1",
-        "Aliases": [
-            "Gaganyaan Orbital Vehicle"
-        ]
+        "Aliases": ["Gaganyaan Orbital Vehicle"]
     }
 ]
