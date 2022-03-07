@@ -6,9 +6,9 @@ More info:
 (https://aas.org/about/mission-and-vision-statement)
 
 ## Identifiers
- AAS identifiers are avaialble from [AAS web portal, AAS journals section](https://journals.aas.org/facility-keywords/)
+ AAS identifiers are available from [AAS web portal, AAS journals section](https://journals.aas.org/facility-keywords/)
 
-The data is available in the [AAS.xml](AAS.xml) file, retrieved on 2022-02-01.
+The data is available in the [AAS.xml](AAS.xml) & [AAS.json](AAS.json) file, retrieved on 2022-02-01.
 
 ## Parser
 
