@@ -8,7 +8,11 @@ More info:
 ## Identifiers
  AAS identifiers are available from [AAS web portal, AAS journals section](https://journals.aas.org/facility-keywords/)
 
-The data is available in the [AAS.xml](AAS.xml) & [AAS.json](AAS.json) file, retrieved on 2022-02-01.
+The data is available in the [AAS.xml](AAS.xml) & [AAS.json](AAS.json) file, retrieved on 
+```
+
+```
+2022-02-01.
 
 ## Parser
 
