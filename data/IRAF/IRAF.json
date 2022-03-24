@@ -1,114 +1,114 @@
 [
     {
-        "IRAF Observatory Code": "kpno",
-        "IRAF Observatory Name": "Kitt Peak National Observatory"
+        "ID": "kpno",
+        "Name": "Kitt Peak National Observatory"
     },
     {
-        "IRAF Observatory Code": "ctio",
-        "IRAF Observatory Name": "Cerro Tololo Interamerican Observatory"
+        "ID": "ctio",
+        "Name": "Cerro Tololo Interamerican Observatory"
     },
     {
-        "IRAF Observatory Code": "eso",
-        "IRAF Observatory Name": "European Southern Observatory"
+        "ID": "eso",
+        "Name": "European Southern Observatory"
     },
     {
-        "IRAF Observatory Code": "lick",
-        "IRAF Observatory Name": "Lick Observatory"
+        "ID": "lick",
+        "Name": "Lick Observatory"
     },
     {
-        "IRAF Observatory Code": "mmto",
-        "IRAF Observatory Name": "Multiple Mirror Telescope Observatory"
+        "ID": "mmto",
+        "Name": "Multiple Mirror Telescope Observatory"
     },
     {
-        "IRAF Observatory Code": "mmt",
-        "IRAF Observatory Name": "Whipple Observatory"
+        "ID": "mmt",
+        "Name": "Whipple Observatory"
     },
     {
-        "IRAF Observatory Code": "flwo",
-        "IRAF Observatory Name": "Whipple Observatory"
+        "ID": "flwo",
+        "Name": "Whipple Observatory"
     },
     {
-        "IRAF Observatory Code": "cfht",
-        "IRAF Observatory Name": "Canada-France-Hawaii Telescope"
+        "ID": "cfht",
+        "Name": "Canada-France-Hawaii Telescope"
     },
     {
-        "IRAF Observatory Code": "lapalma",
-        "IRAF Observatory Name": "Roque de los Muchachos, La Palma"
+        "ID": "lapalma",
+        "Name": "Roque de los Muchachos, La Palma"
     },
     {
-        "IRAF Observatory Code": "mso",
-        "IRAF Observatory Name": "Mt. Stromlo Observatory"
+        "ID": "mso",
+        "Name": "Mt. Stromlo Observatory"
     },
     {
-        "IRAF Observatory Code": "sso",
-        "IRAF Observatory Name": "Siding Spring Observatory"
+        "ID": "sso",
+        "Name": "Siding Spring Observatory"
     },
     {
-        "IRAF Observatory Code": "aao",
-        "IRAF Observatory Name": "Anglo-Australian Observatory"
+        "ID": "aao",
+        "Name": "Anglo-Australian Observatory"
     },
     {
-        "IRAF Observatory Code": "mcdonald",
-        "IRAF Observatory Name": "McDonald Observatory"
+        "ID": "mcdonald",
+        "Name": "McDonald Observatory"
     },
     {
-        "IRAF Observatory Code": "lco",
-        "IRAF Observatory Name": "Las Campanas Observatory"
+        "ID": "lco",
+        "Name": "Las Campanas Observatory"
     },
     {
-        "IRAF Observatory Code": "mtbigelow",
-        "IRAF Observatory Name": "Catalina Observatory: 61 inch telescope"
+        "ID": "mtbigelow",
+        "Name": "Catalina Observatory: 61 inch telescope"
     },
     {
-        "IRAF Observatory Code": "dao",
-        "IRAF Observatory Name": "Dominion Astrophysical Observatory"
+        "ID": "dao",
+        "Name": "Dominion Astrophysical Observatory"
     },
     {
-        "IRAF Observatory Code": "spm",
-        "IRAF Observatory Name": "Observatorio Astronomico Nacional, San Pedro Martir"
+        "ID": "spm",
+        "Name": "Observatorio Astronomico Nacional, San Pedro Martir"
     },
     {
-        "IRAF Observatory Code": "tona",
-        "IRAF Observatory Name": "Observatorio Astronomico Nacional, Tonantzintla"
+        "ID": "tona",
+        "Name": "Observatorio Astronomico Nacional, Tonantzintla"
     },
     {
-        "IRAF Observatory Code": "Palomar",
-        "IRAF Observatory Name": "The Hale Telescope"
+        "ID": "Palomar",
+        "Name": "The Hale Telescope"
     },
     {
-        "IRAF Observatory Code": "mdm",
-        "IRAF Observatory Name": "Michigan-Dartmouth-MIT Observatory"
+        "ID": "mdm",
+        "Name": "Michigan-Dartmouth-MIT Observatory"
     },
     {
-        "IRAF Observatory Code": "NOV",
-        "IRAF Observatory Name": "National Observatory of Venezuela"
+        "ID": "NOV",
+        "Name": "National Observatory of Venezuela"
     },
     {
-        "IRAF Observatory Code": "bmo",
-        "IRAF Observatory Name": "Black Moshannon Observatory"
+        "ID": "bmo",
+        "Name": "Black Moshannon Observatory"
     },
     {
-        "IRAF Observatory Code": "BAO",
-        "IRAF Observatory Name": "Beijing XingLong Observatory"
+        "ID": "BAO",
+        "Name": "Beijing XingLong Observatory"
     },
     {
-        "IRAF Observatory Code": "keck",
-        "IRAF Observatory Name": "W. M. Keck Observatory"
+        "ID": "keck",
+        "Name": "W. M. Keck Observatory"
     },
     {
-        "IRAF Observatory Code": "ekar",
-        "IRAF Observatory Name": "Mt. Ekar 182 cm. Telescope"
+        "ID": "ekar",
+        "Name": "Mt. Ekar 182 cm. Telescope"
     },
     {
-        "IRAF Observatory Code": "apo",
-        "IRAF Observatory Name": "Apache Point Observatory"
+        "ID": "apo",
+        "Name": "Apache Point Observatory"
     },
     {
-        "IRAF Observatory Code": "lowell",
-        "IRAF Observatory Name": "Lowell Observatory"
+        "ID": "lowell",
+        "Name": "Lowell Observatory"
     },
     {
-        "IRAF Observatory Code": "vbo",
-        "IRAF Observatory Name": "Vainu Bappu Observatory"
+        "ID": "vbo",
+        "Name": "Vainu Bappu Observatory"
     }
 ]
