@@ -1,0 +1,50 @@
+[
+    [
+        {
+            "ID": "-12",
+            "Name": "'PIONEER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935600",
+            "itemLabel": "Pioneer 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1958-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1958-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ],
+    [
+        {
+            "ID": "-23",
+            "Name": "'PIONEER-10'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935600",
+            "itemLabel": "Pioneer 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1958-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1958-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ],
+    [
+        {
+            "ID": "-24",
+            "Name": "'PIONEER-11'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935600",
+            "itemLabel": "Pioneer 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1958-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1958-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ]
+]
