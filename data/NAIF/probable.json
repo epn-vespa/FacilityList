@@ -1,0 +1,1202 @@
+[
+    [
+        {
+            "ID": "-3",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-3",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-3",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ],
+    [
+        {
+            "ID": "-5",
+            "Name": "'PLANET-C'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q23741",
+            "itemLabel": "Beacon Explorer C",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1965-032A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BE-C"
+        }
+    ],
+    [
+        {
+            "ID": "-6",
+            "Name": "'PIONEER-6'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935600",
+            "itemLabel": "Pioneer 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1958-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1958-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ],
+    [
+        {
+            "ID": "-6",
+            "Name": "'PIONEER-6'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q731368",
+            "itemLabel": "STS-6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1983-026A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0666|STS 6|\u0627\u0633 \u062a\u06cc \u0627\u0633-6|\u0627\u0633 \u062a\u06cc \u0627\u0633-\u06f6|STS 6|\u0427\u0435\u043b\u043b\u0435\u043d\u0434\u0436\u0435\u0440 STS-6"
+        }
+    ],
+    [
+        {
+            "ID": "-6",
+            "Name": "'PIONEER-6'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16325219",
+            "itemLabel": "OSO 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1969-068A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting Solar Observatory 6|OSO G"
+        }
+    ],
+    [
+        {
+            "ID": "-6",
+            "Name": "'PIONEER-6'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q104857635",
+            "itemLabel": "OTV-6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2020-029A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2020-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "USA-299|X-37B OTV-6"
+        }
+    ],
+    [
+        {
+            "ID": "-7",
+            "Name": "'PIONEER-7'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935600",
+            "itemLabel": "Pioneer 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1958-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1958-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ],
+    [
+        {
+            "ID": "-7",
+            "Name": "'PIONEER-7'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q620336",
+            "itemLabel": "Luna 7",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1965-077A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunik 7|\u0644\u0648\u0646\u0627 7|Loenik 7"
+        }
+    ],
+    [
+        {
+            "ID": "-7",
+            "Name": "'PIONEER-7'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7073038",
+            "itemLabel": "OSO 7",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1971-083A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting Solar Observatory 7|OSO H"
+        }
+    ],
+    [
+        {
+            "ID": "-7",
+            "Name": "'PIONEER-7'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'PIONEER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'PIONEER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q40518",
+            "itemLabel": "Pioneer 5",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1960-001A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1960-001A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "1960 Alpha 1|Pioneer P-2|Able 4|Paddle-Wheel Satellite|Pioneer P-2|Pioneer P 2|Pioneer P-2|\u5148\u92d25\u865f|\u5148\u9a71\u80055(P-2)\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-20",
+            "Name": "'PIONEER-8'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935600",
+            "itemLabel": "Pioneer 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1958-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1958-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ],
+    [
+        {
+            "ID": "-20",
+            "Name": "'PIONEER-8'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1157214",
+            "itemLabel": "Luna E-8-5 No.405",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Loena E-8-5-405"
+        }
+    ],
+    [
+        {
+            "ID": "-20",
+            "Name": "'PIONEER-8'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q377764",
+            "itemLabel": "STS-8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1983-089A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0668|\u0625\u0633 \u062a\u064a \u0625\u0633-8|\u0625\u0633 \u062a\u064a \u0625\u0633-\u0668"
+        }
+    ],
+    [
+        {
+            "ID": "-20",
+            "Name": "'PIONEER-8'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4045602",
+            "itemLabel": "OSO 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1975-057A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting Solar Observatory 8|OSO I"
+        }
+    ],
+    [
+        {
+            "ID": "-23",
+            "Name": "'PIONEER-10'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
+            "ID": "-24",
+            "Name": "'PIONEER-11'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
+            "ID": "-25",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066370",
+            "itemLabel": "Lunar Orbiter 3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter III"
+        }
+    ],
+    [
+        {
+            "ID": "-25",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q946427",
+            "itemLabel": "Lunar Orbiter 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1966-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "ID": "-25",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066381",
+            "itemLabel": "Lunar Orbiter 4",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-041A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter IV"
+        }
+    ],
+    [
+        {
+            "ID": "-25",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q250644",
+            "itemLabel": "Lunar Orbiter 5",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter V"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'DS-1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'DS-1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54385",
+            "itemLabel": "Transit 5E-1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1963-038C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Transit 5E-1|1963-038C|APL SN 39"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'DS-1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7884627",
+            "itemLabel": "UniBRITE-1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-009G",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u30e6\u30cb\u30d6\u30e9\u30a4\u30c8|\u30e6\u30cb\u30d6\u30e9\u30a4\u30c8-1"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'DS-1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "-37",
+            "Name": "'HAYABUSA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2113134",
+            "itemLabel": "Hayabusa2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2014-076A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2014-076A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0647\u0627\u064a\u0627\u0628\u0648\u0633\u0627 \u0662|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa-2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|\u96bc\u9ce52\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-37",
+            "Name": "'HAYABUSA2'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2113134",
+            "itemLabel": "Hayabusa2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2014-076A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2014-076A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0647\u0627\u064a\u0627\u0628\u0648\u0633\u0627 \u0662|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa-2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|\u96bc\u9ce52\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-39",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066370",
+            "itemLabel": "Lunar Orbiter 3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter III"
+        }
+    ],
+    [
+        {
+            "ID": "-39",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q946427",
+            "itemLabel": "Lunar Orbiter 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1966-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "ID": "-39",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066381",
+            "itemLabel": "Lunar Orbiter 4",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-041A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter IV"
+        }
+    ],
+    [
+        {
+            "ID": "-39",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q250644",
+            "itemLabel": "Lunar Orbiter 5",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter V"
+        }
+    ],
+    [
+        {
+            "ID": "-39",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q23581629",
+            "itemLabel": "Lunar Polar Hydrogen Mapper",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LunaH-Map|LunaH-Map"
+        }
+    ],
+    [
+        {
+            "ID": "-39",
+            "Name": "'LUNAH-MAP'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q23581629",
+            "itemLabel": "Lunar Polar Hydrogen Mapper",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LunaH-Map|LunaH-Map"
+        }
+    ],
+    [
+        {
+            "ID": "-40",
+            "Name": "'CLEMENTINE'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q61971732",
+            "itemLabel": "Astronomical Tower in Clementinum Prague",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Astronomick\u00e1 v\u011b\u017e v Klementinu"
+        }
+    ],
+    [
+        {
+            "ID": "-41",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-41",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-41",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ],
+    [
+        {
+            "ID": "-46",
+            "Name": "'MS-T5'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21392568",
+            "itemLabel": "Soyouz MS-07",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2017-081A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz MS-07"
+        }
+    ],
+    [
+        {
+            "ID": "-46",
+            "Name": "'MS-T5'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48816787",
+            "itemLabel": "Soyouz MS-15",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2019-064A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz MS-15"
+        }
+    ],
+    [
+        {
+            "ID": "-46",
+            "Name": "'MS-T5'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15971488",
+            "itemLabel": "Soyouz MS-01",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2016-044A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2016-044A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz MS-01"
+        }
+    ],
+    [
+        {
+            "ID": "-46",
+            "Name": "'MS-T5'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18341436",
+            "itemLabel": "Soyouz MS-03",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2016-070A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz MS-03"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'PLANET-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1364515",
+            "itemLabel": "A-001",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "A-\u0660\u0660\u0661|\u0627\u064a-001|\u0627\u064a-\u0660\u0660\u0661"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'PLANET-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9161676",
+            "itemLabel": "Atlas-Agena A",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas LV-3A Agena A"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'PLANET-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12353363",
+            "itemLabel": "Ostrava planetarium",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hv\u011bzd\u00e1rna a planet\u00e1rium Johanna Palisy"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'PLANET-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4329983",
+            "itemLabel": "Observatory of San Vito a Montelupo",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "108",
+            "aliases": "Osservatorio di San Vito a Montelupo|Osservatorio di Montelupo"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'GENESIS'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q74418",
+            "itemLabel": "Genesis",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2001-034A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2001-034A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041a\u0430\u043f\u0441\u0443\u043b\u0430 \u0413\u0435\u043d\u044d\u0437\u0456\u0441|\u041a\u0430\u043f\u0441\u0443\u043b\u0430 \u0490\u0435\u043d\u044d\u0437\u0456\u0441|\u0414\u0436\u0435\u043d\u0438\u0437\u0438\u0441|Sonda G\u00e9nesis|Genesis zunda|Genesis-luotain|Programme Genesis|Sonde Genesis|\u30b8\u30a7\u30cd\u30b7\u30b9\u30fb\u30df\u30c3\u30b7\u30e7\u30f3|\u30b8\u30a7\u30cd\u30b7\u30b9\u30df\u30c3\u30b7\u30e7\u30f3|Genesis ruimtesonde|Sonda genesis|\u8d77\u6e90\u53f7\u63a2\u6d4b\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ],
+    [
+        {
+            "ID": "-57",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066370",
+            "itemLabel": "Lunar Orbiter 3",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter III"
+        }
+    ],
+    [
+        {
+            "ID": "-57",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q946427",
+            "itemLabel": "Lunar Orbiter 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1966-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "ID": "-57",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066381",
+            "itemLabel": "Lunar Orbiter 4",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-041A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter IV"
+        }
+    ],
+    [
+        {
+            "ID": "-57",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q250644",
+            "itemLabel": "Lunar Orbiter 5",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter V"
+        }
+    ],
+    [
+        {
+            "ID": "-57",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q23581629",
+            "itemLabel": "Lunar Polar Hydrogen Mapper",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LunaH-Map|LunaH-Map"
+        }
+    ],
+    [
+        {
+            "ID": "-59",
+            "Name": "'RADIOASTRON'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9008673",
+            "itemLabel": "Argentine Institute of Radio Astronomy",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "IAR|(IAR)|Instituto Argentino de Radioastronomia"
+        }
+    ],
+    [
+        {
+            "ID": "-65",
+            "Name": "'MARCO-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9161676",
+            "itemLabel": "Atlas-Agena A",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas LV-3A Agena A"
+        }
+    ],
+    [
+        {
+            "ID": "-65",
+            "Name": "'MARCO-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60038349",
+            "itemLabel": "Mohammed VI - A",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2017-070A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MN35-13A|Mohammed VI-A|MN35-13A|Mohammed VI-A"
+        }
+    ],
+    [
+        {
+            "ID": "-65",
+            "Name": "'MARCO-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q105828693",
+            "itemLabel": "PAC-A",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1969-068B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "PAC A|Package Attitude Control"
+        }
+    ],
+    [
+        {
+            "ID": "-66",
+            "Name": "'MARCO-B'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9161678",
+            "itemLabel": "Atlas-Agena B",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas LV-3A Agena B"
+        }
+    ],
+    [
+        {
+            "ID": "-66",
+            "Name": "'MARCO-B'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60038416",
+            "itemLabel": "Mohammed VI - B",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2018-095A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MN35-13B|Mohammed VI-B|MN35-13B|Mohammed VI-B"
+        }
+    ],
+    [
+        {
+            "ID": "-74",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-74",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-74",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ],
+    [
+        {
+            "ID": "-76",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q909664",
+            "itemLabel": "Mars 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Marsnik 6"
+        }
+    ],
+    [
+        {
+            "ID": "-76",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q634772",
+            "itemLabel": "Mars Observer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1992-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-76",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q746536",
+            "itemLabel": "Mariner 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARINH",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0668|Mariner Mars '71|\ub9c8\ub9ac\ub108 8\ud638"
+        }
+    ]
+]
