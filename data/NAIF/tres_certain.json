@@ -1,0 +1,1186 @@
+[
+    [
+        {
+            "ID": "-3",
+            "Name": "'MOM'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2156739",
+            "itemLabel": "Mangalyaan",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-060A",
+            "all_NAIF_ID": "-3",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MOM|Mangalyaan|Mangalyaan|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928 2013|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928 \u0968\u0966\u0967\u0969|\u0d2e\u0d02\u0d17\u0d7d\u0d2f\u0d3e\u0d7b|Mars Orbiter Mission|MOM|Mangalyaan|Mars Orbiter Mission|\u5370\u5ea6\u7684\u706b\u661f\u8ecc\u9053\u63a2\u6e2c\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-3",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2156739",
+            "itemLabel": "Mangalyaan",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-060A",
+            "all_NAIF_ID": "-3",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MOM|Mangalyaan|Mangalyaan|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928 2013|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928 \u0968\u0966\u0967\u0969|\u0d2e\u0d02\u0d17\u0d7d\u0d2f\u0d3e\u0d7b|Mars Orbiter Mission|MOM|Mangalyaan|Mars Orbiter Mission|\u5370\u5ea6\u7684\u706b\u661f\u8ecc\u9053\u63a2\u6e2c\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-5",
+            "Name": "'AKATSUKI'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q416448",
+            "itemLabel": "Akatsuki",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2010-020D",
+            "all_NAIF_ID": "-5",
+            "all_NSSDCA_ID": "2010-020D",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "VCO|\u0623\u0643\u0627\u062a\u0633\u0648\u0643\u064a (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|Planet-c|Venus Climate Orbiter|Planet-C|PLANET-C|Venus Climate Orbiter|PLANET-C|Venus Climate Orbiter|PLANET C|Venus Climate Orbiter|Planet-c|PLANET-C|Venus Climate Orbiter|Planet-C|Venus Climate Orbiter|PLANET-C|\u30d7\u30e9\u30cd\u30c3\u30c8C|\u7b2c24\u53f7\u79d1\u5b66\u885b\u661f|Planet-C|VCO|Venus Climate Orbiter|Planet-C|Planet-C|PLANET-C|Akatsuki|Planet-C|\u6653\u53f7\u91d1\u661f\u63a2\u6d4b\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-5",
+            "Name": "'VCO'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q416448",
+            "itemLabel": "Akatsuki",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2010-020D",
+            "all_NAIF_ID": "-5",
+            "all_NSSDCA_ID": "2010-020D",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "VCO|\u0623\u0643\u0627\u062a\u0633\u0648\u0643\u064a (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|Planet-c|Venus Climate Orbiter|Planet-C|PLANET-C|Venus Climate Orbiter|PLANET-C|Venus Climate Orbiter|PLANET C|Venus Climate Orbiter|Planet-c|PLANET-C|Venus Climate Orbiter|Planet-C|Venus Climate Orbiter|PLANET-C|\u30d7\u30e9\u30cd\u30c3\u30c8C|\u7b2c24\u53f7\u79d1\u5b66\u885b\u661f|Planet-C|VCO|Venus Climate Orbiter|Planet-C|Planet-C|PLANET-C|Akatsuki|Planet-C|\u6653\u53f7\u91d1\u661f\u63a2\u6d4b\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-5",
+            "Name": "'PLC'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q416448",
+            "itemLabel": "Akatsuki",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2010-020D",
+            "all_NAIF_ID": "-5",
+            "all_NSSDCA_ID": "2010-020D",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "VCO|\u0623\u0643\u0627\u062a\u0633\u0648\u0643\u064a (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|Planet-c|Venus Climate Orbiter|Planet-C|PLANET-C|Venus Climate Orbiter|PLANET-C|Venus Climate Orbiter|PLANET C|Venus Climate Orbiter|Planet-c|PLANET-C|Venus Climate Orbiter|Planet-C|Venus Climate Orbiter|PLANET-C|\u30d7\u30e9\u30cd\u30c3\u30c8C|\u7b2c24\u53f7\u79d1\u5b66\u885b\u661f|Planet-C|VCO|Venus Climate Orbiter|Planet-C|Planet-C|PLANET-C|Akatsuki|Planet-C|\u6653\u53f7\u91d1\u661f\u63a2\u6d4b\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-5",
+            "Name": "'PLANET-C'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q416448",
+            "itemLabel": "Akatsuki",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2010-020D",
+            "all_NAIF_ID": "-5",
+            "all_NSSDCA_ID": "2010-020D",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "VCO|\u0623\u0643\u0627\u062a\u0633\u0648\u0643\u064a (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|Planet-c|Venus Climate Orbiter|Planet-C|PLANET-C|Venus Climate Orbiter|PLANET-C|Venus Climate Orbiter|PLANET C|Venus Climate Orbiter|Planet-c|PLANET-C|Venus Climate Orbiter|Planet-C|Venus Climate Orbiter|PLANET-C|\u30d7\u30e9\u30cd\u30c3\u30c8C|\u7b2c24\u53f7\u79d1\u5b66\u885b\u661f|Planet-C|VCO|Venus Climate Orbiter|Planet-C|Planet-C|PLANET-C|Akatsuki|Planet-C|\u6653\u53f7\u91d1\u661f\u63a2\u6d4b\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-6",
+            "Name": "'P6'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11699464",
+            "itemLabel": "Pioneer 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1965-105A",
+            "all_NAIF_ID": "-6",
+            "all_NSSDCA_ID": "1965-105A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "ID": "-6",
+            "Name": "'PIONEER-6'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11699464",
+            "itemLabel": "Pioneer 6",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1965-105A",
+            "all_NAIF_ID": "-6",
+            "all_NSSDCA_ID": "1965-105A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "ID": "-7",
+            "Name": "'P7'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12815675",
+            "itemLabel": "Pioneer 7",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1966-075A",
+            "all_NAIF_ID": "-7",
+            "all_NSSDCA_ID": "1966-075A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "ID": "-7",
+            "Name": "'PIONEER-7'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12815675",
+            "itemLabel": "Pioneer 7",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1966-075A",
+            "all_NAIF_ID": "-7",
+            "all_NSSDCA_ID": "1966-075A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'VENUS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1611468",
+            "itemLabel": "Pioneer Venus Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1978-051A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "1978-051A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pioneer 12|Pioneer Venus Orbiter|Pioneer Venus 1|Pioneer Venus A"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'VENUS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q601848",
+            "itemLabel": "Lunar Atmosphere and Dust Environment Explorer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-047A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LADEE|LADEE"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'P12'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1611468",
+            "itemLabel": "Pioneer Venus Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1978-051A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "1978-051A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pioneer 12|Pioneer Venus Orbiter|Pioneer Venus 1|Pioneer Venus A"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'P12'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q601848",
+            "itemLabel": "Lunar Atmosphere and Dust Environment Explorer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-047A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LADEE|LADEE"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'PIONEER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1611468",
+            "itemLabel": "Pioneer Venus Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1978-051A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "1978-051A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pioneer 12|Pioneer Venus Orbiter|Pioneer Venus 1|Pioneer Venus A"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'PIONEER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q601848",
+            "itemLabel": "Lunar Atmosphere and Dust Environment Explorer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-047A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LADEE|LADEE"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'LADEE'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q601848",
+            "itemLabel": "Lunar Atmosphere and Dust Environment Explorer",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2013-047A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LADEE|LADEE"
+        }
+    ],
+    [
+        {
+            "ID": "-12",
+            "Name": "'LADEE'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1611468",
+            "itemLabel": "Pioneer Venus Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1978-051A",
+            "all_NAIF_ID": "-12",
+            "all_NSSDCA_ID": "1978-051A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pioneer 12|Pioneer Venus Orbiter|Pioneer Venus 1|Pioneer Venus A"
+        }
+    ],
+    [
+        {
+            "ID": "-18",
+            "Name": "'MGN'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q466932",
+            "itemLabel": "Magellan",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1989-033B",
+            "all_NAIF_ID": "-18",
+            "all_NSSDCA_ID": "1989-033B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Magalh\u00e3es|Missi\u00f3 Magallanes|Sonda Magallanes|Sonda Magellan|Magallanes|Magellan|Magellan-avaruusluotain|Magellan-ohjelma|Magellan S|sonda spaziale Magellan|\u30de\u30b8\u30a7\u30e9\u30f3|sonda Magellan|\u9ea5\u54f2\u502b\u865f|\u9ea6\u54f2\u4f26\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-18",
+            "Name": "'MGN'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q459399",
+            "itemLabel": "Lunar Crater Observation and Sensing Satellite",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2009-031B",
+            "all_NAIF_ID": "-18",
+            "all_NSSDCA_ID": "2009-031B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LCROSS|LCROSS|LCROSS|Lunar Crater Observation and Sensing Satellite|LCROSS|Lunar Crater Observation and Sensing Satellite|\u0627\u0644 \u06a9\u0631\u0627\u0633|LCROSS|LCROSS|LCROSS|Lunar CRater Observation and Sensing Satellite|LCROSS|LCROSS|\u041b\u041a\u0420\u041e\u0421\u0421|LCROSS|Lunar Crater Observation and Satellite|LCROSS|Lunar Crater Observation and Sensing Satellite|LCROSS|\u6708\u7403\u5751\u89c2\u6d4b\u548c\u9065\u611f\u536b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "-18",
+            "Name": "'MAGELLAN'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q466932",
+            "itemLabel": "Magellan",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1989-033B",
+            "all_NAIF_ID": "-18",
+            "all_NSSDCA_ID": "1989-033B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Magalh\u00e3es|Missi\u00f3 Magallanes|Sonda Magallanes|Sonda Magellan|Magallanes|Magellan|Magellan-avaruusluotain|Magellan-ohjelma|Magellan S|sonda spaziale Magellan|\u30de\u30b8\u30a7\u30e9\u30f3|sonda Magellan|\u9ea5\u54f2\u502b\u865f|\u9ea6\u54f2\u4f26\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-18",
+            "Name": "'MAGELLAN'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q459399",
+            "itemLabel": "Lunar Crater Observation and Sensing Satellite",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2009-031B",
+            "all_NAIF_ID": "-18",
+            "all_NSSDCA_ID": "2009-031B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LCROSS|LCROSS|LCROSS|Lunar Crater Observation and Sensing Satellite|LCROSS|Lunar Crater Observation and Sensing Satellite|\u0627\u0644 \u06a9\u0631\u0627\u0633|LCROSS|LCROSS|LCROSS|Lunar CRater Observation and Sensing Satellite|LCROSS|LCROSS|\u041b\u041a\u0420\u041e\u0421\u0421|LCROSS|Lunar Crater Observation and Satellite|LCROSS|Lunar Crater Observation and Sensing Satellite|LCROSS|\u6708\u7403\u5751\u89c2\u6d4b\u548c\u9065\u611f\u536b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "-18",
+            "Name": "'LCROSS'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q459399",
+            "itemLabel": "Lunar Crater Observation and Sensing Satellite",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2009-031B",
+            "all_NAIF_ID": "-18",
+            "all_NSSDCA_ID": "2009-031B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LCROSS|LCROSS|LCROSS|Lunar Crater Observation and Sensing Satellite|LCROSS|Lunar Crater Observation and Sensing Satellite|\u0627\u0644 \u06a9\u0631\u0627\u0633|LCROSS|LCROSS|LCROSS|Lunar CRater Observation and Sensing Satellite|LCROSS|LCROSS|\u041b\u041a\u0420\u041e\u0421\u0421|LCROSS|Lunar Crater Observation and Satellite|LCROSS|Lunar Crater Observation and Sensing Satellite|LCROSS|\u6708\u7403\u5751\u89c2\u6d4b\u548c\u9065\u611f\u536b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "-18",
+            "Name": "'LCROSS'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q466932",
+            "itemLabel": "Magellan",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1989-033B",
+            "all_NAIF_ID": "-18",
+            "all_NSSDCA_ID": "1989-033B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Magalh\u00e3es|Missi\u00f3 Magallanes|Sonda Magallanes|Sonda Magellan|Magallanes|Magellan|Magellan-avaruusluotain|Magellan-ohjelma|Magellan S|sonda spaziale Magellan|\u30de\u30b8\u30a7\u30e9\u30f3|sonda Magellan|\u9ea5\u54f2\u502b\u865f|\u9ea6\u54f2\u4f26\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-20",
+            "Name": "'P8'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9060015",
+            "itemLabel": "Pioneer 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-123A",
+            "all_NAIF_ID": "-20",
+            "all_NSSDCA_ID": "1967-123A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pioneer C"
+        }
+    ],
+    [
+        {
+            "ID": "-20",
+            "Name": "'PIONEER-8'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9060015",
+            "itemLabel": "Pioneer 8",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1967-123A",
+            "all_NAIF_ID": "-20",
+            "all_NSSDCA_ID": "1967-123A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pioneer C"
+        }
+    ],
+    [
+        {
+            "ID": "-21",
+            "Name": "'SOHO'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q320638",
+            "itemLabel": "Solar and Heliospheric Observatory",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1995-065A",
+            "all_NAIF_ID": "-21",
+            "all_NSSDCA_ID": "1995-065A",
+            "all_Minor_Planet_Center_observatory_ID": "249",
+            "aliases": "SOHO|Observatori Heliosf\u00e8ric i Solar|SOHO|Slune\u010dn\u00ed a heliosf\u00e9rick\u00e1 observato\u0159|Solar and Heliospheric Observatory|SOHO|SOHO|Solar Heliospheric Observatory|Observatorio Solar y Heliosferico|Observatorio Solar y Heliosf\u00e9rico|Solar and Heliospheric Observatory|Solar and Heliospheric Observatory|Observatoire solaire et h\u00e9liosph\u00e9rique|Programme Soho|SOHO|Sonde Soho|\u0938\u094b\u0939\u094b|Solar and Heliospheric Observatory|SOHO|SOHO\u885b\u661f|\u30bd\u30fc\u30db\u30fc|\u592a\u967d\u30fb\u5149\u7403\u89b3\u6e2c\u885b\u661f|\u592a\u967d\u30fb\u592a\u967d\u570f\u89b3\u6e2c\u885b\u661f|SOHO|SOHO|SOHO-teleskopet|SOlar Heliospheric Observatory|Solar and Heliospheric Observatory|SOHO|SOlar Heliospheric Observatory|Solar and Heliospheric Observatory|LASCO|SOHO|Sonda soho|Solar and Heliospheric Observatory|SOHO|\u0421\u041e\u0413\u041e|SOHO\u885b\u661f|\u592a\u9633\u53ca\u65e5\u5149\u5c42\u63a2\u6d4b\u4eea"
+        }
+    ],
+    [
+        {
+            "ID": "-23",
+            "Name": "'P10'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59103",
+            "itemLabel": "Pioneer 10",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1972-012A",
+            "all_NAIF_ID": "-23",
+            "all_NSSDCA_ID": "1972-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-23",
+            "Name": "'PIONEER-10'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59103",
+            "itemLabel": "Pioneer 10",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1972-012A",
+            "all_NAIF_ID": "-23",
+            "all_NSSDCA_ID": "1972-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-24",
+            "Name": "'P11'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59113",
+            "itemLabel": "Pioneer 11",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-019A",
+            "all_NAIF_ID": "-24",
+            "all_NSSDCA_ID": "1973-019A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-24",
+            "Name": "'PIONEER-11'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59113",
+            "itemLabel": "Pioneer 11",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1973-019A",
+            "all_NAIF_ID": "-24",
+            "all_NSSDCA_ID": "1973-019A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-25",
+            "Name": "'LP'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q590245",
+            "itemLabel": "Lunar Prospector",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1998-001A",
+            "all_NAIF_ID": "-25",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "ID": "-25",
+            "Name": "'LUNAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q590245",
+            "itemLabel": "Lunar Prospector",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1998-001A",
+            "all_NAIF_ID": "-25",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "ID": "-27",
+            "Name": "'VK1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q210199",
+            "itemLabel": "Viking 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1975-075A",
+            "all_NAIF_ID": "-27",
+            "all_NSSDCA_ID": "1975-075A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0627\u064a\u0643\u0646\u062c 1|\u0641\u0627\u064a\u0643\u0646\u062c \u0661|\u0641\u0627\u064a\u0643\u064a\u0646\u063a \u0661|Viking I|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af 1|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af-\u06f1|\u30f4\u30a1\u30a4\u30ad\u30f3\u30b01\u53f7|Viking I|Viking 1-banesonde|Viking 1-banesonden|Viking 1-landar|Viking 1-landaren|Viking-1|Sonda viking 1|Viking 1|\u6d77\u76dc1\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-27",
+            "Name": "'VIKING"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q210199",
+            "itemLabel": "Viking 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1975-075A",
+            "all_NAIF_ID": "-27",
+            "all_NSSDCA_ID": "1975-075A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0627\u064a\u0643\u0646\u062c 1|\u0641\u0627\u064a\u0643\u0646\u062c \u0661|\u0641\u0627\u064a\u0643\u064a\u0646\u063a \u0661|Viking I|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af 1|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af-\u06f1|\u30f4\u30a1\u30a4\u30ad\u30f3\u30b01\u53f7|Viking I|Viking 1-banesonde|Viking 1-banesonden|Viking 1-landar|Viking 1-landaren|Viking-1|Sonda viking 1|Viking 1|\u6d77\u76dc1\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'VK2'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q212131",
+            "itemLabel": "Viking 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1975-083A",
+            "all_NAIF_ID": "-30",
+            "all_NSSDCA_ID": "1975-083A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0627\u064a\u0643\u0646\u062c 2|\u0641\u0627\u064a\u0643\u0646\u062c \u0662|\u0641\u0627\u064a\u0643\u064a\u0646\u063a \u0662|Viking II|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af 2|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af-\u06f2|\u30f4\u30a1\u30a4\u30ad\u30f3\u30b02\u53f7|\u0412\u0438\u043a\u0438\u043d\u0433-2|Viking 2-banesonde|Viking 2-banesonden|Viking 2-landar|Viking 2-landaren|Viking-2|Serija Viking|Viking 1|Viking 2|Viking1|\u6d77\u76dc2\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'VIKING"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q212131",
+            "itemLabel": "Viking 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1975-083A",
+            "all_NAIF_ID": "-30",
+            "all_NSSDCA_ID": "1975-083A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0627\u064a\u0643\u0646\u062c 2|\u0641\u0627\u064a\u0643\u0646\u062c \u0662|\u0641\u0627\u064a\u0643\u064a\u0646\u063a \u0662|Viking II|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af 2|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af-\u06f2|\u30f4\u30a1\u30a4\u30ad\u30f3\u30b02\u53f7|\u0412\u0438\u043a\u0438\u043d\u0433-2|Viking 2-banesonde|Viking 2-banesonden|Viking 2-landar|Viking 2-landaren|Viking-2|Serija Viking|Viking 1|Viking 2|Viking1|\u6d77\u76dc2\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-30",
+            "Name": "'DS-1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q212131",
+            "itemLabel": "Viking 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1975-083A",
+            "all_NAIF_ID": "-30",
+            "all_NSSDCA_ID": "1975-083A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0627\u064a\u0643\u0646\u062c 2|\u0641\u0627\u064a\u0643\u0646\u062c \u0662|\u0641\u0627\u064a\u0643\u064a\u0646\u063a \u0662|Viking II|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af 2|\u0648\u0627\u06cc\u06a9\u06cc\u0646\u06af-\u06f2|\u30f4\u30a1\u30a4\u30ad\u30f3\u30b02\u53f7|\u0412\u0438\u043a\u0438\u043d\u0433-2|Viking 2-banesonde|Viking 2-banesonden|Viking 2-landar|Viking 2-landaren|Viking-2|Serija Viking|Viking 1|Viking 2|Viking1|\u6d77\u76dc2\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-31",
+            "Name": "'VG1'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48469",
+            "itemLabel": "Voyager 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1977-084A",
+            "all_NAIF_ID": "-31",
+            "all_NSSDCA_ID": "1977-084A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0661|1977-084A|Mariner 77A|Mariner Jupiter/Saturn A|MJS 77A|Outer Planets A|Voja\u011danto 1|\u07d8\u07d0\u07ec\u07db\u07cf\u07f0\u07d9\u07cb\u07ec\u07df\u07ca\u07f2|\u07de\u07ca\u07ec \u07d8\u07ce\u07e2\u07ca\u07eb \u07de\u07ce\u07d8\u07ca\u07eb \u07e2\u07cc\u07e3\u07cc\u07f2\u07eb|\u65c5\u884c\u80051\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|\u65c5\u884c\u8005\u4e00\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-31",
+            "Name": "'VOYAGER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48469",
+            "itemLabel": "Voyager 1",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1977-084A",
+            "all_NAIF_ID": "-31",
+            "all_NSSDCA_ID": "1977-084A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0661|1977-084A|Mariner 77A|Mariner Jupiter/Saturn A|MJS 77A|Outer Planets A|Voja\u011danto 1|\u07d8\u07d0\u07ec\u07db\u07cf\u07f0\u07d9\u07cb\u07ec\u07df\u07ca\u07f2|\u07de\u07ca\u07ec \u07d8\u07ce\u07e2\u07ca\u07eb \u07de\u07ce\u07d8\u07ca\u07eb \u07e2\u07cc\u07e3\u07cc\u07f2\u07eb|\u65c5\u884c\u80051\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|\u65c5\u884c\u8005\u4e00\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "-32",
+            "Name": "'VG2'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48475",
+            "itemLabel": "Voyager 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1977-076A",
+            "all_NAIF_ID": "-32",
+            "all_NSSDCA_ID": "1977-076A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0662|1977-076A|Voja\u011danto 2"
+        }
+    ],
+    [
+        {
+            "ID": "-32",
+            "Name": "'VOYAGER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48475",
+            "itemLabel": "Voyager 2",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1977-076A",
+            "all_NAIF_ID": "-32",
+            "all_NSSDCA_ID": "1977-076A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0662|1977-076A|Voja\u011danto 2"
+        }
+    ],
+    [
+        {
+            "ID": "-40",
+            "Name": "'CLEMENTINE'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49055",
+            "itemLabel": "Clementine",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1994-004A",
+            "all_NAIF_ID": "-40",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Deep Space Program Science Experiment|DSPSE|Deep Space Program Science Experiment|DSPSE|Deep Space Program Science Experiment|DSPSE|\u514b\u5217\u9580\u4e01"
+        }
+    ],
+    [
+        {
+            "ID": "-41",
+            "Name": "'MEX'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q205672",
+            "itemLabel": "Mars Express",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2003-022A",
+            "all_NAIF_ID": "-41",
+            "all_NSSDCA_ID": "2003-022A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MEX|Beagle 2|Mars-Express|Marsexpress|MARSIS|Mars Express Orbiter|HRSC|Programme Mars Express|Mars Express Orbiter|Mars Express Orbiter|\u30de\u30fc\u30ba\u30a8\u30af\u30b9\u30d7\u30ec\u30b9|Mars Express Orbiter|Mars Express|\u041c\u0430\u0440\u0441 \u042d\u043a\u0441\u043f\u0440\u0435\u0441\u0441|\u041c\u0430\u0440\u0441 \u0415\u043a\u0441\u043f\u0440\u0435\u0441|Beagle 2|\u706b\u661f\u7279\u5feb\u8eca"
+        }
+    ],
+    [
+        {
+            "ID": "-41",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q205672",
+            "itemLabel": "Mars Express",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2003-022A",
+            "all_NAIF_ID": "-41",
+            "all_NSSDCA_ID": "2003-022A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MEX|Beagle 2|Mars-Express|Marsexpress|MARSIS|Mars Express Orbiter|HRSC|Programme Mars Express|Mars Express Orbiter|Mars Express Orbiter|\u30de\u30fc\u30ba\u30a8\u30af\u30b9\u30d7\u30ec\u30b9|Mars Express Orbiter|Mars Express|\u041c\u0430\u0440\u0441 \u042d\u043a\u0441\u043f\u0440\u0435\u0441\u0441|\u041c\u0430\u0440\u0441 \u0415\u043a\u0441\u043f\u0440\u0435\u0441|Beagle 2|\u706b\u661f\u7279\u5feb\u8eca"
+        }
+    ],
+    [
+        {
+            "ID": "-46",
+            "Name": "'MS-T5'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1065268",
+            "itemLabel": "Sakigake",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-001A",
+            "all_NAIF_ID": "-46",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MS-T5|MS-T5|MS-T5|Sakigake (romsonde)|Sakigake"
+        }
+    ],
+    [
+        {
+            "ID": "-46",
+            "Name": "'SAKIGAKE'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1065268",
+            "itemLabel": "Sakigake",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-001A",
+            "all_NAIF_ID": "-46",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MS-T5|MS-T5|MS-T5|Sakigake (romsonde)|Sakigake"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'PLANET-A'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q516725",
+            "itemLabel": "Suisei",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-073A",
+            "all_NAIF_ID": "-47",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u0644\u0627\u0646\u062a-\u0623\u064a|\u0628\u0644\u0627\u0646\u064a\u062a A|\u0628\u0644\u0627\u0646\u064a\u062a-\u0623\u064a|PLANET-A"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'SUISEI'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q516725",
+            "itemLabel": "Suisei",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-073A",
+            "all_NAIF_ID": "-47",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u0644\u0627\u0646\u062a-\u0623\u064a|\u0628\u0644\u0627\u0646\u064a\u062a A|\u0628\u0644\u0627\u0646\u064a\u062a-\u0623\u064a|PLANET-A"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'GNS'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q516725",
+            "itemLabel": "Suisei",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-073A",
+            "all_NAIF_ID": "-47",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u0644\u0627\u0646\u062a-\u0623\u064a|\u0628\u0644\u0627\u0646\u064a\u062a A|\u0628\u0644\u0627\u0646\u064a\u062a-\u0623\u064a|PLANET-A"
+        }
+    ],
+    [
+        {
+            "ID": "-47",
+            "Name": "'GENESIS'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q516725",
+            "itemLabel": "Suisei",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-073A",
+            "all_NAIF_ID": "-47",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u0644\u0627\u0646\u062a-\u0623\u064a|\u0628\u0644\u0627\u0646\u064a\u062a A|\u0628\u0644\u0627\u0646\u064a\u062a-\u0623\u064a|PLANET-A"
+        }
+    ],
+    [
+        {
+            "ID": "-48",
+            "Name": "'HUBBLE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2513",
+            "itemLabel": "t\u00e9lescope spatial Hubble",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1990-037B",
+            "all_NAIF_ID": "-48",
+            "all_NSSDCA_ID": "1990-037B",
+            "all_Minor_Planet_Center_observatory_ID": "250",
+            "aliases": "HST|HST|HST|HST|HST|Hubble|Hubble|Hubble|\ud5c8\ube14|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|HST|HST|HST|HST|HST|HST|HST|Hubble|HST|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|Hubble-Space-Telescope|Hubble-Teleskop|Hubbleteleskop|Hubble (telescopio)|TEH|Telescopio espacial Hubble|Telescopio Espacial Hubble|Telescopio Hubble|Hubble Space Telescope|Large Space Telescope|t\u00e9lescope Hubble|Telescope spatial Hubble|T\u00e9lescope spatial Hubble|Hubble-Weltraumteleskop|Hubble Space Telescope|Telescopio Hubble|Telescopio orbitale Hubble|Hubble ruimtetelescoop|Hubble Space Telescope|Hubble-ruimtetelescoop|Hubble-telescoop|Hubbletelescoop|\u07dd.\u07dd.\u07e4|HST|Hubble Space Telescope|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|Hubbleteleskopet"
+        }
+    ],
+    [
+        {
+            "ID": "-48",
+            "Name": "'HST'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2513",
+            "itemLabel": "t\u00e9lescope spatial Hubble",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1990-037B",
+            "all_NAIF_ID": "-48",
+            "all_NSSDCA_ID": "1990-037B",
+            "all_Minor_Planet_Center_observatory_ID": "250",
+            "aliases": "HST|HST|HST|HST|HST|Hubble|Hubble|Hubble|\ud5c8\ube14|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|HST|HST|HST|HST|HST|HST|HST|Hubble|HST|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|Hubble-Space-Telescope|Hubble-Teleskop|Hubbleteleskop|Hubble (telescopio)|TEH|Telescopio espacial Hubble|Telescopio Espacial Hubble|Telescopio Hubble|Hubble Space Telescope|Large Space Telescope|t\u00e9lescope Hubble|Telescope spatial Hubble|T\u00e9lescope spatial Hubble|Hubble-Weltraumteleskop|Hubble Space Telescope|Telescopio Hubble|Telescopio orbitale Hubble|Hubble ruimtetelescoop|Hubble Space Telescope|Hubble-ruimtetelescoop|Hubble-telescoop|Hubbletelescoop|\u07dd.\u07dd.\u07e4|HST|Hubble Space Telescope|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|Hubbleteleskopet"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201771",
+            "itemLabel": "Mars Pathfinder",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1996-068A",
+            "all_NAIF_ID": "-53",
+            "all_NSSDCA_ID": "1996-068A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108|\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7|Mars Pathfinder"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MPF'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201771",
+            "itemLabel": "Mars Pathfinder",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1996-068A",
+            "all_NAIF_ID": "-53",
+            "all_NSSDCA_ID": "1996-068A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108|\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7|Mars Pathfinder"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201771",
+            "itemLabel": "Mars Pathfinder",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1996-068A",
+            "all_NAIF_ID": "-53",
+            "all_NSSDCA_ID": "1996-068A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108|\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7|Mars Pathfinder"
+        }
+    ],
+    [
+        {
+            "ID": "-53",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201771",
+            "itemLabel": "Mars Pathfinder",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1996-068A",
+            "all_NAIF_ID": "-53",
+            "all_NSSDCA_ID": "1996-068A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108|\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7|Mars Pathfinder"
+        }
+    ],
+    [
+        {
+            "ID": "-55",
+            "Name": "'ULYSSES'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q156081",
+            "itemLabel": "Ulysses",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1990-090B",
+            "all_NAIF_ID": "-55",
+            "all_NSSDCA_ID": "1990-090B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Ulysses|\u0627\u0648\u0644\u06cc\u0633|Programme Ulysses|Sonde Ulysses|Ulysses solar|Sonda Ulisse|Ulisses|\u0423\u043b\u0438\u0441\u0441 (\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043f\u043f\u0430\u0440\u0430\u0442)|\u5c24\u5229\u897f\u65af\u53f7\u63a2\u6d4b\u5668|\u5c24\u91cc\u897f\u65af\u53f7|\u5c24\u91cc\u897f\u65af\u53f7\u63a2\u6d4b\u5668|\u0423\u043b\u0438\u0441\u0441 (\u0441\u0442\u0430\u043d\u0446\u0438\u044f)"
+        }
+    ],
+    [
+        {
+            "ID": "-58",
+            "Name": "'VSOP'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1617995",
+            "itemLabel": "Highly Advanced Laboratory for Communications and Astronomy",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1997-005A",
+            "all_NAIF_ID": "-58",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Haruka|Haruka|VSOP|HALCA|MUSES-B|MUSES-B|HALCA|Highly Advanced Laboratory for Communications and Astronomy|HALCA|Highly advanced laboratory for communications and astronomy|Highly Advanced Laboratory For Communications And Astronomy|MUSES-B|MUSES-B|MUSES-B|HALCA"
+        }
+    ],
+    [
+        {
+            "ID": "-58",
+            "Name": "'HALCA'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1617995",
+            "itemLabel": "Highly Advanced Laboratory for Communications and Astronomy",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1997-005A",
+            "all_NAIF_ID": "-58",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Haruka|Haruka|VSOP|HALCA|MUSES-B|MUSES-B|HALCA|Highly Advanced Laboratory for Communications and Astronomy|HALCA|Highly advanced laboratory for communications and astronomy|Highly Advanced Laboratory For Communications And Astronomy|MUSES-B|MUSES-B|MUSES-B|HALCA"
+        }
+    ],
+    [
+        {
+            "ID": "-59",
+            "Name": "'RADIOASTRON'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q837749",
+            "itemLabel": "RadioAstron",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2011-037A",
+            "all_NAIF_ID": "-59",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RadioAstron|Spektr R|Spektr-R|RadioAstron|Spektr R|Spektr-R|Szpektr\u2013R|RadioAstron|RadioAstron|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420|radioastron|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420"
+        }
+    ],
+    [
+        {
+            "ID": "-61",
+            "Name": "'JUNO'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48546",
+            "itemLabel": "Juno",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2011-040A",
+            "all_NAIF_ID": "-61",
+            "all_NSSDCA_ID": "2011-040A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u040f\u0443\u043d\u043e|Juno|\u062c\u0648\u0646\u0648 (\u0645\u0633\u0628\u0627\u0631)"
+        }
+    ],
+    [
+        {
+            "ID": "-64",
+            "Name": "'ORX'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q604428",
+            "itemLabel": "OSIRIS-REx",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2016-055A",
+            "all_NAIF_ID": "-64",
+            "all_NSSDCA_ID": "2016-055A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer|Origins Spectral Interpretation Resource Identification and Security-Regolith Explorer|Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer|OSIRIS-REx|OSIRIS REx|OSIRIS-REx|Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer|Origins Spectral Interpretation Resource Identification Security Regolith Explorer|\u51a5\u738b\u53f7|\u6b50\u897f\u91cc\u65af\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-64",
+            "Name": "'OSIRIS-REX'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q604428",
+            "itemLabel": "OSIRIS-REx",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2016-055A",
+            "all_NAIF_ID": "-64",
+            "all_NSSDCA_ID": "2016-055A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer|Origins Spectral Interpretation Resource Identification and Security-Regolith Explorer|Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer|OSIRIS-REx|OSIRIS REx|OSIRIS-REx|Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer|Origins Spectral Interpretation Resource Identification Security Regolith Explorer|\u51a5\u738b\u53f7|\u6b50\u897f\u91cc\u65af\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-68",
+            "Name": "'MERCURY"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28472819",
+            "itemLabel": "Mercury Magnetospheric Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-68",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MMO|MMO"
+        }
+    ],
+    [
+        {
+            "ID": "-68",
+            "Name": "'MMO'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28472819",
+            "itemLabel": "Mercury Magnetospheric Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-68",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MMO|MMO"
+        }
+    ],
+    [
+        {
+            "ID": "-68",
+            "Name": "'BEPICOLOMBO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28472819",
+            "itemLabel": "Mercury Magnetospheric Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-68",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MMO|MMO"
+        }
+    ],
+    [
+        {
+            "ID": "-70",
+            "Name": "'DEEP"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q208231",
+            "itemLabel": "Deep Impact",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2005-001A",
+            "all_NAIF_ID": "-70",
+            "all_NSSDCA_ID": "2005-001A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Deep Impact|\u062f\u064a\u0628 \u0627\u0645\u0628\u0627\u0643\u062a|Impacto profundo|Sonda Deep Impact|Programme Deep Impact|Deep-Impact|Discovery 8|Missione spaziale Deep Impact|Missione spaziale Impatto Profondo|EPOXI|\u30c7\u30a3\u30fc\u30d7\u30fb\u30a4\u30f3\u30d1\u30af\u30c8\u8a08\u753b|\u30c7\u30a3\u30fc\u30d7\u30a4\u30f3\u30d1\u30af\u30c8\u8a08\u753b|\u5b87\u5b99\u63a2\u67fb\u6a5f\u306eDeep Impact|EPOXI|Deep Impact|EPOXI|T\u00e0u Deep Impact|\u6df1\u5165\u649e\u64ca\u865f|\u6df1\u5ea6\u649e\u51fb|\u6df1\u649e\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "-74",
+            "Name": "'MRO'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q183160",
+            "itemLabel": "Mars Reconnaissance Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2005-029A",
+            "all_NAIF_ID": "-74",
+            "all_NSSDCA_ID": "2005-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MRO|MRO|MRO|MRO|MRO|\u041c\u0420\u041e|MRO|MRO|MRO|MRO|MRO|MRO|MRO|MRO|Mars Reconnaissance Orbiter|\u041c\u0430\u0440\u0441 \u0420\u0438\u043a\u043e\u043d\u0438\u0441\u044a\u043d\u0441 \u041e\u0440\u0431\u0438\u0442\u044a\u0440|Mars Reconaissance Orbiter|Mars Reconnaisance Orbiter|Marsa Skoltada Orbitanto|Orbitador de Reconocimiento de Marte|Orbitador de Reconocimiento Marciano|Marteren Azterketarako Orbitatzailea|Compact Reconnaissance Imaging Spectrometer for Mars|Reconnaissance Orbiter|Mars Reconnaissance|Mars Reconnaissance Orbiter|\u05d7\u05dc\u05dc\u05d9\u05ea \u05e0\u05d0\u05e1\"\u05d0 \u05dc\u05d4\u05db\u05e8\u05d5\u05ea \u05d4\u05de\u05d0\u05d3\u05d9\u05dd|\u05d7\u05dc\u05dc\u05d9\u05ea \u05e0\u05d0\u05e1\"\u05d0 \u05dc\u05d4\u05db\u05e8\u05ea \u05de\u05d0\u05d3\u05d9\u05dd|\u05de\u05e7\u05e4\u05ea \u05d4\u05e1\u05d9\u05d5\u05e8 \u05e9\u05dc \u05de\u05d0\u05d3\u05d9\u05dd|\u05de\u05e7\u05e4\u05ea \u05dc\u05e1\u05e7\u05e8 \u05de\u05d0\u05d3\u05d9\u05dd|\u706b\u661f\u8ecc\u9053\u5468\u56de\u5075\u5bdf\u885b\u661f|Mars Reconnaisance Orbiter|Mars Reconaissance Orbiter|Mars Reconnaisance Orbiter|Mars Reconnaisance Orbiter|MRO|\u041c\u0430\u0440\u0441 \u041e\u0440\u0431\u0438\u0442\u0435\u0440|\u041c\u0430\u0440\u0441\u0438\u0430\u043d\u0441\u043a\u0438\u0439 \u0440\u0430\u0437\u0432\u0435\u0434\u044b\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0441\u043f\u0443\u0442\u043d\u0438\u043a|\u041e\u0440\u0431\u0438\u0442\u0430\u043b\u044c\u043d\u044b\u0439 \u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043a \u041c\u0430\u0440\u0441\u0430|\u0421\u043f\u0443\u0442\u043d\u0438\u043a \u0440\u0430\u0437\u0432\u0435\u0434\u043a\u0438 \u041c\u0430\u0440\u0441\u0430|Mars Reconnaissance Orbiter|\u041c\u0430\u0440\u0441 \u0440\u0435\u043a\u043e\u043d\u0435\u0441\u0430\u043d\u0441 \u043e\u0440\u0431\u0438\u0442\u0435\u0440|\u041c\u0430\u0440\u0441 \u0420\u0435\u043a\u043e\u043d\u0435\u0441\u0435\u043d\u0441 \u041e\u0440\u0431\u0438\u0442\u0435\u0440|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e4c\u0e2a\u0e23\u0e35\u0e04\u0e2d\u0e19\u0e40\u0e19\u0e2a\u0e40\u0e0b\u0e19\u0e0b\u0e4c\u0e2d\u0e2d\u0e23\u0e4c\u0e1a\u0e34\u0e40\u0e15\u0e2d\u0e23\u0e4c|\u706b\u661f\u4fa6\u67e5\u8f68\u9053\u63a2\u6d4b\u5668|\u706b\u661f\u52d8\u5bdf\u885b\u661f|\u706b\u661f\u52d8\u6d4b\u8f68\u9053\u98de\u884c\u5668|\u706b\u661f\u4fa6\u5bdf\u8f68\u9053\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-74",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q183160",
+            "itemLabel": "Mars Reconnaissance Orbiter",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2005-029A",
+            "all_NAIF_ID": "-74",
+            "all_NSSDCA_ID": "2005-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MRO|MRO|MRO|MRO|MRO|\u041c\u0420\u041e|MRO|MRO|MRO|MRO|MRO|MRO|MRO|MRO|Mars Reconnaissance Orbiter|\u041c\u0430\u0440\u0441 \u0420\u0438\u043a\u043e\u043d\u0438\u0441\u044a\u043d\u0441 \u041e\u0440\u0431\u0438\u0442\u044a\u0440|Mars Reconaissance Orbiter|Mars Reconnaisance Orbiter|Marsa Skoltada Orbitanto|Orbitador de Reconocimiento de Marte|Orbitador de Reconocimiento Marciano|Marteren Azterketarako Orbitatzailea|Compact Reconnaissance Imaging Spectrometer for Mars|Reconnaissance Orbiter|Mars Reconnaissance|Mars Reconnaissance Orbiter|\u05d7\u05dc\u05dc\u05d9\u05ea \u05e0\u05d0\u05e1\"\u05d0 \u05dc\u05d4\u05db\u05e8\u05d5\u05ea \u05d4\u05de\u05d0\u05d3\u05d9\u05dd|\u05d7\u05dc\u05dc\u05d9\u05ea \u05e0\u05d0\u05e1\"\u05d0 \u05dc\u05d4\u05db\u05e8\u05ea \u05de\u05d0\u05d3\u05d9\u05dd|\u05de\u05e7\u05e4\u05ea \u05d4\u05e1\u05d9\u05d5\u05e8 \u05e9\u05dc \u05de\u05d0\u05d3\u05d9\u05dd|\u05de\u05e7\u05e4\u05ea \u05dc\u05e1\u05e7\u05e8 \u05de\u05d0\u05d3\u05d9\u05dd|\u706b\u661f\u8ecc\u9053\u5468\u56de\u5075\u5bdf\u885b\u661f|Mars Reconnaisance Orbiter|Mars Reconaissance Orbiter|Mars Reconnaisance Orbiter|Mars Reconnaisance Orbiter|MRO|\u041c\u0430\u0440\u0441 \u041e\u0440\u0431\u0438\u0442\u0435\u0440|\u041c\u0430\u0440\u0441\u0438\u0430\u043d\u0441\u043a\u0438\u0439 \u0440\u0430\u0437\u0432\u0435\u0434\u044b\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0441\u043f\u0443\u0442\u043d\u0438\u043a|\u041e\u0440\u0431\u0438\u0442\u0430\u043b\u044c\u043d\u044b\u0439 \u0420\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043a \u041c\u0430\u0440\u0441\u0430|\u0421\u043f\u0443\u0442\u043d\u0438\u043a \u0440\u0430\u0437\u0432\u0435\u0434\u043a\u0438 \u041c\u0430\u0440\u0441\u0430|Mars Reconnaissance Orbiter|\u041c\u0430\u0440\u0441 \u0440\u0435\u043a\u043e\u043d\u0435\u0441\u0430\u043d\u0441 \u043e\u0440\u0431\u0438\u0442\u0435\u0440|\u041c\u0430\u0440\u0441 \u0420\u0435\u043a\u043e\u043d\u0435\u0441\u0435\u043d\u0441 \u041e\u0440\u0431\u0438\u0442\u0435\u0440|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e4c\u0e2a\u0e23\u0e35\u0e04\u0e2d\u0e19\u0e40\u0e19\u0e2a\u0e40\u0e0b\u0e19\u0e0b\u0e4c\u0e2d\u0e2d\u0e23\u0e4c\u0e1a\u0e34\u0e40\u0e15\u0e2d\u0e23\u0e4c|\u706b\u661f\u4fa6\u67e5\u8f68\u9053\u63a2\u6d4b\u5668|\u706b\u661f\u52d8\u5bdf\u885b\u661f|\u706b\u661f\u52d8\u6d4b\u8f68\u9053\u98de\u884c\u5668|\u706b\u661f\u4fa6\u5bdf\u8f68\u9053\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "-76",
+            "Name": "'CURIOSITY'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48496",
+            "itemLabel": "Mars Science Laboratory",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2011-070A",
+            "all_NAIF_ID": "-76",
+            "all_NSSDCA_ID": "2011-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MSL|\u092e\u093e\u0930\u094d\u0938 \u0938\u093e\u0907\u0902\u0938 \u0932\u0947\u092c\u094b\u0930\u0947\u091f\u0930\u0940"
+        }
+    ],
+    [
+        {
+            "ID": "-76",
+            "Name": "'MSL'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48496",
+            "itemLabel": "Mars Science Laboratory",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2011-070A",
+            "all_NAIF_ID": "-76",
+            "all_NSSDCA_ID": "2011-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MSL|\u092e\u093e\u0930\u094d\u0938 \u0938\u093e\u0907\u0902\u0938 \u0932\u0947\u092c\u094b\u0930\u0947\u091f\u0930\u0940"
+        }
+    ],
+    [
+        {
+            "ID": "-76",
+            "Name": "'MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48496",
+            "itemLabel": "Mars Science Laboratory",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "2011-070A",
+            "all_NAIF_ID": "-76",
+            "all_NSSDCA_ID": "2011-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MSL|\u092e\u093e\u0930\u094d\u0938 \u0938\u093e\u0907\u0902\u0938 \u0932\u0947\u092c\u094b\u0930\u0947\u091f\u0930\u0940"
+        }
+    ],
+    [
+        {
+            "ID": "-78",
+            "Name": "'GIOTTO'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q660356",
+            "itemLabel": "Giotto",
+            "all_props": "http://www.wikidata.org/prop/direct/P31",
+            "all_COSPAR_ID": "1985-056A",
+            "all_NAIF_ID": "-78",
+            "all_NSSDCA_ID": "1985-056A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u30b8\u30e7\u30c3\u30c8|D\u017eoto|Giotto mission|Missi\u00f3 Giotto|Sonda Giotto|Mision Giotto|Misi\u00f3n Giotto|Sonde Giotto|Sonda Giotto|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e08\u0e2d\u0e15\u0e42\u0e15|\u55ac\u9676\u865f"
+        }
+    ]
+]
