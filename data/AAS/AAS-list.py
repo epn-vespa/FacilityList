@@ -1,3 +1,10 @@
+# GNU General Public License
+# see LICENSE for details
+
+# AUTHORS
+# Laura Debisschop
+
+
 import lxml
 from lxml import etree
 import json
