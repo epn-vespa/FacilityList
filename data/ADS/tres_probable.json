@@ -1,0 +1,4002 @@
+[
+    [
+        {
+            "ID": "Air.KAO",
+            "Name": "Kuiper Airborne Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1501126",
+            "itemLabel": "Observatoire a\u00e9roport\u00e9 G\u00e9rard P. Kuiper",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0627\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0648\u0626\u06cc\u067e\u0631|\u30ab\u30a4\u30d1\u30fc\u5929\u6587\u53f0|Kuiper Airborne Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "Air.KAO",
+            "Name": "Kuiper Airborne Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q407150",
+            "itemLabel": "Air Force Maui Optical and Supercomputing observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "625",
+            "aliases": "Air Force Maui Optical Station|AMOS|Air force maui optical and supercomputing observatory|Air Force Maui Optical And Supercomputing Observatory|Air Force Maui Optical and Supercomputing|\u30a2\u30e1\u30ea\u30ab\u7a7a\u8ecd\u30de\u30a6\u30a4\u5149\u5b66\u89b3\u6e2c\u6240"
+        }
+    ],
+    [
+        {
+            "ID": "Air.SOFIA",
+            "Name": "Stratospheric Observatory For Infrared Astronomy"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q407150",
+            "itemLabel": "Air Force Maui Optical and Supercomputing observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "625",
+            "aliases": "Air Force Maui Optical Station|AMOS|Air force maui optical and supercomputing observatory|Air Force Maui Optical And Supercomputing Observatory|Air Force Maui Optical and Supercomputing|\u30a2\u30e1\u30ea\u30ab\u7a7a\u8ecd\u30de\u30a6\u30a4\u5149\u5b66\u89b3\u6e2c\u6240"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.ASTRO",
+            "Name": "Antarctica/ASTRO, Antarctic Submillimeter Telescope and Remote Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15018",
+            "itemLabel": "Advanced Satellite for Cosmology and Astrophysics",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1993-011A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASCA|ASCA|ASCA|ASTRO-D|ASTRO-D|\u5b87\u5b99\u4e0e\u5929\u4f53\u7269\u7406\u5148\u8fdb\u536b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.ASTRO",
+            "Name": "Antarctica/ASTRO, Antarctic Submillimeter Telescope and Remote Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11585400",
+            "itemLabel": "Ishigakijima Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "D44",
+            "aliases": "Ishigaki Island Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.ASTRO",
+            "Name": "Antarctica/ASTRO, Antarctic Submillimeter Telescope and Remote Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q752042",
+            "itemLabel": "Yunnan Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "286",
+            "aliases": "\u4e2d\u56fd\u79d1\u5b66\u9662\u4e91\u5357\u5929\u6587\u53f0|Yunnan Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.ASTRO",
+            "Name": "Antarctica/ASTRO, Antarctic Submillimeter Telescope and Remote Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11521260",
+            "itemLabel": "Sapporo Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sapporo City Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.ASTRO",
+            "Name": "Antarctica/ASTRO, Antarctic Submillimeter Telescope and Remote Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1755255",
+            "itemLabel": "Smithsonian Astrophysical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SAO|SAO|SAO|Observatorio Astrofisico Smithsonian|Osservatorio Astrofisico Smithsoniano|\u30b9\u30df\u30bd\u30cb\u30a2\u30f3\u5929\u4f53\u7269\u7406\u5929\u6587\u53f0|\u30b9\u30df\u30bd\u30cb\u30a2\u30f3\u5929\u4f53\u7269\u7406\u5b66\u5929\u6587\u53f0|\u30b9\u30df\u30bd\u30cb\u30a2\u30f3\u5929\u4f53\u7269\u7406\u5b66\u89b3\u6e2c\u6240|\u30b9\u30df\u30bd\u30cb\u30a2\u30f3\u5929\u6587\u53f0|\u30b9\u30df\u30bd\u30cb\u30a2\u30f3\u5b87\u5b99\u7269\u7406\u89b3\u6e2c\u6240|Smithsonian Astrophysical Observatoire|\u0421\u0410\u041e|Observat\u00f3rio Astrof\u00edsico Smithsonian|Smithsonian Astrophysical Observatory|\u0421\u043c\u0438\u0442\u0441\u043e\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u0421\u043c\u0438\u0442\u0441\u043e\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043b\u0430\u0431\u043e\u0440\u0430\u0442\u043e\u0440\u0438\u044f|\u53f2\u5bc6\u677e\u68ee\u5929\u4f53\u7269\u7406\u53f0|\u53f2\u5bc6\u68ee\u5929\u6587\u53f0|\u53f2\u5bc6\u68ee\u5c3c\u5929\u4f53\u7269\u7406\u5929\u6587\u53f0"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.OASI",
+            "Name": "Antarctica/Submillimetric and Infrared Antarctic Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q752042",
+            "itemLabel": "Yunnan Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "286",
+            "aliases": "\u4e2d\u56fd\u79d1\u5b66\u9662\u4e91\u5357\u5929\u6587\u53f0|Yunnan Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ANT.OASI",
+            "Name": "Antarctica/Submillimetric and Infrared Antarctic Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5759101",
+            "itemLabel": "Highland Road Park Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "747",
+            "aliases": "Highland Road Park Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.1.26m",
+            "Name": "Beijing Astronomical Observatory/1.26 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.1.26m",
+            "Name": "Beijing Astronomical Observatory/1.26 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.1.26m",
+            "Name": "Beijing Astronomical Observatory/1.26 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.1.26m",
+            "Name": "Beijing Astronomical Observatory/1.26 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.1.26m",
+            "Name": "Beijing Astronomical Observatory/1.26 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.2.16m",
+            "Name": "Beijing Astronomical Observatory/2.16 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q946427",
+            "itemLabel": "Lunar Orbiter 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.2.16m",
+            "Name": "Beijing Astronomical Observatory/2.16 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q25451612",
+            "itemLabel": "Falcon 1 Flight 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Falcon Demo Launch 2"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.2.16m",
+            "Name": "Beijing Astronomical Observatory/2.16 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1329651",
+            "itemLabel": "Sich 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2011-044G",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sich 2|Sich-2|\u0421\u0456\u0447-2|Sich 2"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.2.16m",
+            "Name": "Beijing Astronomical Observatory/2.16 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16947045",
+            "itemLabel": "Exploration Mission 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SLS-2|EM-2|Exploration Mission 2|EM-2|Exploration Mission 2|Space Launch System 2|Artemis II|Artemisz III|Artemisz\u20132|\u30a2\u30eb\u30c6\u30df\u30b92|EM-2|Exploration Mission 2|SLS-2|Space Launch System 2|\u30a2\u30eb\u30c6\u30df\u30b92\u53f7|Artemis II"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.2.16m",
+            "Name": "Beijing Astronomical Observatory/2.16 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q714770",
+            "itemLabel": "Kwangmy\u014fngs\u014fng-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Kwangmy\u014fngs\u014fng-2|Kwangmyongsong-2.|Kwangmyongsong 2|Kwangmy\u014fngs\u014fng 2|Kwangmyongsong-2|\u06a9\u0648\u0627\u0646\u06af \u0645\u06cc\u0648\u0646\u06af \u0633\u0648\u0646\u06af-2|\u06a9\u0648\u0627\u0646\u06af \u0645\u06cc\u0648\u0646\u06af \u0633\u0648\u0646\u06af-\u06f2|Kwangmyongsong-2|Kwangmyongsong-2|Kwangmyongsong 2|Kwangmy\u014fngs\u014fng 2|Kwangmyongsong-2|Kwangmyongsong 2|Kwangmy\u014fngs\u014fng 2|Kwangmyongsong-2|Kwangmyongsong-2|\u041a\u0432\u0430\u043d\u043c\u0435\u043d\u0441\u043e\u043d-2|Kwangmy\u014fngs\u014fng-2|Quang Minh Tinh 2"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.7m",
+            "Name": "Beijing Astronomical Observatory/7 meter Solar Radio Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q19596034",
+            "itemLabel": "Beijing Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BAO|Peking Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.MSRT",
+            "Name": "Beijing Astronomical Observatory/Meter-wave aperture Sysnthesis Radio Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q19596034",
+            "itemLabel": "Beijing Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BAO|Peking Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "BAO.MSRT",
+            "Name": "Beijing Astronomical Observatory/Meter-wave aperture Sysnthesis Radio Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10343123",
+            "itemLabel": "Hanggao Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hanggao Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.2m",
+            "Name": "Calar Alto Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5679081",
+            "itemLabel": "Early Bird 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Early Bird 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.2m",
+            "Name": "Calar Alto Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.2m",
+            "Name": "Calar Alto Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.2m",
+            "Name": "Calar Alto Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q27074108",
+            "itemLabel": "Pathfinder-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-059E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BlackSky Pathfinder 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.2m",
+            "Name": "Calar Alto Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.5m",
+            "Name": "Calar Alto Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5679081",
+            "itemLabel": "Early Bird 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Early Bird 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.5m",
+            "Name": "Calar Alto Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.5m",
+            "Name": "Calar Alto Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.5m",
+            "Name": "Calar Alto Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q27074108",
+            "itemLabel": "Pathfinder-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-059E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BlackSky Pathfinder 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.1.5m",
+            "Name": "Calar Alto Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.2.2m",
+            "Name": "Calar Alto Observatory/2.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q106977230",
+            "itemLabel": "SpaceX Axiom Space-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Ax-2|Ax2|Ax-2"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.2.2m",
+            "Name": "Calar Alto Observatory/2.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q25451612",
+            "itemLabel": "Falcon 1 Flight 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Falcon Demo Launch 2"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.2.2m",
+            "Name": "Calar Alto Observatory/2.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2249850",
+            "itemLabel": "Luna E-6 No.2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-001A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0415-6 \u2116 2|\u0421\u043f\u0443\u0442\u043d\u0438\u043a-25"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.2.2m",
+            "Name": "Calar Alto Observatory/2.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2145867",
+            "itemLabel": "Resourcesat-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2011-015A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Resourcesat 2"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.2.2m",
+            "Name": "Calar Alto Observatory/2.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q862204",
+            "itemLabel": "Kwangmy\u014fngs\u014fng-3 num\u00e9ro 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2012-072A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5149\u660e\u661f3\u53f7|Kwangmyongsong 3|Kwangmyongsong-3|Kwangmy\u014fngs\u014fng-3 Unit 2"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.3.5m",
+            "Name": "Calar Alto Observatory/3.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q862204",
+            "itemLabel": "Kwangmy\u014fngs\u014fng-3 num\u00e9ro 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2012-072A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5149\u660e\u661f3\u53f7|Kwangmyongsong 3|Kwangmyongsong-3|Kwangmy\u014fngs\u014fng-3 Unit 2"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.3.5m",
+            "Name": "Calar Alto Observatory/3.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q518867",
+            "itemLabel": "STS-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1982-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0663|\u0625\u0633 \u062a\u064a \u0625\u0633-3|\u0625\u0633 \u062a\u064a \u0625\u0633-\u0663"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.3.5m",
+            "Name": "Calar Alto Observatory/3.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6052292",
+            "itemLabel": "Aur\u00e9ole 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1981-094A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ARCAD 3|Aureole 3"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.3.5m",
+            "Name": "Calar Alto Observatory/3.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q45977933",
+            "itemLabel": "Michibiki 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "QZS-3|QZSS-3"
+        }
+    ],
+    [
+        {
+            "ID": "CAO.3.5m",
+            "Name": "Calar Alto Observatory/3.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15292905",
+            "itemLabel": "CBERS-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Earth Resources Satellite 3"
+        }
+    ],
+    [
+        {
+            "ID": "CP.GEMINIS",
+            "Name": "Cerro Pachon/Gemini South Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q378306",
+            "itemLabel": "Gemini 6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-104A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini VI-A"
+        }
+    ],
+    [
+        {
+            "ID": "CP.GEMINIS",
+            "Name": "Cerro Pachon/Gemini South Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q617651",
+            "itemLabel": "Gemini 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-020A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u062c\u0645\u0646\u0627\u064a \u0668|Gemini VIII"
+        }
+    ],
+    [
+        {
+            "ID": "CP.GEMINIS",
+            "Name": "Cerro Pachon/Gemini South Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q682628",
+            "itemLabel": "Gemini 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-024A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Molly Brown|\u0414\u0436\u0435\u043c\u0438\u043d\u0438-3|Gemini III|\u062c\u0645\u06cc\u0646\u0627\u06cc 3|Gemini 3|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 3|\u53cc\u5b50\u661f3\u53f7|\u96d9\u5b50\u5ea73\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "CP.GEMINIS",
+            "Name": "Cerro Pachon/Gemini South Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q725849",
+            "itemLabel": "Gemini 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-068A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini V|Gemini V|\u062c\u0645\u06cc\u0646\u0627\u06cc 5|01516|Gemini V|\u53cc\u5b50\u661f5\u53f7|\u96d9\u5b50\u5ea75\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "CP.GEMINIS",
+            "Name": "Cerro Pachon/Gemini South Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q119807",
+            "itemLabel": "Gemini 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini VII"
+        }
+    ],
+    [
+        {
+            "ID": "CrAO.1.25m",
+            "Name": "Crimean Astrophysical Observatory/1.25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "CrAO.1.25m",
+            "Name": "Crimean Astrophysical Observatory/1.25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "CrAO.1.25m",
+            "Name": "Crimean Astrophysical Observatory/1.25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "CrAO.1.25m",
+            "Name": "Crimean Astrophysical Observatory/1.25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "CrAO.1.25m",
+            "Name": "Crimean Astrophysical Observatory/1.25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1571699",
+            "itemLabel": "Microsat-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1996-050A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1996-050A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "V\u00edctor|MuSat-1|\u00b5sat-1"
+        }
+    ],
+    [
+        {
+            "ID": "CrAO.22m",
+            "Name": "Crimean Astrophysical Observatory/22 meter Radio Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q96406128",
+            "itemLabel": "SpaceX CRS-22",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2021-048A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2021-048A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CRS-22|CRS-22|SpX-22|CRS-22"
+        }
+    ],
+    [
+        {
+            "ID": "CTIO.1.5m",
+            "Name": "Cerro Tololo Inter-American Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "CTIO.1.5m",
+            "Name": "Cerro Tololo Inter-American Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "CTIO.1.5m",
+            "Name": "Cerro Tololo Inter-American Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "CTIO.1.5m",
+            "Name": "Cerro Tololo Inter-American Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "CTIO.1.5m",
+            "Name": "Cerro Tololo Inter-American Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3459966",
+            "itemLabel": "SPOT-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1986-019A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1986-019A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SPOT 1|SPOT A|Spot-1|SPOT-A|SPOT-A"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.22m",
+            "Name": "Dominion Astrophysical Observatory/1.22 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.22m",
+            "Name": "Dominion Astrophysical Observatory/1.22 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.22m",
+            "Name": "Dominion Astrophysical Observatory/1.22 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.22m",
+            "Name": "Dominion Astrophysical Observatory/1.22 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.22m",
+            "Name": "Dominion Astrophysical Observatory/1.22 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.85m",
+            "Name": "Dominion Astrophysical Observatory/1.85 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.85m",
+            "Name": "Dominion Astrophysical Observatory/1.85 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.85m",
+            "Name": "Dominion Astrophysical Observatory/1.85 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.85m",
+            "Name": "Dominion Astrophysical Observatory/1.85 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "DAO.1.85m",
+            "Name": "Dominion Astrophysical Observatory/1.85 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "DDO.1.8m",
+            "Name": "David Dunlap Observatory/1.88 meter telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5679081",
+            "itemLabel": "Early Bird 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Early Bird 1"
+        }
+    ],
+    [
+        {
+            "ID": "DDO.1.8m",
+            "Name": "David Dunlap Observatory/1.88 meter telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "DDO.1.8m",
+            "Name": "David Dunlap Observatory/1.88 meter telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "DDO.1.8m",
+            "Name": "David Dunlap Observatory/1.88 meter telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q27074108",
+            "itemLabel": "Pathfinder-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-059E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BlackSky Pathfinder 1"
+        }
+    ],
+    [
+        {
+            "ID": "DDO.1.8m",
+            "Name": "David Dunlap Observatory/1.88 meter telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "DRAO.ST",
+            "Name": "Dominion Radio Astrophysical Observatory/Syntesis Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10343123",
+            "itemLabel": "Hanggao Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hanggao Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "DRAO.ST",
+            "Name": "Dominion Radio Astrophysical Observatory/Syntesis Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11521260",
+            "itemLabel": "Sapporo Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sapporo City Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.1.52m",
+            "Name": "European Southern Observatory/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.1.52m",
+            "Name": "European Southern Observatory/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.1.52m",
+            "Name": "European Southern Observatory/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.1.52m",
+            "Name": "European Southern Observatory/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.1.52m",
+            "Name": "European Southern Observatory/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.3.6m",
+            "Name": "European Southern Observatory/3.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q100440345",
+            "itemLabel": "SpaceX Crew-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2021-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2021-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "USCV-3|Crew-3|Crew-3|\u30b9\u30da\u30fc\u30b9X \u30af\u30eb\u30fc\uff1d3"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.3.6m",
+            "Name": "European Southern Observatory/3.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q518867",
+            "itemLabel": "STS-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1982-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0663|\u0625\u0633 \u062a\u064a \u0625\u0633-3|\u0625\u0633 \u062a\u064a \u0625\u0633-\u0663"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.3.6m",
+            "Name": "European Southern Observatory/3.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48556",
+            "itemLabel": "CAT 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1981-057C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Capsule Ariane Technologique 3"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.3.6m",
+            "Name": "European Southern Observatory/3.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15292905",
+            "itemLabel": "CBERS-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Earth Resources Satellite 3"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.3.6m",
+            "Name": "European Southern Observatory/3.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7508847",
+            "itemLabel": "Siding Spring 2.3 m Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Advanced Technology Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.DT",
+            "Name": "European Southern Observatory/Danish 1.5m Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7441795",
+            "itemLabel": "Sears Tower \u2013 Harvard Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sears Tower - Harvard Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.DT",
+            "Name": "European Southern Observatory/Danish 1.5m Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q33272727",
+            "itemLabel": "Goode Solar Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GST|NST|New Solar Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.SEST",
+            "Name": "European Southern Observatory/SEST, Swedish-ESO Submillimeter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1090935",
+            "itemLabel": "T\u00e9lescope de 2,2 m\u00e8tres MPG-ESO",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MPG/ESO 2.2m Telescope|MPG/ESO Teleskop|MPG/ESO-2.2-m-Teleskop"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.SEST",
+            "Name": "European Southern Observatory/SEST, Swedish-ESO Submillimeter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3562800",
+            "itemLabel": "Observatory Vset\u00edn",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatory Vsetin"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U2",
+            "Name": "European Southern Observatory/VLT Unit 2, Kueyen Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1090935",
+            "itemLabel": "T\u00e9lescope de 2,2 m\u00e8tres MPG-ESO",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MPG/ESO 2.2m Telescope|MPG/ESO Teleskop|MPG/ESO-2.2-m-Teleskop"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U2",
+            "Name": "European Southern Observatory/VLT Unit 2, Kueyen Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q738200",
+            "itemLabel": "Soyouz TM-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1987-013A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz TM-2"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U2",
+            "Name": "European Southern Observatory/VLT Unit 2, Kueyen Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16120642",
+            "itemLabel": "Es\u2019hail-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-090A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "AMSAT P4-A|Es\u2019hailSat-2|Es'hail-2"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U2",
+            "Name": "European Southern Observatory/VLT Unit 2, Kueyen Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q690951",
+            "itemLabel": "Soyouz T-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-045A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz T-2|\u30b5\u30ea\u30e5\u30fc\u30c86\u53f7EP-6"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U3",
+            "Name": "European Southern Observatory/VLT Unit 3, Melipal Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q915432",
+            "itemLabel": "Soyouz T-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-094A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Saljut 6 EO-5|Soyuz T 3|Soyuz T-3|Soyuz T-3"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U3",
+            "Name": "European Southern Observatory/VLT Unit 3, Melipal Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q847619",
+            "itemLabel": "Soyouz TM-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1987-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0633\u0648\u064a\u0648\u0632 TM-\u0663|Soyuz TM-3|Soyuz TM-3|\u8054\u76dfTM-3\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U4",
+            "Name": "European Southern Observatory/VLT Unit 4, Yepun Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q676306",
+            "itemLabel": "Soyouz T-4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1981-023A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz T-4"
+        }
+    ],
+    [
+        {
+            "ID": "ESO.VLT-U4",
+            "Name": "European Southern Observatory/VLT Unit 4, Yepun Very Large Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q904285",
+            "itemLabel": "Soyouz TM-4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1987-104A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz TM-4|Soyuz TM-4"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.2m",
+            "Name": "Fred Lawrence Whipple Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.2m",
+            "Name": "Fred Lawrence Whipple Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.2m",
+            "Name": "Fred Lawrence Whipple Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.2m",
+            "Name": "Fred Lawrence Whipple Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.2m",
+            "Name": "Fred Lawrence Whipple Observatory/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.5m",
+            "Name": "Fred Lawrence Whipple Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.5m",
+            "Name": "Fred Lawrence Whipple Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.5m",
+            "Name": "Fred Lawrence Whipple Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.5m",
+            "Name": "Fred Lawrence Whipple Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.1.5m",
+            "Name": "Fred Lawrence Whipple Observatory/1.5 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "FLWO.MMT",
+            "Name": "Fred Lawrence Whipple Observatory/MMT, Multiple Mirror Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779895",
+            "itemLabel": "observatoire MMT",
+            "all_Unified_Astro_Thesaurus_ID": "1080",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "696",
+            "aliases": "MMT|MMTO|MMTO|Multiple Mirror Telescope|MMT|MMTO|Multiple Mirror Telescope, telescopio a specchi multipli"
+        }
+    ],
+    [
+        {
+            "ID": "IRSA.Atlas",
+            "Name": "NASA Infrared Science Archive/Atlas Image Service"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9161676",
+            "itemLabel": "Atlas-Agena A",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas LV-3A Agena A"
+        }
+    ],
+    [
+        {
+            "ID": "IRSA.Atlas",
+            "Name": "NASA Infrared Science Archive/Atlas Image Service"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9161678",
+            "itemLabel": "Atlas-Agena B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas LV-3A Agena B"
+        }
+    ],
+    [
+        {
+            "ID": "IRSA.Atlas",
+            "Name": "NASA Infrared Science Archive/Atlas Image Service"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q498533",
+            "itemLabel": "Mercury-Atlas 6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-003A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1962-003A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0666|Friendship 7|Mercury 6|Friendship 7|MA-6|Mercury 6|Friendship 7|Mercury 6|Friendship 7|Friendship 7|Mercury\u20136|Mercury-Atlas 6|00240|Friendship 7|MA 6|Mercury 6|MA-6|Friendship 7|Mercury 6|Friendship 7|Friendship 7|Mercury 6|Friendship 7|Mercury 6|Friendship 7|\u0e40\u0e1f\u0e23\u0e19\u0e14\u0e4c\u0e0a\u0e34\u0e1b 7|\u6c34\u661f-\u5927\u529b\u795e6\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "IRSA.Atlas",
+            "Name": "NASA Infrared Science Archive/Atlas Image Service"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q498722",
+            "itemLabel": "Mercury-Atlas 9",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-015A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1963-015A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0669|Faith 7|Mercury 9|Mercury 9|Mercury 9|Mercury 9|Faith 7|Mercury 9|00576|Faith 7|MA 9|Mercury 9|Faith 7|MA-9|Mercury 9|Mercury 9|Mercury Atlas 9|Faith 7|Faith 7|MA 9|Mercury 9|Faith 7"
+        }
+    ],
+    [
+        {
+            "ID": "IRSA.Atlas",
+            "Name": "NASA Infrared Science Archive/Atlas Image Service"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q498659",
+            "itemLabel": "Atlas LV-3B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mercury-Atlas Launch Vehicle|Atlas D Mercury Launch Vehicle|Mercury-Atlas Launch Vehicle|\u5b87\u5b99\u795eLV-3B\u578b\u706b\u7bad"
+        }
+    ],
+    [
+        {
+            "ID": "JBO.MERLIN",
+            "Name": "Jodrell Bank Observatory/Merlin Array"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3245062",
+            "itemLabel": "e-MERLIN",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MERLIN|MTRLI|Multi-Element Radio Linked Interferometer Network|MERLIN / e-MERLIN|e-MERLIN|e-\u30de\u30fc\u30ea\u30f3"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.2.1m",
+            "Name": "Kitt Peak National Observatory/2.1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q946427",
+            "itemLabel": "Lunar Orbiter 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.2.1m",
+            "Name": "Kitt Peak National Observatory/2.1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q25451612",
+            "itemLabel": "Falcon 1 Flight 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Falcon Demo Launch 2"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.2.1m",
+            "Name": "Kitt Peak National Observatory/2.1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1329651",
+            "itemLabel": "Sich 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2011-044G",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sich 2|Sich-2|\u0421\u0456\u0447-2|Sich 2"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.2.1m",
+            "Name": "Kitt Peak National Observatory/2.1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16947045",
+            "itemLabel": "Exploration Mission 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SLS-2|EM-2|Exploration Mission 2|EM-2|Exploration Mission 2|Space Launch System 2|Artemis II|Artemisz III|Artemisz\u20132|\u30a2\u30eb\u30c6\u30df\u30b92|EM-2|Exploration Mission 2|SLS-2|Space Launch System 2|\u30a2\u30eb\u30c6\u30df\u30b92\u53f7|Artemis II"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.2.1m",
+            "Name": "Kitt Peak National Observatory/2.1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q714770",
+            "itemLabel": "Kwangmy\u014fngs\u014fng-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Kwangmy\u014fngs\u014fng-2|Kwangmyongsong-2.|Kwangmyongsong 2|Kwangmy\u014fngs\u014fng 2|Kwangmyongsong-2|\u06a9\u0648\u0627\u0646\u06af \u0645\u06cc\u0648\u0646\u06af \u0633\u0648\u0646\u06af-2|\u06a9\u0648\u0627\u0646\u06af \u0645\u06cc\u0648\u0646\u06af \u0633\u0648\u0646\u06af-\u06f2|Kwangmyongsong-2|Kwangmyongsong-2|Kwangmyongsong 2|Kwangmy\u014fngs\u014fng 2|Kwangmyongsong-2|Kwangmyongsong 2|Kwangmy\u014fngs\u014fng 2|Kwangmyongsong-2|Kwangmyongsong-2|\u041a\u0432\u0430\u043d\u043c\u0435\u043d\u0441\u043e\u043d-2|Kwangmy\u014fngs\u014fng-2|Quang Minh Tinh 2"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.MAYALL",
+            "Name": "Kitt Peak National Observatory/Mayall Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q592248",
+            "itemLabel": "observatoire de Kitt Peak",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "695",
+            "aliases": "KPNO|Kitt Peak Observatory|Observatoire de kitt peak|Kitt Peak National Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "KPNO.WIYN",
+            "Name": "Kitt Peak National Observatory/WYIN, Wisconson-Indiana-Yale-NOAO Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7951025",
+            "itemLabel": "WIYN Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WIYN\u5929\u6587\u53f0|WIYN Teleskobu|WIYN\u5929\u6587\u53f0|WIYN\u671b\u8fdc\u955c|WIYN\u671b\u8fdc\u955c|WIYN\u671b\u9060\u93e1"
+        }
+    ],
+    [
+        {
+            "ID": "LNA.1.6m",
+            "Name": "Laboratorio Nacional de Astrofisica/1.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54385",
+            "itemLabel": "Transit 5E-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-038C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Transit 5E-1|1963-038C|APL SN 39"
+        }
+    ],
+    [
+        {
+            "ID": "LNA.1.6m",
+            "Name": "Laboratorio Nacional de Astrofisica/1.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5679081",
+            "itemLabel": "Early Bird 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Early Bird 1"
+        }
+    ],
+    [
+        {
+            "ID": "LNA.1.6m",
+            "Name": "Laboratorio Nacional de Astrofisica/1.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "LNA.1.6m",
+            "Name": "Laboratorio Nacional de Astrofisica/1.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "LNA.1.6m",
+            "Name": "Laboratorio Nacional de Astrofisica/1.6 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q27074108",
+            "itemLabel": "Pathfinder-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-059E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BlackSky Pathfinder 1"
+        }
+    ],
+    [
+        {
+            "ID": "LO.KAIT",
+            "Name": "Lick Observatory/Katzman Automatic Imaging Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2680765",
+            "itemLabel": "Katzman Automatic Imaging Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "KAIT|KAIT"
+        }
+    ],
+    [
+        {
+            "ID": "LO.SHANE",
+            "Name": "Lick Observatory/Shane Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5006395",
+            "itemLabel": "t\u00e9lescope Shane",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "C. Donald Shane telescope|Shane Reflector|Shane telescope|C. Donald Shane telescope"
+        }
+    ],
+    [
+        {
+            "ID": "McD.HET",
+            "Name": "McDonald Observatory/HET, Hobby-Eberly Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q139605",
+            "itemLabel": "T\u00e9lescope Hobby-Eberly",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HET|HET|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0425\u043e\u0431\u0431\u0438-\u042d\u0431\u0435\u0440\u043b\u0438"
+        }
+    ],
+    [
+        {
+            "ID": "MK.GEMININ",
+            "Name": "Mauna Kea/Gemini North Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q682628",
+            "itemLabel": "Gemini 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-024A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Molly Brown|\u0414\u0436\u0435\u043c\u0438\u043d\u0438-3|Gemini III|\u062c\u0645\u06cc\u0646\u0627\u06cc 3|Gemini 3|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 3|\u53cc\u5b50\u661f3\u53f7|\u96d9\u5b50\u5ea73\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "MK.GEMININ",
+            "Name": "Mauna Kea/Gemini North Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q725849",
+            "itemLabel": "Gemini 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-068A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini V|Gemini V|\u062c\u0645\u06cc\u0646\u0627\u06cc 5|01516|Gemini V|\u53cc\u5b50\u661f5\u53f7|\u96d9\u5b50\u5ea75\u865f"
+        }
+    ],
+    [
+        {
+            "ID": "MK.GEMININ",
+            "Name": "Mauna Kea/Gemini North Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q119807",
+            "itemLabel": "Gemini 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini VII"
+        }
+    ],
+    [
+        {
+            "ID": "MK.GEMININ",
+            "Name": "Mauna Kea/Gemini North Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q378306",
+            "itemLabel": "Gemini 6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-104A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini VI-A"
+        }
+    ],
+    [
+        {
+            "ID": "MK.GEMININ",
+            "Name": "Mauna Kea/Gemini North Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q617651",
+            "itemLabel": "Gemini 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-020A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u062c\u0645\u0646\u0627\u064a \u0668|Gemini VIII"
+        }
+    ],
+    [
+        {
+            "ID": "MK.SUBARU",
+            "Name": "Mauna Kea/Subaru Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q841079",
+            "itemLabel": "Subaru",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Subaru|Subaru Telescope|T\u00e9lescope Subaru|\u3059\u3070\u308b\u671b\u9060\u93e1|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|Subaru Telescope|Subaru-telescope|Subarutelescoop|\u6634"
+        }
+    ],
+    [
+        {
+            "ID": "ML.HAO",
+            "Name": "Mauna Loa/HAO, High Altitude Observatory Telescopee"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5754874",
+            "itemLabel": "HAO",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HAO|\u9ad8\u7eac\u89c2\u5bdf\u7ad9|\u9ad8\u6d77\u62d4\u5929\u6587\u53f0|\u9ad8\u6d77\u62d4\u5929\u6587\u53f0|\u9ad8\u7def\u89c0\u5bdf\u7ad9"
+        }
+    ],
+    [
+        {
+            "ID": "ML.HAO",
+            "Name": "Mauna Loa/HAO, High Altitude Observatory Telescopee"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q752125",
+            "itemLabel": "Guillermo Haro Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Guillermo Haro Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "MO.MOST",
+            "Name": "Molonglo Observatory/MOST, Molonglo Observatory Synthesis Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12021070",
+            "itemLabel": "Anton\u00edn Be\u010dv\u00e1\u0159 observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hv\u011bzd\u00e1rna Most"
+        }
+    ],
+    [
+        {
+            "ID": "MO.MOST",
+            "Name": "Molonglo Observatory/MOST, Molonglo Observatory Synthesis Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q24626",
+            "itemLabel": "MOST",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2003-031D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MOST|MOST|MOST|Humble space telescope|Microvariability and Oscillations of STars|Microvariability and Oscillations of STars telescope|MOST space telescope|Microvariability and Oscillations of STars telescope|Microvariability and oscillations of stars|MOST|Sonda MOST|MOST (\u885b\u661f)|MOST\u536b\u661f|\u6052\u661f\u5fae\u53d8\u548c\u632f\u8361\u671b\u8fdc\u955c|MOST\u536b\u661f|\u6052\u661f\u5fae\u53d8\u548c\u632f\u8361\u671b\u8fdc\u955c|MOST\u885b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "MO.MRT",
+            "Name": "Mauritius Observatory/Mauritius Radio Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q752125",
+            "itemLabel": "Guillermo Haro Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Guillermo Haro Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "MtS.74in",
+            "Name": "Mount Stromolo/74 inch Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1143980",
+            "itemLabel": "STS-74",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1995-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0667\u0664|\u0625\u0633 \u062a\u064a \u0625\u0633-74|\u0625\u0633 \u062a\u064a \u0625\u0633-\u0667\u0664|STS 74|\u0410\u0442\u043b\u0430\u043d\u0442\u0438\u0441 STS-74"
+        }
+    ],
+    [
+        {
+            "ID": "MtW.CHARA",
+            "Name": "Mount Wilson/CHARA, Center for High Angular Resolution Astronomy interferometer"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1023601",
+            "itemLabel": "CHARA",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CHARA|CHARA\u30a2\u30ec\u30a4|CHARA|CHARA array"
+        }
+    ],
+    [
+        {
+            "ID": "NAIC.ARECIBO",
+            "Name": "National Astronomy and Ionospheric Center/Arecibo observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q102327045",
+            "itemLabel": "observatoire d'Arecibo",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NAIC|National Astronomy and Ionosphere Center|William-E.-Gordon-Teleskop|NAIC|National Astronomy and Ionosphere Center|Centro Nacional de Astronom\u00eda e Ionosfera|NAIC|National Astronomy and Ionosphere Center|\u0410\u0440\u0435\u0441\u0438\u0431\u043e (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)"
+        }
+    ],
+    [
+        {
+            "ID": "OAGH.2m",
+            "Name": "Observatorio Astrofisico Guillermo Haro/2 meter telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48475",
+            "itemLabel": "Voyager 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-076A",
+            "all_NAIF_ID": "-32",
+            "all_NSSDCA_ID": "1977-076A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0662|1977-076A|Voja\u011danto 2"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.2m",
+            "Name": "Observatoire de Haute-Provence/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54385",
+            "itemLabel": "Transit 5E-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-038C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Transit 5E-1|1963-038C|APL SN 39"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.2m",
+            "Name": "Observatoire de Haute-Provence/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5679081",
+            "itemLabel": "Early Bird 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Early Bird 1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.2m",
+            "Name": "Observatoire de Haute-Provence/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.2m",
+            "Name": "Observatoire de Haute-Provence/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.2m",
+            "Name": "Observatoire de Haute-Provence/1.2 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q27074108",
+            "itemLabel": "Pathfinder-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-059E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BlackSky Pathfinder 1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.52m",
+            "Name": "Observatoire de Haute-Provence/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.52m",
+            "Name": "Observatoire de Haute-Provence/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.52m",
+            "Name": "Observatoire de Haute-Provence/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.52m",
+            "Name": "Observatoire de Haute-Provence/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.52m",
+            "Name": "Observatoire de Haute-Provence/1.52 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.93m",
+            "Name": "Observatoire de Haute-Provence/1.93 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.93m",
+            "Name": "Observatoire de Haute-Provence/1.93 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.93m",
+            "Name": "Observatoire de Haute-Provence/1.93 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.93m",
+            "Name": "Observatoire de Haute-Provence/1.93 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4011610",
+            "itemLabel": "Viking 1 Orbiter",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
+        }
+    ],
+    [
+        {
+            "ID": "OHP.1.93m",
+            "Name": "Observatoire de Haute-Provence/1.93 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320529",
+            "itemLabel": "Rohini Satellite RS-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RS-1"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.DOT",
+            "Name": "Observatorio del Roque de los Muchachos/DOT, Dutch Open Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q543489",
+            "itemLabel": "Observatoire astronomique de Sormano",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "587",
+            "aliases": "Observatorio Astronomico Sormano"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.HEGRA",
+            "Name": "Observatorio del Roque de los Muchachos/HEGRA, High Energy Gamma Ray Astronomy Experiment"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q845962",
+            "itemLabel": "High-Energy-Gamma-Ray Astronomy",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HEGRA|HEGRA|High Energy Gamma Ray Astronomy|\u5207\u4f26\u79d1\u592b\u671b\u8fdc\u955c\u5b9e\u9a8c\u7ec4|\u5951\u4f26\u79d1\u592b\u671b\u8fdc\u955c|\u9ad8\u80fd\u03b3\u5c04\u7dda\u5929\u6587\u5b78"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.LT",
+            "Name": "Observatorio del Roque de los Muchachos/Liverpool Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q925534",
+            "itemLabel": "Swedish Solar Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SST|Swedish 1-m Solar Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.LT",
+            "Name": "Observatorio del Roque de los Muchachos/Liverpool Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q33272727",
+            "itemLabel": "Goode Solar Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GST|NST|New Solar Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.LT",
+            "Name": "Observatorio del Roque de los Muchachos/Liverpool Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q543489",
+            "itemLabel": "Observatoire astronomique de Sormano",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "587",
+            "aliases": "Observatorio Astronomico Sormano"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.MAGIC",
+            "Name": "Observatorio del Roque de los Muchachos/MAGIC, Major Atmospheric Gamma Imaging Cherenkov Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q9037283",
+            "itemLabel": "Kilpisj\u00e4rvi Atmospheric Imaging Receiver Array",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "KAI|Kilpisj\u00e4rvi Atmospheric Imaging Receiver Array"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.MAGIC",
+            "Name": "Observatorio del Roque de los Muchachos/MAGIC, Major Atmospheric Gamma Imaging Cherenkov Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7826439",
+            "itemLabel": "Observatoire magn\u00e9tique et m\u00e9t\u00e9orologique de Toronto",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Magnetico y Meteorologico de Toronto"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.MT",
+            "Name": "Observatorio del Roque de los Muchachos/Mercator Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q925534",
+            "itemLabel": "Swedish Solar Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SST|Swedish 1-m Solar Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.MT",
+            "Name": "Observatorio del Roque de los Muchachos/Mercator Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q33272727",
+            "itemLabel": "Goode Solar Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GST|NST|New Solar Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.MT",
+            "Name": "Observatorio del Roque de los Muchachos/Mercator Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q543489",
+            "itemLabel": "Observatoire astronomique de Sormano",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "587",
+            "aliases": "Observatorio Astronomico Sormano"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.NOT",
+            "Name": "Observatorio del Roque de los Muchachos/NOT, Nordic Optical Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q543489",
+            "itemLabel": "Observatoire astronomique de Sormano",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "587",
+            "aliases": "Observatorio Astronomico Sormano"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.SVST",
+            "Name": "Observatorio del Roque de los Muchachos/SVST, Swedish Vacuum Solar Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q925534",
+            "itemLabel": "Swedish Solar Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SST|Swedish 1-m Solar Telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ORM.TNG",
+            "Name": "Observatorio del Roque de los Muchachos/TNG, Telescopio Nazionale Galileo"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16269",
+            "itemLabel": "Telescopio Nazionale Galileo",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "Z19",
+            "aliases": "TNG|TNG|TNG\u671b\u9060\u93e1|\u30ac\u30ea\u30ec\u30aa\u56fd\u7acb\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u5bb6\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u969b\u671b\u9060\u93e1"
+        }
+    ],
+    [
+        {
+            "ID": "OSO.20m",
+            "Name": "Onsala Space Observatory/20 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q857030",
+            "itemLabel": "Soyouz TMA-20",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2010-067A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz TMA-20|TMA-20"
+        }
+    ],
+    [
+        {
+            "ID": "OSO.25m",
+            "Name": "Onsala Space Observatory/25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q846547",
+            "itemLabel": "Soyouz 25",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-099A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz 25|Soyuz 25"
+        }
+    ],
+    [
+        {
+            "ID": "OSO.25m",
+            "Name": "Onsala Space Observatory/25 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q516698",
+            "itemLabel": "Soyouz TM-25",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-003A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz TM-25"
+        }
+    ],
+    [
+        {
+            "ID": "OVRO.MA",
+            "Name": "Owens Valley Radio Observatory/Millimeter-wavelength Array"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11521260",
+            "itemLabel": "Sapporo Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sapporo City Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "PO.HALE",
+            "Name": "Palomar Observatory/Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2471197",
+            "itemLabel": "Hale Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hale Telescope|Hale Telescoop|Hale-telescoop"
+        }
+    ],
+    [
+        {
+            "ID": "PO.HALE",
+            "Name": "Palomar Observatory/Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q26965824",
+            "itemLabel": "60-inch telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "60-inch Hale telescope"
+        }
+    ],
+    [
+        {
+            "ID": "RO.1.0m",
+            "Name": "Ritter Observatory/1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2038647",
+            "itemLabel": "WorldView-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2007-041A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WorldView 1|WorldView-1"
+        }
+    ],
+    [
+        {
+            "ID": "RO.1.0m",
+            "Name": "Ritter Observatory/1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5679081",
+            "itemLabel": "Early Bird 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Early Bird 1"
+        }
+    ],
+    [
+        {
+            "ID": "RO.1.0m",
+            "Name": "Ritter Observatory/1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49502",
+            "itemLabel": "Deep Space 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-061A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "RO.1.0m",
+            "Name": "Ritter Observatory/1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q27074108",
+            "itemLabel": "Pathfinder-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-059E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BlackSky Pathfinder 1"
+        }
+    ],
+    [
+        {
+            "ID": "RO.1.0m",
+            "Name": "Ritter Observatory/1 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ACE",
+            "Name": "ACE, Advanced Composition Explorer satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2463",
+            "itemLabel": "Advanced Composition Explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1997-045A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ACE|ACE|Explorer 71|\u9ad8\u7d1a\u6210\u5206\u63a2\u6e2c\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ALEXIS",
+            "Name": "ALEXIS, Array of Low Energy X-ray Imaging Sensors satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18539",
+            "itemLabel": "Array of Low Energy X-ray Imaging Sensors",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1993-026A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1993-026A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ALEXIS|ALEXIS|P89-1B"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ANS",
+            "Name": "ANS, Astronomische Nederlandse Satelliet [or Astronomical Netherlands Satellite]"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11585400",
+            "itemLabel": "Ishigakijima Astronomical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "D44",
+            "aliases": "Ishigaki Island Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ARGOS",
+            "Name": "ARGOS, Advanced Research and Global Observation Satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15015",
+            "itemLabel": "ARGOS",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1999-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ARGOS|ARGOS|Advanced Research and Global Observation Satellite"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ARIELV",
+            "Name": "Ariel V satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q659360",
+            "itemLabel": "Ariel V",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-077A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1974-077A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "UK5|Ariel-5|PL-732B|UK 5|UK-5"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ARIELV",
+            "Name": "Ariel V satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q795127",
+            "itemLabel": "Ariel 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-015A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "UK2|S52|Ariel-2|S-52|UK 2|UK-2|UK-C"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ARIELV",
+            "Name": "Ariel V satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q795233",
+            "itemLabel": "Ariel 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1967-042A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "S53|S-53|Ariel-3|UK 3|UK-3|UK-E|UK3|\u0e40\u0e2d\u0e40\u0e23\u0e35\u0e22\u0e25"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.COPERNICUS",
+            "Name": "Copernicus, Orbiting Astronomical Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q109450281",
+            "itemLabel": "Volkssterrenwacht Copernicus",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sterrenwacht Copernicus"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.COPERNICUS",
+            "Name": "Copernicus, Orbiting Astronomical Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12129338",
+            "itemLabel": "Copernicus (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041a\u043e\u043f\u0435\u0440\u043d\u0438\u043a|OAO-3|Orbiting Astronomical Observatory 3|\u041e\u0410\u041e-3"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.COSB",
+            "Name": "Cos-B Satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48711",
+            "itemLabel": "COS-B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-072A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Celestial Observation Satellite"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.EO",
+            "Name": "Einstein, High Energy Astronomy Observatory 2 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q13360143",
+            "itemLabel": "Mount Ny\u016bkasa Optical Observatory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "408",
+            "aliases": "JAXA\u5165\u7b20\u5c71\u5149\u5b66\u89b3\u6e2c\u6240|\u5165\u7b20\u5c71\u5149\u5b66\u89b3\u6e2c\u65bd\u8a2d|Mount Ny\u016bkasa Observatory|Ny\u016bkasa Observatory|Ny\u016bkasa Optical Observatory|Ny\u016bkasayama Observatory|Ny\u016bkasayama Optical Observatory|\u5165\u7b20\u5c71\u5929\u4f53\u89b3\u6e2c\u6240"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.EURECA",
+            "Name": "EURECA, EUropean REtrievable CArrier satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49684",
+            "itemLabel": "Eureca",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1992-049B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-049B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EURECA|European Retrievable Carrier|European Retrievable Carrier"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.EXOSAT",
+            "Name": "EXOSAT, European Space Agency's X-ray Observatory satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49694",
+            "itemLabel": "EXOSAT",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1983-051A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sat|European X-ray Observatory Satellite"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.FAST",
+            "Name": "FAST, Fast Auroral SnapshoT explorer satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49912",
+            "itemLabel": "Fast Auroral Snapshot Explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1996-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "FAST|FAST|Explorer 70"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.FUSE",
+            "Name": "FUSE, Far Ultraviolet Spectroscopic Explorer satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49909",
+            "itemLabel": "FUSE",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1999-035A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "FUSE|FUSE|FUSE|Explorer 77|FUSE"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.GINGA",
+            "Name": "Ginga, third Japanese X-ray satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1524954",
+            "itemLabel": "Ginga (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1987-012A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Ginga|Ginga|ASTRO-C|Astro c|ASTRO C|ASTRO-C|ASTRO C|ASTRO-C|Astro-C|ASTRO-C|GINGA"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HAKUCHO",
+            "Name": "Hakucho, first Japanese xray satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1570051",
+            "itemLabel": "Hakucho",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1979-014A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CORSA-A|CORSA-B|CORSA|CORSA-A|CORSA-B|Corsa-b|Corsa-B|CORSA-b|CORSA-B|Hakucho|Cosmic Radiation Satellite"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-1",
+            "Name": "HEAO-1, High Energy Astronomy Observatory 1 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q56042842",
+            "itemLabel": "Boeing Starliner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Crew-2|USCV-3|Starliner-1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-1",
+            "Name": "HEAO-1, High Energy Astronomy Observatory 1 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q765193",
+            "itemLabel": "Earth Observing-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EO-1|EO-1|Earth Observing 1|EO-1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-1",
+            "Name": "HEAO-1, High Energy Astronomy Observatory 1 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1389529",
+            "itemLabel": "FR-1 (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "France 1|France 1|Fr 1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-1",
+            "Name": "HEAO-1, High Energy Astronomy Observatory 1 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q265594",
+            "itemLabel": "HEAO-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HEAO 1|High Energy Astronomy Observatory 1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-1",
+            "Name": "HEAO-1, High Energy Astronomy Observatory 1 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3129781",
+            "itemLabel": "Helios 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-097A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios A|Helios 1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-3",
+            "Name": "HEAO-3, High Energy Astronomy Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q265594",
+            "itemLabel": "HEAO-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HEAO 1|High Energy Astronomy Observatory 1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-3",
+            "Name": "HEAO-3, High Energy Astronomy Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q518867",
+            "itemLabel": "STS-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1982-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0663|\u0625\u0633 \u062a\u064a \u0625\u0633-3|\u0625\u0633 \u062a\u064a \u0625\u0633-\u0663"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-3",
+            "Name": "HEAO-3, High Energy Astronomy Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7073037",
+            "itemLabel": "OSO 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1967-020A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting Solar Observatory 3|OSO E1"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-3",
+            "Name": "HEAO-3, High Energy Astronomy Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48556",
+            "itemLabel": "CAT 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1981-057C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Capsule Ariane Technologique 3"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HEAO-3",
+            "Name": "HEAO-3, High Energy Astronomy Observatory 3 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q100440345",
+            "itemLabel": "SpaceX Crew-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2021-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2021-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "USCV-3|Crew-3|Crew-3|\u30b9\u30da\u30fc\u30b9X \u30af\u30eb\u30fc\uff1d3"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HETE-2",
+            "Name": "HETE-2, High Energy Transient Explorer 2 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q946427",
+            "itemLabel": "Lunar Orbiter 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HETE-2",
+            "Name": "HETE-2, High Energy Transient Explorer 2 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q25451612",
+            "itemLabel": "Falcon 1 Flight 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Falcon Demo Launch 2"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HETE-2",
+            "Name": "HETE-2, High Energy Transient Explorer 2 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16354696",
+            "itemLabel": "EgyptSat 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2014-021A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0625\u064a\u062c\u064a\u0628\u062a \u0633\u0627\u062a - 2"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HETE-2",
+            "Name": "HETE-2, High Energy Transient Explorer 2 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1329651",
+            "itemLabel": "Sich 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2011-044G",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sich 2|Sich-2|\u0421\u0456\u0447-2|Sich 2"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HETE-2",
+            "Name": "HETE-2, High Energy Transient Explorer 2 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16947045",
+            "itemLabel": "Exploration Mission 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SLS-2|EM-2|Exploration Mission 2|EM-2|Exploration Mission 2|Space Launch System 2|Artemis II|Artemisz III|Artemisz\u20132|\u30a2\u30eb\u30c6\u30df\u30b92|EM-2|Exploration Mission 2|SLS-2|Space Launch System 2|\u30a2\u30eb\u30c6\u30df\u30b92\u53f7|Artemis II"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.HIPPARCOS",
+            "Name": "Hipparcos Space Astrometry Mission satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q555846",
+            "itemLabel": "Hipparcos",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1989-062B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1989-062B",
+            "all_Minor_Planet_Center_observatory_ID": "248",
+            "aliases": "\u0413\u0438\u043f\u043f\u0430\u0440\u0445|Hipparcos|Hiparc|High Precision Parallax Collecting Satellite|Sonda Hipparcos|\u30d2\u30c3\u30d1\u30b3\u30eb\u30b9\u885b\u661f|\u30d2\u30c3\u30d1\u30eb\u30b3\u30b9\u885b\u661f|\ud788\ud30c\ub974\ucf54\uc2a4 \uacc4\ud68d|HIPARCO teleskopas|Hipparcos-katalogen|HIP objekty|Hipparcos|Hipparcos catalog|Tycho Catalogue|\u4f9d\u5df4\u8c37\u5929\u4f53\u6d4b\u91cf\u536b\u661f|\u559c\u5e15\u6070\u65af\u536b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "SA.INTEGRAL",
+            "Name": "INTEGRAL, International Gamma-Ray Astrophysics Laboratory satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q50021",
+            "itemLabel": "International Gamma-Ray Astrophysics Laboratory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2002-048A",
+            "all_NAIF_ID": "-198",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "International Gamma-Ray Astrophysics Laboratory|INTEGRAL|International Gamma-Ray Astrophysics Laboratory|INTErnational Gamma-Ray Astrophysics Laboratory"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.IRAS",
+            "Name": "IRAS, InfraRed Astronomical Satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12129338",
+            "itemLabel": "Copernicus (satellite)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041a\u043e\u043f\u0435\u0440\u043d\u0438\u043a|OAO-3|Orbiting Astronomical Observatory 3|\u041e\u0410\u041e-3"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ISO",
+            "Name": "ISO, Infrared Space Observatory satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2976682",
+            "itemLabel": "observatoire d'Iso-Heikkil\u00e4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "062",
+            "aliases": "Iso-Heikkil\u00e4n t\u00e4htitorni|Observatorio Iso-Heikkil\u00e4|Turku Observatory|Iso-Heikkil\u00e4n t\u00e4htitorni|Iso-Heikkil\u00e4 Sterrenwacht|Turun observatorio, Turun yliopisto"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ISO",
+            "Name": "ISO, Infrared Space Observatory satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779547",
+            "itemLabel": "Observatoire Spatial Infrarouge",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1995-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ISO|ISO|ISO|ISO|Infrared Space Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.IUE",
+            "Name": "IUE, International Ultraviolet Explorer"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q51509",
+            "itemLabel": "International Ultraviolet Explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1978-012A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "IUE|IUE|IUE|IUE|Explorer 57|\u30a8\u30af\u30b9\u30d7\u30ed\u30fc\u30e9\u30fc57\u53f7|\u56fd\u969b\u7d2b\u5916\u7dda\u5929\u6587\u885b\u661f|\u570b\u969b\u7d2b\u5916\u7dda\u63a2\u6e2c\u8005\u885b\u661f"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.MSX",
+            "Name": "MSX, Midcourse Space Experiment"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q970807",
+            "itemLabel": "Midcourse Space Experiment",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1996-024A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MSX"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.NEAR",
+            "Name": "NEAR, Near-Earth Asteroid Rendezvous satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q217188",
+            "itemLabel": "NEAR Shoemaker",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1996-008A",
+            "all_NAIF_ID": "-93",
+            "all_NSSDCA_ID": "1996-008A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NEAR|Near Earth Asteroid Rendezvous - Shoemaker|NEAR|Near Earth Asteroid Rendezvous|Near Earth Asteroid Rendezvous Shoemaker|NEAR|Near Earth Asteroid Rendezvous|NEAR|NEAR Shoemaker|NEAR|NEAR\u30b7\u30e5\u30fc\u30e1\u30a4\u30ab\u30fc|\u30cb\u30a2\u30fb\u30b7\u30e5\u30fc\u30e1\u30fc\u30ab\u30fc|\u30cb\u30a2\u30fb\u30b7\u30e5\u30fc\u30e1\u30fc\u30ab\u30fc\u63a2\u67fb\u6a5f|\u30cb\u30a2\u30fb\u30b7\u30e5\u30fc\u30e1\u30a4\u30ab\u30fc|\u30cb\u30a2\u30fc\u30fb\u30b7\u30e5\u30fc\u30e1\u30fc\u30ab\u30fc|\u30cb\u30a2\u30fc\u30fb\u30b7\u30e5\u30fc\u30e1\u30a4\u30ab\u30fc|\u30cb\u30a2\u8a08\u753b|NEAR|Near Earth Asteroid Rendezvous|NEAR|NEAR-Shoemaker|NEAR \u0e0a\u0e39\u0e40\u0e21\u0e01\u0e40\u0e01\u0e2d\u0e23\u0e4c|\u5c3c\u5c14-\u8212\u6885\u514b\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.NEAR",
+            "Name": "NEAR, Near-Earth Asteroid Rendezvous satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q840936",
+            "itemLabel": "Near Earth Object Surveillance Satellite",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2013-009D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NEOSSat|NEOSSat|Near Earth Object Surveillance Satellite"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ORFEUS",
+            "Name": "ORFEUS, Orbiting and Retrievable Far and Extreme Ultraviolet Spectrometer satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2007875",
+            "itemLabel": "ORFEUS-SPAS II",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1996-065B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting and Retrievable Far and Extreme UV Spectrometer"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.OSO7",
+            "Name": "Orbiting Solar Observatory 7 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7073038",
+            "itemLabel": "OSO 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-083A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting Solar Observatory 7|OSO H"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.OSO8",
+            "Name": "Orbiting Solar Observatory 8 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4045602",
+            "itemLabel": "OSO 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-057A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Orbiting Solar Observatory 8|OSO I"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.OSO8",
+            "Name": "Orbiting Solar Observatory 8 satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q277739",
+            "itemLabel": "SA-8 (Apollo)",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-039A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0623\u064a-\u0661\u0660\u0664|A-104 (SA-8)|AS-104|A-104 (SA-8)"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ROSAT",
+            "Name": "ROSAT, ROentgen Satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q840936",
+            "itemLabel": "Near Earth Object Surveillance Satellite",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2013-009D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NEOSSat|NEOSSat|Near Earth Object Surveillance Satellite"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.RXTE",
+            "Name": "RXTE, Rossi X-ray Timing Explorer"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q766426",
+            "itemLabel": "Rossi X-ray Timing Explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1995-074A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "X-Ray Timing Explorer|RXTE|RXTE"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.RXTE",
+            "Name": "RXTE, Rossi X-ray Timing Explorer"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q705882",
+            "itemLabel": "TerraSAR-X",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2007-026A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2007-026A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "TerraSAR|TerraSAR X|TanDEM-X|TerraSAR-X|TerraSAR-X"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.SAMPEX",
+            "Name": "SAMPEX, Solar Anomalous and Magnetospheric Particle EXplorer"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54367",
+            "itemLabel": "Solar Anomalous and Magnetospheric Particle Explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1992-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SAMPEX|Explorer 68|Explorer 68|SAMPEX|SAMPEX"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.SAS2",
+            "Name": "Small Astronomy Satellite 2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1242087",
+            "itemLabel": "SAS-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-091A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Explorer 48|SAS B|SAS-2|Explorer 48|SAS B|SAS-2"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.SAS2",
+            "Name": "Small Astronomy Satellite 2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60847866",
+            "itemLabel": "GOSAT 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-084B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GOSAT-2"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.SPITZER",
+            "Name": "Spitzer Space Telescope (aka SIRTF)"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201953",
+            "itemLabel": "Spitzer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2003-038A",
+            "all_NAIF_ID": "-79",
+            "all_NSSDCA_ID": "2003-038A",
+            "all_Minor_Planet_Center_observatory_ID": "245",
+            "aliases": "\u0627\u0644\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0633\u0628\u064a\u062a\u0632\u0631|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|Spitzer Space Telescope|SIRTF|Spitzer\u016fv kosmick\u00fd dalekohled|SIRTF|Space Infrared Telescope Facility|Spitzer Space Telescope|Spitzer ST|Spitzer-Teleskop|Spitzer-Weltraumobservatorium|Weltraumteleskop Spitzer|Spitzer Space Telescope|SIRTF|Space Infrared Telescope Facility|SST|SIRTF|Spitzer|SST|Telescopio Spitzer|Avaruusteleskooppi Spitzer|SIRTF|SIRTF|Space Infrared Telescope Facility|Spitzer Space Telescope|T\u00e9lescope spatial infrarouge|Telescope spatial Spitzer|T\u00e9lescope spatial Spitzer|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0938\u094d\u092a\u0947\u0938 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|Spitzer Space Telescope|Teleskop angkasa Spitzer|Teleskop Spitzer|Spitzer Space Telescope|Spitzer-teleskopet|Spitzerteleskopet|SIRTF|Space Infrared Telescope Facility|Spitzer Ruimtetelescoop|Romteleskopet Spitzer|Spitzer-teleskopet|Teleskop Spitzera|Spitzer Space Telescope|Telesc\u00f3pio Spitzer|SIRTF|Spitzer|Spitzer Space Telescope|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0421\u043f\u0438\u0442\u0446\u0435\u0440\u0430|\u0421\u043f\u0438\u0446\u0435\u0440|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0438\u0442\u0446\u0435\u0440|SIRTF|Spitzerov vesm\u00edrny teleskop|Spitzer Space Telescope|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|Spitzer Uzay Teleskopu|\u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|Spitzer Space Telescope|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \"\u0421\u043f\u0456\u0442\u0446\u0435\u0440\"|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u044c\u043f\u0456\u0446\u044d\u0440\u0430"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.SWAS",
+            "Name": "SWAS, Submillimeter Wave Astronomy Satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54374",
+            "itemLabel": "Submillimeter Wave Astronomy Satellite",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-071A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SWAS|Explorer 74|SWAS"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.SWIFT",
+            "Name": "SWIFT, Multi-wavelength Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q837488",
+            "itemLabel": "SWIFT",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2004-047A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Swift|\u0421\u0432\u0438\u0444\u0442|Swift|\u30b9\u30a6\u30a3\u30d5\u30c8|Dru\u017eice Swift|Explorer 84|Kosmick\u00e1 observato\u0159 Swift|Explorer 84|Swift Gamma-Ray Burst Mission investigation|Swift Gamma Ray Burst Explorer|Swift Gamma-Ray Burst Mission|Swift observatoire de sursaut gamma|T\u00e9lescope spatial SWIFT|\u30b9\u30a4\u30d5\u30c8\u885b\u661f|\u30b9\u30a6\u30a3\u30d5\u30c8\u885b\u661f|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-84|Swift|\u4f3d\u739b\u5c04\u7ebf\u66b4\u5feb\u901f\u53cd\u5e94\u63a2\u6d4b\u5668"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.TENMA",
+            "Name": "Tenma, second Japanese Xray satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q880147",
+            "itemLabel": "EnMAP",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EnMAP"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.UHURU",
+            "Name": "Uhuru, Small Astronomical Satellite 1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q580043",
+            "itemLabel": "Uhuru",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-107A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "X-ray Explorer Satellite, SAS-1, Explorer 42|Explorer 42"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.ULYSSES",
+            "Name": "Ulysses satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q156081",
+            "itemLabel": "Ulysses",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1990-090B",
+            "all_NAIF_ID": "-55",
+            "all_NSSDCA_ID": "1990-090B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Ulysses|\u0627\u0648\u0644\u06cc\u0633|Programme Ulysses|Sonde Ulysses|Ulysses solar|Sonda Ulisse|Ulisses|\u0423\u043b\u0438\u0441\u0441 (\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043f\u043f\u0430\u0440\u0430\u0442)|\u5c24\u5229\u897f\u65af\u53f7\u63a2\u6d4b\u5668|\u5c24\u91cc\u897f\u65af\u53f7|\u5c24\u91cc\u897f\u65af\u53f7\u63a2\u6d4b\u5668|\u0423\u043b\u0438\u0441\u0441 (\u0441\u0442\u0430\u043d\u0446\u0438\u044f)"
+        }
+    ],
+    [
+        {
+            "ID": "Sa.WIND",
+            "Name": "Wind satellite"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2300867",
+            "itemLabel": "WIND",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1994-071A",
+            "all_NAIF_ID": "-8",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GGS/Wind|Interplanetary Physics Laboratory|ISTP/Wind|Global Geospace Science|WIND"
+        }
+    ],
+    [
+        {
+            "ID": "Sh.HUT",
+            "Name": "HUT, Hopkins Ultraviolet Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1627672",
+            "itemLabel": "Hopkins Ultraviolet Telescope",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HUT"
+        }
+    ],
+    [
+        {
+            "ID": "SSO.2.3m",
+            "Name": "Siding Springs Observatory/2.3 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q106977230",
+            "itemLabel": "SpaceX Axiom Space-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Ax-2|Ax2|Ax-2"
+        }
+    ],
+    [
+        {
+            "ID": "SSO.2.3m",
+            "Name": "Siding Springs Observatory/2.3 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q25451612",
+            "itemLabel": "Falcon 1 Flight 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Falcon Demo Launch 2"
+        }
+    ],
+    [
+        {
+            "ID": "SSO.2.3m",
+            "Name": "Siding Springs Observatory/2.3 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1424721",
+            "itemLabel": "Soyouz TMA-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2003-016A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz TMA-2|Soyuz TMA-2|TMA-2"
+        }
+    ],
+    [
+        {
+            "ID": "SSO.2.3m",
+            "Name": "Siding Springs Observatory/2.3 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2249850",
+            "itemLabel": "Luna E-6 No.2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-001A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0415-6 \u2116 2|\u0421\u043f\u0443\u0442\u043d\u0438\u043a-25"
+        }
+    ],
+    [
+        {
+            "ID": "SSO.2.3m",
+            "Name": "Siding Springs Observatory/2.3 meter Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2145867",
+            "itemLabel": "Resourcesat-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2011-015A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Resourcesat 2"
+        }
+    ],
+    [
+        {
+            "ID": "SSO.40in",
+            "Name": "Siding Springs Observatory/40 inch Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q905133",
+            "itemLabel": "STS-40",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1991-040A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "STS-\u0664\u0660|STS 40|\u041a\u043e\u043b\u0443\u043c\u0431\u0438\u044f STS-40"
+        }
+    ],
+    [
+        {
+            "ID": "UW.WIRO",
+            "Name": "University of Wyoming/WIRO, Wyoming Infrared Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q753261",
+            "itemLabel": "observatoire infrarouge du Wyoming",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WIRO"
+        }
+    ]
+]
