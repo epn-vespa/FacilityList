@@ -7,7 +7,6 @@
         {
             "item": "http://www.wikidata.org/entity/Q935600",
             "itemLabel": "Pioneer 1",
-            "all_props": "http://www.wikidata.org/prop/direct/P31",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1958-007A",
             "all_NAIF_ID": "",
@@ -24,7 +23,6 @@
         {
             "item": "http://www.wikidata.org/entity/Q935600",
             "itemLabel": "Pioneer 1",
-            "all_props": "http://www.wikidata.org/prop/direct/P31",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1958-007A",
             "all_NAIF_ID": "",
@@ -41,13 +39,156 @@
         {
             "item": "http://www.wikidata.org/entity/Q935600",
             "itemLabel": "Pioneer 1",
-            "all_props": "http://www.wikidata.org/prop/direct/P31",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1958-007A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1958-007A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+        }
+    ],
+    [
+        {
+            "ID": "-148",
+            "Name": "'DRAGONFLY'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q29018128",
+            "itemLabel": "Dragonfly",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dragonfly"
+        }
+    ],
+    [
+        {
+            "ID": "-152",
+            "Name": "'CHANDRAYAAN-2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q325065",
+            "itemLabel": "Chandrayaan-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2019-042A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2019-042A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03b1\u03bd-2|\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03bd 2|\u03a4\u03c3\u03ac\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03b1\u03bd-2|\u30ed\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-153",
+            "Name": "'CHANDRAYAAN-2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q325065",
+            "itemLabel": "Chandrayaan-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2019-042A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2019-042A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03b1\u03bd-2|\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03bd 2|\u03a4\u03c3\u03ac\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03b1\u03bd-2|\u30ed\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "ID": "-301",
+            "Name": "'HELIOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3129777",
+            "itemLabel": "Helios 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1976-003A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios 2"
+        }
+    ],
+    [
+        {
+            "ID": "-301",
+            "Name": "'HELIOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "ID": "-301",
+            "Name": "'HELIOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3129781",
+            "itemLabel": "Helios 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-097A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios A|Helios 1"
+        }
+    ],
+    [
+        {
+            "ID": "-302",
+            "Name": "'HELIOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3129777",
+            "itemLabel": "Helios 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1976-003A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios 2"
+        }
+    ],
+    [
+        {
+            "ID": "-302",
+            "Name": "'HELIOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "ID": "-302",
+            "Name": "'HELIOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3129781",
+            "itemLabel": "Helios 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-097A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios A|Helios 1"
         }
     ]
 ]
