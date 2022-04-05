@@ -1,3 +1,14 @@
+# GNU General Public License
+# see LICENSE for details
+#----------------------------------------------------------------------------
+# Created By  : Laura Debisschop
+# Created Date: 02-13-2022
+# version ='1.0'
+# ---------------------------------------------------------------------------
+#
+# ---------------------------------------------------------------------------
+# Imports lxml , json, BeautifulSoup, re
+# ---------------------------------------------------------------------------
 import lxml
 from lxml import etree
 from bs4 import BeautifulSoup
