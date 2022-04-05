@@ -1,16 +1,20 @@
 # GNU General Public License
 # see LICENSE for details
-
-# AUTHORS
-# Laura Debisschop
-
+#----------------------------------------------------------------------------
+# Created By  : Laura Debisschop
+# Created Date: 02-13-2022
+# version ='1.0'
+# ---------------------------------------------------------------------------
+#
+# ---------------------------------------------------------------------------
+# Imports lxml , json
+# ---------------------------------------------------------------------------
 
 import lxml
 from lxml import etree
 import json
 
 def element_path(xmltreeelement):
-    # AttributeError: 'NoneType' object has no attribute 'getparent'
     try :
         r = element_path(xmltreeelement.getparent())
     except AttributeError: return xmltreeelement.tag
@@ -32,6 +36,7 @@ print("root.tag =", root.tag)
 print("element_path(root) =", element_path(root))
 print('root.findall("RESOURCE") =', root.findall("RESOURCE"))
 print('root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE") =', root.findall("{http://www.ivoa.net/xml/VOTable/v1.2}RESOURCE"))
+
 for child in root.iterchildren() :
     print(element_path(child))
 TAG="{http://www.ivoa.net/xml/VOTable/v1.2}"
