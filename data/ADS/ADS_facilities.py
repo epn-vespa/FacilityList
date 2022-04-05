@@ -1,3 +1,15 @@
+# GNU General Public License
+# see LICENSE for details
+#----------------------------------------------------------------------------
+# Created By  : Laura Debisschop
+# Created Date: 02-13-2022
+# version ='1.0'
+# ---------------------------------------------------------------------------
+#
+# ---------------------------------------------------------------------------
+# Imports json
+# ---------------------------------------------------------------------------
+
 import json
 
 file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/ADS_facilities.txt'
