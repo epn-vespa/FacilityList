@@ -1,1074 +1,1074 @@
 [
     {
-        "ID": "-3",
-        "Name": "'MOM'"
+        "code": "-3",
+        "Name": "MOM"
     },
     {
-        "ID": "-3",
-        "Name": "'MARS"
+        "code": "-3",
+        "Name": "MARS ORBITER MISSION"
     },
     {
-        "ID": "-5",
-        "Name": "'AKATSUKI'"
+        "code": "-5",
+        "Name": "AKATSUKI"
     },
     {
-        "ID": "-5",
-        "Name": "'VCO'"
+        "code": "-5",
+        "Name": "VCO"
     },
     {
-        "ID": "-5",
-        "Name": "'PLC'"
+        "code": "-5",
+        "Name": "PLC"
     },
     {
-        "ID": "-5",
-        "Name": "'PLANET-C'"
+        "code": "-5",
+        "Name": "PLANET-C"
     },
     {
-        "ID": "-6",
-        "Name": "'P6'"
+        "code": "-6",
+        "Name": "P6"
     },
     {
-        "ID": "-6",
-        "Name": "'PIONEER-6'"
+        "code": "-6",
+        "Name": "PIONEER-6"
     },
     {
-        "ID": "-7",
-        "Name": "'P7'"
+        "code": "-7",
+        "Name": "P7"
     },
     {
-        "ID": "-7",
-        "Name": "'PIONEER-7'"
+        "code": "-7",
+        "Name": "PIONEER-7"
     },
     {
-        "ID": "-8",
-        "Name": "'WIND'"
+        "code": "-8",
+        "Name": "WIND"
     },
     {
-        "ID": "-12",
-        "Name": "'VENUS"
+        "code": "-12",
+        "Name": "VENUS ORBITER"
     },
     {
-        "ID": "-12",
-        "Name": "'P12'"
+        "code": "-12",
+        "Name": "P12"
     },
     {
-        "ID": "-12",
-        "Name": "'PIONEER"
+        "code": "-12",
+        "Name": "PIONEER 12"
     },
     {
-        "ID": "-12",
-        "Name": "'LADEE'"
+        "code": "-12",
+        "Name": "LADEE"
     },
     {
-        "ID": "-13",
-        "Name": "'POLAR'"
+        "code": "-13",
+        "Name": "POLAR"
     },
     {
-        "ID": "-18",
-        "Name": "'MGN'"
+        "code": "-18",
+        "Name": "MGN"
     },
     {
-        "ID": "-18",
-        "Name": "'MAGELLAN'"
+        "code": "-18",
+        "Name": "MAGELLAN"
     },
     {
-        "ID": "-18",
-        "Name": "'LCROSS'"
+        "code": "-18",
+        "Name": "LCROSS"
     },
     {
-        "ID": "-20",
-        "Name": "'P8'"
+        "code": "-20",
+        "Name": "P8"
     },
     {
-        "ID": "-20",
-        "Name": "'PIONEER-8'"
+        "code": "-20",
+        "Name": "PIONEER-8"
     },
     {
-        "ID": "-21",
-        "Name": "'SOHO'"
+        "code": "-21",
+        "Name": "SOHO"
     },
     {
-        "ID": "-23",
-        "Name": "'P10'"
+        "code": "-23",
+        "Name": "P10"
     },
     {
-        "ID": "-23",
-        "Name": "'PIONEER-10'"
+        "code": "-23",
+        "Name": "PIONEER-10"
     },
     {
-        "ID": "-24",
-        "Name": "'P11'"
+        "code": "-24",
+        "Name": "P11"
     },
     {
-        "ID": "-24",
-        "Name": "'PIONEER-11'"
+        "code": "-24",
+        "Name": "PIONEER-11"
     },
     {
-        "ID": "-25",
-        "Name": "'LP'"
+        "code": "-25",
+        "Name": "LP"
     },
     {
-        "ID": "-25",
-        "Name": "'LUNAR"
+        "code": "-25",
+        "Name": "LUNAR PROSPECTOR"
     },
     {
-        "ID": "-27",
-        "Name": "'VK1'"
+        "code": "-27",
+        "Name": "VK1"
     },
     {
-        "ID": "-27",
-        "Name": "'VIKING"
+        "code": "-27",
+        "Name": "VIKING 1 ORBITER"
     },
     {
-        "ID": "-28",
-        "Name": "'JUPITER"
+        "code": "-28",
+        "Name": "JUPITER ICY MOONS EXPLORER"
     },
     {
-        "ID": "-28",
-        "Name": "'JUICE'"
+        "code": "-28",
+        "Name": "JUICE"
     },
     {
-        "ID": "-29",
-        "Name": "'STARDUST'"
+        "code": "-29",
+        "Name": "STARDUST"
     },
     {
-        "ID": "-29",
-        "Name": "'SDU'"
+        "code": "-29",
+        "Name": "SDU"
     },
     {
-        "ID": "-29",
-        "Name": "'NEXT'"
+        "code": "-29",
+        "Name": "NEXT"
     },
     {
-        "ID": "-30",
-        "Name": "'VK2'"
+        "code": "-30",
+        "Name": "VK2"
     },
     {
-        "ID": "-30",
-        "Name": "'VIKING"
+        "code": "-30",
+        "Name": "VIKING 2 ORBITER"
     },
     {
-        "ID": "-30",
-        "Name": "'DS-1'"
+        "code": "-30",
+        "Name": "DS-1"
     },
     {
-        "ID": "-31",
-        "Name": "'VG1'"
+        "code": "-31",
+        "Name": "VG1"
     },
     {
-        "ID": "-31",
-        "Name": "'VOYAGER"
+        "code": "-31",
+        "Name": "VOYAGER 1"
     },
     {
-        "ID": "-32",
-        "Name": "'VG2'"
+        "code": "-32",
+        "Name": "VG2"
     },
     {
-        "ID": "-32",
-        "Name": "'VOYAGER"
+        "code": "-32",
+        "Name": "VOYAGER 2"
     },
     {
-        "ID": "-33",
-        "Name": "'NEOS'"
+        "code": "-33",
+        "Name": "NEOS"
     },
     {
-        "ID": "-33",
-        "Name": "'NEO"
+        "code": "-33",
+        "Name": "NEO SURVEYOR"
     },
     {
-        "ID": "-37",
-        "Name": "'HYB2'"
+        "code": "-37",
+        "Name": "HYB2"
     },
     {
-        "ID": "-37",
-        "Name": "'HAYABUSA 2"
+        "code": "-37",
+        "Name": "HAYABUSA 2"
     },
     {
-        "ID": "-37",
-        "Name": "'HAYABUSA2'"
+        "code": "-37",
+        "Name": "HAYABUSA2"
     },
     {
-        "ID": "-39",
-        "Name": "'LUNAR"
+        "code": "-39",
+        "Name": "LUNAR POLAR HYDROGEN MAPPER"
     },
     {
-        "ID": "-39",
-        "Name": "'LUNAH-MAP'"
+        "code": "-39",
+        "Name": "LUNAH-MAP"
     },
     {
-        "ID": "-40",
-        "Name": "'CLEMENTINE'"
+        "code": "-40",
+        "Name": "CLEMENTINE"
     },
     {
-        "ID": "-41",
-        "Name": "'MEX'"
+        "code": "-41",
+        "Name": "MEX"
     },
     {
-        "ID": "-41",
-        "Name": "'MARS"
+        "code": "-41",
+        "Name": "MARS EXPRESS"
     },
     {
-        "ID": "-43",
-        "Name": "'IMAP'"
+        "code": "-43",
+        "Name": "IMAP"
     },
     {
-        "ID": "-44",
-        "Name": "'BEAGLE2'"
+        "code": "-44",
+        "Name": "BEAGLE2"
     },
     {
-        "ID": "-44",
-        "Name": "'BEAGLE"
+        "code": "-44",
+        "Name": "BEAGLE 2"
     },
     {
-        "ID": "-45",
-        "Name": "'JNSA'"
+        "code": "-45",
+        "Name": "JNSA"
     },
     {
-        "ID": "-45",
-        "Name": "'JANUS_A'"
+        "code": "-45",
+        "Name": "JANUS_A"
     },
     {
-        "ID": "-46",
-        "Name": "'MS-T5'"
+        "code": "-46",
+        "Name": "MS-T5"
     },
     {
-        "ID": "-46",
-        "Name": "'SAKIGAKE'"
+        "code": "-46",
+        "Name": "SAKIGAKE"
     },
     {
-        "ID": "-47",
-        "Name": "'PLANET-A'"
+        "code": "-47",
+        "Name": "PLANET-A"
     },
     {
-        "ID": "-47",
-        "Name": "'SUISEI'"
+        "code": "-47",
+        "Name": "SUISEI"
     },
     {
-        "ID": "-47",
-        "Name": "'GNS'"
+        "code": "-47",
+        "Name": "GNS"
     },
     {
-        "ID": "-47",
-        "Name": "'GENESIS'"
+        "code": "-47",
+        "Name": "GENESIS"
     },
     {
-        "ID": "-48",
-        "Name": "'HUBBLE"
+        "code": "-48",
+        "Name": "HUBBLE SPACE TELESCOPE"
     },
     {
-        "ID": "-48",
-        "Name": "'HST'"
+        "code": "-48",
+        "Name": "HST"
     },
     {
-        "ID": "-49",
-        "Name": "'LUCY'"
+        "code": "-49",
+        "Name": "LUCY"
     },
     {
-        "ID": "-53",
-        "Name": "'MARS"
+        "code": "-53",
+        "Name": "MARS PATHFINDER"
     },
     {
-        "ID": "-53",
-        "Name": "'MPF'"
+        "code": "-53",
+        "Name": "MPF"
     },
     {
-        "ID": "-53",
-        "Name": "'MARS"
+        "code": "-53",
+        "Name": "MARS ODYSSEY"
     },
     {
-        "ID": "-53",
-        "Name": "'MARS"
+        "code": "-53",
+        "Name": "MARS SURVEYOR 01 ORBITER"
     },
     {
-        "ID": "-55",
-        "Name": "'ULYSSES'"
+        "code": "-55",
+        "Name": "ULYSSES"
     },
     {
-        "ID": "-57",
-        "Name": "'LUNAR"
+        "code": "-57",
+        "Name": "LUNAR ICECUBE"
     },
     {
-        "ID": "-58",
-        "Name": "'VSOP'"
+        "code": "-58",
+        "Name": "VSOP"
     },
     {
-        "ID": "-58",
-        "Name": "'HALCA'"
+        "code": "-58",
+        "Name": "HALCA"
     },
     {
-        "ID": "-59",
-        "Name": "'RADIOASTRON'"
+        "code": "-59",
+        "Name": "RADIOASTRON"
     },
     {
-        "ID": "-61",
-        "Name": "'JUNO'"
+        "code": "-61",
+        "Name": "JUNO"
     },
     {
-        "ID": "-62",
-        "Name": "'EMM'"
+        "code": "-62",
+        "Name": "EMM"
     },
     {
-        "ID": "-62",
-        "Name": "'EMIRATES"
+        "code": "-62",
+        "Name": "EMIRATES MARS MISSION"
     },
     {
-        "ID": "-64",
-        "Name": "'ORX'"
+        "code": "-64",
+        "Name": "ORX"
     },
     {
-        "ID": "-64",
-        "Name": "'OSIRIS-REX'"
+        "code": "-64",
+        "Name": "OSIRIS-REX"
     },
     {
-        "ID": "-65",
-        "Name": "'MCOA'"
+        "code": "-65",
+        "Name": "MCOA"
     },
     {
-        "ID": "-65",
-        "Name": "'MARCO-A'"
+        "code": "-65",
+        "Name": "MARCO-A"
     },
     {
-        "ID": "-66",
-        "Name": "'VEGA"
+        "code": "-66",
+        "Name": "VEGA 1"
     },
     {
-        "ID": "-66",
-        "Name": "'MCOB'"
+        "code": "-66",
+        "Name": "MCOB"
     },
     {
-        "ID": "-66",
-        "Name": "'MARCO-B'"
+        "code": "-66",
+        "Name": "MARCO-B"
     },
     {
-        "ID": "-67",
-        "Name": "'VEGA"
+        "code": "-67",
+        "Name": "VEGA 2"
     },
     {
-        "ID": "-68",
-        "Name": "'MERCURY"
+        "code": "-68",
+        "Name": "MERCURY MAGNETOSPHERIC ORBITER"
     },
     {
-        "ID": "-68",
-        "Name": "'MMO'"
+        "code": "-68",
+        "Name": "MMO"
     },
     {
-        "ID": "-68",
-        "Name": "'BEPICOLOMBO"
+        "code": "-68",
+        "Name": "BEPICOLOMBO MMO"
     },
     {
-        "ID": "-70",
-        "Name": "'DEEP"
+        "code": "-70",
+        "Name": "DEEP IMPACT IMPACTOR SPACECRAFT"
     },
     {
-        "ID": "-72",
-        "Name": "'JNSB'"
+        "code": "-72",
+        "Name": "JNSB"
     },
     {
-        "ID": "-72",
-        "Name": "'JANUS_B'"
+        "code": "-72",
+        "Name": "JANUS_B"
     },
     {
-        "ID": "-74",
-        "Name": "'MRO'"
+        "code": "-74",
+        "Name": "MRO"
     },
     {
-        "ID": "-74",
-        "Name": "'MARS"
+        "code": "-74",
+        "Name": "MARS RECON ORBITER"
     },
     {
-        "ID": "-76",
-        "Name": "'CURIOSITY'"
+        "code": "-76",
+        "Name": "CURIOSITY"
     },
     {
-        "ID": "-76",
-        "Name": "'MSL'"
+        "code": "-76",
+        "Name": "MSL"
     },
     {
-        "ID": "-76",
-        "Name": "'MARS"
+        "code": "-76",
+        "Name": "MARS SCIENCE LABORATORY"
     },
     {
-        "ID": "-77",
-        "Name": "'GLL'"
+        "code": "-77",
+        "Name": "GLL"
     },
     {
-        "ID": "-77",
-        "Name": "'GALILEO"
+        "code": "-77",
+        "Name": "GALILEO ORBITER"
     },
     {
-        "ID": "-78",
-        "Name": "'GIOTTO'"
+        "code": "-78",
+        "Name": "GIOTTO"
     },
     {
-        "ID": "-79",
-        "Name": "'SPITZER'"
+        "code": "-79",
+        "Name": "SPITZER"
     },
     {
-        "ID": "-79",
-        "Name": "'SPACE"
+        "code": "-79",
+        "Name": "SPACE INFRARED TELESCOPE FACILITY"
     },
     {
-        "ID": "-79",
-        "Name": "'SIRTF'"
+        "code": "-79",
+        "Name": "SIRTF"
     },
     {
-        "ID": "-81",
-        "Name": "'CASSINI"
+        "code": "-81",
+        "Name": "CASSINI ITL"
     },
     {
-        "ID": "-82",
-        "Name": "'CAS'"
+        "code": "-82",
+        "Name": "CAS"
     },
     {
-        "ID": "-82",
-        "Name": "'CASSINI'"
+        "code": "-82",
+        "Name": "CASSINI"
     },
     {
-        "ID": "-84",
-        "Name": "'PHOENIX'"
+        "code": "-84",
+        "Name": "PHOENIX"
     },
     {
-        "ID": "-85",
-        "Name": "'LRO'"
+        "code": "-85",
+        "Name": "LRO"
     },
     {
-        "ID": "-85",
-        "Name": "'LUNAR"
+        "code": "-85",
+        "Name": "LUNAR RECON ORBITER"
     },
     {
-        "ID": "-85",
-        "Name": "'LUNAR"
+        "code": "-85",
+        "Name": "LUNAR RECONNAISSANCE ORBITER"
     },
     {
-        "ID": "-86",
-        "Name": "'CH1'"
+        "code": "-86",
+        "Name": "CH1"
     },
     {
-        "ID": "-86",
-        "Name": "'CHANDRAYAAN-1'"
+        "code": "-86",
+        "Name": "CHANDRAYAAN-1"
     },
     {
-        "ID": "-90",
-        "Name": "'CASSINI"
+        "code": "-90",
+        "Name": "CASSINI SIMULATION"
     },
     {
-        "ID": "-93",
-        "Name": "'NEAR"
+        "code": "-93",
+        "Name": "NEAR EARTH ASTEROID RENDEZVOUS"
     },
     {
-        "ID": "-93",
-        "Name": "'NEAR'"
+        "code": "-93",
+        "Name": "NEAR"
     },
     {
-        "ID": "-94",
-        "Name": "'MO'"
+        "code": "-94",
+        "Name": "MO"
     },
     {
-        "ID": "-94",
-        "Name": "'MARS"
+        "code": "-94",
+        "Name": "MARS OBSERVER"
     },
     {
-        "ID": "-94",
-        "Name": "'MGS'"
+        "code": "-94",
+        "Name": "MGS"
     },
     {
-        "ID": "-94",
-        "Name": "'MARS"
+        "code": "-94",
+        "Name": "MARS GLOBAL SURVEYOR"
     },
     {
-        "ID": "-95",
-        "Name": "'MGS"
+        "code": "-95",
+        "Name": "MGS SIMULATION"
     },
     {
-        "ID": "-96",
-        "Name": "'PARKER"
+        "code": "-96",
+        "Name": "PARKER SOLAR PROBE"
     },
     {
-        "ID": "-96",
-        "Name": "'SPP'"
+        "code": "-96",
+        "Name": "SPP"
     },
     {
-        "ID": "-96",
-        "Name": "'SOLAR"
+        "code": "-96",
+        "Name": "SOLAR PROBE PLUS"
     },
     {
-        "ID": "-97",
-        "Name": "'TOPEX/POSEIDON'"
+        "code": "-97",
+        "Name": "TOPEX/POSEIDON"
     },
     {
-        "ID": "-98",
-        "Name": "'NEW"
+        "code": "-98",
+        "Name": "NEW HORIZONS"
     },
     {
-        "ID": "-107",
-        "Name": "'TROPICAL"
+        "code": "-107",
+        "Name": "TROPICAL RAINFALL MEASURING MISSION"
     },
     {
-        "ID": "-107",
-        "Name": "'TRMM'"
+        "code": "-107",
+        "Name": "TRMM"
     },
     {
-        "ID": "-112",
-        "Name": "'ICE'"
+        "code": "-112",
+        "Name": "ICE"
     },
     {
-        "ID": "-116",
-        "Name": "'MARS"
+        "code": "-116",
+        "Name": "MARS POLAR LANDER"
     },
     {
-        "ID": "-116",
-        "Name": "'MPL'"
+        "code": "-116",
+        "Name": "MPL"
     },
     {
-        "ID": "-117",
-        "Name": "'EDL"
+        "code": "-117",
+        "Name": "EDL DEMONSTRATOR MODULE"
     },
     {
-        "ID": "-117",
-        "Name": "'EDM'"
+        "code": "-117",
+        "Name": "EDM"
     },
     {
-        "ID": "-117",
-        "Name": "'EXOMARS"
+        "code": "-117",
+        "Name": "EXOMARS 2016 EDM"
     },
     {
-        "ID": "-119",
-        "Name": "'MARS_ORBITER_MISSION_2'"
+        "code": "-119",
+        "Name": "MARS_ORBITER_MISSION_2"
     },
     {
-        "ID": "-119",
-        "Name": "'MOM2'"
+        "code": "-119",
+        "Name": "MOM2"
     },
     {
-        "ID": "-121",
-        "Name": "'MERCURY"
+        "code": "-121",
+        "Name": "MERCURY PLANETARY ORBITER"
     },
     {
-        "ID": "-121",
-        "Name": "'MPO'"
+        "code": "-121",
+        "Name": "MPO"
     },
     {
-        "ID": "-121",
-        "Name": "'BEPICOLOMBO"
+        "code": "-121",
+        "Name": "BEPICOLOMBO MPO"
     },
     {
-        "ID": "-127",
-        "Name": "'MARS"
+        "code": "-127",
+        "Name": "MARS CLIMATE ORBITER"
     },
     {
-        "ID": "-127",
-        "Name": "'MCO'"
+        "code": "-127",
+        "Name": "MCO"
     },
     {
-        "ID": "-130",
-        "Name": "'MUSES-C'"
+        "code": "-130",
+        "Name": "MUSES-C"
     },
     {
-        "ID": "-130",
-        "Name": "'HAYABUSA'"
+        "code": "-130",
+        "Name": "HAYABUSA"
     },
     {
-        "ID": "-131",
-        "Name": "'SELENE'"
+        "code": "-131",
+        "Name": "SELENE"
     },
     {
-        "ID": "-131",
-        "Name": "'KAGUYA'"
+        "code": "-131",
+        "Name": "KAGUYA"
     },
     {
-        "ID": "-135",
-        "Name": "'DART'"
+        "code": "-135",
+        "Name": "DART"
     },
     {
-        "ID": "-135",
-        "Name": "'DOUBLE"
+        "code": "-135",
+        "Name": "DOUBLE ASTEROID REDIRECTION TEST"
     },
     {
-        "ID": "-140",
-        "Name": "'EPOCH'"
+        "code": "-140",
+        "Name": "EPOCH"
     },
     {
-        "ID": "-140",
-        "Name": "'DIXI'"
+        "code": "-140",
+        "Name": "DIXI"
     },
     {
-        "ID": "-140",
-        "Name": "'EPOXI'"
+        "code": "-140",
+        "Name": "EPOXI"
     },
     {
-        "ID": "-140",
-        "Name": "'DEEP"
+        "code": "-140",
+        "Name": "DEEP IMPACT FLYBY SPACECRAFT"
     },
     {
-        "ID": "-142",
-        "Name": "'TERRA'"
+        "code": "-142",
+        "Name": "TERRA"
     },
     {
-        "ID": "-142",
-        "Name": "'EOS-AM1'"
+        "code": "-142",
+        "Name": "EOS-AM1"
     },
     {
-        "ID": "-143",
-        "Name": "'TRACE"
+        "code": "-143",
+        "Name": "TRACE GAS ORBITER"
     },
     {
-        "ID": "-143",
-        "Name": "'TGO'"
+        "code": "-143",
+        "Name": "TGO"
     },
     {
-        "ID": "-143",
-        "Name": "'EXOMARS"
+        "code": "-143",
+        "Name": "EXOMARS 2016 TGO"
     },
     {
-        "ID": "-144",
-        "Name": "'SOLO'"
+        "code": "-144",
+        "Name": "SOLO"
     },
     {
-        "ID": "-144",
-        "Name": "'SOLAR"
+        "code": "-144",
+        "Name": "SOLAR ORBITER"
     },
     {
-        "ID": "-146",
-        "Name": "'LUNAR-A'"
+        "code": "-146",
+        "Name": "LUNAR-A"
     },
     {
-        "ID": "-148",
-        "Name": "'DFLY'"
+        "code": "-148",
+        "Name": "DFLY"
     },
     {
-        "ID": "-148",
-        "Name": "'DRAGONFLY'"
+        "code": "-148",
+        "Name": "DRAGONFLY"
     },
     {
-        "ID": "-150",
-        "Name": "'CASSINI"
+        "code": "-150",
+        "Name": "CASSINI PROBE"
     },
     {
-        "ID": "-150",
-        "Name": "'HUYGENS"
+        "code": "-150",
+        "Name": "HUYGENS PROBE"
     },
     {
-        "ID": "-150",
-        "Name": "'CASP'"
+        "code": "-150",
+        "Name": "CASP"
     },
     {
-        "ID": "-151",
-        "Name": "'AXAF'"
+        "code": "-151",
+        "Name": "AXAF"
     },
     {
-        "ID": "-151",
-        "Name": "'CHANDRA'"
+        "code": "-151",
+        "Name": "CHANDRA"
     },
     {
-        "ID": "-152",
-        "Name": "'CH2O'"
+        "code": "-152",
+        "Name": "CH2O"
     },
     {
-        "ID": "-152",
-        "Name": "'CHANDRAYAAN-2"
+        "code": "-152",
+        "Name": "CHANDRAYAAN-2 ORBITER"
     },
     {
-        "ID": "-153",
-        "Name": "'CH2L'"
+        "code": "-153",
+        "Name": "CH2L"
     },
     {
-        "ID": "-153",
-        "Name": "'CHANDRAYAAN-2"
+        "code": "-153",
+        "Name": "CHANDRAYAAN-2 LANDER"
     },
     {
-        "ID": "-154",
-        "Name": "'AQUA'"
+        "code": "-154",
+        "Name": "AQUA"
     },
     {
-        "ID": "-155",
-        "Name": "'KPLO'"
+        "code": "-155",
+        "Name": "KPLO"
     },
     {
-        "ID": "-155",
-        "Name": "'KOREAN"
+        "code": "-155",
+        "Name": "KOREAN PATHFINDER LUNAR ORBITER"
     },
     {
-        "ID": "-156",
-        "Name": "'ADITYA'"
+        "code": "-156",
+        "Name": "ADITYA"
     },
     {
-        "ID": "-156",
-        "Name": "'ADIT'"
+        "code": "-156",
+        "Name": "ADIT"
     },
     {
-        "ID": "-159",
-        "Name": "'EURC'"
+        "code": "-159",
+        "Name": "EURC"
     },
     {
-        "ID": "-159",
-        "Name": "'EUROPA"
+        "code": "-159",
+        "Name": "EUROPA CLIPPER"
     },
     {
-        "ID": "-164",
-        "Name": "'LUNAR"
+        "code": "-164",
+        "Name": "LUNAR FLASHLIGHT"
     },
     {
-        "ID": "-165",
-        "Name": "'MAP'"
+        "code": "-165",
+        "Name": "MAP"
     },
     {
-        "ID": "-166",
-        "Name": "'IMAGE'"
+        "code": "-166",
+        "Name": "IMAGE"
     },
     {
-        "ID": "-168",
-        "Name": "'PERSEVERANCE'"
+        "code": "-168",
+        "Name": "PERSEVERANCE"
     },
     {
-        "ID": "-168",
-        "Name": "'MARS"
+        "code": "-168",
+        "Name": "MARS 2020"
     },
     {
-        "ID": "-168",
-        "Name": "'MARS2020'"
+        "code": "-168",
+        "Name": "MARS2020"
     },
     {
-        "ID": "-168",
-        "Name": "'M2020'"
+        "code": "-168",
+        "Name": "M2020"
     },
     {
-        "ID": "-170",
-        "Name": "'JWST'"
+        "code": "-170",
+        "Name": "JWST"
     },
     {
-        "ID": "-170",
-        "Name": "'JAMES"
+        "code": "-170",
+        "Name": "JAMES WEBB SPACE TELESCOPE"
     },
     {
-        "ID": "-172",
-        "Name": "'EXM"
+        "code": "-172",
+        "Name": "EXM RSP SCC"
     },
     {
-        "ID": "-172",
-        "Name": "'EXM"
+        "code": "-172",
+        "Name": "EXM SPACECRAFT COMPOSITE"
     },
     {
-        "ID": "-172",
-        "Name": "'EXOMARS"
+        "code": "-172",
+        "Name": "EXOMARS SCC"
     },
     {
-        "ID": "-173",
-        "Name": "'EXM"
+        "code": "-173",
+        "Name": "EXM RSP SP"
     },
     {
-        "ID": "-173",
-        "Name": "'EXM"
+        "code": "-173",
+        "Name": "EXM SURFACE PLATFORM"
     },
     {
-        "ID": "-173",
-        "Name": "'EXOMARS"
+        "code": "-173",
+        "Name": "EXOMARS SP"
     },
     {
-        "ID": "-174",
-        "Name": "'EXM"
+        "code": "-174",
+        "Name": "EXM RSP RM"
     },
     {
-        "ID": "-174",
-        "Name": "'EXM"
+        "code": "-174",
+        "Name": "EXM ROVER"
     },
     {
-        "ID": "-174",
-        "Name": "'EXOMARS"
+        "code": "-174",
+        "Name": "EXOMARS ROVER"
     },
     {
-        "ID": "-177",
-        "Name": "'GRAIL-A'"
+        "code": "-177",
+        "Name": "GRAIL-A"
     },
     {
-        "ID": "-178",
-        "Name": "'PLANET-B'"
+        "code": "-178",
+        "Name": "PLANET-B"
     },
     {
-        "ID": "-178",
-        "Name": "'NOZOMI'"
+        "code": "-178",
+        "Name": "NOZOMI"
     },
     {
-        "ID": "-181",
-        "Name": "'GRAIL-B'"
+        "code": "-181",
+        "Name": "GRAIL-B"
     },
     {
-        "ID": "-183",
-        "Name": "'CLUSTER"
+        "code": "-183",
+        "Name": "CLUSTER 1"
     },
     {
-        "ID": "-185",
-        "Name": "'CLUSTER"
+        "code": "-185",
+        "Name": "CLUSTER 2"
     },
     {
-        "ID": "-188",
-        "Name": "'MUSES-B'"
+        "code": "-188",
+        "Name": "MUSES-B"
     },
     {
-        "ID": "-189",
-        "Name": "'NSYT'"
+        "code": "-189",
+        "Name": "NSYT"
     },
     {
-        "ID": "-189",
-        "Name": "'INSIGHT'"
+        "code": "-189",
+        "Name": "INSIGHT"
     },
     {
-        "ID": "-190",
-        "Name": "'SIM'"
+        "code": "-190",
+        "Name": "SIM"
     },
     {
-        "ID": "-194",
-        "Name": "'CLUSTER"
+        "code": "-194",
+        "Name": "CLUSTER 3"
     },
     {
-        "ID": "-196",
-        "Name": "'CLUSTER"
+        "code": "-196",
+        "Name": "CLUSTER 4"
     },
     {
-        "ID": "-197",
-        "Name": "'EXOMARS_LARA'"
+        "code": "-197",
+        "Name": "EXOMARS_LARA"
     },
     {
-        "ID": "-197",
-        "Name": "'LARA'"
+        "code": "-197",
+        "Name": "LARA"
     },
     {
-        "ID": "-198",
-        "Name": "'INTEGRAL'"
+        "code": "-198",
+        "Name": "INTEGRAL"
     },
     {
-        "ID": "-198",
-        "Name": "'NASA-ISRO"
+        "code": "-198",
+        "Name": "NASA-ISRO SAR MISSION"
     },
     {
-        "ID": "-198",
-        "Name": "'NISAR'"
+        "code": "-198",
+        "Name": "NISAR"
     },
     {
-        "ID": "-200",
-        "Name": "'CONTOUR'"
+        "code": "-200",
+        "Name": "CONTOUR"
     },
     {
-        "ID": "-202",
-        "Name": "'MAVEN'"
+        "code": "-202",
+        "Name": "MAVEN"
     },
     {
-        "ID": "-203",
-        "Name": "'DAWN'"
+        "code": "-203",
+        "Name": "DAWN"
     },
     {
-        "ID": "-205",
-        "Name": "'SOIL"
+        "code": "-205",
+        "Name": "SOIL MOISTURE ACTIVE AND PASSIVE"
     },
     {
-        "ID": "-205",
-        "Name": "'SMAP'"
+        "code": "-205",
+        "Name": "SMAP"
     },
     {
-        "ID": "-210",
-        "Name": "'LICIA'"
+        "code": "-210",
+        "Name": "LICIA"
     },
     {
-        "ID": "-210",
-        "Name": "'LICIACUBE'"
+        "code": "-210",
+        "Name": "LICIACUBE"
     },
     {
-        "ID": "-212",
-        "Name": "'STV51'"
+        "code": "-212",
+        "Name": "STV51"
     },
     {
-        "ID": "-213",
-        "Name": "'STV52'"
+        "code": "-213",
+        "Name": "STV52"
     },
     {
-        "ID": "-214",
-        "Name": "'STV53'"
+        "code": "-214",
+        "Name": "STV53"
     },
     {
-        "ID": "-226",
-        "Name": "'ROSETTA'"
+        "code": "-226",
+        "Name": "ROSETTA"
     },
     {
-        "ID": "-227",
-        "Name": "'KEPLER'"
+        "code": "-227",
+        "Name": "KEPLER"
     },
     {
-        "ID": "-228",
-        "Name": "'GLL"
+        "code": "-228",
+        "Name": "GLL PROBE"
     },
     {
-        "ID": "-228",
-        "Name": "'GALILEO"
+        "code": "-228",
+        "Name": "GALILEO PROBE"
     },
     {
-        "ID": "-234",
-        "Name": "'STEREO"
+        "code": "-234",
+        "Name": "STEREO AHEAD"
     },
     {
-        "ID": "-235",
-        "Name": "'STEREO"
+        "code": "-235",
+        "Name": "STEREO BEHIND"
     },
     {
-        "ID": "-236",
-        "Name": "'MESSENGER'"
+        "code": "-236",
+        "Name": "MESSENGER"
     },
     {
-        "ID": "-238",
-        "Name": "'SMART1'"
+        "code": "-238",
+        "Name": "SMART1"
     },
     {
-        "ID": "-238",
-        "Name": "'SM1'"
+        "code": "-238",
+        "Name": "SM1"
     },
     {
-        "ID": "-238",
-        "Name": "'S1'"
+        "code": "-238",
+        "Name": "S1"
     },
     {
-        "ID": "-238",
-        "Name": "'SMART-1'"
+        "code": "-238",
+        "Name": "SMART-1"
     },
     {
-        "ID": "-239",
-        "Name": "'MARTIAN"
+        "code": "-239",
+        "Name": "MARTIAN MOONS EXPLORATION"
     },
     {
-        "ID": "-239",
-        "Name": "'MMX'"
+        "code": "-239",
+        "Name": "MMX"
     },
     {
-        "ID": "-240",
-        "Name": "'SMART"
+        "code": "-240",
+        "Name": "SMART LANDER FOR INVESTIGATING MOON"
     },
     {
-        "ID": "-240",
-        "Name": "'SLIM'"
+        "code": "-240",
+        "Name": "SLIM"
     },
     {
-        "ID": "-242",
-        "Name": "'LUNAR"
+        "code": "-242",
+        "Name": "LUNAR TRAILBLAZER"
     },
     {
-        "ID": "-243",
-        "Name": "'VIPER'"
+        "code": "-243",
+        "Name": "VIPER"
     },
     {
-        "ID": "-248",
-        "Name": "'VEX'"
+        "code": "-248",
+        "Name": "VEX"
     },
     {
-        "ID": "-248",
-        "Name": "'VENUS"
+        "code": "-248",
+        "Name": "VENUS EXPRESS"
     },
     {
-        "ID": "-253",
-        "Name": "'OPPORTUNITY'"
+        "code": "-253",
+        "Name": "OPPORTUNITY"
     },
     {
-        "ID": "-253",
-        "Name": "'MER-1'"
+        "code": "-253",
+        "Name": "MER-1"
     },
     {
-        "ID": "-254",
-        "Name": "'SPIRIT'"
+        "code": "-254",
+        "Name": "SPIRIT"
     },
     {
-        "ID": "-254",
-        "Name": "'MER-2'"
+        "code": "-254",
+        "Name": "MER-2"
     },
     {
-        "ID": "-255",
-        "Name": "'PSYC'"
+        "code": "-255",
+        "Name": "PSYC"
     },
     {
-        "ID": "-301",
-        "Name": "'HELIOS"
+        "code": "-301",
+        "Name": "HELIOS 1"
     },
     {
-        "ID": "-302",
-        "Name": "'HELIOS"
+        "code": "-302",
+        "Name": "HELIOS 2"
     },
     {
-        "ID": "-362",
-        "Name": "'RADIATION"
+        "code": "-362",
+        "Name": "RADIATION BELT STORM PROBE A"
     },
     {
-        "ID": "-362",
-        "Name": "'RBSP_A'"
+        "code": "-362",
+        "Name": "RBSP_A"
     },
     {
-        "ID": "-363",
-        "Name": "'RADIATION"
+        "code": "-363",
+        "Name": "RADIATION BELT STORM PROBE B"
     },
     {
-        "ID": "-363",
-        "Name": "'RBSP_B'"
+        "code": "-363",
+        "Name": "RBSP_B"
     },
     {
-        "ID": "-500",
-        "Name": "'RSAT'"
+        "code": "-500",
+        "Name": "RSAT"
     },
     {
-        "ID": "-500",
-        "Name": "'SELENE"
+        "code": "-500",
+        "Name": "SELENE Relay Satellite"
     },
     {
-        "ID": "-500",
-        "Name": "'SELENE"
+        "code": "-500",
+        "Name": "SELENE Rstar"
     },
     {
-        "ID": "-500",
-        "Name": "'Rstar'"
+        "code": "-500",
+        "Name": "Rstar"
     },
     {
-        "ID": "-502",
-        "Name": "'VSAT'"
+        "code": "-502",
+        "Name": "VSAT"
     },
     {
-        "ID": "-502",
-        "Name": "'SELENE"
+        "code": "-502",
+        "Name": "SELENE VLBI Radio Satellite"
     },
     {
-        "ID": "-502",
-        "Name": "'SELENE"
+        "code": "-502",
+        "Name": "SELENE VRAD Satellite"
     },
     {
-        "ID": "-502",
-        "Name": "'SELENE"
+        "code": "-502",
+        "Name": "SELENE Vstar"
     },
     {
-        "ID": "-502",
-        "Name": "'Vstar'"
+        "code": "-502",
+        "Name": "Vstar"
     },
     {
-        "ID": "-550",
-        "Name": "'MARS-96'"
+        "code": "-550",
+        "Name": "MARS-96"
     },
     {
-        "ID": "-550",
-        "Name": "'M96'"
+        "code": "-550",
+        "Name": "M96"
     },
     {
-        "ID": "-550",
-        "Name": "'MARS"
+        "code": "-550",
+        "Name": "MARS 96"
     },
     {
-        "ID": "-550",
-        "Name": "'MARS96'"
+        "code": "-550",
+        "Name": "MARS96"
     },
     {
-        "ID": "-652",
-        "Name": "'MERCURY"
+        "code": "-652",
+        "Name": "MERCURY TRANSFER MODULE"
     },
     {
-        "ID": "-652",
-        "Name": "'MTM'"
+        "code": "-652",
+        "Name": "MTM"
     },
     {
-        "ID": "-652",
-        "Name": "'BEPICOLOMBO"
+        "code": "-652",
+        "Name": "BEPICOLOMBO MTM"
     },
     {
-        "ID": "-750",
-        "Name": "'SPRINT-A'"
+        "code": "-750",
+        "Name": "SPRINT-A"
     }
 ]
