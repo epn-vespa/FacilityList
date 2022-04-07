@@ -16,20 +16,8 @@
     "Name": "'JNSA'"
   },
   {
-    _Commentaire: camera
-    of
-    the
-    JUICE
-    space
-    mission
-    Q58004759
-    ?
-  {
     "ID": "-45",
-    "Name",
-    :
-    "'JANUS_A'"
-  },
+    "Name": "'JANUS_A'"
   },
   {
     "ID": "-49",
@@ -68,10 +56,6 @@
     "Name": "'JANUS_B'"
   },
   {
-    "ID": "-77",
-    "Name": "'GLL'"
-  },
-  {
     "ID": "-95",
     "Name": "'MGS"
   },
@@ -83,9 +67,6 @@
     "ID": "-107",
     "Name": "'TRMM'"
   },
-  {
-    _Commentaire: article
-    Q61051086
   {
     "ID": "-135",
     "Name": "'DART'"
@@ -101,9 +82,7 @@
   {
     "ID": "-197",
     "Name": "'LARA'"
-  }
-
-
+  },
   {
     "ID": "-146",
     "Name": "'LUNAR-A'"
