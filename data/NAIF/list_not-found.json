@@ -1,40 +1,40 @@
 [
   {
     "ID": "-13",
-    "Name": "'POLAR'"
+    "Name": "POLAR"
   },
   {
     "ID": "-43",
-    "Name": "'IMAP'"
+    "Name": "IMAP"
   },
   {
     "ID": "-45",
-    "Name": "'JNSA'"
+    "Name": "JNSA"
   },
   {
     "ID": "-45",
-    "Name": "'JANUS_A'"
+    "Name": "JANUS_A"
   },
   {
     "ID": "-49",
-    "Name": "'LUCY'"
+    "Name": "LUCY"
   },
 
   {
     "ID": "-65",
-    "Name": "'MCOA'"
+    "Name": "MCOA"
   },
   {
     "ID": "-65",
-    "Name": "'MARCO-A'"
+    "Name": "MARCO-A"
   },
   {
     "ID": "-66",
-    "Name": "'MCOB'"
+    "Name": "MCOB"
   },
   {
     "ID": "-66",
-    "Name": "'MARCO-B'"
+    "Name": "MARCO-B"
   },
   {
     "ID": "-67",
@@ -42,15 +42,15 @@
   },
   {
     "ID": "-72",
-    "Name": "'JNSB'"
+    "Name": "JNSB"
   },
   {
     "ID": "-72",
-    "Name": "'JANUS_B'"
+    "Name": "JANUS_B"
   },
   {
     "ID": "-95",
-    "Name": "'MGS"
+    "Name": "MGS"
   },
   {
     "ID": "-146",
@@ -58,34 +58,34 @@
   },
   {
     "ID": "-188",
-    "Name": "'MUSES-B'"
+    "Name": "MUSES-B"
   },
   {
     "ID": "-197",
-    "Name": "'EXOMARS_LARA'"
+    "Name": "EXOMARS_LARA"
   },
   {
     "ID": "-197",
-    "Name": "'LARA'"
+    "Name": "LARA"
   },
   {
     "ID": "-212",
-    "Name": "'STV51'"
+    "Name": "STV51"
   },
   {
     "ID": "-213",
-    "Name": "'STV52'"
+    "Name": "STV52"
   },
   {
     "ID": "-214",
-    "Name": "'STV53'"
+    "Name": "STV53"
   },
   {
     "ID": "-243",
-    "Name": "'VIPER'"
+    "Name": "VIPER"
   },
   {
     "ID": "-255",
-    "Name": "'PSYC'"
+    "Name": "PSYC"
   }
 ]
