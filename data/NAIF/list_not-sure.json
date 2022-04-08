@@ -121,6 +121,33 @@
     "all_Minor_Planet_Center_observatory_ID": "",
     "aliases": "Lunar Orbiter III"
   },
+  ],
+  [
+        {
+            "ID": "-165",
+            "Name": "MAP"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3486419",
+            "itemLabel": "SkyMapper",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sky Mapper"
+        }
+          {
+            "item": "http://www.wikidata.org/entity/Q880147",
+            "itemLabel": "EnMAP",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EnMAP"
+        }
+    ],
   [
     {
       "ID": "-183",
@@ -256,10 +283,10 @@
     }
   ],
   [
-    {
-    "ID": "-164",
-    "Name": "'LUNAR"
-    },
+   {
+     "ID": "-164",
+     "Name": "LUNAR FLASHLIGHT"
+   },
     {
     "item": "http://www.wikidata.org/entity/Q586893",
     "itemLabel": "Yohkoh",
