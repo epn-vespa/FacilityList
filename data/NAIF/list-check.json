@@ -6,7 +6,7 @@
     },
     {
       "ID": "-3",
-      "Name": "'MARS"
+      "Name": "'MARS ORBITER MISSION"
     },
     {
       "item": "http://www.wikidata.org/entity/Q2156739",
@@ -106,7 +106,7 @@
   [
     {
       "ID": "-12",
-      "Name": "'VENUS"
+      "Name": "'VENUS ORBITER"
     },
     {
       "ID": "-12",
@@ -262,7 +262,7 @@
     },
     {
       "ID": "-25",
-      "Name": "'LUNAR"
+      "Name": "LUNAR PROSPECTOR"
     },
     {
       "item": "http://www.wikidata.org/entity/Q590245",
@@ -282,7 +282,7 @@
     },
     {
       "ID": "-27",
-      "Name": "'VIKING"
+      "Name": "VIKING 1 ORBITER"
     },
     {
       "item": "http://www.wikidata.org/entity/Q210199",
@@ -346,7 +346,7 @@
     },
     {
       "ID": "-30",
-      "Name": "'VIKING"
+      "Name": "VIKING 2 ORBITER"
     },
     {
       "item": "http://www.wikidata.org/entity/Q212131",
@@ -382,7 +382,7 @@
     },
     {
       "ID": "-31",
-      "Name": "'VOYAGER"
+      "Name": "'VOYAGER 1"
     },
     {
       "item": "http://www.wikidata.org/entity/Q48469",
@@ -402,7 +402,7 @@
     },
     {
       "ID": "-32",
-      "Name": "'VOYAGER"
+      "Name": "VOYAGER 2"
     },
     {
       "item": "http://www.wikidata.org/entity/Q48475",
@@ -478,7 +478,7 @@
     },
     {
       "ID": "-41",
-      "Name": "'MARS"
+      "Name": "MARS EXPRESS"
     },
     {
       "item": "http://www.wikidata.org/entity/Q205672",
@@ -494,7 +494,7 @@
   [
     {
       "ID": "-44",
-      "Name": "'BEAGLE"
+      "Name": "'BEAGLE 2"
     },
     {
       "ID": "-44",
@@ -562,11 +562,11 @@
   [
     {
       "ID": "-48",
-      "Name": "'HUBBLE"
+      "Name": "HUBBLE SPACE TELESCOPE"
     },
     {
       "ID": "-48",
-      "Name": "'HST'"
+      "Name": "HST"
     },
     {
       "item": "http://www.wikidata.org/entity/Q2513",
@@ -582,7 +582,7 @@
   [
     {
       "ID": "-53",
-      "Name": "'MARS"
+      "Name": "MARS PATHFINDE"
     },
     {
       "ID": "-53",
