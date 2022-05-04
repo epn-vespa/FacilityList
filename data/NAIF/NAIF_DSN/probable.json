@@ -37,38 +37,6 @@
             "Name": "'DSS-12'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q787254",
-            "itemLabel": "Soyouz T-12",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1984-073A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Sojuz T-12|Soyuz T-12"
-        }
-    ],
-    [
-        {
-            "ID": "399012",
-            "Name": "'DSS-12'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q27048763",
-            "itemLabel": "SpaceX CRS-12",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2017-045A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "SpX-12|CRS-12|SpX-12|SpX-12|SpX-12|SpX-12"
-        }
-    ],
-    [
-        {
-            "ID": "399012",
-            "Name": "'DSS-12'"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q543643",
             "itemLabel": "Soyouz 12",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -93,6 +61,38 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Soyuz TM-12|Soyuz TM-12|\u8054\u76dfTM-12\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "399012",
+            "Name": "'DSS-12'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q787254",
+            "itemLabel": "Soyouz T-12",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1984-073A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sojuz T-12|Soyuz T-12"
+        }
+    ],
+    [
+        {
+            "ID": "399012",
+            "Name": "'DSS-12'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18483440",
+            "itemLabel": "SES-12",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SES 12|SES12"
         }
     ],
     [
@@ -165,14 +165,14 @@
             "Name": "'DSS-13'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q27048765",
-            "itemLabel": "SpaceX CRS-13",
+            "item": "http://www.wikidata.org/entity/Q16325198",
+            "itemLabel": "ESSA-3",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2017-080A",
+            "all_COSPAR_ID": "1966-087A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-13|SpX-13|SpX-13|SpX-13"
+            "aliases": "TOS-1|ESSA3|TIROS TOS-1|TIROS-13|TIROS-TOS1"
         }
     ],
     [
@@ -213,22 +213,6 @@
             "Name": "'DSS-14'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q611541",
-            "itemLabel": "Soyouz TM-14",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1992-014A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Soyuz TM-14|\u8054\u76dfTM-14\u53f7"
-        }
-    ],
-    [
-        {
-            "ID": "399014",
-            "Name": "'DSS-14'"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q144502",
             "itemLabel": "Soyouz T-14",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -245,14 +229,46 @@
             "Name": "'DSS-14'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q27048767",
-            "itemLabel": "SpaceX CRS-14",
+            "item": "http://www.wikidata.org/entity/Q611541",
+            "itemLabel": "Soyouz TM-14",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2018-032A",
+            "all_COSPAR_ID": "1992-014A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "SpX-14|CRS-14|SpaceX CRS14|SpX-14|SpX14|SpX-14"
+            "aliases": "Soyuz TM-14|\u8054\u76dfTM-14\u53f7"
+        }
+    ],
+    [
+        {
+            "ID": "399014",
+            "Name": "'DSS-14'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21400674",
+            "itemLabel": "SES-14",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-012B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SES 14|SES 14"
+        }
+    ],
+    [
+        {
+            "ID": "399015",
+            "Name": "'DSS-15'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q904317",
+            "itemLabel": "Venera 15",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1983-053A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u064a\u0646\u0631\u0627 15|\u0641\u064a\u0646\u0631\u0627 \u0661\u0665|\u0641\u064a\u0646\u064a\u0631\u0627 \u0661\u0665"
         }
     ],
     [
@@ -269,6 +285,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Shi Jian 15|Shijian 15|SJ-15"
+        }
+    ],
+    [
+        {
+            "ID": "399015",
+            "Name": "'DSS-15'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q836053",
+            "itemLabel": "Soyouz 15",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-067A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz 15|\u0421\u043e\u044e\u0437 15|Soyuz 15"
         }
     ],
     [
@@ -305,34 +337,18 @@
     ],
     [
         {
-            "ID": "399015",
-            "Name": "'DSS-15'"
+            "ID": "399016",
+            "Name": "'DSS-16'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q27048769",
-            "itemLabel": "SpaceX CRS-15",
+            "item": "http://www.wikidata.org/entity/Q1540599",
+            "itemLabel": "Soyouz TM-16",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2018-055A",
+            "all_COSPAR_ID": "1993-005A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-15|SpX-15|SpX-15|CRS-15|SpX-15"
-        }
-    ],
-    [
-        {
-            "ID": "399015",
-            "Name": "'DSS-15'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q836053",
-            "itemLabel": "Soyouz 15",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1974-067A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Soyuz 15|\u0421\u043e\u044e\u0437 15|Soyuz 15"
+            "aliases": "Soyuz TM-16|Soyuz TM-16"
         }
     ],
     [
@@ -349,22 +365,6 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Shijian 16-02|SJ-16-02|Shi Jian 16-02"
-        }
-    ],
-    [
-        {
-            "ID": "399016",
-            "Name": "'DSS-16'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1540599",
-            "itemLabel": "Soyouz TM-16",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1993-005A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Soyuz TM-16|Soyuz TM-16"
         }
     ],
     [
@@ -421,54 +421,6 @@
             "Name": "'DSS-17'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q109362472",
-            "itemLabel": "Shijian-17",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2016-065A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Shijian 17|SJ-17|Shi Jian 17"
-        }
-    ],
-    [
-        {
-            "ID": "399017",
-            "Name": "'DSS-17'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q531246",
-            "itemLabel": "Soyouz 17",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1975-001A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Soyuz 17|\u0421\u043e\u044e\u0437 17"
-        }
-    ],
-    [
-        {
-            "ID": "399017",
-            "Name": "'DSS-17'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q27048773",
-            "itemLabel": "SpaceX CRS-17",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2019-025A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-17|SpX-17|SpX-17"
-        }
-    ],
-    [
-        {
-            "ID": "399017",
-            "Name": "'DSS-17'"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q1540613",
             "itemLabel": "Soyouz TM-17",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -477,6 +429,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Soyuz TM-17|Soyuz TM-17|\u0421\u043e\u044e\u0437 TM-17|\u0421\u043e\u044e\u0437 \uff34\uff2d-17"
+        }
+    ],
+    [
+        {
+            "ID": "399017",
+            "Name": "'DSS-17'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q109362472",
+            "itemLabel": "Shijian-17",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Shijian 17|SJ-17|Shi Jian 17"
         }
     ],
     [
@@ -497,6 +465,22 @@
     ],
     [
         {
+            "ID": "399017",
+            "Name": "'DSS-17'"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q531246",
+            "itemLabel": "Soyouz 17",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-001A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Soyuz 17|\u0421\u043e\u044e\u0437 17"
+        }
+    ],
+    [
+        {
             "ID": "399023",
             "Name": "'DSS-23'"
         },
@@ -509,22 +493,6 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Soyuz TM-23"
-        }
-    ],
-    [
-        {
-            "ID": "399023",
-            "Name": "'DSS-23'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q104214626",
-            "itemLabel": "SpaceX CRS-23",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2021-078A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2021-078A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-23|SpX-23|CRS-23|CRS-23"
         }
     ],
     [
@@ -561,18 +529,18 @@
     ],
     [
         {
-            "ID": "399024",
-            "Name": "'DSS-24'"
+            "ID": "399025",
+            "Name": "'DSS-25'"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q104554487",
-            "itemLabel": "SpaceX CRS-24",
+            "item": "http://www.wikidata.org/entity/Q516698",
+            "itemLabel": "Soyouz TM-25",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2021-127A",
+            "all_COSPAR_ID": "1997-003A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2021-127A",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-24|SpX-24|CRS-24"
+            "aliases": "Soyuz TM-25"
         }
     ],
     [
@@ -609,38 +577,6 @@
     ],
     [
         {
-            "ID": "399025",
-            "Name": "'DSS-25'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q516698",
-            "itemLabel": "Soyouz TM-25",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1997-003A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Soyuz TM-25"
-        }
-    ],
-    [
-        {
-            "ID": "399025",
-            "Name": "'DSS-25'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q104859696",
-            "itemLabel": "SpaceX CRS-25",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-25|SpX-25"
-        }
-    ],
-    [
-        {
             "ID": "399026",
             "Name": "'DSS-26'"
         },
@@ -653,22 +589,6 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Soyuz TM-26|Soyuz TM-26|\u30bd\u30e6\u30fc\u30ba TM-26"
-        }
-    ],
-    [
-        {
-            "ID": "399026",
-            "Name": "'DSS-26'"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q106610005",
-            "itemLabel": "SpaceX CRS-26",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CRS-26|SpX-26"
         }
     ],
     [
