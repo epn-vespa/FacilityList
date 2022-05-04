@@ -35,7 +35,7 @@ from lxml import html
 
 
 # l'url de la page PDS a scrapper
-pds_url = 'https://pds.nasa.gov/data/pds4/context-pds4/instrument_host/'
+pds_url = 'https://pds.nasa.gov/data/pds4/context-pds4/investigation/'
 
 # la fonction get_links_pds prend en argument l'url de la page à scrapper,
 # et renvoie la liste des noeuds <a> dont l'attribut href est non-nul.
@@ -88,23 +88,25 @@ for link in xml_links :
 
     parser = 'html.parser'
     soup = BeautifulSoup(resp, parser, from_encoding=resp.info().get_param('charset'))
-    #with open(link,"w") as output_file :
-        #output_file.write(soup.prettify())
+    with open(link,"w") as output_file :
+        output_file.write(soup.prettify())
     
     
     # lecture de la premiere balise <type>
     try :
         title_text=soup.title.string
         logical_identifier =soup.logical_identifier.string
-        naif_host_id=soup.naif_host_id.string
+        Alias_List=soup.Alias_List.string
+        alternate_id=soup.alternate_id.string
+        alternate_title=soup.alternate_title.string
         
         #print( link_url + " :  titre  " + title_text + " logical identifier :  " + logical_identifier+ "naif_host_id" + naif_host_id)
     except AttributeError :
         # S'il n'existe pas de balise type
         pass
         #print( link_url + " :  pas de balise <Title>")
-    result_elt={ "title" : title_text, " logical_identifier" : logical_identifier, "naif_host_id " : naif_host_id }
-    #print ("result_elt :" , result_elt)
+    result_elt={ "title" : title_text, " logical_identifier" : logical_identifier }
+    print ("result_elt :" , result_elt)
     result.append( result_elt )
     
 with open("pds-test-list.json", "w") as f :
