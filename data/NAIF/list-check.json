@@ -145,6 +145,22 @@
   ],
   [
     {
+      "ID": "-13",
+      "Name": "POLAR"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q3270306",
+      "itemLabel": "Polar (satellite)",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "1996-013A",
+      "all_NAIF_ID": "-13",
+      "all_NSSDCA_ID": "",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": ""
+    }
+  ],
+  [
+    {
       "ID": "-18",
       "Name": "MGN"
     },
@@ -299,7 +315,7 @@
       "itemLabel": "Viking 1 Orbiter",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-27",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Viking 1 orbiter|Viking orbiter 1|Viking Orbiter 1|Viking-B orbiter|Viking-B Orbiter"
@@ -319,7 +335,7 @@
       "itemLabel": "Jupiter Icy Moon Explorer",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-28",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Jupiter Icy Moon Explorer|Jupiter Icy Moons Explorer|Jupiter Icy Moon Explorer|JUICE|JUICE|JUICE|JUICE|JUICE|JUICE|Jupiter Icy Moons Explorer"
@@ -379,7 +395,7 @@
       "itemLabel": "Deep Space 1",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "1998-061A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-30",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "DS1|DS1|DS 1"
@@ -443,7 +459,7 @@
       "itemLabel": "Hayabusa2",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "2014-076A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-37",
       "all_NSSDCA_ID": "2014-076A",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "\u0647\u0627\u064a\u0627\u0628\u0648\u0633\u0627 \u0662|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa-2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|\u96bc\u9ce52\u865f"
@@ -463,7 +479,7 @@
       "itemLabel": "Lunar Polar Hydrogen Mapper",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-39",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "LunaH-Map|LunaH-Map"
@@ -595,8 +611,24 @@
   ],
   [
     {
+      "ID": "-49",
+      "Name": "LUCY"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q21076293",
+      "itemLabel": "Lucy",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "2021-093A",
+      "all_NAIF_ID": "-49",
+      "all_NSSDCA_ID": "2021-093A",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "Discovery 13"
+    }
+  ],
+  [
+    {
       "ID": "-53",
-      "Name": "MARS PATHFINDE"
+      "Name": "MARS PATHFINDER"
     },
     {
       "ID": "-53",
@@ -647,7 +679,7 @@
       "itemLabel": "Lunar IceCube",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-57",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": ""
@@ -719,7 +751,7 @@
       "itemLabel": "Mars Hope",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "2020-047A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-62",
       "all_NSSDCA_ID": "2020-047A",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Надежда|Missió Mars Hope|Mars Hope|Mars Hope|Emirates Mars Mission|Mars Hope|sonde Al-amal|Emirates Mars Mission|ел-Амал|Емиратска мисија на Марс|希望号火星探测器|希望號火星探測器"
@@ -747,19 +779,74 @@
   ],
   [
     {
+      "ID": "-65",
+      "Name": "MCOA"
+    },
+    {
+      "ID": "-65",
+      "Name": "MARCO-A"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q52726080",
+      "itemLabel": "MarCO-A",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "2018-042B",
+      "all_NAIF_ID": "-65",
+      "all_NSSDCA_ID": "2018-042B",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "EVE|Mars Cube One-A"
+    }
+  ],
+  [
+    {
+      "ID": "-66",
+      "Name": "MARCO-B"
+    },
+    {
+      "ID": "-66",
+      "Name": "MCOB"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q103851690",
+      "itemLabel": "MarCO-B",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "2018-042C",
+      "all_NAIF_ID": "",
+      "all_NSSDCA_ID": "2018-042C",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "WALL-E|Mars Cube One-B"
+    }
+  ],
+  [
+    {
       "ID": "-66",
       "Name": "VEGA 1"
     },
-
     {
-      "item": "http://www.wikidata.org/entity/Q262629",
-      "itemLabel": "Vega",
+      "item": "http://www.wikidata.org/entity/Q1153267",
+      "itemLabel": "Vega 1",
       "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_COSPAR_ID": "1984-125A",
+      "all_NAIF_ID": "-66",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Vega Space Transportation System|Vettore Europeo di Generazione Avanzata|वेक्टर यूरोपीय पीढ़ी|वेगं"
+      "aliases": "5Vk"
+    }
+  ],
+  [
+    {
+      "ID": "-67",
+      "Name": "VEGA 2"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q1191435",
+      "itemLabel": "Vega 2",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "1984-128A",
+      "all_NAIF_ID": "-67",
+      "all_NSSDCA_ID": "",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": ""
     }
   ],
   [
@@ -908,10 +995,6 @@
   ],
   [
     {
-      "ID": "-81",
-      "Name": "CASSINI"
-    },
-    {
       "ID": "-82",
       "Name": "CASSINI"
     },
@@ -924,7 +1007,7 @@
       "itemLabel": "Cassini",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-82",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Cassini probe|Cassini spacecraft|Cassini probe|Cassini spacecraft|Cassini probe|Cassini spacecraft"
@@ -992,22 +1075,6 @@
   ],
   [
     {
-      "ID": "-90",
-      "Name": "CASSINI SIMULATION"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q2941291",
-      "itemLabel": "Cassini",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Cassini probe|Cassini spacecraft|Cassini probe|Cassini spacecraft|Cassini probe|Cassini spacecraft"
-    }
-  ],
-  [
-    {
       "ID": "-93",
       "Name": "NEAR EARTH ASTEROID RENDEZVOUS"
     },
@@ -1052,16 +1119,6 @@
       "all_NSSDCA_ID": "1996-062A",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Mars Global Surveyor|Mars Orbiter Laser Altimeter|MOLA|MGS|MGS|MGS|\u0646\u0642\u0634\u0647 \u0628\u0631\u062f\u0627\u0631 \u0633\u0631\u0627\u0633\u0631 \u0645\u0631\u06cc\u062e|\u05de\u05d0\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05d5\u05e8\u05d1\u05d9\u05d9\u05e8|\u05de\u05d0\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05e8\u05d5\u05d5\u05d9\u05e8|\u05de\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05d5\u05e8\u05d1\u05d9\u05d9\u05e8|\u05de\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05e8\u05d5\u05d5\u05d9\u05d5\u05e8|MGS|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4\u30fc|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30d9\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30d9\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30d9\u30a4\u30e4\u30fc|MGS|\ub9c8\uc2a4 \uc11c\ubca0\uc774\uc5b4|MGS|MGS|Mars Surveyor|\u041c\u0430\u0440\u0441 \u0413\u043b\u043e\u0431\u0430\u043b \u0421\u0435\u0440\u0432\u0435\u0439\u043e\u0440|\u041c\u0430\u0440\u0441 \u0433\u043b\u043e\u0431\u0430\u043b \u0441\u0443\u0440\u0432\u0435\u0458\u043e\u0440|\u706b\u661f\u5168\u7403\u52d8\u5bdf\u8005|\u706b\u661f\u5168\u7403\u52d8\u6e2c\u8005|\u706b\u661f\u74b0\u7403\u63a2\u6d4b\u8005\u865f|\u73af\u706b\u661f\u52d8\u6d4b\u8005"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q634772",
-      "itemLabel": "Mars Observer",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "1992-063A",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
     }
   ],
   [
@@ -1122,8 +1179,8 @@
   ],
   [
     {
-        "ID": "-107",
-        "Name": "TRMM"
+      "ID": "-107",
+      "Name": "TRMM"
     },
     {
       "ID": "-107",
@@ -1178,40 +1235,6 @@
   ],
   [
     {
-      "ID": "-117",
-      "Name": "EXOMARS"
-    },
-    {
-      "ID": "-117",
-      "Name": "EDL DEMONSTRATOR MODULE"
-    },
-    {
-      "ID": "-117",
-      "Name": "EXOMARS 2016 EDM"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q672135",
-      "itemLabel": "ExoMars",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "\u0395\u03be\u03c9\u03b2\u03b9\u03bf\u03bb\u03bf\u03b3\u03af\u03b1 \u03c3\u03c4\u03bf\u03bd \u0386\u03c1\u03b7|Exobiology on Mars|Exomars|programme ExoMars|Eksobiologi di Mars"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q3061991",
-      "itemLabel": "Schiaparelli",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Schiaparelli|EDM|Schiaparelli|EDM lander|Schiaparelli EDM|aterrizador Schiaparelli|modulo Schiaparelli|ExoMars EDM|ExoMars Entry Descent and Landing Demonstrator Module|EDM lander"
-    }
-  ],
-  [
-    {
       "ID": "-119",
       "Name": "MARS_ORBITER_MISSION_2"
     },
@@ -1224,7 +1247,7 @@
       "itemLabel": "Mangalyaan 2",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-119",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Mars Orbiter Mission 2"
@@ -1320,15 +1343,15 @@
       "Name": "DOUBLE ASTEROID REDIRECTION TEST"
     },
     {
-        "ID": "-135",
-        "Name": "DART"
+      "ID": "-135",
+      "Name": "DART"
     },
     {
       "item": "http://www.wikidata.org/entity/Q47482008",
       "itemLabel": "Double Asteroid Redirection Test",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-135",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "DART|DART|Double Asteroid Redirection Test|\u30c0\u30d6\u30eb\u30fb\u30a2\u30b9\u30c6\u30ed\u30a4\u30c9\u30fb\u30ea\u30c0\u30a4\u30ec\u30af\u30b7\u30e7\u30f3\u30fb\u30c6\u30b9\u30c8|prueba de redireccionamiento de doble asteroide|\u96d9\u5c0f\u884c\u661f\u8f49\u5411\u8a66\u9a57|DART|Double Asteroid Redirection Test|\u05d3\u05d0\u05e8\u05d8"
@@ -1356,7 +1379,7 @@
       "itemLabel": "EPOXI",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-140",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": ""
@@ -1400,26 +1423,10 @@
       "itemLabel": "ExoMars Trace Gas Orbiter",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "2016-017A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-143",
       "all_NSSDCA_ID": "2016-017A",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "TGO|Trace Gas Orbiter|ExoMars TGO|Mars Trace Gas Mission|Mars Trace Gas Orbiter|\u30a8\u30af\u30bd\u30de\u30fc\u30ba\u30fb\u30c8\u30ec\u30fc\u30b9\u30fb\u30ac\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf\u30fc|Mars Science Orbiter|Mars Trace Gas Mission"
-    }
-  ],
-  [
-    {
-      "ID": "-143",
-      "Name": "EXOMARS 2016 TGO"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q672135",
-      "itemLabel": "ExoMars",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "\u0395\u03be\u03c9\u03b2\u03b9\u03bf\u03bb\u03bf\u03b3\u03af\u03b1 \u03c3\u03c4\u03bf\u03bd \u0386\u03c1\u03b7|Exobiology on Mars|Exomars|programme ExoMars|Eksobiologi di Mars"
     }
   ],
   [
@@ -1444,6 +1451,22 @@
   ],
   [
     {
+      "ID": "-146",
+      "Name": "'LUNAR-A'"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q445383",
+      "itemLabel": "Lunar-A",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "",
+      "all_NAIF_ID": "-146",
+      "all_NSSDCA_ID": "",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "LUNAR-A"
+    }
+  ],
+  [
+    {
       "ID": "-148",
       "Name": "DFLY"
     },
@@ -1456,7 +1479,7 @@
       "itemLabel": "Dragonfly",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-148",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Dragonfly"
@@ -1476,14 +1499,14 @@
       "Name": "CASP"
     },
     {
-      "item": "http://www.wikidata.org/entity/Q2941291",
-      "itemLabel": "Cassini",
+      "item": "http://www.wikidata.org/entity/Q714789",
+      "itemLabel": "Huygens",
       "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_COSPAR_ID": "1997-061C ",
+      "all_NAIF_ID": "-150",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Cassini probe|Cassini spacecraft|Cassini probe|Cassini spacecraft|Cassini probe|Cassini spacecraft"
+      "aliases": "Huygens probe"
     }
   ],
   [
@@ -1508,14 +1531,6 @@
   ],
   [
     {
-      "ID": "-152",
-      "Name": "CHANDRAYAAN-2 ORBITER"
-    },
-    {
-      "ID": "-152",
-      "Name": "CH2O"
-    },
-    {
       "ID": "-153",
       "Name": "CHANDRAYAAN-2 LANDER"
     },
@@ -1528,7 +1543,7 @@
       "itemLabel": "Chandrayaan-2",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "2019-042A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-153",
       "all_NSSDCA_ID": "2019-042A",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03b1\u03bd-2|\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03bd 2|\u03a4\u03c3\u03ac\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03b1\u03bd-2|\u30ed\u30fc\u30d0\u30fc"
@@ -1571,27 +1586,57 @@
     }
   ],
   [
-  {
-    "ID": "-159",
-    "Name": "EURC"
-  },
-  {
-    "ID": "-159",
-    "Name": "EUROPA CLIPPER"
-  },
-  {
-    "item": "http://www.wikidata.org/entity/Q2331529",
-    "itemLabel": "Europa Orbiter",
-    "all_Unified_Astro_Thesaurus_ID": "",
-    "all_COSPAR_ID": "",
-    "all_NAIF_ID": "-159",
-    "all_NSSDCA_ID": "",
-    "all_Minor_Planet_Center_observatory_ID": "",
-    "aliases": ""
-  }
+    {
+      "ID": "-159",
+      "Name": "EURC"
+    },
+    {
+      "ID": "-159",
+      "Name": "EUROPA CLIPPER"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q15637513",
+      "itemLabel": "Europa Clipper",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "",
+      "all_NAIF_ID": "-159",
+      "all_NSSDCA_ID": "",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "\u0628\u0639\u062b\u0629 \u0627\u0644\u062a\u062d\u0644\u064a\u0642\u0627\u062a \u0627\u0644\u0645\u062a\u0639\u062f\u062f\u0647 \u062d\u0648 \u0627\u0648\u0631\u0648\u0628\u0627|Europa Multiple-Flyby Mission|Europa Multiple-Flyby Mission|Mision de sobrevuelos de Europa|Europa Clipper|Europa Multiple-Flyby Mission|\uc720\ub85c\ud30c \ud074\ub9ac\ud37c
+    }
   ],
-
-
+  [
+    {
+      "ID": "-164",
+      "Name": "LUNAR FLASHLIGHT"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q586893",
+      "itemLabel": "Yohkoh",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "1991-062A",
+      "all_NAIF_ID": "-164",
+      "all_NSSDCA_ID": "",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "\u7b2c14\u53f7\u79d1\u5b66\u885b\u661fSOLAR-A|Solar-A"
+    }
+  ],
+  [
+    {
+      "ID": "-165",
+      "Name": "MAP"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q274106",
+      "itemLabel": "Wilkinson Microwave Anisotropy Probe",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "2001-027A",
+      "all_NAIF_ID": "-165",
+      "all_NSSDCA_ID": "2001-027A",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "WMAP"
+    }
+  ],
   [
     {
       "ID": "-166",
@@ -1658,43 +1703,23 @@
   ],
   [
     {
-      "ID": "-172",
-      "Name": "EXOMARS SCC"
-    },
-    {
-      "ID": "-172",
-      "Name": "EXM SPACECRAFT COMPOSITE"
-    },
-    {
-      "ID": "-173",
-      "Name": "EXOMARS SP"
-    },
-    {
-      "ID": "-173",
-      "Name": "EXM RSP SP"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q672135",
-      "itemLabel": "ExoMars",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "\u0395\u03be\u03c9\u03b2\u03b9\u03bf\u03bb\u03bf\u03b3\u03af\u03b1 \u03c3\u03c4\u03bf\u03bd \u0386\u03c1\u03b7|Exobiology on Mars|Exomars|programme ExoMars|Eksobiologi di Mars"
-    }
-  ],
-  [
-    {
       "ID": "-174",
       "Name": "EXOMARS ROVER"
+    },
+    {
+      "ID": "-174",
+      "Name": "EXM ROVER"
+    },
+    {
+      "ID": "-174",
+      "Name": "EXM RSP RM"
     },
     {
       "item": "http://www.wikidata.org/entity/Q3445540",
       "itemLabel": "Rover ExoMars",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-174",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "\u30ed\u30b6\u30ea\u30f3\u30c9\u30fb\u30d5\u30e9\u30f3\u30af\u30ea\u30f3|ExoMars|ExoMars rover|Rosalind Franklin rover|ExoMars Rover|ExoMars\u706b\u661f\u8f66|\u7f57\u838e\u7433\u5fb7\u00b7\u5bcc\u5170\u514b\u6797\u63a2\u6d4b\u8f66"
@@ -1758,30 +1783,30 @@
       "Name": "CLUSTER 1"
     },
     {
-      "ID": "-185",
-      "Name": "CLUSTER 2"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q367351",
-      "itemLabel": "Mission Cluster",
+      "item": "http://www.wikidata.org/entity/Q111658821",
+      "itemLabel": "CLUSTER 1",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "2000-045A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-183",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Mision Cluster"
+      "aliases": "Rumba"
     }
   ],
   [
     {
-      "item": "http://www.wikidata.org/entity/Q1617995",
-      "itemLabel": "Highly Advanced Laboratory for Communications and Astronomy",
+      "ID": "-185",
+      "Name": "CLUSTER 2"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q111658865",
+      "itemLabel": "CLUSTER 2",
       "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "1997-005A",
-      "all_NAIF_ID": "-58",
+      "all_COSPAR_ID": "2000-041A",
+      "all_NAIF_ID": "-185",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Haruka|Haruka|VSOP|HALCA|MUSES-B|MUSES-B|HALCA|Highly Advanced Laboratory for Communications and Astronomy|HALCA|Highly advanced laboratory for communications and astronomy|Highly Advanced Laboratory For Communications And Astronomy|MUSES-B|MUSES-B|MUSES-B|HALCA"
+      "aliases": "Salsa"
     }
   ],
   [
@@ -1825,46 +1850,38 @@
       "ID": "-194",
       "Name": "CLUSTER 3"
     },
-     {
-       "ID": "-196",
-       "Name": "CLUSTER 4"
-     },
     {
-      "item": "http://www.wikidata.org/entity/Q367351",
-      "itemLabel": "Mission Cluster",
+      "item": "http://www.wikidata.org/entity/Q111658942",
+      "itemLabel": "CLUSTER 3",
       "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "2000-045A",
-      "all_NAIF_ID": "",
+      "all_COSPAR_ID": "2000-041B",
+      "all_NAIF_ID": "-194",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Mision Cluster"
+      "aliases": "Samba"
     }
   ],
   [
     {
-      "ID": "-197",
-      "Name": "EXOMARS_LARA"
+      "ID": "-196",
+      "Name": "CLUSTER 4"
     },
     {
-      "ID": "-197",
-      "Name": "LARA"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q672135",
-      "itemLabel": "ExoMars",
+      "item": "http://www.wikidata.org/entity/Q111658950",
+      "itemLabel": "CLUSTER 4",
       "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_COSPAR_ID": "2000-045B",
+      "all_NAIF_ID": "-196",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "\u0395\u03be\u03c9\u03b2\u03b9\u03bf\u03bb\u03bf\u03b3\u03af\u03b1 \u03c3\u03c4\u03bf\u03bd \u0386\u03c1\u03b7|Exobiology on Mars|Exomars|programme ExoMars|Eksobiologi di Mars"
+      "aliases": "Tango"
     }
-    ],
-    [
-      {
+  ],
+  [
+    {
       "ID": "-198",
       "Name": "INTEGRAL"
-      },
+    },
     {
       "ID": "-198",
       "Name": "NASA-ISRO SAR MISSION"
@@ -1966,7 +1983,7 @@
       "itemLabel": "LICIACube",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "2021-110C",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-210",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Light Italian CubeSat for Imaging of Asteroids"
@@ -2018,7 +2035,7 @@
       "itemLabel": "Galileo Probe",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "1989-084E",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-228",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "JEP|Galileo Descent Module|Jupiter Entry Probe|Jupiter Orbiter Probe"
@@ -2038,16 +2055,6 @@
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "C49",
       "aliases": "Solar Terrestrial Relations Observatory A|STEREO Ahead|STEREO East|STEREO Lag"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q182766",
-      "itemLabel": "STEREO",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "STEREO-A|STEREO-B|\u0633\u062a\u064a\u0631\u064a\u0648 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|\u0645\u0633\u0628\u0627\u0631 \u0633\u062a\u064a\u0631\u064a\u0648|Solar Terrestrial Relations Observatory|Mision Stereo"
     }
   ],
   [
@@ -2064,16 +2071,6 @@
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "C50",
       "aliases": "Solar Terrestrial Relations Observatory B|STEREO Behind|STEREO Lead|STEREO West"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q182766",
-      "itemLabel": "STEREO",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "STEREO-A|STEREO-B|\u0633\u062a\u064a\u0631\u064a\u0648 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|\u0645\u0633\u0628\u0627\u0631 \u0633\u062a\u064a\u0631\u064a\u0648|Solar Terrestrial Relations Observatory|Mision Stereo"
     }
   ],
   [
@@ -2122,22 +2119,22 @@
   ],
   [
     {
-      "item": "http://www.wikidata.org/entity/Q30748458",
-      "itemLabel": "Martian Moons Explorer",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "MMX|MMX|MMX|MMX|Εξερεύνηση Αρειανών Δορυφόρων|火星衛星探査計画"
-    },
-    {
       "ID": "-239",
       "Name": "MARTIAN"
     },
     {
       "ID": "-239",
       "Name": "MMX"
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q30748458",
+      "itemLabel": "Martian Moons Explorer",
+      "all_Unified_Astro_Thesaurus_ID": "",
+      "all_COSPAR_ID": "",
+      "all_NAIF_ID": "-239",
+      "all_NSSDCA_ID": "",
+      "all_Minor_Planet_Center_observatory_ID": "",
+      "aliases": "MMX|MMX|MMX|MMX|Εξερεύνηση Αρειανών Δορυφόρων|火星衛星探査計画"
     }
   ],
   [
@@ -2154,7 +2151,7 @@
       "itemLabel": "Smart Lander for Investigating Moon",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-240",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": ""
@@ -2170,7 +2167,7 @@
       "itemLabel": "Lunar Trailblazer",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-242",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": ""
@@ -2246,20 +2243,10 @@
       "itemLabel": "Helios 1",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "1974-097A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-301",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Helios A|Helios 1"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q371952",
-      "itemLabel": "Helios",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Helios|Satellite Helios|Satellites Helios"
     }
   ],
   [
@@ -2272,20 +2259,10 @@
       "itemLabel": "Helios 2",
       "all_Unified_Astro_Thesaurus_ID": "",
       "all_COSPAR_ID": "1976-003A",
-      "all_NAIF_ID": "",
+      "all_NAIF_ID": "-302",
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "Helios 2"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q371952",
-      "itemLabel": "Helios",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Helios|Satellite Helios|Satellites Helios"
     }
   ],
   [
@@ -2306,16 +2283,6 @@
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "VAP-A|Radiation Belt Storm Probe A|RBSP A|RBSP-A|VAP A"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q19266",
-      "itemLabel": "Radiation Belt Storm Probes",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Radiation Belt Storm Probes|RBSP|Radiation Belt Storm Probes|RBSP|Radiation Belt Storm Probes|RBSP|RBSP|RBSP|RBSP"
     }
   ],
   [
@@ -2336,16 +2303,6 @@
       "all_NSSDCA_ID": "",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": "VAP-B|Radiation Belt Storm Probe B|RBSP B|RBSP-B|VAP B"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q19266",
-      "itemLabel": "Radiation Belt Storm Probes",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "",
-      "all_NAIF_ID": "",
-      "all_NSSDCA_ID": "",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "Radiation Belt Storm Probes|RBSP|Radiation Belt Storm Probes|RBSP|Radiation Belt Storm Probes|RBSP|RBSP|RBSP|RBSP"
     }
   ],
   [
@@ -2390,8 +2347,8 @@
       "Name": "Vstar"
     },
     {
-       "ID": "-502",
-       "Name": "SELENE VRAD Satellite"
+      "ID": "-502",
+      "Name": "SELENE VRAD Satellite"
     },
     {
       "ID": "-502",
@@ -2434,30 +2391,6 @@
       "all_NSSDCA_ID": "1996-064A",
       "all_Minor_Planet_Center_observatory_ID": "",
       "aliases": ""
-    }
-  ],
-  [
-    {
-      "ID": "-652",
-      "Name": "MERCURY"
-    },
-    {
-      "ID": "-652",
-      "Name": "MTM"
-    },
-    {
-      "ID": "-652",
-      "Name": "BEPICOLOMBO"
-    },
-    {
-      "item": "http://www.wikidata.org/entity/Q113169",
-      "itemLabel": "BepiColombo",
-      "all_Unified_Astro_Thesaurus_ID": "",
-      "all_COSPAR_ID": "2018-080A",
-      "all_NAIF_ID": "-121",
-      "all_NSSDCA_ID": "BEPICLMBO",
-      "all_Minor_Planet_Center_observatory_ID": "",
-      "aliases": "بيبي كولومبو|Bepi Colombo|Bepi Colombo|Bepi Colombo|Bepi-Colombo|Bepi Colombo|Bepi-Colombo|Mercury Magnetospheric Orbiter|Mercury Planetary Orbiter|Mercury Transfer Module|Bepi-Colombo|Bepi-Colombo|BepiColombo|ベピ・コロンボ計画|ベピコロンボ|BepiColombo|Bepi Colombo|Sonda BepiColombo|Sonda spaţială BepiColorado|Sonda spațială BepiColorado"
     }
   ],
   [
