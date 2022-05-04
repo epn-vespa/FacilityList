@@ -1,0 +1,354 @@
+[
+    [
+        {
+            "Name": "Helios-A",
+            "ID": "1974-097A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "Name": "Helios-B",
+            "ID": "1976-003A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "Mariner 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1"
+        }
+    ],
+    [
+        {
+            "Name": "Beresheet",
+            "ID": "2019-009B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q63137797",
+            "itemLabel": "Beresheet 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Beresheet-2|\u0411\u0435\u0440\u0435\u0448\u0438\u0442 2|Beresheet 2|Beresheet2"
+        }
+    ],
+    [
+        {
+            "Name": "Deep Space 2",
+            "ID": "DEEPSP2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q575934",
+            "itemLabel": "Deep Space 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "DEEPSP2",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Scott|DS-2|Amundsen|Mars Microprobe Project|Mars Microprobe|\u30c7\u30a3\u30fc\u30d7\u30fb\u30b9\u30da\u30fc\u30b92|\u30c7\u30a3\u30fc\u30d7\u30b9\u30da\u30fc\u30b92|\u30c7\u30a3\u30fc\u30d7\u30b9\u30da\u30fc\u30b92\u53f7"
+        }
+    ],
+    [
+        {
+            "Name": "Double Asteroid Redirection Test (DART)",
+            "ID": "2021-110A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q47482008",
+            "itemLabel": "Double Asteroid Redirection Test",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-135",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DART|DART|Double Asteroid Redirection Test|\u30c0\u30d6\u30eb\u30fb\u30a2\u30b9\u30c6\u30ed\u30a4\u30c9\u30fb\u30ea\u30c0\u30a4\u30ec\u30af\u30b7\u30e7\u30f3\u30fb\u30c6\u30b9\u30c8|prueba de redireccionamiento de doble asteroide|\u96d9\u5c0f\u884c\u661f\u8f49\u5411\u8a66\u9a57|DART|Double Asteroid Redirection Test|\u05d3\u05d0\u05e8\u05d8"
+        }
+    ],
+    [
+        {
+            "Name": "Dragonfly",
+            "ID": "DRAGONFLY"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q29018128",
+            "itemLabel": "Dragonfly",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-148",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dragonfly"
+        }
+    ],
+    [
+        {
+            "Name": "Gravity Recovery And Interior Laboratory-A (GRAIL)",
+            "ID": "2011-046A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q116681",
+            "itemLabel": "Gravity Recovery and Interior Laboratory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gravity Recovery and Interior Laboratory|GRAIL|GRAIL|GRACE|Gravity Recovery And Climate Experiment|Gravity Recovery And Interior Laboratory|Laboratorio Interior y de Recuperacion de Gravedad|Laboratorio Interior y de Recuperaci\u00f3n de Gravedad|GRAIL|Discovery 11|GRAIL"
+        }
+    ],
+    [
+        {
+            "Name": "Gravity Recovery And Interior Laboratory-B (GRAIL)",
+            "ID": "2011-046B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q116681",
+            "itemLabel": "Gravity Recovery and Interior Laboratory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gravity Recovery and Interior Laboratory|GRAIL|GRAIL|GRACE|Gravity Recovery And Climate Experiment|Gravity Recovery And Interior Laboratory|Laboratorio Interior y de Recuperacion de Gravedad|Laboratorio Interior y de Recuperaci\u00f3n de Gravedad|GRAIL|Discovery 11|GRAIL"
+        }
+    ],
+    [
+        {
+            "Name": "Helios-A",
+            "ID": "1974-097A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "Name": "Helios-B",
+            "ID": "1976-003A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "Name": "Hera",
+            "ID": "HERA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60965184",
+            "itemLabel": "Hera",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "HERA",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hera spacecraft"
+        }
+    ],
+    [
+        {
+            "Name": "Lunar-A ",
+            "ID": "LUNAR-A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q445383",
+            "itemLabel": "Lunar-A",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-146",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LUNAR-A|LUNAR A|LUNAR-A\u8a08\u753b|\u30eb\u30ca\u30fcA|\u30eb\u30ca\u30fcA\u8a08\u753b|\u30eb\u30caA|\u30eb\u30caA\u8a08\u753b"
+        }
+    ],
+    [
+        {
+            "Name": "Mangalyaan",
+            "ID": "2013-060A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21027956",
+            "itemLabel": "Mangalyaan 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-119",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mangalyaan 2|Mars Orbiter Mission 2|\u706b\u661f\u8f68\u9053\u63a2\u6d4b\u56682\u53f7"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 1",
+            "ID": "MARIN1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "Mariner 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "Mariner 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-31",
+            "ID": "PIONZ"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1187438",
+            "itemLabel": "Pioneer P-31",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONZ",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas Able 5B|Atlas-Able 5B|P 31|Pioneer P 31|Pioneer Z|Pioneer Z|\u5148\u92d2D\u865f|\u5148\u92d2Z\u865f|\u5148\u9a71\u8005C\u53f7|\u5148\u9a71\u8005P-31"
+        }
+    ],
+    [
+        {
+            "Name": "Smart Lander for Investigating Moon (SLIM)",
+            "ID": "SLIM"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q23773226",
+            "itemLabel": "Smart Lander for Investigating Moon",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-240",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Smart Lander for Investigating Moon|\u30b9\u30ea\u30e0"
+        }
+    ],
+    [
+        {
+            "Name": "Yinghuo-1",
+            "ID": "YINGHUO-1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q177852",
+            "itemLabel": "Yinghuo 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "YINGHUO-1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\ud615\ud654 1\ud638|\u87a2\u706b 1\u865f|\u0407\u043d\u0445\u0432\u043e-1|\u0407\u043d\u0445\u043e-1"
+        }
+    ],
+    [
+        {
+            "Name": "D2B",
+            "ID": "1975-092A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320187",
+            "itemLabel": "Aura",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-092A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1975-092A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Helios-A",
+            "ID": "1974-097A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ],
+    [
+        {
+            "Name": "Helios-B",
+            "ID": "1976-003A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q371952",
+            "itemLabel": "Helios",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Helios|Satellite Helios|Satellites Helios"
+        }
+    ]
+]
