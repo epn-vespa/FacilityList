@@ -35,7 +35,7 @@ from lxml import html
 
 
 # l'url de la page PDS a scrapper
-pds_url = 'http://cdsweb.u-strasbg.fr/astroWeb/astroweb/telescope.html'
+pds_url = 'https://pds.nasa.gov/data/pds4/context-pds4/facility/'
 
 # la fonction get_links_pds prend en argument l'url de la page à scrapper,
 # et renvoie la liste des noeuds <a> dont l'attribut href est non-nul.
@@ -107,7 +107,7 @@ for link in xml_links :
     print ("result_elt :" , result_elt)
     result.append( result_elt )
     
-with open("pds-test-list.json", "w") as f :
+with open("pds-list_facility.json", "w") as f :
     f.write(json.dumps( result, indent=4 ))
 
 
