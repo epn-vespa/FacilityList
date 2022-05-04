@@ -18,9 +18,8 @@ probable = []
 non_trouves = []
 
 data_naif = data_naif[0:1000]
-for i,e in enumerate(data_naif):
-    print("[" + str(i+1) + "/" + str(len(data_naif))+"]" + str(e))
-    #r = process.extract(e['Name']+' '+e['ID'], wikidata, scorer=fuzz.token_sort_ratio)
+for i, e in enumerate(data_naif):
+    print("[" + str(i + 1) + "/" + str(len(data_naif)) + "]" + str(e))
 
     def mon_scorer(q, c):
         r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases'])
@@ -31,11 +30,12 @@ for i,e in enumerate(data_naif):
                 r -= 100
         return r
 
+
     def dummy_proc(x):
         return x
 
-    r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
 
+    r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
 
     results.append(r)
     trouve = False
@@ -48,18 +48,18 @@ for i,e in enumerate(data_naif):
             tres_probable.append((e, r_elem[0]))
         elif r_elem[1] > 150:
             probable.append((e, r_elem[0]))
-    if not trouve : non_trouves.append(e)
+    if not trouve: non_trouves.append(e)
 
 print("tres_certain : " + str(len(tres_certain)))
 print("tres_probable : " + str(len(tres_probable)))
 print("probable : " + str(len(probable)))
 print("non_trouves : " + str(len(non_trouves)))
 
-with open("tres_certain.json",'w') as fout:
+with open("tres_certain.json", 'w') as fout:
     fout.write(json.dumps(tres_certain, indent=4))
-with open("tres_probable.json",'w') as fout:
+with open("tres_probable.json", 'w') as fout:
     fout.write(json.dumps(tres_probable, indent=4))
-with open("probable.json",'w') as fout:
+with open("probable.json", 'w') as fout:
     fout.write(json.dumps(probable, indent=4))
-with open("non_trouves.json",'w') as fout:
+with open("non_trouves.json", 'w') as fout:
     fout.write(json.dumps(non_trouves, indent=4))
