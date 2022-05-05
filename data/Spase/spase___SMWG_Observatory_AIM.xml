@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/AIM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AIM</ResourceName>
+      <ReleaseDate>2010-08-05T18:19:12Z</ReleaseDate>
+      <Description>AIM (Aeronomy of Ice in the Mesosphere) is a NASA Small
+Explorer spacecraft launched April 25, 2007, into a high-inclination, 
+600-km altitude orbit for study of noctilucent clouds (also called Polar 
+Mesospheric Clouds) that occur at 80-90 km altitudes at high latitudes in 
+summer time and are thought to be formed by ice crystals.
+
+AIM carried three instruments:
+
+* The Cloud Imaging and Particle Size (CIPS) experiment 
+that provides an average 5km x 5km resolution in downward-looking images.
+* The Solar Occultation For Ice Experiment (SOFIE) for limb profiles of 
+temperatures and absorptions for various molecules.
+* The Cosmic Dust Experiment (CDE).</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/James.M.Russell.III</PersonID>
+        <Role>ProjectScientist</Role>
+      </Contact>
+      <InformationURL>
+        <Name>AIM web page at Hampton University</Name>
+        <URL>http://aim.hamptonu.edu/</URL>
+      </InformationURL>
+    </ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.NearSurface</ObservatoryRegion>
+    </Location>
+  </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AIM/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AIM Positions</ResourceName>
+      <AlternateName>AIM Ephemeris</AlternateName>
+      <ReleaseDate>2013-04-09T00:00:00Z</ReleaseDate>
+      <Description>AIM spacecraft positions in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.E.McGuire</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+        </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AIM</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AIM/CIPS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AIM Cloud Imaging and Particle Size experiment</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The cloud imaging and particle size experiment (CIPS) is a UV panoramic imager that
+   uses intensified CCD cameras to image the Polar Mesospheric Clouds (PMC) latitude versus longitude
+   distribution. It provides nadir imaging with a 120 degrees by 80 degrees field of view (1140 by
+   960 km) with at least 3 km spatial resolution at 83 km. CIPS observes the backscattered radiance
+   from PMCs (near 82 km altitude) to derive the morphology of PMCs and the cloud particle sizes.
+   Rayleigh scattering from the background near 50 km altitude is used to measure gravity wave
+   activity. Multiple exposures of individual cloud elements provide a measurement of the scattering
+   phase function and detect spatial scales ~2 km. The Ultraviolet bandpass (265 plus or minus 5 nm)
+   maximizes cloud contrast. CIPS is designed, fabricated, and calibrated by the Laboratory for
+   Atmospheric and Space Physics (LASP) of Colorado University.
+          .</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Cora.Randall</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>AIM/CIPS web page at Hampton U.</Name>
+        <URL>http://aim.hamptonu.edu/instrmt/cips.html</URL>
+</InformationURL>
+      <InformationURL>
+        <Name>AIM insrument descriptions at LASP</Name>
+        <URL>http://aim.hamptonu.edu/instrmt/cde.html</URL>
+</InformationURL>
+   <InformationURL>
+        <Name>Journal of Atmospheric and Solar-Terrestrial Physics Article</Name>
+        <URL>https://linkinghub.elsevier.com/retrieve/pii/S1364682608002204</URL>
+        <Description>Detailed information about the Aeronomy of Ice in the Mesosphere (AIM) mission and the CIPS experiment.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Imager</InstrumentType>
+    <InvestigationName>CIPS</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AIM</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AIM/SOFIE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AIM Solar Occultation For Ice Experiment</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Solar Occultation For Ice Experiment (SOFIE)
+flown on the AIM spacecraft performs solar occultation measurements
+in eight pairs of spectral bands covering the 0.29 to 5.26 microns
+range. The spectral data are used to retrieve vertical profiles of
+temperature, O3, H2O, CO2, CH4, NO, and PMC (Polar Mesospheric Clouds)
+extinction at 11 wavelengths.  Each day SOFIE provides 15 sunset
+measurements at latitudes ranging from 65-85 deg S (depending on time
+of year) and 15 sunrise measurements at latitudes from 65 - 85 deg N.
+SOFIE images the sun with a 2D detector array to obtain pointing
+knowledge of the FOV position relative to the sun center to within
+plus or minus 0.1 arc second through image edge analysis.
+
+SOFIE was defined and built by the Space Dynamics Lab at Utah State University
+and collaborators; it has a heritage in the TIMED/SABER instrument.
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Mark.Hervig</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>AIM/SOFIE web page at Hampton U.</Name>
+        <URL>http://aim.hamptonu.edu/instrmt/sofie.html</URL>
+</InformationURL>
+      <InformationURL>
+        <Name>AIM/SOFIE web page at Gats, Inc.</Name>
+        <URL>http://sofie.gats-inc.com/sofie/index.php</URL>
+</InformationURL>
+   <InformationURL>
+        <Name>Journal of Atmospheric and Solar-Terrestrial Physics Article</Name>
+        <URL>https://linkinghub.elsevier.com/retrieve/pii/S1364682608002204</URL>
+        <Description>Detailed information about the Aeronomy of Ice in the Mesosphere (AIM) mission and SOFIE.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>SOFIE</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AIM</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AIM/CDE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AIM Cosmic Dust Experiment</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Cosmic Dust Experiment (CDE) measures inflowing
+cosmic dust as a contributor to Polar Mesospheric Clouds.  CDE has a
+sensor area of about 0.1 m^2, and can detect particles greater than
+about 1 micron in radius, by recording impact-generated signals on
+thin, permanently polarized Polyvinylidene Fluoride films. Twelve
+detectors face the zenith, while two are shielded and face down
+for background noise measurements.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Mihaly.Horanyi</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>AIM/CDE web page at Hampton U.</Name>
+        <URL>http://aim.hamptonu.edu/instrmt/cde.html</URL>
+</InformationURL>
+      <InformationURL>
+        <Name>AIM instrument descriptions at LASP</Name>
+        <URL>http://aim.hamptonu.edu/instrmt/cde.html</URL>
+</InformationURL>
+   <InformationURL>
+        <Name>Journal of Atmospheric and Solar-Terrestrial Physics Article</Name>
+        <URL>https://linkinghub.elsevier.com/retrieve/pii/S1364682608002204</URL>
+        <Description>Detailed information about the Aeronomy of Ice in the Mesosphere (AIM) mission and the Cosmic Dust Experiment (CDE).</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>DustDetector</InstrumentType>
+    <InvestigationName>CDE</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AIM</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/James.M.Russell.III</ResourceID>
+    <PersonName>Dr. James M. Russell, III</PersonName>
+    <OrganizationName>Hampton University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Mihaly.Horanyi</ResourceID>
+    <PersonName>Dr. Mihaly Horanyi</PersonName>
+    <OrganizationName>University of Colorado</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.E.McGuire</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Robert E. McGuire</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>robert.e.mcguire@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 7794</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Cora.Randall</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Cora Randall</PersonName>
+    <OrganizationName>University of Colorado</OrganizationName>
+    <Email>randall@lasp.colorado.edu</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Mark.Hervig</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Mark Hervig</PersonName>
+    <OrganizationName>GATS, Inc.</OrganizationName>
+    <Email>mark.hervig@sofie.gats-inc.com</Email>
+  </Person></Spase>
+
+
