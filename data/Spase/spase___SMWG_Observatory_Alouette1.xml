@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Alouette1</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Alouette 1</ResourceName>
+      <AlternateName>1962-049A</AlternateName>
+      <AlternateName>Alouette-A</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>Alouette 1 was a small ionospheric observatory instrumented with an ionospheric sounder, a VLF receiver,
+                an energetic particle detector, and a cosmic noise experiment. Extended from the satellite shell were two dipole
+                antennas (45.7 m and 22.8 m long, respectively) which were shared by three of the experiments on the spacecraft.
+                The satellite was spin-stabilized at about 1.4 rpm after antenna extension. After about 500 days, the spin slowed more
+                than had been expected, to about 0.6 rpm when satellite spin-stabilization failed. It is believed that the satellite
+                gradually progressed toward a gravity gradient stabilization with the longer antenna pointing earthward. Attitude
+                information was deduced only from a single magnetometer and temperature measurements on the upper and lower heat shields.
+                Attitude determination could have been in error by as much as 10 degrees. There was no tape recorder, so data were available
+                only from the vicinity of telemetry stations. Telemetry stations were located to provide primary data coverage near the 80
+                degree W meridian and in areas near Hawaii, Singapore, Australia, Europe, and Central Africa. Initially, data were recorded
+                for about six hours per day. In September 1972, spacecraft operations were terminated. A data restoration effort began in the
+                late nineties and successfully saved a considerable portion of the high-resolution data before the telemetry tapes were
+                discarded.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/John.E.Jackson</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1962-049A</URL>
+        <Description>Information about the Alouette 1 mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Alouette1/SFS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Alouette 1 Sweep-Frequency Sounder</ResourceName>
+      <AlternateName>Topside Sounder</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Alouette 1 Sweep-Frequency Sounder measured the ionospheric electron density in the altitude range 300 to 1000 km. The ionosonde was a radio transmitter that recorded the time delay between a transmitted and returned radio-frequency pulse. A continuum of frequencies between 0.5 and 12 MHz was sampled once every 18 s. Several virtual-range (delay-time) traces resulting from ground reflections, plasma resonances, birefringence of the ionosphere, nonvertical propagation, etc., were normally observed.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.B.Muldrew</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1962-049A-01</URL>
+        <Description>Information about the Sweep-Frequency Sounder on Alouette 1</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Sounder</InstrumentType>
+    <InvestigationName>Sweep-Frequency Sounder on Alouette 1</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Alouette1</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Alouette1/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Alouette1 Positions</ResourceName>
+      <AlternateName>Alouette1 Ephemeris</AlternateName>
+      <ReleaseDate>2013-04-09T00:00:00Z</ReleaseDate>
+      <Description>Alouette1 spacecraft positions in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.E.McGuire</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+        </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Alouette1</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/John.E.Jackson</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Mr. John E. Jackson</PersonName>
+    <OrganizationName>Deceased - formerly at GSFC and NSSDC</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Donald.B.Muldrew</ResourceID>
+    <PersonName>Mr. Donald B. Muldrew</PersonName>
+    <OrganizationName>Communications Research Centre</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.E.McGuire</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Robert E. McGuire</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>robert.e.mcguire@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 7794</PhoneNumber>
+  </Person></Spase>
+
+
