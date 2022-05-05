@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema https://www.spase-group.org/data/schema/spase-2_4_0.xsd">
+   <Version>2.4.0</Version>
+   <Observatory>
+      <ResourceID>spase://SMWG/Observatory/Akebono</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AKEBONO</ResourceName>
+         <AlternateName>EXOS-D</AlternateName>
+         <ReleaseDate>2022-02-20T12:34:56.789</ReleaseDate>
+         <RevisionHistory>
+            <RevisionEvent>
+               <ReleaseDate>2022-02-20T12:34:56.789</ReleaseDate>
+               <Note>AKEBONO Observatory and two Instruments: Update JAXA URL, File reformated, RDM file rewritten. Metadata submitted by J.M. Weygand on 2021-11-16, reviewed by LFB</Note>
+            </RevisionEvent>
+         </RevisionHistory>
+         <Description>AKEBONO (EXOS-D) is an aurora observation satellite launched by the M-3SII-4 launch vehicle from Uchinoura Space Center (USC) on February 22, 1989. The objective of AKEBONO is to investigate the magnetospheric phenomena associated with the acceleration process of aurora particles. Aurora is a luminous phenomenon that occurs when solar-wind particles trapped in the magnetosphere collide with Earth's atmospheric particles. A better understanding of this phenomenon will help us understand the physical processes taking place in the Sun and the reaction on Earth. AKEBONO observes these physical processes to create a greater understanding of the structure of the magnetosphere and the flow and momentum of energy from the Sun through the geospace. AKEBONO is an ambitious satellite carrying a number of "world-first" technologies. AKEBONO carries eight sets of instruments for scientific observation. It also has a radiation monitor, and anti-radiation technology that has been applied to a satellite for the first time in the world. This technology provides protection against radiation, even in the near-Earth radiation belt, as it is designed to tolerate about ten times the intensity withstood by conventional satellites. Other world-first technology applied to AKEBONO includes an extension mast for antenna and surface electrical conduction processing, to gain better conductivity and protection from charged particles. The GEOTAIL and NOZOMI satellites have inherited these technologies. GEOTAIL operates in the world-best quiet environment, which has never before been possible without the electromagnetic compatibility test conducted by AKEBONO. AKEBONO has operated for more than 20 years. Although the aurora imager camera has deteriorated due to the severe radioactive environment, all the other instruments are in good order. The direction of the major magnetic field of the Sun is known to reverse in a 22-year cycle. The Sun's activeness, which is typically measured by the number of sunspots, increases and decreases twice in this 22-year cycle. In other words, the Sun's behavior is changing in an 11-year cycle. To study the response of the magnetosphere to various activities of the Sun, we need to acquire data for 22 years. AKEBONO will, therefore, continue its observations. [From: http://www.jaxa.jp/projects/sat/akebono/index_e.html]</Description>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Toshifumi.Mukai</PersonID>
+            <Role>ProjectScientist</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Toshifumi.Mukai</PersonID>
+            <Role>ProjectScientist</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/James.M.Weygand</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>AKEBONO web site</Name>
+            <URL>https://www.stp.isas.jaxa.jp/akebono/</URL>
+            <Description>AKEBONO web site</Description>
+         </InformationURL>
+         <InformationURL>
+            <Name>NSSDC's Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-016A</URL>
+            <Description>Additional information on the AKEBONO spacecraft.</Description>
+         </InformationURL>
+      </ResourceHeader>
+      <Location>
+         <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+      </Location>
+      <OperatingSpan>
+         <StartDate>1989-03-01T00:00:00</StartDate>
+         <StopDate>1998-12-31T23:59:59</StopDate>
+      </OperatingSpan>
+   </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/Akebono/LEP</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AKEBONO Low Energy Particle, LEP, Instrument</ResourceName>
+         <ReleaseDate>2022-02-20T12:34:56.789</ReleaseDate>
+         <RevisionHistory>
+            <RevisionEvent>
+               <ReleaseDate>2022-02-20T12:34:56.789</ReleaseDate>
+               <Note>AKEBONO Observatory and two Instruments: Update JAXA URL, File reformated, RDM file rewritten. Metadata submitted by J.M. Weygand on 2021-11-16, reviewed by LFB</Note>
+            </RevisionEvent>
+         </RevisionHistory>
+         <Description>The AKEBONO, also known as EXOS-D, satellite has undertaken studies of particle-acceleration processes in the auroral magnetosphere. Its low energy particle instrument gathers data on the energy and pitch-angle distributions of auroral electrons and ions, in conjunction with analyses of mass/charge of positive ions and onboard detections of particle-flux modulations in the high frequency, HF, and very low frequency, VLF, domains. Attention is presently given to unique examples of high particle activity in the polar cap, and hot plasma distributions along the transpolar arc. These data are interpreted as signatures of longitudinal and/or temporal fluctuations of the magnetosheath plasma injection into the polar cusp. (text adapted fom the abstract of Mukai et al., 1990, see Infomation URL elow).</Description>
+         <Acknowledgement>Before submission, you should contact to Toshifumi Mukai, mukai@stp.isas.jaxa.jp, for the confirmation of the data reliability. We ask you to send reprints to AKEBONO Project Office. The use of the DARTS/AEBONO data should be acknowledged, for example, as "AKEBONO LEP data were provided by Prof. Mukai through DARTS at Institute of Space and Astronautical Science, ISAS, Japan."</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Toshifumi.Mukai</PersonID>
+            <Role>PrincipalInvestigator</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/James.M.Weygand</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>AKEBONO LEP instrument description publication</Name>
+            <URL>https://doi.org/10.5636/jgg.42.479</URL>
+            <Description>Mukai, T., N. Kaya, E. Sagawa, M. Hirahara, W. Miyake, T. Obara, H. Miyaoka, S. Machida, H. Yamagishi, M. Ejiri, H. Matsumoto, and T. Itoh, Low Energy Charged Particle Observations in the "Auroral" Magnetosphere, J. Geomag. Geoelect., 42(4), 479-496, 1990. (ISSN 0022-1392)</Description>
+         </InformationURL>
+         <InformationURL>
+            <Name>AKEBONO LEP instrument website</Name>
+            <URL>https://darts.jaxa.jp/stp/akebono/LEP.html</URL>
+            <Description>AKEBONO LEP instrument website listing the data format, data usage policy, and contact information as well as providing data access and plotting options.</Description>
+         </InformationURL>
+      </ResourceHeader>
+      <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+      <InvestigationName>AKEBONO LEP</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+   </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/Akebono/RDM</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AKEBONO Radiation Dose, RDM, Instrument</ResourceName>
+         <ReleaseDate>2022-02-20T12:34:56.789</ReleaseDate>
+         <RevisionHistory>
+            <RevisionEvent>
+               <ReleaseDate>2022-02-20T12:34:56.789</ReleaseDate>
+               <Note>AKEBONO Observatory and two Instruments: Update JAXA URL, File reformated, RDM file rewritten. Metadata submitted by J.M. Weygand on 2021-11-16, reviewed by LFB</Note>
+            </RevisionEvent>
+         </RevisionHistory>
+         <Description>AKEBONO, also known as EXOS-D, satellite has undertaken studies of particle-acceleration processes in the auroral magnetosphere. The Radiation Monitor, RDM, on AKEBONO consists of the High energy Particle Monitor, HPM, and the monitor for Radiation effect on IC, RIC. RDM data files hosted on the Science Data Base, SDB, are summary files for the HPM data. HPM observes fluxes of electrons in three energy channels, protons in three energy channels, and alpha particles in one energy channel. The table below is adapted from text listed at the following UL: http://www.stp.isas.jaxa.jp/akebono/readme/readme.rdm.txt.
+
++-------------------------------------------+
+| Channel | Particle | Energy Range         |
+|---------|----------|----------------------|
+| E1      | electron | &gt;2.5MeV           |
+| E2      | electron | 0.95 MeV to 2.5 MeV  |
+| E3      | electron | 0.3 MeV to 0.95 MeV  |
+| P1      | proton   | 29 MeV to 62 MeV     |
+| P2      | proton   | 15 MeV to 29 MeV     |
+| P3      | proton   | 6.3 MeV to 15 MeV    |
+| AA      | alpha    | 16 MeV to 52 MeV     |
++-------------------------------------------+</Description>
+         <Acknowledgement>Data are free for scientific publications. If you have any questions or requests about the RDM data, please contact Tsugunobu Nagai at the Tokyo Institute of Technology. When you publish a paper, please inform Prof. Nagai of your publication. In any publications, the use of the AKEBONO/RDM data should be acknowledged, for example, as "The AKEBONO/RDM data were provided through DARTS at Institute of Space and Astronautical Science, JAXA."</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Tsugunobu.Nagai</PersonID>
+            <Role>GeneralContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Akira.S.Yukimatu</PersonID>
+            <Role>CoInvestigator</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/James.M.Weygand</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>AKEBONO RDM instrument description publication</Name>
+            <URL>https://doi.org/10.1109/23.273513</URL>
+            <Description>Takagi, S., T. Nakamura, T. Kohno, N. Shiono, and F. Makino, Observation of space radiation environment with EXOS-D, IEEE Trans. Nucl. Sci., 40(6), 1491-1497, 1993. (ISSN 1558-1578)</Description>
+         </InformationURL>
+         <InformationURL>
+            <Name>AKEBONO RDM instrument website</Name>
+            <URL>https://darts.jaxa.jp/stp/akebono/RDM.html</URL>
+            <Description>AKEBONO RDM instrument website listing the data format, data usage policy, contact information, and instrument related publications as well as providing data access via TDAS and data plotting options.</Description>
+         </InformationURL>
+      </ResourceHeader>
+      <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+      <InvestigationName>AKEBONO RDM</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+   </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Akebono/PWS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Plasma Wave Observation and Sounder Experiments (PWS)</ResourceName>
+      <ReleaseDate>2011-02-23T17:36:22Z</ReleaseDate>
+      <Description>
+      The PWS observes both natural and stimulated plasma waves. PWS has three sub-systems; i) natural plasma wave observations (NPW), ii) stimulated plasma  wave  experiments (SPW)  and iii) measurement of the number density of electrons (NEI). The NPW consists of three components: a) dynamic spectra observation, b) polarization observation and c) Poynting vector observation. Five modes of operation can be carried out by the SPW. The measurement of electron number density is made by a swept frequency impedance probe. For accurate measurement of the electric field component, a fixed-frequency impedance measurement is also possible. The frequency range of the NPW system is 20 kHz to 5.12 MHz. The SPW range is 20 kHz to 11.4 MHz.
+
+The main sensors consist of two sets of 60 m tip-to-tip dipole antennas consisting of 0.381 mm wire elements and a three axial loop antenna. The loop antenna has dimensions of 600 mm x 600 mm square for each component with a loop winding of 10 turns; the effective height is estimated as 0.4 m at 300 kHz.
+
+For a detailed description of the PWS instrument and its operation please see 
+
+H. Oya, A. Morioka, K. Kobayashi, M. Iizima, T. Ono, H. Miyaoka, T. Okada, and T. Obara, Plasma Wave Observation and Sounder Experiments (PWS) Using the Akebono (EXOS-D) Satellite - Instrumentation and Initial Results Including Discovery of the High Altitude Equatorial Plasma Turbulence. J. Geomag. Geoelectr. 42, 411-442, 1990. </Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Takayuki.Ono</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hiroshi.Oya</PersonID>
+        <Role>FormerPI</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>LongWire</InstrumentType>
+    <InstrumentType>Sounder</InstrumentType>
+    <InstrumentType>SpectralPowerReceiver</InstrumentType>
+    <InvestigationName>Plasma Waves and Sounder (PWS)</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Akebono/TED</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Akebono Thermal Electron Energy Distribution (TED)</ResourceName>
+      <ReleaseDate>2011-02-23T17:31:20Z</ReleaseDate>
+      <Description>The Thermal Electron Energy Distribution (TED)
+experiment measures 0-5 eV electrons in 32 energy steps.  The experiment 
+outputs numbers which are the second harmonic of electron flux incident
+on the TED probe, from these the energy distribution in units of 
+1/(eV cm**3) may be computed.  Data are available from DARTS as plots
+and digital binary data in the Akebono database.  See
+http://www.darts.isas.jaxa.jp/akbn/readme/readme.ted.txt and
+Abe et al, J. Geomag. Geoelect., 42, 537-554, 1990, for further
+details.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Koh-Ichiro.Oyama</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>Thermal Electron Energy Distribution (TED)</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Akebono/ATV</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Akebono Auroral TV Imagery(ATV)</ResourceName>
+      <ReleaseDate>2011-02-23T17:31:20Z</ReleaseDate>
+      <Description>The Akebono Auroral Television (ATV) acquired
+downlooking auroral imagery that is DARTS-accessible for almost
+a year in 1989-1990.  See the ATV paper in the set of Akebono
+papers in J. Geomag. Geoelect., 42, 1990, for further details.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Masaki.Ejiri</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Imager</InstrumentType>
+    <InvestigationName>Auroral TV(ATV)</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Akebono/SMS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Suprathermal Mass Spectrometer(SMS)</ResourceName>
+      <ReleaseDate>2011-02-23T17:36:22Z</ReleaseDate>
+      <Description>The Akebono Suprathermal Mass Spectrometer (SMS) 
+is a radio-frequency ion mass spectrometer. It is designed to measure 
+the mass composition and velocity distribution (mass-per-charge, 
+energy-per-charge and angular distribution in the spacecraft 
+spin-plane) of thermal and suprathermal (0.1-4000 eV/q) ions in the 
+ionosphere and magnetosphere. It consists of a retarding potential 
+analyzer, a 3-stage modified Bennett ion mass spectrometer, and a 
+micro-channel plate detector. It can sample ions at 256 mass steps 
+over the 1-80 AMU/q mass range, and 256 retarding potential steps 
+in the 0.1-25.6V range, and 16 suprathermal energy steps in the 
+100-4000 V range. It operates in a number of fast scan and mass 
+scan operational modes.
+For a detailed description of the SMS instrument and its operation, 
+please see B. A. Whalen, J. R. Burrows, A. W. Yau, E. E. Budzinski, 
+A. M. Pilon, I. Iwamoto, K. Marubashi, S. Watanabe, H. Mori, and 
+E. Sagawa, The suprathermal ion mass spectrometer (SMS) onboard 
+the EXOS?D satellite. J. Geomag. Geoelectr. 42, 511-536, 1990 and 
+A. W. Yau, E. Drakou, M. J. Greffen, D. J. Knudsen, and E. Sagawa, 
+Radio-frequency ion mass spectrometer measurements of thermal ion 
+composition, velocity, and temperature: the EXOS-D Suprathermal 
+Mass Spectrometer, Geophys. Monogr. Ser., 102, 307-312, 1998.  See also
+http://www.darts.isas.jaxa.jp/akbn/readme/readme.sms.txt</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Andrew.W.Yau</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Suprathermal Mass Spectrometer (SMS)</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Akebono/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Akebono Positions</ResourceName>
+      <AlternateName>Akebono Ephemeris</AlternateName>
+      <ReleaseDate>2013-04-09T00:00:00Z</ReleaseDate>
+      <Description>Akebono spacecraft positions in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.E.McGuire
+</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+        </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Akebono</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+        <ResourceID>spase://SMWG/Person/Akira.S.Yukimatu</ResourceID>
+        <ReleaseDate>2011-02-17T00:00:00</ReleaseDate>
+        <PersonName>Akira Sessai Yukimatu</PersonName>
+        <OrganizationName>Upper Atmosphere Physics Group, National Institute of Polar Research (NIPR)</OrganizationName>
+        <Address>1-9-10, Kaga, Itabasi, Tokyo 173</Address>
+        <Email>akebono-rdm@uap.nipr.ac.jp</Email>
+    </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Tsugunobu.Nagai</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Prof. Tsugunobu Nagai</PersonName>
+    <OrganizationName>Tokyo Institute of Technology</OrganizationName>
+    <Address>Department of Earth and Planetary Sciences, 2-12-1 Ookayama, Meguro-ku, Tokyo 152-8551, Japan</Address>
+    <Email>nagai@geo.titech.ac.jp</Email>
+    <FaxNumber>+81 3 5734 3537</FaxNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Koh-Ichiro.Oyama</ResourceID>
+    <PersonName>Dr. Koh-Ichiro Oyama</PersonName>
+    <OrganizationName>Institute of Space and Astronautical Science</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Hiroshi.Oya</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Prof. Hiroshi Oya</PersonName>
+    <OrganizationName>Fukui University</OrganizationName>
+    <Email>oya@ccmail.kukui-ut.ac.jp</Email>
+    <PhoneNumber>+1-0</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Takayuki.Ono</ResourceID>
+    <PersonName>Dr. Takayuki Ono</PersonName>
+    <OrganizationName>Tohoku University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Lee.Frost.Bargatze</ResourceID>
+      <ReleaseDate>2012-06-13T12:34:56.789</ReleaseDate>
+      <PersonName>Lee Frost Bargatze</PersonName>
+      <OrganizationName>Institute of Geophysics and Planetary Physics and the Department of Earth and Space Sciences, University of California, Los Angeles</OrganizationName>
+      <Address>Institute of Geophysics and Planetary Physics, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+      <Email>lfb@igpp.ucla.edu</Email>
+      <PhoneNumber>+1 310 206 6073</PhoneNumber>
+   </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/James.M.Weygand</ResourceID>
+    <ReleaseDate>2018-05-30T17:35:46Z</ReleaseDate>
+    <PersonName>James M. Weygand</PersonName>
+    <OrganizationName>Department of Earth, Planetary, and Space Sciences; University of California, Los Angeles</OrganizationName>
+    <Address>Department of Earth, Planetary, and Space Sciences, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+    <Email>jweygand@igpp.ucla.edu</Email>
+    <PhoneNumber>+1 310 825 3547</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Toshifumi.Mukai</ResourceID>
+    <ReleaseDate>2011-02-02T16:49:41Z</ReleaseDate>
+    <PersonName>Prof. Toshifumi Mukai</PersonName>
+    <OrganizationName>Institute of Space and Astronautical Science, JAXA</OrganizationName>
+    <Address>3-1-1 Yoshinodai, Sagamihara, Kanagawa 229-8510, Japan</Address>
+    <Email>mukai@stp.isas.jaxa.jp</Email>
+    <PhoneNumber>+81 42 751 3911</PhoneNumber>
+    <FaxNumber>+81-42-759-8456</FaxNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Andrew.W.Yau</ResourceID>
+    <PersonName>Dr. Andrew W. Yau</PersonName>
+    <OrganizationName>University of Calgary</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Masaki.Ejiri</ResourceID>
+    <PersonName>Dr. Masaki Ejiri</PersonName>
+    <OrganizationName>National Institute of Polar Research</OrganizationName>
+  </Person></Spase>
+
+
