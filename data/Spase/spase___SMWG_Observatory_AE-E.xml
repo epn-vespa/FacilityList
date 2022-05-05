@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+<Version>2.2.0</Version>
+<Observatory>
+    <ResourceID>spase://SMWG/Observatory/AE-E</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AE-E</ResourceName>
+      <AlternateName>1975-107A</AlternateName>
+      <AlternateName>Explorer 55</AlternateName>
+      <AlternateName>AE 5</AlternateName>
+      <AlternateName>Atmosphere Explorer-E</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The purpose of the AE-E mission was to investigate the chemical processes and energy transfer mechanisms that control the structure and behavior of the earth's atmosphere and ionosphere in the region of high absorption of solar energy at low and equatorial latitudes. The simultaneous sampling at higher latitudes was carried out by the AE-D spacecraft until its failure on January 29, 1976, and then by AE-C, until it reentered on December 12, 1978. The same type of spacecraft as AE-C was used, and the payload consisted of the same types of instruments except that the low-energy electron and UV nitric oxide experiments were deleted and a backscatter UV spectrometer was added to monitor the ozone content of the atmosphere. The two experiments that were deleted were more appropriate for the high-latitude regions. The perigee swept through more than six full latitude cycles and two local time cycles during the first year after launch when the orbit was elliptical and the perigee height was varied between 130 and 400 km. The circularization of the orbit around 390 km was made on November 20, 1976 and the spacecraft was raised to this height whenever it would decay to about 250 km. AE-E reentered on June 10, 1981. More details can be found in A. Dalgarno et al., Radio Sci., v. 8, n. 4, p. 263, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Nelson.W.Spencer</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-107A</URL>
+        <Description>Information about the AE-E mission</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/full/10.1029/RS008i004p00263</URL>
+  <Description>More detailed information about the AE-E mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/AE</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.NearSurface</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/OSS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Open-Source Neutral Mass Spectrometer</ResourceName>
+      <AlternateName>OSS</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The objective of this experiment was to contribute to a study of the chemical, dynamic,
+   and energetic processes that control the structure of the thermosphere by providing direct in situ
+   measurements of both major and minor neutral atmospheric constituents having masses in the range
+   from 1 to 48 atomic mass units (u). A double-focusing, Mattauch-Herzog magnetic deflection mass
+   spectrometer with an impact ion source was flown. Two ion collectors were included to measure ions
+   differing in mass by a factor of 8; i.e., the two mass ranges covered were 1 to 6 and 6 to 48 u.
+   In the ion source the neutral species were ionized by means of electron impact. The electron energies
+   were selectable; 75 eV for the high-eV mode and 25 eV for the low-eV mode. At altitudes greater
+   than 380 km, ion currents were measured with an electron multiplier. Counts were accumulated for
+   1/20 s before automatically switching to a different mass number. While complete mass spectra could
+   be swept, in the common mode of operation peak stepping was employed; readings on principal peaks in
+   the mass spectrum were repeated approximately every 0.5 s and on other species less frequently.
+   Data below 380 km were measured using an electrometer. In addition to the peak stepping mode,
+   there were several other operating modes which were selected by ground command. In the fly-through
+   mode, ambient particles striking the ion source retained energies less than 0.1 eV, which was not
+   high enough to overcome the negative space charge potential holding the ions in the beam. Those
+   ambient particles that did not strike the ion source retained their incoming energy of several eV
+   after ionization and escaped into the acceleration region of the analyzer. More experiment details
+   can be found in A. O. Nier et al., Radio Sci., v. 8, n. 4, p. 271, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Alfred.O.C.Nier</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-07</URL>
+        <Description>Information about the Open-Source Neutral Mass Spectrometer experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00271</URL>
+        <Description>Detailed information about the Open-Source Neutral Mass Spectrometer on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Open-Source Neutral Mass Spectrometer on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/EUVS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>The Extreme Ultraviolet Spectrometer (EUVS)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Extreme Ultraviolet Spectrometer (EUVS) was used to observe the variations in
+   the solar EUV flux in the wavelength range from 140 to 1850 A and the atmospheric attenuation
+   at various fixed wavelengths. This provided quantitative atmospheric structure and composition
+   data. The instrument consisted of 24 grazing-incidence grating monochromators, using parallel-slit
+   systems for entrance collimation and photoelectric detectors at the exit slits. Twelve of these
+   monochromators had wavelength scan capability, each with 128 selectable wavelength positions,
+   which could also automatically step scan through these positions. The other 12 monochromators
+   operated at fixed wavelengths with fields of view smaller than the full solar disk to aid in the
+   atmospheric absorption analysis. The spectral resolution varied from 2 to 54 A depending upon
+   the particular instrument. The field of view varied from 60 x 60 down to 3 x 6 arc min. All 24
+   monochromator-entrance axes were co-aligned parallel. A solar pointing system could point to 256
+   different positions, execute a 16-step one-dimensional scan or a full 256-step raster. The time
+   resolution varied from 0.5 s for observing 12 fixed wavelengths up to 256 s for programming the
+   EUVS through all possible modes. More details can be found in H. E. Hinteregger et al.,
+   Radio Sci., v. 8, n. 4, p. 349, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hans.E.Hinteregger</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-06</URL>
+        <Description>Information about AE-E EUVS</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00349</URL>
+        <Description>Detailed information about the Extreme Ultraviolet Spectrometer (EUVS) on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>The Extreme Ultraviolet Spectrometer (EUVS) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/NACE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Neutral Atmosphere Composition (NACE)</ResourceName>
+      <AlternateName>NACE</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment measured in situ the spatial distribution and temporal changes of the
+   concentrations of the neutral atmospheric species. In addition, new insight into in situ measurement
+   techniques was obtained from comparisons of these measurements with those obtained from other onboard
+   experiments; namely, open source spectrometer (75-107A-07), solar EUV spectrometer (75-107A-06), and
+   atmospheric density accelerometer (75-107A-02). The mass-spectrometer sensor had a gold-plated stainless
+   steel thermalizing chamber and ion source, a hyperbolic rod quadrupole analyzer, and an off-axis
+   electron multiplier. When operating in the "normal" format, the analyzer measured all masses in the
+   range 1 to 44 atomic mass units with emphasis on hydrogen, helium, oxygen, nitrogen, and argon.
+   Another format was optimized for minor constituent studies of gas species in the measured range.
+   Spatial resolution was determined primarily by the mode of spacecraft operation. In orbit, the presealed
+   spectrometer was opened, and the atmospheric constituents passed through a knife-edged orifice into the
+   thermalization chamber and ion source. Selected ions left the quadrupole analyzer through a weak
+   focusing lens and were accelerated into an electron multiplier, where they were turned 90 deg to
+   strike the first dynode. The spectrometer had a resolution of better than 1 u for all masses between
+   1 and 44, and the measurement system had a planned dynamic range of approximately 1.E8. There was
+   provision for the instrument orifice to be covered during spacecraft thruster operations. More
+   experiment details can be found in D. T. Pelz et al., Radio Sci., v. 8, n. 4, p. 277, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Alan.E.Hedin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-08</URL>
+        <Description>Information about the Neutral Atmosphere Composition (NACE) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00277</URL>
+        <Description>Detailed information about the neutral-atmosphere composition experiment on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Neutral Atmosphere Composition (NACE) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/NATE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Neutral Atmosphere Temperature (NATE)</ResourceName>
+      <AlternateName>NATE</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was designed to measure the kinetic temperature of the neutral atmosphere by
+   determining the instantaneous density of molecular nitrogen in a spherical chamber coupled to the
+   atmosphere through a knife-edged orifice. Analysis of the measured molecular nitrogen density variation
+   over a spin cycle with a knowledge of the satellite's motion and orientation led to a determination
+   of the ambient temperature, independent of scale height. Measurements of the ambient neutral composition
+   were obtained when the instrument was commanded into the appropriate mode. Approximate values for the
+   meridional wind were obtained from the measurement of the "stream" position relative to the satellite
+   velocity. An alternate measurement of neutral temperature was also undertaken, using a baffle inserted
+   in front of the orifice to intercept a portion of the gas particle stream entering the chamber. When the
+   satellite was in the despun mode, the baffle was made to oscillate in a stepwise fashion in order to
+   interrupt the particle stream seen by the orificed chamber. These chamber density variations were
+   interpreted to yield the neutral gas kinetic temperature too. A dual-filament ion source sampled the
+   thermalized molecular nitrogen in the chamber and produced an ion beam density proportional to the
+   nitrogen chamber density. From the source, this ionized nitrogen beam was directed into a quadrupole
+   analyzer, tuned to pass those particles with a mass-to-charge ratio of 28. The beam then struck an
+   electron multiplier, and the output pulses were amplified and counted. The sensor was vacuum-sealed prior
+   to launch and opened to the atmosphere after the spacecraft was in orbit. More experiment details can
+   be found in N. W. Spencer et al., Radio Sci., v. 8, n. 4, p. 287, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Nelson.W.Spencer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-09</URL>
+        <Description>Information about the Neutral Atmosphere Temperature (NATE) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00287</URL>
+        <Description>Detailed information about the Neutral Atmosphere Temperature experiment on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>Neutral Atmosphere Temperature (NATE) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/VAE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Visible Airglow Photometer (VAE)</ResourceName>
+      <AlternateName>VAE</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment provided detailed data on the rates of excitation of the atomic and
+   molecular constituents of the thermosphere. The wavelength range, expressed in Angstroms, was measured
+   in pairs: 7319 and 6563, 5300 and dark, 5577 and 7319, 2800 and 5200, 6300 and 5577, calibrate and
+   2800, and 6563 and 6300. A photometer was used which contained two separate optical channels, a narrow
+   field of view and a wide field of view. Spectral selection was accomplished with a filter wheel that
+   contained six interference filters and a dark and calibrate position. The two channels were separated
+   by 90 deg. One channel had a 3-deg half-angle cone field of view for high sensitivity and pointed
+   normally toward the local zenith. The second had a field of view of 0.75-deg half cone for high spatial
+   resolution, pointing tangentially to the surface of the earth when the satellite was in the oriented
+   mode. Both channels were protected from stray light contamination during the daytime with multistage
+   baffle systems. Filters were operated in several modes. The two separate optical channels were monitored
+   at time intervals consistent with their angular resolution in the spinning mode. More experiment details
+   can be found in P. B. Hays et al., Radio Sci., v. 8, n. 4, p. 369, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Paul.B.Hays</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-11</URL>
+        <Description>Information about the Visible Airglow Photometer (VAE) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00369</URL>
+        <Description>Detailed information about the Visible Airglow Photometer (VAE) experiment on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Photometer</InstrumentType>
+    <InvestigationName>Visible Airglow Photometer (VAE) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/BUV</ResourceID>
+    <ResourceHeader>
+      <ResourceName>AE-E Backscatter Ultraviolet Spectrometer (BUV)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The backscatter ultraviolet instrument (BUV) monitored
+the spatial distribution of atmospheric ozone by measuring the intensity
+of the UV radiation backscattered from the earth's atmosphere. To obtain
+this ozone distribution, the BUV subsystem measured direct solar radiation
+and backscattered UV radiation from the daytime sun-illuminated atmosphere.
+The instrument consisted of a spectrometer (monochromator) and a photometer.
+The monochromator measured the intensity of UV radiation backscatter and
+reflected radiation from the earth's atmosphere in 12 wavelengths (2555
+to 3398 A) in which ozone attenuation occurs. The photometer measured the
+reflected UV radiation in a single wavelength span in which attenuation by
+ozone does not occur.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.F.Heath</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSDC Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-16</URL>
+  <Description>Detailed information about the Backscatter Ultraviolet Spectrometer (BUV) on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Pure and Applied Geophysics Article</Name>
+        <URL>https://link.springer.com/content/pdf/10.1007%2FBF00881076.pdf</URL>
+        <Description>Detailed information about the Backscatter Ultraviolet Spectrometer (BUV) on the
+  Nimbus-4 satellite and similar to the one on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>BUV</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/BIMS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Bennett Ion-Mass Spectrometer (BIMS)</ResourceName>
+      <AlternateName>BIMS</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was flown to measure, throughout the orbit, the individual concentrations of
+   all thermal ion species in the mass range 1 to 72 atomic mass units (u) and in the ambient density range
+   from 5 to 5.E6 ions/cc. The mass range was normally scanned in 1.7 s, but the scan time per range could
+   be increased by command. Laboratory and inflight determination of spectrometer efficiency and mass
+   discrimination permitted direct conversion of measured ion currents to ambient concentrations. Correlation
+   of these measured data with the results from companion experiments, CEP (75-107A-01) and RPA (75-107A-04)
+   permitted individual ion concentrations to be determined with high accuracy. The experiment's four
+   primary mechanical components were guard ring and ion-analyzer tube, collector and preamplifier assembly,
+   vent, and main electronics housing. A three-stage Bennett tube with 7- to 5-cycle drift spaces was
+   flown; it was modified to permit ion concentration measurements to be obtained at low altitudes.
+   The balance between ion-current sensitivity and mass resolution in a Bennett spectrometer may be altered
+   by changing appropriate voltages. These voltage changes were controlled independently by ground command
+   for each one of the three mass ranges: 1 to 4, 2 to 18, and 8 to 72. More complete experiment details
+   can be found in H. C. Brinton et al., Radio Sci., v. 8, n. 4, p. 369, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Henry.C.Brinton</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1973-101A-11</URL>
+        <Description>Information about the Bennett Ion-Mass Spectrometer (BIMS) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00323</URL>
+        <Description>Detailed information about the Bennett Ion-Mass Spectrometer (BIMS) on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Bennett Ion-Mass Spectrometer (BIMS) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/PES</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Photoelectron Spectrometer (PES)</ResourceName>
+      <AlternateName>PES</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was designed to provide information on the intensity, angular distribution,
+   energy spectrum, and net flow along field lines, of electrons in the thermosphere with energies between
+   1 and 500 eV. The instrument consisted of two identical oppositely directed hemispherical electrostatic
+   analyzers, and contained 30 operating modes. Each spectrometer had a relative energy resolution of plus
+   or minus 2.5% and a geometric factor on the order of 0.001 sq cm-sr, independent of electron energy.
+   Three separate energy ranges could be measured: 0 to 25, 0 to 100, and 0 to 500 eV. Measurements from
+   these intervals could be sequenced in five different ways. Data could be taken from either sensor
+   separately, or alternately with time resolution varying from 0.25 to 8 s. There were two deflection
+   voltage scan rates determined by the spacecraft clock. This voltage was changed in 64 steps, and was
+   done at 4 or 16 steps per telemetry frame. With 16 frames/s, this allowed a choice of either one
+   64-point spectrum, or four 16-point spectra in one second. The longest (8 s) cycle of data involved
+   observations using increasing voltage steps for the lowest, middle, lowest, then highest energy ranges
+   (in that order) for 1 s each. A repeat for decreasing voltage steps completed the cycle. A more
+   detailed description of this experiment is found in J. P. Doering et al., Radio Sci., v. 8, n. 4, p.
+   387, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/John.P.Doering</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-03</URL>
+        <Description>Information about the Photoelectron Spectrometer (PES) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00387</URL>
+        <Description>Detailed information about the Photoelectron Spectrometer (PES) experiment on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Photoelectron Spectrometer (PES) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/RPA</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Retarding Potential Analyzer/Drift Meter</ResourceName>
+      <AlternateName>RPA</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was designed to determine vector ion drift velocities, ion concentration
+   and temperature, total ion concentration roughness, and spacecraft potential. The experiment consisted
+   of a retarding potential analyzer with four planar sensor heads. The sensor heads were spaced nearly
+   equally around the satellite equator. Since the satellite spin axis was perpendicular to the orbit plane,
+   these heads could observe along the spacecraft velocity vector in either the spin or despun mode of
+   the spacecraft. Three of the sensor heads were similar. They had two grounded entrance grids, two
+   retarding grids, a suppressor grid, a shield grid, and a collector. A linear sweep voltage (32 or 22
+   to 0 V, up or down) was normally applied to the retarding grids in 0.75 s. Interpretation of the
+   resulting current-voltage profiles provided the ion temperature, the ion and electron concentration,
+   some ion composition information, and vehicle potential and plasma drift velocity parallel to the
+   velocity vector. With the retarding grid at constant zero volts, current changes could be observed for
+   3-s periods to obtain gradients of ion concentration. Electron parameters were measured in a manner
+   similar to ions. Ions in mass ranges 1 to 4, 14 to 16, 24 to 32 and greater than 40 atomic mass units
+   could be identified. The fourth sensor head was for the ion-drift velocity measurements, and consisted
+   of four grounded grids, a negatively biased suppressor grid, and a four-segment collector. Differences
+   in the collector segments' currents provided ion-drift directional component information. More details
+   of this experiment are available in W. B. Hanson et al., Radio Sci., v. 8, n. 4, p. 333,
+   1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/William.B.Hanson</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-04</URL>
+        <Description>Information about the Retarding Potential Analyser/Drift Meter (RPA) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00333</URL>
+        <Description>Detailed information about the Retarding Potential Analyser/Drift Meter (RPA) experiment on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>RetardingPotentialAnalyser</InstrumentType>
+    <InvestigationName>Retarding Potential Analyzer/Drift Meter on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/MESA</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Atmospheric Density Accelerometer (MESA)</ResourceName>
+      <AlternateName>MESA</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Miniature Electrostatic Analyzer (MESA) obtained data on the neutral density of the
+   atmosphere in the altitude range of 120 to 400 km, by the measurements of satellite deceleration due
+   to aerodynamic drag, which is directly proportional to atmospheric density. The instrument consisted
+   of three single-axis accelerometers, mounted mutually at right angles, two in the spacecraft X-Y plane
+   and the other along the Z-axis. The instrument determined the applied acceleration from the electrostatic
+   force required to recenter a proof mass. The output of the device was a digital pulse rate proportional
+   to the applied acceleration. The sample time of each instrument was 0.25 s. The measurements allowed
+   determination of the density of the neutral atmosphere, monitored the thrust of the Orbit-Adjust
+   Propulsion System (OAPS), determined the satellite minimum altitude, measured spacecraft roll,
+   and provided some attitude-sensing information. Spacecraft nutations of less than 0.01 deg were
+   monitored. The instrument had three sensitivity ranges: 8.E-3 earth's gravity (G) in OAPS monitor mode;
+   4.E-4 G between 120 km (plus or minus 2%) and 280 km (plus or minus 10%); and 2.E-5 G between 180 km
+   (plus or minus 2%) and 400 km (plus or minus 10%). Numbers in parentheses represent errors. There may
+   be a systematic error of up to plus or minus 5% due to drag coefficient uncertainty. The highest
+   measurement altitude was determined assuming the instrument could sense to 0.2% of full scale.
+   More details can be found in K. S. Champion et al., Radio Sci., v. 8, n. 4, p. 297, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Kenneth.S.W.Champion</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-02</URL>
+        <Description>Information about the Atmospheric Density Accelerometer (MESA) experiment on the AE-E mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00297</URL>
+        <Description>Detailed information about the Atmospheric Density Accelerometer experiment on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Atmospheric Density Accelerometer (MESA) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/CEP</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Cylindrical Electrostatic Probe (CEP)</ResourceName>
+      <AlternateName>CEP</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The CEP consisted of two identical instruments designed to measure electron temperatures,
+   electron and ion concentrations, ion mass, and spacecraft potential. One probe was oriented along the
+   spin axis of the spacecraft (usually perpendicular to the orbit plane), and the other radially, so
+   that it could observe in the direction of the velocity vector once each 15-s spin period. Each
+   instrument was a retarding-potential Langmuir-probe device that produced a current-voltage (I-V)
+   curve for a known voltage pattern placed on the collector. Electrometers were used to measure the
+   current. There were two systems of operation (one with two modes and another with three modes) using
+   collector voltage patterns between plus and minus 5 volts. Most modes involved an automatic or fixed
+   adjustment of collector voltage limits (and/or electrometer output) such that the region of interest
+   on the I-V profile provided high resolution. Each system was designed for use with only one of the
+   probes, but they could be interswitched to provide backup redundancy. The best measurements in the
+   most favorable modes provided 1-s time resolution; electron temperature between 300 and 1.E4 deg K
+   (10% accuracy); ion density between 1.E4 and 1.E7 ions/cc (10-20% accuracy); electron density between
+   50 and 1.E6 electrons/cc; and ion mass at ion densities above 1.E4. Each probe had a collector
+   electrode extending from the central axis of a cylindrical guard ring. The 2.5-cm-long guard ring
+   was at the end of a 25-cm boom, and the collector extended another 7.5 cm beyond the guard ring.
+   The boom, guard, and collector were 0.2 cm in diameter. More detailed information can be found in
+   L. H. Brace et al., Radio Sci., v. 8, n. 4, p. 341, 1973.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Larry.H.Brace</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-01</URL>
+        <Description>Information about the Cylindrical Electrostatic Probes experiment on the AE-E mission.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00341</URL>
+        <Description>Detailed information about the Cylindrical Electrostatic Probes on the AE-E mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>LangmuirProbe</InstrumentType>
+    <InvestigationName>Cylindrical Electrostatic Probe (CEP) on AE-E</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/AE-E/ESUM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Extreme Solar Ultraviolet Monitor (ESUM)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Extreme Solar Ultraviolet Monitor (ESUM) experiment made absolute broadband
+   spectro-radiometric measurements of the solar EUV flux from 200 A to Lyman-alpha at 1216 A and
+   made precise measurements of the temporal variability. The instrument consisted of two identical
+   windowless EUV photodiodes with aluminum oxide cathodes and a filter wheel containing two sets of
+   unbacked metallic filters (aluminum, tin, indium) and an open position. A visible light diode
+   measured the pinhole transmittance of the filters to determine the white light background. The
+   tilt angle of the instrument relative to the +Z spacecraft axis was optimized for the maximum
+   viewing time of the sun in both spinning and despun spacecraft modes. The instrument field of view
+   was 60 deg. The nominal bandwidths in Angstroms for 50% of the signal were 270 to 550, 570 to 584,
+   800 to 935, and 1216 A. More experiment details can be found in D. F. Heath and J. F. Osantowski,
+   Radio Sci., v. 8, n. 4, p. 361, 1973.
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.F.Heath</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSDC Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1975-107A-05</URL>
+  <Description>Information about the Extreme Solar Ultraviolet Monitor (ESUM) experiment.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Radio Science Journal Article</Name>
+        <URL>https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/RS008i004p00361</URL>
+  <Description>Detailed information the ESUM experiment.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>ESUM</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/AE-E</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Hans.E.Hinteregger</ResourceID>
+    <ReleaseDate>2011-11-30T20:52:23Z</ReleaseDate>
+    <PersonName>Dr. Hans E Hinteregger</PersonName>
+    <OrganizationName>Cranfield University</OrganizationName>
+    <Note>Formerly with Phillips Laboratory of the United States Air Force</Note>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Larry.H.Brace</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Mr. Larry H. Brace</PersonName>
+    <OrganizationName>GSFC-Code 910.4</OrganizationName>
+    <PhoneNumber>+1-301-286-8575</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Kenneth.S.W.Champion</ResourceID>
+    <PersonName>Dr. Kenneth S. W. Champion</PersonName>
+    <OrganizationName>USAF Phillips Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Donald.F.Heath</ResourceID>
+    <PersonName>Dr. Donald F. Heath</PersonName>
+    <OrganizationName>Unknown - formerly with Raytheon, Boulder</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/John.P.Doering</ResourceID>
+    <PersonName>Dr. John P. Doering</PersonName>
+    <OrganizationName>Johns Hopkins University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Alfred.O.C.Nier</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:45Z</ReleaseDate>
+    <PersonName>Prof. Alfred O. C. Nier</PersonName>
+    <OrganizationName>Deceased - formerly at University of Minnesota</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Paul.B.Hays</ResourceID>
+    <PersonName>Prof. Paul B. Hays</PersonName>
+    <OrganizationName>University of Michigan</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Henry.C.Brinton</ResourceID>
+    <PersonName>Mr. Henry C. Brinton</PersonName>
+    <OrganizationName>NASA Headquarters</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Alan.E.Hedin</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:45Z</ReleaseDate>
+    <PersonName>Dr. Alan E. Hedin</PersonName>
+    <OrganizationName>Retired - formerly at GSFC-Code 914</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/William.B.Hanson</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Prof. William B. Hanson</PersonName>
+    <OrganizationName>Deceased - formerly Director, CSS, U Texas, Dallas</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Nelson.W.Spencer</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Nelson W. Spencer</PersonName>
+    <OrganizationName>Deceased - formerly at GSFC-Code 910</OrganizationName>
+  </Person></Spase>
+
+
