@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Genesis</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Genesis</ResourceName>
+      <AlternateName>2001-034A</AlternateName>
+      <AlternateName>Genesis Solar Wind Sample Return</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The parachute on the Genesis sample return capsule failed to deploy on re-entry. The capsule crashed in the Utah desert. The fragments from the sample return container have been packaged for shipment to Johnson Space Center's curation facility in early October. Scientists are optimistic that they will be able to salvage useful data from the samples.
+
+The primary objective of the Genesis mission is to collect samples of solar wind particles and return them to Earth for detailed analysis. The science objectives are to obtain precise measurements of solar isotopic and elemental abundances and provide a reservoir of solar matter for future scientific analysis. Specifically, the primary scientific objectives were to obtain precise measurements of isotope ratios of oxygen, nitrogen, and solar wind isotopic fractionation. Study of these samples will allow testing of theories of solar system formation and evolution and early nebular composition. A total sample mass of roughly 10 to 20 micrograms is expected.
+
+Spacecraft and Subsystems
+
+The Genesis spacecraft has a launch mass of 636 kg, including 142 kg of fuel, and consists of a
+2.3 meter long, 2 meter wide spacecraft deck with two fixed solar panel wings with a
+total span of 7.9 meters and a sample return capsule mounted on top of
+the deck. The spacecraft is spin stabilized at one revolution every 37.5
+seconds. Propulsion is provided by a hydrazine monopropellant thruster
+using a helium pressurant. Communication is S-band via a fixed antenna.
+The solar panels provide a maximum of 254 Watts power to a nickle-hydrogen storage battery. Temperatures
+are maintained by heaters and passive thermal control. The spacecraft is also
+equipped with ion and electron electrostatic monitors to determine which
+solar wind regime is being encountered and to help set the appropriate
+collector voltage. Spacecraft subsystems and monitors are mounted
+beneath the sample return capsule.
+
+Sample Return Capsule
+
+The sample return capsule is disc-shaped with a blunt conical top and bottom, 1.5 meters
+in diameter and 1.31 meters high, with a total mass of about 225 kg.
+It contains a 97.3 cm diameter science cannister which holds a
+concentrator and three collector arrays. The collector arrays are flat
+discs made of ultra-pure silicon, silicon carbide, germanium, sapphire, chemically deposited diamond, gold, aluminum, and metallic glass wafers which are exposed to the solar
+wind. Isotopes of helium, oxygen, nitrogen, neon, radon, and other elements are implanted in the top 100 nm of these materials. The concentrator is an electrostatic
+mirror which concentrates elements up to neon by a factor of
+approximately 20. Each collector array is to be deployed for a different solar wind regime.
+
+Mission Profile
+
+Genesis launched successfully at 16:13:40.324 UT on 8 August 2001 on a Delta 7326 (a Delta II Lite launch vehicle with three strap-on solid-rocket boosters and a Star 37FM third stage). Approximately 1 hour later the spacecraft left low Earth orbit on a three month journey out towards the L1 Lagrangian Sun-Earth libration point, 0.01 AU from Earth, to be inserted into a halo orbit about the L1 point. The L1 point is beyond the influences of the geomagnetic field and its trapped particles. Genesis reached the L1 point on 16 November 2001 and fired its hydrazine thrusters for 268 seconds to insert itself into the halo orbit at 19:03 UT (2:03 p.m. EST). On 3 December 2001 it opened its collector arrays and began gathering samples of solar wind particles. It completed 5 halo orbits over 30 months collecting samples. In April of 2004 it ended sample collection and shut the door to the sample collection cannister.
+
+The samples were stowed and sealed in the contamination-tight canister within the Sample Return Capsule and returned to Earth over a five month period, flying past the Earth and then returning in order to be positioned for daylight entry. On 8 September 2004 the sample return capsule was released from the main spacecraft bus at about 12:00 UT and re-entered the Earth's atmosphere at 15:52:47 UT (11:53 a.m. EDT, 9:53 a.m. local MDT) and should have deployed a drogue parachute 2 minutes 7 seconds after entry at 33 km altitude. The parachute never deployed and the capsule crashed in the desert at a speed of 311 km/hr, severely damaging the capsule. The science cannister was removed to a clean room and the sample collection fragments are now ready to be shipped to Johnson Space Center. The cause of the parachute failure is believed to be incorrectly installed accelerometers which were to deploy the parachutes. The science team is confident that most of the planned science can be recovered from the salvaged sample collectors.
+
+The spacecraft bus looped around Earth after the capsule was released and headed back out towards the L1 point.
+
+The original plan for re-entry was as follows: Six minutes after drogue chute deployment the main parafoil was to deploy at an altitude of 6 km over the U.S.A.F. Utah Test and Training Range, where it would be aerocaptured by one of two specially equipped helicopters at an altitude of about 2.5 km. The spacecraft had the capability of going into a parking orbit if the weather at the capture site was unsuitable. The capsule was taken to a clean room at the U.S. Army Dugway Proving Ground and will be transported to Johnson Space Center for contamination control and curation, and distributed to selected Advanced Analytical Instrument Facilities for analysis.
+
+There was some concern that the sample return capsule battery would fail, jeopardizing the re-entry. The battery was overheating in space, but ground tests showed that the battery should have been unaffected by the amount of heating it had endured, and should have operated to deploy the parachute on reentry. The actual cause of the parachute deployment failure is not known at this time.
+
+Genesis was the fifth launch in NASA's Discovery program. The total cost of the project is $164 million for spacecraft development and science instruments and $45 million for operations and science data analysis.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.S.Burnett</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-034A</URL>
+        <Description>Information about the Genesis mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Genesis/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Genesis Positions</ResourceName>
+      <AlternateName>Genesis Ephemeris</AlternateName>
+      <ReleaseDate>2009-05-20T21:10:02Z</ReleaseDate>
+      <Description>Genesis spacecraft positions</Description>
+      <Contact>
+        <!-- Jan Merka -->
+        <PersonID>spase://SMWG/Person/Jan.Merka</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Genesis</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Genesis/GIM-GEM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Genesis Plasma Spectrometers</ResourceName>
+      <AlternateName>Genesis Ion Monitor (GIM)</AlternateName>
+      <AlternateName>Genesis Electron Monitor (GEM)</AlternateName>
+      <AlternateName>GIM</AlternateName>
+      <AlternateName>GEM</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>There are two solar wind spectrometers on-board the Genesis spacecraft: the Genesis Ion Monitor (GIM) and the Genesis Electron Monitor (GEM). The primary purpose of these spectrometers is to enable the collection of appropriate samples of the solar wind by the Genesis sample collectors. This involves determining the type of solar wind that is flowing past the spacecraft, adjusting high-voltages in the Concentrator for the current conditions and deploying the appropriate Collector Array for the type of solar wind present, all in realtime. The secondary function of the Monitors is to obtain high-quality solar wind data that can be used for various scientific studies. Interested parties are referred to the detailed instrument description paper by Barraclough et al. (2003), listed on the publications page.
+Genesis Ion Monitor (GIM)
+GIM consists of a 120-degree spherical-section electrostatic analyzer (ESA) followed by an array of eight channel electron multipliers (CEMs) for energy and angle analysis of incoming ions. The ESA is negatively biased by a high-voltage power supply that steps across a number of voltage levels to build up an energy spectrum of the plasma population. The GIM is basically an E/q analyzer but does have a mass analysis capability in this instance due to the similar flow velocities of all ions in the solar wind beam. The energy range of the instrument is ~100 eV to 14 keV, with a resolution of 5.2%, but only a small fraction of this range is used at any one time. Onboard software tracks the solar wind flow speed and autonomously adjusts the energy range that is scanned to keep it centered on the beam.
+GIM has a field-of-view (FOV) that is ~3.0 degrees in azimuth by ~26 degrees in polar angle and one of the narrow edges of the FOV is aligned such that it slightly overlaps the spacecraft rotational axis. Given this configuration, during one spin of the spacecraft GIM sweeps out a circle on the sky that is ~24 degrees in radius with the center of the circle being coincident with the average solar wind flow direction at 1 AU. During each spin, GIM steps forty times across ten individual energy steps and this process is repeated for four spins of the spacecraft with the energy steps being varied for each spin. These four spins comprise a complete data cycle and require approximately 2.5 minutes to complete. Thus GIM acquires a complete measurement of the ion distribution function every 2.5 minutes. The data product consists of ion counts for eight polar angle and forty azimuthal angles and forty energy levels.
+Genesis Electron Monitor (GEM)
+The GEM sensor head is almost an identical copy of the electron spectrometers that are currently flying on ACE (SWEPAM-E) and on Ulysses (BAM-E) but the electronics are of a new design. Basically, GEM consists of a 120 degree ESA that is backed by an array of seven CEMs for energy-angle analysis of incident plasma electrons. The energy range of the instrument is 1 to 1400 eV, the energy resolution is ~14%, and the FOV is ~12 degrees in azimuth (this varies somewhat with polar angle) by ~150 degrees in polar angle. The center of the FOV is centered along a normal to the spacecraft spin axis and consequently the FOV sweeps out approximately 94% of the sky during each spin. Data acquisition of the GEM is synchronized with that of the GIM and also takes four spins of the spacecraft to execute. A complete data matrix for the GEM consists of electron counts for seven polar angles and twenty four azimuthal angles and twenty energy levels.
+Both the GEM and GIM were in continuous operation since shortly after launch in August 2001 until August 04, 2004, a month before sample re-entry.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Roger.Wiens</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2001-034A&amp;ex=1</URL>
+        <Description>Information about the Genesis Plasma Spectrometers experiment on the Genesis mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Genesis Plasma Spectrometers on Genesis</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Genesis</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Donald.S.Burnett</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Donald S. Burnett</PersonName>
+    <OrganizationName>California Institute of Technology</OrganizationName>
+    <Email>burnett@gps.caltech.edu</Email>
+    <PhoneNumber>+1-626-395-6117</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Roger.Wiens</ResourceID>
+    <PersonName>Dr. Roger Wiens</PersonName>
+    <OrganizationName>Los Alamos National Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jan.Merka</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Jan Merka</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>jan.merka@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 8751</PhoneNumber>
+  </Person></Spase>
+
+

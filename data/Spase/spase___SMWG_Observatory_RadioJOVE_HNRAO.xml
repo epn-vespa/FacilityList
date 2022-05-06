@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema  http://www.spase-group.org/data/schema/spase-2_3_1.xsd">
+ <Version>2.3.1</Version>
+ <Observatory>
+  <ResourceID>spase://SMWG/Observatory/RadioJOVE/HNRAO</ResourceID>
+  <ResourceHeader>
+   <ResourceName>Hawk's Nest Radio Astronomy Observatory</ResourceName>
+   <AlternateName>HNRAO</AlternateName>
+   <ReleaseDate>2019-04-18T11:08:36</ReleaseDate>
+   <Description>Hawk's Nest Radio Astronomy Observatory is a
+   participant in the RadioJOVE project providing observations of
+   radio emissions from Jupiter, the Sun, and the Galactic Background
+   to other members of the RadioJOVE community. The observatory
+   consists of an LWA (Long Wavelength Array) antenna, a TFD (Terminated
+   Folded Dipole) array, a JOVE dipole array, and a Mosely 20 MHz
+   Yagi.
+
+   The
+   JOVE I receiver is fed the output from the TFD array, the JOVE II
+   receiver the JOVE dipole array, the FSX 8S 12-bit switching dual
+   polarization spectrograph receives the TFD array, the FSX 2 10-bit
+   single polarization spectrograph receives the LWA array, and the
+   SDRPlay RSP2 Software Defined Radio receives the TFD array. </Description>
+   <Contact>
+    <PersonID>spase://SMWG/Person/James.Brown</PersonID>
+    <Role>TechnicalContact</Role>
+   </Contact>
+   <InformationURL>
+    <Name>RadioJOVE Spectrograph Users Group (SUG)</Name>
+    <URL>http://radiojove.org/SUG/</URL>
+    <Description>This site provide station diagrams and other reports for the receiver systems at several radio observatories associated with the RadioJOVE project</Description>
+   </InformationURL>
+  </ResourceHeader>
+  <ObservatoryGroupID>spase://SMWG/Observatory/RadioJOVE</ObservatoryGroupID>
+  <Location>
+   <ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+   <CoordinateSystemName>GEO</CoordinateSystemName>
+   <Latitude>40.673181</Latitude>
+   <Longitude>80.437885</Longitude>
+   <Elevation>366</Elevation>
+  </Location>
+  <OperatingSpan>
+   <StartDate>2013-01-01T00:00:00</StartDate>
+  </OperatingSpan>
+ </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+  <ResourceID>spase://SMWG/Instrument/Ground/HNRAO/DualDipole-RJ</ResourceID>
+  <ResourceHeader>
+   <ResourceName>HNRAO Dual Dipole Array and RadioJOVE receiver system</ResourceName>
+   <ReleaseDate>2019-04-17T15:52:52</ReleaseDate>
+   <Description>RadioJOVE Dual Dipole Array and RadioJOVE receiver
+   system at the Hawk's Nest Radio Astronomy Observatory.
+This is a 2 element array separated by 20 feet. Each antenna element is 25
+feet long. Polarization is linear. The array is aligned to magnetic north. The RadioJOVE direct
+conversion receiver has a 7 KHz RF bandwidth and operates at 20.1 MHz .
+   
+   See the Information URL for a link to a document providing
+   additional descriptions of the instrument characteristics.</Description>
+   <Contact>
+    <PersonID>spase://SMWG/Person/James.Brown</PersonID>
+    <Role>TechnicalContact</Role>
+   </Contact>
+   <InformationURL>
+    <Name>RadioJOVE Spectrograph Users Group</Name>
+    <URL>http://radiojove.org/SUG/</URL>
+    <Description>This site provide station diagrams and other reports for the receiver systems at several radio observatories associated with the RadioJOVE project.</Description>
+   </InformationURL>
+  </ResourceHeader>
+  <InstrumentType>Riometer</InstrumentType>
+   <InstrumentGroupID>spase://SMWG/Instrument/Ground/RadioJOVE-DualDipole-RJ</InstrumentGroupID>
+  <InvestigationName>RadioJOVE phased Dual Dipole Array and RadioJOVE receiver
+  system at HNRAO</InvestigationName>
+  <ObservatoryID>spase://SMWG/Observatory/RadioJOVE/HNRAO</ObservatoryID>
+ </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+  <ResourceID>spase://SMWG/Instrument/Ground/HNRAO/TFD-FSX8S</ResourceID>
+  <ResourceHeader>
+   <ResourceName>HNRAO Terminated Folded Dipole and FSX-8S spectrograph system</ResourceName>
+   <ReleaseDate>2021-04-07T17:26:53Z</ReleaseDate>
+   <Description>Terminated Folded Dipole and FSX-8S 12 bit switching
+   dual polarization spectrograph system at the Hawk's Nest Radio Astronomy Observatory.
+The TFD is a 4 element (26 foot) square array. Each antenna element is 24
+feet long. Bandwidth is 30 kHz. Polarization is simulataneous RCP
+and LCP. TFD array is aligned to true north. The FSX-8S spectrograph
+operates at 15 -30 MHz simultaneous RCP and LCP.
+   
+   See the Information URL for a link to a document providing
+   additional descriptions of the instrument characteristics.</Description>
+   <Contact>
+    <PersonID>spase://SMWG/Person/James.Brown</PersonID>
+    <Role>TechnicalContact</Role>
+   </Contact>
+   <InformationURL>
+    <Name>Radio JOVE Spectrograph Users Group</Name>
+    <URL>http://radiojove.org/SUG/</URL>
+    <Description>This site provide station diagrams and other reports for the receiver systems at several radio observatories associated with the Radio JOVE project.</Description>
+   </InformationURL>
+  </ResourceHeader>
+  <InstrumentType>Spectrometer</InstrumentType>
+  <InstrumentGroupID>spase://SMWG/Instrument/Ground/RadioJOVE-TFD-FSX</InstrumentGroupID>
+ <InvestigationName>Terminated Folded Dipole and FSX-8S spectrograph at HNRAO</InvestigationName>
+  <ObservatoryID>spase://SMWG/Observatory/RadioJOVE/HNRAO</ObservatoryID>
+ </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+  <ResourceID>spase://SMWG/Instrument/Ground/HNRAO/LWA-FSX2</ResourceID>
+  <ResourceHeader>
+   <ResourceName>HNRAO Long Wavelength Array element and FSX-2 spectrograph system</ResourceName>
+   <ReleaseDate>2019-04-26T15:52:52</ReleaseDate>
+   <Description>Long Wavelength Array 4 phase crossed dipoles and FSX-2 10 bit single polarization spectrograph system at the Hawk's Nest Radio Astronomy Observatory.
+The HNRAO LWA is a 4 element square array of crossed dipoles 22 feet
+apart. Bandwidth is 15-30 MHz. Polarization is selectable RCP or LCP. 
+   
+   See the Information URL for a link to a document providing
+   additional descriptions of the instrument characteristics.</Description>
+   <Contact>
+    <PersonID>spase://SMWG/Person/James.Brown</PersonID>
+    <Role>TechnicalContact</Role>
+   </Contact>
+   <InformationURL>
+    <Name>RadioJOVE Spectrograph Users Group</Name>
+    <URL>http://radiojove.org/SUG/</URL>
+    <Description>This site provide station diagrams and other reports for the receiver systems at several radio observatories associated with the RadioJOVE project.</Description>
+   </InformationURL>
+  </ResourceHeader>
+  <InstrumentType>Spectrometer</InstrumentType>
+  <InvestigationName>Long Wavelength Array and FSX-2 spectrograph at HNRAO</InvestigationName>
+  <ObservatoryID>spase://SMWG/Observatory/RadioJOVE/HNRAO</ObservatoryID>
+ </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+  <ResourceID>spase://SMWG/Instrument/Ground/HNRAO/TFD-RJ</ResourceID>
+  <ResourceHeader>
+   <ResourceName>HNRAO Terminated Folded Dipole and RadioJOVE receiver system</ResourceName>
+   <ReleaseDate>2019-04-17T15:52:52</ReleaseDate>
+   <Description>Terminated Folded Dipole and RadioJOVE receiver
+   system at the Hawk's Nest Radio Astronomy Observatory.
+This is a 4 element (26 foot) square array. Each antenna element is 24
+feet long. Bandwidth is 15-30 MHz. Polarization is simulataneous RCP
+and LCP. TFD array is aligned to true north. The RadioJOVE direct
+conversion receiver has a 7 KHz RF bandwidth and operates at 20.1 MHz .
+   
+   See the Information URL for a link to a document providing
+   additional descriptions of the instrument characteristics.</Description>
+   <Contact>
+    <PersonID>spase://SMWG/Person/James.Brown</PersonID>
+    <Role>TechnicalContact</Role>
+   </Contact>
+   <InformationURL>
+    <Name>RadioJOVE Spectrograph Users Group</Name>
+    <URL>http://radiojove.org/SUG/</URL>
+    <Description>This site provide station diagrams and other reports for the receiver systems at several radio observatories associated with the RadioJOVE project.</Description>
+   </InformationURL>
+  </ResourceHeader>
+  <InstrumentType>Riometer</InstrumentType>
+  <InvestigationName>Terminated Folded Dipole and RadioJOVE receiver
+  system at HNRAO</InvestigationName>
+  <ObservatoryID>spase://SMWG/Observatory/RadioJOVE/HNRAO</ObservatoryID>
+ </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+  <ResourceID>spase://SMWG/Instrument/Ground/HNRAO/TFD-SDRPlay</ResourceID>
+  <ResourceHeader>
+   <ResourceName>HNRAO Terminated Folded Dipole and SDRPlay spectrograph system</ResourceName>
+   <ReleaseDate>2019-04-26T15:52:52</ReleaseDate>
+   <Description>Terminated Folded Dipole and SDRPlay Software Defined
+   Radio spectrograph system at the Hawk's Nest Radio Astronomy Observatory.
+The TFD is a 4 element (26 foot) square array. Each antenna element is 24
+feet long. Bandwidth is 15-30 MHz. Polarization is simulataneous RCP
+and LCP. TFD array is aligned to true north. The SDRPlay can be
+selected to detect either RCP or LCP. 
+   
+   See the Information URL for a link to a document providing
+   additional descriptions of the instrument characteristics.</Description>
+   <Contact>
+    <PersonID>spase://SMWG/Person/James.Brown</PersonID>
+    <Role>TechnicalContact</Role>
+   </Contact>
+   <InformationURL>
+    <Name>RadioJOVE Spectrograph Users Group</Name>
+    <URL>http://radiojove.org/SUG/</URL>
+    <Description>This site provide station diagrams and other reports for the receiver systems at several radio observatories associated with the RadioJOVE project.</Description>
+   </InformationURL>
+  </ResourceHeader>
+  <InstrumentType>Spectrometer</InstrumentType>
+  <InvestigationName>Terminated Folded Dipole and SDRPlay spectrograph at HNRAO</InvestigationName>
+  <ObservatoryID>spase://SMWG/Observatory/RadioJOVE/HNRAO</ObservatoryID>
+ </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+  <ResourceID>spase://SMWG/Person/James.Brown</ResourceID>
+  <PersonName>Jim Brown</PersonName>
+  <OrganizationName>Hawks Nest Radio Astronomy Observatory (HNRAO)</OrganizationName>
+ </Person></Spase>
+
+

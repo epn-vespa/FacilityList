@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_3_1.xsd">
+  <Version>2.3.1</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/GOLD</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOLD</ResourceName>
+	  <AlternateName>SES-14</AlternateName>
+	  <AlternateName>43175</AlternateName>
+      <ReleaseDate>2020-09-14T16:47:17Z</ReleaseDate>
+      <Description>Global-scale Observations of the Limb and Disk, or GOLD, is a NASA mission launched 
+          at 5:20 p.m. EST, Thursday, Jan. 25.  GOLD is intended to perform a two-year mission imaging 
+          Earth's thermosphere and ionosphere from geostationary orbit. GOLD is a two-channel far-ultraviolet (FUV) 
+          imaging spectrograph built by the Laboratory for Atmospheric and Space Physics at the University of 
+          Colorado Boulder and flown as a hosted payload on the commercial communications satellite SES-14.
+          SES-14 is a hybrid satellite with C- and Ku-band wide beam coverage, 
+          as well as Ku- and Ka-band High Throughput Satellite (HTS) coverage across the 
+          Americas and the North Atlantic region. The satellite will fully rely on electric 
+          propulsion and will be equipped with an electric plasma propulsion system for orbit 
+          raising and in-orbit manoeuvres. The electric propulsion system delivers significant 
+          reduction in the weight of the satellite, enabling larger payloads to be carried. 
+          The new spacecraft will also feature a Digital Transparent Processor (DTP), increasing 
+          the payload flexibility to provide customized bandwidth solutions to SES's customers.
+      </Description>      
+      <Contact>
+          <PersonID>spase://SMWG/Person/Richard.Eastes</PersonID>
+          <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <InformationURL>
+        <Name>NASA Integrates Ultraviolet Space Spectrograph with SES 14</Name>
+        <URL>https://www.satellitetoday.com/innovation/2017/05/25/nasa-integrates-ultraviolet-space-spectrograph-ses-14/</URL>
+        <Description>A brief description of the SES-14 spacecraft.</Description>
+      </InformationURL>
+      <InformationURL>
+        <Name>Additional information on SES-14</Name>
+        <URL>https://space.skyrocket.de/doc_sdat/ses-14.htm</URL>
+        <Description>More details on the SES-14 spacecraft.</Description>
+      </InformationURL>
+      <PriorID>spase://SMWG/Observatory/SES-14</PriorID>
+    </ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+    </Location>
+	<OperatingSpan>
+		<StartDate>2018-01-25T00:00:00Z</StartDate>
+	</OperatingSpan>
+  </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOLD</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOLD</ResourceName>
+	  <AlternateName>Global-scale Observations of the Limb and Disk Mission</AlternateName>
+      <ReleaseDate>2020-09-14T16:47:17Z</ReleaseDate>
+      <Description>The Global-scale Observations of the Limb and Disk (GOLD) mission 
+	  is a heliophysics Mission of Opportunity for NASA&#x2019;s Explorers program. GOLD is 
+	  intended to perform a two-year mission imaging Earth's thermosphere and ionosphere 
+	  from geostationary orbit. GOLD is a two-channel far-ultraviolet (FUV) imaging 
+	  spectrograph built by the Laboratory for Atmospheric and Space Physics at the 
+	  University of Colorado Boulder and flown as a hosted payload on the commercial 
+	  communications satellite SES-14.
+	  
+	  The scientific objectives of the GOLD mission are to determine how geomagnetic 
+	  storms alter the temperature and composition of Earth&#x2019;s atmosphere, to analyze 
+	  the global-scale response of the thermosphere to solar extreme-ultraviolet variability, 
+	  to investigate the significance of atmospheric waves and tides propagating from 
+	  below the temperature structure of the thermosphere and to resolve how the structure 
+	  of the equatorial ionosphere influences the formation and evolution of equatorial 
+	  plasma density irregularities. The viewpoint provided by GOLD&#x2019;s geostationary 
+	  orbit &#x2013; from which the same hemisphere is always observable &#x2013; is a new perspective 
+	  on the Earth&#x2019;s upper atmosphere. This viewpoint allows local time, universal time 
+	  and longitudinal variations of the thermosphere and ionosphere's response to the 
+	  various forcing mechanisms to be uniquely determined.
+	  </Description>
+	  <Acknowledgement>National Aeronautics and Space Administration; Dr. Richard Eastes</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Richard.Eastes</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <InformationURL>
+        <Name>GOLD Homepage web page</Name>
+        <URL>http://gold.cs.ucf.edu/</URL>
+        <Description>GOLD web page with news and other information.</Description>
+      </InformationURL>
+	  <InformationURL>
+        <Name>GOLD Missions Space Science Reviews Article</Name>
+        <URL>https://doi.org/10.1007/s11214-017-0392-2</URL>
+        <Description>Eastes, R.W., McClintock, W.E., Burns, A.G. et al. Space Sci. Rev. (2017) vol. 212, pp.383.</Description>
+      </InformationURL>
+      <PriorID>spase://SMWG/Instrument/SES-14/GOLD</PriorID>
+    </ResourceHeader>
+    <InstrumentType>Photometer</InstrumentType>
+	<InvestigationName>Global-scale Observations of the Limb and Disk</InvestigationName>
+	<OperatingSpan>
+		<StartDate>2018-01-25T00:00:00Z</StartDate>
+	</OperatingSpan>
+	<ObservatoryID>spase://SMWG/Observatory/GOLD</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Richard.Eastes</ResourceID>
+    <ReleaseDate>2019-04-22T17:35:46Z</ReleaseDate>
+    <PersonName>Richard Eastes</PersonName>
+    <OrganizationName>Laboratory for Atmospheric and Space Physics</OrganizationName>
+    <Address>Office: SPSC-N298; 1234 Innovation Drive, Boulder, CO  80303-7814</Address>
+    <Email>Richard.Eastes@lasp.colorado.edu</Email>
+    <PhoneNumber>+1 303 735 7221</PhoneNumber>
+  </Person></Spase>
+
+

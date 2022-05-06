@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/EvansSolarFacility</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Evans Solar Facility</ResourceName>
+      <AlternateName>ESF</AlternateName>
+   <AlternateName>John W. Evans Solar Facility</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The John W. Evans Solar Facility (ESF) is two telescopes in one,
+   both tracking the solar cycle. A 16" coronagraphic telescope maps magnetic changes
+   in the Sun's outer atmosphere. A special set of 12" coelostat optics "squints" so
+   the Sun appears as a pinpoint, allowing an "apples and apples" comparison with the
+   cycles of distant stars.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+   <InformationURL>
+        <Name>John W. Evans Solar Facility Homepage</Name>
+        <URL>https://nsosp.nso.edu/telescopes/john-w-evans-solar-facility/</URL>
+        <Description>Detailed information about the Evans Solar Facility including instruments and data.</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/NSO</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/EvansSolarFacility/Spectroheliograph</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Evans Solar Facility (ESF) Spectroheliograph</ResourceName>
+      <ReleaseDate>2012-05-03T00:00:00Z</ReleaseDate>
+      <Description>The National Solar Observatory's Evans Solar Facility 
+is at Sacramento Peak, Sunspot, New Mexico.  ESF is two telescopes in one, 
+both tracking the solar cycle. A 16" coronagraphic telescope maps magnetic 
+changes in the Sun's outer atmosphere. A special set of 12" coelostat 
+optics "squints" so the Sun appears as a pinpoint, allowing an "apples 
+and apples" comparison with the cycles of distant stars. The 
+spectroheliograph is basically a specially designed camera that scans 
+across an image of the sun, while letting only light from one particular 
+color fall onto a light detector, such as film. It is possible for the 
+spectroheliograph to pass light produced from the hydrogen or calcium 
+atoms of the sun, for example. Because of the temperature and density 
+variation with height in the solar atmosphere, and the resulting offset 
+in differents types of atoms, the solar atmospheric structure at 
+different heights can can be observed.  See http://nsosp.nso.edu/esf/
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Stephen.L.Kell</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+      <PriorID>spase://vspo/instrument/75</PriorID>
+    </ResourceHeader>
+    <InstrumentType>Imager</InstrumentType>
+    <InvestigationName>ESF Spectroheliograph</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/EvansSolarFacility</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+        <ResourceID>spase://SMWG/Person/Stephen.L.Kell</ResourceID>
+        <ReleaseDate>2012-05-03T00:00:00Z</ReleaseDate>
+        <PersonName>Stephen L. Kell</PersonName>
+        <OrganizationName>National Solar Observatory, Sac Peak</OrganizationName>
+        <Email>skell@nso.edu</Email>
+    </Person></Spase>
+
+

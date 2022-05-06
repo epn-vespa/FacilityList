@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/IMP7</ResourceID>
+    <ResourceHeader>
+      <ResourceName>IMP 7</ResourceName>
+      <AlternateName>1972-073A</AlternateName>
+      <AlternateName>Explorer 47</AlternateName>
+      <AlternateName>IMP-H</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>IMP-H continued the study begun by earlier IMP spacecraft of the interplanetary and magnetotail regions from a nearly circular orbit, near 37 earth radii. This 16-sided drum-shaped spacecraft was 157 cm high and 135 cm in diameter. It was designed to measure energetic particles, plasma, and electric and magnetic fields. The spin axis was normal to the ecliptic plane, and the spin period was 1.3 s. The spacecraft was powered by solar cells and a chemical battery. Scientific data were telemetered at 1600 bps (with a secondary 400-bps rate available). The spacecraft was turned off on October 31, 1978.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Norman.F.Ness</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Joseph.H.King</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-073A</URL>
+        <Description>Information about the IMP-H mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/IMP</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/IMP7/GOSLING</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Solar Plasma Electrostatic Analyzer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>A hemispherical electrostatic analyzer was used to study the directional intensity of positive ions and electrons in the solar wind, magnetosheath, and magnetotail. Ions as heavy as oxygen were resolved when the solar wind temperature was low. Energy analysis was accomplished by charging the plates to known voltage levels and allowing them to discharge with known RC time constants. In the solar wind, positive ions from 200 eV to 5 keV (15% spacing, 3% resolution) and electrons from 5 eV to 1 keV (30% spacing, 15% resolution) were studied. In the magnetosheath, positive ions from 200 eV to 5 keV (15% spacing, 3% resolution) and from 200 eV to 2 keV (30% spacing, 15% resolution) and electrons from 5 eV to 1 keV (30% spacing, 15% resolution) were studied. In the magnetotail, positive ions from 200 eV to 20 keV (30% spacing, 15% resolution) and electrons from 5 eV to 1 keV (30% spacing, 15% resolution) and from 100 eV to 20 keV (15% resolution) were studied. For further details see W. C. Feldman et al., J. Geophys. Res., v. 80, p. 4181, 1975.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/John.T.Gosling</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1972-073A&amp;ex=10</URL>
+        <Description>Information about the Solar Plasma Electrostatic Analyzer experiment on the IMP-H mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Solar Plasma Electrostatic Analyzer on IMP-H</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/IMP7</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/IMP7/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>IMP7 Positions</ResourceName>
+      <AlternateName>IMP7 Ephemeris</AlternateName>
+      <ReleaseDate>2013-04-09T00:00:00Z</ReleaseDate>
+      <Description>IMP7 spacecraft positions in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.E.McGuire
+</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+        </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/IMP7</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/IMP7/LEPEDEA</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Measurement of Low-Energy Protons and Electrons</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment measured the energy spectra of low-energy electrons and protons in the geocentric range 30 to 40 earth radii to further understand geomagnetic storms, aurora, tail and neutral sheet, and other magnetospheric phenomena. The detector was a dual-channel curved-plate electrostatic analyzer (LEPEDEA - low-energy proton and electron differential energy analyzer) with 16 energy intervals between 5 eV and 50 keV. It had an angular field of view of 9 deg by 25 deg in four directions perpendicular to the spacecraft spin axis. The detector was operated in one of two modes: (1) one providing good angular resolution (16 directions for each particle energy band) once each 272 s, and (2) one providing good temporal resolution in which the entire energy range in four directions was measured every 68 s. For further details, see Frank, L. A. et al., J. Geophys. Res., v. 82, p. 129, 1977.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Louis.A.Frank</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1972-073A&amp;ex=4</URL>
+        <Description>Information about the Measurement of Low-Energy Protons and Electrons experiment on the IMP-H mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Measurement of Low-Energy Protons and Electrons on IMP-H</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/IMP7</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Louis.A.Frank</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Prof. Louis A. Frank</PersonName>
+    <OrganizationName>University of Iowa</OrganizationName>
+    <Address>Department of Physics and Astronomy, University of Iowa, Iowa City, IA 52242</Address>
+    <Email>frank@iowasp.physics.uiowa.edu</Email>
+    <PhoneNumber>+1 319 335 1695</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Norman.F.Ness</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Norman F. Ness</PersonName>
+    <OrganizationName>University of Delaware</OrganizationName>
+    <Email>nfness@bartol.udel.edu</Email>
+    <PhoneNumber>+1 302 831 8116</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/John.T.Gosling</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. John T. Gosling</PersonName>
+    <OrganizationName>Los Alamos National Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Joseph.H.King</ResourceID>
+    <ReleaseDate>2010-08-18T13:39:07Z</ReleaseDate>
+    <PersonName>Dr. Joseph H. King</PersonName>
+    <OrganizationName>NASA GSFC, Code 672</OrganizationName>
+    <Email>joseph.h.king@nasa.gov</Email>
+    <PhoneNumber>+1-301-286-1450</PhoneNumber>
+  </Person></Spase>
+
+

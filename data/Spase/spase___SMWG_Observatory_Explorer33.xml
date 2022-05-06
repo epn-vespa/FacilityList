@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Explorer33</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Explorer 33</ResourceName>
+      <AlternateName>IMP D</AlternateName>
+      <AlternateName>AIMP A</AlternateName>
+      <AlternateName>AIMP 1</AlternateName>
+   <AlternateName>02258</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>NASA's Explorer 33 spacecraft, also known as
+  Anchored IMP A (AIMP A) and as IMP D, was launched into a geocentric
+  orbit in July, 1966.  Explorer 33 was a spin-stabilized (spin axis
+  parallel to the ecliptic
+  plane, spin period varying between 2.2 and 3.6 s) spacecraft instrumented
+  for studies of interplanetary plasma, energetic charged particles
+  (electrons, protons, and alphas), magnetic fields, and solar X rays
+  at lunar distances. The spacecraft failed to achieve lunar orbit but
+  did achieve mission objectives. Lunar
+  perturbations caused significant variations in orbit parameters
+  The initial apogee occurred at about
+  1600 h local time. Over the first 3-yr period, perigee varied between
+  6 and 44 earth radii. Apogee varied between 70 and 135 earth radii,
+  and the inclination with respect to the equator of the earth varied
+  between 7 and 60 deg. Periods of principal data coverage (essentially
+  100%) are July 1, 1966 (launch), to January 14, 1970; February 21,
+  1970, to March 6, 1970; July 31, 1970, to September 14, 1970; January
+  15, 1971, to February 28, 1971; March 23, 1971, to May 31, 1971; and
+  August 23, 1971, to September 15, 1971. No data were obtained after
+  September 21, 1971.
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Joseph.H.King</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+   <Contact>
+        <PersonID>spase://SMWG/Person/Norman.F.Ness</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-058A</URL>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/IMP</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+   <ObservatoryRegion>Earth.Magnetosheath</ObservatoryRegion>
+   <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Explorer33/FaradayCup</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Faraday Cup</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>A split-collector Faraday cup mounted on the
+spacecraft equator was used to study the directional intensity of
+solar wind ions and electrons. The following 25-s sequence was executed
+three times for ions and once for electrons each 328 s. Twenty-seven
+directional current samples from the two collectors were taken in the
+energy per charge (E/Q) window from 80 to 2850 eV. The currents in the
+two collectors were then sampled in eight E/Q windows between 50 and
+5400 eV at the azimuth at which peak current appeared in the previous 27
+measurements. Due to telemetry limitations, only the following data were
+returned to earth every 328 s: for ions, the sums of currents measured on
+the two collector plates twice and the difference once, and for electrons,
+the sums once. The experiment worked well from launch until the final
+spacecraft data transmission in October, 1971. For further details,
+see Lyon et al., J. Geophys. Res., v. 72, p. 6113, 1967.
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Alan.J.Lazarus</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1966-058A-06</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>FaradayCup</InstrumentType>
+    <InvestigationName>PlasmaProbe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Explorer33</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Norman.F.Ness</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Norman F. Ness</PersonName>
+    <OrganizationName>University of Delaware</OrganizationName>
+    <Email>nfness@bartol.udel.edu</Email>
+    <PhoneNumber>+1 302 831 8116</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Joseph.H.King</ResourceID>
+    <ReleaseDate>2010-08-18T13:39:07Z</ReleaseDate>
+    <PersonName>Dr. Joseph H. King</PersonName>
+    <OrganizationName>NASA GSFC, Code 672</OrganizationName>
+    <Email>joseph.h.king@nasa.gov</Email>
+    <PhoneNumber>+1-301-286-1450</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Alan.J.Lazarus</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:45Z</ReleaseDate>
+    <PersonName>Dr. Alan J. Lazarus</PersonName>
+    <OrganizationName>Massachusetts Institute of Technology</OrganizationName>
+    <Email>ajl@space.mit.edu</Email>
+    <PhoneNumber>+1 617 253 4284</PhoneNumber>
+  </Person></Spase>
+
+

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/ISEE3</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 3</ResourceName>
+      <AlternateName>1978-079A</AlternateName>
+      <AlternateName>International Sun-Earth Explorer-C</AlternateName>
+      <AlternateName>ISEE-C</AlternateName>
+      <AlternateName>International Cometary Explorer</AlternateName>
+      <AlternateName>ICE</AlternateName>
+      <AlternateName>Explorer 59</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Explorer-class heliocentric spacecraft, International Sun-Earth Explorer 3, was part of the mother/daughter/heliocentric mission (ISEE 1, 2, and 3). The purposes of the mission were: (1) to investigate solar-terrestrial relationships at the outermost boundaries of the Earth's magnetosphere; (2) to examine in detail the structure of the solar wind near the Earth and the shock wave that forms the interface between the solar wind and Earth's magnetosphere; (3) to investigate motions of and mechanisms operating in the plasma sheets; and, (4) to continue the investigation of cosmic rays and solar flare emissions in the interplanetary region near 1 AU.
+            The three spacecraft carried a number of complementary instruments for making measurements of plasmas, energetic particles, waves, and fields. The mission thus extended the investigations of previous IMP spacecraft. The launch of three coordinated spacecraft in this mission permitted the separation of spatial and temporal effects. This heliocentric spacecraft had a spin axis normal to the ecliptic plane and a spin rate of about 20 rpm. It was initially placed into an elliptical halo orbit about the Lagrangian libration point (L1) 235 Earth radii on the sunward side of the Earth, where it continuously monitored changes in the near-Earth interplanetary medium. In conjunction with the mother and daughter spacecraft, which had eccentric geocentric orbits, this mission explored the coupling and energy transfer processes between the incident solar wind and the Earth's magnetosphere. In addition, the heliocentric ISEE 3 spacecraft also provided a near-Earth baseline for making cosmic-ray and other planetary measurements for comparison with corresponding measurements from deep-space probes. ISEE 3 was the first spacecraft to use the halo orbit.
+            For instrument descriptions written by the investigators, see IEEE Trans. on Geosci. Electron., v. GE-16, no. 3, July 1978.
+            In 1982 ISEE 3 began the magnetotail and comet encounter phases of its mission. A maneuver was conducted on June 10, 1982, to remove the spacecraft from the halo orbit around the L1 point and place it in a transfer orbit involving a series of passages between Earth and the L2 (magnetotail) Lagrangian libration point. After several passes through the Earth's magnetotail, with gravity assists from lunar flybys in March, April, September and October of 1983, a final close lunar flyby (119.4 km above the moon's surface) on December 22, 1983, ejected the spacecraft out of the Earth-Moon system and into a heliocentric orbit ahead of the Earth, on a trajectory intercepting that of Comet Giacobini-Zinner. At this time, the spacecraft was renamed International Cometary Explorer (ICE). A total of fifteen propulsive maneuvers (four of which were planned) and five lunar flybys were needed to carry out the transfer from the halo orbit to an escape trajectory from the earth-moon system into a heliocentric orbit.
+            The primary scientific objective of ICE was to study the interaction between the solar wind and a cometary atmosphere. As planned, the spacecraft traversed the plasma tail of Comet Giacobini-Zinner on September 11, 1985, and made in situ measurements of particles, fields, and waves. It also transited between the Sun and Comet Halley in late March 1986, when other spacecraft (Giotto, Planet-A, MS-T5, VEGA) were also in the vicinity of Comet Halley on their early March comet rendezvous missions. ICE became the first spacecraft to directly investigate two comets. ICE data from both cometary encounters are included in the International Halley Watch archive: http://nssdc.gsfc.nasa.gov/database/MasterCatalog?ds=XD-B3A
+            Tracking and telemetry support have been provided by the DSN (Deep Space Network) since January 1984. The ISEE-3/ICE bit rate was nominally 2048 bps during the early part of the mission, and 1024 bps during the Giacobini-Zinner comet encounter. The bit rate then successively dropped to 512 bps (on 9/12/85), 256 bps (on 5/1/87), 128 bps (on 1/24/89) and finally to 64 bps (on 12/27/91).
+            An update to the ICE mission was approved by NASA headquarters in 1991. It defines a Heliospheric mission for ICE consisting of investigations of coronal mass ejections in coordination with ground-based observations, continued cosmic ray studies, and special period observations such as when ICE and Ulysses are on the same solar radial line. By May 1995 ICE was being operated with only a low duty cycle, with some support being provided by the Ulysses project for data analysis. Two years later, termination of operations of ICE/ISEE3 was authorized May 5, 1997.
+            As of January 1990, ICE was in a 355 day heliocentric orbit with an aphelion of 1.03 AU, a perihelion of 0.93 AU and an inclination of 0.1 degree. This will bring it back to the vicinity of the earth-moon system in August, 2014. For instrument descriptions written by the investigators, see IEEE Trans. on Geosci. Electron., v. GE-16, no. 3, July 1978.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Keith.W.Ogilvie</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-079A</URL>
+        <Description>Information about the ISEE 3 mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/ISEE</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE3/HECR</ResourceID>
+    <ResourceHeader>
+      <ResourceName>High-Energy Cosmic Rays</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was designed to determine the isotopic abundance in the primary cosmic rays for hydrogren through nickel. The instrument used a 10-element solid-state particle telescope consisting of lithium-drifted silicon detectors. Energy ranges measured ran from approximately 20 to approximately 500 MeV/nucleon.  The direction of incident nuclei was obtained from a six-plane drift chamber with 2-deg resolution.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Mark.E.Wiedenbeck</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1978-079A-05</URL>
+        <Description>Information about the HECR instrument on the ISEE 3 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>High-Energy Cosmic Rays</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE3</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE3/SWP</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 3 Solar Wind Plasma</ResourceName>
+      <AlternateName>ISEE 3 SWP</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The ISEE 3 SWP instrument provides 2-D and 3-D distribution functions for protons (150eV-7keV) and electrons (10eV-1keV). This experiment was designed to make an integrated study of the nature, origin, and evolution of structure in the interplanetary medium. Also, the thermal state of the interplanetary plasma was studied, unperturbed by the earth's bow shock. Ion velocity distributions were measured by a 135-deg spherical electrostatic analyzer in both two and three dimensions. Step energy resolution for each energy window was 4.2%. Electron velocity distributions were measured by a 90-deg spherical electrostatic analyzer, also in two and three dimensions. The energy window per step for electrons was 10%. Channeltron electron multipliers were used as detectors for each of the analyzers. Solar wind electrons were measured in 15 contiguous channels from 8.5 to 1140 eV. A special photoelectron range of 1.6 to 220 eV could be commanded. Various mixtures of data for two-dimensional and three-dimensional distribution functions could be selected. Ions were measured in 32 channels from 237 eV per charge to 10.7 keV per charge. Various modes were available for basic sweep, search, and tracking of the peak of the distribution. The ion instrument failed to return usable data after February 26, 1980.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/John.T.Gosling</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1978-079A-01</URL>
+        <Description>Information about the Solar wind plasma, 2-D &amp; 3-D distr. fns. p: 150eV - 7keV; e: 10eV-1keV experiment on the ISEE 3 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Solar wind plasma, 2-D &amp; 3-D distr. fns. p: 150eV - 7keV; e: 10eV-1keV on ISEE 3</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE3</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE3/SWIC</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Solar Wind Ion Composition, 300-600 km/s 840 eV/Q to 11.7 keV/Q; M/Q = 1.5 to 5.6</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment consisted of a hemispherical electrostatic energy analyzer and a Wien velocity filter configured as a mass spectrometer to determine the charge state and isotopic constitution of the solar wind. The instrument had an energy-per-unit-charge range of 0.84 to 11.7 keV per charge, a mass-per-unit-charge range of 1.5 to 5.6 u per charge, and a velocity range of 300 to 600 km/s.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Keith.W.Ogilvie</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1978-079A&amp;ex=11</URL>
+        <Description>Information about the Solar Wind Ion Composition, 300-600 km/s 840 eV/Q to 11.7 keV/Q; M/Q = 1.5 to 5.6 experiment on the ISEE 3 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Solar Wind Ion Composition, 300-600 km/s 840 eV/Q to 11.7 keV/Q; M/Q = 1.5 to 5.6 on ISEE 3</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE3</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE3/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 3 Position</ResourceName>
+      <AlternateName>ISEE 3 Ephemeris</AlternateName>
+      <ReleaseDate>2009-06-15T21:10:14Z</ReleaseDate>
+      <Description>ISEE 3 spacecraft position in GSE coordinate system</Description>
+      <Contact>
+        <!-- Robert Candey -->
+        <PersonID>spase://SMWG/Person/Robert.M.Candey</PersonID>
+        <Role>DataProducer</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE3</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE3/MAG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 3 Vector Helium Magnetometer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The instrumentation for this experiment consisted of a boom-mounted triaxial vector helium magnetometer. Measurements were made of the steady magnetic field and its low-frequency variations. Eight field amplitude ranges (minus to plus 4, 14, 42, 144, 640, 4000, 22,000, and 140,000 nT) were available. The instrument ranged up and down automatically or could be commanded into a specific range. The field equivalent noise power spectral density was 2E-4 nT squared per Hz (independent of frequency), or 0.01 nT rms in the passband 0 to 0.5 Hz. A single-axis spectrum analyzer measured fluctuations parallel to the spacecraft spin axis in three frequency bands centered at 0.33, 3.2, and 8.8 Hz.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Edward.J.Smith</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1978-079A-02</URL>
+        <Description>Information about the Vector Helium Magnetometer experiment on the ISEE 3 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Vector Helium Magnetometer on ISEE 3</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE3</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE3/Radio_Mapping</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 3 Radio Mapping Experiment</ResourceName>
+      <AlternateName>Radio Mapping of Solar Wind Disturbances (Type III bursts) in 3-D; 30 kHz - 2 MHz</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The principal purpose of this experiment is to map the trajectories of type III solar bursts by determining the angular coordinates of a localized source as a function of frequency and time. The radial distance may be obtained by triangulation with observations from another satellite, or from assumptions about the density of the interplanetary medium.
+
+Two perpendicular dipole antennas are used. A 90 m tip-to-tip antenna in the spin plane of ISEE-3, referred to as the S antenna, sees a signal which is modulated because of the changing aspect of the source due to the spacecraft's rotation. The Z antenna is 14 m tip-to-tip, along the spin axis. From the S measurements, the azimuth and strength of the source are obtained. Comparison of S and Z observations provides the elevation of the source from the spin plane and an estimate of its angular diameter.
+
+Measurements are made in 12 frequency channels, between 30 and 1980 kHz, in each of two bandwidths, 10 kHz (B), and 3 kHz (N). Every 1.5 seconds (which is nearly one-half spin), one measurement of Z and 11 of S are made for one frequency channel in each bandwidth, interleaving B and N observations. This provides nearly the full range of modulation possible from the S antenna. (At data rates lower than 2048 bps, proportionally fewer S samples are taken.) The frequency channel is selected according to a fixed 72 step program, designed to observe each frequency at uniform intervals but with shorter intervals for the higher frequencies. Alternate modes of observation are possible using only the B or only the N bandwidth. The 72-step sequence takes 108 seconds to complete. Self-calibration occurs every 18 hours.
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jean-Louis.Steinberg</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.J.MacDowall</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1978-079A-10</URL>
+        <Description>Information about the Radio Mapping of Solar Wind Disturbances (Type III bursts) in 3-D; 30 kHz - 2 MHz experiment on the ISEE 3 mission.
+</Description>
+        <Language>en</Language>
+</InformationURL>
+      <InformationURL>
+        <Name>User Guide for ISEE-3 Radio Mapping Experiment CD-ROM Data</Name>
+        <URL>https://spdf.gsfc.nasa.gov/pub/documents/old/miscellaneous_documents_from_nssdc/b48620.txt</URL>
+        <Description>by Robert J. MacDowall, version 1.2 - revised July 1, 2009</Description>
+        <Language>en</Language>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Antenna</InstrumentType>
+    <InstrumentType>LongWire</InstrumentType>
+    <InvestigationName>Radio Mapping of Solar Wind Disturbances (Type III bursts) in 3-D; 30 kHz - 2 MHz on ISEE 3</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE3</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jean-Louis.Steinberg</ResourceID>
+    <PersonName>Dr. Jean-Louis Steinberg</PersonName>
+    <OrganizationName>Observatoire de Paris</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/John.T.Gosling</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. John T. Gosling</PersonName>
+    <OrganizationName>Los Alamos National Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.M.Candey</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Mr. Robert M. Candey</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>robert.m.candey@nasa.gov</Email>
+    <PhoneNumber>1-301-286-6707</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Edward.J.Smith</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Edward J. Smith</PersonName>
+    <OrganizationName>Jet Propulsion Laboratory</OrganizationName>
+    <Email>edward.j.smith@jpl.nasa.gov</Email>
+    <PhoneNumber>+1 818 354 2248</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Keith.W.Ogilvie</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Keith W. Ogilvie</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 673, Greenbelt, MD 20771, USA</Address>
+    <Email>keith.w.ogilvie@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 5904</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.J.MacDowall</ResourceID>
+    <PersonName>Dr. Robert J. MacDowall</PersonName>
+    <OrganizationName>GSFC-Code 695</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Mark.E.Wiedenbeck</ResourceID>
+    <PersonName>Dr. Mark E. Wiedenbeck</PersonName>
+    <OrganizationName>Jet Propulsion Laboratory</OrganizationName>
+  </Person></Spase>
+
+

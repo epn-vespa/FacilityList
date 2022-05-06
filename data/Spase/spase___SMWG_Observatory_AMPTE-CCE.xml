@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_9.xsd">
+   <Version>2.2.9</Version>
+   <Observatory>
+      <ResourceID>spase://SMWG/Observatory/AMPTE-CCE</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE</ResourceName>
+         <AlternateName>AMPTE/Charge Composition Explorer</AlternateName>
+         <AlternateName>CCE</AlternateName>
+         <AlternateName>Explorer 65</AlternateName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>The AMPTE (Active Magnetospheric Particle Tracer Explorers) mission was designed to study the access of solar wind ions to the magnetosphere, the convective-diffusive transport and energization of magnetospheric particles, and the interactions of plasmas in space.
+
+The mission consisted of three spacecraft: the CCE; the IRM, which provided multiple ion releases in the solar wind, the magnetosheath, and the magnetotail, with in situ diagnostics of each; and the UKS, which uses thrusters to keep station near the IRM to provide two-point local measurements.
+
+The CCE (Charge Composition Explorer) spacecraft was instrumented to detect those lithium and barium tracer ions from the IRM releases that were transported into the magnetosphere within the CCE orbit. The spacecraft was spin-stabilized at 10 rpm, with its spin axis in the equatorial plane, and offset from the Earth-sun line by about 20° It could adjust attitude with both magnetic torquing and cold gas thrusters. The CCE used a 2.0e8-bit tape recorder and redundant 2.5 W S-band transponders. The spacecraft battery was charged by a 140 W solar array.
+
+The PI for the U.S. AMPTE Program and for the CCE was S. M. Krimigis (now Richard McEntire of JHU/APL); each instrument was managed by a lead investigator.
+
+The CCE encountered command module/power supply problems since the beginning of 1989, and failed as of 12 July 89. The three CCE particle instruments (CHEM, HPCE, MEPA) and two field instruments (MAG, PWE) collected data over the 4-year mission of August 1984 to January 1989 in a roughly 8 Re equatorial orbit which precessed over a range of apogee local times (apogee 8.8 Re, perigee 1100 km, inclination 4.8°, period 15.6 hours, spin vector in orbit plane 10° to 20° off of sun, spin rate 10.2 rpm).
+
+For more details, see J. Dassoulas et al., IEEE Transactions on Geoscience and Remote Sensing, Vol. GE-23, p. 182, 1985.</Description>
+         <Contact>
+            <!-- Richard McEntire -->
+            <PersonID>spase://SMWG/Person/Richard.W.McEntire</PersonID>
+            <Role>PrincipalInvestigator</Role>
+</Contact>
+         <InformationURL>
+            <Name>JHU/APL AMPTE/CCE Science Data Center (SDC)</Name>
+            <URL>http://sd-www.jhuapl.edu/AMPTE/</URL>
+            <Description>The SDC is the central analysis and archive facility for the AMPTE/CCE spacecraft.</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>NSSDC Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1984-088A</URL>
+            <Description>NSSDC information about the AMPTE/CCE spacecraft</Description>
+</InformationURL>
+         <PriorID>spase://SMWG/Observatory/AMPTE_CCE</PriorID>
+</ResourceHeader>
+      <ObservatoryGroupID>spase://SMWG/Observatory/AMPTE</ObservatoryGroupID>
+      <Location>
+         <ObservatoryRegion>Earth.Magnetosheath</ObservatoryRegion>
+         <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+         <ObservatoryRegion>Earth.Magnetosphere.Magnetotail</ObservatoryRegion>
+         <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+      <OperatingSpan>
+         <StartDate>1984-08-16T00:00:00.999</StartDate>
+         <StopDate>9999-12-31T23:59:59.999</StopDate>
+</OperatingSpan>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/AMPTE-CCE/PWE</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE Plasma Wave Experiment Experiment</ResourceName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>The AMPTE CCE Plasma Wave Experiment had five plasma center frequencies of 100 Hz, 730 Hz, 5.4 kHz, 30 kHz and 178 kHz that were sampled every 0.62 s. The instrument consisted of a balanced electric dipole with an effective length of 70 cm. The instrument was the flight spare of the Pioneer Venus Electric Field Detector. For more details, see F. L. Scarf, IEEE Transactions on Geoscience and Remote Sensing, Vol. GE-23, p. 250, 1985.</Description>
+         <Acknowledgement>User will acknowledge the AMPTE/CCE PWE team in any publication resulting from the use of these data.</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Richard.W.McEntire</PersonID>
+            <Role>GeneralContact</Role>
+</Contact>
+         <InformationURL>
+            <Name>NSSDC Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1984-088A-04</URL>
+            <Description>NSSDC information about the AMPTE/CCE PWE experiment</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>IEEE Transactions on Geoscience and Remote Sensing Journal Article</Name>
+            <URL>https://ieeexplore.ieee.org/document/4072286/</URL>
+            <Description>Detailed information about the instrument.</Description>
+</InformationURL>
+         <PriorID>spase://SMWG/Instrument/AMPTE_CCE/PWE</PriorID>
+</ResourceHeader>
+      <InstrumentType>DoubleSphere</InstrumentType>
+      <InvestigationName>PWE</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/AMPTE-CCE</ObservatoryID>
+      <Caveats>
+</Caveats>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/AMPTE-CCE/MFE</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE Magnetic Field Experiment (MFE)</ResourceName>
+         <AlternateName>AMPTE_CCE MAG</AlternateName>
+         <AlternateName>AMPTE/CCE Magnetometer</AlternateName>
+         <AlternateName>1984-088A-05</AlternateName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>The Magnetic Field Experiment (MFE) includes a fluxgate magnetometer sensor mounted on a 2.3 m boom (Potemra et al., IEEE Trans. Geosci. Remote Sensing, Vol. GE-23, 246, 1985). The fluxgate sensor was sampled at a rate of 8 vector samples/s. It had seven automatically switchable ranges (from plus and minus 16 nT to plus and minus 65,536 nT) with resolution commensurate with a 13-bit A/D converter, and was read out at 8.6 vector samples/s. The signals from two sensors (one parallel to the spin axis and one orthogonal) were also fed into 5-50 Hz bandpass channels that were read out every 5 s. The data span the entire AMPTE/CCE mission, from 1984 day 234, August 21, through 1989 day 009 with occasional data gaps. A lengthy data gap occurred in 1986 from day 252, September 9, &#x223c;1300UT through day 286, October 12, &#x223c;1800UT, during an extended eclipse period. For more details, see T. A. Potemra et al., IEEE Transactions on Geoscience and Remote Sensing, Vol. GE-23, p. 246, 1985.</Description>
+         <Acknowledgement>User will acknowledge the AMPTE/CCE magnetometer team in any publication resulting from the use of these data.</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Brian.J.Anderson</PersonID>
+            <Role>PrincipalInvestigator</Role>
+            <Role>DataProducer</Role>
+</Contact>
+         <InformationURL>
+            <Name>AMPTE/CCE Magnetic Field Experiment Home Page</Name>
+            <URL>http://sd-www.jhuapl.edu/AMPTE/MAG/</URL>
+            <Description>A web site hosting AMPTE/CCE magnetic experiment instrument information as well as spin-averaged data.</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>NSSDC Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1984-088A-05</URL>
+            <Description>NSSDC information about the AMPTE/CCE Magnetometer</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>IEEE Transactions on Geoscience and Remote Sensing Journal Article</Name>
+            <URL>https://ieeexplore.ieee.org/document/4072285/</URL>
+            <Description>Detailed information about the instrument.</Description>
+</InformationURL>
+         <PriorID>spase://SMWG/Instrument/AMPTE_CCE/MFE</PriorID>
+</ResourceHeader>
+      <InstrumentType>Magnetometer</InstrumentType>
+      <InvestigationName>Magnetic Field Experiment</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/AMPTE-CCE</ObservatoryID>
+      <Caveats>
+</Caveats>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/AMPTE-CCE/MEPA</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE Medium Energy Particle Analyzer</ResourceName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>The AMPTE CCE Medium Energy Particle Analyzer (MEPA) measured the spectra and composition of magnetospheric particle populations from 10 keV per nucleon (for oxygen) to more than 6 MeV. The instrument has 32-sector angular resolution and provides for high background rejection and a geometry factor large enough (10^-2 cm^2 sr) to be sensitive to rare natural species and tracer ions beyond geosynchronous orbit, while having the ability to operate in the very high flux regions of the inner magnetosphere. The MEPA telescope measures time of flight and thus velocity of energetic ions from a thin front foil to a rear solid state, total energy detector, determining the incident ion mass. The telescope was capable of isotopic resolution of hydrogen and helium, of elemental resolution up through oxygen, and could resolve major species and groups to beyond iron with 32-sector angular resolution and temporal resolution of 0.2 to 24 s. For more details, see R. W. McEntire et al., IEEE Transactions on Geoscience and Remote Sensing, Vol. GE-23, p. 230, 1985.</Description>
+         <Acknowledgement>User will acknowledge the AMPTE/CCE MEPA team in any publication resulting from the use of these data.</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Richard.W.McEntire</PersonID>
+            <Role>PrincipalInvestigator</Role>
+</Contact>
+         <InformationURL>
+            <Name>NSSDC Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1984-088A-02</URL>
+            <Description>NSSDC information about the AMPTE/CCE MEPA experiment</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>IEEE Transactions on Geoscience and Remote Sensing Journal Article</Name>
+            <URL>https://ieeexplore.ieee.org/document/4072282/</URL>
+            <Description>Detailed information about the instrument.</Description>
+</InformationURL>
+         <PriorID>spase://SMWG/Instrument/AMPTE_CCE/MEPA</PriorID>
+</ResourceHeader>
+      <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+      <InvestigationName>MEPA</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/AMPTE-CCE</ObservatoryID>
+      <Caveats>
+</Caveats>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/AMPTE-CCE/HPCE</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE Hot Plasma Composition Experiment</ResourceName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>The AMPTE CCE Hot Plasma Composition Experiment (HPCE) consists of an energetic ion mass spectrometer and an electron background- environment monitor (EBEM). This instrument consisted of an entrance collimator and retarding potential analyzer, a curved-plate electrostatic energy analyzer, and a combined electrostatic-magnetic mass analyzer in series. The mass spectrometer covers the entire mass per charge range from below 1 to &gt;150 amu/e and the energy per charge range from 0 eV/e (spacecraft potential) to 17 keV/e with a geometric factor ranging from 0.01 to 0.05 cm^2 sr, an energy resolution from 6 to 60%, and a mass over charge resolution of 10%. The EBEM measures elctrons between 50 eV and 25 keV in eight broad energy bands. This instrument cleanly separated Li+ and Ba+ tracer ions from the background. It was nearly identical to one flown on DE 1 by the same group of investigators. An additional set of eight spectrometers containing permanent bending magnets and channeltrons measured electrons in eight channels from 50 eV to 25 keV. For more details, see e.g. Shelley et al., IEEE Transactions on Geoscience and Remote Sensing, Vol. GE-23, p. 241, 1985. The ion mass spectrometer was not operational after April 4, 1985.</Description>
+         <Acknowledgement>User will acknowledge the AMPTE/CCE HPCE team in any publication resulting from the use of these data.</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/David.M.Klumpar</PersonID>
+            <Role>PrincipalInvestigator</Role>
+</Contact>
+         <InformationURL>
+            <Name>NSSDC Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1984-088A-01</URL>
+            <Description>NSSDC information about the AMPTE/CCE HPCE experiment</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>IEEE Transactions on Geoscience and Remote Sensing Journal Article</Name>
+            <URL>https://ieeexplore.ieee.org/document/4072284/</URL>
+            <Description>Detailed information about the instrument.</Description>
+</InformationURL>
+         <PriorID>spase://SMWG/Instrument/AMPTE_CCE/HPCE</PriorID>
+</ResourceHeader>
+      <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+      <InvestigationName>HPCE</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/AMPTE-CCE</ObservatoryID>
+      <Caveats>
+</Caveats>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/AMPTE-CCE/CHEM</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE Charge-Energy-Mass experiment (CHEM)</ResourceName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>The instrument consisted of an entrance collimator and electrostatic analyzer section followed by a time-of-flight and total-energy-measurement section floating at a 30 kV acceleration potential. The energy range covered was from 1 to 300 keV/q, with a geometric factor of 2.E-3 cm^2 sr and 32-sector angular resolution. Energy resolution was 5 to 18%, and all charge states and isotopes of H and He, the charge states of Li, and the major elements and charge states up to and including Fe were resolved. For more details, see G. Gloeckler et al., IEEE Transactions on Geoscience and Remote Sensing, Vol. GE-23, p. 234, 1985.
+
+These 6.4 min averages of data from the Charge-Energy-Mass (CHEM) experiment are written on magnetic tape in SFDU format. Each physical block has a fixed length of 20,480 bytes, written in English/ASCII and VAX binary representation. The volume header file provides an outline of the content and structure of entries. It is followed by an ephemeris file of many blocks, which includes data on GSE Cartesian components of the spacecraft location and velocity, its latitude and longitude, Cartesian components of the measured magnetic field, SM latitude and local time of the spacecraft, and local time of the subsatellite point, each listed every 5 min. Written next is an attitude file that includes the right ascension and declination of the direction of the spin axis, and the spin rate, listed once every orbit. It is followed by an "events" file that includes information on maneuvers, data gaps, anomalous conditions, etc. The final sequence of files contains the CHEM data written as one file per day of data. Each logical record of 5656 bytes includes the following 6.4 min averages: directional differential fluxes (1/(cm^2 s sr keV/q) of H+, He+, He++, O+, and O++ from 16 channels covering the range 1.77 to 300.0 keV/q; directional fluxes in three energy ranges (only two for He) from each of the 32 angular sectors in the spin plane, of the above five species and in the same units; and 512 matrix elements in a mass versus mass per charge space. Energy values of the matrix elements extend over the entire energy range of the instrument, and intercomparision of the elements should be avoided. Also included are data on the location of the spacecraft and measured GSE Cartesian components of the magnetic field. The header of each file provided adequate information on the content, structure, units, etc., so that little or no external documentation is required to abstract data of interest. Caution: the particle data are not corrected for background counts, and experimenters must be contacted for these counts.</Description>
+         <Acknowledgement>
+</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/George.Gloeckler</PersonID>
+            <Role>GeneralContact</Role>
+</Contact>
+         <InformationURL>
+            <Name>NSSDC Master Catalog</Name>
+            <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1984-088A-03</URL>
+            <Description>NSSDC information about the AMPTE/CCE CHEM experiment.</Description>
+</InformationURL>
+         <InformationURL>
+            <Name>IEEE Transactions on Geoscience and Remote Sensing Journal Article</Name>
+            <URL>https://ieeexplore.ieee.org/document/4072283/</URL>
+            <Description>Detailed information about the instrument.</Description>
+</InformationURL>
+         <PriorID>spase://SMWG/Instrument/AMPTE_CCE/CHEM</PriorID>
+</ResourceHeader>
+      <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+      <InvestigationName>CHEM CCE</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/AMPTE-CCE</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/AMPTE-CCE/Ephemeris</ResourceID>
+      <ResourceHeader>
+         <ResourceName>AMPTE/CCE Positions</ResourceName>
+         <AlternateName>AMPTE/CCE Ephemeris</AlternateName>
+         <ReleaseDate>2018-04-12T12:34:56.789</ReleaseDate>
+         <Description>AMPTE/CCE spacecraft positions in various coordinate systems</Description>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Robert.E.McGuire</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <PriorID>spase://SMWG/Instrument/AMPTE_CCE/Ephemeris</PriorID>
+      </ResourceHeader>
+      <InstrumentType>Platform</InstrumentType>
+      <InvestigationName>Spacecraft position</InvestigationName>
+      <ObservatoryID>spase://SMWG/Observatory/AMPTE-CCE</ObservatoryID>
+   </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/David.M.Klumpar</ResourceID>
+    <ReleaseDate>2012-03-10T01:52:28Z</ReleaseDate>
+    <PersonName>Dr. David M. Klumpar</PersonName>
+    <OrganizationName>Montana State University</OrganizationName>
+    <Email>klump@physics.montana.edu</Email>
+    <PhoneNumber>406-994-6169</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Brian.J.Anderson</ResourceID>
+    <ReleaseDate>2011-10-04T18:29:48Z</ReleaseDate>
+    <PersonName>Mr. Brian J. Anderson</PersonName>
+    <OrganizationName>Applied Physics Laboratory</OrganizationName>
+    <Email>brian.anderson@jhuapl.edu</Email>
+    <PhoneNumber>+1-240-228-6347</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.E.McGuire</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Robert E. McGuire</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>robert.e.mcguire@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 7794</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Richard.W.McEntire</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Richard W. McEntire</PersonName>
+    <OrganizationName>Applied Physics Laboratory</OrganizationName>
+    <Email>richard.mcentire@jhuapl.edu</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+        <ResourceID>spase://SMWG/Person/George.Gloeckler</ResourceID>
+        <ReleaseDate>2011-06-15T00:00:00</ReleaseDate>
+        <PersonName>Prof. George M. Gloeckler</PersonName>
+        <OrganizationName>University of Michigan</OrganizationName>
+        <Email>gglo@umich.edu</Email>
+    </Person></Spase>
+
+

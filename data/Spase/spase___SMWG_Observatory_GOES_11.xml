@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/GOES/11</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOES 11</ResourceName>
+      <AlternateName>2000-022A</AlternateName>
+      <AlternateName>GOES-L</AlternateName>
+      <AlternateName>GOES-NEXT</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Geostationary Operational Environmental Satellite GOES 11 is the fourth satellite in a series of next generation geosynchronous spacecraft, referred to as GOES-NEXT and represented by the GOES I through GOES M spacecraft. The GOES-NEXT series is a joint effort on the part of NASA and NOAA to provide continued operational monitoring of weather systems primarily over the United States, distribute meteorological data to regional and national weather offices within the USA, contribute to the development of an environmental data collection network, contribute to the search and rescue program, improve the capability for forcasting and provide real-time warnings of solar distrubances, and to extend knowledge and understanding of atmospheric processes to improve short and long-term weather forecasts.
+     
+      The GOES-NEXT series, extends the capabilities of the previous GOES 1-7 spacecraft. The GOES I-M spacecraft will be placed over the equator at 135 deg West or 75 deg West. The spacecraft structure is based on the Space Transportation System (STS)-launched, three-axis stabilized Insat (geostationary satellite for India) meteorological satellite design. The design allows unobstructed views of the Earth for operational coverage by the spacecraft sensors. The spacecraft configuration is a compact box-shaped main body that carries the Earth-observing instruments, a continuous-drive solar array attached to the south panel through a yoke assembly, and a solar pointing instrument gimbal mounted on the solar panel yoke. The main body accomodates the sensors, electronics, and support subsystems. The communication antennas, except the Tracking, Telemetry, and Command (TT&amp;C) antenna, are hard-mounted to the Earth-facing panel. The Propulsion Module consists of the fuel and oxidizer tanks for the bipropellant propulsion subsystem mounted on the central cylinder. The Attitude and Orbit Control Substem (AOCS) provides attitude control of the spacecraft. The AOCS consists of the sensors, electronics, and the actuators. The GOES power is generated from the solar array and two 12 A-hr batteries. Power is automatically regulated during solar eclipses.
+     
+      The Image Navigation/Registration (INR) system provides Imager and Sounder data products in real-time to users. The Communications, Command, and Data Handling subsystem is comprised of antennas, receivers, transponders, transmitters, data encoders and encryptors and multiplexers. The Tracking Telemetry and Command (TT&amp;C) subsystem provides the necessary monitor and command link between the spacecraft and the ground stations.
+     
+      The GOES-NEXT instruments consist of the following: (1) Earth Imaging System, a 5-channel visible and infrared radiometer which provides Earth imagery 24 hours a day; (2) Sounding System, a 19-channel discrete-filter radiometer for obtaining atmospheric temperature and moisture soundings; (3) a Space Environment Monitor (SEM), which consists of a magnetic field sensor, a solar X-ray sensor, an energetic particle sensor (EPS), and a High Energy Proton and Alpha Detector (HEPAD); (4) a Search and Rescue subsystem (SARSAT), which receives signals from 406 MHz distress beacons and relays them to the ground; (5) a Data Collection System (DCS) for collecting and relaying real-time information from Data Collection Platforms (DCPs) such as buoys, balloons, remote weather stations, ships, and aircraft; and (6) a Weather Facsimile (WEFAX) system which relays processed weather imagery from the Wallops Island station to the user community.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-022A</URL>
+        <Description>Information about the GOES 11 mission</Description>
+</InformationURL>
+      <PriorID>spase://SMWG/Observatory/GOES11</PriorID>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/GOES</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.Magnetosphere.Main</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/11/SEM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Environment Monitor</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Space Environment Monitor (SEM) System on the GOES-NEXT series of geostationary meteorological satellites (GOES-I through GOES-M) is designed to provide direct real-time measurement of solar activity. The SEM consists of a Magnetic Field Sensor, a Solar X-ray Sensor, and an Energetic Particle Sensor (EPS)/High Energy Proton and Alpha Detector (HEPAD). The Magnetic Field Sensor (MFS) allows for the real-time determination of the magnitude and orientation of the magnetic field. Data will be telemetered twice a second for magnetic fields having a magnitude of +/- 1000 nanotesla (nT). The Solar X-Ray Sensor permits real-time determination of the solar x-ray emission in two spectral bands: 0.5-5 angstroms and 1-8 angstroms. The EPS makes flux measurements of protons in the 0.8 to 500 MeV range. The HEPAD monitors protons in four energy ranges above 350 MeV and alpha particles in two energy ranges above 640 MeV/nucleon.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2000-022A&amp;ex=3</URL>
+        <Description>Information about the Environment Monitor experiment on the GOES 11 mission.</Description>
+</InformationURL>
+      <PriorID>spase://SMWG/Instrument/GOES11/SEM</PriorID>
+</ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>Environment Monitor on GOES 11</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/11</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/11/MAG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOES 11, Triaxial Fluxgate Magnetometer</ResourceName>
+      <ReleaseDate>2011-06-03T20:40:24Z</ReleaseDate>
+      <Description>The following brief instrument description, written after the launch of GOES 8 and 9, but that applies to GOES 8-12, is reproduced, in part, from: 
+
+Singer, H.J., L. Matheson, R. Grubb, A. Newman and S.D. Bouwer, Monitoring Space Weather with the GOES Magnetometers. SPIE Conference Proceedings, Vol. 2812, p. 299-308, GOES-8 and Beyond, Edward R. Washwell, ed., 1996
+
+The magnetometers on the three-axis stabilized GOES I-M (called GOES 8-12 after launch) series of satellites are three-axis fluxgate magnetometers manufactured by the Schonstedt Instrument Company and integrated on the spacecraft by Space Systems/LORAL. The magnetometer electronics are inside the spacecraft, and the sensors are mounted on a three-meter boom attached at the north west corner of the anti-Earth panel, with the primary sensor at the end of the boom and a second redundant sensor located 0.3 meters inboard of the first.  Only one magnetometer may be operated at a time.  Each magnetometer axis is measured once a telemetry frame (0.512 seconds), with a 42 millisecond delay between sampling successive axes.  To reduce aliasing, each of the three-axis magnetometer outputs is filtered through a five-pole 0.5 Hz Butterworth low-pass filter.
+
+The magnetometer range is +/- 1000 nanoTesla (nT), and is measured by a 16 bit analog-to-digital converter providing 0.03 nT sensitivity.  With temperature compensation of the sensors and electronics, the accuracy of the instrument is 1 nT.  The instruments are monitored for proper operation by adding a series of small fixed currents to a set of auxiliary windings during weekly calibrations and checking for proper magnetometer gains and transient responses.
+
+To insure accurate measurements, the GOES magnetometers are thoroughly tested and calibrated.   Prior to launch, the instruments are temperature calibrated, and sensor gains and offsets are determined.  Because stray fields, generated by the spacecraft, can severely contaminate the measurement, a stray-fields test program identifies whether or not various spacecraft systems produce magnetic signatures that are likely to be detected in orbit.  If there is a detectable signature, it is either reduced to an allowable limit through hardware modifications, or a correction scheme is instituted in the ground-based data processing.  Efforts are also made to minimize and control magnetic materials on the spacecraft and boom.  An initial calibration of the spacecraft torquer coils is also made prior to launch.
+
+Absolute magnetic field measurements require accurate knowledge of magnetometer offsets that result from the spacecraft and the sensor electronics. A spinning spacecraft continuously provides the opportunity to measure these values for the spin plane sensors; however, on the three-axis stabilized GOES 8-12, we must rely on a one time satellite maneuver.  In orbit, just after the magnetometer boom deployment, the spacecraft is rotated about 3 axes to determine magnetic offsets that result from a combination of the spacecraft field and the magnetometer sensors.  This maneuver cannot be performed again after all spacecraft appendages are deployed and the spacecraft becomes operational.  Following the initial offset determination, data comparisons with magnetic field models are used to monitor for any major changes in these offsets. 
+
+On GOES 8-12, the spacecraft torquer coils are the major system contributing offset fields to the measurements that must be corrected during data processing. The magnetic torquers, along with two momentum wheels, a reaction wheel, the solar panel trim tab and 22 thrusters, maintain the proper attitude of the spacecraft.  They are controlled by an attitude and orbit control subsystem.  At the launch of GOES-8, the torquers could change current at a 20 minute interval.  The currents could change from full scale of one polarity to full scale of the other polarity at one of these steps, could make a small step, or the current might not change at all at one of the possible current change times.  A maximum size step can produce as much as a 400 nT magnetic signature at the magnetometer sensors.  The control of the torquers has evolved into a small fixed size step in the torquer current at a much faster rate.  The current operation of the torquers sets the current change at a level that causes a 1.5 nT magnetometer step at a minimum change interval of 2.56 seconds.  In actual operation not every possible change interval has a torquer current change.  GOES-8 torquer currents change from 600 to 800 times a day. 
+
+A calibration between torquer currents and magnetic field signatures was made both on the ground and in space for correcting the magnetic field measurement; however, on GOES-8, noise in the torquer current telemetry introduced artificial noise in the &#x201c;corrected&#x201d; magnetic field at the few nanoTesla level.  A correction has been instituted on GOES-8, and will be included on following spacecraft, to allow use of torquer command data for torquer current correction.  The problem has been further dealt with on GOES-9, and future spacecraft, by filtering the torquer current telemetry before it is transmitted.
+
+The launch date for each of the satellites is: 
+
+* GOES 8   4/13/94
+* GOES 9   5/23/95  
+* GOES 10  4/25/97  
+* GOES 11  5/03/00  
+* GOES 12  7/23/01
+
+During normal operations, there are two operational GOES satellites with one satellite located at 75 degrees west geographic longitude and the other at 135 degrees west geographic longitude.  There are occasions when one or more of the non-operational GOES satellites are in on-orbit storage (no magnetometer data available), or in use supporting other meteorological functions (sometimes magnetometer data available). The satellites are 3-axis stabilized during operations.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Howard.J.Singer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <PriorID>spase://SMWG/Instrument/GOES11/MAG</PriorID>
+    </ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>GOES 11, Triaxial Fluxgate Magnetometer on GOES 11</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/11</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/11/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOES 11 Positions</ResourceName>
+      <AlternateName>GOES 11 Ephemeris</AlternateName>
+      <ReleaseDate>2011-10-04T18:17:00Z</ReleaseDate>
+      <Description>GOES 11 spacecraft position.</Description>
+      <Acknowledgement>NOAA</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Howard.J.Singer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/11</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Howard.J.Singer</ResourceID>
+    <PersonName>Dr. Howard J. Singer</PersonName>
+    <OrganizationName>NOAA Space Weather Prediction Center</OrganizationName>
+    <Address>Space Weather Prediction Center, W/NP9 325 Broadway, Boulder CO 80305</Address>
+    <Email>Howard.Singer@noaa.gov</Email>
+    <PhoneNumber>303-497-6959</PhoneNumber>
+  </Person></Spase>
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_2.xsd">
+    <Version>2.2.2</Version>
+    <Observatory>
+        <ResourceID>spase://SMWG/Observatory/LANL/97A</ResourceID>
+        <ResourceHeader>
+            <ResourceName>LANL97A</ResourceName>
+            <AlternateName>LANL-97</AlternateName>
+            <ReleaseDate>2014-07-24T20:37:20Z</ReleaseDate>
+            <Description>Geosynchronous spacecraft carrying energetic electron and ion instruments</Description>
+            <Contact>
+                <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+                <Role>GeneralContact</Role>
+            </Contact>
+        </ResourceHeader>
+        <ObservatoryGroupID>spase://SMWG/Observatory/LANL</ObservatoryGroupID>
+        <Location>
+            <ObservatoryRegion>Earth.Magnetosphere.Main</ObservatoryRegion>
+            <ObservatoryRegion>Earth.Magnetosphere.RadiationBelt</ObservatoryRegion>
+        </Location>
+    </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+        <ResourceID>spase://SMWG/Instrument/LANL/97A/ESP</ResourceID>
+        <ResourceHeader>
+            <ResourceName>LANL97A Energetic Spectrometer for Particles (ESP)</ResourceName>
+            <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+            <Description>Higher-energy particles have been measured since 1989 using the Energy Spectrometer for Particles (ESP). The ESP is a bismuth germanate crystal coupled to a thick plastic scintillator that is coupled to a photomultiplier tube [4]. The ESP instrument can measure the spectrum of electrons from 0.7 to 26 MeV and of protons from 11 to &gt;20 MeV.</Description>
+            <Contact>
+                <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+                <Role>PrincipalInvestigator</Role>
+</Contact>
+            <InformationURL>
+                <Name>Long-Term Energetic-Particle Databases from Geosynchronous and GPS Orbits</Name>
+                <URL>https://www.osti.gov/biblio/645545</URL>
+                <Description>Overview of Energetic Particle Instruments flown in association with LANL.</Description>
+</InformationURL>
+</ResourceHeader>
+        <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+        <!--InstrumentType>PhotomultiplierTube</InstrumentType-->
+        <!--<InstrumentType>ScintillationDetector</InstrumentType>-->
+        <InvestigationName>LANL97A Energetic Sensor for Particles</InvestigationName>
+        <ObservatoryID>spase://SMWG/Observatory/LANL/97A</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person></Spase>
+
+

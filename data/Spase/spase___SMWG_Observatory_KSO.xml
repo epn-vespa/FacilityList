@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/KSO</ResourceID>
+    <ResourceHeader>
+      <ResourceName>KSO</ResourceName>
+      <ReleaseDate>2010-09-24T21:51:33Z</ReleaseDate>
+      <Description>Kanzelhoehe Solar Observatory</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/HANET</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+    </Location>
+  </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/KSO/KANZ</ResourceID>
+    <ResourceHeader>
+      <ResourceName>KANZ (VSO notation)</ResourceName>
+      <ReleaseDate>2012-04-04T00:00:00Z</ReleaseDate>
+      <Description>This instrument produces H-alpha solar imagery from 
+Kanzelhoehe Solar Observatory (KSO), Austria.  Its main purpose is a 
+high precision full disk imaging of the photosphere in order to derive 
+sunspot and faculae areas and positions as well. Other scientific 
+objectives are studies of the underlying photosphere before, during and 
+after chromospheric flares, hunting for the mystery white light flares 
+at the begin of a new solar cycle and providing a data set for 
+developing an automatic determination of sunspot relative numbers by 
+image segmentation techniques. The obtained time series will also 
+continue the support of the Debrecen Photoheliographic Data by daily 
+synoptic images.  The Kanzelhoehe Photosphere Telescope (KPT) is based 
+on the Kanzelhöhe Photoheliograph (PhoKa) which went into operation in 
+1989 and was described in detail in Pettauer, T.: 1990, in L. Deszö (ed.), 
+The Dynamic Sun, Publ. Debrecen Heliophysical Observatory, Debrecen, 
+p. 62(1990).  See http://www.kso.ac.at/instrumente/kpt/kpt_en.php
+for further detail.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Dietmar.Baumgartner</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Imager</InstrumentType>
+    <InvestigationName>KANZ (VSO notation) on KSO</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/KSO</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Dietmar.Baumgartner</ResourceID>
+    <PersonName>Dietmar Baumgartner</PersonName>
+    <OrganizationName>KANZELHÖHE OBSERVATORY</OrganizationName>
+    <Email>baumgartner@kso.ac.at</Email>
+  </Person></Spase>
+
+

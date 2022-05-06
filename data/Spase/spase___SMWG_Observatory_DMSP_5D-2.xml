@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/DMSP_5D-2</ResourceID>
+    <ResourceHeader>
+      <ResourceName>DMSP_5D-2</ResourceName>
+      <ReleaseDate>2010-10-01T20:32:07Z</ReleaseDate>
+      <Description>Earth imaging, sun-synchronous spacecraft that also measure measure downward particle fluxes, 
+	  magnetic fields, electron densities, ion drifts, and provide visible light images on the 
+	  different spacecraft near the Earth.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/DMSP</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.NearSurface</ObservatoryRegion>
+    </Location>
+  </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DMSP_5D-2/SSJ4</ResourceID>
+    <ResourceHeader>
+      <ResourceName>SSJ/4 Special Sensor for Precipitating Particles, Version 4</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The purpose of the precipitating electron/ion spectrometer is to measure fluxes and energies of electrons and ions precipitated into the upper atmosphere;</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Paul.L.Rothwell</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1995-015A&amp;ex=04</URL>
+        <Description>Information about the Precipitating Electron/Ion Spectrometer (SSJ/4) experiment on the DMSP 5D-2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>SSJ/4 Special Sensor for Precipitating Particles, Version 4 on DMSP_5D-2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DMSP_5D-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DMSP_5D-2/SSIES</ResourceID>
+    <ResourceHeader>
+      <ResourceName>SSIES Special Sensor Topside Thermal Plasma Monitor</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>SSIES Special Sensor Topside Thermal Plasma Monitor on DMSP_5D-2.  The SSI/ES is an improved version of the Special Sensor for Ions and Electrons (SSI/E). The SSI/E instruments measure the ambient electron density and temperatures, the ambient ion density, and the average ion temperature and molecular weight at the DMSP orbital altitude.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rita.C.Sagalyn</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1995-015A&amp;ex=03</URL>
+        <Description>Information about the Ionosph. Plasma Drift / Scintill Monitor (SSIES2) experiment on the DMSP 5D-2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>LangmuirProbe</InstrumentType>
+    <InvestigationName>SSIES Special Sensor Topside Thermal Plasma Monitor on DMSP_5D-2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DMSP_5D-2</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Rita.C.Sagalyn</ResourceID>
+    <PersonName>Dr. Rita C. Sagalyn</PersonName>
+    <OrganizationName>USAF Geophysics Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Paul.L.Rothwell</ResourceID>
+    <PersonName>Dr. Paul L. Rothwell</PersonName>
+    <OrganizationName>USAF Phillips Laboratory</OrganizationName>
+  </Person></Spase>
+
+

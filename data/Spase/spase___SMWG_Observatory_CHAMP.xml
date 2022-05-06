@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.6</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/CHAMP</ResourceID>
+    <ResourceHeader>
+      <ResourceName>CHAMP</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>CHAMP (CHAllenging Microsatellite Payload) is a German
+spacecraft launched July 15, 2000, into an 87 deg inclination, 454 km
+altitude orbit.  It was intended to provide data for improvement of models
+of Earth's gravitational and magnetic fields.  It carried a GPS receiver,
+a triaxial accelerometer, vector (fluxgate) and scalar magnetometers, and
+a digital ion drift meter for electric field determination.  GPS
+occultation and sounding measurements contributed to atmospheric and
+ionospheric profiles.  The mission continues to operate as of January, 2010.
+The science and data activities of the mission are managed by the
+GeoForschungsZentrum (GFZ; German Research Center for Geosciences) in
+Potsdam.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hermann.Luehr</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>CHAMP web page at the German Research Center for Geosciences</Name>
+        <URL>http://op.gfz-potsdam.de/champ/</URL>
+  <Description>Detailed information about CHAMP.</Description>
+  <Language>German</Language>
+</InformationURL>
+   <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-039B</URL>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.NearSurface</ObservatoryRegion>
+</Location>
+ <OperatingSpan>
+   <StartDate>2000-07-15T12:00:00Z</StartDate>
+   <StopDate>2010-09-19T08:00:59Z</StopDate>
+</OperatingSpan>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/CHAMP/DIDM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Digital Ion Drift Meter</ResourceName>
+      <ReleaseDate>2010-02-02T20:52:14Z</ReleaseDate>
+      <Description>The Digital Ion Drift Meter was provided by
+the Air Force Research Laboratory, Hanscom AFB, USA.  It determines
+ion distributions and moments (density, temperature, drift
+velocity) and can be used in computing V x B electric fields.
+There is a companion Planar Langmuir Probe used for spacecraft
+potential and electron density and temperature determinations.
+The DIDM and PLP data are used to help separate internal-source
+and external-source magnetic field variations, the former being 
+a primary focus of the mission.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jens.Wickert</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+      <InformationURL>
+        <Name>GFZ CHAMP site site</Name>
+        <URL>http://op.gfz-potsdam.de/champ/systems/index_SYSTEMS.html</URL>
+        <Description>German Research Center for Geosciences of Potsdam 
+web site for CHAMP mission, instruments, etc.</Description>
+      </InformationURL>
+    </ResourceHeader>
+    <InstrumentType>IonDrift</InstrumentType>
+    <InvestigationName>Digital Ion Drift Meter</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/CHAMP</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/CHAMP/OVM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Scalar Overhauser Magnetometer</ResourceName>
+      <ReleaseDate>2010-02-02T20:55:39Z</ReleaseDate>
+      <Description>The scalar Overhauser magnetometer was provided by
+the Laboratoire d'Electronique de Technologie et d'Instrumentation in
+Grenoble.  It determines proton precession frequency (and hence field
+magnitude) once per second, and has an absolute accuracy better than 
+0.5 nT.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hermann.Luehr</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <InformationURL>
+        <Name>GFZ CHAMP site site</Name>
+        <URL>http://op.gfz-potsdam.de/champ/systems/index_SYSTEMS.html</URL>
+        <Description>German Research Center for Geosciences of Potsdam 
+web site for CHAMP mission, instruments, etc.</Description>
+      </InformationURL>
+    </ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Overhauser Magnetometer</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/CHAMP</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/CHAMP/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>CHAMP Positions</ResourceName>
+      <AlternateName>CHAMP Ephemeris</AlternateName>
+      <ReleaseDate>2013-04-09T00:00:00Z</ReleaseDate>
+      <Description>CHAMP spacecraft positions in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.E.McGuire</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+        </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/CHAMP</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/CHAMP/FGM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>CHAMP Fluxgate Magnetometer</ResourceName>
+      <ReleaseDate>2010-02-02T20:52:49Z</ReleaseDate>
+      <Description>The triaxial fluxgate magnetometer was provided by
+the Technical University of Denmark.  The design is based on the Compact
+Spherical Coil sensor that was developed for the Oersted spacecraft.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hermann.Luehr</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <InformationURL>
+        <Name>GFZ CHAMP site site</Name>
+        <URL>http://op.gfz-potsdam.de/champ/systems/index_SYSTEMS.html</URL>
+        <Description>German Research Center for Geosciences of Potsdam 
+web site for CHAMP mission, instruments, etc.</Description>
+      </InformationURL>
+    </ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Fluxgate Magnetometer</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/CHAMP</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Hermann.Luehr</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Hermann Luehr</PersonName>
+    <OrganizationName>German Research Center for Geosciences</OrganizationName>
+    <Email>hluehr@gfz-potsdam.de</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jens.Wickert</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Jens Wickert</PersonName>
+    <OrganizationName>German Research Center for Geosciences</OrganizationName>
+    <Email>wickert@gfz-potsdam.de</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.E.McGuire</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Robert E. McGuire</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>robert.e.mcguire@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 7794</PhoneNumber>
+  </Person></Spase>
+
+

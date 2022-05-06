@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Geotail</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail</ResourceName>
+      <AlternateName>1992-044A</AlternateName>
+      <AlternateName>GTL</AlternateName>
+      <AlternateName>ISTP/Geotail</AlternateName>
+      <AlternateName>GGS/Geotail</AlternateName>
+      <AlternateName>Geomagnetic Tail Lab</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The solar wind draws the Earth's magnetic field into a long tail on the nightside of
+   the Earth and stores energy in the stretched field lines of the magnetotail. During active periods,
+   the tail couples with the near-Earth magnetosphere, sometimes releasing energy stored in the tail
+   and activating auroras in the polar ionosphere.
+  
+            The Geotail mission measures global energy flow and transformation in the magnetotail to
+   increase understanding of fundamental magnetospheric processes. This includes the physics of
+   the magnetopause magnetospheric boundary regions, the lobe and plasma sheet, and reconnection
+   and neutral line formation, i.e., the mechanisms processes of input, transport, storage,
+   release and conversion of mass, momentum and energy in the magnetotail.
+  
+  
+            Geotail, together with Wind, Polar, SOHO, and Cluster projects, constitute a cooperative
+   scientific satellite project designated the International Solar Terrestrial Physics (ISTP)
+   program which aims at gaining improved understanding of the physics of solar-terrestrial relations.
+  
+  
+            Geotail is a spin-stabilized spacecraft utilizing mechanically despun antennas with a design
+   lifetime of about four years. The nominal spin rate of the spacecraft is about 20 rpm around
+   a spin axis maintained between 85-89 degrees to the ecliptic plane. Geotail is cylindrical,
+   approximately 2.2 m in diameter, and 1.6 m high. with It has body-mounted solar cells.
+   Geotail also has and a back-up battery subsystem which that operates when the spacecraft is
+   in the Earth's shadow (limited to 2 hrs). Real-time telemetry data transmitted in X-band
+   are received at the Usuda Deep Space Center (UDSC) in Japan. There are two tape recorders
+   on board, each with a capacity of 450 Mb, which allows daily 24-hour data coverage and are
+   collected in playback mode by the NASA Deep Space Network (DSN).
+  
+            The Geotail mission is divided into two phases. During the two-year initial phase,
+   the orbit apogee was kept on the nightside of the Earth by using the Moon's gravity
+   in a series of double-lunar swing-by maneuvers that result in the spacecraft spending most of its
+   time in the distant magnetotail (maximum apogee about 200 Earth radii) with a period varying from
+   one to four months. Then, in November 1994, there were a series of maneuvers that reduced the
+   apogee to 50 Re. After three more months in the magnetotail the spacecraft was put in a 10
+   by 30 Re orbit where it has remained except that the perigee was reduced from 10 to 9 Re in June 1997.
+  
+  
+            Details on the Geotail mission and instrumentation are given in the Journal of Geomagnetism
+   and Geoelectricity (Vol. 46, No. 1, 1994); online from JGG at
+   https://www.jstage.jst.go.jp/browse/jgg1949/46/1/_contents/-char/en</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Guan.Le</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Masaki.Fujimoto</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jan.Merka</PersonID>
+        <Role>MetadataContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-044A</URL>
+        <Description>Information about the Geotail mission</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Journal of Geomagnetism and Geoelectricity Article</Name>
+        <URL>https://www.jstage.jst.go.jp/article/jgg1949/46/1/46_1_3/_article</URL>
+        <Description>Additional nformation about the Geotail mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail Spacecraft Position</ResourceName>
+      <AlternateName>Geotail Position</AlternateName>
+      <ReleaseDate>2009-05-20T21:10:15Z</ReleaseDate>
+      <Description>Geotail spacecraft position in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jan.Merka</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/CPI/SWA</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Solar Wind Analyzer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Solar Wind Analyzer (SWA) of the Comprehensive
+Plasma Instrumentation (CPI) on Geotail is a quadrispherical plasma
+analyzer that measures three-dimensional fluxes of ions in the range
+150-7,000 eV/Q</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Louis.A.Frank</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/William.R.Paterson</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>U.Iowa Geotail/CPI site</Name>
+        <URL>http://www-pi.physics.uiowa.edu/cpi/</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>QuadrisphericalAnalyser</InstrumentType>
+    <InvestigationName>Comprehensive Plasma Instrumentation</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/CPI/HPA</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail Hot Plasma Analyzer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Hot Plasma Analyzer (HPA) of the Comprehensive
+Plasma Instrumentation (CPI) on Geotail is a quadrispherical plasma
+analyzer that measures three-dimensional fluxes of electrons and ions
+in the range 1-50,000 eV/Q</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Louis.A.Frank</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/William.R.Paterson</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>U.Iowa Geotail/CPI site</Name>
+        <URL>http://www-pi.physics.uiowa.edu/cpi/</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>QuadrisphericalAnalyser</InstrumentType>
+    <InvestigationName>Comprehensive Plasma Instrumentation</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/PWI</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail Plasma Wave Investigation (PWI)</ResourceName>
+      <AlternateName>Geotail PWI</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>
+Description taken from
+
+Matsumoto, H., I. Nagano, R. R. Anderson, H. Kojima, K. Hashimoto, M. Tsutsui, T. Okada, I. Kimura, Y. Omura, and M. Okada, Plasma Wave Observations with GEOTAIL Spacecraft, J. Geomag. Geoelectr., 46, 59-95, 1994.
+
+The Geotail spacecraft was launched from Kennedy SPace Center at 14:26 UT on July 24, 1992. The primary scientific objectives of the PWI are to characterize wave-particle interaction processes and instabilities associated with the dynamics in the different regions of the magnetosphere.
+
+The PWI consists of three different sets of receivers: (1) the Sweep Frequency Analyzer(SFA), (2) the Multi-Channel Analyzer (MCA) and (3) the Wave-Form Capture(WFC). The first two sets of receivers are devoted to measuring wave spectra, while the last one is designed to capture wave forms from two electric and three magnetic field components of the measured wave emissions, simultaneously. The frequency ranges of the electric and the magnetic fields which can be measured range from 5.6 Hz to 800 kHz and from 5.6 Hz to 12.5 kHz, respectively. The frequency range of wave forms which can be captured by the WFC is from 10 Hz to 4 kHz.
+
+PWI observation data are available in three types of telemetry formats called Format 1, 2, and 3. Format 1 includes the SFA and MCA data. These data are recorded onboard magnetic data recorder and played back to NASA Deep Space Network.
+Format 2 is a real time observation mode supported by Usuda Deep Space Center (UDSC) in Japan. It includes all of PWI observation data with the highest resolution.
+Format 3 is an unusual observation mode. We mainly use this format, when we need to monitor US SIs' data in real time, because Format 2 does not include any US SIs' data. Format 3 includes all of PWI observation data, however, WFC data quanities are coarse relative to those in Format 2.
+
+Sensors
+
+In order to measure the weak electric and magnetic fields from plasma waves in the geomagnetic tail region, PWI uses two kinds of electric sensors and tri-axial search coils, having taken into account both the most suitable condition for field detection and reduction of spacecraft noise.  Two sets of long dipole antennas with a length of 100 m tip-to-tip are dedicated to measuring the electric field. They are wire and probe antennas termed `WANT' and `PANT', respectively.
+
+Two masts of 6 m in length are used for mounting the magnetic field sensors well away from the spacecraft in an attempt to the reduce the spacecraft noise. One of these masts, called `MST-F', mounts two sets of the flux-gate magnetometers which are used by the MGF team. They are dedicated primarily to the measurement of the DC magnetic field. Two sets of search coil and their pre-amplifiers which are used by both the PWI and MGF teams to measure wave magnetic fields or magnetic field fluctuations are mounted on the other mast called `MST-S'.
+
+The antenna elements of the WANT and PANT are radially deployed from the spacecraft and orthogonal to each other. Their axes, U and V, deviate by 15  degrees clockwise from the spacecraft X and Y coordinate directions, respectively. The assembly of PWI tri-axial search coils (which is hereafter called PWI-SC) and their pre-amplifiers is mounted on the top of the MST-S. The tri-axial search coils associated with the MGF (MGF-SC) are mounted on the same mast but 2 m inside of the PWI-SC. The PWI-SC is normally connected to the PWI measurement system. However, we can select the MGF-SC by a telemetry command if necessary. The direction of the MST-S (and MST--F) deviates by 45° clockwise from the spacecraft Y (and -Y) axis. The three axes of the PWI search coils are defined in a cylindrical coordinate system as follows: \alpha is in the tangential direction, \beta measures in the radial direction, and \gamma is parallel to the spin Z axis of the spacecraft.
+
+Sweep Frequency Analyzer (SFA)
+
+The SFA provides spectral information on plasma wave amplitudes over the frequency range from 24 Hz to 800 kHz for the electric field and 24 Hz to 12.5 kHz for the magnetic field. The SFA consists of eight independent receivers covering 5 frequency bands for the electric fields and three frequency bands for the magnetic fields. The receiver specifications are listed in Table 1.
+
+Table 1. Specification of SFA
+
++--------------------------------------------------------------------------+
+|Band  | Frequency Range   |  Freq. Step   |  Bandwidth  | Source  | Sweep |
+|------|-------------------|---------------|-------------|---------|-------|
+|1     | 24 Hz - 200 Hz    |   1.3 Hz      |  2.6 Hz     | B and E | 64sec |
+|2     | 200 Hz - 1600Hz   |  10.7 Hz      |   10 Hz     | B and E | 64sec |
+|3     |1.6 kHz - 12.5 kHz |  85.4 Hz      |   85 Hz     | B and E | 8 sec |
+|4     |12.5 kHz - 100 kHz |   683 Hz      |  680 Hz     | E only  | 8 sec |
+|5     |100 kHz - 800 kHz  |  5.47kHz      | 5.4 kHz     | E only  | 8 sec |
++--------------------------------------------------------------------------+
+
+Each receiver has a very good frequency resolution of 1/128 of the receiver frequency band although their time resolution (64 sec for Bands 1 and 2, and 8 sec for Bands 3 - 5) is somewhat coarse.
+
+The SFA measures one wave electric field component of either the E_U or E_V component and one wave magnetic field component of either the B_\alpha or B_\gamma component. The selection of which field component is measured is carried out by a telemetry command. Each receiver has an effective dynamic range of ~90 dB. The electric field receivers are placed in the High gain mode by stepping up the level in the Low gain mode by 30 dB.
+
+The SFA has another mode of operation which can be used. Despite its operation as the SFA, we can also fix the measured frequency to one preset value in each frequency band. This mode provides very high time resolution for the observed signals at an arbitrarily selected frequency. The time resolutions in this mode are 0.5 sec for Bands 1 and 2, and 62.5 msec for Bands 3, 4, and 5, respectively. This mode change is also carried out by a telemetry command.
+
+Multi Channel Analyzer (MCA)
+
+This subsystem is provided by the University of Iowa. The MCA contains two spectrum analyzers with fixed frequency channel filters. It provides high time resolution data to complement the coarser time resolution data of the SFA. However, their frequency resolution is coarse because they have only four frequency channels per decade in frequency.
+
+The input signal to the MCA is provided from the output of the common front-end circuit of the PWI system as well as to SFA and WFC receivers. One multi-channel spectrum analyzer is used to measure the electric field and is composed of 20 channels covering the frequency range from 5.62 Hz to 311 kHz. The other spectrum analyzer is used for magnetic field measurements and has 14 channels covering the frequency range from 5.62 Hz to 10 kHz. The bandwidths of the filters are +/- 15% of the channel center frequency in the frequency range below 10 kHz and +/- 7.5% of the center frequency for frequency above 10 kHz. The MCA instrument measures the wave electric field of either the E_U or E_V component (depending on which antenna is used) with a dynamic range of ~110 dB and the wave magnetic field of either the B_\alpha or B_\gamma component with a dynamic range of ~100 dB.
+
+Signals from all channels are sampled simultaneously so that the ratio of the electric to magnetic field strength may be calculated accurately. The signals are sampled once (data acquisition time is 1.037 msec) every 250 msec in Format 2 (and every 500 msec in Format 1). Each channel of the spectrum analyzer has a suitable integration time in the linear detection of signal ranging from 500 msec in the lower frequency channels and decreasing to a few milliseconds for those channel above 3 kHz.
+
+Wave-Form Capture (WFC)
+
+The WFC data are used for the detailed analysis of the wave characteristics, such as determination of the wave vector, polarization, Poynting flux, and antenna sheath impedance. The system has five (two electric and three magnetic) receivers each connected to a sensor through each front end circuit. The WFC has two different operation modes: Memory mode and Direct mode.
+
+In the Memory mode, wave signals are measured simultaneously as E_U, E_V , B_\alpha, B_\beta, and B_\gamma. These are fed to a gain-controller followed by an anti-aliasing filter (LPF) with an upper frequency cutoff of 4 kHz, then through high pass filters (HPF) which have a low frequency cutoff of 10 Hz. An alternate HPF with a low frequency cutoff of 100 Hz can be used with the electric field measurements. Wave forms of the analog signal are sampled then converted into 12 bit data by an A/D converter with a frequency of 12 kHz. The 12 bit digital data are compressed into 8 bit by a quasi-logarithmic compression method. The compressed 8 bit data are then stored into onboard memory with a storage of 512 kBytes for a period of 8.7sec. The stored wave form data are read out of memory and telemetered to the ground using the PCM telemetry during a uninterrupted period of 275 seconds in telemetry Format 2 and 375 seconds in telemetry Format 3. The start timing for initiating wave form capture is controlled by either free running timing pulse (INTER. mode) or when the instrument receives one of eight different sources for triggering signals. The instrument is triggered when one of the following measurements exceeds a preset level:
+
+1. The intensity of Z axis component of the DC magnetic field as measured by the outboard fluxgate magnetometer of the MGF.
+2. The amplitude of the plasma turbulence detected by a single probe of the EFD.
+3. The magnitude of ion and/or electron moments as measured by the electrostatic analyzers of the LEP-EA.
+4. The amplitude of the electric field measured on the 100 kHz channel of the MCA.
+5. The amplitude of the electric field measured on the 316 Hz channel of the MCA.
+6. The amplitude of the magnetic field measured on the 10 Hz channel of the MCA.
+7. The integral amplitude of the electric field over the entire frequency range of Band 1 (frequencies less than 250 Hz) of the SFA.
+8. The integral amplitude of the magnetic field over the entire frequency range of both Bands 1 and 2 (frequency less than 1.875 kHz) of the SFA.
+
+The selection among the possible eight triggering sources and its preset level or amplitude is made via telemetry commands.
+When the WFC instrument is operated in the Memory mode the following three modes of operation are available for storing and reading the data:
+
+1. AFT: Storage of 512 kByte of data after instrument triggering.
+2. MID: Storage of two successive 256 kByte sequences of data, one before and the other after instrument triggering.
+3. BEF: Storage of 512 kByte of data before instrument triggering.
+
+In the last two modes, a continuous sequence of signal sampling and storage into the memory is repeated until a triggering signal is detected by the instrument.
+
+A common problem of noise interference in the plasma wave instruments on spinning occurs as each group of solar cell circuits cycles on/off when the solar cell surface of the group faces to the sun-lit side then to the shadow side of the spacecraft. This repetition of the circuit from on to off to on again causes radiation of electromagnetic noises. To mitigate this problem, a high pass filter (HPF) with a cutoff frequency of 10 Hz is inserted in the receivers in order to suppress the detection of low frequency noise from the solar cell circuits. For the electric field receivers, we prepared an option for changing the HPF cutoff frequency from 10 Hz to 100 Hz in case the noise extended to higher frequencies then expected. The selection of the lower frequency cutoff is based upon the observed in situ noise level. These noise suppression measures limit frequency range of the observed wave forms to a band from 10 Hz (or 100 Hz) to 4 kHz.
+
+Besides the Memory Mode, the WFC can be operated in a Direct mode, with two possible variations: one is the Single channel mode in which only one field component is measured continuously and telemetered to ground on a real-time basis. In this operation mode the instrument can measure continuous wave forms of one electric or one magnetic component with an upper limit in frequency of 640 kHz in telemetry Format 2 (or 470 Hz in telemetry Format 3). The other method of instrument operation is in the Dual channel mode where two field components are measured and telemetered alternately. In this mode the upper limit in frequency is 320 Hz in telemetry Format 2 (or 235 Hz in telemetry Format 3) for each component. For both of these mode, the data sampling frequency is three times the upper limit in frequency.
+
+The WFC system can measure the wave amplitude with a dynamic range of 66 dB. The receiver gain keeping its dynamic range can be stepped up in the gain controller "H/L" by 40 dB and 20 dB in electric and magnetic channels to amplify the weak signal, respectively.
+</Description>
+      <Acknowledgement/>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hiroshi.Matsumoto</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hirotsugu.Kojima</PersonID>
+        <Role>CoInvestigator</Role>
+        <Role>GeneralContact</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Guan.Le</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Stanley.D.Shawhan</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Minoru.Tsutsui</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Joseph.K.Alexander.Jr</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.G.Stone</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Edward.J.Smith</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.A.Helliwell</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Michael.C.Kelley</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Iwane.Kimura</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Paul.J.Kellogg</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Toshimi.Okada</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Roger.R.Anderson</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Paul.M.Kintner</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Paul.Rodriguez</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Isamu.Nagano</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/William.W.L.Taylor</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/William.S.Kurth</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Kozo.Hashimoto</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Yoshiharu.Omura</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Hirotsugu.Kojima</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Frederick.L.Scarf</PersonID>
+        <Role>FormerPI</Role>
+</Contact>
+      <InformationURL>
+        <Name>GEOTAIL Plasma Wave Instrument</Name>
+        <URL>https://www.darts.isas.jaxa.jp/stp/geotail/instruments.html</URL>
+        <Description>Information about the Plasma Wave Investigation (PWI) experiment on the Geotail mission.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1992-044A-02</URL>
+        <Description>Information about the Plasma Wave Investigation (PWI) experiment on the Geotail mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>WaveformReceiver</InstrumentType>
+    <InstrumentType>Antenna</InstrumentType>
+    <InstrumentType>SearchCoil</InstrumentType>
+    <InstrumentType>LongWire</InstrumentType>
+    <InstrumentType>SpectralPowerReceiver</InstrumentType>
+    <InvestigationName>Plasma Wave Investigation (PWI) on Geotail</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/EFD</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail Electric Field Detector</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The objectives of this investigation are studies of
+(1) the large scale configuration of the electric field in the magnetotail,
+(2) tail electric field variations during substorms, (3) the electric
+field in the plasma sheet, (4) the electric field near the magnetopause
+and in the plasma mantle at locations tailward of those covered by similar
+measurements on ISEE 1, (5) micropulsation and low frequency wave
+measurements at frequencies covering the local gyrofrequency (.LT.1Hz) and
+lower hybrid frequency (.LT.10Hz) in the tail, (6) plasma density as deduced
+from measurement of the floating potential of the spacecraft, and
+(7) electric field comparisons (with the aid of the other spacecraft in
+the ISTP program) at different points along the same magnetic field line,
+at different points along a common boundary, or in different regions of
+the magnetosphere. The instrument consists of two orthogonal double probes,
+each of which is a pair of separated spheres on wire booms that are
+located in the satellite spin plane and whose difference of potential is
+measured. The separation distances between the pair of sensors are variable
+and as great as 160 m tip-to-tip. One operating mode involves length ratios
+of the two antennas of about 2:1 in order to verify instrument operation
+through showing that the electric field signature is proportional to the
+boom length. A second reason for two pairs of wire booms in the satellite
+spin plane is the requirement for measurements having a time resolution far
+better than the satellite spin period.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Koichiro.Tsuruda</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Forrest.S.Mozer</PersonID>
+        <Role>CoInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>ISTP site at NASA/GSFC</Name>
+        <URL>https://pwg.gsfc.nasa.gov/geotail.shtml</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>DoubleSphere</InstrumentType>
+    <InvestigationName>Electric Field Detector</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/LEP</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail Low Energy Particle Experiment</ResourceName>
+      <AlternateName>Geotail LEP</AlternateName>
+      <ReleaseDate>2010-02-04T12:34:56.789</ReleaseDate>
+      <Description>The low energy particle (LEP) instrument onboard Geotail is designed to make comprehensive observations of plasma and energetic electrons and ions with fine temporal resolution in the terrestrial magnetosphere (mainly magnetotail) and in the interplanetary medium. It consists of three units of sensors (LEP-EA, LEP-SW and LEP-MS) and common electronics (LEP-E).
+            The Energy-per-charge Analyzers (EA) measure three-dimensional velocity distributions of electrons (with EA-e) and ions (with EA-i) simultaneously and separately, over the energy-per-charge of several eV/q to 43 keV/q. Emphasis in the EA design is laid on the large geometrical factor to measure tenuous plasma in the magnetotail with sufficient counting statistics in the high-time-resolution measurement.
+            On the other hand, the Solar Wind ion analyzer (SW) has smaller geometrical factor, but fine angular and energy resolutions, to measrue energy-per-charge spectra of the solar wind ions. In both EA and SW sensors, the complete three-dimensional velocity distributions can only be obtained in a period of four spins, while the velocity moments up to the third order are calculated onboard every spin period (nominally, 3 sec).
+            The energetic-ion Mass Spectrometer (MS) failed shortly after launch and no data are available.</Description>
+      <Acknowledgement>In any publications, the use of the Geotail LEP data should be acknowledged, for example, as "Geotail magnetic field data were provided by Y. Saito, JAXA in Japan."</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Yoshifumi.Saito</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.H.Fairfield</PersonID>
+        <Role>Scientist</Role>
+      </Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jan.Merka</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+      <InformationURL>
+        <Name>The Geotail Low Energy Particle Experiment (LEP)</Name>
+        <URL>http://www.darts.isas.ac.jp/stp/geotail/jgg_lep.pdf</URL>
+        <Description>Reprint of Mukai, T., S. Machida, Y. Saito, M. Hirahara, T. Terasawa, N. Kaya, T. Obara, M. Ejiri, and A. Nishida, The low energy particle (LEP) experiment onboard the Geotail satellite, J. Geomag. Geoelectr., 46, 669-692, 1994.</Description>
+      </InformationURL>
+    </ResourceHeader>
+    <InstrumentType>QuadrisphericalAnalyser</InstrumentType>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Geotail Low Energy Particle experiment</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/EPIC</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail Energetic Particles and Ion Composition</ResourceName>
+      <ReleaseDate>2011-02-02T17:11:58Z</ReleaseDate>
+      <Description>The principal objective of the EPIC (Energetic 
+Particles and Ion Composition) investigation is to explore the 
+outer magnetosphere and the distant magnetotail region and obtain 
+information on the origin, transport, storage, acceleration and 
+dynamics of suprathermal and non-thermal particle populations. 
+The instrument contains two main sensor heads. The STICS assembly 
+(Supra-Thermal Ion Composition Spectrometer) uses a quadrispherical 
+electrostatic analyzer followed by a foil/solid state detector 
+time-of-flight (TOF) telescope to measure charge state, mass and 
+energy of ions with energies of 10 - 230 keV/charge. The ICS 
+assembly (Ion Composition Subsystem) measures the mass and energy 
+of energetic ions with energies of less than 50 keV to 3 MeV. It 
+uses a pair of collimators with sweeping magnets to reject 
+electrons, followed by TOF and energy analysis. A thin foil/solid 
+state detector electron telescope measures electrons higher than 
+30 keV. Directional measurements with a time resolution less than
+3 s for all species are possible. A detailed instrument description, 
+and a complete set of EPIC summary plots from launch to the present, 
+plus on-line access to the digital data set, is available at the 
+EPIC link below.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Anthony.T.Y.Lui</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.J.Williams</PersonID>
+        <Role>FormerPI</Role>
+      </Contact>
+      <InformationURL>
+        <Name>EPIC site at JHU_APL</Name>
+        <URL>http://sd-www.jhuapl.edu/Geotail/</URL>
+      </InformationURL>
+    </ResourceHeader>
+    <InstrumentType>QuadrisphericalAnalyser</InstrumentType>
+    <InvestigationName>Energetic Particles and Ion Composition</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/CPI</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail CPI</ResourceName>
+      <AlternateName>Geotail Comprehensive Plasma Instrumentation</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The objective of the Comprehensive Plasma Instrumentation (CPI) investigation is to make comprehensive observations of the three-dimensional velocity distribution functions of electrons and positive ions, with identification of ion species. The instrument contains three sets of quadrispherical analyzers with channel electron multipliers. These three obtain three-dimensional measurements for hot plasma and solar wind electrons, for solar wind ions, and for positive-ion composition measurements. The positive-ion composition measurement of the Ion Composition (IC) analyzer includes five miniature imaging mass spectrometers at the exit aperture of the analyzer, and covers masses from 1 to 550 u/Q at 100 eV, and 1 to 55 u/Q at 10 keV. The Hot Plasma (HP) analyzer measures electrons and ions in the range 1-50,000 eV/Q. The Solar Wind (SW) analyzer measures ions from 150 to 7,000 eV/Q. Sequencing of the energy analyzers and mass spectrometers, and other control functions, are provided by two microprocessors.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Louis.A.Frank</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1992-044A-04</URL>
+        <Description>Information about the Comprehensive Plasma Instrument (CPI)</Description>
+</InformationURL>
+      <PriorID>spase://nssdc/instrument/1992-044A-04</PriorID>
+</ResourceHeader>
+    <InstrumentType>QuadrisphericalAnalyser</InstrumentType>
+    <InvestigationName>CPI on GEOTAIL</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Geotail/MGF</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Geotail MGF</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The objective of this experiment is to measure the magnetic field variation of the magnetotail in the frequency below 50 Hz. The MGF experiment consists of dual three-axis fluxgate magnetometers and a three-axis search coil magnetometer. Triad fluxgate sensors, which utilize a ring core geometry, are installed at the end and middle of a 6 m deployable mast. Three search coils are mounted approximately one-half of the way out on another 6 m boom together with search coils for the VLF wave in the PWI system.
+            The fluxgate magnetometers are of standard design and consist of an amplifier, filter, phase sensitive detector, integrator, and a voltage-current convertor. The fluxgate magnetometers operate in seven dynamic ranges to cover various regions of the Earth's magnetosphere and the solar wind: +/-16 nT, +/-64 nT, +/-256 nT, +/-1024 nT, +/-4096 nT, +/-16384 nT, and +/-65536 nT, and supply 16 vectors/sec.
+            The automatic range control of the fluxgate magnetometers failed in 1999 so the observable range was manually fixed in the +/-256 nT where it has remained ever since. On November 23, 2006, the fluxgate magnetometer at the end of the boom failed and data from the second magnetometer at the middle of the boom has been used ever since. Neither of the above changes substantially affect the data.
+            The search coil magnetometer system consists of three sensors, preamplifier, amplifier, filter, multiplexer, and an A/D converter. The search coil magnetometers operate in a frequency range of 0.5 kHz to 1 kHz, and supply 128 vectors/sec. The fluxgate magnetometer operates in both real time and record modes, while the search coil data are used only in real time mode.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Tsugunobu.Nagai</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Donald.H.Fairfield</PersonID>
+        <Role>Scientist</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jan.Merka</PersonID>
+        <Role>MetadataContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1992-044A-06</URL>
+        <Description>Information about the Magnetic Fields Measurement (MGF)</Description>
+</InformationURL>
+      <PriorID>spase://nssdc/instrument/1992-044A-06</PriorID>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>MGF on GEOTAIL</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Geotail</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Louis.A.Frank</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Prof. Louis A. Frank</PersonName>
+    <OrganizationName>University of Iowa</OrganizationName>
+    <Address>Department of Physics and Astronomy, University of Iowa, Iowa City, IA 52242</Address>
+    <Email>frank@iowasp.physics.uiowa.edu</Email>
+    <PhoneNumber>+1 319 335 1695</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Hiroshi.Matsumoto</ResourceID>
+    <PersonName>Prof. Hiroshi Matsumoto</PersonName>
+    <OrganizationName>Kyoto University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Tsugunobu.Nagai</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Prof. Tsugunobu Nagai</PersonName>
+    <OrganizationName>Tokyo Institute of Technology</OrganizationName>
+    <Address>Department of Earth and Planetary Sciences, 2-12-1 Ookayama, Meguro-ku, Tokyo 152-8551, Japan</Address>
+    <Email>nagai@geo.titech.ac.jp</Email>
+    <FaxNumber>+81 3 5734 3537</FaxNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Koichiro.Tsuruda</ResourceID>
+    <PersonName>Dr. Koichiro Tsuruda</PersonName>
+    <OrganizationName>Institute of Space and Astronautical</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Paul.Rodriguez</ResourceID>
+    <PersonName>Dr. Paul Rodriguez</PersonName>
+    <OrganizationName>US Naval Research Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Michael.C.Kelley</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Michael C. Kelley</PersonName>
+    <OrganizationName>Cornell University</OrganizationName>
+    <Address>School of Electrical Engineering
+Cornell University
+318 Rhodes Hall
+Ithaca NY
+   14853</Address>
+    <Email>mikek@ee.cornell.edu</Email>
+    <PhoneNumber>+1-607-254-5331</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Masaki.Fujimoto</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Prof. Masaki Fujimoto</PersonName>
+    <OrganizationName>Institute of Space and Astronautical Science, Japan Aerospace Exploration Agency</OrganizationName>
+    <Address>3-1-1 Yoshinodai, Sagamihara, Kanagawa 229-8510, Japan</Address>
+    <Email>fujimoto@stp.isas.jaxa.jp</Email>
+    <FaxNumber>+81 42 759 8456</FaxNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/William.S.Kurth</ResourceID>
+    <PersonName>Dr. William S. Kurth</PersonName>
+    <OrganizationName>University of Iowa</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Joseph.K.Alexander.Jr</ResourceID>
+    <PersonName>Mr. Joseph K. Alexander, Jr.</PersonName>
+    <OrganizationName>GSFC-Code 600</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/William.R.Paterson</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. William R. Paterson</PersonName>
+    <OrganizationName>Hampton University</OrganizationName>
+    <Address>Atmospheric and Planetary Science, Hampton University, Hampton, VA 23668-6401</Address>
+    <Email>bill.paterson@hamptonu.edu</Email>
+    <PhoneNumber>+1 757 728 6401</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Guan.Le</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Guan Le</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 674, Greenbelt, MD 20771, USA</Address>
+    <Email>guan.le@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 1087</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Forrest.S.Mozer</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Prof. Forrest S. Mozer</PersonName>
+    <OrganizationName>University of California, Berkeley</OrganizationName>
+    <Address>Room 306
+Space Science Laboratory
+University of California, Berkeley
+Berkeley CA
+   94720</Address>
+    <Email>mozer@sunspot.ssl.berkeley.edu</Email>
+    <PhoneNumber>+1-510-642-0549</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Isamu.Nagano</ResourceID>
+    <PersonName>Dr. Isamu Nagano</PersonName>
+    <OrganizationName>Kanazawa University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Yoshifumi.Saito</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:48Z</ReleaseDate>
+    <PersonName>Dr. Yoshifumi Saito</PersonName>
+    <OrganizationName>Institute of Space and Astronautical Science, Japan Aerospace Exploration Agency</OrganizationName>
+    <Address>3-1-1 Yoshinodai, Sagamihara, Kanagawa 229-8510, Japan</Address>
+    <Email>saito@stp.isas.jaxa.jp</Email>
+    <FaxNumber>+81 42 759 8456</FaxNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Yoshiharu.Omura</ResourceID>
+    <PersonName>Dr. Yoshiharu Omura</PersonName>
+    <OrganizationName>Kyoto University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Edward.J.Smith</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Edward J. Smith</PersonName>
+    <OrganizationName>Jet Propulsion Laboratory</OrganizationName>
+    <Email>edward.j.smith@jpl.nasa.gov</Email>
+    <PhoneNumber>+1 818 354 2248</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Donald.J.Williams</ResourceID>
+    <PersonName>Dr. Donald J. Williams</PersonName>
+    <OrganizationName>Applied Physics Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Minoru.Tsutsui</ResourceID>
+    <PersonName>Mr. Minoru Tsutsui</PersonName>
+    <OrganizationName>Kyoto Sangyo University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Paul.M.Kintner</ResourceID>
+    <PersonName>Dr. Paul M. Kintner</PersonName>
+    <OrganizationName>Cornell University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Anthony.T.Y.Lui</ResourceID>
+    <PersonName>Dr. Anthony T.Y. Lui</PersonName>
+    <OrganizationName>Applied Physics Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Frederick.L.Scarf</ResourceID>
+    <ReleaseDate>2010-10-01T18:53:39Z</ReleaseDate>
+    <PersonName>Dr. Frederick L. Scarf</PersonName>
+    <OrganizationName>Deceased - formerly at TRW, CA</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Toshimi.Okada</ResourceID>
+    <PersonName>Dr. Toshimi Okada</PersonName>
+    <OrganizationName>Toyama Prefectural University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Paul.J.Kellogg</ResourceID>
+    <PersonName>Dr. Paul J. Kellogg</PersonName>
+    <OrganizationName>University of Minnesota</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Hirotsugu.Kojima</ResourceID>
+    <PersonName>Dr. Hirotsugu Kojima</PersonName>
+    <OrganizationName>Kyoto University</OrganizationName>
+    <Email>kojima@rish.kyoto-u.ac.jp</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Stanley.D.Shawhan</ResourceID>
+    <ReleaseDate>2010-10-01T18:53:39Z</ReleaseDate>
+    <PersonName>Dr. Stanley D. Shawhan</PersonName>
+    <OrganizationName>Deceased - formerly at NASA Headquarters</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Iwane.Kimura</ResourceID>
+    <PersonName>Dr. Iwane Kimura</PersonName>
+    <OrganizationName>Kyoto University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Roger.R.Anderson</ResourceID>
+    <PersonName>Dr. Roger R. Anderson</PersonName>
+    <OrganizationName>University of Iowa</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Kozo.Hashimoto</ResourceID>
+    <PersonName>Mr. Kozo Hashimoto</PersonName>
+    <OrganizationName>Kyoto University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Donald.H.Fairfield</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Donald H. Fairfield</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 695, Greenbelt, MD 20771, USA</Address>
+    <Email>u2dhf@lepdhf.gsfc.nasa.gov</Email>
+    <PhoneNumber>+1 301 286 7472</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.G.Stone</ResourceID>
+    <PersonName>Dr. Robert G. Stone</PersonName>
+    <OrganizationName>GSFC-Code 690</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jan.Merka</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Jan Merka</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>jan.merka@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 8751</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.A.Helliwell</ResourceID>
+    <PersonName>Prof. Robert A. Helliwell</PersonName>
+    <OrganizationName>Stanford University</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/William.W.L.Taylor</ResourceID>
+    <PersonName>Dr. William W. L. Taylor</PersonName>
+    <OrganizationName>GSFC-Code 612.4</OrganizationName>
+  </Person></Spase>
+
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_8.xsd">
+   <Version>2.2.8</Version>
+   <Observatory>
+      <ResourceID>spase://SMWG/Observatory/Ground/Kilpisjarvi</ResourceID>
+      <ResourceHeader>
+         <ResourceName>Kilpisjarvi Geophysical Observatory</ResourceName>
+		 <AlternateName>Observatory Station Code: KIL</AlternateName>
+         <ReleaseDate>2018-07-26T12:34:56.789</ReleaseDate>
+         <Description>Kilpisjarvi (KIL) Geophysical Observatory</Description>
+         <Acknowledgement>Please acknowledge: Finnish Meteorological Institute</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>THEMIS Fluxgate Ground-based Magnetometer (GMAG) Web Site</Name>
+            <URL>http://themis.ssl.berkeley.edu/instrument_gmags.shtml</URL>
+            <Description>THEMIS makes data available from GMAG stations in the United States, Canada, Denmark, Greenland, Norway, Sweden, Iceland, and Russia, and Antarctica.</Description>
+         </InformationURL>
+		 <InformationURL>
+			  <Name>International Monitor for Auroral Geomagnetic Effects Homepage</Name> 
+			  <URL>http://space.fmi.fi/image/www/index.php?page=home</URL> 
+			  <Description>About the IMAGE program.</Description> 
+		 </InformationURL>
+      </ResourceHeader>
+	  <ObservatoryGroupID>spase://SMWG/Observatory/Ground/IMAGE</ObservatoryGroupID>
+      <Location>
+         <ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+         <CoordinateSystemName>GEO</CoordinateSystemName>
+         <Latitude>69.1</Latitude>
+         <Longitude>20.8</Longitude>
+         <Elevation>480.0</Elevation>
+      </Location>
+      <OperatingSpan>
+         <StartDate>1983-06-01T00:00:00.000</StartDate>
+      </OperatingSpan>
+   </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/Ground/Kilpisjarvi/Magnetometer</ResourceID>
+      <ResourceHeader>
+         <ResourceName>Kilpisjarvi Magnetometer</ResourceName>
+         <ReleaseDate>2017-02-28T12:34:56.789</ReleaseDate>
+         <Description>Kilpisjarvi (KIL) Geophysical Observatory Magnetometer</Description>
+         <Acknowledgement>Please acknowledge L. Juusola, (Finnish Meteorological Institute)</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>THEMIS Fluxgate Ground-based Magnetometer (GMAG) Web Site</Name>
+            <URL>http://themis.ssl.berkeley.edu/instrument_gmags.shtml</URL>
+            <Description>THEMIS makes data available from GMAG stations in the United States, Canada, Denmark, Greenland, Norway, Sweden, Iceland, and Russia, and Antarctica.</Description>
+         </InformationURL>
+      </ResourceHeader>
+      <InstrumentType>Magnetometer</InstrumentType>
+      <InvestigationName>IMAGE Network</InvestigationName>
+      <InvestigationName>THEMIS Mission GMAGs</InvestigationName>
+      <OperatingSpan>
+         <StartDate>2017-01-01T00:00:00.000</StartDate>
+      </OperatingSpan>
+      <ObservatoryID>spase://SMWG/Observatory/Ground/Kilpisjarvi</ObservatoryID>
+   </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Instrument/Ground/Kilpisjarvi/AllSkyCamera</ResourceID>
+      <ResourceHeader>
+         <ResourceName>Kilpisjarvi All Sky Camera</ResourceName>
+         <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+         <Description>Kilpisjarvi All Sky Camera. All-sky colour cameras have fisheye optics and nowadays image detectors with colour filter masks. Previously 16-mm or 35-mm cinematographic film was used. These cameras reproduce the aurora as it looks to the human eye.</Description>
+         <Acknowledgement>Markku Lehtinen, Project Head, Sodankyla Geophysical Observatory, University of Oulu</Acknowledgement>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Markku.Lehtinen</PersonID>
+            <Role>GeneralContact</Role>
+</Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+</Contact>
+         <InformationURL>
+            <Name>Finnish Meteorological Institute, FMI, All Sky Camera Web Site</Name>
+            <URL>http://www.geo.fmi.fi/MIRACLE/ASC/</URL>
+            <Description>Finnish Meteorological Institute, FMI, All Sky Camera Information and Details</Description>
+</InformationURL>
+</ResourceHeader>
+      <InstrumentType>Imager</InstrumentType>
+      <InvestigationName>Finnish Meteorological Institute, FMI, All Sky Cameras</InvestigationName>
+      <OperatingSpan>
+         <StartDate>1996-01-01T00:00:00</StartDate>
+</OperatingSpan>
+      <ObservatoryID>spase://SMWG/Observatory/Ground/Kilpisjarvi</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Lee.Frost.Bargatze</ResourceID>
+      <ReleaseDate>2012-06-13T12:34:56.789</ReleaseDate>
+      <PersonName>Lee Frost Bargatze</PersonName>
+      <OrganizationName>Institute of Geophysics and Planetary Physics and the Department of Earth and Space Sciences, University of California, Los Angeles</OrganizationName>
+      <Address>Institute of Geophysics and Planetary Physics, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+      <Email>lfb@igpp.ucla.edu</Email>
+      <PhoneNumber>+1 310 206 6073</PhoneNumber>
+   </Person><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Markku.Lehtinen</ResourceID>
+      <ReleaseDate>2017-08-22T12:34:56.789</ReleaseDate>
+      <PersonName>Markku Lehtinen</PersonName>
+      <OrganizationName>Sodankyla Geophysical Observatory</OrganizationName>
+      <Address>University of Oulu</Address>
+      <Email>markku.lehtinen@sgo.fi</Email>
+      <PhoneNumber>+358 294 480000</PhoneNumber>
+   </Person></Spase>
+
+

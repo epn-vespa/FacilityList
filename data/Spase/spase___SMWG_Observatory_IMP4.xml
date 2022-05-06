@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/IMP4</ResourceID>
+    <ResourceHeader>
+      <ResourceName>IMP 4</ResourceName>
+      <AlternateName>1967-051A</AlternateName>
+      <AlternateName>IMP-F</AlternateName>
+      <AlternateName>Explorer 34</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This spacecraft was placed into a high-inclination, highly eccentric earth orbit. The apogee point was located near the ecliptic plane and had an initial local time of about 1900 h. The spacecraft was spin-stabilized and had an initial spin period of 2.6 s. The spin vector was approximately perpendicular to the ecliptic plane. Like the earlier IMPs, this spacecraft was instrumented to study interplanetary magnetic fields, energetic particles, and plasma. The spacecraft optical aspect system failed on March 4, 1969. Otherwise, useful data were acquired until just before spacecraft reentry, which occurred on May 3, 1969.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Frank.B.McDonald</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-051A</URL>
+        <Description>Information about the IMP-F mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/IMP</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/IMP4/SPME</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Solar Proton Monitoring Experiment</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The solar proton monitoring experiment used four separate detectors, each of which used one or more solid-state sensors. Three detectors measured the omnidirectional fluxes of protons and alpha particles with energy per nucleon values above 10, 30, and 60 MeV. Alpha particle contributions to the total count rates were generally less than 10%. These detectors were also sensitive to electrons above approximately 0.7, 2, and 8 MeV, respectively. The 10-MeV channel was sampled for two 19.2-s intervals every 163.8 s and the 30- and 60-MeV channels for one 19.2-s interval every 163.8 s. Resultant hourly averaged fluxes have been published in Solar-Geophysical Data (NOAA, Boulder) on a rapid basis. The fourth detector had a 60-deg full look angle normal to the spacecraft spin axis and measured fluxes of 1- to 10-MeV protons for two 19.2-s intervals every 163.8 s. Data were obtained from the first three detectors between launch and May 3, 1969. Data from the fourth detector were obtained between launch and June 12, 1968. NSSDC has all the useful data that now exist.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Carl.O.Bostrom</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1967-051A&amp;ex=7</URL>
+        <Description>Information about the Solar Proton Monitoring Experiment experiment on the IMP-F mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Solar Proton Monitoring Experiment on IMP-F</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/IMP4</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/IMP4/Magnetometer</ResourceID>
+    <ResourceHeader>
+      <ResourceName>IMP 4 Triaxial Fluxgate Magnetometer</ResourceName>
+      <AlternateName>Explorer 34 Triaxial Fluxgate Magnetometer</AlternateName>
+      <AlternateName>IMP-F Triaxial Fluxgate Magnetometer</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment used a triaxial fluxgate magnetometer. Each sensor
+       had dual ranges of minus to plus 32 nT and 128 nT and digitization errors of
+       minus to plus 0.16 and 0.64 nT, respectively. The operating range could be
+       changed by ground command. The sensor parallel to the spin axis was on a 1.8-m
+       boom and was flipped every 3.9 d to check the zero level. The other two sensors
+       were on a separate boom. Vector measurements were returned each 2.56 s. An
+       onboard autocorrelation computer was included. Autocorrelation data based on
+       240 samplings were returned on alternate components each 20.45 s. The experiment
+       worked well throughout the life of the spacecraft. However, failure of the
+       spacecraft optical aspect system on March 4, 1969, rendered impossible the
+       determination of the magnetic field direction over the last 2 months of data
+       acquisition. For further details, see Fairfield, J. Geophys. Res., v. 74, p.
+       3541, 1969. NSSDC has all the useful data that now exist from this investigation.
+       Hourly averaged interplanetary data also exist as part of data sets in the NSSDC
+       supplementary data file.        
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Norman.F.Ness</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+         <PersonID>spase://SMWG/Person/Donald.H.Fairfield</PersonID>
+         <Role>CoInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/James.M.Weygand</PersonID>
+        <Role>MetadataContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1967-051A-11</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Magnetometer</InvestigationName>
+    <OperatingSpan>
+     <StartDate>1967-05-24T14:22:00</StartDate>
+     <StopDate>1969-02-01T09:11:00</StopDate>
+     <Note>Many of the time values in the data file are suspect or unclear.</Note>
+</OperatingSpan>
+    <ObservatoryID>spase://SMWG/Observatory/IMP4</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Norman.F.Ness</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Norman F. Ness</PersonName>
+    <OrganizationName>University of Delaware</OrganizationName>
+    <Email>nfness@bartol.udel.edu</Email>
+    <PhoneNumber>+1 302 831 8116</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Carl.O.Bostrom</ResourceID>
+    <PersonName>Dr. Carl O. Bostrom</PersonName>
+    <OrganizationName>Applied Physics Laboratory</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Frank.B.McDonald</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Frank B. McDonald</PersonName>
+    <OrganizationName>University of Maryland</OrganizationName>
+    <Email>fm27@umail.umd.edu</Email>
+    <PhoneNumber>+1-301-405-4861</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/James.M.Weygand</ResourceID>
+    <ReleaseDate>2018-05-30T17:35:46Z</ReleaseDate>
+    <PersonName>James M. Weygand</PersonName>
+    <OrganizationName>Department of Earth, Planetary, and Space Sciences; University of California, Los Angeles</OrganizationName>
+    <Address>Department of Earth, Planetary, and Space Sciences, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+    <Email>jweygand@igpp.ucla.edu</Email>
+    <PhoneNumber>+1 310 825 3547</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Donald.H.Fairfield</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Donald H. Fairfield</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 695, Greenbelt, MD 20771, USA</Address>
+    <Email>u2dhf@lepdhf.gsfc.nasa.gov</Email>
+    <PhoneNumber>+1 301 286 7472</PhoneNumber>
+  </Person></Spase>
+
+

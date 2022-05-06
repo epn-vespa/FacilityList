@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_3.xsd">
+	<Version>2.2.3</Version>
+	<Observatory>
+		<ResourceID>spase://ASWS/Observatory/Ground/Casey</ResourceID>
+		<ResourceHeader>
+			<ResourceName>Casey</ResourceName>
+			<AlternateName>None</AlternateName>
+  			<ReleaseDate>2020-11-13T20:35:01Z</ReleaseDate>
+			<Description>Casey station is located on Casey, Antarctica. It has been in operation since July 1957.</Description>
+			<Acknowledgement>Please acknowledge: Space Weather Network, Bureau of Meteorology, Australia</Acknowledgement>
+			<Contact>
+				<PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+				<Role>GeneralContact</Role>
+				<Role>DataProducer</Role>
+			</Contact>
+			<Contact>
+				<PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+				<Role>MetadataContact</Role>
+			</Contact>
+                	<InformationURL>
+                  		<Name>ASWS Observatory Information: Casey</Name>
+        		     	<URL>http://www.sws.bom.gov.au/World_Data_Centre/2/1/24</URL>
+        		     	<Description>includes observatory/station name, location, lifetime, identity and datasets informtion.</Description>
+        		     	<Language>en</Language>
+      			</InformationURL>
+                        <PriorID>spase://SMWG/Observatory/Ground/Casey</PriorID>
+                        <PriorID>spase://SMWG/Observatory/WDC/Casey</PriorID>
+		</ResourceHeader>
+		<Location>
+			<ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+			<Latitude>-66.30</Latitude>
+			<Longitude>110.50E</Longitude>
+		</Location>
+		<OperatingSpan>
+			<StartDate>1957-07-01T00:00:00.000</StartDate>
+		</OperatingSpan>
+	</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://ASWS/Instrument/Ground/Casey/Ionosonde</ResourceID>
+      <ResourceHeader>
+         <ResourceName>Casey Ionosonde</ResourceName>
+         <ReleaseDate>2019-05-01T12:34:56.789Z</ReleaseDate>
+         <Description>The Casey Ionosonde station in Casey, Antarctica, has Ionosondes since July 1957. According to INAG-3 and SWS archived Wilkes scaled ionospheric data book (Series D), a C4 ionosonde provided by USA was operated in Wilkes between 02/1957 and 01/1969, and the an IPS 3D ionosonde with 35 mm film was operated since between 03/1969, and then an analog ionosonde with 16 mm film since 14/04/1989 to 03/03/1992. There was a CADI ionosonde between 02/1993 and 10/2001, and an IPS 5D ionosonde since October 1999. The IPS 5D vertical sounding ionosonde normally sweeps in frequency from about 1.0 to 21.5 MHz. Frequency step resolution for the 5D is 5 kHz, with up to 4095 steps available. The step interval is variable, becoming more coarse at higher frequencies as ionograms are generally displayed on a logarithmic scale.</Description>
+         <Contact>
+            <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+            <Role>GeneralContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>INAG-3</Name>
+            <URL>http://www.sws.bom.gov.au/IPSHosted/INAG/pdf-i/inag03i.pdf</URL>
+            <Description>Page 8 includes station name, location, equipment and lifetime of ionosondes.</Description>
+            <Language>en</Language>
+         </InformationURL>
+      </ResourceHeader>
+      <InstrumentType>Radar</InstrumentType>
+      <InvestigationName>Casey Ionosonde</InvestigationName>
+      <ObservatoryID>spase://ASWS/Observatory/Ground/Casey</ObservatoryID>
+   </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Instrument/Ground/Casey/Magnetometer</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Casey Magnetometer</ResourceName>
+      <ReleaseDate>2020-11-13T20:35:01Z</ReleaseDate>
+      <Description>The Casey Magnetometer station in Casey, Antarctica, has two digital Magnetometers since August 2000. 
+      
+      16 August, 2000
+      ---------------
+      Data type: "h"
+      Data started being received in the ASFC from ANTDIV Fluxgate magnetometer. Files were for 5 minutes of data which are appended into a single file for the corresponding fraction of the hour before processing. As the calibration values were unknown at this point in time, the same values as for Davis were used.
+
+      16 August, 2000
+      ---------------
+      Data type: "p"
+      Data being received in ASFC from ANTDIV. The instrument is an induction magnetometer for recording geomagnetic pulsations and is owned by the University of Newcastle and operated by ANTDIV. Presently there is no calibration information available for converting the data to variations in nanoTesla. This information has been requested from the University of Newcastle Space Plasma Waves Research Group and as yet there has been no reply. 
+      (RAM - 16/10/00)
+
+      For more information, please read its log file.     
+      </Description>
+      <Contact>
+        <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+      <InformationURL>
+        <Name>ASWS Casey Instrument Fluxgate Magenetometer (AAD) Log File</Name>
+	<URL>ftp://ftp-out.sws.bom.gov.au/wdc/wdc_mag/data/cas/stn.log</URL>
+	<Description>includes Casey magnetometer log file.</Description>
+	<Language>en</Language>
+      </InformationURL>
+      <InformationURL>
+        <Name>ASWS Casey Instrument Induction Magenetometer (UoN/AAD) Log File</Name>
+	<URL>ftp://ftp-out.sws.bom.gov.au/wdc/wdc_mag/data/csy/stn.log</URL>
+	<Description>includes Casey magnetometer log file.</Description>
+	<Language>en</Language>
+      </InformationURL>
+      <PriorID>spase://SMWG/Instrument/Ground/Casey/Magnetometer</PriorID>
+      <PriorID>spase://SMWG/Instrument/IAGA/Casey/Magnetometer</PriorID>
+    </ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Casey Magnetometer</InvestigationName>
+    <ObservatoryID>spase://ASWS/Observatory/Ground/Casey</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Instrument/Ground/Casey/Riometer</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Casey Riometer</ResourceName>
+      <ReleaseDate>2017-07-24T17:20:00Z</ReleaseDate>
+      <Description>The Casey station in Antarctica has a riometer since 17 January 1989.
+     
+	Ionosondes are ground-based swept-frequency vertical radars that are used to determine the electron density of the ionosphere. They provide information about the E and F layers in the altitude range of about 100 to 500 km. However, most of the absorption that occurs when a radio wave transits the ionosphere occurs in the D-region from about 70 to 100 km in height.
+
+	The riometer (relative ionospheric opacity meter) is one of the few instruments that can be used to determine ionospheric absorption. The first riometers were single beam units and operated at or near a frequency of 30 MHz. The principle of operation is to compare the currently received cosmic radio noise with a calibration curve (called a quiet day curve or QDC). The difference between the two is the current ionospheric absorption over the region monitored by the antenna at the time.
+
+	Most of the cosmic noise monitored by a riometer comes from our own galaxy, and varies over the sky. It has a maximum when looking at the galactic centre (in the direction of Sagittarius) and a minimum at right angles to this direction. To minimize contamination with terrestrial RFI, riometers either employ a wide bandwidth (eg 500 kHz) to dilute the interference and/or sweep rapidly in frequency over several 100 kHz and use the minimum signal detected in this range.
+
+	Riometers are most often employed at high latitude and polar regions where they are used to detect polar cap absorption. This provides a measure of solar-generated high energy protons. The absorption is caused by the particles precipitating down to D-region altitudes. Riometers can also be deployed at lower latitudes, and although natural absorption is much less here, they have been used to monitor atmospheric nuclear explosions.
+
+	Australian Bureau of Meteorology's Space Weather Services (SWS) operates several riometers in Antarctica and the data is available in real-time on the SWS web site at Riometer Data.
+      </Description>
+      <Acknowledgement>We are thankful to AAD and the Space Weather Network, Bureau of Meteorology of Australia for the observations of Casey riometer data.</Acknowledgement>
+      <Contact>
+        <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Riometer</InstrumentType>
+    <InvestigationName>Casey Riometer</InvestigationName>
+    <ObservatoryID>spase://ASWS/Observatory/Ground/Casey</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Person/Kehe.Wang</ResourceID>
+    <ReleaseDate>2017-06-28T17:03:47Z</ReleaseDate>
+    <PersonName>Kehe Wang</PersonName>
+    <OrganizationName>Space Weather Services (SWS), Bureau of Meteorology, Australia</OrganizationName>
+    <Email>kehe.wang@bom.gov.au</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Lee.Frost.Bargatze</ResourceID>
+      <ReleaseDate>2012-06-13T12:34:56.789</ReleaseDate>
+      <PersonName>Lee Frost Bargatze</PersonName>
+      <OrganizationName>Institute of Geophysics and Planetary Physics and the Department of Earth and Space Sciences, University of California, Los Angeles</OrganizationName>
+      <Address>Institute of Geophysics and Planetary Physics, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+      <Email>lfb@igpp.ucla.edu</Email>
+      <PhoneNumber>+1 310 206 6073</PhoneNumber>
+   </Person></Spase>
+
+

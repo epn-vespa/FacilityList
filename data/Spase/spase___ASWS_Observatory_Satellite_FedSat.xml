@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_3.xsd">
+ <Version>2.2.3</Version>
+ <Observatory>
+  <ResourceID>spase://ASWS/Observatory/Satellite/FedSat</ResourceID>
+  <ResourceHeader>
+   <ResourceName>FedSat</ResourceName>
+   <AlternateName>Australia's 'Federation Satellite'</AlternateName>
+     <ReleaseDate>2020-09-28T18:31:52Z</ReleaseDate>
+   <Description>
+   FedSat (Australia's 'Federation Satellite') is an Australian scientific research satellite launched from Tanegashima Space Center, Japan by a NASDA H-IIA launch vehicle in December 2002 (NASDA is now merged with JAXA). The satellite was developed by the Cooperative Research Centre for Satellite Systems, a cooperative made up of several universities, commercial organisations and government bodies. The ground station is at the Institute for Telecommunications Research, part of the University of South Australia, near Adelaide. Since 2005 it was operated by the Australian Department of Defence.
+
+   The satellite had six given below payloads:
+
+   Communications Payload: A collection of three components (UHF transponder, Ka-band transponder and base-band processor) used to perform several experiments in satellite communications.
+   High Performance Computing Experiment: A reconfigurable computer based on a Xilinx FPGA, the first of its kind to be used in space.
+   GPS Payload: A Global Positioning System receiver built by NASA. Conceived especially for ionospheric studies between GPS constellation levels and FedSat orbit.[8]
+   NewMag Payload: A magnetometer built by the University of Newcastle, Australia, used to take measurements of the Earth's magnetic field near its poles.
+   Star Camera: An experimental star camera built by the University of Stellenbosch, used to determine the position of the satellite in space by analysing images of surrounding stars.
+   Compact Disk: A nickel "master" disk "cultural time capsule" with tracks including Paul Kelly's performance of the song he co-wrote with Kev Carmody, "From Little Things, Big Things Grow", and recorded statements from several hundred Australian school children about how they imagined a future Australia and its place in the Asia-Pacific.
+
+   The satellite platform, comprising the structural/thermal components, power system, attitude control system, onboard computer and groundlink, was originally developed in the UK by Space Innovations Limited. It was later completed along with integration of payloads in Canberra, Australia.
+
+   The spacecraft's battery failed in May 2007 and the mission has been terminated, after lasting 18 months longer than expected.
+</Description>
+   <Acknowledgement>Please acknowledge: the University of Newcastle, Australia</Acknowledgement>
+   <Contact>
+    <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+    <Role>GeneralContact</Role>
+    <Role>DataProducer</Role>
+</Contact>
+   <Contact>
+    <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+    <Role>MetadataContact</Role>
+</Contact>
+               <InformationURL>
+                    <Name>FedSat Information: FedSat 1</Name>
+           <URL>https://space.skyrocket.de/doc_sdat/fedsat-1.htm</URL>
+           <Description>includes FedSat Satellite informtion.</Description>
+           <Language>en</Language>
+</InformationURL>
+</ResourceHeader>
+  <Location>
+   <ObservatoryRegion>Earth.Magnetosphere</ObservatoryRegion>
+</Location>
+  <OperatingSpan>
+   <StartDate>2002-12-14T00:00:00.000</StartDate>
+   <StopDate>2007-05-31T00:00:00.000</StopDate>
+</OperatingSpan>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://ASWS/Instrument/Satellite/FedSat/NewMag</ResourceID>
+      <ResourceHeader>
+         <ResourceName>FedSat Magnetometer</ResourceName>
+         <ReleaseDate>2019-05-01T12:34:56.789Z</ReleaseDate>
+         <Description>FedSat (Australia's "Federation Satellite" is an Australian scientific research satellite launched from Tanegashima Space Centre, Japan by a NASDA H-IIA launch vehicle in December 2002 (NASDA is now merged with JAXA). The satellite was developed by the Cooperative Research Centre for Satellite Systems, a cooperative made up of several universities, commercial organisations and government bodies. The ground station is at the Institute for Telecommunications Research, part of the University of South Australia, near Adelaide. Since 2005 it was operated by the Australian Department of Defence.
+
+NewMag Payload: A magnetometer built by the University of Newcastle, Australia, used to take measurements of the Earth's magnetic field near its poles.</Description>
+         <Contact>
+            <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+            <Role>GeneralContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+         <InformationURL>
+            <Name>ASWS Instrument FedSat Information</Name>
+            <URL>http://www.sws.bom.gov.au/World_Data_Centre/1/5/2</URL>
+            <Description>Includes FedSat and NewMag Magnetometer payload and data information.</Description>
+            <Language>en</Language>
+         </InformationURL>
+      </ResourceHeader>
+      <InstrumentType>Magnetometer</InstrumentType>
+      <InvestigationName>FedSat Magnetometer</InvestigationName>
+      <ObservatoryID>spase://ASWS/Observatory/Satellite/FedSat</ObservatoryID>
+   </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Person/Kehe.Wang</ResourceID>
+    <ReleaseDate>2017-06-28T17:03:47Z</ReleaseDate>
+    <PersonName>Kehe Wang</PersonName>
+    <OrganizationName>Space Weather Services (SWS), Bureau of Meteorology, Australia</OrganizationName>
+    <Email>kehe.wang@bom.gov.au</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Lee.Frost.Bargatze</ResourceID>
+      <ReleaseDate>2012-06-13T12:34:56.789</ReleaseDate>
+      <PersonName>Lee Frost Bargatze</PersonName>
+      <OrganizationName>Institute of Geophysics and Planetary Physics and the Department of Earth and Space Sciences, University of California, Los Angeles</OrganizationName>
+      <Address>Institute of Geophysics and Planetary Physics, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+      <Email>lfb@igpp.ucla.edu</Email>
+      <PhoneNumber>+1 310 206 6073</PhoneNumber>
+   </Person></Spase>
+
+

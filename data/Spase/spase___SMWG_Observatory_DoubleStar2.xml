@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/DoubleStar2</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Double Star 2</ResourceName>
+      <AlternateName>2004-029A</AlternateName>
+      <AlternateName>Explorer  2</AlternateName>
+      <AlternateName>Tan Ce 2</AlternateName>
+      <AlternateName>TC 2</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>Double Star 2, also known as Explorer 2 and as Tan Ce 2 (TC 2) , is a
+   European-Chinese (PRC) (ESA-CNSA) satellite that was launched by a Long March 2C
+   rocket from Taiyuan Satellite Launching Center at 07:05 UT on 25 July 2004.
+   The 330 kg, 260 W
+   satellite is cylindrical, with a diameter of 2.1 m, a height of 1.4 m, and spins at a rate
+   of 15 rpm. It carries eight instruments to probe Earth's magnetosphere, five from ESA and
+   three from CNSA. (The ESA instruments are legacies from ESA's Cluster mission.) This
+   joint mission is similar to the equatorial orbiter, Double Star 1, except that Double
+   Star 2 is a polar orbiter.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Christophe.Philippe.Escoubet</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-029A</URL>
+        <Description>Information about the Double Star 2 mission</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Double Star Mission Overview</Name>
+        <URL>http://www.esa.int/Our_Activities/Space_Science/Double_Star_overview2</URL>
+        <Description>Detailed information about the Double Star Mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Double Star Mission European Space Agency Homepage</Name>
+        <URL>http://sci.esa.int/double-star/</URL>
+        <Description>Detailed information about the Double Star Mission.</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Double Star Mission Annales Geophysicae Article</Name>
+        <URL>https://www.ann-geophys.net/23/2707/2005/</URL>
+        <Description>Detailed information about the Double Star Mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/DoubleStar</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.Magnetosphere.Main</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/NUADU</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Neutral Atom Detection Unit (NUADU)</ResourceName>
+      <AlternateName>NUADU</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>NUADU (NeUtral Atom Detection Unit) measures the energetic neutral atoms created by collision of energetic ions with the ambient, cold neutral atoms. Of interest are the energetic neutral atoms coming out of the "Ring Current" belt in the magnetosphere. The Principal Investigator is S. McKenna Lawlor, National University of Ireland, Kildare, Ireland.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=1</URL>
+        <Description>Information about the Neutral Atom Detection Unit (NUADU) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>NeutralParticleDetector</InstrumentType>
+    <InvestigationName>Neutral Atom Detection Unit (NUADU) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/HEPD</ResourceID>
+    <ResourceHeader>
+      <ResourceName>High-Energy Proton Detector (HEPD)</ResourceName>
+      <AlternateName>HEPD</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>HEPD (High Energy Proton Detector): The Principal Investigators are J. Liang and J. B. Cao, CSSAR, China. No further information is available.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=7</URL>
+        <Description>Information about the High-Energy Proton Detector (HEPD) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>High-Energy Proton Detector (HEPD) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/PEACE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Plasma Electron and Current Experiment (PEACE)</ResourceName>
+      <AlternateName>PEACE</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>PEACE (Plasma Electron And Current Experiment) will count the population of low/medium energy electrons by measuring the number of electron impacts at each energy level and each direction. The Principal Investigator is A. Fazakerley, MSSL, Dorking, UK.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Andrew.N.Fazakerley</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=3</URL>
+        <Description>Information about the Plasma Electron and Current Experiment (PEACE) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Plasma Electron and Current Experiment (PEACE) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Double Star 2 Spacecraft Position</ResourceName>
+      <AlternateName>Double Star 2 Ephemeris</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>Double Star 2 spacecraft position information.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/James.M.Weygand</PersonID>
+        <Role>MetadataContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>Double Star 2 Orbit Information</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/displayTrajectory.action?id=2004-029A</URL>
+        <Description>Introduction to the Double Star 2 Orbit.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Double Star 2 Spacecraft Position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/LFEW</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Low-Frequency Electromagnetic Wave Detector (LFEW)</ResourceName>
+      <AlternateName>LFEW</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>LFEW (Low Frequency Electromagnetic Wave detector): The Principal Investigators are Z. Wang and J. B. Cao, CSSAR, China. No further information is available.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=5</URL>
+        <Description>Information about the Low-Frequency Electromagnetic Wave Detector (LFEW) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>Low-Frequency Electromagnetic Wave Detector (LFEW) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/HEED</ResourceID>
+    <ResourceHeader>
+      <ResourceName>High-Energy Electron Detector (HEED)</ResourceName>
+      <AlternateName>HEED</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>HEED (High Energy Electron Detector): The Principal Investigator is W. Zhang and J. B. Cao, CSSAR, China. No further information is available.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=6</URL>
+        <Description>Information about the High-Energy Electron Detector (HEED) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>High-Energy Electron Detector (HEED) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/LEID</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Low-Energy Ion Detector (LEID)</ResourceName>
+      <AlternateName>LEID</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>LEID (Low Energy Ion Detector): The Principal Investigators are Q. Ren and J. B. Cao, CSSAR, China. No further information is available.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=4</URL>
+        <Description>Information about the Low-Energy Ion Detector (LEID) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Low-Energy Ion Detector (LEID) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/FGM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Fluxgate Magnetometer (FGM)</ResourceName>
+      <AlternateName>FGM</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>FGM (FluxGate Magnetometer) is located at the end of a 3.5 meter boom and can sample the field at a rate of 67 samples/s. The Principal Investigator is T. Zhang, IWF, Austria.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=2</URL>
+        <Description>Information about the Fluxgate Magnetometer (FGM) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Fluxgate Magnetometer (FGM) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/DoubleStar2/HID</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Heavy Ion Detector (HID)</ResourceName>
+      <AlternateName>HID</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>HID (Heavy Ion Detector): The Principal Investigators are Y. Zhai and J. B. Cao, CSSAR, China. No further information is available.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=2004-029A&amp;ex=8</URL>
+        <Description>Information about the Heavy Ion Detector (HID) experiment on the Double Star 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Heavy Ion Detector (HID) on Double Star 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/DoubleStar2</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Andrew.N.Fazakerley</ResourceID>
+    <PersonName>Dr. Andrew N. Fazakerley</PersonName>
+    <OrganizationName>University College London</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Christophe.Philippe.Escoubet</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Christophe Philippe Escoubet</PersonName>
+    <OrganizationName>ESA-European Space Research and Technology Centre</OrganizationName>
+    <Email>cpescoub@estec.esa.nl</Email>
+    <PhoneNumber>+1-1719-8-3454</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/James.M.Weygand</ResourceID>
+    <ReleaseDate>2018-05-30T17:35:46Z</ReleaseDate>
+    <PersonName>James M. Weygand</PersonName>
+    <OrganizationName>Department of Earth, Planetary, and Space Sciences; University of California, Los Angeles</OrganizationName>
+    <Address>Department of Earth, Planetary, and Space Sciences, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+    <Email>jweygand@igpp.ucla.edu</Email>
+    <PhoneNumber>+1 310 825 3547</PhoneNumber>
+  </Person></Spase>
+
+

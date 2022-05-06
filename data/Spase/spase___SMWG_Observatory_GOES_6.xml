@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/GOES/6</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOES 6</ResourceName>
+      <AlternateName>1983-041A</AlternateName>
+      <AlternateName>GOES-F</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>GOES 6 was the eighth in a series of NASA-developed, NOAA-operated, geosynchronous,
+   and operational spacecraft. The spin-stabilized spacecraft carried (1) a visible infrared spin-scan
+   radiometer (VISSR) atmospheric sounder (VAS) to provide high-quality day/night cloudcover data,
+   to take radiance-derived temperatures of the earth/atmosphere system, and to determine atmospheric
+   temperature and water vapor content at various levels, (2) a meteorological data collection
+   system to relay processed data from central weather facilities to regional stations equipped
+   with APT and to collect and retransmit data from remotely located earth-based platforms, and (3)
+   a space environment monitor (SEM) system to measure proton, electron, and solar X-ray fluxes and
+   magnetic fields. The cylindrically shaped spacecraft measured 190.5 cm in diameter and 230 cm in
+   length, exclusive of a magnetometer that extended an additional 83 cm beyond the cylindrical
+   shell. The primary structural members were a honeycombed equipment shelf and a thrust tube. The
+   VISSR telescope, which was mounted on the equipment shelf, viewed the earth through a special
+   aperture in the side of the spacecraft. A support structure extended radially from the thrust tube
+   and was affixed to the solar panels, which formed the outer wall of the spacecraft to provide
+   the primary source of electrical power. Located in the annulus-shaped space between the thrust
+   tube and the solar panels were stationkeeping and dynamics control equipment, batteries, and most
+   of the SEM equipment. Proper spacecraft attitude and spin rate (approximately 100 rpm) were
+   maintained by two separate sets of jet thrusters mounted around the spacecraft equator and activated
+   by ground command. The spacecraft used both UHF-band and S-band frequencies in its telemetry
+   and command subsystem. A low-power VHF transponder provided telemetry and command during launch
+   and then served as a backup for the primary subsystem once the spacecraft attained synchronous
+   orbit. GOES 6 was moved from its 135 deg W position to a more central 98 deg W position when GOES
+   5 failed on July 29, 1984. It was turned off on November 12, 1994.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/William.E.Shenk</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1983-041A</URL>
+        <Description>Information about the GOES  6 mission</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Earth Observation Resources Webpage on GOES</Name>
+        <URL>https://earth.esa.int/web/eoportal/satellite-missions/g/goes-2nd-generation</URL>
+        <Description>Detailed information about GOES Series.</Description>
+</InformationURL>
+      <PriorID>spase://SMWG/Observatory/GOES6</PriorID>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.Magnetosphere.Main</ObservatoryRegion>
+</Location>
+ <OperatingSpan>
+   <StartDate>1983-04-28T00:00:00Z</StartDate>
+   <StopDate>1989-01-21T23:59:59</StopDate>
+   <Note>Useful operating span.</Note>
+</OperatingSpan>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/6/MAG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Biaxial Fluxgate Magnetometer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The spinning twin-fluxgate magnetometer, located at a few meters away from the spacecraft was designed to provide the orthogonal components of the magnetic field: Hp was parallel to the spin axis that was held nearly in the direction of Earth's axis, He was directed toward Earth center, and Hn pointed eastward. The magnetometer had a range of +/- 400 nT (without saturation) and a resolution of 0.1 nT over a range of +/- 50 nT. The sensitivity of the magnetometer was about 0.2 nT. The instrument and its electronics were carried on board GOES-4,-5,-6,and -7, without significant changes. Since 9 September, 91, only the Hp component is available, since the Earth-limb locator data that are necessary to obtain the transverse components have remained uncertain.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/NOAA.National.Environmental.Satellite</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1983-041A&amp;ex=5</URL>
+        <Description>Information about the Biaxial Fluxgate Magnetometer experiment on the GOES  6 mission.</Description>
+</InformationURL>
+      <PriorID>spase://SMWG/Instrument/GOES6/MAG</PriorID>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Biaxial Fluxgate Magnetometer on GOES  6</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/6</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/6/SEM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Space Environment Monitor (SEM)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Space Environment Monitor Subsystem (SEM) measures in situ the effect of the sun on the near-earth solar-terrestrial electromagnetic environment on a real-time basis. This information is provided to the Space Environment Services Center where it is used for "near-space weather" reports. These reports, which include solar activity, are important to the operators of communication, navigation, electric power transmission systems, and satellites.
+The SEM consists of four instruments. The Energetic Particle Sensor (EP8,formerly called EPS) makes flux measurements of protons in the 0.8 to 500 MeV range. The High Energy Proton and Alpha Detector (HEPAD) monitors protons in four energy ranges above 350 MeV and alpha particles in two energy ranges above 640 MeV/nucleon. The solar X-Ray Sensor permits real-time determination of the solar x-ray emission in two spectral bands: 0.5-5 angstroms and 1-8 angstroms. The Magnetic Field Sensor (MFS) allows for the real-time determination of the magnitude and orientation of the magnetic field. Data will be telemetered twice a second for magnetic fields having a magnitude of +/- 1000 nanotesla (nT).</Description>
+      <Acknowledgement>NOAA Environmental Research Laboratories; Dr. Harold Leinbach; Dr. Ronald Zwickl;  Dr. Herbert H. Sauer; Dr. Terry Onsager; Dr. Howard Singer; Mr. Howard Garcia</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Ronald.D.Zwickl</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Herbert.H.Sauer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Howard.J.Singer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Harold.Leinbach</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Terry.Onsager</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Howard.A.Garcia</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>GOES 6 Energetic Particle Monitor</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1983-041A-022</URL>
+        <Description>Introduction to the GOES 6 Energetic Particle Sensor.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>GOES 6 Energetic Particle Monitor Data File Information</Name>
+        <URL>https://satdat.ngdc.noaa.gov/sem/goes/software/part.txt</URL>
+        <Description>Additional GOES EPM information.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>GOES 6 Energetic Particle Monitor Additional Data File Information</Name>
+        <URL>ftp://satdat.ngdc.noaa.gov/sem/goes/goes_docs/full/readme.txt</URL>
+        <Description>Additional GOES EPM data file information.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>GOES 6 Biaxial Fluxgate Magnetometer</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1983-041A-05</URL>
+        <Description>Introduction to the GOES 6 Biaxial Fluxgate Magnetometer.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>GOES 6 Space Environment Monitor</Name>
+        <URL>https://satdat.ngdc.noaa.gov/sem/goes/goes_docs/full/readme.txt</URL>
+        <Description>Additional GOES Biaxial Fluxgate Magnetometer information.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>GOES 6 Biaxial Fluxgate Magnetometer Example ASCII file</Name>
+        <URL>https://satdat.ngdc.noaa.gov/sem/goes/software/mag.txt</URL>
+        <Description>Additional GOES Biaxial Fluxgate Magnetometer header information.</Description>
+</InformationURL>
+      <InformationURL>
+        <Name>GOES 6 Solar X-Ray Monitor</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1983-041A-03</URL>
+        <Description>Additional GOES Solar X-Ray Monitor information.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InstrumentType>IonChamber</InstrumentType>
+    <InvestigationName>Space Environment Monitor (SEM) on GOES 6</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/6</ObservatoryID>
+    <Caveats>From http://goes.ngdc.noaa.gov/data/avg/readme.txt: Electron Data Quality
+
+The Electron detector responds significantly to protons above 32 MeV; therefore,
+electron data are contaminated when a proton event is in progress. Beginning
+with GOES-8 the electron data have had a preliminary correction applied,
+however, even these data are not to be considered research quality at this time.
+
+ One component of the GOES-6 particle detector system
+has had radiation damage since 1986 that reduced its counting efficiency
+progressively. At present the E1 and P4 channels derived from this component
+record at only a few percent of their proper rates.
+</Caveats>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/6/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOES 6 Positions</ResourceName>
+      <AlternateName>GOES 6 Ephemeris</AlternateName>
+      <ReleaseDate>2011-10-04T18:17:00Z</ReleaseDate>
+      <Description>GOES 6 spacecraft position.</Description>
+      <Acknowledgement>NOAA</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Howard.J.Singer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/6</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/6/SXM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GOES 6 Solar X-ray Monitor</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The X-ray monitor consisted of two ion chambers, mounted behind a slim rectangular field-of-view (48 deg x 3 deg) collimator made of lead-lined aluminum. The chamber for the lower wavelength band of 5 to 30 nanometer was filled with Xe-He mixture with an entry aperture made of 20 mil Be sheet. For the other band, 10-80 nm, the gas was Ar-He mixture and the aperture was a 2 mil Be. The threshold sensitivities were 1.0E-13 J per sq cm per s for the lower wavelength band, and 1.0E-12 J per sq cm per s for the higher band; each had a dynamic range of four decades. No usable data could be obtained from August, 94.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Howard.A.Garcia</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Herbert.H.Sauer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1983-041A-03</URL>
+        <Description>Information about the Solar X-ray Monitor experiment on the GOES 6 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>Solar X-ray Monitor on GOES 6</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/6</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GOES/6/EPM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Energetic Particle Monitor</ResourceName>
+      <AlternateName>1983-041A-02</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The GOES 6  Energetic Particle Monitor (EPM) consisted of three detector assemblies, each covering limited regions of the overall energy spectrum. The first two detector assemblies monitored protons in seven energy ranges between 0.8 and 500 MeV and alpha particles in six energy ranges from 4 to &gt;400 MeV. There was also one channel for the measurement of electrons in the energy range above 500 keV. The third detector, high energy proton and alpha detector (HEPAD), monitored protons in four energy ranges above 370 MeV and alpha particles in two energy ranges above 640 MeV/nucleon. In all, there were 25 channels of data, each channel sampling at a slow rate of once in a few seconds, or once in a few minutes.</Description>
+      <Acknowledgement>NOAA Environmental Research Laboratories; Dr. Herbert H. Sauer; Dr. Terry Onsager</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Herbert.H.Sauer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Terry.Onsager</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/James.M.Weygand</PersonID>
+        <Role>MetadataContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog on the GOES 6 Energetic Particle Monitor</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1983-041A-02</URL>
+        <Description>Introduction to the Energetic Particle Monitor on GOES 6</Description>
+</InformationURL>
+      <Association>
+        <AssociationID>spase://SMWG/Observatory/GOES/6</AssociationID>
+        <AssociationType>PartOf</AssociationType>
+        <Note>Number of available GOES spacecraft varies from year to year.</Note>
+</Association>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Energetic Particle Monitor on GOES 6</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GOES/6</ObservatoryID>
+    <Caveats/>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Harold.Leinbach</ResourceID>
+    <PersonName>Dr. Harold Leinbach</PersonName>
+    <OrganizationName>NOAA Environmental Research Labs</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Ronald.D.Zwickl</ResourceID>
+    <PersonName>Dr. Ronald D. Zwickl</PersonName>
+    <OrganizationName>NOAA Environmental Research Labs</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Herbert.H.Sauer</ResourceID>
+    <PersonName>Dr. Herbert H. Sauer</PersonName>
+    <OrganizationName>NOAA Environmental Research Labs</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Howard.A.Garcia</ResourceID>
+    <PersonName>Mr. Howard A. Garcia</PersonName>
+    <OrganizationName>NOAA Space Weather Prediction Center</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/James.M.Weygand</ResourceID>
+    <ReleaseDate>2018-05-30T17:35:46Z</ReleaseDate>
+    <PersonName>James M. Weygand</PersonName>
+    <OrganizationName>Department of Earth, Planetary, and Space Sciences; University of California, Los Angeles</OrganizationName>
+    <Address>Department of Earth, Planetary, and Space Sciences, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+    <Email>jweygand@igpp.ucla.edu</Email>
+    <PhoneNumber>+1 310 825 3547</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/NOAA.National.Environmental.Satellite</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>NOAA National Environmental Satellite</PersonName>
+    <OrganizationName>NOAA National Environmental Satellite</OrganizationName>
+    <PhoneNumber>+1-301-763-7568</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/William.E.Shenk</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Mr. William E. Shenk</PersonName>
+    <OrganizationName>Deceased - formerly at GSFC-Code 912</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+        <ResourceID>spase://SMWG/Person/Terry.Onsager</ResourceID>
+        <PersonName>Terry Onsager</PersonName>
+        <OrganizationName>Space Weather Prediction Center</OrganizationName>
+        <Address>Space Weather Prediction Center, W/NP9 325 Broadway, Boulder CO 80305</Address>
+        <Email>Terry.Onsager@noaa.gov</Email>
+        <PhoneNumber>303-497-5713</PhoneNumber>
+    </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Howard.J.Singer</ResourceID>
+    <PersonName>Dr. Howard J. Singer</PersonName>
+    <OrganizationName>NOAA Space Weather Prediction Center</OrganizationName>
+    <Address>Space Weather Prediction Center, W/NP9 325 Broadway, Boulder CO 80305</Address>
+    <Email>Howard.Singer@noaa.gov</Email>
+    <PhoneNumber>303-497-6959</PhoneNumber>
+  </Person></Spase>
+
+

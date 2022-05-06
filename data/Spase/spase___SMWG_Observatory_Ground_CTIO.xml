@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_4.xsd">
+  <Version>2.2.4</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Ground/CTIO</ResourceID>
+    <ResourceHeader>
+      <ResourceName>CTIO</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The facilities of Cerro Tololo Inter-American Observatory (CTIO),
+   part of the U.S. National Optical Astronomy Observatory, continue to be the
+   nucleus of U.S. astronomy in the Southern hemisphere. Cerro Tololo is located
+   about 500km north of Santiago, Chile</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Stephen.Heathcote</PersonID>
+        <Role>Scientist</Role>
+</Contact>
+   <InformationURL>
+        <Name>About the Cerro Tololo Inter-American Observatory</Name>
+        <URL>http://ast.noao.edu/facilities/ctio/</URL>
+        <Description>Information about the CTIO.</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/GONG</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+   <CoordinateSystemName>GEO</CoordinateSystemName>
+   <Latitude>-30.169</Latitude>
+   <Longitude>70.804</Longitude>
+   <Elevation>2200</Elevation>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Ground/CTIO/GONG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Global Oscillation Network Group (GONG) at CTIO</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Global Oscillation Network Group (GONG) is a community-based program to conduct a detailed study of solar internal structure and dynamics using helioseismology. In order to exploit this new technique, GONG has developed a six-station network of extremely sensitive, and stable velocity imagers located around the Earth to obtain nearly continuous observations of the Sun's "five-minute" oscillations, or pulsations</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/John.W.Harvey
+</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>The GONG Instrument</Name>
+        <URL>https://gong.nso.edu/instrument/</URL>
+        <Description>Information about the Global Oscillation Network Group (GONG) instrument.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Interferometer</InstrumentType>
+    <InstrumentType>Imager</InstrumentType>
+  <InvestigationName>GONG instrument at Cerro Tololo Interamerican Observatory, Chile</InvestigationName>
+     <ObservatoryID>spase://SMWG/Observatory/Ground/CTIO</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Stephen.Heathcote</ResourceID>
+<PersonName>Stephen Heathcote</PersonName>
+<OrganizationName>National Optical Astronomy Observatory</OrganizationName>
+</Person></Spase>
+
+

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_3.xsd">
+	<Version>2.2.3</Version>
+	<Observatory>
+		<ResourceID>spase://ASWS/Observatory/Ground/Learmonth</ResourceID>
+		<ResourceHeader>
+			<ResourceName>Learmonth</ResourceName>
+			<AlternateName>None</AlternateName>
+  			<ReleaseDate>2020-11-13T20:35:01Z</ReleaseDate>
+			<Description>Learmonth station is located on Learmonth, WA. It has been in operation since April 1979.</Description>
+			<Acknowledgement>Please acknowledge: Space Weather Network, Bureau of Meteorology, Australia</Acknowledgement>
+			<Contact>
+				<PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+				<Role>GeneralContact</Role>
+				<Role>DataProducer</Role>
+			</Contact>
+			<Contact>
+				<PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+				<Role>MetadataContact</Role>
+			</Contact>
+                	<InformationURL>
+                  		<Name>ASWS Observatory Information: Learmonth</Name>
+        		     	<URL>http://www.sws.bom.gov.au/World_Data_Centre/2/1/21</URL>
+       				<Description>includes observatory/station name, location, lifetime, identity and datasets informtion.</Description>
+       				<Language>en</Language>
+      			</InformationURL>
+                	<InformationURL>
+                  		<Name>ASWS Learmopnth Solar Observatory</Name>
+        		     	<URL>http://www.sws.bom.gov.au/Solar/3/1</URL>
+       				<Description>includes Learmonth Solar Observatory Overview and more details informtion.</Description>
+       				<Language>en</Language>
+      			</InformationURL>
+                        <PriorID>spase://SMWG/Observatory/Ground/Learmonth.2</PriorID>
+		</ResourceHeader>
+		<Location>
+			<ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+			<Latitude>-22.25</Latitude>
+			<Longitude>114.08E</Longitude>
+		</Location>
+		<OperatingSpan>
+			<StartDate>1979-04-01T00:00:00.000</StartDate>
+		</OperatingSpan>
+	</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://ASWS/Instrument/Ground/Learmonth/Ionosonde</ResourceID>
+      <ResourceHeader>
+         <ResourceName>Learmonth Ionosonde</ResourceName>
+         <ReleaseDate>2019-05-01T12:34:56.789Z</ReleaseDate>
+         <Description>The Learmonth Ionosonde station situated in Learmonth Solar Observatory, WA, Australia, has digital Ionosondes since July of 1994. The first one was a Lowell ionosonde since 27/07/1994 to 06/12/2009. There is an IPS 5D since 26 March 2011 to now. The IPS 5D vertical sounding ionosonde normally sweeps in frequency from about 1.0 to 21.5 MHz. Frequency step resolution for the 5D is 5 kHz, with up to 4095 steps available. The step interval is variable, becoming more coarse at higher frequencies as ionograms are generally displayed on a logarithmic scale.</Description>
+         <Contact>
+            <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+            <Role>GeneralContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+      </ResourceHeader>
+      <InstrumentType>Radar</InstrumentType>
+      <InvestigationName>Learmonth Ionosonde</InvestigationName>
+      <ObservatoryID>spase://ASWS/Observatory/Ground/Learmonth</ObservatoryID>
+   </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Instrument/Ground/Learmonth/Magnetometer</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Learmonth Magnetometer</ResourceName>
+      <ReleaseDate>2020-11-13T20:35:01Z</ReleaseDate>
+      <Description>The Learmonth Magnetometer station in Learmonth, WA, Australia, has a digital Magnetometer since March 1995. Up to today, there are four magnetometers monitored or still are monitoring in the staion. According to the station log files.
+
+March 1995
+----------
+an AGSO Magnetometer located at Learmonth and the IPS data acquisition system was setup by John Kennewell (station code lem). Data is recorded on 3.5" floppy disks and sent to head office every 2 weeks. This data source should have a data type "b" as the data output from the instrument has no offset, but as the data is from the same instrument for which another data stream (lea) is given an offset during acquisition, the same data type code was used for this data stream. Data type: "c"
+
+18 September, 1998
+----------------
+Data type: "b"
+Magnetometer is a STEL instrument located at Learmonth and the IPS data acquisition system is handled by Maurice McMullan. Data is sent monthly to the  ASFC on zip disk. Some months missing due to cyclone.
+
+8 February, 1999
+----------------
+Data ceased:
+The AGSO instrument failed on February 11 and the last floppy disk sent had data up to and including February 8. 
+
+28 October, 1999
+----------------
+Data type: "e"
+Software upgraded to use separate resolution parameters for each magnetometer
+component.
+
+25 February, 2003
+-----------------
+Data stream re-started, however, the data is now from the STEL instrument and is received via ftp across the IPS network. The data acquisition system is the same
+as used at other IPS magnetometer sites. Data type:  e
+(RAM)
+
+16 Feb, 2006
+------------
+Data commenced being FTP'd from Geoscience Australia to IPS. The sensor and data acquisition systems are GA owned and operated. The incoming files to IPS are in IAGA-2002 format and are GA's preliminary format. The incoming data files  total field values and are converted to IPS format. Data type: G.
+ 
+*Note:  There were several streams of data from Learmonth from 2 different magnetometers. One magnetometer was an AGSO instrument and the other was a STEL instrument. Different station abreviations were used as the data streams had different sample frequencies or resolutions, although at times the data streams were redundant but sent for comparisons. The AGSO instrument provided data which was sent hourly via phone to the ASFC (lea) and more rapidly sampled data was sent on floppy disks to the ASFC on a fortnightly basis (lem). The floppy disks ceased being sent to the ASFC following the failure of the AGSO instrument on 11th  February, 1999. The AGSO instrument was replaced on 19 February, 1999 and continued to send "lea" data however, the rapidly sampled data from Learmonth was then received only from the STEL instrument on a monthly basis on zip disks (lth). Pulsation indices were also generated from the STEL magnetometer locally and sent to the ASFC via phone on an hourly basis (lmt).
+(RAM - 11/11/99)
+     
+For more information, please read its log file.     
+      </Description>
+      <Contact>
+        <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+      <InformationURL>
+        <Name>ASWS Learmonth Instrument Fluxgate Magenetometer (ICSWSE) Log File</Name>
+	<URL>ftp://ftp-out.sws.bom.gov.au/wdc/wdc_mag/data/lem/stn.log</URL>
+	<Description>includes Learmonth magnetometer log file.</Description>
+	<Language>en</Language>
+      </InformationURL>
+      <PriorID>spase://SMWG/Instrument/Ground/Learmonth/Magnetometer</PriorID>
+      <PriorID>spase://SMWG/Instrument/IAGA/Learmonth/Magnetometer</PriorID>
+    </ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Learmonth Magnetometer</InvestigationName>
+    <ObservatoryID>spase://ASWS/Observatory/Ground/Learmonth</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Instrument/Ground/Learmonth/Radiospectrograph</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Learmonth Solar Radiospectrograph</ResourceName>
+      <ReleaseDate>2020-11-13T20:35:01Z</ReleaseDate>
+      <Description>The Learmonth Solar Observatory near North-West Cape, Western Australia, has a Global Oscillation Network Group (GONG) instrument which provides data for helioseismological studies of the interior of the Sun, an optical telescope to monitor sunspots and solar activity, a radio telescope with three parabolic dish antennae to monitor solar radio flux on 8 discrete frequencies in the range 245-15400 MHz, and a radio spectrograph (which sweeps through a frequency range of 25-180 MHz every 3 seconds) used for monitoring solar radio bursts.  See details at http://www.sws.bom.gov.au/Solar/3/2.</Description>
+      <Contact>
+        <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+      <PriorID>spase://SMWG/Instrument/Ground/Learmonth/Radiospectrograph</PriorID>
+    </ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>Learmonth Radio Spectrograph</InvestigationName>
+    <ObservatoryID>spase://ASWS/Observatory/Ground/Learmonth</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://ASWS/Instrument/Ground/Learmonth/Solar_Radio</ResourceID>
+      <ResourceHeader>
+         <ResourceName>Learmonth Solar Radio</ResourceName>
+         <ReleaseDate>2019-05-01T12:34:56.789Z</ReleaseDate>
+         <Description>The Sun is what we call a broadband emitter: it gives off radiation over a very wide frequency range. The Learmonth solar radio telescopes monitor both the quiet and active Sun, at 245, 410, 610, 1415, 2695, 4995, 8800, and 15400 Mhz.
+
+The background solar radio emission (the quiet Sun) can be used as a source to calibrate other electronic equipment. SWS makes available the Learmonth Quiet Solar Flux or IFLUX for this purpose. Solar radio bursts (the active Sun) can exceed the background solar radio emissions by several orders of magnitude. Solar radio emissions can cause interference to man made electromagnetic systems (e.g., radio, radar, and GPS). It is also useful to know that the source of the interference comes from the Sun, rather than another man made source, or an equipment fault.
+
+These solar radio emissions also indicate the strength of the solar activity, and help predict the arrival of high energy solar protons at the Earth, which can degrade solar panels of spacecraft, and cause transpolar HF circuits to become disrupted (PCA event). A strong burst on the 1415 MHz frequency may indicate that some GPS satellite signals could be lost, if the GPS satellites are near the position of the Sun in the sky. Plots of solar radio emission strength at 8 frequencies from 245 to 15400 Mhz are provided from the links below.
+
+Note that these solar radio telescopes can sometimes themselves be affected by man made radio frequency interference, resulting in a large spike appearing in the plots.
+
+The Learmonth Solar Observatory in Learmonth, WA, Australia, has Solar Radio Telescopes since January of 1991. See details at http://www.sws.bom.gov.au/World_Data_Centre/2/1/21</Description>
+         <Contact>
+            <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+            <Role>GeneralContact</Role>
+         </Contact>
+         <Contact>
+            <PersonID>spase://SMWG/Person/Lee.Frost.Bargatze</PersonID>
+            <Role>MetadataContact</Role>
+         </Contact>
+      </ResourceHeader>
+      <InstrumentType>Antenna</InstrumentType>
+      <InvestigationName>Learmonth Solar Radio</InvestigationName>
+      <ObservatoryID>spase://ASWS/Observatory/Ground/Learmonth</ObservatoryID>
+   </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Instrument/Ground/Learmonth/Telescope</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Learmonth Solar Telescope</ResourceName>
+      <ReleaseDate>2017-07-25T17:20:00Z</ReleaseDate>
+      <Description>
+      The Learmonth Solar Observatory near North-West Cape, Western Australia, has a Global Oscillation Network Group (GONG) instrument which provides data for helioseismological studies of the interior of the Sun, an optical telescope to monitor sunspots and solar activity, a radio telescope with three parabolic dish antennae to monitor solar radio flux on 8 discrete frequencies in the range 245-15400 MHz, and a radio spectrograph (which sweeps through a frequency range of 25-180 MHz every 3 seconds) used for monitoring solar radio bursts.  See details at http://www.sws.bom.gov.au/Solar/3/2.
+      </Description>
+      <Contact>
+        <PersonID>spase://ASWS/Person/Kehe.Wang</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>Learmonth Telescope</InvestigationName>
+    <ObservatoryID>spase://ASWS/Observatory/Ground/Learmonth</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://ASWS/Person/Kehe.Wang</ResourceID>
+    <ReleaseDate>2017-06-28T17:03:47Z</ReleaseDate>
+    <PersonName>Kehe Wang</PersonName>
+    <OrganizationName>Space Weather Services (SWS), Bureau of Meteorology, Australia</OrganizationName>
+    <Email>kehe.wang@bom.gov.au</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Lee.Frost.Bargatze</ResourceID>
+      <ReleaseDate>2012-06-13T12:34:56.789</ReleaseDate>
+      <PersonName>Lee Frost Bargatze</PersonName>
+      <OrganizationName>Institute of Geophysics and Planetary Physics and the Department of Earth and Space Sciences, University of California, Los Angeles</OrganizationName>
+      <Address>Institute of Geophysics and Planetary Physics, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+      <Email>lfb@igpp.ucla.edu</Email>
+      <PhoneNumber>+1 310 206 6073</PhoneNumber>
+   </Person></Spase>
+
+

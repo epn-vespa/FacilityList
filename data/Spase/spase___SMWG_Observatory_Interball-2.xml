@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Interball-2</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Interball-2</ResourceName>
+      <AlternateName>1996-050C</AlternateName>
+      <AlternateName>Auroral Probe</AlternateName>
+      <AlternateName>Prognoz 2M</AlternateName>
+      <AlternateName>Interball Auroral Probe</AlternateName>
+      <AlternateName>Prognoz 12</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Interball Project is a multi-national effort that consists of four spacecraft: two main spacecraft of the Prognoz series, made in Russia, each with a small subsatellite made in Czechoslovakia. The main objective is to study the physical mechanisms responsible for the transmission of solar wind energy to the magnetosphere, its storage there, and subsequent dissipation in the tail and auroral regions of the magnetosphere, ionosphere, and atmosphere during magnetospheric substorms. A ground-based support group will provide coordinated and simultaneous ground-based data of many types, including observations from auroral and polar cap regions. Interball is an IACG-related mission. Key physical parameters will be generated, and will be available for exchange with other projects.
+
+          One pair of spacecraft, Tail Probe and its subsatellite S2-X (X for the first letter of the Russian word for ``Tail''), will be launched into the magnetospheric tail. The second pair, Auroral Probe and S2-A (A for ``Auroral''), will have an orbit that crosses the auroral oval to observe the acceleration of auroral particles and the flow of electric currents that connect the magnetospheric tail with the conducting ionosphere. To study the equilibrium tail structure, during about half of each year the Tail Probe pair will cross the main parts of the magnetotail every four days. The Auroral Probe pair will support the Tail Probe pair with auroral region measurements.
+
+          Each main spacecraft has more than twenty scientific instruments. The spacecraft is cylindrical, with spin axis toward the sun (within 10 degrees), and with spin period of ~120 s. The electric and magnetic field sensors are on booms connected to the ends of the solar panels. The subsatellites are small, each with about ten scientific instruments. The spin axis will be directed within 10 degrees of the sun, with a spin period of ~120 s, as with the main spacecraft. The subsatellites also carry gas-jet thrusters for limited control of the orbit. Separation distance will range from hundreds of kilometers to several tens of thousands of kilometers for the Tail Probe pair. Separation distance will range from hundreds of meters to hundreds of kilometers for the Auroral Probe pair.
+
+          The Tail Probe has two telemetry systems, at up to 32 Kbps in real-time, with a memory mode capacity of 30 Mb in the RTK telemetry system and 120 Mb in the SSNI system. The Auroral Probe has similar capability plus the additional real-time-only STO system, capable of 40 Kbps. Each subsatellite has only the STO real-time telemetry system. For S2-X the rate can be varied from 2--40 kbps. The Tail Probe has an adapting alert mode while in the memory mode, allowing time resolutions that are the same as in the real-time mode. The aim is to have the highest time resolution available at the thin borders of magnetospheric regions or the sharp borders of some features. In the alert mode (triggered by an on-board computer monitoring plasma and field parameters), the bit rate is increased for plasma, field, and wave measurements. The duration of these alert periods is about 10 minutes, and there can be 5--6 of them during one orbit.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-050C</URL>
+        <Description>Information about the Interball Auroral Probe mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/Interball-Auroral</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/HYPERBOLOID</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Ion Mass Analyzer (HYPERBOLOID)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>HYPERBOLOID is a plasma spectrometer aimed at the investigation of low energy ion dynamics in the polar ionosphere and magnetosphere. The scientific objectives of this experiment include studies of: thermal plasma transport by magnetospheric convection and escape along high latitude magnetic field lines; ion heating and acceleration by electrostatic and electromagnetic turbulence; and generation and propagation of magnetic field aligned small-scale structures in the auroral plasma.
+The instrument is basically a multi-directional ion mass spectrometer measuring ion distribution functions over an energy range from ~0.1 to 80 eV. In normal modes of operation, the four major species H+, He+, O+, O++ can be measured simultaneously; special modes may be used to detect minor species as N+ or the molecular ions.
+The ion angular and energy distribution are obtained by means of electrostatic optics defining 2 planes with several entrance windows. In the main plane, there are 16 windows at 10 intervals with individual FOV ~ 12 degrees and effective entrance area ~ 0.8 cm2. This plane contains the spacecraft spin axis so that the instrument is able to sample practically the full space in a complete spin period (120 seconds). Depending on the number of windows simultaneously opened, the angular resolution can be varied from 10 to 40, thus providing an adjustable trade off between angular and time resolution. The second plane of measurement is almost orthogonal to the first one with 10 windows at 15 intervals, FOV ~ 5 degrees and effective entrance area ~ 5 to 8 times less than in the main plane. Again, from 1 to 4 windows can be activated simultaneously. This second plane of measurement is meant to obtain a better time resolution (~ 1 second) for a full distribution function when the instrument is facing the rammed plasma, thus enabling to look at fast plasma variations.
+Each window is followed by a spherical electrostatic energy analyzer. In normal modes of operation the energy resolution is ~ +/- 10% for the main 16 windows and +/- 5% for the 10 secondary ones. By pre-accelerating or decelerating the ions at the entrance of the analyzer, one can vary this energy resolution by a factor between ~ 0.5 and 2.
+An arrangement of 2 toroidal concentrators is used to focus ions at the entrance of a magnet (which provides the mass separation), irrespective of their direction of arrival. There are 4 identical detectors in the focal plane, one for each of the major ions, which depending on the ion flux can be operated either in digital (pulse counting) or in analogical (charge integration) mode, thus providing a total dynamic range of 1E11.
+The temporal resolution of the instrument for a complete angular and energy scan depends on the telemetry rate and varies from ~ 1 to 16 seconds in most modes of operation.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jean-Jacques.Berthelier</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=10</URL>
+        <Description>Information about the Ion Mass Analyzer (HYPERBOLOID) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Ion Mass Analyzer (HYPERBOLOID) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/SKA3</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Electron and proton distribution (SKA-3)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The SKA-3 set of particle detectors is designed to measure distribution functions of electrons and ions (namely, H+, He+ and O+) in seven steps over the energy range 30 - 500 keV. It consists of two energy-angle analyzers EA-2 and EA-3 for low energy particles, and two identical oppositely directed time-of-flight (TOF) analyzers EM-1-1 and EM-1-2 for high energies. The instruments are mounted outside the pressurized container on the back side of the satellite, opposite to sunward direction, with fields of view perpendicular to the satellite rotation axis (which is sunward directed). The satellite spinning thus scans the range of the pitch angles studied depending on the angle between the sunward direction and magnetic field. The spin period of the satellite is 120 seconds. Temporal resolution of observation modes varies from 0.8 to 6.4 seconds, and spatial resolution at apogee is about 110 km.
+The EA-2 and EA-3 energy-angle spectrometers are based on electrostatic toroidal analyzers. EA-2 measures energy-angle distributions of electrons; EA-3 measures ion distributions. During satellite rotation each window (of 22.5 degrees width with a gap of 22.5 degrees in between) scans all the phase angle range. The instruments allow to measure simultaneously in eight angular sectors evenly distributed in the plane perpendicular to the satellite rotation axis, and sequentially in 7 energy intervals for each angular sector. The central energies are 30, 85, 240, 680, 1900, 5300, and 15000 eV, and the energy resolution E/E is about 10%. The particles are recorded by means of microchannel plates with spaced anodes for eight angular directions. The calculated geometric factor is 0.06 cm2sr.
+EM-1-1 and EM-1-2 are identical time-of-flight energy- mass spectrometers. They allow to measure electrons deflected from the ion aperture by a magnet and ions with masses 1, 4 and 16 in 7 energy intervals in the energy range from 20 to 500 keV. These spectrometers are based on a combination of a TOF device with a thick silicon semiconductor detector of full energy at the end. The fields of view of the two detectors are directed oppositely and perpendicular to the satellite rotation axis. The field of view of the spectrometers is a cone of full angle 8 degrees. The calculated geometric factor is 0.003 cm2sr.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/A.D.Kuzmin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=1</URL>
+        <Description>Information about the Electron and proton distribution (SKA-3) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Electron and proton distribution (SKA-3) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/NVK</ResourceID>
+    <ResourceHeader>
+      <ResourceName>VLF Electromagnetic Waves (NVK-ONCH)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The NVK-ONCH instrument is a part of the complex of closely-related wave experiments on Interball 2. The others are MEMO, POLRAD, and IESP. The NVK-ONCH instrument measures VLF electromagnetic waves in the frequency range 20 Hz - 20 KHz.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/O.A.Molchanov</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=7</URL>
+        <Description>Information about the VLF Electromagnetic Waves (NVK-ONCH) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>VLF Electromagnetic Waves (NVK-ONCH) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/KM7</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Thermal Plasma Measurements (KM-7)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The primary purpose of KM-7 is to measure the temperature of cold electrons in the plasmasphere. As an auxiliary parameter, the instrument measures the difference of potentials between the floating spherical probe DET-P and the spacecraft. The spacecraft potential can be evaluated from these measurements. From detailed measurements (only in the STO telemetry mode) the ambient ion density can also be determined.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jan.I.Smilauer</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=11</URL>
+        <Description>Information about the Thermal Plasma Measurements (KM-7) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Unspecified</InstrumentType>
+    <InvestigationName>Thermal Plasma Measurements (KM-7) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/IMAP3</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Three-Axis Magnetic Field (IMAP-3)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The IMAP-3 magnetic field experiment is designed to study the following processes in the Earth's plasma environment: structure of the inner magnetosphere magnetic field; structure of the small scale field-aligned currents; dynamics of the field-aligned currents during substorms; and relation of the processes in the auroral zone and in the tail.
+The IMAP-3 was designed and manufactured under cooperation of IZMIRAN (http://www.izmiran.rssi.ru), NPL SDS (Bulgaria) and PIC GPI of RAS.
+The instrument is designed to measure three components of the DC magnetic field in two ranges: +/- 6800 nT with resolution 1 nT and +/- 68000 nT with resolution 10 nT. Usually magnetometer data are transmitted to the scientific SSNI telemetry system at a rate of one vector per 3 seconds; during special intervals data are transmitted to telemetry at 2 or 8 vectors second depending on the instrument operating mode.
+The spacecraft was launched on 29 August 1996. The IMAP-3 was initially tested on the 9th of September and started to work regularly on the 14th of September.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Ivan.S.Arshinkov</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=5</URL>
+        <Description>Information about the Three-Axis Magnetic Field (IMAP-3) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Three-Axis Magnetic Field (IMAP-3) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/ION</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Ion Spectra and Anisotropy (ION)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The ION experiment flown on the Interball-Aurora mission performs simultaneous ion and electron measurements. Two mass spectrometers looking in opposing directions perpendicular to the satellite spin axis, which points toward the sun, measure ions in the mass and energy ranges 1-32 amu and ~ 0 to 14,000 eV. The ion measurements are complemented by simple electron spectrometers performing measurements in the energy range ~10 eV (or 60 eV) to 20,000 eV.
+Ion composition analyzers:&lt;br&gt; The design of the detector heads of the ION-1 and ION-2 mass spectrometers is based on the principle of the Wien filter, where the mass filtering is performed by crossed electric and magnetic fields. The energy over charge (E/Q) selection is made by a cylindrical electrostatic analyzer placed in front of the filter. At each energy step, the electric field in the magnetic analyzer is programmed in order either to scan 2 or 4 ions (H+, He++, He+, O+).
+Electron analyzers:&lt;br&gt; Two spectrometers, ION3 and 4, measure electron fluxes. They consist of two cylindrical electrostatic analyzer heads and associated electronics.
+The ION SADS page available at http://sads.cnes.fr:8010 has additional information, and access to browse the ION QuickLook images.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jean-Andre.C.Sauvaud</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=2</URL>
+        <Description>Information about the Ion Spectra and Anisotropy (ION) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>MassSpectrometer</InstrumentType>
+    <InvestigationName>Ion Spectra and Anisotropy (ION) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/DOK2A</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Electron and Proton Anisotropy (DOK-2A)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The study of energetic particle acceleration and transport within the magnetosphere and on its boundaries is the main goal of this experiment. Two particle spectrometers: DOK-2 and its small version DOK-2S were installed on the main satellite and small subsatellite. The DOK-2 experiments on the Tail and Auroral Probes of INTERBALL continue the studies of energetic particle population on Prognoz 10 in 1985 (Intershock project). Due to much higher energy, angular and time resolution, and better separation of electrons and ions, it is expected that the DOK-2 experiment will allow to re-examine in more detail the energetic particle population and related processes in magnetosphere regions covered by the spacecraft orbit.
+DOK-2 uses two pairs of energetic particle telescopes. Each telescope has a single, passively cooled, totally depleted, surface-barrier silicon detector. One detector of each pair (1e, 2e) is of 0.3 mm thick. Thin foil in front of the detector absorbs protons with energies E &lt; 400 keV so this detector measures electron spectrum in 20 - 420 keV range. The second detector (1p, 2p) of 0.15 mm thick is supplied with a broom magnet, deflecting electrons up to 1500 keV. It measures the spectrum of ions (protons) in 20-850 keV range. Full aperture angles and geometric factors of electron telescopes are 27 degrees and 0.066 cm2*sr. For proton telescopes these values are 12.7 degrees and 0.015 cm2*sr. Particle flux angular distribution is measured using spacecraft rotation with a ~2-minute period around the axis directed to the Sun and mechanical scanning of the second telescope pair in a plane containing the rotation axis. So a 3-dimensional particle distribution function is measured during each 2-minute rotation period. About seven full scanning cycles are carried out for every rotation. The first detector pair (1e, 1p) is fixed in the antisolar direction. The moving detector pair (2e, 2p) can either scan from 45 to 180 degrees (to the Sun direction) or stay in one of 4 positions: 45, 90, 135 and 180 degrees.
+Analog electronics for each of 4 detectors consists of a charge sensitive preamplifier (in a cooled part of the instrument), a shaping pulse amplifier and 56-57 channel amplitude analyser AA (logarithmic ADC). The measurements base is formed of "elementary measurement" (EM) - one full 56-57 channel spectrum measured every 1 second for each of 4 telescopes. This information is available only during the most informative Real Time mode of DOK-2. In storing modes there are two kinds of output information formed from EM's: (1) full 56-57 channel spectra accumulated during time intervals from 10 to 1464 seconds depending on particle intensity; and (2) three time profile (TP) parameters for each detector. TP parameters are counting rates in 3 narrow (&lt;30%) energy intervals from about 20 to 133 keV. An accumulation time for TP is variable in basic Monitoring modes (1-260 seconds). It depends on the variability of particle intensities. A special algorithm ensures time resolution of 1 second when the intensity change is statistically valuable. In Fast modes the accumulation time interval is &lt;1 second.
+The mechanical scanning occurs only in Fast and Real Time modes. Transition from Monitoring to more informative Fast modes occurs automatically when particle flux variability is high enough or after a sharp increase of fluxes. Return to Monitoring mode is also automatic.
+Spectrometer DOK-2 was switched on 5 hours after the launch on 29.08.1996 and operates continuously.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Karel.Kudela</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=14</URL>
+        <Description>Information about the Electron and Proton Anisotropy (DOK-2A) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>EnergeticParticleInstrument</InstrumentType>
+    <InvestigationName>Electron and Proton Anisotropy (DOK-2A) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/POLRAD</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Auroral Kilometric Radiation (POLRAD)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The POLRAD experiment is a part of the wave consortium of experiments on Interball 2. POLRAD is a swept frequency radio-spectrometer, covering the frequency range from 4 kHz to 2 MHz with a frequency resolution of 4 kHz. It can be used either as a radio-spectro-polarimeter, or as a radio-spectrograph. The instrument can use 1 or 3 antennae. Their coordinate system is fixed to the spinning spacecraft (1 revolution in 2 minutes). One antenna is an 11-m monopile (tip-to-spacecraft center) oriented along the spin axis in an anti-solar direction. The other antennae are 2 crossed dipoles, 22 m tip-to-tip, perpendicular to the spin axis. The size of the monopole, which is half as long as the other dipoles, is compensated by the doubled voltage gain of its preamplifier. The antenna diameter is 25 mm.
+In the spectrograph mode the power spectra of signals received from each antenna are measured in separate channels. the step increment of SFA is 4.096 kHz, while the half-power bandwidth is 2.7 kHz. POLRAD can be swept over several frequency ranges selected between 4 kHz and 2 MHz. The frequency range most frequently used can be set from 4 to 491 kHz (120 steps) or from 4 to 983 kHz (240 steps). The sweep periods most frequently used are 6 or 12 seconds.
+The instrument has an additional active mode aimed at the determination of the frequencies of the plasma resonances excited in the ambient plasma by a built-in relaxation sounder.
+This information was taken from the paper by Hanasz et al., Ann. Geophysicae 16, 1097-1104 (1998), which contains much more detail about the instrument, and presents observations.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Jan.Hanasz</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=9</URL>
+        <Description>Information about the Auroral Kilometric Radiation (POLRAD) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Antenna</InstrumentType>
+    <InvestigationName>Auroral Kilometric Radiation (POLRAD) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/IESP2</ResourceID>
+    <ResourceHeader>
+      <ResourceName>DC Electric Field Intensity and ULF Waves (IESP-2)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The IESP experiment measures the six components (3 magnetic, 3 electric) of the waves in the ULF range 0.1 - 10 Hz and (from time to time) 0 - 30 Hz. It also measures the three components of the DC electric field (1 sample per second), and the electric potential of the satellite (1 sample per 16 seconds), which is the voltage measured between one of the spheres and the structure of the satellite. The voltage is transmitted to the RON experiment which controls an ion gun to neutralize the ambient plasma. The magnetic components are measured with the triaxial search coil magnetometer of the MEMO experiment, and these signals come from MEMO to ISEP via the NVK-ONCH expeirment. The electric field is measured with six spheres (80 mm diameter) mounted at the ends of long booms. The longest booms (25 m tip to tip) are in the spin plane; the pair ED1 and ED2 corresponds to Ey, and ED3 and ED4 to Ez; the third pair of booms (ED5, ED6) is about 4.5 m long corresponding to Ex, more or less aligned along the spin axis. ED5 makes an angle of 6 degrees with respect to the spin axis in order to avoid shadowing effects on ED6. The IESP provides signals to the other wave experiments NVK-ONCH and MEMO.
+This information was taken from the paper by Perraut et al., Ann. Geophysicae 16, 1105-1110 (1998), which cantains more details of the experiment and its observations.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Vitaly.M.Chmyrev</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=6</URL>
+        <Description>Information about the DC Electric Field Intensity and ULF Waves (IESP-2) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>SearchCoil</InstrumentType>
+    <InstrumentType>DoubleSphere</InstrumentType>
+    <InvestigationName>DC Electric Field Intensity and ULF Waves (IESP-2) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/ANEPE2</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Electron and proton spectrometer (ANEPE-2)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The ANEPE instrument on Interball Auroral Probe is identical to that on the spacecraft Intercosmos-Bulgaria-1300. It consists of three sets of cylindrical electrostatic analyzers (ESA); each set had three ESAs, one to measure protons and two to measure electrons. The angular field of view for each individual analyzer was 7 degrees X 24 degrees. One set viewed out along the spacecraft Z-axis and the other two along perpendicular axes in the spacecraft X_Y plane at azimuthal angles of 50 and 140 deg. The energy per charge range from 0.2 to 15 keV/q could be covered by up to 16 channels/s and the energy rsolution adjusted to 0.1, 0.2 or 0.3. The flux range was 1.E4 to 1.E9 particles/(sq cm-sr-keV-s).</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=3</URL>
+        <Description>Information about the Electron and proton spectrometer (ANEPE-2) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Electron and proton spectrometer (ANEPE-2) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/MEMO</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Analyzer of Wideband Electromagnetic Waves (MEMO)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The MEMO (Mesure Multicomposante des Ondes) experiment is a part of the wave consortium of experiments on Interball 2. It provides waveforms associated with the measurement of two to five components in three freuency bands: ELF (5-1000 Hz), VLF (1-20 kHz), and LF (20-250 kHz). Due to the memory capacity and allocated bit rate (about 10 kbps), the main operational mode of MEMO is a snapshot mode. Preliminary results show that, despite a functional degradation and a fatal failure four months after switching on, the MEMO experiment has fulfilled part of its initial objectives.
+The MEMO instrument is closely associated with three other experiments: POLRAD in the LF/MF frequency range; NVK-ONCH in the ELF and VLF ranges; and IESP in the ULF range. The MEMO experiment mainly deals with the digitized waveform data it produces internally. However, it is also used to transmit: the ELF NVK_ONCH filter-bank data on a regular basis; and the VLF-ONCH filter data and the POLRAD sounder data via specific modes.
+This information was taken from the paper by Lefeuvre et al., Ann. Geophysicae 16, 1117-1136 (1998), which contains a much more detailed description of these complex instruments and also presents preliminary results.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Francois.Lefeuvre</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=8</URL>
+        <Description>Information about the Analyzer of Wideband Electromagnetic Waves (MEMO) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>WaveformReceiver</InstrumentType>
+    <InvestigationName>Analyzer of Wideband Electromagnetic Waves (MEMO) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/PROMICS3</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Ion Composition and Energy (PROMICS-3)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>PROMICS-3 is a plasma experiment and performs three-dimensional measurements of ions in the energy range 4 eV to 70 keV with mass separation (M = 1 - 32), and of electrons in the energy range 12 eV to 35 keV. The instrument uses toroidal electrostatic analyzers. MEPS is the electron spectrometer, and TRICS is the ion mass spectrometer.
+Interball Tail Probe and Interball Auroral Probe both carry identical PROMICS-3 instruments, thus facilitating direct comparisons of the particle distributions.
+See the web page at http://www.irf.se/rpg/interball.html for further information.
+The PROMICS-3 instrument was developed in cooperation between the Swedish Institute of Space Physics (IRF), the Finnish Meteorological Institute (FMI) and the Space Research Institute, Moscow (IKI). The major part of the hardware of PROMICS-3 was designed and built at IRF in Kiruna. Much of the electronics was built in Finland by FMI, Hollming OY, and VTT.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rickard.Lundin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=4</URL>
+        <Description>Information about the Ion Composition and Energy (PROMICS-3) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Ion Composition and Energy (PROMICS-3) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/ALPHA3</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Thermal Ion Trap (ALPHA-3)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The ALPHA-3 experiment is designed to study cold magnetospheric plasma, and identical instruments are installed on both Interball Tail and Interball Auroral Probe. The instrument uses planar electrostatic analyzers, with a planar modulating potential analyzer. The collector effective area is 11.3 square cm, and the range of current measurements is 1.E-13 to 1.3E-8 A. The energy range of the registered particles is 0 - 25.5 eV. The minimum measurable density of protons is 1 per cc for an ion temperature of 1.E4 K and for the analyzer directed along the velocity vector.
+For more details, see the article by V. V. Bezrukikh and K. I. Gringauz at pp. 215 - 221 of "Interball Mission and Payload," a joint publication of RKA, IKI, and CNES (1995).</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/V.V.Bezrukikh</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=12</URL>
+        <Description>Information about the Thermal Ion Trap (ALPHA-3) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Thermal Ion Trap (ALPHA-3) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/UVAI</ResourceID>
+    <ResourceHeader>
+      <ResourceName>UV Auroral Imager (UVAI)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Ultra-Violet Auroral Imager (UVAI) is a Canadian instrument on the Interball Auroral Probe. It was of a similar design to the very successful imager on the Swedish Viking satellite. The camera was mounted at 90 degrees to the platform spin axis with the CCD columns shifted electronically at a rate selected to exactly correct for the satellite spin motion.
+Unfortunately, the actual motion of the spacecraft was more complicated than expected. The platform developed a significant coning problem, with the wobble amplitude increasing with time. Attitude control could restore the desired simple behavior, but to conserve thrusters this was done only when the amplitude became larger than 10 degrees, or roughly once every five days.
+UVAI images are affected in various ways by the wobble, depending on the amplitude and phase of the coning motion during any particular frame. Some images suffer little or no degredation. Others are badly smeared, with point-like objects (such as stars) appearing as ellipsoids rather than circles.
+UVAI image data were obtained with 12 bit resolution, potentially allowing a dynamic range of 4096. Logarithmic compression was applied to map 12 bit counts onto 8 bit data numbers in order to reduce data volume and telemetry requirements.
+The UVAI home page at http://www.phys.ucalgary.ca/~bjackel/uvai/main.html provides a catalog of approximately three months of good image data, from January to March 1997.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Leroy.L.Cogger</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=16</URL>
+        <Description>Information about the UV Auroral Imager (UVAI) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Imager</InstrumentType>
+    <InvestigationName>UV Auroral Imager (UVAI) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/UVSIPS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Auroral UV Emission Line Measurements (UVSIPS)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The UV spectrometer UVSIPS was designed to map ionospheric auroral characteristics in the magnetic field line footprint. The instrument is a classical slit-less spectrograph with a plane diffraction grid. UVSIPS has three fixed spectral channels for simultaneous measurements centered at wavelengths of 1304, 1356, and 1493 Angstroms. A microprocessor calculates the coordinates of the footprint before every spin period of the satellite. The input mirror of the instrument moves to the corresponding position by small steps, scanning by its field of view in the satellite-Sun-Earth plane. The instrument scans in the plane perpendicular to the spacecraft spin axis by virtue of the spin rotation (period about 2 minutes).
+This information was taken from the paper by Kuzmin et al., in Interball Mission and Payload, published by CNES, IKI, and RSA, pp. 401-408 (1995), which contains additional details of the instrument.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Kounijo.Palazov</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=15</URL>
+        <Description>Information about the Auroral UV Emission Line Measurements (UVSIPS) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Spectrometer</InstrumentType>
+    <InvestigationName>Auroral UV Emission Line Measurements (UVSIPS) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+        <ResourceID>spase://SMWG/Instrument/Interball-2/Ephemeris</ResourceID>
+        <ResourceHeader>
+            <ResourceName>Interball-2 Orbit</ResourceName>
+            <AlternateName>Interball-2 Ephemeris</AlternateName>
+            <ReleaseDate>2012-06-19T00:00:00Z</ReleaseDate>
+            <Description>Interball Aurora Orbital modeling.</Description>
+             <Contact>
+            <PersonID>spase://SMWG/Person/Jan.Merka</PersonID>
+            <Role>MetadataContact</Role>
+            </Contact>
+           <InformationURL>
+                 <Name>IKI Satellite Situation Center</Name>
+                 <URL>http://www.iki.rssi.ru/vprokhor/</URL>
+                 <Description>
+                 This page maintains the Situation Analysis for the IKI International Space Missions and its coordination with the 
+                 Inter-Agency multimission campaigns.</Description>
+           </InformationURL>
+        </ResourceHeader>
+     <InstrumentType>Platform</InstrumentType>
+     <InvestigationName>Spacecraft position</InvestigationName>
+     <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+  </Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Interball-2/RON</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Spacecraft Potential Control, Ion Beam Emitter (RON)</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The main objective of the spacecraft potential control experiment (RON-AC) is to neutralize and thereby stabilize the positive floating potential which a sunlit spacecraft often acquires. Such conditions in near-Earth space are met outside the plasmasphere, where the plasma density is low and as long as the electron temperature is not too high (less than a few keV).
+The instrument contains two different and independent ion beam systems, providing an adjustable current of singly charged indium or N2 ions. The ions are emitted toward the sun, parallel to the spacecraft spin axis. One type of ion emitter is a "solid needle" liquid metal ion source using indium. Unfortunately an early high voltage failure prevented the operation of the indium ion beam. The other ion emitter utilizes a bottle of pure nitrogen gas under high pressure, and a saddle field arrangement for the ionization, using a potential of up to 6 keV.
+A microprocessor controls the ion emitter and interfaces with the spacecraft telemetry and the experiment IESP-2M, which provides spacecraft potential data in real time.
+Details of the instrument are given in the paper by Torkar et al., Ann. Geophysicae 16, 1086-1096 (1998).</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Willi.W.Riedler</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1996-050C&amp;ex=13</URL>
+        <Description>Information about the Spacecraft Potential Control, Ion Beam Emitter (RON) experiment on the Interball Auroral Probe mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>SpacecraftPotentialControl</InstrumentType>
+    <InvestigationName>Spacecraft Potential Control, Ion Beam Emitter (RON) on Interball Auroral Probe</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Interball-2</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jan.Hanasz</ResourceID>
+    <PersonName>Dr. Jan Hanasz</PersonName>
+    <OrganizationName>Space Research Centre</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/A.D.Kuzmin</ResourceID>
+    <PersonName>Prof. A. D. Kuzmin</PersonName>
+    <OrganizationName>Academy of Sciences</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jan.I.Smilauer</ResourceID>
+    <PersonName>Dr. Jan I. Smilauer</PersonName>
+    <OrganizationName>Czech Academy of Sciences</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Vitaly.M.Chmyrev</ResourceID>
+    <PersonName>Dr. Vitaly M. Chmyrev</PersonName>
+    <OrganizationName>IZMIRAN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jean-Jacques.Berthelier</ResourceID>
+    <PersonName>Dr. Jean-Jacques Berthelier</PersonName>
+    <OrganizationName>Centre de Recherches en Physique de l'</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Francois.Lefeuvre</ResourceID>
+    <PersonName>Dr. Francois Lefeuvre</PersonName>
+    <OrganizationName>Centre National de la Recherche Scientifique</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Karel.Kudela</ResourceID>
+    <PersonName>Mr. Karel Kudela</PersonName>
+    <OrganizationName>Slovak Academy of Sciences</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/V.V.Bezrukikh</ResourceID>
+    <PersonName>Dr. V. V. Bezrukikh</PersonName>
+    <OrganizationName>Academy of Sciences</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jean-Andre.C.Sauvaud</ResourceID>
+    <PersonName>Dr. Jean-Andre C. Sauvaud</PersonName>
+    <OrganizationName>Center d Etudes Spatiales des Rayonnemen</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Rickard.Lundin</ResourceID>
+    <PersonName>Prof. Rickard Lundin</PersonName>
+    <OrganizationName>Swedish Institute of Space Physics</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Kounijo.Palazov</ResourceID>
+    <PersonName>Dr. Kounijo Palazov</PersonName>
+    <OrganizationName>Bulgarian Academy of Sciences</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Ivan.S.Arshinkov</ResourceID>
+    <PersonName>Dr. Ivan S. Arshinkov</PersonName>
+    <OrganizationName>Bulgarian Academy of Sciences</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Leroy.L.Cogger</ResourceID>
+    <PersonName>Dr. Leroy L. Cogger</PersonName>
+    <OrganizationName>University of Calgary</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/O.A.Molchanov</ResourceID>
+    <PersonName>Dr. O. A. Molchanov</PersonName>
+    <OrganizationName>IZMIRAN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Jan.Merka</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Jan Merka</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 672, Greenbelt, MD 20771, USA</Address>
+    <Email>jan.merka@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 8751</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Willi.W.Riedler</ResourceID>
+    <PersonName>Prof. Willi W. Riedler</PersonName>
+    <OrganizationName>Technische Universitat Graz</OrganizationName>
+  </Person></Spase>
+
+

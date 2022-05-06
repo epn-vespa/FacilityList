@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/ISEE2</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 2</ResourceName>
+      <AlternateName>1977-102B</AlternateName>
+      <AlternateName>International Sun-Earth Explorer-B</AlternateName>
+      <AlternateName>ISEE-B</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Explorer-class daughter spacecraft, International Sun-Earth Explorer 2, was part of the mother/daughter/heliocentric mission (ISEE 1, ISEE 2, ISEE 3). The purposes of the mission were: (1) to investigate solar-terrestrial relationships at the outermost boundaries of the Earth's magnetosphere, (2) to examine in detail the structure of the solar wind near the Earth and the shock wave that forms the interface between the solar wind and the Earth's magnetosphere, (3) to investigate motions of and mechanisms operating in the plasma sheets, and (4) to continue the investigation of cosmic rays and solar flare effects in the interplanetary region near 1 AU. The three spacecraft carried a number of complementary instruments for making measurements of plasmas, energetic particles, waves, and fields. The mission thus extended the investigations of previous IMP spacecraft. The mother/daughter portion of the mission consisted of two spacecraft (ISEE 1 and ISEE 2) with station-keeping capability in the same highly eccentric geocentric orbit with an apogee of 23 Earth radii. During the course of the mission, the ISEE 1 and ISEE 2 orbit parameters underwent short-term and long-term variations due to solar and lunar perturbations. These two spacecraft maintained a small separation distance, and made simultaneous coordinated measurements to permit separation of spatial from temporal irregularities in the near-Earth solar wind, the bow shock, and inside the magnetosphere. By maneuvering ISEE 2, the inter-spacecraft separation as measured near the Earth's bow shock was allowed to vary between 10 km and 5000 km; its value is accurately known as a function of time and orbital position. The spacecraft were spin stabilized, with the spin vectors maintained nominally within 1 degree of perpendicular to the ecliptic plane, pointing north. The spin rates were nominally 19.75 rpm for ISEE 1 and 19.8 rpm for ISEE 2, so that there was a slow differential rotation between the two spacecraft. The ISEE 2 body-mounted solar array supplied approximately 112 watts at launch. The ISEE 2 data rate was 2048 bps most of the time and 8192 bps during one orbit out of every five (with some exceptions). Both ISEE 1 and ISEE 2 re-entered the Earth's atmosphere during orbit 1518 on September 26, 1987. Seventeen of 21 on-board experiments were operational at the end. For instrument descriptions written by the investigators, see IEEE Trans. on Geosci. Electron., v. GE-16, no. 3, July 1978.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Keith.W.Ogilvie</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Alastair.C.Durney</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-102B</URL>
+        <Description>Information about the ISEE 2 mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <ObservatoryGroupID>spase://SMWG/Observatory/ISEE</ObservatoryGroupID>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE2/MAG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 2 Fluxgate Magnetometer, Tri-axial</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The magnetic fields investigation selected for ISEE 1 and 2 had as its principal objectives the study of the magnetic signatures of magnetospheric phenomena and magnetohydrodynamic waves in and around the magnetosphere, and to provide supporting data for other experiments on the spacecraft such as the electric field, particle and plasma wave investigations. In this triaxial fluxgate magnetometer, three ring-core sensors in an orthogonal triad were enclosed in a flipper mechanism at the end of the magnetometer boom. The electronics unit was on the main body of the spacecraft at the foot of the boom. The magnetometer had two operating ranges of +/- 8192 nT and +/- 256 nT in each vector component. The data were digitized and averaged within the instrument to provide increased resolution and to provide Nyquist filtering. There were two modes for the transmission of the averaged data. In the double-precision mode of operation, 16-bit samples of data were transmitted. This provided a maximum resolution of +/- 1/4 nT or 1/128 nT in the low-sensitivity and high-sensitivity ranges. Operation of this experiment was near nominal until spacecraft re-entry on September 26, 1987. Users of data from this experiment should be aware of the fact that the averaging of 12-bit samples to create 16-bit samples worked well in the spin plane, but in situations during which the field along the spin axis was quiet relative to the size of a digital window, the magnetometer returned only a 12-bit sample. This was particularly noticeable when the spacecraft was in the solar wind and the instrument was operated in its low gain (8192 nT) range, and when the spacecraft was in quiet regions of the magnetosphere in the low gain mode. The former situation limited the resolution of the field measured to 4 nT in the double precision mode in which the magnetometer usually was operated, and the latter situation created, as the spacecraft moved through the large gradient in the Earth's magnetic field, a stair step pattern of field changes of size 4 nT which may be mistaken for waves. Another operational anomaly was the saturation of a sensor during gain changes. At these times, the 3 components of the magnetic field were deduced from one spin tone and the field along the spin axis, limiting the temporal resolution of the instrument to below the spin frequency. Every effort was made to minimize zero level errors, clerical errors and other data processing anomalies within the available resources. However, these resources were very constrained and funding ceased before the entire submitted data set could be checked. It is expected that eventually quality checks of the entire database will be possible, but in the meantime, users of the ISEE 1 and 2 magnetometer data are requested to report all suspicions about data quality to the principal investigator, C. T. Russell, for verification.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Christopher.T.Russell</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1977-102B-04</URL>
+        <Description>Information about the Fluxgate Magnetometer, Tri-axial experiment on the ISEE 2 mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Fluxgate Magnetometer, Tri-axial on ISEE 2</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE2/UCB</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 2 UCB Particle Detectors</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was designed to determine, by using identical instrumentation (see 77-102A) on the mother/daughter spacecraft, the spatial extent, propagation velocity, and temporal behavior of a wide variety of particle phenomena. Electrons were measured at 2 and 6 keV and in two bands: 8 to 200 keV and 30 to 200 keV. Protons were measured at 2 and 6 keV and in three bands: 8 to 200 keV, 30 to 200 keV, and 200 to 380 keV. The 30 keV threshold could be commanded to 15 or 60 keV. Identical instrumentation on each spacecraft consisted of a pair of surface-barrier semiconductor-detector telescopes (one with a foil and one without a foil) and four fixed-voltage cylindrical electrostatic analyzers (two for electrons and two for protons). Channel multipliers were used as detectors with the fixed-voltage analyzers. The telescopes had a viewing cone with a 40-deg half-angle, oriented at about 20 deg to the spin axis.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Kinsey.A.Anderson</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1977-102B-08</URL>
+</InformationURL>
+      <PriorID>spase://nssdc/instrument/1977-102B-08</PriorID>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <!-- <InstrumentType>ParticleDetector</InstrumentType> -->
+    <InvestigationName>Electron and Proton Fluxes in the Outer magnetosphere</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE2/FPE</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE 2 Fast Plasma Experiment</ResourceName>
+      <AlternateName>ISEE 2 FPE</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>This experiment was designed to study plasma velocity distributions and their spatial and temporal variations in the solar wind, bow shock, magnetosheath, magnetopause, and magnetotail (within the magnetosphere). One-, two-, and three-dimensional velocity distributions for positive ions and electrons were measured using two 90-deg spherical electrostatic analyzers with channeltron electron multipliers as detectors. In conjunction with similar instrumentation (77-102A-01) provided by S. J. Bame/LANL for the mother spacecraft, protons from 50 eV to 40 keV (and electrons from 5 eV to 20 keV) were measured with 10% energy resolution in two ranges each.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Goetz.Paschmann</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1977-102B-01</URL>
+        <Description>NSSDC Master Catalog</Description>
+</InformationURL>
+      <PriorID>spase://nssdc/instrument/1977-102B-01</PriorID>
+</ResourceHeader>
+    <InstrumentType>ElectrostaticAnalyser</InstrumentType>
+    <InvestigationName>Fast Plasma Experiment and Solar Wind Experiment</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE2</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/ISEE2/Ephemeris</ResourceID>
+    <ResourceHeader>
+      <ResourceName>ISEE2 Positions</ResourceName>
+      <AlternateName>ISEE2 Ephemeris</AlternateName>
+      <ReleaseDate>2013-04-09T00:00:00Z</ReleaseDate>
+      <Description>ISEE2 spacecraft positions in various coordinate systems</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.E.McGuire
+</PersonID>
+        <Role>MetadataContact</Role>
+      </Contact>
+        </ResourceHeader>
+    <InstrumentType>Platform</InstrumentType>
+    <InvestigationName>Spacecraft position</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/ISEE2</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Alastair.C.Durney</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:45Z</ReleaseDate>
+    <PersonName>Dr. Alastair C. Durney</PersonName>
+    <OrganizationName>ESA, European Space Research and Technology Centre</OrganizationName>
+    <PhoneNumber>+44 705665966 3312</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Kinsey.A.Anderson</ResourceID>
+    <PersonName>Prof. Kinsey A. Anderson</PersonName>
+    <OrganizationName>University of California, Berkeley</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+      <ResourceID>spase://SMWG/Person/Christopher.T.Russell</ResourceID>
+      <ReleaseDate>2012-06-13T12:34:56.789</ReleaseDate>
+      <PersonName>Christopher T. Russell</PersonName>
+      <OrganizationName>Institute of Geophysics and Planetary Physics and the Department of Earth and Space Sciences, University of California, Los Angeles</OrganizationName>
+      <Address>Institute of Geophysics and Planetary Physics, University of California Los Angeles, Box 951567, Los Angeles, CA 90095-1567</Address>
+      <Email>ctrussell@igpp.ucla.edu</Email>
+      <PhoneNumber>+1 310 825 3188</PhoneNumber>
+      <FaxNumber>+1 310 206 3051</FaxNumber>
+   </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Goetz.Paschmann</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Goetz Paschmann</PersonName>
+    <OrganizationName>Max Planck Institut fur Extraterrestrische Physik, Garching, Germany</OrganizationName>
+    <Email>gep@mpe.mpg.de</Email>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Keith.W.Ogilvie</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Keith W. Ogilvie</PersonName>
+    <OrganizationName>NASA Goddard Space Flight Center</OrganizationName>
+    <Address>Code 673, Greenbelt, MD 20771, USA</Address>
+    <Email>keith.w.ogilvie@nasa.gov</Email>
+    <PhoneNumber>+1 301 286 5904</PhoneNumber>
+  </Person></Spase>
+
+

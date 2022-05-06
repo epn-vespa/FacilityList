@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/IRIDIUM</ResourceID>
+    <ResourceHeader>
+      <ResourceName>IRIDIUM</ResourceName>
+      <ReleaseDate>2010-09-27T18:22:17Z</ReleaseDate>
+      <Description/>
+      <Contact>
+        <PersonID>spase://SMWG/Person/UNKNOWN</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+    </ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.NearSurface</ObservatoryRegion>
+    </Location>
+  </Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/IRIDIUM/Magnetometer</ResourceID>
+    <ResourceHeader>
+      <ResourceName>IRIDIUM Magnetometer</ResourceName>
+      <ReleaseDate>2014-07-24T20:37:20Z</ReleaseDate>
+      <Description>The IRIDIUM series of spacecraft carry engineering 
+magnetometers whose data, in aggregate, are relevant to the study
+of Birkeland (magnetic field aligned) currents at auroral latitudes.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Brian.J.Anderson</PersonID>
+        <Role>GeneralContact</Role>
+      </Contact>
+      <InformationURL>
+        <Name>IRIDIUM data pages at JHU/APL</Name>
+        <URL>http://sd-www.jhuapl.edu/Iridium/introduction.html</URL>
+      </InformationURL>
+    </ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Birkeland Currents from IRIDIUM Data</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/IRIDIUM</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/UNKNOWN</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>UNKNOWN</PersonName>
+    <OrganizationName>UNKNOWN</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Brian.J.Anderson</ResourceID>
+    <ReleaseDate>2011-10-04T18:29:48Z</ReleaseDate>
+    <PersonName>Mr. Brian J. Anderson</PersonName>
+    <OrganizationName>Applied Physics Laboratory</OrganizationName>
+    <Email>brian.anderson@jhuapl.edu</Email>
+    <PhoneNumber>+1-240-228-6347</PhoneNumber>
+  </Person></Spase>
+
+

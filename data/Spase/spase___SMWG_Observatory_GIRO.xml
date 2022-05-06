@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_1.xsd">
+  <Version>2.2.1</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/GIRO</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GIRO Group</ResourceName>
+      <AlternateName>Global Ionospheric Radio Observatory Group</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>GIRO provides accurate specification of the electron density in the Earth's
+   ionosphere at &gt;60 locations in the world. 37 GIRO locations provide real-time ionospheric
+   data to the central server in Lowell, Massachusetts within several minutes. GIRO sites
+   are equipped by Digisonde instruments that use the high frequency remote sounding
+   technique to probe the bottomside ionosphere from 80 km up to the peak of ionospheric
+   plasma density. Real-time and retrospective data from GIRO locations are ingested in Lowell
+   Digital Ionogram DataBase (DIDBase) GIRO data are open for public access via DIDBase and
+   DriftBase Web Portals, and custom software tools for digisonde data analysis, SAO Explorer
+   and Drift Explorer.</Description>
+      <Acknowledgement>A heavy investment of time, effort, expertise, and funds continues to
+   be made to produce, collect, quality control, interpret, and store digisonde ionograms. It
+   is important that data providers and the UML DIDBase developers are appropriately acknowledged
+   in scientific publications that involve analysis of data obtained from the Lowell DIDBase.
+</Acknowledgement>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Bodo.W.Reinisch</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Ivan.A.Galkin</PersonID>
+        <Role>TechnicalContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>GIRO (Global Ionospheric Radio Observatory) Home Page.</Name>
+        <URL>http://giro.uml.edu/</URL>
+        <Description>Access to real-time data and software tools</Description>
+</InformationURL>
+   <InformationURL>
+        <Name>Global Ionospheric Radio Observatory (GIRO) Article</Name>
+        <URL>https://link.springer.com/article/10.5047%2Feps.2011.03.001</URL>
+        <Description>Detailed information about the Global Ionospheric Radio Observatory.</Description>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Earth.Surface</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/GIRO/Ionosonde</ResourceID>
+    <ResourceHeader>
+      <ResourceName>GIRO Ionospheric Sounder</ResourceName>
+      <AlternateName>Ionosonde</AlternateName>
+      <ReleaseDate>2012-03-21T09:08:00Z</ReleaseDate>
+      <Description>
+
+The GIRO (Global Ionospheric Radio Observatory) comprises records of subpeak
+ionospheric characteristics, including altitude profiles of electron 
+density and plasma drift velocity, in the altitude range 90 km to the 
+peak height of the F2 layer, measured by a global ground-based network 
+of active high frequency (HF) radiowave remote sensing instruments, 
+ionosondes. The ionosonde uses stepped- or fixed-frequency probing 
+radio signals transmitted from the ground for propagation into ionosphere, 
+total reflection from an area of matching plasma density, and return to 
+the same or different ionosonde location for detection. The detected 
+echoes are evaluated for their travel time and other characteristics 
+such as amplitude, phase, polarization, Doppler frequency shift, and 
+angle of arrival. The signal travel time is commonly translated to 
+the virtual range to the reflecting area in the ionosphere in the 
+assumption of the signal propagating at the speed of light.
+Stepped-frequency measurements provide adequate information to compute
+true range of reflections by accounting for refractive properties of plasma.
+
+The ionosonde designs are commonly divided in two classes, (1) a pulsed sounder
+with stepped frequency that transmits short pulses to detect the echo arrival
+in the time domain, and (2) a chirp-sounder that transmits a continuous
+swept-frequency signal to detect its reflections in the frequency domain.
+The stepped- or swept-frequency sounders produce inherently 2-dimensional
+data record (frequency x travel time), ionogram. Each element of the 2D
+ionogram structure holds multiple signal characteristics measured in the
+ionosonde's receiver channels. Thus acquired information is processed to
+detect echoes and use their attributes to derive ionospheric characteristics
+along the propagation path.
+
+The fixed-frequency measurement, while using the same concept of radio
+sounding by total reflection, targets specific plasma densities in the 
+ionosphere, and usually provides higher Doppler frequency resolution by 
+transmitting pulses at the same frequency for several seconds. 
+Simultaneously occurring reflection points in a structured ionosphere 
+are identified by their different echo Doppler frequencies allowing the
+computation of Doppler skymaps and plasma drift velocity.
+      </Description>
+      <Acknowledgement>
+A heavy investment of time, effort, expertise, and 
+funds continues to be made to produce, collect, quality control, interpret, 
+and store ionograms. It is important that data suppliers and the 
+UML DIDBase developers are appropriately acknowledged in scientific 
+publications that involve analysis of data obtained from the GIRO repositories
+such as DIDBase and DriftBase.
+      </Acknowledgement>
+      <Contact>
+         <PersonID>spase://SMWG/Person/Bodo.W.Reinisch</PersonID>
+         <Role>PrincipalInvestigator</Role>
+      </Contact>
+      <Contact>
+         <PersonID>spase://SMWG/Person/Ivan.A.Galkin</PersonID>
+         <Role>DataProducer</Role>
+         <Role>TechnicalContact</Role>
+      </Contact> 
+      <InformationURL>
+      <Name>GIRO (Global Ionospheric Radio Observatory) Home Page</Name>
+      <URL>http://giro.uml.edu</URL>
+      <Description>Access to real-time data and software tools</Description>
+      <Language>en</Language>
+      </InformationURL>
+      <Association>
+         <AssociationID>spase://SMWG/Observatory/GIRO</AssociationID>
+         <AssociationType>Other</AssociationType>
+      </Association>
+    </ResourceHeader>
+    <InstrumentType>Sounder</InstrumentType>
+    <InvestigationName>Global Ionospheric Radio Observatory</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/GIRO</ObservatoryID>
+  </Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Ivan.A.Galkin</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:46Z</ReleaseDate>
+    <PersonName>Dr. Ivan A. Galkin</PersonName>
+    <OrganizationName>University of Massachusetts Lowell, Center for Atmospheric Research</OrganizationName>
+    <Address>600 Suffolk Street, Lowell, MA 01851 U.S.A.&gt;</Address>
+    <Email>Ivan_Galkin@uml.edu</Email>
+    <PhoneNumber>978-934-4912</PhoneNumber>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Bodo.W.Reinisch</ResourceID>
+    <PersonName>Prof. Bodo W. Reinisch</PersonName>
+    <OrganizationName>University of Massachusetts at Lowell</OrganizationName>
+  </Person></Spase>
+
+
