@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_0.xsd">
+  <Version>2.2.0</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/Magsat</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Magsat</ResourceName>
+      <AlternateName>1979-094A</AlternateName>
+      <AlternateName>Explorer 61</AlternateName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Magsat project was a joint NASA/United States Geological Survey (USGS) effort to measure near-earth magnetic fields on a global basis. Objectives included obtaining an accurate description of the earth's magnetic field, obtaining data for use in the update and refinement of world and regional magnetic charts, compilation of a global crustal magnetic anomaly map, and interpretation of that map in terms of geologic/geophysical models of the earth's crust. The spacecraft was launched into a low, near-polar, orbit by the Scout vehicle. The basic spacecraft was made up of two distinct parts: the instrument module that contained a vector and a scalar magnetometer and their unique supporting gear; and the base module that contained the necessary data-handling, power, communications, command, and attitude-control subsystems to support the instrument module. The base module complete with its subsystems was comprised of residual Small Astronomy Satellite (SAS-C) hardware. The magnetometers were deployed after launch to a position 6 m behind the spacecraft. At this distance, the influence of magnetic materials from the instrument and base module (chiefly from the star cameras) was less than 1 nT. Sixteen complete vector magnetic field measurements and eight scalar measurements were obtained every second.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.A.Langel.III</PersonID>
+        <Role>ProjectScientist</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1979-094A</URL>
+        <Description>Information about the Magsat mission</Description>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Heliosphere.NearEarth</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Magsat/VMAG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Vector Magnetometer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The vector magnetometer consisted of three fluxgate sensing elements aligned along orthogonal axes. The output of each vector sensor was converted to a digital word by an analog-to-digital converter. The outputs of all these axes were sampled essentially at the same time. Sixteen vectors were measured per second. Each vector measurement had a resolution of better than 1 nT and an absolute accuracy of better than 6 nT rms when referenced to a geocentric coordinate system. The measurement range was plus or minus 6.4E4 nT.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.A.Langel.III</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1979-094A&amp;ex=2</URL>
+        <Description>Information about the Vector Magnetometer experiment on the Magsat mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Vector Magnetometer on Magsat</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Magsat</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/Magsat/SMAG</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Scalar Magnetometer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The scalar magnetometer had two dual-cell, cesium-vapor sensor heads whose output frequency was proportional to the total magnetic field. With this sensor configuration, only two small diamond-shaped dead zones existed. These lay along the orbit normal (the east-west direction) for the orbit and attitude chosen for this mission and a direction in which the magnetic field was never oriented. The scalar magnetometer's basic accuracy was on the order of 0.5 nT. A period count system converted the magnetometer output frequency to a digital word acceptable to the spacecraft telemetry system. This digital data had a resolution and accuracy of between 0.5 and 1.0 nT in the range 1.5E4 to 6.4E4 nT. Most of the time, noise on the spacecraft resulted in operation of only one sensor at a time. Eight total magnetic field strength measurements were obtained every second.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Robert.A.Langel.III</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>NSSDC's Master Catalog</Name>
+        <URL>https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1979-094A&amp;ex=1</URL>
+        <Description>Information about the Scalar Magnetometer experiment on the Magsat mission.</Description>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>Magnetometer</InstrumentType>
+    <InvestigationName>Scalar Magnetometer on Magsat</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/Magsat</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Robert.A.Langel.III</ResourceID>
+    <ReleaseDate>2010-08-05T17:35:47Z</ReleaseDate>
+    <PersonName>Dr. Robert A. Langel, III</PersonName>
+    <OrganizationName>Deceased - formerly at GSFC-Code 921</OrganizationName>
+  </Person></Spase>
+
+
