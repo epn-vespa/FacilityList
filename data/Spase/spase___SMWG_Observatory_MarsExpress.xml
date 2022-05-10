@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spase xmlns="http://www.spase-group.org/data/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spase-group.org/data/schema http://www.spase-group.org/data/schema/spase-2_2_2.xsd">
+  <Version>2.2.2</Version>
+  <Observatory>
+    <ResourceID>spase://SMWG/Observatory/MarsExpress</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Mars Express</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>ESA's Mars Express mission was launched 02-June-2003
+and arrived at Mars in December, 2003.  A lander, Beagle 2, was deployed
+on 19-Dec-2003, but communication was lost prior to any science data
+capture.  The main spacecraft went into a polar orbit on 25-Dec-2003, with
+apogee and perigee altitudes of 11,634 km and 279 km (3.4 and 0.08 Martian
+radii).  The scientific objectives of the 3-axis-stabilized Mars Express
+Orbiter are to obtain global high-resolution photo-geology (10 m resolution),
+mineralogical mapping (100 m resolution) and mapping of the atmospheric
+composition, study the subsurface structure, the global atmospheric
+circulation, and the interaction between the atmosphere and the subsurface,
+and the atmosphere and the interplanetary medium.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rudolf.J.Schmidt</PersonID>
+        <Role>GeneralContact</Role>
+</Contact>
+      <InformationURL>
+        <Name>ESA Mars Express web page</Name>
+        <URL>http://www.esa.int/Our_Activities/Space_Science/Mars_Express/</URL>
+</InformationURL>
+</ResourceHeader>
+    <Location>
+      <ObservatoryRegion>Mars</ObservatoryRegion>
+</Location>
+</Observatory>
+<Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/MarsExpress/ASPERA3/ELS</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Mars Express ASPERA-3 Electron Spectrometer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Electron Spectrometer (ELS) of the ASPERA-3 package
+flown on Mars Express measures electrons in the energy range 0.01-20 keV.
+The intrinsic field of view is 10 deg x 360 deg. The 360 deg aperture is
+divided into 16 sectors. The sensor is a standard top-hat electrostatic
+analyzer in a very compact design.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rickard.Lundin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>PDS ASPERA web page</Name>
+        <URL>http://pds-geosciences.wustl.edu/missions/mars_express/aspera.htm</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>RetardingPotentialAnalyser</InstrumentType>
+    <InvestigationName>ASPERA3_ELS</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/MarsExpress</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/MarsExpress/ASPERA3/NPI</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Mars Express ASPERA-3 Neutral Particle Imager</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Neutral Particle Imager (NPI) of the ASPERA-3 package
+flown on Mars Express provides measurements of the integral ENA flux with no
+mass and energy resolution but with 5 deg x 11 deg angular resolution. The
+intrinsic field of view is 9 deg x 344 deg. The sensor utilizes a graphite surface
+to suppress the UV background. ENAs incident on the surface at a grazing angle of
+20 deg are reflected and/or cause ion sputtering. An MCP stack detects the reflected
+particles and sputtered fragments with a discrete anode.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rickard.Lundin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>PDS ASPERA web page</Name>
+        <URL>http://pds-geosciences.wustl.edu/missions/mars_express/aspera.htm</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>NeutralAtomImager</InstrumentType>
+    <InvestigationName>ASPERA3_NPI</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/MarsExpress</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/MarsExpress/ASPERA3/IMA</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Mars Express ASPERA-3 Ion Mass Analyzer</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Ion Mass Analyzer (IMA) of the ASPERA-3 package
+flown on Mars Express provides ion measurements in the energy range
+0.01 - 40 keV/q for the main ion components H+, H2+, He+, O+, and for the
+group of molecular ions with M/q ration between 20 and 80 amu/e. IMA has a 4.6 deg x 360 deg field
+of view. Electrostatic sweeping performs elevation (+/- 45 deg) coverage.
+The IMA sensor is a spherical electrostatic analyzer followed by a circular
+magnetic separating section. A large diameter MCP with a discrete anode images
+the matrix azimuth x mass.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rickard.Lundin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>PDS ASPERA web page</Name>
+        <URL>http://pds-geosciences.wustl.edu/missions/mars_express/aspera.htm</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>RetardingPotentialAnalyser</InstrumentType>
+    <InvestigationName>ASPERA3_IMA</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/MarsExpress</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/MarsExpress/ASPERA3</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Mars Express ASPERA-3</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>ASPERA-3 (Analysis of Space Plasmas and Energetic Atoms,
+version 3) consists of an ensemble of instruments to study the interaction
+between the solar wind and the Martian atmosphere and to characterize the
+plasma and neutral gas environment.  The instruments consist of a Neutral
+Particle Imager (NPI), a Neutral Particle Detector (NPD), an Electron
+Spectrometer (ELS), and an ion Mass Analyzer (IMA).  NPI provides good
+ENA arrival direction resolution but little energy or mass resolution,
+while NPD provides energy and mass resolution but little directional
+resolution.
+</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rickard.Lundin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>PDS ASPERA web page</Name>
+        <URL>http://pds-geosciences.wustl.edu/missions/mars_express/aspera.htm</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>NeutralAtomImager</InstrumentType>
+    <InstrumentType>RetardingPotentialAnalyser</InstrumentType>
+    <InvestigationName>ASPERA3</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/MarsExpress</ObservatoryID>
+</Instrument><Instrument xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Instrument/MarsExpress/ASPERA3/NPD</ResourceID>
+    <ResourceHeader>
+      <ResourceName>Mars Express ASPERA-3 Neutral Particle Detector</ResourceName>
+      <ReleaseDate>2019-05-05T12:34:56Z</ReleaseDate>
+      <Description>The Neutral Particle Detector (NPD) of the ASPERA-3 package
+flown on Mars Express provides measurements of the ENA differential flux over
+the energy range 100 eV - 10 keV resolving H and O with a coarse 5 deg x 30 deg
+angular resolution. The sensor consists of two identical detectors each with a
+9 deg x 90 deg intrinsic field of view. The measurement technique is based on a
+principle similar to the Neutral Particle Imager. ENAs incident on a surface at
+a grazing angle of 15 deg are reflected and cause secondary electron emission.
+The secondary electrons are transported to an MCP assembly, which gives the START
+signal.  The reflected ENAs hit the second surface and again produce the secondary
+electrons used to generate the STOP signal. The time-of-flight (TOF) electronics
+give the ENA velocity. The pulse-height distribution analysis of the STOP signals
+is used to provide a rough determination of the ENA mass.</Description>
+      <Contact>
+        <PersonID>spase://SMWG/Person/Rickard.Lundin</PersonID>
+        <Role>PrincipalInvestigator</Role>
+</Contact>
+      <InformationURL>
+        <Name>PDS ASPERA web page</Name>
+        <URL>http://pds-geosciences.wustl.edu/missions/mars_express/aspera.htm</URL>
+</InformationURL>
+</ResourceHeader>
+    <InstrumentType>NeutralAtomImager</InstrumentType>
+    <InvestigationName>ASPERA3_NPD</InvestigationName>
+    <ObservatoryID>spase://SMWG/Observatory/MarsExpress</ObservatoryID>
+</Instrument><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Rudolf.J.Schmidt</ResourceID>
+    <PersonName>Dr. Rudolf J. Schmidt</PersonName>
+    <OrganizationName>ESA-European Space Research Technology Cente</OrganizationName>
+  </Person><Person xmlns="http://www.spase-group.org/data/schema">
+    <ResourceID>spase://SMWG/Person/Rickard.Lundin</ResourceID>
+    <PersonName>Prof. Rickard Lundin</PersonName>
+    <OrganizationName>Swedish Institute of Space Physics</OrganizationName>
+  </Person></Spase>
+
+
