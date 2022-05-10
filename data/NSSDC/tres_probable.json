@@ -49,6 +49,22 @@
     ],
     [
         {
+            "Name": "Pioneer P-3",
+            "ID": "PIONX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
             "Name": "Beresheet",
             "ID": "2019-009B"
         },
@@ -257,6 +273,70 @@
     ],
     [
         {
+            "Name": "NEA Scout",
+            "ID": "NEA-SCOUT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q22084830",
+            "itemLabel": "Near-Earth Asteroid Scout",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NEA Scout"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer 3",
+            "ID": "1958-008A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-3",
+            "ID": "PIONX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-30",
+            "ID": "PIONY"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
+        }
+    ],
+    [
+        {
             "Name": "Pioneer P-31",
             "ID": "PIONZ"
         },
@@ -269,6 +349,22 @@
             "all_NSSDCA_ID": "PIONZ",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Atlas Able 5B|Atlas-Able 5B|P 31|Pioneer P 31|Pioneer Z|Pioneer Z|\u5148\u92d2D\u865f|\u5148\u92d2Z\u865f|\u5148\u9a71\u8005C\u53f7|\u5148\u9a71\u8005P-31"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-31",
+            "ID": "PIONZ"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "Pioneer P-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3"
         }
     ],
     [
