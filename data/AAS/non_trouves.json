@@ -104,10 +104,6 @@
         "ID": "HERA"
     },
     {
-        "Name": "South African Radio Astronomy Observatory (SARAO) MeerKAT Telescope",
-        "ID": "MeerKAT"
-    },
-    {
         "Name": "The PolarLight CubeSat X-ray polarimeter mission",
         "ID": "PolarLight"
     },
@@ -122,10 +118,6 @@
     {
         "Name": "Astrophysical Multimessenger Observatory Network",
         "ID": "AMON"
-    },
-    {
-        "Name": "IceCube South Pole Neutrino Observatory",
-        "ID": "IceCube"
     },
     {
         "Name": "The High Altitude Water Cherenkov Gamma-Ray Observatory",
@@ -148,10 +140,6 @@
         "ID": "S-PLUS"
     },
     {
-        "Name": "The Indian Space Research Organization's (ISRO) Astrosat  multi-wavelength space telescope",
-        "ID": "Astrosat"
-    },
-    {
         "Name": "The 1.3-m Warsaw Telescope,  Las Campanas Observatory, Chile, OGLE Survey",
         "ID": "OGLE"
     },
@@ -160,8 +148,8 @@
         "ID": "NEOWISE"
     },
     {
-        "Name": "University of Iowa/NASA HaloSat - A CubeSat to Study the Hot Galactic Halo",
-        "ID": "HaloSat"
+        "Name": "Australian Square Kilometre Array Pathfinder",
+        "ID": "ASKAP"
     },
     {
         "Name": "Inter University Center for Astronomy and Astrophysics (IUCAA), Pune, 2 m telescope at Girawali Observatory (IGO)",
@@ -200,10 +188,6 @@
         "ID": "Insight-HXMT"
     },
     {
-        "Name": "Miniature X-ray Solar Spectrometer (MinXSS) CubeSat",
-        "ID": "MinXSS"
-    },
-    {
         "Name": "NASA WB-57 High-Altitude Research Program",
         "ID": "WB-57"
     },
@@ -212,20 +196,12 @@
         "ID": "MCAO"
     },
     {
-        "Name": "NASA Transition Region and Coronal Explorer (TRACE) solar satellite Mission",
-        "ID": "TRACE"
-    },
-    {
         "Name": "National Aeronautics and Space Administration's (NASA) Neutron star Interior Composition Explorer (NICER)",
         "ID": "NICER"
     },
     {
         "Name": "NASA Solar Radiation and Climate Experiment (SORCE) satellite mission",
         "ID": "SORCE"
-    },
-    {
-        "Name": "European Space Agency (ESA) Newton-XMM X-Ray Multi-Mirror Mission Satellite",
-        "ID": "XMM"
     },
     {
         "Name": "NASA Neil Gehrels Swift Observatory Mission",
@@ -244,14 +220,6 @@
         "ID": "HETE-2"
     },
     {
-        "Name": "Japan Aerospace eXploration Agency (JAXA) Hinode Satellite Mission (formerly Solar-B)",
-        "ID": "Hinode"
-    },
-    {
-        "Name": "Japan Aerospace eXploration Agency (JAXA)/NASA Suzaku (formerly ASTRO-EII) X-ray Satellite Mission",
-        "ID": "Suzaku"
-    },
-    {
         "Name": "European Space Agency (ESA) Hipparcos Space Astrometry Mission Satellite",
         "ID": "HIPPARCOS"
     },
@@ -268,10 +236,6 @@
         "ID": "HST"
     },
     {
-        "Name": "NASA/Netherlands Institute for Space Research (NIVR)/Science and Engineering Research Council (SERC) 0.57m InfraRed Astronomical Satellite (IRAS) Satellite Mission",
-        "ID": "IRAS"
-    },
-    {
         "Name": "European Space Agency (ESA) 0.6m Infrared Space Observatory (ISO) Satellite Mission",
         "ID": "ISO"
     },
@@ -282,10 +246,6 @@
     {
         "Name": "NASA Advanced Composition Explorer (ACE) satellite mission",
         "ID": "ACE"
-    },
-    {
-        "Name": "US Air Force Space Test Program Advanced Research and Global Observation (ARGOS) Satellite Mission",
-        "ID": "ARGOS"
     },
     {
         "Name": "Japan Aerospace eXploration Agency (JAXA) Advanced Satellite for Cosmology and Astrophysics Satellite Mission (formerly ASTRO-D)",
@@ -300,10 +260,6 @@
         "ID": "IUE"
     },
     {
-        "Name": "Italian Space Agency (ASI) Astro-rivelatore Gamma a Immagini LEggero (AGILE) Satellite Mission",
-        "ID": "AGILE"
-    },
-    {
         "Name": "Japan Aerospace eXploration Agency (JAXA) Monitor of All-sky X-ray Image (MAXI) experiment on the International Space Station (SS)",
         "ID": "MAXI"
     },
@@ -314,10 +270,6 @@
     {
         "Name": "Science and Engineering Research Council (SERC)/NASA Ariel V Satellite Mission",
         "ID": "ArielV"
-    },
-    {
-        "Name": "European Space Agency (ESA) Gaia Satellite Mission",
-        "ID": "Gaia"
     },
     {
         "Name": "US Department of Energy Array of Low Energy X-ray Imaging Sensors (ALEXIS) Satellite Mission",
@@ -356,24 +308,8 @@
         "ID": "CoRoT"
     },
     {
-        "Name": "Japan Aerospace eXploration Agency (JAXA) Yohkoh Gamma and X-ray solar satellite (formerly known as Solar-A)",
-        "ID": "Yohkoh"
-    },
-    {
         "Name": "NASA Rossi X-ray Timing Explorer (RXTE) Satellite Mission",
         "ID": "RXTE"
-    },
-    {
-        "Name": "NASA/ESA/ASI Cassini-Huygens Spacecraft Mission to Saturn",
-        "ID": "Cassini"
-    },
-    {
-        "Name": "NASA Stardust comet sample return mission to Wild 2",
-        "ID": "Stardust"
-    },
-    {
-        "Name": "NASA 0.85m Spitzer Space Telescope (SST formerly Space Infrared Telescope Facility or SIRTIF) Satellite Mission",
-        "ID": "Spitzer"
     },
     {
         "Name": "NASA Compton Gamma Ray Observatory satellite mission",
@@ -386,10 +322,6 @@
     {
         "Name": "Wisconsin Ultraviolet PhotoPolarimter Experiment (WUPPE) on ASTRO-1 and ASTRO-2",
         "ID": "WUPPE"
-    },
-    {
-        "Name": "Roscosmos State Corporation (RKA) Soviet Gamma Gamma-ray observatory",
-        "ID": "Gamma"
     },
     {
         "Name": "NASA Wilkinson Microwave Anisotropy Probe (WMAP) Satellite Mission",
@@ -420,10 +352,6 @@
         "ID": "Voyager I"
     },
     {
-        "Name": "NASA and UK Science Research Council Copernicus (also known as Orbiting Astronomical Observatory 3) satellite mission",
-        "ID": "Copernicus"
-    },
-    {
         "Name": "European Space Research Organisation (ESRO) Cos-B Satellitei Mission",
         "ID": "Cos-B"
     },
@@ -442,14 +370,6 @@
     {
         "Name": "US Department of Defense (DoD) P78-1 space test Program spacecraft (also known as Solwind)",
         "ID": "P78-1\t"
-    },
-    {
-        "Name": "NASA MErcury Surface, Space ENvironment, GEochemistry, and Ranging (MESSENGER) orbiter mission to Mercury",
-        "ID": "MESSENGER"
-    },
-    {
-        "Name": "Canadian Space Agency (CSA) Microvariability and Oscillations of STars (MOST) Satellite Mission",
-        "ID": "MOST"
     },
     {
         "Name": "US Department of Defense (DoD) and the National Oceanic and Atmospheric Administration (NOAA) Defense Meteorological Satellite Program (DMSP) satellites",
@@ -492,20 +412,8 @@
         "ID": "RHESSI"
     },
     {
-        "Name": "European Space Agency (ESA) Planck Space Observatory Mission",
-        "ID": "Planck"
-    },
-    {
         "Name": "NASA 0.38m Ultraviolet Imaging Telescope (UIT) on ASTRO-1 and ASTRO-2",
         "ID": "UIT"
-    },
-    {
-        "Name": "NASA Uhuru (also known as X-ray Small Astronomical Satellite 1 or Explorer 42))",
-        "ID": "Uhuru"
-    },
-    {
-        "Name": "European Space Agency (ESA) X-ray Observatory satellite (EXOSAT originally named HELOS)",
-        "ID": "EXOSAT"
     },
     {
         "Name": "NASA Extreme UltraViolet Explorer (EUVE) Ssatellite Mission",
@@ -516,10 +424,6 @@
         "ID": "FAUST"
     },
     {
-        "Name": "NASA/Johns Hopkins University (JHU) Far Ultraviolet Spectroscopic Explorer (FUSE) Satellite Mission",
-        "ID": "FUSE"
-    },
-    {
         "Name": "NASA/European Space Agency (ESA) ULYSSES heliospheric Mission",
         "ID": "ULYSSES"
     },
@@ -528,20 +432,12 @@
         "ID": "PROBA2"
     },
     {
-        "Name": "NASA/Goddard Space Sciences Laboratory Fast Auroral SnapshoT explorer (FAST) Satellite Mission",
-        "ID": "FAST"
-    },
-    {
         "Name": "NASA/US Department of Energy (DoE) Fermi Gamma-Ray Space Telescope (FGST formerly Gamma-Ray Large Area Space Telescope GLAST) Satellite Mission",
         "ID": "Fermi"
     },
     {
         "Name": "NASA Solar Anomalous and Magnetospheric Particle EXplorer (SAMPEX) Mission",
         "ID": "SAMPEX"
-    },
-    {
-        "Name": "NASA Solar Terrestrial Relations Observatory (STEREO) solar orbiters",
-        "ID": "STEREO"
     },
     {
         "Name": "NASA Small Astronomy Satellite 3 (SAS 3) Mission (also known as SAS-C)",
@@ -556,16 +452,8 @@
         "ID": "GALEX"
     },
     {
-        "Name": "NASA 0.95m Kepler Satellite Mission",
-        "ID": "Kepler"
-    },
-    {
         "Name": "NASA Transiting Exoplanet Survey Satellite (TESS)",
         "ID": "TESS"
-    },
-    {
-        "Name": "European Space Agency (ESA) International Rosetta Probe Mission to comet 67P/Churyumov-Gerasimenko (67P)",
-        "ID": "Rosetta"
     },
     {
         "Name": "Institute of Space and Astronautical Science (ISAS) 0.15m Infrared Telescope in Space (IRTS) aboard the small space platform Space Flyer Unit",
@@ -602,22 +490,6 @@
     {
         "Name": "German Aerospace Center (DLR)/NASA ROentgen Satellite (ROSAT) Mission",
         "ID": "ROSAT"
-    },
-    {
-        "Name": "Institute of Space and Astronautical Science 8m (ISAS) Hakucho X-ray satellite (also known as CORSA-b)",
-        "ID": "Hakucho"
-    },
-    {
-        "Name": "NASA High Energy Astronomy Observatory 1 (HEAO 1) Satellite Mission",
-        "ID": "HEAO-1"
-    },
-    {
-        "Name": "European Space Research Organisation (ESRO) TD-1A (also known as Thor-Delta 1A) Satellite Mission",
-        "ID": "TD-1A"
-    },
-    {
-        "Name": "NASA High Energy Astronomy Observatory 3 (HEAO 3) Satellite Mission",
-        "ID": "HEAO-3"
     },
     {
         "Name": "The 2.15m Jorge Sahade Telescope at El Leoncito Astronomical Complex (CASLEO)",
@@ -888,10 +760,6 @@
         "ID": "ISI"
     },
     {
-        "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
-        "ID": "Ritter Observatory"
-    },
-    {
         "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
         "ID": "UMN:1.52m"
     },
@@ -908,20 +776,12 @@
         "ID": "ISOON"
     },
     {
-        "Name": "VERITAS Collaboration Very Energetic Radiation Imaging Telescope Array System (VERITAS) at Fred Lawrence Whipple Observatory (FLWO)",
-        "ID": "VERITAS"
-    },
-    {
         "Name": "Instituto Nacional de Astrofisica, optica y Electronica (INAOE) and the University of Massachusetts at Amherst (UMass) 50m Large Millimeter Telescope (LMT) Alfonso Serrano (or Gran Telescopio Milimetrico Alfonso Serrano) at Volcano Sierra Negra",
         "ID": "LMT"
     },
     {
         "Name": "Smithsonian Astrophysical Observatory (SAO)/Academia Sinica SubMillimeter Array (SMA) at Mauna Kea Observatory",
         "ID": "SMA"
-    },
-    {
-        "Name": "National Astronomical Observatory of Japan (NAOJ) 8.2m Subaru Telescope at Mauna Kea Observatory",
-        "ID": "Subaru"
     },
     {
         "Name": "University of Chicago Sunyaev-Zeldovich Array at Owens Valley Radio Observatory (OVRO)",
@@ -966,10 +826,6 @@
     {
         "Name": "Arizona Radio Observatory (ARO) 12m Sub-millimeter Telescope at Mount Graham International Observatory",
         "ID": "ARO:SMT"
-    },
-    {
-        "Name": "National Center for Atmospheric Research (NCAR) High Altitude Observatory telescope at Mauna Loa Solar Observatory (MLSO)",
-        "ID": "HAO"
     },
     {
         "Name": "Norfolk State University 0.6m (24inch) Rapid Response Robotic Telescope (RRRT) at Fan Mountain Observatory",
@@ -1156,10 +1012,6 @@
         "ID": "FTN"
     },
     {
-        "Name": "Georgia Stat University (GSU) Center for High Angular Resolution Astronomy (CHARA) interferometer at Mount Wilson Observatory",
-        "ID": "CHARA"
-    },
-    {
         "Name": "Massachusetts Institute of Technology (MIT) 24inch Telescope at George R. Wallace, Jr., Astrophysical Observatory",
         "ID": "MIT:WAO:0.61m"
     },
@@ -1174,10 +1026,6 @@
     {
         "Name": "Mark III Stellar Interferometer at Mount Wilson Observatory",
         "ID": "Mark III interferometer"
-    },
-    {
-        "Name": "University of Washington 0.75m Telescope at Manastash Ridge Observatory (MRO)",
-        "ID": "Manastash Ridge Observatory"
     },
     {
         "Name": "US Naval Observatory (USNO) 1m (40inch) Telescope at Naval Observatory Flagstaff Station (NOFS)",
@@ -1636,10 +1484,6 @@
         "ID": "Lovell"
     },
     {
-        "Name": "Netherlands Institute for Radio Astronomy (ASTRON) Low-Frequency Array (LOFAR)",
-        "ID": "LOFAR"
-    },
-    {
         "Name": "Bologna Astronomical Observatory 1.52m Gian Domenico Cassini Telescope at Loiano Observatory",
         "ID": "Loiano:1.52m"
     },
@@ -1976,14 +1820,6 @@
         "ID": "SHAO:1.56m"
     },
     {
-        "Name": "Tel Aviv University 1m Telescope at Florence and George Wise Observatory",
-        "ID": "Wise Observatory"
-    },
-    {
-        "Name": "Chinese Academy of Science 4m Large Sky Area Multi-Object Fiber Spectroscopy Telescope (LAMOST also known as Guo Shoujing Telescope)",
-        "ID": "LAMOST"
-    },
-    {
         "Name": "National Astronomical Observatory of Japan (NAOJ) 45m Radio Telescope at Nobeyama Radio Observatory",
         "ID": "No:45m"
     },
@@ -2116,16 +1952,8 @@
         "ID": "SOFIA"
     },
     {
-        "Name": "Centre National de la Recherche Scientifique (CNRS)/National Institute for Astrophysics (INAF) 0.9m Telescope Heliographique pour l'Etude du Magnetisme et des Instabilites Solaires (THEMIS) Telescope at Observatorio del Teide",
-        "ID": "THEMIS"
-    },
-    {
         "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
         "ID": "SST"
-    },
-    {
-        "Name": "SuperWASP extra-solar planet detection program at Roque de los Muchachos Observatory (SuperWASP-North) and South African Astronomical Observatory (SAAO; SuperWASP-South)",
-        "ID": "SuperWASP"
     },
     {
         "Name": "1.5m GREGOR Solar Telescope at Observatorio del Teide",
