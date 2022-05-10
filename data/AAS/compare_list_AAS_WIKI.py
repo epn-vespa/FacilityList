@@ -23,17 +23,17 @@ for i,e in enumerate(data_aas):
     #r = process.extract(e['Name']+' '+e['ID'], wikidata, scorer=fuzz.token_sort_ratio)
 
     def mon_scorer(q, c):
-        r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases']) + fuzz.WRatio(q['ID'], c[
+        r = fuzz.WRatio(q['ID'], c['itemLabel']) + fuzz.WRatio(q['ID'], c['aliases']) + fuzz.WRatio(q['ID'], c[
             'itemLabel']) + fuzz.WRatio(q['ID'], c['aliases'])
 
 
-        if "Name" in q and 'itemLabel' in c:
-            if q['Name'] == c['itemLabel']:
+        if "ID" in q and 'itemLabel' in c:
+            if q['ID'] == c['itemLabel']:
                 r += 400
             else:
                 r -= 50
-        if "Name" in q and 'aliases' in c:
-            if q['Name'] in c['aliases'].split("|"):
+        if "ID" in q and 'aliases' in c:
+            if q['ID'] in c['aliases'].split("|"):
                 r += 200
             else:
                 r -= 50
