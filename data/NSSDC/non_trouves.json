@@ -100,14 +100,6 @@
         "ID": "ESRO2A"
     },
     {
-        "Name": "GECAM A",
-        "ID": "2020-094A"
-    },
-    {
-        "Name": "GECAM B",
-        "ID": "2020-094B"
-    },
-    {
         "Name": "GP-A",
         "ID": "GRAVR-A"
     },
@@ -170,6 +162,26 @@
     {
         "Name": "Pioneer-E",
         "ID": "PIONE"
+    },
+    {
+        "Name": "Prognoz  4",
+        "ID": "1975-122A"
+    },
+    {
+        "Name": "Prognoz  5",
+        "ID": "1976-112A"
+    },
+    {
+        "Name": "Prognoz  6",
+        "ID": "1977-093A"
+    },
+    {
+        "Name": "Prognoz  7",
+        "ID": "1978-101A"
+    },
+    {
+        "Name": "Prognoz  8",
+        "ID": "1980-103A"
     },
     {
         "Name": "QUASAT",
@@ -982,6 +994,26 @@
     {
         "Name": "Prognoz 2",
         "ID": "1972-046A"
+    },
+    {
+        "Name": "Prognoz 4",
+        "ID": "1975-122A"
+    },
+    {
+        "Name": "Prognoz 5",
+        "ID": "1976-112A"
+    },
+    {
+        "Name": "Prognoz 6",
+        "ID": "1977-093A"
+    },
+    {
+        "Name": "Prognoz 7",
+        "ID": "1978-101A"
+    },
+    {
+        "Name": "Prognoz 8",
+        "ID": "1980-103A"
     },
     {
         "Name": "Prognoz 10",
