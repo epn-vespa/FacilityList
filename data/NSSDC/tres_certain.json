@@ -449,6 +449,22 @@
     ],
     [
         {
+            "Name": "Brite Totonto",
+            "ID": "2014-033L"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q796936",
+            "itemLabel": "BRITE",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2014-033L",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2014-033L",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "BRIght-star Target Explorer|BRITE Constellation|TUGSAT|TUGSAT-1"
+        }
+    ],
+    [
+        {
             "Name": "BRITE-A",
             "ID": "2013-009F"
         },
@@ -2028,7 +2044,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1983-004A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite"
+            "aliases": "Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite|IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9"
         }
     ],
     [
@@ -2076,7 +2092,7 @@
             "all_NAIF_ID": "-112",
             "all_NSSDCA_ID": "1978-079A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ICE|Explorer 59|International Sun-Earth Explorer-3|International Sun-Earth Explorer-C|ISEE-3|International Sun-Earth Explorer-3|ISEE-3|\u56fd\u9645\u5f57\u661f\u63a2\u6d4b\u5668|\u570b\u969b\u5f57\u661f\u63a2\u6e2c"
+            "aliases": "ICE|Explorer 59|International Sun-Earth Explorer-3|International Sun-Earth Explorer-C|ISEE-3|International Sun-Earth Explorer-3|ISEE-3|\u56fd\u9645\u5f57\u661f\u63a2\u6d4b\u5668|\u570b\u969b\u5f57\u661f\u63a2\u6e2c|ISEE-C|International Magnetospheric Study-H|IME-H"
         }
     ],
     [
@@ -2156,7 +2172,7 @@
             "all_NAIF_ID": "-170",
             "all_NSSDCA_ID": "2021-130A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0645\u0631\u0635\u062f \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0642\u0631\u0627\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|James Webb Space Telescope|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649 \u0641\u0647\u0632\u0627\u06cc\u0649 \u062c\u06cc\u0645\u0633 \u0648\u06cc\u0628|Dalekohled Jamese Webba|James Webb Space Telescope|JWST|Webb\u016fv vesm\u00edrn\u00fd dalekohled|James Webb Space Telescope|James Webb Space Telescope|James Webb Weltraumteleskop|James Webb-Weltraumteleskop|James-Webb-Teleskop|JWST|Next Generation Space Telescope|\u03a4\u03b6\u03ad\u03b9\u03bc\u03c2 \u039f\u03c5\u03ad\u03bc\u03c0|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb'i kosmoseteleskoop|Hurrengo Belaunaldiko Espazio Teleskopioa|James Webb (teleskopioa)|James Webb teleskopioa|JWST|Next Generation Space Telescope|NGST|James Webb -teleskooppi|James Webb Space Telescope|JWST|James Webb Space Telescope|James Webb Telescope|James-Webb|JWST|Next Generation Space Telescope|NGST|T\u00e9lescope spatial James Webb|JWST|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4 \u05d4\u05d7\u05dc\u05dc \u05d2'\u05d9\u05d9\u05de\u05e1 \u05d5\u05d5\u05d1|JWST|James Webb Space Telescope|JWST|Telescopio Webb|JWST|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|Jwst|Next Generation Space Telescope|NGST|NGST teleskopas|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Ruimtetelescoop|JWST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|\u062c\u06cc\u0645\u0632 \u0648\u06cc\u0628 \u062e\u0644\u0627\u0626\u06cc \u062f\u0648\u0631\u0628\u06cc\u0646|James Webb Space Telescope|JWST|Telescopul spa\u0163ial James Webb|JWST|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|JWST|James Webb Space Telescope|JWST|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d \u0c35\u0c46\u0c2c\u0c4d \u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37 \u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c \u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|James Webb Uzay Teleskobu|James Webb Space Telescope|JWST|K\u00ednh thi\u00ean v\u0103n James Webb|K\u00ednh thi\u00ean v\u0103n v\u0169 tr\u1ee5 James Webb|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|Webb Space Telescope|Webb Telescope|James Webb Space Telescope|JWST|JWST|NGST|Webb \ub9dd\uc6d0\uacbd|Webb \uc6b0\uc8fc\ub9dd\uc6d0\uacbd|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Atiliskup n usayrar Jims Wib|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|James Webb|JWST|\u062a\u0644\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u04b6\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|James Webb (teleskop)|Jeyms Webb (teleskop)|Teleskopi kajhoniji \u00c7ejms Uebb|Teleskopi kayhonii Jeyms Uebb|Teleskopi kayhonii Jeyms Webb|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0414\u0436\u0435\u0439\u043c\u0441\u0430 \u0412\u0435\u0431\u0431\u0430|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0414\u0436\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0423\u044d\u0431\u0431|\u0423\u044d\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)"
+            "aliases": "James Webb|JWST|\u062a\u0644\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0635\u062f \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0642\u0631\u0627\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|James Webb Space Telescope|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649 \u0641\u0647\u0632\u0627\u06cc\u0649 \u062c\u06cc\u0645\u0633 \u0648\u06cc\u0628|Dalekohled Jamese Webba|James Webb Space Telescope|JWST|Webb\u016fv vesm\u00edrn\u00fd dalekohled|James Webb Space Telescope|James Webb Space Telescope|James Webb Weltraumteleskop|James Webb-Weltraumteleskop|James-Webb-Teleskop|JWST|Next Generation Space Telescope|\u03a4\u03b6\u03ad\u03b9\u03bc\u03c2 \u039f\u03c5\u03ad\u03bc\u03c0|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb'i kosmoseteleskoop|Hurrengo Belaunaldiko Espazio Teleskopioa|James Webb (teleskopioa)|James Webb teleskopioa|JWST|Next Generation Space Telescope|NGST|James Webb -teleskooppi|James Webb Space Telescope|JWST|James Webb Space Telescope|James Webb Telescope|James-Webb|JWST|Next Generation Space Telescope|NGST|T\u00e9lescope spatial James Webb|JWST|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4 \u05d4\u05d7\u05dc\u05dc \u05d2'\u05d9\u05d9\u05de\u05e1 \u05d5\u05d5\u05d1|JWST|James Webb Space Telescope|JWST|Telescopio Webb|JWST|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|Jwst|Next Generation Space Telescope|NGST|NGST teleskopas|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Ruimtetelescoop|JWST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|\u062c\u06cc\u0645\u0632 \u0648\u06cc\u0628 \u062e\u0644\u0627\u0626\u06cc \u062f\u0648\u0631\u0628\u06cc\u0646|James Webb Space Telescope|JWST|Telescopul spa\u0163ial James Webb|JWST|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|JWST|James Webb Space Telescope|JWST|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d \u0c35\u0c46\u0c2c\u0c4d \u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37 \u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c \u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|James Webb Uzay Teleskobu|James Webb Space Telescope|JWST|K\u00ednh thi\u00ean v\u0103n James Webb|K\u00ednh thi\u00ean v\u0103n v\u0169 tr\u1ee5 James Webb|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|Webb Space Telescope|Webb Telescope|James Webb Space Telescope|JWST|JWST|NGST|Webb \ub9dd\uc6d0\uacbd|Webb \uc6b0\uc8fc\ub9dd\uc6d0\uacbd|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Atiliskup n usayrar Jims Wib|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|James Webb (teleskop)|Jeyms Webb (teleskop)|Teleskopi kajhoniji \u00c7ejms Uebb|Teleskopi kayhonii Jeyms Uebb|Teleskopi kayhonii Jeyms Webb|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0414\u0436\u0435\u0439\u043c\u0441\u0430 \u0412\u0435\u0431\u0431\u0430|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0414\u0436\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0423\u044d\u0431\u0431|\u0423\u044d\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)"
         }
     ],
     [
@@ -3041,6 +3057,22 @@
     ],
     [
         {
+            "Name": "PicSat",
+            "ID": "2018-004W"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q39059373",
+            "itemLabel": "PicSat",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-004W",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2018-004W",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
             "Name": "Pioneer  6",
             "ID": "1965-105A"
         },
@@ -3116,7 +3148,7 @@
             "all_NAIF_ID": "-23",
             "all_NSSDCA_ID": "1972-012A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7"
+            "aliases": "\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7|\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10"
         }
     ],
     [
@@ -3181,6 +3213,22 @@
             "all_NSSDCA_ID": "1968-055A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Explorer 38|RAE-A|Explorer 38|RAE-A"
+        }
+    ],
+    [
+        {
+            "Name": "RAE-B",
+            "ID": "1973-039A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1781732",
+            "itemLabel": "Explorer 49",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-039A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1973-039A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2"
         }
     ],
     [
@@ -3996,7 +4044,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2004-047A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Swift|\u0421\u0432\u0438\u0444\u0442|Swift|\u30b9\u30a6\u30a3\u30d5\u30c8|Dru\u017eice Swift|Explorer 84|Kosmick\u00e1 observato\u0159 Swift|Explorer 84|Swift Gamma-Ray Burst Mission investigation|Swift Gamma Ray Burst Explorer|Swift Gamma-Ray Burst Mission|Swift observatoire de sursaut gamma|T\u00e9lescope spatial SWIFT|\u30b9\u30a4\u30d5\u30c8\u885b\u661f|\u30b9\u30a6\u30a3\u30d5\u30c8\u885b\u661f|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-84|Swift|\u4f3d\u739b\u5c04\u7ebf\u66b4\u5feb\u901f\u53cd\u5e94\u63a2\u6d4b\u5668"
+            "aliases": "\u4f3d\u739b\u5c04\u7ebf\u66b4\u5feb\u901f\u53cd\u5e94\u63a2\u6d4b\u5668|Swift|\u0421\u0432\u0438\u0444\u0442|Swift|\u30b9\u30a6\u30a3\u30d5\u30c8|Dru\u017eice Swift|Explorer 84|Kosmick\u00e1 observato\u0159 Swift|Explorer 84|Swift Gamma-Ray Burst Mission investigation|Swift Gamma Ray Burst Explorer|Swift Gamma-Ray Burst Mission|Swift observatoire de sursaut gamma|T\u00e9lescope spatial SWIFT|\u30b9\u30a4\u30d5\u30c8\u885b\u661f|\u30b9\u30a6\u30a3\u30d5\u30c8\u885b\u661f|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-84|Swift"
         }
     ],
     [
@@ -4349,6 +4397,22 @@
             "all_NSSDCA_ID": "1977-076A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0662|1977-076A|Voja\u011danto 2"
+        }
+    ],
+    [
+        {
+            "Name": "Wind",
+            "ID": "1994-071A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2300867",
+            "itemLabel": "WIND",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1994-071A",
+            "all_NAIF_ID": "-8",
+            "all_NSSDCA_ID": "1994-071A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "IPL|GGS/Wind|Interplanetary Physics Laboratory|ISTP/Wind|Global Geospace Science|WIND|Global Geospace Science Wind"
         }
     ],
     [
@@ -4993,6 +5057,22 @@
     ],
     [
         {
+            "Name": "Beresheet",
+            "ID": "2019-009B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q61742389",
+            "itemLabel": "Beresheet",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2019-009B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2019-009B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sparrow|Bereshit|Beresheet Moon Probe|Bereshit Moon Probe|Israeli Moon Probe|Bereshit|Sonda lunar Beresheet|Space IL|SpaceIL|Space IL|SpaceIL|\u05d4\u05d7\u05dc\u05dc\u05d9\u05ea \u05d1\u05e8\u05d0\u05e9\u05d9\u05ea|\u05e1\u05e4\u05d9\u05d9\u05e1 \u05d0\u05d9\u05d9 \u05d0\u05dc|Beresheet|\u05d1\u05e2\u05e8\u05e2\u05e9\u05d9\u05d8|B'reshit"
+        }
+    ],
+    [
+        {
             "Name": "Cassini",
             "ID": "1997-061A"
         },
@@ -5037,6 +5117,86 @@
             "all_NSSDCA_ID": "2019-042A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03b1\u03bd-2|\u03a4\u03c3\u03b1\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03ac\u03bd 2|\u03a4\u03c3\u03ac\u03bd\u03c4\u03c1\u03b1\u03b3\u03b9\u03b1\u03bd-2|\u30ed\u30fc\u30d0\u30fc"
+        }
+    ],
+    [
+        {
+            "Name": "Chang'e 1",
+            "ID": "2007-051A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49044",
+            "itemLabel": "Chang'e 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2007-051A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2007-051A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u062a\u0634\u0627\u0646\u063a \u0622\u0647-\u0661|\u010cchang-e i-chao|\uc0c1\uc544 1\ud638|\u5ae6\u5a25 1\u865f|\u5ae6\u5a25\u4e00\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Chang'e 2",
+            "ID": "2010-050A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q831345",
+            "itemLabel": "Chang'e 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2010-050A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u062a\u0634\u0627\u0646\u063a-\u0622\u0647 2|\u062a\u0634\u0627\u0646\u063a\u064a 2|Chang'e 2|Chang'e-2|Chang'e-II|\u091a\u0940\u0928\u0940 \u091a\u0902\u0926\u094d\u0930\u092e\u093e \u0911\u0930\u094d\u092c\u093f\u091f\u0930 2010|\uc0c1\uc544 2\ud638|\ucc3d\uc5b42\ud638|\u5ae6\u5a25 2\u865f|Chang'e 2|Th\u01b0\u1eddng Nga 2|\u5ae6\u5a252\u53f7"
+        }
+    ],
+    [
+        {
+            "Name": "Chang'e 3",
+            "ID": "2013-070A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1061879",
+            "itemLabel": "Chang'e 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2013-070A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2013-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u062a\u0634\u0627\u0646\u062c \u0622\u0647-3|\u062a\u0634\u0627\u0646\u063a \u0622\u0647-3|\u062a\u0634\u0627\u0646\u063a \u0625\u064a-3|\u062a\u0634\u0627\u0646\u063a \u0625\u064a-\u0663|\uc0c1\uc544 3\ud638|\u5ae6\u5a25 3\u865f|Chang'e-3 (Moundsond)|Th\u01b0\u1eddng Nga 3|Th\u01b0\u1eddng Nga tam hi\u1ec7u|\u5ae6\u5a253\u53f7"
+        }
+    ],
+    [
+        {
+            "Name": "Chang'e 4",
+            "ID": "2018-103A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q723045",
+            "itemLabel": "Chang'e 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2018-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Chang'e4|Change 4|Change4|\uc0c1\uc544 4\ud638|\u5ae6\u5a25 4\u865f|Th\u01b0\u1eddng Nga 4|\u5ae6\u5a254\u53f7|\u5ae6\u5a254\u865f|\u5ae6\u5a25\u56db\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Chang'e 5",
+            "ID": "2020-087A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10944018",
+            "itemLabel": "Chang'e 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2020-087A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2020-087A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\uc0c1\uc544 5\ud638|\u5ae6\u5a25 5\u865f|Th\u01b0\u1eddng Nga ng\u0169 hi\u1ec7u|\u4e2d\u56fd\u63a2\u6708\u4e09\u671f\u5de5\u7a0b\u5ae6\u5a25\u4e94\u53f7\u63a2\u6d4b\u5668|\u5ae6\u5a255\u53f7|\u5ae6\u5a25\u4e94\u53f7\u63a2\u6d4b\u5668|\u5ae6\u5a25\u4e94\u865f"
         }
     ],
     [
@@ -5585,22 +5745,6 @@
     ],
     [
         {
-            "Name": "Giotto",
-            "ID": "1985-056A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q660356",
-            "itemLabel": "Giotto",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1985-056A",
-            "all_NAIF_ID": "-78",
-            "all_NSSDCA_ID": "1985-056A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30b8\u30e7\u30c3\u30c8|D\u017eoto|Giotto mission|Missi\u00f3 Giotto|Sonda Giotto|Mision Giotto|Misi\u00f3n Giotto|Sonde Giotto|Sonda Giotto|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e08\u0e2d\u0e15\u0e42\u0e15|\u55ac\u9676\u865f"
-        }
-    ],
-    [
-        {
             "Name": "Gravity Recovery And Interior Laboratory-A (GRAIL)",
             "ID": "2011-046A"
         },
@@ -5729,6 +5873,22 @@
     ],
     [
         {
+            "Name": "Hiten",
+            "ID": "1990-007A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935149",
+            "itemLabel": "Hiten",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1990-007A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1990-007A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Celestial Maiden|MUSES-A|MUSES-A|MUSES-A|Hagoromo|Hiten|MUSES|Muses-A|Muses-A|Hiten|Hiten Orbiter|MUSES-A|MUSES-A|MUSES-A|MUSES-A|Muses-a|Sonda hiten|Hiten|\u0425\u0438\u0442\u0435\u043d|MUSES-A|Mu Space Engineering Spacecraft A"
+        }
+    ],
+    [
+        {
             "Name": "BHST",
             "ID": "1990-037B"
         },
@@ -5788,7 +5948,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1983-004A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite"
+            "aliases": "Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite|IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9"
         }
     ],
     [
@@ -5804,7 +5964,7 @@
             "all_NAIF_ID": "-112",
             "all_NSSDCA_ID": "1978-079A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ICE|Explorer 59|International Sun-Earth Explorer-3|International Sun-Earth Explorer-C|ISEE-3|International Sun-Earth Explorer-3|ISEE-3|\u56fd\u9645\u5f57\u661f\u63a2\u6d4b\u5668|\u570b\u969b\u5f57\u661f\u63a2\u6e2c"
+            "aliases": "ICE|Explorer 59|International Sun-Earth Explorer-3|International Sun-Earth Explorer-C|ISEE-3|International Sun-Earth Explorer-3|ISEE-3|\u56fd\u9645\u5f57\u661f\u63a2\u6d4b\u5668|\u570b\u969b\u5f57\u661f\u63a2\u6e2c|ISEE-C|International Magnetospheric Study-H|IME-H"
         }
     ],
     [
@@ -5836,7 +5996,7 @@
             "all_NAIF_ID": "-170",
             "all_NSSDCA_ID": "2021-130A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0645\u0631\u0635\u062f \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0642\u0631\u0627\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|James Webb Space Telescope|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649 \u0641\u0647\u0632\u0627\u06cc\u0649 \u062c\u06cc\u0645\u0633 \u0648\u06cc\u0628|Dalekohled Jamese Webba|James Webb Space Telescope|JWST|Webb\u016fv vesm\u00edrn\u00fd dalekohled|James Webb Space Telescope|James Webb Space Telescope|James Webb Weltraumteleskop|James Webb-Weltraumteleskop|James-Webb-Teleskop|JWST|Next Generation Space Telescope|\u03a4\u03b6\u03ad\u03b9\u03bc\u03c2 \u039f\u03c5\u03ad\u03bc\u03c0|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb'i kosmoseteleskoop|Hurrengo Belaunaldiko Espazio Teleskopioa|James Webb (teleskopioa)|James Webb teleskopioa|JWST|Next Generation Space Telescope|NGST|James Webb -teleskooppi|James Webb Space Telescope|JWST|James Webb Space Telescope|James Webb Telescope|James-Webb|JWST|Next Generation Space Telescope|NGST|T\u00e9lescope spatial James Webb|JWST|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4 \u05d4\u05d7\u05dc\u05dc \u05d2'\u05d9\u05d9\u05de\u05e1 \u05d5\u05d5\u05d1|JWST|James Webb Space Telescope|JWST|Telescopio Webb|JWST|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|Jwst|Next Generation Space Telescope|NGST|NGST teleskopas|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Ruimtetelescoop|JWST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|\u062c\u06cc\u0645\u0632 \u0648\u06cc\u0628 \u062e\u0644\u0627\u0626\u06cc \u062f\u0648\u0631\u0628\u06cc\u0646|James Webb Space Telescope|JWST|Telescopul spa\u0163ial James Webb|JWST|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|JWST|James Webb Space Telescope|JWST|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d \u0c35\u0c46\u0c2c\u0c4d \u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37 \u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c \u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|James Webb Uzay Teleskobu|James Webb Space Telescope|JWST|K\u00ednh thi\u00ean v\u0103n James Webb|K\u00ednh thi\u00ean v\u0103n v\u0169 tr\u1ee5 James Webb|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|Webb Space Telescope|Webb Telescope|James Webb Space Telescope|JWST|JWST|NGST|Webb \ub9dd\uc6d0\uacbd|Webb \uc6b0\uc8fc\ub9dd\uc6d0\uacbd|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Atiliskup n usayrar Jims Wib|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|James Webb|JWST|\u062a\u0644\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u04b6\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|James Webb (teleskop)|Jeyms Webb (teleskop)|Teleskopi kajhoniji \u00c7ejms Uebb|Teleskopi kayhonii Jeyms Uebb|Teleskopi kayhonii Jeyms Webb|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0414\u0436\u0435\u0439\u043c\u0441\u0430 \u0412\u0435\u0431\u0431\u0430|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0414\u0436\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0423\u044d\u0431\u0431|\u0423\u044d\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)"
+            "aliases": "James Webb|JWST|\u062a\u0644\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0635\u062f \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0642\u0631\u0627\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|James Webb Space Telescope|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649 \u0641\u0647\u0632\u0627\u06cc\u0649 \u062c\u06cc\u0645\u0633 \u0648\u06cc\u0628|Dalekohled Jamese Webba|James Webb Space Telescope|JWST|Webb\u016fv vesm\u00edrn\u00fd dalekohled|James Webb Space Telescope|James Webb Space Telescope|James Webb Weltraumteleskop|James Webb-Weltraumteleskop|James-Webb-Teleskop|JWST|Next Generation Space Telescope|\u03a4\u03b6\u03ad\u03b9\u03bc\u03c2 \u039f\u03c5\u03ad\u03bc\u03c0|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb'i kosmoseteleskoop|Hurrengo Belaunaldiko Espazio Teleskopioa|James Webb (teleskopioa)|James Webb teleskopioa|JWST|Next Generation Space Telescope|NGST|James Webb -teleskooppi|James Webb Space Telescope|JWST|James Webb Space Telescope|James Webb Telescope|James-Webb|JWST|Next Generation Space Telescope|NGST|T\u00e9lescope spatial James Webb|JWST|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4 \u05d4\u05d7\u05dc\u05dc \u05d2'\u05d9\u05d9\u05de\u05e1 \u05d5\u05d5\u05d1|JWST|James Webb Space Telescope|JWST|Telescopio Webb|JWST|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|Jwst|Next Generation Space Telescope|NGST|NGST teleskopas|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Ruimtetelescoop|JWST|James Webb Space Telescope|JWST|Next Generation Space Telescope|NGST|James Webb Space Telescope|JWST|\u062c\u06cc\u0645\u0632 \u0648\u06cc\u0628 \u062e\u0644\u0627\u0626\u06cc \u062f\u0648\u0631\u0628\u06cc\u0646|James Webb Space Telescope|JWST|Telescopul spa\u0163ial James Webb|JWST|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|JWST|James Webb Space Telescope|JWST|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d \u0c35\u0c46\u0c2c\u0c4d \u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37 \u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c \u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|James Webb Uzay Teleskobu|James Webb Space Telescope|JWST|K\u00ednh thi\u00ean v\u0103n James Webb|K\u00ednh thi\u00ean v\u0103n v\u0169 tr\u1ee5 James Webb|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|Webb Space Telescope|Webb Telescope|James Webb Space Telescope|JWST|JWST|NGST|Webb \ub9dd\uc6d0\uacbd|Webb \uc6b0\uc8fc\ub9dd\uc6d0\uacbd|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Atiliskup n usayrar Jims Wib|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|James Webb (teleskop)|Jeyms Webb (teleskop)|Teleskopi kajhoniji \u00c7ejms Uebb|Teleskopi kayhonii Jeyms Uebb|Teleskopi kayhonii Jeyms Webb|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0414\u0436\u0435\u0439\u043c\u0441\u0430 \u0412\u0435\u0431\u0431\u0430|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0414\u0436\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0423\u044d\u0431\u0431|\u0423\u044d\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)"
         }
     ],
     [
@@ -5857,34 +6017,18 @@
     ],
     [
         {
-            "Name": "Longjiang 1",
-            "ID": "2018-045B"
+            "Name": "Kaguya",
+            "ID": "2007-039A"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q60846115",
-            "itemLabel": "Longjiang 1",
+            "item": "http://www.wikidata.org/entity/Q205408",
+            "itemLabel": "SELENE",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2018-045B",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
+            "all_COSPAR_ID": "2007-039A",
+            "all_NAIF_ID": "-131",
+            "all_NSSDCA_ID": "2007-039A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": ""
-        }
-    ],
-    [
-        {
-            "Name": "Longjiang 2",
-            "ID": "2018-045C"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q60846119",
-            "itemLabel": "Longjiang 2",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2018-045C",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "LO-94|Longjiang-2|Lunar OSCAR 94"
+            "aliases": "\uc140\ub808\ub124|\u8f89\u591c\u59ec|Kaguya|Kaguya|Kaguya|SELENE|Kaguya|SELENE|Selene Moon Orbiter|Selenological and Engineering Explorer|Selenological and Engineering Explorer|\u05e1\u05dc\u05df-\u05e7\u05d0\u05d2\u05d5\u05d9\u05d4|\u05e7\u05d0\u05d2\u05d5\u05d9\u05d4|SELENE|SELENE|Selenological and Engineering Explorer|Sonda SELENE|SELENE\u8a08\u753b|\u30bb\u30ec\u30fc\u30cd\u8a08\u753b|\uce74\uad6c\uc57c|Kaguya|SELENE|Selenological and Engineering Explorer|SELENE|Selenological and Engineering Explorer|Romsonden Selene|SELENE|SELENE|Selenological and Engineering Explorer|Kaguya|Kaguya|\u041a\u0430\u0433\u0443\u0439\u044f|\u0421\u0415\u041b\u0415\u041d\u0415|SELENE|KAGUYA|Selenological and Engineering Explorer|\u0e22\u0e32\u0e19\u0e04\u0e32\u0e01\u0e38\u0e22\u0e30|\u0e22\u0e32\u0e19\u0e40\u0e0b\u0e25\u0e35\u0e19\u0e35|\u041a\u0430\u0491\u0443\u044f|SELENE|\u6708\u4eae\u5973\u795e\u53f7\u63a2\u6d4b\u5668|\u6708\u5973\u795e|\u8f1d\u591c\u59ec\u865f|\u8f1d\u591c\u865f"
         }
     ],
     [
@@ -5917,6 +6061,22 @@
             "all_NSSDCA_ID": "1959-012A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0644\u0648\u0646\u0627 \u0661|Lunik 1|00112|1959-012A|Luna 1|Luna E 1|Luna E-1|Lunik 1|\u0644\u0648\u0646\u0627 1|Lunik 1|Lunik 1|\ub8e8\ub0981\ud638|Luna 1|Luna-1D|Loenik 1|\u0141unnik 1|Mechta"
+        }
+    ],
+    [
+        {
+            "Name": "Luna 2",
+            "ID": "1959-014A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1159927",
+            "itemLabel": "Luna 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1959-014A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1959-014A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0662|\u0644\u0648\u0646\u0627-2|\u0644\u0648\u0646\u0627-\u0662|Lunik 2|Lunik 2|\u039b\u03bf\u03cd\u03bd\u03b9\u03ba 2|Luna E 1A|Luna E-1A|Lunik 2|\u0644\u0648\u0646\u0627 2|Lunik 2|\u10da\u10e3\u10dc\u10d0 2|Luna 2|\u101c\u1030\u1014\u102c \u1042|Loenik 2|Luna 2|\u0141unnik 2|E-1 No. 7|Lunik 2|Second Soviet Cosmic Rocket"
         }
     ],
     [
@@ -5985,6 +6145,86 @@
     ],
     [
         {
+            "Name": "Luna 9",
+            "ID": "1966-006A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1159933",
+            "itemLabel": "Luna 9",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-006A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-006A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0669|Lunik 9|\u0644\u0648\u0646\u0627 9|Lunik 9|\u041b\u0443\u043d\u0430 9|Luna IX|Ye-6 No. 13"
+        }
+    ],
+    [
+        {
+            "Name": "Luna 10",
+            "ID": "1966-027A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1159895",
+            "itemLabel": "Luna 10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-027A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-027A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0661\u0660|Lunik 10|\u0644\u0648\u0646\u0627 10|Lunik 10|\u6708\u740310\u865f|Lunik 10"
+        }
+    ],
+    [
+        {
+            "Name": "Luna 11",
+            "ID": "1966-078A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q590956",
+            "itemLabel": "Luna 11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-078A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-078A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0661\u0661|Lunik 11"
+        }
+    ],
+    [
+        {
+            "Name": "Luna 12",
+            "ID": "1966-094A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q291210",
+            "itemLabel": "Luna 12",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-094A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-094A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0661\u0662|Lunik 12"
+        }
+    ],
+    [
+        {
+            "Name": "Luna 13",
+            "ID": "1966-116A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q935627",
+            "itemLabel": "Luna 13",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-116A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-116A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0661\u0663|\u0644\u0648\u0646\u0627 13"
+        }
+    ],
+    [
+        {
             "Name": "Luna 14",
             "ID": "1968-027A"
         },
@@ -6044,7 +6284,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1970-095A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0644\u0648\u0646\u0627 \u0661\u0667|Lunokhod1"
+            "aliases": "\u0644\u0648\u0646\u0627 \u0661\u0667|LOK Luna 17|Lunik 17"
         }
     ],
     [
@@ -6221,6 +6461,22 @@
             "all_NSSDCA_ID": "1966-100A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Lunar Orbiter II|Lunar Orbiter 2"
+        }
+    ],
+    [
+        {
+            "Name": "Lunar Orbiter 3",
+            "ID": "1967-008A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1066370",
+            "itemLabel": "Lunar Orbiter 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1967-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1967-008A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Orbiter III"
         }
     ],
     [
@@ -6449,22 +6705,6 @@
     ],
     [
         {
-            "Name": "Mars 1",
-            "ID": "1962-061A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q678689",
-            "itemLabel": "Mars 1",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1962-061A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0386\u03c1\u03b7\u03c2-1|\u041c\u0430\u0440c-1"
-        }
-    ],
-    [
-        {
             "Name": "Mars 2",
             "ID": "1971-045A"
         },
@@ -6652,7 +6892,7 @@
             "all_NAIF_ID": "-94",
             "all_NSSDCA_ID": "1996-062A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u041c\u0430\u0440\u0441 \u0433\u043b\u043e\u0431\u0430\u043b \u0441\u0443\u0440\u0432\u0435\u0458\u043e\u0440|\u706b\u661f\u5168\u7403\u52d8\u5bdf\u8005|\u706b\u661f\u5168\u7403\u52d8\u6e2c\u8005|\u706b\u661f\u74b0\u7403\u63a2\u6d4b\u8005\u865f|\u73af\u706b\u661f\u52d8\u6d4b\u8005|Mars Global Surveyor|Mars Orbiter Laser Altimeter|MOLA|MGS|MGS|MGS|\u0646\u0642\u0634\u0647 \u0628\u0631\u062f\u0627\u0631 \u0633\u0631\u0627\u0633\u0631 \u0645\u0631\u06cc\u062e|\u05de\u05d0\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05d5\u05e8\u05d1\u05d9\u05d9\u05e8|\u05de\u05d0\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05e8\u05d5\u05d5\u05d9\u05e8|\u05de\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05d5\u05e8\u05d1\u05d9\u05d9\u05e8|\u05de\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05e8\u05d5\u05d5\u05d9\u05d5\u05e8|MGS|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4\u30fc|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30d9\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30d9\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30d9\u30a4\u30e4\u30fc|MGS|\ub9c8\uc2a4 \uc11c\ubca0\uc774\uc5b4|MGS|MGS|Mars Surveyor|\u041c\u0430\u0440\u0441 \u0413\u043b\u043e\u0431\u0430\u043b \u0421\u0435\u0440\u0432\u0435\u0439\u043e\u0440"
+            "aliases": "Mars Global Surveyor|Mars Orbiter Laser Altimeter|MOLA|MGS|MGS|MGS|\u0646\u0642\u0634\u0647 \u0628\u0631\u062f\u0627\u0631 \u0633\u0631\u0627\u0633\u0631 \u0645\u0631\u06cc\u062e|\u05de\u05d0\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05d5\u05e8\u05d1\u05d9\u05d9\u05e8|\u05de\u05d0\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05e8\u05d5\u05d5\u05d9\u05e8|\u05de\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05d5\u05e8\u05d1\u05d9\u05d9\u05e8|\u05de\u05e8\u05e1 \u05d2\u05dc\u05d5\u05d1\u05dc \u05e1\u05e8\u05d5\u05d5\u05d9\u05d5\u05e8|MGS|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4\u30fc|\u30de\u30fc\u30ba\u30fb\u30b0\u30ed\u30fc\u30d0\u30eb\u30fb\u30b5\u30fc\u30d9\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30f4\u30a7\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30d9\u30a4\u30e4|\u30de\u30fc\u30ba\u30b0\u30ed\u30fc\u30d0\u30eb\u30b5\u30fc\u30d9\u30a4\u30e4\u30fc|MGS|\ub9c8\uc2a4 \uc11c\ubca0\uc774\uc5b4|MGS|MGS|Mars Surveyor|\u041c\u0430\u0440\u0441 \u0413\u043b\u043e\u0431\u0430\u043b \u0421\u0435\u0440\u0432\u0435\u0439\u043e\u0440|\u041c\u0430\u0440\u0441 \u0433\u043b\u043e\u0431\u0430\u043b \u0441\u0443\u0440\u0432\u0435\u0458\u043e\u0440|\u706b\u661f\u5168\u7403\u52d8\u5bdf\u8005|\u706b\u661f\u5168\u7403\u52d8\u6e2c\u8005|\u706b\u661f\u74b0\u7403\u63a2\u6d4b\u8005\u865f|\u73af\u706b\u661f\u52d8\u6d4b\u8005"
         }
     ],
     [
@@ -6684,7 +6924,7 @@
             "all_NAIF_ID": "-53",
             "all_NSSDCA_ID": "1996-068A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Mars Pathfinder|Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108|\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7"
+            "aliases": "\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7|Mars Pathfinder|Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108"
         }
     ],
     [
@@ -7212,7 +7452,7 @@
             "all_NAIF_ID": "-23",
             "all_NSSDCA_ID": "1972-012A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7"
+            "aliases": "\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7|\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10"
         }
     ],
     [
@@ -7261,6 +7501,22 @@
             "all_NSSDCA_ID": "1978-078A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Pioneer 13|Pioneer Venus Multiprobe|Pioneer Venus Multiprobe|Pioneer 13|Pioneer Venus 2|Pioneer Venus B"
+        }
+    ],
+    [
+        {
+            "Name": "RAE-B",
+            "ID": "1973-039A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1781732",
+            "itemLabel": "Explorer 49",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-039A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1973-039A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2"
         }
     ],
     [
@@ -7409,22 +7665,6 @@
     ],
     [
         {
-            "Name": "Rosetta",
-            "ID": "2004-006A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q48572",
-            "itemLabel": "Rosetta",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2004-006A",
-            "all_NAIF_ID": "-226",
-            "all_NSSDCA_ID": "2004-006A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Rosetta|Rosetta space probe|2007 VN84|2007VN84|Programme Rosetta|Sonde Rosetta|\u0420\u043e\u0437\u0435\u0442\u0442\u0430 (\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043f\u043f\u0430\u0440\u0430\u0442)"
-        }
-    ],
-    [
-        {
             "Name": "S 55A",
             "ID": "1961-022A"
         },
@@ -7533,6 +7773,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4"
+        }
+    ],
+    [
+        {
+            "Name": "SMART 1",
+            "ID": "2003-043C"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213498",
+            "itemLabel": "SMART-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2003-043C",
+            "all_NAIF_ID": "-238",
+            "all_NSSDCA_ID": "2003-043C",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "XSM|SMART-1|SMART-\u0661|\u0633\u0645\u0627\u0631\u062a \u0661|\u0633\u0645\u0627\u0631\u062a-1|\u0633\u0645\u0627\u0631\u062a-\u0661|SMART-1|\u0421\u043c\u0430\u0440\u0442 1|SMART-1|Smart 1|Small Missions for Advanced Research in Technology|SMART 1|SMART1|Smart 1|Sonda SMART 1|Sonda SMART-1|SMART 1|Programme Smart 1|Programme SMART-1|Smart 1|SMART 1|\u05e1\u05de\u05d0\u05e8\u05d8 1|Smart-1|Smart 1|Sonda Smart 1|SMART-1|SMART1|Smart 1|SMART-1|SMART 1|\u0421\u041c\u0410\u0420\u0422 1|Smart 1|\u5c0f\u578b\u9ad8\u65b0\u79d1\u6280\u63a2\u6d4b\u5668-1|\u667a\u61671\u53f7|\u667a\u6167\u4e00\u53f7|\u667a\u80fd1\u53f7|\u667a\u80fd\u4e00\u53f7|\u8070\u660e\u4e00\u865f"
         }
     ],
     [
@@ -7665,6 +7921,38 @@
     ],
     [
         {
+            "Name": "Surveyor 1",
+            "ID": "1966-045A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q837692",
+            "itemLabel": "Surveyor 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-045A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-045A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0633\u064a\u0631\u0641\u064a\u0648\u0631 \u0661|Surveyor I|Surveyor I|\u52d8\u6e2c\u80051\u865f|\u89c0\u6e2c\u80051\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Surveyor 2",
+            "ID": "1966-084A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q862799",
+            "itemLabel": "Surveyor 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1966-084A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-084A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u52d8\u6e2c\u80052\u865f"
+        }
+    ],
+    [
+        {
             "Name": "Surveyor 3",
             "ID": "1967-035A"
         },
@@ -7713,6 +8001,38 @@
     ],
     [
         {
+            "Name": "Surveyor 6",
+            "ID": "1967-112A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q862568",
+            "itemLabel": "Surveyor 6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1967-112A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1967-112A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Surveyor VI|Surveyor-6|\u52d8\u6e2c\u80056\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Surveyor 7",
+            "ID": "1968-001A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q774594",
+            "itemLabel": "Surveyor 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1968-001A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1968-001A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
             "Name": "Tianwen 1",
             "ID": "2020-049A"
         },
@@ -7724,7 +8044,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2020-049A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|2020 Chinese Mars Mission|Huoxing-1|HX-1|Tianwen 1|Huoxing-1|HX-1|Mars Global Remote Sensing Orbiter, Lander and Small Rover|Tianwen 1|Huoxing-1|Mission martienne chinoise|Tianwen 1|HX-1|Mars Global Remote Sensing Orbiter and Small Rover|Ti\u0101n w\u00e8n y\u012b h\u00e0o|\u5929\u554f1\u53f7|\ud150\uc6d01\ud638|\u5929\u554f1\u865f|Huoxing-1|Huoxing-1|HX-1|\u5929\u554f\u4e00\u865f|\u8424\u706b\u4e8c\u53f7|\u5929\u95ee1\u53f7"
+            "aliases": "\u5929\u554f1\u53f7|\ud150\uc6d01\ud638|\u5929\u554f1\u865f|Huoxing-1|Huoxing-1|HX-1|\u5929\u554f\u4e00\u865f|\u8424\u706b\u4e8c\u53f7|\u5929\u95ee1\u53f7|Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|2020 Chinese Mars Mission|Huoxing-1|HX-1|Tianwen 1|Huoxing-1|HX-1|Mars Global Remote Sensing Orbiter, Lander and Small Rover|Tianwen 1|Huoxing-1|Mission martienne chinoise|Tianwen 1|HX-1|Mars Global Remote Sensing Orbiter and Small Rover|Ti\u0101n w\u00e8n y\u012b h\u00e0o"
         }
     ],
     [
@@ -7805,6 +8125,22 @@
             "all_NSSDCA_ID": "1965-091A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0641\u064a\u0646\u064a\u0631\u0627 \u0662|3MV-4 No.4|Venera 2"
+        }
+    ],
+    [
+        {
+            "Name": "Venera 3",
+            "ID": "1965-092A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q719607",
+            "itemLabel": "Venera 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-092A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1965-092A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0641\u064a\u0646\u064a\u0631\u0627 \u0663|Venera 3|\u0412\u0435\u043d\u0435\u0440\u0430 3|\u0e22\u0e32\u0e19\u0e40\u0e27\u0e40\u0e19\u0e23\u0e32 3|\u0e27\u0e35\u0e40\u0e19\u0e23\u0e32 3"
         }
     ],
     [
@@ -8145,6 +8481,22 @@
     ],
     [
         {
+            "Name": "Zond 1",
+            "ID": "1964-016D"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1085985",
+            "itemLabel": "Zond 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-016D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
             "Name": "Zond 2",
             "ID": "1964-078C"
         },
@@ -8157,6 +8509,22 @@
             "all_NSSDCA_ID": "1964-078C",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "3MV-4 No. 2|3MV-4A|\u0632\u0648\u0646\u062f 2"
+        }
+    ],
+    [
+        {
+            "Name": "Zond 3",
+            "ID": "1965-056A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q769448",
+            "itemLabel": "Zond 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-056A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
         }
     ],
     [
@@ -8700,7 +9068,7 @@
             "all_NAIF_ID": "-112",
             "all_NSSDCA_ID": "1978-079A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ICE|Explorer 59|International Sun-Earth Explorer-3|International Sun-Earth Explorer-C|ISEE-3|International Sun-Earth Explorer-3|ISEE-3|\u56fd\u9645\u5f57\u661f\u63a2\u6d4b\u5668|\u570b\u969b\u5f57\u661f\u63a2\u6e2c"
+            "aliases": "ICE|Explorer 59|International Sun-Earth Explorer-3|International Sun-Earth Explorer-C|ISEE-3|International Sun-Earth Explorer-3|ISEE-3|\u56fd\u9645\u5f57\u661f\u63a2\u6d4b\u5668|\u570b\u969b\u5f57\u661f\u63a2\u6e2c|ISEE-C|International Magnetospheric Study-H|IME-H"
         }
     ],
     [
@@ -9341,6 +9709,22 @@
             "all_NSSDCA_ID": "1968-055A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Explorer 38|RAE-A|Explorer 38|RAE-A"
+        }
+    ],
+    [
+        {
+            "Name": "RAE-B",
+            "ID": "1973-039A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1781732",
+            "itemLabel": "Explorer 49",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-039A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1973-039A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2"
         }
     ],
     [
@@ -10113,6 +10497,22 @@
     ],
     [
         {
+            "Name": "Wind",
+            "ID": "1994-071A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2300867",
+            "itemLabel": "WIND",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1994-071A",
+            "all_NAIF_ID": "-8",
+            "all_NSSDCA_ID": "1994-071A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "IPL|GGS/Wind|Interplanetary Physics Laboratory|ISTP/Wind|Global Geospace Science|WIND|Global Geospace Science Wind"
+        }
+    ],
+    [
+        {
             "Name": "WRESAT",
             "ID": "1967-118A"
         },
@@ -10385,6 +10785,22 @@
     ],
     [
         {
+            "Name": "AMPTE/CCE",
+            "ID": "1984-088A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2957726",
+            "itemLabel": "Charge Composition Explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1984-088A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1984-088A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CCE|CCE|AMPT/CCE|Explorer 65|AMPTE-CCE|Explorer 65|Explorer 65|AMPTE 1"
+        }
+    ],
+    [
+        {
             "Name": "AMPTE/IRM",
             "ID": "1984-088B"
         },
@@ -10589,6 +11005,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Arase (ERG)",
+            "ID": "2016-080A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q17012906",
+            "itemLabel": "SPRINT-B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2016-080A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ERG|ERG|Energization and Radiation in Geospace|ERG\u885b\u661f|ARASE|ERG|ERG\u885b\u661f|Exploration of energization and Radiation in Geospace"
         }
     ],
     [
@@ -10993,6 +11425,22 @@
     ],
     [
         {
+            "Name": "CHAMP",
+            "ID": "2000-039B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48600",
+            "itemLabel": "CHAMP",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-039B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Challenging Minisatellite Payload|CHAllenging Minisatellite Payload|CHAllenging Minisatellite Payload"
+        }
+    ],
+    [
+        {
             "Name": "Clementine",
             "ID": "1994-004A"
         },
@@ -11021,6 +11469,70 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Clementine"
+        }
+    ],
+    [
+        {
+            "Name": "Cluster 2/FM5 (Rumba)",
+            "ID": "2000-045A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111658821",
+            "itemLabel": "Cluster 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-045A",
+            "all_NAIF_ID": "-183",
+            "all_NSSDCA_ID": "2000-045A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Rumba|Cluster C1|Cluster FM5|Cluster Rumba"
+        }
+    ],
+    [
+        {
+            "Name": "Cluster 2/FM6 (Salsa)",
+            "ID": "2000-041B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111658865",
+            "itemLabel": "Cluster 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-041B",
+            "all_NAIF_ID": "-185",
+            "all_NSSDCA_ID": "2000-041B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Salsa|Cluster C2|Cluster FM6|Cluster Salsa"
+        }
+    ],
+    [
+        {
+            "Name": "Cluster 2/FM7 (Samba)",
+            "ID": "2000-041A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111658942",
+            "itemLabel": "Cluster 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-041A",
+            "all_NAIF_ID": "-194",
+            "all_NSSDCA_ID": "2000-041A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Samba|Cluster C3|Cluster FM7|Cluster Samba"
+        }
+    ],
+    [
+        {
+            "Name": "Cluster 2/FM8 (Tango)",
+            "ID": "2000-045B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111658950",
+            "itemLabel": "Cluster 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-045B",
+            "all_NAIF_ID": "-196",
+            "all_NSSDCA_ID": "2000-045B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Tango|Cluster C4|Cluster FM8|Cluster Tango"
         }
     ],
     [
