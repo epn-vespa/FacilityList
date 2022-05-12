@@ -11,7 +11,7 @@ def read_xml(xml_file_path):
         r = {}
         r['ResourceName'] = soup.resourcename.string
         r['ResourceID'] = soup.resourceid.string
-        r['AlternateName'] = soup.find_all("AlternateName") 
+        r['AlternateName'] = [ x.string for x in soup.find_all("alternatename") ]
         return r
 
 result=[]
