@@ -36,10 +36,6 @@
         "ID": "BEAM"
     },
     {
-        "Name": "Brite Totonto",
-        "ID": "2014-033L"
-    },
-    {
         "Name": "Challenger",
         "ID": "CHALNGR"
     },
@@ -152,10 +148,6 @@
         "ID": "OV1-7"
     },
     {
-        "Name": "PicSat",
-        "ID": "2018-004W"
-    },
-    {
         "Name": "Pioneer P-3",
         "ID": "PIONX"
     },
@@ -186,10 +178,6 @@
     {
         "Name": "QUASAT",
         "ID": "QUASAT"
-    },
-    {
-        "Name": "RAE-B",
-        "ID": "1973-039A"
     },
     {
         "Name": "Regatta-A",
@@ -236,10 +224,6 @@
         "ID": "TYVAK-61C"
     },
     {
-        "Name": "Wind",
-        "ID": "1994-071A"
-    },
-    {
         "Name": "Apollo Lunar Series",
         "ID": "1968-118Z"
     },
@@ -256,10 +240,6 @@
         "ID": "ASTRO-2"
     },
     {
-        "Name": "Beresheet",
-        "ID": "2019-009B"
-    },
-    {
         "Name": "Blue Ghost Mission 1",
         "ID": "BLUEGHOST"
     },
@@ -272,28 +252,8 @@
         "ID": "CHANDRYN3"
     },
     {
-        "Name": "Chang'e 1",
-        "ID": "2007-051A"
-    },
-    {
-        "Name": "Chang'e 2",
-        "ID": "2010-050A"
-    },
-    {
-        "Name": "Chang'e 3",
-        "ID": "2013-070A"
-    },
-    {
         "Name": "Chang'e 3 Rover",
         "ID": "2013-070C"
-    },
-    {
-        "Name": "Chang'e 4",
-        "ID": "2018-103A"
-    },
-    {
-        "Name": "Chang'e 5",
-        "ID": "2020-087A"
     },
     {
         "Name": "Chang'e 7",
@@ -360,12 +320,12 @@
         "ID": "2001-034D"
     },
     {
-        "Name": "Hera",
-        "ID": "HERA"
+        "Name": "Giotto",
+        "ID": "1985-056A"
     },
     {
-        "Name": "Hiten",
-        "ID": "1990-007A"
+        "Name": "Hera",
+        "ID": "HERA"
     },
     {
         "Name": "Intercosmos 14",
@@ -388,40 +348,20 @@
         "ID": "JUICE"
     },
     {
-        "Name": "Kaguya",
-        "ID": "2007-039A"
-    },
-    {
         "Name": "Korea Pathfinder Lunar Orbiter (KPLO)",
         "ID": "KPLO"
     },
     {
-        "Name": "Luna 2",
-        "ID": "1959-014A"
+        "Name": "Longjiang 1",
+        "ID": "2018-045B"
+    },
+    {
+        "Name": "Longjiang 2",
+        "ID": "2018-045C"
     },
     {
         "Name": "Luna 3",
         "ID": "1959-008A"
-    },
-    {
-        "Name": "Luna 9",
-        "ID": "1966-006A"
-    },
-    {
-        "Name": "Luna 10",
-        "ID": "1966-027A"
-    },
-    {
-        "Name": "Luna 11",
-        "ID": "1966-078A"
-    },
-    {
-        "Name": "Luna 12",
-        "ID": "1966-094A"
-    },
-    {
-        "Name": "Luna 13",
-        "ID": "1966-116A"
     },
     {
         "Name": "Luna 24 Descent Craft",
@@ -448,10 +388,6 @@
         "ID": "1966-073Z"
     },
     {
-        "Name": "Lunar Orbiter 3",
-        "ID": "1967-008A"
-    },
-    {
         "Name": "Lunar Trailblazer",
         "ID": "L-TRLBLZR"
     },
@@ -470,6 +406,10 @@
     {
         "Name": "Mariner-H",
         "ID": "MARINH"
+    },
+    {
+        "Name": "Mars 1",
+        "ID": "1962-061A"
     },
     {
         "Name": "Mars 1969A",
@@ -640,20 +580,16 @@
         "ID": "QUEQIAO"
     },
     {
-        "Name": "RAE-B",
-        "ID": "1973-039A"
-    },
-    {
         "Name": "RM 1",
         "ID": "1970-094B"
     },
     {
-        "Name": "Saturn SA-1",
-        "ID": "SATURNSA1"
+        "Name": "Rosetta",
+        "ID": "2004-006A"
     },
     {
-        "Name": "SMART 1",
-        "ID": "2003-043C"
+        "Name": "Saturn SA-1",
+        "ID": "SATURNSA1"
     },
     {
         "Name": "Smart Lander for Investigating Moon (SLIM)",
@@ -688,22 +624,6 @@
         "ID": "1982-041A"
     },
     {
-        "Name": "Surveyor 1",
-        "ID": "1966-045A"
-    },
-    {
-        "Name": "Surveyor 2",
-        "ID": "1966-084A"
-    },
-    {
-        "Name": "Surveyor 6",
-        "ID": "1967-112A"
-    },
-    {
-        "Name": "Surveyor 7",
-        "ID": "1968-001A"
-    },
-    {
         "Name": "Vega 1 Balloon",
         "ID": "1984-125F"
     },
@@ -718,10 +638,6 @@
     {
         "Name": "Vega 2 Descent Craft",
         "ID": "1984-128E"
-    },
-    {
-        "Name": "Venera 3",
-        "ID": "1965-092A"
     },
     {
         "Name": "Venera 9 Descent Craft",
@@ -766,14 +682,6 @@
     {
         "Name": "Yinghuo-1",
         "ID": "YINGHUO-1"
-    },
-    {
-        "Name": "Zond 1",
-        "ID": "1964-016D"
-    },
-    {
-        "Name": "Zond 3",
-        "ID": "1965-056A"
     },
     {
         "Name": "Zond 4",
@@ -1020,10 +928,6 @@
         "ID": "1985-033A"
     },
     {
-        "Name": "RAE-B",
-        "ID": "1973-039A"
-    },
-    {
         "Name": "S3-1",
         "ID": "1974-085C"
     },
@@ -1116,10 +1020,6 @@
         "ID": "UARS-2"
     },
     {
-        "Name": "Wind",
-        "ID": "1994-071A"
-    },
-    {
         "Name": "1965-027E",
         "ID": "1965-027E"
     },
@@ -1140,16 +1040,8 @@
         "ID": "AMPS"
     },
     {
-        "Name": "AMPTE/CCE",
-        "ID": "1984-088A"
-    },
-    {
         "Name": "ANDESITE",
         "ID": "2020-037D"
-    },
-    {
-        "Name": "Arase (ERG)",
-        "ID": "2016-080A"
     },
     {
         "Name": "ArduSat 1",
@@ -1204,10 +1096,6 @@
         "ID": "EXS-66A"
     },
     {
-        "Name": "CHAMP",
-        "ID": "2000-039B"
-    },
-    {
         "Name": "CINEMA 2",
         "ID": "2013-066J"
     },
@@ -1218,22 +1106,6 @@
     {
         "Name": "Clementine ISAS",
         "ID": "1994-004C"
-    },
-    {
-        "Name": "Cluster 2/FM5 (Rumba)",
-        "ID": "2000-045A"
-    },
-    {
-        "Name": "Cluster 2/FM6 (Salsa)",
-        "ID": "2000-041B"
-    },
-    {
-        "Name": "Cluster 2/FM7 (Samba)",
-        "ID": "2000-041A"
-    },
-    {
-        "Name": "Cluster 2/FM8 (Tango)",
-        "ID": "2000-045B"
     },
     {
         "Name": "Cluster96",
