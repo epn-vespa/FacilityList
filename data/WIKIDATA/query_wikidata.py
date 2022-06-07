@@ -1,124 +1,104 @@
 # pip install sparqlwrapper
 # https://rdflib.github.io/sparqlwrapper/
 import json
-import pywikibot
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+import sys
+from SPARQLWrapper import SPARQLWrapper, JSON
 
-# Pywikibot will automatically set the user-agent to include your username.
-# To customise the user-agent see
-# https://www.mediawiki.org/wiki/Manual:Pywikibot/User-agent
+endpoint_url = "https://query.wikidata.org/sparql"
 
-import pywikibot
-from pywikibot.pagegenerators import WikidataSPARQLPageGenerator
-from pywikibot.bot import SingleSiteBot
-
-
-class WikidataQueryBot(SingleSiteBot):
-    """
-    Basic bot to show wikidata queries.
-
-    See https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Pywikibot
-    for more information.
-    """
-
-    def __init__(self, generator, **kwargs):
-        """
-        Initializer.
-
-        @param generator: the page generator that determines on which pages
-            to print
-        @type generator: generator
-        """
-        super(WikidataQueryBot, self).__init__(**kwargs)
-        self.generator = generator
-
-    def treat(self, page):
-        print(page)
-
-
-if __name__ == '__main__':
-    query = """PREFIX schema: <http://schema.org/>
+query_prefix="""
+PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
+"""
 
+select_count="""
 SELECT  
-   ?item     
-   ?itemLabel
+     ( COUNT ( DISTINCT ?item ) as ?count )
+"""
+select_main="""
+SELECT
+  ?item     
+  ?itemLabel
   (GROUP_CONCAT(DISTINCT ?Unified_Astro_Thesaurus_ID; SEPARATOR="|") AS ?all_Unified_Astro_Thesaurus_ID)
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
   (GROUP_CONCAT(DISTINCT ?NSSDCA_ID; SEPARATOR="|") AS ?all_NSSDCA_ID)
   (GROUP_CONCAT(DISTINCT ?Minor_Planet_Center_observatory_ID; SEPARATOR="|") AS ?all_Minor_Planet_Center_observatory_ID)
   (GROUP_CONCAT(DISTINCT ?alias; SEPARATOR="|") AS ?aliases)
-  
+"""
+
+where="""
  WHERE 
- {       
-   ?item p:P31 ?stat . 
-  #item instance of
-  {?stat ps:P31 wd:Q148578 .}  # space observatory
-  UNION {?stat ps:P31 wd:Q40218 .} # spacecraft
-  UNION {?stat ps:P31 wd:Q1254933 .} # astronomical observatory
-  UNION {?stat ps:P31 wd:Q26540 .} # artificial satellite 
-  UNION {?stat ps:P31 wd:Q697175 .} # Launch vehicle
-  UNION {?stat ps:P31 wd:Q349772 .} # radio interferometer
-  UNION {?stat ps:P31 wd:Q2098169 .} # planetary probe
-  UNION {?stat ps:P31 wd:Q928667 .} # orbiter 
-  UNION {?stat ps:P31 wd:Q26529 .} # space probe
-  UNION {?stat ps:P31 wd:Q752783 .} # human spacefligh
-  UNION {?stat ps:P31 wd:Q2133344 .} # space mission
-  UNION {?stat ps:P31 wd:Q5916 .} # spaceflight
-  UNION {?stat ps:P31 wd:Q62832 .} # observatory
-  UNION {?stat ps:P31 wd:Q35273 .} # optical telescope
-  UNION {?stat ps:P31 wd:Q854845 .} # Earth observation satellite
-  UNION {?stat ps:P31 wd:Q763288 .} # lander  
-  UNION {?stat ps:P31 wd:Q15078724 .} # expendable launch vehicle
-  UNION {?stat ps:P31 wd:Q389459 .} # Mars rover
-  UNION {?stat ps:P31 wd:Q1580082 .} # small satellite
-  UNION {?stat ps:P31 wd:Q209363 .} # weather satellite
-  UNION {?stat ps:P31 wd:Q466421 .} # reconnaissance satellite
-  #item has part(s) of the class
-  UNION {?item wdt:P2670 wd:Q148578 .} # space observatory
-  UNION {?item wdt:P2670 wd:Q40218 .} # spacecraft
-  UNION {?item wdt:P2670 wd:Q1254933 .} # astronomical observatory
-  UNION {?item wdt:P2670 wd:Q26540 .} # artificial satellite 
-  UNION {?item wdt:P2670 wd:Q697175 .} # Launch vehicle
-  UNION {?item wdt:P2670 wd:Q349772 .} # radio interferometer
-  UNION {?item wdt:P2670 wd:Q2098169 .} # planetary probe
-  UNION {?item wdt:P2670 wd:Q928667 .} # orbiter 
-  UNION {?item wdt:P2670 wd:Q26529 .} # space probe
-  UNION {?item wdt:P2670 wd:Q752783 .} # human spacefligh
-  UNION {?item wdt:P2670 wd:Q2133344 .} # space mission
-  UNION {?item wdt:P2670 wd:Q5916 .} # spaceflight
-  UNION {?item wdt:P2670 wd:Q62832 .} # observatory
-  UNION {?item wdt:P2670 wd:Q35273 .} # optical telescope
-  UNION {?item wdt:P2670 wd:Q854845 .} # Earth observation satellite
-  UNION {?item wdt:P2670 wd:Q763288 .} # lander
-  UNION {?item wdt:P2670 wd:Q15078724 .} # expendable launch vehicle
-  UNION {?item wdt:P2670 wd:Q389459 .} # Mars rover
-  UNION {?item wdt:P2670 wd:Q1580082 .} # small satellite
-  UNION {?item wdt:P2670 wd:Q209363 .} # weather satellite
-  UNION {?stat wdt:P2670 wd:Q466421 .} # reconnaissance satellite
-   
+ {        
+  {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
+  UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
+  UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
+  UNION {?item  wdt:P279  wd:Q35273 .} # optical telescope
+  UNION {?item  wdt:P279  wd:Q697175 .} # Launch vehicle
+  UNION {?item  wdt:P279  wd:Q18812508 .} # space station module
+  UNION {?item  wdt:P279  wd:Q17004698 .} # astronomical interferometer
+
   OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
   OPTIONAL {?item wdt:P8913 ?NSSDCA_ID .}
   OPTIONAL {?item wdt:P2956 ?NAIF_ID .}
   OPTIONAL {?item wdt:P717 ?Minor_Planet_Center_observatory_ID .}
   OPTIONAL {?item skos:altLabel ?alias .}
-   
-   
- 
+
+
+
    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
- } 
- GROUP BY ?item ?itemLabel"""
-    site = pywikibot.Site()
-    gen = WikidataSPARQLPageGenerator(query, site=site.data_repository(),
-                                      endpoint='https://query.wikidata.org/sparql')
-    bot = WikidataQueryBot(gen, site=site)
-    bot.run()
-#with open("list_observatories_spacecrafts1.json", 'w') as fout:
-#    fout.write(json.dumps(results, indent=4))
+ }
+"""
+
+def page(page, page_size) :
+    return """
+    GROUP BY ?item ?itemLabel
+    ORDER BY ?item
+    OFFSET {}
+    LIMIT {}
+    """.format(page*page_size, page_size)
+
+
+def get_results(endpoint_url, query):
+    user_agent = "Laura.debisschop@obspm.fr - Observatoire de Paris - Python/%s.%s" % (sys.version_info[0], sys.version_info[1])
+    # TODO adjust user agent; see https://w.wiki/CX6
+    sparql = SPARQLWrapper(endpoint_url, agent=user_agent)
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    return sparql.query().convert()
+
+# assemble a query for knowing the number of results
+query_count = query_prefix + select_count + where
+query_count_results = get_results(endpoint_url, query_count)
+results_count = query_count_results["results"]["bindings"][0]["count"]["value"]
+
+print("response contains " + results_count + " results")
+
+test=True
+#page_size=100
+not test
+test=False
+page_size=1000
+
+
+print("using page_size = " + str(page_size) )
+r=[]
+# for each page that we need to query
+for i in range( 1 if test == True else int(results_count)//page_size) :
+    print( "requesting page " + str(i) )
+    # assemble a query for knowing the results of the i-th page
+    query_page = query_prefix + select_main + where + page(i, page_size)
+    print( query_page )
+    query_page_result = get_results(endpoint_url, query_page)
+    bindings=query_page_result["results"]["bindings"]
+    r.append( [ { k : b[k]["value"] for k in b } for b in bindings ] )
+
+print(r)
+
+with open("list_observatories_spacecrafts1.json", 'w') as fout:
+    fout.write(json.dumps(r, indent=4))
 
  
