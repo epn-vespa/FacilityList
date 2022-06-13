@@ -12,10 +12,6 @@
         "ID": "AFP-888"
     },
     {
-        "Name": "ASTP-Apollo",
-        "ID": "1975-066A"
-    },
-    {
         "Name": "Astro 1",
         "ID": "ASTRO-1"
     },
@@ -112,12 +108,24 @@
         "ID": "ISPNASA"
     },
     {
+        "Name": "KRISTALL",
+        "ID": "1990-048A"
+    },
+    {
         "Name": "LAS",
         "ID": "LAS"
     },
     {
         "Name": "Lomonosov",
         "ID": "LOMNSOV"
+    },
+    {
+        "Name": "Mariner  2",
+        "ID": "1962-041A"
+    },
+    {
+        "Name": "Mariner 10",
+        "ID": "1973-085A"
     },
     {
         "Name": "Mariner-H",
@@ -148,32 +156,20 @@
         "ID": "OV1-7"
     },
     {
+        "Name": "Pioneer 10",
+        "ID": "1972-012A"
+    },
+    {
+        "Name": "Pioneer 11",
+        "ID": "1973-019A"
+    },
+    {
         "Name": "Pioneer P-3",
         "ID": "PIONX"
     },
     {
         "Name": "Pioneer-E",
         "ID": "PIONE"
-    },
-    {
-        "Name": "Prognoz  4",
-        "ID": "1975-122A"
-    },
-    {
-        "Name": "Prognoz  5",
-        "ID": "1976-112A"
-    },
-    {
-        "Name": "Prognoz  6",
-        "ID": "1977-093A"
-    },
-    {
-        "Name": "Prognoz  7",
-        "ID": "1978-101A"
-    },
-    {
-        "Name": "Prognoz  8",
-        "ID": "1980-103A"
     },
     {
         "Name": "QUASAT",
@@ -186,6 +182,10 @@
     {
         "Name": "Relict 2",
         "ID": "RELICT2"
+    },
+    {
+        "Name": "SAMPEX",
+        "ID": "1992-038A"
     },
     {
         "Name": "SHEAL-A",
@@ -212,12 +212,28 @@
         "ID": "SPECXGM"
     },
     {
+        "Name": "STP P78-1",
+        "ID": "1979-017A"
+    },
+    {
         "Name": "STP P80-2",
         "ID": "P80-2"
     },
     {
         "Name": "STS/STORE",
         "ID": "STORE"
+    },
+    {
+        "Name": "Suzaku",
+        "ID": "2005-025A"
+    },
+    {
+        "Name": "SWAS",
+        "ID": "1998-071A"
+    },
+    {
+        "Name": "Tenma",
+        "ID": "1983-011A"
     },
     {
         "Name": "TYVAK-61C",
@@ -320,16 +336,8 @@
         "ID": "2001-034D"
     },
     {
-        "Name": "Giotto",
-        "ID": "1985-056A"
-    },
-    {
         "Name": "Hera",
         "ID": "HERA"
-    },
-    {
-        "Name": "Intercosmos 14",
-        "ID": "1975-115A"
     },
     {
         "Name": "Intuitive Machines 1 (IM-1)",
@@ -350,18 +358,6 @@
     {
         "Name": "Korea Pathfinder Lunar Orbiter (KPLO)",
         "ID": "KPLO"
-    },
-    {
-        "Name": "Longjiang 1",
-        "ID": "2018-045B"
-    },
-    {
-        "Name": "Longjiang 2",
-        "ID": "2018-045C"
-    },
-    {
-        "Name": "Luna 3",
-        "ID": "1959-008A"
     },
     {
         "Name": "Luna 24 Descent Craft",
@@ -404,12 +400,16 @@
         "ID": "MARIN1"
     },
     {
-        "Name": "Mariner-H",
-        "ID": "MARINH"
+        "Name": "Mariner 2",
+        "ID": "1962-041A"
     },
     {
-        "Name": "Mars 1",
-        "ID": "1962-061A"
+        "Name": "Mariner 10",
+        "ID": "1973-085A"
+    },
+    {
+        "Name": "Mariner-H",
+        "ID": "MARINH"
     },
     {
         "Name": "Mars 1969A",
@@ -512,10 +512,6 @@
         "ID": "2007-039C"
     },
     {
-        "Name": "Pegasus 3",
-        "ID": "1965-060A"
-    },
-    {
         "Name": "Peregrine Mission 1",
         "ID": "PEREGRN-1"
     },
@@ -526,6 +522,14 @@
     {
         "Name": "Pioneer 0",
         "ID": "ABLE1"
+    },
+    {
+        "Name": "Pioneer 10",
+        "ID": "1972-012A"
+    },
+    {
+        "Name": "Pioneer 11",
+        "ID": "1973-019A"
     },
     {
         "Name": "Pioneer P-3",
@@ -584,36 +588,12 @@
         "ID": "1970-094B"
     },
     {
-        "Name": "Rosetta",
-        "ID": "2004-006A"
-    },
-    {
         "Name": "Saturn SA-1",
         "ID": "SATURNSA1"
     },
     {
         "Name": "Smart Lander for Investigating Moon (SLIM)",
         "ID": "SLIM"
-    },
-    {
-        "Name": "Sputnik 19",
-        "ID": "1962-040A"
-    },
-    {
-        "Name": "Sputnik 20",
-        "ID": "1962-043A"
-    },
-    {
-        "Name": "Sputnik 21",
-        "ID": "1962-045A"
-    },
-    {
-        "Name": "Sputnik 22",
-        "ID": "1962-057A"
-    },
-    {
-        "Name": "Sputnik 24",
-        "ID": "1962-062A"
     },
     {
         "Name": "Stardust Sample Return Capsule",
@@ -684,36 +664,8 @@
         "ID": "YINGHUO-1"
     },
     {
-        "Name": "Zond 4",
-        "ID": "1968-013A"
-    },
-    {
-        "Name": "Zond 5",
-        "ID": "1968-076A"
-    },
-    {
-        "Name": "Zond 6",
-        "ID": "1968-101A"
-    },
-    {
-        "Name": "Zond 7",
-        "ID": "1969-067A"
-    },
-    {
-        "Name": "Zond 8",
-        "ID": "1970-088A"
-    },
-    {
         "Name": "Advanced OSO",
         "ID": "AOSO"
-    },
-    {
-        "Name": "Aeros-A",
-        "ID": "1972-100A"
-    },
-    {
-        "Name": "Aeros-B",
-        "ID": "1974-055A"
     },
     {
         "Name": "Atlas 1 / STS 45",
@@ -732,18 +684,6 @@
         "ID": "ATLAS4"
     },
     {
-        "Name": "Cassiope",
-        "ID": "2013-055A"
-    },
-    {
-        "Name": "Cosmos 262",
-        "ID": "1968-119A"
-    },
-    {
-        "Name": "D2B",
-        "ID": "1975-092A"
-    },
-    {
         "Name": "EOM-A",
         "ID": "EOM-A"
     },
@@ -758,50 +698,6 @@
     {
         "Name": "Genesis Sample Collection and Return Capsule",
         "ID": "2001-034D"
-    },
-    {
-        "Name": "GOES 1",
-        "ID": "1975-100A"
-    },
-    {
-        "Name": "GOES 2",
-        "ID": "1977-048A"
-    },
-    {
-        "Name": "GOES 3",
-        "ID": "1978-062A"
-    },
-    {
-        "Name": "GOES 4",
-        "ID": "1980-074A"
-    },
-    {
-        "Name": "GOES 5",
-        "ID": "1981-049A"
-    },
-    {
-        "Name": "GOES 6",
-        "ID": "1983-041A"
-    },
-    {
-        "Name": "GOES 7",
-        "ID": "1987-022A"
-    },
-    {
-        "Name": "GOES 8",
-        "ID": "1994-022A"
-    },
-    {
-        "Name": "GOES 9",
-        "ID": "1995-025A"
-    },
-    {
-        "Name": "GOES 11",
-        "ID": "2000-022A"
-    },
-    {
-        "Name": "GOES 12",
-        "ID": "2001-031A"
     },
     {
         "Name": "GOES-G",
@@ -820,32 +716,8 @@
         "ID": "GOES-X"
     },
     {
-        "Name": "Intercosmos 4",
-        "ID": "1970-084A"
-    },
-    {
-        "Name": "Intercosmos 7",
-        "ID": "1972-047A"
-    },
-    {
-        "Name": "Intercosmos 9",
-        "ID": "1973-022A"
-    },
-    {
-        "Name": "Intercosmos 11",
-        "ID": "1974-034A"
-    },
-    {
-        "Name": "Intercosmos 16",
-        "ID": "1976-076A"
-    },
-    {
         "Name": "ISPM/NASA",
         "ID": "ISPNASA"
-    },
-    {
-        "Name": "KH-5 9034A",
-        "ID": "1962-018A"
     },
     {
         "Name": "Lambda 4S-1",
@@ -904,32 +776,12 @@
         "ID": "1972-046A"
     },
     {
-        "Name": "Prognoz 4",
-        "ID": "1975-122A"
-    },
-    {
-        "Name": "Prognoz 5",
-        "ID": "1976-112A"
-    },
-    {
-        "Name": "Prognoz 6",
-        "ID": "1977-093A"
-    },
-    {
-        "Name": "Prognoz 7",
-        "ID": "1978-101A"
-    },
-    {
-        "Name": "Prognoz 8",
-        "ID": "1980-103A"
-    },
-    {
-        "Name": "Prognoz 10",
-        "ID": "1985-033A"
-    },
-    {
         "Name": "S3-1",
         "ID": "1974-085C"
+    },
+    {
+        "Name": "SAMPEX",
+        "ID": "1992-038A"
     },
     {
         "Name": "SMS 2",
@@ -950,6 +802,10 @@
     {
         "Name": "SOLRAD 2",
         "ID": "SRD-2"
+    },
+    {
+        "Name": "SORCE",
+        "ID": "2003-004A"
     },
     {
         "Name": "Space Shuttle",
@@ -988,10 +844,6 @@
         "ID": "SPATN-C"
     },
     {
-        "Name": "Sputnik 2",
-        "ID": "1957-002A"
-    },
-    {
         "Name": "SR 4/GREB 4",
         "ID": "SR4GREB"
     },
@@ -1008,6 +860,10 @@
         "ID": "SSBUV06"
     },
     {
+        "Name": "STP P78-1",
+        "ID": "1979-017A"
+    },
+    {
         "Name": "STP P80-2",
         "ID": "P80-2"
     },
@@ -1016,20 +872,24 @@
         "ID": "SUNLB-A"
     },
     {
+        "Name": "TERRIERS",
+        "ID": "1999-026A"
+    },
+    {
+        "Name": "TIMED",
+        "ID": "2001-055B"
+    },
+    {
         "Name": "UARS 2",
         "ID": "UARS-2"
     },
     {
+        "Name": "1963-038C",
+        "ID": "1963-038C"
+    },
+    {
         "Name": "1965-027E",
         "ID": "1965-027E"
-    },
-    {
-        "Name": "Aeros-A",
-        "ID": "1972-100A"
-    },
-    {
-        "Name": "Aeros-B",
-        "ID": "1974-055A"
     },
     {
         "Name": "AESP 14",
@@ -1056,10 +916,6 @@
         "ID": "ARIANV2"
     },
     {
-        "Name": "ASTP-Apollo",
-        "ID": "1975-066A"
-    },
-    {
         "Name": "Atlas 1 / STS 45",
         "ID": "ATLAS1"
     },
@@ -1074,14 +930,6 @@
     {
         "Name": "ATS-G",
         "ID": "ATS-G"
-    },
-    {
-        "Name": "Aureol 1",
-        "ID": "1971-119A"
-    },
-    {
-        "Name": "Aureol 2",
-        "ID": "1973-107A"
     },
     {
         "Name": "Beacon 1",
@@ -1110,21 +958,5 @@
     {
         "Name": "Cluster96",
         "ID": "CLUSTR1"
-    },
-    {
-        "Name": "Cosmos 11",
-        "ID": "1962-056A"
-    },
-    {
-        "Name": "Cosmos 26",
-        "ID": "1964-013A"
-    },
-    {
-        "Name": "Cosmos 49",
-        "ID": "1964-069A"
-    },
-    {
-        "Name": "Cosmos 53",
-        "ID": "1965-006A"
     }
 ]
