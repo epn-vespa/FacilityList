@@ -6,9 +6,9 @@ from fuzzywuzzy import process
 import json
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_list.json') as f:
-    data_naif = json.load(f)
+    data_nssdc = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts1.json') as f:
     wikidata = json.load(f)
 
 
@@ -18,9 +18,12 @@ tres_probable = []
 probable = []
 non_trouves = []
 
-data_naif = data_naif[0:1000]
-for i, e in enumerate(data_naif):
-    print("[" + str(i + 1) + "/" + str(len(data_naif)) + "]" + str(e))
+
+#data_nssdc = data_nssdc[0:1000]
+
+
+for i, e in enumerate(data_nssdc):
+    print("[" + str(i + 1) + "/" + str(len(data_nssdc)) + "]" + str(e))
 
     def mon_scorer(q, c):
         r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases'])
