@@ -6,21 +6,22 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 endpoint_url = "https://query.wikidata.org/sparql"
 
-query_prefix="""
+query_prefix = """
 PREFIX schema: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 """
 
-select_count="""
+select_count = """
 SELECT  
      ( COUNT ( DISTINCT ?item ) as ?count )
 """
-select_main="""
+select_main = """
 SELECT
   ?item     
   ?itemLabel
+  ?itemDescription
   (GROUP_CONCAT(DISTINCT ?Unified_Astro_Thesaurus_ID; SEPARATOR="|") AS ?all_Unified_Astro_Thesaurus_ID)
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
@@ -29,7 +30,7 @@ SELECT
   (GROUP_CONCAT(DISTINCT ?alias; SEPARATOR="|") AS ?aliases)
 """
 
-where="""
+where = """
  WHERE 
  {        
   {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
@@ -53,22 +54,25 @@ where="""
  }
 """
 
-def page(page, page_size) :
+
+def page(page, page_size):
     return """
-    GROUP BY ?item ?itemLabel
+    GROUP BY ?item ?itemLabel ?itemDescription
     ORDER BY ?item
     OFFSET {}
     LIMIT {}
-    """.format(page*page_size, page_size)
+    """.format(page * page_size, page_size)
 
 
 def get_results(endpoint_url, query):
-    user_agent = "Laura.debisschop@obspm.fr - Observatoire de Paris - Python/%s.%s" % (sys.version_info[0], sys.version_info[1])
+    user_agent = "Laura.debisschop@obspm.fr - Observatoire de Paris - Python/%s.%s" % (
+    sys.version_info[0], sys.version_info[1])
     # TODO adjust user agent; see https://w.wiki/CX6
     sparql = SPARQLWrapper(endpoint_url, agent=user_agent)
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     return sparql.query().convert()
+
 
 # assemble a query for knowing the number of results
 query_count = query_prefix + select_count + where
@@ -77,28 +81,34 @@ results_count = query_count_results["results"]["bindings"][0]["count"]["value"]
 
 print("response contains " + results_count + " results")
 
-test=True
-#page_size=100
-not test
-test=False
-page_size=1000
+# test
+#test = True
+#page_size=10
 
+# or not test
+test = False
+page_size = 1000
 
-print("using page_size = " + str(page_size) )
-r=[]
+print("using page_size = " + str(page_size))
+r = []
 # for each page that we need to query
-for i in range( 1 if test == True else int(results_count)//page_size) :
-    print( "requesting page " + str(i) )
+for i in range(1 if test == True else int(results_count) // page_size):
+    print("requesting page " + str(i))
     # assemble a query for knowing the results of the i-th page
     query_page = query_prefix + select_main + where + page(i, page_size)
-    print( query_page )
+    print(query_page)
     query_page_result = get_results(endpoint_url, query_page)
-    bindings=query_page_result["results"]["bindings"]
-    r.append( [ { k : b[k]["value"] for k in b } for b in bindings ] )
+    bindings = query_page_result["results"]["bindings"]
+
+    new_elements = [{k: b[k]["value"] for k in b} for b in bindings]
+    # remplacer les espaces par des tirets dans itemLabel
+    for e in new_elements:
+        e['itemLabel'] = e['itemLabel'].replace(' ', '-')
+    r.extend(new_elements)
 
 print(r)
 
 with open("list_observatories_spacecrafts1.json", 'w') as fout:
     fout.write(json.dumps(r, indent=4))
 
- 
+
