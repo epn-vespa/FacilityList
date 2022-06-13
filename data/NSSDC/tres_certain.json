@@ -70,7 +70,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q14918",
-            "itemLabel": "ABRIXAS",
+            "itemLabel": "A Broadband Imaging X-ray All-sky Survey",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1999-022A",
             "all_NAIF_ID": "",
@@ -102,7 +102,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q298047",
-            "itemLabel": "ASTRO-F",
+            "itemLabel": "Akari (satellite)",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2006-005A",
             "all_NAIF_ID": "",
@@ -118,7 +118,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q18539",
-            "itemLabel": "Array of Low Energy X-ray Imaging Sensors",
+            "itemLabel": "Array of Low-Energy X-ray Imaging Sensors",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1993-026A",
             "all_NAIF_ID": "",
@@ -140,7 +140,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1962-049A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30a2\u30eb\u30fc\u30a8\u30c3\u30c81|Alouette I|Alouette-1|Alouette A|Alouette-1|\u0410\u043b\u0443\u044d\u0442-1|\u0410\u043b\u044e\u044d\u0442\u0442-1|Alouette 1|\u4e91\u96c01\u53f7"
+            "aliases": "\u30a2\u30eb\u30fc\u30a8\u30c3\u30c81|Alouette I|Alouette-1|Alouette A|Alouette-1|\u0410\u043b\u0443\u044d\u0442-1|\u0410\u043b\u044e\u044d\u0442\u0442-1|Alouette 1|\u4e91\u96c01\u53f7|Alouette-A|S27-3|S27-A"
         }
     ],
     [
@@ -156,7 +156,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1965-098A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": ""
+            "aliases": "Alouette-B|ISIS-X|S27-4|S27-B"
         }
     ],
     [
@@ -181,6 +181,22 @@
             "ID": "1971-008A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q28101387",
+            "itemLabel": "Apollo 14 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CM-110|CSM-110|Kitty Hawk"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 14 Command and Service Module (CSM)",
+            "ID": "1971-008A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q178871",
             "itemLabel": "Apollo 14",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -197,6 +213,22 @@
             "ID": "1971-063A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q28101431",
+            "itemLabel": "Apollo 15 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Endeavour|CM-112|CSM-112"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 15 Command and Service Module (CSM)",
+            "ID": "1971-063A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q194068",
             "itemLabel": "Apollo 15",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -205,6 +237,22 @@
             "all_NSSDCA_ID": "1971-063A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0623\u0628\u0648\u0644\u0648 \u0661\u0665|\u0627\u0628\u0648\u0644\u0648 15|\u0627\u0628\u0648\u0644\u0648 \u0661\u0665|Apol\u00b7lo 15|Apollo 15|Apolo 15|\u0622\u067e\u0648\u0644\u0648 15|\u0627\u067e\u0648\u0644\u0648 15|\u0627\u067e\u0648\u0644\u0648 \u06f1\u06f5|Apolo 15|\u0410\u043f\u043e\u043b\u043b\u043e\u043d 15|Apollo 15|\u592a\u967d\u795e15\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 16 Command and Service Module (CSM)",
+            "ID": "1972-031A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101407",
+            "itemLabel": "Apollo 16 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-031A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Casper|CM-113|CSM-113"
         }
     ],
     [
@@ -237,6 +285,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "LM Orion"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 17 Command and Service Module (CSM)",
+            "ID": "1972-096A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101398",
+            "itemLabel": "Apollo 17 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-096A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "America|CM-114|CSM-114"
         }
     ],
     [
@@ -326,7 +390,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q659360",
-            "itemLabel": "Ariel V",
+            "itemLabel": "Ariel 5",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1974-077A",
             "all_NAIF_ID": "",
@@ -342,7 +406,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q507511",
-            "itemLabel": "Ariel VI",
+            "itemLabel": "Ariel 6",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1979-047A",
             "all_NAIF_ID": "",
@@ -369,12 +433,28 @@
     ],
     [
         {
+            "Name": "ASTP-Apollo",
+            "ID": "1975-066A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4068053",
+            "itemLabel": "CSM-111",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-066A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Apollo (ASTP)|Apollo CSM-111"
+        }
+    ],
+    [
+        {
             "Name": "Astro-C",
             "ID": "1987-012A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q1524954",
-            "itemLabel": "Ginga (satellite)",
+            "itemLabel": "Ginga",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1987-012A",
             "all_NAIF_ID": "",
@@ -390,7 +470,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q298048",
-            "itemLabel": "ASTRO-H",
+            "itemLabel": "Hitomi",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2016-012A",
             "all_NAIF_ID": "",
@@ -438,7 +518,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q65515867",
-            "itemLabel": "Bhaskara 1",
+            "itemLabel": "Bhaskara I",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1979-051A",
             "all_NAIF_ID": "",
@@ -534,7 +614,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q165585",
-            "itemLabel": "Cassini-Huygens",
+            "itemLabel": "Cassini\u2212Huygens",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1997-061A",
             "all_NAIF_ID": "-150|-81",
@@ -550,7 +630,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49002",
-            "itemLabel": "Chandra",
+            "itemLabel": "Chandra X-ray Observatory",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1999-040B",
             "all_NAIF_ID": "-151",
@@ -598,7 +678,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q41519",
-            "itemLabel": "Compton Gamma-Ray Observatory",
+            "itemLabel": "Compton Gamma Ray Observatory",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1991-027B",
             "all_NAIF_ID": "",
@@ -614,7 +694,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q48633",
-            "itemLabel": "Corot",
+            "itemLabel": "COROT",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2006-063A",
             "all_NAIF_ID": "",
@@ -630,7 +710,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q48711",
-            "itemLabel": "COS-B",
+            "itemLabel": "Cos-B",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1975-072A",
             "all_NAIF_ID": "",
@@ -646,7 +726,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q53055",
-            "itemLabel": "Cosmos 31",
+            "itemLabel": "Kosmos 31",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1964-028A",
             "all_NAIF_ID": "",
@@ -662,7 +742,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q53586",
-            "itemLabel": "Cosmos 51",
+            "itemLabel": "Kosmos 51",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1964-080A",
             "all_NAIF_ID": "",
@@ -678,7 +758,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q346597",
-            "itemLabel": "Cosmos 166",
+            "itemLabel": "Kosmos 166",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1967-061A",
             "all_NAIF_ID": "",
@@ -694,7 +774,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q51563",
-            "itemLabel": "Cosmos 215",
+            "itemLabel": "Kosmos 215",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-033A",
             "all_NAIF_ID": "",
@@ -710,7 +790,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q347961",
-            "itemLabel": "Cosmos 230",
+            "itemLabel": "Kosmos 230",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-056A",
             "all_NAIF_ID": "",
@@ -726,7 +806,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q53574",
-            "itemLabel": "Cosmos 461",
+            "itemLabel": "Kosmos 461",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1971-105A",
             "all_NAIF_ID": "",
@@ -806,7 +886,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3816563",
-            "itemLabel": "Cosmos 1066",
+            "itemLabel": "Kosmos 1066",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1978-121A",
             "all_NAIF_ID": "",
@@ -854,7 +934,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q21775017",
-            "itemLabel": "DAMPE",
+            "itemLabel": "Dark Matter Particle Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2015-078A",
             "all_NAIF_ID": "",
@@ -1382,7 +1462,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2944742",
-            "itemLabel": "ESRO 2B",
+            "itemLabel": "ESRO-2B",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-041A",
             "all_NAIF_ID": "",
@@ -1398,7 +1478,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49684",
-            "itemLabel": "Eureca",
+            "itemLabel": "European Retrievable Carrier",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1992-049B",
             "all_NAIF_ID": "",
@@ -1450,7 +1530,7 @@
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1958-003A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "1958-003A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "1958 Gamma 1|Explorer III|Explorer-3"
         }
@@ -1494,7 +1574,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49909",
-            "itemLabel": "FUSE",
+            "itemLabel": "Far Ultraviolet Spectroscopic Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1999-035A",
             "all_NAIF_ID": "",
@@ -1526,7 +1606,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49944",
-            "itemLabel": "Galaxy Evolution Explorer",
+            "itemLabel": "GALEX",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2003-017A",
             "all_NAIF_ID": "",
@@ -1654,7 +1734,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q519533",
-            "itemLabel": "Gemini 9",
+            "itemLabel": "Gemini 9A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1966-047A",
             "all_NAIF_ID": "",
@@ -1708,7 +1788,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1989-096A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Astron 2"
+            "aliases": "Astron 2|International Astrophysical Observatory \"GRANAT\"|1AS No. 420|Astron 2"
         }
     ],
     [
@@ -1750,7 +1830,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1617995",
-            "itemLabel": "Highly Advanced Laboratory for Communications and Astronomy",
+            "itemLabel": "HALCA",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1997-005A",
             "all_NAIF_ID": "-58",
@@ -1766,7 +1846,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q265594",
-            "itemLabel": "HEAO-1",
+            "itemLabel": "High Energy Astronomy Observatory 1",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1977-075A",
             "all_NAIF_ID": "",
@@ -1782,7 +1862,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1426842",
-            "itemLabel": "HEAO-2",
+            "itemLabel": "Einstein Observatory",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1978-103A",
             "all_NAIF_ID": "",
@@ -1798,7 +1878,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1190799",
-            "itemLabel": "HEAO-3",
+            "itemLabel": "High Energy Astronomy Observatory 3",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1979-082A",
             "all_NAIF_ID": "",
@@ -1814,7 +1894,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3129781",
-            "itemLabel": "Helios 1",
+            "itemLabel": "Helios-A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1974-097A",
             "all_NAIF_ID": "-301",
@@ -1830,7 +1910,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3129777",
-            "itemLabel": "Helios 2",
+            "itemLabel": "Helios-B",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1976-003A",
             "all_NAIF_ID": "-302",
@@ -1846,7 +1926,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q209630",
-            "itemLabel": "Herschel",
+            "itemLabel": "Herschel Space Observatory",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2009-026A",
             "all_NAIF_ID": "",
@@ -1910,7 +1990,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3459972",
-            "itemLabel": "SPRINT-A",
+            "itemLabel": "Hisaki (satellite)",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2013-049A",
             "all_NAIF_ID": "-750",
@@ -1926,13 +2006,13 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2513",
-            "itemLabel": "t\u00e9lescope spatial Hubble",
+            "itemLabel": "Hubble Space Telescope",
             "all_Unified_Astro_Thesaurus_ID": "761",
             "all_COSPAR_ID": "1990-037B",
             "all_NAIF_ID": "-48",
             "all_NSSDCA_ID": "1990-037B",
             "all_Minor_Planet_Center_observatory_ID": "250",
-            "aliases": "HST|HST|HST|HST|HST|Hubble|Hubble|Hubble|\ud5c8\ube14|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|HST|HST|HST|HST|HST|HST|HST|Hubble|HST|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|Hubble-Space-Telescope|Hubble-Teleskop|Hubbleteleskop|Hubble (telescopio)|TEH|Telescopio espacial Hubble|Telescopio Espacial Hubble|Telescopio Hubble|Hubble Space Telescope|Large Space Telescope|t\u00e9lescope Hubble|Telescope spatial Hubble|T\u00e9lescope spatial Hubble|Hubble-Weltraumteleskop|Hubble Space Telescope|Telescopio Hubble|Telescopio orbitale Hubble|Hubble ruimtetelescoop|Hubble Space Telescope|Hubble-ruimtetelescoop|Hubble-telescoop|Hubbletelescoop|\u07dd.\u07dd.\u07e4|HST|Hubble Space Telescope|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|Hubbleteleskopet"
+            "aliases": "HST|HST|HST|HST|HST|Hubble|Hubble|Hubble|\ud5c8\ube14|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|HST|HST|HST|HST|HST|HST|HST|Hubble|Hubble|HST|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|Hubble-Space-Telescope|Hubble-Teleskop|Hubbleteleskop|Hubble (telescopio)|TEH|Telescopio espacial Hubble|Telescopio Espacial Hubble|Telescopio Hubble|Hubble Space Telescope|Large Space Telescope|t\u00e9lescope Hubble|Telescope spatial Hubble|T\u00e9lescope spatial Hubble|Hubble-Weltraumteleskop|Hubble Space Telescope|Telescopio Hubble|Telescopio orbitale Hubble|Hubble ruimtetelescoop|Hubble Space Telescope|Hubble-ruimtetelescoop|Hubble-telescoop|Hubbletelescoop|\u07dd.\u07dd.\u07e4|HST|Hubble Space Telescope|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|Hubbleteleskopet|HST|Hubble Space Telescope|Hubble- telescope"
         }
     ],
     [
@@ -1942,7 +2022,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3125220",
-            "itemLabel": "HXMT",
+            "itemLabel": "Hard X-ray Modulation Telescope",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2017-034A",
             "all_NAIF_ID": "",
@@ -2022,7 +2102,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q50021",
-            "itemLabel": "International Gamma-Ray Astrophysics Laboratory",
+            "itemLabel": "INTEGRAL",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2002-048A",
             "all_NAIF_ID": "-198",
@@ -2044,7 +2124,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1983-004A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite|IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9"
+            "aliases": "IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite"
         }
     ],
     [
@@ -2086,7 +2166,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1475301",
-            "itemLabel": "International Sun-Earth Explorer",
+            "itemLabel": "International Cometary Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1978-079A",
             "all_NAIF_ID": "-112",
@@ -2134,7 +2214,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q779547",
-            "itemLabel": "Observatoire Spatial Infrarouge",
+            "itemLabel": "Infrared Space Observatory",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1995-062A",
             "all_NAIF_ID": "",
@@ -2166,7 +2246,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q186447",
-            "itemLabel": "T\u00e9l\u00e9scope spatial James-Webb",
+            "itemLabel": "James Webb Space Telescope",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2021-130A",
             "all_NAIF_ID": "-170",
@@ -2182,7 +2262,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q626090",
-            "itemLabel": "STSAT-1",
+            "itemLabel": "Korea Advanced Institute of Science and Technology Satellite 4",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2003-042G",
             "all_NAIF_ID": "",
@@ -2289,22 +2369,6 @@
     ],
     [
         {
-            "Name": "KRISTALL",
-            "ID": "1990-048A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1789155",
-            "itemLabel": "Kristall",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1990-048A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Kwant 3|Kristall (station spatiale Mir)"
-        }
-    ],
-    [
-        {
             "Name": "LARES",
             "ID": "2012-006A"
         },
@@ -2317,22 +2381,6 @@
             "all_NSSDCA_ID": "2012-006A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Laser Relativity Satellite"
-        }
-    ],
-    [
-        {
-            "Name": "Mariner  2",
-            "ID": "1962-041A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q208984",
-            "itemLabel": "Mariner 2",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1962-041A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1962-041A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0662|\u0645\u0627\u0631\u06cc\u0646\u0631 2|\ub9c8\ub9ac\ub108 2\ud638|Mariner II"
         }
     ],
     [
@@ -2413,22 +2461,6 @@
             "all_NSSDCA_ID": "1971-051A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0669|1971-051A|\u0645\u0627\u0631\u06cc\u0646\u0631 9|\ub9c8\ub9ac\ub108 9\ud638|Mariner 9|\u041c\u0430\u0440\u0438\u043d\u0435\u0440 9|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 9|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 9|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 9"
-        }
-    ],
-    [
-        {
-            "Name": "Mariner 10",
-            "ID": "1973-085A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q59131",
-            "itemLabel": "Mariner 10",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1973-085A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1973-085A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661\u0660|\u0645\u0627\u0631\u06cc\u0646\u0631 10|\u0645\u0627\u0631\u06cc\u0646\u0631 \u0661\u0660|Mariner X|\ub9c8\ub9ac\ub108 10\ud638|Mariner Neezn\u00e1\u00e1|Mariner-10|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 10|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|Mariner 73-2|Mariner 73J|Mariner Venus Mercury 1973"
         }
     ],
     [
@@ -2550,7 +2582,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q24626",
-            "itemLabel": "MOST",
+            "itemLabel": "Microvariability and Oscillations of Stars",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2003-031D",
             "all_NAIF_ID": "",
@@ -2646,7 +2678,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q12129338",
-            "itemLabel": "Copernicus (satellite)",
+            "itemLabel": "Copernicus",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1972-065A",
             "all_NAIF_ID": "",
@@ -2662,7 +2694,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2014573",
-            "itemLabel": "Odin (satellite)",
+            "itemLabel": "Odin",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2001-007A",
             "all_NAIF_ID": "",
@@ -3137,38 +3169,6 @@
     ],
     [
         {
-            "Name": "Pioneer 10",
-            "ID": "1972-012A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q59103",
-            "itemLabel": "Pioneer 10",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1972-012A",
-            "all_NAIF_ID": "-23",
-            "all_NSSDCA_ID": "1972-012A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7|\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10"
-        }
-    ],
-    [
-        {
-            "Name": "Pioneer 11",
-            "ID": "1973-019A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q59113",
-            "itemLabel": "Pioneer 11",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1973-019A",
-            "all_NAIF_ID": "-24",
-            "all_NSSDCA_ID": "1973-019A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f"
-        }
-    ],
-    [
-        {
             "Name": "Planck",
             "ID": "2009-026B"
         },
@@ -3201,12 +3201,92 @@
     ],
     [
         {
+            "Name": "Prognoz  4",
+            "ID": "1975-122A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111854567",
+            "itemLabel": "Prognoz 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-122A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1975-122A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz4"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz  5",
+            "ID": "1976-112A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111855228",
+            "itemLabel": "Prognoz 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1976-112A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1976-112A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz5"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz  6",
+            "ID": "1977-093A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111855775",
+            "itemLabel": "Prognoz  6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-093A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1977-093A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz6"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz  7",
+            "ID": "1978-101A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111855979",
+            "itemLabel": "Prognoz 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1978-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1978-101A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz7"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz  8",
+            "ID": "1980-103A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111856351",
+            "itemLabel": "Prognoz 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1980-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz8"
+        }
+    ],
+    [
+        {
             "Name": "RAE-A",
             "ID": "1968-055A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q3736075",
-            "itemLabel": "Explorer 38",
+            "itemLabel": "Radio Astronomy Explorer A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-055A",
             "all_NAIF_ID": "",
@@ -3270,7 +3350,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q54284",
-            "itemLabel": "Rosat",
+            "itemLabel": "ROSAT",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1990-049A",
             "all_NAIF_ID": "",
@@ -3345,28 +3425,12 @@
     ],
     [
         {
-            "Name": "SAMPEX",
-            "ID": "1992-038A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54367",
-            "itemLabel": "Solar Anomalous and Magnetospheric Particle Explorer",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1992-038A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1992-038A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "SAMPEX|Explorer 68|Explorer 68|SAMPEX|SAMPEX"
-        }
-    ],
-    [
-        {
             "Name": "SARA",
             "ID": "1991-050E"
         },
         {
             "item": "http://www.wikidata.org/entity/Q5938757",
-            "itemLabel": "Satellite amateur de radio-astronomie",
+            "itemLabel": "SARA",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1991-050E",
             "all_NAIF_ID": "",
@@ -3382,7 +3446,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1242087",
-            "itemLabel": "SAS-2",
+            "itemLabel": "Small Astronomy Satellite 2",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1972-091A",
             "all_NAIF_ID": "",
@@ -3446,7 +3510,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q23770",
-            "itemLabel": "Beppo-SAX",
+            "itemLabel": "BeppoSAX",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1996-027A",
             "all_NAIF_ID": "",
@@ -3494,7 +3558,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q16325278",
-            "itemLabel": "Signe 3",
+            "itemLabel": "SIGNE 3",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1977-049A",
             "all_NAIF_ID": "",
@@ -3590,7 +3654,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q841182",
-            "itemLabel": "Soyouz 13",
+            "itemLabel": "Soyuz 13",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1973-103A",
             "all_NAIF_ID": "",
@@ -3654,7 +3718,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q837749",
-            "itemLabel": "RadioAstron",
+            "itemLabel": "Spektr-R",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2011-037A",
             "all_NAIF_ID": "-59",
@@ -3686,7 +3750,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q201953",
-            "itemLabel": "Spitzer",
+            "itemLabel": "Spitzer Space Telescope",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2003-038A",
             "all_NAIF_ID": "-79",
@@ -3702,13 +3766,13 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q719789",
-            "itemLabel": "Spoutnik 3",
+            "itemLabel": "Sputnik 3",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1958-004B",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1958-004B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Spoetnik 3|Spoetnik \u0663|\u0633\u0628\u0648\u062a\u0646\u0643 \u0663|Object D|Objet D|Sputnik III|Sputnik-3|Sputnik-III|Sput\u0146ik-3|\u041e\u0431\u044a\u0435\u043a\u0442 \u0414 No.1|\u0bb8\u0bcd\u0baa\u0bc1\u0b9f\u0bcd\u0ba9\u0bbf\u0b95\u0bcd 3|\u041e\u0431'\u0454\u043a\u0442 \u0414|\u0421\u043f\u0443\u0442\u043d\u0456\u043a-3|\u536b\u661f\u4e09\u53f7|\u536b\u661f\u4e09\u53f7|\u536b\u661f\u4e09\u53f7|\u885b\u661f\u4e09\u865f"
+            "aliases": "Spoetnik 3|Spoetnik \u0663|\u0633\u0628\u0648\u062a\u0646\u0643 \u0663|Object D|Objet D|Sputnik III|Sputnik-3|Sputnik-III|Sput\u0146ik-3|\u041e\u0431\u044a\u0435\u043a\u0442 \u0414 No.1|\u0bb8\u0bcd\u0baa\u0bc1\u0b9f\u0bcd\u0ba9\u0bbf\u0b95\u0bcd 3|\u041e\u0431'\u0454\u043a\u0442 \u0414|\u0421\u043f\u0443\u0442\u043d\u0456\u043a-3|\u536b\u661f\u4e09\u53f7|\u536b\u661f\u4e09\u53f7|\u536b\u661f\u4e09\u53f7|\u885b\u661f\u4e09\u865f|3-y ISZ|3-y Sovetskiy ISZ|D No. 2"
         }
     ],
     [
@@ -3741,22 +3805,6 @@
             "all_NSSDCA_ID": "1994-027A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
-        }
-    ],
-    [
-        {
-            "Name": "STP P78-1",
-            "ID": "1979-017A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54370",
-            "itemLabel": "Solwind",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1979-017A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1979-017A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Solwind|P78-1|P-78|Space Test Program P78-1 (P78-1)|P78-1\u4eba\u9020\u885b\u661f"
         }
     ],
     [
@@ -4001,50 +4049,18 @@
     ],
     [
         {
-            "Name": "Suzaku",
-            "ID": "2005-025A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54375",
-            "itemLabel": "Suzaku",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2005-025A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2005-025A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ASTRO-E2|ASTRO-EII"
-        }
-    ],
-    [
-        {
-            "Name": "SWAS",
-            "ID": "1998-071A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54374",
-            "itemLabel": "Submillimeter Wave Astronomy Satellite",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1998-071A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1998-071A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "SWAS|Explorer 74|SWAS"
-        }
-    ],
-    [
-        {
             "Name": "Swift",
             "ID": "2004-047A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q837488",
-            "itemLabel": "SWIFT",
+            "itemLabel": "Neil Gehrels Swift Observatory",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2004-047A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2004-047A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u4f3d\u739b\u5c04\u7ebf\u66b4\u5feb\u901f\u53cd\u5e94\u63a2\u6d4b\u5668|Swift|\u0421\u0432\u0438\u0444\u0442|Swift|\u30b9\u30a6\u30a3\u30d5\u30c8|Dru\u017eice Swift|Explorer 84|Kosmick\u00e1 observato\u0159 Swift|Explorer 84|Swift Gamma-Ray Burst Mission investigation|Swift Gamma Ray Burst Explorer|Swift Gamma-Ray Burst Mission|Swift observatoire de sursaut gamma|T\u00e9lescope spatial SWIFT|\u30b9\u30a4\u30d5\u30c8\u885b\u661f|\u30b9\u30a6\u30a3\u30d5\u30c8\u885b\u661f|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-84|Swift"
+            "aliases": "Swift|\u0421\u0432\u0438\u0444\u0442|Swift|\u30b9\u30a6\u30a3\u30d5\u30c8|Dru\u017eice Swift|Explorer 84|Kosmick\u00e1 observato\u0159 Swift|Explorer 84|Swift Gamma-Ray Burst Mission investigation|Swift Gamma Ray Burst Explorer|Swift Gamma-Ray Burst Mission|Swift observatoire de sursaut gamma|T\u00e9lescope spatial SWIFT|\u30b9\u30a4\u30d5\u30c8\u885b\u661f|\u30b9\u30a6\u30a3\u30d5\u30c8\u885b\u661f|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-84|Swift|\u4f3d\u739b\u5c04\u7ebf\u66b4\u5feb\u901f\u53cd\u5e94\u63a2\u6d4b\u5668"
         }
     ],
     [
@@ -4061,22 +4077,6 @@
             "all_NSSDCA_ID": "1972-014A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
-        }
-    ],
-    [
-        {
-            "Name": "Tenma",
-            "ID": "1983-011A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54376",
-            "itemLabel": "ASTRO-B",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1983-011A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1983-011A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ASTRO-B"
         }
     ],
     [
@@ -4380,7 +4380,7 @@
             "all_NAIF_ID": "-31",
             "all_NSSDCA_ID": "1977-084A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0661|1977-084A|Mariner 77A|Mariner Jupiter/Saturn A|MJS 77A|Outer Planets A|Voja\u011danto 1|\u07d8\u07d0\u07ec\u07db\u07cf\u07f0\u07d9\u07cb\u07ec\u07df\u07ca\u07f2|\u07de\u07ca\u07ec \u07d8\u07ce\u07e2\u07ca\u07eb \u07de\u07ce\u07d8\u07ca\u07eb \u07e2\u07cc\u07e3\u07cc\u07f2\u07eb|\u65c5\u884c\u80051\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|\u65c5\u884c\u8005\u4e00\u53f7"
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0661|1977-084A|Mariner 77A|Mariner Jupiter/Saturn A|MJS 77A|Outer Planets A|Voja\u011danto 1|\u07d8\u07d0\u07ec\u07db\u07cf\u07f0\u07d9\u07cb\u07ec\u07df\u07ca\u07f2|\u07de\u07ca\u07ec \u07d8\u07ce\u07e2\u07ca\u07eb \u07de\u07ce\u07d8\u07ca\u07eb \u07e2\u07cc\u07e3\u07cc\u07f2\u07eb|\u65c5\u884c\u80051\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|Voyager 77-2"
         }
     ],
     [
@@ -4406,7 +4406,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2300867",
-            "itemLabel": "WIND",
+            "itemLabel": "Wind",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1994-071A",
             "all_NAIF_ID": "-8",
@@ -4438,7 +4438,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q693552",
-            "itemLabel": "Wide-Field Infrared Survey Explorer",
+            "itemLabel": "Wide-field Infrared Survey Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2009-071A",
             "all_NAIF_ID": "",
@@ -4561,6 +4561,22 @@
     ],
     [
         {
+            "Name": "Apollo 10",
+            "ID": "1969-043A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101423",
+            "itemLabel": "Apollo 10 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1969-043A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Charlie Brown|CM-106|CSM-106"
+        }
+    ],
+    [
+        {
             "Name": "Apollo 10 SIVB",
             "ID": "1969-043B"
         },
@@ -4581,8 +4597,24 @@
             "ID": "1969-059A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q28101301",
+            "itemLabel": "CSM-107",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1969-059A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1969-059A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Columbia|CSM-107 Columbia"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 11 Command and Service Module (CSM)",
+            "ID": "1969-059A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q43653",
-            "itemLabel": "Apollo 11",
+            "itemLabel": "Apollo 11.",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1969-059A",
             "all_NAIF_ID": "",
@@ -4593,12 +4625,28 @@
     ],
     [
         {
+            "Name": "Apollo 11 Command and Service Module (CSM)",
+            "ID": "1969-059A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q85753536",
+            "itemLabel": "Columbia",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1969-059A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1969-059A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Columbia|CM-107|Command Module Columbia|CM-107|CM-107|Columbia"
+        }
+    ],
+    [
+        {
             "Name": "Apollo 11 Lunar Module / EASEP",
             "ID": "1969-059C"
         },
         {
             "item": "http://www.wikidata.org/entity/Q28101302",
-            "itemLabel": "Eagle (module lunaire)",
+            "itemLabel": "Eagle",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1969-059C",
             "all_NAIF_ID": "",
@@ -4641,6 +4689,22 @@
     ],
     [
         {
+            "Name": "Apollo 12 Command and Service Module (CSM)",
+            "ID": "1969-099A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101414",
+            "itemLabel": "Apollo 12 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1969-099A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Yankee Clipper|CM-108|CSM-108"
+        }
+    ],
+    [
+        {
             "Name": "Apollo 12 Lunar Module / ALSEP",
             "ID": "1969-099C"
         },
@@ -4669,6 +4733,22 @@
             "all_NSSDCA_ID": "1969-099B",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "04226|Apollo 12 Saturn V third stage|Apollo12SIVB"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 13 Command and Service Module (CSM)",
+            "ID": "1970-029A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101481",
+            "itemLabel": "Apollo 13 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-029A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Odyssey|CM-109|CSM-109"
         }
     ],
     [
@@ -4725,6 +4805,22 @@
             "ID": "1971-008A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q28101387",
+            "itemLabel": "Apollo 14 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CM-110|CSM-110|Kitty Hawk"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 14 Command and Service Module (CSM)",
+            "ID": "1971-008A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q178871",
             "itemLabel": "Apollo 14",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -4765,6 +4861,22 @@
             "all_NSSDCA_ID": "1971-008B",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "04904|Apollo 14 Saturn V third stage|Apollo14SIVB"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 15 Command and Service Module (CSM)",
+            "ID": "1971-063A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101431",
+            "itemLabel": "Apollo 15 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Endeavour|CM-112|CSM-112"
         }
     ],
     [
@@ -4837,6 +4949,22 @@
             "ID": "1972-031A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q28101407",
+            "itemLabel": "Apollo 16 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-031A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Casper|CM-113|CSM-113"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 16 Command and Service Module (CSM)",
+            "ID": "1972-031A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q188168",
             "itemLabel": "Apollo 16",
             "all_Unified_Astro_Thesaurus_ID": "",
@@ -4893,6 +5021,22 @@
             "all_NSSDCA_ID": "1972-031D",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "06009|Apollo 16D|Apollo16Subsatellite|PFS-2"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 17 Command and Service Module (CSM)",
+            "ID": "1972-096A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101398",
+            "itemLabel": "Apollo 17 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-096A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "America|CM-114|CSM-114"
         }
     ],
     [
@@ -5078,7 +5222,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q165585",
-            "itemLabel": "Cassini-Huygens",
+            "itemLabel": "Cassini\u2212Huygens",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1997-061A",
             "all_NAIF_ID": "-150|-81",
@@ -5238,7 +5382,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1078290",
-            "itemLabel": "Cosmos 21",
+            "itemLabel": "Kosmos 21",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1963-044A",
             "all_NAIF_ID": "",
@@ -5254,7 +5398,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1078275",
-            "itemLabel": "Cosmos 27",
+            "itemLabel": "Kosmos 27",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1964-014A",
             "all_NAIF_ID": "",
@@ -5270,7 +5414,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q733783",
-            "itemLabel": "Cosmos 60",
+            "itemLabel": "Kosmos 60",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1965-018A",
             "all_NAIF_ID": "",
@@ -5286,7 +5430,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1632091",
-            "itemLabel": "Cosmos 96",
+            "itemLabel": "Kosmos 96",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1965-094A",
             "all_NAIF_ID": "",
@@ -5302,7 +5446,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q592835",
-            "itemLabel": "Cosmos 111",
+            "itemLabel": "Kosmos 111",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1966-017A",
             "all_NAIF_ID": "",
@@ -5318,7 +5462,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q7204940",
-            "itemLabel": "Cosmos 167",
+            "itemLabel": "Kosmos 167",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1967-063A",
             "all_NAIF_ID": "",
@@ -5334,7 +5478,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q387190",
-            "itemLabel": "Cosmos 300",
+            "itemLabel": "Kosmos 300",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1969-080A",
             "all_NAIF_ID": "",
@@ -5350,7 +5494,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q554526",
-            "itemLabel": "Cosmos 305",
+            "itemLabel": "Kosmos 305",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1969-092A",
             "all_NAIF_ID": "",
@@ -5366,7 +5510,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q4235066",
-            "itemLabel": "Cosmos 359",
+            "itemLabel": "Kosmos 359",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1970-065A",
             "all_NAIF_ID": "",
@@ -5382,7 +5526,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2503206",
-            "itemLabel": "Cosmos 419",
+            "itemLabel": "Kosmos 419",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1971-042A",
             "all_NAIF_ID": "",
@@ -5398,7 +5542,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3242405",
-            "itemLabel": "Cosmos 482",
+            "itemLabel": "Kosmos 482",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1972-023A",
             "all_NAIF_ID": "",
@@ -5526,7 +5670,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49684",
-            "itemLabel": "Eureca",
+            "itemLabel": "European Retrievable Carrier",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1992-049B",
             "all_NAIF_ID": "",
@@ -5564,7 +5708,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1959-004A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "S 2"
+            "aliases": "S-2|S 2|Able 3|Explorer VI"
         }
     ],
     [
@@ -5686,7 +5830,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q519533",
-            "itemLabel": "Gemini 9",
+            "itemLabel": "Gemini 9A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1966-047A",
             "all_NAIF_ID": "",
@@ -5741,6 +5885,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "GEOdetic SATellite|GEOdetic SATellite"
+        }
+    ],
+    [
+        {
+            "Name": "Giotto",
+            "ID": "1985-056A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q660356",
+            "itemLabel": "Giotto",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1985-056A",
+            "all_NAIF_ID": "-78",
+            "all_NSSDCA_ID": "1985-056A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u30b8\u30e7\u30c3\u30c8|D\u017eoto|Giotto mission|Missi\u00f3 Giotto|Sonda Giotto|Mision Giotto|Misi\u00f3n Giotto|Sonde Giotto|Sonda Giotto|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e08\u0e2d\u0e15\u0e42\u0e15|\u55ac\u9676\u865f"
         }
     ],
     [
@@ -5830,7 +5990,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1190799",
-            "itemLabel": "HEAO-3",
+            "itemLabel": "High Energy Astronomy Observatory 3",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1979-082A",
             "all_NAIF_ID": "",
@@ -5846,7 +6006,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3129781",
-            "itemLabel": "Helios 1",
+            "itemLabel": "Helios-A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1974-097A",
             "all_NAIF_ID": "-301",
@@ -5862,7 +6022,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3129777",
-            "itemLabel": "Helios 2",
+            "itemLabel": "Helios-B",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1976-003A",
             "all_NAIF_ID": "-302",
@@ -5894,13 +6054,13 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2513",
-            "itemLabel": "t\u00e9lescope spatial Hubble",
+            "itemLabel": "Hubble Space Telescope",
             "all_Unified_Astro_Thesaurus_ID": "761",
             "all_COSPAR_ID": "1990-037B",
             "all_NAIF_ID": "-48",
             "all_NSSDCA_ID": "1990-037B",
             "all_Minor_Planet_Center_observatory_ID": "250",
-            "aliases": "HST|HST|HST|HST|HST|Hubble|Hubble|Hubble|\ud5c8\ube14|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|HST|HST|HST|HST|HST|HST|HST|Hubble|HST|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|Hubble-Space-Telescope|Hubble-Teleskop|Hubbleteleskop|Hubble (telescopio)|TEH|Telescopio espacial Hubble|Telescopio Espacial Hubble|Telescopio Hubble|Hubble Space Telescope|Large Space Telescope|t\u00e9lescope Hubble|Telescope spatial Hubble|T\u00e9lescope spatial Hubble|Hubble-Weltraumteleskop|Hubble Space Telescope|Telescopio Hubble|Telescopio orbitale Hubble|Hubble ruimtetelescoop|Hubble Space Telescope|Hubble-ruimtetelescoop|Hubble-telescoop|Hubbletelescoop|\u07dd.\u07dd.\u07e4|HST|Hubble Space Telescope|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|Hubbleteleskopet"
+            "aliases": "HST|HST|HST|HST|HST|Hubble|Hubble|Hubble|\ud5c8\ube14|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|HST|HST|HST|HST|HST|HST|HST|Hubble|Hubble|HST|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|Hubble-Space-Telescope|Hubble-Teleskop|Hubbleteleskop|Hubble (telescopio)|TEH|Telescopio espacial Hubble|Telescopio Espacial Hubble|Telescopio Hubble|Hubble Space Telescope|Large Space Telescope|t\u00e9lescope Hubble|Telescope spatial Hubble|T\u00e9lescope spatial Hubble|Hubble-Weltraumteleskop|Hubble Space Telescope|Telescopio Hubble|Telescopio orbitale Hubble|Hubble ruimtetelescoop|Hubble Space Telescope|Hubble-ruimtetelescoop|Hubble-telescoop|Hubbletelescoop|\u07dd.\u07dd.\u07e4|HST|Hubble Space Telescope|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|Hubbleteleskopet|HST|Hubble Space Telescope|Hubble- telescope"
         }
     ],
     [
@@ -5937,6 +6097,22 @@
     ],
     [
         {
+            "Name": "Intercosmos 14",
+            "ID": "1975-115A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1097393",
+            "itemLabel": "Intercosmos 14",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-115A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Interkosmos 14|Intercosmos 14"
+        }
+    ],
+    [
+        {
             "Name": "IRAS",
             "ID": "1983-004A"
         },
@@ -5948,7 +6124,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1983-004A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite|IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9"
+            "aliases": "IRAS|IRAS|The Infrared Astronomical Satellite|Iras|Infrared Astronomical Satellite|Satelite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Sat\u00e9lite astron\u00f3mico infrarrojo|Satelite IRAS|Sat\u00e9lite IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescope spatial IRAS|T\u00e9lescope spatial iras|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|Infrared Astronomy Satellite|Telescopio spaziale IRAS|\u30a2\u30a4\u30e9\u30b9|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satelite|IRAS|Infrared Astronomical Satellite|\u7d05\u5916\u5929\u6587\u885b\u661f|\u7ea2\u5916\u5929\u6587\u536b\u661f|Infrared Astronomical Satellite"
         }
     ],
     [
@@ -5958,7 +6134,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1475301",
-            "itemLabel": "International Sun-Earth Explorer",
+            "itemLabel": "International Cometary Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1978-079A",
             "all_NAIF_ID": "-112",
@@ -5990,7 +6166,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q186447",
-            "itemLabel": "T\u00e9l\u00e9scope spatial James-Webb",
+            "itemLabel": "James Webb Space Telescope",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2021-130A",
             "all_NAIF_ID": "-170",
@@ -6033,6 +6209,38 @@
     ],
     [
         {
+            "Name": "Longjiang 1",
+            "ID": "2018-045B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60846115",
+            "itemLabel": "Longjiang 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-045B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Longjiang 2",
+            "ID": "2018-045C"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60846119",
+            "itemLabel": "Longjiang 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2018-045C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LO-94|Longjiang-2|Lunar OSCAR 94"
+        }
+    ],
+    [
+        {
             "Name": "Lucy",
             "ID": "2021-093A"
         },
@@ -6060,7 +6268,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1959-012A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0644\u0648\u0646\u0627 \u0661|Lunik 1|00112|1959-012A|Luna 1|Luna E 1|Luna E-1|Lunik 1|\u0644\u0648\u0646\u0627 1|Lunik 1|Lunik 1|\ub8e8\ub0981\ud638|Luna 1|Luna-1D|Loenik 1|\u0141unnik 1|Mechta"
+            "aliases": "\u0644\u0648\u0646\u0627 \u0661|Lunik 1|00112|1959-012A|Luna 1|Luna E 1|Luna E-1|Lunik 1|\u0644\u0648\u0646\u0627 1|Lunik 1|Lunik 1|\ub8e8\ub0981\ud638|Luna 1|Luna-1D|Loenik 1|\u0141unnik 1|Mechta|Mechta|E-1 No. 4|Ye-1 No. 4|Lunik 1|Artificial Planet 1|First Cosmic Ship"
         }
     ],
     [
@@ -6076,7 +6284,23 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1959-014A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0644\u0648\u0646\u0627 \u0662|\u0644\u0648\u0646\u0627-2|\u0644\u0648\u0646\u0627-\u0662|Lunik 2|Lunik 2|\u039b\u03bf\u03cd\u03bd\u03b9\u03ba 2|Luna E 1A|Luna E-1A|Lunik 2|\u0644\u0648\u0646\u0627 2|Lunik 2|\u10da\u10e3\u10dc\u10d0 2|Luna 2|\u101c\u1030\u1014\u102c \u1042|Loenik 2|Luna 2|\u0141unnik 2|E-1 No. 7|Lunik 2|Second Soviet Cosmic Rocket"
+            "aliases": "\u0644\u0648\u0646\u0627 \u0662|\u0644\u0648\u0646\u0627-2|\u0644\u0648\u0646\u0627-\u0662|Lunik 2|Lunik 2|\u039b\u03bf\u03cd\u03bd\u03b9\u03ba 2|Luna E 1A|Luna E-1A|Lunik 2|\u0644\u0648\u0646\u0627 2|Lunik 2|\u10da\u10e3\u10dc\u10d0 2|Luna 2|\u101c\u1030\u1014\u102c \u1042|Loenik 2|Luna 2|\u0141unnik 2|E-1 No. 7|Lunik 2|Second Soviet Cosmic Rocket|Ye-1A No. 7"
+        }
+    ],
+    [
+        {
+            "Name": "Luna 3",
+            "ID": "1959-008A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q942814",
+            "itemLabel": "Luna 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1959-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1959-008A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0644\u0648\u0646\u0627 \u0663|Lunik 3|\u041b\u0443\u043d\u0430-3|E-2A No. 1"
         }
     ],
     [
@@ -6422,7 +6646,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q459399",
-            "itemLabel": "Lunar Crater Observation and Sensing Satellite",
+            "itemLabel": "LCROSS",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2009-031B",
             "all_NAIF_ID": "-18",
@@ -6540,7 +6764,7 @@
             "all_NAIF_ID": "-85",
             "all_NSSDCA_ID": "2009-031A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|Lcross|LRO|\u0642\u0635\u0641 \u0627\u0644\u0642\u0645\u0631|Lunar Reconnaissance Orbiter|\u041b\u0443\u043d\u0430\u0440 \u0420\u0438\u043a\u043e\u043d\u0438\u0441\u044a\u043d\u0441 \u041e\u0440\u0431\u0438\u0442\u044a\u0440|LCROSS|LRO|Lunar Reconnaissance Orbiter|\u0932\u0930\u0913|\u30eb\u30ca\u30fb\u30ea\u30b3\u30cd\u30c3\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf\u30fc|\u30eb\u30ca\u30fc\u30fb\u30ea\u30b3\u30ca\u30a4\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf|\u30eb\u30ca\u30fc\u30fb\u30ea\u30b3\u30cd\u30c3\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf|\u30eb\u30ca\u30fc\u30fb\u30ea\u30b3\u30cd\u30c3\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf\u30fc|LRO|M\u0113ness izl\u016bko\u0161anas orbit\u0101lais apar\u0101ts|LRO|Lunar Reconnaissance Orbiter|\u041b\u0420\u041e|LRO|LRO"
+            "aliases": "LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|LRO|\u0642\u0635\u0641 \u0627\u0644\u0642\u0645\u0631|Lunar Reconnaissance Orbiter|\u041b\u0443\u043d\u0430\u0440 \u0420\u0438\u043a\u043e\u043d\u0438\u0441\u044a\u043d\u0441 \u041e\u0440\u0431\u0438\u0442\u044a\u0440|LRO|Lunar Reconnaissance Orbiter|\u0932\u0930\u0913|\u30eb\u30ca\u30fb\u30ea\u30b3\u30cd\u30c3\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf\u30fc|\u30eb\u30ca\u30fc\u30fb\u30ea\u30b3\u30ca\u30a4\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf|\u30eb\u30ca\u30fc\u30fb\u30ea\u30b3\u30cd\u30c3\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf|\u30eb\u30ca\u30fc\u30fb\u30ea\u30b3\u30cd\u30c3\u30b5\u30f3\u30b9\u30fb\u30aa\u30fc\u30d3\u30bf\u30fc|LRO|M\u0113ness izl\u016bko\u0161anas orbit\u0101lais apar\u0101ts|LRO|Lunar Reconnaissance Orbiter|\u041b\u0420\u041e|LRO|LRO"
         }
     ],
     [
@@ -6566,29 +6790,13 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2156739",
-            "itemLabel": "Mangalyaan",
+            "itemLabel": "Mars Orbiter Mission",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2013-060A",
             "all_NAIF_ID": "-3",
             "all_NSSDCA_ID": "2013-060A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "MOM|Mangalyaan|Mangalyaan|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928 2013|\u092d\u093e\u0930\u0924\u0940\u092f \u092e\u0902\u0917\u0932 \u092e\u093f\u0936\u0928 \u0968\u0966\u0967\u0969|\u0d2e\u0d02\u0d17\u0d7d\u0d2f\u0d3e\u0d7b|Mars Orbiter Mission|MOM|Mangalyaan|Mars Orbiter Mission|\u5370\u5ea6\u7684\u706b\u661f\u8ecc\u9053\u63a2\u6e2c\u5668"
-        }
-    ],
-    [
-        {
-            "Name": "Mariner 2",
-            "ID": "1962-041A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q208984",
-            "itemLabel": "Mariner 2",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1962-041A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1962-041A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0662|\u0645\u0627\u0631\u06cc\u0646\u0631 2|\ub9c8\ub9ac\ub108 2\ud638|Mariner II"
         }
     ],
     [
@@ -6689,18 +6897,18 @@
     ],
     [
         {
-            "Name": "Mariner 10",
-            "ID": "1973-085A"
+            "Name": "Mars 1",
+            "ID": "1962-061A"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q59131",
-            "itemLabel": "Mariner 10",
+            "item": "http://www.wikidata.org/entity/Q678689",
+            "itemLabel": "Mars 1",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1973-085A",
+            "all_COSPAR_ID": "1962-061A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1973-085A",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661\u0660|\u0645\u0627\u0631\u06cc\u0646\u0631 10|\u0645\u0627\u0631\u06cc\u0646\u0631 \u0661\u0660|Mariner X|\ub9c8\ub9ac\ub108 10\ud638|Mariner Neezn\u00e1\u00e1|Mariner-10|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 10|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|Mariner 73-2|Mariner 73J|Mariner Venus Mercury 1973"
+            "aliases": "\u0386\u03c1\u03b7\u03c2-1|\u041c\u0430\u0440c-1"
         }
     ],
     [
@@ -6924,7 +7132,7 @@
             "all_NAIF_ID": "-53",
             "all_NSSDCA_ID": "1996-068A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7|Mars Pathfinder|Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108"
+            "aliases": "Mars Pathfinder|Pathfinder|Sojourner|Carl Sagan Memorial Station|Carl Sagan Memorial Station|MESUR Pathfinder|\u05de\u05d0\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05de\u05e8\u05e1 \u05e4\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u05e4\u05d0\u05ea'\u05e4\u05d9\u05d9\u05e0\u05d3\u05e8|\u30bd\u30b8\u30e3\u30fc\u30ca|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u8a08\u753b|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0|\u30de\u30fc\u30ba\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc|\ub9c8\uc2a4 \uc18c\uc800\ub108|\uc18c\uc800\ub108|\uc18c\uc800\ub108 \ub85c\ubc84|\uc18c\uc800\ub108\ud638|\uce7c \uc138\uc774\uac74 \uae30\ub150\uae30\uc9c0|\ud328\uc2a4\ud30c\uc778\ub354 \uacc4\ud68d|\ud328\uc2a4\ud30c\uc778\ub354 \uc784\ubb34|\ud328\uc2a4\ud30c\uc778\ub354 \ud638|\ud654\uc131 \ud328\uc2a4\ud30c\uc778\ub354|Sojourner|Romsonden Sojourner|Sojourner-roveren|\u041c\u0430\u0440\u0441 \u041f\u0430\u0441\u0444\u0430\u0439\u043d\u0434\u0435\u0440|Pathfinder|Pathfinder|Sojourner|\u0421\u043e\u0434\u0436\u043e\u0440\u043d\u0435\u0440|\u706b\u661f\u62d3\u8352\u8005\u865f|\u706b\u661f\u63a2\u8def\u8005\u53f7"
         }
     ],
     [
@@ -7205,8 +7413,24 @@
             "ID": "1965-009A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q7160562",
+            "itemLabel": "Pegasus 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-009A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pegasus A|Pegasus I"
+        }
+    ],
+    [
+        {
+            "Name": "Pegasus 1",
+            "ID": "1965-009A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q277734",
-            "itemLabel": "SA-9 (Apollo)",
+            "itemLabel": "A-103",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1965-009A",
             "all_NAIF_ID": "",
@@ -7221,14 +7445,46 @@
             "ID": "1965-039A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q7160563",
+            "itemLabel": "Pegasus 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-039A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Apollo SA-8|Pegasus B|Pegasus II"
+        }
+    ],
+    [
+        {
+            "Name": "Pegasus 2",
+            "ID": "1965-039A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q277739",
-            "itemLabel": "SA-8 (Apollo)",
+            "itemLabel": "A-104 (spacecraft)",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1965-039A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1965-039A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0623\u064a-\u0661\u0660\u0664|A-104 (SA-8)|AS-104|A-104 (SA-8)"
+        }
+    ],
+    [
+        {
+            "Name": "Pegasus 3",
+            "ID": "1965-060A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7160560",
+            "itemLabel": "Pegasus 3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-060A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Pegasus C|Pegasus III"
         }
     ],
     [
@@ -7286,7 +7542,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q210020",
-            "itemLabel": "Phobos-Grunt",
+            "itemLabel": "Fobos-Grunt",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2011-065A",
             "all_NAIF_ID": "",
@@ -7324,7 +7580,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1958-007A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able"
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661|Pioneer Able|Able 2"
         }
     ],
     [
@@ -7437,38 +7693,6 @@
             "all_NSSDCA_ID": "1968-100A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
-        }
-    ],
-    [
-        {
-            "Name": "Pioneer 10",
-            "ID": "1972-012A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q59103",
-            "itemLabel": "Pioneer 10",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1972-012A",
-            "all_NAIF_ID": "-23",
-            "all_NSSDCA_ID": "1972-012A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7|\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10"
-        }
-    ],
-    [
-        {
-            "Name": "Pioneer 11",
-            "ID": "1973-019A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q59113",
-            "itemLabel": "Pioneer 11",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1973-019A",
-            "all_NAIF_ID": "-24",
-            "all_NSSDCA_ID": "1973-019A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f"
         }
     ],
     [
@@ -7665,6 +7889,22 @@
     ],
     [
         {
+            "Name": "Rosetta",
+            "ID": "2004-006A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48572",
+            "itemLabel": "Rosetta",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2004-006A",
+            "all_NAIF_ID": "-226",
+            "all_NSSDCA_ID": "2004-006A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Rosetta|Rosetta space probe|2007 VN84|2007VN84|Programme Rosetta|Sonde Rosetta|\u0420\u043e\u0437\u0435\u0442\u0442\u0430 (\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043f\u043f\u0430\u0440\u0430\u0442)"
+        }
+    ],
+    [
+        {
             "Name": "S 55A",
             "ID": "1961-022A"
         },
@@ -7750,7 +7990,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q5938757",
-            "itemLabel": "Satellite amateur de radio-astronomie",
+            "itemLabel": "SARA",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1991-050E",
             "all_NAIF_ID": "",
@@ -7814,13 +8054,93 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q40610",
-            "itemLabel": "Spoutnik 7",
+            "itemLabel": "Tyazhely Sputnik",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1961-002A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1961-002A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Sputnik|Sputnik 7|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 7|1VA|Tyazhely Sputnik|Venera 1VA No.1|\u0422\u044f\u0436\u0435\u043b\u044b\u0439 \u0421\u043f\u0443\u0442\u043d\u0438\u043a|Venera 1VA No.1|Tyazheliy Sputnik 4|Sputnik-7|\u0422\u044f\u0436\u0451\u043b\u044b\u0439 \u0441\u043f\u0443\u0442\u043d\u0438\u043a 01|Sputnik 7|1\u0412\u0410 \u2116 1|\u0421\u0443\u043f\u0443\u0442\u043d\u0438\u043a-7|\u53f2\u6f51\u5c3c\u514b7\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Sputnik 19",
+            "ID": "1962-040A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1579612",
+            "itemLabel": "Venera 2MV-1 No.1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-040A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sputnik 23|Spoetnik 19|\u30d9\u30cd\u30e92MV-1 No.1|Sputnik 19|\u0421\u043f\u0443\u0442\u043d\u0438\u043a-19|Alpha Pi 1|Sputnik 19|\u53f2\u6f51\u5c3c\u514b19\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Sputnik 20",
+            "ID": "1962-043A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1579517",
+            "itemLabel": "Venera 2MV-1 No.2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-043A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sputnik 20|\u30d9\u30cd\u30e92MV-1 No.2|\u30d9\u30cd\u30e92MV-2 No.1|Sputnik 12|Sputnik 20|\u0421\u043f\u0443\u0442\u043d\u0438\u043a-20|1962 Alfa Tau 1|Sputnik 20|\u53f2\u6f51\u5c3c\u514b20\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Sputnik 21",
+            "ID": "1962-045A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1578461",
+            "itemLabel": "Venera 2MV-2 No.1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-045A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sputnik 13|Sputnik 21|\u0421\u043f\u0443\u0442\u043d\u0438\u043a-21|Sputnik 21|\u53f2\u6f51\u5c3c\u514b21\u865f"
+        }
+    ],
+    [
+        {
+            "Name": "Sputnik 22",
+            "ID": "1962-057A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2316001",
+            "itemLabel": "Mars 2MV-4 No.1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-057A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041c\u0430\u0440\u0441 1962\u0410|Marsnik 1962A|Korabl 11|Mars 1962A|\u30de\u30eb\u30b92MV-4 No.1|2MV-4 3|2MV-4 \u21161|Mars 2MV-4 \u21161|Mars 2MV-4 \u21163|Sput\u0146ik-22|Korabl 11|Mars 1962A|Sputnik 29|\u041c\u0430\u0440\u0441 1962A"
+        }
+    ],
+    [
+        {
+            "Name": "Sputnik 24",
+            "ID": "1962-062A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18775",
+            "itemLabel": "Mars 2MV-3 No.1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0421\u043f\u0443\u0442\u043d\u0438\u043a 24|Mars 2MV-3 No.1|\u30de\u30eb\u30b92MV-3 No.1|Sput\u0146ik-24|\u041c\u0430\u0440\u0441 1962\u0411"
         }
     ],
     [
@@ -8044,7 +8364,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2020-049A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u5929\u554f1\u53f7|\ud150\uc6d01\ud638|\u5929\u554f1\u865f|Huoxing-1|Huoxing-1|HX-1|\u5929\u554f\u4e00\u865f|\u8424\u706b\u4e8c\u53f7|\u5929\u95ee1\u53f7|Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|2020 Chinese Mars Mission|Huoxing-1|HX-1|Tianwen 1|Huoxing-1|HX-1|Mars Global Remote Sensing Orbiter, Lander and Small Rover|Tianwen 1|Huoxing-1|Mission martienne chinoise|Tianwen 1|HX-1|Mars Global Remote Sensing Orbiter and Small Rover|Ti\u0101n w\u00e8n y\u012b h\u00e0o"
+            "aliases": "Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|Chinesische Mars-Mission 2020|2020 Chinese Mars Mission|Huoxing-1|HX-1|Tianwen 1|Huoxing-1|HX-1|Mars Global Remote Sensing Orbiter, Lander and Small Rover|Tianwen 1|Huoxing-1|Mission martienne chinoise|Tianwen 1|HX-1|Mars Global Remote Sensing Orbiter and Small Rover|Ti\u0101n w\u00e8n y\u012b h\u00e0o|\u5929\u554f1\u53f7|\ud150\uc6d01\ud638|\u5929\u554f1\u865f|Huoxing-1|Huoxing-1|HX-1|\u5929\u554f\u4e00\u865f|\u8424\u706b\u4e8c\u53f7|\u5929\u95ee1\u53f7"
         }
     ],
     [
@@ -8236,7 +8556,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1975-050A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0641\u064a\u0646\u064a\u0631\u0627 \u0669|Venera 9"
+            "aliases": "\u0641\u064a\u0646\u064a\u0631\u0627 \u0669|Venera 9|venera 9"
         }
     ],
     [
@@ -8444,7 +8764,7 @@
             "all_NAIF_ID": "-31",
             "all_NSSDCA_ID": "1977-084A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0661|1977-084A|Mariner 77A|Mariner Jupiter/Saturn A|MJS 77A|Outer Planets A|Voja\u011danto 1|\u07d8\u07d0\u07ec\u07db\u07cf\u07f0\u07d9\u07cb\u07ec\u07df\u07ca\u07f2|\u07de\u07ca\u07ec \u07d8\u07ce\u07e2\u07ca\u07eb \u07de\u07ce\u07d8\u07ca\u07eb \u07e2\u07cc\u07e3\u07cc\u07f2\u07eb|\u65c5\u884c\u80051\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|\u65c5\u884c\u8005\u4e00\u53f7"
+            "aliases": "\u0641\u0648\u064a\u0627\u062c\u0631 \u0661|1977-084A|Mariner 77A|Mariner Jupiter/Saturn A|MJS 77A|Outer Planets A|Voja\u011danto 1|\u07d8\u07d0\u07ec\u07db\u07cf\u07f0\u07d9\u07cb\u07ec\u07df\u07ca\u07f2|\u07de\u07ca\u07ec \u07d8\u07ce\u07e2\u07ca\u07eb \u07de\u07ce\u07d8\u07ca\u07eb \u07e2\u07cc\u07e3\u07cc\u07f2\u07eb|\u65c5\u884c\u80051\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|\u65c5\u884c\u8005\u4e00\u53f7|Voyager 77-2"
         }
     ],
     [
@@ -8470,7 +8790,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q693552",
-            "itemLabel": "Wide-Field Infrared Survey Explorer",
+            "itemLabel": "Wide-field Infrared Survey Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2009-071A",
             "all_NAIF_ID": "",
@@ -8529,6 +8849,86 @@
     ],
     [
         {
+            "Name": "Zond 4",
+            "ID": "1968-013A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q668831",
+            "itemLabel": "Zond 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1968-013A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Zond 5",
+            "ID": "1968-076A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q372945",
+            "itemLabel": "Zond 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1968-076A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Zond 6",
+            "ID": "1968-101A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q265766",
+            "itemLabel": "Zond 6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1968-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0632\u0648\u0646\u062f \u0666"
+        }
+    ],
+    [
+        {
+            "Name": "Zond 7",
+            "ID": "1969-067A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1042955",
+            "itemLabel": "Zond 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1969-067A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Zond 8",
+            "ID": "1970-088A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q366944",
+            "itemLabel": "Zond 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-088A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
             "Name": "AE-C",
             "ID": "1973-101A"
         },
@@ -8577,6 +8977,38 @@
     ],
     [
         {
+            "Name": "Aeros-A",
+            "ID": "1972-100A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q17513",
+            "itemLabel": "AEROS A",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Aeros 1"
+        }
+    ],
+    [
+        {
+            "Name": "Aeros-B",
+            "ID": "1974-055A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14920322",
+            "itemLabel": "AEROS B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-055A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Aeros 2"
+        }
+    ],
+    [
+        {
             "Name": "Alouette 1",
             "ID": "1962-049A"
         },
@@ -8588,7 +9020,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1962-049A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30a2\u30eb\u30fc\u30a8\u30c3\u30c81|Alouette I|Alouette-1|Alouette A|Alouette-1|\u0410\u043b\u0443\u044d\u0442-1|\u0410\u043b\u044e\u044d\u0442\u0442-1|Alouette 1|\u4e91\u96c01\u53f7"
+            "aliases": "\u30a2\u30eb\u30fc\u30a8\u30c3\u30c81|Alouette I|Alouette-1|Alouette A|Alouette-1|\u0410\u043b\u0443\u044d\u0442-1|\u0410\u043b\u044e\u044d\u0442\u0442-1|Alouette 1|\u4e91\u96c01\u53f7|Alouette-A|S27-3|S27-A"
         }
     ],
     [
@@ -8604,7 +9036,23 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1965-098A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": ""
+            "aliases": "Alouette-B|ISIS-X|S27-4|S27-B"
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 16 Command and Service Module (CSM)",
+            "ID": "1972-031A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101407",
+            "itemLabel": "Apollo 16 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-031A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Casper|CM-113|CSM-113"
         }
     ],
     [
@@ -8662,7 +9110,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q8183069",
-            "itemLabel": "ATS-5",
+            "itemLabel": "Applications Technology Satellite 5",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1969-069A",
             "all_NAIF_ID": "",
@@ -8689,6 +9137,22 @@
     ],
     [
         {
+            "Name": "Cassiope",
+            "ID": "2013-055A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1022873",
+            "itemLabel": "CASSIOPE",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2013-055A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Cascade, Smallsat and Ionospheric Polar Explorer"
+        }
+    ],
+    [
+        {
             "Name": "Coriolis",
             "ID": "2003-001A"
         },
@@ -8710,7 +9174,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q5737410",
-            "itemLabel": "Coronas-F",
+            "itemLabel": "CORONAS-F",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2001-032A",
             "all_NAIF_ID": "",
@@ -8726,11 +9190,43 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q5737413",
-            "itemLabel": "Coronas-I",
+            "itemLabel": "CORONAS-I",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1994-014A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1994-014A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 262",
+            "ID": "1968-119A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53019",
+            "itemLabel": "Kosmos 262",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1968-119A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-U2-GF No.1|DS-U2-GF No.1|Kosmos 262|DS-U2-GF N\u00ba 1|DS-U2-GF No.1|DS-U2-GF No.1"
+        }
+    ],
+    [
+        {
+            "Name": "D2B",
+            "ID": "1975-092A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16320187",
+            "itemLabel": "D2B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-092A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1975-092A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
         }
@@ -8822,7 +9318,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2944742",
-            "itemLabel": "ESRO 2B",
+            "itemLabel": "ESRO-2B",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-041A",
             "all_NAIF_ID": "",
@@ -8838,7 +9334,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49684",
-            "itemLabel": "Eureca",
+            "itemLabel": "European Retrievable Carrier",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1992-049B",
             "all_NAIF_ID": "",
@@ -8929,12 +9425,188 @@
     ],
     [
         {
+            "Name": "GOES 1",
+            "ID": "1975-100A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3813727",
+            "itemLabel": "GOES 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1975-100A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 1|Geostationary Operational Environmental Satellite A|Geostationary Operational Environmental Satellite-1|Geostationary Operational Environmental Satellite-A|GOES A|GOES-1|GOES-A|SMS C|SMS-C"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 2",
+            "ID": "1977-048A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5514056",
+            "itemLabel": "GOES 2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-048A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1977-048A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 2|Geostationary Operational Environmental Satellite B|Geostationary Operational Environmental Satellite-2|Geostationary Operational Environmental Satellite-B|GOES B|GOES-2|GOES-B"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 3",
+            "ID": "1978-062A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5514058",
+            "itemLabel": "GOES-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1978-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1978-062A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 3|Geostationary Operational Environmental Satellite C|Geostationary Operational Environmental Satellite-3|Geostationary Operational Environmental Satellite-C|GOES C|GOES-3|GOES-C|GOES 3|GOES-C|GOES-C"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 4",
+            "ID": "1980-074A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3813724",
+            "itemLabel": "GOES 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-074A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1980-074A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 4|Geostationary Operational Environmental Satellite D|Geostationary Operational Environmental Satellite-4|Geostationary Operational Environmental Satellite-D|GOES D|GOES-4|GOES-D"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 5",
+            "ID": "1981-049A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3813721",
+            "itemLabel": "GOES 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1981-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1981-049A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 5|Geostationary Operational Environmental Satellite E|Geostationary Operational Environmental Satellite-5|Geostationary Operational Environmental Satellite-E|GOES E|GOES-5|GOES-E"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 6",
+            "ID": "1983-041A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3813708",
+            "itemLabel": "GOES 6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1983-041A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-041A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 6|Geostationary Operational Environmental Satellite F|Geostationary Operational Environmental Satellite-6|Geostationary Operational Environmental Satellite-F|GOES F|GOES-6|GOES-F"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 7",
+            "ID": "1987-022A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5514061",
+            "itemLabel": "GOES 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1987-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1987-022A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 7|Geostationary Operational Environmental Satellite H|Geostationary Operational Environmental Satellite-7|Geostationary Operational Environmental Satellite-H|GOES H|GOES-7|GOES-H"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 8",
+            "ID": "1994-022A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28726",
+            "itemLabel": "GOES 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1994-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1994-022A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "GOES 9",
+            "ID": "1995-025A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28637",
+            "itemLabel": "GOES 9",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1995-025A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 9|Geostationary Operational Environmental Satellite J|Geostationary Operational Environmental Satellite-9|Geostationary Operational Environmental Satellite-J|GOES J|GOES-9|GOES-J|GOES-J"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 11",
+            "ID": "2000-022A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q31563",
+            "itemLabel": "GOES 11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2000-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 11|Geostationary Operational Environmental Satellite L|Geostationary Operational Environmental Satellite-11|Geostationary Operational Environmental Satellite-L|GOES L|GOES-11|GOES-L|GOES-L"
+        }
+    ],
+    [
+        {
+            "Name": "GOES 12",
+            "ID": "2001-031A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q31562",
+            "itemLabel": "GOES 12",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2001-031A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Operational Environmental Satellite 12|Geostationary Operational Environmental Satellite M|Geostationary Operational Environmental Satellite-12|Geostationary Operational Environmental Satellite-M|GOES M|GOES-12|GOES-M|GOES-M"
+        }
+    ],
+    [
+        {
             "Name": "Helios-A",
             "ID": "1974-097A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q3129781",
-            "itemLabel": "Helios 1",
+            "itemLabel": "Helios-A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1974-097A",
             "all_NAIF_ID": "-301",
@@ -8950,7 +9622,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3129777",
-            "itemLabel": "Helios 2",
+            "itemLabel": "Helios-B",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1976-003A",
             "all_NAIF_ID": "-302",
@@ -8982,13 +9654,13 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q50017",
-            "itemLabel": "ASTRO-A",
+            "itemLabel": "Hinotori",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1981-017A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1981-017A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Hinotori|Hinotori|Hinotori|ASTRO-A|ASTRO-A|ASTRO-A|ASTRO A|ASTRO-A|Astro-A"
+            "aliases": "Hinotori|Hinotori|Hinotori|Hinotori|ASTRO-A|ASTRO-A|ASTRO-A|ASTRO A|ASTRO-A|Astro-A"
         }
     ],
     [
@@ -9041,6 +9713,86 @@
     ],
     [
         {
+            "Name": "Intercosmos 4",
+            "ID": "1970-084A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q252603",
+            "itemLabel": "Intercosmos 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-084A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Intercosmos 4"
+        }
+    ],
+    [
+        {
+            "Name": "Intercosmos 7",
+            "ID": "1972-047A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q254182",
+            "itemLabel": "Intercosmos 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-047A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Intercosmos 7"
+        }
+    ],
+    [
+        {
+            "Name": "Intercosmos 9",
+            "ID": "1973-022A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q863788",
+            "itemLabel": "Intercosmos 9",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-022A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Interkosmos 9|Copernicus 500|Intercosmos 9"
+        }
+    ],
+    [
+        {
+            "Name": "Intercosmos 11",
+            "ID": "1974-034A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q300379",
+            "itemLabel": "Intercosmos 11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-034A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Intercosmos 11"
+        }
+    ],
+    [
+        {
+            "Name": "Intercosmos 16",
+            "ID": "1976-076A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q300438",
+            "itemLabel": "Intercosmos 16",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1976-076A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Intercosmos 16|IK\u201316"
+        }
+    ],
+    [
+        {
             "Name": "Interface Region Imaging Spectrograph (IRIS)",
             "ID": "2013-033A"
         },
@@ -9062,7 +9814,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1475301",
-            "itemLabel": "International Sun-Earth Explorer",
+            "itemLabel": "International Cometary Explorer",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1978-079A",
             "all_NAIF_ID": "-112",
@@ -9073,12 +9825,28 @@
     ],
     [
         {
+            "Name": "KH-5 9034A",
+            "ID": "1962-018A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q650661",
+            "itemLabel": "FTV-1126",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-018A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Corona 41"
+        }
+    ],
+    [
+        {
             "Name": "KORONAS-Foton",
             "ID": "2009-003A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q377849",
-            "itemLabel": "Coronas-Photon",
+            "itemLabel": "Koronas-Foton",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2009-003A",
             "all_NAIF_ID": "",
@@ -9382,7 +10150,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q166596",
-            "itemLabel": "\u014csumi",
+            "itemLabel": "Ohsumi",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1970-011A",
             "all_NAIF_ID": "",
@@ -9681,6 +10449,86 @@
     ],
     [
         {
+            "Name": "Prognoz 4",
+            "ID": "1975-122A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111854567",
+            "itemLabel": "Prognoz 4",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-122A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1975-122A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz4"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz 5",
+            "ID": "1976-112A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111855228",
+            "itemLabel": "Prognoz 5",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1976-112A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1976-112A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz5"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz 6",
+            "ID": "1977-093A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111855775",
+            "itemLabel": "Prognoz  6",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1977-093A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1977-093A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz6"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz 7",
+            "ID": "1978-101A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111855979",
+            "itemLabel": "Prognoz 7",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1978-101A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1978-101A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz7"
+        }
+    ],
+    [
+        {
+            "Name": "Prognoz 8",
+            "ID": "1980-103A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111856351",
+            "itemLabel": "Prognoz 8",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1980-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1980-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Prognoz8"
+        }
+    ],
+    [
+        {
             "Name": "Prognoz 9",
             "ID": "1983-067A"
         },
@@ -9697,12 +10545,28 @@
     ],
     [
         {
+            "Name": "Prognoz 10",
+            "ID": "1985-033A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1541114",
+            "itemLabel": "Prognoz 10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1985-033A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041f\u0440\u043e\u0433\u043d\u043e\u0437-10"
+        }
+    ],
+    [
+        {
             "Name": "RAE-A",
             "ID": "1968-055A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q3736075",
-            "itemLabel": "Explorer 38",
+            "itemLabel": "Radio Astronomy Explorer A",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-055A",
             "all_NAIF_ID": "",
@@ -9793,22 +10657,6 @@
     ],
     [
         {
-            "Name": "SAMPEX",
-            "ID": "1992-038A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54367",
-            "itemLabel": "Solar Anomalous and Magnetospheric Particle Explorer",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1992-038A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1992-038A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "SAMPEX|Explorer 68|Explorer 68|SAMPEX|SAMPEX"
-        }
-    ],
-    [
-        {
             "Name": "San Marco-D/L",
             "ID": "1988-026A"
         },
@@ -9846,7 +10694,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q16325278",
-            "itemLabel": "Signe 3",
+            "itemLabel": "SIGNE 3",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1977-049A",
             "all_NAIF_ID": "",
@@ -10069,12 +10917,44 @@
             "ID": "1968-017A"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q46400832",
+            "itemLabel": "Solrad 9",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1968-017A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Explorer 37|Explorer 37"
+        }
+    ],
+    [
+        {
+            "Name": "SOLRAD 9",
+            "ID": "1968-017A"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q109801908",
             "itemLabel": "Explorer 37",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1968-017A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1968-017A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "SOLRAD 10",
+            "ID": "1971-058A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q55150831",
+            "itemLabel": "Solrad 10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-058A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
         }
@@ -10129,18 +11009,18 @@
     ],
     [
         {
-            "Name": "SORCE",
-            "ID": "2003-004A"
+            "Name": "Sputnik 2",
+            "ID": "1957-002A"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q54368",
-            "itemLabel": "Solar Radiation and Climate Experiment",
+            "item": "http://www.wikidata.org/entity/Q190555",
+            "itemLabel": "Sputnik 2",
             "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2003-004A",
+            "all_COSPAR_ID": "1957-002A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2003-004A",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "SORCE|SORCE"
+            "aliases": "\u0633\u0628\u0648\u062a\u0646\u0643 \u0662|\u0633\u0628\u0648\u062a\u0646\u064a\u0643 2|\u0633\u0628\u0648\u062a\u0646\u064a\u0643 \u0662|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 2|Sputnik II|\u03a3\u03c0\u03bf\u03cd\u03c4\u03bd\u03b9\u03ba \u0399\u0399|Prosteyshiy Sputnik 2|Sputnik II|\u0627\u0633\u067e\u0648\u062a\u0646\u06cc\u06a9 2|\u0627\u0633\u067e\u0648\u062a\u0646\u06cc\u06a9 \u06f2|\u0627\u0633\u067e\u0648\u062a\u0646\u06cc\u06a9-2|Sputnik-2|Sputnik 2|Sputnik 2|Sputnik II|Sputnik-2|Sputnik-II|PS-2|Sput\u0146ik 2|Sput\u0146ik-2|Sputnik 2|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 2|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 2|Sputnik II|\u0b9a\u0bc1\u0baa\u0bc1\u0b9f\u0bcd\u0ba9\u0bbf\u0b95\u0bcd 2|\u0bb8\u0bcd\u0baa\u0bc1\u0b9f\u0bcd\u0ba9\u0bbf\u0b95\u0bcd 2|\u53f2\u6cfc\u5c3c\u514b2\u53f7|\u53f2\u6f51\u5c3c\u514b2\u865f|\u65af\u666e\u7279\u5c3c\u514b2\u53f7"
         }
     ],
     [
@@ -10173,22 +11053,6 @@
             "all_NSSDCA_ID": "2006-047B",
             "all_Minor_Planet_Center_observatory_ID": "C50",
             "aliases": "Solar Terrestrial Relations Observatory B|STEREO Behind|STEREO Lead|STEREO West"
-        }
-    ],
-    [
-        {
-            "Name": "STP P78-1",
-            "ID": "1979-017A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54370",
-            "itemLabel": "Solwind",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1979-017A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1979-017A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Solwind|P78-1|P-78|Space Test Program P78-1 (P78-1)|P78-1\u4eba\u9020\u885b\u661f"
         }
     ],
     [
@@ -10326,7 +11190,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3514094",
-            "itemLabel": "Taiyo",
+            "itemLabel": "Taiyo (satellite)",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1975-014A",
             "all_NAIF_ID": "",
@@ -10349,38 +11213,6 @@
             "all_NSSDCA_ID": "1972-014A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
-        }
-    ],
-    [
-        {
-            "Name": "TERRIERS",
-            "ID": "1999-026A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54379",
-            "itemLabel": "TERRIERS",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1999-026A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1999-026A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Topographic Experiment using Radiative Recombinative Ionospheric EUV and Radio Sources|Explorer 76|TERRIERS"
-        }
-    ],
-    [
-        {
-            "Name": "TIMED",
-            "ID": "2001-055B"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54378",
-            "itemLabel": "TIMED",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "2001-055B",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2001-055B",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "TIMED"
         }
     ],
     [
@@ -10502,7 +11334,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2300867",
-            "itemLabel": "WIND",
+            "itemLabel": "Wind",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1994-071A",
             "all_NAIF_ID": "-8",
@@ -10589,22 +11421,6 @@
             "all_NSSDCA_ID": "1962-021A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Discoverer 42"
-        }
-    ],
-    [
-        {
-            "Name": "1963-038C",
-            "ID": "1963-038C"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q54385",
-            "itemLabel": "Transit 5E-1",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "1963-038C",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1963-038C",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Transit 5E-1|1963-038C|APL SN 39"
         }
     ],
     [
@@ -10737,12 +11553,44 @@
     ],
     [
         {
+            "Name": "Aeros-A",
+            "ID": "1972-100A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q17513",
+            "itemLabel": "AEROS A",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Aeros 1"
+        }
+    ],
+    [
+        {
+            "Name": "Aeros-B",
+            "ID": "1974-055A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14920322",
+            "itemLabel": "AEROS B",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1974-055A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Aeros 2"
+        }
+    ],
+    [
+        {
             "Name": "Akebono",
             "ID": "1989-016A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q2828969",
-            "itemLabel": "Akebono (satellite)",
+            "itemLabel": "Akebono",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1989-016A",
             "all_NAIF_ID": "",
@@ -10764,7 +11612,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1962-049A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30a2\u30eb\u30fc\u30a8\u30c3\u30c81|Alouette I|Alouette-1|Alouette A|Alouette-1|\u0410\u043b\u0443\u044d\u0442-1|\u0410\u043b\u044e\u044d\u0442\u0442-1|Alouette 1|\u4e91\u96c01\u53f7"
+            "aliases": "\u30a2\u30eb\u30fc\u30a8\u30c3\u30c81|Alouette I|Alouette-1|Alouette A|Alouette-1|\u0410\u043b\u0443\u044d\u0442-1|\u0410\u043b\u044e\u044d\u0442\u0442-1|Alouette 1|\u4e91\u96c01\u53f7|Alouette-A|S27-3|S27-A"
         }
     ],
     [
@@ -10780,7 +11628,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1965-098A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": ""
+            "aliases": "Alouette-B|ISIS-X|S27-4|S27-B"
         }
     ],
     [
@@ -10893,6 +11741,22 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Apollo 14 Command and Service Module (CSM)",
+            "ID": "1971-008A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101387",
+            "itemLabel": "Apollo 14 Command and Service Module",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CM-110|CSM-110|Kitty Hawk"
         }
     ],
     [
@@ -11014,7 +11878,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q17012906",
-            "itemLabel": "SPRINT-B",
+            "itemLabel": "Arase",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2016-080A",
             "all_NAIF_ID": "",
@@ -11121,6 +11985,22 @@
     ],
     [
         {
+            "Name": "ASTP-Apollo",
+            "ID": "1975-066A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4068053",
+            "itemLabel": "CSM-111",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1975-066A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Apollo (ASTP)|Apollo CSM-111"
+        }
+    ],
+    [
+        {
             "Name": "Astrid",
             "ID": "1995-002B"
         },
@@ -11206,7 +12086,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q8183069",
-            "itemLabel": "ATS-5",
+            "itemLabel": "Applications Technology Satellite 5",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1969-069A",
             "all_NAIF_ID": "",
@@ -11233,12 +12113,44 @@
     ],
     [
         {
+            "Name": "Aureol 1",
+            "ID": "1971-119A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54232",
+            "itemLabel": "Oreol 1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-119A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Arkad 1|Aureole 1"
+        }
+    ],
+    [
+        {
+            "Name": "Aureol 2",
+            "ID": "1973-107A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54233",
+            "itemLabel": "\u041e\u0440\u0435\u043e\u043b-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-107A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Arkad 2|Aureole 2"
+        }
+    ],
+    [
+        {
             "Name": "Aureol 3",
             "ID": "1981-094A"
         },
         {
             "item": "http://www.wikidata.org/entity/Q6052292",
-            "itemLabel": "Aur\u00e9ole 3",
+            "itemLabel": "Oreol 3",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1981-094A",
             "all_NAIF_ID": "",
@@ -11414,7 +12326,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q165585",
-            "itemLabel": "Cassini-Huygens",
+            "itemLabel": "Cassini\u2212Huygens",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1997-061A",
             "all_NAIF_ID": "-150|-81",
@@ -11558,7 +12470,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q5737410",
-            "itemLabel": "Coronas-F",
+            "itemLabel": "CORONAS-F",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "2001-032A",
             "all_NAIF_ID": "",
@@ -11574,7 +12486,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q5737413",
-            "itemLabel": "Coronas-I",
+            "itemLabel": "CORONAS-I",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1994-014A",
             "all_NAIF_ID": "",
@@ -11590,13 +12502,77 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q51558",
-            "itemLabel": "Cosmos 2",
+            "itemLabel": "Kosmos 2",
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1962-009A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1962-009A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Sputnik 12|Sputnik 12|1MS #1|Kosmos 2|1MS N\u00b01|Sputnik 12"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 11",
+            "ID": "1962-056A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q367580",
+            "itemLabel": "Kosmos 11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1962-056A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Kosmos 11"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 26",
+            "ID": "1964-013A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53014",
+            "itemLabel": "Kosmos 26",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-013A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-MG No.1|Kosmos 26|DS-MG N\u00b01|DSZ-MG-1"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 49",
+            "ID": "1964-069A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53580",
+            "itemLabel": "Kosmos 49",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-069A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-MG No.2|Kosmos 49|DS-MG N\u00b02"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 53",
+            "ID": "1965-006A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q851808",
+            "itemLabel": "Kosmos 53",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1965-006A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Kosmos 53|Kosmos 53"
         }
     ]
 ]
