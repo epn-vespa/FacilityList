@@ -104,6 +104,7 @@ for i in range(1 if test == True else int(results_count) // page_size):
     # remplacer les espaces par des tirets dans itemLabel
     for e in new_elements:
         e['itemLabel'] = e['itemLabel'].replace(' ', '-')
+        e['itemLabel'] = e['itemLabel'].lower()
     r.extend(new_elements)
 
 print(r)
