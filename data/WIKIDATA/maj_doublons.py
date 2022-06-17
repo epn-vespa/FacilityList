@@ -10,7 +10,7 @@ print(duplicate_names)
 
 duplicatas = {}
 for name in duplicate_names :
-    duplicatas[name] = [ e["item"] for e in r if e["itemLabel"]==name ]
+    duplicatas[name] = [ e["item"] for e in r if e["itemLabel"]==name]
 
 print(duplicatas)
 
