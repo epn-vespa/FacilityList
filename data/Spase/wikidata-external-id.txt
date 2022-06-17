@@ -11,7 +11,7 @@
 |subject item           = Q111145806
 |infobox parameter	= <!-- Wikipedia infobox parameters, if any; ex: "population" in [[:en:template:infobox settlement]] -->
 |datatype		= external-id
-|domain			= {{Q|62832}}, {{Q|3099911}}, {{Q|40218}}, {{Q|5227240}}, {{Q|1172284}}, {{Q|31855}}
+|domain			= {{Q|6643326}}, {{Q|2740627}}, {{Q|104499}}
 |allowed values		= <!-- type of linked items (Q template or text), string pattern (regex if possible), list or range of allowed values, etc. -->
 |allowed units          = <!-- units that are allowed for values of this property if the datatype is quantity or time -->
 |source			= https://spase-group.org
