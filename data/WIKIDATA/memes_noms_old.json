@@ -1,0 +1,807 @@
+{
+    "MOVE-II": [
+        "http://www.wikidata.org/entity/Q105245387",
+        "http://www.wikidata.org/entity/Q60847603" pas le meme cospar ID
+    ],
+    "Galileo": [
+        "http://www.wikidata.org/entity/Q105425030",
+        "http://www.wikidata.org/entity/Q182008" a noter comme doublon 
+    ],
+    "Walter-Hohmann-Sternwarte": [
+        "http://www.wikidata.org/entity/Q105542244",
+        "http://www.wikidata.org/entity/Q257131" pas un doublon mais meme nom
+    ],
+    "LOSAT-X": [
+        "http://www.wikidata.org/entity/Q105828691",
+        "http://www.wikidata.org/entity/Q111499731" fusionné
+    ],
+    "SPOT-2": [
+        "http://www.wikidata.org/entity/Q106366737",
+        "http://www.wikidata.org/entity/Q111500120"fusionné
+    ],
+    "SPOT-3": [
+        "http://www.wikidata.org/entity/Q106366903",
+        "http://www.wikidata.org/entity/Q111499244" fusionné
+    ],
+    "SPOT-4": [
+        "http://www.wikidata.org/entity/Q106366942",
+        "http://www.wikidata.org/entity/Q111498338" fusionné
+    ],
+    "SPOT-5": [
+        "http://www.wikidata.org/entity/Q106366993",
+        "http://www.wikidata.org/entity/Q111497585" fusionné
+    ],
+    "OSIRIS-3U": [
+        "http://www.wikidata.org/entity/Q106473565",
+        "http://www.wikidata.org/entity/Q111471107" fusionné
+    ],
+    "AMC-12": [
+        "http://www.wikidata.org/entity/Q106555066",
+        "http://www.wikidata.org/entity/Q294623"Un conflit a été détecté sur enwiki: [[Q294623]] avec enwiki:Star One C12, [[Q106555066]] avec enwiki:AMC-12 (satellite)
+    ],
+    "USA-198": [
+        "http://www.wikidata.org/entity/Q106608624",
+        "http://www.wikidata.org/entity/Q111497031"fusionné
+    ],
+    "USA-197": [
+        "http://www.wikidata.org/entity/Q106630000",
+        "http://www.wikidata.org/entity/Q111497034"fusionné
+    ],
+    "Stockholm-Observatory": [
+        "http://www.wikidata.org/entity/Q10680543",
+        "http://www.wikidata.org/entity/Q681497" meme nom mais pas la meme adresse
+    ],
+    "Shijian-4": [
+        "http://www.wikidata.org/entity/Q108104309",
+        "http://www.wikidata.org/entity/Q111499111" fusionné
+    ],
+    "Shijian-5": [
+        "http://www.wikidata.org/entity/Q108104312",
+        "http://www.wikidata.org/entity/Q111497859"fusionné
+    ],
+    "Shijian-7": [
+        "http://www.wikidata.org/entity/Q108104316",
+        "http://www.wikidata.org/entity/Q111497359"fusionné
+    ],
+    "Skipper": [
+        "http://www.wikidata.org/entity/Q108104337",
+        "http://www.wikidata.org/entity/Q111498955"fusionné
+    ],
+    "STSAT-3": [
+        "http://www.wikidata.org/entity/Q10855426",
+        "http://www.wikidata.org/entity/Q111471803"fusionné
+    ],
+    "CXBN-2": [
+        "http://www.wikidata.org/entity/Q109941204",
+        "http://www.wikidata.org/entity/Q111471222"fusionné
+    ],
+    "Chinasat-9A": [
+        "http://www.wikidata.org/entity/Q110117396",
+        "http://www.wikidata.org/entity/Q30345520"meme nom, id differents
+    ],
+    "Shijian-6A": [
+        "http://www.wikidata.org/entity/Q110160704",
+        "http://www.wikidata.org/entity/Q111497425"ok
+    ],
+    "Shijian-6B": [
+        "http://www.wikidata.org/entity/Q110160710",
+        "http://www.wikidata.org/entity/Q111497426"ok
+    ],
+    "Shijian-6C": [
+        "http://www.wikidata.org/entity/Q110160713",
+        "http://www.wikidata.org/entity/Q111497217"ok
+    ],
+    "Shijian-6D": [
+        "http://www.wikidata.org/entity/Q110160714",
+        "http://www.wikidata.org/entity/Q111497218"ok
+    ],
+    "Shijian-6E": [
+        "http://www.wikidata.org/entity/Q110160717",
+        "http://www.wikidata.org/entity/Q111496937"ok
+    ],
+    "Shijian-6F": [
+        "http://www.wikidata.org/entity/Q110160718",
+        "http://www.wikidata.org/entity/Q111496938"ok
+    ],
+    "IRNSS-1I": [
+        "http://www.wikidata.org/entity/Q111470992",
+        "http://www.wikidata.org/entity/Q25428047"ok
+    ],
+    "GSAT-6A": [
+        "http://www.wikidata.org/entity/Q111471017",
+        "http://www.wikidata.org/entity/Q18480158"ok
+    ],
+    "BEIDOU-3-M1": [
+        "http://www.wikidata.org/entity/Q111471089",
+        "http://www.wikidata.org/entity/Q111471584" meme nom mais satelitte different
+    ],
+    "BEIDOU-3-M2": [
+        "http://www.wikidata.org/entity/Q111471090",
+        "http://www.wikidata.org/entity/Q111471585" meme nom mais satelitte different
+    ],
+    "EchoStar-105/SES-11": [
+        "http://www.wikidata.org/entity/Q111471145",
+        "http://www.wikidata.org/entity/Q41975718"ok
+    ],
+    "TDRS-13": [
+        "http://www.wikidata.org/entity/Q111471167",
+        "http://www.wikidata.org/entity/Q18486434" ok
+    ],
+    "COMPASS-2": [
+        "http://www.wikidata.org/entity/Q111471191",
+        "http://www.wikidata.org/entity/Q111497270",
+        "http://www.wikidata.org/entity/Q1124844",
+        "http://www.wikidata.org/entity/Q14822767" meme nom id different
+    ],
+    "Pegasus": [
+        "http://www.wikidata.org/entity/Q111471193",
+        "http://www.wikidata.org/entity/Q30102248",fusionné avec Q111471193
+        "http://www.wikidata.org/entity/Q478603" air launched rocket different satellite
+    ],
+    "ROBUSTA-1B": [
+        "http://www.wikidata.org/entity/Q111471201",
+        "http://www.wikidata.org/entity/Q22038862"ok
+    ],
+    "GSAT-17": [
+        "http://www.wikidata.org/entity/Q111471215",
+        "http://www.wikidata.org/entity/Q18480132"ok
+    ],
+    "GSAT-9": [
+        "http://www.wikidata.org/entity/Q111471216",
+        "http://www.wikidata.org/entity/Q5514536"ok
+    ],
+    "SES-15": [
+        "http://www.wikidata.org/entity/Q111471226",ok
+    ],
+    "INS-1B": [
+        "http://www.wikidata.org/entity/Q111471310",
+        "http://www.wikidata.org/entity/Q111471313"meme nom mais satellite different Entity["Satellite", "41950"] et Entity["Satellite", "41954"]
+    ],
+    "RESOURCESAT-2A": [
+        "http://www.wikidata.org/entity/Q111471319",
+        "http://www.wikidata.org/entity/Q27976215"ok
+    ],
+    "JCSAT-15": [
+        "http://www.wikidata.org/entity/Q111471335",
+        "http://www.wikidata.org/entity/Q18466412"ok
+    ],
+    "SCATSAT-1": [
+        "http://www.wikidata.org/entity/Q111471377",
+        "http://www.wikidata.org/entity/Q22908533"ok
+    ],
+    "GSAT-18": [
+        "http://www.wikidata.org/entity/Q111471378",
+        "http://www.wikidata.org/entity/Q20055945"ok
+    ],
+    "JCSAT-16": [
+        "http://www.wikidata.org/entity/Q111471385",
+        "http://www.wikidata.org/entity/Q18466419"ok
+    ],
+    "ASAP-S": [
+        "http://www.wikidata.org/entity/Q111471440",
+        "http://www.wikidata.org/entity/Q111472011"meme nom mais pas meme id Entity["Satellite", "41461"] et Entity["Satellite", "38013"]
+    ],
+    "IRNSS-1G": [
+        "http://www.wikidata.org/entity/Q111471445",
+        "http://www.wikidata.org/entity/Q19698208"ok
+    ],
+    "IRNSS-1F": [
+        "http://www.wikidata.org/entity/Q111471449",
+        "http://www.wikidata.org/entity/Q19701015"ok
+    ],
+    "GSAT-15": [
+        "http://www.wikidata.org/entity/Q111471533",
+        "http://www.wikidata.org/entity/Q17019699"ok
+    ],
+    "ARSAT-2": [
+        "http://www.wikidata.org/entity/Q111471539",
+        "http://www.wikidata.org/entity/Q17709488"ok
+    ],
+    "KOMPSAT-3A": [
+        "http://www.wikidata.org/entity/Q111471601",
+        "http://www.wikidata.org/entity/Q16261847"ok
+    ],
+    "IRNSS-1D": [
+        "http://www.wikidata.org/entity/Q111471604",
+        "http://www.wikidata.org/entity/Q15694173"ok
+    ],
+    "GSAT-16": [
+        "http://www.wikidata.org/entity/Q111471619",
+        "http://www.wikidata.org/entity/Q17019715"ok
+    ],
+    "AESP-14": [
+        "http://www.wikidata.org/entity/Q111471641",
+        "http://www.wikidata.org/entity/Q19609346"ok
+    ],
+    "ARSAT-1": [
+        "http://www.wikidata.org/entity/Q111471642",
+        "http://www.wikidata.org/entity/Q4653923"ok
+    ],
+    "IRNSS-1C": [
+        "http://www.wikidata.org/entity/Q111471662",
+        "http://www.wikidata.org/entity/Q15694179"ok
+    ],
+    "UNIFORM-1": [
+        "http://www.wikidata.org/entity/Q111471733",
+        "http://www.wikidata.org/entity/Q17056511"ok
+    ],
+    "IRNSS-1B": [
+        "http://www.wikidata.org/entity/Q111471753",
+        "http://www.wikidata.org/entity/Q16012990"ok
+    ],
+    "ITF-1": [
+        "http://www.wikidata.org/entity/Q111471765",
+        "http://www.wikidata.org/entity/Q16632409"ok
+    ],
+    "GSAT-14": [
+        "http://www.wikidata.org/entity/Q111471777",
+        "http://www.wikidata.org/entity/Q14554285"ok
+    ],
+    "TDRS-12": [
+        "http://www.wikidata.org/entity/Q111471779",
+        "http://www.wikidata.org/entity/Q15712428"ok
+    ],
+    "SES-6": [
+        "http://www.wikidata.org/entity/Q111471878",
+        "http://www.wikidata.org/entity/Q13415767"ok
+    ],
+    "KOMPSAT-5": [
+        "http://www.wikidata.org/entity/Q111471886",
+        "http://www.wikidata.org/entity/Q11256162"ok
+    ],
+    "GSAT-7": [
+        "http://www.wikidata.org/entity/Q111471888",
+        "http://www.wikidata.org/entity/Q13112185"ok
+    ],
+    "PROBA-V": [
+        "http://www.wikidata.org/entity/Q111471906",
+        "http://www.wikidata.org/entity/Q3359841"ok
+    ],
+    "IGS-8A": [
+        "http://www.wikidata.org/entity/Q111471914",
+        "http://www.wikidata.org/entity/Q16086314"ok
+    ],
+    "STSAT-2C": [
+        "http://www.wikidata.org/entity/Q111471916",
+        "http://www.wikidata.org/entity/Q3912898"ok
+    ],
+    "TDRS-11": [
+        "http://www.wikidata.org/entity/Q111471917",
+        "http://www.wikidata.org/entity/Q4273946"ok
+    ],
+    "SES-5": [
+        "http://www.wikidata.org/entity/Q111471967",
+        "http://www.wikidata.org/entity/Q1622625"ok
+    ],
+    "JCSAT-13": [
+        "http://www.wikidata.org/entity/Q111471973",
+        "http://www.wikidata.org/entity/Q4041719"ok
+    ],
+    "CARTOSAT-2B": [
+        "http://www.wikidata.org/entity/Q111496713",
+        "http://www.wikidata.org/entity/Q1148147"ok
+    ],
+    "SERVIS-2": [
+        "http://www.wikidata.org/entity/Q111496728",
+        "http://www.wikidata.org/entity/Q1136417"ok
+    ],
+    "PROBA-2": [
+        "http://www.wikidata.org/entity/Q111496786",
+        "http://www.wikidata.org/entity/Q742155"ok
+    ],
+    "WorldView-2": [
+        "http://www.wikidata.org/entity/Q111496802",
+        "http://www.wikidata.org/entity/Q1128040"ok
+    ],
+    "NSS-9": [
+        "http://www.wikidata.org/entity/Q111496909",
+        "http://www.wikidata.org/entity/Q6955343"ok
+    ],
+    "SDS-1": [
+        "http://www.wikidata.org/entity/Q111496931",
+        "http://www.wikidata.org/entity/Q2205675"ok
+    ],
+    "GeoEye-1": [
+        "http://www.wikidata.org/entity/Q111496943",
+        "http://www.wikidata.org/entity/Q428048"ok
+    ],
+    "Nimiq-4": [
+        "http://www.wikidata.org/entity/Q111496946",
+        "http://www.wikidata.org/entity/Q7037678"ok
+    ],
+    "Inmarsat-4-F3": [
+        "http://www.wikidata.org/entity/Q111496949",
+        "http://www.wikidata.org/entity/Q6035073"ok
+    ],
+    "CartoSat-2A": [
+        "http://www.wikidata.org/entity/Q111496995",
+        "http://www.wikidata.org/entity/Q111497181" meme nom mais id different Entity["Satellite", "32783"] et Entity["Satellite", "29710"]
+    ],
+    "DirecTV-10": [
+        "http://www.wikidata.org/entity/Q111497051",
+        "http://www.wikidata.org/entity/Q1227406"ok
+    ],
+    "TacSat-2": [
+        "http://www.wikidata.org/entity/Q111497192",
+        "http://www.wikidata.org/entity/Q7673661"ok
+    ],
+    "STEREO-A": [
+        "http://www.wikidata.org/entity/Q111497220",
+        "http://www.wikidata.org/entity/Q28473065"ok
+    ],
+    "STEREO-B": [
+        "http://www.wikidata.org/entity/Q111497222",
+        "http://www.wikidata.org/entity/Q28473073"ok
+    ],
+    "Shijian-8": [
+        "http://www.wikidata.org/entity/Q111497229",
+        "http://www.wikidata.org/entity/Q2278759"ok
+    ],
+    "Syracuse-3B": [
+        "http://www.wikidata.org/entity/Q111497247",
+        "http://www.wikidata.org/entity/Q18327669"ok
+    ],
+    "Inmarsat-4-F1": [
+        "http://www.wikidata.org/entity/Q111497372",
+        "http://www.wikidata.org/entity/Q18327656"ok
+    ],
+    "DART": [
+        "http://www.wikidata.org/entity/Q111497376",
+        "http://www.wikidata.org/entity/Q49449"ok
+    ],
+    "Sich-1M": [
+        "http://www.wikidata.org/entity/Q111497396",
+        "http://www.wikidata.org/entity/Q4421262"ok
+    ],
+    "Double-Star-2": [
+        "http://www.wikidata.org/entity/Q111497421",
+        "http://www.wikidata.org/entity/Q111725983"ok
+    ],
+    "AMC-11": [
+        "http://www.wikidata.org/entity/Q111497447",
+        "http://www.wikidata.org/entity/Q4652545"ok
+    ],
+    "Double-Star-1": [
+        "http://www.wikidata.org/entity/Q111497460",
+        "http://www.wikidata.org/entity/Q111725982"ok
+    ],
+    "IRS-P6": [
+        "http://www.wikidata.org/entity/Q111497463",
+        "http://www.wikidata.org/entity/Q111497464" meme nom mais id differente Entity["Satellite", "28050"] et Entity["Satellite", "28051"]
+    ],
+    "SERVIS-1": [
+        "http://www.wikidata.org/entity/Q111497468",
+        "http://www.wikidata.org/entity/Q7389848"ok
+    ],
+    "USA-170": [
+        "http://www.wikidata.org/entity/Q111497518",
+        "http://www.wikidata.org/entity/Q23933954"
+    ],
+    "GSAT-2": [
+        "http://www.wikidata.org/entity/Q111497520",
+        "http://www.wikidata.org/entity/Q5514535"ok
+    ],
+    "AMC-9": [
+        "http://www.wikidata.org/entity/Q111497522",
+        "http://www.wikidata.org/entity/Q16061254"ok
+    ],
+    "USA-167": [
+        "http://www.wikidata.org/entity/Q111497529",
+        "http://www.wikidata.org/entity/Q23933929"ok
+    ],
+    "NSS-6": [
+        "http://www.wikidata.org/entity/Q111497536",
+        "http://www.wikidata.org/entity/Q4044996"ok
+    ],
+    "Nimiq-2": [
+        "http://www.wikidata.org/entity/Q111497541",
+        "http://www.wikidata.org/entity/Q14559241"ok
+    ],
+    "TDRS-10": [
+        "http://www.wikidata.org/entity/Q111497549",
+        "http://www.wikidata.org/entity/Q7669866"ok
+    ],
+    "DirecTV-5": [
+        "http://www.wikidata.org/entity/Q111497562",
+        "http://www.wikidata.org/entity/Q5280200"ok
+    ],
+    "Haiyang-1": [
+        "http://www.wikidata.org/entity/Q111497563",
+        "http://www.wikidata.org/entity/Q97279947"ok
+    ],
+    "MDS-1": [
+        "http://www.wikidata.org/entity/Q111497571",
+        "http://www.wikidata.org/entity/Q3658287"ok
+    ],
+    "TDRS-9": [
+        "http://www.wikidata.org/entity/Q111497581",
+        "http://www.wikidata.org/entity/Q7669873"ok
+    ],
+    "Reflector": [
+        "http://www.wikidata.org/entity/Q111497603",
+        "http://www.wikidata.org/entity/Q28697813"ok
+    ],
+    "PROBA-1": [
+        "http://www.wikidata.org/entity/Q111497611",
+        "http://www.wikidata.org/entity/Q1479854"ok
+    ],
+    "LRE": [
+        "http://www.wikidata.org/entity/Q111497624",
+        "http://www.wikidata.org/entity/Q5413096"ok
+    ],
+    "GSAT-1": [
+        "http://www.wikidata.org/entity/Q111497651",
+        "http://www.wikidata.org/entity/Q5514533"ok
+    ],
+    "BADR-2": [
+        "http://www.wikidata.org/entity/Q111497655",pas les meme noms ??? BADR 2 et Eurobird 2
+        "http://www.wikidata.org/entity/Q448658"
+    ],
+    "SAC-C": [
+        "http://www.wikidata.org/entity/Q111497661",
+        "http://www.wikidata.org/entity/Q5556788" ok
+    ],
+    "TDRS-8": [
+        "http://www.wikidata.org/entity/Q111497731",
+        "http://www.wikidata.org/entity/Q7669872"ok
+    ],
+    "OCS": [
+        "http://www.wikidata.org/entity/Q111497757",
+        "http://www.wikidata.org/entity/Q21406045"ok
+    ],
+    "Globalstar-M029": [
+        "http://www.wikidata.org/entity/Q111497790",
+        "http://www.wikidata.org/entity/Q111497792" meme noms mais pas le meme id Entity["Satellite", "25961"] et Entity["Satellite", "25963"]
+    ],
+    "Globalstar-M053": [
+        "http://www.wikidata.org/entity/Q111497808",
+        "http://www.wikidata.org/entity/Q111497810" meme noms mais pas le meme id Entity["Satellite", "25885"] et Entity["Satellite", "25886"]
+    ],
+    "Globalstar-M033": [
+        "http://www.wikidata.org/entity/Q111497814",
+        "http://www.wikidata.org/entity/Q111497816"meme noms mais pas le meme id Entity["Satellite", "25907"] et Entity["Satellite", "25909"]
+    ],
+    "Resurs-F-1M": [
+        "http://www.wikidata.org/entity/Q111497821",
+        "http://www.wikidata.org/entity/Q111498569"meme noms mais pas le meme id Entity["Satellite", "25929"] et Entity["Satellite", "25059"]
+    ],
+    "Globalstar-M026": [
+        "http://www.wikidata.org/entity/Q111497828",
+        "http://www.wikidata.org/entity/Q111497829"meme noms mais pas le meme id Entity["Satellite", "25872"] et Entity["Satellite", "25873"]
+    ],
+    "Globalstar-M025": [
+        "http://www.wikidata.org/entity/Q111497835",
+        "http://www.wikidata.org/entity/Q111497864"meme noms mais pas le meme id Entity["Satellite", "25772"] et Entity["Satellite", "25770"]
+    ],
+    "Iridium-14": [
+        "http://www.wikidata.org/entity/Q111497837",
+        "http://www.wikidata.org/entity/Q111498618"meme noms mais pas le meme id Entity["Satellite", "25777"] et Entity["Satellite", "24836"]
+    ],
+    ],
+    "Iridium-21": [
+        "http://www.wikidata.org/entity/Q111497838",
+        "http://www.wikidata.org/entity/Q111498602"meme noms mais pas le meme id Entity["Satellite", "25778"] et Entity["Satellite", "24873"]
+    ],
+    ],
+    "Kitsat-3": [
+        "http://www.wikidata.org/entity/Q111497862",
+        "http://www.wikidata.org/entity/Q11227964"ok
+    ],
+    "Globalstar-M019": [
+        "http://www.wikidata.org/entity/Q111497893",
+        "http://www.wikidata.org/entity/Q111497896"meme noms mais pas le meme id Entity["Satellite", "25677"] et Entity["Satellite", "25679"]
+    ],
+    ],
+    "Globalstar-M023": [
+        "http://www.wikidata.org/entity/Q111497912",
+        "http://www.wikidata.org/entity/Q111497914"meme noms mais pas le meme id Entity["Satellite", "25621"] et Entity["Satellite", "25623"]
+    ],
+    ],
+    "Iridium-11": [
+        "http://www.wikidata.org/entity/Q111497929",
+        "http://www.wikidata.org/entity/Q111498625"meme noms mais pas le meme id Entity["Satellite", "25578"] et Entity["Satellite", "24842"]
+    ],
+    ],
+    "Orbcomm-FM-13": [
+        "http://www.wikidata.org/entity/Q111498076",
+        "http://www.wikidata.org/entity/Q111498169"meme noms mais pas le meme id Entity["Satellite", "25420"] et Entity["Satellite", "25413"]
+    ],
+    ],
+    "Nozomi": [
+        "http://www.wikidata.org/entity/Q111498148",
+        "http://www.wikidata.org/entity/Q849074"ok
+    ],
+    "Orbcomm-FM-14": [
+        "http://www.wikidata.org/entity/Q111498171",
+        "http://www.wikidata.org/entity/Q111498181"meme noms mais pas le meme id Entity["Satellite", "25414"] et Entity["Satellite", "25419"]
+    ],
+    ],
+    "Orbcomm-FM-15": [
+        "http://www.wikidata.org/entity/Q111498173",
+        "http://www.wikidata.org/entity/Q111498180"meme noms mais pas le meme id Entity["Satellite", "25415"] et Entity["Satellite", "25418"]
+    ],
+    ],
+    "Orbcomm-FM-16": [
+        "http://www.wikidata.org/entity/Q111498176",
+        "http://www.wikidata.org/entity/Q111498177"meme noms mais pas le meme id Entity["Satellite", "25416"] et Entity["Satellite", "25417"]
+    ],
+    ],
+    "Iridium-71": [
+        "http://www.wikidata.org/entity/Q111498196",
+        "http://www.wikidata.org/entity/Q111498397"meme noms mais pas le meme id Entity["Satellite", "25320"] et Entity["Satellite", "25230"]
+    ],
+    ],
+    "Iridium-50": [
+        "http://www.wikidata.org/entity/Q111498449",
+        "http://www.wikidata.org/entity/Q111498457"meme noms mais pas le meme id Entity["Satellite", "25169"] et Entity["Satellite", "25172"]
+    ],
+    ],
+    "Galaxy-8": [
+        "http://www.wikidata.org/entity/Q111498482",
+        "http://www.wikidata.org/entity/Q14771263"ok
+    ],
+    "Iridium-24": [
+        "http://www.wikidata.org/entity/Q111498490",
+        "http://www.wikidata.org/entity/Q111498582"meme noms mais pas le meme id Entity["Satellite", "25105"] et Entity["Satellite", "24905"]
+    ],
+    ],
+    "Spartan": [
+        "http://www.wikidata.org/entity/Q111498570",
+        "http://www.wikidata.org/entity/Q111498925"meme noms mais pas le meme id Entity["Satellite", "25062"] et Entity["Satellite", "23871"]
+    ],
+    ],
+    "Iridium-35": [
+        "http://www.wikidata.org/entity/Q111498573",
+        "http://www.wikidata.org/entity/Q111498575"meme noms mais pas le meme id Entity["Satellite", "24966"] et Entity["Satellite", "24968"]
+    ],
+    ],
+    "Iridium-18": [
+        "http://www.wikidata.org/entity/Q111498600",
+        "http://www.wikidata.org/entity/Q111498601"meme noms mais pas le meme id Entity["Satellite", "24871"] et Entity["Satellite", "24872"]
+    ],
+    ],
+    "Inmarsat-3-F4": [
+        "http://www.wikidata.org/entity/Q111498616",
+        "http://www.wikidata.org/entity/Q16064246"ok
+    ],
+    "ORFEUS-SPAS": [
+        "http://www.wikidata.org/entity/Q111498635",
+        "http://www.wikidata.org/entity/Q111499233"meme noms mais pas le meme id Entity["Satellite", "24661"] et Entity["Satellite", "22798"]
+    ],
+    ],
+    "JAS-2": [
+        "http://www.wikidata.org/entity/Q111498745",
+        "http://www.wikidata.org/entity/Q2045696"ok
+    ],
+    "Inmarsat-3-F1": [
+        "http://www.wikidata.org/entity/Q111498918",
+        "http://www.wikidata.org/entity/Q18327660"ok
+    ],
+    "MSTI-3": [
+        "http://www.wikidata.org/entity/Q111498924",
+        "http://www.wikidata.org/entity/Q29611580"ok
+    ],
+    "JCSAT-3": [
+        "http://www.wikidata.org/entity/Q111498959",
+        "http://www.wikidata.org/entity/Q16061340"ok
+    ],
+    "TDRS-7": [
+        "http://www.wikidata.org/entity/Q111498973",
+        "http://www.wikidata.org/entity/Q7669871"ok
+    ],
+    "Orion-1": [
+        "http://www.wikidata.org/entity/Q111498998",
+        "http://www.wikidata.org/entity/Q923935"ok
+    ],
+    "Electro": [
+        "http://www.wikidata.org/entity/Q111499018",
+        "http://www.wikidata.org/entity/Q13395231"ok
+    ],
+    "SROSS-C2": [
+        "http://www.wikidata.org/entity/Q111499044",
+        "http://www.wikidata.org/entity/Q65561688"ok
+    ],
+    "Stella": [
+        "http://www.wikidata.org/entity/Q111499247",
+        "http://www.wikidata.org/entity/Q6133949"ok
+    ],
+    "ITAmsat": [
+        "http://www.wikidata.org/entity/Q111499254",
+        "http://www.wikidata.org/entity/Q111499258"meme noms mais pas le meme id Entity["Satellite", "22826"] et Entity["Satellite", "22828"]
+    ],
+    ],
+    "NOAA-13": [
+        "http://www.wikidata.org/entity/Q111499280",
+        "http://www.wikidata.org/entity/Q55624487"ok
+    ],
+    "TDRS-6": [
+        "http://www.wikidata.org/entity/Q111499431",
+        "http://www.wikidata.org/entity/Q14174202"ok
+    ],
+    "CTA": [
+        "http://www.wikidata.org/entity/Q111499436",
+        "http://www.wikidata.org/entity/Q65274617"ok
+    ],
+    "DFS-Kopernikus-3": [
+        "http://www.wikidata.org/entity/Q111499450",
+        "http://www.wikidata.org/entity/Q16061243"ok
+    ],
+    "TDRS-5": [
+        "http://www.wikidata.org/entity/Q111499712",
+        "http://www.wikidata.org/entity/Q7669868"ok
+    ],
+    "ERS-1": [
+        "http://www.wikidata.org/entity/Q111499741",
+        "http://www.wikidata.org/entity/Q987402"ok
+    ],
+    "Microsat-1": [
+        "http://www.wikidata.org/entity/Q111499753",
+        "http://www.wikidata.org/entity/Q1571699"ok
+    ],
+    "NOAA-12": [
+        "http://www.wikidata.org/entity/Q111499926",
+        "http://www.wikidata.org/entity/Q55624485"ok
+    ],
+    "TDF-2": [
+        "http://www.wikidata.org/entity/Q111500092",
+        "http://www.wikidata.org/entity/Q16061238"ok
+    ],
+    "JCSAT-2": [
+        "http://www.wikidata.org/entity/Q111500130",
+        "http://www.wikidata.org/entity/Q16061342"ok
+    ],
+    "JCSAT-1": [
+        "http://www.wikidata.org/entity/Q111500568",
+        "http://www.wikidata.org/entity/Q16061343"ok
+    ],
+    "TDF-1": [
+        "http://www.wikidata.org/entity/Q111500621",
+        "http://www.wikidata.org/entity/Q16061240"ok
+    ],
+    "Ofeq-1": [
+        "http://www.wikidata.org/entity/Q111500631",
+        "http://www.wikidata.org/entity/Q3880993"ok
+    ],
+    "NOAA-11": [
+        "http://www.wikidata.org/entity/Q111500632",
+        "http://www.wikidata.org/entity/Q55624483"ok
+    ],
+    "TDRS-3": [
+        "http://www.wikidata.org/entity/Q111500634",
+        "http://www.wikidata.org/entity/Q7669867"ok
+    ],
+    "Spacenet-3": [
+        "http://www.wikidata.org/entity/Q111500862",
+        "http://www.wikidata.org/entity/Q18327679"ok
+    ],
+    "RCA-SATCOM-4": [
+        "http://www.wikidata.org/entity/Q16061273",
+        "http://www.wikidata.org/entity/Q17047998"ok
+    ],
+    "Ekran-14": [
+        "http://www.wikidata.org/entity/Q16943285",
+        "http://www.wikidata.org/entity/Q16943366"Un conflit a été détecté sur ptwiki: [[Q16943366]] avec ptwiki:Ekran 14L, [[Q16943285]] avec ptwiki:Ekran 14
+    ],
+    "Meteor-M-No.2-1": [
+        "http://www.wikidata.org/entity/Q17331480",
+        "http://www.wikidata.org/entity/Q85785045"Erreur durant "Attendez ..." : 
+Un conflit a été détecté sur enwiki: [[Q85785045]] avec enwiki:Meteor-M No.2-1, [[Q17331480]] avec enwiki:Meteor-M No.2
+Un conflit a été détecté sur lvwiki: [[Q85785045]] avec lvwiki:Meteor-M № 2-1, [[Q17331480]] avec lvwiki:Meteor-M № 2
+    ],
+    "Endeavour": [
+        "http://www.wikidata.org/entity/Q182508",
+        "http://www.wikidata.org/entity/Q96206891" pas le meme nom Endeavour et Crew Dragon Endeavour
+    ],
+    "Royal-Observatory": [
+        "http://www.wikidata.org/entity/Q192988",
+        "http://www.wikidata.org/entity/Q3106882" pas le meme nom observatoire royal d'Édimbourg et Observatoire royal de Greenwich
+    ],
+    "Dominion-Observatory": [
+        "http://www.wikidata.org/entity/Q19875599",
+        "http://www.wikidata.org/entity/Q266818" pas le meme nom Dominion Observatory et observatoire fédéral
+    ],
+    "Jantar-Mantar": [
+        "http://www.wikidata.org/entity/Q2045115",meme noms meme pas les memes adresse
+        "http://www.wikidata.org/entity/Q21069423",
+        "http://www.wikidata.org/entity/Q508634" pas la meme nom
+    ],
+    "Radcliffe-Observatory": [
+        "http://www.wikidata.org/entity/Q2066160",
+        "http://www.wikidata.org/entity/Q4329990" meme nom, adresses et id differentes
+    ],
+    "VERITAS": [
+        "http://www.wikidata.org/entity/Q21083280",
+        "http://www.wikidata.org/entity/Q3556305" meme noms mais spacecraft et telescope 
+    ],
+    "Gotha-Observatory": [
+        "http://www.wikidata.org/entity/Q2346057",
+        "http://www.wikidata.org/entity/Q315157"pas les meme noms ?
+    ],
+    "Tianhui-1B": [
+        "http://www.wikidata.org/entity/Q2431071",
+        "http://www.wikidata.org/entity/Q4467962" meme noms mais id differente
+    ],
+    "Strela": [
+        "http://www.wikidata.org/entity/Q248564",
+        "http://www.wikidata.org/entity/Q73610"meme noms mais id differents
+    ],
+    "Proton": [
+        "http://www.wikidata.org/entity/Q249231",
+        "http://www.wikidata.org/entity/Q3566447" Erreur durant "Attendez ..." : 
+Un conflit a été détecté sur cswiki: [[Q249231]] avec cswiki:Proton (nosná raketa), [[Q3566447]] avec cswiki:Proton (dvoustupňová nosná raketa)
+Un conflit a été détecté sur lvwiki: [[Q249231]] avec lvwiki:Proton (nesējraķešu saime), [[Q3566447]] avec lvwiki:Proton (nesējraķete)
+Un conflit a été détecté sur skwiki: [[Q249231]] avec skwiki:Proton (nosná raketa), [[Q3566447]] avec skwiki:Proton (dvojstupňová nosná raketa)
+    ],
+    "Observatory": [
+        "http://www.wikidata.org/entity/Q26497403",
+        "http://www.wikidata.org/entity/Q26548529" meme nom mais la meme adresse
+    ],
+    "Oceanus": [
+        "http://www.wikidata.org/entity/Q39055750", sonde spatiale (Titan)
+        "http://www.wikidata.org/entity/Q48851572" mission spatiale Uranus
+    ],
+    "Ka-Dar-Observatory": [
+        "http://www.wikidata.org/entity/Q4071795",
+        "http://www.wikidata.org/entity/Q4329966"Erreur durant "Attendez ..." : 
+Un conflit a été détecté sur ruwiki: [[Q4071795]] avec ruwiki:Астрономическая станция ТАУ, [[Q4329966]] avec ruwiki:Обсерватория Ка-Дар
+    ],
+    "National-Astronomical-Observatory": [
+        "http://www.wikidata.org/entity/Q4289239",
+        "http://www.wikidata.org/entity/Q5811531" pas les meme noms
+    ],
+    "Sputnik-3": [
+        "http://www.wikidata.org/entity/Q4330517",
+        "http://www.wikidata.org/entity/Q719789" Erreur durant "Attendez ..." : 
+Un conflit a été détecté sur dewiki: [[Q719789]] avec dewiki:Sputnik 3, [[Q4330517]] avec dewiki:Sputnik (3)
+Un conflit a été détecté sur ruwiki: [[Q719789]] avec ruwiki:Спутник-3, [[Q4330517]] avec ruwiki:Объект Д №1
+Un conflit a été détecté sur ukwiki: [[Q719789]] avec ukwiki:Супутник-3, [[Q4330517]] avec ukwiki:ІСЗ Д-1 № 1
+    ],
+    "Alte-Sternwarte": [
+        "http://www.wikidata.org/entity/Q436256",
+        "http://www.wikidata.org/entity/Q53513403"meme nom mais pas la meme adresse
+    ],
+    "Ford-Observatory": [
+        "http://www.wikidata.org/entity/Q5467882",
+        "http://www.wikidata.org/entity/Q5467884"meme noms mais id differente
+    ],
+    "NEXUS": [
+        "http://www.wikidata.org/entity/Q63089346", cubesat
+        "http://www.wikidata.org/entity/Q6953645" rocket
+    ],
+    "RISAT-2B": [
+        "http://www.wikidata.org/entity/Q65560084",
+        "http://www.wikidata.org/entity/Q83277250"ok
+    ],
+    "Weston-Observatory": [
+        "http://www.wikidata.org/entity/Q7989459",meme noms mais pas la meme adresse
+        "http://www.wikidata.org/entity/Q7989460"
+    ],
+    "trumpet": [
+        "http://www.wikidata.org/entity/Q89190791",
+        "http://www.wikidata.org/entity/Q89194441",
+        "http://www.wikidata.org/entity/Q89194533",
+        "http://www.wikidata.org/entity/Q89195115",
+        "http://www.wikidata.org/entity/Q89195782",
+        "http://www.wikidata.org/entity/Q89195884",
+        "http://www.wikidata.org/entity/Q89197122",
+        "http://www.wikidata.org/entity/Q89197888",
+        "http://www.wikidata.org/entity/Q89197892",
+        "http://www.wikidata.org/entity/Q89197894",
+        "http://www.wikidata.org/entity/Q89197895",
+        "http://www.wikidata.org/entity/Q89197897",T
+        "http://www.wikidata.org/entity/Q89197899",
+        "http://www.wikidata.org/entity/Q89197920",
+        "http://www.wikidata.org/entity/Q89200878",
+        "http://www.wikidata.org/entity/Q89200882",
+        "http://www.wikidata.org/entity/Q89200942",
+        "http://www.wikidata.org/entity/Q89201739",
+        "http://www.wikidata.org/entity/Q89201743",
+        "http://www.wikidata.org/entity/Q89201746",
+        "http://www.wikidata.org/entity/Q89201749",
+        "http://www.wikidata.org/entity/Q89201752",
+        "http://www.wikidata.org/entity/Q89201762",
+        "http://www.wikidata.org/entity/Q89202307",
+        "http://www.wikidata.org/entity/Q90802027",
+        "http://www.wikidata.org/entity/Q90802072"
+    ]
+}
