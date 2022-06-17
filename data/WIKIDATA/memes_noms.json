@@ -1,782 +1,744 @@
 {
-    "MOVE-II": [
+    "move-ii": [
         "http://www.wikidata.org/entity/Q105245387",
         "http://www.wikidata.org/entity/Q60847603"
     ],
-    "Galileo": [
+    "galileo": [
         "http://www.wikidata.org/entity/Q105425030",
         "http://www.wikidata.org/entity/Q182008"
     ],
-    "Walter-Hohmann-Sternwarte": [
+    "walter-hohmann-sternwarte": [
         "http://www.wikidata.org/entity/Q105542244",
         "http://www.wikidata.org/entity/Q257131"
     ],
-    "LOSAT-X": [
-        "http://www.wikidata.org/entity/Q105828691",
-        "http://www.wikidata.org/entity/Q111499731"
+    "phoenix": [
+        "http://www.wikidata.org/entity/Q105828616",
+        "http://www.wikidata.org/entity/Q129091"
     ],
-    "SPOT-2": [
-        "http://www.wikidata.org/entity/Q106366737",
-        "http://www.wikidata.org/entity/Q111500120"
-    ],
-    "SPOT-3": [
-        "http://www.wikidata.org/entity/Q106366903",
-        "http://www.wikidata.org/entity/Q111499244"
-    ],
-    "SPOT-4": [
-        "http://www.wikidata.org/entity/Q106366942",
-        "http://www.wikidata.org/entity/Q111498338"
-    ],
-    "SPOT-5": [
-        "http://www.wikidata.org/entity/Q106366993",
-        "http://www.wikidata.org/entity/Q111497585"
-    ],
-    "OSIRIS-3U": [
-        "http://www.wikidata.org/entity/Q106473565",
-        "http://www.wikidata.org/entity/Q111471107"
-    ],
-    "AMC-12": [
+    "amc-12": [
         "http://www.wikidata.org/entity/Q106555066",
         "http://www.wikidata.org/entity/Q294623"
     ],
-    "USA-198": [
-        "http://www.wikidata.org/entity/Q106608624",
-        "http://www.wikidata.org/entity/Q111497031"
-    ],
-    "USA-197": [
-        "http://www.wikidata.org/entity/Q106630000",
-        "http://www.wikidata.org/entity/Q111497034"
-    ],
-    "Stockholm-Observatory": [
+    "stockholm-observatory": [
         "http://www.wikidata.org/entity/Q10680543",
         "http://www.wikidata.org/entity/Q681497"
     ],
-    "Shijian-4": [
-        "http://www.wikidata.org/entity/Q108104309",
-        "http://www.wikidata.org/entity/Q111499111"
-    ],
-    "Shijian-5": [
-        "http://www.wikidata.org/entity/Q108104312",
-        "http://www.wikidata.org/entity/Q111497859"
-    ],
-    "Shijian-7": [
-        "http://www.wikidata.org/entity/Q108104316",
-        "http://www.wikidata.org/entity/Q111497359"
-    ],
-    "Skipper": [
-        "http://www.wikidata.org/entity/Q108104337",
-        "http://www.wikidata.org/entity/Q111498955"
-    ],
-    "STSAT-3": [
-        "http://www.wikidata.org/entity/Q10855426",
-        "http://www.wikidata.org/entity/Q111471803"
-    ],
-    "CXBN-2": [
-        "http://www.wikidata.org/entity/Q109941204",
-        "http://www.wikidata.org/entity/Q111471222"
-    ],
-    "Chinasat-9A": [
+    "chinasat-9a": [
         "http://www.wikidata.org/entity/Q110117396",
         "http://www.wikidata.org/entity/Q30345520"
     ],
-    "Shijian-6A": [
-        "http://www.wikidata.org/entity/Q110160704",
-        "http://www.wikidata.org/entity/Q111497425"
-    ],
-    "Shijian-6B": [
-        "http://www.wikidata.org/entity/Q110160710",
-        "http://www.wikidata.org/entity/Q111497426"
-    ],
-    "Shijian-6C": [
-        "http://www.wikidata.org/entity/Q110160713",
-        "http://www.wikidata.org/entity/Q111497217"
-    ],
-    "Shijian-6D": [
-        "http://www.wikidata.org/entity/Q110160714",
-        "http://www.wikidata.org/entity/Q111497218"
-    ],
-    "Shijian-6E": [
-        "http://www.wikidata.org/entity/Q110160717",
-        "http://www.wikidata.org/entity/Q111496937"
-    ],
-    "Shijian-6F": [
-        "http://www.wikidata.org/entity/Q110160718",
-        "http://www.wikidata.org/entity/Q111496938"
-    ],
-    "IRNSS-1I": [
-        "http://www.wikidata.org/entity/Q111470992",
-        "http://www.wikidata.org/entity/Q25428047"
-    ],
-    "GSAT-6A": [
-        "http://www.wikidata.org/entity/Q111471017",
-        "http://www.wikidata.org/entity/Q18480158"
-    ],
-    "BEIDOU-3-M1": [
-        "http://www.wikidata.org/entity/Q111471089",
-        "http://www.wikidata.org/entity/Q111471584"
-    ],
-    "BEIDOU-3-M2": [
+    "beidou-3-m2": [
         "http://www.wikidata.org/entity/Q111471090",
-        "http://www.wikidata.org/entity/Q111471585"
+        "http://www.wikidata.org/entity/Q21663527"
     ],
-    "EchoStar-105/SES-11": [
-        "http://www.wikidata.org/entity/Q111471145",
-        "http://www.wikidata.org/entity/Q41975718"
-    ],
-    "TDRS-13": [
-        "http://www.wikidata.org/entity/Q111471167",
-        "http://www.wikidata.org/entity/Q18486434"
-    ],
-    "COMPASS-2": [
+    "compass-2": [
         "http://www.wikidata.org/entity/Q111471191",
         "http://www.wikidata.org/entity/Q111497270",
+        "http://www.wikidata.org/entity/Q1121303",
         "http://www.wikidata.org/entity/Q1124844",
         "http://www.wikidata.org/entity/Q14822767"
     ],
-    "Pegasus": [
-        "http://www.wikidata.org/entity/Q111471193",
-        "http://www.wikidata.org/entity/Q30102248",
-        "http://www.wikidata.org/entity/Q478603"
-    ],
-    "ROBUSTA-1B": [
-        "http://www.wikidata.org/entity/Q111471201",
-        "http://www.wikidata.org/entity/Q22038862"
-    ],
-    "GSAT-17": [
-        "http://www.wikidata.org/entity/Q111471215",
-        "http://www.wikidata.org/entity/Q18480132"
-    ],
-    "GSAT-9": [
-        "http://www.wikidata.org/entity/Q111471216",
-        "http://www.wikidata.org/entity/Q5514536"
-    ],
-    "SES-15": [
-        "http://www.wikidata.org/entity/Q111471226",
-        "http://www.wikidata.org/entity/Q25449599"
-    ],
-    "INS-1B": [
+    "ins-1b": [
         "http://www.wikidata.org/entity/Q111471310",
         "http://www.wikidata.org/entity/Q111471313"
     ],
-    "RESOURCESAT-2A": [
-        "http://www.wikidata.org/entity/Q111471319",
-        "http://www.wikidata.org/entity/Q27976215"
+    "worldview-4": [
+        "http://www.wikidata.org/entity/Q111471354",
+        "http://www.wikidata.org/entity/Q870032"
     ],
-    "JCSAT-15": [
-        "http://www.wikidata.org/entity/Q111471335",
-        "http://www.wikidata.org/entity/Q18466412"
-    ],
-    "SCATSAT-1": [
-        "http://www.wikidata.org/entity/Q111471377",
-        "http://www.wikidata.org/entity/Q22908533"
-    ],
-    "GSAT-18": [
-        "http://www.wikidata.org/entity/Q111471378",
-        "http://www.wikidata.org/entity/Q20055945"
-    ],
-    "JCSAT-16": [
-        "http://www.wikidata.org/entity/Q111471385",
-        "http://www.wikidata.org/entity/Q18466419"
-    ],
-    "ASAP-S": [
+    "asap-s": [
         "http://www.wikidata.org/entity/Q111471440",
         "http://www.wikidata.org/entity/Q111472011"
     ],
-    "IRNSS-1G": [
-        "http://www.wikidata.org/entity/Q111471445",
-        "http://www.wikidata.org/entity/Q19698208"
+    "bugsat-1": [
+        "http://www.wikidata.org/entity/Q111471708",
+        "http://www.wikidata.org/entity/Q17512643"
     ],
-    "IRNSS-1F": [
-        "http://www.wikidata.org/entity/Q111471449",
-        "http://www.wikidata.org/entity/Q19701015"
+    "dragonsat": [
+        "http://www.wikidata.org/entity/Q111471833",
+        "http://www.wikidata.org/entity/Q111496821"
     ],
-    "GSAT-15": [
-        "http://www.wikidata.org/entity/Q111471533",
-        "http://www.wikidata.org/entity/Q17019699"
+    "astra-2e": [
+        "http://www.wikidata.org/entity/Q111471877",
+        "http://www.wikidata.org/entity/Q14288806"
     ],
-    "ARSAT-2": [
-        "http://www.wikidata.org/entity/Q111471539",
-        "http://www.wikidata.org/entity/Q17709488"
+    "o3b-fm2": [
+        "http://www.wikidata.org/entity/Q111471881",
+        "http://www.wikidata.org/entity/Q16089294"
     ],
-    "KOMPSAT-3A": [
-        "http://www.wikidata.org/entity/Q111471601",
-        "http://www.wikidata.org/entity/Q16261847"
+    "insat-3d": [
+        "http://www.wikidata.org/entity/Q111471885",
+        "http://www.wikidata.org/entity/Q5972407"
     ],
-    "IRNSS-1D": [
-        "http://www.wikidata.org/entity/Q111471604",
-        "http://www.wikidata.org/entity/Q15694173"
+    "dove-2": [
+        "http://www.wikidata.org/entity/Q111471892",
+        "http://www.wikidata.org/entity/Q13634242"
     ],
-    "GSAT-16": [
-        "http://www.wikidata.org/entity/Q111471619",
-        "http://www.wikidata.org/entity/Q17019715"
+    "beesat-3": [
+        "http://www.wikidata.org/entity/Q111471893",
+        "http://www.wikidata.org/entity/Q14152739"
     ],
-    "AESP-14": [
-        "http://www.wikidata.org/entity/Q111471641",
-        "http://www.wikidata.org/entity/Q19609346"
+    "beesat-2": [
+        "http://www.wikidata.org/entity/Q111471894",
+        "http://www.wikidata.org/entity/Q795802"
     ],
-    "ARSAT-1": [
-        "http://www.wikidata.org/entity/Q111471642",
-        "http://www.wikidata.org/entity/Q4653923"
+    "bell": [
+        "http://www.wikidata.org/entity/Q111471897",
+        "http://www.wikidata.org/entity/Q14174567"
     ],
-    "IRNSS-1C": [
-        "http://www.wikidata.org/entity/Q111471662",
-        "http://www.wikidata.org/entity/Q15694179"
+    "graham": [
+        "http://www.wikidata.org/entity/Q111471898",
+        "http://www.wikidata.org/entity/Q13407657"
     ],
-    "UNIFORM-1": [
-        "http://www.wikidata.org/entity/Q111471733",
-        "http://www.wikidata.org/entity/Q17056511"
+    "gaofen-1": [
+        "http://www.wikidata.org/entity/Q111471899",
+        "http://www.wikidata.org/entity/Q12230697"
     ],
-    "IRNSS-1B": [
-        "http://www.wikidata.org/entity/Q111471753",
-        "http://www.wikidata.org/entity/Q16012990"
+    "cubebug-1": [
+        "http://www.wikidata.org/entity/Q111471903",
+        "http://www.wikidata.org/entity/Q14228001"
     ],
-    "ITF-1": [
-        "http://www.wikidata.org/entity/Q111471765",
-        "http://www.wikidata.org/entity/Q16632409"
+    "chinasat-11": [
+        "http://www.wikidata.org/entity/Q111471904",
+        "http://www.wikidata.org/entity/Q18327639"
     ],
-    "GSAT-14": [
-        "http://www.wikidata.org/entity/Q111471777",
-        "http://www.wikidata.org/entity/Q14554285"
+    "vnredsat-1": [
+        "http://www.wikidata.org/entity/Q111471907",
+        "http://www.wikidata.org/entity/Q5098773"
     ],
-    "TDRS-12": [
-        "http://www.wikidata.org/entity/Q111471779",
-        "http://www.wikidata.org/entity/Q15712428"
+    "estcube-1": [
+        "http://www.wikidata.org/entity/Q111471908",
+        "http://www.wikidata.org/entity/Q3200445"
     ],
-    "SES-6": [
-        "http://www.wikidata.org/entity/Q111471878",
-        "http://www.wikidata.org/entity/Q13415767"
+    "amazonas-3": [
+        "http://www.wikidata.org/entity/Q111471924",
+        "http://www.wikidata.org/entity/Q4740877"
     ],
-    "KOMPSAT-5": [
-        "http://www.wikidata.org/entity/Q111471886",
-        "http://www.wikidata.org/entity/Q11256162"
+    "strand-1": [
+        "http://www.wikidata.org/entity/Q111471929",
+        "http://www.wikidata.org/entity/Q6116306"
     ],
-    "GSAT-7": [
-        "http://www.wikidata.org/entity/Q111471888",
-        "http://www.wikidata.org/entity/Q13112185"
+    "pleiades-1b": [
+        "http://www.wikidata.org/entity/Q111471938",
+        "http://www.wikidata.org/entity/Q14083950"
     ],
-    "PROBA-V": [
-        "http://www.wikidata.org/entity/Q111471906",
-        "http://www.wikidata.org/entity/Q3359841"
+    "yamal-402": [
+        "http://www.wikidata.org/entity/Q111471940",
+        "http://www.wikidata.org/entity/Q800044"
     ],
-    "IGS-8A": [
-        "http://www.wikidata.org/entity/Q111471914",
-        "http://www.wikidata.org/entity/Q16086314"
+    "mexsat-3": [
+        "http://www.wikidata.org/entity/Q111471942",
+        "http://www.wikidata.org/entity/Q1658743"
     ],
-    "STSAT-2C": [
-        "http://www.wikidata.org/entity/Q111471916",
-        "http://www.wikidata.org/entity/Q3912898"
+    "beidou-g6": [
+        "http://www.wikidata.org/entity/Q111471943",
+        "http://www.wikidata.org/entity/Q14083945"
     ],
-    "TDRS-11": [
-        "http://www.wikidata.org/entity/Q111471917",
-        "http://www.wikidata.org/entity/Q4273946"
+    "luch-5b": [
+        "http://www.wikidata.org/entity/Q111471944",
+        "http://www.wikidata.org/entity/Q2093607"
     ],
-    "SES-5": [
-        "http://www.wikidata.org/entity/Q111471967",
-        "http://www.wikidata.org/entity/Q1622625"
+    "yubeleiny-2": [
+        "http://www.wikidata.org/entity/Q111471958",
+        "http://www.wikidata.org/entity/Q14497237"
     ],
-    "JCSAT-13": [
-        "http://www.wikidata.org/entity/Q111471973",
-        "http://www.wikidata.org/entity/Q4041719"
+    "telkom-3": [
+        "http://www.wikidata.org/entity/Q111471961",
+        "http://www.wikidata.org/entity/Q2603711"
     ],
-    "CARTOSAT-2B": [
-        "http://www.wikidata.org/entity/Q111496713",
-        "http://www.wikidata.org/entity/Q1148147"
+    "beidou-m5": [
+        "http://www.wikidata.org/entity/Q111471963",
+        "http://www.wikidata.org/entity/Q14083944"
     ],
-    "SERVIS-2": [
-        "http://www.wikidata.org/entity/Q111496728",
-        "http://www.wikidata.org/entity/Q1136417"
+    "astra-2f": [
+        "http://www.wikidata.org/entity/Q111471965",
+        "http://www.wikidata.org/entity/Q211202"
     ],
-    "PROBA-2": [
-        "http://www.wikidata.org/entity/Q111496786",
-        "http://www.wikidata.org/entity/Q742155"
+    "chinasat-2a": [
+        "http://www.wikidata.org/entity/Q111471970",
+        "http://www.wikidata.org/entity/Q14267197"
     ],
-    "WorldView-2": [
-        "http://www.wikidata.org/entity/Q111496802",
-        "http://www.wikidata.org/entity/Q1128040"
+    "yaogan-15": [
+        "http://www.wikidata.org/entity/Q111471971",
+        "http://www.wikidata.org/entity/Q4538412"
     ],
-    "NSS-9": [
-        "http://www.wikidata.org/entity/Q111496909",
-        "http://www.wikidata.org/entity/Q6955343"
+    "vinasat-2": [
+        "http://www.wikidata.org/entity/Q111471974",
+        "http://www.wikidata.org/entity/Q2625188"
     ],
-    "SDS-1": [
-        "http://www.wikidata.org/entity/Q111496931",
-        "http://www.wikidata.org/entity/Q2205675"
+    "nimiq-6": [
+        "http://www.wikidata.org/entity/Q111471977",
+        "http://www.wikidata.org/entity/Q4321398"
     ],
-    "GeoEye-1": [
-        "http://www.wikidata.org/entity/Q111496943",
-        "http://www.wikidata.org/entity/Q428048"
+    "yahsat-1b": [
+        "http://www.wikidata.org/entity/Q111471979",
+        "http://www.wikidata.org/entity/Q4539745"
     ],
-    "Nimiq-4": [
-        "http://www.wikidata.org/entity/Q111496946",
-        "http://www.wikidata.org/entity/Q7037678"
+    "beidou-m4": [
+        "http://www.wikidata.org/entity/Q111471981",
+        "http://www.wikidata.org/entity/Q4230015"
     ],
-    "Inmarsat-4-F3": [
-        "http://www.wikidata.org/entity/Q111496949",
-        "http://www.wikidata.org/entity/Q6035073"
+    "yaogan-14": [
+        "http://www.wikidata.org/entity/Q111471984",
+        "http://www.wikidata.org/entity/Q4538411"
     ],
-    "CartoSat-2A": [
+    "unicubesat-gg": [
+        "http://www.wikidata.org/entity/Q111471988",
+        "http://www.wikidata.org/entity/Q4052138"
+    ],
+    "beidou-g5": [
+        "http://www.wikidata.org/entity/Q111471989",
+        "http://www.wikidata.org/entity/Q4230014"
+    ],
+    "vesselsat-2": [
+        "http://www.wikidata.org/entity/Q111471999",
+        "http://www.wikidata.org/entity/Q4052665"
+    ],
+    "almasat-1": [
+        "http://www.wikidata.org/entity/Q111472003",
+        "http://www.wikidata.org/entity/Q4033801"
+    ],
+    "pleiades-1": [
+        "http://www.wikidata.org/entity/Q111472010",
+        "http://www.wikidata.org/entity/Q13989992"
+    ],
+    "nigcomsat-1r": [
+        "http://www.wikidata.org/entity/Q111472012",
+        "http://www.wikidata.org/entity/Q14083897"
+    ],
+    "asiasat-7": [
+        "http://www.wikidata.org/entity/Q111472015",
+        "http://www.wikidata.org/entity/Q726840"
+    ],
+    "luch-5a": [
+        "http://www.wikidata.org/entity/Q111472019",
+        "http://www.wikidata.org/entity/Q6111357"
+    ],
+    "aissat-1": [
+        "http://www.wikidata.org/entity/Q111496714",
+        "http://www.wikidata.org/entity/Q3431532"
+    ],
+    "alsat-2a": [
+        "http://www.wikidata.org/entity/Q111496715",
+        "http://www.wikidata.org/entity/Q1138051"
+    ],
+    "nilesat-201": [
+        "http://www.wikidata.org/entity/Q111496719",
+        "http://www.wikidata.org/entity/Q1145187"
+    ],
+    "rascom-qaf-1r": [
+        "http://www.wikidata.org/entity/Q111496720",
+        "http://www.wikidata.org/entity/Q1729766"
+    ],
+    "arabsat-5a": [
+        "http://www.wikidata.org/entity/Q111496724",
+        "http://www.wikidata.org/entity/Q582440"
+    ],
+    "beidou-g3": [
+        "http://www.wikidata.org/entity/Q111496730",
+        "http://www.wikidata.org/entity/Q111496765",
+        "http://www.wikidata.org/entity/Q14083908"
+    ],
+    "tandem-x": [
+        "http://www.wikidata.org/entity/Q111496736",
+        "http://www.wikidata.org/entity/Q565632"
+    ],
+    "negai": [
+        "http://www.wikidata.org/entity/Q111496739",
+        "http://www.wikidata.org/entity/Q5962115"
+    ],
+    "astra-3b": [
+        "http://www.wikidata.org/entity/Q111496740",
+        "http://www.wikidata.org/entity/Q750287"
+    ],
+    "comsatbw-2": [
+        "http://www.wikidata.org/entity/Q111496741",
+        "http://www.wikidata.org/entity/Q18327672"
+    ],
+    "cryosat-2": [
+        "http://www.wikidata.org/entity/Q111496744",
+        "http://www.wikidata.org/entity/Q870049"
+    ],
+    "yaogan-8": [
+        "http://www.wikidata.org/entity/Q111496772",
+        "http://www.wikidata.org/entity/Q14083926"
+    ],
+    "helios-2b": [
+        "http://www.wikidata.org/entity/Q111496775",
+        "http://www.wikidata.org/entity/Q3129779"
+    ],
+    "directv-12": [
+        "http://www.wikidata.org/entity/Q111496776",
+        "http://www.wikidata.org/entity/Q5280201"
+    ],
+    "oceansat-2": [
+        "http://www.wikidata.org/entity/Q111496791",
+        "http://www.wikidata.org/entity/Q1552666"
+    ],
+    "sterkh-2": [
+        "http://www.wikidata.org/entity/Q111496805",
+        "http://www.wikidata.org/entity/Q14152757"
+    ],
+    "nimiq-5": [
+        "http://www.wikidata.org/entity/Q111496810",
+        "http://www.wikidata.org/entity/Q14196834"
+    ],
+    "asiasat-5": [
+        "http://www.wikidata.org/entity/Q111496823",
+        "http://www.wikidata.org/entity/Q726836"
+    ],
+    "nanosat-1b": [
+        "http://www.wikidata.org/entity/Q111496830",
+        "http://www.wikidata.org/entity/Q6964139"
+    ],
+    "terrestar-1": [
+        "http://www.wikidata.org/entity/Q111496842",
+        "http://www.wikidata.org/entity/Q375846"
+    ],
+    "measat-3a": [
+        "http://www.wikidata.org/entity/Q111496851",
+        "http://www.wikidata.org/entity/Q4043404"
+    ],
+    "pharmasat": [
+        "http://www.wikidata.org/entity/Q111496867",
+        "http://www.wikidata.org/entity/Q1639497"
+    ],
+    "aerocube-3": [
+        "http://www.wikidata.org/entity/Q111496871",
+        "http://www.wikidata.org/entity/Q2825584"
+    ],
+    "risat-2": [
+        "http://www.wikidata.org/entity/Q111496877",
+        "http://www.wikidata.org/entity/Q1549353"
+    ],
+    "koronas-foton": [
+        "http://www.wikidata.org/entity/Q111496932",
+        "http://www.wikidata.org/entity/Q377849"
+    ],
+    "cartosat-2a": [
         "http://www.wikidata.org/entity/Q111496995",
         "http://www.wikidata.org/entity/Q111497181"
     ],
-    "DirecTV-10": [
-        "http://www.wikidata.org/entity/Q111497051",
-        "http://www.wikidata.org/entity/Q1227406"
+    "compass-1": [
+        "http://www.wikidata.org/entity/Q111496997",
+        "http://www.wikidata.org/entity/Q167316"
     ],
-    "TacSat-2": [
-        "http://www.wikidata.org/entity/Q111497192",
-        "http://www.wikidata.org/entity/Q7673661"
+    "insat-4cr": [
+        "http://www.wikidata.org/entity/Q111497045",
+        "http://www.wikidata.org/entity/Q5972412"
     ],
-    "STEREO-A": [
-        "http://www.wikidata.org/entity/Q111497220",
-        "http://www.wikidata.org/entity/Q28473065"
+    "cape-1": [
+        "http://www.wikidata.org/entity/Q111497097",
+        "http://www.wikidata.org/entity/Q5008741"
     ],
-    "STEREO-B": [
-        "http://www.wikidata.org/entity/Q111497222",
-        "http://www.wikidata.org/entity/Q28473073"
+    "insat-4b": [
+        "http://www.wikidata.org/entity/Q111497117",
+        "http://www.wikidata.org/entity/Q14559263"
     ],
-    "Shijian-8": [
-        "http://www.wikidata.org/entity/Q111497229",
-        "http://www.wikidata.org/entity/Q2278759"
+    "midstar-1": [
+        "http://www.wikidata.org/entity/Q111497124",
+        "http://www.wikidata.org/entity/Q6840889"
     ],
-    "Syracuse-3B": [
-        "http://www.wikidata.org/entity/Q111497247",
-        "http://www.wikidata.org/entity/Q18327669"
+    "lapan-tubsat": [
+        "http://www.wikidata.org/entity/Q111497179",
+        "http://www.wikidata.org/entity/Q574293"
     ],
-    "Inmarsat-4-F1": [
-        "http://www.wikidata.org/entity/Q111497372",
-        "http://www.wikidata.org/entity/Q18327656"
+    "pehuensat-1": [
+        "http://www.wikidata.org/entity/Q111497182",
+        "http://www.wikidata.org/entity/Q11698688"
     ],
-    "DART": [
-        "http://www.wikidata.org/entity/Q111497376",
-        "http://www.wikidata.org/entity/Q49449"
+    "measat-3": [
+        "http://www.wikidata.org/entity/Q111497190",
+        "http://www.wikidata.org/entity/Q6715252"
     ],
-    "Sich-1M": [
-        "http://www.wikidata.org/entity/Q111497396",
-        "http://www.wikidata.org/entity/Q4421262"
+    "chinasat-22a": [
+        "http://www.wikidata.org/entity/Q111497231",
+        "http://www.wikidata.org/entity/Q197923"
     ],
-    "Double-Star-2": [
-        "http://www.wikidata.org/entity/Q111497421",
-        "http://www.wikidata.org/entity/Q111725983"
+    "koreasat-5": [
+        "http://www.wikidata.org/entity/Q111497239",
+        "http://www.wikidata.org/entity/Q496843"
     ],
-    "AMC-11": [
-        "http://www.wikidata.org/entity/Q111497447",
-        "http://www.wikidata.org/entity/Q4652545"
+    "kompsat-2": [
+        "http://www.wikidata.org/entity/Q111497243",
+        "http://www.wikidata.org/entity/Q487279"
     ],
-    "Double-Star-1": [
-        "http://www.wikidata.org/entity/Q111497460",
-        "http://www.wikidata.org/entity/Q111725982"
+    "satmex-6": [
+        "http://www.wikidata.org/entity/Q111497271",
+        "http://www.wikidata.org/entity/Q6122034"
     ],
-    "IRS-P6": [
+    "insat-4a": [
+        "http://www.wikidata.org/entity/Q111497337",
+        "http://www.wikidata.org/entity/Q1664373"
+    ],
+    "cartosat-1": [
+        "http://www.wikidata.org/entity/Q111497378",
+        "http://www.wikidata.org/entity/Q2940667"
+    ],
+    "hamsat": [
+        "http://www.wikidata.org/entity/Q111497379",
+        "http://www.wikidata.org/entity/Q2724062"
+    ],
+    "irs-p6": [
         "http://www.wikidata.org/entity/Q111497463",
         "http://www.wikidata.org/entity/Q111497464"
     ],
-    "SERVIS-1": [
-        "http://www.wikidata.org/entity/Q111497468",
-        "http://www.wikidata.org/entity/Q7389848"
+    "bilsat-1": [
+        "http://www.wikidata.org/entity/Q111497480",
+        "http://www.wikidata.org/entity/Q2949436"
     ],
-    "USA-170": [
-        "http://www.wikidata.org/entity/Q111497518",
-        "http://www.wikidata.org/entity/Q23933954"
+    "dtusat": [
+        "http://www.wikidata.org/entity/Q111497504",
+        "http://www.wikidata.org/entity/Q5206259"
     ],
-    "GSAT-2": [
-        "http://www.wikidata.org/entity/Q111497520",
-        "http://www.wikidata.org/entity/Q5514535"
+    "aau-cubesat": [
+        "http://www.wikidata.org/entity/Q111497505",
+        "http://www.wikidata.org/entity/Q4649958"
     ],
-    "AMC-9": [
-        "http://www.wikidata.org/entity/Q111497522",
-        "http://www.wikidata.org/entity/Q16061254"
+    "asiasat-4": [
+        "http://www.wikidata.org/entity/Q111497523",
+        "http://www.wikidata.org/entity/Q14559246"
     ],
-    "USA-167": [
-        "http://www.wikidata.org/entity/Q111497529",
-        "http://www.wikidata.org/entity/Q23933929"
+    "insat-3a": [
+        "http://www.wikidata.org/entity/Q111497534",
+        "http://www.wikidata.org/entity/Q1536999"
     ],
-    "NSS-6": [
-        "http://www.wikidata.org/entity/Q111497536",
-        "http://www.wikidata.org/entity/Q4044996"
+    "alsat-1": [
+        "http://www.wikidata.org/entity/Q111497543",
+        "http://www.wikidata.org/entity/Q4703424"
     ],
-    "Nimiq-2": [
-        "http://www.wikidata.org/entity/Q111497541",
-        "http://www.wikidata.org/entity/Q14559241"
+    "fedsat": [
+        "http://www.wikidata.org/entity/Q111497552",
+        "http://www.wikidata.org/entity/Q4025646"
     ],
-    "TDRS-10": [
-        "http://www.wikidata.org/entity/Q111497549",
-        "http://www.wikidata.org/entity/Q7669866"
+    "insat-3c": [
+        "http://www.wikidata.org/entity/Q111497589",
+        "http://www.wikidata.org/entity/Q5972405"
     ],
-    "DirecTV-5": [
-        "http://www.wikidata.org/entity/Q111497562",
-        "http://www.wikidata.org/entity/Q5280200"
+    "maroc-tubsat": [
+        "http://www.wikidata.org/entity/Q111497602",
+        "http://www.wikidata.org/entity/Q1881170"
     ],
-    "Haiyang-1": [
-        "http://www.wikidata.org/entity/Q111497563",
-        "http://www.wikidata.org/entity/Q97279947"
+    "jason": [
+        "http://www.wikidata.org/entity/Q111497618",
+        "http://www.wikidata.org/entity/Q14177683"
     ],
-    "MDS-1": [
-        "http://www.wikidata.org/entity/Q111497571",
-        "http://www.wikidata.org/entity/Q3658287"
+    "picosat-9": [
+        "http://www.wikidata.org/entity/Q111497629",
+        "http://www.wikidata.org/entity/Q7191001"
     ],
-    "TDRS-9": [
-        "http://www.wikidata.org/entity/Q111497581",
-        "http://www.wikidata.org/entity/Q7669873"
-    ],
-    "Reflector": [
-        "http://www.wikidata.org/entity/Q111497603",
-        "http://www.wikidata.org/entity/Q28697813"
-    ],
-    "PROBA-1": [
-        "http://www.wikidata.org/entity/Q111497611",
-        "http://www.wikidata.org/entity/Q1479854"
-    ],
-    "LRE": [
-        "http://www.wikidata.org/entity/Q111497624",
-        "http://www.wikidata.org/entity/Q5413096"
-    ],
-    "GSAT-1": [
-        "http://www.wikidata.org/entity/Q111497651",
-        "http://www.wikidata.org/entity/Q5514533"
-    ],
-    "BADR-2": [
+    "badr-2": [
         "http://www.wikidata.org/entity/Q111497655",
         "http://www.wikidata.org/entity/Q448658"
     ],
-    "SAC-C": [
-        "http://www.wikidata.org/entity/Q111497661",
-        "http://www.wikidata.org/entity/Q5556788"
+    "tiungsat-1": [
+        "http://www.wikidata.org/entity/Q111497668",
+        "http://www.wikidata.org/entity/Q1449650"
     ],
-    "TDRS-8": [
-        "http://www.wikidata.org/entity/Q111497731",
-        "http://www.wikidata.org/entity/Q7669872"
+    "snap-1": [
+        "http://www.wikidata.org/entity/Q111497730",
+        "http://www.wikidata.org/entity/Q7391781"
     ],
-    "OCS": [
-        "http://www.wikidata.org/entity/Q111497757",
-        "http://www.wikidata.org/entity/Q21406045"
+    "mightysat-2": [
+        "http://www.wikidata.org/entity/Q111497736",
+        "http://www.wikidata.org/entity/Q6844090"
     ],
-    "Globalstar-M029": [
+    "asiastar": [
+        "http://www.wikidata.org/entity/Q111497749",
+        "http://www.wikidata.org/entity/Q4806326"
+    ],
+    "insat-3b": [
+        "http://www.wikidata.org/entity/Q111497750",
+        "http://www.wikidata.org/entity/Q13115915"
+    ],
+    "chinasat-22": [
+        "http://www.wikidata.org/entity/Q111497755",
+        "http://www.wikidata.org/entity/Q5858670"
+    ],
+    "globalstar-m029": [
         "http://www.wikidata.org/entity/Q111497790",
         "http://www.wikidata.org/entity/Q111497792"
     ],
-    "Globalstar-M053": [
+    "globalstar-m053": [
         "http://www.wikidata.org/entity/Q111497808",
         "http://www.wikidata.org/entity/Q111497810"
     ],
-    "Globalstar-M033": [
+    "globalstar-m033": [
         "http://www.wikidata.org/entity/Q111497814",
         "http://www.wikidata.org/entity/Q111497816"
     ],
-    "Resurs-F-1M": [
+    "resurs-f-1m": [
         "http://www.wikidata.org/entity/Q111497821",
         "http://www.wikidata.org/entity/Q111498569"
     ],
-    "Globalstar-M026": [
+    "globalstar-m026": [
         "http://www.wikidata.org/entity/Q111497828",
         "http://www.wikidata.org/entity/Q111497829"
     ],
-    "Globalstar-M025": [
+    "globalstar-m025": [
         "http://www.wikidata.org/entity/Q111497835",
         "http://www.wikidata.org/entity/Q111497864"
     ],
-    "Iridium-14": [
+    "iridium-14": [
         "http://www.wikidata.org/entity/Q111497837",
         "http://www.wikidata.org/entity/Q111498618"
     ],
-    "Iridium-21": [
+    "iridium-21": [
         "http://www.wikidata.org/entity/Q111497838",
         "http://www.wikidata.org/entity/Q111498602"
     ],
-    "Kitsat-3": [
-        "http://www.wikidata.org/entity/Q111497862",
-        "http://www.wikidata.org/entity/Q11227964"
+    "insat-2e": [
+        "http://www.wikidata.org/entity/Q111497888",
+        "http://www.wikidata.org/entity/Q5972401"
     ],
-    "Globalstar-M019": [
+    "globalstar-m019": [
         "http://www.wikidata.org/entity/Q111497893",
         "http://www.wikidata.org/entity/Q111497896"
     ],
-    "Globalstar-M023": [
+    "uosat-12": [
+        "http://www.wikidata.org/entity/Q111497905",
+        "http://www.wikidata.org/entity/Q1530723"
+    ],
+    "stardust": [
+        "http://www.wikidata.org/entity/Q111497911",
+        "http://www.wikidata.org/entity/Q205747"
+    ],
+    "globalstar-m023": [
         "http://www.wikidata.org/entity/Q111497912",
         "http://www.wikidata.org/entity/Q111497914"
     ],
-    "Iridium-11": [
+    "mightysat-1": [
+        "http://www.wikidata.org/entity/Q111497925",
+        "http://www.wikidata.org/entity/Q6844091"
+    ],
+    "iridium-11": [
         "http://www.wikidata.org/entity/Q111497929",
         "http://www.wikidata.org/entity/Q111498625"
     ],
-    "Orbcomm-FM-13": [
+    "orbcomm-fm-13": [
         "http://www.wikidata.org/entity/Q111498076",
         "http://www.wikidata.org/entity/Q111498169"
     ],
-    "Nozomi": [
-        "http://www.wikidata.org/entity/Q111498148",
-        "http://www.wikidata.org/entity/Q849074"
-    ],
-    "Orbcomm-FM-14": [
+    "orbcomm-fm-14": [
         "http://www.wikidata.org/entity/Q111498171",
         "http://www.wikidata.org/entity/Q111498181"
     ],
-    "Orbcomm-FM-15": [
+    "orbcomm-fm-15": [
         "http://www.wikidata.org/entity/Q111498173",
         "http://www.wikidata.org/entity/Q111498180"
     ],
-    "Orbcomm-FM-16": [
+    "orbcomm-fm-16": [
         "http://www.wikidata.org/entity/Q111498176",
         "http://www.wikidata.org/entity/Q111498177"
     ],
-    "Iridium-71": [
+    "iridium-71": [
         "http://www.wikidata.org/entity/Q111498196",
         "http://www.wikidata.org/entity/Q111498397"
     ],
-    "Iridium-50": [
+    "iridium-50": [
         "http://www.wikidata.org/entity/Q111498449",
         "http://www.wikidata.org/entity/Q111498457"
     ],
-    "Galaxy-8": [
-        "http://www.wikidata.org/entity/Q111498482",
-        "http://www.wikidata.org/entity/Q14771263"
-    ],
-    "Iridium-24": [
+    "iridium-24": [
         "http://www.wikidata.org/entity/Q111498490",
         "http://www.wikidata.org/entity/Q111498582"
     ],
-    "Spartan": [
+    "indostar-1": [
+        "http://www.wikidata.org/entity/Q111498566",
+        "http://www.wikidata.org/entity/Q6025593"
+    ],
+    "spartan": [
         "http://www.wikidata.org/entity/Q111498570",
         "http://www.wikidata.org/entity/Q111498925"
     ],
-    "Iridium-35": [
+    "iridium-35": [
         "http://www.wikidata.org/entity/Q111498573",
         "http://www.wikidata.org/entity/Q111498575"
     ],
-    "Iridium-18": [
+    "iridium-18": [
         "http://www.wikidata.org/entity/Q111498600",
         "http://www.wikidata.org/entity/Q111498601"
     ],
-    "Inmarsat-3-F4": [
-        "http://www.wikidata.org/entity/Q111498616",
-        "http://www.wikidata.org/entity/Q16064246"
+    "panamsat-6": [
+        "http://www.wikidata.org/entity/Q111498605",
+        "http://www.wikidata.org/entity/Q14771270"
     ],
-    "ORFEUS-SPAS": [
+    "insat-2d": [
+        "http://www.wikidata.org/entity/Q111498617",
+        "http://www.wikidata.org/entity/Q14914820"
+    ],
+    "orfeus-spas": [
         "http://www.wikidata.org/entity/Q111498635",
         "http://www.wikidata.org/entity/Q111499233"
     ],
-    "JAS-2": [
-        "http://www.wikidata.org/entity/Q111498745",
-        "http://www.wikidata.org/entity/Q2045696"
+    "measat-2": [
+        "http://www.wikidata.org/entity/Q111498644",
+        "http://www.wikidata.org/entity/Q16943272"
     ],
-    "Inmarsat-3-F1": [
-        "http://www.wikidata.org/entity/Q111498918",
-        "http://www.wikidata.org/entity/Q18327660"
+    "telecom-2d": [
+        "http://www.wikidata.org/entity/Q111498791",
+        "http://www.wikidata.org/entity/Q1283626"
     ],
-    "MSTI-3": [
-        "http://www.wikidata.org/entity/Q111498924",
-        "http://www.wikidata.org/entity/Q29611580"
+    "n-star-b": [
+        "http://www.wikidata.org/entity/Q111498936",
+        "http://www.wikidata.org/entity/Q16061329"
     ],
-    "JCSAT-3": [
-        "http://www.wikidata.org/entity/Q111498959",
-        "http://www.wikidata.org/entity/Q16061340"
+    "insat-2c": [
+        "http://www.wikidata.org/entity/Q111498953",
+        "http://www.wikidata.org/entity/Q14914818"
     ],
-    "TDRS-7": [
-        "http://www.wikidata.org/entity/Q111498973",
-        "http://www.wikidata.org/entity/Q7669871"
+    "telecom-2c": [
+        "http://www.wikidata.org/entity/Q111498954",
+        "http://www.wikidata.org/entity/Q1725959"
     ],
-    "Orion-1": [
-        "http://www.wikidata.org/entity/Q111498998",
-        "http://www.wikidata.org/entity/Q923935"
+    "n-star-a": [
+        "http://www.wikidata.org/entity/Q111498960",
+        "http://www.wikidata.org/entity/Q16061330"
     ],
-    "Electro": [
-        "http://www.wikidata.org/entity/Q111499018",
-        "http://www.wikidata.org/entity/Q13395231"
+    "eyesat-1": [
+        "http://www.wikidata.org/entity/Q111499249",
+        "http://www.wikidata.org/entity/Q2790524"
     ],
-    "SROSS-C2": [
-        "http://www.wikidata.org/entity/Q111499044",
-        "http://www.wikidata.org/entity/Q65561688"
-    ],
-    "Stella": [
-        "http://www.wikidata.org/entity/Q111499247",
-        "http://www.wikidata.org/entity/Q6133949"
-    ],
-    "ITAmsat": [
+    "itamsat": [
         "http://www.wikidata.org/entity/Q111499254",
-        "http://www.wikidata.org/entity/Q111499258"
+        "http://www.wikidata.org/entity/Q111499258",
+        "http://www.wikidata.org/entity/Q2790523"
     ],
-    "NOAA-13": [
-        "http://www.wikidata.org/entity/Q111499280",
-        "http://www.wikidata.org/entity/Q55624487"
+    "insat-2b": [
+        "http://www.wikidata.org/entity/Q111499331",
+        "http://www.wikidata.org/entity/Q13115908"
     ],
-    "TDRS-6": [
-        "http://www.wikidata.org/entity/Q111499431",
-        "http://www.wikidata.org/entity/Q14174202"
+    "lageos-2": [
+        "http://www.wikidata.org/entity/Q111499452",
+        "http://www.wikidata.org/entity/Q84057139"
     ],
-    "CTA": [
-        "http://www.wikidata.org/entity/Q111499436",
-        "http://www.wikidata.org/entity/Q65274617"
+    "insat-2a": [
+        "http://www.wikidata.org/entity/Q111499459",
+        "http://www.wikidata.org/entity/Q13115903"
     ],
-    "DFS-Kopernikus-3": [
-        "http://www.wikidata.org/entity/Q111499450",
-        "http://www.wikidata.org/entity/Q16061243"
+    "telecom-2a": [
+        "http://www.wikidata.org/entity/Q111499562",
+        "http://www.wikidata.org/entity/Q448641"
     ],
-    "TDRS-5": [
-        "http://www.wikidata.org/entity/Q111499712",
-        "http://www.wikidata.org/entity/Q7669868"
+    "insat-1d": [
+        "http://www.wikidata.org/entity/Q111500102",
+        "http://www.wikidata.org/entity/Q14914744"
     ],
-    "ERS-1": [
-        "http://www.wikidata.org/entity/Q111499741",
-        "http://www.wikidata.org/entity/Q987402"
+    "hagoromo": [
+        "http://www.wikidata.org/entity/Q111500111",
+        "http://www.wikidata.org/entity/Q12949031"
     ],
-    "Microsat-1": [
-        "http://www.wikidata.org/entity/Q111499753",
-        "http://www.wikidata.org/entity/Q1571699"
+    "mos-1b": [
+        "http://www.wikidata.org/entity/Q111500124",
+        "http://www.wikidata.org/entity/Q11280113"
     ],
-    "NOAA-12": [
-        "http://www.wikidata.org/entity/Q111499926",
-        "http://www.wikidata.org/entity/Q55624485"
+    "tele-x": [
+        "http://www.wikidata.org/entity/Q111500507",
+        "http://www.wikidata.org/entity/Q742759"
     ],
-    "TDF-2": [
-        "http://www.wikidata.org/entity/Q111500092",
-        "http://www.wikidata.org/entity/Q16061238"
+    "insat-1c": [
+        "http://www.wikidata.org/entity/Q111500685",
+        "http://www.wikidata.org/entity/Q14174561"
     ],
-    "JCSAT-2": [
-        "http://www.wikidata.org/entity/Q111500130",
-        "http://www.wikidata.org/entity/Q16061342"
+    "astro": [
+        "http://www.wikidata.org/entity/Q15912403",
+        "http://www.wikidata.org/entity/Q4654403"
     ],
-    "JCSAT-1": [
-        "http://www.wikidata.org/entity/Q111500568",
-        "http://www.wikidata.org/entity/Q16061343"
-    ],
-    "TDF-1": [
-        "http://www.wikidata.org/entity/Q111500621",
-        "http://www.wikidata.org/entity/Q16061240"
-    ],
-    "Ofeq-1": [
-        "http://www.wikidata.org/entity/Q111500631",
-        "http://www.wikidata.org/entity/Q3880993"
-    ],
-    "NOAA-11": [
-        "http://www.wikidata.org/entity/Q111500632",
-        "http://www.wikidata.org/entity/Q55624483"
-    ],
-    "TDRS-3": [
-        "http://www.wikidata.org/entity/Q111500634",
-        "http://www.wikidata.org/entity/Q7669867"
-    ],
-    "Spacenet-3": [
-        "http://www.wikidata.org/entity/Q111500862",
-        "http://www.wikidata.org/entity/Q18327679"
-    ],
-    "RCA-SATCOM-4": [
-        "http://www.wikidata.org/entity/Q16061273",
-        "http://www.wikidata.org/entity/Q17047998"
-    ],
-    "Ekran-14": [
+    "ekran-14": [
         "http://www.wikidata.org/entity/Q16943285",
         "http://www.wikidata.org/entity/Q16943366"
     ],
-    "Meteor-M-No.2-1": [
+    "prisma": [
+        "http://www.wikidata.org/entity/Q17092544",
+        "http://www.wikidata.org/entity/Q2067560"
+    ],
+    "meteor-m-no.2-1": [
         "http://www.wikidata.org/entity/Q17331480",
         "http://www.wikidata.org/entity/Q85785045"
     ],
-    "Endeavour": [
-        "http://www.wikidata.org/entity/Q182508",
-        "http://www.wikidata.org/entity/Q96206891"
-    ],
-    "Royal-Observatory": [
+    "royal-observatory": [
         "http://www.wikidata.org/entity/Q192988",
         "http://www.wikidata.org/entity/Q3106882"
     ],
-    "Dominion-Observatory": [
+    "dominion-observatory": [
         "http://www.wikidata.org/entity/Q19875599",
         "http://www.wikidata.org/entity/Q266818"
     ],
-    "Jantar-Mantar": [
+    "jantar-mantar": [
         "http://www.wikidata.org/entity/Q2045115",
         "http://www.wikidata.org/entity/Q21069423",
         "http://www.wikidata.org/entity/Q508634"
     ],
-    "Radcliffe-Observatory": [
+    "radcliffe-observatory": [
         "http://www.wikidata.org/entity/Q2066160",
         "http://www.wikidata.org/entity/Q4329990"
     ],
-    "VERITAS": [
+    "veritas": [
         "http://www.wikidata.org/entity/Q21083280",
         "http://www.wikidata.org/entity/Q3556305"
     ],
-    "Gotha-Observatory": [
+    "beidou-3-m1": [
+        "http://www.wikidata.org/entity/Q21663525",
+        "http://www.wikidata.org/entity/Q60749620"
+    ],
+    "gotha-observatory": [
         "http://www.wikidata.org/entity/Q2346057",
         "http://www.wikidata.org/entity/Q315157"
     ],
-    "Tianhui-1B": [
+    "tianhui-1b": [
         "http://www.wikidata.org/entity/Q2431071",
         "http://www.wikidata.org/entity/Q4467962"
     ],
-    "Strela": [
+    "strela": [
         "http://www.wikidata.org/entity/Q248564",
         "http://www.wikidata.org/entity/Q73610"
     ],
-    "Proton": [
+    "proton": [
         "http://www.wikidata.org/entity/Q249231",
         "http://www.wikidata.org/entity/Q3566447"
     ],
-    "Observatory": [
+    "observatory": [
         "http://www.wikidata.org/entity/Q26497403",
         "http://www.wikidata.org/entity/Q26548529"
     ],
-    "Oceanus": [
+    "pegasus": [
+        "http://www.wikidata.org/entity/Q30102248",
+        "http://www.wikidata.org/entity/Q478603"
+    ],
+    "megsat": [
+        "http://www.wikidata.org/entity/Q3853894",
+        "http://www.wikidata.org/entity/Q3853898"
+    ],
+    "oceanus": [
         "http://www.wikidata.org/entity/Q39055750",
         "http://www.wikidata.org/entity/Q48851572"
     ],
-    "Ka-Dar-Observatory": [
+    "ka-dar-observatory": [
         "http://www.wikidata.org/entity/Q4071795",
         "http://www.wikidata.org/entity/Q4329966"
     ],
-    "National-Astronomical-Observatory": [
+    "national-astronomical-observatory": [
         "http://www.wikidata.org/entity/Q4289239",
         "http://www.wikidata.org/entity/Q5811531"
     ],
-    "Sputnik-3": [
+    "sputnik-3": [
         "http://www.wikidata.org/entity/Q4330517",
         "http://www.wikidata.org/entity/Q719789"
     ],
-    "Alte-Sternwarte": [
+    "alte-sternwarte": [
         "http://www.wikidata.org/entity/Q436256",
         "http://www.wikidata.org/entity/Q53513403"
     ],
-    "Ford-Observatory": [
+    "ford-observatory": [
         "http://www.wikidata.org/entity/Q5467882",
         "http://www.wikidata.org/entity/Q5467884"
     ],
-    "NEXUS": [
+    "nexus": [
         "http://www.wikidata.org/entity/Q63089346",
         "http://www.wikidata.org/entity/Q6953645"
     ],
-    "RISAT-2B": [
-        "http://www.wikidata.org/entity/Q65560084",
-        "http://www.wikidata.org/entity/Q83277250"
-    ],
-    "Weston-Observatory": [
+    "weston-observatory": [
         "http://www.wikidata.org/entity/Q7989459",
         "http://www.wikidata.org/entity/Q7989460"
-    ],
-    "trumpet": [
-        "http://www.wikidata.org/entity/Q89190791",
-        "http://www.wikidata.org/entity/Q89194441",
-        "http://www.wikidata.org/entity/Q89194533",
-        "http://www.wikidata.org/entity/Q89195115",
-        "http://www.wikidata.org/entity/Q89195782",
-        "http://www.wikidata.org/entity/Q89195884",
-        "http://www.wikidata.org/entity/Q89197122",
-        "http://www.wikidata.org/entity/Q89197888",
-        "http://www.wikidata.org/entity/Q89197892",
-        "http://www.wikidata.org/entity/Q89197894",
-        "http://www.wikidata.org/entity/Q89197895",
-        "http://www.wikidata.org/entity/Q89197897",
-        "http://www.wikidata.org/entity/Q89197899",
-        "http://www.wikidata.org/entity/Q89197920",
-        "http://www.wikidata.org/entity/Q89200878",
-        "http://www.wikidata.org/entity/Q89200882",
-        "http://www.wikidata.org/entity/Q89200942",
-        "http://www.wikidata.org/entity/Q89201739",
-        "http://www.wikidata.org/entity/Q89201743",
-        "http://www.wikidata.org/entity/Q89201746",
-        "http://www.wikidata.org/entity/Q89201749",
-        "http://www.wikidata.org/entity/Q89201752",
-        "http://www.wikidata.org/entity/Q89201762",
-        "http://www.wikidata.org/entity/Q89202307",
-        "http://www.wikidata.org/entity/Q90802027",
-        "http://www.wikidata.org/entity/Q90802072"
     ]
 }
