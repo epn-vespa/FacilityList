@@ -33,13 +33,14 @@
     },
     {
         "item": "http://www.wikidata.org/entity/Q100448764",
-        "itemLabel": "q100448764",
+        "itemLabel": "prenzlau-observatory",
         "all_Unified_Astro_Thesaurus_ID": "",
         "all_COSPAR_ID": "",
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "Public observatory in Prenzlau"
     },
     {
         "item": "http://www.wikidata.org/entity/Q100882828",
@@ -1073,16 +1074,6 @@
         "itemDescription": "astronomical observatory"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q104635403",
-        "itemLabel": "ia\u0219i-astronomical-observatory",
-        "all_Unified_Astro_Thesaurus_ID": "",
-        "all_COSPAR_ID": "",
-        "all_NAIF_ID": "",
-        "all_NSSDCA_ID": "",
-        "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Observatorul Astronomic din Ia\u015fi"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q104665604",
         "itemLabel": "vega-flight-vv18",
         "all_Unified_Astro_Thesaurus_ID": "",
@@ -1594,7 +1585,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "type of CubeSat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q105807981",
@@ -1749,7 +1741,7 @@
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
         "aliases": "ASGARDIA 1",
-        "itemDescription": "43049"
+        "itemDescription": "artificial satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q105921311",
@@ -1812,7 +1804,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "Nanosatellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q105968870",
@@ -4551,6 +4544,16 @@
         "aliases": "Shijian 17|SJ-17|Shi Jian 17"
     },
     {
+        "item": "http://www.wikidata.org/entity/Q109363208",
+        "itemLabel": "q109363208",
+        "all_Unified_Astro_Thesaurus_ID": "",
+        "all_COSPAR_ID": "",
+        "all_NAIF_ID": "",
+        "all_NSSDCA_ID": "",
+        "all_Minor_Planet_Center_observatory_ID": "",
+        "aliases": ""
+    },
+    {
         "item": "http://www.wikidata.org/entity/Q10940040",
         "itemLabel": "kosmos-1214",
         "all_Unified_Astro_Thesaurus_ID": "",
@@ -6121,13 +6124,14 @@
     },
     {
         "item": "http://www.wikidata.org/entity/Q111209191",
-        "itemLabel": "q111209191",
+        "itemLabel": "geostationary-extended-observations",
         "all_Unified_Astro_Thesaurus_ID": "",
         "all_COSPAR_ID": "",
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "GeoXO",
+        "itemDescription": "planned weather satellite system"
     },
     {
         "item": "http://www.wikidata.org/entity/Q111211433",
@@ -12706,12 +12710,12 @@
         "item": "http://www.wikidata.org/entity/Q111471997",
         "itemLabel": "globalstar-m086",
         "all_Unified_Astro_Thesaurus_ID": "",
-        "all_COSPAR_ID": "",
+        "all_COSPAR_ID": "2011-080F",
         "all_NAIF_ID": "",
-        "all_NSSDCA_ID": "",
+        "all_NSSDCA_ID": "2011-080F",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "",
-        "itemDescription": "38045"
+        "aliases": "FM14|Globalstar-2 M086|M086",
+        "itemDescription": "communications satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q111471998",
@@ -23830,7 +23834,7 @@
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
         "aliases": "",
-        "itemDescription": "planned German reconnaissance satellite"
+        "itemDescription": "German reconnaissance satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q112229094",
@@ -24048,6 +24052,17 @@
         "aliases": "ECS-A|Experimental Communications Satellite-A"
     },
     {
+        "item": "http://www.wikidata.org/entity/Q112604962",
+        "itemLabel": "kosmos-1443",
+        "all_Unified_Astro_Thesaurus_ID": "",
+        "all_COSPAR_ID": "",
+        "all_NAIF_ID": "",
+        "all_NSSDCA_ID": "",
+        "all_Minor_Planet_Center_observatory_ID": "",
+        "aliases": "",
+        "itemDescription": "unmanned TKS spacecraft"
+    },
+    {
         "item": "http://www.wikidata.org/entity/Q11260748",
         "itemLabel": "iss-b",
         "all_Unified_Astro_Thesaurus_ID": "",
@@ -24066,6 +24081,17 @@
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
         "aliases": ""
+    },
+    {
+        "item": "http://www.wikidata.org/entity/Q112628974",
+        "itemLabel": "globalstar-m087",
+        "all_Unified_Astro_Thesaurus_ID": "",
+        "all_COSPAR_ID": "",
+        "all_NAIF_ID": "",
+        "all_NSSDCA_ID": "",
+        "all_Minor_Planet_Center_observatory_ID": "",
+        "aliases": "FM15|Globalstar-2 M087|M087",
+        "itemDescription": "communications satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11263596",
@@ -25024,7 +25050,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1961-020A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Explorer 12|EPE A|EPE-A|S-3|Energetic Particles Explorer-A",
+        "aliases": "S-3|Energetic Particles Explorer-A|Explorer 12|EPE A|EPE-A",
         "itemDescription": "former American research satellite"
     },
     {
@@ -26260,7 +26286,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Gemini VII",
+        "aliases": "Gemini VII|Gemini VII",
         "itemDescription": "1965 manned spaceflight in NASA's Gemini program"
     },
     {
@@ -48671,7 +48697,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "Niwaka"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1389402",
@@ -50286,7 +50312,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "Experimental space technologies"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14554285",
@@ -50483,7 +50510,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "a geostationary communication satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14559255",
@@ -52228,7 +52256,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "ESO|ESO|ESO|ESO|ESO|ESO|\u0627\u064a\u0633\u0648|ESO|Observatori Europeu Austral|European Southern Observatory|European Southern Observatory|Europ\u00e4ische Organisation f\u00fcr astronomische Forschung in der s\u00fcdlichen Hemisph\u00e4re|European Southern Observatory|ESO|European Southern Observatory|European Organisation for Astronomical Research in the Southern Hemisphere|The European Southern Observatory\uff0cESO|The European Southern Observatory\uff0c\u7e2e\u5beb\uff1aESO|European Southern Observatory|Observatorio Austral Europeo|Observatorio del Sur Europeo|Observatorio Europeo Austral|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u062c\u0646\u0648\u0628\u06cc \u0627\u0631\u0648\u067e\u0627|European Southern Observatory|Observatoire europeen austral|European Southern Observatory|European Southern Observatory|ESO|\u30e8\u30fc\u30ed\u30c3\u30d1\u5357\u5929\u6587\u53f0|\u6b27\u5dde\u5357\u5929\u5929\u6587\u53f0|ESO|\uc720\ub7fd \ub0a8\ubc18\uad6c \ucc9c\ubb38\ub300|\uc720\ub7fd \ub0a8\ucc9c\ubb38\ub300|\uc720\ub7fd\ub0a8\ubd80\ucc9c\ubb38\ub300|\uc720\ub7fd\ub0a8\ucc9c\ubb38\ub300|European Southern Observatory|ESO|\u0415\u0421\u041e|ESO|European Southern Observatory|European Southern Observatory|Det europeiske sydobservatorium|Det s\u00f8rlege europeiske observatoriet|ESO|European Southern Observatory|ESO|ESO|European southern observatory|European Organisation for Astronomical Research in the Southern Hemisphere|European Southern Observatory|European Organisation for Astronomical Research in the Southern Hemisphere|European Southern Observatory|ESO|ESO|European Southern Observatory|ESO|Evropska organizacija za astronomsko raziskovanje na ju\u017eni polobli|European Organisation for Astronomical Research in the Southern Hemisphere|European Southern Observatory|ESO|European Southern Observatory|\u0e2b\u0e2d\u0e14\u0e39\u0e14\u0e32\u0e27\u0e22\u0e38\u0e42\u0e23\u0e1b\u0e43\u0e15\u0e49|European Southern Observatory|ESO|\u0110\u00e0i quan s\u00e1t Nam \u00c2u|ESO|ESO|\u5357\u6b50\u5929\u6587\u53f0|\u6b27\u5357\u53f0|\u6b27\u6d32\u5357\u5929\u5929\u6587\u53f0|\u6b50\u6d32\u5357\u5929\u5929\u6587\u53f0|\u6b50\u6d32\u5357\u5929\u6587\u53f0|\u042d\u041f\u0410",
+        "aliases": "ESO|ESO|ESO|ESO|ESO|ESO|\u0627\u064a\u0633\u0648|ESO|Observatori Europeu Austral|European Southern Observatory|European Southern Observatory|Europ\u00e4ische Organisation f\u00fcr astronomische Forschung in der s\u00fcdlichen Hemisph\u00e4re|European Southern Observatory|ESO|European Southern Observatory|European Organisation for Astronomical Research in the Southern Hemisphere|The European Southern Observatory\uff0cESO|The European Southern Observatory\uff0c\u7e2e\u5beb\uff1aESO|European Southern Observatory|Observatorio Austral Europeo|Observatorio del Sur Europeo|Observatorio Europeo Austral|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u062c\u0646\u0648\u0628\u06cc \u0627\u0631\u0648\u067e\u0627|European Southern Observatory|Observatoire europeen austral|European Southern Observatory|European Southern Observatory|ESO|\u30e8\u30fc\u30ed\u30c3\u30d1\u5357\u5929\u6587\u53f0|\u6b27\u5dde\u5357\u5929\u5929\u6587\u53f0|ESO|\uc720\ub7fd \ub0a8\ubc18\uad6c \ucc9c\ubb38\ub300|\uc720\ub7fd \ub0a8\ucc9c\ubb38\ub300|\uc720\ub7fd\ub0a8\ubd80\ucc9c\ubb38\ub300|\uc720\ub7fd\ub0a8\ucc9c\ubb38\ub300|European Southern Observatory|ESO|\u0415\u0421\u041e|ESO|European Southern Observatory|European Southern Observatory|Det europeiske sydobservatorium|Det s\u00f8rlege europeiske observatoriet|ESO|European Southern Observatory|ESO|ESO|European southern observatory|European Organisation for Astronomical Research in the Southern Hemisphere|European Southern Observatory|European Organisation for Astronomical Research in the Southern Hemisphere|European Southern Observatory|ESO|ESO|European Southern Observatory|ESO|Evropska organizacija za astronomsko raziskovanje na ju\u017eni polobli|European Organisation for Astronomical Research in the Southern Hemisphere|European Southern Observatory|ESO|European Southern Observatory|\u0e2b\u0e2d\u0e14\u0e39\u0e14\u0e32\u0e27\u0e22\u0e38\u0e42\u0e23\u0e1b\u0e43\u0e15\u0e49|European Southern Observatory|ESO|\u0110\u00e0i quan s\u00e1t Nam \u00c2u|ESO|ESO|\u5357\u6b50\u5929\u6587\u53f0|\u6b27\u5357\u53f0|\u6b27\u6d32\u5357\u5929\u5929\u6587\u53f0|\u6b50\u6d32\u5357\u5929\u5929\u6587\u53f0|\u6b50\u6d32\u5357\u5929\u6587\u53f0|ESO|\u042d\u041f\u0410",
         "itemDescription": "intergovernmental research organization for ground-based astronomy"
     },
     {
@@ -53588,7 +53616,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "2013-066AB",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Ecuadorian Space Ship-02|Krysaor|NEE-02|NEE 02 KRYSAOR",
+        "aliases": "Ecuadorian Space Ship-02|Krysaor|NEE-02|NEE 02 Krysaor",
         "itemDescription": "Ecuadorian satellite"
     },
     {
@@ -58119,13 +58147,13 @@
     },
     {
         "item": "http://www.wikidata.org/entity/Q17088505",
-        "itemLabel": "venus",
+        "itemLabel": "victoria-experimental-network-under-the-sea",
         "all_Unified_Astro_Thesaurus_ID": "",
         "all_COSPAR_ID": "",
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Victoria Experimental Network Under the Sea",
+        "aliases": "VENUS",
         "itemDescription": "cabled sea floor observatory"
     },
     {
@@ -59700,7 +59728,7 @@
         "all_NAIF_ID": "-236",
         "all_NSSDCA_ID": "2004-030A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "MESSENGER|Romsonden messenger|Sonda messenger|MESSENGER|Mesind\u017eer|MESSENGER|\u0e22\u0e32\u0e19\u0e40\u0e21\u0e2a\u0e40\u0e0b\u0e19\u0e40\u0e08\u0e2d\u0e23\u0e4c|T\u00e0u v\u0169 tr\u1ee5 Messenger|MESSENGER|\u4fe1\u4f7f\u53f7\u6c34\u661f\u63a2\u6d4b\u5668|MESSENGER|\u0645\u0633\u0646\u062c\u0631 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|\u0645\u064a\u0633\u0646\u062c\u0631 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|MESSENGER|Mercury Surface, Space Environment, Geochemistry, and Ranging|MErcury Surface Space ENvironment GEochemistry and Ranging|MErcury Surface Space ENvironment, GEochemistry and Ranging|MErcury Surface, Space ENvironment, GEochemistry and Ranging|Mercury Surface, Space Environment, Geochemistry, and Ranging|MErcury Surface, Space ENvironment, GEochemistry and Ranging|Messenger-luotain|Mercury Surface, Space Environment, Geochemistry and Ranging|Programme Messenger|MESSENGER|Discovery 7|Mercury Surface, Space Environment, Geochemistry, and Ranging|\u30e1\u30c3\u30bb\u30f3\u30b8\u30e3\u30fc\u8a08\u753b|\u10db\u10d4\u10e1\u10d4\u10dc\u10ef\u10d4\u10e0\u10d8|\uba54\uc2e0\uc800(\uc218\uc131 \ud0d0\uc0ac\uc120)",
+        "aliases": "MESSENGER|\u0645\u0633\u0646\u062c\u0631 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|\u0645\u064a\u0633\u0646\u062c\u0631 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|MESSENGER|Mercury Surface, Space Environment, Geochemistry, and Ranging|MErcury Surface Space ENvironment GEochemistry and Ranging|MErcury Surface Space ENvironment, GEochemistry and Ranging|MErcury Surface, Space ENvironment, GEochemistry and Ranging|Mercury Surface, Space Environment, Geochemistry, and Ranging|MErcury Surface, Space ENvironment, GEochemistry and Ranging|Messenger-luotain|Mercury Surface, Space Environment, Geochemistry and Ranging|Programme Messenger|MESSENGER|Discovery 7|Mercury Surface, Space Environment, Geochemistry, and Ranging|\u30e1\u30c3\u30bb\u30f3\u30b8\u30e3\u30fc\u8a08\u753b|\u10db\u10d4\u10e1\u10d4\u10dc\u10ef\u10d4\u10e0\u10d8|\uba54\uc2e0\uc800(\uc218\uc131 \ud0d0\uc0ac\uc120)|MESSENGER|Romsonden messenger|Sonda messenger|MESSENGER|Mesind\u017eer|MESSENGER|\u0e22\u0e32\u0e19\u0e40\u0e21\u0e2a\u0e40\u0e0b\u0e19\u0e40\u0e08\u0e2d\u0e23\u0e4c|T\u00e0u v\u0169 tr\u1ee5 Messenger|MESSENGER|\u4fe1\u4f7f\u53f7\u6c34\u661f\u63a2\u6d4b\u5668",
         "itemDescription": "robotic NASA spacecraft orbiting the planet Mercury"
     },
     {
@@ -62084,7 +62112,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4",
+        "aliases": "\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4|\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab",
         "itemDescription": "space station launched and operated by NASA"
     },
     {
@@ -62117,7 +62145,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 \u0662|Mercury 2|MR-2|MR-2",
+        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 \u0662|Mercury 2|MR-2|MR-2|MR-2",
         "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft"
     },
     {
@@ -63535,7 +63563,7 @@
         "all_NAIF_ID": "-79",
         "all_NSSDCA_ID": "2003-038A",
         "all_Minor_Planet_Center_observatory_ID": "245",
-        "aliases": "\u0627\u0644\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0633\u0628\u064a\u062a\u0632\u0631|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|Spitzer Space Telescope|SIRTF|Spitzer\u016fv kosmick\u00fd dalekohled|SIRTF|Space Infrared Telescope Facility|Spitzer Space Telescope|Spitzer ST|Spitzer-Teleskop|Spitzer-Weltraumobservatorium|Weltraumteleskop Spitzer|Spitzer Space Telescope|SIRTF|Space Infrared Telescope Facility|SST|SIRTF|Spitzer|SST|Telescopio Spitzer|Avaruusteleskooppi Spitzer|SIRTF|SIRTF|Space Infrared Telescope Facility|Spitzer Space Telescope|T\u00e9lescope spatial infrarouge|Telescope spatial Spitzer|T\u00e9lescope spatial Spitzer|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0938\u094d\u092a\u0947\u0938 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|Spitzer Space Telescope|Teleskop angkasa Spitzer|Teleskop Spitzer|Spitzer Space Telescope|Spitzer-teleskopet|Spitzerteleskopet|SIRTF|Space Infrared Telescope Facility|Spitzer Ruimtetelescoop|Romteleskopet Spitzer|Spitzer-teleskopet|Teleskop Spitzera|Spitzer Space Telescope|Telesc\u00f3pio Spitzer|SIRTF|Spitzer|Spitzer Space Telescope|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0421\u043f\u0438\u0442\u0446\u0435\u0440\u0430|\u0421\u043f\u0438\u0446\u0435\u0440|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0438\u0442\u0446\u0435\u0440|SIRTF|Spitzerov vesm\u00edrny teleskop|Spitzer Space Telescope|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|Spitzer Uzay Teleskopu|\u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|Spitzer Space Telescope|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \"\u0421\u043f\u0456\u0442\u0446\u0435\u0440\"|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u044c\u043f\u0456\u0446\u044d\u0440\u0430",
+        "aliases": "Spitzer Space Telescope|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \"\u0421\u043f\u0456\u0442\u0446\u0435\u0440\"|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u044c\u043f\u0456\u0446\u044d\u0440\u0430|\u0627\u0644\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0633\u0628\u064a\u062a\u0632\u0631|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|Spitzer Space Telescope|SIRTF|Spitzer\u016fv kosmick\u00fd dalekohled|SIRTF|Space Infrared Telescope Facility|Spitzer Space Telescope|Spitzer ST|Spitzer-Teleskop|Spitzer-Weltraumobservatorium|Weltraumteleskop Spitzer|Spitzer Space Telescope|SIRTF|Space Infrared Telescope Facility|SST|SIRTF|Spitzer|SST|Telescopio Spitzer|Avaruusteleskooppi Spitzer|SIRTF|SIRTF|Space Infrared Telescope Facility|Spitzer Space Telescope|T\u00e9lescope spatial infrarouge|Telescope spatial Spitzer|T\u00e9lescope spatial Spitzer|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0938\u094d\u092a\u0947\u0938 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|Spitzer Space Telescope|Teleskop angkasa Spitzer|Teleskop Spitzer|Spitzer Space Telescope|Spitzer-teleskopet|Spitzerteleskopet|SIRTF|Space Infrared Telescope Facility|Spitzer Ruimtetelescoop|Romteleskopet Spitzer|Spitzer-teleskopet|Teleskop Spitzera|Spitzer Space Telescope|Telesc\u00f3pio Spitzer|SIRTF|Spitzer|Spitzer Space Telescope|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0421\u043f\u0438\u0442\u0446\u0435\u0440\u0430|\u0421\u043f\u0438\u0446\u0435\u0440|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0438\u0442\u0446\u0435\u0440|SIRTF|Spitzerov vesm\u00edrny teleskop|Spitzer Space Telescope|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|Spitzer Uzay Teleskopu|\u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb",
         "itemDescription": "former NASA infrared space observatory"
     },
     {
@@ -63750,7 +63778,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "327",
-        "aliases": "Stacio Xinglong|Estacion Xinglong|\u8208\u9686\u89b3\u6e2c\u6240|Xinglong Station|\u5174\u9686\u5929\u6587\u53f0|\u8208\u9686\u89c0\u6e2c\u57fa\u5730|\u8208\u9686\u89c0\u6e2c\u7ad9|\u56fd\u5bb6\u5929\u6587\u53f0\u8208\u9686\u89b3\u6e2c\u57fa\u5730"
+        "aliases": "Estacion Xinglong|\u8208\u9686\u89b3\u6e2c\u6240|Xinglong Station|\u5174\u9686\u5929\u6587\u53f0|\u8208\u9686\u89c0\u6e2c\u57fa\u5730|\u8208\u9686\u89c0\u6e2c\u7ad9|\u56fd\u5bb6\u5929\u6587\u53f0\u8208\u9686\u89b3\u6e2c\u57fa\u5730|Stacio Xinglong"
     },
     {
         "item": "http://www.wikidata.org/entity/Q203801",
@@ -64040,7 +64068,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "2019-040A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "SXG|SRG|SRG|SXG|Spectrum-X-Gamma|Spectrum-X-Gamma|Spectrum-X-Gamma|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420\u0413|Sonda spektr-roentgen-gamma|Sonda Spektr-Roentgen-Gamma|\u0421\u043f\u0435\u043a\u0442\u0440 \u0420\u0413|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420\u0435\u043d\u0442\u0433\u0435\u043d-\u0413\u0430\u043c\u043c\u0430|Spectrum-X-Gamma|Spektr-RG",
+        "aliases": "SXG|SRG|SRG|SXG|Spectrum-X-Gamma|Spectrum-X-Gamma|Spectrum-X-Gamma|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420\u0413|Sonda spektr-roentgen-gamma|Sonda Spektr-Roentgen-Gamma|\u0421\u043f\u0435\u043a\u0442\u0440 \u0420\u0413|\u0421\u043f\u0435\u043a\u0442\u0440-\u0420\u0435\u043d\u0442\u0433\u0435\u043d-\u0413\u0430\u043c\u043c\u0430|Spectrum-X-Gamma|Spektr-RG|Spectrum + R\u00f6ntgen + Gamma|Spectrum-R\u00f6ntgen-Gamma",
         "itemDescription": "Russian\u2013German X-ray observatory"
     },
     {
@@ -66180,7 +66208,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "",
+        "aliases": "MA-10",
         "itemDescription": "cancelled spaceflight of Project Mercury"
     },
     {
@@ -69218,7 +69246,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "896",
-        "aliases": "Yatsugatake Nanroku Temmondai|Yatsugatake Nanroku Tenmondai"
+        "aliases": "Yatsugatake Nanroku Temmondai|Yatsugatake Nanroku Tenmondai",
+        "itemDescription": "Japanese astronomical observatory"
     },
     {
         "item": "http://www.wikidata.org/entity/Q25438445",
@@ -71295,7 +71324,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Environmental Research Satellite 28|ERS 28|ERS-28|OV5-2"
+        "aliases": "ERS-28|OV5-2|Environmental Research Satellite 28|ERS 28"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2780519",
@@ -73670,7 +73699,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "AMC-23|Eutelsat 172A|Eutelsat 174A|GE-23|Worldsat 3",
+        "aliases": "Eutelsat 174A|GE-23|Worldsat 3|AMC-23|Eutelsat 172A",
         "itemDescription": "communications satellite"
     },
     {
@@ -74482,7 +74511,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0938\u094d\u092a\u0947\u0938 \u0915\u0945\u092a\u094d\u0938\u0941\u0932 \u0930\u093f\u0915\u094d\u0935\u094d\u0939\u0930\u0940 \u092a\u094d\u0930\u092f\u094b\u0917|Space Capsule Recovery Experiment|SRE-1|\u0927\u094d\u0930\u0941\u0935\u0940\u092f \u0909\u092a\u0917\u094d\u0930\u0939 \u092a\u094d\u0930\u0915\u094d\u0937\u0947\u092a\u0923 \u092f\u093e\u0928|SCRE|SRE 1|SRE-1|SRE-1|Space Capsule Recovery Experiment|\u0d0e\u0d38\u0d4d \u0d06\u0d7c \u0d07 \u0d12\u0d28\u0d4d\u0d28\u0d4d|\u0d0e\u0d38\u0d4d.\u0d06\u0d7c.\u0d07 \u0d12\u0d28\u0d4d\u0d28\u0d4d"
+        "aliases": "\u0927\u094d\u0930\u0941\u0935\u0940\u092f \u0909\u092a\u0917\u094d\u0930\u0939 \u092a\u094d\u0930\u0915\u094d\u0937\u0947\u092a\u0923 \u092f\u093e\u0928|SCRE|SRE 1|SRE-1|SRE-1|Space Capsule Recovery Experiment|\u0d0e\u0d38\u0d4d \u0d06\u0d7c \u0d07 \u0d12\u0d28\u0d4d\u0d28\u0d4d|\u0d0e\u0d38\u0d4d.\u0d06\u0d7c.\u0d07 \u0d12\u0d28\u0d4d\u0d28\u0d4d|\u0938\u094d\u092a\u0947\u0938 \u0915\u0945\u092a\u094d\u0938\u0941\u0932 \u0930\u093f\u0915\u094d\u0935\u094d\u0939\u0930\u0940 \u092a\u094d\u0930\u092f\u094b\u0917|Space Capsule Recovery Experiment|SRE-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q30595566",
@@ -74790,7 +74819,7 @@
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
         "aliases": "Globalstar 2nd generation|Globalstar 2de g\u00e9n\u00e9ration",
-        "itemDescription": "Globalstar's 2nd generation of satellite constellation"
+        "itemDescription": "2nd generation of Globalstar communications satellites"
     },
     {
         "item": "http://www.wikidata.org/entity/Q31190967",
@@ -74832,7 +74861,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "STS-\u0661\u0662\u0661|ISS-ULF-1.1|Sts 121|STS 121|STS 121|\u0414\u0438\u0441\u043a\u0430\u0432\u0435\u0440\u0438 STS-121|STS 121",
+        "aliases": "Sts 121|STS 121|STS 121|\u0414\u0438\u0441\u043a\u0430\u0432\u0435\u0440\u0438 STS-121|STS 121|STS-\u0661\u0662\u0661|ISS-ULF-1.1",
         "itemDescription": "human spaceflight"
     },
     {
@@ -75206,7 +75235,7 @@
         "all_NAIF_ID": "-21",
         "all_NSSDCA_ID": "1995-065A",
         "all_Minor_Planet_Center_observatory_ID": "249",
-        "aliases": "SOHO|Observatori Heliosf\u00e8ric i Solar|SOHO|Slune\u010dn\u00ed a heliosf\u00e9rick\u00e1 observato\u0159|Solar and Heliospheric Observatory|SOHO|SOHO|Solar Heliospheric Observatory|Observatorio Solar y Heliosferico|Observatorio Solar y Heliosf\u00e9rico|Solar and Heliospheric Observatory|Solar and Heliospheric Observatory|Observatoire solaire et h\u00e9liosph\u00e9rique|Programme Soho|SOHO|Sonde Soho|\u0938\u094b\u0939\u094b|Solar and Heliospheric Observatory|SOHO|SOHO\u885b\u661f|\u30bd\u30fc\u30db\u30fc|\u592a\u967d\u30fb\u5149\u7403\u89b3\u6e2c\u885b\u661f|\u592a\u967d\u30fb\u592a\u967d\u570f\u89b3\u6e2c\u885b\u661f|SOHO|SOHO|SOHO-teleskopet|SOlar Heliospheric Observatory|Solar and Heliospheric Observatory|SOHO|SOlar Heliospheric Observatory|Solar and Heliospheric Observatory|LASCO|SOHO|Sonda soho|Solar and Heliospheric Observatory|SOHO|\u0421\u041e\u0413\u041e|SOHO\u885b\u661f|\u592a\u9633\u53ca\u65e5\u5149\u5c42\u63a2\u6d4b\u4eea",
+        "aliases": "Observatorio Solar y Heliosferico|Observatorio Solar y Heliosf\u00e9rico|Solar and Heliospheric Observatory|Solar and Heliospheric Observatory|Observatoire solaire et h\u00e9liosph\u00e9rique|Programme Soho|SOHO|Sonde Soho|\u0938\u094b\u0939\u094b|Solar and Heliospheric Observatory|SOHO|SOHO\u885b\u661f|\u30bd\u30fc\u30db\u30fc|\u592a\u967d\u30fb\u5149\u7403\u89b3\u6e2c\u885b\u661f|\u592a\u967d\u30fb\u592a\u967d\u570f\u89b3\u6e2c\u885b\u661f|SOHO|SOHO|SOHO-teleskopet|SOlar Heliospheric Observatory|Solar and Heliospheric Observatory|SOHO|SOlar Heliospheric Observatory|Solar and Heliospheric Observatory|LASCO|SOHO|Sonda soho|Solar and Heliospheric Observatory|SOHO|\u0421\u041e\u0413\u041e|SOHO\u885b\u661f|\u592a\u9633\u53ca\u65e5\u5149\u5c42\u63a2\u6d4b\u4eea|SOHO|Observatori Heliosf\u00e8ric i Solar|SOHO|Slune\u010dn\u00ed a heliosf\u00e9rick\u00e1 observato\u0159|Solar and Heliospheric Observatory|SOHO|SOHO|Solar Heliospheric Observatory",
         "itemDescription": "space observatory"
     },
     {
@@ -75228,7 +75257,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "042",
-        "aliases": "\u30a2\u30a4\u30f3\u30b7\u30e5\u30bf\u30a4\u30f3\u30fb\u30bf\u30ef\u30fc|Einsteint\u00e5rn|Einsteint\u00e5rnet|Einsteinturm|Einstein Tower|Einsteinturm|Einsteinturm|\u0628\u0631\u062c \u0623\u0646\u064a\u0634\u062a\u0627\u064a\u0646|\u041a\u0443\u043b\u0430\u0442\u0430 \u0410\u0439\u043d\u0449\u0430\u0439\u043d|Kaiser-Wilhelm-Institut f\u00fcr Physik|Einstein-Turm|Torre Albert Einstein|Torre de Albert Einstein|Torre de Einstein|Einstein Tower|Einsteinturm",
+        "aliases": "\u0628\u0631\u062c \u0623\u0646\u064a\u0634\u062a\u0627\u064a\u0646|\u041a\u0443\u043b\u0430\u0442\u0430 \u0410\u0439\u043d\u0449\u0430\u0439\u043d|Kaiser-Wilhelm-Institut f\u00fcr Physik|Einstein-Turm|Torre Albert Einstein|Torre de Albert Einstein|Torre de Einstein|Einstein Tower|Einsteinturm|\u30a2\u30a4\u30f3\u30b7\u30e5\u30bf\u30a4\u30f3\u30fb\u30bf\u30ef\u30fc|Einsteint\u00e5rn|Einsteint\u00e5rnet|Einsteinturm|Einstein Tower|Einsteinturm|Einsteinturm",
         "itemDescription": "astrophysical observatory in Potsdam, Germany"
     },
     {
@@ -75419,7 +75448,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "983",
-        "aliases": "Observatorio de Marina de San Fernando|Observatorio de San Fernando|Real Instituto y Observatorio de San Fernando|Real Observatorio Astronomico de la Armada|Real Observatorio Astron\u00f3mico de la Armada|observatori de San Fernando|Instituto y Observatorio de Marina de San Fernando|Observatorio de Cadiz|Observatorio de C\u00e1diz",
+        "aliases": "Observatorio de C\u00e1diz|Observatorio de Marina de San Fernando|Observatorio de San Fernando|Real Instituto y Observatorio de San Fernando|Real Observatorio Astronomico de la Armada|Real Observatorio Astron\u00f3mico de la Armada|observatori de San Fernando|Instituto y Observatorio de Marina de San Fernando|Observatorio de Cadiz",
         "itemDescription": "astronomical observatory of the Spanish Navy"
     },
     {
@@ -75602,7 +75631,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u795e\u516d|\u795e\u5dde6\u53f7|\u795e\u5dde\u516d\u53f7|\u795e\u821f6\u53f7|\u795e\u821f6\u865f|\u795e\u821f\u516d\u865f|\u05e9\u05e0\u05d6'\u05d5 6|\u0160enzou VI|Shenzhou VI|Shenzhou 6|Shenzhou VI|Shenzhou VI|Shenzhou VI|\u0428\u0435\u043d\u044c\u0447\u0436\u043e\u0443-6|\u0160en\u017eu 6|Shenzhou 6|\u0160en-\u010dou 6",
+        "aliases": "\u05e9\u05e0\u05d6'\u05d5 6|\u0160enzou VI|Shenzhou VI|Shenzhou 6|Shenzhou VI|Shenzhou VI|Shenzhou VI|\u0428\u0435\u043d\u044c\u0447\u0436\u043e\u0443-6|\u0160en\u017eu 6|Shenzhou 6|\u0160en-\u010dou 6|\u795e\u516d|\u795e\u5dde6\u53f7|\u795e\u5dde\u516d\u53f7|\u795e\u821f6\u53f7|\u795e\u821f6\u865f|\u795e\u821f\u516d\u865f",
         "itemDescription": "2005 Chinese manned spaceflight"
     },
     {
@@ -76119,7 +76148,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "Experimental russian orbital vehicle"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3391256",
@@ -78476,7 +78506,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1975-100A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Geostationary Operational Environmental Satellite 1|Geostationary Operational Environmental Satellite A|Geostationary Operational Environmental Satellite-1|Geostationary Operational Environmental Satellite-A|GOES A|GOES-1|GOES-A|SMS C|SMS-C"
+        "aliases": "GOES A|GOES-1|GOES-A|SMS C|SMS-C|Geostationary Operational Environmental Satellite 1|Geostationary Operational Environmental Satellite A|Geostationary Operational Environmental Satellite-1|Geostationary Operational Environmental Satellite-A"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3813802",
@@ -80765,6 +80795,17 @@
         "itemDescription": "astronomical observatory"
     },
     {
+        "item": "http://www.wikidata.org/entity/Q43001971",
+        "itemLabel": "ia\u0219i-astronomical-observatory",
+        "all_Unified_Astro_Thesaurus_ID": "",
+        "all_COSPAR_ID": "",
+        "all_NAIF_ID": "",
+        "all_NSSDCA_ID": "",
+        "all_Minor_Planet_Center_observatory_ID": "",
+        "aliases": "Observatorul Astronomic din Ia\u015fi|Observatorul Astronomic din Ia\u0219i",
+        "itemDescription": "heritage site in Ia\u0219i County, Romania"
+    },
+    {
         "item": "http://www.wikidata.org/entity/Q4302480",
         "itemLabel": "sentinel-2",
         "all_Unified_Astro_Thesaurus_ID": "",
@@ -81609,6 +81650,16 @@
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
         "aliases": "Alte Sternwarte (Bonn)|Alte Sternwarte Bonn"
+    },
+    {
+        "item": "http://www.wikidata.org/entity/Q4379736",
+        "itemLabel": "oderacs-2e",
+        "all_Unified_Astro_Thesaurus_ID": "",
+        "all_COSPAR_ID": "1995-004G",
+        "all_NAIF_ID": "",
+        "all_NSSDCA_ID": "",
+        "all_Minor_Planet_Center_observatory_ID": "",
+        "aliases": "\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \"\u041e\u0414\u0415\u0420\u0410\u041a\u0421\"|\u041e\u0414\u0415\u0420\u0410\u041a\u0421-2\u0415"
     },
     {
         "item": "http://www.wikidata.org/entity/Q4379818",
@@ -83149,7 +83200,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "690",
-        "aliases": "Lowell-Sternwarte|Lowell Observatory|Observatorio de Lowell|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0644\u0627\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0627\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0644\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0648\u0648\u0644|Lowell Observatory|Osservatorio di Flagstaff|\u30ed\u30fc\u30a8\u30eb\u5929\u6587\u53f0|\ub85c\uc6f0\ucc9c\ubb38\ub300|Lowell Observatory|Lowell Observatorium|Lowell Observatory|Observat\u00f3rio de Lowell|Lowell Observatory|\u041b\u043e\u0443\u044d\u043b\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|Anderson Mesa|Flagstaff Station|Lowllov observatorij|Lowell-observatoriet|Lowellobservatoriet|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u041b\u043e\u0432\u0435\u043b\u043b\u0430|\u7f57\u5a01\u5c14\u5929\u6587\u53f0|\u7f85\u5a01\u723e\u5929\u6587\u53f0|Anderson Mesa Station|Lowell Observatory",
+        "aliases": "Anderson Mesa Station|Lowell Observatory|Lowell-Sternwarte|Lowell Observatory|Observatorio de Lowell|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0644\u0627\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0627\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0644\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0648\u0648\u0644|Lowell Observatory|Osservatorio di Flagstaff|\u30ed\u30fc\u30a8\u30eb\u5929\u6587\u53f0|\ub85c\uc6f0\ucc9c\ubb38\ub300|Lowell Observatory|Lowell Observatorium|Lowell Observatory|Observat\u00f3rio de Lowell|Lowell Observatory|\u041b\u043e\u0443\u044d\u043b\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|Anderson Mesa|Flagstaff Station|Lowllov observatorij|Lowell-observatoriet|Lowellobservatoriet|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u041b\u043e\u0432\u0435\u043b\u043b\u0430|\u7f57\u5a01\u5c14\u5929\u6587\u53f0|\u7f85\u5a01\u723e\u5929\u6587\u53f0",
         "itemDescription": "astronomical observatory"
     },
     {
@@ -83160,7 +83211,7 @@
         "all_NAIF_ID": "-18",
         "all_NSSDCA_ID": "1989-033B",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Sonda Magallanes|Sonda Magellan|Magallanes|Magellan|Magellan-avaruusluotain|Magellan-ohjelma|Magellan S|sonda spaziale Magellan|\u30de\u30b8\u30a7\u30e9\u30f3|sonda Magellan|\u9ea5\u54f2\u502b\u865f|\u9ea6\u54f2\u4f26\u53f7|Magalh\u00e3es|Missi\u00f3 Magallanes",
+        "aliases": "Magalh\u00e3es|Missi\u00f3 Magallanes|Sonda Magallanes|Sonda Magellan|Magallanes|Magellan|Magellan-avaruusluotain|Magellan-ohjelma|Magellan S|sonda spaziale Magellan|\u30de\u30b8\u30a7\u30e9\u30f3|sonda Magellan|\u9ea5\u54f2\u502b\u865f|\u9ea6\u54f2\u4f26\u53f7",
         "itemDescription": "NASA space probe which was launched in 1989 to explorer Venus, the second planet from the Sun"
     },
     {
@@ -84158,7 +84209,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "NOAA-21|Joint Polar Satellite System 2",
+        "aliases": "Joint Polar Satellite System 2|NOAA-21",
         "itemDescription": "future American weather satellite"
     },
     {
@@ -84255,7 +84306,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "NASA's first 6U CubeSat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q4899457",
@@ -84522,7 +84574,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 \u0664|Liberty Bell 7|Mercury 4|Liberty Bell 7|Mercury 4|Liberty Bell 7|Mercury 4|\u05dc\u05d9\u05d1\u05e8\u05d8\u05d9 \u05d1\u05dc 7|\u05e4\u05e2\u05de\u05d5\u05df \u05d4\u05d7\u05d9\u05e8\u05d5\u05ea 7|Liberty Bell 7|Mercury\u20134|\u30ea\u30d0\u30c6\u30a3\u30fb\u30d9\u30eb7|\u30ea\u30d0\u30c6\u30a3\u30d9\u30eb7|\ub9ac\ubc84\ud2f0\ubca8 7\ud638|Liberty Bell 7|MR-4|Mercury 4|Liberty bell 7|Liberty Bell 7|Mercury 4|MR 4|Liberty Bell 7|Mercury 4|Liberty Bell 7|\u6c34\u661f4\u53f7",
+        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 \u0664|Liberty Bell 7|Mercury 4|Liberty Bell 7|Mercury 4|Liberty Bell 7|Mercury 4|\u05dc\u05d9\u05d1\u05e8\u05d8\u05d9 \u05d1\u05dc 7|\u05e4\u05e2\u05de\u05d5\u05df \u05d4\u05d7\u05d9\u05e8\u05d5\u05ea 7|Liberty Bell 7|Mercury\u20134|\u30ea\u30d0\u30c6\u30a3\u30fb\u30d9\u30eb7|\u30ea\u30d0\u30c6\u30a3\u30d9\u30eb7|\ub9ac\ubc84\ud2f0\ubca8 7\ud638|Liberty Bell 7|MR-4|Mercury 4|Liberty bell 7|Liberty Bell 7|Mercury 4|MR 4|Liberty Bell 7|Mercury 4|Liberty Bell 7|\u6c34\u661f4\u53f7|Liberty Bell 7",
         "itemDescription": "manned spacecraft"
     },
     {
@@ -84533,7 +84585,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1962-003A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0666|Friendship 7|Mercury 6|Friendship 7|MA-6|Mercury 6|Friendship 7|Mercury 6|Friendship 7|Friendship 7|Mercury\u20136|Mercury-Atlas 6|00240|Friendship 7|MA 6|Mercury 6|MA-6|Friendship 7|Mercury 6|Friendship 7|Friendship 7|Mercury 6|Friendship 7|Mercury 6|Friendship 7|\u0e40\u0e1f\u0e23\u0e19\u0e14\u0e4c\u0e0a\u0e34\u0e1b 7|\u6c34\u661f-\u5927\u529b\u795e6\u53f7",
+        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0666|Friendship 7|Mercury 6|Friendship 7|MA-6|Mercury 6|Friendship 7|Mercury 6|Friendship 7|Friendship 7|Mercury\u20136|Mercury-Atlas 6|00240|Friendship 7|MA 6|Mercury 6|MA-6|Friendship 7|Mercury 6|Friendship 7|Friendship 7|Mercury 6|Friendship 7|Mercury 6|Friendship 7|\u0e40\u0e1f\u0e23\u0e19\u0e14\u0e4c\u0e0a\u0e34\u0e1b 7|\u6c34\u661f-\u5927\u529b\u795e6\u53f7|Friendship 7|Friendship 7",
         "itemDescription": "first American orbital spaceflight"
     },
     {
@@ -84544,7 +84596,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1962-019A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0667|Aurora 7|Mercury 7|Aurora 7|Mercury 7|Mercury 7|Aurora 7|Mercury\u20137|00295|Aurora 7|MA 7|Mercury 7|Aurora 7|MA-7|Aurora 7|Mercury 7|Aurora 7|\u041c\u0435\u0440\u043a\u0443\u0440\u0438\u0439-7|Aurora 7|MA 7|Mercury 7|Aurora 7|Mercury 7|Aurora 7|\u6c34\u661f-\u64ce\u5929\u795e7\u865f",
+        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0667|Aurora 7|Mercury 7|Aurora 7|Mercury 7|Mercury 7|Aurora 7|Mercury\u20137|00295|Aurora 7|MA 7|Mercury 7|Aurora 7|MA-7|Aurora 7|Mercury 7|Aurora 7|\u041c\u0435\u0440\u043a\u0443\u0440\u0438\u0439-7|Aurora 7|MA 7|Mercury 7|Aurora 7|Mercury 7|Aurora 7|\u6c34\u661f-\u64ce\u5929\u795e7\u865f|Aurora 7|Aurora 7",
         "itemDescription": "manned spacecraft"
     },
     {
@@ -84555,7 +84607,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1962-052A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0423\u043e\u043b\u0438 \u0428\u0438\u0440\u0430|Mercury 8|Mercury 8|Mercury 8|Mercury 8|Mercury 8|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0668|Sigma 7|Sigma 7|Sigma 7|00433|MA 8|Sigma 7|MA-8|Sigma 7|Sigma 7|Sigma 7|Sigma 7",
+        "aliases": "\u0423\u043e\u043b\u0438 \u0428\u0438\u0440\u0430|Mercury 8|Mercury 8|Mercury 8|Mercury 8|Mercury 8|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0668|Sigma 7|Sigma 7|Sigma 7|00433|MA 8|Sigma 7|MA-8|Sigma 7|Sigma 7|Sigma 7|Sigma 7|Sigma 7|Sigma 7|MA-8",
         "itemDescription": "manned spacecraft"
     },
     {
@@ -84566,7 +84618,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1963-015A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0669|Faith 7|Mercury 9|Mercury 9|Mercury 9|Mercury 9|Faith 7|Mercury 9|00576|Faith 7|MA 9|Mercury 9|Faith 7|MA-9|Mercury 9|Mercury 9|Mercury Atlas 9|Faith 7|Faith 7|MA 9|Mercury 9|Faith 7",
+        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0623\u0637\u0644\u0633 \u0669|Faith 7|Mercury 9|Mercury 9|Mercury 9|Mercury 9|Faith 7|Mercury 9|00576|Faith 7|MA 9|Mercury 9|Faith 7|MA-9|Mercury 9|Mercury 9|Mercury Atlas 9|Faith 7|Faith 7|MA 9|Mercury 9|Faith 7|Faith 7",
         "itemDescription": "manned spacecraft"
     },
     {
@@ -85346,7 +85398,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1966-047A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Gemini 9A\u3082\u3057\u304f\u306fGemini IX-A|Gemini IX-A|Gemini IX-A|Gemini 9A|\u96d9\u5b50\u5ea79A\u865f|\u96d9\u5b50\u661f9A\u865f|\u96d9\u5b50\u5ea79A\u865f",
+        "aliases": "Gemini 9A\u3082\u3057\u304f\u306fGemini IX-A|Gemini IX-A|Gemini IX-A|Gemini 9A|\u96d9\u5b50\u5ea79A\u865f|\u96d9\u5b50\u661f9A\u865f|\u96d9\u5b50\u5ea79A\u865f|Gemini IX-A",
         "itemDescription": "manned spaceflight in NASA's Gemini program"
     },
     {
@@ -87842,16 +87894,6 @@
         "aliases": ""
     },
     {
-        "item": "http://www.wikidata.org/entity/Q55641296",
-        "itemLabel": "oderacs-2e",
-        "all_Unified_Astro_Thesaurus_ID": "",
-        "all_COSPAR_ID": "1995-004G",
-        "all_NAIF_ID": "",
-        "all_NSSDCA_ID": "",
-        "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q5564187",
         "itemLabel": "girawali-observatory",
         "all_Unified_Astro_Thesaurus_ID": "",
@@ -89034,7 +89076,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u30e9\u30a4\u30c8\u30d0\u30fc\u30c9"
+        "aliases": "\u30e9\u30a4\u30c8\u30d0\u30fc\u30c9",
+        "itemDescription": "Planned Japanese small space observatory"
     },
     {
         "item": "http://www.wikidata.org/entity/Q574293",
@@ -89247,7 +89290,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u09b8\u09af\u09bc\u09c1\u099c \u09a8\u09ad\u09cb\u09af\u09be\u09a8|veicolo spaziale Sojuz|\u806f\u76df\u865f|\u806f\u76df\u865f",
+        "aliases": "\u09b8\u09af\u09bc\u09c1\u099c \u09a8\u09ad\u09cb\u09af\u09be\u09a8|veicolo spaziale Sojuz|\u8054\u76df\u53f7\u5b87\u5b99\u98de\u8239|\u806f\u76df\u865f|\u806f\u76df\u865f",
         "itemDescription": "series of spacecraft designed for the Soviet space programme"
     },
     {
@@ -92618,7 +92661,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Mercury-Atlas 5 (MA-5)|MA-5|MA-5|00208|MA 5|Mercury 5|MA-5|Mercury 5",
+        "aliases": "Mercury-Atlas 5 (MA-5)|MA-5|MA-5|00208|MA 5|Mercury 5|MA-5|Mercury 5|MA-5",
         "itemDescription": "test flight of the Atlas rocket and Mercury spacecraft"
     },
     {
@@ -93927,7 +93970,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1966-020A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u062c\u0645\u0646\u0627\u064a \u0668|Gemini VIII",
+        "aliases": "\u062c\u0645\u0646\u0627\u064a \u0668|Gemini VIII|Gemini VIII",
         "itemDescription": "sixth manned spaceflight in NASA's Gemini program"
     },
     {
@@ -94153,7 +94196,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 3|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 \u0663|Freedom 7|Mercury 3|Freedom 7|Mercury 3|Freedom 7|Mercury 3|Freedom 7|Mercury 3|Freedom 7|\u05de\u05e8\u05e7\u05d5\u05e8\u05d9 3|\u05e4\u05e8\u05d9\u05d3\u05d5\u05dd 7|Freedom 7|Mercury\u20133|Freedom 7|\u30d5\u30ea\u30fc\u30c0\u30e0\u30fb\u30bb\u30d6\u30f3|\u30d5\u30ea\u30fc\u30c0\u30e07|\u30d5\u30ea\u30fc\u30c0\u30e0\u30bb\u30d6\u30f3|\u30de\u30fc\u30ad\u30e5\u30ea\u30fc3\u53f7|\ud504\ub9ac\ub364 7\ud638|Freedom 7|Mercury 3|Mercury-3|MR-3|Freedom 7|Mercury 3|Freedom 7|\u041c\u0435\u0440\u043a\u0443\u0440\u0438\u0439-3|Freedom 7|Mercury 3|MR 3|Freedom 7|Mercury 3|Freedom 7|\u6c34\u661f3\u53f7|\u81ea\u75317\u53f7",
+        "aliases": "\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 3|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646 \u0663|Freedom 7|Mercury 3|Freedom 7|Mercury 3|Freedom 7|Mercury 3|Freedom 7|Mercury 3|Freedom 7|\u05de\u05e8\u05e7\u05d5\u05e8\u05d9 3|\u05e4\u05e8\u05d9\u05d3\u05d5\u05dd 7|Freedom 7|Mercury\u20133|Freedom 7|\u30d5\u30ea\u30fc\u30c0\u30e0\u30fb\u30bb\u30d6\u30f3|\u30d5\u30ea\u30fc\u30c0\u30e07|\u30d5\u30ea\u30fc\u30c0\u30e0\u30bb\u30d6\u30f3|\u30de\u30fc\u30ad\u30e5\u30ea\u30fc3\u53f7|\ud504\ub9ac\ub364 7\ud638|Freedom 7|Mercury 3|Mercury-3|MR-3|Freedom 7|Mercury 3|Freedom 7|\u041c\u0435\u0440\u043a\u0443\u0440\u0438\u0439-3|Freedom 7|Mercury 3|MR 3|Freedom 7|Mercury 3|Freedom 7|\u6c34\u661f3\u53f7|\u81ea\u75317\u53f7|Freedom 7",
         "itemDescription": "first United States human spaceflight, on May 5, 1961"
     },
     {
@@ -94218,7 +94261,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "KSLV-2|KSLV-II|\ub204\ub9ac\ud638|Nuri\u53f7\u8fd0\u8f7d\u706b\u7bad|\u4e16\u754c\u53f7\u8fd0\u8f7d\u706b\u7bad|\u7f57\u8001-2\u8fd0\u8f7d\u706b\u7bad|KSLV-II\u8fd0\u8f7d\u706b\u7bad|\u7f57\u8001-2\u8fd0\u8f7d\u706b\u7bad|KSLV-II\u904b\u8f09\u706b\u7bad|KSLV-2|KSLV-II|KSLV-II|Korean Space Launch Vehicle II|Nuri|\ub204\ub9ac|KSLV-II|KSLV 2\ud638",
+        "aliases": "Nuri|\ub204\ub9ac|KSLV-II|KSLV 2\ud638|KSLV-2|KSLV-II|\ub204\ub9ac\ud638|Nuri\u53f7\u8fd0\u8f7d\u706b\u7bad|\u4e16\u754c\u53f7\u8fd0\u8f7d\u706b\u7bad|\u7f57\u8001-2\u8fd0\u8f7d\u706b\u7bad|KSLV-II\u8fd0\u8f7d\u706b\u7bad|\u7f57\u8001-2\u8fd0\u8f7d\u706b\u7bad|KSLV-II\u904b\u8f09\u706b\u7bad|KSLV-2|KSLV-II|KSLV-II|Korean Space Launch Vehicle II",
         "itemDescription": "First South Korean orbital launch vehicle developed domestically"
     },
     {
@@ -95292,13 +95335,14 @@
     },
     {
         "item": "http://www.wikidata.org/entity/Q64623809",
-        "itemLabel": "astronomical-roentgen-telescope",
+        "itemLabel": "art-xc",
         "all_Unified_Astro_Thesaurus_ID": "",
         "all_COSPAR_ID": "",
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "ART-XC"
+        "aliases": "Astronomical Roentgen Telescope \u2013 X-ray Concentrator|Astronomical Roentgen Telescope X-ray Concentrator|Astronomical R\u00f6ntgen Telescope \u2013 X-ray Concentrator|Astronomical R\u00f6ntgen Telescope X-ray Concentrator|Mikhail Pavlinsky ART-XC|Mikhail Pavlinsky Astronomical Roentgen Telescope \u2013 X-ray Concentrator",
+        "itemDescription": "X-ray space telescope"
     },
     {
         "item": "http://www.wikidata.org/entity/Q6464551",
@@ -96570,7 +96614,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "USNAP1"
+        "aliases": "USNAP1",
+        "itemDescription": "Experimental amateur radio satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q66496845",
@@ -97259,7 +97304,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "observatory in Indiana, United States"
     },
     {
         "item": "http://www.wikidata.org/entity/Q6802382",
@@ -100851,7 +100897,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1966-066A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "\u062c\u0645\u0646\u0627\u064a \u0661\u0660|\u0414\u0436\u0435\u043c\u0438\u043d\u0438-10|Gemini X|G\u00e9mini 10|\u062c\u0645\u06cc\u0646\u0627\u06cc 10|Gemini X|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 X|Gemini X|\u53cc\u5b50\u661f10\u53f7",
+        "aliases": "\u062c\u0645\u0646\u0627\u064a \u0661\u0660|\u0414\u0436\u0435\u043c\u0438\u043d\u0438-10|Gemini X|G\u00e9mini 10|\u062c\u0645\u06cc\u0646\u0627\u06cc 10|Gemini X|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 X|Gemini X|\u53cc\u5b50\u661f10\u53f7|Gemini X",
         "itemDescription": "1966 manned spaceflight in NASA's Gemini program"
     },
     {
@@ -101425,7 +101471,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "South African micro Earth observation satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q7641159",
@@ -102683,7 +102730,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "American navigation satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q787254",
@@ -104046,7 +104094,8 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
+        "aliases": "",
+        "itemDescription": "Nanosatellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q833520",
@@ -104177,7 +104226,7 @@
         "all_NAIF_ID": "",
         "all_NSSDCA_ID": "1966-081A",
         "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "Gemini XI|Gemini XI|\u062c\u0645\u06cc\u0646\u0627\u06cc 11|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 XI|\u53cc\u5b50\u661f11\u53f7",
+        "aliases": "Gemini XI|Gemini XI|\u062c\u0645\u06cc\u0646\u0627\u06cc 11|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 XI|\u53cc\u5b50\u661f11\u53f7|Gemini XI",
         "itemDescription": "ninth manned spaceflight mission of NASA's Project Gemini"
     },
     {
@@ -105414,37 +105463,5 @@
         "all_Minor_Planet_Center_observatory_ID": "",
         "aliases": "Apollo Test Capsule 30|Boilerplate 18|BP-18|BP-30",
         "itemDescription": "test article used during the Apollo program"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q884905",
-        "itemLabel": "tet-1",
-        "all_Unified_Astro_Thesaurus_ID": "",
-        "all_COSPAR_ID": "2012-039D",
-        "all_NAIF_ID": "",
-        "all_NSSDCA_ID": "",
-        "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "TechnologieErprobungsTr\u00e4ger|Technologieerprobungstr\u00e4ger 1|Technologieerprobungstr\u00e4ger-1|TET 1",
-        "itemDescription": "microsatellite operated by the German Aerospace Center"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q8876084",
-        "itemLabel": "blits",
-        "all_Unified_Astro_Thesaurus_ID": "",
-        "all_COSPAR_ID": "2009-049G",
-        "all_NAIF_ID": "",
-        "all_NSSDCA_ID": "",
-        "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": ""
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q89197897",
-        "itemLabel": "trumpet",
-        "all_Unified_Astro_Thesaurus_ID": "",
-        "all_COSPAR_ID": "",
-        "all_NAIF_ID": "",
-        "all_NSSDCA_ID": "",
-        "all_Minor_Planet_Center_observatory_ID": "",
-        "aliases": "",
-        "itemDescription": "Trumpet, Hawkes & Son, London"
     }
 ]
