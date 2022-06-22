@@ -87,7 +87,7 @@ print("response contains " + results_count + " results")
 
 # or not test
 test = False
-page_size = 1000
+page_size = 1500
 
 print("using page_size = " + str(page_size))
 r = []
