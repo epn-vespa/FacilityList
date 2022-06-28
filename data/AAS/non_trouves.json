@@ -104,6 +104,10 @@
         "ID": "HERA"
     },
     {
+        "Name": "South African Radio Astronomy Observatory (SARAO) MeerKAT Telescope",
+        "ID": "MeerKAT"
+    },
+    {
         "Name": "The PolarLight CubeSat X-ray polarimeter mission",
         "ID": "PolarLight"
     },
@@ -440,6 +444,10 @@
         "ID": "SAMPEX"
     },
     {
+        "Name": "NASA Solar Terrestrial Relations Observatory (STEREO) solar orbiters",
+        "ID": "STEREO"
+    },
+    {
         "Name": "NASA Small Astronomy Satellite 3 (SAS 3) Mission (also known as SAS-C)",
         "ID": "SAS3"
     },
@@ -478,10 +486,6 @@
     {
         "Name": "Japan Aerospace eXploration Agency (JAXA) Tenma (previously known as ASTRO-B) X-ray Satellite Mission",
         "ID": "Tenma"
-    },
-    {
-        "Name": "NASA Global Geospace Science (GGS) Wind Satellite Mission",
-        "ID": "WIND"
     },
     {
         "Name": "Institute of Space and Astronautical Science 8m (ISAS) Highly Advanced Laboratory for Communications and Astronomy (HALCA) Very Long Baseline Interferometry (VLBI) Space Observatory Program Satellite Mission (also known as VSOP)",
@@ -760,6 +764,10 @@
         "ID": "ISI"
     },
     {
+        "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
+        "ID": "Ritter Observatory"
+    },
+    {
         "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
         "ID": "UMN:1.52m"
     },
@@ -782,6 +790,10 @@
     {
         "Name": "Smithsonian Astrophysical Observatory (SAO)/Academia Sinica SubMillimeter Array (SMA) at Mauna Kea Observatory",
         "ID": "SMA"
+    },
+    {
+        "Name": "National Astronomical Observatory of Japan (NAOJ) 8.2m Subaru Telescope at Mauna Kea Observatory",
+        "ID": "Subaru"
     },
     {
         "Name": "University of Chicago Sunyaev-Zeldovich Array at Owens Valley Radio Observatory (OVRO)",
@@ -826,6 +838,10 @@
     {
         "Name": "Arizona Radio Observatory (ARO) 12m Sub-millimeter Telescope at Mount Graham International Observatory",
         "ID": "ARO:SMT"
+    },
+    {
+        "Name": "National Center for Atmospheric Research (NCAR) High Altitude Observatory telescope at Mauna Loa Solar Observatory (MLSO)",
+        "ID": "HAO"
     },
     {
         "Name": "Norfolk State University 0.6m (24inch) Rapid Response Robotic Telescope (RRRT) at Fan Mountain Observatory",
@@ -1012,6 +1028,10 @@
         "ID": "FTN"
     },
     {
+        "Name": "Georgia Stat University (GSU) Center for High Angular Resolution Astronomy (CHARA) interferometer at Mount Wilson Observatory",
+        "ID": "CHARA"
+    },
+    {
         "Name": "Massachusetts Institute of Technology (MIT) 24inch Telescope at George R. Wallace, Jr., Astrophysical Observatory",
         "ID": "MIT:WAO:0.61m"
     },
@@ -1026,6 +1046,10 @@
     {
         "Name": "Mark III Stellar Interferometer at Mount Wilson Observatory",
         "ID": "Mark III interferometer"
+    },
+    {
+        "Name": "University of Washington 0.75m Telescope at Manastash Ridge Observatory (MRO)",
+        "ID": "Manastash Ridge Observatory"
     },
     {
         "Name": "US Naval Observatory (USNO) 1m (40inch) Telescope at Naval Observatory Flagstaff Station (NOFS)",
@@ -1484,6 +1508,10 @@
         "ID": "Lovell"
     },
     {
+        "Name": "Netherlands Institute for Radio Astronomy (ASTRON) Low-Frequency Array (LOFAR)",
+        "ID": "LOFAR"
+    },
+    {
         "Name": "Bologna Astronomical Observatory 1.52m Gian Domenico Cassini Telescope at Loiano Observatory",
         "ID": "Loiano:1.52m"
     },
@@ -1820,6 +1848,14 @@
         "ID": "SHAO:1.56m"
     },
     {
+        "Name": "Tel Aviv University 1m Telescope at Florence and George Wise Observatory",
+        "ID": "Wise Observatory"
+    },
+    {
+        "Name": "Chinese Academy of Science 4m Large Sky Area Multi-Object Fiber Spectroscopy Telescope (LAMOST also known as Guo Shoujing Telescope)",
+        "ID": "LAMOST"
+    },
+    {
         "Name": "National Astronomical Observatory of Japan (NAOJ) 45m Radio Telescope at Nobeyama Radio Observatory",
         "ID": "No:45m"
     },
@@ -1954,6 +1990,10 @@
     {
         "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
         "ID": "SST"
+    },
+    {
+        "Name": "SuperWASP extra-solar planet detection program at Roque de los Muchachos Observatory (SuperWASP-North) and South African Astronomical Observatory (SAAO; SuperWASP-South)",
+        "ID": "SuperWASP"
     },
     {
         "Name": "1.5m GREGOR Solar Telescope at Observatorio del Teide",
