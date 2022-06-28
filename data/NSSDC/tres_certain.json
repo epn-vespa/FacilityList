@@ -760,6 +760,40 @@
     ],
     [
         {
+            "Name": "Cosmos   31",
+            "ID": "1964-028A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53055",
+            "itemLabel": "kosmos-31",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-028A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-MT No.2|Kosmos 31|DS-MT N\u00b02",
+            "itemDescription": "technology demonstration satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos   51",
+            "ID": "1964-080A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53586",
+            "itemLabel": "kosmos-51",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-080A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-MT No.3|Kosmos 51|DS-MT N\u00b03",
+            "itemDescription": "technology demonstration satellite"
+        }
+    ],
+    [
+        {
             "Name": "Cosmos  166",
             "ID": "1967-061A"
         },
@@ -806,6 +840,23 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Kosmos 230|Kosmos 230|Cosmos 230"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos  461",
+            "ID": "1971-105A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53574",
+            "itemLabel": "kosmos-461",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-105A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-U2-MT No.1|Kosmos 461|DS-U2-MT",
+            "itemDescription": "Soviet satellite"
         }
     ],
     [
@@ -2540,6 +2591,23 @@
     ],
     [
         {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59131",
+            "itemLabel": "mariner-10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1973-085A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661\u0660|\u0645\u0627\u0631\u06cc\u0646\u0631 10|\u0645\u0627\u0631\u06cc\u0646\u0631 \u0661\u0660|Mariner X|\ub9c8\ub9ac\ub108 10\ud638|Mariner Neezn\u00e1\u00e1|Mariner-10|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 10|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|Mariner 73-2|Mariner 73J|Mariner Venus Mercury 1973",
+            "itemDescription": "American space probe"
+        }
+    ],
+    [
+        {
             "Name": "Mars Observer",
             "ID": "1992-063A"
         },
@@ -3275,6 +3343,40 @@
     ],
     [
         {
+            "Name": "Pioneer 10",
+            "ID": "1972-012A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59103",
+            "itemLabel": "pioneer-10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-012A",
+            "all_NAIF_ID": "-23",
+            "all_NSSDCA_ID": "1972-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7",
+            "itemDescription": "NASA space probe launched in March 1972"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer 11",
+            "ID": "1973-019A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59113",
+            "itemLabel": "pioneer-11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-019A",
+            "all_NAIF_ID": "-24",
+            "all_NSSDCA_ID": "1973-019A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f",
+            "itemDescription": "robotic space probe launched by NASA for planetary and heliosphere exploration"
+        }
+    ],
+    [
+        {
             "Name": "Planck",
             "ID": "2009-026B"
         },
@@ -3286,7 +3388,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2009-026B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u666e\u90ce\u514b\u5de1\u5929\u8005|COBRAS/SAMBA|Cosmic Background Radiation Anisotropy Satellite/Satellite for Measurement of Background Anisotropies|observatorio espacial planck|satelite planck|sat\u00e9lite planck|Planck|Planck|\u0645\u0631\u0643\u0628\u0629 \u0628\u0644\u0627\u0646\u0643 \u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629|Planck-Satellit|COBRAS/SAMBA|Cosmic Background Radiation Anisotropy Satellite/Satellite for Measurement of Background Anisotropies|Planck Surveyor|\u0645\u0627\u0647\u0648\u0627\u0631\u0647\u0654 \u067e\u0644\u0627\u0646\u06a9|Planck satelliitti|Planck Surveyor|Planck-luotain|Planck-satelliitti|Planck Surveyor|Satellite Planck|Planck|\u30d7\u30e9\u30f3\u30af\u885b\u661f|COBRAS/SAMBA|Satelita Planck|Sonda Planck|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u041f\u043b\u0430\u043d\u043a|Planck Surveyor|\u666e\u6717\u514b\u63a2\u6d4b\u5668",
+            "aliases": "Planck|Planck|\u0645\u0631\u0643\u0628\u0629 \u0628\u0644\u0627\u0646\u0643 \u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629|Planck-Satellit|COBRAS/SAMBA|Cosmic Background Radiation Anisotropy Satellite/Satellite for Measurement of Background Anisotropies|Planck Surveyor|\u0645\u0627\u0647\u0648\u0627\u0631\u0647\u0654 \u067e\u0644\u0627\u0646\u06a9|Planck satelliitti|Planck Surveyor|Planck-luotain|Planck-satelliitti|Planck Surveyor|Satellite Planck|Planck|\u30d7\u30e9\u30f3\u30af\u885b\u661f|COBRAS/SAMBA|Satelita Planck|Sonda Planck|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u041f\u043b\u0430\u043d\u043a|Planck Surveyor|\u666e\u6717\u514b\u63a2\u6d4b\u5668|\u666e\u90ce\u514b\u5de1\u5929\u8005|COBRAS/SAMBA|Cosmic Background Radiation Anisotropy Satellite/Satellite for Measurement of Background Anisotropies|observatorio espacial planck|satelite planck|sat\u00e9lite planck",
             "itemDescription": "ESA space observatory"
         }
     ],
@@ -3422,7 +3524,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1973-039A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2",
+            "aliases": "RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2|Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B",
             "itemDescription": "satellite launched by NASA for long range radio astronomy"
         }
     ],
@@ -3458,6 +3560,23 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "",
             "itemDescription": "US unmanned spaceprobe"
+        }
+    ],
+    [
+        {
+            "Name": "ROSAT",
+            "ID": "1990-049A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54284",
+            "itemLabel": "rosat",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1990-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1990-049A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "",
+            "itemDescription": "German space observatory"
         }
     ],
     [
@@ -3525,6 +3644,23 @@
             "all_NSSDCA_ID": "1962-016A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "SAMPEX",
+            "ID": "1992-038A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54367",
+            "itemLabel": "solar-anomalous-and-magnetospheric-particle-explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1992-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-038A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SAMPEX|Explorer 68|Explorer 68|SAMPEX|SAMPEX",
+            "itemDescription": "space observatory"
         }
     ],
     [
@@ -3708,7 +3844,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4|\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab",
+            "aliases": "\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4",
             "itemDescription": "space station launched and operated by NASA"
         }
     ],
@@ -3931,6 +4067,22 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "SROSS C2",
             "itemDescription": "23099"
+        }
+    ],
+    [
+        {
+            "Name": "STP P78-1",
+            "ID": "1979-017A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54370",
+            "itemLabel": "p78-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1979-017A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1979-017A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Solwind|P78-1|P-78|Space Test Program P78-1 (P78-1)|P78-1\u4eba\u9020\u885b\u661f"
         }
     ],
     [
@@ -4189,6 +4341,40 @@
     ],
     [
         {
+            "Name": "Suzaku",
+            "ID": "2005-025A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54375",
+            "itemLabel": "suzaku",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2005-025A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2005-025A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASTRO-E2|ASTRO-EII",
+            "itemDescription": "satellite"
+        }
+    ],
+    [
+        {
+            "Name": "SWAS",
+            "ID": "1998-071A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54374",
+            "itemLabel": "submillimeter-wave-astronomy-satellite",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1998-071A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1998-071A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SWAS|Explorer 74|SWAS",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
             "Name": "Swift",
             "ID": "2004-047A"
         },
@@ -4218,6 +4404,23 @@
             "all_NSSDCA_ID": "1972-014A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "Tenma",
+            "ID": "1983-011A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54376",
+            "itemLabel": "tenma",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1983-011A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-011A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASTRO-B",
+            "itemDescription": "space observatory"
         }
     ],
     [
@@ -6221,7 +6424,7 @@
             "all_NAIF_ID": "-37",
             "all_NSSDCA_ID": "2014-076A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0647\u0627\u064a\u0627\u0628\u0648\u0633\u0627 \u0662|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa-2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|\u96bc\u9e1f2\u53f7",
+            "aliases": "Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|\u96bc\u9e1f2\u53f7|\u0647\u0627\u064a\u0627\u0628\u0648\u0633\u0627 \u0662|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa-2|Hayabusa 2|Hayabusa 2|Hayabusa 2|Hayabusa 2",
             "itemDescription": "Japanese space probe"
         }
     ],
@@ -7190,6 +7393,23 @@
     ],
     [
         {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59131",
+            "itemLabel": "mariner-10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1973-085A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661\u0660|\u0645\u0627\u0631\u06cc\u0646\u0631 10|\u0645\u0627\u0631\u06cc\u0646\u0631 \u0661\u0660|Mariner X|\ub9c8\ub9ac\ub108 10\ud638|Mariner Neezn\u00e1\u00e1|Mariner-10|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 10|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|Mariner 73-2|Mariner 73J|Mariner Venus Mercury 1973",
+            "itemDescription": "American space probe"
+        }
+    ],
+    [
+        {
             "Name": "Mars 1",
             "ID": "1962-061A"
         },
@@ -7676,7 +7896,7 @@
             "all_NAIF_ID": "-253",
             "all_NSSDCA_ID": "2003-032A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Opportunity-rovaren|Opportunity-roveren|Opportunity-sonden|Romsonden opportunity|MER-B|Roverul Opportunity|Vehiculul spa\u0163ial Opportunity|\u041e\u043f\u043e\u0440\u0442\u044c\u044e\u043d\u0438\u0442\u0438|Mars Exploration Rover B|\u041c\u0430\u0440\u0441\u043e\u0445\u0456\u0434 \"\u041e\u043f\u043e\u0440\u0442\u044c\u044e\u043d\u0456\u0442\u0456\"|\u041e\u043f\u043e\u0440\u0442\u044c\u044e\u043d\u0456\u0442\u0456|MER-B|\u673a\u9047\u53f7\u706b\u661f\u8f66|\u6a5f\u6703\u865f|\u6a5f\u9047\u865f|Opportunity|Mars Exploration Rover Opportunity|\u0623\u0648\u0628\u0648\u0631\u062a\u064a\u0648\u0646\u064a\u062a\u064a|\u0627\u0628\u0648\u0631\u062a\u064a\u0648\u0646\u064a\u062a\u064a|MER-B|MER-B|Opportunity rover|MER-B|MER-1|MER-B|MER-1|MER-B|2003-032A|MER-1|MER-B|Opportunity rover|Mars Exploration Rover Opportunity|MER B|MER-B|MER-1|\u05d0\u05d5\u05e4\u05d5\u05e8\u05d8\u05d9\u05d5\u05e0\u05d9\u05d8\u05d9|MER-B|MER-B|MER B|MER-B|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fb\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fb\u30ed\u30fc\u30d0\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30fb\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30fb\u30ed\u30fc\u30d0\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30ed\u30fc\u30d0\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30ed\u30fc\u30d0\u30fc|\u30de\u30fc\u30ba\u30fb\u30a8\u30af\u30b9\u30d7\u30ed\u30ec\u30fc\u30b7\u30e7\u30f3\u30fb\u30ed\u30fc\u30d0\u30fcB|\u30de\u30fc\u30ba\u30fb\u30a8\u30af\u30b9\u30d7\u30ed\u30ec\u30fc\u30b7\u30e7\u30f3\u30fb\u30ed\u30fc\u30d0B|\uc624\ud37c\ud29c\ub2c8\ud2f0 \ub85c\ubc84|\uc624\ud37c\ud29c\ub2c8\ud2f0 \ud638|Mars Exploration Rover - B|MER-B|MER-B|Mars Exploration Rover - B|Marsbilen opportuninty|Marslandaren opportunity|Marsrovaren opportunity|Marsroveren opportunity|Marssonden opportunity|Opportunity rovaren|Opportunity rover|Opportunity roveren|Opportunity sonden",
+            "aliases": "Opportunity|Mars Exploration Rover Opportunity|\u0623\u0648\u0628\u0648\u0631\u062a\u064a\u0648\u0646\u064a\u062a\u064a|\u0627\u0628\u0648\u0631\u062a\u064a\u0648\u0646\u064a\u062a\u064a|MER-B|MER-B|Opportunity rover|MER-B|MER-1|MER-B|MER-1|MER-B|2003-032A|MER-1|MER-B|Opportunity rover|Mars Exploration Rover Opportunity|MER B|MER-B|MER-1|\u05d0\u05d5\u05e4\u05d5\u05e8\u05d8\u05d9\u05d5\u05e0\u05d9\u05d8\u05d9|MER-B|MER-B|MER B|MER-B|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fb\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fb\u30ed\u30fc\u30d0\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30fb\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30fb\u30ed\u30fc\u30d0\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30fc\u30ed\u30fc\u30d0\u30fc|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30ed\u30fc\u30d0|\u30aa\u30dd\u30c1\u30e5\u30cb\u30c6\u30a3\u30ed\u30fc\u30d0\u30fc|\u30de\u30fc\u30ba\u30fb\u30a8\u30af\u30b9\u30d7\u30ed\u30ec\u30fc\u30b7\u30e7\u30f3\u30fb\u30ed\u30fc\u30d0\u30fcB|\u30de\u30fc\u30ba\u30fb\u30a8\u30af\u30b9\u30d7\u30ed\u30ec\u30fc\u30b7\u30e7\u30f3\u30fb\u30ed\u30fc\u30d0B|\uc624\ud37c\ud29c\ub2c8\ud2f0 \ub85c\ubc84|\uc624\ud37c\ud29c\ub2c8\ud2f0 \ud638|Mars Exploration Rover - B|MER-B|MER-B|Mars Exploration Rover - B|Marsbilen opportuninty|Marslandaren opportunity|Marsrovaren opportunity|Marsroveren opportunity|Marssonden opportunity|Opportunity rovaren|Opportunity rover|Opportunity roveren|Opportunity sonden|Opportunity-rovaren|Opportunity-roveren|Opportunity-sonden|Romsonden opportunity|MER-B|Roverul Opportunity|Vehiculul spa\u0163ial Opportunity|\u041e\u043f\u043e\u0440\u0442\u044c\u044e\u043d\u0438\u0442\u0438|Mars Exploration Rover B|\u041c\u0430\u0440\u0441\u043e\u0445\u0456\u0434 \"\u041e\u043f\u043e\u0440\u0442\u044c\u044e\u043d\u0456\u0442\u0456\"|\u041e\u043f\u043e\u0440\u0442\u044c\u044e\u043d\u0456\u0442\u0456|MER-B|\u673a\u9047\u53f7\u706b\u661f\u8f66|\u6a5f\u6703\u865f|\u6a5f\u9047\u865f",
             "itemDescription": "former NASA Mars rover"
         }
     ],
@@ -8036,6 +8256,40 @@
     ],
     [
         {
+            "Name": "Pioneer 10",
+            "ID": "1972-012A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59103",
+            "itemLabel": "pioneer-10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-012A",
+            "all_NAIF_ID": "-23",
+            "all_NSSDCA_ID": "1972-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7",
+            "itemDescription": "NASA space probe launched in March 1972"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer 11",
+            "ID": "1973-019A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59113",
+            "itemLabel": "pioneer-11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-019A",
+            "all_NAIF_ID": "-24",
+            "all_NSSDCA_ID": "1973-019A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f",
+            "itemDescription": "robotic space probe launched by NASA for planetary and heliosphere exploration"
+        }
+    ],
+    [
+        {
             "Name": "Pioneer Venus Orbiter",
             "ID": "1978-051A"
         },
@@ -8081,7 +8335,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1973-039A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2",
+            "aliases": "RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2|Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B",
             "itemDescription": "satellite launched by NASA for long range radio astronomy"
         }
     ],
@@ -8368,7 +8622,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4|\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab",
+            "aliases": "\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4",
             "itemDescription": "space station launched and operated by NASA"
         }
     ],
@@ -11064,7 +11318,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1973-039A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2",
+            "aliases": "RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2|Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B",
             "itemDescription": "satellite launched by NASA for long range radio astronomy"
         }
     ],
@@ -11104,6 +11358,23 @@
     ],
     [
         {
+            "Name": "RHESSI",
+            "ID": "2002-004A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54359",
+            "itemLabel": "reuven-ramaty-high-energy-solar-spectroscopic-imager",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2002-004A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2002-004A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HESSI|HESSI|Explorer 81|High Energy Solar Spectroscopic Imager|RHESSI|SMEX-6|Explorer 81|RHESSI|Explorer 81|RHESSI",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
             "Name": "SAC-B",
             "ID": "1996-061B"
         },
@@ -11117,6 +11388,23 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "",
             "itemDescription": "Argentine satellite"
+        }
+    ],
+    [
+        {
+            "Name": "SAMPEX",
+            "ID": "1992-038A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54367",
+            "itemLabel": "solar-anomalous-and-magnetospheric-particle-explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1992-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-038A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SAMPEX|Explorer 68|Explorer 68|SAMPEX|SAMPEX",
+            "itemDescription": "space observatory"
         }
     ],
     [
@@ -11181,7 +11469,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4|\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab",
+            "aliases": "\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4",
             "itemDescription": "space station launched and operated by NASA"
         }
     ],
@@ -11489,6 +11777,23 @@
     ],
     [
         {
+            "Name": "SORCE",
+            "ID": "2003-004A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54368",
+            "itemLabel": "solar-radiation-and-climate-experiment",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2003-004A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2003-004A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SORCE|SORCE",
+            "itemDescription": "NASA space observatory"
+        }
+    ],
+    [
+        {
             "Name": "Sputnik 2",
             "ID": "1957-002A"
         },
@@ -11501,7 +11806,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0633\u0628\u0648\u062a\u0646\u0643 \u0662|\u0633\u0628\u0648\u062a\u0646\u064a\u0643 2|\u0633\u0628\u0648\u062a\u0646\u064a\u0643 \u0662|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 2|Sputnik II|\u03a3\u03c0\u03bf\u03cd\u03c4\u03bd\u03b9\u03ba \u0399\u0399|Prosteyshiy Sputnik 2|Sputnik II|\u0627\u0633\u067e\u0648\u062a\u0646\u06cc\u06a9 2|\u0627\u0633\u067e\u0648\u062a\u0646\u06cc\u06a9 \u06f2|\u0627\u0633\u067e\u0648\u062a\u0646\u06cc\u06a9-2|Sputnik-2|Sputnik 2|Sputnik 2|Sputnik II|Sputnik-2|Sputnik-II|PS-2|Sput\u0146ik 2|Sput\u0146ik-2|Sputnik 2|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 2|\u0421\u043f\u0443\u0442\u043d\u0438\u043a 2|Sputnik II|\u0b9a\u0bc1\u0baa\u0bc1\u0b9f\u0bcd\u0ba9\u0bbf\u0b95\u0bcd 2|\u0bb8\u0bcd\u0baa\u0bc1\u0b9f\u0bcd\u0ba9\u0bbf\u0b95\u0bcd 2|\u53f2\u6cfc\u5c3c\u514b2\u53f7|\u53f2\u6f51\u5c3c\u514b2\u865f|\u65af\u666e\u7279\u5c3c\u514b2\u53f7",
-            "itemDescription": "artificial satellite"
+            "itemDescription": "artificial satellite that takes Laika to the space"
         }
     ],
     [
@@ -11536,6 +11841,22 @@
             "all_Minor_Planet_Center_observatory_ID": "C50",
             "aliases": "Solar Terrestrial Relations Observatory B|STEREO Behind|STEREO Lead|STEREO West|STEREO B",
             "itemDescription": "NASA heliophysics space probe"
+        }
+    ],
+    [
+        {
+            "Name": "STP P78-1",
+            "ID": "1979-017A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54370",
+            "itemLabel": "p78-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1979-017A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1979-017A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Solwind|P78-1|P-78|Space Test Program P78-1 (P78-1)|P78-1\u4eba\u9020\u885b\u661f"
         }
     ],
     [
@@ -11704,6 +12025,40 @@
             "all_NSSDCA_ID": "1972-014A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "TERRIERS",
+            "ID": "1999-026A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54379",
+            "itemLabel": "terriers",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1999-026A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1999-026A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Topographic Experiment using Radiative Recombinative Ionospheric EUV and Radio Sources|Explorer 76|TERRIERS",
+            "itemDescription": "NASA mission to study the ionosphere"
+        }
+    ],
+    [
+        {
+            "Name": "TIMED",
+            "ID": "2001-055B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54378",
+            "itemLabel": "timed",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2001-055B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2001-055B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "TIMED",
+            "itemDescription": "Satellite mission by the NASA"
         }
     ],
     [
@@ -11922,6 +12277,23 @@
             "all_NSSDCA_ID": "1962-021A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Discoverer 42"
+        }
+    ],
+    [
+        {
+            "Name": "1963-038C",
+            "ID": "1963-038C"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54385",
+            "itemLabel": "transit-5e-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-038C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1963-038C",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Transit 5E-1|1963-038C|APL SN 39",
+            "itemDescription": "artificial satellite of the United States Department of Defense"
         }
     ],
     [
@@ -12645,6 +13017,38 @@
     ],
     [
         {
+            "Name": "Aureol 1",
+            "ID": "1971-119A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54232",
+            "itemLabel": "oreol-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1971-119A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Arkad 1|Aureole 1"
+        }
+    ],
+    [
+        {
+            "Name": "Aureol 2",
+            "ID": "1973-107A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54233",
+            "itemLabel": "\u043e\u0440\u0435\u043e\u043b-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-107A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Arkad 2|Aureole 2"
+        }
+    ],
+    [
+        {
             "Name": "Aureol 3",
             "ID": "1981-094A"
         },
@@ -13065,6 +13469,23 @@
     ],
     [
         {
+            "Name": "Cosmos 49",
+            "ID": "1964-069A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53580",
+            "itemLabel": "kosmos-49",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1964-069A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-MG No.2|Kosmos 49|DS-MG N\u00b02",
+            "itemDescription": "technology demonstration satellite"
+        }
+    ],
+    [
+        {
             "Name": "Cosmos 53",
             "ID": "1965-006A"
         },
@@ -13177,6 +13598,74 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "DS-U2-GK No.1|Kosmos 261|DS-U2-GK N\u00ba 1",
+            "itemDescription": "Soviet satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 321",
+            "ID": "1970-006A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53063",
+            "itemLabel": "kosmos-321",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-006A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-U2-MG #1|DS-U2-MG No.1|Kosmos 321|DS-U2-MG N\u00ba 1",
+            "itemDescription": "Soviet satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 348",
+            "ID": "1970-044A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53488",
+            "itemLabel": "kosmos-348",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-044A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-U2-GK No.2|Kosmos 348|Kosmos 348|DS-U2-GK N\u00ba 2|DS-U2-GK #2",
+            "itemDescription": "Soviet satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 356",
+            "ID": "1970-059A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53498",
+            "itemLabel": "kosmos-356",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-059A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-U2-MG No.2|Kosmos 356|DS-U2-MG N\u00ba 2",
+            "itemDescription": "Soviet satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Cosmos 378",
+            "ID": "1970-097A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53516",
+            "itemLabel": "kosmos-378",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1970-097A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DS-U2-IP No.1|Kosmos 378|DS-U2-IP",
             "itemDescription": "Soviet satellite"
         }
     ],
@@ -16521,6 +17010,23 @@
     ],
     [
         {
+            "Name": "Magsat",
+            "ID": "1979-094A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54208",
+            "itemLabel": "magsat",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1979-094A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "AEM-3|Applications Explorer Mission-3|Explorer 61|Magnetic Field Satellite|Explorer 61",
+            "itemDescription": "joint NASA and USGS satellite for studying Earth's magnetic field"
+        }
+    ],
+    [
+        {
             "Name": "Mariner 3",
             "ID": "1964-073A"
         },
@@ -16585,6 +17091,23 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0669|1971-051A|\u0645\u0627\u0631\u06cc\u0646\u0631 9|\ub9c8\ub9ac\ub108 9\ud638|Mariner 9|\u041c\u0430\u0440\u0438\u043d\u0435\u0440 9|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 9|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 9|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 9",
             "itemDescription": "Mars Orbiter"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59131",
+            "itemLabel": "mariner-10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-085A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1973-085A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661\u0660|\u0645\u0627\u0631\u06cc\u0646\u0631 10|\u0645\u0627\u0631\u06cc\u0646\u0631 \u0661\u0660|Mariner X|\ub9c8\ub9ac\ub108 10\ud638|Mariner Neezn\u00e1\u00e1|Mariner-10|\u0bae\u0bbe\u0bb0\u0bbf\u0ba9\u0bb0\u0bcd 10|\u0e22\u0e32\u0e19\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e21\u0e32\u0e23\u0e34\u0e40\u0e19\u0e2d\u0e23\u0e4c 10|Mariner 73-2|Mariner 73J|Mariner Venus Mercury 1973",
+            "itemDescription": "American space probe"
         }
     ],
     [
@@ -18092,6 +18615,40 @@
     ],
     [
         {
+            "Name": "Pioneer 10",
+            "ID": "1972-012A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59103",
+            "itemLabel": "pioneer-10",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1972-012A",
+            "all_NAIF_ID": "-23",
+            "all_NSSDCA_ID": "1972-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0660|\u041f\u0456\u044f\u043d\u0435\u0440-10|Pioneer 10|Pioneer X|Pioneer F|Pioneer 10|Pioneer F|Pioneer|Pioneer F|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 10|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f0|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 \u06f1\u06f0|Sonde Pioneer 10|\u10de\u10d8\u10dd\u10dc\u10d4\u10e0 10|\u041f\u0430\u0439\u043e\u043d\u0438\u0438\u0440-10|\ud30c\uc774\uc624\ub2c8\uc544|\ud30c\uc774\uc624\ub2c8\uc5b4 10\ud638|Pioneer F|Pioneer 10|Pioneer-10|Pioneer F|Pioneer F|Pioneer 10|Pioneer 10|Pioneer F|\u041f\u0456\u043e\u043d\u0435\u0440-10|\u041f\u0456\u043e\u043d\u0435\u044010|\u5148\u92d210\u865f|\u5148\u92d2\u5341\u865f|\u5148\u950b10\u53f7",
+            "itemDescription": "NASA space probe launched in March 1972"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer 11",
+            "ID": "1973-019A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59113",
+            "itemLabel": "pioneer-11",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1973-019A",
+            "all_NAIF_ID": "-24",
+            "all_NSSDCA_ID": "1973-019A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0628\u064a\u0648\u0646\u064a\u0631 \u0661\u0661|\u041f\u0456\u044f\u043d\u0435\u0440-11|Pioneer-11|Pioneer G|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631 11|\u067e\u0627\u06cc\u0648\u0646\u06cc\u0631\u06f1\u06f1|Pioneer XI|Sonde Pioneer 11|\u05e4\u05d9\u05d5\u05e0\u05d9\u05e8 G|\ud30c\uc774\uc624\ub2c8\uc5b4 11\ud638|Pioneer elleve|Pioneer G|\u07d4\u07cc\u07e6\u07cf\u07e3\u07cd\u07d9 \u07d7\u07ed\u07cb\u07ed|Pioneer 11|Pioneer-11|\u041f\u0438\u043e\u043d\u0435\u0440 11|Pioneer G|Pioneer-Saturn|Pioneer G|Pioneer 11|\u041f\u0456\u043e\u043d\u0435\u0440-11|\u5148\u92d211\u865f",
+            "itemDescription": "robotic space probe launched by NASA for planetary and heliosphere exploration"
+        }
+    ],
+    [
+        {
             "Name": "Pioneer Venus Orbiter",
             "ID": "1978-051A"
         },
@@ -18375,6 +18932,23 @@
     ],
     [
         {
+            "Name": "RADOSE",
+            "ID": "1963-021D"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54283",
+            "itemLabel": "radose",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1963-021D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Radose",
+            "itemDescription": "Satellite launched in 1963"
+        }
+    ],
+    [
+        {
             "Name": "RADSAT",
             "ID": "1972-076B"
         },
@@ -18419,7 +18993,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1973-039A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B|RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2",
+            "aliases": "RAE B|Radio Astronomy Explorer-2|RAE-B|RAE-2|Lunar Explorer 49|Explorer 38|Explorer 49|RAE-A|RAE-B|Radio Astronomy Explorer-B|RAE-B",
             "itemDescription": "satellite launched by NASA for long range radio astronomy"
         }
     ],
@@ -18536,7 +19110,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1999-002A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ROCSAT-1|ROCSAT-1|\u4e2d\u83ef\u885b\u661f\u4e00\u865f|\u798f\u5c14\u6469\u6c99\u536b\u661f\u4e00\u53f7|\u798f\u885b\u4e00\u865f|Chunghua-1|Republic of China Satellite 1|Formosat 1",
+            "aliases": "Formosat 1|ROCSAT-1|ROCSAT-1|\u4e2d\u83ef\u885b\u661f\u4e00\u865f|\u798f\u5c14\u6469\u6c99\u536b\u661f\u4e00\u53f7|\u798f\u885b\u4e00\u865f|Chunghua-1|Republic of China Satellite 1",
             "itemDescription": "Earth observation satellite"
         }
     ],
@@ -18689,6 +19263,23 @@
             "all_NSSDCA_ID": "1962-016A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": ""
+        }
+    ],
+    [
+        {
+            "Name": "SAMPEX",
+            "ID": "1992-038A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54367",
+            "itemLabel": "solar-anomalous-and-magnetospheric-particle-explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1992-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-038A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SAMPEX|Explorer 68|Explorer 68|SAMPEX|SAMPEX",
+            "itemDescription": "space observatory"
         }
     ],
     [
@@ -18984,7 +19575,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4|\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab",
+            "aliases": "\u0633\u0643\u0627\u064a\u0644\u0627\u0628|Programa Skylab|Skylab 1|Apollo Application Program|Skylab 1|Programa Skylab|\u0627\u0633\u06a9\u0627\u06cc \u0644\u0628|Skylab 1|Skylab|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d0\u05d1 1|\u05e1\u05e7\u05d9\u05d9\u05dc\u05d1|Programma Skylab|\u30b5\u30bf\u30fc\u30f3 INT-21|\u30b9\u30ab\u30a4\u30e9\u30d61\u53f7|\uc2a4\uce74\uc774\ub7a9 \uacc4\ud68d|Skylab|Skylab 1|Skylab 1|SKYLAB|\u0421\u043a\u0430\u0439\u043b\u0430\u0431|\u0421\u043a\u0430\u0439\u043b\u044d\u0431 1|Skylab 1|Skylabprogrammet|\u0e2a\u0e01\u0e32\u0e22\u0e41\u0e25\u0e47\u0e1a|\u5929\u7a7a\u5b9e\u9a8c\u5ba4",
             "itemDescription": "space station launched and operated by NASA"
         }
     ],
@@ -19243,6 +19834,22 @@
     ],
     [
         {
+            "Name": "STP P78-1",
+            "ID": "1979-017A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54370",
+            "itemLabel": "p78-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1979-017A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1979-017A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Solwind|P78-1|P-78|Space Test Program P78-1 (P78-1)|P78-1\u4eba\u9020\u885b\u661f"
+        }
+    ],
+    [
+        {
             "Name": "STP P78-2",
             "ID": "1979-007A"
         },
@@ -19461,6 +20068,23 @@
     ],
     [
         {
+            "Name": "TERRIERS",
+            "ID": "1999-026A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54379",
+            "itemLabel": "terriers",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1999-026A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1999-026A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Topographic Experiment using Radiative Recombinative Ionospheric EUV and Radio Sources|Explorer 76|TERRIERS",
+            "itemDescription": "NASA mission to study the ionosphere"
+        }
+    ],
+    [
+        {
             "Name": "THEMIS-A",
             "ID": "2007-004A"
         },
@@ -19546,6 +20170,23 @@
     ],
     [
         {
+            "Name": "TIMED",
+            "ID": "2001-055B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54378",
+            "itemLabel": "timed",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "2001-055B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2001-055B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "TIMED",
+            "itemDescription": "Satellite mission by the NASA"
+        }
+    ],
+    [
+        {
             "Name": "TIROS 7",
             "ID": "1963-024A"
         },
@@ -19576,6 +20217,23 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "",
             "itemDescription": "U.S. weather satellite"
+        }
+    ],
+    [
+        {
+            "Name": "TRAAC",
+            "ID": "1961-031B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54387",
+            "itemLabel": "transit-research-and-attitude-control",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1961-031B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "TRAAC",
+            "itemDescription": "satellite"
         }
     ],
     [
