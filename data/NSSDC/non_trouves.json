@@ -44,18 +44,6 @@
         "ID": "COS-A"
     },
     {
-        "Name": "Cosmos   31",
-        "ID": "1964-028A"
-    },
-    {
-        "Name": "Cosmos   51",
-        "ID": "1964-080A"
-    },
-    {
-        "Name": "Cosmos  461",
-        "ID": "1971-105A"
-    },
-    {
         "Name": "CXBN 2",
         "ID": "1998067LM"
     },
@@ -136,10 +124,6 @@
         "ID": "1962-041A"
     },
     {
-        "Name": "Mariner 10",
-        "ID": "1973-085A"
-    },
-    {
         "Name": "Mariner-H",
         "ID": "MARINH"
     },
@@ -168,14 +152,6 @@
         "ID": "OV1-7"
     },
     {
-        "Name": "Pioneer 10",
-        "ID": "1972-012A"
-    },
-    {
-        "Name": "Pioneer 11",
-        "ID": "1973-019A"
-    },
-    {
         "Name": "Pioneer P-3",
         "ID": "PIONX"
     },
@@ -194,14 +170,6 @@
     {
         "Name": "Relict 2",
         "ID": "RELICT2"
-    },
-    {
-        "Name": "ROSAT",
-        "ID": "1990-049A"
-    },
-    {
-        "Name": "SAMPEX",
-        "ID": "1992-038A"
     },
     {
         "Name": "SHEAL-A",
@@ -228,28 +196,12 @@
         "ID": "SPECXGM"
     },
     {
-        "Name": "STP P78-1",
-        "ID": "1979-017A"
-    },
-    {
         "Name": "STP P80-2",
         "ID": "P80-2"
     },
     {
         "Name": "STS/STORE",
         "ID": "STORE"
-    },
-    {
-        "Name": "Suzaku",
-        "ID": "2005-025A"
-    },
-    {
-        "Name": "SWAS",
-        "ID": "1998-071A"
-    },
-    {
-        "Name": "Tenma",
-        "ID": "1983-011A"
     },
     {
         "Name": "TYVAK-61C",
@@ -420,10 +372,6 @@
         "ID": "1962-041A"
     },
     {
-        "Name": "Mariner 10",
-        "ID": "1973-085A"
-    },
-    {
         "Name": "Mariner-H",
         "ID": "MARINH"
     },
@@ -538,14 +486,6 @@
     {
         "Name": "Pioneer 0",
         "ID": "ABLE1"
-    },
-    {
-        "Name": "Pioneer 10",
-        "ID": "1972-012A"
-    },
-    {
-        "Name": "Pioneer 11",
-        "ID": "1973-019A"
     },
     {
         "Name": "Pioneer P-3",
@@ -792,16 +732,8 @@
         "ID": "1972-046A"
     },
     {
-        "Name": "RHESSI",
-        "ID": "2002-004A"
-    },
-    {
         "Name": "S3-1",
         "ID": "1974-085C"
-    },
-    {
-        "Name": "SAMPEX",
-        "ID": "1992-038A"
     },
     {
         "Name": "SMS 2",
@@ -822,10 +754,6 @@
     {
         "Name": "SOLRAD 2",
         "ID": "SRD-2"
-    },
-    {
-        "Name": "SORCE",
-        "ID": "2003-004A"
     },
     {
         "Name": "Space Shuttle",
@@ -880,10 +808,6 @@
         "ID": "SSBUV06"
     },
     {
-        "Name": "STP P78-1",
-        "ID": "1979-017A"
-    },
-    {
         "Name": "STP P80-2",
         "ID": "P80-2"
     },
@@ -892,20 +816,8 @@
         "ID": "SUNLB-A"
     },
     {
-        "Name": "TERRIERS",
-        "ID": "1999-026A"
-    },
-    {
-        "Name": "TIMED",
-        "ID": "2001-055B"
-    },
-    {
         "Name": "UARS 2",
         "ID": "UARS-2"
-    },
-    {
-        "Name": "1963-038C",
-        "ID": "1963-038C"
     },
     {
         "Name": "1965-027E",
@@ -952,14 +864,6 @@
         "ID": "ATS-G"
     },
     {
-        "Name": "Aureol 1",
-        "ID": "1971-119A"
-    },
-    {
-        "Name": "Aureol 2",
-        "ID": "1973-107A"
-    },
-    {
         "Name": "Beacon 1",
         "ID": "BEAC1"
     },
@@ -986,26 +890,6 @@
     {
         "Name": "Cluster96",
         "ID": "CLUSTR1"
-    },
-    {
-        "Name": "Cosmos 49",
-        "ID": "1964-069A"
-    },
-    {
-        "Name": "Cosmos 321",
-        "ID": "1970-006A"
-    },
-    {
-        "Name": "Cosmos 348",
-        "ID": "1970-044A"
-    },
-    {
-        "Name": "Cosmos 356",
-        "ID": "1970-059A"
-    },
-    {
-        "Name": "Cosmos 378",
-        "ID": "1970-097A"
     },
     {
         "Name": "CUNYSAT-1",
@@ -1280,20 +1164,12 @@
         "ID": "2015-011D"
     },
     {
-        "Name": "Magsat",
-        "ID": "1979-094A"
-    },
-    {
         "Name": "Mariner 1",
         "ID": "MARIN1"
     },
     {
         "Name": "Mariner 2",
         "ID": "1962-041A"
-    },
-    {
-        "Name": "Mariner 10",
-        "ID": "1973-085A"
     },
     {
         "Name": "Mariner-H",
@@ -1388,14 +1264,6 @@
         "ID": "ABLE1"
     },
     {
-        "Name": "Pioneer 10",
-        "ID": "1972-012A"
-    },
-    {
-        "Name": "Pioneer 11",
-        "ID": "1973-019A"
-    },
-    {
         "Name": "Pioneer P-3",
         "ID": "PIONX"
     },
@@ -1430,10 +1298,6 @@
     {
         "Name": "Prognoz 3",
         "ID": "1973-009A"
-    },
-    {
-        "Name": "RADOSE",
-        "ID": "1963-021D"
     },
     {
         "Name": "Relict 2",
@@ -1484,10 +1348,6 @@
         "ID": "SAMOS1"
     },
     {
-        "Name": "SAMPEX",
-        "ID": "1992-038A"
-    },
-    {
         "Name": "SARI",
         "ID": "SARI"
     },
@@ -1512,10 +1372,6 @@
         "ID": "SHUTTLE"
     },
     {
-        "Name": "STP P78-1",
-        "ID": "1979-017A"
-    },
-    {
         "Name": "STP S81-1",
         "ID": "1982-041A"
     },
@@ -1528,10 +1384,6 @@
         "ID": "2019-036T"
     },
     {
-        "Name": "TERRIERS",
-        "ID": "1999-026A"
-    },
-    {
         "Name": "TEX",
         "ID": "1990-031B"
     },
@@ -1540,16 +1392,8 @@
         "ID": "THEMIS-GB"
     },
     {
-        "Name": "TIMED",
-        "ID": "2001-055B"
-    },
-    {
         "Name": "TIP 1",
         "ID": "1972-069A"
-    },
-    {
-        "Name": "TRAAC",
-        "ID": "1961-031B"
     },
     {
         "Name": "TSS-1",
