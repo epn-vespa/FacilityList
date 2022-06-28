@@ -103,6 +103,23 @@
     ],
     [
         {
+            "Name": "DAVINCI PLUS",
+            "ID": "DAVINCI-P"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21083242",
+            "itemLabel": "deep-atmosphere-venus-investigation-of-noble-gases,-chemistry,-and-imaging,-plus",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DAVINCI+|DAVINCI",
+            "itemDescription": "planned Venus atmospheric-entry probe"
+        }
+    ],
+    [
+        {
             "Name": "Deep Space 2",
             "ID": "DEEPSP2"
         },
@@ -469,7 +486,7 @@
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "-240",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "SLIM",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Smart Lander for Investigating Moon|\u30b9\u30ea\u30e0",
             "itemDescription": "a lunar lander being developed by the Japan Aerospace Exploration Agency"
