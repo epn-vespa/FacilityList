@@ -58,9 +58,25 @@
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1998-061A",
             "all_NAIF_ID": "-30",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "1998-061A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "DS1|DS1|DS 1"
+        }
+    ],
+    [
+        {
+            "ID": "-40",
+            "Name": "CLEMENTINE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2980729",
+            "itemLabel": "Cl\u00e9mentine",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1999-064B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Clementine"
         }
     ],
     [
@@ -74,7 +90,7 @@
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1984-125A",
             "all_NAIF_ID": "-66",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "1984-125A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "5Vk"
         }
@@ -90,7 +106,7 @@
             "all_Unified_Astro_Thesaurus_ID": "",
             "all_COSPAR_ID": "1992-063A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "1992-063A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Mars Observer; MO|\u30de\u30fc\u30ba\u30fb\u30aa\u30d6\u30b5\u30fc\u30d0\u30fc"
         }
