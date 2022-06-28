@@ -36,11 +36,13 @@ where = """
   {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
   UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
-  UNION {?item  wdt:P279  wd:Q35273 .} # optical telescope
-  UNION {?item  wdt:P279  wd:Q697175 .} # Launch vehicle
-  UNION {?item  wdt:P279  wd:Q18812508 .} # space station module
-  UNION {?item  wdt:P279  wd:Q17004698 .} # astronomical interferometer
-
+  UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
+  UNION {?item  wdt:P31  wd:Q697175 .} # Launch vehicle
+  UNION {?item  wdt:P31  wd:Q18812508 .} # space station module
+  UNION {?item  wdt:P31  wd:Q17004698 .} # astronomical interferometer
+  UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
+  UNION {?item  wdt:P31  wd:Q13226383 .} # facility
+  
   OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
   OPTIONAL {?item wdt:P8913 ?NSSDCA_ID .}
@@ -87,27 +89,28 @@ print("response contains " + results_count + " results")
 
 # or not test
 test = False
-page_size = 1500
+page_size = 2000
 
 print("using page_size = " + str(page_size))
 r = []
 # for each page that we need to query
-for i in range(1 if test == True else int(results_count) // page_size):
+for i in range( 1 if test == True else (int(results_count) // page_size) + 1 ):
     print("requesting page " + str(i))
     # assemble a query for knowing the results of the i-th page
     query_page = query_prefix + select_main + where + page(i, page_size)
-    print(query_page)
+    #print(query_page)
+
     query_page_result = get_results(endpoint_url, query_page)
     bindings = query_page_result["results"]["bindings"]
-
     new_elements = [{k: b[k]["value"] for k in b} for b in bindings]
+
     # remplacer les espaces par des tirets dans itemLabel
     for e in new_elements:
         e['itemLabel'] = e['itemLabel'].replace(' ', '-')
         e['itemLabel'] = e['itemLabel'].lower()
     r.extend(new_elements)
 
-print(r)
+print("successfully retrieved " + str(len(r)) + " results")
 
 with open("list_observatories_spacecrafts1.json", 'w') as fout:
     fout.write(json.dumps(r, indent=4))
