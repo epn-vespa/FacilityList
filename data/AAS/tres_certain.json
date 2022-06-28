@@ -1,22 +1,6 @@
 [
     [
         {
-            "Name": "South African Radio Astronomy Observatory (SARAO) MeerKAT Telescope",
-            "ID": "MeerKAT"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q6807657",
-            "itemLabel": "MeerKAT",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Karoo Array Telescope|Karoo Array Telescope|Karoo Array Telescope|\u0622\u0631\u0627\u06cc\u0647 \u062a\u0644\u0633\u06a9\u0648\u067e\u06cc \u06a9\u0627\u0631\u0648|\u062a\u0644\u0633\u0643\u0648\u0628 Karoo Array|\u0915\u093e\u0930\u0942 \u0910\u0930\u0947 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a"
-        }
-    ],
-    [
-        {
             "Name": "IceCube South Pole Neutrino Observatory",
             "ID": "IceCube"
         },
@@ -417,22 +401,6 @@
     ],
     [
         {
-            "Name": "NASA Solar Terrestrial Relations Observatory (STEREO) solar orbiters",
-            "ID": "STEREO"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q182766",
-            "itemLabel": "STEREO",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "STEREO-A|STEREO-B|\u0633\u062a\u064a\u0631\u064a\u0648 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|\u0645\u0633\u0628\u0627\u0631 \u0633\u062a\u064a\u0631\u064a\u0648|Solar Terrestrial Relations Observatory|Mision Stereo"
-        }
-    ],
-    [
-        {
             "Name": "NASA 0.95m Kepler Satellite Mission",
             "ID": "Kepler"
         },
@@ -461,6 +429,22 @@
             "all_NSSDCA_ID": "2004-006A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Rosetta|Rosetta space probe|2007 VN84|2007VN84|Programme Rosetta|Sonde Rosetta|\u0420\u043e\u0437\u0435\u0442\u0442\u0430 (\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043f\u043f\u0430\u0440\u0430\u0442)"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Global Geospace Science (GGS) Wind Satellite Mission",
+            "ID": "WIND"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2300867",
+            "itemLabel": "WIND",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "1994-071A",
+            "all_NAIF_ID": "-8",
+            "all_NSSDCA_ID": "1994-071A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "IPL|GGS/Wind|Interplanetary Physics Laboratory|ISTP/Wind|Global Geospace Science|WIND|Global Geospace Science Wind"
         }
     ],
     [
@@ -529,22 +513,6 @@
     ],
     [
         {
-            "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
-            "ID": "Ritter Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q7336813",
-            "itemLabel": "Ritter Observatory",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": ""
-        }
-    ],
-    [
-        {
             "Name": "VERITAS Collaboration Very Energetic Radiation Imaging Telescope Array System (VERITAS) at Fred Lawrence Whipple Observatory (FLWO)",
             "ID": "VERITAS"
         },
@@ -561,118 +529,6 @@
     ],
     [
         {
-            "Name": "National Astronomical Observatory of Japan (NAOJ) 8.2m Subaru Telescope at Mauna Kea Observatory",
-            "ID": "Subaru"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q841079",
-            "itemLabel": "Subaru",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Subaru|Subaru Telescope|T\u00e9lescope Subaru|\u3059\u3070\u308b\u671b\u9060\u93e1|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|Subaru Telescope|Subaru-telescope|Subarutelescoop|\u6634"
-        }
-    ],
-    [
-        {
-            "Name": "National Center for Atmospheric Research (NCAR) High Altitude Observatory telescope at Mauna Loa Solar Observatory (MLSO)",
-            "ID": "HAO"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5754874",
-            "itemLabel": "HAO",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "HAO|\u9ad8\u7eac\u89c2\u5bdf\u7ad9|\u9ad8\u6d77\u62d4\u5929\u6587\u53f0|\u9ad8\u6d77\u62d4\u5929\u6587\u53f0|\u9ad8\u7def\u89c0\u5bdf\u7ad9"
-        }
-    ],
-    [
-        {
-            "Name": "Georgia Stat University (GSU) Center for High Angular Resolution Astronomy (CHARA) interferometer at Mount Wilson Observatory",
-            "ID": "CHARA"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1023601",
-            "itemLabel": "CHARA",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "CHARA|CHARA\u30a2\u30ec\u30a4|CHARA|CHARA array"
-        }
-    ],
-    [
-        {
-            "Name": "University of Washington 0.75m Telescope at Manastash Ridge Observatory (MRO)",
-            "ID": "Manastash Ridge Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q6747042",
-            "itemLabel": "Manastash Ridge Observatory",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "664",
-            "aliases": ""
-        }
-    ],
-    [
-        {
-            "Name": "Netherlands Institute for Radio Astronomy (ASTRON) Low-Frequency Array (LOFAR)",
-            "ID": "LOFAR"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1192324",
-            "itemLabel": "LOFAR",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "LOFAR|Low-Frequency Array|low frequency array|matriz de baja frecuencia|Low-Frequency Array|Low Frequency Array|\u30ed\u30fc\u30d5\u30a1\u30eb|\u041b\u041e\u0424\u0410\u0420|\u041d\u0438\u0437\u043a\u043e\u0447\u0430\u0441\u0442\u043e\u043d\u0442\u043d\u0430\u044f \u0420\u0435\u0448\u0451\u0442\u043a\u0430"
-        }
-    ],
-    [
-        {
-            "Name": "Tel Aviv University 1m Telescope at Florence and George Wise Observatory",
-            "ID": "Wise Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q580230",
-            "itemLabel": "Wise Observatory",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "097",
-            "aliases": "Wise Observatory|\u0412\u0430\u0439\u0437 \u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u0437\u0456\u0440\u043e\u043a \u0456\u043c\u0435\u043d\u0456 \u0412\u0430\u0439\u0437\u0430|\u05de\u05e6\u05e4\u05d4 \u05d4\u05db\u05d5\u05db\u05d1\u05d9\u05dd \u05e2\u05dc \u05e9\u05dd \u05d5\u05d9\u05d9\u05d6"
-        }
-    ],
-    [
-        {
-            "Name": "Chinese Academy of Science 4m Large Sky Area Multi-Object Fiber Spectroscopy Telescope (LAMOST also known as Guo Shoujing Telescope)",
-            "ID": "LAMOST"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1513326",
-            "itemLabel": "LAMOST",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Large Sky Area Multi-Object Fibre Spectroscopic Telescope|Large Sky Area Multi-Object Fibre Spectroscopic Telescope|LAMOST\u671b\u8fdc\u955c|LAMOST\u671b\u9060\u93e1|\u5927\u578b\u591a\u5929\u4f53\u5206\u5149\u671b\u8fdc\u955c|\u5927\u5929\u533a\u9762\u79ef\u591a\u76ee\u6807\u5149\u7ea4\u5149\u8c31\u5929\u6587\u671b\u8fdc\u955c|\u5927\u5929\u533a\u9762\u79ef\u591a\u76ee\u6807\u5149\u7ea4\u5149\u8c31\u671b\u8fdc\u955c|\u5927\u5929\u533a\u9762\u79ef\u591a\u76ee\u6807\u5149\u7ea4\u5149\u8c31\u671b\u8fdc\u955c"
-        }
-    ],
-    [
-        {
             "Name": "Centre National de la Recherche Scientifique (CNRS)/National Institute for Astrophysics (INAF) 0.9m Telescope Heliographique pour l'Etude du Magnetisme et des Instabilites Solaires (THEMIS) Telescope at Observatorio del Teide",
             "ID": "THEMIS"
         },
@@ -685,22 +541,6 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "THEMIS|Explorer 85|Explorer 86|Explorer 87|Explorer 88|Explorer 89|Explorer 85|Explorer 86|Explorer 87|Explorer 88|Explorer 89|Time History of Events and Macroscale Interactions during Substorms|Time History of Events and Macroscale Interactions during Substorms|THEMIS|THEMIS|THEMIS \uc704\uc131|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-85|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-86|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-87|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-88|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-89"
-        }
-    ],
-    [
-        {
-            "Name": "SuperWASP extra-solar planet detection program at Roque de los Muchachos Observatory (SuperWASP-North) and South African Astronomical Observatory (SAAO; SuperWASP-South)",
-            "ID": "SuperWASP"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q572830",
-            "itemLabel": "SuperWASP",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "WASP"
         }
     ]
 ]
