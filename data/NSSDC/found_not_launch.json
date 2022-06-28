@@ -1,5 +1,8 @@
 [
-  [
+  [ 
+    {
+       "launch": "Following launch in 2026 and flybys of Venus and Earth, Dragonfly will reach Titan in 2034."
+    },
     {
       "Name": "Dragonfly",
       "ID": "DRAGONFLY"
@@ -17,6 +20,9 @@
   ],
   [
     {
+       "launch": "Hera is scheduled to launch in 2024 and arrive at the Didymos system in early January 2027 on an Ariane 6"
+    },
+    {
       "Name": "Hera",
       "ID": "HERA"
     },
@@ -33,6 +39,9 @@
   ],
   [
     {
+       "launch": ""
+    },
+    {
       "Name": "Mariner 1",
       "ID": "MARIN1"
     },
@@ -47,7 +56,11 @@
       "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1"
     }
   ],
+  
   [
+    {
+       "launch": "Following launch in 2026 and flybys of Venus and Earth, Dragonfly will reach Titan in 2034."
+    },
     {
       "Name": "Smart Lander for Investigating Moon (SLIM)",
       "ID": "SLIM"
@@ -65,6 +78,9 @@
   ],
   [
     {
+       "launch": "Following launch in 2026 and flybys of Venus and Earth, Dragonfly will reach Titan in 2034."
+    },
+    {
       "Name": "Pioneer P-31",
       "ID": "PIONZ"
     },
@@ -80,6 +96,9 @@
     }
   ],
   [
+    {
+       "launch": "Following launch in 2026 and flybys of Venus and Earth, Dragonfly will reach Titan in 2034."
+    },
     {
       "Name": "Viking 1 Orbiter",
       "ID": "1975-075A"
@@ -97,6 +116,9 @@
   ],
   [
     {
+       "launch": "Following launch in 2026 and flybys of Venus and Earth, Dragonfly will reach Titan in 2034."
+    },
+    {
       "Name": "Yinghuo-1",
       "ID": "YINGHUO-1"
     },
@@ -111,7 +133,10 @@
       "aliases": "\ud615\ud654 1\ud638|\u87a2\u706b 1\u865f|\u0407\u043d\u0445\u0432\u043e-1|\u0407\u043d\u0445\u043e-1"
     }
   ],
-  [
+  [ 
+    {
+       "launch": "Following launch in 2026 and flybys of Venus and Earth, Dragonfly will reach Titan in 2034."
+    },
     {
       "Name": "D2B",
       "ID": "1975-092A"
