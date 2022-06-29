@@ -341,57 +341,6 @@
     ],
     [
         {
-            "Name": "Pegasus 1",
-            "ID": "1965-009A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q478603",
-            "itemLabel": "pegasus",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Pegasus Hybrid|Pegasus XL|Pegasus",
-            "itemDescription": "air-launched rocket"
-        }
-    ],
-    [
-        {
-            "Name": "Pegasus 2",
-            "ID": "1965-039A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q478603",
-            "itemLabel": "pegasus",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Pegasus Hybrid|Pegasus XL|Pegasus",
-            "itemDescription": "air-launched rocket"
-        }
-    ],
-    [
-        {
-            "Name": "Pegasus 3",
-            "ID": "1965-060A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q478603",
-            "itemLabel": "pegasus",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Pegasus Hybrid|Pegasus XL|Pegasus",
-            "itemDescription": "air-launched rocket"
-        }
-    ],
-    [
-        {
             "Name": "Pioneer 3",
             "ID": "1958-008A"
         },
@@ -541,57 +490,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\ud615\ud654 1\ud638|\u87a2\u706b 1\u865f|\u0407\u043d\u0445\u0432\u043e-1|\u0407\u043d\u0445\u043e-1",
             "itemDescription": "first attempted Chinese mission to Mars"
-        }
-    ],
-    [
-        {
-            "Name": "Atlas 2",
-            "ID": "ATLAS2"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q22949",
-            "itemLabel": "atlas",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Atlas|\"Atlas\"|Atlasraket",
-            "itemDescription": "family of American missiles and space launch vehicles"
-        }
-    ],
-    [
-        {
-            "Name": "Atlas 3",
-            "ID": "ATLAS3"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q22949",
-            "itemLabel": "atlas",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Atlas|\"Atlas\"|Atlasraket",
-            "itemDescription": "family of American missiles and space launch vehicles"
-        }
-    ],
-    [
-        {
-            "Name": "Atlas 4",
-            "ID": "ATLAS4"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q22949",
-            "itemLabel": "atlas",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Atlas|\"Atlas\"|Atlasraket",
-            "itemDescription": "family of American missiles and space launch vehicles"
         }
     ],
     [
@@ -779,57 +677,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "M\u00e9t\u00e9osat|M\u00e9t\u00e9osat premi\u00e8re g\u00e9n\u00e9ration|METEOSAT",
             "itemDescription": "series of european weather satellites"
-        }
-    ],
-    [
-        {
-            "Name": "Pegasus 1",
-            "ID": "1965-009A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q478603",
-            "itemLabel": "pegasus",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Pegasus Hybrid|Pegasus XL|Pegasus",
-            "itemDescription": "air-launched rocket"
-        }
-    ],
-    [
-        {
-            "Name": "Pegasus 2",
-            "ID": "1965-039A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q478603",
-            "itemLabel": "pegasus",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Pegasus Hybrid|Pegasus XL|Pegasus",
-            "itemDescription": "air-launched rocket"
-        }
-    ],
-    [
-        {
-            "Name": "Pegasus 3",
-            "ID": "1965-060A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q478603",
-            "itemLabel": "pegasus",
-            "all_Unified_Astro_Thesaurus_ID": "",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Pegasus Hybrid|Pegasus XL|Pegasus",
-            "itemDescription": "air-launched rocket"
         }
     ],
     [
