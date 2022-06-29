@@ -41,7 +41,7 @@ where = """
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module
   UNION {?item  wdt:P31  wd:Q17004698 .} # astronomical interferometer
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
-  UNION {?item  wdt:P31  wd:Q13226383 .} # facility
+  #UNION {?item  wdt:P31  wd:Q13226383 .} # facility
   
   OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
