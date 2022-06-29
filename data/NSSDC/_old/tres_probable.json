@@ -1,0 +1,835 @@
+[
+    [
+        {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "mariner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1",
+            "itemDescription": "First US attempt to fly by Venus"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-3",
+            "ID": "PIONX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Spacelab-D2",
+            "ID": "SPLABD2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS   9/Spacelab 1",
+            "ID": "1983-116A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS  51F/Spacelab 2",
+            "ID": "1985-063A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "Beresheet",
+            "ID": "2019-009B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q63137797",
+            "itemLabel": "beresheet-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Beresheet-2|\u0411\u0435\u0440\u0435\u0448\u0438\u0442 2|Beresheet 2|Beresheet2",
+            "itemDescription": "planned Israeli/UAE lunar mission"
+        }
+    ],
+    [
+        {
+            "Name": "DAVINCI PLUS",
+            "ID": "DAVINCI-P"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21083242",
+            "itemLabel": "deep-atmosphere-venus-investigation-of-noble-gases,-chemistry,-and-imaging,-plus",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DAVINCI+|DAVINCI",
+            "itemDescription": "planned Venus atmospheric-entry probe"
+        }
+    ],
+    [
+        {
+            "Name": "Deep Space 2",
+            "ID": "DEEPSP2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q575934",
+            "itemLabel": "deep-space-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "DEEPSP2",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Scott|DS-2|Amundsen|Mars Microprobe Project|Mars Microprobe|\u30c7\u30a3\u30fc\u30d7\u30fb\u30b9\u30da\u30fc\u30b92|\u30c7\u30a3\u30fc\u30d7\u30b9\u30da\u30fc\u30b92|\u30c7\u30a3\u30fc\u30d7\u30b9\u30da\u30fc\u30b92\u53f7",
+            "itemDescription": "twin Mars impact probes"
+        }
+    ],
+    [
+        {
+            "Name": "Double Asteroid Redirection Test (DART)",
+            "ID": "2021-110A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q47482008",
+            "itemLabel": "double-asteroid-redirection-test",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-135",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DART|DART|Double Asteroid Redirection Test|\u30c0\u30d6\u30eb\u30fb\u30a2\u30b9\u30c6\u30ed\u30a4\u30c9\u30fb\u30ea\u30c0\u30a4\u30ec\u30af\u30b7\u30e7\u30f3\u30fb\u30c6\u30b9\u30c8|prueba de redireccionamiento de doble asteroide|\u96d9\u5c0f\u884c\u661f\u8f49\u5411\u8a66\u9a57|DART|Double Asteroid Redirection Test|\u05d3\u05d0\u05e8\u05d8",
+            "itemDescription": "first mission in NASA's Solar System Exploration program; impact of asteroid Dimorphos in 65803 Didymos system"
+        }
+    ],
+    [
+        {
+            "Name": "Dragonfly",
+            "ID": "DRAGONFLY"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q29018128",
+            "itemLabel": "titan-dragonfly",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-148",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dragonfly",
+            "itemDescription": "mission planned by NASA to explore Saturn's moon Titan with a robotic aircraft"
+        }
+    ],
+    [
+        {
+            "Name": "Gemini 2",
+            "ID": "GEMINI2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q47010762",
+            "itemLabel": "gemini-sc-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gemini spacecraft No. 2",
+            "itemDescription": "First reusable space capsule"
+        }
+    ],
+    [
+        {
+            "Name": "Gravity Recovery And Interior Laboratory-A (GRAIL)",
+            "ID": "2011-046A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q116681",
+            "itemLabel": "gravity-recovery-and-interior-laboratory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gravity Recovery and Interior Laboratory|GRAIL|GRAIL|GRACE|Gravity Recovery And Climate Experiment|Gravity Recovery And Interior Laboratory|Laboratorio Interior y de Recuperacion de Gravedad|Laboratorio Interior y de Recuperaci\u00f3n de Gravedad|GRAIL|Discovery 11|GRAIL",
+            "itemDescription": "American lunar science mission in NASA's Discovery Program"
+        }
+    ],
+    [
+        {
+            "Name": "Gravity Recovery And Interior Laboratory-B (GRAIL)",
+            "ID": "2011-046B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q116681",
+            "itemLabel": "gravity-recovery-and-interior-laboratory",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Gravity Recovery and Interior Laboratory|GRAIL|GRAIL|GRACE|Gravity Recovery And Climate Experiment|Gravity Recovery And Interior Laboratory|Laboratorio Interior y de Recuperacion de Gravedad|Laboratorio Interior y de Recuperaci\u00f3n de Gravedad|GRAIL|Discovery 11|GRAIL",
+            "itemDescription": "American lunar science mission in NASA's Discovery Program"
+        }
+    ],
+    [
+        {
+            "Name": "Hera",
+            "ID": "HERA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q60965184",
+            "itemLabel": "hera",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "HERA",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hera spacecraft",
+            "itemDescription": "ESA spacecraft which will study the effects of the DART Impactor on the asteroid moon Dimorphos"
+        }
+    ],
+    [
+        {
+            "Name": "Lunar-A ",
+            "ID": "LUNAR-A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q445383",
+            "itemLabel": "lunar-a",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-146",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LUNAR-A|LUNAR A|LUNAR-A\u8a08\u753b|\u30eb\u30ca\u30fcA|\u30eb\u30ca\u30fcA\u8a08\u753b|\u30eb\u30caA|\u30eb\u30caA\u8a08\u753b",
+            "itemDescription": "cancelled space probe"
+        }
+    ],
+    [
+        {
+            "Name": "Mangalyaan",
+            "ID": "2013-060A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21027956",
+            "itemLabel": "mangalyaan-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-119",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Mangalyaan 2|Mars Orbiter Mission 2|\u706b\u661f\u8f68\u9053\u63a2\u6d4b\u56682\u53f7",
+            "itemDescription": "India's second Martian mission"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 1",
+            "ID": "MARIN1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "mariner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1",
+            "itemDescription": "First US attempt to fly by Venus"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "mariner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1",
+            "itemDescription": "First US attempt to fly by Venus"
+        }
+    ],
+    [
+        {
+            "Name": "Martian Moons eXploration (MMX)",
+            "ID": "MMX-MARS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q30748458",
+            "itemLabel": "martian-moons-exploration",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-239",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MMX|MMX|MMX|MMX|\u0395\u03be\u03b5\u03c1\u03b5\u03cd\u03bd\u03b7\u03c3\u03b7 \u0391\u03c1\u03b5\u03b9\u03b1\u03bd\u03ce\u03bd \u0394\u03bf\u03c1\u03c5\u03c6\u03cc\u03c1\u03c9\u03bd|\u706b\u661f\u885b\u661f\u63a2\u67fb\u8a08\u753b",
+            "itemDescription": "Japanese space mission for the exploration of Mars and its moons"
+        }
+    ],
+    [
+        {
+            "Name": "NEA Scout",
+            "ID": "NEA-SCOUT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q22084830",
+            "itemLabel": "near-earth-asteroid-scout",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NEA Scout",
+            "itemDescription": "planned solar sail spacecraft"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer 3",
+            "ID": "1958-008A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-3",
+            "ID": "PIONX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-30",
+            "ID": "PIONY"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-31",
+            "ID": "PIONZ"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1187438",
+            "itemLabel": "pioneer-p-31",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONZ",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas Able 5B|Atlas-Able 5B|P 31|Pioneer P 31|Pioneer Z|Pioneer Z|\u5148\u92d2D\u865f|\u5148\u92d2Z\u865f|\u5148\u9a71\u8005C\u53f7|\u5148\u9a71\u8005P-31",
+            "itemDescription": "failed lunar orbiter probe"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-31",
+            "ID": "PIONZ"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Smart Lander for Investigating Moon (SLIM)",
+            "ID": "SLIM"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q23773226",
+            "itemLabel": "smart-lander-for-investigating-moon",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "-240",
+            "all_NSSDCA_ID": "SLIM",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Smart Lander for Investigating Moon|\u30b9\u30ea\u30e0",
+            "itemDescription": "a lunar lander being developed by the Japan Aerospace Exploration Agency"
+        }
+    ],
+    [
+        {
+            "Name": "STS 51B/Spacelab 3",
+            "ID": "1985-034A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS 51F/Spacelab 2",
+            "ID": "1985-063A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "Yinghuo-1",
+            "ID": "YINGHUO-1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q177852",
+            "itemLabel": "yinghuo-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "YINGHUO-1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\ud615\ud654 1\ud638|\u87a2\u706b 1\u865f|\u0407\u043d\u0445\u0432\u043e-1|\u0407\u043d\u0445\u043e-1",
+            "itemDescription": "first attempted Chinese mission to Mars"
+        }
+    ],
+    [
+        {
+            "Name": "SOLRAD 2",
+            "ID": "SRD-2"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q13399314",
+            "itemLabel": "solrad-2",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GRAB 2|Solrad 2",
+            "itemDescription": "US satellite launched in 1960"
+        }
+    ],
+    [
+        {
+            "Name": "Spacelab Solar",
+            "ID": "SPLBSOL"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS 9/Spacelab 1",
+            "ID": "1983-116A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS 51B/Spacelab 3",
+            "ID": "1985-034A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS 51F/Spacelab 2",
+            "ID": "1985-063A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "Dynamics Explorer 1",
+            "ID": "1981-070A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1445709",
+            "itemLabel": "dynamics-explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dynamic Explorer",
+            "itemDescription": "NASA geomagnetic satellite mission"
+        }
+    ],
+    [
+        {
+            "Name": "Dynamics Explorer 2",
+            "ID": "1981-070B"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1445709",
+            "itemLabel": "dynamics-explorer",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dynamic Explorer",
+            "itemDescription": "NASA geomagnetic satellite mission"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 1",
+            "ID": "MARIN1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "mariner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1",
+            "itemDescription": "First US attempt to fly by Venus"
+        }
+    ],
+    [
+        {
+            "Name": "Mariner 10",
+            "ID": "1973-085A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q213499",
+            "itemLabel": "mariner-1",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "MARIN1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0645\u0627\u0631\u064a\u0646\u0631 \u0661|Mariner I|\ub9c8\ub9ac\ub108 1\ud638|Mariner-1",
+            "itemDescription": "First US attempt to fly by Venus"
+        }
+    ],
+    [
+        {
+            "Name": "Meteosat 2",
+            "ID": "1981-057A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1429889",
+            "itemLabel": "meteosat",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "M\u00e9t\u00e9osat|M\u00e9t\u00e9osat premi\u00e8re g\u00e9n\u00e9ration|METEOSAT",
+            "itemDescription": "series of european weather satellites"
+        }
+    ],
+    [
+        {
+            "Name": "Meteosat 3",
+            "ID": "1988-051A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1429889",
+            "itemLabel": "meteosat",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "M\u00e9t\u00e9osat|M\u00e9t\u00e9osat premi\u00e8re g\u00e9n\u00e9ration|METEOSAT",
+            "itemDescription": "series of european weather satellites"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer 3",
+            "ID": "1958-008A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-3",
+            "ID": "PIONX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-30",
+            "ID": "PIONY"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-31",
+            "ID": "PIONZ"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1187438",
+            "itemLabel": "pioneer-p-31",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONZ",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas Able 5B|Atlas-Able 5B|P 31|Pioneer P 31|Pioneer Z|Pioneer Z|\u5148\u92d2D\u865f|\u5148\u92d2Z\u865f|\u5148\u9a71\u8005C\u53f7|\u5148\u9a71\u8005P-31",
+            "itemDescription": "failed lunar orbiter probe"
+        }
+    ],
+    [
+        {
+            "Name": "Pioneer P-31",
+            "ID": "PIONZ"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q296987",
+            "itemLabel": "pioneer-p-3",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "PIONX",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Atlas-Able 4|Pioneer X|Pioneer P-3",
+            "itemDescription": "U.S. lunar orbiter destroyed in a launch failure"
+        }
+    ],
+    [
+        {
+            "Name": "Shijian 1",
+            "ID": "1971-018A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q110010611",
+            "itemLabel": "shijian-18",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Shijian 18|ShiJian-18|SJ-18|Shi Jian 18",
+            "itemDescription": "Chinese technology demonstration and communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "STS 9/Spacelab 1",
+            "ID": "1983-116A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS 51B/Spacelab 3",
+            "ID": "1985-034A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ],
+    [
+        {
+            "Name": "STS 51F/Spacelab 2",
+            "ID": "1985-063A"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q166008",
+            "itemLabel": "spacelab",
+            "all_Unified_Astro_Thesaurus_ID": "",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Spacelab|Spacelab",
+            "itemDescription": "laboratory module flown on the Space Shuttle"
+        }
+    ]
+]
