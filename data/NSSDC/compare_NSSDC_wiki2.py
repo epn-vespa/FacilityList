@@ -17,6 +17,11 @@ def mon_scorer(q, c):
             r += 500
         else:
             r -= 100
+    if c['all_NSSDCA_ID'] != "":
+        if q['ID'] == c['all_NSSDCA_ID']:
+            r += 500
+        else:
+            r -= 100
     return r
 
 def dummy_proc(x):
@@ -51,12 +56,12 @@ def compare_NSSDC(data_nssdc, wikidata) :
         r = results[i]
         trouve = False
         for r_elem in r:
-            if r_elem[1] > 500:
+            if r_elem[1] > 400:
                 trouve = True
                 tres_certain.append((e, r_elem[0]))
-            elif r_elem[1] > 180:
+            elif r_elem[1] > 160:
                 tres_probable.append((e, r_elem[0]))
-            elif r_elem[1] > 150:
+            elif r_elem[1] > 120:
                 probable.append((e, r_elem[0]))
         if not trouve: non_trouves.append(e)
 
