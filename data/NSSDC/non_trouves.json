@@ -1,43 +1,11 @@
 [
     {
-        "Name": "1971-054A",
-        "ID": "1971-054A"
-    },
-    {
-        "Name": "AFP-675",
-        "ID": "AFP-675"
-    },
-    {
-        "Name": "AFP-888",
-        "ID": "AFP-888"
-    },
-    {
-        "Name": "Astro 1",
-        "ID": "ASTRO-1"
-    },
-    {
-        "Name": "Astro 2",
-        "ID": "ASTRO-2"
-    },
-    {
-        "Name": "Astromag FF",
-        "ID": "ASTRMAG"
-    },
-    {
         "Name": "Atlas 1 / STS 45",
         "ID": "ATLAS1"
     },
     {
         "Name": "Beam",
         "ID": "BEAM"
-    },
-    {
-        "Name": "Challenger",
-        "ID": "CHALNGR"
-    },
-    {
-        "Name": "CORSA",
-        "ID": "CORSA"
     },
     {
         "Name": "COS-A",
@@ -48,60 +16,8 @@
         "ID": "1998067LM"
     },
     {
-        "Name": "Discoverer  5 Capsule",
-        "ID": "1959-005B"
-    },
-    {
-        "Name": "Discoverer  9",
-        "ID": "DISC9"
-    },
-    {
-        "Name": "Discoverer 16",
-        "ID": "DISC16"
-    },
-    {
-        "Name": "Discoverer 27",
-        "ID": "DISC27"
-    },
-    {
-        "Name": "Discoverer 28",
-        "ID": "DISC28"
-    },
-    {
-        "Name": "Discoverer 33",
-        "ID": "DISC33"
-    },
-    {
-        "Name": "DXS",
-        "ID": "DXS"
-    },
-    {
-        "Name": "EGRET",
-        "ID": "EGRET"
-    },
-    {
-        "Name": "EOM-A",
-        "ID": "EOM-A"
-    },
-    {
-        "Name": "ERS  3",
-        "ID": "ERS3"
-    },
-    {
-        "Name": "ESRO 2A",
-        "ID": "ESRO2A"
-    },
-    {
-        "Name": "GP-A",
-        "ID": "GRAVR-A"
-    },
-    {
         "Name": "GRASP",
         "ID": "GRASP"
-    },
-    {
-        "Name": "HaloSat",
-        "ID": "1998067NX"
     },
     {
         "Name": "ISPM/NASA",
@@ -110,30 +26,6 @@
     {
         "Name": "LAS",
         "ID": "LAS"
-    },
-    {
-        "Name": "Lomonosov",
-        "ID": "LOMNSOV"
-    },
-    {
-        "Name": "Mariner  2",
-        "ID": "1962-041A"
-    },
-    {
-        "Name": "Mariner-H",
-        "ID": "MARINH"
-    },
-    {
-        "Name": "MIDAS  1",
-        "ID": "MIDAS1"
-    },
-    {
-        "Name": "OAO-B",
-        "ID": "OAO-B"
-    },
-    {
-        "Name": "ORFEUS-SPAS I",
-        "ID": "1993-058C"
     },
     {
         "Name": "OSO-C",
@@ -148,76 +40,20 @@
         "ID": "OV1-7"
     },
     {
-        "Name": "Pioneer P-3",
-        "ID": "PIONX"
-    },
-    {
-        "Name": "Pioneer-E",
-        "ID": "PIONE"
-    },
-    {
         "Name": "QUASAT",
         "ID": "QUASAT"
-    },
-    {
-        "Name": "Regatta-A",
-        "ID": "REGTTAA"
-    },
-    {
-        "Name": "Relict 2",
-        "ID": "RELICT2"
-    },
-    {
-        "Name": "SHEAL-A",
-        "ID": "OSS-2"
-    },
-    {
-        "Name": "SOLRAD 11C",
-        "ID": "SRD-11C"
     },
     {
         "Name": "Space Shuttle",
         "ID": "SHUTTLE"
     },
     {
-        "Name": "Spacelab-D2",
-        "ID": "SPLABD2"
-    },
-    {
-        "Name": "Spartan Halley",
-        "ID": "SPATN-H"
-    },
-    {
         "Name": "Spectrum-X-Gamma",
         "ID": "SPECXGM"
     },
     {
-        "Name": "STP P80-2",
-        "ID": "P80-2"
-    },
-    {
-        "Name": "STS/STORE",
-        "ID": "STORE"
-    },
-    {
-        "Name": "TYVAK-61C",
-        "ID": "TYVAK-61C"
-    },
-    {
-        "Name": "Apollo Lunar Series",
-        "ID": "1968-118Z"
-    },
-    {
         "Name": "Artificial Comet",
         "ID": "ARTCOMT"
-    },
-    {
-        "Name": "Astro 1",
-        "ID": "ASTRO-1"
-    },
-    {
-        "Name": "Astro 2",
-        "ID": "ASTRO-2"
     },
     {
         "Name": "Blue Ghost Mission 1",
@@ -254,10 +90,6 @@
     {
         "Name": "Deep Impact Impactor (DII) Vehicle",
         "ID": "2005-001D"
-    },
-    {
-        "Name": "Deep Space 2",
-        "ID": "DEEPSP2"
     },
     {
         "Name": "Dragonfly",
@@ -298,10 +130,6 @@
     {
         "Name": "Genesis Sample Collection and Return Capsule",
         "ID": "2001-034D"
-    },
-    {
-        "Name": "Hera",
-        "ID": "HERA"
     },
     {
         "Name": "Intuitive Machines 1 (IM-1)",
@@ -360,18 +188,6 @@
         "ID": "1970-095D"
     },
     {
-        "Name": "Mariner 1",
-        "ID": "MARIN1"
-    },
-    {
-        "Name": "Mariner 2",
-        "ID": "1962-041A"
-    },
-    {
-        "Name": "Mariner-H",
-        "ID": "MARINH"
-    },
-    {
         "Name": "Mars 1969A",
         "ID": "MARS69A"
     },
@@ -414,10 +230,6 @@
     {
         "Name": "Mars 96 Surface Station",
         "ID": "MARS96C"
-    },
-    {
-        "Name": "Mars Pathfinder Rover",
-        "ID": "MESURPR"
     },
     {
         "Name": "Mars Surveyor 2001 Lander",
@@ -476,24 +288,8 @@
         "ID": "PEREGRN-1"
     },
     {
-        "Name": "Pioneer 2",
-        "ID": "PION2"
-    },
-    {
-        "Name": "Pioneer 0",
-        "ID": "ABLE1"
-    },
-    {
-        "Name": "Pioneer P-3",
-        "ID": "PIONX"
-    },
-    {
         "Name": "Pioneer P-30",
         "ID": "PIONY"
-    },
-    {
-        "Name": "Pioneer P-31",
-        "ID": "PIONZ"
     },
     {
         "Name": "Pioneer Venus Large Probe",
@@ -542,10 +338,6 @@
     {
         "Name": "Saturn SA-1",
         "ID": "SATURNSA1"
-    },
-    {
-        "Name": "Smart Lander for Investigating Moon (SLIM)",
-        "ID": "SLIM"
     },
     {
         "Name": "Stardust Sample Return Capsule",
@@ -612,10 +404,6 @@
         "ID": "XL1-LANDR"
     },
     {
-        "Name": "Yinghuo-1",
-        "ID": "YINGHUO-1"
-    },
-    {
         "Name": "Advanced OSO",
         "ID": "AOSO"
     },
@@ -636,16 +424,8 @@
         "ID": "ATLAS4"
     },
     {
-        "Name": "EOM-A",
-        "ID": "EOM-A"
-    },
-    {
         "Name": "EOS-CHEM1",
         "ID": "EOSCHEM"
-    },
-    {
-        "Name": "ESRO 2A",
-        "ID": "ESRO2A"
     },
     {
         "Name": "Genesis Sample Collection and Return Capsule",
@@ -744,10 +524,6 @@
         "ID": "SRAD4B"
     },
     {
-        "Name": "SOLRAD 11C",
-        "ID": "SRD-11C"
-    },
-    {
         "Name": "SOLRAD 2",
         "ID": "SRD-2"
     },
@@ -802,10 +578,6 @@
     {
         "Name": "SSBUV06",
         "ID": "SSBUV06"
-    },
-    {
-        "Name": "STP P80-2",
-        "ID": "P80-2"
     },
     {
         "Name": "Sunlab-A",
@@ -884,20 +656,12 @@
         "ID": "1994-004C"
     },
     {
-        "Name": "Cluster96",
-        "ID": "CLUSTR1"
-    },
-    {
         "Name": "CUNYSAT-1",
         "ID": "2013-072J"
     },
     {
         "Name": "DIAPO",
         "ID": "DIAPO"
-    },
-    {
-        "Name": "Discoverer 33",
-        "ID": "DISC33"
     },
     {
         "Name": "DMSP 4A/F4",
@@ -992,20 +756,12 @@
         "ID": "EE"
     },
     {
-        "Name": "EOM-A",
-        "ID": "EOM-A"
-    },
-    {
         "Name": "EOS-ALT1",
         "ID": "EOS-ALT"
     },
     {
         "Name": "ESA-GEOS 1",
         "ID": "1977-029A"
-    },
-    {
-        "Name": "ESRO 2A",
-        "ID": "ESRO2A"
     },
     {
         "Name": "Explorer 2",
@@ -1160,24 +916,8 @@
         "ID": "2015-011D"
     },
     {
-        "Name": "Mariner 1",
-        "ID": "MARIN1"
-    },
-    {
-        "Name": "Mariner 2",
-        "ID": "1962-041A"
-    },
-    {
-        "Name": "Mariner-H",
-        "ID": "MARINH"
-    },
-    {
         "Name": "Microlab 1",
         "ID": "1995-017C"
-    },
-    {
-        "Name": "MIDAS 1",
-        "ID": "MIDAS1"
     },
     {
         "Name": "NanosatC-Br1",
@@ -1252,28 +992,8 @@
         "ID": "P21A"
     },
     {
-        "Name": "Pioneer 2",
-        "ID": "PION2"
-    },
-    {
-        "Name": "Pioneer 0",
-        "ID": "ABLE1"
-    },
-    {
-        "Name": "Pioneer P-3",
-        "ID": "PIONX"
-    },
-    {
         "Name": "Pioneer P-30",
         "ID": "PIONY"
-    },
-    {
-        "Name": "Pioneer P-31",
-        "ID": "PIONZ"
-    },
-    {
-        "Name": "Pioneer-E",
-        "ID": "PIONE"
     },
     {
         "Name": "Pluto Kuiper Express",
@@ -1294,10 +1014,6 @@
     {
         "Name": "Prognoz 3",
         "ID": "1973-009A"
-    },
-    {
-        "Name": "Relict 2",
-        "ID": "RELICT2"
     },
     {
         "Name": "RM 1",
@@ -1358,10 +1074,6 @@
     {
         "Name": "SMS 2",
         "ID": "1975-011A"
-    },
-    {
-        "Name": "SOLRAD 11C",
-        "ID": "SRD-11C"
     },
     {
         "Name": "Space Shuttle",
