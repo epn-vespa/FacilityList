@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.sch" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<product_context xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd">
+ <identification_area>
+  <logical_identifier>
+   urn:nasa:pds:context:facility:laboratory.aps
+  </logical_identifier>
+  <version_id>
+   1.0
+  </version_id>
+  <title>
+   Advanced Photon Source
+  </title>
+  <information_model_version>
+   1.17.0.0
+  </information_model_version>
+  <product_class>
+   Product_Context
+  </product_class>
+  <modification_history>
+   <modification_detail>
+    <modification_date>
+     2021-08-18
+    </modification_date>
+    <version_id>
+     1.0
+    </version_id>
+    <description>
+     Initial version.
+    </description>
+   </modification_detail>
+  </modification_history>
+ </identification_area>
+ <reference_list>
+  <internal_reference>
+   <lid_reference>
+    urn:nasa:pds:context:investigation:individual.xas_synthesized_glasses
+   </lid_reference>
+   <reference_type>
+    facility_to_investigation
+   </reference_type>
+  </internal_reference>
+  <internal_reference>
+   <lid_reference>
+    urn:nasa:pds:context:instrument:aps.beamline13ide
+   </lid_reference>
+   <reference_type>
+    facility_to_instrument
+   </reference_type>
+  </internal_reference>
+ </reference_list>
+ <facility>
+  <name>
+   Advanced Photon Source
+  </name>
+  <type>
+   Laboratory
+  </type>
+  <description>
+   The Advanced Photon Source (APS) at Argonne National Laboratory is funded by the Office of Science-Basic 
+            Energy Sciences in the U.S. Department of Energy. The APS research facility provides ultra-bright, 
+            high-energy x-ray beams to scientists from a multitude of scientific disciplines and institutions. For more 
+            information see https://www.aps.anl.gov/.
+  </description>
+ </facility>
+</product_context>

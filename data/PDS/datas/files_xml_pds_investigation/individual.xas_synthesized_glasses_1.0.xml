@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.sch" 
+ schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<product_context xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd">
+ <identification_area>
+  <logical_identifier>
+   urn:nasa:pds:context:investigation:individual.xas_synthesized_glasses
+  </logical_identifier>
+  <version_id>
+   1.0
+  </version_id>
+  <title>
+   XAS Spectra of Synthesized Glasses
+  </title>
+  <information_model_version>
+   1.17.0.0
+  </information_model_version>
+  <product_class>
+   Product_Context
+  </product_class>
+  <modification_history>
+   <modification_detail>
+    <modification_date>
+     2021-08-18
+    </modification_date>
+    <version_id>
+     1.0
+    </version_id>
+    <description>
+     Initial version
+    </description>
+   </modification_detail>
+  </modification_history>
+ </identification_area>
+ <reference_list>
+  <internal_reference>
+   <lid_reference>
+    urn:nasa:pds:context:facility:laboratory.aps
+   </lid_reference>
+   <reference_type>
+    investigation_to_facility
+   </reference_type>
+  </internal_reference>
+  <internal_reference>
+   <lid_reference>
+    urn:nasa:pds:context:instrument:aps.beamline13ide
+   </lid_reference>
+   <reference_type>
+    investigation_to_instrument
+   </reference_type>
+  </internal_reference>
+  <internal_reference>
+   <lid_reference>
+    urn:nasa:pds:xas_synthesized_glasses:document:xas_synthesized_glasses_description
+   </lid_reference>
+   <reference_type>
+    investigation_to_document
+   </reference_type>
+  </internal_reference>
+  <external_reference>
+   <doi>
+    10.2138/am-2016-5555
+   </doi>
+   <reference_text>
+    M. Darby Dyar, Molly McCanta, Elly Breves, C.J. Carey, Antonio Lanzirotti, Accurate predictions 
+                of iron redox state in silicate glasses: A multivariate approach using X-ray absorption spectroscopy, 
+                American Mineralogist, 101(3): 744–747, doi: https://doi.org/10.2138/am-2016-5555.
+   </reference_text>
+  </external_reference>
+ </reference_list>
+ <investigation>
+  <name>
+   XAS Spectra of Synthesized Glasses
+  </name>
+  <type>
+   Individual Investigation
+  </type>
+  <start_date>
+   2018-02-10
+  </start_date>
+  <stop_date>
+   2019-02-16
+  </stop_date>
+  <description>
+   In this investigation, multivariate techniques were used to enable accurate X-ray Absorption Spectroscopy (XAS) 
+            measurements of Fe, Cr, Mn, and Ti ratios across the whole spectral region through creation of a broad suite of 
+            experimentally homogenized glasses of geological relevance for use as XAS standards. Iron, Cr, Mn, and Ti were 
+            analyzed as epoxy-mounted polished glass beads using XAS at the GeoSoilEnviroCARS beamline at the Advanced Photon 
+            Source, Argonne National Laboratory using a spot size of ca. 1x1 μm.
+  </description>
+ </investigation>
+</product_context>

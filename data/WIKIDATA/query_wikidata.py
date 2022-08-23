@@ -37,11 +37,12 @@ where = """
   UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
-  UNION {?item  wdt:P31  wd:Q697175 .} # Launch vehicle
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module
   UNION {?item  wdt:P31  wd:Q17004698 .} # astronomical interferometer
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
-  #UNION {?item  wdt:P31  wd:Q13226383 .} # facility
+  UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
+  UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
   
   OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
@@ -109,6 +110,8 @@ for i in range( 1 if test == True else (int(results_count) // page_size) + 1 ):
         e['itemLabel'] = e['itemLabel'].replace(' ', '-')
         e['itemLabel'] = e['itemLabel'].lower()
     r.extend(new_elements)
+
+
 
 print("successfully retrieved " + str(len(r)) + " results")
 
