@@ -8,12 +8,16 @@ More info:
 ## Identifiers
  AAS identifiers are available from [AAS web portal, AAS journals section](https://journals.aas.org/facility-keywords/)
 
-The data is available in the [AAS.xml](AAS.xml) & [AAS.json](AAS.json) file, retrieved on 
+The data is available in the [datas_aas.xml](datas_aas.xml) & [datas_aas.json](AAS.json) file, retrieved on 
 ```
 
 ```
-2022-02-01.
+2022-07-27
 
-## Parser
+## Extract datas
 
+Python scrypt is available in the folder scripts_py, in the [extract_datas_aas.py] (extract_datas_aas.py) file
 
+## Compare list
+
+Python scrypt is available in the folder scripts_py, in the [compare_list_aas_wiki.py] (compare_list_aas_wiki.py) file
