@@ -5,7 +5,7 @@ from fuzzywuzzy import process
 
 import json
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_list.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/datas/NSSDC_list.json') as f:
     data_naif = json.load(f)
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts.json') as f:

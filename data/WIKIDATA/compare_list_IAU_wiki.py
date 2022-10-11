@@ -22,10 +22,10 @@ def mon_scorer(q, c):
 def dummy_proc(x):
     return x
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/Scripts/naif_dsn.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/datas/IAU-MPC.json') as f:
     data_naif = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts1.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts.json') as f:
     wikidata = json.load(f)
 
 def get_scores( t ):
