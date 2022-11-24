@@ -37,7 +37,7 @@ def get_scores( t ):
     return r
 
 
-def compare_iau(data_iau, wikidata) :
+def compare_iau(data_iau, wikidata):
     results = []
     tres_certain = []
     tres_probable = []
@@ -81,6 +81,6 @@ def compare_iau(data_iau, wikidata) :
                 print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
 
 if __name__ == "__main__" :
-    # chosse to either run with or without profiling
+    # choose to either run with or without profiling
     compare_iau(data_iau, wikidata)
     # cProfile.run("compare_NSSDC(data_nssdc[0:10], wikidata)")

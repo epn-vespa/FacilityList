@@ -43,16 +43,13 @@ where = """
   UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
   UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
   UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
-  
+
   OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
   OPTIONAL {?item wdt:P8913 ?NSSDCA_ID .}
   OPTIONAL {?item wdt:P2956 ?NAIF_ID .}
   OPTIONAL {?item wdt:P717 ?Minor_Planet_Center_observatory_ID .}
   OPTIONAL {?item skos:altLabel ?alias .}
-
-
-
    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
  }
 """
@@ -69,7 +66,7 @@ def page(page, page_size):
 
 def get_results(endpoint_url, query):
     user_agent = "Laura.debisschop@obspm.fr - Observatoire de Paris - Python/%s.%s" % (
-    sys.version_info[0], sys.version_info[1])
+        sys.version_info[0], sys.version_info[1])
     # TODO adjust user agent; see https://w.wiki/CX6
     sparql = SPARQLWrapper(endpoint_url, agent=user_agent)
     sparql.setQuery(query)
@@ -85,8 +82,8 @@ results_count = query_count_results["results"]["bindings"][0]["count"]["value"]
 print("response contains " + results_count + " results")
 
 # test
-#test = True
-#page_size=10
+# test = True
+# page_size=10
 
 # or not test
 test = False
@@ -95,11 +92,11 @@ page_size = 2000
 print("using page_size = " + str(page_size))
 r = []
 # for each page that we need to query
-for i in range( 1 if test == True else (int(results_count) // page_size) + 1 ):
+for i in range(1 if test == True else (int(results_count) // page_size) + 1):
     print("requesting page " + str(i))
     # assemble a query for knowing the results of the i-th page
     query_page = query_prefix + select_main + where + page(i, page_size)
-    #print(query_page)
+    # print(query_page)
 
     query_page_result = get_results(endpoint_url, query_page)
     bindings = query_page_result["results"]["bindings"]
@@ -111,11 +108,8 @@ for i in range( 1 if test == True else (int(results_count) // page_size) + 1 ):
         e['itemLabel'] = e['itemLabel'].lower()
     r.extend(new_elements)
 
-
-
 print("successfully retrieved " + str(len(r)) + " results")
 
 with open("list_observatories_spacecrafts.json", 'w') as fout:
     fout.write(json.dumps(r, indent=4))
-
 
