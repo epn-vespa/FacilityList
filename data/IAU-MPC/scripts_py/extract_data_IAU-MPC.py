@@ -1,7 +1,7 @@
 import json
 
-file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/datas/IAU-MPC.txt'
-output_file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/IAU-MPC.json'
+file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/observatories/observatories.txt'
+output_file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/observatories.json'
 
 my_list=[]
 #first line flag
@@ -14,11 +14,11 @@ with open(file) as f:
         description = list(line.strip().split(maxsplit=4)
 )
         dic_line ={ 
-            "code" : description[0],
-            #"Longitude": description[1],
-            #"cos" : description[2],
-            #"sin" : description[3],
-            "Name": description[4]
+            "name" : description[0],
+            #"ObservatoryLatitude": description[1],
+            #"ObservatoryLongitude" : description[2],
+            #"ObservatoryAltitude" : description[3],
+
             }
             
         my_list.append(dic_line)

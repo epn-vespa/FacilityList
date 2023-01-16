@@ -22,34 +22,43 @@ SELECT
   ?item     
   ?itemLabel
   ?itemDescription
-  (GROUP_CONCAT(DISTINCT ?Unified_Astro_Thesaurus_ID; SEPARATOR="|") AS ?all_Unified_Astro_Thesaurus_ID)
+  #(GROUP_CONCAT(DISTINCT ?Unified_Astro_Thesaurus_ID; SEPARATOR="|") AS ?all_Unified_Astro_Thesaurus_ID)
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
   (GROUP_CONCAT(DISTINCT ?NSSDCA_ID; SEPARATOR="|") AS ?all_NSSDCA_ID)
   (GROUP_CONCAT(DISTINCT ?Minor_Planet_Center_observatory_ID; SEPARATOR="|") AS ?all_Minor_Planet_Center_observatory_ID)
   (GROUP_CONCAT(DISTINCT ?alias; SEPARATOR="|") AS ?aliases)
+  (GROUP_CONCAT(DISTINCT ?instance_of; SEPARATOR="|") AS ?all_instance_of)
+  (GROUP_CONCAT(DISTINCT ?country; SEPARATOR="|") AS ?countries)
+  (GROUP_CONCAT(DISTINCT ?located; SEPARATOR="|") AS ?all_located)
+  (GROUP_CONCAT(DISTINCT ?coordinate_location; SEPARATOR="|") AS ?all_coordinate_location)
 """
 
 where = """
  WHERE 
  {        
-  {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
-  UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
-  UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
+  {?item wdt:P31/wdt:P279*  wd:Q62832 .} # observatory
+  #UNION {?item wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
+  #UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
-  UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
-  UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
-  UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
+  #UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
+  #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
+  #UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
+  #UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
+  #UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
   UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
 
-  OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
+  #OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
   OPTIONAL {?item wdt:P8913 ?NSSDCA_ID .}
   OPTIONAL {?item wdt:P2956 ?NAIF_ID .}
   OPTIONAL {?item wdt:P717 ?Minor_Planet_Center_observatory_ID .}
   OPTIONAL {?item skos:altLabel ?alias .}
+  OPTIONAL {?item wdt:P31 ?instance_of .}
+  OPTIONAL {?item wdt:P17 ?country .}
+  OPTIONAL {?item wdt:P131 ?located .}
+  OPTIONAL {?item wdt:P625 ?coordinate_location .}
+  
    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
  }
 """
@@ -83,7 +92,7 @@ print("response contains " + results_count + " results")
 
 # test
 # test = True
-# page_size=10
+# page_size=1
 
 # or not test
 test = False
@@ -110,6 +119,6 @@ for i in range(1 if test == True else (int(results_count) // page_size) + 1):
 
 print("successfully retrieved " + str(len(r)) + " results")
 
-with open("list_observatories_spacecrafts.json", 'w') as fout:
+with open("extract_wikidata.json", 'w') as fout:
     fout.write(json.dumps(r, indent=4))
 

@@ -25,7 +25,7 @@ def dummy_proc(x):
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/datas/IAU-MPC.json') as f:
     data_iau = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 def get_scores( t ):

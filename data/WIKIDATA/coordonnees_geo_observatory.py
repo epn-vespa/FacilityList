@@ -2,7 +2,7 @@ from geopy.geocoders import Nominatim
 import json
 
 OBS_ID_JSON ='/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/scripts_py/non_trouves.json'
-OBS_ADRESS_JSON ='/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/scripts_py/obs_address.json'
+OBS_ADRESS_JSON ='/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/scripts_py/obs_address1.json'
 
 geolocator = Nominatim(user_agent="Laura")
 
