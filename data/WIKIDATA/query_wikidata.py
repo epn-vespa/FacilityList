@@ -21,17 +21,19 @@ select_main = """
 SELECT
   ?item     
   ?itemLabel
-  ?itemDescription
+  ?itemDescription  
   #(GROUP_CONCAT(DISTINCT ?Unified_Astro_Thesaurus_ID; SEPARATOR="|") AS ?all_Unified_Astro_Thesaurus_ID)
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
   (GROUP_CONCAT(DISTINCT ?NSSDCA_ID; SEPARATOR="|") AS ?all_NSSDCA_ID)
   (GROUP_CONCAT(DISTINCT ?Minor_Planet_Center_observatory_ID; SEPARATOR="|") AS ?all_Minor_Planet_Center_observatory_ID)
   (GROUP_CONCAT(DISTINCT ?alias; SEPARATOR="|") AS ?aliases)
-  (GROUP_CONCAT(DISTINCT ?instance_of; SEPARATOR="|") AS ?all_instance_of)
-  (GROUP_CONCAT(DISTINCT ?country; SEPARATOR="|") AS ?countries)
-  (GROUP_CONCAT(DISTINCT ?located; SEPARATOR="|") AS ?all_located)
-  (GROUP_CONCAT(DISTINCT ?coordinate_location; SEPARATOR="|") AS ?all_coordinate_location)
+  (GROUP_CONCAT(DISTINCT ?instance_ofName; SEPARATOR="|") AS ?all_instance_of)
+  #(GROUP_CONCAT(DISTINCT ?country; SEPARATOR="|") AS ?countries)
+  #(GROUP_CONCAT(DISTINCT ?located; SEPARATOR="|") AS ?all_located)
+  #(GROUP_CONCAT(DISTINCT ?coordinate_location; SEPARATOR="|") AS ?all_coordinate_location)
+  (GROUP_CONCAT(DISTINCT ?has_partName; SEPARATOR="|") AS ?all_has_part)
+  (GROUP_CONCAT(DISTINCT ?part_ofName; SEPARATOR="|") AS ?all_part_of)
 """
 
 where = """
@@ -55,10 +57,25 @@ where = """
   OPTIONAL {?item wdt:P717 ?Minor_Planet_Center_observatory_ID .}
   OPTIONAL {?item skos:altLabel ?alias .}
   OPTIONAL {?item wdt:P31 ?instance_of .}
-  OPTIONAL {?item wdt:P17 ?country .}
-  OPTIONAL {?item wdt:P131 ?located .}
-  OPTIONAL {?item wdt:P625 ?coordinate_location .}
-  
+  #OPTIONAL {?item wdt:P17 ?country .}
+  #OPTIONAL {?item wdt:P131 ?located .}
+  #OPTIONAL {?item wdt:P625 ?coordinate_location .}
+  OPTIONAL {
+  ?item wdt:P31 ?instance_of .
+  ?instance_of rdfs:label ?instance_ofName .
+  Filter((LANG(?instance_ofName)) = "en")
+  }
+  OPTIONAL {
+  ?item wdt:P527 ?has_part .
+  ?has_part rdfs:label ?has_partName .
+  Filter((LANG(?has_partName)) = "en")
+  }
+  OPTIONAL {
+  ?item wdt:P361 ?part_of .
+  ?part_of rdfs:label ?part_ofName .
+  Filter((LANG(?part_ofName)) = "en")
+  }
+ 
    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
  }
 """
@@ -66,7 +83,7 @@ where = """
 
 def page(page, page_size):
     return """
-    GROUP BY ?item ?itemLabel ?itemDescription
+    GROUP BY ?item ?itemLabel ?itemDescription ?has_partLabel ?part_ofLabel
     ORDER BY ?item
     OFFSET {}
     LIMIT {}
