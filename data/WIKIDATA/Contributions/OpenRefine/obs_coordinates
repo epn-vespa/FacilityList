@@ -1,0 +1,2409 @@
+Code Longitude  Latitude   region
+000	  0.0000	+51.477379	UK/England	Greenwich
+001	  0.1542	+51.051835	UK/England	Crowborough
+002	  0.62	+51.652979	UK/England	Rayleigh
+003	  3.90	+43.650525	France	Montpellier
+004	  1.4625	+43.612279	France	Toulouse
+005	  2.23100	+48.805069	France	Meudon
+006	  2.12417	+41.418524	Spain	Fabra Observatory, Barcelona
+007	  2.33675	+48.836384	France	Paris
+008	  3.0355	+36.801463	Algeria	Algiers-Bouzareah
+009	  7.4417	+46.953793	Switzerland	Berne-Uecht
+010	  6.92124	+43.750945	France	Caussols
+011	  8.7975	+47.319327	Switzerland	Wetzikon
+012	  4.35821	+50.798599	Belgium	Uccle
+013	  4.48397	+52.154947	Netherlands	Leiden
+014	  5.39509	+43.305869	France	Marseilles
+015	  5.12929	+52.085463	Netherlands	Utrecht
+016	  5.9893	+47.250002	France	Besancon
+017	  6.84924	+50.161388	Germany	Hoher List
+018	  6.7612	+51.206991	Germany	Dusseldorf-Bilk
+019	  6.9575	+46.997440	Switzerland	Neuchatel
+020	  7.3004	+43.721542	France	Nice
+021	  8.3855	+49.024024	Germany	Karlsruhe
+022	  7.7748	+45.037805	Italy	Pino Torinese
+023	  8.2625	+50.081187	Germany	Wiesbaden
+024	  8.7216	+49.398618	Germany	Heidelberg-Konigstuhl
+025	  9.19650	+48.782528	Germany	Stuttgart
+026	  7.46511	+46.877102	Switzerland	Berne-Zimmerwald
+027	  9.1912	+45.466337	Italy	Milan
+028	  9.9363	+49.791035	Germany	Wurzburg
+029	 10.2406	+53.479709	Germany	Hamburg-Bergedorf
+030	 11.25446	+43.750648	Italy	Arcetri Observatory, Florence
+031	 11.18985	+50.377394	Germany	Sonneberg
+032	 11.58295	+50.925259	Germany	Jena
+033	 11.71124	+50.980139	Germany	Karl Schwarzschild Observatory, Tautenburg
+034	 12.45246	+41.922451	Italy	Monte Mario Observatory, Rome
+035	 12.57592	+55.686868	Denmark	Copenhagen
+036	 12.65040	+41.747469	Italy	Castel Gandolfo
+037	 13.7333	+42.657470	Italy	Collurania Observatory, Teramo
+038	 13.7704	+45.643273	Italy	Trieste
+039	 13.1874	+55.697864	Sweden	Lund
+040	 13.7298	+51.031147	Germany	Lohrmann Institute, Dresden
+041	 11.38083	+47.268155	Austria	Innsbruck
+042	 13.06428	+52.379654	Germany	Potsdam
+043	 11.52643	+45.866447	Italy	Asiago Astrophysical Observatory, Padua
+044	 14.2559	+40.862941	Italy	Capodimonte Observatory, Naples
+045	 16.3390	+48.231915	Austria	Vienna (since 1879)
+046	 14.2881	+48.863293	Czech Republi	Klet Observatory, Ceske Budejovice
+047	 16.8782	+52.398536	Poland	Poznan
+048	 15.84080	+50.177332	Czech Republi	Hradec Kralove
+049	 17.6067	+59.500336	Sweden	Uppsala-Kvistaberg
+050	 18.0582	+59.342247	Sweden	Stockholm (before 1931)
+051	 18.4766	-33.933947	South Africa	Royal Observatory, Cape of Good Hope
+052	 18.3083	+59.271649	Sweden	Stockholm-Saltsjobaden
+053	 18.9642	+47.499604	Hungary	Konkoly Observatory, Budapest (since 1933)
+054	 11.6654	+55.621918	Denmark	Brorfelde
+055	 19.9596	+50.064521	Poland	Cracow
+056	 20.23418	+49.189565	Slovakia	Skalnate Pleso
+057	 20.5133	+44.803652	Serbia	Belgrade
+058	 20.4950	+54.712819	Russia	Kaliningrad
+059	 20.2201	+49.195978	Slovakia	Lomnicky Stit
+060	 21.4200	+52.090014	Poland	Warsaw-Ostrowik
+061	 22.29850	+48.633469	Ukraine	Uzhgorod
+062	 22.2293	+60.452429	Finland	Turku
+063	 22.4450	+60.415790	Finland	Turku-Tuorla
+064	 22.7500	+60.420405	Finland	Turku-Kevola
+065	 12.6318	+47.862150	Germany	Traunstein
+066	 23.71817	+37.972271	Greece	Athens
+067	 24.0297	+49.832821	Ukraine	Lvov University Observatory
+068	 24.0142	+49.836492	Ukraine	Lvov Polytechnic Institute
+069	 24.4042	+56.773119	Latvia	Baldone
+070	 25.2865	+54.683110	Lithuania	Vilnius (before 1939)
+071	 24.73782	+41.693123	Bulgaria	NAO Rozhen, Smolyan
+072	  7.17	+51.088915	Germany	Scheuren Observatory
+073	 26.0967	+44.413615	Romania	Bucharest
+074	 26.4058	-29.038138	South Africa	Boyden Observatory, Bloemfontein
+075	 26.7216	+58.379715	Estonia	Tartu
+076	 27.8768	-25.772770	South Africa	Johannesburg-Hartbeespoort
+077	 28.0292	-26.187261	South Africa	Yale-Columbia Station, Johannesburg
+078	 28.0750	-26.181859	South Africa	Johannesburg
+079	 28.2288	-25.787998	South Africa	Radcliffe Observatory, Pretoria
+080	 28.9667	+41.012704	Turkey	Istanbul
+081	 27.8768	-25.772770	South Africa	Leiden Station, Johannesburg
+082	 15.7561	+48.087978	Austria	St. Polten
+083	 30.5056	+50.365008	Ukraine	Golosseevo-Kiev
+084	 30.3274	+59.772118	Russia	Pulkovo
+085	 30.5023	+50.452956	Ukraine	Kiev
+086	 30.7582	+46.476827	Ukraine	Odessa
+087	 31.3411	+29.858775	Egypt	Helwan
+088	 31.8250	+29.931772	Egypt	Kottomia
+089	 31.9747	+46.971605	Ukraine	Nikolaev
+090	  8.25	+49.943154	Germany	Mainz
+091	  4.20919	+45.381384	France	Observatoire de Nurol, Aurec sur Loire
+092	 18.5546	+53.096304	Poland	Torun-Piwnice
+093	 20.3647	+69.349331	Norway	Skibotn
+094	 33.9974	+44.403089	Ukraine	Crimea-Simeis
+095	 34.0160	+44.726558	Ukraine	Crimea-Nauchnij
+096	  9.4283	+45.698835	Italy	Merate
+097	 34.7625	+30.595660	Israel	Wise Observatory, Mitzpeh Ramon
+098	 11.56900	+45.848591	Italy	Asiago Observatory, Cima Ekar
+099	 25.53529	+61.130238	Finland	Lahti
+100	 24.14145	+62.617163	Finland	Ahtari
+101	 36.2322	+50.002702	Ukraine	Kharkov
+102	 36.75953	+55.699517	Russia	Zvenigorod
+103	 14.52774	+46.043781	Slovenia	Ljubljana
+104	 10.80375	+44.064181	Italy	San Marcello Pistoiese
+105	 37.5706	+55.755715	Russia	Moscow
+106	 14.0711	+45.945908	Slovenia	Crni Vrh
+107	 11.0030	+44.862896	Italy	Cavezzo
+108	 11.0278	+43.738117	Italy	Montelupo
+109	  3.0705	+36.733068	Algeria	Algiers-Kouba
+110	 39.4150	+57.189178	Russia	Rostov
+111	 10.9721	+43.678850	Italy	Piazzano Observatory, Florence
+112	 10.9039	+45.483789	Italy	Pleiade Observatory, Verona
+113	 13.0166	+50.676689	Germany	Volkssternwarte Drebach, Schoenbrunn
+114	 41.4277	+43.655713	Russia	Engelhardt Observatory, Zelenchukskaya Station
+115	 41.44067	+43.646713	Russia	Zelenchukskaya
+116	 11.5958	+48.115221	Germany	Giesing
+117	 11.5385	+48.112747	Germany	Sendling
+118	 17.2740	+48.373144	Slovakia	Astronomical and Geophysical Observatory, Modra
+119	 42.8200	+41.753627	Georgia	Abastuman
+120	 13.7261	+45.277637	Croatia	Visnjan
+121	 36.93403	+49.640838	Ukraine	Kharkov University, Chuguevskaya Station
+122	  3.5035	+44.039542	France	Pises Observatory
+123	 44.2917	+40.335211	Armenia	Byurakan
+124	  2.2550	+43.600501	France	Castres
+125	 44.78950	+41.717322	Georgia	Tbilisi
+126	  9.7903	+44.133169	Italy	Monte Viseggi
+127	  6.9797	+50.760191	Germany	Bornheim
+128	 46.00661	+51.538322	Russia	Saratov
+129	 45.92	+39.134625	Azerbaijan	Ordubad
+130	 10.23963	+45.665025	Italy	Lumezzane
+131	  4.725	+44.677036	France	Observatoire de l'Ardeche
+132	  5.2461	+44.113303	France	Bedoin
+133	  5.0906	+43.361706	France	Les Tardieux
+134	 11.48245	+50.928437	Germany	Groszschwabhausen
+135	 49.1210	+55.789708	Russia	Kasan
+136	 48.8156	+55.839125	Russia	Engelhardt Observatory, Kasan
+137	 34.8147	+32.069775	Israel	Givatayim Observatory
+138	  7.5717	+47.604863	France	Village-Neuf
+139	  7.1108	+43.606163	France	Antibes
+140	  3.6294	+45.718290	France	Augerolles
+141	  7.3672	+49.067017	France	Hottviller
+142	  7.1874	+51.663869	Germany	Sinsen
+143	  9.02406	+46.231419	Switzerland	Gnosca
+144	  1.6660	+49.138729	France	Bray et Lu
+145	  4.5597	+51.240029	Belgium	's-Gravenwezel
+146	 10.6673	+44.288328	Italy	Frignano
+147	  8.57391	+45.637244	Italy	Osservatorio Astronomico di Suno
+148	  2.0375	+43.644347	France	Guitalens
+149	  4.2236	+49.250078	France	Beine-Nauroy
+150	  2.1572	+48.943583	France	Maisons Laffitte
+151	  8.7440	+47.476030	Switzerland	Eschenberg Observatory, Winterthur
+152	 25.5633	+55.316042	Lithuania	Moletai Astronomical Observatory
+153	  9.1747	+48.738079	Germany	Stuttgart-Hoffeld
+154	 12.1043	+46.542158	Italy	Cortina
+155	 10.1971	+56.127647	Denmark	Ole Romer Observatory, Aarhus
+156	 15.0858	+37.503415	Italy	Catania Astrophysical Observatory
+157	 12.8117	+42.227537	Italy	Frasso Sabino
+158	  7.6033	+45.785535	Italy	Promiod
+159	 10.5153	+43.995223	Italy	Monte Agliale
+160	 10.84144	+43.823061	Italy	Castelmartini
+161	  8.1605	+45.087720	Italy	Cerrina Tololo Observatory
+162	 15.7805	+40.650008	Italy	Potenza
+163	  6.1492	+49.543169	Luxembourg	Roeser Observatory, Luxembourg
+164	  6.8861	+48.315558	France	St. Michel sur Meurthe
+165	  1.7553	+41.521506	Spain	Piera Observatory, Barcelona
+166	 16.0117	+50.506901	Czech Republi	Upice
+167	  8.5727	+47.520289	Switzerland	Bulach Observatory
+168	 59.5472	+57.036807	Russia	Kourovskaya
+169	  8.4016	+45.077171	Italy	Airali Observatory
+170	  1.9206	+41.331805	Spain	Observatorio de Begues
+171	 14.4697	+35.909942	Malta	Flarestar Observatory, San Gwann
+172	  7.0364	+46.793619	Switzerland	Onnens
+173	 55.5061	-20.897572	France (Reuni	St. Clotilde, Reunion
+174	 25.5131	+62.346623	Finland	Nyrola Observatory, Jyvaskyla
+175	  7.6083	+46.230887	Switzerland	F.-X. Bagnoud Observatory, St-Luc
+176	  2.8225	+39.653687	Spain	Observatorio Astronomico de Consell
+177	  3.9414	+43.646763	France	Le Cres
+178	  6.1344	+46.134629	France	Collonges
+179	  9.0175	+45.927927	Switzerland	Monte Generoso
+180	  3.9519	+43.568393	France	Mauguio
+181	 55.4100	-21.199551	France (Reuni	Observatoire des Makes, Saint-Louis
+182	 55.2586	-21.012592	France (Reuni	St. Paul, Reunion
+183	 41.4200	+43.650034	Russia	Starlab Observatory, Karachay-Cherkessia
+184	  6.0361	+43.981412	France	Valmeca Observatory, Puimichel
+185	  7.4219	+47.353048	Switzerland	Observatoire Astronomique Jurassien-Vicques
+186	 66.8821	+39.133773	Uzbekistan	Kitab
+187	 17.0733	+52.277129	Poland	Astronomical Observatory, Borowiec
+188	 66.89555	+38.673365	Uzbekistan	Majdanak
+189	  6.1514	+46.199977	Switzerland	Geneva (before 1967)
+190	 68.6819	+38.490299	Tajikistan	Gissar
+191	 68.7811	+38.561092	Tajikistan	Dushanbe
+192	 69.2936	+41.325129	Uzbekistan	Tashkent
+193	 69.2178	+38.260781	Tajikistan	Sanglok
+194	 18.0094	-23.461596	Namibia	Tivoli
+195	 11.4492	+48.183860	Germany	Untermenzing Observatory, Munich
+196	  7.3331	+49.331752	Germany	Homburg-Erbach
+197	 12.1836	+44.256931	Italy	Bastia
+198	  8.75674	+48.631946	Germany	Wildberg
+199	  2.4380	+48.291739	France	Buthiers
+200	  4.3036	+50.760191	Belgium	Beersel Hills Observatory
+201	  7.6033	+45.785135	Italy	Jonathan B. Postel Observatory
+202	  5.8997	+43.095279	France	Tamaris Observatoire, La Seyne sur Mer
+203	  8.9955	+45.541407	Italy	GiaGa Observatory
+204	  8.7708	+45.867933	Italy	Schiaparelli Observatory
+205	 11.2731	+44.472064	Italy	Obs. Casalecchio di Reno, Bologna
+206	 10.5667	+60.600925	Norway	Haagaar Observatory, Eina
+207	  9.3065	+45.545063	Italy	Osservatorio Antonio Grosso
+208	  9.5875	+44.949339	Italy	Rivalta
+209	 11.56883	+45.849484	Italy	Asiago Observatory, Cima Ekar-ADAS
+210	 76.9573	+43.188278	Kazakhstan	Alma-Ata
+211	 11.1764	+43.762483	Italy	Scandicci
+212	355.35747	+36.653332	Spain	Observatorio La Dehesilla
+213	  2.38539	+41.519715	Spain	Observatorio Montcabre
+214	 11.6569	+48.256592	Germany	Garching Observatory
+215	 10.7328	+48.017293	Germany	Buchloe
+216	  5.6914	+49.001576	France	Observatoire des Cote de Meuse
+217	 77.87114	+43.225527	Kazakhstan	Assah
+218	 78.4541	+17.431847	India	Hyderabad
+219	 78.7283	+17.098328	India	Japal-Rangapur
+220	 78.8263	+12.576280	India	Vainu Bappu Observatory, Kavalur
+221	 16.36170	-23.236369	Namibia	IAS Observatory, Hakos
+222	  2.4939	+48.709856	France	Yerres-Canotiers
+223	 80.2464	+13.068995	India	Madras
+224	  7.50171	+47.784762	France	Ottmarsheim
+225	288.8250	+43.227708	US/New Hampsh	Northwood Ridge Observatory
+226	 11.8858	+45.433882	Italy	Guido Ruggieri Observatory, Padua
+227	281.2853	+42.638389	US/New York	OrbitJet Observatory, Colden
+228	 13.8750	+45.642425	Italy	Bruno Zugna Observatory, Trieste
+229	 14.9743	+40.690815	Italy	G. C. Gloriosi Astronomical Observatory, Salerno
+230	 12.0133	+47.704038	Germany	Mt. Wendelstein Observatory
+231	  5.3983	+50.005282	Belgium	Vesqueville
+232	  1.3317	+41.508536	Spain	Masquefa Observatory
+233	 10.5403	+43.855044	Italy	Sauro Donati Astronomical Observatory, San Vito
+234	  1.12833	+52.145254	UK/England	Coddenham Observatory
+235	 13.11352	+45.936027	Italy	CAST Observatory, Talmassons
+236	 84.9465	+56.468260	Russia	Tomsk
+237	  2.7333	+47.083528	France	Baugy
+238	 10.9094	+59.949148	Norway	Grorudalen Optical Observatory
+239	  8.4114	+49.925391	Germany	Trebur
+240	  8.83317	+48.623595	Germany	Herrenberg Sternwarte
+241	 13.4700	+48.443494	Austria	Schaerding
+242	  1.6956	+43.479120	France	Varennes
+243	  9.4130	+53.528078	Germany	Umbrella Observatory, Fredenbeck
+244	  0.00000	 +0.000000		Geocentric Occultation Observation
+245	  0.000000	 +0.000000		Spitzer Space Telescope
+246	 14.28476	+48.863994	Czech Republi	Klet Observatory-KLENOT
+247	  0.000000	 +0.000000		Roving Observer
+248	  0.00000	 +0.000000		Hipparcos
+249	  0.000000	 +0.000000		SOHO
+250	  0.000000	 +0.000000		Hubble Space Telescope
+251	293.24692	+18.343444	US/Puerto Ric	Arecibo
+252	243.20512	+35.247200	US/California	Goldstone DSS 13, Fort Irwin
+253	243.11047	+35.425917	US/California	Goldstone DSS 14, Fort Irwin
+254	288.51128	+42.623198	US/Massachuse	Haystack, Westford
+255	 33.18689	+45.189218	Ukraine	Evpatoria
+256	280.16017	+38.433112	US/West Virgi	Green Bank
+257	243.12461	+35.337575	US/California	Goldstone DSS 25, Fort Irwin
+258	  0.000000	 +0.000000		Gaia
+259	 19.22586	+69.586488	Norway	EISCAT Tromso UHF
+260	149.0661	-31.276809	Australia/NSW	Siding Spring Observatory-DSS
+261	243.14022	+33.357340	US/California	Palomar Mountain-DSS
+262	289.26626	-29.258822	Chile	European Southern Observatory, La Silla-DSS
+266	204.52344	+19.825588	US/Hawaii	New Horizons KBO Search-Subaru
+267	204.53044	+19.825347	US/Hawaii	New Horizons KBO Search-CFHT
+268	289.30803	-29.014271	Chile	New Horizons KBO Search-Magellan/Clay
+269	289.30914	-29.014791	Chile	New Horizons KBO Search-Magellan/Baade
+270	  0.000000	 +0.000000		Unistellar Network, Roving Observer
+274	  0.000000	 +0.000000		James Webb Space Telescope
+275	  0.000000	 +0.000000		Non-geocentric Occultation Observation
+276	 20.38279	+52.627454	Poland	Plonsk
+277	356.8175	+55.924922	UK/Scotland	Royal Observatory, Blackford Hill, Edinburgh
+278	116.4494	+39.904051	China	Peking, Transit of Venus site
+279	 10.72822	+50.933993	Germany	Seeberg Observatory, Gotha (1787-1857)
+280	  8.9118	+53.140662	Germany	Lilienthal
+281	 11.3522	+44.496414	Italy	Bologna
+282	  4.3603	+43.839623	France	Nimes
+283	  8.8163	+53.076358	Germany	Bremen
+284	 15.8311	+52.838165	Poland	Driesen
+285	  2.3708	+48.693563	France	Flammarion Observatory, Juvisy
+286	102.7883	+25.025449	China	Yunnan Observatory
+290	250.10799	+32.701295	US/Arizona	Mt. Graham-VATT
+291	248.40024	+31.961598	US/Arizona	LPL/Spacewatch II
+292	285.1058	+40.072036	US/New Jersey	Burlington, New Jersey
+293	285.5899	+39.798433	US/New Jersey	Burlington remote site
+294	285.8467	+40.603851	US/New York	Astrophysical Obs., College of Staten Island
+295	283.0000	+38.936501	US/Dist. of C	Catholic University Observatory, Washington
+296	286.2515	+42.663049	US/New York	Dudley Observatory, Albany (after 1893)
+297	286.819	+44.015373	US/Vermont	Middlebury
+298	287.3408	+41.555172	US/Connecticu	Van Vleck Observatory
+299	107.6160	 -6.825509	Indonesia	Bosscha Observatory, Lembang
+300	133.54444	+34.671960	Japan	Bisei Spaceguard Center-BATTeRS
+301	288.8467	+45.454905	Canada/Quebec	Mont Megantic
+302	288.88	 +8.672755	Venezuela	University of the Andes station
+303	289.1296	 +8.787722	Venezuela	OAN de Llano del Hato, Merida
+304	289.2980	-29.003554	Chile	Las Campanas Observatory
+305	109.5514	+34.945455	China	Purple Mountain, Hainan Island station
+306	290.6769	+10.075583	Venezuela	Observatorio Taya Beixo, Barquisimeto
+307	287.7166	+43.704047	US/New Hampsh	Shattuck Observatory, Hanover
+309	289.59569	-24.627212	Chile	Cerro Paranal
+310	288.87164	+42.381468	US/Massachuse	Minor Planet Center Test Code
+312	112.334	+16.831966	China	Tsingtao field station, Xisha Islands
+318	115.691	-31.649985	Australia/WA	Quinns Rock
+319	116.1350	-32.007951	Australia/WA	Perth Observatory, Perth-Lowell Telescope
+320	116.4381	-30.929884	Australia/WA	Chiro Observatory
+321	115.7571	-31.790469	Australia/WA	Craigie
+322	116.1340	-32.008744	Australia/WA	Perth Observatory, Bickley-MCT
+323	116.1350	-32.008744	Australia/WA	Perth Observatory, Bickley
+324	116.3277	+40.101011	China	Peking Observatory, Shaho Station
+327	117.5750	+40.394239	China	Peking Observatory, Xinglong Station
+330	118.8209	+32.066662	China	Purple Mountain Observatory, Nanking
+333	249.5236	+31.962537	US/Arizona	Desert Eagle Observatory
+334	120.3196	+36.069984	China	Tsingtao
+337	121.1843	+31.095926	China	Sheshan, formerly Zo-Se
+340	135.4853	+34.806934	Japan	Toyonaka
+341	137.9486	+36.328956	Japan	Akashina
+342	134.3189	+33.551342	Japan	Shishikui
+343	127.1258	+38.200078	South Korea	Younchun
+344	128.9767	+36.164835	South Korea	Bohyunsan Optical Astronomy Observatory
+345	128.4575	+36.934554	South Korea	Sobaeksan Optical Astronomy Observatory
+346	127.3854	+36.507876	South Korea	KNUE Astronomical Observatory
+347	139.9086	+36.563401	Japan	Utsunomiya-Imaizumi
+348	135.2669	+35.307915	Japan	Ayabe
+349	139.56622	+35.956470	Japan	Ageo
+350	139.2635	+36.481912	Japan	Kurohone
+351	135.8678	+35.068331	Japan	Sakamoto
+352	136.1778	+34.947102	Japan	Konan
+353	135.0648	+34.741373	Japan	Nishi Kobe
+354	140.0206	+36.867325	Japan	Kawachi
+355	139.2133	+35.388445	Japan	Hadano
+356	141.0867	+38.540262	Japan	Kogota
+357	140.0064	+36.184257	Japan	Shimotsuma
+358	140.1586	+38.045106	Japan	Nanyo
+359	135.1719	+34.214312	Japan	Wakayama
+360	132.9442	+33.674308	Japan	Kuma Kogen
+361	134.8933	+34.349555	Japan	Sumoto
+362	140.6550	+42.644812	Japan	Ray Observatory
+363	130.7703	+33.559953	Japan	Yamada
+364	130.5747	+31.644934	Japan	YCPM Kagoshima Station
+365	135.9579	+34.409143	Japan	Uto Observatory
+366	138.3003	+35.862459	Japan	Miyasaka Observatory
+367	133.1670	+35.499977	Japan	Yatsuka
+368	138.8117	+35.804841	Japan	Ochiai
+369	139.1500	+35.989182	Japan	Chichibu
+370	133.5273	+33.552139	Japan	Kochi
+371	133.5965	+34.573894	Japan	Tokyo-Okayama
+372	133.8276	+33.526623	Japan	Geisei
+373	135.3397	+34.132477	Japan	Oishi
+374	134.7196	+35.094608	Japan	Minami-Oda Observatory
+375	134.8708	+34.950729	Japan	Uzurano
+376	139.0392	+35.689745	Japan	Uenohara
+377	135.7933	+34.994623	Japan	Kwasan Observatory, Kyoto
+378	136.0142	+34.570222	Japan	Murou
+379	137.6279	+34.703448	Japan	Hamamatsu-Yuto
+380	137.0349	+34.814608	Japan	Ishiki
+381	137.62542	+35.797229	Japan	Tokyo-Kiso
+382	137.5553	+36.113770	Japan	Tokyo-Norikura
+383	137.8959	+36.761699	Japan	Chirorin
+384	138.1792	+34.818384	Japan	Shimada
+385	138.4680	+34.970368	Japan	Nihondaira Observatory
+386	138.3217	+35.890776	Japan	Yatsugatake-Kobuchizawa
+387	139.1944	+36.006046	Japan	Tokyo-Dodaira
+388	139.5421	+35.672253	Japan	Tokyo-Mitaka
+389	139.7447	+35.654413	Japan	Tokyo (before 1938)
+390	139.8725	+36.556046	Japan	Utsunomiya
+391	140.77843	+38.265246	Japan	Sendai Observatory, Ayashi Station
+392	141.3667	+42.913350	Japan	JCPM Sapporo Station
+393	140.1292	+36.091454	Japan	JCPM Sakura Station
+394	142.3208	+45.111668	Japan	JCPM Hamatonbetsu Station
+395	142.3583	+43.840783	Japan	Tokyo-Asahikawa
+396	142.4208	+43.743384	Japan	Asahikawa
+397	141.4761	+43.033526	Japan	Sapporo Science Center
+398	139.1080	+36.124836	Japan	Nagatoro
+399	144.5900	+43.078239	Japan	Kushiro
+400	143.7827	+43.758443	Japan	Kitami
+401	139.4208	+36.112161	Japan	Oosato
+402	136.3078	+35.208347	Japan	Dynic Astronomical Observatory
+403	137.0556	+35.413171	Japan	Kani
+404	140.9292	+37.823762	Japan	Yamamoto
+405	139.3292	+36.297262	Japan	Kamihoriguchi
+406	141.8233	+43.255299	Japan	Bibai
+407	140.3099	+38.442185	Japan	Kahoku
+408	138.1747	+35.899622	Japan	Nyukasa
+409	139.5211	+35.766543	Japan	Kiyose and Mizuho
+410	134.8910	+35.127762	Japan	Sengamine
+411	139.4170	+36.250478	Japan	Oizumi
+412	140.5991	+36.960421	Japan	Iwaki
+413	149.06608	-31.277057	Australia/NSW	Siding Spring Observatory
+414	149.0077	-35.320502	Australia/NSW	Mount Stromlo
+415	149.0636	-35.396942	Australia/NSW	Kambah
+416	149.1336	-35.311609	Australia/NSW	Barton
+417	137.1371	+37.334673	Japan	Yanagida Astronomical Observatory
+418	150.94034	-31.081447	Australia/NSW	Tamworth
+419	150.8329	-33.608598	Australia/NSW	Windsor
+420	151.2050	-33.861540	Australia/NSW	Sydney
+421	133.7650	+33.755950	Japan	Mt. Kajigamori, Otoyo
+422	151.0461	-31.334632	Australia/NSW	Loomberah
+423	151.12473	-33.804956	Australia/NSW	North Ryde
+424	149.0658	-35.255144	Australia/NSW	Macquarie
+425	152.9316	-27.463275	Australia/QLD	Taylor Range Observatory, Brisbane
+426	136.8217	-31.196556	Australia/SA	Woomera
+427	138.7283	-34.333272	Australia/SA	Stockport
+428	153.3970	-28.110269	Australia/QLD	Reedy Creek
+429	149.0400	-35.252741	Australia/NSW	Hawker
+430	149.2123	-31.278320	Australia/NSW	Rainbow Observatory, near Coonabarabran
+431	149.7578	-33.434627	Australia/NSW	Mt. Tarana Observatory, Bathurst
+432	153.08222	-30.339159	Australia/NSW	Boambee
+433	152.1078	-32.738478	Australia/NSW	Bagnall Beach Observatory
+434	 10.9206	+45.052013	Italy	S. Benedetto Po
+435	 11.8936	+45.404256	Italy	G. Colombo Astronomical Observatory, Padua
+436	 11.3356	+44.328016	Italy	Osservatorio di Livergnano
+437	284.6971	+40.010986	US/Pennsylvan	Haverford
+438	287.3621	+42.317295	US/Massachuse	Smith College Observatory, Northampton
+439	253.2539	+35.869209	US/New Mexico	ROTSE-III, Los Alamos
+440	278.6842	+43.192028	Canada/Ontari	Elginfield Observatory
+441	357.1697	+56.337515	UK/Scotland	Swilken Brae, St. Andrews
+442	357.4822	+41.707871	Spain	Gualba Observatory
+443	301.4656	-34.633268	Argentina	Obs. Astronomico Plomer, Buenos Aires
+444	243.2794	+33.483600	US/California	Star Cruiser Observatory
+445	359.4200	+38.818062	Spain	Observatorio d'Ontinyent
+446	262.1666	+29.569093	US/Texas	Kingsnake Observatory, Seguin
+447	255.2056	+39.621225	US/Colorado	Centennial Observatory
+448	253.2801	+32.387587	US/New Mexico	Desert Moon Observatory, Las Cruces
+449	279.6503	+34.383671	US/South Caro	Griffin Hunter Observatory, Bethune
+450	279.3339	+35.151408	US/North Caro	Carla Jane Observatory, Charlotte
+451	262.7569	+37.491891	US/Kansas	West Skies Observatory, Mulvane
+452	279.1063	+26.178656	US/Florida	Big Cypress Observatory, Fort Lauderdale
+453	242.1331	+34.984639	US/California	Edwards Raven Observatory
+454	283.37678	+39.331812	US/Maryland	Maryland Space Grant Consortium Observatory
+455	237.9636	+37.989977	US/California	CBA Concord
+456	358.8278	+52.252596	UK/England	Daventry Observatory
+457	 18.3403	+48.628495	Slovakia	Partizanske
+458	355.9806	+40.647204	Spain	Guadarrama Observatory
+459	288.1172	+43.540840	US/New Hampsh	Smith River Observatory, Danbury
+460	265.9981	+33.982263	US/Arkansas	Area 52 Observatory, Nashville
+461	 19.8943	+47.918047	Hungary	University of Szeged, Piszkesteto Stn. (Konkoly)
+462	283.0842	+38.921254	US/Maryland	Mount Belleview Observatory
+463	254.7375	+40.004026	US/Colorado	Sommers-Bausch Observatory, Boulder
+464	288.5013	+41.410715	US/Rhode Isla	Toby Point Observatory, Narragansett
+465	174.7801	-36.803529	New Zealand	Takapuna
+466	174.8487	-36.942156	New Zealand	Mount Molehill Observatory, Auckland
+467	174.7766	-36.907900	New Zealand	Auckland Observatory
+468	 13.3296	+41.821092	Italy	Astronomical Observatory, Campo Catino
+469	  7.3820	+47.356257	Switzerland	Courroux
+470	 13.32756	+41.570282	Italy	Ceccano
+471	  8.2389	+55.781599	Denmark	Houstrup
+472	  6.3203	+44.694558	France	Merlette
+473	 13.31661	+46.086367	Italy	Remanzacco
+474	170.46496	-43.987388	New Zealand	Mount John Observatory, Lake Tekapo
+475	  7.6965	+45.069054	Italy	Turin (before 1913)
+476	  7.14075	+45.142175	Italy	Grange Observatory, Bussoleno
+477	  0.4856	+51.702635	UK/England	Galleywood
+478	  3.0896	+43.588723	France	Lamalou-les-Bains
+479	  6.0505	+43.193574	France	Sollies-Pont
+480	  0.7733	+52.166479	UK/England	Cockfield
+481	  7.93067	+53.553670	Germany	Moorwarfen
+482	357.1854	+56.336721	UK/Scotland	St. Andrews
+483	173.8036	-41.749054	New Zealand	Carter Observatory, Black Birch Station
+484	174.7594	-41.339510	New Zealand	Happy Valley, Wellington
+485	174.7654	-41.284240	New Zealand	Carter Observatory, Wellington
+486	175.47	-40.237349	New Zealand	Palmerston North
+487	355.4444	+55.439342	UK/Scotland	Macnairston Observatory
+488	358.3664	+55.001347	UK/England	Newcastle-upon-Tyne
+489	359.87	+52.351623	UK/England	Hemingford Abbots
+490	358.00	+50.838529	UK/England	Wimborne Minster
+491	356.9000	+40.525053	Spain	Centro Astronomico de Yebes
+492	358.47	+52.913724	UK/England	Mickleover
+493	357.4542	+37.223531	Spain	Calar Alto
+494	357.8361	+52.412865	UK/England	Stakenbridge
+495	357.66247	+53.376319	UK/England	Altrincham
+496	358.6860	+50.962820	UK/England	Bishopstoke
+497	359.29449	+51.608582	UK/England	Loudwater
+498	359.2581	+52.262099	UK/England	Earls Barton
+499	359.79078	+51.369834	UK/England	Cheam
+500	  0.00000	 +0.000000		Geocentric
+501	  0.3475	+50.869432	UK/England	Herstmonceux
+502	  0.84793	+51.915842	UK/England	Colchester
+503	  0.0948	+52.214289	UK/England	Cambridge
+504	  4.3944	+46.822521	France	Le Creusot
+505	  4.5639	+51.566280	Netherlands	Simon Stevin
+506	  9.96	+53.303447	Germany	Bendestorf
+507	  5.22	+51.949210	Netherlands	Nyenheim
+508	  5.29	+51.949210	Netherlands	Zeist
+509	  5.8725	+43.099337	France	La Seyne sur Mer
+510	  8.0256	+50.910286	Germany	Siegen
+511	  5.7157	+43.931875	France	Haute Provence
+512	  4.4893	+52.157984	Netherlands	Leiden (before 1860)
+513	  4.7855	+45.694788	France	Lyons
+514	  8.438	+49.456279	Germany	Mundenheim (1907-1913)
+515	  7.4956	+49.814908	Germany	Volkssternwarte Dhaun, near Kirn
+516	  9.97321	+53.551081	Germany	Hamburg (before 1909)
+517	  6.1358	+46.310753	Switzerland	Geneva (from 1967)
+518	  9.9727	+53.547675	Germany	Marine Observatory, Hamburg
+519	  8.2867	+51.342097	Germany	Meschede
+520	  7.0966	+50.728847	Germany	Bonn
+521	 10.88794	+49.884549	Germany	Remeis Observatory, Bamberg
+522	  7.7677	+48.583819	France	Strasbourg
+523	  8.6512	+50.116646	Germany	Frankfurt
+524	  8.4605	+49.484894	Germany	Mannheim
+525	  8.76917	+50.811848	Germany	Marburg
+526	 10.1477	+54.340949	Germany	Kiel
+527	  9.9431	+53.545029	Germany	Altona
+528	  9.9426	+51.529931	Germany	Gottingen
+529	 10.7229	+59.912146	Norway	Christiania
+530	 10.6898	+53.856800	Germany	Lubeck
+531	 12.4797	+41.898438	Italy	Collegio Romano, Rome
+532	 11.6084	+48.146087	Germany	Munich
+533	 11.8715	+45.400199	Italy	Padua
+534	 12.3913	+51.334935	Germany	Leipzig (since 1861)
+535	 13.3578	+38.112038	Italy	Palermo
+536	 13.1062	+52.406679	Germany	Berlin-Babelsberg
+537	 13.3642	+52.526023	Germany	Urania Observatory, Berlin
+538	 13.8461	+44.863303	Croatia	Pola
+539	 14.1316	+48.056389	Austria	Kremsmunster
+540	 14.2753	+48.442489	Austria	Linz
+541	 14.3953	+50.076637	Czech Republi	Prague
+542	 13.0374	+52.567266	Germany	Falkensee
+543	 12.3688	+51.337979	Germany	Leipzig (before 1861)
+544	 13.35131	+52.457381	Germany	Wilhelm Foerster Observatory, Berlin
+545	 16.3817	+48.209620	Austria	Vienna (before 1879)
+546	 16.3549	+48.215289	Austria	Oppolzer Observatory, Vienna
+547	 17.0363	+51.115578	Poland	Breslau
+548	 13.3950	+52.504462	Germany	Berlin (1835-1913)
+549	 17.6257	+59.858039	Sweden	Uppsala
+550	 11.4196	+53.627586	Germany	Schwerin
+551	 18.1895	+47.874161	Slovakia	Hurbanovo, formerly O'Gyalla
+552	 11.3418	+44.468021	Italy	Osservatorio S. Vittore, Bologna
+553	 18.9938	+50.299749	Poland	Chorzow
+554	  8.3959	+50.539287	Germany	Burgsolms Observatory, Wetzlar
+555	 19.8263	+50.054245	Poland	Cracow-Fort Skala
+556	 11.26	+47.589673	Germany	Reintal, near Munich
+557	 14.77961	+49.914803	Czech Republi	Ondrejov
+558	 21.0303	+52.217857	Poland	Warsaw
+559	 14.98	+37.618100	Italy	Serra La Nave
+560	 10.93100	+45.407461	Italy	Madonna di Dossobuono
+561	 19.8943	+47.918047	Hungary	Piszkesteto Stn. (Konkoly)
+562	 15.9236	+48.083754	Austria	Figl Observatory, Vienna
+563	 13.60	+47.952529	Austria	Seewalchen
+564	 11.19	+48.029249	Germany	Herrsching
+565	 10.1344	+45.317821	Italy	Bassano Bresciano
+566	203.7424	+20.708375	US/Hawaii	Haleakala-NEAT/GEODSS
+567	 12.7117	+45.843338	Italy	Chions
+568	204.5278	+19.826116	US/Hawaii	Maunakea
+569	 24.9587	+60.155276	Finland	Helsinki
+570	 25.2990	+54.682117	Lithuania	Vilnius (since 1939)
+571	 10.63	+45.354705	Italy	Cavriana
+572	  6.89	+50.927521	Germany	Cologne
+573	  9.6612	+52.175130	Germany	Eldagsen
+574	 10.2667	+45.297123	Italy	Gottolengo
+575	  6.808	+47.089416	Switzerland	La Chaux de Fonds
+576	  0.3760	+50.994968	UK/England	Burwash
+577	  7.50	+47.462736	Switzerland	Metzerlen Observatory
+578	 27.99	-26.204483	South Africa	Linden Observatory
+579	  8.85	+44.786623	Italy	Novi Ligure
+580	 15.4936	+47.067254	Austria	Graz
+581	 22.80	-33.995489	South Africa	Sedgefield
+582	  1.2408	+52.009272	UK/England	Orwell Park
+583	 30.2717	+46.397290	Ukraine	Odessa-Mayaki
+584	 30.2946	+59.942394	Russia	Leningrad
+585	 30.52462	+50.297989	Ukraine	Kyiv comet station
+586	  0.1423	+42.936555	France	Pic du Midi
+587	  9.22918	+45.882949	Italy	Sormano
+588	 11.25	+44.461990	Italy	Eremo di Tizzano
+589	 12.64369	+42.519425	Italy	Santa Lucia Stroncone
+590	  7.46	+47.462736	Switzerland	Metzerlen
+591	  9.6258	+52.507327	Germany	Resse Observatory
+592	  7.02114	+51.174341	Germany	Solingen
+593	 11.17	+42.430591	Italy	Monte Argentario
+594	 13.2033	+41.957433	Italy	Monte Autore
+595	 13.52578	+45.915733	Italy	Farra d'Isonzo
+596	 12.6183	+41.983845	Italy	Colleverde di Guidonia
+597	  9.6631	+52.170501	Germany	Springe
+598	 11.33409	+44.259208	Italy	Loiano
+599	 13.55764	+42.444136	Italy	Campo Imperatore-CINEOS
+600	 11.4708	+44.358840	Italy	TLC Observatory, Bologna
+601	 13.7281	+51.038129	Germany	Engelhardt Observatory, Dresden
+602	 16.3854	+48.212050	Austria	Urania Observatory, Vienna
+603	 10.1300	+54.202600	Germany	Bothkamp
+604	 13.47524	+52.486761	Germany	Archenhold Sternwarte, Berlin-Treptow
+605	  7.1130	+51.674076	Germany	Marl
+606	  9.9956	+53.684186	Germany	Norderstedt
+607	  8.0000	+51.218913	Germany	Hagen Observatory, Ronkhausen
+608	203.7420	+20.708375	US/Hawaii	Haleakala-AMOS
+609	 12.8533	+42.570843	Italy	Osservatorio Polino
+610	 11.3431	+44.391708	Italy	Pianoro
+611	  8.6531	+49.647790	Germany	Starkenburg Sternwarte, Heppenheim
+612	  7.10	+51.411396	Germany	Lenkerbeck
+613	  7.0709	+51.409604	Germany	Heisingen
+614	  2.467	+48.635126	France	Soisy-sur-Seine
+615	  6.9067	+44.697855	France	St. Veran
+616	 16.58348	+49.204434	Czech Republi	Brno
+617	  2.5725	+48.416110	France	Arbonne la Foret
+618	  5.0077	+43.419372	France	Martigues
+619	  2.09013	+41.550043	Spain	Sabadell
+620	  2.9517	+39.643980	Spain	Observatorio Astronomico de Mallorca
+621	  7.48503	+51.086390	Germany	Bergisch Gladbach
+622	  7.5680	+46.645163	Switzerland	Oberwichtrach
+623	  5.5667	+50.618355	Belgium	Liege
+624	  9.6167	+49.762986	Germany	Dertingen
+625	203.5683	+20.746069	US/Hawaii	Kihei-AMOS Remote Maui Experimental Site
+626	  4.9864	+51.157211	Belgium	Geel
+627	  5.2146	+44.042227	France	Blauvac
+628	  6.84366	+51.427430	Germany	Mulheim-Ruhr
+629	 20.1511	+46.250362	Hungary	Szeged Observatory
+630	  7.2367	+47.992991	France	Osenbach
+631	 10.02293	+53.508969	Germany	Hamburg-Georgswerder
+632	 11.1739	+43.728395	Italy	San Polo A Mosciano
+633	  9.9339	+44.099841	Italy	Romito
+634	  5.1456	+45.527180	France	Crolles
+635	  2.9019	+42.700402	France	Pergignan
+636	  6.9794	+51.394563	Germany	Essen
+637	 10.0903	+53.703441	Germany	Hamburg-Himmelsmoor
+638	  8.8933	+51.940146	Germany	Detmold
+639	 13.7233	+51.094359	Germany	Dresden
+640	 13.5996	+50.086985	Czech Republi	Senftenberger Sternwarte
+641	 20.0272	-34.535490	South Africa	Overberg
+642	236.6850	+48.427924	Canada/BritCo	Oak Bay, Victoria
+643	243.2794	+33.483600	US/California	OCA-Anza Observatory
+644	243.14022	+33.357340	US/California	Palomar Mountain/NEAT
+645	254.17942	+32.780502	US/New Mexico	Apache Point-Sloan Digital Sky Survey
+646	242.4369	+33.997240	US/California	Santana Observatory, Rancho Cucamonga
+647	245.9683	+50.778455	Canada/Albert	Stone Finder Observatory, Calgary
+648	249.39822	+31.665606	US/Arizona	Winer Observatory, Sonoita
+649	265.3003	+38.646416	US/Kansas	Powell Observatory, Louisburg
+650	242.9028	+33.467301	US/California	Temecula
+651	249.41916	+31.670421	US/Arizona	Grasslands Observatory, Tucson
+652	245.9333	+51.116859	Canada/Albert	Rock Finder Observatory, Calgary
+653	237.8678	+47.183041	US/Washington	Torus Observatory, Buckley
+654	242.31841	+34.381822	US/California	Table Mountain Observatory, Wrightwood-PHMC
+655	236.383	+48.366952	Canada/BritCo	Sooke
+656	236.3921	+48.353425	Canada/BritCo	Victoria
+657	236.6903	+48.461980	Canada/BritCo	Climenhaga Observatory, Victoria
+658	236.58300	+48.519987	Canada/BritCo	Dominion Astrophysical Observatory
+659	237.0514	+48.599732	US/Washington	Heron Cove Observatory, Orcas
+660	237.7379	+37.873406	US/California	Leuschner Observatory, Berkeley
+661	245.7117	+50.868272	Canada/Albert	Rothney Astrophysical Observatory, Priddis
+662	238.3545	+37.340108	US/California	Lick Observatory, Mount Hamilton
+663	248.3136	+33.496489	US/Arizona	Red Mountain Observatory
+664	239.2775	+46.949324	US/Washington	Manastash Ridge Observatory
+665	240.9903	+34.810651	US/California	Wallis Observatory
+666	241.1692	+34.301680	US/California	Moorpark College Observatory
+667	240.00921	+46.902678	US/Washington	Wanapum Dam
+668	240.82	+34.857391	US/California	San Emigdio Peak
+669	240.8238	+34.467031	US/California	Ojai
+670	240.9558	+34.221330	US/California	Camarillo
+671	242.00198	+34.301561	US/California	Stony Ridge
+672	241.9436	+34.224694	US/California	Mount Wilson
+673	242.31783	+34.381488	US/California	Table Mountain Observatory, Wrightwood
+674	242.33605	+34.382192	US/California	Ford Observatory, Wrightwood
+675	243.13746	+33.354120	US/California	Palomar Mountain
+676	242.3907	+33.418166	US/California	San Clemente
+677	242.8281	+34.273483	US/California	Lake Arrowhead
+678	248.2597	+33.635876	US/Arizona	Fountain Hills
+679	244.5367	+31.043406	Mexico	San Pedro Martir
+680	244.78	+33.803964	US/California	Los Angeles
+681	245.8858	+51.086072	Canada/Albert	Calgary
+682	247.6381	+37.046938	US/Utah	Kanab
+683	248.9182	+32.155481	US/Arizona	Goodricke-Pigott Observatory, Tucson
+684	247.5100	+34.512629	US/Arizona	Prescott
+685	247.84	+35.352234	US/Arizona	Williams
+686	249.2092	+32.441312	US/Arizona	U. of Minn. Infrared Obs., Mt. Lemmon
+687	248.3473	+35.184460	US/Arizona	Northern Arizona University, Flagstaff
+688	248.4645	+35.095943	US/Arizona	Lowell Observatory, Anderson Mesa Station
+689	248.2601	+35.183936	US/Arizona	U.S. Naval Observatory, Flagstaff
+690	248.3367	+35.201970	US/Arizona	Lowell Observatory, Flagstaff
+691	248.39966	+31.962189	US/Arizona	Steward Observatory, Kitt Peak-Spacewatch
+692	249.0513	+32.233024	US/Arizona	Steward Observatory, Tucson
+693	249.26745	+32.416847	US/Arizona	Catalina Station, Tucson
+694	248.9943	+32.213449	US/Arizona	Tumamoc Hill, Tucson
+695	248.40533	+31.958398	US/Arizona	Kitt Peak
+696	249.1154	+31.688954	US/Arizona	Whipple Observatory, Mt. Hopkins
+697	248.38381	+31.951411	US/Arizona	Kitt Peak, McGraw-Hill
+698	249.26736	+32.416926	US/Arizona	Mt. Bigelow
+699	248.46331	+35.095943	US/Arizona	Lowell Observatory-LONEOS
+700	250.3817	+36.350510	US/Arizona	Chinle
+701	249.79716	+31.475562	US/Arizona	Junk Bond Observatory, Sierra Vista
+702	252.8117	+33.984187	US/New Mexico	Joint Obs. for cometary research, Socorro
+703	249.26736	+32.417006	US/Arizona	Catalina Sky Survey
+704	253.34093	+33.818259	US/New Mexico	Lincoln Laboratory ETS, New Mexico
+705	254.17942	+32.780502	US/New Mexico	Apache Point
+706	253.9366	+38.582008	US/Colorado	Salida
+707	254.56	+39.465804	US/Colorado	Chamberlin field station
+708	255.0475	+39.675783	US/Colorado	Chamberlin Observatory, Denver
+709	254.22882	+32.955690	US/New Mexico	W & B Observatory, Cloudcroft
+710	254.7336	+38.880789	US/Colorado	MPO Observatory, Florissant
+711	255.9785	+30.671481	US/Texas	McDonald Observatory, Fort Davis
+712	255.11867	+39.007187	US/Colorado	USAF Academy Observatory, Colorado Springs
+713	254.9897	+39.879687	US/Colorado	Thornton
+714	246.8173	+34.574092	US/Arizona	Bagdad
+715	253.2759	+32.384721	US/New Mexico	Jornada Observatory, Las Cruces
+716	255.2489	+39.084677	US/Colorado	Palmer Divide Observatory, Colorado Springs
+717	256.0481	+30.610986	US/Texas	Prude Ranch
+718	247.7042	+40.641408	US/Utah	Tooele
+719	253.08608	+34.072674	US/New Mexico	Etscorn Observatory
+720	259.6261	+25.643182	Mexico	Universidad de Monterrey
+721	259.7312	+40.399469	US/Nebraska	Lime Creek
+722	264.4192	+29.604204	US/Texas	Missouri City
+723	263.3300	+34.874996	US/Oklahoma	Cottonwood Observatory, Ada
+724	260.8053	+19.404990	Mexico	National Observatory, Tacubaya
+725	261.3453	+29.766354	US/Texas	Fair Oaks Ranch
+726	265.6933	+46.448790	US/Minnesota	Brainerd
+727	262.53872	+35.612756	US/Oklahoma	Zeno Observatory, Edmond
+728	262.6084	+27.691909	US/Texas	Corpus Christi
+729	262.87858	+49.645227	Saskatchewan	Glenlea Astronomical Observatory, Winnipeg
+730	262.84143	+47.911570	US/North Dako	University of North Dakota, Grand Forks
+731	272.6711	+39.481134	US/Indiana	Rose-Hulman Observatory, Terre Haute
+732	263.2300	+17.181651	Mexico	Oaxaca
+733	263.3546	+33.159311	US/Texas	Allen, Texas
+734	263.9986	+38.890106	US/Kansas	Farpoint Observatory, Eskridge
+735	264.40640	+29.375000	US/Texas	George Observatory, Needville
+736	263.3357	+29.618337	US/Texas	Houston
+737	275.6633	+34.177302	US/Georgia	New Bullpen Observatory, Alpharetta
+738	267.6733	+38.944581	US/Missouri	Observatory of the State University of Missouri
+739	265.2440	+38.868756	US/Kansas	Sunflower Observatory, Olathe
+740	265.3383	+31.757304	US/Texas	SFA Observatory, Nacogdoches
+741	266.8503	+44.461527	US/Minnesota	Goodsell Observatory, Northfield
+742	266.31216	+41.595519	US/Iowa	Drake University, Des Moines
+743	267.76148	+44.982902	US/Wisconsin	University of Minnesota, Minneapolis
+744	273.8378	+39.847122	US/Indiana	Doyan Rose Observatory, Indianapolis
+745	267.1747	+39.229358	US/Missouri	Morrison Obervatory, Glasgow
+746	275.2254	+43.587536	US/Michigan	Brooks Observatory, Mt. Pleasant
+747	268.9292	+30.346067	US/Louisiana	Highland Road Park Observatory
+748	268.4680	+41.495468	US/Iowa	Van Allen Observatory, Iowa City
+749	276.1642	+34.205355	US/Georgia	Oakwood
+750	268.7282	+44.815827	US/Wisconsin	Hobbs Observatory, Fall Creek
+751	269.2439	+38.799941	US/Missouri	Lake Saint Louis
+752	275.4647	+34.732390	US/Georgia	Puckett Observatory, Mountain Town
+753	270.59069	+43.076214	US/Wisconsin	Washburn Observatory, Madison
+754	271.4432	+42.570076	US/Wisconsin	Yerkes Observatory, Williams Bay
+755	274.6478	+42.914973	US/Michigan	Optec Observatory
+756	272.32567	+42.057533	US/Illinois	Dearborn Observatory, Evanston (bef. July 1939)
+757	280.0050	+36.038626	US/North Caro	High Point
+758	279.2379	+28.385032	US/Florida	BCC Observatory, Cocoa
+759	273.1947	+36.052656	US/Tennessee	Nashville
+760	273.6048	+39.549397	US/Indiana	Goethe Link Observatory, Brooklyn
+761	277.6456	+28.271214	US/Florida	Zephyrhills
+762	274.2008	+44.956645	US/Michigan	Four Winds Observatory, Lake Leelanau
+763	280.4658	+43.914771	Canada/Ontari	King City
+764	275.1439	+33.722310	US/Georgia	Puckett Observatory, Stone Mountain
+765	275.5775	+39.138735	US/Ohio	Cincinnati
+766	275.5167	+42.706569	US/Michigan	Michigan State University Obs., East Lansing
+767	276.2697	+42.280295	US/Michigan	Ann Arbor
+768	272.32488	+42.059283	US/Illinois	Dearborn Observatory, Evanston (aft. Oct. 1939)
+769	276.9892	+39.997598	US/Ohio	McMillin Observatory, Columbus
+770	274.0786	+39.225235	US/Indiana	Crescent Moon Observatory, Columbus
+771	277.57	+23.013306	Cuba	Boyeros Observatory, Havana
+772	284.0865	+45.254105	Canada/Ontari	Boltwood Observatory, Stittsville
+773	278.4318	+41.536957	US/Ohio	Warner and Swasey Observatory, Cleveland
+774	278.9250	+41.591562	US/Ohio	Warner and Swasey Nassau Station, Chardon
+775	284.6168	+40.606343	US/Pennsylvan	Sayre Observatory, South Bethlehem
+776	284.4669	+42.816318	US/New York	Foggy Bottom, Hamilton
+777	280.6017	+43.666676	Canada/Ontari	Toronto
+778	279.9778	+40.482685	US/Pennsylvan	Allegheny Observatory, Pittsburgh
+779	280.5779	+43.862795	Canada/Ontari	David Dunlap Observatory, Richmond Hill
+780	281.4778	+38.033616	US/Virginia	Leander McCormick Observatory, Charlottesville
+781	281.5075	 -0.233505	Ecuador	Quito
+782	281.65	 +0.000000	Ecuador	Quito, comet astrograph station
+783	282.02	+38.650286	US/Virginia	Rixeyville
+784	282.2146	+42.250749	US/New York	Stull Observatory, Alfred University
+785	285.3542	+40.345554	US/New Jersey	Fitz-Randolph Observatory, Princeton
+786	282.9345	+38.920446	US/Dist. of C	U.S. Naval Obs., Washington (since 1893)
+787	282.9494	+38.894247	US/Dist. of C	U.S. Naval Obs., Washington (before 1893)
+788	284.3667	+39.784239	US/Delaware	Mount Cuba Observatory, Wilmington
+789	284.5940	+43.054734	US/New York	Litchfield Observatory, Clinton
+790	284.2835	+45.394109	Canada/Ontari	Dominion Observatory, Ottawa
+791	284.5236	+39.999146	US/Pennsylvan	Flower and Cook Observatory, Philadelphia
+792	288.29905	+41.353320	US/Rhode Isla	University of Rhode Island, Quonochontaug
+793	286.2200	+42.653670	US/New York	Dudley Observatory, Albany (before 1893)
+794	286.1100	+41.688179	US/New York	Vassar College Observatory, Poughkeepsie
+795	286.03861	+40.809795	US/New York	Rutherford
+796	286.45	+41.090425	US/Connecticu	Stamford
+797	287.0751	+41.316332	US/Connecticu	Yale Observatory, New Haven
+798	287.0154	+41.426698	US/Connecticu	Yale Observatory, Bethany
+799	288.8650	+42.453331	US/Massachuse	Winchester
+800	288.4511	-16.374554	Peru	Harvard Observatory, Arequipa
+801	288.44233	+42.505363	US/Massachuse	Oak Ridge Observatory
+802	288.87164	+42.381468	US/Massachuse	Harvard Observatory, Cambridge
+803	288.9167	+41.900060	US/Massachuse	Taunton
+804	289.3121	-33.562676	Chile	Santiago-San Bernardo
+805	288.9800	-32.981524	Chile	Santiago-Cerro El Roble
+806	289.4513	-33.396831	Chile	Santiago-Cerro Calan
+807	289.1941	-30.169135	Chile	Cerro Tololo Observatory, La Serena
+808	290.6708	-31.802005	Argentina	El Leoncito
+809	289.26626	-29.258822	Chile	European Southern Observatory, La Silla
+810	288.5154	+42.610216	US/Massachuse	Wallace Observatory, Westford
+811	289.89565	+41.280622	US/Massachuse	Maria Mitchell Observatory, Nantucket
+812	288.4543	-32.958004	Chile	Vina del Mar
+813	289.3083	-33.445138	Chile	Santiago-Quinta Normal (1862-1920)
+814	288.41917	+41.851177	US/Rhode Isla	North Scituate
+815	289.3479	-33.440358	Chile	Santiago-Santa Lucia (1849-1861)
+816	285.7583	+44.338978	US/New York	Rand Observatory
+817	288.6104	+42.349703	US/Massachuse	Sudbury
+818	286.4167	+45.350672	Canada/Quebec	Gemeaux Observatory, Laval
+819	284.3850	+45.894857	Canada/Quebec	Val-des-Bois
+820	295.37581	-21.596256	Bolivia	Tarija
+821	295.45041	-31.598329	Argentina	Cordoba-Bosque Alegre
+822	295.80137	-31.420047	Argentina	Cordoba
+823	288.1691	+42.609895	US/Massachuse	Fitchburg
+824	285.7528	+44.342225	US/New York	Lake Clear
+825	288.2595	+42.337960	US/Massachuse	Granville
+826	288.2282	+46.219516	Canada/Quebec	Plessissville
+827	287.5393	+48.651315	Canada/Quebec	Saint-Felicien
+828	288.9758	+41.802871	US/Massachuse	Assonet
+829	290.6979	-31.799327	Argentina	Complejo Astronomico El Leoncito
+830	288.5697	+42.796690	US/New Hampsh	Hudson
+831	277.4134	+29.401652	US/Florida	Rosemary Hill Observatory, University of Florida
+832	283.1850	+40.164833	US/Pennsylvan	Etters
+833	301.4633	-34.629923	Argentina	Obs. Astronomico de Mercedes, Buenos Aires
+834	301.5654	-34.605196	Argentina	Buenos Aires-AAAA
+835	288.6428	+42.612227	US/Massachuse	Drum Hill Station, Chelmsford
+836	288.5011	+41.758139	US/Rhode Isla	Furnace Brook Observatory, Cranston
+837	279.7553	+26.915986	US/Florida	Jupiter
+838	275.8628	+39.743125	US/Ohio	Dayton
+839	302.0678	-34.908385	Argentina	La Plata
+840	276.2833	+43.014499	US/Michigan	Flint
+841	279.44233	+37.332810	US/Virginia	Martin Observatory, Blacksburg
+842	282.7678	+39.831163	US/Pennsylvan	Gettysburg College Observatory
+843	273.0648	+34.523202	US/Alabama	Emerald Lane Observatory, Decatur
+844	303.80982	-34.755486	Uruguay	Observatorio Astronomico Los Molinos
+845	283.5058	+42.417288	US/New York	Ford Observatory, Ithaca
+846	269.65501	+38.850025	US/Missouri	Principia Astronomical Observatory, Elsah
+847	275.9750	+45.042271	US/Michigan	Lunar Cafe Observator, Flint
+848	237.0219	+43.702424	US/Oregon	Tenagra Observatory, Cottage Grove
+849	265.1694	+38.903927	US/Kansas	Everstar Observatory, Olathe
+850	274.0802	+35.204093	US/Tennessee	Cordell-Lorenz Observatory, Sewanee
+851	296.41962	+44.630588	Canada/Nova S	Burke-Gaffney Observatory, Halifax
+852	269.4050	+38.789352	US/Missouri	River Moss Observatory, St. Peters
+853	249.1517	+32.576438	US/Arizona	Biosphere 2 Observatory
+854	249.17995	+32.299852	US/Arizona	Sabino Canyon Observatory, Tucson
+855	266.5383	+44.920528	US/Minnesota	Wayside Observatory, Minnetonka
+856	242.5540	+33.995489	US/California	Riverside
+857	249.3992	+31.664517	US/Arizona	Iowa Robotic Observatory, Sonoita
+858	253.7800	+35.093872	US/New Mexico	Tebbutt Observatory, Edgewood
+859	316.3097	-19.823982	Brazil	Wykrota Observatory-CEAMIG
+860	313.0347	-23.003277	Brazil	Valinhos
+861	312.9204	-22.782460	Brazil	Barao Geraldo
+862	138.5262	+36.140884	Japan	Saku
+863	137.18	+36.261419	Japan	Furukawa
+864	130.7533	+32.675794	Japan	Kumamoto
+865	285.8792	+41.709352	US/New York	Emmy Observatory, New Paltz
+866	283.5100	+38.981367	US/Maryland	U.S. Naval Academy, Michelson
+867	134.1222	+35.338934	Japan	Saji Observatory
+868	135.1359	+33.922783	Japan	Hidaka Observatory
+869	133.4298	+33.493125	Japan	Tosa
+870	313.17411	-22.900508	Brazil	Campinas
+871	134.3925	+34.748574	Japan	Akou
+872	134.2411	+34.090233	Japan	Tokushima
+873	133.7717	+34.592760	Japan	Kurashiki Observatory
+874	314.41735	-22.535487	Brazil	Observatorio do Pico dos Dias, Itajuba
+875	139.2353	+36.098847	Japan	Yorii
+876	139.2467	+36.228291	Japan	Honjo
+877	139.0828	+35.813560	Japan	Okutama
+878	136.9142	+34.987323	Japan	Kagiya
+879	137.3535	+35.041153	Japan	Tokai
+880	316.7771	-22.895183	Brazil	Rio de Janeiro
+881	137.2571	+35.135162	Japan	Toyota
+882	137.3558	+35.169063	Japan	JCPM Oi Station
+883	138.4215	+35.019868	Japan	Shizuoka
+884	138.0792	+35.140525	Japan	Kawane
+885	138.4667	+34.956708	Japan	JCPM Yakiimo Station
+886	138.9367	+35.170580	Japan	Mishima
+887	139.3367	+36.245194	Japan	Ojima
+888	138.9952	+35.124749	Japan	Gekko
+889	140.1427	+36.655017	Japan	Karasuyama
+890	140.2500	+35.919028	Japan	JCPM Tone Station
+891	140.8633	+38.275274	Japan	JCPM Kimachi Station
+892	139.4753	+36.140222	Japan	YGCO Hoshikawa and Nagano Stations
+893	140.86222	+38.259193	Japan	Sendai Municipal Observatory
+894	138.4476	+35.899059	Japan	Kiyosato
+895	140.7203	+38.309121	Japan	Hatamae
+896	138.3678	+35.879154	Japan	Yatsugatake South Base Observatory
+897	139.4929	+36.193681	Japan	YGCO Chiyoda Station
+898	138.1883	+34.901794	Japan	Fujieda
+899	142.5500	+43.840783	Japan	Toma
+900	135.98994	+35.049756	Japan	Moriyama
+901	137.0877	+35.342668	Japan	Tajimi
+902	132.2208	+34.221330	Japan	Ootake
+903	135.1769	+35.267884	Japan	Fukuchiyama and Kannabe
+904	135.12	+34.617319	Japan	Go-Chome and Kobe-Suma
+905	135.9246	+33.610193	Japan	Nachi-Katsuura Observatory
+906	145.667	-35.916135	Australia/VIC	Cobram
+907	144.9758	-37.831574	Australia/VIC	Melbourne
+908	137.2467	+36.625358	Japan	Toyama
+909	237.8717	+47.944427	US/Washington	Snohomish Hilltop Observatory
+910	  6.9267	+43.748916	France	Caussols-ODAS
+911	282.9233	+42.118459	US/New York	Collins Observatory, Corning Community College
+912	288.2342	+41.706538	US/Rhode Isla	Carbuncle Hill Observatory, Greene
+913	303.8161	-34.912529	Uruguay	Observatorio Kappa Crucis, Montevideo
+914	288.0108	+42.531103	US/Massachuse	Underwood Observatory, Hubbardston
+915	261.8789	+29.790119	US/Texas	River Oaks Observatory, New Braunfels
+916	272.6836	+39.484004	US/Indiana	Oakley Observatory, Terre Haute
+917	237.5522	+47.143704	US/Washington	Pacific Lutheran University Keck Observatory
+918	257.8694	+43.990766	US/South Dako	Badlands Observatory, Quinn
+919	248.3183	+32.749846	US/Arizona	Desert Beaver Observatory
+920	282.3353	+43.075804	US/New York	RIT Observatory, Rochester
+921	254.4725	+32.991092	US/New Mexico	SW Institute for Space Research, Cloudcroft
+922	272.8333	+34.671195	US/Alabama	Timberland Observatory, Decatur
+923	284.6300	+40.050923	US/Pennsylvan	The Bradstreet Observatory, St. Davids
+924	287.6769	+46.475621	Canada/Quebec	Observatoire du Cegep de Trois-Rivieres
+925	249.8589	+31.400591	US/Arizona	Palominas Observatory
+926	249.1209	+31.462043	US/Arizona	Tenagra II Observatory, Nogales
+927	270.56194	+42.790800	US/Wisconsin	Madison-YRS
+928	286.6761	+40.905185	US/New York	Moonedge Observatory, Northport
+929	268.7758	+30.407442	US/Louisiana	Port Allen
+930	210.41224	-17.551379	Tahiti	S. S. Observatory, Pamatai
+931	210.3842	-17.634072	Tahiti	Puna'auia
+932	286.57394	+41.525724	US/Connecticu	John J. McCarthy Obs., New Milford
+933	249.7342	+31.476137	US/Arizona	Rockland Observatory, Sierra Vista
+934	242.9572	+32.967432	US/California	Poway Valley
+935	282.3394	+38.855930	US/Virginia	Wyrick Observatory, Haymarket
+936	263.3792	+39.188979	US/Kansas	Ibis Observatory, Manhattan
+937	358.6900	+54.594859	UK/England	Bradbury Observatory, Stockton-on-Tees
+938	351.6162	+39.522688	Portugal	Linhaceira
+939	359.6033	+39.759895	Spain	Observatorio Rodeno
+940	358.9611	+50.897187	UK/England	Waterlooville
+941	359.6139	+39.752833	Spain	Observatorio Pla D'Arguines
+942	359.3636	+52.926889	UK/England	Grantham
+943	355.8664	+50.391587	UK/England	Peverell
+944	354.08315	+37.281246	Spain	Observatorio Geminis, Dos Hermanas
+945	354.3986	+43.488901	Spain	Observatorio Monte Deva
+946	  0.7931	+40.929721	Spain	Ametlla de Mar
+947	  2.1244	+49.351780	France	Saint-Sulpice
+948	  0.2189	+52.468571	UK/England	Pymoor
+949	359.8169	+47.677637	France	Durtal
+950	342.1176	+28.760222	Canary Island	La Palma
+951	358.2983	+51.636471	UK/England	Highworth
+952	359.7583	+38.952660	Spain	Marxuquera
+953	  2.1339	+41.859061	Spain	Montjoia
+954	343.4906	+28.298383	Canary Island	Teide Observatory
+955	350.6739	+38.700163	Portugal	Sassoeiros
+956	356.1908	+40.440581	Spain	Observatorio Pozuelo
+957	359.3506	+44.823124	France	Merignac
+958	358.96961	+43.693327	France	Observatoire de Dax
+959	  1.4653	+43.549352	France	Ramonville Saint Agne
+960	  0.6108	+51.032485	UK/England	Rolvenden
+961	356.8206	+55.956698	UK/Scotland	City Observatory, Calton Hill, Edinburgh
+962	359.8188	+38.975541	Spain	Gandia
+963	359.7333	+52.616547	UK/England	Werrington
+964	358.8433	+51.433687	UK/England	Southend Bradfield
+965	351.4008	+37.191463	Portugal	Observacao Astronomica no Algarve, Portimao
+966	357.20423	+52.534468	UK/England	Church Stretton
+967	358.9778	+52.136567	UK/England	Greens Norton
+968	  0.4250	+52.084635	UK/England	Haverhill
+969	359.8454	+51.521519	UK/England	London-Regents Park
+970	  0.4954	+51.744716	UK/England	Chelmsford
+971	350.81249	+38.711792	Portugal	Lisbon
+972	357.5833	+57.160100	UK/Scotland	Dun Echt
+973	359.6671	+51.579445	UK/England	Harrow
+974	  8.9220	+44.419297	Italy	Genoa
+975	359.6333	+39.478187	Spain	Observatorio Astronomico de Valencia
+976	358.4669	+52.317598	UK/England	Leamington Spa
+977	351.5483	+54.175554	Ireland	Markree
+978	357.24541	+54.028476	UK/England	Conder Brow
+979	358.6697	+51.121308	UK/England	South Wonston
+980	357.2200	+54.031472	UK/England	Lancaster
+981	353.3522	+54.352872	UK/NIreland	Armagh
+982	353.6621	+53.386636	Ireland	Dunsink Observatory, Dublin
+983	353.79525	+36.465879	Spain	San Fernando
+984	357.26975	+50.921432	UK/England	Eastfield
+985	357.5317	+52.648228	UK/England	Telford
+986	359.36053	+51.408914	UK/England	Ascot
+987	355.3735	+54.177825	UK/Isle of Ma	Isle of Man Observatory, Foxdale
+988	355.7060	+55.878367	UK/Scotland	Glasgow
+989	357.40582	+53.801442	UK/England	Wilfred Hall Observatory, Preston
+990	356.3121	+40.408374	Spain	Madrid
+991	356.9278	+53.401423	UK/England	Liverpool (since 1867)
+992	356.9995	+53.414384	UK/England	Liverpool (before 1867)
+993	357.49556	+51.046536	UK/England	Woolston Observatory
+994	359.3878	+51.171894	UK/England	Godalming
+995	358.4177	+54.768164	UK/England	Durham
+996	358.7483	+51.759752	UK/England	Oxford
+997	359.15	+51.858946	UK/England	Hartwell
+998	359.75753	+51.613320	UK/England	London-Mill Hill
+999	359.4725	+44.835301	France	Bordeaux-Floirac
+A00	  0.3770	+51.430107	UK/England	Gravesend
+A01	  0.7441	+42.017901	Spain	Masia Cal Maciarol Modul 2
+A02	  0.7441	+42.017901	Spain	Masia Cal Maciarol Modul 8
+A03	  1.4000	+41.150366	Spain	Torredembarra
+A04	  1.7181	+43.873347	France	Saint-Caprais
+A05	  1.8175	+43.445408	France	Belesta
+A06	  2.4417	+41.573486	Spain	Mataro
+A07	  2.7444	+48.742768	France	Gretz-Armainvilliers
+A08	  2.8847	+43.435297	France	Malibert
+A09	  1.1803	+49.527000	France	Quincampoix
+A10	  1.9281	+41.266410	Spain	Observatorio Astronomico de Corbera
+A11	  2.4718	+50.880083	France	Wormhout
+A12	  8.74768	+45.396541	Italy	Stazione Astronomica di Sozzago
+A13	  7.1394	+46.762386	Switzerland	Observatoire Naef, Marly
+A14	  5.1864	+44.021537	France	Les Engarouines Observatory
+A15	  6.7972	+51.848743	Germany	Josef Bresser Sternwarte, Borken
+A16	  7.1922	+46.770495	Switzerland	Tentlingen
+A17	  8.68152	+49.545393	Germany	Guidestar Observatory, Weinheim
+A18	  7.1761	+51.527963	Germany	Herne
+A19	  7.0744	+50.923246	Germany	Koln
+A20	  7.51887	+52.844412	Germany	Sogel
+A21	  8.0581	+50.553007	Germany	Irmtraut
+A22	  8.6531	+49.647790	Germany	Starkenburg Sternwarte-SOHAS
+A23	  8.6677	+49.534340	Germany	Weinheim
+A24	  8.9481	+45.675313	Italy	New Millennium Observatory, Mozzate
+A25	  9.1925	+45.587262	Italy	Nova Milanese
+A26	  8.65736	+49.810438	Germany	Darmstadt
+A27	 10.3236	+51.908175	Germany	Eridanus Observatory, Langelsheim
+A28	 10.3342	+47.726489	Germany	Kempten
+A29	 10.6733	+43.736494	Italy	Santa Maria a Monte
+A30	 11.22308	+45.645137	Italy	Crespadoro
+A31	 11.4186	+45.651379	Italy	Corcaroli Observatory
+A32	 10.5517	+54.342680	Germany	Panker
+A33	 11.0157	+50.875357	Germany	Volkssternwarte Kirchheim
+A34	 10.7911	+49.598090	Germany	Grosshabersdorf
+A35	 12.8978	+50.670518	Germany	Hormersdorf Observatory
+A36	  9.7911	+45.794504	Italy	Ganda di Aviatico
+A37	 13.6634	+52.411257	Germany	Mueggelheim
+A38	 13.3747	+41.764900	Italy	Campocatino Automated Telescope, Collepardo
+A39	 12.4186	+50.983787	Germany	Altenburg
+A40	 14.4978	+35.895108	Malta	Pieta
+A41	 14.5911	+46.239745	Slovenia	Rezman Observatory, Kamnik
+A42	  9.5019	+52.301311	Germany	Gehrden
+A43	 13.0897	+52.358521	Germany	Inastars Observatory, Potsdam (before 2006)
+A44	 13.6972	+48.332991	Austria	Altschwendt
+A45	  9.3620	+51.395188	Germany	Karrenkneul
+A46	 16.5825	+49.292629	Czech Republi	Lelekovice
+A47	 16.6031	+40.668886	Italy	Matera
+A48	 10.8885	+45.347038	Italy	Povegliano Veronese
+A49	 17.6372	+59.837517	Sweden	Uppsala-Angstrom
+A50	 28.9973	+50.000576	Ukraine	Andrushivka Astronomical Observatory
+A51	 18.6667	+54.381717	Poland	Danzig
+A52	 18.7553	+47.444102	Hungary	Etyek
+A53	 10.6883	+45.433875	Italy	Peschiera del Garda
+A54	 16.6217	+52.628276	Poland	Ostrorog
+A55	 13.1181	+42.485891	Italy	Osservatorio Astronomico Vallemare di Borbona
+A56	 10.3197	+44.534187	Italy	Parma
+A57	 11.1031	+43.742211	Italy	Osservatorio Astron. Margherita Hack, Firenze
+A58	  2.4694	+48.693184	France	Observatoire de Chalandray-Canotiers
+A59	 12.9071	+50.215609	Czech Republi	Karlovy Vary Observatory
+A60	 20.8106	-32.379699	South Africa	YSTAR-NEOPAT Station, Sutherland
+A61	  8.8581	+44.903887	Italy	Tortona
+A62	  9.2301	+48.620677	Germany	Aichtal
+A63	  4.7567	+45.768240	France	Cosmosoz Obs., Tassin la Demi Lune
+A64	  6.1151	+46.449376	Switzerland	Couvaloup de St-Cergue
+A65	  2.4083	+44.096659	France	Le Couvent de Lentin
+A66	 10.3161	+43.533474	Italy	Stazione Osservativa Astronomica, Livorno
+A67	  7.6785	+44.322746	Italy	Chiusa di Pesio
+A68	  9.6533	+54.812329	Germany	Swedenborg Obs., Bockholmwik
+A69	 11.3300	+43.321153	Italy	Osservatorio Palazzo Bindi Sergardi
+A70	 25.2033	+64.826072	Finland	Lumijoki
+A71	 15.4533	+48.428775	Austria	Stixendorf
+A72	 13.6222	+51.116298	Germany	Radebeul Observatory
+A73	 16.2895	+48.194141	Austria	Penzing Astrometric Obs., Vienna
+A74	  8.76240	+50.158743	Germany	Bergen-Enkheim Observatory
+A75	  2.1861	+41.398125	Spain	Fort Pius Observatory, Barcelona
+A76	 20.8356	+48.069906	Hungary	Andromeda Observatory, Miskolc
+A77	  5.64693	+43.999793	France	Observatoire Chante-Perdrix, Dauban
+A78	 11.71509	+43.135211	Italy	Stia
+A79	 23.84340	+42.063583	Bulgaria	Zvezdno Obshtestvo Observatory, Plana
+A80	 14.1222	+52.208909	Germany	Lindenberg Observatory
+A81	 12.4033	+41.869968	Italy	Balzaretto Observatory, Rome
+A82	 13.8744	+45.643237	Italy	Osservatorio Astronomico di Trieste
+A83	 29.9969	+62.727467	Finland	Jakokoski Observatory
+A84	 30.3333	+36.825271	Turkey	TUBITAK National Observatory
+A85	 30.8065	+46.560440	Ukraine	Odessa Astronomical Observatory, Kryzhanovka
+A86	  4.3547	+45.537721	France	Albigneux
+A87	  8.7662	+49.603879	Germany	Rimbach
+A88	  8.90133	+44.456799	Italy	Bolzaneto
+A89	 10.3308	+47.708625	Germany	Sterni Observatory, Kempten
+A90	  2.1431	+41.401798	Spain	Sant Gervasi Observatory, Barcelona
+A91	 26.5997	+62.254457	Finland	Hankasalmi Observatory
+A92	 26.0927	+44.448518	Romania	Urseanu Observatory, Bucharest
+A93	 10.4189	+43.858291	Italy	Lucca
+A94	 13.4577	+45.957361	Italy	Cormons
+A95	 28.3892	+62.315387	Finland	Taurus Hill Observatory, Varkaus
+A96	 16.2867	+48.296458	Austria	Klosterneuburg
+A97	 16.4219	+48.302648	Austria	Stammersdorf
+A98	 30.2092	+54.491084	Belarus	Observatory Mazzarot-1, Baran'
+A99	 10.8589	+45.697524	Italy	Osservatorio del Monte Baldo
+B00	  2.5767	+48.575344	France	Savigny-le-Temple
+B01	  8.4464	+50.221554	Germany	Taunus Observatory, Frankfurt
+B02	 20.6566	+50.881003	Poland	Kielce
+B03	 16.2698	+48.217246	Austria	Alter Satzberg, Vienna
+B04	  7.47851	+45.789693	Italy	OAVdA, Saint-Barthelemy
+B05	 37.8831	+55.247706	Russia	Ka-Dar Observatory, Barybino
+B06	  2.53372	+41.721521	Spain	Montseny Astronomical Observatory
+B07	  9.0033	+46.164298	Switzerland	Camorino
+B08	 11.3807	+44.455830	Italy	San Lazzaro di Savena
+B09	 10.6708	+43.586269	Italy	Capannoli
+B10	  5.5150	+44.408000	France	Observatoire des Baronnies Provencales, Moydans
+B11	 10.6286	+45.775422	Italy	Osservatorio Cima Rest, Magasa
+B12	  4.4906	+52.265418	Netherlands	Koschny Observatory, Noordwijkerhout
+B13	  8.9311	+45.712229	Italy	Osservatorio di Tradate
+B14	  9.0758	+44.817867	Italy	Ca del Monte
+B15	 13.0129	+52.423524	Germany	Inastars Observatory, Potsdam (since 2006)
+B16	 36.9547	+55.770495	Russia	1st Moscow Gymnasium Observatory, Lipki
+B17	 33.16280	+45.219533	Ukraine	AZT-8 Evpatoria
+B18	 42.5008	+43.274820	Russia	Terskol
+B19	  2.4414	+41.538100	Spain	Observatorio Iluro, Mataro
+B20	  2.2636	+41.484450	Spain	Observatorio Carmelita, Tiana
+B21	 13.4744	+48.543040	Austria	Gaisberg Observatory, Schaerding
+B22	  0.7441	+42.019523	Spain	Observatorio d'Ager
+B23	 10.9710	+45.575852	Italy	Fiamene
+B24	  2.5983	+48.554195	France	Cesson
+B25	 15.0557	+37.548790	Italy	Catania
+B26	  5.6667	+43.878280	France	Observatoire des Terres Blanches, Reillanne
+B27	 14.1544	+48.476639	Austria	Picard Observatory, St. Veit
+B28	 13.1836	+46.097357	Italy	Mandi Observatory, Pagnacco
+B29	  0.6701	+40.807126	Spain	L'Ampolla Observatory, Tarragona
+B30	 16.5689	+52.596406	Poland	Szamotuly-Galowo
+B31	 20.8108	-32.375553	South Africa	Southern African Large Telescope, Sutherland
+B32	 12.9486	+50.702747	Germany	Gelenau
+B33	 10.7783	+43.555428	Italy	Libbiano Observatory, Peccioli
+B34	 33.7258	+35.258463	Cyprus	Green Island Observatory, Gecitkale
+B35	 35.0317	+31.888210	Israel	Bareket Observatory, Macabim
+B36	 13.7125	+48.274928	Austria	Redshed Observatory, Kallham
+B37	  2.25934	+41.651214	Spain	Obs. de L' Ametlla del Valles, Barcelona
+B38	 11.85746	+43.630911	Italy	Santa Mama
+B39	  8.9072	+45.712229	Italy	Tradate
+B40	 15.0706	+37.602675	Italy	Skylive Observatory, Catania
+B41	 17.6925	+49.217367	Czech Republi	Zlin Observatory
+B42	 30.3275	+55.061283	Belarus	Vitebsk
+B43	  7.3089	+50.746314	Germany	Hennef
+B44	  5.5906	+44.237548	France	Eygalayes
+B45	 19.9356	+50.179564	Poland	Narama
+B46	 12.05439	+44.504404	Italy	Sintini Observatory, Alfonsine
+B47	 24.7503	+60.198376	Finland	Metsala Observatory, Espoo
+B48	  6.5981	+51.849644	Germany	Bocholt
+B49	  2.11250	+41.551035	Spain	Paus Observatory, Sabadell
+B50	  8.2767	+48.942718	Germany	Corner Observatory, Durmersheim
+B51	  7.06669	+43.577678	France	Vallauris
+B52	  2.99725	+42.250063	Spain	Observatorio El Far
+B53	 12.3536	+41.875261	Italy	Casal Lumbroso, Rome
+B54	  0.7439	+42.018712	Spain	Ager
+B55	 12.87600	+46.507990	Italy	Comeglians
+B56	  2.44935	+41.538838	Spain	Observatorio Sant Pere, Mataro
+B57	  2.22439	+41.565488	Spain	Laietania Observatory, Parets del Valles
+B58	 19.02529	+47.553014	Hungary	Polaris Observatory, Budapest
+B59	  6.87881	+51.833875	Germany	Borken
+B60	  7.17531	+52.299382	Germany	Deep Sky Observatorium, Bad Bentheim
+B61	  2.04350	+41.456722	Spain	Valldoreix Obs.,Sant Cugat del Valles
+B62	  9.68531	+52.556305	Germany	Brelingen
+B63	 20.10799	+50.111626	Poland	Solaris Observatory, Luczanowice
+B64	 24.88779	+60.637874	Finland	Slope Rock Observatory, Hyvinkaa
+B65	 24.3878	+60.173240	Finland	Komakallio Observatory, Kirkkonummi
+B66	  9.00693	+44.816520	Italy	Osservatorio di Casasco
+B67	  9.22419	+46.804169	Switzerland	Sternwarte Mirasteilas, Falera
+B68	 13.53950	+46.203214	Italy	Mount Matajur Observatory
+B69	  9.01719	+48.635010	Germany	Owls and Ravens Observatory, Holzgerlingen
+B70	  2.4937	+41.690658	Spain	Sant Celoni
+B71	  1.5213	+41.189751	Spain	Observatorio El Vendrell
+B72	  7.6811	+50.698511	Germany	Soerth
+B73	  8.98503	+48.641134	Germany	Mauren Valley Observatory, Holzgerlingen
+B74	  1.10536	+41.720161	Spain	Santa Maria de Montmagastrell
+B75	  8.80519	+45.584704	Italy	Stazione Astronomica Betelgeuse, Magnago
+B76	 13.8944	+51.032229	Germany	Sternwarte Schonfeld, Dresden
+B77	  7.95083	+47.420270	Switzerland	Schafmatt Observatory, Aarau
+B78	 14.12811	+47.963497	Austria	Astrophoton Observatory, Audorf
+B79	 11.20990	+45.637801	Italy	Marana Observatory
+B80	 12.74126	+42.173959	Italy	Osservatorio Astronomico Campomaggiore
+B81	  2.8990	+39.772030	Spain	Caimari
+B82	  9.9716	+49.846325	Germany	Maidbronn
+B83	  5.79769	+45.184993	France	Gieres
+B84	  3.53775	+51.571978	Netherlands	Cyclops Observatory, Oostkapelle
+B85	  6.51011	+52.866626	Netherlands	Beilen Observatory
+B86	  7.45561	+51.345508	Germany	Sternwarte Hagen
+B87	  2.7701	+42.114404	Spain	Banyoles
+B88	  8.29681	+44.816595	Italy	Bigmuskie Observatory, Mombercelli
+B89	  2.2619	+41.491795	Spain	Observatori Astronomic de Tiana
+B90	 13.29686	+46.150357	Italy	Malina River Observatory, Povoletto
+B91	  7.25544	+47.864977	France	Bollwiller
+B92	  0.27539	+47.169202	France	Chinon
+B93	  6.47856	+52.712619	Netherlands	Hoogeveen
+B94	 34.2817	+61.772379	Russia	Petrozavodsk
+B95	  8.15450	+53.047909	Germany	Achternholt
+B96	  4.31031	+51.163512	Belgium	Brixiis Observatory, Kruibeke
+B97	  6.1118	+52.004797	Netherlands	Sterrenwacht Andromeda, Meppel
+B98	 11.31300	+43.317796	Italy	Siena
+B99	  0.7443	+42.019139	Spain	Santa Coloma de Gramenet
+C00	 30.5150	+56.321628	Russian	Velikie Luki
+C01	 13.92293	+51.027264	Germany	Lohrmann-Observatorium, Triebenberg
+C02	  2.5305	+41.731336	Spain	Observatorio Royal Park
+C03	 24.96114	+60.552084	Finland	Clayhole Observatory, Jokela
+C04	 37.6331	+48.797639	Ukraine	Kramatorsk
+C05	 12.1153	+47.247514	Austria	Konigsleiten
+C06	 92.9744	+56.012308	Russia	Krasnoyarsk
+C07	  0.7442	+42.018712	Spain	Anysllum Observatory, Ager
+C08	 17.3761	+59.883671	Sweden	Fiby
+C09	  3.80397	+43.823490	France	Rouet
+C10	  3.42622	+48.717713	France	Maisoncelles
+C11	 14.0901	+50.236680	Czech Republi	City Observatory, Slany
+C12	  2.1107	+41.535717	Spain	Berta Observatory, Sabadell
+C13	  9.10031	+45.805083	Italy	Como
+C14	 15.96700	+48.150634	Austria	Sky Vistas Observatory, Eichgraben
+C15	132.1656	+43.698384	Russia	ISON-Ussuriysk Observatory
+C16	 11.57261	+47.749381	Germany	Isarwinkel Observatory, Bad Tolz
+C17	  0.74381	+42.019284	Spain	Observatorio Joan Roget, Ager
+C18	  3.60400	+50.683525	Belgium	Frasnes-Lez-Anvaing
+C19	  5.4231	+44.384037	France	ROSA Observatory, Vaucluse
+C20	 42.66191	+43.741564	Russia	Kislovodsk Mtn. Astronomical Stn., Pulkovo Obs.
+C21	  0.74383	+42.019284	Spain	Observatorio Via Lactea, Ager
+C22	 12.9599	+50.415635	Germany	Oberwiesenthal
+C23	  5.15439	+51.140448	Belgium	Olmen
+C24	  9.1331	+45.642443	Italy	Seveso
+C25	 13.55806	+42.444217	Italy	Pulkovo Observatory Station, Campo Imperatore
+C26	  4.49928	+52.155052	Netherlands	Levendaal Observatory, Leiden
+C27	  1.35302	+41.618091	Spain	Pallerols
+C28	  7.48300	+51.469481	Germany	Wellinghofen
+C29	  1.07889	+42.617886	Spain	Observatori Astronomic de Les Planes de Son
+C30	 35.3425	+61.403580	Russia	Petrozavodsk University Obs., Sheltozero Stn.
+C31	  6.9825	+51.208962	Germany	Sternwarte Neanderhoehe Hochdahl e.V., Erkrath
+C32	 41.4258	+43.649619	Russia	Ka-Dar Observatory, TAU Station, Nizhny Arkhyz
+C33	  2.8989	+39.772030	Spain	Observatorio CEAM, Caimari
+C34	 19.0108	+46.180557	Hungary	Baja Astronomical Observatory
+C35	  2.0349	+41.571580	Spain	Terrassa
+C36	 30.3086	+54.479628	Belarus	Starry Wanderer Observatory, Baran'
+C37	  1.01830	+52.196794	UK/England	Stowupland
+C38	  7.64911	+45.405815	Italy	Varuna Observatory, Cuorgne
+C39	  5.7992	+51.829232	Netherlands	Nijmegen
+C40	 39.0308	+45.019547	Russia	Kuban State University Astrophysical Observatory
+C41	 42.66126	+43.741685	Russia	MASTER-II Observatory, Kislovodsk
+C42	 87.1778	+43.471021	China	Xingming Observatory, Mt. Nanshan
+C43	 14.2792	+51.448370	Germany	Hoyerswerda
+C44	  9.02239	+45.975463	Italy	A. Volta Observatory, Lanzo d'Intelvi
+C45	 12.40639	+41.988382	Italy	La Giustiniana
+C46	 69.12219	+54.878195	Kazakhstan	Horizon Observatory, Petropavlovsk
+C47	 15.2356	+48.786797	Austria	Nonndorf
+C48	100.9214	+51.619826	Russia	Sayan Solar Observatory, Irkutsk
+C49	  0.000000	 +0.000000		STEREO-A
+C50	  0.000000	 +0.000000		STEREO-B
+C51	  0.000000	 +0.000000		WISE
+C52	  0.000000	 +0.000000		Swift
+C53	  0.000000	 +0.000000		NEOSSat
+C54	  0.000000	 +0.000000		New Horizons
+C55	  0.000000	 +0.000000		Kepler
+C56	  0.000000	 +0.000000		LISA-Pathfinder
+C57	  0.000000	 +0.000000		TESS
+C59	  0.000000	 +0.000000		Yangwang-1
+C60	  7.06926	+50.729791	Germany	Argelander Institute for Astronomy Obs., Bonn
+C61	  2.58202	+48.880216	France	Chelles
+C62	 11.3467	+46.494235	Italy	Eurac Observatory, Bolzano
+C63	  9.9797	+46.188865	Italy	Giuseppe Piazzi Observatory, Ponte in Valtellina
+C64	 15.28439	+47.929391	Austria	Puchenstuben
+C65	  0.72965	+42.051655	Spain	Observatori Astronomic del Montsec
+C66	  2.8050	+39.666780	Spain	Observatorio El Cielo de Consell
+C67	 12.2199	+53.403828	Germany	Gnevsdorf
+C68	 23.89339	+37.997695	Greece	Ellinogermaniki Agogi Observatory, Pallini
+C69	 13.3611	+48.927653	Germany	Bayerwald Sternwarte, Neuhuette
+C70	  4.49775	+52.157400	Netherlands	Uiterstegracht Station, Leiden
+C71	  1.4892	+41.702336	Spain	Sant Marti Sesgueioles
+C72	 12.8717	+41.836813	Italy	Palestrina
+C73	 28.0325	+45.418865	Romania	Galati Observatory
+C74	  0.7449	+42.019523	Spain	Observatorio El Teatrillo de Lyra, Ager
+C75	 13.2225	+46.163089	Italy	Whitestar Observatory, Borgobello
+C76	  0.74431	+42.018998	Spain	Observatorio Estels, Ager
+C77	  7.4535	+44.385250	Italy	Bernezzo Observatory
+C78	 34.81242	+31.908277	Israel	Martin S. Kraar Observatory, Rehovot
+C79	  2.7855	+41.677592	Spain	Roser Observatory, Blanes
+C80	 39.7651	+47.284989	Russia	Don Astronomical Observatory, Rostov-on-Don
+C81	 10.84098	+46.241077	Italy	Dolomites Astronomical Observatory
+C82	 14.35763	+40.618683	Italy	Osservatorio Astronomico Nastro Verde, Sorrento
+C83	 91.8425	+56.084127	Russia	Badalozhnyj Observatory
+C84	  2.24372	+41.445592	Spain	Badalona
+C85	  1.2408	+38.891102	Spain	Observatorio Cala d'Hort, Ibiza
+C86	  2.7813	+41.677592	Spain	Blanes
+C87	  8.7689	+49.620548	Germany	Rimbach
+C88	 11.18331	+43.232801	Italy	Montarrenti Observatory, Siena
+C89	 21.55558	+43.140233	Serbia	Astronomical Station Vidojevica
+C90	  1.05181	+41.110418	Spain	Vinyols
+C91	 11.22621	+44.243180	Italy	Montevenere Observatory, Monzuno
+C92	 13.60995	+43.426292	Italy	Valdicerro Observatory, Loreto
+C93	 13.4064	+42.334904	Italy	Bellavista Observatory, L'Aquila
+C94	103.0670	+51.810111	Russia	MASTER-II Observatory, Tunka
+C95	  5.71239	+43.932042	France	SATINO Remote Observatory, Haute Provence
+C96	 13.8786	+42.753689	Italy	OACL Observatory, Mosciano Sant Angelo
+C97	 57.97633	+23.629468	Oman	Al-Fulaij Observatory, Oman
+C98	 11.1764	+43.764918	Italy	Osservatorio Casellina, Scandicci
+C99	  2.89631	+41.826669	Spain	Observatori Can Roig, Llagostera
+D00	 42.6536	+43.740151	Russia	ASC-Kislovodsk Observatory
+D01	 23.93061	+60.352767	Finland	Andean Northern Observatory, Nummi-Pusula
+D02	  2.05189	+41.383634	Spain	Observatori Petit Sant Feliu
+D03	 10.5889	+44.440858	Italy	Rantiga Osservatorio, Tincana
+D04	 38.8569	+44.894146	Russia	Krasnodar
+D05	 42.50005	+43.274569	Russia	ISON-Terskol Observatory
+D06	 12.77017	+41.750270	Italy	Associazione Tuscolana di Astronomia, Domatore
+D07	  6.2094	+51.142527	Germany	Wegberg
+D08	  8.9191	+46.455115	Switzerland	Ghezz Observatory, Leontica
+D09	  5.6794	+50.941601	Belgium	Observatory Gromme, Maasmechelen
+D10	  8.90181	+48.648915	Germany	Gaertringen
+D11	  5.62797	+43.790819	France	Bastidan Observatory
+D12	 11.33806	+46.422793	Italy	Filzi School Observatory, Laives
+D13	 11.56369	+42.479972	Italy	Cat's Eye Observatory
+D14	113.3231	+23.143683	China	Nanchuan Observatory, Guangzhou
+D15	 11.31781	+50.983394	Germany	Sternwarte F.Schiller-Gymnasium, Weimar
+D16	113.96422	+22.376619	China	Po Leung Kuk Observatory, Tuen Mun
+D17	114.2200	+22.474601	China	Hong Kong
+D18	114.3580	+30.521411	China	Mt. Guizi Observatory
+D19	114.32300	+22.408327	China	Hong Kong Space Museum Sai Kung iObservatory
+D20	115.71311	-31.355948	Australia/WA	Zadko Observatory, Wallingup Plain
+D21	115.8150	-31.961553	Australia/WA	Shenton Park
+D22	115.81667	-31.978893	Australia/WA	UWA Observatory, Crawley
+D24	117.08969	-32.514144	Australia/WA	LightBuckets Observatory, Pingelly
+D25	117.08978	-32.513139	Australia/WA	Tzec Maun Observatory, Pingelly (before 2010)
+D29	118.4639	+32.734366	China	Purple Mountain Observatory, XuYi Station
+D32	119.59975	+30.469432	China	JiangNanTianChi Observatory, Mt. Getianling
+D33	120.6982	+22.049959	Taiwan	Kenting Observatory, Checheng
+D34	120.7839	+21.950269	Taiwan	Kenting Observatory, Hengchun
+D35	120.8736	+23.468580	Taiwan	Lulin Observatory
+D36	120.8897	+23.487263	Taiwan	Tataka, Mt. Yu-Shan National Park
+D37	120.87325	+23.468778	Taiwan	Lulin Widefield Telescope, Mt. Lulin
+D39	122.04961	+37.535927	China	Shandong University Observatory, Weihai
+D44	124.13928	+24.372862	Japan	Ishigakijima Astronomical Observatory
+D53	127.4820	+50.318536	Russia	ISON-Blagoveschensk Observatory
+D54	127.4830	+50.318902	Russia	MASTER-II Observatory, Blagoveshchensk
+D55	127.9747	+37.372831	South Korea	Kangwon Science High School Observatory, Ksho
+D57	128.88744	+35.252875	South Korea	Gimhae Astronomical Observatory, Uhbang-dong
+D58	129.02500	+35.165619	South Korea	KSA SEM Observatory, Danggam-dong
+D61	134.9131	+34.327701	Japan	Suntopia Marina, Sumoto
+D62	130.4494	+33.289452	Japan	Miyaki-Argenteus
+D70	133.4686	+33.467927	Japan	Tosa
+D74	134.6819	+33.948936	Japan	Nakagawa
+D78	136.13281	+34.768568	Japan	Iga-Ueno
+D79	138.63092	-34.884487	Australia/SA	YSVP Observatory, Vale Park
+D80	138.9728	+36.596424	Japan	Gumma Astronomical Observatory
+D81	138.2239	+36.669278	Japan	Nagano
+D82	137.6317	-33.931075	Australia/SA	Wallaroo
+D83	138.4681	+36.496336	Japan	Miwa
+D84	138.5086	-35.086370	Australia/SA	Hallet Cove
+D85	138.6597	-34.820641	Australia/SA	Ingle Farm
+D86	138.6407	-33.918940	Australia/SA	Penwortham
+D87	138.5500	-34.926094	Australia/SA	Brooklyn Park
+D88	139.3142	+35.369663	Japan	Hiratsuka
+D89	140.3383	+38.184585	Japan	Yamagata
+D90	140.3420	-34.269333	Australia/SA	RAS Observatory, Moorook
+D91	140.8250	+37.665917	Japan	Adati
+D92	140.94638	+38.565522	Japan	Osaki
+D93	140.75516	+38.255144	Japan	Sendai Astronomical Observatory
+D94	139.9962	+36.628007	Japan	Takanezawa, Tochigi
+D95	141.0680	+38.801469	Japan	Kurihara
+D96	140.34216	-34.268869	Australia/SA	Tzec Maun Observatory, Moorook
+D97	140.5700	-34.244932	Australia/SA	Berri
+E00	144.2089	-37.059619	Australia/VIC	Castlemaine
+E01	144.54142	-37.098948	Australia/VIC	Barfold
+E03	145.3822	-38.136178	Australia/VIC	RAS Observatory, Officer
+E04	145.7403	+15.156538	US/Saipan	Pacific Sky Observatory, Saipan
+E05	145.69721	-16.794672	Australia/QLD	Earl Hill Observatory, Trinity Beach
+E07	148.99889	-34.958699	Australia/NSW	Murrumbateman
+E08	149.33431	-31.226991	Australia/NSW	Wobblesock Observatory, Coonabarabran
+E09	149.0814	-31.281463	Australia/NSW	Oakley Southern Sky Observatory, Coonabarabran
+E10	149.07085	-31.272806	Australia/NSW	Siding Spring-Faulkes Telescope South
+E11	149.6627	-32.456034	Australia/NSW	Frog Rock Observatory, Mudgee
+E12	149.0642	-31.273455	Australia/NSW	Siding Spring Survey
+E13	149.0969	-35.390394	Australia/NSW	Wanniassa
+E14	149.1100	-35.162463	Australia/NSW	Hunters Hill Observatory, Ngunnawal
+E15	149.6061	-34.998673	Australia/NSW	Magellan Observatory, near Goulburn
+E16	149.36624	-33.829625	Australia/NSW	Grove Creek Observatory, Trunkey
+E17	150.3417	-33.706839	Australia/NSW	Leura
+E18	151.02714	-34.010413	Australia/NSW	BDI Observatory, Regents Park
+E19	151.0958	-33.947661	Australia/NSW	Kingsgrove
+E20	151.10320	-33.770507	Australia/NSW	Marsfield
+E21	151.5667	-27.985792	Australia/QLD	Norma Rose Observatory, Leyburn
+E22	151.85500	-27.797722	Australia/QLD	Univ. of Southern Queensland Obs., Mt. Kent
+E23	151.07119	-33.621199	Australia/NSW	Arcadia
+E24	150.7769	-33.809709	Australia/NSW	Tangra Observatory, St. Clair
+E25	153.1170	-27.563958	Australia/QLD	Rochedale (APTA)
+E26	153.3971	-27.933917	Australia/QLD	RAS Observatory, Biggera Waters
+E27	153.2667	-27.566288	Australia/QLD	Thornlands
+E28	150.64105	-33.664388	Australia/NSW	Kuriwa Observatory, Hawkesbury Heights
+E81	173.2617	-41.274462	New Zealand	Nelson
+E83	173.95703	-41.535738	New Zealand	Wither Observatory, Witherlea
+E85	174.89400	-36.895808	New Zealand	Farm Cove
+E87	175.6540	-40.411595	New Zealand	Turitea
+E89	176.2040	-38.136018	New Zealand	Geyserland Observatory, Pukehangi
+E94	177.88331	-38.629922	New Zealand	Possum Observatory, Gisborne
+F51	203.74409	+20.707235	US/Hawaii	Pan-STARRS 1, Haleakala
+F52	203.74409	+20.707384	US/Hawaii	Pan-STARRS 2, Haleakala
+F59	201.94100	+21.311100	US/Hawaii	Ironwood Remote Observatory, Hawaii
+F60	201.95283	+21.644636	US/Hawaii	Ironwood Observatory, Hawaii
+F65	203.74250	+20.707007	US/Hawaii	Haleakala-Faulkes Telescope North
+F84	210.3842	-17.634072	Tahiti	Hibiscus Observatory, Punaauia
+F85	210.3842	-17.634072	Tahiti	Tiki Observatory, Punaauia
+F86	210.38381	-17.634221	Tahiti	Moana Observatory, Punaauia
+G00	 15.12600	+48.381564	Austria	AZM Martinsberg, Oed
+G01	  8.16528	+53.152847	Germany	Universitaetssternwarte Oldenburg
+G02	 18.76539	+49.307316	Slovakia	KYSUCE Observatory, Kysucke Nove Mesto
+G03	 18.26061	+47.362997	Hungary	Capricornus Observatory, Csokako
+G04	  7.14133	+51.230706	Germany	Schuelerlabor Astronomie St. 7, Wuppertal
+G05	354.53363	+38.177283	Spain	Piconcillo, Sierra Morena
+G06	  4.67150	+51.779218	Netherlands	Dordrecht, Sterrenburg
+G07	  3.06386	+44.096004	France	Millau Observatory
+G08	  1.99694	+41.620271	Spain	Observatorio Les Pedritxes, Matadepera
+G09	  0.61056	+51.647539	UK/England	SWF Observatory, South Woodham Ferrers
+G10	354.45055	+37.667863	Spain	Clavier Observatory, Lora Del Rio
+G11	  7.18379	+50.993278	Germany	Breitenweg Observatory, Herkenrath
+G12	  8.3306	+51.676397	Germany	Sternwarte EG, Lippstadt
+G13	  9.77169	+63.213826	Norway	Astronomihagen, Fannrem
+G14	  7.00520	+43.609130	France	Novaloop Observatory, Mougins
+G15	  9.1183	+44.772008	Italy	Magroforte Observatory, Alessandria
+G16	 13.34869	+38.100310	Italy	OmegaLab Observatory, Palermo
+G17	 11.20261	+43.752136	Italy	BAS Observatory, Scandicci
+G18	 11.28056	+44.626939	Italy	ALMO Observatory, Padulle
+G19	 12.7460	+50.860591	Germany	Immanuel Kant Observatory,Limbach
+G20	  6.05989	+43.401236	France	Brignoles Observatory
+G21	 13.73789	+37.347128	Italy	Osservatorio Castrofilippo
+G22	  9.21439	+49.144491	Germany	Experimenta Observatory, Heilbronn
+G23	 19.09234	+47.588701	Hungary	Vulpecula Observatory, Budapest
+G24	  9.09350	+48.612819	Germany	Dettenhausen
+G25	288.1050	+45.415613	Canada/Quebec	Sherbrooke
+G26	109.8236	+34.508337	China	Fushan Observatory, Mt Shaohua
+G27	  0.72935	+42.051659	Spain	Fabra Observatory, Montsec
+G28	  1.00850	+52.510997	UK/England	Wyncroft Observatory, Attleborough
+G29	358.9124	+39.491384	Spain	Requena
+G30	284.90719	+45.306132	Canada/Ontari	Casselman
+G31	 13.7253	+45.714674	Italy	CCAT Trieste
+G32	291.82040	-22.953233	Chile	Elena Remote Observatory, San Pedro de Atacama
+G33	  7.60879	+51.528831	Germany	Wickede
+G34	 13.7015	+50.860063	Germany	Oberfrauendorf
+G35	249.15789	+31.945051	US/Arizona	Elephant Head Obsevatory, Sahuarita
+G36	357.45250	+37.222887	Spain	Calar Alto-CASADO
+G37	248.57749	+34.744284	US/Arizona	Lowell Discovery Telescope
+G38	356.76842	+40.641132	Spain	Observatorio La Senda, Cabanillas del Campo
+G39	291.82039	-22.953105	Chile	ROAD, San Pedro de Atacama
+G40	343.49174	+28.299720	Canary Island	Slooh.com Canary Islands Observatory
+G41	264.73816	+29.967077	US/Texas	Insperity Observatory, Humble
+G42	259.0230	+25.427831	Mexico	Observatorio Astronomico UAdeC, Saltillo
+G43	293.6879	-33.152186	Argentina	Observatorio Buenaventura Suarez, San Luis
+G44	313.3061	-22.987244	Brazil	Observatorio Longa Vista, Sao Paulo
+G45	253.63564	+33.739422	US/New Mexico	Space Surveillance Telescope, Atom Site
+G46	244.66153	+35.224571	US/California	Pinto Valley Observatory
+G47	253.80654	+35.049714	US/New Mexico	HillTopTop Observatory, Edgewood
+G48	251.10148	+31.946920	US/New Mexico	Harlingten Research Observatory, Rancho Hildalgo
+G49	266.5943	+44.954211	US/Minnesota	Minnetonka
+G50	253.3300	+32.296029	US/New Mexico	Organ Mesa Observatory, Las Cruces
+G51	239.95778	+34.691463	US/California	Byrne Observatory, Sedgwick Reserve
+G52	237.49604	+38.288709	US/California	Stone Edge Observatory, El Verano
+G53	240.58727	+37.070515	US/California	Alder Springs Observatory, Auberry
+G54	243.0630	+33.693764	US/California	Hemet
+G55	241.09533	+35.370750	US/California	Bakersfield
+G56	237.9294	+37.924106	US/California	Walnut Creek
+G57	236.8564	+45.532488	US/Oregon	Dilbert Observatory, Forest Grove
+G58	237.8180	+37.819331	US/California	Chabot Space and Science Center, Oakland
+G59	237.4530	+47.661778	US/Washington	Maiden Lane Obs., Bainbridge Island
+G60	240.33888	+34.448409	US/California	Carroll Observatory, Montecito
+G61	238.1524	+37.655933	US/California	Pleasanton
+G62	238.5469	+43.876370	US/Oregon	Sunriver Nature Center Observatory, Sunriver
+G63	238.6858	+45.549113	US/Oregon	Mill Creek Observatory, The Dalles
+G64	239.2911	+39.274187	US/California	Blue Canyon Observatory
+G65	238.3612	+37.342524	US/California	Vulcan North, Lick Observatory, Mount Hamilton
+G66	238.9169	+38.712186	US/California	Lake Forest Observatory, Forest Hills
+G67	239.3650	+38.721062	US/California	Rancho Del Sol, Camino
+G68	240.2250	+38.811659	US/California	Sierra Stars Observatory, Markleeville
+G69	241.0158	+34.169638	US/California	Via Capote Sky Observatory, Thousand Oaks
+G70	241.4547	+34.463211	US/California	Francisquito Observatory, Los Angeles
+G71	241.6047	+33.771589	US/California	Rancho Palos Verdes
+G72	241.82408	+34.064203	US/California	University Hills
+G73	241.9400	+34.213381	US/California	Mount Wilson-TIE
+G74	242.88538	+33.225028	US/California	Boulder Knolls Observatory, Escondido
+G75	243.2783	+33.483607	US/California	Starry Knight Observatory, Coto de Caza
+G76	242.4178	+33.591854	US/California	Altimira Observatory, Coto de Caza
+G77	243.7183	+34.283975	US/California	Baldwin Lake
+G78	244.3127	+32.780118	US/California	Desert Wanderer Observatory, El Centro
+G79	243.6165	+34.291099	US/California	Goat Mountain Astronomical Research Station
+G80	240.5873	+37.070390	US/California	Sierra Remote Observatories, Auberry
+G81	242.91300	+33.486900	US/California	Temecula
+G82	248.40057	+31.960531	US/Arizona	SARA Observatory, Kitt Peak
+G83	250.11039	+32.701485	US/Arizona	Mt. Graham-LBT
+G84	249.21084	+32.442529	US/Arizona	Mount Lemmon SkyCenter
+G85	247.56518	+37.029036	US/Utah	Vermillion Cliffs Observatory, Kanab
+G86	249.0697	+32.269723	US/Arizona	Tucson-Winterhaven
+G87	248.1894	+41.808031	US/Utah	Calvin M. Hooper Memorial Observatory, Hyde Park
+G88	247.8881	+33.933920	US/Arizona	LAMP Observatory, New River
+G89	248.3069	+35.099476	US/Arizona	Kachina Observatory, Flagstaff
+G90	248.9658	+32.642288	US/Arizona	Three Buttes Observatory, Tucson
+G91	249.1219	+31.680709	US/Arizona	Whipple Observatory, Mt. Hopkins--2MASS
+G92	249.2814	+31.976191	US/Arizona	Jarnac Observatory, Vail
+G93	249.3726	+31.662445	US/Arizona	Sonoita Research Observatory, Sonoita
+G94	249.9267	+31.928464	US/Arizona	Sonoran Skies Observatory, St. David
+G95	249.7622	+31.452173	US/Arizona	Hereford Arizona Observatory, Hereford
+G96	249.21128	+32.442754	US/Arizona	Mt. Lemmon Survey
+G97	250.8694	+31.933218	US/Arizona	Astronomical League Alpha Observatory, Portal
+G98	251.34354	+35.525435	US/New Mexico	Calvin-Rehoboth Observatory, Rehoboth
+G99	251.8104	+32.770984	US/New Mexico	NF Observatory, Silver City
+H00	251.6987	+32.710840	US/New Mexico	Tyrone
+H01	252.81067	+33.984831	US/New Mexico	Magdalena Ridge Observatory, Socorro
+H02	253.3706	+35.882355	US/New Mexico	Sulphur Flats Observatory, La Cueva
+H03	253.3553	+35.273229	US/New Mexico	Sandia View Observatory, Rio Rancho
+H04	254.0260	+35.640212	US/New Mexico	Santa Fe
+H05	256.0707	+39.644309	US/Colorado	Edmund Kline Observatory, Deer Trail
+H06	254.47130	+32.903325	US/New Mexico	iTelescope Observatory, Mayhill
+H07	254.47134	+32.903391	US/New Mexico	7300 Observatory, Cloudcroft
+H08	254.47081	+32.903978	US/New Mexico	BlackBird Observatory, Cloudcroft
+H09	255.5886	+39.696668	US/Colorado	Antelope Hills Observatory, Bennett
+H10	254.47141	+32.903308	US/New Mexico	Tzec Maun Observatory, Mayhill
+H11	250.9840	+31.861040	US/New Mexico	LightBuckets Observatory, Rodeo
+H12	254.47078	+32.903180	US/New Mexico	TechDome, Mayhill
+H13	248.25212	+32.901794	US/Arizona	Lenomiya Observatory, Casa Grande
+H14	249.21233	+32.275816	US/Arizona	Morning Star Observatory, Tucson
+H15	254.47156	+32.903260	US/New Mexico	ISON-NM Observatory, Mayhill
+H16	253.2890	+39.632573	US/Colorado	HUT Observatory, Eagle
+H17	254.38333	+38.516886	US/Colorado	Angel Peaks Observatory
+H18	249.28798	+31.973881	US/Arizona	Vail View Observatory, Vail
+H19	263.86259	+34.183154	US/Oklahoma	Lone Star Observatory, Caney
+H20	271.81682	+39.477224	US/Illinois	Eastern Illinois University Obs., Charleston
+H21	272.03173	+39.483057	US/Illinois	Astronomical Research Observatory, Westfield
+H22	272.7371	+39.346375	US/Indiana	Terre Haute
+H23	273.49858	+30.506292	US/Florida	Pear Tree Observatory, Valparaiso
+H24	274.59881	+42.905314	US/Michigan	J. C. Veen Observatory, Lowell
+H25	266.87082	+44.499312	US/Minnesota	Harvest Moon Observatory, Northfield
+H26	270.78922	+42.785578	US/Wisconsin	Doc Greiner Research Observatory, Janesvillle
+H27	266.23134	+38.829091	US/Missouri	Moonglow Observatory, Warrensburg
+H28	263.23150	+33.275954	US/Texas	Preston Hills Observatory, Celina
+H29	262.5494	+35.634360	US/Oklahoma	Ivywood Observatory, Edmond
+H30	262.5558	+35.202408	US/Oklahoma	University of Oklahoma Observatory, Norman
+H31	263.3300	+29.612413	US/Texas	Star Ridge Observatory, Weimar
+H32	263.6334	+30.572720	US/Texas	Texas A&M Physics Observatory, College Station
+H33	264.1217	+36.008030	US/Oklahoma	Bixhoma Observatory, Bixby
+H34	264.8258	+32.309316	US/Texas	Chapel Hill
+H35	264.9517	+39.362057	US/Kansas	Leavenworth
+H36	264.2936	+38.797693	US/Kansas	Sandlot Observatory, Scranton
+H37	265.2003	+43.258250	US/Iowa	Grems Timmons Observatories, Graettinger
+H38	265.9864	+41.439768	US/Iowa	Timberline Observatory, Urbandale
+H39	266.6828	+44.909571	US/Minnesota	S.O.S. Observatory, Minneapolis
+H40	266.7306	+34.484766	US/Arkansas	Nubbin Ridge Observatory
+H41	267.0742	+35.139585	US/Arkansas	Petit Jean Mountain
+H42	267.5078	+42.733796	US/Iowa	Wartburg College Observatory, Waverly
+H43	267.4998	+35.088442	US/Arkansas	Conway
+H44	267.7982	+35.127814	US/Arkansas	Cascade Mountain
+H45	267.0831	+35.119804	US/Arkansas	Arkansas Sky Obs., Petit Jean Mountain South
+H46	265.7297	+39.003609	US/Missouri	Ricky Observatory, Blue Springs
+H47	269.1439	+32.266216	US/Mississipp	Vicksburg
+H48	265.0139	+37.513158	US/Kansas	PSU Greenbush Observatory, Pittsburg
+H49	266.8636	+35.294819	US/Arkansas	ATU Astronomical Observatory, Russellville
+H50	267.54139	+35.081608	US/Arkansas	University of Central Arkansas Obs., Conway
+H51	270.4003	+43.119890	US/Wisconsin	Greiner Research Observatory, Verona
+H52	270.67354	+42.438939	US/Illinois	Hawkeye Observatory, Durand
+H53	271.22842	+37.945237	US/Illinois	Thompsonville
+H54	271.6514	+44.615346	US/Wisconsin	Cedar Drive Observatory, Pulaski
+H55	271.8558	+39.488125	US/Illinois	Astronomical Research Observatory, Charleston
+H56	272.16764	+42.136354	US/Illinois	Northbrook Meadow Observatory
+H57	275.97246	+40.735169	US/Ohio	Ohio State University Observatory, Lima
+H58	273.3353	+34.656687	US/Alabama	NASA/MSFC ALaMO, Redstone Arsenal
+H59	273.3651	+40.313104	US/Indiana	Prairie Grass Observatory, Camp Cullom
+H60	273.86542	+39.973100	US/Indiana	Heartland Observatory, Carmel
+H61	281.41689	+43.915830	Canada/Ontari	Newcastle
+H62	274.4117	+42.930419	US/Michigan	Calvin College Observatory
+H63	274.9276	+41.311195	US/Indiana	DeKalb Observatory, Auburn
+H64	275.4364	+39.020939	US/Kentucky	Thomas More College Observatory, Crestview Hills
+H65	275.4364	+38.840942	US/Kentucky	Waltonfields Observatory, Walton
+H66	276.1460	+39.783577	US/Ohio	Yellow Springs
+H67	276.16241	+42.297722	US/Michigan	Stonegate Observatory, Ann Arbor
+H68	276.34824	+31.410266	US/Georgia	Red Barn Observatory, Ty Ty
+H69	276.94463	+40.251222	US/Ohio	Perkins Observatory, Delaware
+H70	277.4458	+35.600877	US/North Caro	Asheville
+H71	276.48282	+31.560349	US/Georgia	Chula
+H72	278.2258	+26.460316	US/Florida	Evelyn L. Egan Observatory, Fort Myers
+H73	278.6351	+41.637437	US/Ohio	Lakeland Astronomical Observatory, Kirtland
+H74	278.8747	+28.915559	US/Florida	Bar J Observatory, New Smyrna Beach
+H75	278.91856	+41.547813	US/Ohio	Indian Hill North Observatory, Huntsburg
+H76	279.4133	+25.657258	US/Florida	Oakridge Observatory, Miami
+H77	279.7653	+26.079020	US/Florida	Buehler Observatory
+H78	282.70896	 +1.212645	Colombia	University of Narino Observatory, Pasto
+H79	280.49270	+43.773878	Canada/Ontari	York University Observatory, Toronto
+H80	285.33567	+40.348863	US/New Jersey	Halstead Observatory, Princeton
+H81	283.61539	+42.458241	US/New York	Hartung-Boothroyd Observatory, Ithaca
+H82	281.7839	+38.985492	US/Virginia	CBA-NOVAC Observatory, Front Royal
+H83	282.6641	+38.902499	US/Virginia	Timberlake Observatory, Oakton
+H84	282.4961	+42.993766	US/New York	Northview Observatory, Mendon
+H85	283.0029	+39.031975	US/Maryland	Silver Spring
+H86	283.1576	+39.114436	US/Maryland	CBA-East Observatory, Laurel
+H87	282.4361	+37.618584	US/Virginia	Fenwick Observatory, Richmond
+H88	283.7577	+39.475317	US/Maryland	Hope Observatory, Belcamp
+H89	284.2975	+45.480550	Canada/Quebec	Galaxy Blues Observatory, Gatineau
+H90	284.4731	+45.454982	Canada/Ontari	Ottawa
+H91	285.04839	+44.678121	US/New York	Reynolds Observatory, Potsdam
+H92	285.6211	+39.933838	US/New Jersey	Arcturus Observatory
+H93	285.5758	+40.689822	US/NJersey	Berkeley Heights
+H94	285.5439	+40.825066	US/NJersey	Cedar Knolls
+H95	285.82120	+40.741760	US/NJersey	NJIT Observatory, Newark
+H96	286.6142	+46.353842	Canada/Quebec	Observatoire des Pleiades, Mandeville
+H97	287.20132	+41.811358	US/Connecticu	Talcott Mountain Science Center, Avon
+H98	287.2655	+41.516924	US/Connecticu	Dark Rosanne Obs., Middlefield
+H99	288.8036	+42.330584	US/Massachuse	Sunhill Observatory, Newton
+I00	288.2294	+41.684554	US/Rhode Isla	Carbuncle Hill Observatory, Coventry
+I01	288.86253	+42.307564	US/Massachuse	Clay Center Observatory, Brookline
+I02	289.1949	-30.167725	Chile	Cerro Tololo Observatory, La Serena--2MASS
+I03	289.26626	-29.258822	Chile	European Southern Obs., La Silla--ASTROVIRTEL
+I04	289.3152	-29.989924	Chile	Mamalluca Observatory
+I05	289.2980	-29.003554	Chile	Las Campanas Observatory-TIE
+I06	289.8061	+41.677592	US/Massachuse	Werner Schmidt Obs., Dennis-Yarmouth Regional HS
+I07	288.0971	+42.129084	US/Massachuse	Conlin Hill Observatory, Oxford
+I08	290.6932	-31.786778	Argentina	Alianza S4, Cerro Burek
+I09	289.80377	-24.597743	Chile	Cerro Armazones
+I10	291.8200	-22.952297	Chile	CAO, San Pedro de Atacama (until 2012)
+I11	289.26345	-30.240641	Chile	Gemini South Observatory, Cerro Pachon
+I12	288.87053	+42.647556	US/Massachuse	Phillips Academy Observatory, Andover
+I13	282.93006	+38.914982	US/Dist. of C	Burleith Observatory, Washington D.C.
+I14	288.58931	+42.339622	US/Massachuse	Tigh Speuran Observatory, Framingham
+I15	288.70076	+41.761526	US/Rhode Isla	Wishing Star Observatory, Barrington
+I16	291.82033	-22.953362	Chile	IAA-AI Atacama, San Pedro de Atacama
+I17	284.32206	+41.596355	US/Pennsylvan	Thomas G. Cupillari Observatory, Fleetville
+I18	281.3067	+37.878395	US/Virginia	Fan Mountain Observatory, Covesville
+I19	295.40711	-31.356805	Argentina	Observatorio El Gato Gris, Tanti
+I20	295.68161	-33.106600	Argentina	Observatorio Astronomico Salvador, Rio Cuarto
+I21	295.8281	-31.371056	Argentina	El Condor Observatory, Cordoba
+I22	296.17399	+44.689361	Canada/Nova S	Abbey Ridge Observatory, Stillwater Lake
+I23	292.26649	+44.520760	US/Maine	Frosty Cold Observatory, Mash Harbor
+I24	282.2306	+38.342850	US/Virginia	Lake of the Woods Observatory, Locust Grove
+I25	295.44381	-31.795292	Argentina	ECCCO Observatory, Bosque Alegre
+I26	295.8214	-31.424228	Argentina	Observatorio Kappa Crucis, Cordoba
+I27	284.0006	+45.347441	Canada/Ontari	Barred Owl Observatory, Carp
+I28	289.0889	+41.813840	US/Massachuse	Starhoo Observatory, Lakeville
+I29	288.63304	+42.498408	US/Massachuse	Middlesex School Observatory, Concord
+I30	299.3417	-32.984475	Argentina	Observatorio Geminis Austral
+I31	299.3649	-32.953687	Argentina	Observatorio Astronomico del Colegio Cristo Rey
+I32	299.3464	-32.980641	Argentina	Observatorio Beta Orionis, Rosario
+I33	289.2608	-30.238025	Chile	SOAR, Cerro Pachon
+I34	284.1297	+40.146752	US/Pennsylvan	Morgantown
+I35	301.5572	-34.807262	Argentina	Sidoli
+I36	301.28271	-35.008112	Argentina	Observatorio Los Campitos, Canuelas
+I37	301.35275	-34.440042	Argentina	Astrodomi Observatory, Santa Rita
+I38	302.02141	-31.392540	Uruguay	Observatorio Los Algarrobos, Salto
+I39	301.42661	-34.669660	Argentina	Observatorio Cruz del Sur, San Justo
+I40	289.26061	-29.254610	Chile	La Silla--TRAPPIST
+I41	243.14022	+33.357340	US/California	Palomar Mountain--ZTF
+I42	288.9081	+41.596233	US/Massachuse	Westport Observatory
+I43	261.90237	+32.216192	US/Texas	Tarleton State University Obs., Stephenville
+I44	273.5176	+30.542034	US/Florida	Northwest Florida State College, Niceville
+I45	301.4281	-34.677922	Argentina	W Crusis Astronomical Observatory, San Justo
+I46	281.6108	+40.464743	US/Pennsylvan	The Cottage Observatory, Altoona
+I47	290.5503	-35.495442	Argentina	Pierre Auger Observatory, Malargue
+I48	295.6757	-36.637775	Argentina	Observatorio El Catalejo, Santa Rosa
+I49	253.98617	+35.709179	US/New Mexico	Sunflower Observatory, Santa Fe
+I50	254.47142	+32.903277	US/New Mexico	P2 Observatory, Mayhill
+I51	283.0547	+38.711560	US/Maryland	Clinton
+I52	249.21108	+32.442547	US/Arizona	Steward Observatory, Mt. Lemmon Station
+I53	356.3783	+37.140060	Spain	Armilla
+I54	353.03081	+38.849002	Spain	Observatorio Las Vaguadas, Badajoz
+I55	359.64214	+39.491506	Spain	Valencia
+I56	357.71066	+36.849853	Spain	Observatorio Astronomico John Beckman, Almeria
+I57	359.3256	+38.301573	Spain	Elche
+I58	359.5374	+39.556598	Spain	Betera
+I59	356.1558	+43.415709	Spain	Observatorio Fuente de los matos, Muriedas
+I60	357.1781	+47.722283	France	Guernanderf
+I61	352.1494	+42.326604	Spain	Ourense
+I62	356.42639	+40.009691	Spain	Observatorio Helios Ontigola
+I63	358.8330	+51.085851	UK/England	Cygnus Observatory, New Airesford
+I64	359.29386	+51.519441	UK/England	Maidenhead
+I65	355.0796	+36.736299	Spain	Yunquera
+I66	312.0000	-15.857427	Brazil	Taurus Australis Observatory, Brasilia
+I67	359.08753	+51.306464	UK/England	Hartley Wintney
+I68	312.4981	-14.317305	Brazil	Pousada dos Anoes Observatory
+I69	352.0069	+31.627448	Morocco	AGM Observatory, Marrakech
+I70	359.94158	+52.926531	UK/England	Gedney House Observatory, Kirton
+I71	353.6698	+39.449234	Spain	Observatorio Los Milanos, Caceres
+I72	355.9849	+40.711357	Spain	Observatorio Carpe-Noctem, Madrid
+I73	359.58711	+47.982660	France	Salvia Observatory, Saulges
+I74	358.18739	+51.074819	UK/England	Baxter Garden Observatory, Salisbury
+I75	359.9650	+39.979142	Spain	Observatorio Castellon
+I76	355.93681	+40.500702	Spain	Observatorio Tesla, Valdemorillo
+I77	316.0025	-19.830315	Brazil	CEAMIG-REA Observatory, Belo Horizonte
+I78	355.5721	+36.733411	Spain	Observatorio Principia, Malaga
+I79	357.6733	+38.165641	Spain	AstroCamp, Nerpio
+I80	358.13328	+53.882005	UK/England	Rose Cottage Observatory, Keighley
+I81	356.20111	+57.844125	UK/Scotland	Tarbatness Observatory, Portmahomack
+I82	343.5797	+28.317208	Canary Island	Guimar
+I83	353.1900	+53.487043	Ireland	Cherryvalley Observatory, Rathmolyon
+I84	353.0212	+38.866246	Spain	Cerro del Viento, Badajoz
+I85	357.9848	+36.880773	Spain	Las Negras
+I86	356.2739	+40.451107	Spain	Observatorio UCM, Madrid
+I87	352.9593	+53.136421	Ireland	Astroshot Observatory, Monasterevin
+I88	356.0823	+37.646781	Spain	Fuensanta de Martos
+I89	357.6739	+38.165286	Spain	iTelescope Observatory, Nerpio
+I90	351.59760	+51.900379	Ireland	Blackrock Castle Observatory
+I91	357.69250	+36.848496	Spain	Retamar
+I92	353.95289	+37.345585	Spain	Astreo Observatory, Mairena del Aljarafe
+I93	359.79700	+44.558710	France	St Pardon de Conques
+I94	356.1367	+40.495586	Spain	Observatorio Rho Ophiocus, Las Rozas de Madrid
+I95	356.81394	+39.568615	Spain	Observatorio de la Hita
+I96	356.50384	+40.793540	Spain	Hyperion Observatory, Urbanizacion Caraquiz
+I97	359.50178	+51.639937	UK/England	Penn Heights Observatory, Rickmansworth
+I98	356.41339	+40.883277	Spain	El Berrueco
+I99	356.46043	+40.352499	Spain	Observatorio Blanquita, Vaciamadrid
+J00	359.5056	+39.852563	Spain	Segorbe
+J01	354.28450	+42.377689	Spain	Observatorio Cielo Profundo, Leon
+J02	359.5550	+38.475838	Spain	Busot
+J03	355.13250	+50.394175	UK/England	Gothers Observatory, St. Dennis
+J04	343.48817	+28.300924	Canary Island	ESA Optical Ground Station, Tenerife
+J05	355.29639	+41.545557	Spain	Bootes Observatory, Boecillo
+J06	358.81247	+52.909132	UK/England	Trent Astronomical Observatory, Clifton
+J07	353.89543	+39.935161	Spain	Observatorio SPAG Monfrague, Palazuelo-Empalme
+J08	359.6549	+39.627133	Spain	Observatorio Zonalunar, Puzol
+J09	353.7917	+53.615299	Ireland	Balbriggan
+J10	359.59839	+38.426006	Spain	Alicante
+J11	351.31769	+41.765965	Portugal	Matosinhos
+J12	356.51061	+40.792499	Spain	Caraquiz
+J13	342.1208	+28.762516	Canary Island	La Palma-Liverpool Telescope
+J14	345.99281	+28.405033	Canary Island	La Corte
+J15	352.83061	+41.036699	Portugal	Muxagata
+J16	354.20356	+54.338324	UK/NIreland	An Carraig Observatory, Loughinisland
+J17	357.20313	+52.525604	UK/England	Ragdon
+J18	356.90600	+52.510610	UK/Wales	Dingle Observatory, Montgomery
+J19	359.83036	+40.221450	Spain	El Maestrat
+J20	356.21926	+40.459348	Spain	Aravaca
+J21	356.08003	+40.723283	Spain	El Boalo
+J22	342.13235	+28.641561	Canary Island	Tacande Observatory, La Palma
+J23	358.49361	+47.893049	France	Centre Astronomique de La Couyere
+J24	343.55719	+28.246779	Canary Island	Observatorio Altamira
+J25	354.48883	+43.359111	Spain	Penamayor Observatory, Nava
+J26	356.98119	+52.325044	UK/Wales	The Spaceguard Centre, Knighton
+J27	355.96899	+40.607513	Spain	El Guijo Observatory
+J28	356.21381	+37.781625	Spain	Jaen
+J29	346.34213	+28.957746	Canary Island	Observatorio Nira, Tias
+J30	356.29300	+40.468314	Spain	Observatorio Ventilla, Madrid
+J31	355.77411	+36.729515	Spain	La Axarquia
+J32	352.97769	+37.270489	Spain	Aljaraque
+J33	359.90600	+51.774991	UK/England	University of Hertfordshire Obs., Bayfordbury
+J34	355.22711	+41.625192	Spain	La Fecha
+J35	356.02911	+37.712491	Spain	Tucci Observatory, Martos
+J36	356.94519	+40.171906	Spain	Observatorio DiezALaOnce, Illana
+J37	353.06469	+37.258673	Spain	Huelva
+J38	353.60924	+43.472663	Spain	Observatorio La Vara, Valdes
+J39	344.5636	+27.920212	Canary Island	Ingenio
+J40	355.55847	+36.718766	Spain	Malaga
+J41	353.8189	+53.380563	Ireland	Raheny
+J42	359.6989	+39.616909	Spain	Puzol
+J43	352.13354	+31.206440	Morocco	Oukaimeden Observatory, Marrakech
+J44	357.6552	+42.793367	Spain	Observatorio Iturrieta, Alava
+J45	344.46735	+28.011631	Canary Island	Observatorio Montana Cabreja, Vega de San Mateo
+J46	346.3594	+28.957482	Canary Island	Observatorio Montana Blanca, Tias
+J47	346.4440	+29.041376	Canary Island	Observatorio Nazaret
+J48	343.6960	+28.472217	Canary Island	Observatory Mackay, La Laguna
+J49	359.4482	+38.192624	Spain	Santa Pola
+J50	342.1176	+28.760222	Canary Island	La Palma-NEON
+J51	343.72898	+28.465574	Canary Island	Observatorio Atlante, Tenerife
+J52	358.6608	+42.199032	Spain	Observatorio Pinsoro
+J53	354.89278	+37.801935	Spain	Posadas
+J54	343.4906	+28.298111	Canary Island	Bradford Robotic Telescope
+J55	344.3144	+27.768871	Canary Island	Los Altos de Arguineguin Observatory
+J56	344.4536	+27.962862	Canary Island	Observatorio La Avejerilla
+J57	358.89089	+39.950159	Spain	Centro Astronomico Alto Turia, Valencia
+J58	356.6644	+51.556074	UK/Wales	Brynllefrith Observatory, Llantwit Fardre
+J59	356.20256	+43.464438	Spain	Observatorio Linceo, Santander
+J60	354.3406	+41.711440	Spain	Tocororo Observatory, Arquillinos
+J61	353.4264	+53.423544	Ireland	Brownstown Observatory, Kilcloon
+J62	351.6345	+53.923156	Ireland	Kingsland Observatory, Boyle
+J63	359.4831	+38.329297	Spain	San Gabriel
+J64	359.3459	+38.028481	Spain	La Mata
+J65	353.4497	+53.344457	Ireland	Celbridge
+J66	357.7833	+52.452879	UK/England	Kinver
+J67	359.4667	+39.639860	Spain	Observatorio La Puebla de Vallbona
+J68	357.7055	+51.914101	UK/England	Tweenhills Observatory, Hartpury
+J69	358.98034	+50.938988	UK/England	North Observatory, Clanfield
+J70	358.8404	+37.938923	Spain	Obs. Astronomico Vega del Thader, El Palmar
+J71	357.8947	+53.687268	UK/England	Willow Bank Observatory
+J72	358.9664	+37.849820	Spain	Valle del Sol
+J73	359.0833	+51.872472	UK/England	Quainton
+J74	357.0961	+43.251635	Spain	Bilbao
+J75	357.43471	+37.982402	Spain	OAM Observatory, La Sagra
+J76	358.79718	+37.840245	Spain	La Murta
+J77	357.5947	+50.930949	UK/England	Golden Hill Observatory, Stourton Caundle
+J78	358.8244	+38.014670	Spain	Murcia
+J79	358.38066	+37.389097	Spain	Observatorio Calarreona, Aguilas
+J80	359.1083	+44.973688	France	Sainte Helene
+J81	358.13489	+42.711748	Spain	Guirguillano
+J82	357.3067	+53.684892	UK/England	Leyland
+J83	357.3883	+53.740348	UK/England	Olive Farm Observatory, Hoghton
+J84	358.9803	+50.938652	UK/England	South Observatory, Clanfield
+J85	357.4833	+55.578572	UK/Scotland	Makerstoun
+J86	356.6153	+37.064136	Spain	Sierra Nevada Observatory
+J87	355.5067	+40.603975	Spain	La Canada
+J88	358.5592	+50.922439	UK/England	Strawberry Field Obs., Southampton
+J89	356.2861	+40.598618	Spain	Tres Cantos Observatory
+J90	358.5317	+51.594484	UK/England	West Challow
+J91	357.0483	+42.272956	Spain	Alt emporda Observatory, Figueres
+J92	359.3487	+51.622145	UK/England	Beaconsfield
+J93	357.7426	+51.830842	UK/England	Mount Tuffley Observatory, Gloucester
+J94	357.7886	+51.844268	UK/England	Abbeydale
+J95	358.55301	+51.474960	UK/England	Great Shefford
+J96	356.05669	+42.771620	Spain	Observatorio de Cantabria
+J97	359.5333	+39.250576	Spain	Alginet
+J98	359.5344	+39.493264	Spain	Observatorio Manises
+J99	359.57808	+39.508013	Spain	Burjassot
+K00	  8.94836	+50.107653	Germany	Hanau
+K01	  0.62091	+51.877481	UK/England	Astrognosis Observatory, Bradwell
+K02	  0.66761	+51.568808	UK/England	Eastwood Observatory, Leigh on Sea
+K03	  0.74411	+42.018981	Spain	Observatori AAS Montsec
+K04	  0.74416	+42.019267	Spain	Lo Fossil Observatory, Ager
+K05	  1.02311	+52.454288	UK/England	Eden Observatory, Banham
+K06	  1.99950	+41.538882	Spain	Observatorio Montagut, Can Sola
+K07	  2.4614	+48.817494	France	Observatoire de Gravelle, St. Maurice
+K08	  1.8800	+41.386982	Spain	Observatorio Lledoner, Vallirana
+K09	  2.2400	+41.602815	Spain	Llica d'Amunt
+K10	  5.4214	+44.170140	France	Micro Palomar, Reilhanette
+K11	  2.88079	+45.879436	France	Observatoire de Pommier
+K12	  2.7267	+39.632871	Spain	Obsevatorio Astronomico de Marratxi
+K13	  2.9124	+39.728341	Spain	Albireo Observatory, Inca
+K14	  2.9131	+39.661042	Spain	Observatorio de Sencelles
+K15	  3.75522	+43.615884	France	Murviel-les-Montpellier
+K16	  5.42106	+44.167417	France	Reilhanette
+K17	  7.02679	+46.247616	Switzerland	Observatoire des Valentines, Bex
+K18	  7.5242	+47.575615	France	Hesingue
+K19	  5.64731	+43.999461	France	PASTIS Observatory, Banon
+K20	  4.68015	+50.135470	Belgium	Danastro Observatory, Romeree
+K21	  4.9292	+43.958569	France	Saint-Saturnin-les-Avignon
+K22	  5.07611	+43.693108	France	Les Barres Observatory, Lamanon
+K23	  9.4023	+45.535727	Italy	Gorgonzola
+K24	  6.86069	+49.443210	Germany	Schmelz
+K25	  5.7136	+43.916838	France	Haute Provence Sud, Saint-Michel-l'Observatoire
+K26	  6.2201	+49.582230	Luxembourg	Contern
+K27	  6.2094	+47.026599	France	St-Martin Observatory, Amathay Vesigneux
+K28	  6.8947	+50.804161	Germany	Sternwarte Eckdorf
+K29	  7.78347	+45.983391	Switzerland	Stellarium Gornergrat
+K30	  7.14839	+47.046621	Switzerland	Luscherz
+K31	  7.00361	+44.579323	Italy	Osservatorio Astronomico di Bellino
+K32	  7.52964	+44.363780	Italy	Maritime Alps Observatory, Cuneo
+K33	  7.49761	+44.394665	Italy	San Defendente
+K34	  7.7005	+45.109230	Italy	Turin
+K35	  8.16369	+50.313008	Germany	Huenfelden
+K36	  8.24887	+49.918185	Germany	Ebersheim
+K37	  8.3148	+45.075143	Italy	Cereseto
+K38	  8.91824	+45.873785	Italy	M57 Observatory, Saltrio
+K39	  8.95556	+44.533546	Italy	Serra Observatory
+K40	  9.0135	+48.625483	Germany	Altdorf
+K41	  8.7930	+44.771183	Italy	Vegaquattro Astronomical Obs., Novi Ligure
+K42	  8.3332	+49.035841	Germany	Knielingen
+K43	  9.8389	+46.310097	Italy	OVM Observatory, Chiesa in Valmalencom
+K44	  9.97331	+52.130403	Germany	Marienburg Sternwarte, Hildesheim
+K45	 10.49814	+42.932791	Italy	Oss. Astronomico di Punta Falcone, Piombino
+K46	 10.9114	+49.885015	Germany	Bamberg
+K47	 10.68822	+43.689188	Italy	BSCR Observatory, Santa Maria a Monte
+K48	 10.83881	+45.209185	Italy	Keyhole Observatory, San Giorgio di Mantova
+K49	 11.18581	+43.681117	Italy	Carpione Observatory, Spedaletto
+K50	 11.13300	+49.790115	Germany	Sternwarte Feuerstein, Ebermannstadt
+K51	 11.6579	+46.029412	Italy	Osservatorio del Celado, Castello Tesino
+K52	  7.6478	+45.230562	Italy	Gwen Observatory, San Francesco al Campo
+K53	 12.04564	+41.981365	Italy	Marina di Cerveteri
+K54	 11.33678	+43.312669	Italy	Astronomical Observatory University of Siena
+K55	  7.76500	+49.886880	Germany	Wallhausen
+K56	 12.70497	+42.960268	Italy	Osservatorio di Foligno
+K57	 13.0444	+45.786125	Italy	Fiore Observatory
+K58	  7.4497	+51.300825	Germany	Gevelsberg
+K59	 13.27744	+51.747997	Germany	Elsterland Observatory, Jessnigk
+K60	 13.51069	+55.435949	Sweden	Lindby
+K61	 13.6026	+49.751403	Czech Republi	Rokycany Observatory
+K62	 13.84675	+50.638321	Czech Republi	Teplice Observatory
+K63	 10.4620	+44.082410	Italy	G. Pascoli Observatory, Castelvecchio Pascoli
+K64	 11.74397	+49.935479	Germany	Waizenreuth
+K65	 12.2339	+44.141649	Italy	Cesena
+K66	 12.62861	+41.463359	Italy	Osservatorio Astronomico di Anzio
+K67	 13.3610	+48.927653	Germany	Bayerwald Sternwarte, Spiegelau
+K68	 14.90512	+40.657713	Italy	Osservatorio Elianto, Pontecagnano
+K69	 10.9941	+51.090688	Germany	Riethnordhausen
+K70	 15.9736	+38.489205	Italy	Rosarno
+K71	 12.2159	+48.989760	Germany	Neutraubling
+K72	 16.3396	+39.311045	Italy	Celico
+K73	 16.4158	+40.820758	Italy	Gravina in Puglia
+K74	 10.2364	+49.805279	Germany	Muensterschwarzach Observatory, Schwarzach
+K75	 11.7289	+46.560481	Italy	Astro Dolomites, Santa Cristina Valgardena
+K76	  7.62898	+44.580531	Italy	BSA Osservatorio, Savigliano
+K77	 11.2903	+49.797364	Germany	EHB01 Observatory, Engelhardsberg
+K78	  9.85356	+44.126277	Italy	iota Scorpii Observatory, La Spezia
+K79	 11.05789	+50.959372	Germany	Erfurt
+K80	 16.63733	+52.442301	Poland	Platanus Observatory, Lusowko
+K81	 13.78511	+41.624624	Italy	P.M.P.H.R. Deep Sky Observatory, Atina
+K82	 17.5894	+40.689134	Italy	Alphard Observatory, Ostuni
+K83	 11.04317	+43.755333	Italy	Beppe Forti Astronomical Observatory, Montelupo
+K84	 10.75861	+44.187683	Italy	Felliscopio Observatory, Fellicarolo
+K85	  6.03161	+50.723994	Belgium	Kelmis
+K86	 10.18189	+45.549196	Italy	Brescia
+K87	 10.17011	+49.807693	Germany	Dettelbach Vineyard Observatory
+K88	 19.8936	+47.917622	Hungary	GINOP-KHK, Piszkesteto
+K89	 11.56339	+42.480015	Italy	Digital Stargate Observatory, Manciano
+K90	 20.54577	+44.530241	Serbia	Sopot Astronomical Observatory
+K91	 20.81019	-32.380542	South Africa	Sutherland-LCO A
+K92	 20.81004	-32.380542	South Africa	Sutherland-LCO B
+K93	 20.81011	-32.380670	South Africa	Sutherland-LCO C
+K94	 20.81097	-32.379959	South Africa	Sutherland
+K95	 20.81106	-32.380484	South Africa	MASTER-SAAO Observatory, Sutherland
+K96	 16.75119	+39.314406	Italy	Savelli Observatory
+K97	  7.18026	+48.467691	France	Freconrupt
+K98	 17.07217	+52.633870	Poland	6ROADS Observatory 1, Wojnowko
+K99	 22.45350	+48.563384	Ukraine	Derenivka Observatory
+L00	 12.5375	+41.907402	Italy	East Rome Observatory, Rome
+L01	 13.74930	+45.290899	Croatia	Visnjan Observatory, Tican
+L02	 20.81658	+39.652455	Greece	NOAK Observatory, Stavraki
+L03	 14.73081	+47.896626	Austria	SGT Observatory, Gaflenz
+L04	 23.59640	+46.820954	Romania	ROASTERR-1 Observatory, Cluj-Napoca
+L05	 10.0699	+45.596590	Italy	Dridri Observatory, Franciacorta
+L06	  9.25403	+45.970103	Italy	Sormano 2 Observatory, Bellagio Via Lattea
+L07	 14.56406	+40.623927	Italy	Osservatorio Salvatore di Giacomo, Agerola
+L08	 24.39447	+60.220516	Finland	Metsahovi Optical Telescope, Metsahovi
+L09	 20.80987	-32.380652	South Africa	Sutherland-LCO Aqawan A #1
+L10	 22.6186	+37.972222	Greece	Kryoneri Observatory
+L11	 17.2092	+59.805209	Sweden	Sandvreten Observatory
+L12	  2.67789	+51.113033	Belgium	Koksijde
+L13	 25.62193	+45.641596	Romania	Stardust Observatory, Brasov
+L14	  4.92247	+45.777818	France	Planetarium de Vaulx-en-Velin Observatory
+L15	 25.97839	+45.007006	Romania	St. George Observatory, Ploiesti
+L16	 26.04561	+45.203696	Romania	Stardreams Observatory, Valenii de Munte
+L17	  2.7114	+42.306713	Spain	Observatori Astronomic Albanya
+L18	 26.71828	+48.848295	Ukraine	QOS Observatory, Zalistci
+L19	 11.15258	+44.356284	Italy	Osservatorio Felsina AAB, Montepastore
+L20	 18.32069	+43.844908	Bosnia/Herzeg	AG_Sarajevo Observatory, Sarajevo
+L21	 27.42128	+44.027588	Romania	Ostrov Observatory, Constanta
+L22	 27.66953	+46.231697	Romania	Barlad Observatory
+L23	 27.8319	+45.499624	Romania	Schela Observatory
+L24	 27.9289	-26.102569	South Africa	Gauteng
+L25	 14.43739	+53.353671	Poland	Smolecin
+L26	 11.81019	+42.077138	Italy	Sanderphil Urban Observatory, Civitavecchia
+L27	  5.64704	+43.999846	France	29PREMOTE Observatory, Dauban
+L28	 15.46339	+40.817569	Italy	ISON-Castelgrande Observatory
+L29	 18.0169	-23.460102	Namibia	Drebach-South Observatory, Windhoek
+L30	  7.51469	+51.476911	Germany	Lohbach Observatory, Benninghofen
+L31	 12.85615	+50.860377	Germany	RaSo Observatory, Chemnitz
+L32	 20.81044	-32.378866	South Africa	Korea Microlensing Telescope Network-SAAO
+L33	 29.9546	+47.736097	Ukraine	Ananjev
+L34	 14.02061	+37.939361	Italy	Galhassin Robotic Telescope, Isnello
+L35	 30.5086	+50.262816	Ukraine	DreamSky Observatory, Lisnyky
+L36	 14.78008	+49.909487	Czech Republi	Ondrejov--BlueEye600 Telescope
+L37	353.73883	+36.585182	Spain	Observatorio Alnitak, El Puerto de Santa Maria
+L38	  9.69997	+52.095277	Germany	Gartensternwarte Schafsweide, Sehlde
+L39	 11.04031	+43.789205	Italy	Osservatorio Spica, Signa
+L40	  6.95681	+49.252813	Germany	Sternwarte Saarbruecken Rastpfuhl
+L41	 12.30181	+43.988621	Italy	Ponte Uso
+L42	 11.5633	+42.646824	Italy	Observatory-Astrocamp Manciano
+L43	  0.74439	+42.019186	Spain	Ager, Leida
+L44	  6.22111	+46.619606	Switzerland	AstroVal, Le Chenit
+L45	 15.06243	+37.537428	Italy	ObsCT, Catania
+L46	356.11939	+40.460865	Spain	Observatorio Majadahonda
+L47	 12.50711	+43.585895	Italy	Osservatorio Astronomico, Piobbico
+L48	 23.56873	+47.658052	Romania	CNVL Observatory, Baia Mare
+L49	 13.00730	+47.923899	Austria	VEGA-Sternwarte, Dorfleiten
+L50	 34.0114	+44.738732	Ukraine	GenShtab Observatory, Nauchnij
+L51	 34.0164	+44.729400	Ukraine	MARGO, Nauchnij
+L52	 34.01694	+44.730130	Ukraine	MASTER-Tavrida
+L53	  9.03381	+45.705208	Italy	Lomazzo Observatory, Como
+L54	 22.88881	+45.616531	Romania	Berthelot Observatory, Hunedoara
+L55	 35.08750	+48.320586	Ukraine	Sura Gardens, Dnipro
+L56	  8.05858	+50.381562	Germany	Sternwarte Limburg, Limburg
+L57	 26.90419	+46.565635	Romania	Bacau Observatory, Bacau
+L58	 30.57108	+46.331167	Ukraine	Heavenly Owl observatory
+L59	  1.22606	+49.438402	France	Compustar Observatory, Rouen
+L60	 30.69722	+49.933611	Ukraine	Popovich Observatory, Ivanivka
+L61	 20.81028	-32.378897	South Africa	MONET South, Sutherland
+L62	 12.52889	+44.086121	Italy	Hypatia Observatory, Rimini
+L63	 11.00914	+43.738450	Italy	HOB Observatory, Capraia Fiorentina
+L64	  9.36314	+45.524485	Italy	Martesana Observatory, Cassina de Pecchi
+L65	  8.82831	+53.075281	Germany	Bredenkamp Observatory, Bremen
+L66	 20.81122	-32.379904	South Africa	MeerLICHT-1, Sutherland
+L67	 37.79889	+55.961388	Russia	Cherkizovo Observatory, Moscow Oblast
+L68	 25.53683	-33.987939	South Africa	PESCOPE, Port Elizabeth
+L69	 28.2142	-25.834328	South Africa	LaCaille Observatory, Pretoria
+L70	 15.92333	+45.819577	Croatia	Zvjezdarnica Graberje, Zagreb
+L71	 38.5839	+44.791477	Russia	Vedrus Observatory, Azovskaya
+L72	 38.6928	+56.049008	Russia	Melezhy Astrophoto Observatory
+L73	 11.26183	+43.675409	Italy	Beato Ermanno Observatory, Impruneta
+L74	 14.21109	+40.879156	Italy	AstroColauri, Naples
+L75	 26.46394	+58.264015	Estonia	Tartu Observatory of Tartu University
+L76	 39.65161	+46.976196	Russia	Nomad Observatory, Kochevanchik
+L77	 39.82025	+47.336868	Russia	RDSS, Kovalevka
+L78	 14.7800	+40.682532	Italy	San Marco Observatory, Salerno
+L79	 18.22039	+45.953082	Hungary	BOSZA Observatory, Szalanta
+L80	 18.0175	-23.460102	Namibia	SpringBok Observatory, Tivoli
+L81	 16.36169	-23.236422	Namibia	Skygems Namibia Remote Observatory
+L82	352.67950	+39.275814	Portugal	Crow Observatory, Portalegre
+L83	356.22231	+37.787351	Spain	UJA Observatory, Jaen
+L84	 41.27989	+46.034028	Russia	Kairos Observatory, Letnik
+L85	 15.86325	+40.028874	Italy	BiAnto Observatory, Lauria
+L86	  9.2631	+44.754974	Italy	Giordano Bruno Observatory, Brallo
+L87	 16.36189	-23.236422	Namibia	Moonbase South Observatory, Hakos
+L88	 16.5422	+39.102953	Italy	Stazione Astronomica Le Pleiadi, Pantane
+L89	 11.14439	+43.865166	Italy	PAO, Prato
+L90	 15.97949	+38.455736	Italy	ABObservatory, Rosarno
+L91	 13.8078	+41.705150	Italy	Antares MTM Observatory, S. Donato
+L92	 16.00211	+38.705394	Italy	San Costantino
+L93	  1.77221	+41.258806	Spain	Garraf Observatory, Sant Pere de Ribes
+L94	354.14561	+43.364161	Spain	Observatorio MOMA, Oviedo
+L95	358.95159	+37.612347	Spain	Observatorio Astronomico de Cartagena
+L96	 44.2745	+40.347550	Armenia	ISON-Byurakan Observatory
+L97	357.99161	+51.437018	UK/England	Castle Fields Observatory, Calne
+L98	357.43425	+37.982643	Spain	La Sagra Observatory, Puebla de Don Fadrique
+L99	 30.60281	+50.607688	Ukraine	Novoselki
+M02	  0.86386	+41.123329	Spain	Astropriorat Observatory
+M03	  2.25822	+41.456428	Spain	Badalona Boreal
+M04	  1.4256	+41.717450	Spain	Pujalt Observatory, Barcelona
+M09	  5.60094	+51.032739	Belgium	Observatory Gromme - Oudsbergen
+M10	  6.85411	+43.692307	France	CPF Observatory, St Vallier de Thiey
+M11	  5.64718	+43.999389	France	Novaastro Observatory, Banon
+M14	  8.78939	+45.673318	Italy	Schiaparelli Gallarate Station
+M15	  9.1506	+45.640009	Italy	Virgo Oservatory, Seveso
+M16	  9.77319	+44.094900	Italy	Osservatorio Il Coreggiolo
+M17	  9.80922	+44.111291	Italy	SN1572 Tycho Observatory, La Spezia
+M18	 11.83939	+50.335757	Germany	Koeditz
+M19	 13.88327	+44.863912	Croatia	Osservatorio Explorer, Pula
+M20	 13.01169	+46.469391	Italy	Polse di Cougnes Observatory, Zuglio
+M21	 16.36144	-23.236551	Namibia	Schiaparelli Southern Observatory, Hakos
+M22	 20.81059	-32.380158	South Africa	ATLAS South Africa, Sutherland
+M23	 16.60350	+47.258007	Hungary	ELTE Gothard Observatory, Szombathely
+M24	 16.20050	+38.169874	Italy	Ardore Marina
+M25	 23.8283	+61.494525	Finland	Einarin Observatory, Tampere
+M26	 11.13494	+43.774586	Italy	Zen Observatory, Scandicci
+M27	 10.7175	+43.429222	Italy	Elijah Observatory, Lajatico
+M28	 20.81064	-32.379792	South Africa	Lesedi Telescope-SAAO Observatory, Sutherland
+M29	 12.24864	+44.147748	Italy	O.M.Ni.A. Observatory, Cesena
+M30	 25.62000	+45.644270	Romania	Zeta Aquarii Observatory, Brasov
+M31	 26.21281	+60.733519	Finland	Ursa Havaintokeskus,  Artjarvi
+M32	 22.70919	+48.379032	Ukraine	Sunny Transcarpathian, Mukachevo
+M33	 34.76334	+30.597722	Israel	OWL-Net, Mitzpe Ramon
+M34	 17.27363	+48.372520	Slovakia	AGO70, Astronomical Observatory, Modra
+M35	 26.61669	+46.575381	Romania	PS Observatory, Parjol
+M36	 13.79647	+45.693884	Italy	Opicina, Trieste
+M37	 13.91243	+45.920164	Slovenia	Astronomsko drustvo Nanos, Ajdovscina
+M39	 22.95888	+40.630651	Greece	AUTH Observatory, Thessaloniki
+M40	 31.82708	+29.936004	Egypt	OSTS-NRIAG, Kottamia
+M41	 39.25827	+21.521802	Saudi Arabia	Jeddah
+M42	 54.6708	+24.580820	United Arab E	Emirates Observatory, Al Rahba
+M43	 54.68478	+24.176308	United Arab E	Al Sadeem Observatory, Abu Dhabi
+M44	 54.92031	+24.219597	United Arab E	Al-Khatim Observatory, Abu Dhabi
+M46	 55.45033	+25.213476	United Arab E	Althuraya Astronomy Center, Dubai
+M47	 55.46205	+25.282675	United Arab E	Sharjah Observatory, Sharjah
+M48	 15.09222	+37.506621	Italy	GAC - Via L. Sturzo Observatory, Catania
+M90	 65.4286	+56.946120	Russia	Chervishevo
+N27	 73.7253	+54.748119	Russia	Omsk-Yogik Observatory
+N30	 74.3694	+31.472983	Pakistan	Zeds Astronomical Observatory, Lahore
+N31	 74.44422	+31.513501	Pakistan	Eden Astronomical Observatory, Lahore
+N42	 76.97181	+43.057299	Kazakhstan	Tien-Shan Astronomical Observatory
+N43	 77.1167	-80.417417	Antarctica	Plateau Observatory for Dome A, Kunlun Station
+N44	 77.13931	+38.384471	China	Shache Station, Langan Village
+N50	 78.96383	+32.779547	India	Himalayan Chandra Telescope, IAO, Hanle
+N51	 78.96461	+32.779243	India	GROWTH India Telescope, IAO, Hanle
+N55	 80.02623	+32.326059	China	Beimian Tianwentai, Ali, Tibet
+N56	 80.02675	+32.325098	China	Jiama'erdeng Tianwentai, Ali, Tibet
+N82	 85.95494	+50.172048	Russia	Multa Observatory
+N83	 86.23504	+41.552659	China	LW-1, NAOC-Korla
+N86	 87.17852	+43.473808	China	Xingming Observatory-KATS, Nanshan
+N87	 87.17503	+43.473613	China	Nanshan Station, Xinjiang Observatory
+N88	 87.17322	+43.471787	China	Xingming Observatory #3, Nanshan
+N89	 87.17906	+43.470806	China	Xingming Observatory #2, Nanshan
+O02	 90.52614	+30.103182	China	Galaxy Tibet YBJ Observatory,Yangbajing
+O17	 93.88669	+38.588778	China	Purple Mountain Observatory, Lenghu-1
+O37	 98.48553	+18.589868	Thailand	TRT-NEO, Chiangmai
+O43	 99.78111	 +6.307021	Malaysia	Observatori Negara, Langkawi
+O44	100.0310	+26.709191	China	Lijiang Station, Yunnan Observatories
+O45	100.03261	+26.697920	China	Yunnan-HK Observatory, Gaomeigu
+O47	101.13415	+25.624399	China	Yunling Observatory, Yunnan
+O48	101.18154	+25.526524	China	Purple Mountain Observatory, Yaoan (0.8-m)
+O49	101.18111	+25.528608	China	Purple Mountain Observatory, Yaoan Station
+O50	101.43942	 +3.033412	Malaysia	Hin Hua Observatory, Klang
+O51	101.27869	+12.734700	Thailand	Akin Observatory, Rayong
+O68	105.33090	+37.629648	China	LW-2, NAOC-Zhongwei
+O72	106.33476	+47.886134	Mongolia	OWL-Net, Songino
+O75	107.05180	+47.865238	Mongolia	ISON-Hureltogoot Observatory
+O85	109.21300	+34.352281	China	LiShan Observatory, Lintong
+P07	114.08987	-21.895687	Australia/WA	Space Surveillance Telescope, HEH Station
+P18	116.61083	+40.898907	China	Birch Forest Observatory, LaBaGouMen
+P22	117.57588	+40.394252	China	LW-3, NAOC-Xinglong
+P25	118.31274	+24.432463	China	Kinmen Educational Remote Observatory, Jincheng
+P30	119.59708	+30.468691	China	Jiangnantianchi Observatory, Anji
+P31	119.59736	+30.469175	China	Starlight Observatory, Tianhuangping
+P34	120.32031	+31.321361	China	Lvye Observatory, Suzhou
+P35	120.55699	+24.093399	Taiwan	Cuteip Remote Observatory, Changhua
+P36	120.62669	+31.302952	China	ULTRA Observatory,Suzhou
+P37	120.63972	+24.153164	Taiwan	HuiWen High School Observatory, Taichung City
+P40	121.53958	+25.134642	Taiwan	Chinese Culture University, Taipei
+P48	123.32403	-75.100395	Antarctica	ASTEP, Concordia Station
+P64	127.00489	+37.308898	South Korea	GSHS Observatory, Suwon
+P65	127.37568	+36.397627	South Korea	OWL-Net, Daedeok
+P66	127.44675	+34.526296	South Korea	Deokheung Optical Astronomy Observatory
+P67	127.7415	+37.871793	South Korea	Kangwon National University Observatory
+P71	128.76108	+35.502785	South Korea	Miryang Arirang Astronomical Observatory
+P72	128.97595	+36.163884	South Korea	OWL-Net, Mt. Bohyun
+P73	129.0820	+35.263076	South Korea	BSH Byulsem Observatory, Busan
+P87	132.09419	+33.954136	Japan	Hirao Observatory, Yamaguchi
+P93	133.54433	+34.672353	Japan	Space Tracking and Communications Center, JAXA
+Q02	135.49344	+34.470698	Japan	Sakai Observatory, Osaka
+Q10	137.32944	+34.843619	Japan	Toyokawa Observatory
+Q11	137.52069	+34.984299	Japan	Shinshiro
+Q12	137.82536	+36.476962	Japan	Nagano Observatory
+Q19	139.4390	+35.573820	Japan	Machida
+Q21	139.85335	+36.507360	Japan	Southern Utsunomiya
+Q23	140.3864	+37.295470	Japan	Sukagawa
+Q24	140.52350	+35.898994	Japan	Katori
+Q33	142.48278	+44.373646	Japan	Nayoro Observatory, Hokkaido University
+Q38	143.5506	-35.352090	Australia/VIC	Swan Hill
+Q54	147.28772	-42.431138	Australia/Tas	Harlingten Telescope, Greenhill Observatory
+Q55	149.06142	-31.272133	Australia/NSW	SkyMapper, Siding Spring
+Q56	148.97642	-34.864169	Australia/NSW	Heaven's Mirror Observatory, Yass
+Q57	149.06173	-31.271167	Australia/NSW	Korea Microlensing Telescope Network-SSO
+Q58	149.07085	-31.272855	Australia/NSW	Siding Spring-LCO Clamshell #1
+Q59	149.07081	-31.272936	Australia/NSW	Siding Spring-LCO Clamshell #2
+Q60	149.06900	-31.272985	Australia/NSW	ISON-SSO Observatory, Siding Spring
+Q61	149.0619	-31.271682	Australia/NSW	PROMPT, Siding Spring
+Q62	149.06442	-31.273289	Australia/NSW	iTelescope Observatory, Siding Spring
+Q63	149.07064	-31.273002	Australia/NSW	Siding Spring-LCO A
+Q64	149.07078	-31.273002	Australia/NSW	Siding Spring-LCO B
+Q65	149.19313	-31.276327	Australia/NSW	Warrumbungle Observatory
+Q66	149.06425	-31.273299	Australia/NSW	Siding Spring-Janess-G, JAXA
+Q67	149.49233	-33.397063	Australia/NSW	JBL Observatory, Bathurst
+Q68	150.33742	-33.702135	Australia/NSW	Blue Mountains Observatory, Leura
+Q69	150.44933	-33.712916	Australia/NSW	Hazelbrook
+Q70	150.50044	-23.269456	Australia/QLD	Glenlee Observatory, Glenlee
+Q78	152.94789	-27.605675	Australia/QLD	Woogaroo Observatory, Forest Lake
+Q79	152.8481	-27.368290	Australia/QLD	Samford Valley Observatory
+Q80	153.2160	-27.503454	Australia/QLD	Birkdale
+Q81	153.09622	-26.800858	Australia/QLD	Caloundra West
+R57	170.47278	-44.008206	New Zealand	Aorangi Iti Observatory, Lake Tekapo
+R58	170.49039	-45.864384	New Zealand	Beverly-Begg Observatory, Dunedin
+R65	172.34981	-43.498734	New Zealand	R. F. Joyce Observatory, Christchurch
+R66	172.58761	-43.495302	New Zealand	Mooray Observatory, Christchurch
+T03	203.74247	+20.706986	US/Hawaii	Haleakala-LCO Clamshell #3
+T04	203.74249	+20.706966	US/Hawaii	Haleakala-LCO OGG B #2
+T05	203.74299	+20.707573	US/Hawaii	ATLAS-HKO, Haleakala
+T07	204.42387	+19.536152	US/Hawaii	ATLAS-MLO Auxiliary Camera, Mauna Loa
+T08	204.42395	+19.536152	US/Hawaii	ATLAS-MLO, Mauna Loa
+T09	204.52398	+19.825490	US/Hawaii	Subaru Telescope, Maunakea
+T10	204.52241	+19.824136	US/Hawaii	Submillimeter Array, Maunakea (SMA)
+T11	204.53036	+19.822889	US/Hawaii	United Kingdom Infrared Telescope, Maunakea
+T12	204.53057	+19.822983	US/Hawaii	University of Hawaii 88-inch telescope, Maunakea
+T13	204.52771	+19.827191	US/Hawaii	NASA Infrared Telescope Facility, Maunakea
+T14	204.53113	+19.825280	US/Hawaii	Canada-France-Hawaii Telescope, Maunakea
+T15	204.53094	+19.823834	US/Hawaii	Gemini North Observatory, Maunakea
+T16	204.52570	+19.826253	US/Hawaii	W. M. Keck Observatory, Keck 1, Maunakea
+T17	204.52580	+19.826636	US/Hawaii	W. M. Keck Observatory, Keck 2, Maunakea
+T35	210.39020	-17.563461	Tahiti	Astronomical Society of Tahiti
+U52	237.45111	+41.579167	US/California	Shasta Valley Observatory, Grenada
+U53	237.1603	+45.450107	US/Oregon	Murray Hill Observatory, Beaverton
+U54	237.31286	+38.565903	US/California	Hume Observatory, Santa Rosa
+U55	237.41456	+49.253279	Canada/BritCo	Golden Ears Observatory, Maple Ridge
+U56	237.86917	+37.433102	US/California	Palo Alto
+U57	237.84128	+37.366692	US/California	Black Mountain Observatory, Los Altos
+U63	239.19456	+47.162715	US/Washington	Burnt Tree Hill Observatory, Cle Elum
+U64	239.46151	+47.000247	US/Washington	CWU-Lind Observatory, Ellensburg
+U65	239.45983	+47.002078	US/Washington	CWU Observatory, Ellensburg
+U67	240.20358	+39.185603	US/Nevada	Jack C. Davis Observatory, Carson City
+U68	240.58701	+37.070390	US/California	JPL SynTrack Robotic Telescope, Auberry
+U69	240.5870	+37.070390	US/California	iTelescope SRO Observatory, Auberry
+U70	240.5869	+37.070390	US/California	RASC Observatory, Alder Springs
+U71	241.3633	+34.485863	US/California	AHS Observatory, Castaic
+U72	241.46000	+34.183055	US/California	Tarzana
+U73	241.6172	+33.821671	US/California	Redondo Beach
+U74	240.58720	+37.070344	US/California	JPL SynTrack Robotic Telescope 2, Auberry
+U75	242.18366	+33.607628	US/California	Newport Beach
+U76	242.1279	+34.142213	US/California	Maury Lewin Observatory, Glendora
+U77	242.9181	+32.946672	US/California	Rani Observatory, San Diego
+U78	242.8449	+34.258673	US/California	Cedar Glen Observatory
+U79	242.79187	+33.072374	US/California	Cosmos Research Center, Encinitas
+U80	243.6151	+34.272596	US/California	CS3-DanHenge Observatory, Landers
+U81	243.61514	+34.272551	US/California	CS3-Trojan Station, Landers
+U82	243.61519	+34.272471	US/California	CS3-Palmer Divide Station, Landers
+U83	243.57311	+32.842004	US/California	Mount Laguna Observatory
+U96	246.68600	+54.713670	Canada/Albert	Athabasca University Geophysical Observatory
+U97	248.33292	+35.202997	US/Arizona	JPL SynTrack Robotic Telescope 3, Flagstaff
+U98	249.74300	+31.941291	US/Arizona	NAC Observatory, Benson
+V00	248.39981	+31.963127	US/Arizona	Kitt Peak-Bok
+V01	248.23911	+40.448904	US/Utah	Mountainville Observatory, Alpine
+V02	248.05794	+33.399758	US/Arizona	Command Module, Tempe
+V03	248.3314	+37.083379	US/Utah	Big Water
+V04	248.46331	+35.095868	US/Arizona	FRoST, Anderson Mesa
+V05	248.63195	+33.310395	US/Arizona	Rusty Mountain Observatory, Gold Canyon
+V06	249.26745	+32.416847	US/Arizona	Catalina Sky Survey-Kuiper
+V07	249.1219	+31.680709	US/Arizona	Whipple Observatory, Mount Hopkins-PAIRITEL
+V08	249.33900	+32.079598	US/Arizona	Mountain Creek Ranch, Vail
+V09	249.74202	+31.940560	US/Arizona	Moka Observatory, Benson
+V10	248.32772	+35.170189	US/Arizona	Sierra Sinagua Observatory, Flagstaff
+V11	249.21119	+32.208838	US/Arizona	Saguaro Observatory, Tucson
+V12	249.39819	+31.665610	US/Arizona	Elgin
+V13	248.78278	+40.451944	US/Utah	Little Moose Observatory, Timber Lakes
+V14	248.78336	+40.455730	US/Utah	Moose Springs Observatory, Timber Lakes
+V15	249.21069	+32.442202	US/Arizona	OWL-Net, Mt. Lemmon
+V16	251.10288	+31.946944	US/New Mexico	Dark Sky New Mexico, Animas
+V17	248.98319	+32.373981	US/Arizona	Leo Observatory, Tucson
+V18	249.6181	+31.056034	Mexico	MASTER-OAGH Observatory, Sonora
+V19	251.79086	+32.829983	US/New Mexico	Whiskey Creek Observatory
+V20	251.77822	+34.327333	US/New Mexico	Killer Rocks Observatory, Pie Town
+V21	251.10231	+31.946621	US/New Mexico	Cewanee Observatory at DSNM
+V22	251.81550	+34.327076	US/New Mexico	Insight Remote Observatory, Pie Town
+V23	252.76406	+34.147702	US/New Mexico	FOAH Observatory, Magdalena
+V26	253.39020	+24.401562	Mexico	UAS-ISON Observatory, Cosala
+V27	253.71819	+35.890115	US/New Mexico	North Mesa Observatory, Los Alamos
+V28	254.34647	+35.331087	US/New Mexico	Deep Sky West Observatory, Rowe
+V29	254.26660	+32.979417	US/New Mexico	Tzec Maun Cloudcroft Facility
+V30	254.47105	+32.903532	US/New Mexico	Heaven on Earth Observatory, Mayhill
+V31	254.4750	+32.913751	US/New Mexico	Hazardous Observatory, Mayhill
+V32	254.47131	+32.903322	US/New Mexico	Canvas View New Mexico Skies, Mayhill
+V33	254.72039	+36.380357	US/New Mexico	Finlaystone Observatory, Angel Fire
+V34	255.36992	+39.004636	US/Colorado	Black Forest
+V35	255.91881	+30.588443	US/Texas	Deep Sky Observatory Collaborative, Pier 5
+V36	255.61742	+32.638535	US/New Mexico	The Ranch Observatory, Lakewood
+V37	255.98483	+30.679870	US/Texas	McDonald Observatory-LCO ELP
+V38	255.98493	+30.680077	US/Texas	McDonald Observatory-LCO ELP Aqawan A #1
+V39	255.98452	+30.680028	US/Texas	McDonald Observatory-LCO ELP B
+V40	255.91873	+30.588443	US/Texas	Divine Creation Observatory, Fort Davis
+V41	256.72578	+44.052007	US/South Dako	Rapid City
+V58	260.73497	+29.778158	US/Texas	Medina Dome, Medina
+V59	261.0734	+30.046447	US/Texas	Millwood Observatory, Comfort
+V60	261.09473	+30.534071	US/Texas	Putman Mountain Observatory
+V61	261.05710	+30.975730	US/Texas	Shed of Science South, Pontotoc
+V62	261.05661	+30.975779	US/Texas	Live Oak Observatory, Pontotoc
+V63	261.05728	+30.975444	US/Texas	Tara Observatory, Cherokee
+V70	263.33572	+29.619051	US/Texas	Starry Night Observatory, Columbus
+V72	263.89011	+41.274124	US/Nebraska	JDP Observatory, Omaha
+V74	264.15689	+29.703308	US/Texas	Katy Observatory, Katy
+V78	265.10780	+45.660977	US/Minnesota	Spirit Marsh Observatory. Sauk Centre
+V81	265.7604	+36.095422	US/Arkansas	Fayetteville
+V83	266.25728	+38.677354	US/Missouri	Rolling Hills Observatory, Warrensburg
+V86	266.8927	+38.633315	US/Missouri	Rattle Snake Observatory, Sedalia
+V88	267.42811	+34.946273	US/Arkansas	River Ridge Observatory, Conway
+V93	268.61611	+40.653352	US/Iowa	Pin Oak Observatory, Fort Madison
+V94	268.66169	+40.643752	US/Iowa	Cherokeeridge Observatory, Fort Madison
+W04	271.00944	+40.491610	US/Illinois	Mark Evans Observatory, Bloomington
+W08	271.88331	+41.758980	US/Illinois	Jimginny Observatory, Naperville
+W09	272.14753	+41.256136	US/Illinois	Willowed Plains Observatory, Manteno
+W11	272.6247	+41.270841	US/Indiana	Northwest Indiana Robotic Telescope, Lowell
+W14	273.24511	+34.816697	US/Alabama	Harvest
+W15	273.19083	+35.912496	US/Tennessee	Wayne Observatory, Franklin
+W16	273.76869	+34.711891	US/Alabama	Pleasant Groves Observatory
+W18	274.24962	+40.008446	US/Indiana	Red Fox Observatory, Pendleton
+W19	274.37283	+42.300452	US/Michigan	Kalamazoo
+W22	275.00447	+32.459694	US/Georgia	WestRock Observatory, Columbus
+W23	275.38019	+39.492126	US/Ohio	Hevonen Farm Observatory, Oxford
+W24	275.23817	+43.830760	US/Michigan	Shamrock Banks Observatory, Clare
+W25	275.63506	+39.163116	US/Ohio	RMS Observatory, Cincinnati
+W28	276.3883	+33.982895	US/Georgia	Ex Nihilo Observatory, Winder
+W29	276.9939	+40.048565	US/Ohio	Adena Brook Observatory, Columbus
+W30	276.77117	+33.082852	US/Georgia	Georgia College Observatory, Milledgeville
+W31	277.23736	+33.555123	US/Georgia	Deerlick Observatory, Crawfordville
+W32	277.23750	+33.555538	US/Georgia	Crawfordville Observatory
+W33	277.83451	+35.077819	US/South Caro	Transit Dreams Observatory, Campobello
+W34	277.8453	+35.225393	US/North Caro	Squirrel Valley Observatory, Columbus
+W35	278.03910	+31.146836	US/Georgia	Buffalo Creek Observatory, Nahunta
+W38	278.58531	+36.252691	US/North Caro	Dark Sky Observatory, Boone
+W42	279.46569	+27.764539	US/Florida	Mind's Eye Observatory, Vero Beach
+W46	280.41192	+35.145627	US/North Caro	Foxfire Village
+W48	280.88700	+35.831005	US/North Caro	BKH Observatory, Chapel Hill
+W49	281.06757	+38.952839	US/West Virgi	CBA-MM Observatory, Mountain Meadows
+W50	281.25404	+35.690054	US/North Caro	Apex
+W52	283.51419	+38.985324	US/Maryland	US Naval Academy Hopper Hall Observatory
+W53	282.31524	+39.639374	US/Maryland	Hagerstown
+W54	282.28944	+38.333748	US/Virginia	Mark Slade Remote Observatory, Wilderness
+W55	282.58389	+39.407774	US/Maryland	Natelli Observatory, Frederick
+W56	282.52583	+39.459533	US/Maryland	Pineapple Observatory, Frederick
+W57	289.26094	-29.255188	Chile	ESA TBT La Silla Observatory
+W58	283.14964	+39.046892	US/Maryland	ALPHA Observatory, South Laurel
+W59	284.10758	+40.897966	US/Pennsylvan	The Dark Side Observatory, Weatherly
+W60	286.36626	 +5.610983	Colombia	AstroExplor Observatory, Tinjaca
+W61	283.74492	+44.586395	Canada/Ontari	Leeside Observatory, Elgin
+W62	284.13761	+40.745188	US/Pennsylvan	Comet Hunter Observatory2, New Ringgold
+W63	284.30958	 +4.790538	Colombia	Observatorio Astronomico UTP, Pereira
+W64	285.27004	+39.887267	US/New Jersey	Red Lion Observatory, Southampton Twsp
+W65	284.79169	+45.850016	Canada/Quebec	Observatoire GOZ, Montpellier
+W66	285.05381	+40.960335	US/New Jersey	SVH Observatory, Blairstown
+W67	285.10211	+40.681845	US/NJersey	Paul Robinson Observatory, Voorhees State Park
+W68	289.23502	-30.471012	Chile	ATLAS Chile, Rio Hurtado
+W69	285.98500	+40.639006	US/New York	OLPH Observatory, Brooklyn
+W70	285.91386	+45.792560	Canada/Quebec	Loose Goose Observatory, Saint-Jerome
+W71	285.99297	+44.261139	US/New York	Rand II Observatory, Lake Placid
+W72	286.8211	+41.243074	US/Connecticu	Trumbull Observatory, Trumbull
+W73	289.32156	-16.828157	Peru	Observatorio Astronomico de Moquegua, Carumas
+W74	289.26245	-29.257911	Chile	Danish Telescope, La Silla
+W75	289.60944	-24.616088	Chile	SPECULOOS-South Observatory, Paranal
+W76	289.23695	-30.472508	Chile	CHILESCOPE Observatory, Rio Hurtad
+W77	287.4010	+41.335888	US/Connecticu	Skyledge Observatory, Killingworth
+W78	288.88325	+42.376505	US/Massachuse	Clay Telescope, Harvard University
+W79	289.19535	-30.167671	Chile	Cerro Tololo-LCO Aqawan B #1
+W80	288.7678	+42.247271	US/Massachuse	Westwood
+W81	288.99967	+43.665919	US/New Hampsh	Nebula Knoll Observatoy, East Wakefield
+W82	288.87804	+42.669325	US/Massachuse	Mendel Observatory, Merrimack College
+W83	288.69747	+42.294822	US/Massachuse	Whitin Observatory, Wellesley
+W84	289.19358	-30.169597	Chile	Cerro Tololo-DECam
+W85	289.19519	-30.167407	Chile	Cerro Tololo-LCO A
+W86	289.19533	-30.167328	Chile	Cerro Tololo-LCO B
+W87	289.19532	-30.167456	Chile	Cerro Tololo-LCO C
+W88	289.46570	-33.269128	Chile	Slooh.com Chile Observatory, La Dehesa
+W89	289.19533	-30.167663	Chile	Cerro Tololo-LCO Aqawan A #1
+W90	289.05814	+42.979452	US/New Hampsh	Phillips Exeter Academy Grainger Observatory
+W91	289.60257	-24.615840	Chile	VHS-VISTA, Cerro Paranal
+W92	290.67357	-31.802281	Argentina	MASTER-OAFA Observatory, San Juan
+W93	289.19600	-30.167216	Chile	Korea Microlensing Telescope Network-CTIO
+W94	291.82019	-22.953076	Chile	MAP, San Pedro de Atacama
+W95	291.82012	-22.953180	Chile	Observatorio Panameno, San Pedro de Atacama
+W96	291.82006	-22.953490	Chile	CAO, San Pedro de Atacama (since 2013)
+W97	291.82024	-22.953415	Chile	Atacama Desert Observatory, San Pedro de Atacama
+W98	291.82030	-22.953180	Chile	Polonia Observatory, San Pedro de Atacama
+W99	291.82015	-22.953415	Chile	SON, San Pedro de Atacama Station
+X00	292.60125	-24.589539	Argentina	Observatorio Astronomico Tolar
+X01	289.23502	-30.471033	Chile	Observatory Hurtado, El Sauce
+X02	289.23517	-30.470668	Chile	Telescope Live, El Sauce
+X03	289.20361	-30.533917	Chile	Observatoire SADR, Poroto
+X04	291.56747	+48.469954	Canada/Quebec	MCD Observatory, Saint-Anaclet
+X05	289.25058	-30.244603	Chile	Simonyi Survey Telescope, Rubin Observatory
+X12	295.71200	-36.635593	Argentina	Observatorio Los Cabezones
+X13	295.4498	-31.598171	Argentina	Observatorio Remoto Bosque Alegre
+X14	295.83222	-31.389999	Argentina	Observatorio Orbis Tertius, Cordoba
+X31	299.47934	-31.823022	Argentina	Galileo Galilei Observatory, Oro Verde
+X33	299.99039	 -2.997379	Brazil	OARU, Manaus
+X38	301.13711	-34.435686	Argentina	Observatorio Pueyrredon, La Lonja
+X39	301.1378	-34.385269	Argentina	Observatorio Antares, Pilar
+X40	301.61689	-34.747330	Argentina	Cielos de Banfield, Banfield
+X50	303.82419	-34.903699	Uruguay	Observatorio Astronomico de Montevideo
+X57	305.40626	-25.434816	Brazil	Polo Astronomico CMF,Foz do Iguacu
+X70	308.43322	-21.384967	Brazil	Observatorio OATU, Tupi Paulista
+X74	309.1506	-21.661263	Brazil	Observatorio Campo dos Amarais
+X87	312.0889	-15.891703	Brazil	Dogsheaven Observatory, Brasilia
+X88	312.49131	-23.445389	Brazil	Observatorio Adhara, Sorocaba
+X89	312.21786	-15.844483	Brazil	Rocca Observatory, Brasilia
+X90	312.13208	-15.656914	Brazil	Carina Observatory, Brasilia
+X93	313.6047	-22.628914	Brazil	Munhoz Observatory
+Y00	315.21504	-20.715082	Brazil	SONEAR Observatory, Oliveira
+Y16	318.68794	-21.745265	Brazil	ROCG, Campos dos Goytacazes
+Y28	321.3126	 -8.788707	Brazil	OASI, Nova Itacuruba
+Y40	324.03889	 -8.288643	Brazil	Discovery Observatory, Caruaru
+Y90	354.5553	+43.203490	Spain	Observatorio ESTELIA, Ladines
+Y91	354.83350	+36.732104	Spain	Ras Algethi, Ronda
+Z00	353.26586	+37.104084	Spain	BOOTES-1, Mazagon
+Z01	352.13321	+31.206060	Morocco	OWL-Net, Oukaimeden
+Z02	352.13331	+31.206172	Morocco	HAO observatory, Oukaimeden
+Z03	355.73346	+40.523696	Spain	Rio Cofio, Robledo de Chavela
+Z04	352.98203	+33.601394	Morocco	MAO, Ain Laqsab
+Z05	355.36389	+36.710515	Spain	Observatorio Horus, Cartama
+Z06	357.67324	+38.165593	Spain	Marina Sky, Nerpio
+Z07	356.36050	+37.111289	Spain	Ad Astra Sangos Observatory, Alhendin
+Z08	357.59139	+37.501038	Spain	Telescope Live, Oria
+Z09	356.8786	+51.159629	UK/England	Old Orchard Observatory, Fiddington
+Z10	353.37235	+38.215823	Spain	PGC, Fregenal de la Sierra
+Z11	358.96669	+53.106104	UK/England	Appledorne Observatory, Farnsfield
+Z12	359.0961	+38.384145	Spain	La Romaneta, Monovar
+Z13	355.54519	+36.722641	Spain	Observatorio AGP GUAM 4, Malaga
+Z14	353.37226	+38.215845	Spain	ART, Fregenal de la Sierra
+Z15	359.65331	+51.018662	UK/England	Southwater
+Z16	358.95192	+37.612323	Spain	Asociacion Astronomica de Cartagena
+Z17	343.48827	+28.300316	Canary Island	Tenerife-LCO Aqawan A #2
+Z18	342.10811	+28.756590	Canary Island	Gran Telescopio Canarias, Roque de los Muchachos
+Z19	342.11094	+28.753995	Canary Island	La Palma-TNG
+Z20	342.1217	+28.762012	Canary Island	La Palma-MERCATOR
+Z21	343.48830	+28.300332	Canary Island	Tenerife-LCO Aqawan A #1
+Z22	343.4894	+28.298890	Canary Island	MASTER-IAC Observatory, Tenerife
+Z23	342.11492	+28.757277	Canary Island	Nordic Optical Telescope, La Palma
+Z24	343.48848	+28.300546	Canary Island	Tenerife Observatory-LCO B, Tenerife
+Z25	343.49031	+28.300012	Canary Island	Artemis Observatory, Teide
+Z26	343.38969	+28.078226	Canary Island	Observatorio Astronomico Arcangel, Las Zocas
+Z27	343.6998	+28.472491	Canary Island	Observatorio Coralito, La Laguna
+Z28	357.67331	+38.165719	Spain	Northern Skygems Observatory, Nerpio
+Z29	354.11944	+41.372224	Spain	Observatorio Astronomico Sobradillo
+Z30	355.52500	+54.178411	UK/Isle of Ma	Glyn Marsh Observatory, Douglas
+Z31	343.48835	+28.300417	Canary Island	Tenerife Observatory-LCO A, Tenerife
+Z32	358.98372	+40.041843	Spain	Observatorio Astrofisico de Javalambre
+Z33	357.67331	+38.165746	Spain	6ROADS Observatory 2, Nerpio
+Z34	359.11233	+52.302083	UK/England	NNHS Drummonds Observatory
+Z35	358.8985	+39.945062	Spain	OAO University Observatory Station Aras
+Z36	354.94553	+36.461066	Spain	Cancelada
+Z37	357.80426	+50.839047	UK/England	Northolt Branch Observatory 3, Blandford Forum
+Z38	351.15294	+39.856140	Portugal	Picoto Observatory, Leiria
+Z39	346.4989	+28.996159	Canary Island	Observatorio Costa Teguise
+Z40	355.5127	+36.733872	Spain	El Manzanillo Observatory, Puerto de la Torre
+Z41	356.6264	+40.561118	Spain	Irydeo Observatory, Camarma de Esteruelas
+Z42	357.66579	+50.934434	UK/England	Rushay Farm Observatory, Sturminster Newton
+Z43	357.46216	+48.434104	France	Landehen
+Z44	351.67248	+43.318117	Spain	Observatorio Terminus, A Coruna
+Z45	355.14264	+36.516212	Spain	Cosmos Observatory, Marbella
+Z46	356.80700	+51.514032	UK/Wales	Cardiff
+Z47	357.2925	+53.333337	UK/England	Runcorn
+Z48	359.74915	+51.500075	UK/England	Northolt Branch Observatory 2, Shepherd's Bush
+Z49	357.40631	+53.801041	UK/England	Alston Observatory
+Z50	355.28431	+42.025894	Spain	Mazariegos
+Z51	356.4486	+40.360654	Spain	Anunaki Observatory, Rivas Vaciamadrid
+Z52	359.33899	+52.915118	UK/England	The Studios Observatory, Grantham
+Z53	352.1336	+31.206221	Morocco	TRAPPIST-North, Oukaimeden
+Z54	358.92214	+51.528801	UK/England	Greenmoor Observatory, Woodcote
+Z55	354.9150	+37.542483	Spain	Uraniborg Observatory, Ecija
+Z56	350.2119	+52.085639	Ireland	Knocknaboola
+Z57	355.42589	+36.656985	Spain	Observatorio Zuben, Alhaurin de la Torre
+Z58	355.63068	+40.454056	Spain	ESA TBT Cebreros Observatory
+Z59	357.71540	+53.273907	UK/England	Chelford Observatory
+Z60	357.8506	+43.038842	Spain	Observatorio Zaldibia
+Z61	359.06400	+41.629001	Spain	Montecanal Observatory, Zaragoza
+Z62	351.62912	+42.610591	Spain	Observatorio Forcarei
+Z63	358.47002	+41.830074	Spain	Skybor Observatory, Borja
+Z64	352.1424	+42.352174	Spain	Observatorio el Miron del Cielo
+Z65	352.17252	+42.249342	Spain	Observatorio Astronomico Corgas
+Z66	355.59156	+38.543547	Spain	DeSS Deimos Sky Survey, Niefla Mountain
+Z67	353.52314	+53.414420	Ireland	Dunboyne Castle Observatory
+Z68	353.4003	+38.868669	Spain	Observatorio Torreaguila, Barbano
+Z69	353.1870	+37.131467	Spain	Observatorio Mazagon Huelva
+Z70	353.35711	+42.575022	Spain	Ponferrada
+Z71	353.60972	+39.450877	Spain	Observatorio Norba Caesarina, Aldea Moret
+Z72	353.88864	+53.273256	Ireland	Cademuir Observatory, Dalkey
+Z73	353.96731	+37.403179	Spain	Observatorio Nuevos Horizontes, Camas
+Z74	354.1562	+37.334107	Spain	Amanecer de Arrakis
+Z75	354.4676	+42.598353	Spain	Observatorio Sirius, Las Lomas
+Z76	354.5644	+43.481490	Spain	Observatorio Carda, Villaviciosa
+Z77	354.88958	+37.230879	Spain	Osuna
+Z78	358.32420	+38.096870	Spain	Arroyo Observatory, Arroyo Hurtado
+Z79	357.45327	+37.220935	Spain	Calar Alto TNO Survey
+Z80	359.62808	+51.554661	UK/England	Northolt Branch Observatory
+Z81	355.73240	+36.720606	Spain	Observatorio Estrella de Mar
+Z82	355.95903	+36.759241	Spain	BOOTES-2 Observatory, Algarrobo
+Z83	356.2881	+40.610079	Spain	Chicharronian 3C Observatory, Tres Cantos
+Z84	357.45179	+37.224049	Spain	Calar Alto-Schmidt
+Z85	356.75028	+36.877254	Spain	Observatorio Sierra Contraviesa
+Z86	356.8900	+51.523936	UK/Wales	St. Mellons
+Z87	357.10210	+52.648212	UK/England	Stanley Laver Observatory, Pontesbury
+Z88	357.5101	+51.254536	UK/England	Fosseway Observatoy, Stratton-on-the-Fosse
+Z89	357.8281	+53.264567	UK/England	Macclesfield
+Z90	357.8482	+37.405564	Spain	Albox
+Z91	358.74999	+50.916485	UK/England	Curdridge
+Z92	358.39222	+53.837615	UK/England	Almalex Observatory, Leeds
+Z93	359.85589	+38.617299	Spain	Observatorio Polop, Alicante
+Z94	358.8565	+51.247283	UK/England	Kempshott
+Z95	358.8909	+39.949917	Spain	Astronomia Para Todos Remote Observatory
+Z96	359.19369	+41.696118	Spain	Observatorio Cesaraugusto
+Z97	359.41647	+45.302074	France	OPERA Observatory, Saint Palais
+Z98	359.5216	+39.601465	Spain	Observatorio TRZ, Betera
+Z99	359.97874	+53.546062	UK/England	Clixby Observatory, Cleethorpes

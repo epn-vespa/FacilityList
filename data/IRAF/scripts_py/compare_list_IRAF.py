@@ -5,10 +5,10 @@ from fuzzywuzzy import process
 
 import json
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IRAF/IRAF.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IRAF/datas/IRAF.json') as f:
     data_iraf = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/Scripts/extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 results = []
