@@ -25,7 +25,7 @@ def dummy_proc(x):
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/Scripts/naif_dsn.json') as f:
     data_naif = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts1.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 def get_scores( t ):

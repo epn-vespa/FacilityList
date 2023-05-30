@@ -1,0 +1,434 @@
+  [
+        {
+            "Teslescope Name": "Palomar 1.2m Oschin",
+            "Nickname": "P48"
+        },
+        {
+            "Teslescope Name": "Palomar 1.5m",
+            "Nickname": "P60"
+        },
+        {
+            "Teslescope Name": "Palomar 5.1m Hale",
+            "Nickname": "P200"
+        },
+        {
+            "Teslescope Name": "Keck I 10m",
+            "Nickname": "Keck1"
+        },
+        {
+            "Teslescope Name": "Keck II 10m",
+            "Nickname": "Keck2"
+        },
+        {
+            "Teslescope Name": "4m Ncholas U. Mayall Telescope",
+            "Nickname": "Mayall"
+        },
+        {
+            "Teslescope Name": "Hobby-Eberly Telescope",
+            "Nickname": "HET"
+        },
+        {
+            "Teslescope Name": "William Herschel Telescope",
+            "Nickname": "WHT-4.2m"
+        },
+        {
+            "Teslescope Name": "Lick 1m Nickel Reflector",
+            "Nickname": "Lick1m"
+        },
+        {
+            "Teslescope Name": "3m Lick Shane Reflector",
+            "Nickname": "Lick 3m"
+        },
+        {
+            "Teslescope Name": "MDM 2.4m Hiltner",
+            "Nickname": "MDM-2.4"
+        },
+        {
+            "Teslescope Name": "Nordic Optical Telescope",
+            "Nickname": "NOT"
+        },
+        {
+            "Teslescope Name": "Peters Automated Infrared Imaging Telescope",
+            "Nickname": "PAIRITEL"
+        },
+        {
+            "Teslescope Name": "Telescopio Nazionale Galileo",
+            "Nickname": "TNG"
+        },
+        {
+            "Teslescope Name": "Gemini North",
+            "Nickname": "Gemini-N"
+        },
+        {
+            "Teslescope Name": "Gemini South",
+            "Nickname": "Gemini-S"
+        },
+        {
+            "Teslescope Name": "UH 88inch",
+            "Nickname": "UH88"
+        },
+        {
+            "Teslescope Name": "Wise 1m",
+            "Nickname": "Wise1m"
+        },
+        {
+            "Teslescope Name": "Wise 18 inch",
+            "Nickname": "Wise-C18"
+        },
+        {
+            "Teslescope Name": "The Very Large Telescope - UT1",
+            "Nickname": "VLT-UT1"
+        },
+        {
+            "Teslescope Name": "The Very Large Telescope - UT2",
+            "Nickname": "VLT-UT2"
+        },
+        {
+            "Teslescope Name": "The Very Large Telescope - UT3",
+            "Nickname": "VLT-UT3"
+        },
+        {
+            "Teslescope Name": "The Very Large Telescope - UT4",
+            "Nickname": "VLT-UT4"
+        },
+        {
+            "Teslescope Name": "The ESO New Technology Telescope",
+            "Nickname": "ESO-NTT"
+        },
+        {
+            "Teslescope Name": "The ESO 2.2m at La Silla",
+            "Nickname": "ESO-2.2m"
+        },
+        {
+            "Teslescope Name": "The ESO 3.6m at La Silla",
+            "Nickname": "ESO-3.6m"
+        },
+        {
+            "Teslescope Name": "Isaac Newton Telescope 2.5m",
+            "Nickname": "INT-2.5m"
+        },
+        {
+            "Teslescope Name": "Asiago Ekar Telescope",
+            "Nickname": "Ekar"
+        },
+        {
+            "Teslescope Name": "FLWO 1.5m Tillinghast",
+            "Nickname": "FLWO 1.5m"
+        },
+        {
+            "Teslescope Name": "The Danish 1.54-m Telescope at La Silla",
+            "Nickname": "Danish-1.54m"
+        },
+        {
+            "Teslescope Name": "The 2-m Himalayan Chandra Telescope (IAO)",
+            "Nickname": "HCT-2m"
+        },
+        {
+            "Teslescope Name": "United Kingdom Infra-Red Telescope",
+            "Nickname": "UKIRT"
+        },
+        {
+            "Teslescope Name": "Calar Alto 2.2m Telescope",
+            "Nickname": "CA-2.2m"
+        },
+        {
+            "Teslescope Name": "NHAO Nayuta 2m Telescope",
+            "Nickname": "Nayuta"
+        },
+        {
+            "Teslescope Name": "UV/Optical Telescope on Swift",
+            "Nickname": "Swift-UVOT"
+        },
+        {
+            "Teslescope Name": "David Dunlap Observatory",
+            "Nickname": "DDO"
+        },
+        {
+            "Teslescope Name": "ESO 1.5-m Telescope",
+            "Nickname": "ESO-1.5m"
+        },
+        {
+            "Teslescope Name": "2.16m Beijing Astronomical Observatory Telescope",
+            "Nickname": "BAO-2.16m"
+        },
+        {
+            "Teslescope Name": "Asiago Galileo Telescope",
+            "Nickname": "Galileo"
+        },
+        {
+            "Teslescope Name": "MMT Observatory 6.5m",
+            "Nickname": "MMT"
+        },
+        {
+            "Teslescope Name": "Calar Alto 3.5m Telescope",
+            "Nickname": "CA-3.5m"
+        },
+        {
+            "Teslescope Name": "Siding Spring Observatory 2.3-m Telescope",
+            "Nickname": "SSO-2.3m"
+        },
+        {
+            "Teslescope Name": "Las Campanas Observatory du Pont telescope",
+            "Nickname": "LCO-duPont"
+        },
+        {
+            "Teslescope Name": "Gunma Astronomical Observatory 150cm reflector",
+            "Nickname": "GAO-1.5"
+        },
+        {
+            "Teslescope Name": "The Spitzer Space Telescope",
+            "Nickname": "SST"
+        },
+        {
+            "Teslescope Name": "Bok Telescope",
+            "Nickname": "Bok"
+        },
+        {
+            "Teslescope Name": "Walter Baade Magellan 6.5-m telescope (LCO)",
+            "Nickname": "Magellan-Baade"
+        },
+        {
+            "Teslescope Name": "3.5m Astrophysical Reaserch Consortium",
+            "Nickname": "APO 3.5m"
+        },
+        {
+            "Teslescope Name": "Subaru",
+            "Nickname": "Subaru"
+        },
+        {
+            "Teslescope Name": "CTIO - 4-m Victor M. Blanco Telescope",
+            "Nickname": "CTIO-4m"
+        },
+        {
+            "Teslescope Name": "CTIO - 1.5-Meter Telescope (SMARTS Consortium)",
+            "Nickname": "CTIO-1.5m"
+        },
+        {
+            "Teslescope Name": "Wisconsin-Indiana-Yale-NOAO Telescope",
+            "Nickname": "WIYN"
+        },
+        {
+            "Teslescope Name": "0.85m Beijing Astronomical Observatory Telescope",
+            "Nickname": "BAO-0.85m"
+        },
+        {
+            "Teslescope Name": "Crossley Reflector",
+            "Nickname": "Crossley"
+        },
+        {
+            "Teslescope Name": "Hubble Space Telescope",
+            "Nickname": "HST"
+        },
+        {
+            "Teslescope Name": "Landon T. Clay Magellan 6.5-m telescope (LCO)",
+            "Nickname": "Magellan-Clay"
+        },
+        {
+            "Teslescope Name": "CTIO 0.9 Meter (SMARTS Consortium)",
+            "Nickname": "CTIO-0.9"
+        },
+        {
+            "Teslescope Name": "Copernico Teliscope",
+            "Nickname": "copernico"
+        },
+        {
+            "Teslescope Name": "2.7m Harlan J Smith Telescope",
+            "Nickname": "Harlan J Smith"
+        },
+        {
+            "Teslescope Name": "2.1m-Otto Struve Tellescope",
+            "Nickname": "Otto Struve"
+        },
+        {
+            "Teslescope Name": "International Ultraviolet Explorer",
+            "Nickname": "IUE"
+        },
+        {
+            "Teslescope Name": "Liverpool Telescope",
+            "Nickname": "LT"
+        },
+        {
+            "Teslescope Name": "Gran Telescopio Canarias",
+            "Nickname": "GTC"
+        },
+        {
+            "Teslescope Name": "Sloan Digital Sky Survey",
+            "Nickname": "Sloan"
+        },
+        {
+            "Teslescope Name": "Galaxy Evolution Explorer 50 cm",
+            "Nickname": "GALEX"
+        },
+        {
+            "Teslescope Name": "Faulkes Telescope North",
+            "Nickname": "FTN"
+        },
+        {
+            "Teslescope Name": "Faulkes Telescope South",
+            "Nickname": "FTS"
+        },
+        {
+            "Teslescope Name": "Haute-Provence Observatory",
+            "Nickname": "OHP-1.93m"
+        },
+        {
+            "Teslescope Name": "Lijiang 2.4m telescope - Yunnan Obsvervatories",
+            "Nickname": "Lijiang-2.4m"
+        },
+        {
+            "Teslescope Name": "Mount Laguna Observatory 1m",
+            "Nickname": "MLO-1m"
+        },
+        {
+            "Teslescope Name": "ANU 2.3m Advanced Technology Telescope",
+            "Nickname": "ANU 2,3m"
+        },
+        {
+            "Teslescope Name": "Katzman Automatic Imaging Telescope",
+            "Nickname": "KAIT"
+        },
+        {
+            "Teslescope Name": "South African Astronomical Observatory",
+            "Nickname": "SAAO"
+        },
+        {
+            "Teslescope Name": "Southern African Large Telescope",
+            "Nickname": "SALT"
+        },
+        {
+            "Teslescope Name": "Large Binocular Telescope",
+            "Nickname": "LBT"
+        },
+        {
+            "Teslescope Name": "NASA Infrared Telescope Facility",
+            "Nickname": "IRTF"
+        },
+        {
+            "Teslescope Name": "SPM 1.5-meter Johnson telescope",
+            "Nickname": "SPM15"
+        },
+        {
+            "Teslescope Name": "Southern Astrophysical Research Telescope",
+            "Nickname": "SOAR"
+        },
+        {
+            "Teslescope Name": "Big Telescope Alt-azimuth",
+            "Nickname": "BTA-6"
+        },
+        {
+            "Teslescope Name": "74-inch Reflector - Mount Stromlo Observatory",
+            "Nickname": "MSO-74in"
+        },
+        {
+            "Teslescope Name": "Gunma 0.65m",
+            "Nickname": "GAO-0.65m"
+        },
+        {
+            "Teslescope Name": "KANATA 1.5-m Optical and Near-Infrared telescope",
+            "Nickname": "Kanata"
+        },
+        {
+            "Teslescope Name": "Okayama Astrophysical Observatory 188cm",
+            "Nickname": "OAO-188"
+        },
+        {
+            "Teslescope Name": "Koyama Astronomical Observatory - Araki Telescope",
+            "Nickname": "KAO"
+        },
+        {
+            "Teslescope Name": "Discovery Channel Telescope",
+            "Nickname": "DCT"
+        },
+        {
+            "Teslescope Name": "Boyden Refractor",
+            "Nickname": "Alvan Clark Telescope"
+        },
+        {
+            "Teslescope Name": "Dominion AStrophysical Observatory",
+            "Nickname": "Plaskett Telescope"
+        },
+        {
+            "Teslescope Name": "Roque de los Muchachos Observatory",
+            "Nickname": "Mercator Telescope"
+        },
+        {
+            "Teslescope Name": "SkyMapper wide-field survey telescope",
+            "Nickname": "SkyMapper 1.35m"
+        },
+        {
+            "Teslescope Name": "Pan-STARRS",
+            "Nickname": "PS1"
+        },
+        {
+            "Teslescope Name": "ASASSN-Brutus",
+            "Nickname": "ASASSN-1"
+        },
+        {
+            "Teslescope Name": "ASASSN-Cassius",
+            "Nickname": "ASASSN-2"
+        },
+        {
+            "Teslescope Name": "Anglo-Australian Telescope",
+            "Nickname": "AAT"
+        },
+        {
+            "Teslescope Name": "ESO 1-m Schmidt telescope",
+            "Nickname": "ESO-1m"
+        },
+        {
+            "Teslescope Name": "ATLAS Haleakala",
+            "Nickname": "ATLAS1"
+        },
+        {
+            "Teslescope Name": "ATLAS Mauna Loa",
+            "Nickname": "ATLAS2"
+        },
+        {
+            "Teslescope Name": "XingLong telescope",
+            "Nickname": "XLT"
+        },
+        {
+            "Teslescope Name": "Chinese Near Earth Object Survey Telescope",
+            "Nickname": "CNEOST"
+        },
+        {
+            "Teslescope Name": "Gaia Spacecraft",
+            "Nickname": "Gaia"
+        },
+        {
+            "Teslescope Name": "Mount Abu Infrared Observatory",
+            "Nickname": "Mt. Abu"
+        },
+        {
+            "Teslescope Name": "0.6m Beijing Astronomical Observatory Telescope",
+            "Nickname": "BAO-0.6m"
+        },
+        {
+            "Teslescope Name": "The Antarctic Schmidt/Survey Telescopes",
+            "Nickname": "AST3"
+        },
+        {
+            "Teslescope Name": "IUCAA Girawali Observatory",
+            "Nickname": "IGO"
+        },
+        {
+            "Teslescope Name": "James Webb Space Telescope",
+            "Nickname": "JWST"
+        },
+        {
+            "Teslescope Name": "The 1.3 m OGLE Warsaw Telescope",
+            "Nickname": "OGLE-1.3m"
+        },
+        {
+            "Teslescope Name": "ASASSN-Paczynski",
+            "Nickname": "ASASSN-3"
+        },
+        {
+            "Teslescope Name": "ASASSN-Leavitt",
+            "Nickname": "ASASSN-4"
+        },
+        {
+            "Teslescope Name": "ASASSN-Payne-Gaposchkin",
+            "Nickname": "ASASSN-5"
+        }
+    ]

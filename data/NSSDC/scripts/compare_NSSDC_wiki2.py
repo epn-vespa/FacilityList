@@ -24,10 +24,10 @@ def mon_scorer(q, c):
 def dummy_proc(x):
     return x
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/NSSDC_list1.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/datas/NSSDC_list1.json') as f:
     data_nssdc = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts1.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 def get_scores( t ):

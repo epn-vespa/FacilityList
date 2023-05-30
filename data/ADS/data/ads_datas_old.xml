@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <row>
+        <Heading0>Air.KAO         Kuiper Airborne Observatory </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Air.SOFIA       Stratospheric Observatory For Infrared Astronomy </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ANT.AMANDA      Antarctica/AMANDA</Heading0>
+        <Heading1>Antarctic Muon and Neutrino Detector Array </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ANT.ASTRO       Antarctica/ASTRO</Heading0>
+        <Heading1>Antarctic Submillimeter Telescope and Remote Observatory </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ANT.OASI        Antarctica/Submillimetric and Infrared Antarctic Observatory </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>AO.CT           Asiago Observatory/Copernico Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>AO.GT           Asiago Observatory/Galilei Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>AO.ST           Asiago Observatory/Schmidt Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>APO.ARC         Apache Point Observatory/ARC</Heading0>
+        <Heading1>Astrophysical Research Consortium Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>APO.NMSU        Apache Point Observatory/New Mexico State University Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>APO.SLOAN       Apache Point Observatory/Sloan digital Sky Survey Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ATNF.CA         Australia Telescope National Facility/Compact Array </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ATNF.MRT        Australia Telescope National Facility/Mopra Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ATNF.PRT        Australia Telescope National Facility/Parkes Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Ba.ARCHEOPS     Archeops</Heading0>
+        <Heading1>the High Resolution</Heading1>
+        <Heading2>Large Sky Coverage Balloon Experiment for Mapping CMB Anisotropies</Heading2>
+    </row>
+    <row>
+        <Heading0>Ba.GRIP         GRIP</Heading0>
+        <Heading1>Balloon-borne Gamma Ray Imaging Platform </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Ba.MAXIMA       MAXIMA balloon experiment</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>BAO.1.26m       Beijing Astronomical Observatory/1.26 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>BAO.2.16m       Beijing Astronomical Observatory/2.16 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>BAO.7m          Beijing Astronomical Observatory/7 meter Solar Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>BAO.MSRT        Beijing Astronomical Observatory/Meter-wave aperture Sysnthesis Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>BBSO.ST         Big Bear Solar Observatory/Solar Telescopes </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CAO.1.2m        Calar Alto Observatory/1.2 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CAO.1.5m        Calar Alto Observatory/1.5 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CAO.2.2m        Calar Alto Observatory/2.2 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CAO.3.5m        Calar Alto Observatory/3.5 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CAO.ST          Calar Alto Observatory/Schmidt Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CP.GEMINIS      Cerro Pachon/Gemini South Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CrAO.1.25m      Crimean Astrophysical Observatory/1.25 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CrAO.22m        Crimean Astrophysical Observatory/22 meter Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CrAO.GT48       Crimean Astrophysical Observatory/Gamma Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CrAO.SHAJN      Crimean Astrophysical Observatory/Shajn Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CrAO.ST         Crimean Astrophysical Observatory/Solar Tower </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CRO.30m         Ceduna Radio Observatory/30 meter telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CTIO.1.5m       Cerro Tololo Inter-American Observatory/1.5 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CTIO.2MASS      Cerro Tololo Inter-American Observatory/2MASS Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CTIO.VBT        Cerro Tololo Inter-American Observatory/Victor Blanco Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>CTIO.YALO       Cerro Tololo Inter-American Observatory/YALO</Heading0>
+        <Heading1>Yale-AURA-Lisbon-OU Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>DAO.1.22m       Dominion Astrophysical Observatory/1.22 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>DAO.1.85m       Dominion Astrophysical Observatory/1.85 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>DDO.1.8m        David Dunlap Observatory/1.88 meter telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>DRAO.26m        Dominion Radio Astrophysical Observatory/26 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>DRAO.ST         Dominion Radio Astrophysical Observatory/Syntesis Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.1.52m       European Southern Observatory/1.52 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.3.6m        European Southern Observatory/3.6 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.APEX        European Southern Observatory/Atacama Pathfinder Experiment</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.DT          European Southern Observatory/Danish 1.5m Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.MPG         European Southern Observatory/Max Planck Gesellaschaft 2.2 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.NTT         European Southern Observatory/NTT</Heading0>
+        <Heading1>New Techology Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.SEST        European Southern Observatory/SEST</Heading0>
+        <Heading1>Swedish-ESO Submillimeter Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VISTA       European Southern Observatory/Visible and Infrared Telescope for Astronomy</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VLT-U1      European Southern Observatory/VLT Unit 1</Heading0>
+        <Heading1>Antu Very Large Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VLT-U2      European Southern Observatory/VLT Unit 2</Heading0>
+        <Heading1>Kueyen Very Large Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VLT-U3      European Southern Observatory/VLT Unit 3</Heading0>
+        <Heading1>Melipal Very Large Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VLT-U4      European Southern Observatory/VLT Unit 4</Heading0>
+        <Heading1>Yepun Very Large Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VLTI        European Southern Observatory/Very Large Telescope Interferometer</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ESO.VST         European Southern Observatory/VLT Survey Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>FCRAO.14m       Five College Radio Astronomy Observatory/FCRAO</Heading0>
+        <Heading1>14 meter Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>FLWO.1.2m       Fred Lawrence Whipple Observatory/1.2 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>FLWO.1.5m       Fred Lawrence Whipple Observatory/1.5 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>FLWO.10m        Fred Lawrence Whipple Observatory/10 meter amtmospheric Cherenkov observatory</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>FLWO.IOTA       Fred Lawrence Whipple Observatory/IOTA</Heading0>
+        <Heading1>Infrared Optical Telescope Array</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>FLWO.MMT        Fred Lawrence Whipple Observatory/MMT</Heading0>
+        <Heading1>Multiple Mirror Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>HC.BIMA         Hat Creek/BIMA</Heading0>
+        <Heading1>Berkeley Illinois Maryland Array</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ING.INT         Isaac Newton Group/INT</Heading0>
+        <Heading1>Isaac Newton Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ING.JKT         Isaac Newton Group/JKT</Heading0>
+        <Heading1>Jacobus Kapteyn Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ING.WHT         Isaac Newton Group/WHT</Heading0>
+        <Heading1>William Herschel Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>IRSA.Atlas      NASA Infrared Science Archive/Atlas Image Service</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>JBO.LOVELL      Jodrell Bank Observatory/Lovell Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>JBO.MERLIN      Jodrell Bank Observatory/Merlin Array </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.12m        Kitt Peak National Observatory/12 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.2.1m       Kitt Peak National Observatory/2.1 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.BT         Kitt Peak National Observatory/Bok Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.MAYALL     Kitt Peak National Observatory/Mayall Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.MDMHT      Kitt Peak National Observatory/MDM Hitner Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.MDMMH      Kitt Peak National Observatory/MDM HcGraw-Hill Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.MPT        Kitt Peak National Observatory/McMath-Pierce Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.SARA       Kitt Peak National Observatory/Southeastern Association for Reasearch in Astronomy Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.SWT        Kitt Peak National Observatory/Space Watch Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>KPNO.WIYN       Kitt Peak National Observatory/WYIN</Heading0>
+        <Heading1>Wisconson-Indiana-Yale-NOAO Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LCO.dPT         Las Campanas Observatory/du Pont Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LCO.M1WBT       Las Campanas Observatory/Magellan I</Heading0>
+        <Heading1>Walter Baada Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LCO.M2LCT       Las Campanas Observatory/Magellan II</Heading0>
+        <Heading1>Landon Clay Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LCO.ST          Las Campanas Observatory/Swope Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LNA.0.6m        Laboratorio Nacional de Astrofisica/0.6 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LNA.1.6m        Laboratorio Nacional de Astrofisica/1.6 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.31in         Lowell Observatory/31 inch Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.JHT          Lowell Observatory/John Hall Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.KAIT         Lick Observatory/Katzman Automatic Imaging Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.LONEOS       Lowell Observatory/LONEOS</Heading0>
+        <Heading1>Lowell Observatory Near Earth Object Search Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.NICKEL       Lick Observatory/Nickel Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.PT           Lowell Observatory/Perkins Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>LO.SHANE        Lick Observatory/Shane Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>McD.0.8m        McDonald Observatory/0.8 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>McD.HET         McDonald Observatory/HET</Heading0>
+        <Heading1>Hobby-Eberly Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>McD.HST         McDonald Observatory/Harlan Smith Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>McD.OST         McDonald Observatory/Otto Sturve Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MGIO.HHT        Mount Graham International Observatory/HHT</Heading0>
+        <Heading1>Heinrich Hertz Submillimeter Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MGIO.VATT       Mount Graham International Observatory/VATT</Heading0>
+        <Heading1>Vatican Advanced Technology Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MGRO.MT         Milagro Gamma Ray Observatory/Milagrito Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.CFHT         Mauna Kea/CFHT</Heading0>
+        <Heading1>Canada-France-Hawaii Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.CSO          Mauna Kea/CSO</Heading0>
+        <Heading1>Caltech Submillimeter Observatory </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.GEMININ      Mauna Kea/Gemini North Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.IRTF         Mauna Kea/IRTF</Heading0>
+        <Heading1>Infrared Telescope Facility </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.JCMT         Mauna Kea/JCMT</Heading0>
+        <Heading1>James Clerk Maxwell Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.KECK1        Mauna Kea/KECK I Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.KECK2        Mauna Kea/KECK II Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.SMA          Mauna Kea/Smithsonian Millimeter Array </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.SUBARU       Mauna Kea/Subaru Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.UHT          Mauna Kea/University of Hawaii Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MK.UKIRT        Mauna Kea/UKIRT</Heading0>
+        <Heading1>United Kingdom Infrared Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ML.HAO          Mauna Loa/HAO</Heading0>
+        <Heading1>High Altitude Observatory Telescopee</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MO.MOST         Molonglo Observatory/MOST</Heading0>
+        <Heading1>Molonglo Observatory Synthesis Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MO.MRT          Mauritius Observatory/Mauritius Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MPIR.ERT        Max Planck Institut fur Radioastronomie/ERT</Heading0>
+        <Heading1>Effelsberg Radio Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MRAO.CLFST      Mullard Radio Astronomy Observatory/CLFST</Heading0>
+        <Heading1>Cambridge Low-Frequency Sythesis Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MRAO.COAST      Mullard Radio Astronomy Observatory/COAST</Heading0>
+        <Heading1>Cambridge Optical Aperture Synthesis Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MRAO.RT         Mullard Radio Astronomy Observatory/Ryle Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MRO.14m         Metsahovi Radio Observatory/14 meter Radio Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtL.KT          Mount Lemmon/Kuiper Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtL.NT          Mount Lemmon/NASA Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtPO.14m        Mount Pleasant Radio Observatory/14 meter telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtPO.26m        Mount Pleasant Radio Observatory/26 meter telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtS.50in        Mount Stromolo/50 inch Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtS.74in        Mount Stromolo/74 inch Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtW.60fST       Mount Wilson/60 foot Solar Tower </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtW.60in        Mount Wilson/60 inch Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtW.CHARA       Mount Wilson/CHARA</Heading0>
+        <Heading1>Center for High Angular Resolution Astronomy interferometer</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtW.HT          Mount Wilson/Hooker Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtW.ISI         Mount Wilson/Infrared Spatial Interferometer</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>MtW.MIII        Mount Wilson/Mark III Interferometer </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NAIC.ARECIBO    National Astronomy and Ionospheric Center/Arecibo observatory</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NCRA.GMRT       National Center for Radio Astrophysics/GMRT</Heading0>
+        <Heading1>Giant Meter-wave Radio Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NCRA.ORT        National Center for Radio Astrophysics/ORT</Heading0>
+        <Heading1>Ooty Radio Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NRAO.140ft      National Radio Astronomy Observatory/Green Bank 140 foot Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NRAO.GBI        National Radio Astronomy Observatory/Green Bank Interferometer </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NRAO.GBT        National Radio Astronomy Observatory/Green Bank Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NRAO.VLA        National Radio Astronomy Observatory/VLA</Heading0>
+        <Heading1>Very Large Array </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NRAO.VLBA       National Radio Astronomy Observatory/VLBA</Heading0>
+        <Heading1>Very Long Baseline Array </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>NSTTF.STACEE    National Solar Thermal Test Facility/STACEE</Heading0>
+        <Heading1>Solar Tower Atmospheric Cerenkov Effect Experiment </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OAGH.2m         Observatorio Astrofisico Guillermo Haro/2 meter telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OHP.1.2m        Observatoire de Haute-Provence/1.2 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OHP.1.52m       Observatoire de Haute-Provence/1.52 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OHP.1.93m       Observatoire de Haute-Provence/1.93 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.DOT         Observatorio del Roque de los Muchachos/DOT</Heading0>
+        <Heading1>Dutch Open Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.HEGRA       Observatorio del Roque de los Muchachos/HEGRA</Heading0>
+        <Heading1>High Energy Gamma Ray Astronomy Experiment </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.LT          Observatorio del Roque de los Muchachos/Liverpool Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.MAGIC       Observatorio del Roque de los Muchachos/MAGIC</Heading0>
+        <Heading1>Major Atmospheric Gamma Imaging Cherenkov Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.MT          Observatorio del Roque de los Muchachos/Mercator Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.NOT         Observatorio del Roque de los Muchachos/NOT</Heading0>
+        <Heading1>Nordic Optical Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.SVST        Observatorio del Roque de los Muchachos/SVST</Heading0>
+        <Heading1>Swedish Vacuum Solar Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>ORM.TNG         Observatorio del Roque de los Muchachos/TNG</Heading0>
+        <Heading1>Telescopio Nazionale Galileo </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OSO.20m         Onsala Space Observatory/20 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OSO.25m         Onsala Space Observatory/25 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.0.8m         Observatorio del Teide/80 cm Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.GCT          Observatorio del Teide/Gregory Coude Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.TCS          Observatorio del Teide/Carlos Sanchez Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.THEMIS       Observatorio del Teide/THEMIS Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.VNT          Observatorio del Teide/Vacuum Newtoinian Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.VSA          Observatorio del Teide/VSA</Heading0>
+        <Heading1>Very Small Array </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OT.VTT          Observatorio del Teide/Vacuum Tower Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OVRO.40m        Owens Valley Radio Observatory/40 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OVRO.MA         Owens Valley Radio Observatory/Millimeter-wavelength Array</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>OVRO.SA         Owens Valley Radio Observatory/Solar Array</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>PBO.HPOL        Pine Bluff Observatory/HPOL Spectropolarimeter </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>PO.48in         Palomar Observatory/48 inch Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>PO.60in         Palomar Obseravtory/60 inch Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>PO.HALE         Palomar Observatory/Hale Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>RO.1.0m         Ritter Observatory/1 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ACE          ACE</Heading0>
+        <Heading1>Advanced Composition Explorer satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ALEXIS       ALEXIS</Heading0>
+        <Heading1>Array of Low Energy X-ray Imaging Sensors satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ANS          ANS</Heading0>
+        <Heading1>Astronomische Nederlandse Satelliet [or Astronomical Netherlands Satellite] </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ARGOS        ARGOS</Heading0>
+        <Heading1>Advanced Research and Global Observation Satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ARIELV       Ariel V satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ASCA         ASCA</Heading0>
+        <Heading1>Advanced Satellite for Cosmology and Astrophysics </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.BeppoSAX     BeppoSAX</Heading0>
+        <Heading1>Italian/Dutch X-ray satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.CGRO         CGRO</Heading0>
+        <Heading1>Compton Gamma Ray Observatory satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.CHIPS        CHIPS</Heading0>
+        <Heading1>Cosmic Hot Interstellar Plasma Spectrometer satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.COBE         COBE</Heading0>
+        <Heading1>COsmic Background Explorer satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.COPERNICUS   Copernicus</Heading0>
+        <Heading1>Orbiting Astronomical Observatory 3 satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.COSB         Cos-B Satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.CXO          CXO</Heading0>
+        <Heading1>Chandra X-ray Observatory satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.DMSP         DMSP</Heading0>
+        <Heading1>Defense Meteorological Satellite Program </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.EO           Einstein</Heading0>
+        <Heading1>High Energy Astronomy Observatory 2 satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.EURECA       EURECA</Heading0>
+        <Heading1>EUropean REtrievable CArrier satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.EUVE         EUVE</Heading0>
+        <Heading1>Extreme UltraViolet Explorer satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.EXOSAT       EXOSAT</Heading0>
+        <Heading1>European Space Agency's X-ray Observatory satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.FAST         FAST</Heading0>
+        <Heading1>Fast Auroral SnapshoT explorer satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.FUSE         FUSE</Heading0>
+        <Heading1>Far Ultraviolet Spectroscopic Explorer satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.GALEX        GALEX</Heading0>
+        <Heading1>Galaxy Evolution Explorer satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.GINGA        Ginga</Heading0>
+        <Heading1>third Japanese X-ray satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.GRANAT       Granat</Heading0>
+        <Heading1>Russian X-ray satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.HAKUCHO      Hakucho</Heading0>
+        <Heading1>first Japanese xray satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.HALCA        HALCA</Heading0>
+        <Heading1>Japanese VLBI Space Observatory Program satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.HEAO-1       HEAO-1</Heading0>
+        <Heading1>High Energy Astronomy Observatory 1 satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.HEAO-3       HEAO-3</Heading0>
+        <Heading1>High Energy Astronomy Observatory 3 satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.HETE-2       HETE-2</Heading0>
+        <Heading1>High Energy Transient Explorer 2 satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.HST          Hubble Space Telescope satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.INTEGRAL     INTEGRAL</Heading0>
+        <Heading1>International Gamma-Ray Astrophysics Laboratory satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.IRAS         IRAS</Heading0>
+        <Heading1>InfraRed Astronomical Satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ISO          ISO</Heading0>
+        <Heading1>Infrared Space Observatory satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.IUE          IUE</Heading0>
+        <Heading1>International Ultraviolet Explorer </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.Koronas      Koronas</Heading0>
+        <Heading1>solar activity monitor satellites </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.MSX          MSX</Heading0>
+        <Heading1>Midcourse Space Experiment</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.NEAR         NEAR</Heading0>
+        <Heading1>Near-Earth Asteroid Rendezvous satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ORFEUS       ORFEUS</Heading0>
+        <Heading1>Orbiting and Retrievable Far and Extreme Ultraviolet Spectrometer satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.OSO7         Orbiting Solar Observatory 7 satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.OSO8         Orbiting Solar Observatory 8 satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.PVO          PVO</Heading0>
+        <Heading1>Pioneer Venus Orbiter </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.RHESSI       RHESSI</Heading0>
+        <Heading1>Reuven Ramaty High Energy Solar Spectroscopic Imager satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ROSAT        ROSAT</Heading0>
+        <Heading1>ROentgen Satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.RXTE         RXTE</Heading0>
+        <Heading1>Rossi X-ray Timing Explorer</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SAMPEX       SAMPEX</Heading0>
+        <Heading1>Solar Anomalous and Magnetospheric Particle EXplorer</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SAS2         Small Astronomy Satellite 2 </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SAS3         Small Astronomy Satellite 3 </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SMM          SMM</Heading0>
+        <Heading1>Solar Maximum Mission satellite</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SOHO         SOHO</Heading0>
+        <Heading1>SOlar Heliospheric Observatory satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SPITZER      Spitzer Space Telescope (aka SIRTF)</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SROSS        SROSS</Heading0>
+        <Heading1>Stretched ROhini Satellite Series</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SWAN         SWAN</Heading0>
+        <Heading1>Solar Wind Anisotropy Experiment satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SWAS         SWAS</Heading0>
+        <Heading1>Submillimeter Wave Astronomy Satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.SWIFT        SWIFT</Heading0>
+        <Heading1>Multi-wavelength Observatory</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.TENMA        Tenma</Heading0>
+        <Heading1>second Japanese Xray satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.UHURU        Uhuru</Heading0>
+        <Heading1>Small Astronomical Satellite 1 </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.ULYSSES      Ulysses satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.VELA         Vela nuclear test detection satellites </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.VOYAGER1     Voyager I satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.VOYAGER2     Voyager II satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.WIND         Wind satellite </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.WMAP         Wilkinson Microwave Background Anisotropy Probe</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.XMM          XMM-Newton</Heading0>
+        <Heading1>X-Ray Multimirror Mission Newton satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sa.YOHKOH       Yohkoh</Heading0>
+        <Heading1>Japanese-US Gamma and X-ray solar satellite </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SAAO.0.5m       South African Astronomical Observatory/0.5 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SAAO.0.75m      South African Astronomical Observatory/0.75 meter Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SAAO.ET         South African Astronomical Observatory/Elizabeth Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SAAO.RT         South African Astronomical Observatory/Radcliffe Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SAO.BTA         Special Astrophysical Observatory/Bolshoi Azimuthal Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SAO.RATAN       Special Astrophysical Observatory/RATAN</Heading0>
+        <Heading1>Radio Telescope of the Acadamey of Sciences </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sh.BBXRT        BBXRT</Heading0>
+        <Heading1>Broad-Band X-Ray Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sh.DXS          DXS</Heading0>
+        <Heading1>Diffuse X-ray Spectrometer </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sh.FAUST        FAUST</Heading0>
+        <Heading1>Far Ultraviolet Space Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sh.HUT          HUT</Heading0>
+        <Heading1>Hopkins Ultraviolet Telescope </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sh.UIT          UIT</Heading0>
+        <Heading1>Ultraviolet Imaging Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>Sh.WUPPE        WUPPE</Heading0>
+        <Heading1>Wisconsin Ultraviolet PhotoPolarimeter Experiment </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SP.ESF          Sacramento Peak/Evans Solar Facility </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SP.HF           Sacramento Peak/Hilltop Facility </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SP.RDT          Sacramento Peak/Richard Dunn Solar Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SPdA.CBI        Cosmic Background Imager</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SPole.ACBAR     ACBAR</Heading0>
+        <Heading1>the Arcminute Cosmology Bolometer Array Receiver</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SSO.2.3m        Siding Springs Observatory/2.3 meter Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SSO.40in        Siding Springs Observatory/40 inch Telescope </Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SSO.AAT         Siding Springs Observatory/AAT</Heading0>
+        <Heading1>Anglo-Australian Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>SSO.UKST        Siding Springs Observatory/UKST</Heading0>
+        <Heading1>United Kingdom Schmidt Telescope</Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>USNO.NPOI       United States Naval Observatory/NPOI</Heading0>
+        <Heading1>Navy Prototype Optical Interferometer </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>UW.WIRO         University of Wyoming/WIRO</Heading0>
+        <Heading1>Wyoming Infrared Observatory </Heading1>
+        <Heading2></Heading2>
+    </row>
+    <row>
+        <Heading0>WO.40in         Wise Observatory/40 inch Telescope</Heading0>
+        <Heading1></Heading1>
+        <Heading2></Heading2>
+    </row>
+</root>

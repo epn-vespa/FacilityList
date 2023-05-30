@@ -1,0 +1,9029 @@
+[
+    {
+        "ID": "1.3.112.4.7.1495",
+        "Name": "PVSAT",
+        "Abbreviation": "PVSAT"
+    },
+    {
+        "ID": "1.3.112.4.7.1524",
+        "Name": "SES-23",
+        "Abbreviation": "SES-23"
+    },
+    {
+        "ID": "1.3.112.4.7.1536",
+        "Name": "SARNext-C",
+        "Abbreviation": "SNC"
+    },
+    {
+        "ID": "1.3.112.4.7.1528",
+        "Name": "KSF2-a",
+        "Abbreviation": "KSF2-a"
+    },
+    {
+        "ID": "1.3.112.4.7.1496",
+        "Name": "CAS500-4",
+        "Abbreviation": "CAS500-4"
+    },
+    {
+        "ID": "1.3.112.4.7.1537",
+        "Name": "QUBIK-3",
+        "Abbreviation": "QUBIK-3"
+    },
+    {
+        "ID": "1.3.112.4.7.1529",
+        "Name": "KSF2-b",
+        "Abbreviation": "KSF2-b"
+    },
+    {
+        "ID": "1.3.112.4.7.1525",
+        "Name": "UMBRA-02",
+        "Abbreviation": "UMBRA-02"
+    },
+    {
+        "ID": "1.3.112.4.7.1497",
+        "Name": "Sentinel-CO2M-A",
+        "Abbreviation": "CO2A"
+    },
+    {
+        "ID": "1.3.112.4.7.1526",
+        "Name": "RApid Innovative payload demonstration SatellitE-3",
+        "Abbreviation": "RAISE-3"
+    },
+    {
+        "ID": "1.3.112.4.7.1538",
+        "Name": "QUBIK-4",
+        "Abbreviation": "QUBIK-4"
+    },
+    {
+        "ID": "1.3.112.4.7.1530",
+        "Name": "KSF2-c",
+        "Abbreviation": "KSF2-c"
+    },
+    {
+        "ID": "1.3.112.4.7.129",
+        "Name": "FBM",
+        "Abbreviation": "FBM"
+    },
+    {
+        "ID": "1.3.112.4.7.1498",
+        "Name": "Sentinel-CO2M-B",
+        "Abbreviation": "CO2B"
+    },
+    {
+        "ID": "1.3.112.4.7.781",
+        "Name": "INMARSAT-6F1",
+        "Abbreviation": "INMARSAT-6F1"
+    },
+    {
+        "ID": "1.3.112.4.7.1531",
+        "Name": "KSF2-d",
+        "Abbreviation": "KSF2-d"
+    },
+    {
+        "ID": "1.3.112.4.7.1539",
+        "Name": "QUBIK-5",
+        "Abbreviation": "QUBIK-5"
+    },
+    {
+        "ID": "1.3.112.4.7.1499",
+        "Name": "Sentinel-CO2M-C",
+        "Abbreviation": "CO2C"
+    },
+    {
+        "ID": "1.3.112.4.7.372",
+        "Name": "FY-4",
+        "Abbreviation": "FY-4",
+        "Aliases": ["FengYun-4"]
+    },
+    {
+        "ID": "1.3.112.4.7.1532",
+        "Name": "QPS-SAR-3",
+        "Abbreviation": "QPS-SAR-3"
+    },
+    {
+        "ID": "1.3.112.4.7.1540",
+        "Name": "QUBIK-6",
+        "Abbreviation": "QUBIK-6"
+    },
+    {
+        "ID": "1.3.112.4.7.1500",
+        "Name": "INS-2B",
+        "Abbreviation": "INS2B"
+    },
+    {
+        "ID": "1.3.112.4.7.1089",
+        "Name": "Dark Matter Particle Explore",
+        "Abbreviation": "Dark-Matter-Particle-Explore",
+        "Aliases": ["DAMPE"]
+    },
+    {
+        "ID": "1.3.112.4.7.1533",
+        "Name": "QPS-SAR-4",
+        "Abbreviation": "QPS-SAR-4"
+    },
+    {
+        "ID": "1.3.112.4.7.1541",
+        "Name": "OFX-1",
+        "Abbreviation": "OFX-1"
+    },
+    {
+        "ID": "1.3.112.4.7.1501",
+        "Name": "TRACERS-S1",
+        "Abbreviation": "TRACERS-S1"
+    },
+    {
+        "ID": "1.3.112.4.7.1527",
+        "Name": "Sirius/XM-9",
+        "Abbreviation": "SiriusXM-9"
+    },
+    {
+        "ID": "1.3.112.4.7.1534",
+        "Name": "QPS-SAR-5",
+        "Abbreviation": "QPS-SAR-5"
+    },
+    {
+        "ID": "1.3.112.4.7.1542",
+        "Name": "SWFO-L1",
+        "Abbreviation": "SWFO-L1"
+        
+    },
+    {
+        "ID": "1.3.112.4.7.356",
+        "Name": "KOREASAT-5,Sim",
+        "Abbreviation": "KOREASAT-5Sim"
+    },
+    {
+        "ID": "1.3.112.4.7.1502",
+        "Name": "TRACERS-S2",
+        "Abbreviation": "TRACERS-S2"
+    },
+    {
+        "ID": "1.3.112.4.7.1535",
+        "Name": "QPS-SAR-6",
+        "Abbreviation": "QPS-SAR-6"
+    },
+    {
+        "ID": "1.3.112.4.7.1543",
+        "Name": "LOTUSat-1",
+        "Abbreviation": "LOTUSat-1"
+    },
+    {
+        "ID": "1.3.112.4.7.394",
+        "Name": "CHINASAT9sim",
+        "Abbreviation": "CHINASAT9sim"
+    },
+    {
+        "ID": "1.3.112.4.7.1503",
+        "Name": "COSMO-SG-3",
+        "Abbreviation": "COSMO-SG-3"
+    },
+    {
+        "ID": "1.3.112.4.7.1544",
+        "Name": "ALE-3",
+        "Abbreviation": "ALE-3"
+    },
+    {
+        "ID": "1.3.112.4.7.1504",
+        "Name": "COSMO-SG-4",
+        "Abbreviation": "COSMO-SG-4"
+    },
+    {
+        "ID": "1.3.112.4.7.1545",
+        "Name": "SPHERE-1",
+        "Abbreviation": "SPHERE-1"
+    },
+    {
+        "ID": "1.3.112.4.7.492",
+        "Name": "AB7",
+        "Abbreviation": "AB7"
+    },
+    {
+        "ID": "1.3.112.4.7.1505",
+        "Name": "E36X",
+        "Abbreviation": "E36X",
+        "Aliases": ["E36X"]
+    },
+    {
+        "ID": "1.3.112.4.7.1546",
+        "Name": "LEV-1",
+        "Abbreviation": "LEV-1"
+    },
+    {
+        "ID": "1.3.112.4.7.527",
+        "Name": "K-MILSAT1",
+        "Abbreviation": "K-MILSAT1"
+    },
+    {
+        "ID": "1.3.112.4.7.1547",
+        "Name": "TELKOMSAT HTS 113 BT",
+        "Abbreviation": "SATMP-3",
+        "Aliases": ["Merah Putih 3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1548",
+        "Name": "KOMPSAT-7A",
+        "Abbreviation": "KOMPSAT-7A"
+    },
+    {
+        "ID": "1.3.112.4.7.1549",
+        "Name": "Near Earth Object Surveyor",
+        "Abbreviation": "NEOS"
+    },
+    {
+        "ID": "1.3.112.4.7.1550",
+        "Name": "SES-24",
+        "Abbreviation": "SES-24",
+        "Aliases": ["ASTRA 1P"]
+    },
+    {
+        "ID": "1.3.112.4.7.1551",
+        "Name": "Russian ISS Segment Service Module",
+        "Abbreviation": "SM",
+        "Aliases": ["Zvezda Service Module"]
+    },
+    {
+        "ID": "1.3.112.4.7.731",
+        "Name": "HOT BIRD 10",
+        "Abbreviation": "HOT-BIRD-10"
+    },
+    {
+        "ID": "1.3.112.4.7.1511",
+        "Name": "OPTUS 11",
+        "Abbreviation": "OPTUS11",
+        "Aliases": ["OPTUS11"]
+    },
+    {
+        "ID": "1.3.112.4.7.1552",
+        "Name": "Sunrise-Bebop",
+        "Abbreviation": "Sunrise-Bebop"
+    },
+    {
+        "ID": "1.3.112.4.7.1512",
+        "Name": "INTELSAT 42",
+        "Abbreviation": "IS-42",
+        "Aliases": ["IS-42"]
+    },
+    {
+        "ID": "1.3.112.4.7.1553",
+        "Name": "SunRise-Edward",
+        "Abbreviation": "SunRise-Edward"
+    },
+    {
+        "ID": "1.3.112.4.7.1513",
+        "Name": "INTELSAT 43",
+        "Abbreviation": "IS-43",
+        "Aliases": ["IS-43"]
+    },
+    {
+        "ID": "1.3.112.4.7.1554",
+        "Name": "SunRise-EIN",
+        "Abbreviation": "SunRise-EIN"
+    },
+    {
+        "ID": "1.3.112.4.7.1514",
+        "Name": "SUPERBIRD 9",
+        "Abbreviation": "SB9",
+        "Aliases": ["SB9"]
+    },
+    {
+        "ID": "1.3.112.4.7.1555",
+        "Name": "SunRise-FAYE",
+        "Abbreviation": "SunRise-FAYE"
+    },
+    {
+        "ID": "1.3.112.4.7.1515",
+        "Name": "Arctic Weather Satellite",
+        "Abbreviation": "AWS1",
+        "Aliases": ["AWS"]
+    },
+    {
+        "ID": "1.3.112.4.7.1556",
+        "Name": "SunRise-JET",
+        "Abbreviation": "SunRise-JET"
+    },
+    {
+        "ID": "1.3.112.4.7.1516",
+        "Name": "StriX-b",
+        "Abbreviation": "StriX-b"
+    },
+    {
+        "ID": "1.3.112.4.7.1557",
+        "Name": "SunRise-SPIKE",
+        "Abbreviation": "SunRise-SPIKE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.967",
+        "Name": "ROCSAT3,FI6",
+        "Abbreviation": "ROCSAT3FI6"
+    },
+    {
+        "ID": "1.3.112.4.7.1517",
+        "Name": "DESTINY PLUS",
+        "Abbreviation": "DESTINY PLUS"
+    },
+    {
+        "ID": "1.3.112.4.7.1558",
+        "Name": "Service Module Zvezda",
+        "Abbreviation": "SM Zvezda"
+    },
+    {
+        "ID": "1.3.112.4.7.1518",
+        "Name": "KASI_SAT-A",
+        "Abbreviation": "KASI_SAT-A"
+    },
+    {
+        "ID": "1.3.112.4.7.9",
+        "Name": "SBSS",
+        "Abbreviation": "SBSS"
+    },
+    {
+        "ID": "1.3.112.4.7.1519",
+        "Name": "KASI_SAT-B",
+        "Abbreviation": "KASI_SAT-B"
+    },
+    {
+        "ID": "1.3.112.4.7.1520",
+        "Name": "KASI_SAT-C",
+        "Abbreviation": "KASI_SAT-C"
+    },
+    {
+        "ID": "1.3.112.4.7.1521",
+        "Name": "KASI_SAT-D",
+        "Abbreviation": "KASI_SAT-D"
+    },
+    {
+        "ID": "1.3.112.4.7.13",
+        "Name": "METOP-SIM",
+        "Abbreviation": "METOP-SIM"
+    },
+    {
+        "ID": "1.3.112.4.7.1522",
+        "Name": "IMAP",
+        "Abbreviation": "IMAP"
+    },
+    {
+        "ID": "1.3.112.4.7.10",
+        "Name": "METOP1",
+        "Abbreviation": "METOP1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1348",
+        "Name": "ASBM-1",
+        "Abbreviation": "ASBM-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.3",
+        "Name": "ERS-2",
+        "Abbreviation": "ERS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1523",
+        "Name": "Technology Demonstration Spacecraft - 01",
+        "Abbreviation": "TDS-01"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1231",
+        "Name": "STRV-1 A",
+        "Abbreviation": "STRV-1-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1255",
+        "Name": "INMARSAT-6F2",
+        "Abbreviation": "INMARSAT-6F2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.966",
+        "Name": "ROCSAT3,FI5",
+        "Abbreviation": "ROCSAT3FI5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1256",
+        "Name": "KOMPSAT-7",
+        "Abbreviation": "KOrea Multi Purpose SATellite 7",
+        "Aliases": ["KOMPSAT-7"]
+    },
+    {
+        "ID": "1.3.112.4.7.1353",
+        "Name": "PSLV C49 OP",
+        "Abbreviation": "PSLV-C49-OP",
+        "Aliases": ["C49 OP"]
+    },
+    {
+        "ID": "1.3.112.4.7.1",
+        "Name": "ASTRO-SPAS",
+        "Abbreviation": "ASTRO-SPAS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.2",
+        "Name": "ASTRO-SPAS Sim.",
+        "Abbreviation": "ASTRO-SPAS-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1446",
+        "Name": "HERA",
+        "Abbreviation": "HERA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.4",
+        "Name": "ERS-2 Simulator",
+        "Abbreviation": "ERS-2-Simulator"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.5",
+        "Name": "AXAF-1",
+        "Abbreviation": "AXAF-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.6",
+        "Name": "CHANDRA",
+        "Abbreviation": "CHANDRA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.7",
+        "Name": "KOMPSAT-1",
+        "Abbreviation": "KOMPSAT-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.8",
+        "Name": "FUSE",
+        "Abbreviation": "FUSE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.11",
+        "Name": "METOP2",
+        "Abbreviation": "METOP2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.12",
+        "Name": "METOP3",
+        "Abbreviation": "METOP3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.14",
+        "Name": "EUTELSAT-F1(S-)",
+        "Abbreviation": "EUTELSAT-F1S-"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.15",
+        "Name": "EUTELSAT-F1(Ku)",
+        "Abbreviation": "EUTELSAT-F1Ku"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.16",
+        "Name": "EUTELSAT-F2(S-)",
+        "Abbreviation": "EUTELSAT-F2S-"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.17",
+        "Name": "EUTELSAT-F2(Ku)",
+        "Abbreviation": "EUTELSAT-F2Ku"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.18",
+        "Name": "DE-2",
+        "Abbreviation": "DE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.19",
+        "Name": "EUTELSAT-F3(S-)",
+        "Abbreviation": "EUTELSAT-F3S-"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.20",
+        "Name": "EUTELSAT-F3(Ku)",
+        "Abbreviation": "EUTELSAT-F3Ku"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.21",
+        "Name": "SOHO",
+        "Abbreviation": "SOHO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.22",
+        "Name": "SOHO-Simulator",
+        "Abbreviation": "SOHO-Simulator"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.23",
+        "Name": "Space Station Freedom",
+        "Abbreviation": "Space-Station-Freedom"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.24",
+        "Name": "EUTELSAT-SIM(Ku)",
+        "Abbreviation": "EUTELSAT-SIMKu"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.25",
+        "Name": "SESAT-F1",
+        "Abbreviation": "SESAT-F1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.26",
+        "Name": "SESAT-SIM",
+        "Abbreviation": "SESAT-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.27",
+        "Name": "ARIANE 5",
+        "Abbreviation": "ARIANE-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.28",
+        "Name": "HOTBIRD-5",
+        "Abbreviation": "HOTBIRD-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.29",
+        "Name": "NASA ISPM",
+        "Abbreviation": "NASA-ISPM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.30",
+        "Name": "STARDUST",
+        "Abbreviation": "STARDUST"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.31",
+        "Name": "DS-1 Flight",
+        "Abbreviation": "DS-1-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.32",
+        "Name": "TRANSMED SCIENTIFIC BALLOON",
+        "Abbreviation": "TRANSMED-SCIENTIFIC-BALLOON"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.33",
+        "Name": "EOS-CHEM",
+        "Abbreviation": "EOS-CHEM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.34",
+        "Name": "ATV-1",
+        "Abbreviation": "ATV-1"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.35",
+        "Name": "GALEX",
+        "Abbreviation": "GALEX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.36",
+        "Name": "ATV-2",
+        "Abbreviation": "ATV-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.37",
+        "Name": "MSP 01-Orbiter Simulator",
+        "Abbreviation": "MSP-01-Orbiter-Simulator"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.38",
+        "Name": "TRIANA",
+        "Abbreviation": "TRIANA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.39",
+        "Name": "ATV-3",
+        "Abbreviation": "ATV-3"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.40",
+        "Name": "GRACE-A",
+        "Abbreviation": "GRACE-A"
+    },
+    {
+        "ID": "1.3.112.4.7.41",
+        "Name": "GRACE-B",
+        "Abbreviation": "GRACE-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.42",
+        "Name": "Nimbus 7",
+        "Abbreviation": "Nimbus-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.43",
+        "Name": "NILESAT-1",
+        "Abbreviation": "NILESAT-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.44",
+        "Name": "CARIBSTAR",
+        "Abbreviation": "CARIBSTAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.45",
+        "Name": "ASIASTAR",
+        "Abbreviation": "ASIASTAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.46",
+        "Name": "AFRISTAR",
+        "Abbreviation": "AFRISTAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.47",
+        "Name": "ST-1",
+        "Abbreviation": "ST-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.48",
+        "Name": "ASTRA 2B",
+        "Abbreviation": "ASTRA-2B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.49",
+        "Name": "EURECA",
+        "Abbreviation": "EURECA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.50",
+        "Name": "NPOESS C5",
+        "Abbreviation": "NPOESS-C5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.51",
+        "Name": "MUSES-C",
+        "Abbreviation": "MUSES-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.52",
+        "Name": "GENESIS Flight",
+        "Abbreviation": "GENESIS-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.53",
+        "Name": "ATV-4",
+        "Abbreviation": "ATV-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.54",
+        "Name": "ATV-5",
+        "Abbreviation": "ATV-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.55",
+        "Name": "ATV-6",
+        "Abbreviation": "ATV-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.56",
+        "Name": "ATV-6 Duplicate",
+        "Abbreviation": "ATV-6-Duplicate"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.57",
+        "Name": "FEDSAT",
+        "Abbreviation": "FEDSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.58",
+        "Name": "MESURpathfinder Flight",
+        "Abbreviation": "MESURpathfinder-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.59",
+        "Name": "MSP 01-Orbiter Flight",
+        "Abbreviation": "MSP-01-Orbiter-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.60",
+        "Name": "GENESIS Simulator",
+        "Abbreviation": "GENESIS-Simulator"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.61",
+        "Name": "SpaceIL",
+        "Abbreviation": "SpaceIL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.62",
+        "Name": "MARS-EXP-ORB",
+        "Abbreviation": "MARS-EXP-ORB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.63",
+        "Name": "BEAGLE-2",
+        "Abbreviation": "BEAGLE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.64",
+        "Name": "SLATS",
+        "Abbreviation": "SLATS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.65",
+        "Name": "NEMO-A",
+        "Abbreviation": "NEMO-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.66",
+        "Name": "Space Telescope",
+        "Abbreviation": "Space-Telescope"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.67",
+        "Name": "MSL98 (SIM)",
+        "Abbreviation": "MSL98-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.68",
+        "Name": "INTELSAT K-TV",
+        "Abbreviation": "INTELSAT-K-TV"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.69",
+        "Name": "JUNO",
+        "Abbreviation": "JUNO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.70",
+        "Name": "OCO",
+        "Abbreviation": "OCO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.71",
+        "Name": "OCO-2",
+        "Abbreviation": "OCO-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.72",
+        "Name": "JUNO,sim",
+        "Abbreviation": "JUNOsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.73",
+        "Name": "NEMO-B",
+        "Abbreviation": "NEMO-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.74",
+        "Name": "ATV-7",
+        "Abbreviation": "ATV-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.75",
+        "Name": "ATV-8",
+        "Abbreviation": "ATV-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.76",
+        "Name": "W1R",
+        "Abbreviation": "W1R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.77",
+        "Name": "NILESAT 2",
+        "Abbreviation": "NILESAT-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.78",
+        "Name": "WORLDSTAR 4",
+        "Abbreviation": "WORLDSTAR-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.79",
+        "Name": "ABRIXAS/A",
+        "Abbreviation": "ABRIXASA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.80",
+        "Name": "DI-IMPACTOR",
+        "Abbreviation": "DI-IMPACTOR"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.81",
+        "Name": "GRAVITY PROBE-B",
+        "Abbreviation": "GRAVITY-PROBE-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.82",
+        "Name": "PICASSO-CENA",
+        "Abbreviation": "PICASSO-CENA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.83",
+        "Name": "PICASSO-CENA,SIM",
+        "Abbreviation": "PICASSO-CENASIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.84",
+        "Name": "MRO",
+        "Abbreviation": "MRO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.85",
+        "Name": "SDO",
+        "Abbreviation": "SDO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.86",
+        "Name": "GRO",
+        "Abbreviation": "GRO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.87",
+        "Name": "MSL",
+        "Abbreviation": "MSL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.88",
+        "Name": "GLAST",
+        "Abbreviation": "GLAST"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.89",
+        "Name": "DSCOVR",
+        "Abbreviation": "DSCOVR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.90",
+        "Name": "ORBVIEW-5",
+        "Abbreviation": "ORBVIEW-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.91",
+        "Name": "SELENE",
+        "Abbreviation": "SELENE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.92",
+        "Name": "CRAF",
+        "Abbreviation": "CRAF"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.93",
+        "Name": "CASSINI ITL",
+        "Abbreviation": "CASSINI-ITL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.94",
+        "Name": "Cassini",
+        "Abbreviation": "Cassini"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.95",
+        "Name": "ATV-9",
+        "Abbreviation": "ATV-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.96",
+        "Name": "MESURpathfinder Simulator",
+        "Abbreviation": "MESURpathfinder-Simulator"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.97",
+        "Name": "MSP-01-Lander",
+        "Abbreviation": "MSP-01-Lander"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.98",
+        "Name": "PHOENIX Flight",
+        "Abbreviation": "PHOENIX-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.99",
+        "Name": "LANDSAT-7(CTIU-1)",
+        "Abbreviation": "LANDSAT-7CTIU-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.100",
+        "Name": "LANDSAT-7(CTIU-2)",
+        "Abbreviation": "LANDSAT-7CTIU-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.101",
+        "Name": "ATV-10",
+        "Abbreviation": "ATV-10"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.102",
+        "Name": "ATV-11",
+        "Abbreviation": "ATV-11"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.103",
+        "Name": "MSP01-Lander Simulator",
+        "Abbreviation": "MSP01-Lander-Simulator"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.104",
+        "Name": "PHOENIX Simulation",
+        "Abbreviation": "PHOENIX-Simulation"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.105",
+        "Name": "ERS-1",
+        "Abbreviation": "ERS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.106",
+        "Name": "CRAF Sim",
+        "Abbreviation": "CRAF-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.107",
+        "Name": "SPIRALE 1",
+        "Abbreviation": "SPIRALE-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.108",
+        "Name": "CASSINI-Sim",
+        "Abbreviation": "CASSINI-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.109",
+        "Name": "ACE",
+        "Abbreviation": "ACE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.110",
+        "Name": "DEEPIMPACT(fl)",
+        "Abbreviation": "DEEPIMPACTfl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.111",
+        "Name": "NPOESS C6",
+        "Abbreviation": "NPOESS-C6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.112",
+        "Name": "DEEPIMPACT(sim)",
+        "Abbreviation": "DEEPIMPACTsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.113",
+        "Name": "ST5-2",
+        "Abbreviation": "ST5-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.114",
+        "Name": "MARS OBSERVER",
+        "Abbreviation": "MARS-OBSERVER"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.115",
+        "Name": "GE12",
+        "Abbreviation": "GE12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.116",
+        "Name": "ATV-12",
+        "Abbreviation": "ATV-12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.117",
+        "Name": "ATV-SIM",
+        "Abbreviation": "ATV-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.118",
+        "Name": "NEW HORIZON",
+        "Abbreviation": "NEW-HORIZON"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.119",
+        "Name": "ALOS",
+        "Abbreviation": "ALOS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.120",
+        "Name": "COSMO-SkyMed1",
+        "Abbreviation": "COSMO-SkyMed1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.121",
+        "Name": "RESSAT",
+        "Abbreviation": "RESSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.122",
+        "Name": "PROBA",
+        "Abbreviation": "PROBA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.123",
+        "Name": "SICRAL",
+        "Abbreviation": "SICRAL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.233",
+        "Name": "SOLARPROBE, SIM",
+        "Abbreviation": "SOLARPROBE-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.124",
+        "Name": "ROCSAT-1",
+        "Abbreviation": "ROCSAT-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.125",
+        "Name": "EURASIASAT",
+        "Abbreviation": "EURASIASAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.126",
+        "Name": "GE12 fl",
+        "Abbreviation": "GE12-fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.127",
+        "Name": "GE14 sim",
+        "Abbreviation": "GE14-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.128",
+        "Name": "GE14 fl",
+        "Abbreviation": "GE14-fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.130",
+        "Name": "HISPASAT-1D",
+        "Abbreviation": "HISPASAT-1D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.131",
+        "Name": "HISPASAT 1D,Sim",
+        "Abbreviation": "HISPASAT-1DSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.132",
+        "Name": "EURASIASAT(SIM)",
+        "Abbreviation": "EURASIASATSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.133",
+        "Name": "USERS SEM",
+        "Abbreviation": "USERS-SEM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.134",
+        "Name": "HISPASAT1C",
+        "Abbreviation": "HISPASAT1C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.135",
+        "Name": "HISPASAT(SIM)",
+        "Abbreviation": "HISPASATSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.136",
+        "Name": "ORION F2",
+        "Abbreviation": "ORION-F2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.137",
+        "Name": "ISEE-1",
+        "Abbreviation": "ISEE-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.138",
+        "Name": "MSL98 Flight",
+        "Abbreviation": "MSL98-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.139",
+        "Name": "ORBVIEW-4",
+        "Abbreviation": "ORBVIEW-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.140",
+        "Name": "COSMO-SkyMed3",
+        "Abbreviation": "COSMO-SkyMed3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.141",
+        "Name": "EUTELSATW4",
+        "Abbreviation": "EUTELSATW4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.142",
+        "Name": "MSO98 (SIM)",
+        "Abbreviation": "MSO98-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.143",
+        "Name": "INTEGRAL",
+        "Abbreviation": "INTEGRAL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.144",
+        "Name": "WINDS",
+        "Abbreviation": "WINDS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.145",
+        "Name": "NPOESS C1",
+        "Abbreviation": "NPOESS-C1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.146",
+        "Name": "NPOESS C2",
+        "Abbreviation": "NPOESS-C2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.147",
+        "Name": "NPOESS C3",
+        "Abbreviation": "NPOESS-C3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.148",
+        "Name": "NPOESS C4",
+        "Abbreviation": "NPOESS-C4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.149",
+        "Name": "MSO98",
+        "Abbreviation": "MSO98"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.150",
+        "Name": "JASON-1",
+        "Abbreviation": "JASON-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.151",
+        "Name": "JASON-1(SIM)",
+        "Abbreviation": "JASON-1SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.152",
+        "Name": "COROT",
+        "Abbreviation": "COROT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.153",
+        "Name": "COROT (SIM)",
+        "Abbreviation": "COROT-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.154",
+        "Name": "STENTOR",
+        "Abbreviation": "STENTOR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.155",
+        "Name": "AGORA",
+        "Abbreviation": "AGORA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.156",
+        "Name": "STENTOR backup",
+        "Abbreviation": "STENTOR-backup"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.157",
+        "Name": "AGORA-Backup",
+        "Abbreviation": "AGORA-Backup"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.158",
+        "Name": "QUICKSCAT",
+        "Abbreviation": "QUICKSCAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.159",
+        "Name": "DE-1",
+        "Abbreviation": "DE-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.160",
+        "Name": "ARBSAT2 PFM",
+        "Abbreviation": "ARBSAT2-PFM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.161",
+        "Name": "ARBSAT2 FM2",
+        "Abbreviation": "ARBSAT2-FM2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.162",
+        "Name": "ARABSAT2 SIM",
+        "Abbreviation": "ARABSAT2-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.163",
+        "Name": "EO-1",
+        "Abbreviation": "EO-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.164",
+        "Name": "FAME",
+        "Abbreviation": "FAME"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.165",
+        "Name": "AIM",
+        "Abbreviation": "AIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.166",
+        "Name": "DSN-1",
+        "Abbreviation": "DSN-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.167",
+        "Name": "DEEP IMPACT",
+        "Abbreviation": "DEEP-IMPACT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.168",
+        "Name": "DI (Flyby) Fl",
+        "Abbreviation": "DI-Flyby-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.169",
+        "Name": "ISO Flight",
+        "Abbreviation": "ISO-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.170",
+        "Name": "ARTEMIS (SIM)",
+        "Abbreviation": "ARTEMIS-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.171",
+        "Name": "ISO (SIM)",
+        "Abbreviation": "ISO-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.172",
+        "Name": "ARTEMIS",
+        "Abbreviation": "ARTEMIS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.173",
+        "Name": "TRACE",
+        "Abbreviation": "TRACE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.174",
+        "Name": "Cluster-A (Old)",
+        "Abbreviation": "Cluster-A-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.175",
+        "Name": "Cluster-A",
+        "Abbreviation": "Cluster-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.176",
+        "Name": "Cluster-B (Old)",
+        "Abbreviation": "Cluster-B-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.177",
+        "Name": "Cluster-B",
+        "Abbreviation": "Cluster-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.178",
+        "Name": "Cluster-C (Old)",
+        "Abbreviation": "Cluster-C-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.179",
+        "Name": "Cluster-C",
+        "Abbreviation": "Cluster-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.180",
+        "Name": "Cluster-D (Old)",
+        "Abbreviation": "Cluster-D-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.181",
+        "Name": "Cluster-D",
+        "Abbreviation": "Cluster-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.182",
+        "Name": "Cluster-Spare (Old)",
+        "Abbreviation": "Cluster-Spare-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.183",
+        "Name": "Cluster-Spare",
+        "Abbreviation": "Cluster-Spare"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.184",
+        "Name": "Cluster-A Sim (Old)",
+        "Abbreviation": "Cluster-A-Sim-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.185",
+        "Name": "Cluster-A Sim",
+        "Abbreviation": "Cluster-A-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.186",
+        "Name": "Cluster-B Sim (Old)",
+        "Abbreviation": "Cluster-B-Sim-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.187",
+        "Name": "Cluster-B Sim",
+        "Abbreviation": "Cluster-B-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.188",
+        "Name": "ROSETTA",
+        "Abbreviation": "ROSETTA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.189",
+        "Name": "STS-3/OSS-1",
+        "Abbreviation": "STS-3OSS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.190",
+        "Name": "ROSETTA (SIM)",
+        "Abbreviation": "ROSETTA-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.191",
+        "Name": "WIRE",
+        "Abbreviation": "WIRE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.192",
+        "Name": "EOS-PM",
+        "Abbreviation": "EOS-PM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.193",
+        "Name": "LUNARPROSPECT",
+        "Abbreviation": "LUNARPROSPECT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.194",
+        "Name": "ST5-3",
+        "Abbreviation": "ST5-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.195",
+        "Name": "ST3COMB-T",
+        "Abbreviation": "ST3COMB-T"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.196",
+        "Name": "NPP",
+        "Abbreviation": "NPP"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.197",
+        "Name": "MSL SIM",
+        "Abbreviation": "MSL-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.198",
+        "Name": "EUROPA ORB. Flight",
+        "Abbreviation": "EUROPA-ORB-Flight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.273",
+        "Name": "KEPLER-Fl",
+        "Abbreviation": "KEPLER-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.199",
+        "Name": "Europa Clipper",
+        "Abbreviation": "EUROPA",
+        "Aliases": ["Europa"]
+    },
+    {
+        "ID": "1.3.112.4.7.200",
+        "Name": "EUROPA-ORBIT,SIM",
+        "Abbreviation": "EUROPA-ORBITSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.201",
+        "Name": "EUROPA SIM",
+        "Abbreviation": "EUROPA-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.202",
+        "Name": "MTI",
+        "Abbreviation": "MTI"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.203",
+        "Name": "SORCE",
+        "Abbreviation": "SORCE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.204",
+        "Name": "ATLANTIC BIRD 1",
+        "Abbreviation": "ATLANTIC-BIRD-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.205",
+        "Name": "MAP",
+        "Abbreviation": "MAP"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.206",
+        "Name": "LRO",
+        "Abbreviation": "LRO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.207",
+        "Name": "IMAGE",
+        "Abbreviation": "IMAGE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.208",
+        "Name": "HESSI",
+        "Abbreviation": "HESSI"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.209",
+        "Name": "VCL",
+        "Abbreviation": "VCL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.210",
+        "Name": "GLORY",
+        "Abbreviation": "GLORY"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.211",
+        "Name": "MARS 2020",
+        "Abbreviation": "MARS-2020"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.212",
+        "Name": "EOS-AM-1(CTIU-1)",
+        "Abbreviation": "EOS-AM-1CTIU-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.213",
+        "Name": "EOS-AM-1(CTIU-2)",
+        "Abbreviation": "EOS-AM-1CTIU-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.214",
+        "Name": "DI (Flyby) Sim",
+        "Abbreviation": "DI-Flyby-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.215",
+        "Name": "ST3COMB-F",
+        "Abbreviation": "ST3COMB-F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.216",
+        "Name": "HOTBIRD7",
+        "Abbreviation": "HOTBIRD7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.217",
+        "Name": "PLUTO-KEIPER",
+        "Abbreviation": "PLUTO-KEIPER"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.218",
+        "Name": "PLUTO-KEIPER,SIM",
+        "Abbreviation": "PLUTO-KEIPERSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.219",
+        "Name": "SAMPEX",
+        "Abbreviation": "SAMPEX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.220",
+        "Name": "SAX",
+        "Abbreviation": "SAX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.221",
+        "Name": "GRAIL-A",
+        "Abbreviation": "GRAIL-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.222",
+        "Name": "SAX,Sim",
+        "Abbreviation": "SAXSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.223",
+        "Name": "FAST",
+        "Abbreviation": "FAST"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.224",
+        "Name": "NUSTAR",
+        "Abbreviation": "NUSTAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.225",
+        "Name": "MARSOBSERVER,Sim",
+        "Abbreviation": "MARSOBSERVERSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.226",
+        "Name": "GRAIL-B",
+        "Abbreviation": "GRAIL-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.227",
+        "Name": "SWAS",
+        "Abbreviation": "SWAS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.228",
+        "Name": "HUYGENS",
+        "Abbreviation": "HUYGENS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.229",
+        "Name": "GOSAT",
+        "Abbreviation": "GOSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.230",
+        "Name": "SOLAR PROBE",
+        "Abbreviation": "SOLAR-PROBE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.231",
+        "Name": "Solar Probe Plus",
+        "Abbreviation": "Solar-Probe-Plus",
+        "Aliases": ["SPP"]
+    },
+    {
+        "ID": "1.3.112.4.7.232",
+        "Name": "NI-ALPHA 310",
+        "Abbreviation": "NI-ALPHA-310"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.234",
+        "Name": "Solar Probe Plus SIM",
+        "Abbreviation": "Solar-Probe-Plus-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.235",
+        "Name": "SPACE INTFER",
+        "Abbreviation": "SPACE-INTFER"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.236",
+        "Name": "SPACE INTFER,SIM",
+        "Abbreviation": "SPACE-INTFERSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.237",
+        "Name": "SUPERBIRD 7",
+        "Abbreviation": "SUPERBIRD-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.238",
+        "Name": "XMM",
+        "Abbreviation": "XMM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.239",
+        "Name": "XMM(SIM)",
+        "Abbreviation": "XMMSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.240",
+        "Name": "MESURpathfinder",
+        "Abbreviation": "MESURpathfinder"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.241",
+        "Name": "ASTRA 1K",
+        "Abbreviation": "ASTRA-1K"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.242",
+        "Name": "NEAR",
+        "Abbreviation": "NEAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.243",
+        "Name": "OERSTED",
+        "Abbreviation": "OERSTED"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.244",
+        "Name": "OERSTED-SIM",
+        "Abbreviation": "OERSTED-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.245",
+        "Name": "ENVISAT",
+        "Abbreviation": "ENVISAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.246",
+        "Name": "CONTOUR",
+        "Abbreviation": "CONTOUR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.247",
+        "Name": "RADARSAT",
+        "Abbreviation": "RADARSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.248",
+        "Name": "MAVEN",
+        "Abbreviation": "MAVEN"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.249",
+        "Name": "DAWN Fl",
+        "Abbreviation": "DAWN-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.250",
+        "Name": "EOS-AURA",
+        "Abbreviation": "EOS-AURA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.251",
+        "Name": "ISEE-3",
+        "Abbreviation": "ISEE-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.252",
+        "Name": "ST3COLL-F",
+        "Abbreviation": "ST3COLL-F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.253",
+        "Name": "NI-ALPHA 359",
+        "Abbreviation": "NI-ALPHA-359"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.254",
+        "Name": "ST3COLL-T",
+        "Abbreviation": "ST3COLL-T"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.255",
+        "Name": "MRO,Sim",
+        "Abbreviation": "MROSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.256",
+        "Name": "SNOE",
+        "Abbreviation": "SNOE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.257",
+        "Name": "SIRIUS 2",
+        "Abbreviation": "SIRIUS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.258",
+        "Name": "SIRIUS2(SIM)",
+        "Abbreviation": "SIRIUS2SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.259",
+        "Name": "CORIOLIS",
+        "Abbreviation": "CORIOLIS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.260",
+        "Name": "ASTRA 1K(SIM)",
+        "Abbreviation": "ASTRA-1KSIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.261",
+        "Name": "PICARD",
+        "Abbreviation": "PICARD"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.262",
+        "Name": "DEMETER",
+        "Abbreviation": "DEMETER"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.263",
+        "Name": "PIC+DEM_SIM",
+        "Abbreviation": "PICDEM_SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.264",
+        "Name": "HOTBIRD 6",
+        "Abbreviation": "HOTBIRD-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.265",
+        "Name": "NEW BIRD",
+        "Abbreviation": "NEW-BIRD"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.266",
+        "Name": "KOMPSAT-2",
+        "Abbreviation": "KOMPSAT-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.267",
+        "Name": "INMARSAT 4F1",
+        "Abbreviation": "INMARSAT-4F1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.268",
+        "Name": "INMARSAT 4F2",
+        "Abbreviation": "INMARSAT-4F2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.269",
+        "Name": "INMARSAT 4F3",
+        "Abbreviation": "INMARSAT-4F3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.270",
+        "Name": "ST5-1",
+        "Abbreviation": "ST5-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.271",
+        "Name": "ARABSAT 2(SIM)",
+        "Abbreviation": "ARABSAT-2SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.272",
+        "Name": "SPIRALE 2",
+        "Abbreviation": "SPIRALE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.274",
+        "Name": "SPIRALE-Sim",
+        "Abbreviation": "SPIRALE-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.275",
+        "Name": "STELLATsim",
+        "Abbreviation": "STELLATsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.276",
+        "Name": "KEPLER-Sim",
+        "Abbreviation": "KEPLER-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.277",
+        "Name": "ETS-VII",
+        "Abbreviation": "ETS-VII"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.278",
+        "Name": "ISEE-2",
+        "Abbreviation": "ISEE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.279",
+        "Name": "ETS-VIII",
+        "Abbreviation": "ETS-VIII"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.280",
+        "Name": "STELLATfl",
+        "Abbreviation": "STELLATfl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.281",
+        "Name": "ISO",
+        "Abbreviation": "ISO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.282",
+        "Name": "STEREO-AHEAD(2)",
+        "Abbreviation": "STEREO-AHEAD2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.283",
+        "Name": "STEREO-BEHIND(2)",
+        "Abbreviation": "STEREO-BEHIND2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.284",
+        "Name": "MESSENGER",
+        "Abbreviation": "MESSENGER"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.285",
+        "Name": "SCISAT",
+        "Abbreviation": "SCISAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.286",
+        "Name": "SMART 1",
+        "Abbreviation": "SMART-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.287",
+        "Name": "KATE",
+        "Abbreviation": "KATE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.288",
+        "Name": "HOT BIRD 2",
+        "Abbreviation": "HOT-BIRD-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.289",
+        "Name": "HOT BIRD 3",
+        "Abbreviation": "HOT-BIRD-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.290",
+        "Name": "HOT BIRD 4",
+        "Abbreviation": "HOT-BIRD-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.291",
+        "Name": "HOTBIRD (SW SIM)",
+        "Abbreviation": "HOTBIRD-SW-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.292",
+        "Name": "HOTBIRD (HW SIM)",
+        "Abbreviation": "HOTBIRD-HW-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.293",
+        "Name": "DAWN Sim",
+        "Abbreviation": "DAWN-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.294",
+        "Name": "ST-2",
+        "Abbreviation": "ST-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.295",
+        "Name": "ROCSAT-2",
+        "Abbreviation": "ROCSAT-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.296",
+        "Name": "SYRACUSE-3B",
+        "Abbreviation": "SYRACUSE-3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.297",
+        "Name": "MTSAT-2",
+        "Abbreviation": "MTSAT-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.298",
+        "Name": "CRYOSAT X-band",
+        "Abbreviation": "CRYOSAT-X-band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.299",
+        "Name": "CRYOSAT",
+        "Abbreviation": "CRYOSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.300",
+        "Name": "SWIFT",
+        "Abbreviation": "SWIFT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.301",
+        "Name": "MERS-1-Sim",
+        "Abbreviation": "MERS-1-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.302",
+        "Name": "MERS-1-Fl",
+        "Abbreviation": "MERS-1-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.303",
+        "Name": "MERS-2-Fl",
+        "Abbreviation": "MERS-2-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.304",
+        "Name": "MERS-2-Sim",
+        "Abbreviation": "MERS-2-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.305",
+        "Name": "ASNARO",
+        "Abbreviation": "ASNARO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.306",
+        "Name": "PROCYON",
+        "Abbreviation": "PROCYON"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.307",
+        "Name": "IRIS",
+        "Abbreviation": "IRIS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.308",
+        "Name": "EDRS-C",
+        "Abbreviation": "EDRS-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.309",
+        "Name": "ASTRO-H",
+        "Abbreviation": "ASTRO-H"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.310",
+        "Name": "QZS-1",
+        "Abbreviation": "QZS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.311",
+        "Name": "PLANET-C",
+        "Abbreviation": "PLANET-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.312",
+        "Name": "BioSentinel",
+        "Abbreviation": "BioSentinel"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.349",
+        "Name": "RSACOMQAF-1(Sim)",
+        "Abbreviation": "RSACOMQAF-1Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.313",
+        "Name": "ORB-9E",
+        "Abbreviation": "ORB-9E",
+        "Aliases": ["Cygnus"]
+    },
+    {
+        "ID": "1.3.112.4.7.314",
+        "Name": "DSN-2",
+        "Abbreviation": "DSN-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.315",
+        "Name": "ACYGNUS (COTS)",
+        "Abbreviation": "ACYGNUS-COTS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.316",
+        "Name": "COSMO-SkyMed4",
+        "Abbreviation": "COSMO-SkyMed4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.317",
+        "Name": "COSMO-SkyMed2",
+        "Abbreviation": "COSMO-SkyMed2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.318",
+        "Name": "GPM",
+        "Abbreviation": "GPM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.319",
+        "Name": "ORB-10E",
+        "Abbreviation": "ORB-10E",
+        "Aliases": ["Cygnus"]
+    },
+    {
+        "ID": "1.3.112.4.7.320",
+        "Name": "SPRINT-A",
+        "Abbreviation": "SPRINT-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.321",
+        "Name": "MMS 1",
+        "Abbreviation": "MMS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.322",
+        "Name": "MMS 2",
+        "Abbreviation": "MMS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.323",
+        "Name": "MMS 3",
+        "Abbreviation": "MMS-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.324",
+        "Name": "MMS 4",
+        "Abbreviation": "MMS-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.325",
+        "Name": "LADEE",
+        "Abbreviation": "LADEE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.326",
+        "Name": "EXPRESS-AM4",
+        "Abbreviation": "EXPRESS-AM4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.327",
+        "Name": "MSG-1",
+        "Abbreviation": "MSG-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.328",
+        "Name": "MSG-2",
+        "Abbreviation": "MSG-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.329",
+        "Name": "MSG-3",
+        "Abbreviation": "MSG-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.330",
+        "Name": "MSG-4",
+        "Abbreviation": "MSG-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.331",
+        "Name": "OA-16",
+        "Abbreviation": "OA-16"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.332",
+        "Name": "ORB-6",
+        "Abbreviation": "ORB-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.333",
+        "Name": "ORB-7",
+        "Abbreviation": "ORB-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.334",
+        "Name": "ORB-8",
+        "Abbreviation": "ORB-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.335",
+        "Name": "JCSat-14",
+        "Abbreviation": "JCSat-14"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.336",
+        "Name": "THEMIS SIM",
+        "Abbreviation": "THEMIS-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.337",
+        "Name": "THEMIS 1",
+        "Abbreviation": "THEMIS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.338",
+        "Name": "THEMIS A",
+        "Abbreviation": "THEMIS-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.339",
+        "Name": "THEMIS 2",
+        "Abbreviation": "THEMIS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.340",
+        "Name": "THEMIS B",
+        "Abbreviation": "THEMIS-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.341",
+        "Name": "THEMIS 3",
+        "Abbreviation": "THEMIS-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.342",
+        "Name": "THEMIS C",
+        "Abbreviation": "THEMIS-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.343",
+        "Name": "THEMIS 4",
+        "Abbreviation": "THEMIS-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.344",
+        "Name": "THEMIS D",
+        "Abbreviation": "THEMIS-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.345",
+        "Name": "THEMIS 5",
+        "Abbreviation": "THEMIS-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.346",
+        "Name": "THEMIS E",
+        "Abbreviation": "THEMIS-E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.347",
+        "Name": "THEMIS Spare",
+        "Abbreviation": "THEMIS-Spare"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.348",
+        "Name": "RASCOMQAF-1",
+        "Abbreviation": "RASCOMQAF-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.350",
+        "Name": "MITA",
+        "Abbreviation": "MITA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.351",
+        "Name": "AGILE",
+        "Abbreviation": "AGILE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.352",
+        "Name": "TURKSAT-4A",
+        "Abbreviation": "TURKSAT-4A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.353",
+        "Name": "EXPRESS-AM4R",
+        "Abbreviation": "EXPRESS-AM4R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.354",
+        "Name": "TURKSAT-4B",
+        "Abbreviation": "TURKSAT-4B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.355",
+        "Name": "KOREASAT-5",
+        "Abbreviation": "KOREASAT-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.357",
+        "Name": "ARABSAT 4A",
+        "Abbreviation": "ARABSAT-4A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.358",
+        "Name": "ARABSAT 4B",
+        "Abbreviation": "ARABSAT-4B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.359",
+        "Name": "SKYNET 5A",
+        "Abbreviation": "SKYNET-5A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.360",
+        "Name": "SKYNET 5B",
+        "Abbreviation": "SKYNET-5B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.361",
+        "Name": "HOTBIRD 8",
+        "Abbreviation": "HOTBIRD-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.362",
+        "Name": "FORMOSAT-5",
+        "Abbreviation": "FORMOSAT-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.363",
+        "Name": "QUESS",
+        "Abbreviation": "QUESS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.364",
+        "Name": "CINEMA",
+        "Abbreviation": "CINEMA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.365",
+        "Name": "XTE",
+        "Abbreviation": "XTE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.366",
+        "Name": "OA-11",
+        "Abbreviation": "OA-11",
+        "Aliases": ["Cygnus"]
+    },
+    {
+        "ID": "1.3.112.4.7.367",
+        "Name": "OA-12",
+        "Abbreviation": "OA-12",
+        "Aliases": ["Cygnus"]
+    },
+    {
+        "ID": "1.3.112.4.7.368",
+        "Name": "OA-13",
+        "Abbreviation": "OA-13",
+        "Aliases": ["Cygnus"]
+    },
+    {
+        "ID": "1.3.112.4.7.369",
+        "Name": "OA-14",
+        "Abbreviation": "OA-14",
+        "Aliases": ["Cygnus"]
+    },
+    {
+        "ID": "1.3.112.4.7.370",
+        "Name": "GeoEye-2",
+        "Abbreviation": "GeoEye-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.371",
+        "Name": "GeoEye-3",
+        "Abbreviation": "GeoEye-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.373",
+        "Name": "HTV/EM",
+        "Abbreviation": "HTVEM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.374",
+        "Name": "SERVIS 2",
+        "Abbreviation": "SERVIS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.375",
+        "Name": "GOSAT-2",
+        "Abbreviation": "GOSAT-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.376",
+        "Name": "GCOM-W1",
+        "Abbreviation": "GCOM-W1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.377",
+        "Name": "GCOM-C1",
+        "Abbreviation": "GCOM-C1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.378",
+        "Name": "HTV-DM",
+        "Abbreviation": "HTV-DM"       
+    },
+    {
+        "ID": "1.3.112.4.7.379",
+        "Name": "HTV-01",
+        "Abbreviation": "HTV-01"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.380",
+        "Name": "HTV-02",
+        "Abbreviation": "HTV-02"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.381",
+        "Name": "HTV-03",
+        "Abbreviation": "HTV-03"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.382",
+        "Name": "HTV-04",
+        "Abbreviation": "HTV-04"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.383",
+        "Name": "HTV-05",
+        "Abbreviation": "HTV-05"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.384",
+        "Name": "HTV-06",
+        "Abbreviation": "HTV-06"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.385",
+        "Name": "HTV-07",
+        "Abbreviation": "HTV-07"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.386",
+        "Name": "HTV-08",
+        "Abbreviation": "HTV-08"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.387",
+        "Name": "HTV-09",
+        "Abbreviation": "HTV-09"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.388",
+        "Name": "Al Yeh 3",
+        "Abbreviation": "Al-Yeh-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.389",
+        "Name": "JPSS-1",
+        "Abbreviation": "JPSS-1",
+        "Aliases": ["NOAA-20"]
+    },
+    {
+        "ID": "1.3.112.4.7.390",
+        "Name": "GALILEO-GEM",
+        "Abbreviation": "GALILEO-GEM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.391",
+        "Name": "CHINASAT9",
+        "Abbreviation": "CHINASAT9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.392",
+        "Name": "ASTRA-1M",
+        "Abbreviation": "ASTRA-1M"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.393",
+        "Name": "GALILEO-GEM (Sim)",
+        "Abbreviation": "GALILEO-GEM-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.395",
+        "Name": "ESSAIM-A",
+        "Abbreviation": "ESSAIM-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.396",
+        "Name": "ESSAIM-B",
+        "Abbreviation": "ESSAIM-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.397",
+        "Name": "ESSAIM-C",
+        "Abbreviation": "ESSAIM-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.398",
+        "Name": "ESSAIM-D",
+        "Abbreviation": "ESSAIM-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.399",
+        "Name": "ESSAIM-SIM",
+        "Abbreviation": "ESSAIM-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.400",
+        "Name": "PARASOL",
+        "Abbreviation": "PARASOL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.401",
+        "Name": "MICROSCOPE",
+        "Abbreviation": "MICROSCOPE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.402",
+        "Name": "SMOS",
+        "Abbreviation": "SMOS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.403",
+        "Name": "SMOS-Sim",
+        "Abbreviation": "SMOS-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.404",
+        "Name": "JASON-2",
+        "Abbreviation": "JASON-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.405",
+        "Name": "Hylas-4",
+        "Abbreviation": "Hylas-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.406",
+        "Name": "JASON-2,Sim",
+        "Abbreviation": "JASON-2Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.407",
+        "Name": "JPSS-2",
+        "Abbreviation": "JPSS-2",
+        "Aliases": ["NOAA-21"]
+    },
+    {
+        "ID": "1.3.112.4.7.408",
+        "Name": "Roue-I-A",
+        "Abbreviation": "Roue-I-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.409",
+        "Name": "JPSS-3",
+        "Abbreviation": "JPSS-3",
+        "Aliases": ["NOAA-22"]
+    },
+    {
+        "ID": "1.3.112.4.7.410",
+        "Name": "Roue-I-B",
+        "Abbreviation": "Roue-I-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.411",
+        "Name": "JPSS-4",
+        "Abbreviation": "JPSS-4",
+        "Aliases": ["NOAA-23"]
+    },
+    {
+        "ID": "1.3.112.4.7.412",
+        "Name": "ROUE-I-C",
+        "Abbreviation": "ROUE-I-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.413",
+        "Name": "ASTRA-2G",
+        "Abbreviation": "ASTRA-2G"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.414",
+        "Name": "ROUE-I-D",
+        "Abbreviation": "ROUE-I-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.415",
+        "Name": "MEGHATROPIQUEs",
+        "Abbreviation": "MEGHATROPIQUEs"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.416",
+        "Name": "MEGHATROPIQUES_Sim",
+        "Abbreviation": "MEGHATROPIQUES_Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.417",
+        "Name": "GE1i",
+        "Abbreviation": "GE1i"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.418",
+        "Name": "GE1i-Sim",
+        "Abbreviation": "GE1i-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.419",
+        "Name": "ASNARO-2 (System)",
+        "Abbreviation": "ASNARO-2-System",
+        "Aliases": ["ASNARO-2 (System)"]
+    },
+    {
+        "ID": "1.3.112.4.7.458",
+        "Name": "CRYOSAT (Sim)",
+        "Abbreviation": "CRYOSAT-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.420",
+        "Name": "ERG",
+        "Abbreviation": "ERG"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.421",
+        "Name": "STRV-1C",
+        "Abbreviation": "STRV-1C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.422",
+        "Name": "GE2i",
+        "Abbreviation": "GE2i"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.423",
+        "Name": "GE3i",
+        "Abbreviation": "GE3i"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.424",
+        "Name": "GE4i",
+        "Abbreviation": "GE4i"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.425",
+        "Name": "SERVIS1-ATTC",
+        "Abbreviation": "SERVIS1-ATTC"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.426",
+        "Name": "SERVIS1",
+        "Abbreviation": "SERVIS1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.427",
+        "Name": "W3A-1",
+        "Abbreviation": "W3A-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.428",
+        "Name": "ICESAT",
+        "Abbreviation": "ICESAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.429",
+        "Name": "W3A-2",
+        "Abbreviation": "W3A-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.430",
+        "Name": "GE2i(Sim)",
+        "Abbreviation": "GE2iSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.431",
+        "Name": "GE3i(Sim)",
+        "Abbreviation": "GE3iSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.432",
+        "Name": "GE4i(Sim)",
+        "Abbreviation": "GE4iSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.433",
+        "Name": "GE2E",
+        "Abbreviation": "GE2E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.434",
+        "Name": "ASTRA-2F",
+        "Abbreviation": "ASTRA-2F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.435",
+        "Name": "GE3E",
+        "Abbreviation": "GE3E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.436",
+        "Name": "ASTRA-2E",
+        "Abbreviation": "ASTRA-2E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.437",
+        "Name": "SYRACUS3 (Fl)",
+        "Abbreviation": "SYRACUS3-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.438",
+        "Name": "SYRACUS3",
+        "Abbreviation": "SYRACUS3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.439",
+        "Name": "RADARSAT 2A",
+        "Abbreviation": "RADARSAT-2A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.440",
+        "Name": "RADARSAT 2B",
+        "Abbreviation": "RADARSAT-2B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.441",
+        "Name": "ABRIXAS",
+        "Abbreviation": "ABRIXAS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.442",
+        "Name": "CHAMP",
+        "Abbreviation": "CHAMP"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.443",
+        "Name": "TIMED",
+        "Abbreviation": "TIMED"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.444",
+        "Name": "ABRIXAS(Flt)",
+        "Abbreviation": "ABRIXASFlt"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.445",
+        "Name": "PROBA-2",
+        "Abbreviation": "PROBA-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.446",
+        "Name": "HERSCHEL",
+        "Abbreviation": "HERSCHEL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.447",
+        "Name": "PLANCK",
+        "Abbreviation": "PLANCK"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.448",
+        "Name": "HPAVM",
+        "Abbreviation": "HPAVM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.449",
+        "Name": "HERSCHEL,sim",
+        "Abbreviation": "HERSCHELsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.450",
+        "Name": "PLANCK,sim",
+        "Abbreviation": "PLANCKsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.451",
+        "Name": "GEMS",
+        "Abbreviation": "GEMS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.452",
+        "Name": "ICON",
+        "Abbreviation": "ICON"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.453",
+        "Name": "GOCE-FM",
+        "Abbreviation": "GOCE-FM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.454",
+        "Name": "GOCE-EM",
+        "Abbreviation": "GOCE-EM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.455",
+        "Name": "GOCE-SIM",
+        "Abbreviation": "GOCE-SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.456",
+        "Name": "STAR ONE C1",
+        "Abbreviation": "STAR-ONE-C1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.457",
+        "Name": "STAR ONE C1 (Sim)",
+        "Abbreviation": "STAR-ONE-C1-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.459",
+        "Name": "LDCM",
+        "Abbreviation": "LDCM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.460",
+        "Name": "Quasi-Zenith Satellite 2",
+        "Abbreviation": "Quasi-Zenith-Satellite-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.461",
+        "Name": "Quasi-Zenith Satellite 3",
+        "Abbreviation": "Quasi-Zenith-Satellite-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.462",
+        "Name": "Quasi-Zenith Satellite 4",
+        "Abbreviation": "Quasi-Zenith-Satellite-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.463",
+        "Name": "AEOLUS-S",
+        "Abbreviation": "AEOLUS-S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.464",
+        "Name": "AEOLUS-X",
+        "Abbreviation": "AEOLUS-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.465",
+        "Name": "AEOLUS-S Sim",
+        "Abbreviation": "AEOLUS-S-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.466",
+        "Name": "GSTB-V2",
+        "Abbreviation": "GSTB-V2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.467",
+        "Name": "GSTB-V2 Sim",
+        "Abbreviation": "GSTB-V2-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.468",
+        "Name": "GSAT299",
+        "Abbreviation": "GSAT299"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.469",
+        "Name": "PLEIADES HR-1A",
+        "Abbreviation": "PLEIADES-HR-1A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.470",
+        "Name": "PLEIADES HR-1A Sim",
+        "Abbreviation": "PLEIADES-HR-1A-Sim"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.471",
+        "Name": "PLEIADES HR-1B",
+        "Abbreviation": "PLEIADES-HR-1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.472",
+        "Name": "PLEIADES HR-1B Sim",
+        "Abbreviation": "PLEIADES-HR-1B-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.473",
+        "Name": "HOTBIRD7A",
+        "Abbreviation": "HOTBIRD7A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.474",
+        "Name": "GALAXY 17",
+        "Abbreviation": "GALAXY-17"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.475",
+        "Name": "TET-1-FM",
+        "Abbreviation": "TET-1-FM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.476",
+        "Name": "TET-1-EM",
+        "Abbreviation": "TET-1-EM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.477",
+        "Name": "JASON-3",
+        "Abbreviation": "JASON-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.478",
+        "Name": "JASON-3sim",
+        "Abbreviation": "JASON-3sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.479",
+        "Name": "TARANIS",
+        "Abbreviation": "TARANIS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.480",
+        "Name": "ARABSAT 5C",
+        "Abbreviation": "ARABSAT-5C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.481",
+        "Name": "GALAXY 17 Sim",
+        "Abbreviation": "GALAXY-17-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.482",
+        "Name": "ANIK-F3",
+        "Abbreviation": "ANIK-F3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.483",
+        "Name": "THEOS",
+        "Abbreviation": "THEOS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.484",
+        "Name": "STAR ONE C-2",
+        "Abbreviation": "STAR-ONE-C-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.485",
+        "Name": "SKYNET 5C",
+        "Abbreviation": "SKYNET-5C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.486",
+        "Name": "CHANDRAYAAN-1",
+        "Abbreviation": "CHANDRAYAAN-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.487",
+        "Name": "Express-AMU1",
+        "Abbreviation": "Express-AMU1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.488",
+        "Name": "euCROPIS",
+        "Abbreviation": "euCROPIS",
+        "Aliases": ["EUC"]
+    },
+    {
+        "ID": "1.3.112.4.7.489",
+        "Name": "W3B",
+        "Abbreviation": "W3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.490",
+        "Name": "PAZ",
+        "Abbreviation": "PAZ"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.491",
+        "Name": "AMOS5",
+        "Abbreviation": "AMOS5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.493",
+        "Name": "PROBA-V",
+        "Abbreviation": "PROBA-V"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.494",
+        "Name": "SPOT6 (sc)",
+        "Abbreviation": "SPOT6-sc"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.495",
+        "Name": "SPOT7 (sc)",
+        "Abbreviation": "SPOT7-sc"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.496",
+        "Name": "CHIBIS-M",
+        "Abbreviation": "CHIBIS-M"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.497",
+        "Name": "ALOS-2",
+        "Abbreviation": "ALOS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.498",
+        "Name": "ARSAT-1",
+        "Abbreviation": "ARSAT-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.499",
+        "Name": "W3C",
+        "Abbreviation": "W3C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.500",
+        "Name": "EarthCare (EFM)",
+        "Abbreviation": "EarthCare-EFM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.501",
+        "Name": "EarthCare (EQM)",
+        "Abbreviation": "EarthCare-EQM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.502",
+        "Name": "EarthCare (FM model)",
+        "Abbreviation": "EarthCare-FM-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.503",
+        "Name": "EarthCare (FM Prime)",
+        "Abbreviation": "EarthCare-FM-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.504",
+        "Name": "EnMAP(Prim)",
+        "Abbreviation": "EnMAPPrim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.505",
+        "Name": "EnMAP(Back)",
+        "Abbreviation": "EnMAPBack"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.506",
+        "Name": "EarthCare (STB)",
+        "Abbreviation": "EarthCare-STB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.507",
+        "Name": "SARAL",
+        "Abbreviation": "SARAL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.508",
+        "Name": "Sentinel-1 (EFM)",
+        "Abbreviation": "Sentinel-1-EFM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.509",
+        "Name": "Sentinel-1 (EQM)",
+        "Abbreviation": "Sentinel-1-EQM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.510",
+        "Name": "SES-16",
+        "Abbreviation": "SES-16"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.511",
+        "Name": "Sentinel-1 (FM A model)",
+        "Abbreviation": "Sentinel-1-FM-A-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.512",
+        "Name": "Sentinel-1 (FM A Prime)",
+        "Abbreviation": "Sentinel-1-FM-A-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.513",
+        "Name": "PSN VI",
+        "Abbreviation": "PSN-VI"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.514",
+        "Name": "Sentinel-1 (FM B model)",
+        "Abbreviation": "Sentinel-1-FM-B-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.515",
+        "Name": "Sentinel-1 (FM B Prime)",
+        "Abbreviation": "Sentinel-1-FM-B-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.516",
+        "Name": "MATS",
+        "Abbreviation": "MATS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.517",
+        "Name": "Sentinel-1 (STB)",
+        "Abbreviation": "Sentinel-1-STB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.518",
+        "Name": "ADS-1B",
+        "Abbreviation": "ADS-1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.519",
+        "Name": "Sentinel-2 (EFM)",
+        "Abbreviation": "Sentinel-2-EFM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.520",
+        "Name": "Sentinel-2 (EQM)",
+        "Abbreviation": "Sentinel-2-EQM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.521",
+        "Name": "FE-1 (S-Band)",
+        "Abbreviation": "FE-1-S-Band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.522",
+        "Name": "Sentinel-2 (FM A model)",
+        "Abbreviation": "Sentinel-2-FM-A-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.523",
+        "Name": "Sentinel-2 (FM A Prime)",
+        "Abbreviation": "Sentinel-2-FM-A-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.524",
+        "Name": "FE-2 (S-Band)",
+        "Abbreviation": "FE-2-S-Band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.525",
+        "Name": "Sentinel-2 (FM B model)",
+        "Abbreviation": "Sentinel-2-M-B-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.526",
+        "Name": "Sentinel-2 (FM B Prime)",
+        "Abbreviation": "Sentinel-2-FM-B-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.528",
+        "Name": "Sentinel-2 (STB)",
+        "Abbreviation": "Sentinel-2-STB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.529",
+        "Name": "W6A",
+        "Abbreviation": "W6A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.530",
+        "Name": "Sentinel-3 (EFM)",
+        "Abbreviation": "Sentinel-3-EFM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.533",
+        "Name": "Sentinel-3 (FM A model)",
+        "Abbreviation": "Sentinel-3-FM-A-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.534",
+        "Name": "Sentinel-3 (FM A Prime)",
+        "Abbreviation": "Sentinel-3-FM-A-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.535",
+        "Name": "BSAT-4a",
+        "Abbreviation": "BSAT-4a"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.536",
+        "Name": "Sentinel-3 (FM B model)",
+        "Abbreviation": "Sentinel-3-FM-B-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.537",
+        "Name": "Sentinel-3 (FM B Prime)",
+        "Abbreviation": "Sentinel-3-FM-B-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.538",
+        "Name": "EXOMARS SCC (Spacecraft Composite)",
+        "Abbreviation": "EXOMARS-SCC-Spacecraft-Composite"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.539",
+        "Name": "Sentinel-3 (STB)",
+        "Abbreviation": "Sentinel-3-STB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.540",
+        "Name": "APSTAR-7",
+        "Abbreviation": "APSTAR-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.541",
+        "Name": "TELKOM-3",
+        "Abbreviation": "TELKOM-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.542",
+        "Name": "CHANDRAYAAN-2",
+        "Abbreviation": "CHANDRAYAAN-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.543",
+        "Name": "ROVER-1",
+        "Abbreviation": "ROVER-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.544",
+        "Name": "ROVER-2",
+        "Abbreviation": "ROVER-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.545",
+        "Name": "SKYNET-5D",
+        "Abbreviation": "SKYNET-5D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.546",
+        "Name": "W-5A",
+        "Abbreviation": "W-5A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.547",
+        "Name": "KOMPSAT-3A",
+        "Abbreviation": "KOMPSAT-3A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.548",
+        "Name": "IXV",
+        "Abbreviation": "IXV"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.549",
+        "Name": "SES-6",
+        "Abbreviation": "SES-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.550",
+        "Name": "APSTAR-7B/CS12",
+        "Abbreviation": "APSTAR-7BCS12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.551",
+        "Name": "EUROBIRD-2A",
+        "Abbreviation": "EUROBIRD-2A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.552",
+        "Name": "DZZ-HR",
+        "Abbreviation": "DZZ-HR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.553",
+        "Name": "GOES-R(A)",
+        "Abbreviation": "GOES-RA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.554",
+        "Name": "YAMAL-402",
+        "Abbreviation": "YAMAL-402"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.555",
+        "Name": "INGENIO FM",
+        "Abbreviation": "INGENIO-FM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.556",
+        "Name": "INGENIO EQM",
+        "Abbreviation": "INGENIO-EQM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.557",
+        "Name": "SICRAL 2",
+        "Abbreviation": "SICRAL-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.558",
+        "Name": "HAYABUSA 2",
+        "Abbreviation": "HAYABUSA-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.559",
+        "Name": "RCM-1",
+        "Abbreviation": "RCM-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.560",
+        "Name": "RCM-2",
+        "Abbreviation": "RCM-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.561",
+        "Name": "RCM-3",
+        "Abbreviation": "RCM-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.562",
+        "Name": "VNREDSAT-1",
+        "Abbreviation": "VNREDSAT-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.563",
+        "Name": "W3D",
+        "Abbreviation": "W3D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.564",
+        "Name": "BIROS",
+        "Abbreviation": "BIROS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.565",
+        "Name": "BIROS-EM",
+        "Abbreviation": "BIROS-EM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.566",
+        "Name": "FLYINGLAPTOP",
+        "Abbreviation": "FLYINGLAPTOP"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.567",
+        "Name": "AMAZONIA 1",
+        "Abbreviation": "AMAZONIA-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.568",
+        "Name": "GOES-R(B)",
+        "Abbreviation": "GOES-RB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.569",
+        "Name": "OPTUS-10",
+        "Abbreviation": "OPTUS-10"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.606",
+        "Name": "O3BMODEL12",
+        "Abbreviation": "O3BMODEL12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.570",
+        "Name": "GSAT201",
+        "Abbreviation": "GSAT201"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.571",
+        "Name": "GSAT202",
+        "Abbreviation": "GSAT202"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.572",
+        "Name": "GSAT203",
+        "Abbreviation": "GSAT203"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.573",
+        "Name": "GSAT204",
+        "Abbreviation": "GSAT204"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.574",
+        "Name": "GSAT205",
+        "Abbreviation": "GSAT205"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.575",
+        "Name": "GSAT206",
+        "Abbreviation": "GSAT206"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.576",
+        "Name": "GSAT207",
+        "Abbreviation": "GSAT207"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.577",
+        "Name": "GSAT208",
+        "Abbreviation": "GSAT208"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.578",
+        "Name": "GSAT209",
+        "Abbreviation": "GSAT209"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.579",
+        "Name": "GSAT210",
+        "Abbreviation": "GSAT210"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.580",
+        "Name": "GSAT211",
+        "Abbreviation": "GSAT211"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.581",
+        "Name": "GSAT212",
+        "Abbreviation": "GSAT212"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.582",
+        "Name": "GSAT213",
+        "Abbreviation": "GSAT213"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.583",
+        "Name": "GSAT214",
+        "Abbreviation": "GSAT214"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.584",
+        "Name": "Himawari-8",
+        "Abbreviation": "Himawari-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.585",
+        "Name": "Himawari-9",
+        "Abbreviation": "Himawari-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.586",
+        "Name": "CSO-1-S",
+        "Abbreviation": "CSO-1-S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.587",
+        "Name": "MEASAT-3B",
+        "Abbreviation": "MEASAT-3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.588",
+        "Name": "E3B",
+        "Abbreviation": "E3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.589",
+        "Name": "KAZSAT-3",
+        "Abbreviation": "KAZSAT-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.590",
+        "Name": "ATHENAFIDUS",
+        "Abbreviation": "ATHENAFIDUS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.591",
+        "Name": "ATHENAF-sim",
+        "Abbreviation": "ATHENAF-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.592",
+        "Name": "CSO-1-Ssim",
+        "Abbreviation": "CSO-1-Ssim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.593",
+        "Name": "M3MSAT",
+        "Abbreviation": "M3MSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.594",
+        "Name": "DIRECTV-15",
+        "Abbreviation": "DIRECTV-15"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.595",
+        "Name": "IRNSS-1A",
+        "Abbreviation": "IRNSS-1A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.596",
+        "Name": "IRNSS-1B",
+        "Abbreviation": "IRNSS-1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.597",
+        "Name": "IRNSS-1C",
+        "Abbreviation": "IRNSS-1C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.598",
+        "Name": "IRNSS-1D",
+        "Abbreviation": "IRNSS-1D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.599",
+        "Name": "IRNSS-1E",
+        "Abbreviation": "IRNSS-1E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.600",
+        "Name": "IRNSS-1F",
+        "Abbreviation": "IRNSS-1F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.601",
+        "Name": "IRNSS-1G",
+        "Abbreviation": "IRNSS-1G"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.602",
+        "Name": "O3BMODEL 9",
+        "Abbreviation": "O3BMODEL-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.603",
+        "Name": "GOES-S(A)",
+        "Abbreviation": "GOES-SA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.604",
+        "Name": "O3BMODEL10",
+        "Abbreviation": "O3BMODEL10"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.605",
+        "Name": "O3BMODEL11",
+        "Abbreviation": "O3BMODEL11"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.861",
+        "Name": "MEV-1",
+        "Abbreviation": "MEV-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.607",
+        "Name": "SGDC",
+        "Abbreviation": "SGDC"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.608",
+        "Name": "EXPRESS-AT2",
+        "Abbreviation": "EXPRESS-AT2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.609",
+        "Name": "CSO-3-S",
+        "Abbreviation": "CSO-3-S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.610",
+        "Name": "EXPRESS-AM7",
+        "Abbreviation": "EXPRESS-AM7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.611",
+        "Name": "SOLO",
+        "Abbreviation": "SOLO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.612",
+        "Name": "CSO-3-Ssim",
+        "Abbreviation": "CSO-3-Ssim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.613",
+        "Name": "LYBID",
+        "Abbreviation": "LYBID"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.614",
+        "Name": "GOES-S(B)",
+        "Abbreviation": "GOES-SB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.615",
+        "Name": "EB9B",
+        "Abbreviation": "EB9B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.616",
+        "Name": "EXOMARS2016O",
+        "Abbreviation": "EXOMARS2016O"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.617",
+        "Name": "HODOYOSHI-3",
+        "Abbreviation": "HODOYOSHI-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.618",
+        "Name": "CSO-2-S",
+        "Abbreviation": "CSO-2-S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.619",
+        "Name": "HODOYOSHI3",
+        "Abbreviation": "HODOYOSHI3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.620",
+        "Name": "HODOYOSHI4",
+        "Abbreviation": "HODOYOSHI4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.621",
+        "Name": "UNIFORM-1",
+        "Abbreviation": "UNIFORM-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.622",
+        "Name": "EXPRESS-AT1",
+        "Abbreviation": "EXPRESS-AT1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.623",
+        "Name": "AMAZONIA1B",
+        "Abbreviation": "AMAZONIA1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.624",
+        "Name": "MOM",
+        "Abbreviation": "MOM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.625",
+        "Name": "MTG-I1",
+        "Abbreviation": "MTG-I1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.626",
+        "Name": "MTG-S1",
+        "Abbreviation": "MTG-S1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.627",
+        "Name": "MTG-I2",
+        "Abbreviation": "MTG-I2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.628",
+        "Name": "MTG-I3",
+        "Abbreviation": "MTG-I3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.629",
+        "Name": "MTG-S2",
+        "Abbreviation": "MTG-S2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.630",
+        "Name": "MTG-I4",
+        "Abbreviation": "MTG-I4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.631",
+        "Name": "CHINASAT 6B",
+        "Abbreviation": "CHINASAT-6B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.632",
+        "Name": "CHINASAT 6B,sim",
+        "Abbreviation": "CHINASAT-6Bsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.633",
+        "Name": "CASSIOPE",
+        "Abbreviation": "CASSIOPE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.634",
+        "Name": "ARSAT-2",
+        "Abbreviation": "ARSAT-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.635",
+        "Name": "T-1",
+        "Abbreviation": "T-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.636",
+        "Name": "X-SAT",
+        "Abbreviation": "X-SAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.637",
+        "Name": "IBEX",
+        "Abbreviation": "IBEX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.638",
+        "Name": "ST8",
+        "Abbreviation": "ST8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.639",
+        "Name": "EUCLID",
+        "Abbreviation": "EUCLID"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.640",
+        "Name": "AMOS 6",
+        "Abbreviation": "AMOS-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.641",
+        "Name": "PRISMA",
+        "Abbreviation": "PRISMA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.642",
+        "Name": "TURKSAT 3A",
+        "Abbreviation": "TURKSAT-3A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.643",
+        "Name": "TURKSAT3A,sim",
+        "Abbreviation": "TURKSAT3Asim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.644",
+        "Name": "AMOS 3",
+        "Abbreviation": "AMOS-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.645",
+        "Name": "TSU 3",
+        "Abbreviation": "TSU-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.646",
+        "Name": "ASTRA-5B",
+        "Abbreviation": "ASTRA-5B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.647",
+        "Name": "CIEL-2",
+        "Abbreviation": "CIEL-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.648",
+        "Name": "ARABSAT 6B",
+        "Abbreviation": "ARABSAT-6B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.649",
+        "Name": "TURKMENISTANNSSC",
+        "Abbreviation": "TURKMENISTANNSSC"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.650",
+        "Name": "ABS-2",
+        "Abbreviation": "ABS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.651",
+        "Name": "GRACE-FO-A",
+        "Abbreviation": "GRACE-FO-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.652",
+        "Name": "GRACE-FO-B",
+        "Abbreviation": "GRACE-FO-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.653",
+        "Name": "GRACE-FO -sim",
+        "Abbreviation": "GRACE-FO-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.654",
+        "Name": "GOES-U(A)",
+        "Abbreviation": "GOES-UA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.655",
+        "Name": "EUTELSAT 8WB",
+        "Abbreviation": "EUTELSAT-8WB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.656",
+        "Name": "CSO-Stests",
+        "Abbreviation": "CSO-Stests"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.657",
+        "Name": "GOES-U(B)",
+        "Abbreviation": "GOES-UB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.658",
+        "Name": "STAR ONE C2(Sim)",
+        "Abbreviation": "STAR-ONE-C2Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.659",
+        "Name": "SICRAL 1B",
+        "Abbreviation": "SICRAL-1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.660",
+        "Name": "NIMIQ-4",
+        "Abbreviation": "NIMIQ-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.661",
+        "Name": "SWARM-A",
+        "Abbreviation": "SWARM-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.662",
+        "Name": "SWARM-C",
+        "Abbreviation": "SWARM-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.663",
+        "Name": "SWARM-B",
+        "Abbreviation": "SWARM-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.664",
+        "Name": "GSAT0220",
+        "Abbreviation": "GSAT0220"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.665",
+        "Name": "GSAT0221",
+        "Abbreviation": "GSAT0221"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.666",
+        "Name": "GSAT0222",
+        "Abbreviation": "GSAT0222"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.667",
+        "Name": "SKYBRASIL-1",
+        "Abbreviation": "SKYBRASIL-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.668",
+        "Name": "GSAT0215",
+        "Abbreviation": "GSAT0215"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.669",
+        "Name": "GSAT0216",
+        "Abbreviation": "GSAT0216"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.670",
+        "Name": "GSAT0217",
+        "Abbreviation": "GSAT0217"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.671",
+        "Name": "GSAT0218",
+        "Abbreviation": "GSAT0218"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.672",
+        "Name": "GSAT0219",
+        "Abbreviation": "GSAT0219"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.673",
+        "Name": "SWARM-EM",
+        "Abbreviation": "SWARM-EM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.674",
+        "Name": "CHEOPS",
+        "Abbreviation": "CHEOPS",
+        "Aliases": ["CHEOPS"]
+    },
+    {
+        "ID": "1.3.112.4.7.675",
+        "Name": "APStar-9",
+        "Abbreviation": "APStar-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.676",
+        "Name": "POPSAT-HIP1",
+        "Abbreviation": "POPSAT-HIP1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.677",
+        "Name": "O3B FM 13",
+        "Abbreviation": "O3B-FM-13"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.678",
+        "Name": "ScatSat-1",
+        "Abbreviation": "ScatSat-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.679",
+        "Name": "TELSTAR 12N",
+        "Abbreviation": "TELSTAR-12N"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.680",
+        "Name": "Jupiter-2",
+        "Abbreviation": "Jupiter-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.681",
+        "Name": "SENTINEL-5 PRECU",
+        "Abbreviation": "SENTINEL-5-PRECU"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.862",
+        "Name": "MEV-2",
+        "Abbreviation": "MEV-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.682",
+        "Name": "SES-10",
+        "Abbreviation": "SES-10"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.683",
+        "Name": "TESS",
+        "Abbreviation": "TESS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.684",
+        "Name": "EUTELSAT 65 WEST A",
+        "Abbreviation": "EUTELSAT-65-WEST-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.685",
+        "Name": "ASTRA 1N",
+        "Abbreviation": "ASTRA-1N"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.686",
+        "Name": "SENTINEL-5 P-sim",
+        "Abbreviation": "SENTINEL-5-P-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.687",
+        "Name": "KOREASAT-5A",
+        "Abbreviation": "KOREASAT-5A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.688",
+        "Name": "KOREASAT-7",
+        "Abbreviation": "KOREASAT-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.689",
+        "Name": "JCSat-15",
+        "Abbreviation": "JCSat-15"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.690",
+        "Name": "ISDLA-1",
+        "Abbreviation": "ISDLA-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.691",
+        "Name": "JCSat-16",
+        "Abbreviation": "JCSat-16"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.692",
+        "Name": "ECHOSTAR-105",
+        "Abbreviation": "ECHOSTAR-105"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.693",
+        "Name": "MN35-A",
+        "Abbreviation": "MN35-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.694",
+        "Name": "MN35-B (S-band)",
+        "Abbreviation": "MN35-B-S-band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.695",
+        "Name": "EUTELSAT-172B",
+        "Abbreviation": "EUTELSAT-172B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.696",
+        "Name": "SES-12",
+        "Abbreviation": "SES-12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.697",
+        "Name": "EMISAT",
+        "Abbreviation": "EMISAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.698",
+        "Name": "IRNSS-1H",
+        "Abbreviation": "IRNSS-1H"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.699",
+        "Name": "IRNSS-1I",
+        "Abbreviation": "IRNSS-1I"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.700",
+        "Name": "GOES-T(A)",
+        "Abbreviation": "GOES-TA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.701",
+        "Name": "GSAT-11",
+        "Abbreviation": "GSAT-11"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.702",
+        "Name": "Es'hail 2",
+        "Abbreviation": "Eshail-2",
+        "Aliases": ["Es'hail 2"]
+    },
+    {
+        "ID": "1.3.112.4.7.703",
+        "Name": "HS3-IS",
+        "Abbreviation": "HS3-IS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.704",
+        "Name": "GEO-KOMPSAT-2B",
+        "Abbreviation": "GEO-KOMPSAT-2B",
+        "Aliases": ["GK2B"]
+    },
+    {
+        "ID": "1.3.112.4.7.705",
+        "Name": "GEO-KOMPSAT-2A",
+        "Abbreviation": "GEO-KOMPSAT-2A",
+        "Aliases": ["GK2A"]
+    },
+    {
+        "ID": "1.3.112.4.7.706",
+        "Name": "GOES-T(B)",
+        "Abbreviation": "GOES-TB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.707",
+        "Name": "ECHOSTAR-18",
+        "Abbreviation": "ECHOSTAR-18"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.711",
+        "Name": "AsiaSat 9",
+        "Abbreviation": "AsiaSat-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.712",
+        "Name": "APSTAR6",
+        "Abbreviation": "APSTAR6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.713",
+        "Name": "APSTARS6(Sim)",
+        "Abbreviation": "APSTARS6Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.714",
+        "Name": "AMAZONAS-A",
+        "Abbreviation": "AMAZONAS-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.715",
+        "Name": "AMAZONAS-B",
+        "Abbreviation": "AMAZONAS-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.716",
+        "Name": "TERRASAR-X",
+        "Abbreviation": "TERRASAR-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.717",
+        "Name": "TER*-X Sim",
+        "Abbreviation": "TER-X-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.718",
+        "Name": "SYRACUSE-3B,sim",
+        "Abbreviation": "SYRACUSE-3Bsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.719",
+        "Name": "EDDINGTON",
+        "Abbreviation": "EDDINGTON"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.720",
+        "Name": "CRYOSAT(RF-SC)",
+        "Abbreviation": "CRYOSATRF-SC"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.721",
+        "Name": "FASTSAT",
+        "Abbreviation": "FASTSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.722",
+        "Name": "O3B FM 14",
+        "Abbreviation": "O3B-FM-14"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.723",
+        "Name": "Hispasat 1F",
+        "Abbreviation": "Hispasat-1F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.724",
+        "Name": "TELKOM-3S",
+        "Abbreviation": "TELKOM-3S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.725",
+        "Name": "Amazonas-5",
+        "Abbreviation": "Amazonas-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.727",
+        "Name": "PeruSat-1",
+        "Abbreviation": "PeruSat-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.728",
+        "Name": "TanDEM-X",
+        "Abbreviation": "TANDEM-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.729",
+        "Name": "TANDEM-Xsim",
+        "Abbreviation": "TANDEM-Xsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.730",
+        "Name": "LISA-PF",
+        "Abbreviation": "LISA-PF"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.732",
+        "Name": "ASTRA 3B",
+        "Abbreviation": "ASTRA-3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.733",
+        "Name": "W2A",
+        "Abbreviation": "W2A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.734",
+        "Name": "W7",
+        "Abbreviation": "W7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.735",
+        "Name": "AMAZONAS2",
+        "Abbreviation": "AMAZONAS2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.736",
+        "Name": "COMSATBw1",
+        "Abbreviation": "COMSATBw1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.737",
+        "Name": "O3B FM 15",
+        "Abbreviation": "O3B-FM-15"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.738",
+        "Name": "O3B FM 16",
+        "Abbreviation": "O3B-FM-16"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.739",
+        "Name": "O3B FM 17",
+        "Abbreviation": "O3B-FM-17"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.740",
+        "Name": "O3B FM 19",
+        "Abbreviation": "O3B-FM-19"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.741",
+        "Name": "O3B FM 20",
+        "Abbreviation": "O3B-FM-20"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.742",
+        "Name": "O3B FM 18",
+        "Abbreviation": "O3B-FM-18"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.743",
+        "Name": "COMSATBw2",
+        "Abbreviation": "COMSATBw2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.744",
+        "Name": "HYLAS",
+        "Abbreviation": "HYLAS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.745",
+        "Name": "ARABSAT 5A",
+        "Abbreviation": "ARABSAT-5A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.746",
+        "Name": "ARABSAT 5B",
+        "Abbreviation": "ARABSAT-5B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.747",
+        "Name": "GAIA(AVM)sim(",
+        "Abbreviation": "GAIAAVMsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.748",
+        "Name": "GAIA",
+        "Abbreviation": "GAIA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.749",
+        "Name": "GALILEOSATeng",
+        "Abbreviation": "GALILEOSATeng"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.750",
+        "Name": "GSAT0104",
+        "Abbreviation": "GSAT0104"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.751",
+        "Name": "THOR 6 sim",
+        "Abbreviation": "THOR-6-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.752",
+        "Name": "THOR 6",
+        "Abbreviation": "THOR-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.753",
+        "Name": "DIRECTV T16",
+        "Abbreviation": "DIRECTV-T16",
+        "Aliases": ["T16"]
+    },
+    {
+        "ID": "1.3.112.4.7.754",
+        "Name": "NBNCO-1A",
+        "Abbreviation": "NBNCO-1A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.755",
+        "Name": "NBNCO-1B",
+        "Abbreviation": "NBNCO-1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.758",
+        "Name": "SEAM",
+        "Abbreviation": "SEAM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.759",
+        "Name": "Azerspace-2/Intelsat-38",
+        "Abbreviation": "Azerspace-2Intelsat-38"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.760",
+        "Name": "PALAPA-D",
+        "Abbreviation": "PALAPA-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.761",
+        "Name": "PALAPA-Dsim",
+        "Abbreviation": "PALAPA-Dsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.762",
+        "Name": "KOMPSAT-5",
+        "Abbreviation": "KOMPSAT-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.763",
+        "Name": "PACE-NCKU",
+        "Abbreviation": "PACE-NCKU"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.764",
+        "Name": "KOMPSAT-3",
+        "Abbreviation": "KOMPSAT-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.765",
+        "Name": "Bangabandhu",
+        "Abbreviation": "Bangabandhu",
+        "Aliases": ["BS1"]
+    },
+    {
+        "ID": "1.3.112.4.7.766",
+        "Name": "YAHSAT-Y1A",
+        "Abbreviation": "YAHSAT-Y1A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.767",
+        "Name": "KaSAT",
+        "Abbreviation": "KaSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.768",
+        "Name": "NEOSsat",
+        "Abbreviation": "NEOSsat"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.769",
+        "Name": "OPS-SAT",
+        "Abbreviation": "OPS-SAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.770",
+        "Name": "JDRS",
+        "Abbreviation": "JDRS",
+        "Aliases": ["JDRS"]
+    },
+    {
+        "ID": "1.3.112.4.7.771",
+        "Name": "CAS500-1",
+        "Abbreviation": "CAS500-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.772",
+        "Name": "ASTERIA",
+        "Abbreviation": "ASTERIA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.773",
+        "Name": "Telkom-4",
+        "Abbreviation": "Telkom-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.774",
+        "Name": "BEPICOLOMBO",
+        "Abbreviation": "BEPICOLOMBO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.775",
+        "Name": "YAHSAT-Y1B",
+        "Abbreviation": "YAHSAT-Y1B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.776",
+        "Name": "ALPHASAT",
+        "Abbreviation": "ALPHASAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.777",
+        "Name": "ALPHASAT-sim",
+        "Abbreviation": "ALPHASAT-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.778",
+        "Name": "IKAROS",
+        "Abbreviation": "IKAROS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.779",
+        "Name": "MMO",
+        "Abbreviation": "MMO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.780",
+        "Name": "ARGOS on SARAL",
+        "Abbreviation": "ARGOS-on-SARAL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.782",
+        "Name": "Sentinel-1 (FM C model)",
+        "Abbreviation": "Sentinel-1-FM-C-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.783",
+        "Name": "Sentinel-1 (FM D model)",
+        "Abbreviation": "Sentinel-1-FM-D-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.784",
+        "Name": "Sentinel-2 (FM C model)",
+        "Abbreviation": "Sentinel-2-FM-C-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.785",
+        "Name": "Sentinel-2 (FM D model)",
+        "Abbreviation": "Sentinel-2-FM-D-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.786",
+        "Name": "Sentinel-3 (FM C model)",
+        "Abbreviation": "Sentinel-3-FM-C-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.787",
+        "Name": "AMOS4",
+        "Abbreviation": "AMOS4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.788",
+        "Name": "SSOT",
+        "Abbreviation": "SSOT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.789",
+        "Name": "RQ1R",
+        "Abbreviation": "RQ1R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.790",
+        "Name": "RQ1R sim",
+        "Abbreviation": "RQ1R-sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.791",
+        "Name": "NILESAT",
+        "Abbreviation": "NILESAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.792",
+        "Name": "NILESATsim",
+        "Abbreviation": "NILESATsim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1018",
+        "Name": "TOPSAT",
+        "Abbreviation": "TOPSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.793",
+        "Name": "Sentinel-3 (FM D model)",
+        "Abbreviation": "Sentinel-3-FM-D-model"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.794",
+        "Name": "MERLIN",
+        "Abbreviation": "MERLIN",
+        "Aliases": ["MERLIN (TT)"]
+    },
+    {
+        "ID": "1.3.112.4.7.795",
+        "Name": "SWOT",
+        "Abbreviation": "SWOT",
+        "Aliases": ["SWOT (TT)"]
+    },
+    {
+        "ID": "1.3.112.4.7.796",
+        "Name": "Telstar 18 Vantage",
+        "Abbreviation": "Telstar-18-Vantage"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.797",
+        "Name": "LunaH-Map",
+        "Abbreviation": "LunaH-Map",
+        "Aliases": ["Lunar Polar Hydrogen Mapper"]
+    },
+    {
+        "ID": "1.3.112.4.7.798",
+        "Name": "Telstar 19 Vantage",
+        "Abbreviation": "Telstar-19-Vantage"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.799",
+        "Name": "JUICE",
+        "Abbreviation": "JUICE",
+        "Aliases": ["JUICE"]
+    },
+    {
+        "ID": "1.3.112.4.7.800",
+        "Name": "GSAT-19",
+        "Abbreviation": "GSAT-19"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.801",
+        "Name": "Sentinel-6/Jason CS A",
+        "Abbreviation": "Sentinel-6Jason-CS-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.802",
+        "Name": "Sentinel-6/Jason CS B",
+        "Abbreviation": "Sentinel-6Jason-CS-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.803",
+        "Name": "SOCRATES",
+        "Abbreviation": "SOCRATES"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.804",
+        "Name": "IRIDIUM-101",
+        "Abbreviation": "IRIDIUM-101"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.805",
+        "Name": "IRIDIUM-102",
+        "Abbreviation": "IRIDIUM-102"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.806",
+        "Name": "IRIDIUM-103",
+        "Abbreviation": "IRIDIUM-103"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.807",
+        "Name": "IRIDIUM-104",
+        "Abbreviation": "IRIDIUM-104"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.808",
+        "Name": "IRIDIUM-105",
+        "Abbreviation": "IRIDIUM-105"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.809",
+        "Name": "IRIDIUM-106",
+        "Abbreviation": "IRIDIUM-106"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.810",
+        "Name": "IRIDIUM-107",
+        "Abbreviation": "IRIDIUM-107"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.811",
+        "Name": "IRIDIUM-108",
+        "Abbreviation": "IRIDIUM-108"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.812",
+        "Name": "IRIDIUM-109",
+        "Abbreviation": "IRIDIUM-109"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.813",
+        "Name": "Proba-3 CSC",
+        "Abbreviation": "Proba-3-CSC",
+        "Aliases": ["Proba-3"]
+    },
+    {
+        "ID": "1.3.112.4.7.814",
+        "Name": "Proba-3 OSC",
+        "Abbreviation": "Proba-3-OSC",
+        "Aliases": ["Proba-3"]
+    },
+    {
+        "ID": "1.3.112.4.7.815",
+        "Name": "EQUULEUS",
+        "Abbreviation": "EQUULEUS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.816",
+        "Name": "OMOTENASHI",
+        "Abbreviation": "OMOTENASHI"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.817",
+        "Name": "EUTELSAT 7C",
+        "Abbreviation": "EUTELSAT-7C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.818",
+        "Name": "Egypt MilSatCom",
+        "Abbreviation": "Egypt-MilSatCom"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.819",
+        "Name": "IRIDIUM-110",
+        "Abbreviation": "IRIDIUM-110"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.820",
+        "Name": "IRIDIUM-111",
+        "Abbreviation": "IRIDIUM-111"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.821",
+        "Name": "IRIDIUM-112",
+        "Abbreviation": "IRIDIUM-112"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.822",
+        "Name": "IRIDIUM-113",
+        "Abbreviation": "IRIDIUM-113"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.823",
+        "Name": "IRIDIUM-114",
+        "Abbreviation": "IRIDIUM-114"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.824",
+        "Name": "IRIDIUM-115",
+        "Abbreviation": "IRIDIUM-115"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.825",
+        "Name": "IRIDIUM-117",
+        "Abbreviation": "IRIDIUM-117"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.826",
+        "Name": "IRIDIUM-118",
+        "Abbreviation": "IRIDIUM-118"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.827",
+        "Name": "IRIDIUM-119",
+        "Abbreviation": "IRIDIUM-119"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.828",
+        "Name": "IRIDIUM-116",
+        "Abbreviation": "IRIDIUM-116"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.829",
+        "Name": "Lunar Flashlight",
+        "Abbreviation": "Lunar-Flashlight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.830",
+        "Name": "Near Earth Asteroid Scout",
+        "Abbreviation": "Near-Earth-Asteriod-Scout",
+        "Aliases": ["NEA Scout"]
+    },
+    {
+        "ID": "1.3.112.4.7.831",
+        "Name": "Intelsat-39",
+        "Abbreviation": "Intelsat-39"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.832",
+        "Name": "Red Dragon 1",
+        "Abbreviation": "Red-Dragon-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.833",
+        "Name": "Lunar IceCube",
+        "Abbreviation": "Lunar-IceCube"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.834",
+        "Name": "CuSP",
+        "Abbreviation": "CuSP",
+        "Aliases": ["CubeSat for the observation of Solar Particles"]
+    },
+    {
+        "ID": "1.3.112.4.7.835",
+        "Name": "FORMOSAT7 T1",
+        "Abbreviation": "FORMOSAT7-T1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.836",
+        "Name": "FORMOSAT7 T2",
+        "Abbreviation": "FORMOSAT7-T2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.837",
+        "Name": "FORMOSAT7 T3",
+        "Abbreviation": "FORMOSAT7-T3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.838",
+        "Name": "FORMOSAT7 T4",
+        "Abbreviation": "FORMOSAT7-T4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.839",
+        "Name": "FORMOSAT7 T5",
+        "Abbreviation": "FORMOSAT7-T5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.840",
+        "Name": "FORMOSAT7 T6",
+        "Abbreviation": "FORMOSAT7-T6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.841",
+        "Name": "COSMO SG-1",
+        "Abbreviation": "COSMO-SG-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.842",
+        "Name": "SDS-4",
+        "Abbreviation": "SDS-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.843",
+        "Name": "COSMO SG-2",
+        "Abbreviation": "COSMO-SG-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.845",
+        "Name": "Microsat-TD",
+        "Abbreviation": "Microsat-TD"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.846",
+        "Name": "NISAR",
+        "Abbreviation": "NISAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.847",
+        "Name": "Oceansat-3",
+        "Abbreviation": "Oceansat-3",
+        "Aliases": ["OS3"]
+    },
+    {
+        "ID": "1.3.112.4.7.848",
+        "Name": "SatKomHan",
+        "Abbreviation": "SatKomHan",
+        "Aliases": ["SatKomHan"]
+    },
+    {
+        "ID": "1.3.112.4.7.849",
+        "Name": "Sirius/XM-7",
+        "Abbreviation": "SiriusXM-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.850",
+        "Name": "IRIDIUM-120",
+        "Abbreviation": "IRIDIUM-120"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.851",
+        "Name": "IRIDIUM-121",
+        "Abbreviation": "IRIDIUM-121"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.852",
+        "Name": "IRIDIUM-122",
+        "Abbreviation": "IRIDIUM-122"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.853",
+        "Name": "IRIDIUM-123",
+        "Abbreviation": "IRIDIUM-123"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.854",
+        "Name": "IRIDIUM-124",
+        "Abbreviation": "IRIDIUM-124"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.855",
+        "Name": "IRIDIUM-125",
+        "Abbreviation": "IRIDIUM-125"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.856",
+        "Name": "IRIDIUM-126",
+        "Abbreviation": "IRIDIUM-126"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.857",
+        "Name": "IRIDIUM-127",
+        "Abbreviation": "IRIDIUM-127"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.858",
+        "Name": "IRIDIUM-128",
+        "Abbreviation": "IRIDIUM-128"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.859",
+        "Name": "IRIDIUM-129",
+        "Abbreviation": "IRIDIUM-129"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.860",
+        "Name": "Sirius/XM-8",
+        "Abbreviation": "SiriusXM-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.863",
+        "Name": "Pl\u00e9iades-3",
+        "Abbreviation": "Pl\u00e9iades-3",
+        "Aliases": ["VHR2020-A"]
+    },
+    {
+        "ID": "1.3.112.4.7.864",
+        "Name": "Pl\u00e9iades-4",
+        "Abbreviation": "Pl\u00e9iades-4",
+        "Aliases": ["VHR2020-B"]
+    },
+    {
+        "ID": "1.3.112.4.7.865",
+        "Name": "Pl\u00e9iades-5",
+        "Abbreviation": "Pl\u00e9iades-5",
+        "Aliases": ["VHR2020-C"]
+    },
+    {
+        "ID": "1.3.112.4.7.866",
+        "Name": "IRIDIUM-130",
+        "Abbreviation": "IRIDIUM-130"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.867",
+        "Name": "IRIDIUM-131",
+        "Abbreviation": "IRIDIUM-131"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.868",
+        "Name": "IRIDIUM-132",
+        "Abbreviation": "IRIDIUM-132"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.869",
+        "Name": "IRIDIUM-133",
+        "Abbreviation": "IRIDIUM-133"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.870",
+        "Name": "IRIDIUM-134",
+        "Abbreviation": "IRIDIUM-134"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.871",
+        "Name": "IRIDIUM-135",
+        "Abbreviation": "IRIDIUM-135"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.872",
+        "Name": "IRIDIUM-136",
+        "Abbreviation": "IRIDIUM-136"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.873",
+        "Name": "IRIDIUM-137",
+        "Abbreviation": "IRIDIUM-137"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.874",
+        "Name": "IRIDIUM-138",
+        "Abbreviation": "IRIDIUM-138"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.875",
+        "Name": "IRIDIUM-139",
+        "Abbreviation": "IRIDIUM-139"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.876",
+        "Name": "Pl\u00e9iades-6",
+        "Abbreviation": "Pl\u00e9iades-6",
+        "Aliases": ["VHR2020-D"]
+    },
+    {
+        "ID": "1.3.112.4.7.877",
+        "Name": "IDEA OSG 1",
+        "Abbreviation": "IDEA-OSG-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.878",
+        "Name": "HYSIS",
+        "Abbreviation": "HYSIS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.879",
+        "Name": "Iridium-173",
+        "Abbreviation": "Iridium-173"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.880",
+        "Name": "Iridium-174",
+        "Abbreviation": "Iridium-174"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.881",
+        "Name": "Iridium-175",
+        "Abbreviation": "Iridium-175"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.882",
+        "Name": "Iridium-176",
+        "Abbreviation": "Iridium-176"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.883",
+        "Name": "CIEL-2Sim",
+        "Abbreviation": "CIEL-2Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.884",
+        "Name": "COMS",
+        "Abbreviation": "COMS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.885",
+        "Name": "HOTBIRD 9",
+        "Abbreviation": "HOTBIRD-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.886",
+        "Name": "GALILEOSAT01",
+        "Abbreviation": "GALILEOSAT01"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.887",
+        "Name": "GSAT0199",
+        "Abbreviation": "GSAT0199"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.888",
+        "Name": "GALILEOSAT02",
+        "Abbreviation": "GALILEOSAT02"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.889",
+        "Name": "GSAT0101",
+        "Abbreviation": "GSAT0101"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.890",
+        "Name": "GALILEOSAT03",
+        "Abbreviation": "GALILEOSAT03"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.891",
+        "Name": "GSAT0102",
+        "Abbreviation": "GSAT0102"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.892",
+        "Name": "GALILEOSAT04",
+        "Abbreviation": "GALILEOSAT04"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.893",
+        "Name": "GSAT0103",
+        "Abbreviation": "GSAT0103"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.894",
+        "Name": "W2M",
+        "Abbreviation": "W2M"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.895",
+        "Name": "ARABSAT4R",
+        "Abbreviation": "ARABSAT4R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.896",
+        "Name": "ALSAT-2A",
+        "Abbreviation": "ALSAT-2A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.897",
+        "Name": "ALSAT-2B",
+        "Abbreviation": "ALSAT-2B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.898",
+        "Name": "ELISA-A",
+        "Abbreviation": "ELISA-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.899",
+        "Name": "ELISA-D",
+        "Abbreviation": "ELISA-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.900",
+        "Name": "ELISA-B",
+        "Abbreviation": "ELISA-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.901",
+        "Name": "ELISA-C",
+        "Abbreviation": "ELISA-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.902",
+        "Name": "Iridium-177",
+        "Abbreviation": "Iridium-177"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.903",
+        "Name": "O3B model1",
+        "Abbreviation": "O3B-model1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.904",
+        "Name": "O3B model2",
+        "Abbreviation": "O3B-model2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.905",
+        "Name": "O3B model3",
+        "Abbreviation": "O3B-model3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.906",
+        "Name": "O3B model4",
+        "Abbreviation": "O3B-model4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.907",
+        "Name": "O3B model5",
+        "Abbreviation": "O3B-model5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.908",
+        "Name": "O3B model6",
+        "Abbreviation": "O3B-model6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.909",
+        "Name": "O3B model7",
+        "Abbreviation": "O3B-model7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.910",
+        "Name": "O3B model8",
+        "Abbreviation": "O3B-model8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.911",
+        "Name": "Iridium-178",
+        "Abbreviation": "Iridium-178"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.912",
+        "Name": "Iridium-179",
+        "Abbreviation": "Iridium-179"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.913",
+        "Name": "Iridium-180",
+        "Abbreviation": "Iridium-180"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.914",
+        "Name": "Iridium-181",
+        "Abbreviation": "Iridium-181"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.915",
+        "Name": "Iridium-182",
+        "Abbreviation": "Iridium-182"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.916",
+        "Name": "Iridium-183",
+        "Abbreviation": "Iridium-183"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.917",
+        "Name": "IRIDIUM-140",
+        "Abbreviation": "IRIDIUM-140"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.918",
+        "Name": "IRIDIUM-141",
+        "Abbreviation": "IRIDIUM-141"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.919",
+        "Name": "IRIDIUM-142",
+        "Abbreviation": "IRIDIUM-142"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.920",
+        "Name": "IRIDIUM-143",
+        "Abbreviation": "IRIDIUM-143"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.921",
+        "Name": "IRIDIUM-144",
+        "Abbreviation": "IRIDIUM-144"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.922",
+        "Name": "IRIDIUM-145",
+        "Abbreviation": "IRIDIUM-145"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.923",
+        "Name": "IRIDIUM-146",
+        "Abbreviation": "IRIDIUM-146"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.924",
+        "Name": "IRIDIUM-147",
+        "Abbreviation": "IRIDIUM-147"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.925",
+        "Name": "IRIDIUM-148",
+        "Abbreviation": "IRIDIUM-148"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.926",
+        "Name": "IRIDIUM-149",
+        "Abbreviation": "IRIDIUM-149"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.927",
+        "Name": "Eutelsat 5WB",
+        "Abbreviation": "Eutelsat-5WB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.928",
+        "Name": "TURKSAT 6A",
+        "Abbreviation": "TURKSAT-6A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.929",
+        "Name": "PRISMA-I",
+        "Abbreviation": "PRISMA-I"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.930",
+        "Name": "KOMPSAT-6",
+        "Abbreviation": "KOMPSAT-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.931",
+        "Name": "Emirates Mars Mission",
+        "Abbreviation": "Emirates-Mars-Mission",
+        "Aliases": ["Hope Mission"]
+    },
+    {
+        "ID": "1.3.112.4.7.932",
+        "Name": "IRIDIUM-150",
+        "Abbreviation": "IRIDIUM-150"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.933",
+        "Name": "IRIDIUM-151",
+        "Abbreviation": "IRIDIUM-151"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.934",
+        "Name": "IRIDIUM-152",
+        "Abbreviation": "IRIDIUM-152"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.935",
+        "Name": "IRIDIUM-153",
+        "Abbreviation": "IRIDIUM-153"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.936",
+        "Name": "IRIDIUM-154",
+        "Abbreviation": "IRIDIUM-154"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.937",
+        "Name": "IRIDIUM-155",
+        "Abbreviation": "IRIDIUM-155"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.938",
+        "Name": "IRIDIUM-156",
+        "Abbreviation": "IRIDIUM-156"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.939",
+        "Name": "IRIDIUM-157",
+        "Abbreviation": "IRIDIUM-157"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.940",
+        "Name": "IRIDIUM-158",
+        "Abbreviation": "IRIDIUM-158"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.941",
+        "Name": "IRIDIUM-159",
+        "Abbreviation": "IRIDIUM-159"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.942",
+        "Name": "ISDLA-2",
+        "Abbreviation": "ISDLA-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.943",
+        "Name": "EUTELSAT QUANTUM",
+        "Abbreviation": "EUTELSAT-QUANTUM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.944",
+        "Name": "ALOS-3",
+        "Abbreviation": "ALOS-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.945",
+        "Name": "Athena",
+        "Abbreviation": "Athena"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.946",
+        "Name": "ICEYE-POC-1",
+        "Abbreviation": "ICEYE-POC-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.947",
+        "Name": "ICEYE-POC-2",
+        "Abbreviation": "ICEYE-POC-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.948",
+        "Name": "IRIDIUM-160",
+        "Abbreviation": "IRIDIUM-160"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.949",
+        "Name": "IRIDIUM-161",
+        "Abbreviation": "IRIDIUM-161"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.950",
+        "Name": "IRIDIUM-162",
+        "Abbreviation": "IRIDIUM-162"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.951",
+        "Name": "IRIDIUM-163",
+        "Abbreviation": "IRIDIUM-163"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.952",
+        "Name": "IRIDIUM-164",
+        "Abbreviation": "IRIDIUM-164"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.953",
+        "Name": "IRIDIUM-165",
+        "Abbreviation": "IRIDIUM-165"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.954",
+        "Name": "IRIDIUM-166",
+        "Abbreviation": "IRIDIUM-166"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.955",
+        "Name": "IRIDIUM-167",
+        "Abbreviation": "IRIDIUM-167"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.956",
+        "Name": "IRIDIUM-168",
+        "Abbreviation": "IRIDIUM-168"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.957",
+        "Name": "IRIDIUM-169",
+        "Abbreviation": "IRIDIUM-169"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.958",
+        "Name": "IRIDIUM-170",
+        "Abbreviation": "IRIDIUM-170"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.959",
+        "Name": "IRIDIUM-171",
+        "Abbreviation": "IRIDIUM-171"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.960",
+        "Name": "IRIDIUM-172",
+        "Abbreviation": "IRIDIUM-172"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.961",
+        "Name": "YAMAL 601",
+        "Abbreviation": "YAMAL-601"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.962",
+        "Name": "ROCSAT3,Fl1",
+        "Abbreviation": "ROCSAT3Fl1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.963",
+        "Name": "ROCSAT3,Fl2",
+        "Abbreviation": "ROCSAT3Fl2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.964",
+        "Name": "ROCSAT3,Fl3",
+        "Abbreviation": "ROCSAT3Fl3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.965",
+        "Name": "ROCSAT3,FI4",
+        "Abbreviation": "ROCSAT3FI4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.968",
+        "Name": "VENUS_EXPRS",
+        "Abbreviation": "VENUS_EXPRS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.969",
+        "Name": "ANIK-F1R",
+        "Abbreviation": "ANIK-F1R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.970",
+        "Name": "SES-14",
+        "Abbreviation": "SES-14"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.971",
+        "Name": "GLOBE",
+        "Abbreviation": "GLOBE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.972",
+        "Name": "ASTRO-E",
+        "Abbreviation": "ASTRO-E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.973",
+        "Name": "ASTRO E2",
+        "Abbreviation": "ASTRO-E2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.974",
+        "Name": "PLANET-B",
+        "Abbreviation": "PLANET-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.975",
+        "Name": "WISE",
+        "Abbreviation": "WISE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.976",
+        "Name": "LUNAR-A",
+        "Abbreviation": "LUNAR-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.977",
+        "Name": "FE-1 (X-Band)",
+        "Abbreviation": "FE-1-X-Band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.982",
+        "Name": "ISSA-JEM",
+        "Abbreviation": "ISSA-JEM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.983",
+        "Name": "LCROSS",
+        "Abbreviation": "LCROSS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.984",
+        "Name": "FE-2 (X-Band)",
+        "Abbreviation": "FE-2-X-Band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.985",
+        "Name": "MPCV",
+        "Abbreviation": "MPCV"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.986",
+        "Name": "LANDSAT7",
+        "Abbreviation": "LANDSAT7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.987",
+        "Name": "ISS-COF(Col.Or.F)",
+        "Abbreviation": "ISS-COFColOrF"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.988",
+        "Name": "Sp.St.Freedom(ISS)",
+        "Abbreviation": "SpStFreedomISS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.989",
+        "Name": "TOMS-EP-1",
+        "Abbreviation": "TOMS-EP-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.990",
+        "Name": "TOMS-EP-2",
+        "Abbreviation": "TOMS-EP-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.991",
+        "Name": "ACYGNUS",
+        "Abbreviation": "ACYGNUS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.992",
+        "Name": "METEOR-3M-1",
+        "Abbreviation": "METEOR-3M-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.993",
+        "Name": "DSN-2 (Mission)",
+        "Abbreviation": "DSN-2-Mission"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.994",
+        "Name": "YH-1",
+        "Abbreviation": "YH-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.995",
+        "Name": "Starliner-1 (CST-100)",
+        "Abbreviation": "Starliner-1-CST-100"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.996",
+        "Name": "SPOT-6 (Payload)",
+        "Abbreviation": "SPOT-6-Payload"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.997",
+        "Name": "SJ-10",
+        "Abbreviation": "SJ-10"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.998",
+        "Name": "EOS-AM-1(TM)",
+        "Abbreviation": "EOS-AM-1TM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.999",
+        "Name": "CYGNSS-3",
+        "Abbreviation": "CYGNSS-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1000",
+        "Name": "CYGNSS-4",
+        "Abbreviation": "CYGNSS-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1001",
+        "Name": "CYGNSS-5",
+        "Abbreviation": "CYGNSS-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1002",
+        "Name": "EOS-AM-1",
+        "Abbreviation": "EOS-AM-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1003",
+        "Name": "Starliner-2 (CST-100)",
+        "Abbreviation": "Starliner-2-CST-100"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1004",
+        "Name": "CYGNSS-6",
+        "Abbreviation": "CYGNSS-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1005",
+        "Name": "CYGNSS-7",
+        "Abbreviation": "CYGNSS-7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1006",
+        "Name": "NEMO DOWN",
+        "Abbreviation": "NEMO-DOWN"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1007",
+        "Name": "ASTRO-F",
+        "Abbreviation": "ASTRO-F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1008",
+        "Name": "TanSat",
+        "Abbreviation": "TanSat"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1010",
+        "Name": "OSIRIS-REX",
+        "Abbreviation": "OSIRIS-REX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1011",
+        "Name": "SPOT-7 (Payload)",
+        "Abbreviation": "SPOT-7-Payload"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1012",
+        "Name": "Argos on Oceansat-3",
+        "Abbreviation": "Argos-on-Oceansat-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1013",
+        "Name": "Sentinel-1 (FM-A Prime)",
+        "Abbreviation": "Sentinel-1-FM-A-Prime0"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1014",
+        "Name": "Sentinel-1 (FM-B Prime)",
+        "Abbreviation": "Sentinel-1-FM-B-Prime0"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1015",
+        "Name": "CYGNSS-8",
+        "Abbreviation": "CYGNSS-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1016",
+        "Name": "MRO (Fl)",
+        "Abbreviation": "MRO-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1017",
+        "Name": "CE-5T1",
+        "Abbreviation": "CE-5T1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1019",
+        "Name": "Sentinel-2 (FM-A, Prime)",
+        "Abbreviation": "Sentinel-2-FM-A-Prime0"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1020",
+        "Name": "Sentinel-2 (FM-B Prime)",
+        "Abbreviation": "Sentinel-2-FM-B-Prime0"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1021",
+        "Name": "HY-2",
+        "Abbreviation": "HY-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1022",
+        "Name": "CEP-5",
+        "Abbreviation": "CEP-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1023",
+        "Name": "CEZ-5",
+        "Abbreviation": "CEZ-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1024",
+        "Name": "INGENIO X-BAND",
+        "Abbreviation": "INGENIO-X-BAND"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1025",
+        "Name": "CSO-1-X",
+        "Abbreviation": "CSO-1-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1026",
+        "Name": "CEF-5",
+        "Abbreviation": "CEF-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1027",
+        "Name": "RBSP PROBE1",
+        "Abbreviation": "RBSP-PROBE1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1028",
+        "Name": "RBSP PROBE2",
+        "Abbreviation": "RBSP-PROBE2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1029",
+        "Name": "CEG-5",
+        "Abbreviation": "CEG-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1030",
+        "Name": "SLS",
+        "Abbreviation": "SLS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1031",
+        "Name": "USERS REM",
+        "Abbreviation": "USERS-REM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1032",
+        "Name": "CEF-5T1",
+        "Abbreviation": "CEF-5T1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1033",
+        "Name": "ORBVIEW-3",
+        "Abbreviation": "ORBVIEW-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1034",
+        "Name": "METEOR3/TOMS5",
+        "Abbreviation": "METEOR3TOMS5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1035",
+        "Name": "SDS-1",
+        "Abbreviation": "SDS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1036",
+        "Name": "GeoEye-2 (Old)",
+        "Abbreviation": "GeoEye-2-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1037",
+        "Name": "GeoEye-3 (Old)",
+        "Abbreviation": "GeoEye-3-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1039",
+        "Name": "MN35-A (X band)",
+        "Abbreviation": "MN35-A-X-band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1040",
+        "Name": "MN35-B (X band)",
+        "Abbreviation": "MN35-B-X-band"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1041",
+        "Name": "HY-2C",
+        "Abbreviation": "HY-2C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1042",
+        "Name": "EOS-PM (DOWNLINK)",
+        "Abbreviation": "EOS-PM-DOWNLINK"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1043",
+        "Name": "MSL-SIM",
+        "Abbreviation": "MSL-SIM0"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1044",
+        "Name": "SOLAR-B",
+        "Abbreviation": "SOLAR-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1045",
+        "Name": "ADEOS 2",
+        "Abbreviation": "ADEOS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1046",
+        "Name": "CE-3-X",
+        "Abbreviation": "CE-3-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1047",
+        "Name": "CSO-2-X",
+        "Abbreviation": "CSO-2-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1048",
+        "Name": "CE-3-Z",
+        "Abbreviation": "CE-3-Z"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1049",
+        "Name": "JWST, Fl",
+        "Abbreviation": "JWST-Fl"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1050",
+        "Name": "CE-4-X",
+        "Abbreviation": "CE-4-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1051",
+        "Name": "CE-4-Z",
+        "Abbreviation": "CE-4-Z"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1052",
+        "Name": "HODOYOSHI-1",
+        "Abbreviation": "HODOYOSHI-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1053",
+        "Name": "HODOYOSHI-4",
+        "Abbreviation": "HODOYOSHI-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1054",
+        "Name": "ROUE-Intfer-A",
+        "Abbreviation": "ROUE-Intfer-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1055",
+        "Name": "ROUE-Intfer-B",
+        "Abbreviation": "ROUE-Intfer-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1056",
+        "Name": "ROUE-Intfer-C",
+        "Abbreviation": "ROUE-Intfer-C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1057",
+        "Name": "ROUE-Intfer-D",
+        "Abbreviation": "ROUE-Intfer-D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1058",
+        "Name": "Dragon-B",
+        "Abbreviation": "Dragon-B",
+        "Aliases": ["Dragon-B (for NASA Commercial Crew Program)"]
+    },
+    {
+        "ID": "1.3.112.4.7.1059",
+        "Name": "CSO-3-X",
+        "Abbreviation": "CSO-3-X"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1060",
+        "Name": "Dove 3",
+        "Abbreviation": "Dove-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1061",
+        "Name": "Dove 4",
+        "Abbreviation": "Dove-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1062",
+        "Name": "JWST,Sim",
+        "Abbreviation": "JWSTSim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1262",
+        "Name": "BB4A",
+        "Abbreviation": "BB4A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1063",
+        "Name": "InSight",
+        "Abbreviation": "InSight"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1064",
+        "Name": "CSO-Xtestset",
+        "Abbreviation": "CSO-Xtestset"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1065",
+        "Name": "C2V2",
+        "Abbreviation": "C2V2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1066",
+        "Name": "COMS-MPDR",
+        "Abbreviation": "COMS-MPDR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1067",
+        "Name": "NASA-ISRO SAR (NISAR)",
+        "Abbreviation": "NASA-ISRO-SAR-NISAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1068",
+        "Name": "SMAP",
+        "Abbreviation": "SMAP"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1069",
+        "Name": "ICESAT2",
+        "Abbreviation": "ICESAT2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1070",
+        "Name": "STRV-1D",
+        "Abbreviation": "STRV-1D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1071",
+        "Name": "MRO (Sim)",
+        "Abbreviation": "MRO-Sim"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1072",
+        "Name": "Dragon-A",
+        "Abbreviation": "Dragon-A",
+        "Aliases": ["NASA Commercial Crew Demo-1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1073",
+        "Name": "DOVE 2",
+        "Abbreviation": "DOVE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1074",
+        "Name": "SHUTTLE-OV103",
+        "Abbreviation": "SHUTTLE-OV103"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1075",
+        "Name": "HY-2B",
+        "Abbreviation": "HY-2B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1076",
+        "Name": "MTSAT",
+        "Abbreviation": "MTSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1077",
+        "Name": "MTSAT 1R",
+        "Abbreviation": "MTSAT-1R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1081",
+        "Name": "TRITON-1",
+        "Abbreviation": "TRITON-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1082",
+        "Name": "FUNcube-1",
+        "Abbreviation": "FUNcube-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1083",
+        "Name": "Delfi-n3xt",
+        "Abbreviation": "Delfi-n3xt"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1084",
+        "Name": "COMS-PAYLOADS",
+        "Abbreviation": "COMS-PAYLOADS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1085",
+        "Name": "KEPLER",
+        "Abbreviation": "KEPLER"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1086",
+        "Name": "SHUTTLE-OV104",
+        "Abbreviation": "SHUTTLE-OV104"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1087",
+        "Name": "CHANG'E-1",
+        "Abbreviation": "CHANGE-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1088",
+        "Name": "CHANG'E-2",
+        "Abbreviation": "CHANGE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1090",
+        "Name": "Flock 1",
+        "Abbreviation": "Flock-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1091",
+        "Name": "TAN CE-1",
+        "Abbreviation": "TAN-CE-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1092",
+        "Name": "Sentinel-6/ Jason CS A",
+        "Abbreviation": "Sentinel-6-Jason-CS-A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1093",
+        "Name": "TAN CE-2",
+        "Abbreviation": "TAN-CE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1094",
+        "Name": "SHUTTLE-OV105",
+        "Abbreviation": "SHUTTLE-OV105"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1095",
+        "Name": "CYGNSS-1",
+        "Abbreviation": "CYGNSS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1096",
+        "Name": "CYGNSS-2",
+        "Abbreviation": "CYGNSS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1097",
+        "Name": "LRO (Old)",
+        "Abbreviation": "LRO-Old"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1098",
+        "Name": "Pocket Spacecraft Fleet",
+        "Abbreviation": "Pocket-Spacecraft-Fleet",
+        "Aliases": ["PS-FLEET"]
+    },
+    {
+        "ID": "1.3.112.4.7.1099",
+        "Name": "EXOMARS ROVER_P (Prime)",
+        "Abbreviation": "EXOMARS-ROVER_P-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1100",
+        "Name": "EXOMARS SP_P (Surface Platform Prime)",
+        "Abbreviation": "EXOMARS-SP_P-Surface-Platform-Prime"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1101",
+        "Name": "EXOMARS SP_R (Surface Platform Redundant)",
+        "Abbreviation": "EXOMARS-SP_R-Surface-Platform-Redundant"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1102",
+        "Name": "EXOMARS ROVER_R (Redundant)",
+        "Abbreviation": "EXOMARS-ROVER_R-Redundant"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1103",
+        "Name": "M01O",
+        "Abbreviation": "M01O"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1104",
+        "Name": "PHX",
+        "Abbreviation": "PHX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1105",
+        "Name": "InSight Prox-1",
+        "Abbreviation": "InSight-Prox-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1106",
+        "Name": "MER1",
+        "Abbreviation": "MER1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1107",
+        "Name": "MER2",
+        "Abbreviation": "MER2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1108",
+        "Name": "EXOMARS2016E",
+        "Abbreviation": "EXOMARS2016E"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.1109",
+        "Name": "Eagle-1",
+        "Abbreviation": "Eagle-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1110",
+        "Name": "Eagle-2",
+        "Abbreviation": "Eagle-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1111",
+        "Name": "CXBN",
+        "Abbreviation": "CXBN"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1112",
+        "Name": "CXBN-2",
+        "Abbreviation": "CXBN-2",
+        "Aliases": ["Cosmic X-Ray Background Nanosatellite-2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1113",
+        "Name": "ArgoMoon",
+        "Abbreviation": "AGM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1114",
+        "Name": "ARGOS on ANGELS",
+        "Abbreviation": "ANGELS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1115",
+        "Name": "Restore-L",
+        "Abbreviation": "Restore-L"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1116",
+        "Name": "GSAT-29",
+        "Abbreviation": "GSAT-29"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1117",
+        "Name": "Landsat 9",
+        "Abbreviation": "Landsat-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1118",
+        "Name": "KPLO",
+        "Abbreviation": "KPLO",
+        "Aliases": ["Korea Pathfinder Lunar Orbiter"]
+    },
+    {
+        "ID": "1.3.112.4.7.1119",
+        "Name": "ALINA",
+        "Abbreviation": "ALQ",
+        "Aliases": ["Autonomous Landing and Navigation Module"]
+    },
+    {
+        "ID": "1.3.112.4.7.1120",
+        "Name": "ALQ-1",
+        "Abbreviation": "AL1",
+        "Aliases": ["Audi Lunar Quattro 1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1121",
+        "Name": "ALQ-2",
+        "Abbreviation": "AL2",
+        "Aliases": ["Audi Lunar Quattro Rover 2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1122",
+        "Name": "ALOS-4",
+        "Abbreviation": "ALOS-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1123",
+        "Name": "Quasi-Zenith-Satellite-1R",
+        "Abbreviation": "Q1R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1124",
+        "Name": "GSAT0223",
+        "Abbreviation": "GSAT0223"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1125",
+        "Name": "GSAT0224",
+        "Abbreviation": "GSAT0224"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1126",
+        "Name": "GSAT0225",
+        "Abbreviation": "GSAT0225"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1127",
+        "Name": "GSAT0226",
+        "Abbreviation": "GSAT0226"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1128",
+        "Name": "GSAT0227",
+        "Abbreviation": "GSAT0227"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1129",
+        "Name": "GSAT0228",
+        "Abbreviation": "GSAT0228"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1130",
+        "Name": "GSAT0229",
+        "Abbreviation": "GSAT0229"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1131",
+        "Name": "GSAT0230",
+        "Abbreviation": "GSAT0230"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1132",
+        "Name": "ELSA-d",
+        "Abbreviation": "ELSA-d"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1133",
+        "Name": "MicroCarb",
+        "Abbreviation": "MicroCarb"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1134",
+        "Name": "Turksat 5A",
+        "Abbreviation": "Turksat-5A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1135",
+        "Name": "Turksat 5B",
+        "Abbreviation": "Turksat-5B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1136",
+        "Name": "ESAIL",
+        "Abbreviation": "ESAIL"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1137",
+        "Name": "Resourcesat-3",
+        "Abbreviation": "RS-3",
+        "Aliases": ["RS-3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1138",
+        "Name": "Resourcesat 3S",
+        "Abbreviation": "RS-3S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1139",
+        "Name": "Resourcesat-3A",
+        "Abbreviation": "RS-3A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1140",
+        "Name": "Resourcesat-3SA",
+        "Abbreviation": "RS-3SA"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1142",
+        "Name": "ECHOSTAR-24",
+        "Abbreviation": "ECHOSTAR-24",
+        "Aliases": ["HNS-Jupiter 3",
+            "EchoStar XXIV"
+        ]
+    },
+    {
+        "ID": "1.3.112.4.7.1144",
+        "Name": "ACCESS",
+        "Abbreviation": "ACCESS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1145",
+        "Name": "ADM-Aelous",
+        "Abbreviation": "ADM-Aelous"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1146",
+        "Name": "Amazonas",
+        "Abbreviation": "Amazonas"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1147",
+        "Name": "AMC-12",
+        "Abbreviation": "AMC-12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1148",
+        "Name": "AMC-13",
+        "Abbreviation": "AMC-13"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1149",
+        "Name": "AMC-9",
+        "Abbreviation": "AMC-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1150",
+        "Name": "AmeriStar",
+        "Abbreviation": "AmeriStar"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1151",
+        "Name": "AMS 01",
+        "Abbreviation": "AMS-01"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1152",
+        "Name": "AMS 02",
+        "Abbreviation": "AMS-02"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1153",
+        "Name": "AMU 1",
+        "Abbreviation": "AMU-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1154",
+        "Name": "AOS",
+        "Abbreviation": "AOS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1155",
+        "Name": "Aqua",
+        "Abbreviation": "Aqua"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1156",
+        "Name": "ARABSAT 3A",
+        "Abbreviation": "ARABSAT-3A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1157",
+        "Name": "ARIES-1",
+        "Abbreviation": "ARIES-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1158",
+        "Name": "Atlantic Bird 2",
+        "Abbreviation": "Atlantic-Bird-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1159",
+        "Name": "BADR-6",
+        "Abbreviation": "BADR-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1160",
+        "Name": "BeeSat",
+        "Abbreviation": "BeeSat"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1161",
+        "Name": "Beppo SAX",
+        "Abbreviation": "Beppo-SAX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1162",
+        "Name": "Bird",
+        "Abbreviation": "Bird"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1163",
+        "Name": "C/NOFS",
+        "Abbreviation": "CNOFS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1164",
+        "Name": "CALIPSO",
+        "Abbreviation": "CALIPSO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1165",
+        "Name": "CGRO",
+        "Abbreviation": "CGRO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1166",
+        "Name": "Chinook",
+        "Abbreviation": "Chinook"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1167",
+        "Name": "CloudSat (ESSP-4)",
+        "Abbreviation": "CloudSat-ESSP-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1168",
+        "Name": "COMS-1",
+        "Abbreviation": "COMS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1169",
+        "Name": "CON-X1",
+        "Abbreviation": "CON-X1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1170",
+        "Name": "CRM",
+        "Abbreviation": "CRM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1171",
+        "Name": "Double Star Equatorial",
+        "Abbreviation": "Double-Star-Equatorial"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1172",
+        "Name": "Double Star Polar",
+        "Abbreviation": "Double-Star-Polar"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1173",
+        "Name": "DS-2",
+        "Abbreviation": "DS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1174",
+        "Name": "ESEO",
+        "Abbreviation": "ESEO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1175",
+        "Name": "Eurobird",
+        "Abbreviation": "Eurobird"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1176",
+        "Name": "Formosat3/ROCSAT-3/COSMIC 1",
+        "Abbreviation": "Formosat3ROCSAT-3COSMIC-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1177",
+        "Name": "Formosat3/ROCSAT-3/COSMIC 2",
+        "Abbreviation": "Formosat3ROCSAT-3COSMIC-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1178",
+        "Name": "Formosat3/ROCSAT-3/COSMIC 3",
+        "Abbreviation": "Formosat3ROCSAT-3COSMIC-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1179",
+        "Name": "Formosat3/ROCSAT-3/COSMIC 4",
+        "Abbreviation": "Formosat3ROCSAT-3COSMIC-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1180",
+        "Name": "Formosat3/ROCSAT-3/COSMIC 5",
+        "Abbreviation": "Formosat3ROCSAT-3COSMIC-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1181",
+        "Name": "Formosat3/ROCSAT-3/COSMIC 6",
+        "Abbreviation": "Formosat3ROCSAT-3COSMIC-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1182",
+        "Name": "GEC",
+        "Abbreviation": "GEC"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1183",
+        "Name": "GIOVE B",
+        "Abbreviation": "GIOVE-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1184",
+        "Name": "GOES 11",
+        "Abbreviation": "GOES-11"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1185",
+        "Name": "GOES 12",
+        "Abbreviation": "GOES-12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1186",
+        "Name": "GOES 13",
+        "Abbreviation": "GOES-13"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1187",
+        "Name": "GP-B",
+        "Abbreviation": "GP-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1188",
+        "Name": "HellasSat 2",
+        "Abbreviation": "HellasSat-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1189",
+        "Name": "HypSEO",
+        "Abbreviation": "HypSEO"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1190",
+        "Name": "ISS",
+        "Abbreviation": "ISS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1191",
+        "Name": "Kibo (ISS)",
+        "Abbreviation": "Kibo-ISS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1192",
+        "Name": "Magnetospheric Constellation (MagCON)",
+        "Abbreviation": "Magnetospheric-Constellation-MagCON"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1193",
+        "Name": "Mars Netlander",
+        "Abbreviation": "Mars-Netlander"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1194",
+        "Name": "Mars Odyssey",
+        "Abbreviation": "Mars-Odyssey"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1195",
+        "Name": "Mars Surveyor 1998 Lander",
+        "Abbreviation": "Mars-Surveyor-1998-Lander"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1196",
+        "Name": "Mars Surveyor 1998 Orbiter",
+        "Abbreviation": "Mars-Surveyor-1998-Orbiter"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1197",
+        "Name": "MASER Service Module",
+        "Abbreviation": "MASER-Service-Module"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1198",
+        "Name": "Meteor-3M/SAGE III",
+        "Abbreviation": "Meteor-3MSAGE-III"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1199",
+        "Name": "MGS",
+        "Abbreviation": "MGS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1200",
+        "Name": "MPF",
+        "Abbreviation": "MPF"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1201",
+        "Name": "Opportunity",
+        "Abbreviation": "Opportunity"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1202",
+        "Name": "Orsted",
+        "Abbreviation": "Orsted"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1203",
+        "Name": "Phobos-Grunt",
+        "Abbreviation": "Phobos-Grunt"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1204",
+        "Name": "QuickBird-1",
+        "Abbreviation": "QuickBird-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1205",
+        "Name": "QuickBird-2",
+        "Abbreviation": "QuickBird-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1206",
+        "Name": "QuikScat",
+        "Abbreviation": "QuikScat"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1207",
+        "Name": "QuikTOMS",
+        "Abbreviation": "QuikTOMS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1208",
+        "Name": "RBM",
+        "Abbreviation": "RBM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1209",
+        "Name": "RHESSI (SMEX-6)",
+        "Abbreviation": "RHESSI-SMEX-6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1210",
+        "Name": "R\u00f8mer",
+        "Abbreviation": "R\u00f8mer"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1211",
+        "Name": "ROSSI XTE",
+        "Abbreviation": "ROSSI-XTE"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1212",
+        "Name": "Rumba",
+        "Abbreviation": "Rumba"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1213",
+        "Name": "Salsa",
+        "Abbreviation": "Salsa"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1214",
+        "Name": "Samba",
+        "Abbreviation": "Samba"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1215",
+        "Name": "SAR-Lupe-1",
+        "Abbreviation": "SAR-Lupe-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1216",
+        "Name": "SAR-Lupe-2",
+        "Abbreviation": "SAR-Lupe-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1217",
+        "Name": "SAR-Lupe-3",
+        "Abbreviation": "SAR-Lupe-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1218",
+        "Name": "SAR-Lupe-4",
+        "Abbreviation": "SAR-Lupe-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1219",
+        "Name": "SAR-Lupe-5",
+        "Abbreviation": "SAR-Lupe-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1220",
+        "Name": "Satcom BW Stufe 2 (1)",
+        "Abbreviation": "Satcom-BW-Stufe-2-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1221",
+        "Name": "Satcom BW Stufe 2 (2)",
+        "Abbreviation": "Satcom-BW-Stufe-2-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1222",
+        "Name": "SBIRS-High",
+        "Abbreviation": "SBIRS-High"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1223",
+        "Name": "Shuttle CS Gateway",
+        "Abbreviation": "Shuttle-CS-Gateway"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1224",
+        "Name": "SIM",
+        "Abbreviation": "SIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1225",
+        "Name": "Spacelab-Deutsche 2",
+        "Abbreviation": "Spacelab-Deutsche-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1226",
+        "Name": "Spartan 201-5",
+        "Abbreviation": "Spartan-201-5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1227",
+        "Name": "Spirit",
+        "Abbreviation": "Spirit"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1228",
+        "Name": "Spitzer Space Telescope",
+        "Abbreviation": "Spitzer-Space-Telescope"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1229",
+        "Name": "SST",
+        "Abbreviation": "SST"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1230",
+        "Name": "Stellat 5/Atlantic Bird 3",
+        "Abbreviation": "Stellat-5Atlantic-Bird-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1232",
+        "Name": "STRV-1 B",
+        "Abbreviation": "STRV-1-B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1233",
+        "Name": "SUZAKU / ASTRO-E2",
+        "Abbreviation": "SUZAKU-ASTRO-E2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1234",
+        "Name": "Syracuse 3A",
+        "Abbreviation": "Syracuse-3A"
+      
+    },
+    {
+        "ID": "1.3.112.4.7.1235",
+        "Name": "Syracuse 3B",
+        "Abbreviation": "Syracuse-3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1237",
+        "Name": "Tango",
+        "Abbreviation": "Tango"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1238",
+        "Name": "TEAMSAT",
+        "Abbreviation": "TEAMSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1239",
+        "Name": "Terra",
+        "Abbreviation": "Terra"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1241",
+        "Name": "TPF",
+        "Abbreviation": "TPF"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1242",
+        "Name": "TRMM",
+        "Abbreviation": "TRMM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1243",
+        "Name": "ULDB",
+        "Abbreviation": "ULDB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1244",
+        "Name": "USERS",
+        "Abbreviation": "USERS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1245",
+        "Name": "VEN\u00b5S",
+        "Abbreviation": "VEN\u00b5S"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1246",
+        "Name": "WMAP (MIDEX 2)",
+        "Abbreviation": "WMAP-MIDEX-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1247",
+        "Name": "X-38",
+        "Abbreviation": "X-38"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1249",
+        "Name": "YES",
+        "Abbreviation": "YES"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1250",
+        "Name": "Yinghuo 1 (YH-1)",
+        "Abbreviation": "Yinghuo-1-YH-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1251",
+        "Name": "BIOMASS",
+        "Abbreviation": "BIOMASS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1252",
+        "Name": "SYRACUSE 4A",
+        "Abbreviation": "SYR4A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1253",
+        "Name": "MARS-1-H",
+        "Abbreviation": "MARS-1-H"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1254",
+        "Name": "MARS-1-ZX",
+        "Abbreviation": "MARS-1-ZX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1257",
+        "Name": "GSAT0231",
+        "Abbreviation": "GSAT0231"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1258",
+        "Name": "GSAT0232",
+        "Abbreviation": "GSAT0232"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1259",
+        "Name": "GSAT0233",
+        "Abbreviation": "GSAT0233"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1260",
+        "Name": "GSAT0234",
+        "Abbreviation": "GSAT0234"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1261",
+        "Name": "T-2",
+        "Abbreviation": "T-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1264",
+        "Name": "FORMOSAT7 R",
+        "Abbreviation": "FORMOSAT7-R"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1265",
+        "Name": "Metop-SG A1",
+        "Abbreviation": "SGA1",
+        "Aliases": ["SGA1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1266",
+        "Name": "Metop-SG A2",
+        "Abbreviation": "SGA2",
+        "Aliases": ["SGA2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1267",
+        "Name": "Metop-SG A3",
+        "Abbreviation": "SGA3",
+        "Aliases": ["SGA3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1268",
+        "Name": "Metop-SG B1",
+        "Abbreviation": "SGB1",
+        "Aliases": ["SGB1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1269",
+        "Name": "Metop-SG B2",
+        "Abbreviation": "SGB2",
+        "Aliases": ["SGB2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1270",
+        "Name": "Metop-SG B3",
+        "Abbreviation": "SGB3",
+        "Aliases": ["SGB3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1271",
+        "Name": "SeaHawk-1",
+        "Abbreviation": "SHWK1",
+        "Aliases": ["SOCON1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1272",
+        "Name": "DaVinci",
+        "Abbreviation": "DaVinci"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1273",
+        "Name": "NSLSat-1",
+        "Abbreviation": "NSLSat-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1274",
+        "Name": "SeaHawk-2",
+        "Abbreviation": "SHWK2",
+        "Aliases": ["SOCON2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1275",
+        "Name": "NSLSat-2",
+        "Abbreviation": "NSLSat-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1276",
+        "Name": "Picasso",
+        "Abbreviation": "Picasso"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1278",
+        "Name": "INMARSAT-GX5",
+        "Abbreviation": "GX5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1279",
+        "Name": "GF-3B",
+        "Abbreviation": "GF-3B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1280",
+        "Name": "GF-3C",
+        "Abbreviation": "GF-3C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1281",
+        "Name": "Star One D2",
+        "Abbreviation": "Star-One-D2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1282",
+        "Name": "Eye-Sat",
+        "Abbreviation": "Eye-Sat",
+        "Aliases": ["EyeSat"]
+    },
+    {
+        "ID": "1.3.112.4.7.1283",
+        "Name": "SLIM",
+        "Abbreviation": "SLIM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1284",
+        "Name": "Galaxy 30",
+        "Abbreviation": "Galaxy-30"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1285",
+        "Name": "RISAT-2B",
+        "Abbreviation": "RISAT-2B",
+        "Aliases": ["R2B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1288",
+        "Name": "BSAT-4b",
+        "Abbreviation": "BSAT-4b"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1289",
+        "Name": "GSAT-30",
+        "Abbreviation": "GSAT-30"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1290",
+        "Name": "ALE-1",
+        "Abbreviation": "ALE-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1291",
+        "Name": "ALE-2",
+        "Abbreviation": "ALE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1292",
+        "Name": "HIBER-1",
+        "Abbreviation": "HIBER-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1293",
+        "Name": "HIBER-2",
+        "Abbreviation": "HIBER-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1294",
+        "Name": "TechEdSat 8",
+        "Abbreviation": "TES-8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1295",
+        "Name": "Engineering Test Satellite - 9",
+        "Abbreviation": "Engineering-Test-Satellite-9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1296",
+        "Name": "ICEYE-X3",
+        "Abbreviation": "ICEYE-X3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1297",
+        "Name": "ICEYE-X4",
+        "Abbreviation": "ICEYE-X4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1298",
+        "Name": "ICEYE-X5",
+        "Abbreviation": "ICEYE-X5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1299",
+        "Name": "CubeL",
+        "Abbreviation": "CBL",
+        "Aliases": ["CBL"]
+    },
+    {
+        "ID": "1.3.112.4.7.1300",
+        "Name": "CAS500-2",
+        "Abbreviation": "CAS500-2",
+        "Aliases": ["Compact Advanced Satellite 500-2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1301",
+        "Name": "THEOS-2",
+        "Abbreviation": "THEOS-2",
+        "Aliases": ["THEOS-2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1302",
+        "Name": "HAKUTO-R L1",
+        "Abbreviation": "HAKUTO-R-L1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1303",
+        "Name": "QPS-SAR",
+        "Abbreviation": "QPS-SAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1304",
+        "Name": "SES-17",
+        "Abbreviation": "SES-17"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1305",
+        "Name": "WFIRST",
+        "Abbreviation": "WFIRST"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1306",
+        "Name": "HTV-X01",
+        "Abbreviation": "HTV-X01"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1307",
+        "Name": "HTV-X02",
+        "Abbreviation": "HTV-X02"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1308",
+        "Name": "HTV-X03",
+        "Abbreviation": "HTV-X03"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1309",
+        "Name": "HOTBIRD F1",
+        "Abbreviation": "HB-F1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1310",
+        "Name": "HOTBIRD F2",
+        "Abbreviation": "HB-F2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1311",
+        "Name": "Luna-Glob",
+        "Abbreviation": "Luna-Glob",
+        "Aliases": ["Luna-25"]
+    },
+    {
+        "ID": "1.3.112.4.7.1312",
+        "Name": "HY-2D",
+        "Abbreviation": "HY-2D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1313",
+        "Name": "X-Ray Imaging and Spectroscopy Mission",
+        "Abbreviation": "XRISM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1314",
+        "Name": "GSAT-20",
+        "Abbreviation": "GSAT20"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1315",
+        "Name": "BRIK-II",
+        "Abbreviation": "BRIK-II"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1316",
+        "Name": "MEASAT-3d",
+        "Abbreviation": "MEASAT-3d",
+        "Aliases": ["MEASAT-3d"]
+    },
+    {
+        "ID": "1.3.112.4.7.1317",
+        "Name": "RTAFSAT-1",
+        "Abbreviation": "RTAFSAT-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1318",
+        "Name": "Harbinger",
+        "Abbreviation": "Harbinger",
+        "Aliases": ["ICEYE-X3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1319",
+        "Name": "Harbinger",
+        "Abbreviation": "Harbinger0"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1320",
+        "Name": "Aditya-L1",
+        "Abbreviation": "Aditya-L1",
+        "Aliases": ["Aditya"]
+    },
+    {
+        "ID": "1.3.112.4.7.1322",
+        "Name": "GSAT-22",
+        "Abbreviation": "GSAT22"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1323",
+        "Name": "GSAT-23",
+        "Abbreviation": "GSAT23"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1324",
+        "Name": "GSAT-24",
+        "Abbreviation": "GSAT24"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1325",
+        "Name": "Microsat 2A",
+        "Abbreviation": "M2A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1326",
+        "Name": "Microsat 2B",
+        "Abbreviation": "M2B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1327",
+        "Name": "VCUB1",
+        "Abbreviation": "VCUB1",
+        "Aliases": [
+            "VCUB-1",
+            "VCUB"
+        ]
+    },
+    {
+        "ID": "1.3.112.4.7.1328",
+        "Name": "IRNSS-1J",
+        "Abbreviation": "I1J"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1329",
+        "Name": "ICEYE-X6",
+        "Abbreviation": "ICEYE-X6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1330",
+        "Name": "ICEYE-X7",
+        "Abbreviation": "ICEYE-X7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1331",
+        "Name": "ICEYE-X8",
+        "Abbreviation": "ICEYE-X8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1332",
+        "Name": "ICEYE-X9",
+        "Abbreviation": "ICEYE-X9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1333",
+        "Name": "FLuorescence EXplorer",
+        "Abbreviation": "FLEX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1334",
+        "Name": "SMILE Satellite",
+        "Abbreviation": "SMILE-Satellite"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1335",
+        "Name": "DSN-3",
+        "Abbreviation": "DSN-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1336",
+        "Name": "PSLV C48 PS4",
+        "Abbreviation": "PSLV-C48-PS4",
+        "Aliases": ["C48"]
+    },
+    {
+        "ID": "1.3.112.4.7.1337",
+        "Name": "RISAT-2BR1",
+        "Abbreviation": "R2BR1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1338",
+        "Name": "RISAT-2BR2",
+        "Abbreviation": "R2BR2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1339",
+        "Name": "IDEASSat",
+        "Abbreviation": "IDEAS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1340",
+        "Name": "WSF-M SV1",
+        "Abbreviation": "WSF-M-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1341",
+        "Name": "Quasi-Zenith Satellite 5",
+        "Abbreviation": "QZS5"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1342",
+        "Name": "Quasi-Zenith Satellite 6",
+        "Abbreviation": "QZS6"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1343",
+        "Name": "Quasi-Zenith Satellite 7",
+        "Abbreviation": "QZS7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1344",
+        "Name": "XSAT-3",
+        "Abbreviation": "XSAT-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1345",
+        "Name": "GRG-01",
+        "Abbreviation": "GR1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1346",
+        "Name": "GRG-02",
+        "Abbreviation": "GR2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1347",
+        "Name": "Lucy",
+        "Abbreviation": "Lucy"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1350",
+        "Name": "CASEarth",
+        "Abbreviation": "CASEarth"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1352",
+        "Name": "KONNECT VHTS",
+        "Abbreviation": "KONNECT-VHTS",
+        "Aliases": ["KVHTS"]
+    },
+    {
+        "ID": "1.3.112.4.7.1354",
+        "Name": "XPOSAT",
+        "Abbreviation": "XPSAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1355",
+        "Name": "HTV-X04",
+        "Abbreviation": "HTV-X04"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1356",
+        "Name": "ASO-S",
+        "Abbreviation": "ASO-S",
+        "Aliases": ["KX-07"]
+    },
+    {
+        "ID": "1.3.112.4.7.1357",
+        "Name": "FORMOSAT-8A",
+        "Abbreviation": "FS8A"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1358",
+        "Name": "FORMOSAT-8B",
+        "Abbreviation": "FS8B"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1359",
+        "Name": "FORMOSAT-8C",
+        "Abbreviation": "FS8C"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1360",
+        "Name": "FORMOSAT-8D",
+        "Abbreviation": "FS8D"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1361",
+        "Name": "FORMOSAT-8E",
+        "Abbreviation": "FS8E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1349",
+        "Name": "ASBM-2",
+        "Abbreviation": "ASBM-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1362",
+        "Name": "FORMOSAT-8F",
+        "Abbreviation": "FS8F"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1363",
+        "Name": "GMS-1",
+        "Abbreviation": "GMS-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1364",
+        "Name": "GMS-2",
+        "Abbreviation": "GMS-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1365",
+        "Name": "Dream Chaser",
+        "Abbreviation": "Dream-Chaser"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1366",
+        "Name": "SPADEX-CHASER",
+        "Abbreviation": "SPX-CH"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1367",
+        "Name": "SPADEX-Target",
+        "Abbreviation": "SPX-TR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1368",
+        "Name": "NESS",
+        "Abbreviation": "NESS",
+        "Aliases": ["NESS"]
+    },
+    {
+        "ID": "1.3.112.4.7.1369",
+        "Name": "NESS-X",
+        "Abbreviation": "NESS-X",
+        "Aliases": ["NESS-X"]
+    },
+    {
+        "ID": "1.3.112.4.7.1370",
+        "Name": "Ovzon 3",
+        "Abbreviation": "Ovzon-3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1371",
+        "Name": "Spainsat NG 29\u00b0E",
+        "Abbreviation": "Spainsat-NG-29E"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1372",
+        "Name": "Spainsat NG 30\u00b0W",
+        "Abbreviation": "Spainsat-NG-30W"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1373",
+        "Name": "IDRSS-1",
+        "Abbreviation": "IDRS1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1374",
+        "Name": "ASO-S",
+        "Abbreviation": "ASO-S0",
+        "Aliases": ["KX-07"]
+    },
+    {
+        "ID": "1.3.112.4.7.1375",
+        "Name": "EUTELSAT 10B",
+        "Abbreviation": "E10B",
+        "Aliases": ["E10B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1376",
+        "Name": "Lunar Node - 1",
+        "Abbreviation": "Lunar-Node-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1377",
+        "Name": "Einstein Probe",
+        "Abbreviation": "EP",
+        "Aliases": ["KX-08"]
+    },
+    {
+        "ID": "1.3.112.4.7.1378",
+        "Name": "Einstein Probe",
+        "Abbreviation": "EP0",
+        "Aliases": ["KX-08"]
+    },
+    {
+        "ID": "1.3.112.4.7.1379",
+        "Name": "StriX-a",
+        "Abbreviation": "StriX-a"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1381",
+        "Name": "QPS-SAR-2",
+        "Abbreviation": "QPS-SAR-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1382",
+        "Name": "Argos-4",
+        "Abbreviation": "Argos-4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1383",
+        "Name": "AAC-AIS-SAT1",
+        "Abbreviation": "AAC-AIS-SAT1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1384",
+        "Name": "AAC-AIS-SAT2",
+        "Abbreviation": "AAC-AIS-SAT2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1385",
+        "Name": "AAC-AIS-EMsat",
+        "Abbreviation": "AAC-AIS-EMsat"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1386",
+        "Name": "AAC-AIS-SIMsat",
+        "Abbreviation": "AAC-AIS-SIMsat"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1387",
+        "Name": "LICIACube",
+        "Abbreviation": "LCC",
+        "Aliases": ["LICIA"]
+    },
+    {
+        "ID": "1.3.112.4.7.1388",
+        "Name": "AstroBio CubeSat",
+        "Abbreviation": "ABC",
+        "Aliases": ["AstroBio"]
+    },
+    {
+        "ID": "1.3.112.4.7.1390",
+        "Name": "G33",
+        "Abbreviation": "G33"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1391",
+        "Name": "G34",
+        "Abbreviation": "G34"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1392",
+        "Name": "AMAZONAS NEXUS",
+        "Abbreviation": "AMZ-NX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1393",
+        "Name": "NILESAT301",
+        "Abbreviation": "N301"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1394",
+        "Name": "Chandrayaan-3 Lander",
+        "Abbreviation": "CH3-LM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1395",
+        "Name": "Chandrayaan-3 Propulsion Module",
+        "Abbreviation": "CH3-PM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1396",
+        "Name": "ELO 3",
+        "Abbreviation": "ELO 3",
+        "Aliases": ["ELO3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1397",
+        "Name": "ELO 4",
+        "Abbreviation": "ELO 4",
+        "Aliases": ["ELO4"]
+    },
+    {
+        "ID": "1.3.112.4.7.1398",
+        "Name": "Inmarsat Gx 7",
+        "Abbreviation": "InmGx7"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1399",
+        "Name": "Inmarsat Gx 8",
+        "Abbreviation": "InmGx8"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1400",
+        "Name": "Inmarsat Gx 9",
+        "Abbreviation": "InmGx9"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1401",
+        "Name": "Intelsat 40e",
+        "Abbreviation": "Intelsat-40e"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1402",
+        "Name": "NAOS-01",
+        "Abbreviation": "NAOS-01",
+        "Aliases": ["Luxembourg_Earth_Observation_System"]
+    },
+    {
+        "ID": "1.3.112.4.7.1403",
+        "Name": "G32",
+        "Abbreviation": "G32"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1404",
+        "Name": "MMX",
+        "Abbreviation": "MMX"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1406",
+        "Name": "SES18",
+        "Abbreviation": "SES18"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1407",
+        "Name": "SES18",
+        "Abbreviation": "SES180"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1408",
+        "Name": "SES19",
+        "Abbreviation": "SES19"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1409",
+        "Name": "SES19",
+        "Abbreviation": "SES190"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1410",
+        "Name": "G31",
+        "Abbreviation": "G31"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1411",
+        "Name": "G35",
+        "Abbreviation": "G35"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1412",
+        "Name": "G36",
+        "Abbreviation": "G36"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1413",
+        "Name": "SVOM",
+        "Abbreviation": "SVOM"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1414",
+        "Name": "UmbraSAR-2001",
+        "Abbreviation": "USAR"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1415",
+        "Name": "GRG-03",
+        "Abbreviation": "GRG-03",
+        "Aliases": ["GR3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1416",
+        "Name": "RApid-Innovative-payload-demonstration-SatellitE-2",
+        "Abbreviation": "RAISE-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1417",
+        "Name": "HTV-X05",
+        "Abbreviation": "HTV-X05"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1418",
+        "Name": "DRUMS",
+        "Abbreviation": "DRUMS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1419",
+        "Name": "SES-22",
+        "Abbreviation": "SES-22"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1421",
+        "Name": "GHALIB",
+        "Abbreviation": "GHALIB"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1422",
+        "Name": "DROR1",
+        "Abbreviation": "DR1",
+        "Aliases": ["DROR1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1423",
+        "Name": "SATRIA",
+        "Abbreviation": "NST"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1424",
+        "Name": "THURAYA T4",
+        "Abbreviation": "THUR-T4"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1425",
+        "Name": "ADRAS-J",
+        "Abbreviation": "ADRAS-J"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1426",
+        "Name": "Global Observing SATellite for Greenhouse gases and Water cycle",
+        "Abbreviation": "GOSAT-GW"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1427",
+        "Name": "Earth Return Orbiter",
+        "Abbreviation": "ERO",
+        "Aliases": ["ERO"]
+    },
+    {
+        "ID": "1.3.112.4.7.1428",
+        "Name": "Sample Fetch Rover",
+        "Abbreviation": "MSFR",
+        "Aliases": ["MSR-SFR"]
+    },
+    {
+        "ID": "1.3.112.4.7.1429",
+        "Name": "BADR-8",
+        "Abbreviation": "BADR8",
+        "Aliases": ["BADR8"]
+    },
+    {
+        "ID": "1.3.112.4.7.1432",
+        "Name": "PLATO (Planetary Transits and Oscillations of stars)",
+        "Abbreviation": "PLTO",
+        "Aliases": ["PLATO"]
+    },
+    {
+        "ID": "1.3.112.4.7.1433",
+        "Name": "TDP-M1",
+        "Abbreviation": "TDPM1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1434",
+        "Name": "Galaxy 37",
+        "Abbreviation": "Galaxy-37"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1440",
+        "Name": "Lunar Trailblazer",
+        "Abbreviation": "Lunar-Trailblazer"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1441",
+        "Name": "ALTIUS",
+        "Abbreviation": "ALTS"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1442",
+        "Name": "MASTEN-XL1",
+        "Abbreviation": "MASTEN-XL1",
+        "Aliases": [
+            "XL1",
+            "XL-1"
+        ]
+    },
+    {
+        "ID": "1.3.112.4.7.1443",
+        "Name": "Angosat-2",
+        "Abbreviation": "ASAT2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1444",
+        "Name": "ASTROBOTIC PEREGRINE Mission 1",
+        "Abbreviation": "ASTROBOTIC-PEREGRINE-Mission-1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1445",
+        "Name": "PLATINO-1",
+        "Abbreviation": "PLT-1,PLT#1,PLT1",
+        "Aliases": ["PLATINO SAR"]
+    },
+    {
+        "ID": "1.3.112.4.7.1447",
+        "Name": "MEP1",
+        "Abbreviation": "MEP1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1448",
+        "Name": "MEP2",
+        "Abbreviation": "MEP2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1449",
+        "Name": "MEP3",
+        "Abbreviation": "MEP3"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1450",
+        "Name": "MRV1",
+        "Abbreviation": "MRV1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1451",
+        "Name": "ICEYE-X11",
+        "Abbreviation": "ICEYE-X11"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1452",
+        "Name": "ICEYE-X12",
+        "Abbreviation": "ICEYE-X12"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1453",
+        "Name": "ICEYE-X13",
+        "Abbreviation": "ICEYE-X13"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1454",
+        "Name": "ICEYE-X14",
+        "Abbreviation": "ICEYE-X14"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1455",
+        "Name": "ICEYE-X15",
+        "Abbreviation": "ICEYE-X15"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1456",
+        "Name": "ICEYE-X16",
+        "Abbreviation": "ICEYE-X16"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1457",
+        "Name": "ICEYE-X17",
+        "Abbreviation": "ICEYE-X17"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1458",
+        "Name": "Masten XL1",
+        "Abbreviation": "Masten-XL1"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1459",
+        "Name": "KINEIS-1A",
+        "Abbreviation": "KIN-1A",
+        "Aliases": ["KIN-1A"]
+    },
+    {
+        "ID": "1.3.112.4.7.1460",
+        "Name": "KINEIS-1B",
+        "Abbreviation": "KIN-1B",
+        "Aliases": ["KIN-1B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1461",
+        "Name": "KINEIS-1C",
+        "Abbreviation": "KIN-1C",
+        "Aliases": ["KIN-1C"]
+    },
+    {
+        "ID": "1.3.112.4.7.1462",
+        "Name": "KINEIS-1D",
+        "Abbreviation": "KIN-1D",
+        "Aliases": ["KIN-1D"]
+    },
+    {
+        "ID": "1.3.112.4.7.1463",
+        "Name": "KINEIS-1E",
+        "Abbreviation": "KIN-1E",
+        "Aliases": ["KIN-1E"]
+    },
+    {
+        "ID": "1.3.112.4.7.1464",
+        "Name": "KINEIS-2A",
+        "Abbreviation": "KIN-2A",
+        "Aliases": ["KIN-2A"]
+    },
+    {
+        "ID": "1.3.112.4.7.1465",
+        "Name": "KINEIS-2B",
+        "Abbreviation": "KIN-2B",
+        "Aliases": ["KIN-2B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1466",
+        "Name": "KINEIS-2C",
+        "Abbreviation": "KIN-2C",
+        "Aliases": ["KIN-2C"]
+    },
+    {
+        "ID": "1.3.112.4.7.1467",
+        "Name": "KINEIS-2D",
+        "Abbreviation": "KIN-2D",
+        "Aliases": ["KIN-2D"]
+    },
+    {
+        "ID": "1.3.112.4.7.1468",
+        "Name": "KINEIS-2E",
+        "Abbreviation": "KIN-2E",
+        "Aliases": ["KIN-2E"]
+    },
+    {
+        "ID": "1.3.112.4.7.1469",
+        "Name": "KINEIS-3A",
+        "Abbreviation": "KIN-3A",
+        "Aliases": ["KIN-3A"]
+    },
+    {
+        "ID": "1.3.112.4.7.1470",
+        "Name": "KINEIS-3B",
+        "Abbreviation": "KIN-3B",
+        "Aliases": ["KIN-3B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1471",
+        "Name": "KINEIS-3C",
+        "Abbreviation": "KIN-3C",
+        "Aliases": ["KIN-3C"]
+    },
+    {
+        "ID": "1.3.112.4.7.1472",
+        "Name": "KINEIS-3D",
+        "Abbreviation": "KIN-3D",
+        "Aliases": ["KIN-3D"]
+    },
+    {
+        "ID": "1.3.112.4.7.1473",
+        "Name": "KINEIS-3E",
+        "Abbreviation": "KIN-3E",
+        "Aliases": ["KIN-3E"]
+    },
+    {
+        "ID": "1.3.112.4.7.1474",
+        "Name": "KINEIS-4A",
+        "Abbreviation": "KIN-4A",
+        "Aliases": ["KIN-4A"]
+    },
+    {
+        "ID": "1.3.112.4.7.1475",
+        "Name": "KINEIS-4B",
+        "Abbreviation": "KIN-4B",
+        "Aliases": ["KIN-4B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1476",
+        "Name": "KINEIS-4C",
+        "Abbreviation": "KIN-4C",
+        "Aliases": ["KIN-4C"]
+    },
+    {
+        "ID": "1.3.112.4.7.1477",
+        "Name": "KINEIS-4D",
+        "Abbreviation": "KIN-4D",
+        "Aliases": ["KIN-4D"]
+    },
+    {
+        "ID": "1.3.112.4.7.1478",
+        "Name": "KINEIS-4E",
+        "Abbreviation": "KIN-4E",
+        "Aliases": ["KIN-4E"]
+    },
+    {
+        "ID": "1.3.112.4.7.1479",
+        "Name": "KINEIS-5A",
+        "Abbreviation": "KIN-5A",
+        "Aliases": ["KIN-5A"]
+    },
+    {
+        "ID": "1.3.112.4.7.1480",
+        "Name": "KINEIS-5B",
+        "Abbreviation": "KIN-5B",
+        "Aliases": ["KIN-5B"]
+    },
+    {
+        "ID": "1.3.112.4.7.1481",
+        "Name": "KINEIS-5C",
+        "Abbreviation": "KIN-5C",
+        "Aliases": ["KIN-5C"]
+    },
+    {
+        "ID": "1.3.112.4.7.1482",
+        "Name": "KINEIS-5D",
+        "Abbreviation": "KIN-5D",
+        "Aliases": ["KIN-5D"]
+    },
+    {
+        "ID": "1.3.112.4.7.1483",
+        "Name": "KINEIS-5E",
+        "Abbreviation": "KIN-5E",
+        "Aliases": ["KIN-5E"]
+    },
+    {
+        "ID": "1.3.112.4.7.1484",
+        "Name": "NAPA-2",
+        "Abbreviation": "NAPA-2"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1485",
+        "Name": "KSF1-a",
+        "Abbreviation": "KSF1-a"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1486",
+        "Name": "KSF1-b",
+        "Abbreviation": "KSF1-b"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1487",
+        "Name": "KSF1-c",
+        "Abbreviation": "KSF1-c"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1488",
+        "Name": "KSF1-d",
+        "Abbreviation": "KSF1-d"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1489",
+        "Name": "CO3D1",
+        "Abbreviation": "CO3D1",
+        "Aliases": ["S250-O1"]
+    },
+    {
+        "ID": "1.3.112.4.7.1490",
+        "Name": "CO3D2",
+        "Abbreviation": "CO3D2",
+        "Aliases": ["S250-O2"]
+    },
+    {
+        "ID": "1.3.112.4.7.1491",
+        "Name": "CO3D3",
+        "Abbreviation": "CO3D3",
+        "Aliases": ["S250-O3"]
+    },
+    {
+        "ID": "1.3.112.4.7.1492",
+        "Name": "CO3D4",
+        "Abbreviation": "CO3D4",
+        "Aliases": ["S250-O4"]
+    },
+    {
+        "ID": "1.3.112.4.7.1493",
+        "Name": "ONGLAISAT",
+        "Abbreviation": "ONGLAISAT"
+       
+    },
+    {
+        "ID": "1.3.112.4.7.1494",
+        "Name": "Gaganyaan",
+        "Abbreviation": "G1, G2, H1",
+        "Aliases": ["Gaganyaan Orbital Vehicle"]
+    }
+]

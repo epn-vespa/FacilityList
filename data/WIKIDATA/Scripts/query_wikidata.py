@@ -4,6 +4,8 @@ import json
 import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
 
+
+
 endpoint_url = "https://query.wikidata.org/sparql"
 
 query_prefix = """
@@ -22,7 +24,7 @@ SELECT
   ?item     
   ?itemLabel
   ?itemDescription  
-  #(GROUP_CONCAT(DISTINCT ?Unified_Astro_Thesaurus_ID; SEPARATOR="|") AS ?all_Unified_Astro_Thesaurus_ID)
+  
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
   (GROUP_CONCAT(DISTINCT ?NSSDCA_ID; SEPARATOR="|") AS ?all_NSSDCA_ID)
@@ -39,16 +41,17 @@ SELECT
 where = """
  WHERE 
  {        
-  {?item wdt:P31/wdt:P279*  wd:Q62832 .} # observatory
-  UNION {?item wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
+  #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
+  {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
-  UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
   UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
-  #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
   UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
   UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
   UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
+  UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
+  UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
+  #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
 
   #OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    

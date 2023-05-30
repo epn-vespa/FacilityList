@@ -1,3 +1,3 @@
-with open('ADS_facilities.txt', 'r') as f:
+with open('ads_datas_old.json', 'r') as f:
     print(len(f.readlines()))
 
