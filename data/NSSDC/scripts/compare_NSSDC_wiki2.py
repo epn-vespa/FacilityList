@@ -6,6 +6,11 @@ import json
 import cProfile
 from multiprocessing import Pool
 
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/datas/NSSDC_list1.json') as f:
+    data_nssdc = json.load(f)
+
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
+    wikidata = json.load(f)
 
 def mon_scorer(q, c):
     r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases'])
@@ -24,11 +29,7 @@ def mon_scorer(q, c):
 def dummy_proc(x):
     return x
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/datas/NSSDC_list1.json') as f:
-    data_nssdc = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
-    wikidata = json.load(f)
 
 def get_scores( t ):
     i=t[0]

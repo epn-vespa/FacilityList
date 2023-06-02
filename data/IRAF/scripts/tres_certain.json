@@ -1,1 +1,2545 @@
-[]
+[
+    [
+        {
+            "ID": "kpno",
+            "Name": "Kitt Peak National Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q592248",
+            "itemLabel": "kitt-peak-national-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "695",
+            "aliases": "Kitt Peak National Observatory|Observatoire de kitt peak|Kitt Peak Observatory|KPNO",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "McMath\u2013Pierce Solar Telescope|WIYN Telescope|Nicholas U. Mayall Telescope|ARO 12m Radio Telescope",
+            "all_part_of": "",
+            "itemDescription": "United States astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "kpno",
+            "Name": "Kitt Peak National Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14715106",
+            "itemLabel": "westport-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I42",
+            "aliases": "Rolnick Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "public observatory in Westport CT"
+        }
+    ],
+    [
+        {
+            "ID": "kpno",
+            "Name": "Kitt Peak National Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4780333",
+            "itemLabel": "apollo-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "838",
+            "aliases": "Dayton Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "kpno",
+            "Name": "Kitt Peak National Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115215962",
+            "itemLabel": "campinas-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "870",
+            "aliases": "Observat\u00f3rio da Cultura de Campinas|Municipal Observatory of Campinas Jean Nicolini",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "kpno",
+            "Name": "Kitt Peak National Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115239746",
+            "itemLabel": "puna'auia-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "931",
+            "aliases": "Punaauia observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ctio",
+            "Name": "Cerro Tololo Interamerican Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q102327045",
+            "itemLabel": "arecibo-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "251",
+            "aliases": "\u0410\u0440\u0435\u0441\u0456\u0431\u043e (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f)|Arecibo Observatory|\u0410\u0440\u0435\u0441\u0438\u0431\u043e (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|National Astronomy and Ionosphere Center|NAIC|Centro Nacional de Astronom\u00eda e Ionosfera|National Astronomy and Ionosphere Center|NAIC|Arecibo Ionosphere Observatory|William-E.-Gordon-Teleskop|National Astronomy and Ionosphere Center|NAIC",
+            "all_instance_of": "tourist attraction|astronomical observatory",
+            "all_has_part": "Arecibo 12m radio telescope|Arecibo Radio Telescope",
+            "all_part_of": "",
+            "itemDescription": "observatory located in the municipality of Arecibo, Puerto Rico"
+        }
+    ],
+    [
+        {
+            "ID": "ctio",
+            "Name": "Cerro Tololo Interamerican Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456566",
+            "itemLabel": "chions-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "567",
+            "aliases": "Chaonis Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ctio",
+            "Name": "Cerro Tololo Interamerican Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q19875599",
+            "itemLabel": "dominion-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Hector Observatory",
+            "all_instance_of": "observatory|architectural structure",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "historic observatory in Wellington"
+        }
+    ],
+    [
+        {
+            "ID": "ctio",
+            "Name": "Cerro Tololo Interamerican Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5024784",
+            "itemLabel": "cal\u00e1n/tololo-survey",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Proyecto Calan Tololo",
+            "all_instance_of": "astronomical survey",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "ctio",
+            "Name": "Cerro Tololo Interamerican Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10340067",
+            "itemLabel": "valinhos-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "860",
+            "aliases": "Observat\u00f3rio abrah\u00e3o de moraes|Abrah\u00e3o de Moraes observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "eso",
+            "Name": "European Southern Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456566",
+            "itemLabel": "chions-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "567",
+            "aliases": "Chaonis Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "eso",
+            "Name": "European Southern Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115536730",
+            "itemLabel": "european-southern-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I03",
+            "aliases": "eso",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "eso",
+            "Name": "European Southern Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q55285981",
+            "itemLabel": "ecuador-ute-uesor",
+            "all_COSPAR_ID": "2017-042H",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "UTE-UESOR",
+            "all_instance_of": "CubeSat",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "eso",
+            "Name": "European Southern Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115607506",
+            "itemLabel": "itelescope-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I89",
+            "aliases": "Ras Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "eso",
+            "Name": "European Southern Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q148044",
+            "itemLabel": "parkes-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "399005",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5e15\u514b\u65af\u96fb\u6ce2\u5929\u6587\u53f0|\u5e15\u514b\u65af\u8108\u885d\u661f\u8a08\u6642\u9663\u5217|\u5e15\u514b\u65af\u5929\u6587\u53f0|Parkes Observatory|Parkes observatoriet|Obserwatorium w Parkes|\ud30c\ud06c\uc2a4 \uc804\ud30c \ub9dd\uc6d0\uacbd|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u067e\u0627\u0631\u06a9\u0633|\u0631\u0635\u062f \u062e\u0627\u0646\u0647\u0654 \u067e\u0627\u0631\u06a9\u0633|\u0631\u0635\u062f \u062e\u0627\u0646\u0647 \u067e\u0627\u0631\u06a9\u0633|Parkes Observatorium",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Parkes 12-metre telescope|Parkes 18-metre telescope|Parkes Radio Telescope",
+            "all_part_of": "Australia Telescope National Facility",
+            "itemDescription": "radio telescope observatory, located 20 kilometres north of the town of Parkes, New South Wales, Australia"
+        }
+    ],
+    [
+        {
+            "ID": "lick",
+            "Name": "Lick Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59506692",
+            "itemLabel": "lerwick-magnetic-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lerwick Observatory",
+            "all_instance_of": "magnetic observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "magnetic observatory in the Shetland Islands, Scotland, UK"
+        }
+    ],
+    [
+        {
+            "ID": "lick",
+            "Name": "Lick Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q461613",
+            "itemLabel": "lick-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "662",
+            "aliases": "\u91cc\u514b\u5929\u6587\u53f0|\u7acb\u514b\u5929\u6587\u53f0|Lick Observatory|Lickobservatoriet|\u041b\u0438\u043a\u0441\u043a\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|Lick Observatory|Lick Observatory|Lick Observatory|Lick-Observatory|Osservatorio di Lick|Lick Observatory|Observatoire de Lick|Lick Observatory|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u06cc\u06a9|Observatorio Astron\u00f3mico Lick|Observatorio Astronomico Lick|Lick-Sternwarte|Lick Observatory|Lick Observatory|lick",
+            "all_instance_of": "university observatory",
+            "all_has_part": "Anna L. Nickel telescope|Katzman Automatic Imaging Telescope|Automated Planet Finder|Crossley telescope|Lick Observatory Main Building|Tauchmann telescope|James Lick telescope|Coud\u00e9 Auxiliary Telescope|Carnegie telescope|C. Donald Shane Telescope",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory, California, USA"
+        }
+    ],
+    [
+        {
+            "ID": "lick",
+            "Name": "Lick Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4920785",
+            "itemLabel": "black-forest-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "V34",
+            "aliases": "Black Forest observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "lick",
+            "Name": "Lick Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6543515",
+            "itemLabel": "lick\u2013carnegie-exoplanet-survey",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u30ea\u30c3\u30af\uff1d\u30ab\u30fc\u30cd\u30ae\u30fc\u7cfb\u5916\u60d1\u661f\u30b5\u30fc\u30d9\u30a4|\u30ab\u30ea\u30d5\u30a9\u30eb\u30cb\u30a2\u30fb\u30ab\u30fc\u30cd\u30ae\u30fc\u5929\u6587\u53f0|LCES|San Francisco Planet Search Project|Programa de Busqueda de Planetas de Lick-Carnegie|California and Carnegie Planet Search|California & Carnegie Planet Search|B\u00fasqueda de Planetas de California y Carnegie|Busqueda de Planetas de California y Carnegie|San Francisco State University Planet Search|Lick-Carnegie Exoplanet Survey|LCES|California and Carnegie Planet Search",
+            "all_instance_of": "astronomical survey",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical survey focusing on exoplanets"
+        }
+    ],
+    [
+        {
+            "ID": "lick",
+            "Name": "Lick Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11087045",
+            "itemLabel": "\u00fapice-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "166",
+            "aliases": "\u00dapice Observatory|\u00dapick\u00e1 hv\u011bzd\u00e1rna",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmto",
+            "Name": "Multiple Mirror Telescope Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779895",
+            "itemLabel": "mmt-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Whipple Observatory|Multiple Mirror Telescope, telescopio a specchi multipli|MMTO|MMT|Multiple Mirror Telescope|MMTO|MMTO|MMT",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmto",
+            "Name": "Multiple Mirror Telescope Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q224761",
+            "itemLabel": "mount-lemmon-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "G84",
+            "aliases": "SkyCenter|Mt. Lemmon SkyCenter Observatory|Mt. Lemmon Observatory|Mount Lemmon SkyCenter Observatory|MLO|Observatorio del Monte Lemmon|Observatorio Astronomico del Monte Lemmon|Mount Lemmon Infrared Observatory|MLO",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Steward Observatory",
+            "itemDescription": "observatory in Arizona, United States"
+        }
+    ],
+    [
+        {
+            "ID": "mmto",
+            "Name": "Multiple Mirror Telescope Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456566",
+            "itemLabel": "chions-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "567",
+            "aliases": "Chaonis Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmto",
+            "Name": "Multiple Mirror Telescope Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114638113",
+            "itemLabel": "szeged-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "629",
+            "aliases": "JATE Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmto",
+            "Name": "Multiple Mirror Telescope Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114662333",
+            "itemLabel": "zephyrhills-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "761",
+            "aliases": "Quail Hollow Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmt",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779895",
+            "itemLabel": "mmt-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Whipple Observatory|Multiple Mirror Telescope, telescopio a specchi multipli|MMTO|MMT|Multiple Mirror Telescope|MMTO|MMTO|MMT",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmt",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q103582616",
+            "itemLabel": "meteorological-observatory-of-el-salvador",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Nacional de El Salvador|Observatorio Meteorol\u00f3gico y Astron\u00f3mico de El Salvador|National Observatory of El Salvador",
+            "all_instance_of": "weather station|observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "old meteorological observatory in San Salvador, El Salvador"
+        }
+    ],
+    [
+        {
+            "ID": "mmt",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4329949",
+            "itemLabel": "ras-(remote-astronomical-society)-observatory-of-new-mexico",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "H06",
+            "aliases": "RAS (Remote Astronomical Society) Observatory of New Mexico|Observatorio remoto de la sociedad astronomica de Nuevo Mexico",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "mmt",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4811610",
+            "itemLabel": "astronaut-memorial-planetarium-and-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "758",
+            "aliases": "\u30a2\u30b9\u30c8\u30ed\u30ce\u30fc\u30c8\u30fb\u30e1\u30e2\u30ea\u30a2\u30eb\u30fb\u30d7\u30e9\u30cd\u30bf\u30ea\u30a6\u30e0\u30fb\u30a2\u30f3\u30c9\u30fb\u30aa\u30d6\u30b6\u30fc\u30f4\u30a7\u30c8\u30ea\u30fc|Brevard Community College Planetarium and Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mmt",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59470379",
+            "itemLabel": "isla-de-pascua-mataveri-(easter-island)-magnetic-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Isla de Pascua Mataveri Magnetic Observatory|Easter Island Magnetic Observatory",
+            "all_instance_of": "magnetic observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "magnetic observatory"
+        }
+    ],
+    [
+        {
+            "ID": "flwo",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115633335",
+            "itemLabel": "whipple-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "V07",
+            "aliases": "flwo",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "flwo",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7895639",
+            "itemLabel": "ucl-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "998",
+            "aliases": "UCL\u5929\u6587\u53f0|observatoire de l'universit\u00e9 de Londres|UCLO|University of London Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory at Mill Hill in London, England"
+        }
+    ],
+    [
+        {
+            "ID": "flwo",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11521260",
+            "itemLabel": "sapporo-astronomical-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sapporo City Astronomical Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "flwo",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3348375",
+            "itemLabel": "california-volcano-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Long Valley-observatorium|Long Valley Observatory|Observatorio Vulcanologico de California|Long Valley Observatory|LVO",
+            "all_instance_of": "volcano observatory",
+            "all_has_part": "",
+            "all_part_of": "Volcano Hazards Program",
+            "itemDescription": "volcano observatory in Eastern California"
+        }
+    ],
+    [
+        {
+            "ID": "flwo",
+            "Name": "Whipple Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3348498",
+            "itemLabel": "yellowstone-volcano-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Yellowstone Volcano Observatory|Observatorio Vulcanologico de Yellowstone|YVO",
+            "all_instance_of": "volcano observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "organization created to monitor and advise on the Yellowstone supervolcano"
+        }
+    ],
+    [
+        {
+            "ID": "cfht",
+            "Name": "Canada-France-Hawaii Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q26965824",
+            "itemLabel": "60-inch-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "60-inch Hale telescope",
+            "all_instance_of": "optical telescope|reflecting telescope",
+            "all_has_part": "",
+            "all_part_of": "Mount Wilson Observatory",
+            "itemDescription": "telescope at Mount Wilson Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "cfht",
+            "Name": "Canada-France-Hawaii Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3547219",
+            "itemLabel": "uk-schmidt-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "United Kingdom Schmidt Telescope|United Kingdom Schmidt Telescope|United Kingdom Schmidt Telescope",
+            "all_instance_of": "optical telescope|Schmidt camera",
+            "all_has_part": "",
+            "all_part_of": "Australian Astronomical Observatory|Siding Spring Observatory",
+            "itemDescription": "optical telescope in Australia"
+        }
+    ],
+    [
+        {
+            "ID": "cfht",
+            "Name": "Canada-France-Hawaii Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3661135",
+            "itemLabel": "40-foot-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Telescopio di William Herschel|Osservatorio Casa|Observatory House|Great Forty-Foot|40-foot telescope|Gran 40 pies|Herschel 40-foot telescope|Great Forty-Foot telescope|\u062a\u0644\u0633\u0643\u0648\u0628 \u0664\u0660 \u0642\u062f\u0645",
+            "all_instance_of": "reflecting telescope|altazimuth mount",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "reflecting telescope constructed between 1785 and 1789 at Observatory House in Slough, England"
+        }
+    ],
+    [
+        {
+            "ID": "cfht",
+            "Name": "Canada-France-Hawaii Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1031946",
+            "itemLabel": "canada\u2013france\u2013hawaii-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "T14",
+            "aliases": "CFHT|\u52a0\u62ff\u5927-\u6cd5\u56fd-\u590f\u5a01\u5937\u671b\u8fdc\u955c|\u041a\u0430\u043d\u0430\u0434\u0430 \u0424\u0440\u0430\u043d\u0446\u0456\u044f \u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0413\u0430\u0432\u0430\u0457 (\u041a\u0424\u0422\u0413)|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f CFHT|CFHT|Canada-France-Hawaii Telescope|CFHT|CFHT|CFHT|T\u00e9lescope Canada-France-Hawaii|T\u00e9lescope Canada-France-Hawa\u00ef|T\u00e9lescope Canada-France Hawa\u00ef|Tcfh|Observatoire Canada-France-Hawaii|Observatoire canada-france-hawaii|CFHT|Canada-France-Hawaii-Telescope|Canada-France-Hawaii Telescope|Canada France Hawaii Telescope|CFHT\uff0cCanada\u2013France\u2013Hawaii Telescope|Canada\u2013France\u2013Hawaii Telescope\uff0c\u7e2e\u5beb\uff1aCFHT|CFHT|Kanadsko-Francouzsko-Havajsk\u00fd teleskop|Kanadsko-francouzsko-havajsk\u00fd teleskop|CFHT|Telescopi de Canad\u00e0, Fran\u00e7a, Hawaii|CFHT|Canada-France-Hawaii Telescope|Canada France Hawaii Telescope",
+            "all_instance_of": "optical telescope|Cassegrain mirror system|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Mauna Kea Observatories",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "cfht",
+            "Name": "Canada-France-Hawaii Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q80380390",
+            "itemLabel": "telescope-which-may-have-been-owned-by-captain-james-cook",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Captain Cook's telescope, James Cook's telescope",
+            "all_instance_of": "telescope|work|scientific instrument|manufactured product",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Telescope made by Edward Nairne and James Blunt which may have been owned by Captain James Cook"
+        }
+    ],
+    [
+        {
+            "ID": "lapalma",
+            "Name": "Roque de los Muchachos, La Palma"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q21004044",
+            "itemLabel": "la-murta-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "J76",
+            "aliases": "Observatorio astron\u00f3mico municipal de Murcia \"La Murta\"",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Murcia, Spain"
+        }
+    ],
+    [
+        {
+            "ID": "lapalma",
+            "Name": "Roque de los Muchachos, La Palma"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q29021714",
+            "itemLabel": "observatorio-vulcanol\u00f3gico-y-sismol\u00f3gico-de-popay\u00e1n",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Vulcanologico y Sismologico de Popayan",
+            "all_instance_of": "volcano observatory",
+            "all_has_part": "",
+            "all_part_of": "Colombia Geological Survey"
+        }
+    ],
+    [
+        {
+            "ID": "lapalma",
+            "Name": "Roque de los Muchachos, La Palma"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q29021719",
+            "itemLabel": "observatorio-vulcanol\u00f3gico-y-sismol\u00f3gico-de-manizales",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Vulcanologico y Sismologico de Manizales",
+            "all_instance_of": "volcano observatory",
+            "all_has_part": "",
+            "all_part_of": "Colombia Geological Survey"
+        }
+    ],
+    [
+        {
+            "ID": "lapalma",
+            "Name": "Roque de los Muchachos, La Palma"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6048247",
+            "itemLabel": "observatorio-vulcanol\u00f3gico-y-sismol\u00f3gico-de-costa-rica",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Vulcanologico y Sismologico de Costa Rica",
+            "all_instance_of": "volcano observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "lapalma",
+            "Name": "Roque de los Muchachos, La Palma"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2092877",
+            "itemLabel": "tour-de-la-babotte",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "003",
+            "aliases": "Tour de la Babotte|Torre della Babote/ Osservatorio di Montpellier,|tour de la babote|observatoire (ancien) dit Tour de la Babotte|Antic Observatori Torre de la Babotte (Montpeller)",
+            "all_instance_of": "tower|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "mso",
+            "Name": "Mt. Stromlo Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1310548",
+            "itemLabel": "mount-stromlo-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "414",
+            "aliases": "mso",
+            "all_instance_of": "organization|astronomical observatory",
+            "all_has_part": "Great Melbourne Telescope|SkyMapper",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mso",
+            "Name": "Mt. Stromlo Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115607506",
+            "itemLabel": "itelescope-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I89",
+            "aliases": "Ras Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mso",
+            "Name": "Mt. Stromlo Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456566",
+            "itemLabel": "chions-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "567",
+            "aliases": "Chaonis Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mso",
+            "Name": "Mt. Stromlo Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6859986",
+            "itemLabel": "mills-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dundee, Balgay Park, Mills Observatory",
+            "all_instance_of": "astronomical observatory|local authority museum",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Dundee City, Scotland, UK"
+        }
+    ],
+    [
+        {
+            "ID": "mso",
+            "Name": "Mt. Stromlo Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1636877",
+            "itemLabel": "pises-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "122",
+            "aliases": "\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041f\u0438\u0437\u0435|Observatoire des Pises|Pises Observatory|Observatoire des Pises",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in France"
+        }
+    ],
+    [
+        {
+            "ID": "sso",
+            "Name": "Siding Spring Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115607506",
+            "itemLabel": "itelescope-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I89",
+            "aliases": "Ras Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "sso",
+            "Name": "Siding Spring Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q26497325",
+            "itemLabel": "bidston-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Bidston Hill Observatory",
+            "all_instance_of": "observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Grade II listed former observatory in Bidston, Wirral, Merseyside, UK"
+        }
+    ],
+    [
+        {
+            "ID": "sso",
+            "Name": "Siding Spring Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456566",
+            "itemLabel": "chions-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "567",
+            "aliases": "Chaonis Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "sso",
+            "Name": "Siding Spring Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1636877",
+            "itemLabel": "pises-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "122",
+            "aliases": "\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041f\u0438\u0437\u0435|Observatoire des Pises|Pises Observatory|Observatoire des Pises",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in France"
+        }
+    ],
+    [
+        {
+            "ID": "sso",
+            "Name": "Siding Spring Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6859986",
+            "itemLabel": "mills-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Dundee, Balgay Park, Mills Observatory",
+            "all_instance_of": "astronomical observatory|local authority museum",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Dundee City, Scotland, UK"
+        }
+    ],
+    [
+        {
+            "ID": "aao",
+            "Name": "Anglo-Australian Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114638113",
+            "itemLabel": "szeged-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "629",
+            "aliases": "JATE Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "aao",
+            "Name": "Anglo-Australian Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3562800",
+            "itemLabel": "observatory-vset\u00edn",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatory Vsetin",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "aao",
+            "Name": "Anglo-Australian Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4780333",
+            "itemLabel": "apollo-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "838",
+            "aliases": "Dayton Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "aao",
+            "Name": "Anglo-Australian Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q525762",
+            "itemLabel": "perth-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "319",
+            "aliases": "Perth Observatory",
+            "all_instance_of": "astronomical observatory|heritage site",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in Bickley, Western Australia"
+        }
+    ],
+    [
+        {
+            "ID": "aao",
+            "Name": "Anglo-Australian Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7071262",
+            "itemLabel": "nyr\u00f6l\u00e4-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "174",
+            "aliases": "Nyr\u00f6l\u00e4 Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "mcdonald",
+            "Name": "McDonald Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1536779",
+            "itemLabel": "mcdonald-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "711",
+            "aliases": "\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0645\u06a9 \u062f\u0648\u0646\u0627\u0644\u062f|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0645\u06a9 \u062f\u0648\u0646\u0627\u0644\u062f|McDonald Observatory|McDonald|McDonald Observatory|McDonald-Observatoire|McDonald Observatory|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0645\u06a9\u062f\u0648\u0646\u0627\u0644\u062f|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0645\u06a9\u062f\u0648\u0646\u0627\u0644\u062f",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Harlan J. Smith Telescope|Otto Struve Telescope|Hobby-Eberly Telescope|Frank N. Bash Visitors Center",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in Texas"
+        }
+    ],
+    [
+        {
+            "ID": "mcdonald",
+            "Name": "McDonald Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11521260",
+            "itemLabel": "sapporo-astronomical-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sapporo City Astronomical Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "mcdonald",
+            "Name": "McDonald Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11585400",
+            "itemLabel": "ishigakijima-astronomical-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "D44",
+            "aliases": "Ishigaki Island Astronomical Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "mcdonald",
+            "Name": "McDonald Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q30111375",
+            "itemLabel": "planetary-astronomical-observatory-of-anzi",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "162",
+            "aliases": "Osservatorio astronomico Planetario|Potenza observatory",
+            "all_instance_of": "planetarium|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "building in Anzi, Italy"
+        }
+    ],
+    [
+        {
+            "ID": "mcdonald",
+            "Name": "McDonald Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5759101",
+            "itemLabel": "highland-road-park-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "747",
+            "aliases": "Highland Road Park Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "in Baton Rouge, Louisiana"
+        }
+    ],
+    [
+        {
+            "ID": "lco",
+            "Name": "Las Campanas Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10340083",
+            "itemLabel": "wilcox-solar-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Wilcox Solar Observatory|Stanford Solar Observatory|WSO",
+            "all_instance_of": "optical telescope|solar telescope",
+            "all_has_part": "",
+            "all_part_of": "Stanford University",
+            "itemDescription": "A synoptic solar telescope located on the Stanford University campus"
+        }
+    ],
+    [
+        {
+            "ID": "lco",
+            "Name": "Las Campanas Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7071262",
+            "itemLabel": "nyr\u00f6l\u00e4-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "174",
+            "aliases": "Nyr\u00f6l\u00e4 Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "lco",
+            "Name": "Las Campanas Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7895639",
+            "itemLabel": "ucl-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "998",
+            "aliases": "UCL\u5929\u6587\u53f0|observatoire de l'universit\u00e9 de Londres|UCLO|University of London Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory at Mill Hill in London, England"
+        }
+    ],
+    [
+        {
+            "ID": "lco",
+            "Name": "Las Campanas Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3348332",
+            "itemLabel": "las-cumbres-observatory-global-telescope-network",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u62c9\u65af\u6606\u5e03\u745e\u5929\u6587\u81fa|\u62c9\u65af\u6606\u5e03\u745e\u5929\u6587\u53f0|\u62c9\u65af\u5eb7\u67cf\u745e\u65af\u5929\u6587\u53f0|\u30e9\u30b9\u30ab\u30f3\u30d6\u30ec\u30b9\u5929\u6587\u53f0|LCOGTN|Las Cumbres Observatory|LCO",
+            "all_instance_of": "nonprofit organization|astronomical observatory",
+            "all_has_part": "Faulkes Telescope South",
+            "all_part_of": "",
+            "itemDescription": "nonprofit organization and astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "lco",
+            "Name": "Las Campanas Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10914152",
+            "itemLabel": "paranal-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "309",
+            "aliases": "\u0430\u0431\u0441\u044d\u0440\u0432\u0430\u0442\u043e\u0440\u044b\u044f \u041f\u0430\u0440\u0430\u043d\u0430\u043b\u044c|ESO's Paranal Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Search for habitable Planets EClipsing ULtra-cOOl Stars|Next-Generation Transit Survey|Cherenkov Telescope Array|VLT Survey Telescope|VISTA|Very Large Telescope",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in the Atacama Desert"
+        }
+    ],
+    [
+        {
+            "ID": "mtbigelow",
+            "Name": "Catalina Observatory: 61 inch telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1965699",
+            "itemLabel": "cambridge-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "503",
+            "aliases": "\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436\u0430|Cambridge Observatory|\u0410\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u044b\u044f \u041a\u0435\u043c\u0431\u0440\u044b\u0434\u0436\u0430",
+            "all_instance_of": "university observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory at the University of Cambridge in the East of England"
+        }
+    ],
+    [
+        {
+            "ID": "mtbigelow",
+            "Name": "Catalina Observatory: 61 inch telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1050214",
+            "itemLabel": "catalina-station",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "693",
+            "aliases": "Estacion Astronomica Catalina|Steward Observatory Catalina Station|\u0645\u0631\u0635\u062f \u0633\u062a\u064a\u0648\u0627\u0631\u062f \u0645\u062d\u0637\u0629 \u0643\u0627\u062a\u0627\u0644\u064a\u0646\u0627|CS|CS|mtbigelow|Catalina Station",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory on Mount Bigelow in Arizona, U.S."
+        }
+    ],
+    [
+        {
+            "ID": "mtbigelow",
+            "Name": "Catalina Observatory: 61 inch telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q858519",
+            "itemLabel": "big-bear-solar-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "G77",
+            "aliases": "Big Bear Solar Observatory|Observatoire solaire de big bear lake",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Full Disk H-alpha (FDHA) Patrol Telescope|Goode Solar Telescope",
+            "all_part_of": "Global Oscillations Network Group",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mtbigelow",
+            "Name": "Catalina Observatory: 61 inch telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1090935",
+            "itemLabel": "mpg/eso-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MPG/ESO-2.2-m-Teleskop|MPG/ESO Teleskop|MPG/ESO 2.2m Telescope",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "La Silla Observatory",
+            "itemDescription": "telescope at the European Southern Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mtbigelow",
+            "Name": "Catalina Observatory: 61 inch telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1161670",
+            "itemLabel": "sardinia-radio-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sardinia Radio Telescope",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "Cagliari Observatory",
+            "itemDescription": "Radio telescope"
+        }
+    ],
+    [
+        {
+            "ID": "dao",
+            "Name": "Dominion Astrophysical Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456566",
+            "itemLabel": "chions-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "567",
+            "aliases": "Chaonis Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "dao",
+            "Name": "Dominion Astrophysical Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114735875",
+            "itemLabel": "scott-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "823",
+            "aliases": "Fitchburg observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "dao",
+            "Name": "Dominion Astrophysical Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115239746",
+            "itemLabel": "puna'auia-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "931",
+            "aliases": "Punaauia observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "dao",
+            "Name": "Dominion Astrophysical Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11629399",
+            "itemLabel": "nishimino-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Nishi Mino Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "dao",
+            "Name": "Dominion Astrophysical Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14715106",
+            "itemLabel": "westport-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I42",
+            "aliases": "Rolnick Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "public observatory in Westport CT"
+        }
+    ],
+    [
+        {
+            "ID": "spm",
+            "Name": "Observatorio Astronomico Nacional, San Pedro Martir"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q30339492",
+            "itemLabel": "simons-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Simons",
+            "all_instance_of": "radio telescope|cosmic microwave background experiment",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Chile"
+        }
+    ],
+    [
+        {
+            "ID": "spm",
+            "Name": "Observatorio Astronomico Nacional, San Pedro Martir"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1265856",
+            "itemLabel": "san-vittore-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "552",
+            "aliases": "Osservatorio San Vittore",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Bologna, Italy"
+        }
+    ],
+    [
+        {
+            "ID": "spm",
+            "Name": "Observatorio Astronomico Nacional, San Pedro Martir"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16325268",
+            "itemLabel": "san-marco-2",
+            "all_COSPAR_ID": "1967-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "San Marco B|San Marco II",
+            "all_instance_of": "former entity|research satellite",
+            "all_has_part": "",
+            "all_part_of": "San Marco",
+            "itemDescription": "second Italian satellite"
+        }
+    ],
+    [
+        {
+            "ID": "tona",
+            "Name": "Observatorio Astronomico Nacional, Tonantzintla"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q428671",
+            "itemLabel": "tonantzintla-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "tona|Observatorio Astrofisico Nacional de Tonantzintla",
+            "all_instance_of": "observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "tona",
+            "Name": "Observatorio Astronomico Nacional, Tonantzintla"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q19764",
+            "itemLabel": "astron",
+            "all_COSPAR_ID": "1983-020A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-020A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Astron\u885b\u661f",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Soviet spacecraft"
+        }
+    ],
+    [
+        {
+            "ID": "tona",
+            "Name": "Observatorio Astronomico Nacional, Tonantzintla"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3140591",
+            "itemLabel": "beauvais-astronomical-clock",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Reloj astronomico de Beauvais",
+            "all_instance_of": "astronomical clock",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "it is 19th century's astronomical clock in Beauvais Cathedral in northern France"
+        }
+    ],
+    [
+        {
+            "ID": "tona",
+            "Name": "Observatorio Astronomico Nacional, Tonantzintla"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q543489",
+            "itemLabel": "osservatorio-astronomico-sormano",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "587",
+            "aliases": "Observatorio Astronomico Sormano",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "tona",
+            "Name": "Observatorio Astronomico Nacional, Tonantzintla"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6621362",
+            "itemLabel": "national-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "880",
+            "aliases": "Observat\u00f3rio Nacional Brasileiro|Observat\u00f3rio nacional brasileiro|Observat\u00f3rio nacional|Observat\u00f3rio Astron\u00f4mico do Rio de Janeiro|Imperial Observat\u00f3rio do Rio de Janeiro|Hora Legal Brasileira|Observat\u00f3rio Nacional Minist\u00e9rio da Ci\u00eancia|Real Observat\u00f3rio",
+            "all_instance_of": "observatory|research institute",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "facility in Rio de Janeiro, Brazil"
+        }
+    ],
+    [
+        {
+            "ID": "Palomar",
+            "Name": "The Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2471197",
+            "itemLabel": "hale-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "palomar|Hale-telescoop|Hale Telescoop|Hale Telescope",
+            "all_instance_of": "reflecting telescope|optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Palomar Mountain Observatory",
+            "itemDescription": "telescope at Palomar Observatory in California, US"
+        }
+    ],
+    [
+        {
+            "ID": "Palomar",
+            "Name": "The Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q781318",
+            "itemLabel": "australia-telescope-compact-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Australia telescope compact array|ATCA|ATCA",
+            "all_instance_of": "cosmic microwave background experiment|radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "Paul Wild Observatory",
+            "itemDescription": "Radio telescope at the Paul Wild Observatory, near the town of Narrabri in New South Wales, Australia"
+        }
+    ],
+    [
+        {
+            "ID": "Palomar",
+            "Name": "The Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3342522",
+            "itemLabel": "nobeyama-45m-radio-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Nobeyama Radio Observatory 45-M Telescope|Nobeyama radio observatory 45-m telescope",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "Nobeyama radio observatory"
+        }
+    ],
+    [
+        {
+            "ID": "Palomar",
+            "Name": "The Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q109555671",
+            "itemLabel": "the-parkes-mit-nrao-southern-sky-survey-at-4850-mhz",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "The Parkes-MIT-NRAO southern sky survey at 4850 MHz|The Parkes-MIT-NRAO southern sky survey at 4850 MHz",
+            "all_instance_of": "astronomical survey|scholarly conference abstract",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "scientific article"
+        }
+    ],
+    [
+        {
+            "ID": "Palomar",
+            "Name": "The Hale Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2825377",
+            "itemLabel": "daniel-k.-inouye-solar-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "DKIST|DKIST|ATST|Advanced Technology Solar Telescope",
+            "all_instance_of": "optical telescope|Gregorian telescope|solar telescope",
+            "all_has_part": "",
+            "all_part_of": "Haleakal\u0101 Observatory",
+            "itemDescription": "large solar telescope under construction in Hawaii"
+        }
+    ],
+    [
+        {
+            "ID": "mdm",
+            "Name": "Michigan-Dartmouth-MIT Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1536779",
+            "itemLabel": "mcdonald-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "711",
+            "aliases": "\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0645\u06a9 \u062f\u0648\u0646\u0627\u0644\u062f|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0645\u06a9 \u062f\u0648\u0646\u0627\u0644\u062f|McDonald Observatory|McDonald|McDonald Observatory|McDonald-Observatoire|McDonald Observatory|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0645\u06a9\u062f\u0648\u0646\u0627\u0644\u062f|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0645\u06a9\u062f\u0648\u0646\u0627\u0644\u062f",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Harlan J. Smith Telescope|Otto Struve Telescope|Hobby-Eberly Telescope|Frank N. Bash Visitors Center",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in Texas"
+        }
+    ],
+    [
+        {
+            "ID": "mdm",
+            "Name": "Michigan-Dartmouth-MIT Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6715169",
+            "itemLabel": "michigan-dartmouth-mit-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "697",
+            "aliases": "Michigan-Dartmouth-MIT|MDM Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "McGraw-Hill Telescope|Hiltner 2.4m Telescope",
+            "all_part_of": "",
+            "itemDescription": "an optical astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mdm",
+            "Name": "Michigan-Dartmouth-MIT Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779895",
+            "itemLabel": "mmt-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Whipple Observatory|Multiple Mirror Telescope, telescopio a specchi multipli|MMTO|MMT|Multiple Mirror Telescope|MMTO|MMTO|MMT",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mdm",
+            "Name": "Michigan-Dartmouth-MIT Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59470379",
+            "itemLabel": "isla-de-pascua-mataveri-(easter-island)-magnetic-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Isla de Pascua Mataveri Magnetic Observatory|Easter Island Magnetic Observatory",
+            "all_instance_of": "magnetic observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "magnetic observatory"
+        }
+    ],
+    [
+        {
+            "ID": "mdm",
+            "Name": "Michigan-Dartmouth-MIT Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4811559",
+            "itemLabel": "astrodomi-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I37",
+            "aliases": "Observatorio astronomico Astrodomi|Astrodomi",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "NOV",
+            "Name": "National Observatory of Venezuela"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11629399",
+            "itemLabel": "nishimino-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Nishi Mino Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "NOV",
+            "Name": "National Observatory of Venezuela"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2564753",
+            "itemLabel": "union-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "078",
+            "aliases": "Union Observatory|Transvaal Observatory|Transvaal Meteorological Department|Republic Observatory|\u30c8\u30e9\u30f3\u30b9\u30d0\u30fc\u30eb\u5dde\u6c17\u8c61\u5c40|Osservatorio Union|Union Observatory|Republic Observatory|Johannesburg Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "decommissioned astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "NOV",
+            "Name": "National Observatory of Venezuela"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q679176",
+            "itemLabel": "observatory-of-geneva",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "517",
+            "aliases": "\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0416\u0435\u043d\u0435\u0432\u044b|Geneva Observatory|Observatoire de Geneve|Geneva Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "NOV",
+            "Name": "National Observatory of Venezuela"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q711919",
+            "itemLabel": "lulin-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "D35",
+            "aliases": "Lulin Sky Survey|Osservatorio astronomico della foresta dei cervi|Observatorio Astronomico de Lulin|Lulin Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Ritchey\u2013Chr\u00e9tien telescope|Cassegrain mirror system",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "NOV",
+            "Name": "National Observatory of Venezuela"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q895961",
+            "itemLabel": "boyden-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "074",
+            "aliases": "Boyden-Observatorium",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "bmo",
+            "Name": "Black Moshannon Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q895961",
+            "itemLabel": "boyden-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "074",
+            "aliases": "Boyden-Observatorium",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "bmo",
+            "Name": "Black Moshannon Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3886755",
+            "itemLabel": "bologna-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "281",
+            "aliases": "Bologna Astronomical Observatory|Osservatorio astronomico di Bologna",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "research center in Bologna, Italy"
+        }
+    ],
+    [
+        {
+            "ID": "bmo",
+            "Name": "Black Moshannon Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q224761",
+            "itemLabel": "mount-lemmon-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "G84",
+            "aliases": "SkyCenter|Mt. Lemmon SkyCenter Observatory|Mt. Lemmon Observatory|Mount Lemmon SkyCenter Observatory|MLO|Observatorio del Monte Lemmon|Observatorio Astronomico del Monte Lemmon|Mount Lemmon Infrared Observatory|MLO",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Steward Observatory",
+            "itemDescription": "observatory in Arizona, United States"
+        }
+    ],
+    [
+        {
+            "ID": "bmo",
+            "Name": "Black Moshannon Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1543970",
+            "itemLabel": "mont-m\u00e9gantic-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "301",
+            "aliases": "\u83ab\u5e72\u8fea\u514b\u5cf0\u5929\u6587\u81fa|\u8499\u7279\u6885\u7518\u8482\u5947\u5929\u6587\u81fa|\u83ab\u5e72\u8fea\u514b\u5cf0\u5929\u6587\u81fa|Observatoire du mont M\u00e9gantic|Observatoire du Mont Megantic|Mont Megantic Observatory|OMM",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Canada"
+        }
+    ],
+    [
+        {
+            "ID": "bmo",
+            "Name": "Black Moshannon Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q30339492",
+            "itemLabel": "simons-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatorio Simons",
+            "all_instance_of": "radio telescope|cosmic microwave background experiment",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory in Chile"
+        }
+    ],
+    [
+        {
+            "ID": "BAO",
+            "Name": "Beijing XingLong Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114638113",
+            "itemLabel": "szeged-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "629",
+            "aliases": "JATE Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "BAO",
+            "Name": "Beijing XingLong Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3562800",
+            "itemLabel": "observatory-vset\u00edn",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Observatory Vsetin",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "BAO",
+            "Name": "Beijing XingLong Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4780333",
+            "itemLabel": "apollo-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "838",
+            "aliases": "Dayton Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "BAO",
+            "Name": "Beijing XingLong Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q525762",
+            "itemLabel": "perth-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "319",
+            "aliases": "Perth Observatory",
+            "all_instance_of": "astronomical observatory|heritage site",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in Bickley, Western Australia"
+        }
+    ],
+    [
+        {
+            "ID": "BAO",
+            "Name": "Beijing XingLong Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7071262",
+            "itemLabel": "nyr\u00f6l\u00e4-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "174",
+            "aliases": "Nyr\u00f6l\u00e4 Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "keck",
+            "Name": "W. M. Keck Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q210997",
+            "itemLabel": "w.-m.-keck-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u51ef\u514b\u671b\u8fdc\u955c|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u041a\u0435\u043a\u0430|Keckobservatoriet|Keck Observatory|Keckove \u010falekoh\u013eady|Keck 2|Keck 1|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041a\u0435\u043a|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0438\u043c. \u0423.\u00a0\u041c.\u00a0\u041a\u0435\u043a\u0430|W. M. Keck Observatory|Keck Observatory|Keck I|Telesc\u00f3pio W. M. Keck|Telesc\u00f3pio Keck|Observat\u00f3rio Keck|Keck Observatory|Teleskop Kecka|Obserwatorium Kecka|W. M. Keck Observatory|Keckobservatoriet|William Myron Keck-observatorium|William Myron Keck observatorium|W.M. Keck-observatorium|Keck-telescopen|Keck telescoop|\u041a\u0435\u043a\u043e\u0432 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|W. M. Keko observatorija|Keko teleskopai|Keko observatorija|\ucf01 \ucc9c\ubb38\ub300|\ucf01 \ub9dd\uc6d0\uacbd|\u30b1\u30c3\u30af\u671b\u9060\u93e1|\u30b1\u30c3\u30af\u5929\u6587\u53f0|\u30b1\u30c3\u30afI\u671b\u9060\u93e1|\u30b1\u30c3\u30afII\u671b\u9060\u93e1|W. M. Keck Observatory|Keck Observatory|Teleskop Keck|Keck II|Keck I|\u05de\u05e6\u05e4\u05d4 \u05e7\u05e7|T\u00e9lescopes Keck|T\u00e9lescope Keck|Observatoire W.M. Keck|Observatoire Keck|Keck telescope|Telescopios Keck|Telescopio Keck|Observatorio W.M. Keck|Observatorio W. M. Keck.|Observatorio W M. Keck|Observatorio W M Keck|Observatorio Keck|Keck telescope|Keck Observatory|W.-M.-Keck-Observatorium|W. M. Keck Observatory|Keck-Teleskop|W. M. Keck Observatory|Telescopi Keck II|Telescopi Keck|Observatori WM Keula|Observatori de W. M. Keck|T\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u041a\u0435\u043a|\u041a\u0435\u043a|\u041a\u0435\u043a|Keck|Keck|Keck|Keck",
+            "all_instance_of": "reflecting telescope|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Mauna Kea Observatories",
+            "itemDescription": "astronomical observatory located in Hawaii"
+        }
+    ],
+    [
+        {
+            "ID": "keck",
+            "Name": "W. M. Keck Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q96051497",
+            "itemLabel": "carkeek-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Stephen Carkeek\u2019s Astronomical Observatory",
+            "all_instance_of": "observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "oldest surviving observatory in New Zealand"
+        }
+    ],
+    [
+        {
+            "ID": "keck",
+            "Name": "W. M. Keck Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1639672",
+            "itemLabel": "hradec-kr\u00e1lov\u00e9-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "048",
+            "aliases": "\u30d5\u30e9\u30c7\u30c4\u30fb\u30af\u30e9\u30fc\u30ed\u30f4\u30a7\u30fc\u5929\u6587\u53f0\u3068\u30d7\u30e9\u30cd\u30bf\u30ea\u30a6\u30e0|Hradec Kralove Observatory|Hvezdarna Hradec Kralove|Hv\u011bzd\u00e1rna Hradec Kr\u00e1lov\u00e9",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "keck",
+            "Name": "W. M. Keck Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4071792",
+            "itemLabel": "astronomical-observatory-a.l.-kekin",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "110",
+            "aliases": "\u0410\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u043f\u0440\u0438 \u0433\u0438\u043c\u043d\u0430\u0437\u0438\u0438 \u0438\u043c\u0435\u043d\u0438 \u0410. \u041b. \u041a\u0435\u043a\u0438\u043d\u0430|\u0410\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0433\u0438\u043c\u043d\u0430\u0437\u0438\u0438 \u0438\u043c\u0435\u043d\u0438 \u0410.\u041b. \u041a\u0435\u043a\u0438\u043d\u0430|Astronomical Observatory of Kekin's Gymnasium|Rostov",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "keck",
+            "Name": "W. M. Keck Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1499172",
+            "itemLabel": "gekko-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "888",
+            "aliases": "Gekko-Observatorium|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0413\u044d\u043a\u043a\u043e|Gekko Astronomical Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ekar",
+            "Name": "Mt. Ekar 182 cm. Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q787525",
+            "itemLabel": "southern-astrophysical-research-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I33",
+            "aliases": "Southern Astrophysical Research Telescope|SOAR|Southern Astrophysical Research|SOAR",
+            "all_instance_of": "optical telescope|segmented mirror",
+            "all_has_part": "",
+            "all_part_of": "Cerro Tololo Inter-American Observatory",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ekar",
+            "Name": "Mt. Ekar 182 cm. Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1200061",
+            "itemLabel": "allen-telescope-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Allen Telescope Array|One Hectare Telescope|1HT|1hT|ATA|ATA",
+            "all_instance_of": "radio interferometer|Gregorian telescope",
+            "all_has_part": "",
+            "all_part_of": "Hat Creek Radio Observatory",
+            "itemDescription": "radio telescope"
+        }
+    ],
+    [
+        {
+            "ID": "ekar",
+            "Name": "Mt. Ekar 182 cm. Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1070229",
+            "itemLabel": "cherenkov-telescope-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CTA|Cherenkov Telescope Array|CTAO|CTA Observatory|Cherenkov Telescope Array Observatory|Pole \u010cerenkovov\u00fdch teleskop\u016f|CTA|CTA|CTA",
+            "all_instance_of": "international collaboration|astronomical observatory",
+            "all_has_part": "Imaging Atmospheric Cherenkov Telescope",
+            "all_part_of": "",
+            "itemDescription": "multinational open observatory project to build a new generation ground-based gamma-ray instrument in the energy range extending from some tens of GeV to about 300 TeV"
+        }
+    ],
+    [
+        {
+            "ID": "ekar",
+            "Name": "Mt. Ekar 182 cm. Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q841079",
+            "itemLabel": "subaru-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "T09",
+            "aliases": "\u6634|Subarutelescoop|Subaru-telescope|Subaru Telescope|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|\u3059\u3070\u308b\u671b\u9060\u93e1|T\u00e9lescope Subaru|Subaru Telescope|Subaru",
+            "all_instance_of": "optical telescope|reflecting telescope|Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Mauna Kea Observatories|National Astronomical Observatory of Japan",
+            "itemDescription": "Japanese telescope and observatory"
+        }
+    ],
+    [
+        {
+            "ID": "ekar",
+            "Name": "Mt. Ekar 182 cm. Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q105094964",
+            "itemLabel": "refracting-telescope,-c-1840",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Refracting telescope|refraktorteleskop, cirka 1840",
+            "all_instance_of": "refracting telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Refracting telescope, three-draw tube, with position micrometer and lens cap, mahogany and brass, British, c. 1840."
+        }
+    ],
+    [
+        {
+            "ID": "apo",
+            "Name": "Apache Point Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7071262",
+            "itemLabel": "nyr\u00f6l\u00e4-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "174",
+            "aliases": "Nyr\u00f6l\u00e4 Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "apo",
+            "Name": "Apache Point Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q616529",
+            "itemLabel": "apache-point-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "645|705",
+            "aliases": "Apache Point Observatory|Apache-Point-Observatoire|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0627\u067e\u0627\u0686\u06cc \u067e\u0648\u06cc\u0646\u062a|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0627\u067e\u0627\u0686\u06cc \u067e\u0648\u06cc\u0646\u062a|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0622\u067e\u0627\u0686\u06cc \u067e\u0648\u06cc\u0646\u062a|Observatorio Astronomico de Apache Point|Apache-Point-Sternwarte|Apache Point Observatory|APO",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory in Sunspot, New Mexico, United States"
+        }
+    ],
+    [
+        {
+            "ID": "apo",
+            "Name": "Apache Point Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q580230",
+            "itemLabel": "wise-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "097",
+            "aliases": "\u05de\u05e6\u05e4\u05d4 \u05d4\u05db\u05d5\u05db\u05d1\u05d9\u05dd \u05e2\u05dc \u05e9\u05dd \u05d5\u05d9\u05d9\u05d6|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u0437\u0456\u0440\u043e\u043a \u0456\u043c\u0435\u043d\u0456 \u0412\u0430\u0439\u0437\u0430|\u0412\u0430\u0439\u0437 \u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456|Wise Observatory|\u30d5\u30ed\u30fc\u30ec\u30f3\u30b9&\u30b8\u30e7\u30fc\u30b8\u30fb\u30ef\u30a4\u30ba\u5929\u6587\u53f0|\u30d5\u30ed\u30fc\u30ec\u30f3\u30b9\u30fb\u30a2\u30f3\u30c9\u30fb\u30b8\u30e7\u30fc\u30b8\u30fb\u30ef\u30a4\u30ba\u5929\u6587\u53f0",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "apo",
+            "Name": "Apache Point Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779895",
+            "itemLabel": "mmt-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Whipple Observatory|Multiple Mirror Telescope, telescopio a specchi multipli|MMTO|MMT|Multiple Mirror Telescope|MMTO|MMTO|MMT",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "apo",
+            "Name": "Apache Point Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7895639",
+            "itemLabel": "ucl-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "998",
+            "aliases": "UCL\u5929\u6587\u53f0|observatoire de l'universit\u00e9 de Londres|UCLO|University of London Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory at Mill Hill in London, England"
+        }
+    ],
+    [
+        {
+            "ID": "lowell",
+            "Name": "Lowell Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q466895",
+            "itemLabel": "lowell-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "690",
+            "aliases": "Flagstaff G\u00f6zlemevi|\u7f85\u5a01\u723e\u5929\u6587\u53f0|\u7f57\u5a01\u5c14\u5929\u6587\u53f0|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u041b\u043e\u0432\u0435\u043b\u043b\u0430|Lowellobservatoriet|Lowell-observatoriet|Lowllov observatorij|Flagstaff Station|Anderson Mesa|\u041b\u043e\u0443\u044d\u043b\u043b\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|Lowell Observatory|Observat\u00f3rio de Lowell|Lowell Observatory|Lowell Observatorium|Lowell Observatory|\ub85c\uc6f0\ucc9c\ubb38\ub300|\u30ed\u30fc\u30a8\u30eb\u5929\u6587\u53f0|Osservatorio di Flagstaff|Lowell Observatory|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0648\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0644\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0644\u0627\u0648\u0644|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0644\u0627\u0648\u0644|Observatorio de Lowell|Lowell Observatory|Flagstaff Observatory|Lowell-Sternwarte|Lowell Observatory|Anderson Mesa Station|Lowell",
+            "all_instance_of": "nonprofit organization|astronomical observatory",
+            "all_has_part": "Discovery Channel Telescope",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "ID": "lowell",
+            "Name": "Lowell Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1165635",
+            "itemLabel": "lowell-observatory-near-earth-object-search",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "699",
+            "aliases": "\u7f85\u5a01\u723e\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u884c\u661f\u641c\u5c0b\u8a08\u756b|\u7f57\u5a01\u5c14\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u884c\u661f\u641c\u5bfb\u8ba1\u5212|\u6d1b\u97e6\u5c14\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u5929\u4f53\u641c\u7d22|\u6d1b\u5384\u5c14\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u884c\u661f\u641c\u5bfb\u8ba1\u5212|Lowell Observatory Near-Earth-Object Search|LONEOS|LONEOS|LONEOS|\u041f\u043e\u0438\u0441\u043a \u043e\u043a\u043e\u043b\u043e\u0437\u0435\u043c\u043d\u044b\u0445 \u043e\u0431\u044a\u0435\u043a\u0442\u043e\u0432 \u0432 \u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u0438 \u041b\u043e\u0443\u044d\u043b\u043b\u0430|Lowell Observatory Near-Earth-Object Search|LONEOS|LONEOS|LONEOS|LONEOS|Lowell Observatory Near-Earth Object Search|LONEOS|\u053c\u0555\u0546\u0535\u0555\u054d|LONEOS|LONEOS|LONEOS|LONEOS|LONEOS|LONEOS|LONEOS",
+            "all_instance_of": "astronomical survey",
+            "all_has_part": "",
+            "all_part_of": "Lowell Observatory",
+            "itemDescription": "Project designed to discover asteroids and comets that orbit near the Earth."
+        }
+    ],
+    [
+        {
+            "ID": "lowell",
+            "Name": "Lowell Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5162822",
+            "itemLabel": "consell-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "176",
+            "aliases": "Observatori de Consell",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Observatory"
+        }
+    ],
+    [
+        {
+            "ID": "lowell",
+            "Name": "Lowell Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3348498",
+            "itemLabel": "yellowstone-volcano-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Yellowstone Volcano Observatory|Observatorio Vulcanologico de Yellowstone|YVO",
+            "all_instance_of": "volcano observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "organization created to monitor and advise on the Yellowstone supervolcano"
+        }
+    ],
+    [
+        {
+            "ID": "lowell",
+            "Name": "Lowell Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11521260",
+            "itemLabel": "sapporo-astronomical-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sapporo City Astronomical Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "ID": "vbo",
+            "Name": "Vainu Bappu Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q252274",
+            "itemLabel": "vainu-bappu-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "220",
+            "aliases": "observatoire de Kavalur|Kavalur Observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Astronomical observatory located in Kavalur. The observatory is a part of Indian Institute of Astrophysics. Tourist Attraction in india."
+        }
+    ],
+    [
+        {
+            "ID": "vbo",
+            "Name": "Vainu Bappu Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q43083539",
+            "itemLabel": "geostationary-carbon-cycle-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Geostationary Carbon Observatory|GeoCARB|EVM-2|Earth Venture Mission 2",
+            "all_instance_of": "space instrument|scientific mission",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA mission to study the carbon cycle and vegetation health over the Americas"
+        }
+    ]
+]

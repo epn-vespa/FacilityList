@@ -51,7 +51,7 @@ where = """
   UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
   UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
-  #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
 
   #OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    

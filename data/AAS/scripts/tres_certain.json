@@ -1,0 +1,2787 @@
+[
+    [
+        {
+            "Name": "The High Altitude Water Cherenkov Gamma-Ray Observatory",
+            "ID": "HAWC"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q17029447",
+            "itemLabel": "high-altitude-water-cherenkov-experiment",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HAWC",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "gamma-ray observatory in Mexico known by the acronym of HAWC"
+        }
+    ],
+    [
+        {
+            "Name": "The Indian Space Research Organization's (ISRO) Astrosat  multi-wavelength space telescope",
+            "ID": "Astrosat"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q298058",
+            "itemLabel": "astrosat",
+            "all_COSPAR_ID": "2015-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2015-052A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u090d\u0938\u094d\u091f\u094d\u0930\u094b\u0938\u0945\u091f|\u0905\u0945\u0938\u094d\u091f\u094d\u0930\u094b\u0938\u0945\u091f|\u0d05\u0d38\u0d4d\u0d1f\u0d4d\u0d30\u0d4b\u0d38\u0d3e\u0d31\u0d4d\u0d31\u0d4d|ASTROSAT|Astrosat|\u0927\u094d\u0930\u0941\u0935\u0940\u092f \u0909\u092a\u0917\u094d\u0930\u0939 \u092a\u094d\u0930\u0915\u094d\u0937\u0947\u092a\u0923 \u092f\u093e\u0928",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "The 1.3-m Warsaw Telescope,  Las Campanas Observatory, Chile, OGLE Survey",
+            "ID": "OGLE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1032158",
+            "itemLabel": "optical-gravitational-lensing-experiment",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u30aa\u30fc\u30b0\u30eb|OGLE|OGLE|Optical Gravitational Lensing Experiment|OGLE|Optical Gravitational Lensing Experiment|Experimento de lente \u00f3ptica gravitacional|Experimento de lente optica gravitacional|OGLE|Optical Gravitational Lensing Experiment|Optical Gravitational Lensing Experiment",
+            "all_instance_of": "astronomical survey",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "long-term variability sky survey"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 0.4m Near-Earth Object Wide-field Infrared Survey Explorer (NEOWISE) Reactivated Mission",
+            "ID": "NEOWISE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q693552",
+            "itemLabel": "wide-field-infrared-survey-explorer",
+            "all_COSPAR_ID": "2009-071A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2009-071A",
+            "all_Minor_Planet_Center_observatory_ID": "C51",
+            "aliases": "\u5ee3\u89d2\u7d05\u5916\u5de1\u5929\u63a2\u6e2c\u5668|\u5e7f\u57df\u7ea2\u5916\u5de1\u5929\u63a2\u6d4b\u5668|WISE|Wide-field Infrared Survey Explorer|WISE Teleskopu|WISE|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-92|Wide-field Infrared Survey Explorer|WISE|\u0428\u0438\u0440\u043e\u043a\u043e\u0437\u0430\u0444\u0430\u0442\u0435\u043d \u0438\u0444\u043d\u0440\u0430\u0446\u0440\u0432\u043d\u043e-\u043f\u0440\u0435\u0433\u043b\u0435\u0434\u0435\u043d \u0438\u0441\u0442\u0440\u0430\u0436\u0443\u0432\u0430\u0447|WISE|WISE|NEOWISE|WISE|WISE mission|T\u00e9lescope spatial WISE|\u06a9\u0627\u0648\u0634\u06af\u0631 \u0646\u0642\u0634\u0647 \u0628\u0631\u062f\u0627\u0631 \u0641\u0631\u0648\u0633\u0631\u062e \u0645\u06cc\u062f\u0627\u0646 \u0648\u0633\u06cc\u0639|Laia-v\u00e4ljaga Infrapuna Vaatluse Uurija|Wide field Infrared Survey Explorer|Wide-field Telescope|Wide-field Infrared Telescope|Next Generation Sky Survey|Near-Earth Object Wide-field Infrared Survey Explorer|MIDEX-6|Medium Explorer 6|Explorer 92|WISE|NGSS|Next Generation Sky Survey|NeoWise|Explorer 92|WISE|Explorer 92|WISE|WISE|WISE|NEOWISE|WISE|NGSS",
+            "all_instance_of": "space telescope|infrared telescope",
+            "all_has_part": "",
+            "all_part_of": "Medium Explorer program",
+            "itemDescription": "American infrared space telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Australian Square Kilometre Array Pathfinder",
+            "ID": "ASKAP"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53679298",
+            "itemLabel": "square-kilometre-array---australia",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASKAP|MWA|SKA",
+            "all_instance_of": "phased array|radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "The australian component of SKA"
+        }
+    ],
+    [
+        {
+            "Name": "Australian Square Kilometre Array Pathfinder",
+            "ID": "ASKAP"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3917556",
+            "itemLabel": "australian-square-kilometre-array-pathfinder",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u6fb3\u5927\u5229\u4e9e\u516c\u91cc\u9663\u5217|\u6fb3\u6d32\u5e73\u65b9\u5343\u91cc\u9663\u63a2\u8def\u8005|ASKAP|Australian Square Kilometer Array Pathfinder|ASKAP",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "Australia Telescope National Facility|Murchison Radio-astronomy Observatory|Square Kilometre Array",
+            "itemDescription": "Radio telescope in Western Australia"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Transition Region and Coronal Explorer (TRACE) solar satellite Mission",
+            "ID": "TRACE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1333568",
+            "itemLabel": "trace",
+            "all_COSPAR_ID": "1998-020A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1998-020A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "TRACE\u536b\u661f|TRACE|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-73|TRACE|Transition Region and Coronal Explorer|Transition Region And Coronal Explorer|SMEX 4|Explorer 73|Explorer 73|\u062a\u0631\u064a\u0633 (\u0645\u0633\u0628\u0627\u0631 \u0634\u0645\u0633\u064a)|\u062a\u0631\u064a\u0633 (\u0645\u0631\u0635\u062f \u0641\u0636\u0627\u0626\u064a)|TRACE",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "National Aeronautics and Space Administration's (NASA) Neutron star Interior Composition Explorer (NICER)",
+            "ID": "NICER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q13582654",
+            "itemLabel": "neutron-star-interior-composition-explorer",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u4e2d\u5b50\u661f\u5167\u90e8\u6210\u5206\u63a2\u6e2c\u5668|NICER|Neutron star Interior Composition Explorer|NICER|NICER",
+            "all_instance_of": "International Space Station experiment|space instrument|X-ray telescope",
+            "all_has_part": "",
+            "all_part_of": "US Orbital Segment",
+            "itemDescription": "X-ray telescope on the International Space Station"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Solar Radiation and Climate Experiment (SORCE) satellite mission",
+            "ID": "SORCE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54368",
+            "itemLabel": "solar-radiation-and-climate-experiment",
+            "all_COSPAR_ID": "2003-004A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2003-004A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SORCE|SORCE",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Neil Gehrels Swift Observatory Mission",
+            "ID": "Swift"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q837488",
+            "itemLabel": "neil-gehrels-swift-observatory",
+            "all_COSPAR_ID": "2004-047A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2004-047A",
+            "all_Minor_Planet_Center_observatory_ID": "C52",
+            "aliases": "\u5c3c\u723e\u00b7\u683c\u96f7\u723e\u65af\u96e8\u71d5\u5929\u6587\u53f0|\u4f3d\u739b\u5c04\u7ebf\u66b4\u5feb\u901f\u53cd\u5e94\u63a2\u6d4b\u5668|Swift|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-84|\u30b9\u30a6\u30a3\u30d5\u30c8\u885b\u661f|\u30b9\u30a4\u30d5\u30c8\u885b\u661f|T\u00e9lescope spatial SWIFT|Swift observatoire de sursaut gamma|Swift Gamma-Ray Burst Mission|Swift Gamma Ray Burst Explorer|Swift Gamma-Ray Burst Mission investigation|Swift (Satellit)|Neil Gehrels Swift Observatory|Explorer 84|Kosmick\u00e1 observato\u0159 Swift|Explorer 84|Dru\u017eice Swift|\u30b9\u30a6\u30a3\u30d5\u30c8|Swift|Swift|\u0421\u0432\u0438\u0444\u0442|Swift",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Goddard Space Flight Center",
+            "itemDescription": "mission concerning a space observatory in low earth orbit measuring gamma ray radiation"
+        }
+    ],
+    [
+        {
+            "Name": "Japan Aerospace eXploration Agency (JAXA) Hinotori Solar Mission (formerly Astro-A)",
+            "ID": "Hinotori"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q50017",
+            "itemLabel": "hinotori",
+            "all_COSPAR_ID": "1981-017A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1981-017A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASTRO-A|Astro-A|ASTRO-A|ASTRO A|ASTRO-A|ASTRO-A|ASTRO-A|Hinotori|Hinotori|Hinotori|Hinotori",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Japanese artificial satellite"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Submillimeter Wave Astronomy Satellite (SWAS) Mission",
+            "ID": "SWAS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54374",
+            "itemLabel": "submillimeter-wave-astronomy-satellite",
+            "all_COSPAR_ID": "1998-071A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1998-071A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SWAS|Explorer 74|SWAS",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Johns Hopkins University (JHU) 0.9m Hopkins Ultraviolet Telescope (HUT) on ASTRO-1 and ASTRO-2",
+            "ID": "HUT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1627672",
+            "itemLabel": "hopkins-ultraviolet-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HUT",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Johns Hopkins University (JHU) 0.9m Hopkins Ultraviolet Telescope (HUT) on ASTRO-1 and ASTRO-2",
+            "ID": "HUT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2868552",
+            "itemLabel": "astro-1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "ASTRO-1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WUPPE|Wisconsin Ultraviolet Photo-Polarimeter Experiment|Ultraviolet Imaging Telescope|HUT|Hopkins Ultraviolet Telescope|Broadband X-ray Telescope|BBXRT",
+            "all_instance_of": "space telescope|payload",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space telescope flown on STS-35"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/European Space Agency (ESA) 2.4m Hubble Space Telescope (HST) Satellite Mission",
+            "ID": "HST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2513",
+            "itemLabel": "hubble-space-telescope",
+            "all_COSPAR_ID": "1990-037B",
+            "all_NAIF_ID": "-48",
+            "all_NSSDCA_ID": "1990-037B",
+            "all_Minor_Planet_Center_observatory_ID": "250",
+            "aliases": "Large Space Telescope|\u54c8\u67cf\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u7a7a\u9593\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u8fdc\u955c|\u54c8\u52c3\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u592a\u7a7a\u671b\u8fdc\u955c|\u54c8\u52c3\u5929\u6587\u671b\u8fdc\u955c|\u54c8\u4f2f\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u201c\u54c8\u52c3\u201d\u7a7a\u95f4\u671b\u8fdc\u955c|Hubbleteleskopet|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|Hubble Space Telescope|HST|Hubble- telescope|Hubble Space Telescope|\u07dd.\u07dd.\u07e4|Hubbletelescoop|Hubble-telescoop|Hubble-ruimtetelescoop|Hubble Space Telescope|Hubble ruimtetelescoop|HST|Telescopio orbitale Hubble|Telescopio Hubble|Hubble Space Telescope|HST|Hubble-Weltraumteleskop|HST|HST|\ud5c8\ube14|Hubble|Hubble|HST|HST|HST|HST|T\u00e9lescope spatial Hubble|Telescope spatial Hubble|t\u00e9lescope Hubble|Large Space Telescope|Hubble Space Telescope|Telescopio Hubble|Telescopio Espacial Hubble|Telescopio espacial Hubble|TEH|Hubble (telescopio)|Hubbleteleskop|Hubble-Teleskop|Hubble-Space-Telescope|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|HST|Hubble|Hubble|Hubble|HST|HST|HST|HST|HST|HST|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|Hubble",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Great Observatories program",
+            "itemDescription": "NASA/ESA space telescope (launched 1990)"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/Netherlands Institute for Space Research (NIVR)/Science and Engineering Research Council (SERC) 0.57m InfraRed Astronomical Satellite (IRAS) Satellite Mission",
+            "ID": "IRAS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q724913",
+            "itemLabel": "iras",
+            "all_COSPAR_ID": "1983-004A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-004A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u7ea2\u5916\u5929\u6587\u536b\u661f|\u7d05\u5916\u5929\u6587\u885b\u661f|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satelite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Infrared Astronomical Satellite|\u30a2\u30a4\u30e9\u30b9|Telescopio spaziale IRAS|Infrared Astronomy Satellite|Infrared Astronomical Satellite|IRAS|Infrared Astronomical Satellite|T\u00e9lescope spatial iras|Telescope spatial IRAS|Infrared Astronomy Satellite|Infrared Astronomical Satellite|Sat\u00e9lite IRAS|Satelite IRAS|Sat\u00e9lite astron\u00f3mico infrarrojo|Sat\u00e9lite astronomico infrarrojo|Satelite astron\u00f3mico infrarrojo|Satelite astronomico infrarrojo|Infrared Astronomical Satellite|Infrared Astronomical Satellite|Iras|The Infrared Astronomical Satellite|IRAS|IRAS",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA) 0.6m Infrared Space Observatory (ISO) Satellite Mission",
+            "ID": "ISO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779547",
+            "itemLabel": "infrared-space-observatory",
+            "all_COSPAR_ID": "1995-062A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1995-062A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Infrared Space Observatory|ISO|ISO|ISO|ISO",
+            "all_instance_of": "artificial satellite|space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "ESA space observatory satellite"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA) International Gamma-Ray Astrophysics Laboratory (INTEGRAL) Satellite Mission",
+            "ID": "INTEGRAL"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q50021",
+            "itemLabel": "integral",
+            "all_COSPAR_ID": "2002-048A",
+            "all_NAIF_ID": "-198",
+            "all_NSSDCA_ID": "2002-048A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "INTErnational Gamma-Ray Astrophysics Laboratory|International Gamma-Ray Astrophysics Laboratory|INTEGRAL|International Gamma-Ray Astrophysics Laboratory",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Goddard Space Flight Center",
+            "itemDescription": "currently operational space telescope for observing gamma rays"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Advanced Composition Explorer (ACE) satellite mission",
+            "ID": "ACE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2463",
+            "itemLabel": "advanced-composition-explorer",
+            "all_COSPAR_ID": "1997-045A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1997-045A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u9ad8\u7d1a\u6210\u5206\u63a2\u6e2c\u5668|Explorer 71|ACE|ACE",
+            "all_instance_of": "robotic spacecraft|space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA scientific satellite"
+        }
+    ],
+    [
+        {
+            "Name": "US Air Force Space Test Program Advanced Research and Global Observation (ARGOS) Satellite Mission",
+            "ID": "ARGOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15015",
+            "itemLabel": "argos",
+            "all_COSPAR_ID": "1999-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1999-008A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Advanced Research and Global Observation Satellite|ARGOS|ARGOS",
+            "all_instance_of": "Earth observation satellite|technology demonstration spacecraft",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Japan Aerospace eXploration Agency (JAXA) Advanced Satellite for Cosmology and Astrophysics Satellite Mission (formerly ASTRO-D)",
+            "ID": "ASCA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15018",
+            "itemLabel": "advanced-satellite-for-cosmology-and-astrophysics",
+            "all_COSPAR_ID": "1993-011A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1993-011A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5b87\u5b99\u4e0e\u5929\u4f53\u7269\u7406\u5148\u8fdb\u536b\u661f|ASTRO-D|ASTRO-D|ASCA|ASCA|ASCA",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "cosmic X-ray astronomy mission"
+        }
+    ],
+    [
+        {
+            "Name": "Japan Aerospace eXploration Agency (JAXA) Akari Satellite Mission (formerly ASTRO-F)",
+            "ID": "Akari"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q298047",
+            "itemLabel": "akari-(satellite)",
+            "all_COSPAR_ID": "2006-005A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2006-005A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASTRO-F|AKARI|\u05d0\u05e7\u05d0\u05e8\u05d9|\u05d0\u05e1\u05d8\u05e8\u05d5-F|ASTRO-F|ASTRO F|T\u00e9lescope spatial Astro-F|ASTRO-F|ASTRO F|Astro f|AKARI|ASTRO-F|Akari (Astro-F)|AKARI|Astro-F|Akari|Akari|\u7ea2\u5916\u6210\u50cf\u5de1\u5929\u8bbe\u5907|IRIS (\u671b\u8fdc\u955c)|ASTRO-F|ASTRO-F|ASTRO-F|Akari (\u041a\u0410)|AKARI (teleskop)|ASTRO-F|ASTRO-F\u885b\u661f|ASTRO-F|Astro-F",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "infrared astronomy satellite developed by Japan Aerospace Exploration Agency"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/European Space Agency (ESA)/Science and Engineering Research Council (SERC) International Ultraviolet Explorer (IUE) Satellite Mission",
+            "ID": "IUE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q51509",
+            "itemLabel": "international-ultraviolet-explorer",
+            "all_COSPAR_ID": "1978-012A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1978-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u570b\u969b\u7d2b\u5916\u7dda\u63a2\u6e2c\u8005\u885b\u661f|\u56fd\u969b\u7d2b\u5916\u7dda\u5929\u6587\u885b\u661f|\u30a8\u30af\u30b9\u30d7\u30ed\u30fc\u30e9\u30fc57\u53f7|Explorer 57|IUE|IUE|IUE|IUE",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory satellite"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 6.5m James Webb Space Telescope (JWST) Satellite Mission",
+            "ID": "JWST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q186447",
+            "itemLabel": "james-webb-space-telescope",
+            "all_COSPAR_ID": "2021-130A",
+            "all_NAIF_ID": "-170",
+            "all_NSSDCA_ID": "2021-130A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "JWST|James Webb Space Telescope|Dalekohled Jamese Webba|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649 \u0641\u0647\u0632\u0627\u06cc\u0649 \u062c\u06cc\u0645\u0633 \u0648\u06cc\u0628|JWST|James Webb Space Telescope|James Webb Space Telescope|\u0645\u0642\u0631\u0627\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0635\u062f \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|JWST|James Webb|James Webb -teleskooppi|NGST|Next Generation Space Telescope|JWST|James Webb teleskopioa|James Webb (teleskopioa)|Hurrengo Belaunaldiko Espazio Teleskopioa|James Webb'i kosmoseteleskoop|NGST|Next Generation Space Telescope|JWST|James Webb Space Telescope|Webb Telescope|Webb Space Telescope|NGST|Next Generation Space Telescope|JWST|\u03a4\u03b6\u03ad\u03b9\u03bc\u03c2 \u039f\u03c5\u03ad\u03bc\u03c0|Next Generation Space Telescope|JWST|James-Webb-Teleskop|James Webb-Weltraumteleskop|James Webb Weltraumteleskop|James Webb Space Telescope|James Webb Space Telescope|Webb\u016fv vesm\u00edrn\u00fd dalekohled|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|K\u00ednh thi\u00ean v\u0103n v\u0169 tr\u1ee5 James Webb|K\u00ednh thi\u00ean v\u0103n James Webb|JWST|James Webb Space Telescope|James Webb Uzay Teleskobu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c \u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|Teleskopi kayhonii Jeyms Webb|Teleskopi kayhonii Jeyms Uebb|Teleskopi kajhoniji \u00c7ejms Uebb|Jeyms Webb (teleskop)|James Webb (teleskop)|\u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d \u0c35\u0c46\u0c2c\u0c4d \u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37 \u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|JWST|James Webb Space Telescope|JWST|Atiliskup n usayrar Jims Wib|\u0423\u044d\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0423\u044d\u0431\u0431|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0414\u0436\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0414\u0436\u0435\u0439\u043c\u0441\u0430 \u0412\u0435\u0431\u0431\u0430|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|JWST|Telescopul spa\u0163ial James Webb|JWST|James Webb Space Telescope|\u062c\u06cc\u0645\u0632 \u0648\u06cc\u0628 \u062e\u0644\u0627\u0626\u06cc \u062f\u0648\u0631\u0628\u06cc\u0646|JWST|James Webb Space Telescope|\u07e5\u07cd\u07d3 \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07e5\u07cd\u07d3 \u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07d6.\u07e5.\u07dd.\u07dd|NGST|Next Generation Space Telescope|JWST|James Webb Space Telescope|JWST|James Webb Ruimtetelescoop|NGST|Next Generation Space Telescope|JWST|James Webb Space Telescope|NGST teleskopas|NGST|Next Generation Space Telescope|Jwst|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Webb \uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Webb \ub9dd\uc6d0\uacbd|NGST|JWST|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|JWST|Telescopio Webb|JWST|James Webb Space Telescope|JWST|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4 \u05d4\u05d7\u05dc\u05dc \u05d2'\u05d9\u05d9\u05de\u05e1 \u05d5\u05d5\u05d1|JWST|T\u00e9lescope spatial James Webb|NGST|Next Generation Space Telescope|JWST|James-Webb|James Webb Telescope|James Webb Space Telescope|JWST|James Webb Space Telescope",
+            "all_instance_of": "space telescope",
+            "all_has_part": "Spacecraft Bus|James Webb Space Telescope sunshield|Optical Telescope Element|Integrated Science Instrument Module",
+            "all_part_of": "",
+            "itemDescription": "NASA/ESA/CSA space telescope launched in 2021"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA) Gaia Satellite Mission",
+            "ID": "Gaia"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q767805",
+            "itemLabel": "gaia",
+            "all_COSPAR_ID": "2013-074A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2013-074A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u74b0\u7403\u5929\u6587\u5929\u9ad4\u6e2c\u91cf\u5e72\u6d89\u5100|Global Astrometric Interferometer for Astrophysics|Global Astrometric Interferometer for Astrophysics|satellite Gaia|Gaia|Global Astrometric Interferometer for Astrophysics|Gaia mission|Gaia-Weltraumteleskop|Gaia-Mission|GAIA|Global Astrometric Interferometer for Astrophysics|\u062c\u0627\u064a\u0627 (\u0645\u0633\u0628\u0627\u0631 \u0641\u0636\u0627\u0626\u064a)|\u062c\u0627\u064a\u0627 (\u0627\u0644\u0645\u0631\u0643\u0628\u0629 \u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629)|\u0533\u0561\u0575\u0561|\u0533\u0565\u0561",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "European Space Agency",
+            "itemDescription": "European Space Agency astrometric mission"
+        }
+    ],
+    [
+        {
+            "Name": "US Department of Energy Array of Low Energy X-ray Imaging Sensors (ALEXIS) Satellite Mission",
+            "ID": "ALEXIS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18539",
+            "itemLabel": "array-of-low-energy-x-ray-imaging-sensors",
+            "all_COSPAR_ID": "1993-026A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1993-026A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ALEXIS|ALEXIS|P89-1B",
+            "all_instance_of": "space telescope|X-ray telescope|technology demonstration spacecraft",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "X-ray telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Broad Band X-Ray Telescope (BBXRT) on ASTRO-1",
+            "ID": "BBXRT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2868552",
+            "itemLabel": "astro-1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "ASTRO-1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WUPPE|Wisconsin Ultraviolet Photo-Polarimeter Experiment|Ultraviolet Imaging Telescope|HUT|Hopkins Ultraviolet Telescope|Broadband X-ray Telescope|BBXRT",
+            "all_instance_of": "space telescope|payload",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space telescope flown on STS-35"
+        }
+    ],
+    [
+        {
+            "Name": "NASA COsmic Background Explorer satellite mission (also known as Explorer 66)",
+            "ID": "COBE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49445",
+            "itemLabel": "cosmic-background-explorer",
+            "all_COSPAR_ID": "1989-089A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1989-089A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "V\u1ec7 tinh kh\u1ea3o s\u00e1t b\u1ee9c x\u1ea1 n\u1ec1n v\u0169 tr\u1ee5|COBE|\u5b87\u5b99\u80cc\u666f\u653e\u5c04\u63a2\u67fb\u885b\u661f|COBE\u885b\u661f|Cosmic Background Explorer|Cosmic Background Explorer (COBE)|Cosmic Background Explorer|COBE|Explorer 66|COBE",
+            "all_instance_of": "space telescope|cosmic microwave background experiment",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory satellite"
+        }
+    ],
+    [
+        {
+            "Name": "French Space Agency (CNES)/European Space Agency (ESA) 0.27m Convection, Rotation, and planetary Transits (CoRoT) Satellite Mission",
+            "ID": "CoRoT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48633",
+            "itemLabel": "corot",
+            "all_COSPAR_ID": "2006-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2006-063A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "COnvection ROtation and planetary Transits|COROT space telescope|\u30b3\u30ed\u30fc\u885b\u661f|CoRoT|Convection, Rotation and planetary Transits|COnvection ROtation and planetary Transits|Convection Rotation and Planetary Transits|CoRoT",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "European Space Agency space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Rossi X-ray Timing Explorer (RXTE) Satellite Mission",
+            "ID": "RXTE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q766426",
+            "itemLabel": "rossi-x-ray-timing-explorer",
+            "all_COSPAR_ID": "1995-074A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1995-074A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RXTE|RXTE|X-Ray Timing Explorer",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/ESA/ASI Cassini-Huygens Spacecraft Mission to Saturn",
+            "ID": "Cassini"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q165585",
+            "itemLabel": "cassini\u2212huygens",
+            "all_COSPAR_ID": "1997-061A",
+            "all_NAIF_ID": "-150",
+            "all_NSSDCA_ID": "1997-061A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5361\u897f\u5c3c\u2014\u60e0\u66f4\u65af\u53f7|\u5361\u897f\u5c3c-\u60e0\u66f4\u65af\u53f7\u63a2\u6d4b\u5668|\u5361\u897f\u5c3c-\u60e0\u66f4\u65af\u53f7\u571f\u661f\u63a2\u6d4b\u5668|\u5361\u897f\u5c3c-\u60e0\u66f4\u65af\u53f7|Cassini-Huygens|\u041a\u0430\u0441\u0441\u0441\u0456\u043d\u0456-\u0413\u044e\u0439\u0433\u0435\u043d\u0441|\u041a\u0430\u0441\u0441\u0456\u043d\u0456-\u0413\u044e\u0439\u0433\u0435\u043d\u0441|\u041a\u0430\u0441\u0441\u0456\u043d\u0456 \u2013 \u0413\u044e\u0439\u0433\u0435\u043d\u0441|\u041a\u0430\u0441\u0441\u0456\u043d\u0456|\"\u041a\u0430\u0441\u0441\u0456\u043d\u0456\"|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e41\u0e04\u0e2a\u0e2a\u0e34\u0e19\u0e35-\u0e2e\u0e2d\u0e22\u0e40\u0e01\u0e19\u0e2a\u0e4c|\u0e22\u0e32\u0e19\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e41\u0e04\u0e2a\u0e2a\u0e34\u0e19\u0e35|\u0e22\u0e32\u0e19\u0e2a\u0e33\u0e23\u0e27\u0e08\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e41\u0e04\u0e2a\u0e0b\u0e35\u0e19\u0e35|\u0e22\u0e32\u0e19\u0e41\u0e04\u0e2a\u0e2a\u0e34\u0e19\u0e35|\u0e22\u0e32\u0e19\u0e41\u0e04\u0e2a\u0e0b\u0e35\u0e19\u0e35|\u0e41\u0e04\u0e2a\u0e0b\u0e35\u0e19\u0e35-\u0e44\u0e2e\u0e40\u0e01\u0e19\u0e2a\u0e4c|\u0e41\u0e04\u0e2a\u0e0b\u0e35\u0e19\u0e35|Cassini\u2013Huygens|Cassini rymdsonden|Cassini-Huyhens|\u0915\u0948\u0938\u093f\u0928\u0940-\u0939\u093e\u092f\u0917\u0928\u094d\u0938 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937-\u092f\u093e\u0928|\u0915\u0948\u0938\u093f\u0928\u0940 \u0939\u093e\u092f\u091c\u0947\u0928\u094d\u0938|\u0915\u0948\u0938\u093f\u0928\u0940 \u0936\u094b\u0927 \u092f\u093e\u0928|\u0915\u0948\u0938\u093f\u0928\u0940 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0936\u094b\u0927 \u092f\u093e\u0928|\u0915\u0948\u0938\u093f\u0928\u0940 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u092f\u093e\u0928|\u0915\u093e\u0938\u0940\u0928\u0940 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u092f\u093e\u0928|\u05e7\u05e1\u05d9\u05e0\u05d9|\u05e7\u05d0\u05e1\u05d9\u05e0\u05d9-\u05d4\u05d5\u05d9\u05d2\u05e0\u05e1|Cassini-Huygens|Cassini\u2013Huygens|\u041a\u0430\u0441\u0441\u0438\u043d\u0438 \u2014 \u0413\u044e\u0439\u0433\u0435\u043d\u0441|\u041a\u0430\u0441\u0441\u0438\u043d\u0438|Sonda spa\u021bial\u0103 Huygens|Sonda spa\u021bial\u0103 Cassini|Sonda Cassini-Huygens|Cassini\u2013Huygens|Sonda cassini-huygens|Sonda Cassini|Cassini\u2013Huygen|Cassini|Romsonden Cassini|Cassini|Cassini-ruimtesonde|Cassini ruimtesonde|Cassini|Cassini\u2013Huygens|Cassini - Huygens|\ud558\uc704\ud5cc\uc2a4 \ud0d0\uc0ac\uc120|\uce74\uc2dc\ub2c8-\ud638\uc774\uac90\uc2a4 \ud638|\uce74\uc2dc\ub2c8-\ud558\uc704\ud5cc\uc2a4\ud638|\uce74\uc2dc\ub2c8 \ud638\uc774\uac90\uc2a4 \ud638|\uce74\uc2dc\ub2c8 \ud638|Sonda spaziale Cassini|Sonda Cassini/Huygens|Sonda Cassini|Cassini-Huygens|Cassini-Huygens|Cassini|\u0915\u0948\u0938\u0940\u0928\u0940 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u092f\u093e\u0928|Sonde Hugyens|Sonde Cassini-Huygens|Programme Cassini-Huygens|Mission cassini-huygens|Cassini\u2013Huygens|Cassini-luotain|\u0641\u0636\u0627\u067e\u06cc\u0645\u0627\u06cc \u06a9\u0627\u0633\u06cc\u0646\u06cc|Sonda Cassini-Huygens|Sonda Cassini Huygens|Sonda Cassini|Misi\u00f3n espacial Cassini|Mision espacial Cassini|Cassini/Huygens|Cassini\u2013Huygens|Cassini Huygens|Misio Cassini\u2013Huygens|Cassini\u2013Huygens|Cassini-Huygens|Cassini\u2013Huygens|Cassini-Huygens|\u039a\u03b1\u03c3\u03c3\u03af\u03bd\u03b9-\u03a7\u03cc\u03b9\u03c7\u03b5\u03bd\u03c2|\u039a\u03b1\u03c3\u03c3\u03af\u03bd\u03b9 - \u03a7\u03cc\u03b9\u03c7\u03b5\u03bd\u03c2|Cassini-Huygens|Huygens-Cassini|Mise Cassini-Huygens|Cassini\u2013Huygens|Cassini-Huygens|Cassini|Sonda Cassini-Huygens|Sonda Cassini|Cassini/Huygens|Cassini\u2013Huygens|Cassini|Cassini-Huygens|\u041a\u0430\u0441\u0456\u043d\u0456\u2014\u0413\u044e\u0439\u0433\u0435\u043d\u0441|\u041a\u0430\u0441\u0456\u043d\u0456 \u2014 \u0413\u044e\u0439\u0433\u0435\u043d\u0441|\u0645\u0631\u0643\u0628\u0629 \u0643\u0627\u0633\u064a\u0646\u064a|\u0643\u0627\u0633\u064a\u0646\u064a-\u0647\u064a\u0646\u062c\u0632|\u0643\u0627\u0633\u064a\u0646\u064a-\u0647\u0648\u064a\u063a\u0646\u0632|\u0643\u0627\u0633\u064a\u0646\u064a-\u0647\u0627\u064a\u062c\u0646\u0633|\u0643\u0627\u0633\u064a\u0646\u064a \u0647\u0648\u064a\u063a\u0646\u0632|\u0643\u0627\u0633\u064a\u0646\u064a \u0647\u0648\u064a\u062c\u0646\u0632|Cassini\u2013Huygens|Huygens",
+            "all_instance_of": "space mission|robotic spacecraft",
+            "all_has_part": "Cassini|Huygens",
+            "all_part_of": "",
+            "itemDescription": "NASA space mission sent to the Saturn system"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Stardust comet sample return mission to Wild 2",
+            "ID": "Stardust"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q205747",
+            "itemLabel": "stardust",
+            "all_COSPAR_ID": "1999-003A",
+            "all_NAIF_ID": "-29",
+            "all_NSSDCA_ID": "1999-003A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u661f\u5875\u865f|Stardust-NExT|New Exploration of Tempel 1|Stardust|Sonda spaziale Stardust|Sonde Stardust|Programme Stardust|Sonda stardust|StarDUST|NExT|New Exploration of Tempel 1|\u0633\u062a\u0627\u0631\u062f\u0633\u062a",
+            "all_instance_of": "space probe|sample-return mission",
+            "all_has_part": "Stardust Sample Return Capsule",
+            "all_part_of": "",
+            "itemDescription": "space probe launched by NASA in 1999"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 0.85m Spitzer Space Telescope (SST formerly Space Infrared Telescope Facility or SIRTIF) Satellite Mission",
+            "ID": "Spitzer"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201953",
+            "itemLabel": "spitzer-space-telescope",
+            "all_COSPAR_ID": "2003-038A",
+            "all_NAIF_ID": "-79",
+            "all_NSSDCA_ID": "2003-038A",
+            "all_Minor_Planet_Center_observatory_ID": "245",
+            "aliases": "\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \"\u0421\u043f\u0456\u0442\u0446\u0435\u0440\"|Spitzer Space Telescope|\u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|Spitzer Uzay Teleskopu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|Spitzer Space Telescope|Spitzerov vesm\u00edrny teleskop|SIRTF|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0438\u0442\u0446\u0435\u0440|\u0421\u043f\u0438\u0446\u0435\u0440|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0421\u043f\u0438\u0442\u0446\u0435\u0440\u0430|Spitzer Space Telescope|Spitzer|SIRTF|Telesc\u00f3pio Spitzer|Spitzer Space Telescope|Teleskop Spitzera|Spitzer-teleskopet|Romteleskopet Spitzer|Spitzer Ruimtetelescoop|Space Infrared Telescope Facility|SIRTF|Spitzerteleskopet|Spitzer-teleskopet|Spitzer Space Telescope|Teleskop Spitzer|Teleskop angkasa Spitzer|Spitzer Space Telescope|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0938\u094d\u092a\u0947\u0938 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|T\u00e9lescope spatial Spitzer|Telescope spatial Spitzer|T\u00e9lescope spatial infrarouge|Spitzer Space Telescope|Space Infrared Telescope Facility|SIRTF|SIRTF|Avaruusteleskooppi Spitzer|Telescopio Spitzer|SST|Spitzer|SIRTF|SST|Space Infrared Telescope Facility|SIRTF|Spitzer Space Telescope|Weltraumteleskop Spitzer|Spitzer-Weltraumobservatorium|Spitzer-Teleskop|Spitzer ST|Spitzer Space Telescope|Space Infrared Telescope Facility|SIRTF|Spitzer\u016fv kosmick\u00fd dalekohled|SIRTF|Spitzer Space Telescope|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u044c\u043f\u0456\u0446\u044d\u0440\u0430|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631|\u0627\u0644\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0633\u0628\u064a\u062a\u0632\u0631",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Great Observatories program",
+            "itemDescription": "former NASA infrared space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Compton Gamma Ray Observatory satellite mission",
+            "ID": "CGRO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q41519",
+            "itemLabel": "compton-gamma-ray-observatory",
+            "all_COSPAR_ID": "1991-027B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1991-027B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5eb7\u666e\u987f\u4f3d\u9a6c\u5c04\u7ebf\u592a\u7a7a\u671b\u8fdc\u955c|\u5eb7\u666e\u9813\u5929\u6587\u53f0|\u5eb7\u666e\u9813\u03b3\u5c04\u7dda\u5929\u6587\u53f0|Compton Gama I\u015f\u0131nlar\u0131 G\u00f6zlemevi|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e23\u0e31\u0e07\u0e2a\u0e35\u0e41\u0e01\u0e21\u0e21\u0e32\u0e04\u0e2d\u0e21\u0e1e\u0e4c\u0e15\u0e31\u0e19|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e23\u0e31\u0e07\u0e2a\u0e35\u0e41\u0e01\u0e21\u0e21\u0e32\u0e04\u0e2d\u0e21\u0e1b\u0e4c\u0e15\u0e31\u0e19|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e04\u0e2d\u0e21\u0e1e\u0e4c\u0e15\u0e31\u0e19|\u0b95\u0bca\u0bae\u0bcd\u0baa\u0bcd\u0b9f\u0ba9\u0bcd \u0b95\u0bbe\u0bae\u0bcd\u0bae\u0bbe\u0b95\u0bcd \u0b95\u0ba4\u0bbf\u0bb0\u0bcd \u0b85\u0bb5\u0ba4\u0bbe\u0ba9 \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bae\u0bcd|GRO|Comptonovo gama observat\u00f3rium|Comptonove gama observat\u00f3rium|Compton Gama Ray Observatory|CGRO|\u041a\u043e\u043c\u043f\u0442\u043e\u043d\u043e\u0432\u0441\u043a\u0430\u044f \u0433\u0430\u043c\u043c\u0430-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|Observat\u00f3rio de Raios Gama|Compton Gamma Ray Observatory|Kosmiczny teleskop Comptona|Compton Gamma Ray Observatory|CGRO|CGRO|CGRO|\u30b3\u30f3\u30d7\u30c8\u30f3\u885b\u661f|CGRO|Osservatorio Raggi Gamma Compton|Compton Gamma-Ray Observatory|CGRO|GRO Compton|Compton GRO|Compton Gamma Ray Observatory|CGRO|Compton Gamma Ray Observatory|CGRO|Gammy Ray Observatory|Compton Observatory|CGRO|Gammastrahlungsobservatorium|Gammastrahlenobservatorium|Gamma Ray Observatory|CGRO|Observatori de Rajos Gamma Compton|Compton Gamma Ray Observatory|\u041a\u043e\u043c\u043f\u0442\u043e\u043d",
+            "all_instance_of": "space telescope|former entity",
+            "all_has_part": "",
+            "all_part_of": "Great Observatories program",
+            "itemDescription": "former NASA space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Wisconsin Ultraviolet PhotoPolarimter Experiment (WUPPE) on ASTRO-1 and ASTRO-2",
+            "ID": "WUPPE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2868552",
+            "itemLabel": "astro-1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "ASTRO-1",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WUPPE|Wisconsin Ultraviolet Photo-Polarimeter Experiment|Ultraviolet Imaging Telescope|HUT|Hopkins Ultraviolet Telescope|Broadband X-ray Telescope|BBXRT",
+            "all_instance_of": "space telescope|payload",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space telescope flown on STS-35"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Wilkinson Microwave Anisotropy Probe (WMAP) Satellite Mission",
+            "ID": "WMAP"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q274106",
+            "itemLabel": "wilkinson-microwave-anisotropy-probe",
+            "all_COSPAR_ID": "2001-027A",
+            "all_NAIF_ID": "-165",
+            "all_NSSDCA_ID": "2001-027A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u63a2\u96aa\u800580\u865f|\u5fae\u6ce2\u5404\u5411\u5f02\u6027\u63a2\u6d4b\u5668|WMAP|\u0e14\u0e32\u0e27\u0e40\u0e17\u0e35\u0e22\u0e21\u0e28\u0e36\u0e01\u0e29\u0e32\u0e01\u0e32\u0e23\u0e41\u0e01\u0e27\u0e48\u0e07\u0e15\u0e31\u0e27\u0e02\u0e2d\u0e07\u0e44\u0e21\u0e42\u0e04\u0e23\u0e40\u0e27\u0e1f\u0e27\u0e34\u0e25\u0e04\u0e34\u0e19\u0e2a\u0e31\u0e19|WMAP|Wilkinson Microwave Anisotropy Probe|Wilkinson Microwave Anisotropy Probe|WMAP|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-80|\u041c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u044b\u0439 \u0430\u043d\u0438\u0437\u043e\u0442\u0440\u043e\u043f\u043d\u044b\u0439 \u0437\u043e\u043d\u0434 \u0423\u0438\u043b\u043a\u0438\u043d\u0441\u043e\u043d\u0430|\u041c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u044b\u0439 \u0430\u043d\u0438\u0437\u043e\u0442\u0440\u043e\u043f\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440 \u0423\u0438\u043b\u043a\u0438\u043d\u0441\u043e\u043d\u0430|Wilkinson Microwave Anisotropy Probe|Wilkinson Microwave Anisotropy Probe|WMAP|Mikrogolf Anisotropie Sonde|Mikrogolf Anisotropie Proeve|Microgolf Anisotropie Sonde|Microgolf Anisotropie Proeve|Wilkinson Microwave Anisotropy Probe|\u0d35\u0d3f\u0d7d\u0d15\u0d4d\u0d15\u0d3f\u0d7b\u0d38\u0d7a \u0d2e\u0d48\u0d15\u0d4d\u0d30\u0d4b\u0d35\u0d47\u0d35\u0d4d \u0d05\u0d28\u0d48\u0d38\u0d4b\u0d1f\u0d4d\u0d30\u0d4b\u0d2a\u0d4d\u0d2a\u0d3f \u0d2a\u0d4d\u0d30\u0d4b\u0d2c\u0d4d|\u0d21\u0d2c\u0d4d\u0d32\u0d4d\u0d2f\u0d41 \u0d2e\u0d3e\u0d2a\u0d4d|WMAP|WMAP|Wilkinson Microwave Anisotropy Probe|\ub354\ube14\uc720\ub9f5 \uc704\uc131|\ub354\ube14\uc720\ub9f5|\u06a9\u0627\u0648\u0634\u06af\u0631 WMAP|WMAP|MAP|Wilkinson Microwave Anisotropy Probe|WMAP|Microwave Anisotropy Probe|MAP|Explorer 80|WMAP|Explorer 80|WMAP|Explorer 80|Wilkinson Microwave Anisotropy Probe|Sat\u00e8l\u00b7lit WMAP|\u09a1\u09ac\u09cd\u09b2\u09bf\u0989\u098f\u09ae\u098f\u09aa\u09bf|\u0989\u0987\u09b2\u0995\u09bf\u09a8\u09b8\u09a8 \u09ae\u09be\u0987\u0995\u09cd\u09b0\u09cb\u0993\u09af\u09bc\u09c7\u09ad \u098f\u09a8\u09bf\u09b8\u09cb\u099f\u09cd\u09b0\u09aa\u09bf \u09aa\u09cd\u09b0\u09cb\u09ac|\u0989\u0987\u09b2\u0995\u09bf\u09a8\u09b8\u09a8 \u09ae\u09be\u0987\u0995\u09cd\u09b0\u09cb\u0993\u09af\u09bc\u09c7\u09ad \u0985\u09cd\u09af\u09be\u09a8\u09bf\u09b8\u09cb\u099f\u09cd\u09b0\u09aa\u09bf \u09aa\u09cd\u09b0\u09cb\u09ac|\u0645\u062c\u0633 \u0648\u064a\u0644\u0643\u064a\u0646\u0633\u0648\u0646 \u0645\u0627\u064a\u0643\u0631\u0648\u0648\u064a\u0641 \u0627\u0646\u064a\u0633\u0648\u062a\u0631\u0648\u0628\u064a|WMAP|WMAP\uc704\uc131|WMAP \uc704\uc131|WMAP\u885b\u661f|Wilkinson Microwave Anisotropy Probe|\u0921\u092c\u094d\u0932\u094d\u092f\u0942 \u092e\u0948\u092a \u0936\u094b\u0927\u092f\u093e\u0928|WMAP|WMAP|MAP|WMAP|Wilkinson Microwave Anisotropy Probe|\u06a9\u0627\u0648\u0634\u06af\u0631 \u0646\u0627\u0647\u0645\u0633\u0627\u0646\u06af\u0631\u062f\u06cc \u0631\u06cc\u0632\u0645\u0648\u062c\u06cc \u0648\u06cc\u0644\u06a9\u06cc\u0646\u0633\u0648\u0646",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA Cosmic Microwave Background probe launched in 2001"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 0.4m Wide-field Infrared Survey Explorer (WISE) Satellite Mission",
+            "ID": "WISE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q693552",
+            "itemLabel": "wide-field-infrared-survey-explorer",
+            "all_COSPAR_ID": "2009-071A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2009-071A",
+            "all_Minor_Planet_Center_observatory_ID": "C51",
+            "aliases": "\u5ee3\u89d2\u7d05\u5916\u5de1\u5929\u63a2\u6e2c\u5668|\u5e7f\u57df\u7ea2\u5916\u5de1\u5929\u63a2\u6d4b\u5668|WISE|Wide-field Infrared Survey Explorer|WISE Teleskopu|WISE|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-92|Wide-field Infrared Survey Explorer|WISE|\u0428\u0438\u0440\u043e\u043a\u043e\u0437\u0430\u0444\u0430\u0442\u0435\u043d \u0438\u0444\u043d\u0440\u0430\u0446\u0440\u0432\u043d\u043e-\u043f\u0440\u0435\u0433\u043b\u0435\u0434\u0435\u043d \u0438\u0441\u0442\u0440\u0430\u0436\u0443\u0432\u0430\u0447|WISE|WISE|NEOWISE|WISE|WISE mission|T\u00e9lescope spatial WISE|\u06a9\u0627\u0648\u0634\u06af\u0631 \u0646\u0642\u0634\u0647 \u0628\u0631\u062f\u0627\u0631 \u0641\u0631\u0648\u0633\u0631\u062e \u0645\u06cc\u062f\u0627\u0646 \u0648\u0633\u06cc\u0639|Laia-v\u00e4ljaga Infrapuna Vaatluse Uurija|Wide field Infrared Survey Explorer|Wide-field Telescope|Wide-field Infrared Telescope|Next Generation Sky Survey|Near-Earth Object Wide-field Infrared Survey Explorer|MIDEX-6|Medium Explorer 6|Explorer 92|WISE|NGSS|Next Generation Sky Survey|NeoWise|Explorer 92|WISE|Explorer 92|WISE|WISE|WISE|NEOWISE|WISE|NGSS",
+            "all_instance_of": "space telescope|infrared telescope",
+            "all_has_part": "",
+            "all_part_of": "Medium Explorer program",
+            "itemDescription": "American infrared space telescope"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Chandra X-ray Observatory (CXO) Satellite Mission",
+            "ID": "CXO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49002",
+            "itemLabel": "chandra-x-ray-observatory",
+            "all_COSPAR_ID": "1999-040B",
+            "all_NAIF_ID": "-151",
+            "all_NSSDCA_ID": "1999-040B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Chandra X-ray Observatory|AXAF|Advanced X-ray Astrophysics Facility|\u0645\u0631\u0635\u062f \u0634\u0627\u0646\u062f\u0631\u0627 \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0644\u0644\u0623\u0634\u0639\u0629 \u0627\u0644\u0633\u064a\u0646\u064a\u0629|\u0645\u0631\u0635\u062f \u062a\u0634\u0627\u0646\u062f\u0631\u0627 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u0633\u0643\u0648\u0628 \u0634\u0627\u0646\u062f\u0631\u0627 \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0644\u0644\u0623\u0634\u0639\u0629 \u0627\u0644\u0633\u064a\u0646\u064a\u0629|\u062a\u0644\u0633\u0643\u0648\u0628 \u062a\u0634\u0627\u0646\u062f\u0631\u0627 \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0644\u0644\u0623\u0634\u0639\u0629 \u0627\u0644\u0633\u064a\u0646\u064a\u0629|Chandra|CXO",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Great Observatories program",
+            "itemDescription": "NASA space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA and UK Science Research Council Copernicus (also known as Orbiting Astronomical Observatory 3) satellite mission",
+            "ID": "Copernicus"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12129338",
+            "itemLabel": "copernicus",
+            "all_COSPAR_ID": "1972-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1972-065A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041e\u0410\u041e-3|Orbiting Astronomical Observatory 3|OAO-3|OAO-3|\u041a\u043e\u043f\u0435\u0440\u043d\u0438\u043a|Copernicus",
+            "all_instance_of": "artificial satellite|space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "artificial satellite"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 2001 Mars Odyssey Orbiter to Mars",
+            "ID": "Odyssey"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q28101481",
+            "itemLabel": "apollo-13-command-and-service-module",
+            "all_COSPAR_ID": "1970-029A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1970-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CSM-109|CM-109|Odyssey",
+            "all_instance_of": "Apollo Command and Service Module",
+            "all_has_part": "",
+            "all_part_of": "Apollo 13",
+            "itemDescription": "Command and Service Module used during Apollo 13"
+        }
+    ],
+    [
+        {
+            "Name": "NASA MErcury Surface, Space ENvironment, GEochemistry, and Ranging (MESSENGER) orbiter mission to Mercury",
+            "ID": "MESSENGER"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q182539",
+            "itemLabel": "messenger",
+            "all_COSPAR_ID": "2004-030A",
+            "all_NAIF_ID": "-236",
+            "all_NSSDCA_ID": "2004-030A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u4fe1\u4f7f\u53f7\u6c34\u661f\u63a2\u6d4b\u5668|MESSENGER|T\u00e0u v\u0169 tr\u1ee5 Messenger|\u0e22\u0e32\u0e19\u0e40\u0e21\u0e2a\u0e40\u0e0b\u0e19\u0e40\u0e08\u0e2d\u0e23\u0e4c|MESSENGER|Mesind\u017eer|MESSENGER|Sonda messenger|Romsonden messenger|MESSENGER|\uba54\uc2e0\uc800(\uc218\uc131 \ud0d0\uc0ac\uc120)|\u10db\u10d4\u10e1\u10d4\u10dc\u10ef\u10d4\u10e0\u10d8|\u30e1\u30c3\u30bb\u30f3\u30b8\u30e3\u30fc\u8a08\u753b|Mercury Surface, Space Environment, Geochemistry, and Ranging|Discovery 7|MESSENGER|Programme Messenger|Mercury Surface, Space Environment, Geochemistry and Ranging|Messenger-luotain|MErcury Surface, Space ENvironment, GEochemistry and Ranging|Mercury Surface, Space Environment, Geochemistry, and Ranging|MErcury Surface, Space ENvironment, GEochemistry and Ranging|MErcury Surface Space ENvironment, GEochemistry and Ranging|MErcury Surface Space ENvironment GEochemistry and Ranging|Mercury Surface, Space Environment, Geochemistry, and Ranging|MESSENGER|\u0645\u064a\u0633\u0646\u062c\u0631 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|\u0645\u0633\u0646\u062c\u0631 (\u0645\u0631\u0643\u0628\u0629 \u0641\u0636\u0627\u0626\u064a\u0629)|MESSENGER",
+            "all_instance_of": "former entity|space probe",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "seventh mission of the Discovery program; orbital reconnaissance of the planet Mercury (2004\u20132015)"
+        }
+    ],
+    [
+        {
+            "Name": "Canadian Space Agency (CSA) Microvariability and Oscillations of STars (MOST) Satellite Mission",
+            "ID": "MOST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3348377",
+            "itemLabel": "molonglo-observatory-synthesis-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u83ab\u9686\u683c\u52d2\u5929\u6587\u53f0\u5408\u6210\u671b\u9060\u93e1|\u83ab\u4f26\u8c37\u5929\u6587\u53f0|MOST",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "radio telescope in New South Wales, Australia"
+        }
+    ],
+    [
+        {
+            "Name": "Canadian Space Agency (CSA) Microvariability and Oscillations of STars (MOST) Satellite Mission",
+            "ID": "MOST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q24626",
+            "itemLabel": "microvariability-and-oscillations-of-stars",
+            "all_COSPAR_ID": "2003-031D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2003-031D",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Microvariability and Oscillations of STars|Humble space telescope|MOST|MOST|MOST|MOST\u885b\u661f|\u6052\u661f\u5fae\u53d8\u548c\u632f\u8361\u671b\u8fdc\u955c|MOST\u536b\u661f|\u6052\u661f\u5fae\u53d8\u548c\u632f\u8361\u671b\u8fdc\u955c|MOST\u536b\u661f|MOST (\u885b\u661f)|Sonda MOST|MOST|Microvariability and oscillations of stars|Microvariability and Oscillations of STars telescope|MOST space telescope|Microvariability and Oscillations of STars telescope",
+            "all_instance_of": "optical telescope|space telescope|catadioptric system|Maksutov telescope|technology demonstration spacecraft",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "smallsat space telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Ballistic Missile Defense Organization (BMDO) Midcourse Space Experiment (MSX) Satellite Mission",
+            "ID": "MSX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q970807",
+            "itemLabel": "midcourse-space-experiment",
+            "all_COSPAR_ID": "1996-025A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1996-024A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MSX",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA) EUropean REtrievable CArrier (EURECA) satellite mission",
+            "ID": "EURECA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49684",
+            "itemLabel": "european-retrievable-carrier",
+            "all_COSPAR_ID": "1992-049B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-049B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "European Retrievable Carrier|European Retrievable Carrier|EURECA 1|EURECA",
+            "all_instance_of": "space telescope|research satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory and research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Einstein (also known as High Energy Astronomy Observatory (HEA0) 2) satellite mission",
+            "ID": "Einstein"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1426842",
+            "itemLabel": "einstein-observatory",
+            "all_COSPAR_ID": "1978-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1978-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u042d\u0439\u043d\u0448\u0442\u0435\u0439\u043d|Einstein|\u9ad8\u80fd\u5929\u6587\u53f02\u53f7|HEAO2|HEAO-2|HEAO 2|Einstein Observatory|Einstein Observatory|High Energy Astronomy Observatory 2|Einstein-Observatoire|Einstein Observatory|HEAO2|HEAO-2|Observatorio Einstein|HEAO 2|High Energy Astrophysics Observatory 2|HEAO-2|HEAO B|Einstein-Observatorium",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Solar Maximum Mission (also known as SolarMax) Satellite Mission",
+            "ID": "SMM"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1188874",
+            "itemLabel": "solar-maximum-mission",
+            "all_COSPAR_ID": "1980-014A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1980-014A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Solar Maximum Mission|Solarmax|SMM|SolarMax|Solar Maximum Mission Satellite|SolarMax|SolarMax|SMM|SMMS|SMM|Solar Max|Solar Max",
+            "all_instance_of": "space telescope|solar observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA)/NASA Solar Heliospheric Observatory (SOHO) Satellite Mission",
+            "ID": "SOHO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q320638",
+            "itemLabel": "solar-and-heliospheric-observatory",
+            "all_COSPAR_ID": "1995-065A",
+            "all_NAIF_ID": "-21",
+            "all_NSSDCA_ID": "1995-065A",
+            "all_Minor_Planet_Center_observatory_ID": "249",
+            "aliases": "\u592a\u9633\u53ca\u65e5\u5149\u5c42\u63a2\u6d4b\u4eea|SOHO\u885b\u661f|\u0421\u041e\u0413\u041e|SOHO|Solar and Heliospheric Observatory|Sonda soho|SOHO|LASCO|Solar and Heliospheric Observatory|SOlar Heliospheric Observatory|SOHO|Solar and Heliospheric Observatory|SOlar Heliospheric Observatory|SOHO-teleskopet|SOHO|SOHO|\u592a\u967d\u30fb\u592a\u967d\u570f\u89b3\u6e2c\u885b\u661f|\u592a\u967d\u30fb\u5149\u7403\u89b3\u6e2c\u885b\u661f|\u30bd\u30fc\u30db\u30fc|SOHO\u885b\u661f|SOHO|Solar and Heliospheric Observatory|\u0938\u094b\u0939\u094b|Sonde Soho|SOHO|Programme Soho|Observatoire solaire et h\u00e9liosph\u00e9rique|Solar and Heliospheric Observatory|Solar and Heliospheric Observatory|Observatorio Solar y Heliosf\u00e9rico|Observatorio Solar y Heliosferico|Solar Heliospheric Observatory|SOHO|SOHO|Solar and Heliospheric Observatory|Slune\u010dn\u00ed a heliosf\u00e9rick\u00e1 observato\u0159|SOHO|Observatori Heliosf\u00e8ric i Solar|SOHO",
+            "all_instance_of": "solar probe|space telescope",
+            "all_has_part": "",
+            "all_part_of": "International Solar-Terrestrial Physics Science Initiative|Horizon 2020",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Solar Dynamics Observatory (SDO) Mission",
+            "ID": "SDO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q382494",
+            "itemLabel": "solar-dynamics-observatory",
+            "all_COSPAR_ID": "2010-005A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2010-005A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u592a\u967d\u52d5\u529b\u5929\u6587\u53f0|Solar Dynamics Observatory|Solar Dynamics Observatory|Solar Dynamics Observatory|Solar Dynamics Observatory|SDO|SDO|Saules dinamikas observatorija|Solar Dinamics Observatory|Sdo|Observatorio Solar Din\u00e1mico|Observatorio Solar Dinamico|Observatorio de Din\u00e1mica Solar|Observatorio de Dinamica Solar|SDO|SDO|SDO",
+            "all_instance_of": "solar probe",
+            "all_has_part": "Extreme Ultraviolet Variability Experiment|Helioseismic and Magnetic Imager|Atmospheric Imaging Assembly",
+            "all_part_of": "Goddard Space Flight Center",
+            "itemDescription": "solar observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Ramaty High Energy Solar Spectroscopic Imager (RHESSI) Satellite Mission",
+            "ID": "RHESSI"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54359",
+            "itemLabel": "reuven-ramaty-high-energy-solar-spectroscopic-imager",
+            "all_COSPAR_ID": "2002-004A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2002-004A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "RHESSI|Explorer 81|RHESSI|Explorer 81|SMEX-6|RHESSI|High Energy Solar Spectroscopic Imager|Explorer 81|HESSI|HESSI",
+            "all_instance_of": "space telescope|former entity|solar observatory",
+            "all_has_part": "",
+            "all_part_of": "Small Explorer program",
+            "itemDescription": "space observatory which reentered in 2023"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA) Planck Space Observatory Mission",
+            "ID": "Planck"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q725309",
+            "itemLabel": "planck",
+            "all_COSPAR_ID": "2009-026B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2009-026B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u666e\u90ce\u514b\u5de1\u5929\u8005|\u666e\u6717\u514b\u63a2\u6d4b\u5668|Planck Surveyor|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u041f\u043b\u0430\u043d\u043a|Sonda Planck|Satelita Planck|COBRAS/SAMBA|\u30d7\u30e9\u30f3\u30af\u885b\u661f|Planck|Satellite Planck|Planck Surveyor|Planck-satelliitti|Planck-luotain|Planck Surveyor|Planck satelliitti|\u0645\u0627\u0647\u0648\u0627\u0631\u0647\u0654 \u067e\u0644\u0627\u0646\u06a9|sat\u00e9lite planck|satelite planck|Planck Surveyor|observatorio espacial planck|Cosmic Background Radiation Anisotropy Satellite/Satellite for Measurement of Background Anisotropies|COBRAS/SAMBA|Cosmic Background Radiation Anisotropy Satellite/Satellite for Measurement of Background Anisotropies|COBRAS/SAMBA|Planck-Satellit|\u0645\u0631\u0643\u0628\u0629 \u0628\u0644\u0627\u0646\u0643 \u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629|Planck|Planck",
+            "all_instance_of": "former entity|cosmic microwave background experiment|space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "ESA space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Extreme UltraViolet Explorer (EUVE) Ssatellite Mission",
+            "ID": "EUVE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49904",
+            "itemLabel": "extreme-ultraviolet-explorer",
+            "all_COSPAR_ID": "1992-031A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-031A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EUVE|Explorer 67|BERKSAT|Berkeley Satellite|EUVE|EUVE|EUVE",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space telescope for ultraviolet astronomy"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/Johns Hopkins University (JHU) Far Ultraviolet Spectroscopic Explorer (FUSE) Satellite Mission",
+            "ID": "FUSE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49909",
+            "itemLabel": "far-ultraviolet-spectroscopic-explorer",
+            "all_COSPAR_ID": "1999-035A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1999-035A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "FUSE|Explorer 77|FUSE|FUSE|FUSE",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/Goddard Space Sciences Laboratory Fast Auroral SnapshoT explorer (FAST) Satellite Mission",
+            "ID": "FAST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49912",
+            "itemLabel": "fast-auroral-snapshot-explorer",
+            "all_COSPAR_ID": "1996-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Explorer 70|FAST|FAST",
+            "all_instance_of": "Earth observation satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA satellite of the Explorer program"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/Goddard Space Sciences Laboratory Fast Auroral SnapshoT explorer (FAST) Satellite Mission",
+            "ID": "FAST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1827255",
+            "itemLabel": "five-hundred-meter-aperture-spherical-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u4e2d\u56fd\u5929\u773c|\u4e94\u767e\u7c73\u53e3\u5f84\u7403\u9762\u5c04\u7535\u671b\u8fdc\u955c|\u4e2d\u570b\u5929\u773c|Five hundred meter Aperture Spherical Telescope|Five hundred meter Aperture Spherical Telescope|\u0422\u044c\u044f\u043d\u044c\u044f\u043d|\u0421\u0444\u0435\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441 \u043f\u044f\u0442\u0438\u0441\u043e\u0442\u043c\u0435\u0442\u0440\u043e\u0432\u043e\u0439 \u0430\u043f\u0435\u0440\u0442\u0443\u0440\u043e\u0439|FAST|Five hundred meter Aperture Spherical Telescope|Telescopio esferico de quinientos metros de apertura|Heavenly Eye|Five-hundred-meter Aperture Spherical Telescope|Five hundred meter Aperture Spherical Telescope|FAST|FAST|FAST|Tianyan|Eye of Heaven|Thi\u00ean Nh\u00e3n|FAST|FAST",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "radio telescope located in Pingtang County, Guizhou Province, China"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Solar Anomalous and Magnetospheric Particle EXplorer (SAMPEX) Mission",
+            "ID": "SAMPEX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q54367",
+            "itemLabel": "solar-anomalous-and-magnetospheric-particle-explorer",
+            "all_COSPAR_ID": "1992-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1992-038A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SAMPEX|SAMPEX|Explorer 68|Explorer 68|SAMPEX",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Nuclear Spectroscopic Telescope Array (NuSTAR) Satellite Mission",
+            "ID": "NuSTAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q163922",
+            "itemLabel": "nuclear-spectroscopic-telescope-array",
+            "all_COSPAR_ID": "2012-031A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2012-031A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NuSTAR|SMEX-11|Explorer 93|Nuclear Spectroscopic Telescope Array|NuSTAR",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA X-ray space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/Jet Propulsion Laboratory (JPL) Galaxy Evolution Explorer (GALEX) Satellite Mission",
+            "ID": "GALEX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q49944",
+            "itemLabel": "galex",
+            "all_COSPAR_ID": "2003-017A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2003-017A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GALEX|GALEX|GALEX|Explorer 83|Galaxy Evolution Explorer|Qalaktika T\u0259kam\u00fcl\u00fc K\u0259\u015ffiyyat\u0131",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "US space telescope"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 0.95m Kepler Satellite Mission",
+            "ID": "Kepler"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q47272",
+            "itemLabel": "kepler",
+            "all_COSPAR_ID": "2009-011A",
+            "all_NAIF_ID": "-227",
+            "all_NSSDCA_ID": "2009-011A",
+            "all_Minor_Planet_Center_observatory_ID": "C55",
+            "aliases": "\u958b\u666e\u52d2\u592a\u7a7a\u671b\u9060\u93e1|\u5f00\u666e\u52d2\u592a\u7a7a\u671b\u8fdc\u955c|\u514b\u535c\u52d2\u4efb\u52d9|\u041e\u0440\u0431\u0456\u0442\u0430\u043b\u044c\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u041a\u0435\u043f\u043b\u0435\u0440|\u041e\u0440\u0431\u0456\u0442\u0430\u043b\u044c\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u041a\u0435\u043f\u043b\u0435\u0440\u00bb|Kepler Uzay Teleskobu|Kepler g\u00f6revi|\u0b95\u0bc6\u0baa\u0bcd\u0bb2\u0bb0\u0bcd \u0bb5\u0bbf\u0ba3\u0bcd\u0bb5\u0bc6\u0bb3\u0bbf\u0ba4\u0bcd \u0ba4\u0bbf\u0b9f\u0bcd\u0b9f\u0bae\u0bcd|\u0b95\u0bc6\u0baa\u0bcd\u0bb2\u0bb0\u0bcd \u0bb5\u0bbf\u0ba3\u0bcd\u0b95\u0bb2\u0bae\u0bcd|Discovery 10|\u041c\u0438\u0441\u0441\u0438\u044f \u041a\u0435\u043f\u043b\u0435\u0440\u0430|Telescopul Kepler|Misiunea spa\u021bial\u0103 Kepler|Telesc\u00f3pio espacial Kepler|Sonda kepler|Miss\u00e3o Kepler|Miss\u00e3o espacial kepler|Sonda kepler|Misja Kepler|Romteleskopet Kepler|Kepler Mission|\u0915\u0947\u092a\u094d\u0932\u0947\u0930 \u0905\u0928\u094d\u0924\u0947\u0930\u093f\u0915\u094d\u0937 \u092f\u093e\u0928|Kepler Mission|\ucf00\ud50c\ub7ec \uc6b0\uc8fc\uc120|\ucf00\ud50c\ub7ec \uc6b0\uc8fc \ub9dd\uc6d0\uacbd|\ucf00\ud50c\ub7ec \ubbf8\uc158|\ucf00\ud50c\ub7ec \ub9dd\uc6d0\uacbd|\u10d9\u10d4\u10de\u10da\u10d4\u10e0\u10d8\u10e1 \u10db\u10d8\u10e1\u10d8\u10d0|\u30b1\u30d7\u30e9\u30fc\u671b\u9060\u93e1|\u30b1\u30d7\u30e9\u30fc\u5b87\u5b99\u671b\u9060\u93e1|Sonda Keplero|Missione Keplero|Kepler Space Observatory|Kepler Space Mission|Teleskop luar angkasa Kepler|Teleskop Kepler|Teleskop angkasa Kepler|Kepler Mission|Discovery 10|\u0915\u0945\u092a\u094d\u0932\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u092f\u093e\u0928|\u0915\u0945\u092a\u094d\u0932\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0915\u094d\u0937\u094b\u0927 \u092f\u093e\u0928|\u05de\u05e9\u05d9\u05de\u05ea \u05e7\u05e4\u05dc\u05e8|T\u00e9lescope spatial kepler|Telescope spatial Kepler|Sonde Kepler|Mission Kepler|\u0645\u0627\u0645\u0648\u0631\u06cc\u062a \u06a9\u067e\u0644\u0631|\u062a\u0644\u0633\u06a9\u0648\u067e \u06a9\u067e\u0644\u0631|Kepler teleskopioa|Kepler satelitea|Kepler misioa|Telescopio espacial Kepler|Sat\u00e9lite Kepler|Satelite kepler|Misi\u00f3n Kepler|Mision Kepler|Kepler Space Observatory|Kepler Teleskopo|Kepler space telescope|Kepler Space Observatory|\u0645\u0647\u0645\u0629 \u0643\u064a\u0628\u0644\u0631|\u062a\u0644\u0633\u0643\u0648\u0628 \u0643\u0628\u0644\u0631|Kepler|Kepler|Kepler|Kepler|Kepler|Kepler",
+            "all_instance_of": "space telescope",
+            "all_has_part": "K2 Mission",
+            "all_part_of": "Discovery Program",
+            "itemDescription": "NASA space telescope"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Transiting Exoplanet Survey Satellite (TESS)",
+            "ID": "TESS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1323537",
+            "itemLabel": "transiting-exoplanet-survey-satellite",
+            "all_COSPAR_ID": "2018-038A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2018-038A",
+            "all_Minor_Planet_Center_observatory_ID": "C57",
+            "aliases": "TESS|\u7cfb\u5916\u884c\u661f\u63a9\u661f\u4efb\u52d9\u885b\u661f|\u51cc\u65e5\u7cfb\u5916\u884c\u661f\u52d8\u6d4b\u536b\u661f|\u07de.\u07df.\u07d8.\u07de|TESS|Transiting Exoplanet Survey Satellite|Satelite de Sondeo de Exoplanetas en Transito|TESS|TESS|TESS|TESS",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Explorers Program|Medium Explorer program",
+            "itemDescription": "NASA satellite of the Explorer program"
+        }
+    ],
+    [
+        {
+            "Name": "European Space Agency (ESA) International Rosetta Probe Mission to comet 67P/Churyumov-Gerasimenko (67P)",
+            "ID": "Rosetta"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q48572",
+            "itemLabel": "rosetta",
+            "all_COSPAR_ID": "2004-006A",
+            "all_NAIF_ID": "-226",
+            "all_NSSDCA_ID": "2004-006A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0420\u043e\u0437\u0435\u0442\u0442\u0430 (\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043f\u043f\u0430\u0440\u0430\u0442)|Sonde Rosetta|Programme Rosetta|2007VN84|2007 VN84|Rosetta space probe|Rosetta",
+            "all_instance_of": "comet probe",
+            "all_has_part": "Philae",
+            "all_part_of": "Horizon 2000",
+            "itemDescription": "robotic space probe"
+        }
+    ],
+    [
+        {
+            "Name": "Institute of Space and Astronautical Science (ISAS) 0.15m Infrared Telescope in Space (IRTS) aboard the small space platform Space Flyer Unit",
+            "ID": "IRTS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1662658",
+            "itemLabel": "infrared-telescope-in-space",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "IRTS|IRTS",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Japan Aerospace eXploration Agency (JAXA) Ginga X-ray satellite mission (formerly ASTRO-C)",
+            "ID": "Ginga"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1524954",
+            "itemLabel": "ginga",
+            "all_COSPAR_ID": "1987-012A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1987-012A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "GINGA|ASTRO-C|Astro-C|ASTRO-C|ASTRO C|ASTRO-C|ASTRO C|Astro c|ASTRO-C|Ginga|Ginga",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "satellite"
+        }
+    ],
+    [
+        {
+            "Name": "NASA Global Geospace Science (GGS) Wind Satellite Mission",
+            "ID": "WIND"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2300867",
+            "itemLabel": "wind",
+            "all_COSPAR_ID": "1994-071A",
+            "all_NAIF_ID": "-8",
+            "all_NSSDCA_ID": "1994-071A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WIND|Global Geospace Science|ISTP/Wind|Interplanetary Physics Laboratory|Global Geospace Science Wind|GGS/Wind|IPL",
+            "all_instance_of": "geomagnetic satellite",
+            "all_has_part": "",
+            "all_part_of": "Global Geospace Science|International Solar-Terrestrial Physics Science Initiative",
+            "itemDescription": "NASA geomagnetic research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Institute of Space and Astronautical Science 8m (ISAS) Highly Advanced Laboratory for Communications and Astronomy (HALCA) Very Long Baseline Interferometry (VLBI) Space Observatory Program Satellite Mission (also known as VSOP)",
+            "ID": "HALCA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1617995",
+            "itemLabel": "halca",
+            "all_COSPAR_ID": "1997-005A",
+            "all_NAIF_ID": "-58",
+            "all_NSSDCA_ID": "1997-005A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HALCA|MUSES-B|MUSES-B|MUSES-B|Highly Advanced Laboratory For Communications And Astronomy|Highly advanced laboratory for communications and astronomy|HALCA|Highly Advanced Laboratory for Communications and Astronomy|HALCA|MUSES-B|MUSES-B|HALCA|VSOP|Haruka|Haruka",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Institute of Space and Astronautical Science 8m (ISAS) Hakucho X-ray satellite (also known as CORSA-b)",
+            "ID": "Hakucho"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1570051",
+            "itemLabel": "hakucho",
+            "all_COSPAR_ID": "1979-014A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1979-014A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Cosmic Radiation Satellite|Hakucho|CORSA-B|CORSA-b|Corsa-B|Corsa-b|CORSA-B|CORSA-A|CORSA|CORSA-B|CORSA-A",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA High Energy Astronomy Observatory 1 (HEAO 1) Satellite Mission",
+            "ID": "HEAO-1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q265594",
+            "itemLabel": "high-energy-astronomy-observatory-1",
+            "all_COSPAR_ID": "1977-075A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1977-075A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "High Energy Astronomy Observatory 1|HEAO-1|HEAO-1|HEAO 1",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "NASA High Energy Astronomy Observatory 3 (HEAO 3) Satellite Mission",
+            "ID": "HEAO-3"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1190799",
+            "itemLabel": "high-energy-astronomy-observatory-3",
+            "all_COSPAR_ID": "1979-082A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1979-082A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HEAO 3|HEAO 3|HEAO-3|\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0644\u0643 \u0627\u0644\u0639\u0627\u0644\u064a \u0627\u0644\u0637\u0627\u0642\u0629 \u0663",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) 0.6m TRAnsiting Planets and PlanetesImals Small Telescope (TRAPPIST) at La Silla Observatory",
+            "ID": "TRAPPIST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10852903",
+            "itemLabel": "trappist",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I40",
+            "aliases": "TRAnsiting Planets and PlanetesImals Small Telescope|TRAPPIST|TRAnsiting Planets and PlanetesImals Small Telescope|Transiting planets and planetesImals small telescope|TRAPPIST",
+            "all_instance_of": "optical telescope|robotic telescope",
+            "all_has_part": "",
+            "all_part_of": "La Silla Observatory|Ouka\u00efmden Observatory",
+            "itemDescription": "pair of Belgian optic robotic telescopes"
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) 39.3m European Extremely Large Telescope at the Cerro Armazones Observatory (Observatorio Cerro Armazones)",
+            "ID": "E-ELT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q635105",
+            "itemLabel": "extremely-large-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "E-ELT|\u6b27\u6d32\u6781\u5927\u671b\u8fdc\u955c|K\u00ednh thi\u00ean v\u0103n c\u1ef1c l\u1edbn ch\u00e2u \u00c2u|\u0404\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u044c\u043a\u0438\u0439 \u043d\u0430\u0434\u0437\u0432\u0438\u0447\u0430\u0439\u043d\u043e \u0432\u0435\u043b\u0438\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0415\u0432\u0440\u043e\u043f\u0441\u043a\u0438 \u0438\u0437\u0443\u0437\u0435\u0442\u043d\u043e \u0432\u0435\u043b\u0438\u043a\u0438 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0415\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u043a\u0438\u0439 \u0447\u0440\u0435\u0437\u0432\u044b\u0447\u0430\u0439\u043d\u043e \u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0d2f\u0d42\u0d31\u0d4b\u0d2a\u0d4d\u0d2f\u0d7b \u0d0e\u0d15\u0d4d\u0d38\u0d4d\u0d1f\u0d4d\u0d30\u0d40\u0d2e\u0d4d\u0d32\u0d3f \u0d32\u0d3e\u0d7c\u0d1c\u0d4d \u0d1f\u0d46\u0d32\u0d3f\u0d38\u0d4d\u0d15\u0d4b\u0d2a\u0d4d|Europos Didysis teleskopas|\uc720\ub7fd \ucd08\ub300\ud615 \ub9dd\uc6d0\uacbd|\u6b27\u5dde\u8d85\u5927\u578b\u671b\u9060\u93e1|E-ELT|Extremely Large Telescope|\u062a\u0644\u0633\u06a9\u0648\u067e \u0628\u0633\u06cc\u0627\u0631 \u0628\u0632\u0631\u06af \u0627\u0631\u0648\u067e\u0627\u06cc\u06cc|Extremely Large Telescope|E-ELT|Evropsk\u00fd extr\u00e9mn\u011b velk\u00fd dalekohled|E-ELT|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u0645\u06d5\u0632\u0646\u06cc \u0626\u06d5\u0648\u0631\u0648\u0648\u067e\u06cc|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u0626\u06cc \u0626\u06ce\u06b5 \u062a\u06cc|\u092f\u0942\u0930\u094b\u092a\u093f\u092f\u0928 \u090f\u0915\u094d\u0938\u091f\u094d\u0930\u0940\u092e\u0932\u0940 \u0932\u093e\u0930\u094d\u091c \u091f\u0947\u0932\u093f\u0938\u094d\u0915\u094b\u092a|\u0415\u0413\u0422|\u0415-\u0415\u0413\u0422|ELT|ELT|ELT|ELT|ELT|EIT",
+            "all_instance_of": "Nasmyth telescope|infrared telescope|extremely large telescope",
+            "all_has_part": "",
+            "all_part_of": "European Southern Observatory",
+            "itemDescription": "major astronomical facility being constructed by the European Southern Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) 3.6m New Techology Telescope (NTT) at La Silla Observatory",
+            "ID": "NTT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1982969",
+            "itemLabel": "new-technology-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "NTT-teleskooppi|Telescopio de Nueva Tecnologia|NTT|NTT",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope|thin mirror telescope",
+            "all_has_part": "",
+            "all_part_of": "La Silla Observatory",
+            "itemDescription": "Ritchey\u2013Chr\u00e9tien thin mirror optical telescope"
+        }
+    ],
+    [
+        {
+            "Name": "National Science Foundation (NSF), Department of Energy (DOE), and the LSST Corporation's 8.4m Large Synoptic Survey Telescope at Cerro Pachon",
+            "ID": "LSST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q672021",
+            "itemLabel": "vera-c.-rubin-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "X05",
+            "aliases": "\u0412\u0421\u041e\u0422|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0412\u0435\u0440\u044b \u0420\u0443\u0431\u0438\u043d|VRO|VCRO|LSST|Large Synoptic Survey Telescope|\u30f4\u30a7\u30e9\u30fbC\u30fb\u30eb\u30fc\u30d3\u30f3\u5929\u6587\u53f0|LSST, Legacy Survey of Space and Time,|\u05de\u05e6\u05e4\u05d4 \u05d4\u05db\u05d5\u05db\u05d1\u05d9\u05dd \u05e2\u05dc \u05e9\u05dd \u05d5\u05e8\u05d4 \u05e8\u05d5\u05d1\u05d9\u05df|Gran Telescopio para Rastreos Sin\u00f3pticos|Gran Telescopio para Rastreos Sinopticos|Vera Rubin Observatory|VCRO|Rubin Observatory|NSF Vera C. Rubin Observatory|LSST camera|Large Synoptic Survey Telescope|LSST|LSST|LSST|VRO|VRO",
+            "all_instance_of": "reflecting telescope|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory under construction in Chile"
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO)/National Science Foundation (NSF)/National Institutes of Natural Sciences, Japan Atacama Large Millimeter Array at Llano de Chajnantor Observatory",
+            "ID": "ALMA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q725364",
+            "itemLabel": "atacama-large-millimeter-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u0430\u0442\u0430\u043a\u0430\u043c\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|ALMA|ALMA-telescoop|ALMA-radiotelescoop|Atacama Large Millimeter Array|\uc544\ud0c0\uce74\ub9c8 \ub300\ud615 \ubc00\ub9ac\ud30c \uc9d1\ud569\uccb4|\uc544\ud0c0\uce74\ub9c8 \ub300\ud615 \ubbf8\ub9ac\ud30c \uc9d1\ud569\uccb4|\uc544\ud0c0\uce74\ub9c8 \ub300\ud615 \ubbf8\ub9ac\uba54\ud130 \uc9d1\ud569\uccb4|\uc544\ud0c0\uce74\ub9c8 \ub300\ud615 \uadf9\uace0\uc8fc\ud30c \uc9d1\ud569\uccb4|Atacama Large Millimeter Array|\u3044\u3056\u3088\u3044|\u30a2\u30eb\u30de\u96fb\u6ce2\u671b\u9060\u93e1|\u30a2\u30eb\u30de\u671b\u9060\u93e1|ALMA\u8a08\u753b|ALMA|ALMA|\u062a\u0644\u0633\u06a9\u0648\u067e \u0627\u0644\u0645\u0627|\u062a\u0644\u0633\u06a9\u0648\u067e \u0622\u0644\u0645\u0627|\u0627\u0631\u0627\u06cc\u0647\u0654 \u0645\u06cc\u0644\u06cc\u0645\u062a\u0631\u06cc \u0628\u0632\u0631\u06af \u0627\u062a\u0627\u06a9\u0627\u0645\u0627|\u0627\u0631\u0627\u06cc\u0647 \u0645\u06cc\u0644\u06cc\u0645\u062a\u0631\u06cc \u0628\u0632\u0631\u06af \u0627\u062a\u0627\u06a9\u0627\u0645\u0627|\u0622\u0631\u0627\u06cc\u0647\u0654 \u0645\u06cc\u0644\u06cc\u0645\u062a\u0631\u06cc \u0628\u0632\u0631\u06af \u0622\u062a\u0627\u06a9\u0627\u0645\u0627|Proyecto ALMA|Gran Arreglo Milim\u00e9trico y Submilim\u00e9trico de Atacama|Gran Arreglo Milimetrico y Submilimetrico de Atacama|Gran Arreglo Milim\u00e9trico de Atacama|Gran Arreglo Milimetrico de Atacama|Atacama Large Millimeter and Submillimeter Array|ALMA telescope|ALMA SMEGO|ALMA|Atacama Large Millimeter Array|ALMA|ALMA|ALMA|ALMA|ALMA|\u963f\u5854\u5361\u99ac\u5927\u578b\u6beb\u7c73/\u6b21\u6beb\u7c73\u9663\u5217|ALMA\u5c04\u7535\u5929\u6587\u671b\u8fdc\u955c|ALMA|\u0412\u0435\u043b\u0438\u043a\u0430 \u043c\u0456\u043b\u0456\u043c\u0435\u0442\u0440\u043e\u0432\u0430 \u0430\u043d\u0442\u0435\u043d\u0430 \u0410\u0442\u0430\u043a\u0430\u043c\u0430",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "radio telescope",
+            "all_part_of": "Llano de Chajnantor Observatory|Event Horizon Telescope",
+            "itemDescription": "66 radio telescopes in the Atacama Desert of northern Chile"
+        }
+    ],
+    [
+        {
+            "Name": "Atacama Pathfinder Experiment",
+            "ID": "APEX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15014",
+            "itemLabel": "advanced-photovoltaic-experiment",
+            "all_COSPAR_ID": "1994-046A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1994-046A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "APEX",
+            "all_instance_of": "spaceflight",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "satellite-based science mission"
+        }
+    ],
+    [
+        {
+            "Name": "Atacama Pathfinder Experiment",
+            "ID": "APEX"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q753076",
+            "itemLabel": "atacama-pathfinder-experiment",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "APEX|APEX|\u0410\u0442\u0430\u043a\u0430\u043c\u0441\u043a\u0438\u0439 \u0437\u043e\u043d\u0434\u0438\u0440\u0443\u044e\u0449\u0438\u0439 \u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442|\u30a2\u30bf\u30ab\u30de\u30fb\u30d1\u30b9\u30d5\u30a1\u30a4\u30f3\u30c0\u30fc\u5b9f\u9a13\u6a5f|Atacama Pathfinder EXperiment|APEX|APEX",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "Llano de Chajnantor Observatory|Event Horizon Telescope",
+            "itemDescription": "radio telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Atacama Submillimeter Telescope Experiment",
+            "ID": "ASTE"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q742486",
+            "itemLabel": "atacama-submillimeter-telescope-experiment",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u963f\u5854\u5361\u746a\u6b21\u516c\u91d0\u6ce2\u5be6\u9a57\u671b\u9060\u93e1|\u963f\u5854\u5361\u99ac\u6b21\u6beb\u7c73\u671b\u9060\u93e1\u5be6\u9a57|\u963f\u5854\u5361\u746a\u6b21\u6beb\u7c73\u6ce2\u5be6\u9a57\u671b\u9060\u93e1|\u30a2\u30bf\u30ab\u30de\u30b5\u30d6\u30df\u30ea\u6ce2\u671b\u9060\u93e1\u5b9f\u9a13|ASTE|ASTE|ASTE|ASTE",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "Llano de Chajnantor Observatory",
+            "itemDescription": "Radio astronomy telescope"
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) Very Large Telescope Interferometer (VLTI) at Cerro Paranal",
+            "ID": "VLTI"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3556304",
+            "itemLabel": "very-large-telescope-interferometer",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "VLTI|VLTI|VLTI",
+            "all_instance_of": "optical telescope|astronomical interferometer",
+            "all_has_part": "",
+            "all_part_of": "Very Large Telescope",
+            "itemDescription": "coherent operations of either the four Unit Telescopes or four Auxiliary Telescopes at the Very Large Telescope facility"
+        }
+    ],
+    [
+        {
+            "Name": "4.1m Southern Astrophysical Research (SOAR) Telescope at Cerro Pachon",
+            "ID": "SOAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q787525",
+            "itemLabel": "southern-astrophysical-research-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "I33",
+            "aliases": "Southern Astrophysical Research Telescope|SOAR|Southern Astrophysical Research|SOAR",
+            "all_instance_of": "optical telescope|segmented mirror",
+            "all_has_part": "",
+            "all_part_of": "Cerro Tololo Inter-American Observatory",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "Name": "The All Sky Automated Survey (ASAS) project",
+            "ID": "ASAS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4385811",
+            "itemLabel": "all-sky-automated-survey",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Asas|ASAS|ASAS|\u5168\u5929\u81ea\u52d5\u30b5\u30fc\u30d9\u30a4|ASAS",
+            "all_instance_of": "astronomical survey",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical survey"
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology Cosmic Background Imager (CBI) at Chajnantor Observatory",
+            "ID": "CBI"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3982934",
+            "itemLabel": "cosmic-background-imager",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5b87\u5b99\u80cc\u666f\u6210\u50cf\u5668|\u5b87\u5b99\u80cc\u666f\u653e\u5c04\u64ae\u50cf\u88c5\u7f6e|CBI",
+            "all_instance_of": "radio interferometer|cosmic microwave background experiment",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "microwave interferometer"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 3m Infrared Telescope Facility (IRTF) at Mauna Kea Observatory",
+            "ID": "IRTF"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1662664",
+            "itemLabel": "nasa-infrared-telescope-facility",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "T13",
+            "aliases": "\u7f8e\u570b\u592a\u7a7a\u7e3d\u7f72\u671b\u9060\u93e1|NASA\u7d05\u5916\u7dda\u671b\u9060\u93e1\u8a2d\u65bd|\u0406\u043d\u0444\u0440\u0430\u0447\u0435\u0440\u0432\u043e\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f (\u041c\u0430\u0443\u043d\u0430 \u041a\u0435\u0430)|\u0418\u043d\u0444\u0440\u0430\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f IRTF|NASA IRTF|Infrared Telescope Facility|NASA\u8d64\u5916\u7dda\u671b\u9060\u93e1\u65bd\u8a2d|NASA\u8d64\u5916\u671b\u9060\u93e1\u65bd\u8a2d|Infrared Telescope Facility|Telescopio infrarrojo de nasa|NASA IRTF|IRTF|IRTF|IRTF",
+            "all_instance_of": "Cassegrain mirror system|infrared telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "infrared telescope in Hawaii"
+        }
+    ],
+    [
+        {
+            "Name": "Panoramic Survey Telescope and Rapid Response System (Pan-STARRS) 1.8m PS1 Telescope at Haleakala Observatory",
+            "ID": "PS1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4046366",
+            "itemLabel": "pan-starrs1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "F51",
+            "aliases": "Panoramic Survey Telescope and Rapid Response System|Pan-STARRS 1|Panoramic Survey Telescope and Rapid Response System 1|Pan-STARRS-1|PS1",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Pan-STARRS",
+            "itemDescription": "American automated survey telescope"
+        }
+    ],
+    [
+        {
+            "Name": "VERITAS Collaboration Very Energetic Radiation Imaging Telescope Array System (VERITAS) at Fred Lawrence Whipple Observatory (FLWO)",
+            "ID": "VERITAS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3556305",
+            "itemLabel": "veritas",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Very Energetic Radiation Imaging Telescope Array System|VERITAS|Very Energetic Radiation Imaging Telescope Array System",
+            "all_instance_of": "gamma-ray telescope|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Fred Lawrence Whipple Observatory",
+            "itemDescription": "major ground-based gamma-ray observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Instituto Nacional de Astrofisica, optica y Electronica (INAOE) and the University of Massachusetts at Amherst (UMass) 50m Large Millimeter Telescope (LMT) Alfonso Serrano (or Gran Telescopio Milimetrico Alfonso Serrano) at Volcano Sierra Negra",
+            "ID": "LMT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1805920",
+            "itemLabel": "large-millimeter-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Did\u017eiausias milimetrinis teleskopas|Gran Telescopio Millimetrico|Gran Telescopio Milim\u00e9trico|Large Millimeter Telescope|Gran Telescopio Milim\u00e9trico|Large Millimeter Telescope|Gran telescopio milim\u00e9trico|Gran Telescopio Milimetrico|Large Millimeter Telescope Alfonso Serrano|Gran Telescopio Milim\u00e9trico|Gran Telescopi Mil\u00b7lim\u00e8tric|Gran Telescopi Mil\u2022lim\u00e8tric|Gran Telescopi Mil.lim\u00e8tric|GMT|GMT|LMT|GTM|GTM|LMT",
+            "all_instance_of": "radio telescope|Cassegrain reflecting telescope",
+            "all_has_part": "",
+            "all_part_of": "Event Horizon Telescope",
+            "itemDescription": "world's largest millimetric telescope, located in Mexico"
+        }
+    ],
+    [
+        {
+            "Name": "Smithsonian Astrophysical Observatory (SAO)/Academia Sinica SubMillimeter Array (SMA) at Mauna Kea Observatory",
+            "ID": "SMA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1205241",
+            "itemLabel": "submillimeter-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Sub-Millimeter Array|SMA|\uc11c\ube0c\ubc00\ub9ac\ud30c \uc9d1\ud569\uccb4|\uc11c\ube0c\ubc00\ub9ac\ubbf8\ud130 \uc5b4\ub808\uc774|\uc11c\ube0c\ubbf8\ub9ac\ud30c \uc9d1\ud569\uccb4|\uc11c\ube0c\ubbf8\ub9ac\uba54\ud130 \uc9d1\ud569\uccb4|Submillimeter Array",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "Mauna Kea Observatories|Event Horizon Telescope",
+            "itemDescription": "array of radio telescopes in Hawaii"
+        }
+    ],
+    [
+        {
+            "Name": "National Astronomical Observatory of Japan (NAOJ) 8.2m Subaru Telescope at Mauna Kea Observatory",
+            "ID": "Subaru"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q841079",
+            "itemLabel": "subaru-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "T09",
+            "aliases": "\u6634|Subarutelescoop|Subaru-telescope|Subaru Telescope|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|\u3059\u3070\u308b\u671b\u9060\u93e1|T\u00e9lescope Subaru|Subaru Telescope|Subaru",
+            "all_instance_of": "reflecting telescope|Ritchey\u2013Chr\u00e9tien telescope|optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Mauna Kea Observatories|National Astronomical Observatory of Japan",
+            "itemDescription": "Japanese telescope and observatory"
+        }
+    ],
+    [
+        {
+            "Name": "National Radio Astronomy Observatory (NRAO) Karl G. Jansky Very Large Array (VLA) on the plains of San Agustin",
+            "ID": "VLA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q461382",
+            "itemLabel": "karl-g.-jansky-very-large-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u8d85\u5927\u5929\u7dda\u9663|\u751a\u5927\u5c04\u7535\u671b\u8fdc\u955c\u9635\u5217|\u751a\u5927\u5c04\u7535\u671b\u8fdc\u955c\u9635|\u0414\u0412\u041c|VLA|Very Large Array|VLA|\u0421\u0432\u0435\u0440\u0445\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0430\u0441\u0441\u0438\u0432|\u041e\u0447\u0435\u043d\u044c \u0431\u043e\u043b\u044c\u0448\u0430\u044f \u0440\u0435\u0448\u0451\u0442\u043a\u0430|VLA|VLA|Karl G. Jansky Very Large Array|VLA|Very Large Array|\ucd08\ub300\ud615 \uc9d1\ud569\uccb4|\ucd08\uace0\ubc00\ub3c4 \uc9d1\ud569\uccb4|VLA|Very Large Array|VLA|VLA|VLA|Very Large Array|NROA VLA|NRAO VLA|Expanded Very Large Array|VLA|VLA|Radiotelescopio VLA|VLA|KGJ VLA|Very Large Array|VLA",
+            "all_instance_of": "radio telescope|interferometer|radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "NRAO VLA Sky Survey",
+            "itemDescription": "radio astronomy observatory located on the Plains of San Agustin"
+        }
+    ],
+    [
+        {
+            "Name": "University of California 2.4m Automated Planet Finder (APF) Telescope at Lick Observatory",
+            "ID": "APF"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1748180",
+            "itemLabel": "automated-planet-finder",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "APF",
+            "all_instance_of": "optical telescope|robotic telescope",
+            "all_has_part": "",
+            "all_part_of": "Lick Observatory",
+            "itemDescription": "automated telescope searching exoplanets currently under construction"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 0.6m Lowell Observatory Near Earth Object Search(LONEOS) Telescope at Lowell Observatory, Anderson Mesa",
+            "ID": "LONEOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1165635",
+            "itemLabel": "lowell-observatory-near-earth-object-search",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "699",
+            "aliases": "\u7f85\u5a01\u723e\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u884c\u661f\u641c\u5c0b\u8a08\u756b|\u7f57\u5a01\u5c14\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u884c\u661f\u641c\u5bfb\u8ba1\u5212|\u6d1b\u97e6\u5c14\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u5929\u4f53\u641c\u7d22|\u6d1b\u5384\u5c14\u5929\u6587\u53f0\u8fd1\u5730\u5c0f\u884c\u661f\u641c\u5bfb\u8ba1\u5212|Lowell Observatory Near-Earth-Object Search|LONEOS|LONEOS|LONEOS|\u041f\u043e\u0438\u0441\u043a \u043e\u043a\u043e\u043b\u043e\u0437\u0435\u043c\u043d\u044b\u0445 \u043e\u0431\u044a\u0435\u043a\u0442\u043e\u0432 \u0432 \u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u0438 \u041b\u043e\u0443\u044d\u043b\u043b\u0430|Lowell Observatory Near-Earth-Object Search|LONEOS|LONEOS|LONEOS|LONEOS|Lowell Observatory Near-Earth Object Search|LONEOS|\u053c\u0555\u0546\u0535\u0555\u054d|LONEOS|LONEOS|LONEOS|LONEOS|LONEOS|LONEOS|LONEOS",
+            "all_instance_of": "astronomical survey",
+            "all_has_part": "",
+            "all_part_of": "Lowell Observatory",
+            "itemDescription": "Project designed to discover asteroids and comets that orbit near the Earth."
+        }
+    ],
+    [
+        {
+            "Name": "National Center for Atmospheric Research (NCAR) High Altitude Observatory telescope at Mauna Loa Solar Observatory (MLSO)",
+            "ID": "HAO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5754874",
+            "itemLabel": "high-altitude-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u9ad8\u7def\u89c0\u5bdf\u7ad9|\u9ad8\u6d77\u62d4\u5929\u6587\u53f0|\u9ad8\u6d77\u62d4\u5929\u6587\u53f0|\u9ad8\u7eac\u89c2\u5bdf\u7ad9|HAO",
+            "all_instance_of": "observatory|laboratory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "National Radio Astronomy Observatory (NRAO) Very Long Baseline Array (VLBA)",
+            "ID": "VLBA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1147559",
+            "itemLabel": "very-long-baseline-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "VLBA|\u0410\u043d\u0442\u0435\u043d\u043d\u0430\u044f \u0440\u0435\u0448\u0451\u0442\u043a\u0430 \u0441\u043e \u0441\u0432\u0435\u0440\u0445\u0434\u043b\u0438\u043d\u043d\u044b\u043c\u0438 \u0431\u0430\u0437\u0430\u043c\u0438|VLBA|VLBA|VLBA|VLBA",
+            "all_instance_of": "radio interferometer|radio telescope",
+            "all_has_part": "Brewster VLBA station|Kitt Peak VLBA station|Pie Town VLBA station|Los Alamos VLBA station|Fort Davis VLBA station|North Liberty VLBA station|Hancock VLBA station|St. Croix VLBA station|Mauna Kea VLBA station|OVRO VLBA station",
+            "all_part_of": "Long Baseline Observatory",
+            "itemDescription": "radio interferometer / radio telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Naval Observatory Flagstaff Station (NOFS)/Naval Research Laboratory (NRL)/Lowell Observatory Navy Prototype Optical Interferometer (NPOI) at Lowell Observatory, Anderson Mesa",
+            "ID": "NPOI"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3337336",
+            "itemLabel": "navy-precision-optical-interferometer",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u6d77\u8ecd\u7cbe\u5bc6\u5149\u5b66\u5e72\u6e09\u8a08|NPOI|\u062a\u062f\u0627\u062e\u0644 \u0633\u0646\u062c \u0646\u0648\u0631\u06cc \u0627\u0632\u0645\u0627\u06cc\u0634\u06cc \u0646\u06cc\u0631\u0648\u06cc \u062f\u0631\u06cc\u0627\u06cc\u06cc|\u062a\u062f\u0627\u062e\u0644 \u0633\u0646\u062c \u0646\u0648\u0631\u06cc \u0622\u0632\u0645\u0627\u06cc\u0634\u06cc \u0646\u06cc\u0631\u0648\u06cc \u062f\u0631\u06cc\u0627\u06cc\u06cc|The Kenneth J. Johnston Navy Precision Optical Interferometer|NPOI",
+            "all_instance_of": "Michelson interferometer|astronomical interferometer",
+            "all_has_part": "",
+            "all_part_of": "United States Naval Observatory Flagstaff Station",
+            "itemDescription": "major astronomical interferometer"
+        }
+    ],
+    [
+        {
+            "Name": "University of Wisconsin, Madison Wisconsin H-Alpha Mapper (WHAM)",
+            "ID": "WHAM"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q30622109",
+            "itemLabel": "wisconsin-h-alpha-mapper",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WHAM",
+            "all_instance_of": "optical telescope|astronomical survey",
+            "all_has_part": "",
+            "all_part_of": "Cerro Tololo Inter-American Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Five College Radio Astronomy Observatory (FCRAO) Telescope",
+            "ID": "FCRAO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5455865",
+            "itemLabel": "five-college-radio-astronomy-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "FCRAO",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Texas, Austin 9.3m Hobby-Eberly Telescope at McDonald Observatory",
+            "ID": "HET"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q139605",
+            "itemLabel": "hobby-eberly-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0425\u043e\u0431\u0431\u0438-\u042d\u0431\u0435\u0440\u043b\u0438|HET|HET",
+            "all_instance_of": "optical telescope|segmented mirror",
+            "all_has_part": "",
+            "all_part_of": "McDonald Observatory",
+            "itemDescription": "Texan astronomy instrument"
+        }
+    ],
+    [
+        {
+            "Name": "Georgia Stat University (GSU) Center for High Angular Resolution Astronomy (CHARA) interferometer at Mount Wilson Observatory",
+            "ID": "CHARA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1023601",
+            "itemLabel": "chara-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CHARA array|CHARA|CHARA\u30a2\u30ec\u30a4|CHARA",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "optical interferometer,"
+        }
+    ],
+    [
+        {
+            "Name": "University of Arizona/Smithsonian Institution 6.5m MMT Telescope at Fred Lawrence Whipple Observatory (FLWO)",
+            "ID": "MMT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q779895",
+            "itemLabel": "mmt-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Multiple Mirror Telescope, telescopio a specchi multipli|MMTO|MMT|Multiple Mirror Telescope|MMTO|MMTO|MMT",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Lowell Observatory/Discovery Communications 4.3m Discovery Channel Telescope at Lowell Observatory, Happy Jack",
+            "ID": "DCT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1383460",
+            "itemLabel": "discovery-channel-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "G37",
+            "aliases": "Discovery Telescope|Lowell Discovery Telescope|DCT",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Lowell Observatory",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "Name": "University of Wyoming 2.3m Telescope at Wyoming Infrared Observatory (WIRO)",
+            "ID": "WIRO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q753261",
+            "itemLabel": "wyoming-infrared-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WIRO",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "Name": "3.58m Canada-France-Hawaii Telescope (CFHT) at Mauna Kea Observatory",
+            "ID": "CFHT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1031946",
+            "itemLabel": "canada\u2013france\u2013hawaii-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "T14",
+            "aliases": "\u52a0\u62ff\u5927-\u6cd5\u56fd-\u590f\u5a01\u5937\u671b\u8fdc\u955c|\u041a\u0430\u043d\u0430\u0434\u0430 \u0424\u0440\u0430\u043d\u0446\u0456\u044f \u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0413\u0430\u0432\u0430\u0457 (\u041a\u0424\u0422\u0413)|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f CFHT|CFHT|Canada-France-Hawaii Telescope|CFHT|CFHT|CFHT|T\u00e9lescope Canada-France-Hawaii|T\u00e9lescope Canada-France-Hawa\u00ef|T\u00e9lescope Canada-France Hawa\u00ef|Tcfh|Observatoire Canada-France-Hawaii|Observatoire canada-france-hawaii|CFHT|Canada-France-Hawaii-Telescope|Canada-France-Hawaii Telescope|Canada France Hawaii Telescope|CFHT\uff0cCanada\u2013France\u2013Hawaii Telescope|Canada\u2013France\u2013Hawaii Telescope\uff0c\u7e2e\u5beb\uff1aCFHT|CFHT|Kanadsko-Francouzsko-Havajsk\u00fd teleskop|Kanadsko-francouzsko-havajsk\u00fd teleskop|CFHT|Telescopi de Canad\u00e0, Fran\u00e7a, Hawaii|CFHT|Canada-France-Hawaii Telescope|Canada France Hawaii Telescope",
+            "all_instance_of": "optical telescope|Cassegrain mirror system|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Mauna Kea Observatories",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "Name": "LBT Consortium Large Binocular Telescope (LBT) at Mount Graham International Observatory",
+            "ID": "LBT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q845304",
+            "itemLabel": "large-binocular-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "G83",
+            "aliases": "LBT|Large Binocular Telescope|LBT|Large Binocular Telescope|LBT|\u062a\u0644\u0633\u06a9\u0648\u067e \u0627\u0644 \u0628\u06cc \u062a\u06cc|\u0627\u0644 \u0628\u06cc \u062a\u06cc|Large Binocular Telescope|LBT|LBT|LBT|LBT",
+            "all_instance_of": "optical telescope|double telescope",
+            "all_has_part": "",
+            "all_part_of": "Mount Graham International Observatory|Steward Observatory",
+            "itemDescription": "telescope for optical astronomy on Mount Graham, Arizona, USA"
+        }
+    ],
+    [
+        {
+            "Name": "3.8m United Kingdom Infrared Telescope (UKIRT) at Mauna Kea Observatory",
+            "ID": "UKIRT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q848021",
+            "itemLabel": "united-kingdom-infrared-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "T11",
+            "aliases": "\uc601\uad6d \uc801\uc678\uc120\ub9dd\uc6d0\uacbd|UKIRT|UKIRT|UKIRT|UKIRT",
+            "all_instance_of": "infrared telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "infrared reflecting telescope in Hawaii"
+        }
+    ],
+    [
+        {
+            "Name": "University of California, Berkeley 0.76m Katzman Automatic Imaging Telescope (KAIT) at Lick Observatory",
+            "ID": "KAIT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2680765",
+            "itemLabel": "katzman-automatic-imaging-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "KAIT|KAIT",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Lick Observatory",
+            "itemDescription": "automated telescope"
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 10.4m Caltech Submillimeter Observatory (CSO) at Mauna Kea Observatory",
+            "ID": "CSO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q117820403",
+            "itemLabel": "carl-sagan-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "CSST|CSO|Carl Sagan Telescope|Carl Sagan Space Telescope",
+            "all_instance_of": "proposed entity|space telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "proposed space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "East Asian Observatory 15m James Clerk Maxwell Telescope (JCMT) at Mauna Kea Observatory",
+            "ID": "JCMT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q155466",
+            "itemLabel": "james-clerk-maxwell-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u9ea5\u514b\u65af\u97cb\u671b\u9060\u93e1|\u8a79\u59c6\u65af\u00b7\u514b\u62c9\u514b\u00b7\u99ac\u514b\u65af\u97cb\u723e\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u514b\u62c9\u514b\u9ea5\u514b\u65af\u5a01\u723e\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u00b7\u514b\u62c9\u514b\u00b7\u9ea5\u65af\u5a01\u723e\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u00b7\u514b\u62c9\u514b\u00b7\u746a\u514b\u65af\u5a01\u671b\u9060\u93e1|JCMT|JCMT|JCMT",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "Submillimetre Common-User Bolometer Array",
+            "all_part_of": "Event Horizon Telescope",
+            "itemDescription": "radio telescope in Hawaii, US"
+        }
+    ],
+    [
+        {
+            "Name": "Search for Extraterrestrial Intelligence (SETI) Allen Telescope Array (formerly the One Hectare Telescope)",
+            "ID": "ATA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1200061",
+            "itemLabel": "allen-telescope-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Allen Telescope Array|One Hectare Telescope|1HT|1hT|ATA|ATA",
+            "all_instance_of": "Gregorian telescope|radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "Hat Creek Radio Observatory",
+            "itemDescription": "radio telescope"
+        }
+    ],
+    [
+        {
+            "Name": "US Department of Defense (DoD) 3.67m Advanced Electro Optical System (AEOS) at Haleakala Observatory",
+            "ID": "AEOS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4634267",
+            "itemLabel": "3.67-m-advanced-electro-optical-system-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "AEOS|Advanced Electro-Optical System",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Air Force Maui Optical and Supercomputing observatory",
+            "itemDescription": "U.S. Air Force optical telescope in Hawaii"
+        }
+    ],
+    [
+        {
+            "Name": "Vatican Observatory Research Group 1.8m Alice P. Lennon Vatican Advanced Technology Telescope (VATT) at Mount Graham International Observatory",
+            "ID": "VATT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1818791",
+            "itemLabel": "vatican-advanced-technology-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "290",
+            "aliases": "VATT|VATT|VATT|VATT|Vatican Telescope|Thomas J. Bannan Astrophysics Facility|Alice P. Lennon Telescope|VATT|VATT",
+            "all_instance_of": "Gregorian telescope|optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Mount Graham International Observatory",
+            "itemDescription": "Gregorian telescope"
+        }
+    ],
+    [
+        {
+            "Name": "University of Manchester Multi-Element Radio-Linked Interferometer Network Array (MERLIN)",
+            "ID": "MERLIN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3245062",
+            "itemLabel": "e-merlin",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "e-\u30de\u30fc\u30ea\u30f3|e-MERLIN|MERLIN / e-MERLIN|Multi-Element Radio Linked Interferometer Network|MTRLI|MERLIN",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "Knockin telescope|Defford telescope|Pickmere telescope|Cambridge MERLIN telescope|Mark\u00a0II|Lovell Telescope",
+            "all_part_of": "Jodrell Bank Observatory",
+            "itemDescription": "Radio interferometer in the UK"
+        }
+    ],
+    [
+        {
+            "Name": "University of Manchester Multi-Element Radio-Linked Interferometer Network Array (MERLIN)",
+            "ID": "MERLIN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10928755",
+            "itemLabel": "methane-remote-sensing-lidar-mission",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Methane Remote Sensing Lidar Mission|MERLIN",
+            "all_instance_of": "Earth observation satellite|proposed entity",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "planned joint French and German remote sensing satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Netherlands Institute for Radio Astronomy (ASTRON) Low-Frequency Array (LOFAR)",
+            "ID": "LOFAR"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1192324",
+            "itemLabel": "lofar",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u041d\u0438\u0437\u043a\u043e\u0447\u0430\u0441\u0442\u043e\u043d\u0442\u043d\u0430\u044f \u0420\u0435\u0448\u0451\u0442\u043a\u0430|\u041b\u041e\u0424\u0410\u0420|\u30ed\u30fc\u30d5\u30a1\u30eb|Low Frequency Array|Low-Frequency Array|matriz de baja frecuencia|low frequency array|Low-Frequency Array|LOFAR",
+            "all_instance_of": "observatory|radio telescope|radio interferometer|phased array",
+            "all_has_part": "I-LOFAR|Nan\u00e7ay Radio Observatory|Rawlings Array|Onsala Space Observatory LOFAR station",
+            "all_part_of": "",
+            "itemDescription": "large radio telescope network between Ireland and Poland, located mainly in the Netherlands"
+        }
+    ],
+    [
+        {
+            "Name": "University of Cambridge Optical Aperture Synthesis Telescope (COAST) at Mullard Radio Astronomy Observatory (MRAO)",
+            "ID": "COAST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q912398",
+            "itemLabel": "cambridge-optical-aperture-synthesis-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "COAST|COAST",
+            "all_instance_of": "optical telescope|astronomical interferometer",
+            "all_has_part": "",
+            "all_part_of": "Mullard Radio Astronomy Observatory",
+            "itemDescription": "astronomical optical interferometer"
+        }
+    ],
+    [
+        {
+            "Name": "Netherlands Institute for Radio Astronomy (ASTRON) Westerbork Synthesis Radio Telescope (WSRT)",
+            "ID": "WSRT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2556501",
+            "itemLabel": "westerbork-synthesis-radio-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "WSRT",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "European VLBI Network",
+            "itemDescription": "aperture synthesis interferometer in the Netherlands"
+        }
+    ],
+    [
+        {
+            "Name": "University of Cologne/University of Bonn 3m Kolner Observatorium fur SubMillimeter Astronomie (KOSMA) Telescope",
+            "ID": "KOSMA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1269051",
+            "itemLabel": "k\u00f6lner-observatorium-f\u00fcr-submillimeter-astronomie",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "KOSMA",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Kilodegree Extremely Little Telescope (KELT) at Winer Observatory (KELT-North) and at South Africa Astronomical Observatory (SAAO; KELT-South)",
+            "ID": "KELT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q17088615",
+            "itemLabel": "kilodegree-extremely-little-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Avco\u516c\u53f8|KELT|KELT|KELT|KELT|KELT|KELT",
+            "all_instance_of": "optical telescope|astronomical survey|astronomical observatory|robotic telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observation system"
+        }
+    ],
+    [
+        {
+            "Name": "National Solar Observatory (NSO) Global Oscillation Network Group (GONG)",
+            "ID": "GONG"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5570538",
+            "itemLabel": "global-oscillations-network-group",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Global Oscillation Network Group|GONG",
+            "all_instance_of": "solar observatory",
+            "all_has_part": "Learmonth Solar Observatory|Mauna Loa Solar Observatory|Udaipur Solar Observatory|Teide Observatory|Cerro Tololo Inter-American Observatory|Big Bear Solar Observatory",
+            "all_part_of": "",
+            "itemDescription": "worldwide network of identical telescopes designed to observe the Sun 24/7"
+        }
+    ],
+    [
+        {
+            "Name": "The European Consortium for VLBI European Very Long Baseline Interferometry (VLBI) Network",
+            "ID": "EVN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1053281",
+            "itemLabel": "european-vlbi-network",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u6b50\u6d32\u7279\u9577\u57fa\u7dda\u5e72\u6d89\u6e2c\u91cf\u6cd5\u7db2\u8def|\u6b50\u6d32\u7279\u9577\u57fa\u7dda\u5e72\u6d89\u6e2c\u91cf\u6cd5\u7db2\u7d61|\u6b50\u6d32\u7279\u9577\u57fa\u7dda\u5e72\u6d89\u6e2c\u91cf\u6cd5\u7db2\u7d61|\u6b27\u6d32VLBI\u7f51\u7edc|\u0404\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u044c\u043a\u0430 \u0440\u0430\u0434\u0456\u043e\u0456\u043d\u0442\u0435\u0440\u0444\u0435\u0440\u043e\u043c\u0435\u0442\u0440\u0438\u0447\u043d\u0430 \u043c\u0435\u0440\u0435\u0436\u0430|\u0404\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u044c\u043a\u0430 \u043c\u0435\u0440\u0435\u0436\u0430 \u0420\u041d\u0414\u0411|EVN|\u0415\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u043a\u0430\u044f \u0441\u0435\u0442\u044c \u0420\u0421\u0414\u0411|\u0415\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u043a\u0430\u044f \u0440\u0430\u0434\u0438\u043e\u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0440\u043e\u043c\u0435\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u0435\u0442\u044c|EVN|EVN|EVN|EVN|EVN",
+            "all_instance_of": "radio interferometer|very-long-baseline interferometry",
+            "all_has_part": "Wettzell 20m radio telescope|Sheshan 25m radio telescope|Metsahovi 14m radio telescope|Noto 32-m radio telescope|Medicina 32-m radio telescope|Toru\u0144 RT4|Cambridge MERLIN telescope|Onsala Space Observatory 25 m telescope|Onsala Space Observatory 20 m telescope|Nanshan Radio Telescope|Hartebeesthoek Radio Astronomy Observatory|Yebes Observatory RT40m|Mark\u00a0II|Westerbork Synthesis Radio Telescope|Madrid Deep Space Communication Complex|Lovell Telescope|Arecibo Radio Telescope|Effelsberg 100-m Radio Telescope",
+            "all_part_of": "",
+            "itemDescription": "network of radio telescopes located primarily in Europe that link together for radio interferometry"
+        }
+    ],
+    [
+        {
+            "Name": "The millimeter and submillimeter Very Long Baseline Interferometry (VLBI) Event Horizon Telescope (EHT)",
+            "ID": "EHT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3944788",
+            "itemLabel": "event-horizon-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "EHT|\u30a4\u30d9\u30f3\u30c8\u30fb\u30db\u30e9\u30a4\u30ba\u30f3\u30fb\u30c6\u30ec\u30b9\u30b3\u30fc\u30d7|Teleskop Horizon Peristiwa|Teleskop Event Horizon|EHT|EHT|EHT|EHT|EHT|EHT|EHT|EHT|Event Horizon Telescope|Event Horizon Telescope|\u4e8b\u8c61\u306e\u5730\u5e73\u7dda\u671b\u9060\u93e1|\u30a4\u30d9\u30f3\u30c8\u30db\u30e9\u30a4\u30ba\u30f3\u30c6\u30ec\u30b9\u30b3\u30fc\u30d7|\u4e8b\u8c61\u306e\u5730\u5e73\u9762\u671b\u9060\u93e1",
+            "all_instance_of": "astronomical observatory|astronomical interferometer|international collaboration|research collaboration",
+            "all_has_part": "Atacama Pathfinder Experiment|Atacama Large Millimeter Array|James Clerk Maxwell Telescope|IRAM 30-meter telescope|Large Millimeter Telescope|Heinrich Hertz Submillimeter Telescope|South Pole Telescope|Submillimeter Array",
+            "all_part_of": "",
+            "itemDescription": "project to create a global interferometric telescope array"
+        }
+    ],
+    [
+        {
+            "Name": "Commonwealth Scientific and Industrial Research Organisation (CSIRO) Astronomy and Space Science Australia Telescope Compact Array (ATCA) at the Paul Wild Observatory",
+            "ID": "ATCA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q781318",
+            "itemLabel": "australia-telescope-compact-array",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Australia telescope compact array|ATCA|ATCA",
+            "all_instance_of": "cosmic microwave background experiment|radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "Paul Wild Observatory",
+            "itemDescription": "Radio telescope at the Paul Wild Observatory, near the town of Narrabri in New South Wales, Australia"
+        }
+    ],
+    [
+        {
+            "Name": "Murchison Widefield Array (formerly Mileura Widefield Array) at Murchison Radio-astronomy Observatory",
+            "ID": "MWA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q53679298",
+            "itemLabel": "square-kilometre-array---australia",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ASKAP|MWA|SKA",
+            "all_instance_of": "phased array|radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "The australian component of SKA"
+        }
+    ],
+    [
+        {
+            "Name": "National Centre for Radio Astrophysics Giant Meter-wave Radio Telescope",
+            "ID": "GMRT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1522736",
+            "itemLabel": "giant-metrewave-radio-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0bae\u0bbe\u0baa\u0bc6\u0bb0\u0bc1\u0bae\u0bcd \u0bae\u0bc0\u0b9f\u0bcd\u0b9f\u0bb0\u0bcd\u0b85\u0bb2\u0bc8 \u0bb0\u0bc7\u0b9f\u0bbf\u0baf\u0bcb \u0ba4\u0bca\u0bb2\u0bc8\u0ba8\u0bcb\u0b95\u0bcd\u0b95\u0bbf|GMRT|\u091c\u093e\u092f\u0902\u091f \u092e\u0940\u091f\u0930\u0935\u0947\u0935\u094d\u0939 \u0930\u0947\u0921\u0940\u0913 \u091f\u0947\u0932\u093f\u0938\u094d\u0915\u094b\u092a|\u0d1c\u0d3f.\u0d0e\u0d02.\u0d06\u0d7c.\u0d1f\u0d3f.|Giant Metrewave Radio Telescope|\u0935\u0943\u0939\u0924 \u092e\u0940\u091f\u0930\u0935\u0947\u0935 \u0930\u0947\u0921\u093f\u092f\u094b \u091f\u0947\u0932\u093f\u0938\u094d\u0915\u094b\u092a|\u091c\u0949\u092f\u0902\u091f \u092e\u0940\u091f\u094d\u0930\u0940\u0935\u0947\u0935 \u0930\u0947\u0921\u093f\u092f\u094b \u091f\u0947\u0932\u093f\u0938\u094d\u0915\u094b\u092a|\u091c\u0940\u090f\u092e\u0906\u0930\u091f\u0940|\u091c\u093e\u092f\u0902\u091f \u092e\u0940\u091f\u0930 \u0935\u0947\u0935 \u0930\u0947\u0921\u093f\u092f\u094b \u091f\u0947\u0932\u093f\u0938\u094d\u0915\u094b\u092a|GMRT|uGMRT|GMRT|GMRT",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "radio telescope center"
+        }
+    ],
+    [
+        {
+            "Name": "Korea Astronomy and Space Science Institute (KASI) Korean Very Long Baseline Interferometry (VLBI) Network (KVN)",
+            "ID": "KVN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q12623480",
+            "itemLabel": "korean-vlbi-network",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\ud0d0\ub77c\uc804\ud30c\ucc9c\ubb38\ub300|\ud0d0\ub77c\ub300\ud559\uad50\ucc9c\ubb38\ub300|\uc6b8\uc0b0\uc804\ud30c\ucc9c\ubb38\ub300|\uc5f0\uc138\uc804\ud30c\ucc9c\ubb38\ub300|\uc5f0\uc138\ub300\ud559\uad50\ucc9c\ubb38\ub300|KVN",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "Tanma Radio Telescope|Ulsan Radio Telescope|Yonsei radio telescope",
+            "all_part_of": "",
+            "itemDescription": "korean observatory"
+        }
+    ],
+    [
+        {
+            "Name": "The Japanese Very Long Baseline Interferometry (VLBI) Network (JVN)",
+            "ID": "JVN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q61223419",
+            "itemLabel": "japanese-vlbi-network",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "JVN",
+            "all_instance_of": "radio interferometer",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Tel Aviv University 1m Telescope at Florence and George Wise Observatory",
+            "ID": "Wise Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q580230",
+            "itemLabel": "wise-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "097",
+            "aliases": "\u05de\u05e6\u05e4\u05d4 \u05d4\u05db\u05d5\u05db\u05d1\u05d9\u05dd \u05e2\u05dc \u05e9\u05dd \u05d5\u05d9\u05d9\u05d6|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u0437\u0456\u0440\u043e\u043a \u0456\u043c\u0435\u043d\u0456 \u0412\u0430\u0439\u0437\u0430|\u0412\u0430\u0439\u0437 \u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456|Wise Observatory|\u30d5\u30ed\u30fc\u30ec\u30f3\u30b9&\u30b8\u30e7\u30fc\u30b8\u30fb\u30ef\u30a4\u30ba\u5929\u6587\u53f0|\u30d5\u30ed\u30fc\u30ec\u30f3\u30b9\u30fb\u30a2\u30f3\u30c9\u30fb\u30b8\u30e7\u30fc\u30b8\u30fb\u30ef\u30a4\u30ba\u5929\u6587\u53f0",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Chinese Academy of Science 4m Large Sky Area Multi-Object Fiber Spectroscopy Telescope (LAMOST also known as Guo Shoujing Telescope)",
+            "ID": "LAMOST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1513326",
+            "itemLabel": "lamost",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "LAMOST|LAMOST|\u5927\u5929\u533a\u9762\u79ef\u591a\u76ee\u6807\u5149\u7ea4\u5149\u8c31\u671b\u8fdc\u955c|LAMOST|\u5927\u5929\u533a\u9762\u79ef\u591a\u76ee\u6807\u5149\u7ea4\u5149\u8c31\u671b\u8fdc\u955c|\u5927\u5929\u533a\u9762\u79ef\u591a\u76ee\u6807\u5149\u7ea4\u5149\u8c31\u5929\u6587\u671b\u8fdc\u955c|\u5927\u578b\u591a\u5929\u4f53\u5206\u5149\u671b\u8fdc\u955c|LAMOST\u671b\u9060\u93e1|LAMOST\u671b\u8fdc\u955c|LAMOST|Large Sky Area Multi-Object Fibre Spectroscopic Telescope|Large Sky Area Multi-Object Fibre Spectroscopic Telescope",
+            "all_instance_of": "optical telescope|Schmidt camera",
+            "all_has_part": "",
+            "all_part_of": "Xinglong Station"
+        }
+    ],
+    [
+        {
+            "Name": "Russian Academy of Sciences 576m Radio Telescope (RATAN-600) at Special Astrophysical Observatory",
+            "ID": "RATAN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1937388",
+            "itemLabel": "special-astrophysical-observatory-of-the-russian-academy-of-science",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "115",
+            "aliases": "\u7279\u8a2d\u5929\u9ad4\u7269\u7406\u53f0|\u4e13\u95e8\u5929\u4f53\u7269\u7406\u89c2\u6d4b\u53f0|\u0424\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0435 \u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u0431\u044e\u0434\u0436\u0435\u0442\u043d\u043e\u0435 \u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435 \u043d\u0430\u0443\u043a\u0438 \u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u043e\u0439 \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0438 \u043d\u0430\u0443\u043a|\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u0421\u0410\u041e \u0420\u0410\u041d|Zelenchuk|RATAN-600|RATAN|Observatoire special d'astrophysique|BTA6|BTA-6|Observatorio Astrof\u00edsico Especial|Special Astrophysical Observatory|Federal State Institution of Science Special Astrophysical Observatory of the Russian Academy of Sciences|BTA-6|Bolschoi Teleskop|Ratan-600|Radioteleskop RATAN-600",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Radio Astronomical Telescope Academy Nauk 600|BTA-6",
+            "all_part_of": "",
+            "itemDescription": "astronomical observatory near Nizhny Arkhyz, Russia"
+        }
+    ],
+    [
+        {
+            "Name": "NSF/US Department of Energy 10m South Pole Telescope (SPT)",
+            "ID": "SPT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1513315",
+            "itemLabel": "south-pole-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "South Pole Telescope|Telesgop Antartica|SPT|SPT|\u0422\u042e\u041f|South Pole Teleskope|Sydpolteleskopet|South Pole Telescope|The South Pole Telescope|Piet\u0173 poliaus teleskopas|South Pole Telescope|The South Pole Telescope",
+            "all_instance_of": "radio telescope|Gregorian telescope|cosmic microwave background experiment",
+            "all_has_part": "",
+            "all_part_of": "Event Horizon Telescope|Amundsen\u2013Scott South Pole Station",
+            "itemDescription": "telescope at the South Pole"
+        }
+    ],
+    [
+        {
+            "Name": "The 1.7m Antarctic Submillimeter Telescope and Remote Observatory",
+            "ID": "AST/RO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q4771004",
+            "itemLabel": "antarctic-submillimeter-telescope-and-remote-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "AST/RO",
+            "all_instance_of": "radio telescope",
+            "all_has_part": "",
+            "all_part_of": "Amundsen\u2013Scott South Pole Station",
+            "itemDescription": "radio telescope"
+        }
+    ],
+    [
+        {
+            "Name": "University of Arizona/University of New South Wales High Elevation Antarctic Terahertz Telescope (HEAT) at Ridge A",
+            "ID": "HEAT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18612209",
+            "itemLabel": "high-elevation-antarctic-terahertz-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "HEAT",
+            "all_instance_of": "infrared telescope",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "1.3m Balloon Observations Of Millimetric Extragalactic Radiation ANd Geophysics (BOOMERanG)",
+            "ID": "BOOMERANG"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q796870",
+            "itemLabel": "boomerang-experiment",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u6beb\u7c73\u6ce2\u6bb5\u6c14\u7403\u89c2\u5929\u8ba1\u5212|\u0e42\u0e04\u0e23\u0e07\u0e01\u0e32\u0e23 BOOMERanG|BOOMERanG|Balloon Observations of Millimetric Extragalactic Radiation and Geophysics|Experimento BOOMERANG|BOOMERanG (A\u00e9ronautique)|BOOMERanG (a\u00e9ronautique)|Boomerang (a\u00e9ronautique)|BOOMERANG|Balloon Observations Of Millimetric Extragalactic Radiation and Geophysics|\u09ac\u09c1\u09ae\u09c7\u09b0\u09be\u0982 \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09a3",
+            "all_instance_of": "radio telescope|cosmic microwave background experiment|balloon-borne telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "sub-orbital experiment which studied the properties of cosmic microwave background radiation"
+        }
+    ],
+    [
+        {
+            "Name": "NASA 0.9m Gerard P. Kuiper Airborne Observatory (KAO)",
+            "ID": "KAO"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1501126",
+            "itemLabel": "kuiper-airborne-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Kuiper Airborne Observatory|\u30ab\u30a4\u30d1\u30fc\u5929\u6587\u53f0|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0627\u06cc\u067e\u0631|NASA 714|N714NA|Gerard P. Kuiper Airborne Observatory|KAO",
+            "all_instance_of": "airborne observatory|C-141A Starlifter",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "airborne infrared observatory operated by NASA"
+        }
+    ],
+    [
+        {
+            "Name": "NASA/German Aerospace Center (DLR) 2.5m Stratospheric Observatory for Infrared Astronomy (SOFIA)",
+            "ID": "SOFIA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q261229",
+            "itemLabel": "stratospheric-observatory-for-infrared-astronomy",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SOFIA|Stratospheric Observatory for Infrared Astronomy|N747NA|N536PA|N145UA|Clipper Lindbergh|SOFIA|SOFIA|SOFIA|SOFIA|\u0421\u0442\u0440\u0430\u0442\u043e\u0441\u0444\u0435\u0440\u043d\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0418\u041a-\u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0438|Observat\u00f3rio Estratosf\u00e9rico de Astronomia Infravermelha|\u8d64\u5916\u7dda\u5929\u6587\u5b66\u6210\u5c64\u570f\u89b3\u6e2c\u65bd\u8a2d|\u8d64\u5916\u7dda\u5929\u6587\u5b66\u6210\u5c64\u570f\u5929\u6587\u53f0|\u6210\u5c64\u570f\u8d64\u5916\u7dda\u89b3\u6e2c\u6a5f|SOFIA",
+            "all_instance_of": "Boeing 747SP|airborne observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "airborne infrared observatory operated by NASA"
+        }
+    ],
+    [
+        {
+            "Name": "Centre National de la Recherche Scientifique (CNRS)/National Institute for Astrophysics (INAF) 0.9m Telescope Heliographique pour l'Etude du Magnetisme et des Instabilites Solaires (THEMIS) Telescope at Observatorio del Teide",
+            "ID": "THEMIS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q837500",
+            "itemLabel": "themis",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-89|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-88|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-87|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-86|\u042d\u043a\u0441\u043f\u043b\u043e\u0440\u0435\u0440-85|THEMIS \uc704\uc131|THEMIS|THEMIS|Time History of Events and Macroscale Interactions during Substorms|Time History of Events and Macroscale Interactions during Substorms|Explorer 89|Explorer 88|Explorer 87|Explorer 86|Explorer 85|Explorer 89|Explorer 88|Explorer 87|Explorer 86|Explorer 85|THEMIS",
+            "all_instance_of": "space mission|spacecraft constellation",
+            "all_has_part": "THEMIS-C|THEMIS-B|THEMIS-A|THEMIS-E|THEMIS-D",
+            "all_part_of": "Medium Explorer program",
+            "itemDescription": "NASA satellite of the Explorer program"
+        }
+    ],
+    [
+        {
+            "Name": "Centre National de la Recherche Scientifique (CNRS)/National Institute for Astrophysics (INAF) 0.9m Telescope Heliographique pour l'Etude du Magnetisme et des Instabilites Solaires (THEMIS) Telescope at Observatorio del Teide",
+            "ID": "THEMIS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1108979",
+            "itemLabel": "thermal-emission-imaging-system",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Themis|THEMIS",
+            "all_instance_of": "space instrument|camera system",
+            "all_has_part": "",
+            "all_part_of": "2001 Mars Odyssey",
+            "itemDescription": "Mars Odyssey camera system"
+        }
+    ],
+    [
+        {
+            "Name": "Centre National de la Recherche Scientifique (CNRS)/National Institute for Astrophysics (INAF) 0.9m Telescope Heliographique pour l'Etude du Magnetisme et des Instabilites Solaires (THEMIS) Telescope at Observatorio del Teide",
+            "ID": "THEMIS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q207164",
+            "itemLabel": "2001-mars-odyssey",
+            "all_COSPAR_ID": "2001-013A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2001-013A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u706b\u661f\u5967\u5fb7\u8cfd\u865f|2001 Mars Odyssey|2001 Mars Odyssey|Mars odyssey|Mars Odyssey Orbiter|Mars Odyssey 2001|2001 Mars Surveyor Lander|2001 Mars Odyssey|2001 Mars Odyssey|THEMIS|MARIE|GRS|\ub9c8\uc2a4 \uc624\ub514\uc138\uc774|\u30de\u30fc\u30ba\u30aa\u30c7\u30c3\u30bb\u30a4|\u30de\u30fc\u30ba\u30aa\u30c7\u30a3\u30c3\u30bb\u30a4|\u30de\u30fc\u30ba\u30fb\u30b5\u30fc\u30d9\u30a4\u30e4\u30fc2001\u30aa\u30fc\u30d3\u30bf\u30fc|\u30de\u30fc\u30ba\u30fb\u30aa\u30c7\u30c3\u30bb\u30a4|\u30de\u30fc\u30ba\u30fb\u30aa\u30c7\u30a3\u30c3\u30bb\u30a4|2001\u30de\u30fc\u30ba\u30aa\u30c7\u30c3\u30bb\u30a4|2001\u30de\u30fc\u30ba\u30aa\u30c7\u30a3\u30c3\u30bb\u30a4|2001\u30de\u30fc\u30ba\u30fb\u30aa\u30c7\u30a3\u30c3\u30bb\u30a4|Svemirske letjelice/Mars Odyssey|\u05de\u05e8\u05e1 \u05d0\u05d5\u05d3\u05d9\u05e1\u05d9\u05d9|\u05de\u05e8\u05e1 \u05d0\u05d5\u05d3\u05d9\u05e1\u05d9|\u05de\u05d0\u05e8\u05e1 \u05d0\u05d5\u05d3\u05d9\u05e1\u05d9\u05d9 2001|\u05de\u05d0\u05e8\u05e1 \u05d0\u05d5\u05d3\u05d9\u05e1\u05d9\u05d9|\u05de\u05d0\u05e8\u05e1 \u05d0\u05d5\u05d3\u05d9\u05e1\u05d9|Mars odyssey|2001 Mars Odyssey|2001 Mars Odyssey|Mars Odyssey 2001|2001 Mars Odyssey|\u041c\u0430\u0440\u0441 \u041e\u0434\u0438\u0441\u0435\u0439|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|Mars Odyssey|\u041e\u0434\u0438\u0441\u0441\u0435\u0439",
+            "all_instance_of": "space probe",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "2001 NASA orbiter studying the geology and hydrology of Mars"
+        }
+    ],
+    [
+        {
+            "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
+            "ID": "SST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1418160",
+            "itemLabel": "space-surveillance-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "G45",
+            "aliases": "SST",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Military telescope located in Exmouth, Western Australia"
+        }
+    ],
+    [
+        {
+            "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
+            "ID": "SST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18379108",
+            "itemLabel": "solar-submillimeter-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SST",
+            "all_instance_of": "Cassegrain mirror system|radio telescope",
+            "all_has_part": "",
+            "all_part_of": "Leoncito Astronomical Complex"
+        }
+    ],
+    [
+        {
+            "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
+            "ID": "SST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q7572501",
+            "itemLabel": "space-solar-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "SST|Space Solar Telescope|SST",
+            "all_instance_of": "optical telescope|space telescope|proposed telescope",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "planned Chinese 1 metre optical space solar telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
+            "ID": "SST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q925534",
+            "itemLabel": "swedish-solar-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Swedish 1-m Solar Telescope|Swedish 1-m Refractive Telescope|S. S. M. R.T|SST",
+            "all_instance_of": "refracting telescope|solar telescope",
+            "all_has_part": "",
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemDescription": "telescope on La Plama, Canary Islands"
+        }
+    ],
+    [
+        {
+            "Name": "Royal Swedish Academy of Sciences 1m Swedish Solar Telescope (SST) at Roque de los Muchachos Observatory",
+            "ID": "SST"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q201953",
+            "itemLabel": "spitzer-space-telescope",
+            "all_COSPAR_ID": "2003-038A",
+            "all_NAIF_ID": "-79",
+            "all_NSSDCA_ID": "2003-038A",
+            "all_Minor_Planet_Center_observatory_ID": "245",
+            "aliases": "\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \"\u0421\u043f\u0456\u0442\u0446\u0435\u0440\"|Spitzer Space Telescope|\u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|Spitzer Uzay Teleskopu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|Spitzer Space Telescope|Spitzerov vesm\u00edrny teleskop|SIRTF|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0438\u0442\u0446\u0435\u0440|\u0421\u043f\u0438\u0446\u0435\u0440|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0421\u043f\u0438\u0442\u0446\u0435\u0440\u0430|Spitzer Space Telescope|Spitzer|SIRTF|Telesc\u00f3pio Spitzer|Spitzer Space Telescope|Teleskop Spitzera|Spitzer-teleskopet|Romteleskopet Spitzer|Spitzer Ruimtetelescoop|Space Infrared Telescope Facility|SIRTF|Spitzerteleskopet|Spitzer-teleskopet|Spitzer Space Telescope|Teleskop Spitzer|Teleskop angkasa Spitzer|Spitzer Space Telescope|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0938\u094d\u092a\u0947\u0938 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|T\u00e9lescope spatial Spitzer|Telescope spatial Spitzer|T\u00e9lescope spatial infrarouge|Spitzer Space Telescope|Space Infrared Telescope Facility|SIRTF|SIRTF|Avaruusteleskooppi Spitzer|Telescopio Spitzer|SST|Spitzer|SIRTF|SST|Space Infrared Telescope Facility|SIRTF|Spitzer Space Telescope|Weltraumteleskop Spitzer|Spitzer-Weltraumobservatorium|Spitzer-Teleskop|Spitzer ST|Spitzer Space Telescope|Space Infrared Telescope Facility|SIRTF|Spitzer\u016fv kosmick\u00fd dalekohled|SIRTF|Spitzer Space Telescope|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u044c\u043f\u0456\u0446\u044d\u0440\u0430|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631|\u0627\u0644\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0633\u0628\u064a\u062a\u0632\u0631",
+            "all_instance_of": "space telescope",
+            "all_has_part": "",
+            "all_part_of": "Great Observatories program",
+            "itemDescription": "former NASA infrared space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "0.4m Vacuum Newtonian Telescope (VNT) at Observatorio del Teide",
+            "ID": "VNT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q62391720",
+            "itemLabel": "astronomical-observatory-in-kolonitskom-plateau",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Vihorlatsk\u00e1 hvezd\u00e1re\u0148 a Astronomick\u00e9 observat\u00f3rium na Kolonickom sedle|Vihorlat-Observatorium|Observat\u00f3rium Vihorlat|Astronomick\u00e9 observat\u00f3rium Kolonica|Vihorlat National Telescope|Astronomical Observatory in Kolonitskom sedle|Astronomical Observatory at the Kolonicky Saddle|Vihorlat-Observatorium|Sternwarte Kolonica|Kolonica-Sternwarte|Kolonica-Observatorium|VNT",
+            "all_instance_of": "planetarium|astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "Poloniny Dark-Sky Park|Vihorlat Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "H.E.S.S. Collaboration High Energy Stereoscopic System (HESS) imaging atmospheric Cherenkov telescopes",
+            "ID": "HESS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1617774",
+            "itemLabel": "high-energy-stereoscopic-system",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "High Energy Stereoscopic System|High energy stereoscopic system|Obserwatorium HESS|Obserwatorium astronomiczne HESS|High Energy Stereoscopic System|HESS|H.E.S.S.|HESS|H.E.S.S.|H.E.S.S.|G\u00f6llschau|Hess|Sistema Estereosc\u00f3pico de Alta Energia",
+            "all_instance_of": "telescope|observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "gamma Ray Telescope System in Namibia"
+        }
+    ],
+    [
+        {
+            "Name": "9.3m Southern African Large Telescope (SALT) at South African Astronomical Observatory (SAAO)",
+            "ID": "SALT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q833639",
+            "itemLabel": "southern-african-large-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "B31",
+            "aliases": "SALT|\u0413\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0438\u0439 \u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|Southern African Large Telescope|Southern African Large Telescope|\u062a\u0644\u0633\u06a9\u0648\u067e \u0628\u0632\u0631\u06af \u0627\u0641\u0631\u06cc\u0642\u0627\u06cc \u062c\u0646\u0648\u0628\u06cc|Hego Afrikako Teleskopio Handia|Southern African Large Telescope|Southern African Large Telescope\uff0cSALT|Gran telescopi sud- afric\u00e0|Suid-Afrikaanse Groot Teleskoop|SALT|SAGT|SALT|SALT",
+            "all_instance_of": "optical telescope|reflecting telescope|segmented mirror",
+            "all_has_part": "",
+            "all_part_of": "South African Astronomical Observatory",
+            "itemDescription": "architectural structure"
+        }
+    ],
+    [
+        {
+            "Name": "High Energy Gamma Ray Astronomy Experiment (HEGRA) at Roque de los Muchachos Observatory",
+            "ID": "HEGRA"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q845962",
+            "itemLabel": "high-energy-gamma-ray-astronomy",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u9ad8\u80fd\u03b3\u5c04\u7dda\u5929\u6587\u5b78|\u5951\u4f26\u79d1\u592b\u671b\u8fdc\u955c|\u5207\u4f26\u79d1\u592b\u671b\u8fdc\u955c\u5b9e\u9a8c\u7ec4|High Energy Gamma Ray Astronomy|HEGRA|HEGRA",
+            "all_instance_of": "optical telescope|Imaging Atmospheric Cherenkov Telescope|former entity",
+            "all_has_part": "",
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemDescription": "former gamma-ray telescope"
+        }
+    ],
+    [
+        {
+            "Name": "MAGIC collaboration Major Atmospheric Gamma Imaging Cherenkov Telescopes (MAGIC) at Roque de los Muchachos Observatory",
+            "ID": "MAGIC"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q45732",
+            "itemLabel": "major-atmospheric-gamma-imaging-cherenkov-telescopes",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "MAGIC telescope|MAGIC Florian Goebel Telescopes|MAGIC-Teleskop|MAGIC",
+            "all_instance_of": "reflecting telescope|Imaging Atmospheric Cherenkov Telescope|gamma-ray telescope",
+            "all_has_part": "",
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemDescription": "two-telescope system in the Canary Islands"
+        }
+    ],
+    [
+        {
+            "Name": "10.4m Gran Telescopio Canarias (GTC) Telescope at Roque de los Muchachos Observatory",
+            "ID": "GTC"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q59973",
+            "itemLabel": "gran-telescopio-canarias",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "Z18",
+            "aliases": "\u041d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0443 \u0441\u0432\u0456\u0442\u0456|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f The Gran Telescopio CANARIAS|Grantecan|Grande Telesc\u00f3pio das Can\u00e1rias|Gran Kanarijos observatorija|\u30ab\u30ca\u30ea\u30a2\u5927\u5929\u4f53\u671b\u9060\u93e1|GranTeCan|Grand T\u00e9lescope des \u00eeles Canaries|GRANTECAN|Gran Telescopio de Canarias|GRAN TECAN|Gran Telescopio Canarias|GranTeCan|GRANTECAN|Gran Telescopio Canarias|GTC|GTC|GTC|GTC|GTC",
+            "all_instance_of": "optical telescope|Ritchey\u2013Chr\u00e9tien telescope|segmented mirror",
+            "all_has_part": "",
+            "all_part_of": "Unique Scientific and Technical Infrastructures|Roque de los Muchachos Observatory",
+            "itemDescription": "reflecting telescope"
+        }
+    ],
+    [
+        {
+            "Name": "Italian National Institute of Astrophysics (INAF) 3.58m Telescopio Nazionale Galileo (TNG) at Roque de los Muchachos Observatory",
+            "ID": "TNG"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16269",
+            "itemLabel": "galileo-national-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "Z19",
+            "aliases": "\u062a\u06cc\u0627\u0646\u062c\u06cc|\u4f3d\u5229\u7565\u570b\u969b\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u5bb6\u671b\u9060\u93e1|\u30ac\u30ea\u30ec\u30aa\u56fd\u7acb\u671b\u9060\u93e1|TNG\u671b\u9060\u93e1|TNG|TNG",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemDescription": "3.58m Italian telescope"
+        }
+    ]
+]
