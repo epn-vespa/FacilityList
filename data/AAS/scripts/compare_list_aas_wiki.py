@@ -14,10 +14,20 @@ with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/script
 
 
 def mon_scorer(q, c):
-    r = fuzz.WRatio(q['ID'], c['itemLabel']) + fuzz.WRatio(q['ID'], c['aliases']) + fuzz.WRatio(q['ID'], c[
+    r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases']) + fuzz.WRatio(q['ID'], c[
         'itemLabel']) + fuzz.WRatio(q['ID'], c['aliases'])
+    if "Name" in q and 'itemLabel' in c:
+        if q['Name'] == c['itemLabel']:
+            r += 500
+        else:
+            r -= 50
+    if "Name" in q and 'aliases' in c:
+        if q['Name'] == c['aliases'].split("|"):
+            r += 500
+        else:
+             r -= 50
     if "ID" in q and 'itemLabel' in c:
-        if q['ID'] == c['itemLabel']:
+        if q['ID'] in c['itemLabel']:
             r += 500
         else:
             r -= 50
