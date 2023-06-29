@@ -49,7 +49,7 @@ where = """
   UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
   UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
   UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
-  UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
+  #UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
   UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
 

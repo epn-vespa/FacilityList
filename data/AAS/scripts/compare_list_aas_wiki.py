@@ -17,12 +17,12 @@ def mon_scorer(q, c):
     r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases']) + fuzz.WRatio(q['ID'], c[
         'itemLabel']) + fuzz.WRatio(q['ID'], c['aliases'])
     if "Name" in q and 'itemLabel' in c:
-        if q['Name'] == c['itemLabel']:
+        if q['Name'] in c['itemLabel']:
             r += 500
         else:
             r -= 50
     if "Name" in q and 'aliases' in c:
-        if q['Name'] == c['aliases'].split("|"):
+        if q['Name'] in c['aliases'].split("|"):
             r += 500
         else:
              r -= 50
@@ -32,7 +32,7 @@ def mon_scorer(q, c):
         else:
             r -= 50
     if "ID" in q and 'aliases' in c:
-        if q['ID'] in c['aliases'].split("|"):
+        if q['ID'].strip() in c['aliases'].split("|"):
             r += 500
         else:
             r -= 50
@@ -66,11 +66,11 @@ def compare_aas(data_aas, wikidata):
         r = results[i]
         trouve = False
         for r_elem in r:
-            if r_elem[1] > 500:
+            if r_elem[1] > 180:
                 trouve = True
                 tres_certain.append((e, r_elem[0]))
-            # elif r_elem[1] > 180:
-            # tres_probable.append((e, r_elem[0]))
+            elif r_elem[1] > 130:
+                 tres_probable.append((e, r_elem[0]))
             # elif r_elem[1] > 150:
             # probable.append((e, r_elem[0]))
         if not trouve: non_trouves.append(e)
