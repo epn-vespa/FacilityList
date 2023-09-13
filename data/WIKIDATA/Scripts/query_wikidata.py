@@ -4,8 +4,6 @@ import json
 import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-
-
 endpoint_url = "https://query.wikidata.org/sparql"
 
 query_prefix = """
@@ -24,7 +22,7 @@ SELECT
   ?item     
   ?itemLabel
   ?itemDescription  
-  
+
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
   (GROUP_CONCAT(DISTINCT ?NSSDCA_ID; SEPARATOR="|") AS ?all_NSSDCA_ID)
@@ -53,7 +51,7 @@ where = """
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
   UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
 
-  #OPTIONAL {?item wdt:P4466 ?Unified_Astro_Thesaurus_ID .}
+ 
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
   OPTIONAL {?item wdt:P8913 ?NSSDCA_ID .}
   OPTIONAL {?item wdt:P2956 ?NAIF_ID .}
@@ -78,7 +76,7 @@ where = """
   ?part_of rdfs:label ?part_ofName .
   Filter((LANG(?part_ofName)) = "en")
   }
- 
+
    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
  }
 """
@@ -135,16 +133,17 @@ for i in range(1 if test == True else (int(results_count) // page_size) + 1):
     for e in new_elements:
         e['itemLabel'] = e['itemLabel'].replace(' ', '-')
         e['itemLabel'] = e['itemLabel'].lower()
-        #e['aliases'] = e['aliases'].replace(' ', '-')
-        #e['aliases'] = e['aliases'].lower()
-        #e['all_has_part'] = e['all_has_part'].replace(' ', '-')
-        #e['all_has_part'] = e['all_has_part'].lower()
-        #e['all_part_of'] = e['all_part_of'].replace(' ', '-')
-        #e['all_part_of'] = e['all_part_of'].lower()
+        # e['aliases'] = e['aliases'].replace(' ', '-')
+        # e['aliases'] = e['aliases'].lower()
+        # e['all_has_part'] = e['all_has_part'].replace(' ', '-')
+        # e['all_has_part'] = e['all_has_part'].lower()
+        # e['all_part_of'] = e['all_part_of'].replace(' ', '-')
+        # e['all_part_of'] = e['all_part_of'].lower()
     r.extend(new_elements)
 
 print("successfully retrieved " + str(len(r)) + " results")
 
-with open("extract_wikidata.json", 'w') as fout:
-    fout.write(json.dumps(r, indent=4))
+with open("extract_wikidata.json", 'w', encoding='utf-8') as fout:
+    fout.write(json.dumps(r, ensure_ascii=False, indent=4))
+
 
