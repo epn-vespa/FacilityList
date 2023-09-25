@@ -14,17 +14,20 @@ with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/script
 
 
 def mon_scorer(q, c):
-    r = fuzz.WRatio(q['instrument_host_name'], c['itemLabel']) + fuzz.WRatio(q['instrument_host_name'], c['aliases'])
-    if "instrument_host_name" in q and 'itemLabel' in c:
-        if q["instrument_host_name"] in c['itemLabel']:
-            r += 500
-        else:
-            r -= 50
-    if "instrument_host_name" in q and 'aliases' in c:
-        if q["instrument_host_name"] in c['aliases'].split("|"):
-            r += 500
-        else:
-            r -= 50
+    r = 0
+    if 'instrument_host_name_lower' in q:
+        if 'itemLabel' in c:
+            if q['instrument_host_name_lower'] in c['itemLabel']:
+                r += 500
+            else:
+                r -= 50
+        if 'aliases' in c:
+            aliases_parts = c['aliases'].lower().split("|")
+            if q['instrument_host_name_lower'] in aliases_parts:
+                r += 500
+            else:
+                r -= 50
+    r += fuzz.WRatio(q['instrument_host_name_lower'], c['itemLabel']) + fuzz.WRatio(q['instrument_host_name_lower'], c['aliases'])
     return r
 
 
@@ -37,12 +40,16 @@ def get_scores(t):
     e = t[1]
     r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
     print("[" + str(i + 1) + "/" + str(len(data_vespa)) + "]" + str(e))
-    print("  " + str(r[0][1]) + " : " + str(r[0][0]))
+    try :
+        print("  " + str(r[0][1]) + " : " + str(r[0][0]))
+    except IndexError :
+        print(None)
+
     return r
 
 
-def compare_vespa(data_vespa, wikidata):
-    results = []
+def compare_vespa(data_vespa):
+    # results = [] # results is a list
     tres_certain = []
     tres_probable = []
     probable = []
@@ -62,7 +69,8 @@ def compare_vespa(data_vespa, wikidata):
                  tres_probable.append((e, r_elem[0]))
             # elif r_elem[1] > 150:
             # probable.append((e, r_elem[0]))
-        if not trouve: non_trouves.append(e)
+        if not trouve:
+            non_trouves.append(e)
 
 
     print("tres_certain : " + str(len(tres_certain)))
@@ -83,6 +91,8 @@ def compare_vespa(data_vespa, wikidata):
             print({"[" + str(i + 1) + "/" + str(len(data_vespa)) + "]" + str(e): r}, file=fout)
         for t in r:
             print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
+
+
 if __name__ == "__main__":
     # chosse to either run with or without profiling
     compare_vespa(data_vespa, wikidata)

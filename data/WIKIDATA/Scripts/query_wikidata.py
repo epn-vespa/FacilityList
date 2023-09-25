@@ -133,8 +133,8 @@ for i in range(1 if test == True else (int(results_count) // page_size) + 1):
     for e in new_elements:
         e['itemLabel'] = e['itemLabel'].replace(' ', '-')
         e['itemLabel'] = e['itemLabel'].lower()
-        # e['aliases'] = e['aliases'].replace(' ', '-')
-        # e['aliases'] = e['aliases'].lower()
+        e['aliases'] = e['aliases'].replace(' ', '-')
+        e['aliases'] = e['aliases'].lower()
         # e['all_has_part'] = e['all_has_part'].replace(' ', '-')
         # e['all_has_part'] = e['all_has_part'].lower()
         # e['all_part_of'] = e['all_part_of'].replace(' ', '-')

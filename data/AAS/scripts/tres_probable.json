@@ -69,7 +69,7 @@
             "all_NSSDCA_ID": "1965-068A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u96d9\u5b50\u5ea75\u865f|\u53cc\u5b50\u661f5\u53f7|Gemini V|01516|\u062c\u0645\u06cc\u0646\u0627\u06cc 5|Gemini V|Gemini V|Gemini V",
-            "all_instance_of": "human spaceflight|Gemini spacecraft",
+            "all_instance_of": "Gemini spacecraft|human spaceflight",
             "all_has_part": "",
             "all_part_of": "Project Gemini",
             "itemDescription": "human spaceflight"
@@ -87,7 +87,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u062c\u0645\u06cc\u0646\u0627\u06cc 4|Gemini IV|Gemini IV|G\u00e9mini 4|Gemini IV|Gemini IV|\u0414\u0436\u0435\u043c\u0438\u043d\u0438-4|GeminIV|\u96d9\u5b50\u5ea74\u865f|\u53cc\u5b50\u661f4\u53f7|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 IV|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 4|Gemini IV|Gemini 4|01390",
+            "aliases": "Gemini IV|Gemini IV|G\u00e9mini 4|Gemini IV|Gemini IV|\u0414\u0436\u0435\u043c\u0438\u043d\u0438-4|GeminIV|\u062c\u0645\u06cc\u0646\u0627\u06cc 4|\u96d9\u5b50\u5ea74\u865f|\u53cc\u5b50\u661f4\u53f7|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 IV|\u0414\u0436\u0435\u043c\u0438\u043d\u0438 4|Gemini IV|Gemini 4|01390",
             "all_instance_of": "human spaceflight|Gemini spacecraft",
             "all_has_part": "",
             "all_part_of": "Project Gemini",
@@ -278,7 +278,7 @@
             "all_NSSDCA_ID": "1996-027A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "BeppoSAX X-ray satellite|SAX",
-            "all_instance_of": "former entity|space telescope",
+            "all_instance_of": "space telescope|former entity",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "former Italian-Dutch satellite used for X-ray astronomy"
@@ -403,17 +403,17 @@
             "ID": "P78-1\t"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14083938",
-            "itemLabel": "orbcomm-og2-1",
-            "all_COSPAR_ID": "2012-054B",
+            "item": "http://www.wikidata.org/entity/Q122417769",
+            "itemLabel": "tiantong-1-2",
+            "all_COSPAR_ID": "2020-082A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2012-054B",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Orbcomm OG2-1|Orbcomm FM101",
-            "all_instance_of": "former entity|Orbcomm-OG2",
+            "aliases": "Tiantong-1 02",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": "",
-            "itemDescription": "prototype designed to test second generation OG2 satellites"
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -422,16 +422,17 @@
             "ID": "P78-1\t"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q122417785",
+            "itemLabel": "tiantong-1-3",
+            "all_COSPAR_ID": "2021-003A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "OSCAR 56|Cute-1.7+APD II",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "Tiantong-1 03",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -1107,7 +1108,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "SATURNSA1",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Saturn I SA-1|Saturn I SA-1|\u0633\u0627\u062a\u0648\u0631\u0646 I SA-\u0661|SA-1|\u0130lk Missiya|SA-1|Saturn-Apollo 1 (SA-1)|SA 1|Saturn SA-1|Apollo SA-1 Test Flight",
+            "aliases": "Saturn-Apollo 1 (SA-1)|SA 1|Saturn SA-1|Apollo SA-1 Test Flight|Saturn I SA-1|Saturn I SA-1|\u0633\u0627\u062a\u0648\u0631\u0646 I SA-\u0661|SA-1|\u0130lk Missiya|SA-1",
             "all_instance_of": "spaceflight",
             "all_has_part": "",
             "all_part_of": "",
@@ -1150,6 +1151,24 @@
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "soviet robotic spacecraft of 1969"
+        }
+    ],
+    [
+        {
+            "Name": "Carnegie Institution for Science (CIS) 2.5m (100 inch) Irenee du Pont Telescope at Las Campanas Observatory (LCO)",
+            "ID": "Du Pont"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q42127464",
+            "itemLabel": "du-pont-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "T\u00e9lescope Ir\u00e9n\u00e9e du Pont",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Las Campanas Observatory"
         }
     ],
     [
@@ -1352,7 +1371,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Swedish-eso submillimetre telescope|Africa Millimetre Telescope",
-            "all_instance_of": "parabolic reflector|radio telescope",
+            "all_instance_of": "radio telescope|parabolic reflector",
             "all_has_part": "",
             "all_part_of": "La Silla Observatory",
             "itemDescription": "radio telescope located in South America"
@@ -1390,7 +1409,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "HDFS|Hubble Deep Field - South|HDF-S|\u062d\u0642\u0644 \u0647\u0627\u0628\u0644 \u0627\u0644\u0633\u062d\u064a\u0642 \u0627\u0644\u062c\u0646\u0648\u0628\u064a|HDFS",
-            "all_instance_of": "astronomical survey|deep field|astrophotography",
+            "all_instance_of": "astrophotography|astronomical survey|deep field",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "multiple exposure image of deep space in the constellation Tucana"
@@ -1409,7 +1428,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Swedish-eso submillimetre telescope|Africa Millimetre Telescope",
-            "all_instance_of": "parabolic reflector|radio telescope",
+            "all_instance_of": "radio telescope|parabolic reflector",
             "all_has_part": "",
             "all_part_of": "La Silla Observatory",
             "itemDescription": "radio telescope located in South America"
@@ -1446,7 +1465,7 @@
             "all_NSSDCA_ID": "2003-061A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Tan Ce 1|DSP-E|Double Star Equatorial|Double Star DSP-E|TC-1",
-            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_instance_of": "former entity|geomagnetic satellite",
             "all_has_part": "",
             "all_part_of": "Double Star mission",
             "itemDescription": "former joint Chinese-European magnetospheric research satellite"
@@ -1673,7 +1692,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -1768,7 +1787,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -2034,7 +2053,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -2261,7 +2280,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -2621,8 +2640,8 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "DKIST|DKIST|ATST|Advanced Technology Solar Telescope",
-            "all_instance_of": "optical telescope|Gregorian telescope|solar telescope",
+            "aliases": "ATST|Advanced Technology Solar Telescope|DKIST|DKIST",
+            "all_instance_of": "solar telescope|Gregorian telescope|optical telescope",
             "all_has_part": "",
             "all_part_of": "Haleakal\u0101 Observatory",
             "itemDescription": "large solar telescope under construction in Hawaii"
@@ -2641,7 +2660,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "WISPR|Widefield Imager for Solar Probe",
-            "all_instance_of": "solar telescope|CMOS camera|scientific instrument|space instrument",
+            "all_instance_of": "solar telescope|scientific instrument|space instrument|CMOS camera",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "imaging instrument of the Parker Solar Probe"
@@ -2678,8 +2697,8 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "DKIST|DKIST|ATST|Advanced Technology Solar Telescope",
-            "all_instance_of": "optical telescope|Gregorian telescope|solar telescope",
+            "aliases": "ATST|Advanced Technology Solar Telescope|DKIST|DKIST",
+            "all_instance_of": "solar telescope|Gregorian telescope|optical telescope",
             "all_has_part": "",
             "all_part_of": "Haleakal\u0101 Observatory",
             "itemDescription": "large solar telescope under construction in Hawaii"
@@ -2698,7 +2717,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "WISPR|Widefield Imager for Solar Probe",
-            "all_instance_of": "solar telescope|CMOS camera|scientific instrument|space instrument",
+            "all_instance_of": "solar telescope|scientific instrument|space instrument|CMOS camera",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "imaging instrument of the Parker Solar Probe"
@@ -2766,17 +2785,17 @@
             "ID": "MtW:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14083938",
-            "itemLabel": "orbcomm-og2-1",
-            "all_COSPAR_ID": "2012-054B",
+            "item": "http://www.wikidata.org/entity/Q122417769",
+            "itemLabel": "tiantong-1-2",
+            "all_COSPAR_ID": "2020-082A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2012-054B",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Orbcomm OG2-1|Orbcomm FM101",
-            "all_instance_of": "former entity|Orbcomm-OG2",
+            "aliases": "Tiantong-1 02",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": "",
-            "itemDescription": "prototype designed to test second generation OG2 satellites"
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -2785,16 +2804,17 @@
             "ID": "MtW:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q122417785",
+            "itemLabel": "tiantong-1-3",
+            "all_COSPAR_ID": "2021-003A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "OSCAR 56|Cute-1.7+APD II",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "Tiantong-1 03",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -2980,7 +3000,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -3037,7 +3057,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -3094,7 +3114,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -3189,7 +3209,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -3283,7 +3303,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -3408,17 +3428,17 @@
             "ID": "SOR:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q122417769",
+            "itemLabel": "tiantong-1-2",
+            "all_COSPAR_ID": "2020-082A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "Tiantong-1 02",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": "",
-            "itemDescription": "weather satellite"
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -3584,7 +3604,7 @@
             "all_NSSDCA_ID": "1966-110A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "ATS-1|ATS 1|ATS-1|Applications Technology Satellite 1|ATS-B|ATS-1",
-            "all_instance_of": "communications satellite|weather satellite|former entity|geostationary satellite",
+            "all_instance_of": "weather satellite|former entity|geostationary satellite|communications satellite",
             "all_has_part": "",
             "all_part_of": "Applications Technology Satellite",
             "itemDescription": "former NASA communications and weather satellite"
@@ -3603,7 +3623,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Canadian Advanced Nanospace eXperiment-1|CanX-5|CANX 1|CanX Program",
-            "all_instance_of": "technology demonstration spacecraft|CubeSat",
+            "all_instance_of": "CubeSat|technology demonstration spacecraft",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3639,7 +3659,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2023-070A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Ax2|Ax-2|Axiom-2|Ax2|Ax-2|Axiom-2|Ax-2|Ax-2|Ax-2",
+            "aliases": "Axiom-2|Ax2|Ax-2|Axiom-2|Ax-2|Ax-2|Ax-2|Ax2|Ax-2",
             "all_instance_of": "private spaceflight|human spaceflight",
             "all_has_part": "",
             "all_part_of": "",
@@ -3676,8 +3696,8 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2004-029A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Tan Ce 2|DSP-P|Double Star Polar|Double Star DSP-P|TC-2",
-            "all_instance_of": "geomagnetic satellite|former entity",
+            "aliases": "DSP-P|Double Star Polar|Double Star DSP-P|TC-2|Tan Ce 2",
+            "all_instance_of": "former entity|geomagnetic satellite",
             "all_has_part": "",
             "all_part_of": "Double Star mission",
             "itemDescription": "former joint Chinese-European magnetospheric research satellite"
@@ -4037,7 +4057,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Captain Cook's telescope, James Cook's telescope",
-            "all_instance_of": "telescope|work|scientific instrument|manufactured product",
+            "all_instance_of": "work|telescope|manufactured product|scientific instrument",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "Telescope made by Edward Nairne and James Blunt which may have been owned by Captain James Cook"
@@ -4208,7 +4228,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "MINiature Exoplanet Radial Velocity Array|MINERVA",
-            "all_instance_of": "astronomical survey|optical telescope",
+            "all_instance_of": "optical telescope|astronomical survey",
             "all_has_part": "",
             "all_part_of": "Fred Lawrence Whipple Observatory",
             "itemDescription": "astronomical observational instrument"
@@ -4302,7 +4322,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -4416,7 +4436,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -4511,7 +4531,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -4663,7 +4683,7 @@
             "all_NSSDCA_ID": "2003-061A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "Tan Ce 1|DSP-E|Double Star Equatorial|Double Star DSP-E|TC-1",
-            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_instance_of": "former entity|geomagnetic satellite",
             "all_has_part": "",
             "all_part_of": "Double Star mission",
             "itemDescription": "former joint Chinese-European magnetospheric research satellite"
@@ -4852,7 +4872,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -5155,9 +5175,9 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "JB-2|FSW-3|JB-4|Jianbing-4|Jianbing-2",
+            "aliases": "Jianbing-4|Jianbing-2|JB-2|FSW-3|JB-4",
             "all_instance_of": "spacecraft series",
-            "all_has_part": "FSW-3 5|FSW-3 3|FSW-3 1|FSW-3 2|FSW-3 4",
+            "all_has_part": "FSW-3 4|FSW-3 5|FSW-3 3|FSW-3 1|FSW-3 2",
             "all_part_of": "Fanhui Shi Weixing",
             "itemDescription": "fourth class of Chinese reconnaissance satellites under the FSW program"
         }
@@ -5574,7 +5594,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "WISPR|Widefield Imager for Solar Probe",
-            "all_instance_of": "solar telescope|CMOS camera|scientific instrument|space instrument",
+            "all_instance_of": "solar telescope|scientific instrument|space instrument|CMOS camera",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "imaging instrument of the Parker Solar Probe"
@@ -5593,7 +5613,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "OVSA|Expanded Owens Valley Solar Array|EOVSA",
-            "all_instance_of": "solar telescope|radio telescope",
+            "all_instance_of": "radio telescope|solar telescope",
             "all_has_part": "",
             "all_part_of": "Owens Valley Radio Observatory",
             "itemDescription": "radio telescope array"
@@ -5717,17 +5737,17 @@
             "ID": "MtS:1.3m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q122417769",
+            "itemLabel": "tiantong-1-2",
+            "all_COSPAR_ID": "2020-082A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "Tiantong-1 02",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": "",
-            "itemDescription": "weather satellite"
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -5811,17 +5831,17 @@
             "ID": "MtS:1.9m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q122417769",
+            "itemLabel": "tiantong-1-2",
+            "all_COSPAR_ID": "2020-082A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "Tiantong-1 02",
+            "all_instance_of": "communications satellite",
             "all_has_part": "",
-            "all_part_of": "",
-            "itemDescription": "weather satellite"
+            "all_part_of": "Tiantong",
+            "itemDescription": "communications satellite"
         }
     ],
     [
@@ -5855,7 +5875,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -5969,7 +5989,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",
@@ -6310,7 +6330,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Starship test flight 2|OFT-2",
+            "aliases": "Starship Integrated Flight Test 2|Starship test flight 2|OFT-2",
             "all_instance_of": "unmanned spaceflight|test flight|future event",
             "all_has_part": "",
             "all_part_of": "",
@@ -6610,7 +6630,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -6912,7 +6932,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -7178,8 +7198,8 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "The Alexander Observatory|\u30aa\u30fc\u30eb\u30c0\u30fc\u30b7\u30e7\u30c3\u30c8\u5929\u6587\u53f0",
-            "all_instance_of": "refracting telescope|equatorial mount|astronomical observatory",
+            "aliases": "\u30aa\u30fc\u30eb\u30c0\u30fc\u30b7\u30e7\u30c3\u30c8\u5929\u6587\u53f0|The Alexander Observatory",
+            "all_instance_of": "refracting telescope|astronomical observatory|equatorial mount",
             "all_has_part": "",
             "all_part_of": "",
             "itemDescription": "grade II listed refracting telescope in Aldershot, United kingdom"
@@ -7200,7 +7220,7 @@
             "aliases": "Yebes Observatory RT40m|ARIES XXI",
             "all_instance_of": "radio telescope|Nasmyth telescope|Cassegrain mirror system",
             "all_has_part": "",
-            "all_part_of": "Yebes Observatory|European VLBI Network",
+            "all_part_of": "European VLBI Network|Yebes Observatory",
             "itemDescription": "radio telescope at Yebes, Spain"
         }
     ],
@@ -7349,7 +7369,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2023-070A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Ax2|Ax-2|Axiom-2|Ax2|Ax-2|Axiom-2|Ax-2|Ax-2|Ax-2",
+            "aliases": "Axiom-2|Ax2|Ax-2|Axiom-2|Ax-2|Ax-2|Ax-2|Ax2|Ax-2",
             "all_instance_of": "private spaceflight|human spaceflight",
             "all_has_part": "",
             "all_part_of": "",
@@ -7404,8 +7424,8 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2004-029A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "Tan Ce 2|DSP-P|Double Star Polar|Double Star DSP-P|TC-2",
-            "all_instance_of": "geomagnetic satellite|former entity",
+            "aliases": "DSP-P|Double Star Polar|Double Star DSP-P|TC-2|Tan Ce 2",
+            "all_instance_of": "former entity|geomagnetic satellite",
             "all_has_part": "",
             "all_part_of": "Double Star mission",
             "itemDescription": "former joint Chinese-European magnetospheric research satellite"
@@ -7499,7 +7519,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "GOMS-2|Elektro-L No.1|Elektro-L 1|Elektro-L|Elektro-L",
+            "aliases": "Elektro-L|Elektro-L|GOMS-2|Elektro-L No.1|Elektro-L 1",
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": "",
@@ -7896,7 +7916,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1990-058A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gamma|gama|Gamma|Gama|Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio",
+            "aliases": "Gamma-ray observatory|\u0413\u0430\u043c\u043c\u0430 (\u0441\u043f\u0443\u0442\u043d\u0438\u043a)|\u0413\u0430\u043c\u043c\u0430 (\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|\u0413\u0430\u043c\u043c\u0430 (\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f)|gamma telescopio|gamma|gama|Gamma|Gama",
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": "",

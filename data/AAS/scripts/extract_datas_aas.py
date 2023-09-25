@@ -20,8 +20,8 @@ def element_path(xmltreeelement):
     except AttributeError: return xmltreeelement.tag
     return r + "/" + xmltreeelement.tag
  
-input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/AAS.xml"
-output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/AAS.json"
+input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.xml"
+output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json"
  
 tree = etree.parse(input_file)
 print(tree)
@@ -73,7 +73,7 @@ for tr in table_data.findall( TAG + "TR" ) :
     rows_list.append(row)
 print(json.dumps(rows_list, indent=4))
 
-with open(output_file,"w") as out_f:
-    out_f.write(json.dumps(rows_list, indent=4))
+with open(output_file,"w",encoding='utf-8') as out_f:
+    out_f.write(json.dumps(rows_list, ensure_ascii=False, indent=4))
 
 #print("root.values()=",root.values())

@@ -76,30 +76,24 @@
         "ID": "DSN:DSS-13"
     },
     {
-        "Name": "NSF\u2019s NOIRLab Arizona-NOIRLab Temporal Analysis and Response to Events System (ANTARES)",
+        "Name": "NSF’s NOIRLab Arizona-NOIRLab Temporal Analysis and Response to Events System (ANTARES)",
         "ID": "ANTARES"
     },
     {
-        "Name": "NSF\u2019s NOIRLab Gemini Science archive",
+        "Name": "NSF’s NOIRLab Gemini Science archive",
         "ID": "Gemini Science archive"
-
     },
     {
-        "Name": "NSF\u2019s NOIRLab Astro Data Lab",
+        "Name": "NSF’s NOIRLab Astro Data Lab",
         "ID": "Astro Data Lab"
-
-
     },
     {
-        "Name": "NSF\u2019s NOIRLab Astro Data Archive",
+        "Name": "NSF’s NOIRLab Astro Data Archive",
         "ID": "Astro Data Archive"
-
-
     },
     {
         "Name": "The Open Supernova Catalog (https://sne.space/)",
         "ID": "OSC"
-
     },
     {
         "Name": "Kamioka Gravitational wave detector, Large-scale Cryogenic Gravitational wave Telescope (KAGRA)",
@@ -132,7 +126,6 @@
     {
         "Name": "IceCube South Pole Neutrino Observatory",
         "ID": "IceCube"
-
     },
     {
         "Name": "The High Altitude Water Cherenkov Gamma-Ray Observatory",
@@ -735,7 +728,7 @@
         "ID": "CTIO:1.5m"
     },
     {
-        "Name": "NSF\u2019s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 4m Victor M. Blanco Telescope Cerro Tololo Inter-American Observatory (CTIO)",
+        "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 4m Victor M. Blanco Telescope Cerro Tololo Inter-American Observatory (CTIO)",
         "ID": "Blanco"
     },
     {
@@ -1331,15 +1324,15 @@
         "ID": "KPVT"
     },
     {
-        "Name": "NSF\u2019s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 4m Nicholas U. Mayall Telescope at Kitt Peak National Observatory (KPNO)",
+        "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 4m Nicholas U. Mayall Telescope at Kitt Peak National Observatory (KPNO)",
         "ID": "Mayall"
     },
     {
-        "Name": "NSF\u2019s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 2.1 meter Telescope at Kitt Peak National Observatory (KPNO)",
+        "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 2.1 meter Telescope at Kitt Peak National Observatory (KPNO)",
         "ID": "KPNO:2.1m"
     },
     {
-        "Name": "NSF\u2019s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) Coude Feed Telescope at Kitt Peak National Observatory (KPNO)",
+        "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) Coude Feed Telescope at Kitt Peak National Observatory (KPNO)",
         "ID": "KPNO:CFT"
     },
     {
@@ -1773,7 +1766,6 @@
     {
         "Name": "Australian National University (ANU) 1.3m Skymapper Telescope at Siding Spring Observatory (SSO)",
         "ID": "Skymapper"
-
     },
     {
         "Name": "Murchison Widefield Array (formerly Mileura Widefield Array) at Murchison Radio-astronomy Observatory",
@@ -1786,12 +1778,10 @@
     {
         "Name": "Australian National University (ANU) 1.3m Telescope at Mount Stromlo Observatory (MSO)",
         "ID": "MtS:1.3m"
-
     },
     {
         "Name": "Australian National University (ANU) 1.88m Telescope at Mount Stromlo Observatory (MSO)",
         "ID": "MtS:1.9m"
-
     },
     {
         "Name": "University of Sydney Molonglo Observatory Synthesis Telescope (MOST)",
