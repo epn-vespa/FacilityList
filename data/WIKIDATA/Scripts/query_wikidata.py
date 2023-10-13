@@ -38,20 +38,27 @@ SELECT
 
 where = """
  WHERE 
- {        
-  #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
+ {      
+  ######## OBSERVATION FACILITIES ########  
+  
+  
   {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
   UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
-  UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
   UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
-  UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
-  #UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
+  UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
-
- 
+  UNION {?item  wdt:P31  wd:Q184356 .} # radiotelescope
+  UNION {?item  wdt:P31  wd:Q1369318 .} # X-ray telescope
+  #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
+  
+  #####ASTRONOMICAL INSTRUMENT#####
+  
+  #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
+  #UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
+  #UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
+  
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    
   OPTIONAL {?item wdt:P8913 ?NSSDCA_ID .}
   OPTIONAL {?item wdt:P2956 ?NAIF_ID .}

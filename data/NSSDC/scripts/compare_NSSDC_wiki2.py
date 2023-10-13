@@ -32,11 +32,15 @@ def dummy_proc(x):
 
 
 def get_scores( t ):
-    i=t[0]
-    e=t[1]
+    i = t[0]
+    e = t[1]
     r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
     print("[" + str(i + 1) + "/" + str(len(data_nssdc)) + "]" + str(e))
     print("  " + str(r[0][1]) + " : " + str(r[0][0]))
+    try:
+        print("  " + str(r[0][1]) + " : " + str(r[0][0]))
+    except IndexError:
+        print(None)
     return r
 
 

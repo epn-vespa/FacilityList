@@ -64,7 +64,7 @@
         "instrument_host_name_lower": "mms4"
     },
     {
-        "instrument_host_name": "Observatoire de Paris - USN",
+        "instrument_host_name": "Observatoire de Paris- USN",
         "instrument_host_name_lower": "observatoire-de-paris-usn"
     },
     {
@@ -74,10 +74,6 @@
     {
         "instrument_host_name": "WISE",
         "instrument_host_name_lower": "wise"
-    },
-    {
-        "instrument_host_name": "500@-163",
-        "instrument_host_name_lower": "500@-163"
     },
     {
         "instrument_host_name": "MESSENGER",
@@ -136,10 +132,6 @@
         "instrument_host_name_lower": "hst"
     },
     {
-        "instrument_host_name": "500@399",
-        "instrument_host_name_lower": "500@399"
-    },
-    {
         "instrument_host_name": "Pic du Midi",
         "instrument_host_name_lower": "pic-du-midi"
     },
@@ -172,7 +164,7 @@
         "instrument_host_name_lower": "ace"
     },
     {
-        "instrument_host_name": "Royal Observatory of Belguim",
+        "instrument_host_name": "Royal Observatory of Belgium",
         "instrument_host_name_lower": "royal-observatory-of-belguim"
     },
     {
@@ -368,10 +360,6 @@
         "instrument_host_name_lower": "venus-express"
     },
     {
-        "instrument_host_name": "500@-486",
-        "instrument_host_name_lower": "500@-486"
-    },
-    {
         "instrument_host_name": "HSO",
         "instrument_host_name_lower": "hso"
     },
@@ -484,8 +472,8 @@
         "instrument_host_name_lower": "mc"
     },
     {
-        "instrument_host_name": "Galileo Orbitor",
-        "instrument_host_name_lower": "galileo-orbitor"
+        "instrument_host_name": "Galileo Orbiter",
+        "instrument_host_name_lower": "galileo-orbiter"
     },
     {
         "instrument_host_name": "ATH",

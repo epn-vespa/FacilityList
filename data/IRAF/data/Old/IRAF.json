@@ -1,0 +1,114 @@
+[
+    {
+        "ID": "kpno",
+        "Name": "Kitt Peak National Observatory"
+    },
+    {
+        "ID": "ctio",
+        "Name": "Cerro Tololo Interamerican Observatory"
+    },
+    {
+        "ID": "eso",
+        "Name": "European Southern Observatory"
+    },
+    {
+        "ID": "lick",
+        "Name": "Lick Observatory"
+    },
+    {
+        "ID": "mmto",
+        "Name": "Multiple Mirror Telescope Observatory"
+    },
+    {
+        "ID": "mmt",
+        "Name": "Whipple Observatory"
+    },
+    {
+        "ID": "flwo",
+        "Name": "Whipple Observatory"
+    },
+    {
+        "ID": "cfht",
+        "Name": "Canada-France-Hawaii Telescope"
+    },
+    {
+        "ID": "lapalma",
+        "Name": "Roque de los Muchachos, La Palma"
+    },
+    {
+        "ID": "mso",
+        "Name": "Mt. Stromlo Observatory"
+    },
+    {
+        "ID": "sso",
+        "Name": "Siding Spring Observatory"
+    },
+    {
+        "ID": "aao",
+        "Name": "Anglo-Australian Observatory"
+    },
+    {
+        "ID": "mcdonald",
+        "Name": "McDonald Observatory"
+    },
+    {
+        "ID": "lco",
+        "Name": "Las Campanas Observatory"
+    },
+    {
+        "ID": "mtbigelow",
+        "Name": "Catalina Observatory: 61 inch telescope"
+    },
+    {
+        "ID": "dao",
+        "Name": "Dominion Astrophysical Observatory"
+    },
+    {
+        "ID": "spm",
+        "Name": "Observatorio Astronomico Nacional, San Pedro Martir"
+    },
+    {
+        "ID": "tona",
+        "Name": "Observatorio Astronomico Nacional, Tonantzintla"
+    },
+    {
+        "ID": "Palomar",
+        "Name": "The Hale Telescope"
+    },
+    {
+        "ID": "mdm",
+        "Name": "Michigan-Dartmouth-MIT Observatory"
+    },
+    {
+        "ID": "NOV",
+        "Name": "National Observatory of Venezuela"
+    },
+    {
+        "ID": "bmo",
+        "Name": "Black Moshannon Observatory"
+    },
+    {
+        "ID": "BAO",
+        "Name": "Beijing XingLong Observatory"
+    },
+    {
+        "ID": "keck",
+        "Name": "W. M. Keck Observatory"
+    },
+    {
+        "ID": "ekar",
+        "Name": "Mt. Ekar 182 cm. Telescope"
+    },
+    {
+        "ID": "apo",
+        "Name": "Apache Point Observatory"
+    },
+    {
+        "ID": "lowell",
+        "Name": "Lowell Observatory"
+    },
+    {
+        "ID": "vbo",
+        "Name": "Vainu Bappu Observatory"
+    }
+]

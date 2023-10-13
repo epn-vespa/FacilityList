@@ -48,7 +48,7 @@ def get_scores(t):
     return r
 
 
-def compare_vespa(data_vespa):
+def compare_vespa(data_vespa, wikidata):
     # results = [] # results is a list
     tres_certain = []
     tres_probable = []

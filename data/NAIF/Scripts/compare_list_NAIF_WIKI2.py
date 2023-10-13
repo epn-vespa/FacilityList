@@ -10,19 +10,46 @@ import cProfile
 from multiprocessing import Pool
 
 
+
 def mon_scorer(q, c):
-    r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases'])
-    if c['all_NAIF_ID'] != "":
-        if q['ID'] == c['all_NAIF_ID']:
-            r += 500
-        else:
-            r -= 100
+    r = 0
+    if 'Name' in q:
+        if 'itemLabel' in c:
+            if q['Name'].lower() in c['itemLabel']:
+                r += 500
+            else:
+                r -= 50
+        if 'aliases' in c:
+            aliases_parts = c['aliases'].lower().split("|")
+            if q['Name'].lower() in aliases_parts:
+                r += 500
+            else:
+                r -= 50
+    if 'ID'in q:
+        if "all_NAIF_ID"in c:
+            if q['ID'].lower() == c['all_NAIF_ID']:
+                r += 500
+            else:
+                r -= 50
+    if 'ID'in q:
+        if "itemLabel"in c:
+            if q['ID'].lower() in c['itemLabel']:
+                r += 500
+            else:
+                r -= 50
+    if 'ID'in q:
+        if "aliases"in c:
+            if q['ID'].lower() in c['aliases']:
+                r += 500
+            else:
+                r -= 50
+    r += fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases']) + fuzz.WRatio(q['ID'], c['all_NAIF_ID']) + fuzz.WRatio(q['ID'], c['itemLabel']) + fuzz.WRatio(q['ID'], c['aliases'])
     return r
 
 def dummy_proc(x):
     return x
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/Scripts/naif_dsn.json') as f:
+with open('/Users/ldebisschop/Desktop/Europlanet/data/NAIF/data/naif_dsn.json') as f:
     data_naif = json.load(f)
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
@@ -33,8 +60,13 @@ def get_scores( t ):
     e=t[1]
     r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
     print("[" + str(i + 1) + "/" + str(len(data_naif)) + "]" + str(e))
-    print("  " + str(r[0][1]) + " : " + str(r[0][0]))
+
+    try:
+        print("  " + str(r[0][1]) + " : " + str(r[0][0]))
+    except IndexError:
+        print(None)
     return r
+
 
 
 def compare_naif(data_naif, wikidata) :

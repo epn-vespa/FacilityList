@@ -1,1454 +1,2252 @@
 [
-    {
-        "name": "1st High Energy Astrophysics Observatory",
-        "short_name": "HEAO 1. GSFC. NASA"
-    },
-    {
-        "name": "2-Telescopes Large Interferometer",
-        "short_name": "GI2T REGAIN"
-    },
-    {
-        "name": "AKARI",
-        "short_name": "ASTRO-F"
-    },
-    {
-        "name": "AREA31 Radio Observatory",
-        "short_name": "A31RO"
-    },
-    {
-        "name": "ASTRO Observatory",
-        "short_name": "ASTRO-1 and ASTRO-2"
-    },
-    {
-        "name": "ATNF - Australia Telescope Compact Array",
-        "short_name": "ATCA, Narrabri"
-    },
-    {
-        "name": "ATNF - Australia Telescope National Facility",
-        "short_name": "CSIRO"
-    },
-    {
-        "name": "ATNF - Mopra Observatory",
-        "short_name": "ATNF Mopra"
-    },
-    {
-        "name": "ATNF - Parkes Observatory",
-        "short_name": "ATNF Parkes"
-    },
-    {
-        "name": "Active Magnetospheric Particle Tracer Explorers",
-        "short_name": "AMPTE"
-    },
-    {
-        "name": "Advanced Camera for Surveys",
-        "short_name": "ACS"
-    },
-    {
-        "name": "Advanced Fiber-Optic Echelle",
-        "short_name": "AFOE"
-    },
-    {
-        "name": "Advanced Satellite for Cosmology and Astrophysics",
-        "short_name": "ASCA, ex-Astro-D"
-    },
-    {
-        "name": "Air Force Maui Optical Station",
-        "short_name": "AMOS"
-    },
-    {
-        "name": "Anglo-Australian Observatory",
-        "short_name": "AAO"
-    },
-    {
-        "name": "Antarctic Muon and Neutrino Detector Array",
-        "short_name": "---"
-    },
-    {
-        "name": "Antarctic Submillimeter Telescope and Remote Observatory",
-        "short_name": "AST/RO"
-    },
-    {
-        "name": "Apache Point Observatory",
-        "short_name": "APO"
-    },
-    {
-        "name": "Arecibo Observatory - National Astronomy and Ionosphere Center",
-        "short_name": "NAIC"
-    },
-    {
-        "name": "Aristarchos 2.3m Telescope Project",
-        "short_name": "The New Greek Telescope"
-    },
-    {
-        "name": "Arizona Radio Observatory",
-        "short_name": "ARO"
-    },
-    {
-        "name": "Array of Low Energy X-ray Imaging Sensors",
-        "short_name": "ALEXIS"
-    },
-    {
-        "name": "Aryabhatta Research Institute of observational-sciencES",
-        "short_name": "ARIES"
-    },
-    {
-        "name": "Asiago Observatory",
-        "short_name": "Padova"
-    },
-    {
-        "name": "Atacama Large Millimeter Array - ESO Web site",
-        "short_name": "ALMA"
-    },
-    {
-        "name": "Atacama Large Millimeter Array - NRAO Web site",
-        "short_name": "ALMA"
-    },
-    {
-        "name": "Automated Patrol Telescope",
-        "short_name": "APT"
-    },
-    {
-        "name": "Belogradchik Astronomical observatory"
-    },
-    {
-        "name": "BeppoSAX Mission",
-        "short_name": "SAX"
-    },
-    {
-        "name": "Berkeley Illinois Maryland Association",
-        "short_name": "BIMA - Hat Creek"
-    },
-    {
-        "name": "Bernard Lyot Telescope",
-        "short_name": "UPS"
-    },
-    {
-        "name": "Big Bear Solar Observatory",
-        "short_name": "BBSO"
-    },
-    {
-        "name": "Big Ear Radio Observatory Memorial website",
-        "short_name": "Ohio State University"
-    },
-    {
-        "name": "Birmingham Solar Oscillations Network",
-        "short_name": "BiSON"
-    },
-    {
-        "name": "Boyden Observatory",
-        "short_name": "---"
-    },
-    {
-        "name": "Bradford Robotic Telescope",
-        "short_name": "University of Bradford"
-    },
-    {
-        "name": "Brazil National Laboratory for Astrophysics",
-        "short_name": "LNA"
-    },
-    {
-        "name": "Brazil National Observatory",
-        "short_name": "ON"
-    },
-    {
-        "name": "Broad Band X-ray Telescope",
-        "short_name": "BBXRT. GSFC. NASA"
-    },
-    {
-        "name": "Broadcast from Carl Sagan Observatory",
-        "short_name": "ASTRO-USON WebTV"
-    },
-    {
-        "name": "Bucknell University Observatory"
-    },
-    {
-        "name": "Bulgaria National Astronomical Observatory \"Rozhen\"",
-        "short_name": "NAO-Rozhen"
-    },
-    {
-        "name": "Byurakan Astrophysical Observatory",
-        "short_name": "Armenia"
-    },
-    {
-        "name": "CERN Hybrid Oscillation Research apparatUS",
-        "short_name": "CHORUS"
-    },
-    {
-        "name": "COnvection ROtation and planetary Transits - Asteroseismology and Search for Exoplanets",
-        "short_name": "COROT"
-    },
-    {
-        "name": "COsmic Background Explorer",
-        "short_name": "COBE"
-    },
-    {
-        "name": "Cagliari Astronomical Observatory",
-        "short_name": "International Latitude Station"
-    },
-    {
-        "name": "Calar Alto Astronomical Observatory",
-        "short_name": "Calar Alto Astronomical Observatory"
-    },
-    {
-        "name": "Caltech Submillimeter Observatory",
-        "short_name": "CSO"
-    },
-    {
-        "name": "Cambridge LFST"
-    },
-    {
-        "name": "Cambridge Optical Aperture Synthesis Telescope",
-        "short_name": "COAST"
-    },
-    {
-        "name": "Cambridge Ryle Telescope"
-    },
-    {
-        "name": "Canada France Hawaii Telescope",
-        "short_name": "CFHT"
-    },
-    {
-        "name": "Canada France Hawaii Telescope (ftp",
-        "short_name": "CFHT"
-    },
-    {
-        "name": "Canadian Satellite Tracking and Orbit Research",
-        "short_name": "CASTOR Satellite Tracking Project"
-    },
-    {
-        "name": "Canopus 1 m telescope",
-        "short_name": "Tasmania"
-    },
-    {
-        "name": "Carlsberg Meridian Telescope",
-        "short_name": "CMT"
-    },
-    {
-        "name": "Carnegie Institution Observatories",
-        "short_name": "OCIW"
-    },
-    {
-        "name": "Carter Observatory",
-        "short_name": "New Zealand"
-    },
-    {
-        "name": "Case Western Reserve University - Nassau Station Robotic Telescope",
-        "short_name": "CWRU"
-    },
-    {
-        "name": "Cassini-Huygens Mission to Saturn & Titan",
-        "short_name": "Cassini"
-    },
-    {
-        "name": "Catania Astrophysical Observatory",
-        "short_name": "INAF-OACt"
-    },
-    {
-        "name": "Ceduna Radio Observatory",
-        "short_name": "South Australia"
-    },
-    {
-        "name": "Center for Astrophysical Research in Antarctica",
-        "short_name": "CARA"
-    },
-    {
-        "name": "Center for Extreme Ultraviolet Astrophysics",
-        "short_name": "CEA/EUVE"
-    },
-    {
-        "name": "Center for High Angular Resolution Astronomy",
-        "short_name": "CHARA Array"
-    },
-    {
-        "name": "Cerro Tololo Interamerican Observatory",
-        "short_name": "CTIO"
-    },
-    {
-        "name": "CfA 1.2 m Millimeter-Wave Telescope",
-        "short_name": "CfA_mini"
-    },
-    {
-        "name": "Chandra X-ray Observatory",
-        "short_name": "AXAF"
-    },
-    {
-        "name": "Cherenkov Array at Themis",
-        "short_name": "CAT"
-    },
-    {
-        "name": "China National Astronomical Observatories",
-        "short_name": "NAOC"
-    },
-    {
-        "name": "Climenhaga Observatory",
-        "short_name": "Canada"
-    },
-    {
-        "name": "Collaboration between Australia and Nippon for a Gamma Ray Observatory in the Outback",
-        "short_name": "CANGAROO"
-    },
-    {
-        "name": "Combined Array for Research in Millimeter-wave Astronomy Project",
-        "short_name": "CARMA"
-    },
-    {
-        "name": "Constellation-X",
-        "short_name": "HTXS"
-    },
-    {
-        "name": "Cosmic Anisotropy Telescope",
-        "short_name": "CAT"
-    },
-    {
-        "name": "Cracow - Solar radio emission in dm wavelength"
-    },
-    {
-        "name": "Crimean Astrophysical Observatory",
-        "short_name": "CrAO"
-    },
-    {
-        "name": "Danish telescopes around the world"
-    },
-    {
-        "name": "Dark Matter Telescope Project",
-        "short_name": "DMT / LSST"
-    },
-    {
-        "name": "David Dunlap Observatory, University of Toronto",
-        "short_name": "DDO"
-    },
-    {
-        "name": "Deep Space Network - Goldstone Deep Space Station",
-        "short_name": "DSN"
-    },
-    {
-        "name": "Denver Univ. Astronomy",
-        "short_name": "DU"
-    },
-    {
-        "name": "Dominion Astrophysical Observatory",
-        "short_name": "DAO"
-    },
-    {
-        "name": "Dutch Open Telescope",
-        "short_name": "DOT"
-    },
-    {
-        "name": "ESA - VILlafranca Satellite Tracking Station, SPAin",
-        "short_name": "VILSPA"
-    },
-    {
-        "name": "ESA's X-ray Observatory",
-        "short_name": "EXOSAT at GSFC - NASA"
-    },
-    {
-        "name": "EUSO - Extreme Universe Space Observatory",
-        "short_name": "EUSO"
-    },
-    {
-        "name": "Edinburgh Royal Observatory",
-        "short_name": "ROE"
-    },
-    {
-        "name": "Effelsberg Radio Telescope",
-        "short_name": "MPIfR"
-    },
-    {
-        "name": "Einstein Observatory",
-        "short_name": "HEAO-2"
-    },
-    {
-        "name": "El Leoncito Astronomical Complex",
-        "short_name": "CASLEO"
-    },
-    {
-        "name": "European Northern Observatory",
-        "short_name": "ENO"
-    },
-    {
-        "name": "European Southern Observatory",
-        "short_name": "ESO"
-    },
-    {
-        "name": "European VLBI Network",
-        "short_name": "EVN"
-    },
-    {
-        "name": "European X-ray Observatory Satellite",
-        "short_name": "EXOSAT at ESTEC, ESA"
-    },
-    {
-        "name": "Exploration of Neighboring Planetary Systems",
-        "short_name": "ExNPS"
-    },
-    {
-        "name": "FOcal Reducer/low dispersion Spectrograph",
-        "short_name": "FORS, ESO VLT"
-    },
-    {
-        "name": "Far Ultraviolet Spectroscopic Explorer",
-        "short_name": "FUSE French site"
-    },
-    {
-        "name": "Far Ultraviolet Spectroscopic Explorer",
-        "short_name": "FUSE"
-    },
-    {
-        "name": "Fast Auroral SnapshoT explorer",
-        "short_name": "FAST"
-    },
-    {
-        "name": "Fibre Large Area Multi-Element Spectrograph",
-        "short_name": "FLAMES, ESO VLT"
-    },
-    {
-        "name": "Five College Radio Astronomy Observatory",
-        "short_name": "FCRAO"
-    },
-    {
-        "name": "Florence and George Wise Observatory",
-        "short_name": "Wise"
-    },
-    {
-        "name": "Fred Lawrence Whipple Observatory",
-        "short_name": "FLWO"
-    },
-    {
-        "name": "Frequency-Agile Solar Radiotelescope",
-        "short_name": "FASR"
-    },
-    {
-        "name": "Full-sky Astrometric Mapping Explorer",
-        "short_name": "FAME"
-    },
-    {
-        "name": "GALaxy Evolution EXplorer",
-        "short_name": "GALEX"
-    },
-    {
-        "name": "Gamma-ray Large Area Space Telescope",
-        "short_name": "GLAST"
-    },
-    {
-        "name": "Gemini - U.K. Support Group",
-        "short_name": "UKGSG"
-    },
-    {
-        "name": "Gemini Multiobject Spectrographs",
-        "short_name": "GMOS"
-    },
-    {
-        "name": "Gemini Observatory",
-        "short_name": "Two 8 m telescopes"
-    },
-    {
-        "name": "German Interferometer for Multi-channel Photometry and Astrometry",
-        "short_name": "DIVA"
-    },
-    {
-        "name": "Giant Metrewave Radio Telescope",
-        "short_name": "GMRT"
-    },
-    {
-        "name": "Ginga",
-        "short_name": "ex Astro-C"
-    },
-    {
-        "name": "Global Astrometric Interferometer for Astrophysics",
-        "short_name": "GAIA"
-    },
-    {
-        "name": "Global Oscillation Network Group",
-        "short_name": "GONG"
-    },
-    {
-        "name": "Gornergrat Infrared Telescope",
-        "short_name": "TIRGO"
-    },
-    {
-        "name": "Gran Telescopio Canarias Project",
-        "short_name": "GTC"
-    },
-    {
-        "name": "Green Bank"
-    },
-    {
-        "name": "Groupe Astronomie de Spa",
-        "short_name": "GAS"
-    },
-    {
-        "name": "Guillermo Haro Observatory",
-        "short_name": "Cananea, Mexico"
-    },
-    {
-        "name": "Haleakala Observatories",
-        "short_name": "Hawaii"
-    },
-    {
-        "name": "Hard Labor Creek Observatory",
-        "short_name": "HLCO"
-    },
-    {
-        "name": "Hartebeesthoek Radio Astronomy Observatory",
-        "short_name": "HartRAO"
-    },
-    {
-        "name": "Hat Creek Radio Observatory",
-        "short_name": "HLCO"
-    },
-    {
-        "name": "Haystack Observatory",
-         "short_name": "HartRAO"
-    },
-    {
-        "name": "Herschel Science Centre",
-        "short_name": "ex-FIRST"
-    },
-    {
-        "name": "High Energy Astrophysics Observatories",
-        "short_name": "HEASARC. GSFC. NASA"
-    },
-    {
-        "name": "High Energy Stereoscopic System Project",
-        "short_name": "HESS"
-    },
-    {
-        "name": "High Energy Transient Explorer",
-        "short_name": "HETE-2"
-    },
-    {
-        "name": "High Energy X-ray Timing Experiment",
-        "short_name": "HEXTE"
-    },
-    {
-        "name": "High Resolution Fly's Eye Cosmic Ray Detector",
-        "short_name": "HiRes"
-    },
-    {
-        "name": "Hobby Eberly Telescope",
-        "short_name": "HET"
-    },
-    {
-        "name": "Hubble Space Telescope",
-        "short_name": "HST"
-    },
-    {
-        "name": "IAC / Observatorio Roque de los Muchachos"
-    },
-    {
-        "name": "IAC / Observatorio del Teide"
-    },
-    {
-        "name": "INTERBALL"
-    },
-    {
-        "name": "INTErnational Gamma-Ray Astrophysics Laboratory",
-        "short_name": "INTEGRAL"
-    },
-    {
-        "name": "IPS Radio & Space Services",
-        "short_name": "IPS"
-    },
-    {
-        "name": "Indian Astronomical Observatory Hanle",
-        "short_name": "IAO, the world's highest observatory for optical and infrared astronomy"
-    },
-    {
-        "name": "Infra-Red Space Interferometer DARWIN",
-        "short_name": "IRSI / DARWIN"
-    },
-    {
-        "name": "Infra-Red Telescope Facility",
-        "short_name": "IRTF"
-    },
-    {
-        "name": "InfraRed Array Camera for Spitzer Space telescope",
-        "short_name": "IRAC"
-    },
-    {
-        "name": "InfraRed Spectrograph on Spitzer Space Telescope",
-        "short_name": "IRS"
-    },
-    {
-        "name": "Infrared Space Observatory",
-        "short_name": "ISO"
-    },
-    {
-        "name": "Infrared Space Observatory U.S. Support Center",
-        "short_name": "ISO"
-    },
-    {
-        "name": "Infrared Spectrometer And Array Camera",
-        "short_name": "ISAAC, ESO VLT"
-    },
-    {
-        "name": "Infrared and Optical Telescope Array",
-        "short_name": "IOTA"
-    },
-    {
-        "name": "Institut de Radio Astronomie Millim\u00e9trique",
-        "short_name": "IRAM"
-    },
-    {
-        "name": "Instituto Argentino de Radioastronomia",
-        "short_name": "IAR"
-    },
-    {
-        "name": "Instituto Nacional de Astrof\u00edsica, \u00d3ptica y Electr\u00f3nica. Astrophysics Department",
-        "short_name": "INAOE, Mexico"
-    },
-    {
-        "name": "Interferometry Center of Excellence",
-        "short_name": "ICE, JPL"
-    },
-    {
-        "name": "International Interference Mitigation (for Radio Astronomy"
-    },
-    {
-        "name": "International Liquid Mirror Telescope Project",
-        "short_name": "ILMT"
-    },
-    {
-        "name": "Iowa Robotic Telescopes Facilities"
-    },
-    {
-        "name": "Isaac Newton Group - La Palma",
-        "short_name": "ING"
-    },
-    {
-        "name": "JWST ListServs",
-        "short_name": "ex-NGST ListServs"
-    },
-    {
-        "name": "James Clerk Maxwell Telescope",
-        "short_name": "JCMT"
-    },
-    {
-        "name": "James Webb Space Telescope",
-        "short_name": "JWST, ex-NGST"
-    },
-    {
-        "name": "Jicamarca Radio Observatory",
-        "short_name": "Peru"
-    },
-    {
-        "name": "Jodrell Bank Observatory",
-        "short_name": "University of Manchester"
-    },
-    {
-        "name": "Joint Astronomy Centre",
-        "short_name": "Hilo, Hawaii"
-    },
-    {
-        "name": "Joint Institute for VLBI in Europe / European VLBI Network",
-        "short_name": "JIVE / EVN"
-    },
-    {
-        "name": "KLEt Observatory Near Earth and Other unusual objects observations Team and Telescope",
-        "short_name": "KLENOT"
-    },
-    {
-        "name": "Kanzelhoehe Solar Observatory"
-    },
-    {
-        "name": "Keck Observatory",
-        "short_name": "CalTech"
-    },
-    {
-        "name": "Kiepenheuer-Institut f\u00fcr Sonnenphysik",
-        "short_name": "KIS"
-    },
-    {
-        "name": "Kirkwood Observatory"
-    },
-    {
-        "name": "Kitt Peak National Observatory",
-        "short_name": "KPNO"
-    },
-    {
-        "name": "Kodaikanal Solar Observatory"
-    },
-    {
-        "name": "Koelner Observatorium fuer SubMillimeter Astronomie",
-        "short_name": "KOSMA"
-    },
-    {
-        "name": "Kvistaberg Observatory"
-    },
-    {
-        "name": "LAMOST Sky Survey Project",
-        "short_name": "LAMOST"
-    },
-    {
-        "name": "LECS Instrument on BeppoSAX",
-        "short_name": "SAX, ESTEC, ESA"
-    },
-    {
-        "name": "La Silla - ESO Facilities"
-    },
-    {
-        "name": "Lake Afton Public Observatory",
-        "short_name": "Wichita State University"
-    },
-    {
-        "name": "Large Angle and Spectrographic Coronagraph for SOHO",
-        "short_name": "LASCO/SOHO"
-    },
-    {
-        "name": "Large Binocular Telescope Observatory",
-        "short_name": "LBT"
-    },
-    {
-        "name": "Large Millimeter Telescope / Gran Telescopio Milim\u00e9trico",
-        "short_name": "LMT"
-    },
-    {
-        "name": "Large Millimeter and Submillimeter Array Project",
-        "short_name": "LMSA: ALMA in Japan"
-    },
-    {
-        "name": "Laser Guide Star Adaptive Optics",
-        "short_name": "LLNL"
-    },
-    {
-        "name": "Laser Interferometer Gravitational-Wave Observatory",
-        "short_name": "LIGO"
-    },
-    {
-        "name": "Lick Observatory - University of California",
-        "short_name": "UCOLICK"
-    },
-    {
-        "name": "Liquid Mirrors at Universit\u00e9 Laval",
-        "short_name": "LM"
-    },
-    {
-        "name": "Liverpool John Moores University, Astrophysics Research Institute",
-        "short_name": "ARI, Liverpool JMU"
-    },
-    {
-        "name": "Loiano Telescopes - Bologna"
-    },
-    {
-        "name": "Low Energy Gamma-Ray Imager",
-        "short_name": "LEGRI"
-    },
-    {
-        "name": "Low Frequency Array",
-        "short_name": "LOFAR"
-    },
-    {
-        "name": "MDM Observatory",
-        "short_name": "MDM Observatory"
-    },
-    {
-        "name": "MONOPTEC's Fixed Shutter Dome",
-        "short_name": "FSD"
-    },
-    {
-        "name": "MOnitoring X-ray Experiment",
-        "short_name": "MOXE"
-    },
-    {
-        "name": "MPE Garching site for COMPTEL",
-        "short_name": "onboard Compton Gamma-Ray Observatory"
-    },
-    {
-        "name": "Magdelena Ridge Observatory Project",
-        "short_name": "MRO"
-    },
-    {
-        "name": "Magellan Mission to Venus"
-    },
-    {
-        "name": "Mauna Kea Observatories"
-    },
-    {
-        "name": "Mauritius Radio Telescope",
-        "short_name": "MRT"
-    },
-    {
-        "name": "McDonald Observatory",
-        "short_name": "University of Texas, Austin"
-    },
-    {
-        "name": "Mees Solar Observatory",
-        "short_name": "MSO, Hawaii"
-    },
-    {
-        "name": "Metsahovi Radio Research Station"
-    },
-    {
-        "name": "Michelle: A mid-infrared spectrometer and imager for the UKIRT and Gemini telescopes"
-    },
-    {
-        "name": "Michigan State Univ. SOuthern Astrophysical Research Telescope",
-        "short_name": "SOAR"
-    },
-    {
-        "name": "Microlensing Planet Finder Project",
-        "short_name": "MPF, ex-GEST"
-    },
-    {
-        "name": "Microvariability and Oscillations of STars",
-        "short_name": "MOST"
-    },
-    {
-        "name": "Mid-InfraRed Large-well Imager",
-        "short_name": "MIRLIN"
-    },
-    {
-        "name": "Midcourse Space Experiment",
-        "short_name": "MSX"
-    },
-    {
-        "name": "Millstone Hill Observatory",
-        "short_name": "MHO, Haystack"
-    },
-    {
-        "name": "Mississippi State University - Howell Observatory"
-    },
-    {
-        "name": "Moletai Astronomical Observatory",
-        "short_name": "MAO"
-    },
-    {
-        "name": "Molonglo Observatory Synthesis Telescope",
-        "short_name": "MOST"
-    },
-    {
-        "name": "Monterey Institute for Research in Astronomy",
-        "short_name": "MIRA"
-    },
-    {
-        "name": "Mount Evans Meyer-Womble Observatory",
-        "short_name": "Denver Univ."
-    },
-    {
-        "name": "Mount Graham International Observatory",
-        "short_name": "MGIO"
-    },
-    {
-        "name": "Mount Laguna Observatory"
-    },
-    {
-        "name": "Mount Pleasant Radio Observatory",
-        "short_name": "Tasmania"
-    },
-    {
-        "name": "Mount Stromlo and Siding Spring Observatories - Observing facilities",
-        "short_name": "MSSSO"
-    },
-    {
-        "name": "Mount Suhora Observatory",
-        "short_name": "Cracow Pedagogical University"
-    },
-    {
-        "name": "Mount Wilson Observatory"
-    },
-    {
-        "name": "Mt John (Canterbury) University Observatory",
-        "short_name": "New Zealand"
-    },
-    {
-        "name": "Multi-Element Radio Linked Interferometer Network",
-        "short_name": "MERLIN - Jodrell Bank"
-    },
-    {
-        "name": "Multiband Imaging Photometer for Spitzer Space Telescope",
-        "short_name": "MIPS"
-    },
-    {
-        "name": "Multiple Mirror Telescope Observatory (1",
-        "short_name": "MMTO"
-    },
-    {
-        "name": "Multiple Mirror Telescope Observatory (2",
-        "short_name": "MMTO"
-    },
-    {
-        "name": "Muriwai Beach Observatory NZ"
-    },
-    {
-        "name": "NFO's Automatic Radio Linked Telescope"
-    },
-    {
-        "name": "Nan\u00e7ay Radio Observatory",
-        "short_name": "USN"
-    },
-    {
-        "name": "Nasmyth Adaptive Optics System - Near-Infrared Imager and Spectrograph",
-        "short_name": "NAOS-CONICA -- NaCo -- ESO VLT"
-    },
-    {
-        "name": "National Astronomical Observatory of Spain",
-        "short_name": "OAN"
-    },
-    {
-        "name": "National Centre for Radio Astrophysics",
-        "short_name": "NCRA"
-    },
-    {
-        "name": "National Schools' Observatory"
-    },
-    {
-        "name": "National Solar Observatory",
-        "short_name": "NSO, USA"
-    },
-    {
-        "name": "National Undergraduate Research Observatory",
-        "short_name": "NURO"
-    },
-    {
-        "name": "Near Infrared Camera and Multi-Object Spectrometer",
-        "short_name": "NICMOS"
-    },
-    {
-        "name": "Near-Earth Asteroid Tracking",
-        "short_name": "NEAT"
-    },
-    {
-        "name": "New Radio Telescope Technologies Laboratory",
-        "short_name": "NRTT Lab"
-    },
-    {
-        "name": "Nobeyama Radio Observatory, NAOJ",
-        "short_name": "NRO"
-    },
-    {
-        "name": "Nordic Optical Telescope",
-        "short_name": "NOT, La Palma"
-    },
-    {
-        "name": "Northeastern Space Radio Observatory - VLBI antenna",
-        "short_name": "ROEN"
-    },
-    {
-        "name": "Noto VLBI Station"
-    },
-    {
-        "name": "Oak Ridge Observatory"
-    },
-    {
-        "name": "Observatoire Midi-Pyrenees",
-        "short_name": "OMP"
-    },
-    {
-        "name": "Observatoire de Haute-Provence",
-        "short_name": "OHP"
-    },
-    {
-        "name": "Observatoire du Mont M\u00e9gantic",
-        "short_name": "OMM"
-    },
-    {
-        "name": "Observatorio Astronomico da Serra da Piedade",
-        "short_name": "OAP, Mainas Gerais, Brazil"
-    },
-    {
-        "name": "Observatorio Astron\u00f3mico Nacional",
-        "short_name": "OAN"
-    },
-    {
-        "name": "Observatorium Hoher List",
-        "short_name": "Bonn"
-    },
-    {
-        "name": "OmegaCAM"
-    },
-    {
-        "name": "Onsala Space Observatory",
-        "short_name": "OSO"
-    },
-    {
-        "name": "Orbiting Very Long Baseline Interferometry",
-        "short_name": "OVLBI"
-    },
-    {
-        "name": "OverWhelmingly Large Telescope Project",
-        "short_name": "OWL"
-    },
-    {
-        "name": "Owens Valley Radio Observatory",
-        "short_name": "OVRO"
-    },
-    {
-        "name": "PLANCK",
-        "short_name": "ex-COBRAS/SAMBA"
-    },
-    {
-        "name": "POLAR Spacecraft"
-    },
-    {
-        "name": "Palomar Observatory",
-        "short_name": "CalTech"
-    },
-    {
-        "name": "Palomar Testbed Interferometer",
-        "short_name": "PTI"
-    },
-    {
-        "name": "Panoramic Survey Telescope & Rapid Response System",
-        "short_name": "Pan-STARRS"
-    },
-    {
-        "name": "Perkins Observatory"
-    },
-    {
-        "name": "Perugia Univ. Astronomical Observatory & Astrophysics Section",
-        "short_name": "OAUP"
-    },
-    {
-        "name": "Pico dos Dias Observatory",
-        "short_name": "OPD"
-    },
-    {
-        "name": "Pine Mountain Observatory",
-        "short_name": "University of Oregon"
-    },
-    {
-        "name": "Planet Sciences Association - Astronomy sector",
-        "short_name": "ex-ANSTJ, France"
-    },
-    {
-        "name": "Pushchino Radioastronomy Observatory (PRAO",
-        "short_name": "PRAO"
-    },
-    {
-        "name": "RATAN-600 Radiotelescope",
-        "short_name": "SAO-Russia"
-    },
-    {
-        "name": "ROSAT",
-        "short_name": "X-ray satellite"
-    },
-    {
-        "name": "ROentgen SATellite",
-        "short_name": "ROSAT at GSFC. NASA"
-    },
-    {
-        "name": "RXTE Guest Observer Facility",
-        "short_name": "GFSC"
-    },
-    {
-        "name": "Radio Ice Cherenkov Experiment",
-        "short_name": "RICE"
-    },
-    {
-        "name": "RadioAstron",
-        "short_name": "Space VLBI Mission"
-    },
-    {
-        "name": "Reuven Ramaty High Energy Solar Spectroscopic Imager",
-        "short_name": "RHESSI, ex-HESSI"
-    },
-    {
-        "name": "Robotic Lunar Observatory",
-        "short_name": "ROLO"
-    },
-    {
-        "name": "Robotic Optical Transient Search Experiment",
-        "short_name": "ROTSE"
-    },
-    {
-        "name": "Rossi X-Ray Timing Explorer",
-        "short_name": "RXTE"
-    },
-    {
-        "name": "Rothney Astrophysical Observatory",
-        "short_name": "RAO"
-    },
-    {
-        "name": "SOlar and Heliospheric Observatory",
-        "short_name": "SOHO"
-    },
-    {
-        "name": "SOuthern Astrophysical Research telescope Project",
-        "short_name": "SOAR"
-    },
-    {
-        "name": "STellar Astrophysics & Research on Exoplanets",
-        "short_name": "STARE"
-    },
-    {
-        "name": "SUBARU Telescope"
-    },
-    {
-        "name": "Santiago de Compostela Univ. - Ram\u00f3n Mar\u00eda Aller Astronomical Observatory",
-        "short_name": "AO RMA"
-    },
-    {
-        "name": "Schmidt telescope at Observatoire de la Cote d'Azur"
-    },
-    {
-        "name": "Seoul Radio Astronomy Observatory",
-        "short_name": "SRAO"
-    },
-    {
-        "name": "Small Explorers",
-        "short_name": "SMEX"
-    },
-    {
-        "name": "Soft X-Ray Telescope onboard Yohkoh Satellite, ISAS, Japan",
-        "short_name": "description at LMSAL, USA"
-    },
-    {
-        "name": "Solar Extreme-ultraviolet Rocket Telescope and Spectrograph",
-        "short_name": "SERTS"
-    },
-    {
-        "name": "Solar Group of RATAN-600"
-    },
-    {
-        "name": "Solar Observation Station - Carla Sagan Observatory",
-        "short_name": "EOS/OCS"
-    },
-    {
-        "name": "Solar TErrestrial RElations Observatory",
-        "short_name": "STEREO"
-    },
-    {
-        "name": "Solar Tower Atmospheric Cherenkov Effect Experiment",
-        "short_name": "STACEE"
-    },
-    {
-        "name": "South African Astronomical Observatory",
-        "short_name": "SAAO"
-    },
-    {
-        "name": "Southeastern Association for Research in Astronomy",
-        "short_name": "SARA"
-    },
-    {
-        "name": "Southern African Large Telescope Project",
-        "short_name": "SALT"
-    },
-    {
-        "name": "Southern Columbia Millimeter Telescope",
-        "short_name": "1.2 Meter"
-    },
-    {
-        "name": "Space Interferometry Mission",
-        "short_name": "SIM"
-    },
-    {
-        "name": "Special Astrophysical Observatory of Russian Academy of Science - Schedules",
-        "short_name": "SAO RAS"
-    },
-    {
-        "name": "Spectrum-X-Gamma Coordination facility",
-        "short_name": "SXG. University of Harvard"
-    },
-    {
-        "name": "Spitzer Space Telescope",
-        "short_name": "ex-SIRTF"
-    },
-    {
-        "name": "Square Kilometer Array - Interferometer radio telescope project",
-        "short_name": "SKA"
-    },
-    {
-        "name": "Square Kilometre Array",
-        "short_name": "SKA - Australian contribution"
-    },
-    {
-        "name": "Stardial:an autonomous astronomical camera on the World Wide Web",
-        "short_name": "Stardial"
-    },
-    {
-        "name": "Stardust"
-    },
-    {
-        "name": "Stephen F. Austin State University Observatory",
-        "short_name": "SFASU"
-    },
-    {
-        "name": "Stereo Photographs of Telescopes and Observatories",
-        "short_name": "Stereo Telescope Photos"
-    },
-    {
-        "name": "Steward Observatory"
-    },
-    {
-        "name": "Stratospheric Observatory For Infrared Astronomy",
-        "short_name": "SOFIA"
-    },
-    {
-        "name": "Submillimeter Array",
-        "short_name": "SMA"
-    },
-    {
-        "name": "Submillimeter Polarimeter for Antarctic Remote Observing",
-        "short_name": "SPARO"
-    },
-    {
-        "name": "Submillimeter Receiver Laboratory",
-        "short_name": "SAO"
-    },
-    {
-        "name": "Submillimetre Common-User BolometerArray for the James Clerk Maxwell Telescope",
-        "short_name": "SCUBA"
-    },
-    {
-        "name": "Sudbury Neutrino Observatory",
-        "short_name": "SNO at Queen's University"
-    },
-    {
-        "name": "Super Dual Auroral Radar Network",
-        "short_name": "SuperDARN"
-    },
-    {
-        "name": "Super-Kamiokande"
-    },
-    {
-        "name": "Supernova / Acceleration Probe",
-        "short_name": "SNAP"
-    },
-    {
-        "name": "Swedish 1-m Solar Telescope",
-        "short_name": "NSST"
-    },
-    {
-        "name": "Swedish-ESO SUbmillimetre Telescope",
-        "short_name": "SEST"
-    },
-    {
-        "name": "Swift Gamma Ray Burst Mission"
-    },
-    {
-        "name": "Sydney University Molonglo Sky Survey",
-        "short_name": "SUMSS"
-    },
-    {
-        "name": "THEMIS - Heliographic Telescope for the Study of the Magnetism and Instabilities on the Sun",
-        "short_name": "THEMIS"
-    },
-    {
-        "name": "Taeduk Radio Astronomy Observatory",
-        "short_name": "TRAO"
-    },
-    {
-        "name": "Tartu Observatory"
-    },
-    {
-        "name": "Teide Observatory",
-        "short_name": "OT"
-    },
-    {
-        "name": "Telescope Array Project"
-    },
-    {
-        "name": "Telescopio Nazionale Galileo - Italian National Telescope Galileo",
-        "short_name": "TNG, La Palma"
-    },
-    {
-        "name": "Tennessee State University 2-m Automatic Spectroscopic Telescope Project",
-        "short_name": "2-m AST"
-    },
-    {
-        "name": "Terrestrial Planet Finder (Origins of Stars, Planets... and Life",
-        "short_name": "TPF"
-    },
-    {
-        "name": "The European Incoherent SCATter Scientific Association",
-        "short_name": "EISCAT"
-    },
-    {
-        "name": "The Wilderness Center Astronomy Club",
-        "short_name": "WCAC"
-    },
-    {
-        "name": "Thueringer Landessternwarte Tautenburg",
-        "short_name": "TLS"
-    },
-    {
-        "name": "Torun Radio Astronomy Observatory",
-        "short_name": "TRAO"
-    },
-    {
-        "name": "Transition Region And Coronal Explorer",
-        "short_name": "TRACE"
-    },
-    {
-        "name": "UK Infra-Red Telescope",
-        "short_name": "UKIRT"
-    },
-    {
-        "name": "UK Schmidt Telescope - Anglo-Australian Observatory",
-        "short_name": "UKST / AAO"
-    },
-    {
-        "name": "UK Schmidt Telescope - Wide Field Astronomy Unit",
-        "short_name": "UKST"
-    },
-    {
-        "name": "USA National Solar Observatory / Sacramento Peak, Sunspot, NM",
-        "short_name": "NSO/SP"
-    },
-    {
-        "name": "Udaipur Solar Observatory",
-        "short_name": "USO"
-    },
-    {
-        "name": "Uhuru Satellite",
-        "short_name": "GSFC. NASA"
-    },
-    {
-        "name": "Ultraviolet Imaging Telescope",
-        "short_name": "UIT - Archives at STScI MAST"
-    },
-    {
-        "name": "Ulysses Mission",
-        "short_name": "ESA and NASA"
-    },
-    {
-        "name": "University of California Observatories - Lick Observatory (WWW",
-        "short_name": "UCO/Lick"
-    },
-    {
-        "name": "University of California, Irvine, Observatory",
-        "short_name": "UCI Observatory"
-    },
-    {
-        "name": "University of Hawaii IfA: 2.2m Telescope"
-    },
-    {
-        "name": "University of Louisville - Moore Observatory"
-    },
-    {
-        "name": "University of Toronto Southern Observatory",
-        "short_name": "UTSO"
-    },
-    {
-        "name": "VIsible and IR MultiObject Spectrographs",
-        "short_name": "VIRMOS"
-    },
-    {
-        "name": "VLBI Space Observatory Programme",
-        "short_name": "VSOP"
-    },
-    {
-        "name": "VLT Imager and Spectrometer for mid Infra Red",
-        "short_name": "VISIR, ESO VLT"
-    },
-    {
-        "name": "VLT Survey Telescope",
-        "short_name": "VST"
-    },
-    {
-        "name": "Vainu Bappu Observatory",
-        "short_name": "Kavalur"
-    },
-    {
-        "name": "Venezuela Centre for Researches in Astronomy",
-        "short_name": "CIDA"
-    },
-    {
-        "name": "Ventspils International Radioastronomy Center",
-        "short_name": "VIRAC"
-    },
-    {
-        "name": "Very Large Array",
-        "short_name": "VLA"
-    },
-    {
-        "name": "Very Large Telescope Interferometer",
-        "short_name": "VLTI, ESO"
-    },
-    {
-        "name": "Very Long Baseline Array",
-        "short_name": "VLBA"
-    },
-    {
-        "name": "Very Small Array",
-        "short_name": "VSA"
-    },
-    {
-        "name": "Virgo Interferometer",
-        "short_name": "VIRGO"
-    },
-    {
-        "name": "Visible and Infrared Survey Telescope for Astronomy",
-        "short_name": "VISTA"
-    },
-    {
-        "name": "Vulcan Camera Project"
-    },
-    {
-        "name": "WAVES : The Radio and Plasma Wave Investigation on the WIND Spacecraft",
-        "short_name": "waves"
-    },
-    {
-        "name": "WIND spacecraft"
-    },
-    {
-        "name": "WIYN, from Indiana University"
-    },
-    {
-        "name": "Westerbork Synthesis Radio Telescope",
-        "short_name": "WSRT - ASTRON"
-    },
-    {
-        "name": "Whole Earth Blazar Telescope",
-        "short_name": "WEBT"
-    },
-    {
-        "name": "Whole Earth Telescope",
-        "short_name": "WET, site of University of Texas at Austin"
-    },
-    {
-        "name": "Whole Earth Telescope",
-        "short_name": "WET"
-    },
-    {
-        "name": "Wide Field CAMera for UKIRT",
-        "short_name": "WFCAM"
-    },
-    {
-        "name": "Wide Field Infrared Explorer",
-        "short_name": "WIRE"
-    },
-    {
-        "name": "Wilcox Solar Observatory",
-        "short_name": "WSO"
-    },
-    {
-        "name": "Wilkinson Microwave Anisotropy Probe",
-        "short_name": "WMAP"
-    },
-    {
-        "name": "Wilkinson Microwave Anisotropy Probe",
-        "short_name": "WMAP"
-    },
-    {
-        "name": "Winer Observatory"
-    },
-    {
-        "name": "Wisconsin Ultraviolet Photo-Polarimeter Experiment",
-        "short_name": "WUPPE"
-    },
-    {
-        "name": "Wolfgang-Amadeus, The University of Vienna Twin Automatic Photoelectric Telescope",
-        "short_name": "APT"
-    },
-    {
-        "name": "Wyoming Infrared Observatory",
-        "short_name": "WIRO"
-    },
-    {
-        "name": "X-Ray Timing Explorer",
-        "short_name": "XTE. GSFC.NASA"
-    },
-    {
-        "name": "XMM-Newton",
-        "short_name": "ESA"
-    },
-    {
-        "name": "XMM-Newton Science Operations Centre",
-        "short_name": "XMM, ESA"
-    },
-    {
-        "name": "Yerkes Observatory",
-        "short_name": "University of Chicago"
-    }
+  {
+    "Name": "1st High Energy Astrophysics Observatory",
+    "ID": "HEAO 1. GSFC. NASA",
+    "description": "The first of NASA's three High Energy Astronomy Observatories, HEAO  was launched aboard an Atlas Centaur rocket on 12 August 1977 and operated until 9 January 1979. During that time, it scanned the X-ray sky almost three times over 0.2 keV - 10 MeV, provided nearly constant monitoring of X-ray sources near the ecliptic poles, as well as more detailed studies of a number of objects through pointed observations.",
+    "link": "http://heasarc.gsfc.nasa.goV/docs/heao1/heao1.html"
+  },
+  {
+    "Name": "2-Telescopes Large Interferometer",
+    "ID": "GI2T REGAIN",
+    "description": "",
+    "link": "http://www.obs-nice.fr/fresnel/gi2t/en/"
+  },
+  {
+    "Name": "AKARI",
+    "ID": "",
+    "description": "The Grand Interferometre a 2 Telescopes is an Optical Interferometer, on Plateau du Calern, Departement Fresnel, Observatoire de la Côte d'Azur, France.",
+    "link": "http://www.astro-f.esac.esa.int/"
+  },
+  {
+    "Name": "AREA31 Radio Observatory",
+    "ID": "A31RO",
+    "description": "",
+    "link": "http://www.area31.org/"
+  },
+  {
+    "Name": "ASTRO Observatory",
+    "ID": "ASTRO-1 and ASTRO-2",
+    "description": "AKARI (formerly ASTRO-F) is an infrared sky survey mission from Institute of Space and Astronautical Science (ISAS) of the Japan Aerospace eXploration Agency (JAXA) with the participation of the European Space Agency (ESA).",
+    "link": "http://archive.stsci.edu/astro/"
+  },
+  {
+    "Name": "ATNF - Australia Telescope Compact Array",
+    "ID": "ATCA, Narrabri",
+    "description": "",
+    "link": "http://www.narrabri.atnf.csiro.au/"
+  },
+  {
+    "Name": "ATNF - Australia Telescope National Facility",
+    "ID": "CSIRO",
+    "description": "A31RO is a privately owned astronomical radio observatory operated by the Interstellar Electromagnetics Institute/L'institut Electromagnetique Interstellaire under cooperative agreement with the AREA31 Research Facility. It is located near Shelburne, Ontario, Canada, about 1-1/2 hrs drive NW of Toronto. The Project TARGET microwave SETI program (since 1985), previously conducted at the Hay River Radio Observatory and also the Algonquin Radio Observatory is the primary initiative.",
+    "link": "http://www.atnf.csiro.au/"
+  },
+  {
+    "Name": "ATNF - Mopra Observatory",
+    "ID": "ATNF Mopra",
+    "description": "",
+    "link": "http://www.narrabri.atnf.csiro.au/mopra"
+  },
+  {
+    "Name": "ATNF - Parkes Observatory",
+    "ID": "ATNF Parkes",
+    "description": "The ASTRO Observatory had three primary instruments: the Ultraviolet Imaging Telescope (UIT), the Hopkins Ultraviolet Telescope (HUT) and the Wisconsin Ultraviolet Photo-Polarimeter Experiment (WUPPE). The first Astro flight was on December 2-11, 1990. The X-ray experiment Broad Band X-Ray Telescope (BBXRT) was also part of the Astro-1 flight. The second flight was on March 2-18, 1995.",
+    "link": "http://www.parkes.atnf.csiro.au/"
+  },
+  {
+    "Name": "Active Magnetospheric Particle Tracer Explorers",
+    "ID": "AMPTE",
+    "description": "",
+    "link": "http://sd-www.jhuapl.edu/AMPTE/ampte_mission.html"
+  },
+  {
+    "Name": "Advanced Camera for Surveys",
+    "ID": "ACS",
+    "description": "The Paul Wild Observatory, near Narrabri, is part of the Australia Telescope National Facility (ATNF), and operated by the CSIRO; the Officer-in-Charge is Dr Graham Nelson. The Narrabri site contains the Australia Telescope Compact Array, which consists of five antennas located along a 3-km railtrack, and a 6th antenna 3 km further to the west.",
+    "link": "http://adcam.pha.jhu.edu/"
+  },
+  {
+    "Name": "Advanced Fiber-Optic Echelle",
+    "ID": "AFOE",
+    "description": "",
+    "link": "http://cfa-www.harvard.edu/afoe/"
+  },
+  {
+    "Name": "Advanced Satellite for Cosmology and Astrophysics",
+    "ID": "ASCA, ex-Astro-D",
+    "description": "CSIRO's Australia Telescope National Facility (ATNF) is an organisation that supports and undertakes research in radio astronomy. It operates the Australia Telescope, the collective name for a set of radio telescopes in New South Wales. These telescopes are used, individually or together, to study objects in the Universe ranging from the remains of dead stars to entire galaxies.",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/asca/asca2.html"
+  },
+  {
+    "Name": "Air Force Maui Optical Station",
+    "ID": "AMOS",
+    "description": "",
+    "link": "http://www.maui.afmc.af.mil/"
+  },
+  {
+    "Name": "Anglo-Australian Observatory",
+    "ID": "AAO",
+    "description": "The Mopra 22-m antenna is part of the Australia Telescope National Facility (ATNF), operated by the CSIRO. It is intended for use in conjunction with other AT antennas (the six 22-m dishes at Narrabri, and the 64-m Parkes dish) to form the Long Baseline Array. Like the Parkes antenna, it is also used for single-dish operation; mm-wavelength receivers are to be installed soon.",
+    "link": "http://www.aao.gov.au/"
+  },
+  {
+    "Name": "Antarctic Muon and Neutrino Detector Array",
+    "ID": "INACTIVE LINK ? - 378 --- AMANDA",
+    "description": "",
+    "link": "http://amanda.berkeley.edu/"
+  },
+  {
+    "Name": "Antarctic Submillimeter Telescope and Remote Observatory",
+    "ID": "AST/RO",
+    "description": "The CSIRO Australia Telescope National Facility operates a group of radio telescopes collectively known as the Australia Telescope. The ATNF Parkes Observatory consists of a 64m telescope which is used as an independent instrument, and networked with other Australian and international radio telescopes for VLBI.",
+    "link": "http://cfa-www.harvard.edu/~adair/AST_RO/"
+  },
+  {
+    "Name": "Apache Point Observatory",
+    "ID": "APO",
+    "description": "",
+    "link": "http://www.apo.nmsu.edu/"
+  },
+  {
+    "Name": "Arecibo Observatory - National Astronomy and Ionosphere Center",
+    "ID": "NAIC",
+    "description": "",
+    "link": "http://www.naic.edu/"
+  },
+  {
+    "Name": "Aristarchos 2.3m Telescope Project",
+    "ID": "The New Greek Telescope",
+    "description": "The Advanced Camera for Surveys (ACS) will be installed in the Hubble Space Telescope (HST) during a Space Shuttle mission scheduled in 2000. ACS will increase the discovery efficiency of the HST by a factor of ten. ACS will consist of three electronic cameras and a complement of filters and dispersers that detect light from the ultraviolet at 1200 angstroms to the near infrared at 10,000 angstroms.",
+    "link": "http://www.astro.noa.gr/ASC_2.3m/ngt_main.htm"
+  },
+  {
+    "Name": "Arizona Radio Observatory",
+    "ID": "ARO",
+    "description": "",
+    "link": "http://aro.as.arizona.edu/"
+  },
+  {
+    "Name": "Array of Low Energy X-ray Imaging Sensors",
+    "ID": "ALEXIS",
+    "description": "A Spectrograph for Precise Stellar Radial Velocity Measurements.",
+    "link": "http://alexis-www.lanl.gov/"
+  },
+  {
+    "Name": "Aryabhatta Research Institute of observational-sciencES",
+    "ID": "ARIES",
+    "description": "",
+    "link": "http://aries.ernet.in/"
+  },
+  {
+    "Name": "Asiago Observatory",
+    "ID": "Padova",
+    "description": "ASCA (formerly named Astro-D) is Japan's fourth cosmic X-ray astronomy mission, and the second for which the United States is providing part of the scientific payload. The satellite was successfully launched February 20, 1993.",
+    "link": "http://www.pd.astro.it/asiago"
+  },
+  {
+    "Name": "Atacama Large Millimeter Array - ESO Web site",
+    "ID": "ALMA",
+    "description": "",
+    "link": "http://www.eso.org/projects/alma/"
+  },
+  {
+    "Name": "Atacama Large Millimeter Array - NRAO Web site",
+    "ID": "ALMA",
+    "description": "Information about the Air Force Maui Optical Station (AMOS), located on Maui, Hawaii. This is a dual-use facility, supporting both US government agencies as well as the civilian community. Assets include visible and IR sensors, and a 3.67 meter telescope under construction.",
+    "link": "http://www.mma.nrao.edu/"
+  },
+  {
+    "Name": "Automated Patrol Telescope",
+    "ID": "APT",
+    "description": "",
+    "link": "http://www.phys.unsw.edu.au/~mcba/apt.html"
+  },
+  {
+    "Name": "Belogradchik Astronomical observatory",
+    "ID": "",
+    "description": "The Anglo-Australian Observatory operates the Anglo-Australian and Telescopes at Siding Spring, Australia, and a laboratory on the same campus as the ATNF in the Sydney Suburb of Epping.",
+    "link": "http://www.astro.bas.bg/~aobel/"
+  },
+  {
+    "Name": "BeppoSAX Mission",
+    "ID": "SAX",
+    "description": "",
+    "link": "http://www.asdc.asi.it/bepposax/"
+  },
+  {
+    "Name": "Berkeley Illinois Maryland Association",
+    "ID": "BIMA - Hat Creek",
+    "description": "",
+    "link": "http://bima.astro.umd.edu/"
+  },
+  {
+    "Name": "Bernard Lyot Telescope",
+    "ID": "INACTIVE LINK ? - 326 --- UPS",
+    "description": "AST/RO is a 1.7 meter diameter off-axis telescope for research in astronomy and aeronomy at wavelengths between 200 microns and 2 mm. The instrument is now operating at the South Pole with four heterodyne receivers and three acousto-optical spectrometers.",
+    "link": "http://bigorre.bagn.obs-mip.fr/tbl/indexeh.htm"
+  },
+  {
+    "Name": "Big Bear Solar Observatory",
+    "ID": "BBSO",
+    "description": "",
+    "link": "http://www.bbso.njit.edu/"
+  },
+  {
+    "Name": "Big Ear Radio Observatory Memorial website",
+    "ID": "Ohio State University",
+    "description": "APO is privately owned and operated by the Astrophysical Research Consortium. Located near Sunspot, New Mexico, the observatory consists of a 3.5-meter telescope, the 2.5-meter Sloan Digital Sky Survey telescope, and two smaller telescopes.",
+    "link": "http://www.bigear.org/"
+  },
+  {
+    "Name": "Birmingham Solar Oscillations Network",
+    "ID": "BiSON",
+    "description": "",
+    "link": "http://bison.ph.bham.ac.uk/"
+  },
+  {
+    "Name": "Boyden Observatory",
+    "ID": "INACTIVE LINK ? - 338 --- South Africa",
+    "description": "",
+    "link": "http://www.uovs.ac.za/container.php?faculties_id=04&dept_id=NFSK&code=DEPT_DOC&document_id=1349?PHPSESSID=b52d7551b81bc5f170ee6156d436ea9c"
+  },
+  {
+    "Name": "Bradford Robotic Telescope",
+    "ID": "University of Bradford",
+    "description": "The New Greek Telescope project of the for the 2.3m Ritchey-Chretien telescope, funded by the European Commission and the General Secretariat for Research and Technology of the Hellenic Ministry of Development.",
+    "link": "http://www.telescope.org/"
+  },
+  {
+    "Name": "Brazil National Laboratory for Astrophysics",
+    "ID": "LNA",
+    "description": "",
+    "link": "http://www.lna.br/Welcom_e.html"
+  },
+  {
+    "Name": "Brazil National Observatory",
+    "ID": "ON",
+    "description": "The ARO owns and operates two radio telescopes in southern Arizona: The former NRAO 12 Meter (KP12m) Telescope located 50 miles southwest of Tucson on Kitt Peak and the Heinrich Hertz Submillimeter Telescope (HHSMT) located on Mt. Graham near Safford, Arizona. Combined, the two telescopes routinely cover the entire millimeter and submillimeter windows from about 4.6 mm to about 0.6 mm, and at the HHSMT observations can be made all the way to 0.3 mm with PI instruments. The telescopes are operated around-the-clock for about 9 to 10 months per year for a combined 10,000 hours per observing season (about 500 hours are dedicated to sub-mm wavelengths at the HHSMT). The ARO offices are centrally located in the Steward Observatory building on the campus of the University of Arizona in Tucson Arizona.",
+    "link": "http://www.on.br/"
+  },
+  {
+    "Name": "Broad Band X-ray Telescope",
+    "ID": "BBXRT. GSFC. NASA",
+    "description": "",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/bbxrt/bbxrt.html"
+  },
+  {
+    "Name": "Broadcast from Carl Sagan Observatory",
+    "ID": "ASTRO-USON WebTV",
+    "description": "ALEXIS' X-ray telescopes feature curved mirrors whose multilayer coatings reflect and focus low-energy X-rays or extreme ultraviolet light the way optical telescopes focus visible light. The satellite and payloads were funded by the Department of Energy and built by in collaboration with Sandia National Laboratory and the University of California-Space Sciences Lab. The Launch was provided by the Air Force Space Test Program on a Pegasus Booster on April 25, 1993. The mission is entirely controlled from a small groundstation at LANL.",
+    "link": "http://cosmos.astro.uson.mx/webtv/webtv.htm"
+  },
+  {
+    "Name": "Bucknell University Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.eg.bucknell.edu/physics/astronomy/observatory/"
+  },
+  {
+    "Name": "Bulgaria National Astronomical Observatory \"Rozhen\"",
+    "ID": "NAO-Rozhen",
+    "description": "This observatory at Himalayan regions of Nainital, India (long.~79.5 degree E, lat.~29.4 degree N , height~1951m) provides optical observational facilities (astronomical and atmospheric sciences) with 5 telescopes of sizes in between 15cm and 104cm. In future, ARIES plans to set-up a 1-m class robotic and a 3-m class telescope. The main research areas are in solar astronomy, star clusters, GRBs and supernova, and stellar pulsations. ARIES also promotes research work using radio and X-ray telescopes.",
+    "link": "http://www.astro.bas.bg/rozhen.html"
+  },
+  {
+    "Name": "Byurakan Astrophysical Observatory",
+    "ID": "Armenia",
+    "description": "",
+    "link": "http://www.aras.am/bao.html"
+  },
+  {
+    "Name": "CERN Hybrid Oscillation Research apparatUS",
+    "ID": "CHORUS",
+    "description": "",
+    "link": "http://choruswww.cern.ch/Public/welcome1.html"
+  },
+  {
+    "Name": "COnvection ROtation and planetary Transits - Asteroseismology and Search for Exoplanets",
+    "ID": "INACTIVE LINK ? - 97 --- COROT",
+    "description": "The Atacama Large Millimeter Array (ALMA) is the new name for the merger of the major millimeter array projects into one global project: the European Large Southern Array (LSA), the U.S. Millimeter Array (MMA), and possibly the Japanese Large Millimeter and Submillimeter Array (LMSA). This will be the largest ground-based astronomy project of the next decade after VLT/VLTI, and, together with the Next Generation Space Telescope (NGST), one of the two major new facilities for world astronomy coming into operation by the end of the next decade.",
+    "link": "http://www.lam.oamp.fr/projets/corot/"
+  },
+  {
+    "Name": "COsmic Background Explorer",
+    "ID": "COBE",
+    "description": "",
+    "link": "http://lambda.gsfc.nasa.gov/product/cobe/"
+  },
+  {
+    "Name": "Cagliari Astronomical Observatory",
+    "ID": "International Latitude Station",
+    "description": "The Atacama Large Millimeter Array (ALMA) is a millimeter wavelength telescope. The U.S. side of the project is run by the National Radio Astronomy Observatory (NRAO), operated by Associated Universities, Inc., under cooperative agreement with the National Science Foundation (NSF). The European side of the project is a collaboration between the European Southern Observatory (ESO), the Centre National de la Recherche Scientifique, the Max-Planck-Gesellschaft, the Netherlands Foundation for Research in Astronomy and Nederlandse Onderzoekschool Voor Astronomie, and the United Kingdom Particle Physics and Astronomy Research Council.",
+    "link": "http://www.ca.astro.iT/"
+  },
+  {
+    "Name": "Calar Alto Astronomical Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.caha.es"
+  },
+  {
+    "Name": "Caltech Submillimeter Observatory",
+    "ID": "CSO",
+    "description": "The Automated Patrol Telescope (APT) is a wide-field CCD imaging telescope, which is operated by the University of New South Wales at Siding Spring Observatory, Australia.",
+    "link": "http://www.submm.caltech.edu/cso/"
+  },
+  {
+    "Name": "Cambridge LFST",
+    "ID": "",
+    "description": "",
+    "link": "http://www.mrao.cam.ac.uk/telescopes/clfst/"
+  },
+  {
+    "Name": "Cambridge Optical Aperture Synthesis Telescope",
+    "ID": "COAST",
+    "description": "",
+    "link": "http://www.mrao.cam.ac.uk/telescopes/coast/"
+  },
+  {
+    "Name": "Cambridge Ryle Telescope",
+    "ID": "",
+    "description": "The X-ray astronomy satellite BeppoSAX (Satellite per Astronomia X, \"Beppo\" in honor of Giuseppe Occhialini) is a project of the with participation of the Netherlands Agency for Aerospace Programs (NIVR). In the framework of past and future X-ray missions BeppoSAX stands out for its wide spectral coverage, ranging from 0.1 to over 200 keV. The sensitivity of the scientific payload allows the detailed study over the entire energy band of sources as weak as about 1/20 of 3C273. This opens new perspectives in the study of broad band X-ray spectra and variability of cosmic sources. [also in Italian]",
+    "link": "http://www.mrao.cam.ac.uk/telescopes/ryle/"
+  },
+  {
+    "Name": "Canada France Hawaii Telescope",
+    "ID": "CFHT",
+    "description": "",
+    "link": "http://www.cfht.hawaii.edu/"
+  },
+  {
+    "Name": "Canada France Hawaii Telescope (ftp)",
+    "ID": "CFHT",
+    "description": "BIMA is a consortium consisting of the The University of California at Berkeley, The University of Illinois at Urbana and The University of Maryland at College Park which operates and maintains a millimeter-wave radio interferometer at Hat Creek, California. As of 2005 BIMA has been incoorporated in CARMA.",
+    "link": "ftp://ftp.cfht.hawaii.edu/pub/"
+  },
+  {
+    "Name": "Canadian Satellite Tracking and Orbit Research",
+    "ID": "CASTOR Satellite Tracking Project",
+    "description": "",
+    "link": "http://www.castor2.ca"
+  },
+  {
+    "Name": "Canopus 1 m telescope",
+    "ID": "Tasmania",
+    "description": "2 m Cassegrain telescope operating in the visible domain. Located at 2878 m high on the Pic du Midi in the French Pyrénées. [also in French]",
+    "link": "http://www.phys.utas.edu.au/physics/opttastr/canopus.htm"
+  },
+  {
+    "Name": "Carlsberg Meridian Telescope",
+    "ID": "CMT",
+    "description": "",
+    "link": "http://www.ast.cam.ac.uk/~dwe/SRF/camc.html"
+  },
+  {
+    "Name": "Carnegie Institution Observatories",
+    "ID": "OCIW",
+    "description": "This site contains daily images from our solar optical telescope at Big Bear, California. Fulldisk images for the current month. H-alpha, white light, and Ca-II K-line images are generally available for every observing day; Ca-II K-line fulldisk archive; H-alpha fulldisk archive; White light fulldisk archive; Current high-resolution region images; Programs to read FITS images on IBM PCs and Macintoshes.",
+    "link": "http://www.ociw.edu/"
+  },
+  {
+    "Name": "Carter Observatory",
+    "ID": "New Zealand",
+    "description": "",
+    "link": "http://www.carterobservatory.org"
+  },
+  {
+    "Name": "Case Western Reserve University - Nassau Station Robotic Telescope",
+    "ID": "INACTIVE LINK ? - 607 --- CWRU",
+    "description": "Big Ear is a Kraus-type radio telescope which covers an area larger than three football fields. The telescope is famous for discovering some of the most distant known objects in the universe, and the longest-running SETI (Search for ExtraTerrestrial Intelligence) project.",
+    "link": "http://astrwww.astr.cwru.edu/nassau/nassau.html"
+  },
+  {
+    "Name": "Cassini-Huygens Mission to Saturn & Titan",
+    "ID": "Cassini",
+    "description": "",
+    "link": "http://saturn.jpl.nasa.gov/home/"
+  },
+  {
+    "Name": "Catania Astrophysical Observatory",
+    "ID": "INAF-OACt",
+    "description": "The current status of the Birmingham Solar Oscillations Network - a global network for helioseismology. Additionally some recent results and publications are available. [site under reconstruction]",
+    "link": "http://woac.ct.astro.it/index_en.html"
+  },
+  {
+    "Name": "Ceduna Radio Observatory",
+    "ID": "South Australia",
+    "description": "",
+    "link": "http://www-ra.phys.utas.edu.au/physics_ceduna.html"
+  },
+  {
+    "Name": "Center for Astrophysical Research in Antarctica",
+    "ID": "CARA",
+    "description": "Boyden Observatory is situated 25 km outside of Bloemfontein, besides the Aventura Maselspoort Resort. The largest telescope at Boyden is the 1,52 m telescope which is currently being upgraded. There are also three smaller telecopes: a 10 inch, a 13 inch (currently used to observe cataclysmic variables) and a 16 inch.",
+    "link": "http://astro.uchicago.edu/cara/"
+  },
+  {
+    "Name": "Center for Extreme Ultraviolet Astrophysics",
+    "ID": "INACTIVE LINK ? - 107 --- CEA / EUVE",
+    "description": "",
+    "link": "http://www.cea.berkeley.edu/"
+  },
+  {
+    "Name": "Center for High Angular Resolution Astronomy",
+    "ID": "CHARA Array",
+    "description": "The engineering in astronomy Team in the are currently working on low-cost fully-robotic telescopes.",
+    "link": "http://www.chara.gsu.edu/CHARA/"
+  },
+  {
+    "Name": "Cerro Tololo Interamerican Observatory",
+    "ID": "CTIO",
+    "description": "",
+    "link": "http://www.ctio.noao.edu/ctio.html"
+  },
+  {
+    "Name": "CfA 1.2 m Millimeter-Wave Telescope",
+    "ID": "CfA_mini",
+    "description": "The Laboratório Nacional de Astrofísica is an Institute of the Brazil National Council for Scientific and Technological Development (CNPq). At present, LNA supports 3 telescopes: the 1.6-m Ritchey-Chretien and coudé, the 0.6-m Cassegrain and the 0.6-m telescope of the University of São Paulo. [also in Portuguese]",
+    "link": "http://cfa-www.harvard.edu/cfa/mmw/"
+  },
+  {
+    "Name": "Chandra X-ray Observatory",
+    "ID": "AXAF",
+    "description": "",
+    "link": "http://chandra.harvard.edu/"
+  },
+  {
+    "Name": "Cherenkov Array at Themis",
+    "ID": "CAT",
+    "description": "The Observatório Nacional of Brazil, located in Rio de Janeiro, was founded in 1827. [in Portuguese]",
+    "link": "http://lpnp90.in2p3.fr/~cat/"
+  },
+  {
+    "Name": "China National Astronomical Observatories",
+    "ID": "NAOC",
+    "description": "",
+    "link": "http://www.bao.ac.cn/english/home.asp"
+  },
+  {
+    "Name": "Climenhaga Observatory",
+    "ID": "Canada",
+    "description": "The Broad Band X-ray Telescope (BBXRT) was flown on the space shuttle Columbia (STS-35) on 1990 December 2-December 11, as part of the ASTRO-1 payload. The flight of BBXRT marked the first opportunity for performing X-ray observations over a broad energy range (0.3-12 keV) with a moderate energy resolution (typically 90 eV and 150 eV at 1 and 6 keV, respectively).",
+    "link": "http://astrowww.phys.uvic.ca/climenhaga/obs/telescope.html"
+  },
+  {
+    "Name": "Collaboration between Australia and Nippon for a Gamma Ray Observatory in the Outback",
+    "ID": "CANGAROO",
+    "description": "",
+    "link": "http://icrhp9.icrr.u-tokyo.ac.jp/"
+  },
+  {
+    "Name": "Combined Array for Research in Millimeter-wave Astronomy Project",
+    "ID": "CARMA",
+    "description": "Live broadcast of solar observation from Observatorio \"Carl Sagan\", Universidad de Sonora, Mexico, from Monday to Saturday, 15 to 22 hrs UTC, weather permit.",
+    "link": "http://www.mmarray.org/"
+  },
+  {
+    "Name": "Constellation-X",
+    "ID": "",
+    "description": "",
+    "link": "http://constellation.gsfc.nasa.gov/"
+  },
+  {
+    "Name": "Cosmic Anisotropy Telescope",
+    "ID": "CAT",
+    "description": "",
+    "link": "http://www.mrao.cam.ac.uk/telescopes/cat/"
+  },
+  {
+    "Name": "Cracow - Solar radio emission in dm wavelength",
+    "ID": "",
+    "description": "The National Astronomical Observatory (NAO) - Rozhen (the Rhodopes), operated by the Institute of Astronomy (IA), Bulgarian Academy of Sciences disposes with a 2-meter Ritchey-Chretien-Coude (RCC) telescope, a 50/70 cm Schmidt, and a 60 cm Cassegrain telescope. On the 2-m telescope, in the RC mode, direct images of extended astronomical objects are obtained on astronomical photographic plates with size up to 30x30 cm2, covering a field 1° x 1°. The three cameras of the Coude spectrograph allow the obtaining of spectra of astronomical objects with dispersions ranging from 2 Å mm-1 to 36Å mm-1.",
+    "link": "http://www.oa.uj.edu.pl/sol/"
+  },
+  {
+    "Name": "Crimean Astrophysical Observatory",
+    "ID": "CrAO",
+    "description": "",
+    "link": "http://www.crao.crimea.ua/"
+  },
+  {
+    "Name": "Danish telescopes around the world",
+    "ID": "",
+    "description": "",
+    "link": "http://www.astro.ku.dk/~michael/dantel.html"
+  },
+  {
+    "Name": "Dark Matter Telescope Project",
+    "ID": "DMT / LSST",
+    "description": "",
+    "link": "http://www.dmtelescope.org/"
+  },
+  {
+    "Name": "David Dunlap Observatory, University of Toronto",
+    "ID": "DDO",
+    "description": "A space mission of the French Space Agency (CNES), with a launch planned in 2006. COROT stands for COnvection ROtation and planetary Transits.",
+    "link": "http://www.astro.utoronto.ca/DDO/"
+  },
+  {
+    "Name": "Deep Space Network - Goldstone Deep Space Station",
+    "ID": "DSN",
+    "description": "",
+    "link": "http://deepspace.jpl.nasa.gov/dsn/index.html"
+  },
+  {
+    "Name": "Denver Univ. Astronomy",
+    "ID": "DU",
+    "description": "",
+    "link": "http://www.du.edu/~rstencel/#obs"
+  },
+  {
+    "Name": "Dominion Astrophysical Observatory",
+    "ID": "DAO",
+    "description": "The Cagliari Astronomical Observatory was established as International Latitude Astronomical Station of Carloforte in 1899, a small town of the sardinian island of S. Pietro. It has been, for about 80 years, one of the five international stations devoted to study the Earth rotation and polar motion. Observations with the zenital telescope were carried out, except in the period of the second world's war. Starting from 1978, the headquarters were moved to Punta Sa Menta, a site 15 km far from Cagliari which has the same latitude of the Carloforte station. (Satellite Laser Ranging, Astrophysics, Planetary Dynamics, Time Laboratory, Data Processing). [in Italian]",
+    "link": "http://www.hia-iha.nrc-cnrc.gc.ca/dao/index_e.html"
+  },
+  {
+    "Name": "Dutch Open Telescope",
+    "ID": "DOT",
+    "description": "",
+    "link": "http://dot.astro.uu.nl/"
+  },
+  {
+    "Name": "ESA - VILlafranca Satellite Tracking Station, SPAin",
+    "ID": "INACTIVE LINK ? - 174 --- VILSPA",
+    "description": "The German-Spanish Astronomical Center at Calar Alto is located in the Sierra de Los Filabres in Southern Spain. It operates four telescopes with apertures from 1.2m to 3.5m as well as a Schmidt reflector.",
+    "link": "http://www.vilspa.esa.es/"
+  },
+  {
+    "Name": "ESA's X-ray Observatory",
+    "ID": "EXOSAT at GSFC - NASA",
+    "description": "",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/exosat/exosat.html"
+  },
+  {
+    "Name": "EUSO - Extreme Universe Space Observatory",
+    "ID": "INACTIVE LINK ? - 29 --- EUSO",
+    "description": "The Caltech Submillimeter Observatory (CSO) is a cutting-edge facility for astronomical research and instrumentation development. It consists of a 10.4-meter diameter Leighton radio dish situated in a compact dome near the summit of Mauna Kea, Hawaii.",
+    "link": "http://www.euso-mission.org/"
+  },
+  {
+    "Name": "Edinburgh Royal Observatory",
+    "ID": "ROE",
+    "description": "",
+    "link": "http://www.roe.ac.uk/"
+  },
+  {
+    "Name": "Effelsberg Radio Telescope",
+    "ID": "MPIfR",
+    "description": "",
+    "link": "http://www.mpifr-bonn.mpg.de/div/effelsberg/index_e.html"
+  },
+  {
+    "Name": "Einstein Observatory",
+    "ID": "HEAO-2",
+    "description": "",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/einstein/heao2.html"
+  },
+  {
+    "Name": "El Leoncito Astronomical Complex",
+    "ID": "CASLEO",
+    "description": "",
+    "link": "http://www.casleo.gov.ar/indexingles.htm"
+  },
+  {
+    "Name": "European Northern Observatory",
+    "ID": "ENO",
+    "description": "CFHT is a joint facility of the National Research Council of Canada, the Centre National de la Recherche Scientifique of France, and the University of Hawaii. The CFH observatory hosts a world-class, 3.6 meter optical/infrared telescope. The observatory is located atop the summit of Mauna Kea, a 4200 meter, dormant volcano located on the island of Hawaii. The CFH Telescope became operational in 1979. There is a . A has information about the CFHT archive, CCDs, proposal template and manuals.",
+    "link": "http://www.iac.es/eno/"
+  },
+  {
+    "Name": "European Southern Observatory",
+    "ID": "ESO",
+    "description": "",
+    "link": "http://www.eso.org/"
+  },
+  {
+    "Name": "European VLBI Network",
+    "ID": "EVN",
+    "description": "",
+    "link": "http://www.evlbi.org/"
+  },
+  {
+    "Name": "European X-ray Observatory Satellite",
+    "ID": "EXOSAT at ESTEC, ESA",
+    "description": "The Canadian Satellite Tracking and Orbit Research (CASTOR)project, based in Ottawa, Ontario Canada, uses optical telescopes to track earth orbiting satellites and inform the general public about our satellite population that we take for granted every day.",
+    "link": "http://www.rssd.esa.int/Exosat"
+  },
+  {
+    "Name": "Exploration of Neighboring Planetary Systems",
+    "ID": "ExNPS",
+    "description": "",
+    "link": "http://origins.jpl.nasa.gov/library/exnps/ExNPS.html"
+  },
+  {
+    "Name": "FOcal Reducer/low dispersion Spectrograph",
+    "ID": "FORS, ESO VLT",
+    "description": "",
+    "link": "http://www.eso.org/instruments/fors1/"
+  },
+  {
+    "Name": "Far Ultraviolet Spectroscopic Explorer",
+    "ID": "FUSE French site",
+    "description": "The Carlsberg Meridian Telescope (formerly the Carlsberg Automatic Meridian Circle) is located on La Palma and is dedicated to carrying out high-precision optical astrometry.",
+    "link": "http://www.iap.fr/Fuse/"
+  },
+  {
+    "Name": "Far Ultraviolet Spectroscopic Explorer",
+    "ID": "FUSE",
+    "description": "",
+    "link": "http://fuse.pha.jhu.edu/"
+  },
+  {
+    "Name": "Fast Auroral SnapshoT explorer",
+    "ID": "FAST",
+    "description": "",
+    "link": "http://sunland.gsfc.nasa.gov/smex/fast/"
+  },
+  {
+    "Name": "Fibre Large Area Multi-Element Spectrograph",
+    "ID": "FLAMES, ESO VLT",
+    "description": "Carter Observatory is the National Observatory of New Zealand.",
+    "link": "http://www.eso.org/instruments/flames/"
+  },
+  {
+    "Name": "Five College Radio Astronomy Observatory",
+    "ID": "FCRAO",
+    "description": "",
+    "link": "http://donald.phast.umass.edu/~fcrao/"
+  },
+  {
+    "Name": "Florence and George Wise Observatory",
+    "ID": "Wise",
+    "description": "",
+    "link": "http://wise-obs.tau.ac.il/"
+  },
+  {
+    "Name": "Fred Lawrence Whipple Observatory",
+    "ID": "FLWO",
+    "description": "Saturn and Titan will be the destination for the Cassini mission, a project under joint development by , the and the The U.S. portion of the mission is managed for NASA by the ",
+    "link": "http://cfa-www.harvard.edu/flwo/index.html"
+  },
+  {
+    "Name": "Frequency-Agile Solar Radiotelescope",
+    "ID": "FASR",
+    "description": "",
+    "link": "http://www.ovsa.njit.edu/fasr/"
+  },
+  {
+    "Name": "Full-sky Astrometric Mapping Explorer",
+    "ID": "FAME",
+    "description": "Daily solar images (chromosphere and photosphere). [also in Italian]",
+    "link": "http://aa.usno.navy.mil/FAME/"
+  },
+  {
+    "Name": "GALaxy Evolution EXplorer",
+    "ID": "GALEX",
+    "description": "",
+    "link": "http://www.galex.caltech.edu/"
+  },
+  {
+    "Name": "Gamma-ray Large Area Space Telescope",
+    "ID": "GLAST",
+    "description": "Ceduna 1 Satellite Earth Station in South Australia: 30 metre diameter antenna.",
+    "link": "http://www-glast.stanford.edu/"
+  },
+  {
+    "Name": "Gemini - U.K. Support Group",
+    "ID": "UKGSG",
+    "description": "",
+    "link": "http://gemini.physics.ox.ac.uk/"
+  },
+  {
+    "Name": "Gemini Multiobject Spectrographs",
+    "ID": "GMOS",
+    "description": "",
+    "link": "http://star-www.dur.ac.uk/~jra/gmos.html"
+  },
+  {
+    "Name": "Gemini Observatory",
+    "ID": "Two 8 m telescopes",
+    "description": "The Center for Extreme Ultraviolet Astrophysics (CEA) opened in September, 990. CEA represents the culmination of twenty years of research and student training in the field of EUV astronomy brought to focus by the launch of NASA's research mission, the University of California at Berkeley Extreme Ultraviolet Explorer (EUVE), on June 7, 1992.",
+    "link": "http://www.gemini.edu/"
+  },
+  {
+    "Name": "German Interferometer for Multi-channel Photometry and Astrometry",
+    "ID": "INACTIVE LINK ? - 94 --- DIVA",
+    "description": "",
+    "link": "http://www.ari.uni-heidelberg.de/diva/"
+  },
+  {
+    "Name": "Giant Metrewave Radio Telescope",
+    "ID": "INACTIVE LINK ? - 432 --- GMRT",
+    "description": "CHARA research is focused on the development of astronomical long-baseline optical/infrared interferometry and the application of interferometry to high resolution observations leading to the determination of the astrophysical properties of stars. The Center operates the CHARA Array, a six-telescope optical/infrared interferometric array in a Y-shaped array contained within a 400m diameter circle (on Mount Wilson, California). This configuration will provide high resolution interferometry in the visible spectral region as well as the K spectral band (2.2 micron), with a limiting resolution of 0.2 milliarcsec in the visible.",
+    "link": "http://www.ncra.tifr.res.in/ncra_hpage/gmrt/gmrt.html"
+  },
+  {
+    "Name": "Ginga",
+    "ID": "ex Astro-C",
+    "description": "",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/ginga/ginga.html"
+  },
+  {
+    "Name": "Global Astrometric Interferometer for Astrophysics",
+    "ID": "GAIA",
+    "description": "Cerro Tololo Interamerican Observatory is a complex of astronomical telescopes and instruments located approximately 80 km to the East of La Serena, Chile at an altitude of 2200 Meters. CTIO is operated by the (AURA), under a cooperative agreement with the as part of the .",
+    "link": "http://www.rssd.esa.int/gaia/"
+  },
+  {
+    "Name": "Global Oscillation Network Group",
+    "ID": "GONG",
+    "description": "",
+    "link": "http://gong.nso.edu/"
+  },
+  {
+    "Name": "Gornergrat Infrared Telescope",
+    "ID": "TIRGO",
+    "description": "The 1.2 meter Millimeter-Wave Telescope at the Harvard- Smithsonian Center for Astrophysics and its twin instrument at CTIO in Chile have been studying the distribution and properties of molecular clouds in our Galaxy and its nearest neighbours for over 20 years.",
+    "link": "http://www.arcetri.astro.it/irlab/tirgo/"
+  },
+  {
+    "Name": "Gran Telescopio Canarias Project",
+    "ID": "GTC",
+    "description": "",
+    "link": "http://www.gtc.iac.es/"
+  },
+  {
+    "Name": "Green Bank",
+    "ID": "",
+    "description": "The Chandra X-ray Observatory is the U.S. follow-on to the Einstein Observatory. Chandra was formerly known as AXAF, the Advanced X-ray Astrophysics Facility, but renamed by NASA in December, 1998. The Chandra spacecraft carries a high resolution mirror, two imaging detectors, and two sets of transmission gratings.",
+    "link": "http://www.gb.nrao.edu/"
+  },
+  {
+    "Name": "Groupe Astronomie de Spa",
+    "ID": "GAS",
+    "description": "",
+    "link": "http://www.groupeastronomiespa.be"
+  },
+  {
+    "Name": "Guillermo Haro Observatory",
+    "ID": "Cananea, Mexico",
+    "description": "Homepage of the CAT (Cherenkov Array at Themis) imager. This is an atmospheric Cherenkov imaging telescope for detection of high-energy gamma rays (>200 GeV), sited in the French Pyrenees.",
+    "link": "http://www.inaoep.mx/~astrofi/cananea/"
+  },
+  {
+    "Name": "Haleakala Observatories",
+    "ID": "Hawaii",
+    "description": "",
+    "link": "http://www.ifa.hawaii.edu/haleakala/"
+  },
+  {
+    "Name": "Hard Labor Creek Observatory",
+    "ID": "HLCO",
+    "description": "The NAOC-Chinese Academy of Sciences (CAS) were officially founded on April 25, 2001 through the bringing together of four CAS observatories, three CAS observing stations and one CAS research centre. The Headquarters of the NAOC are situated in the northern suburbs of Beijing on the site of the former Beijing Astronomical Observatory (BAO), and take responsibility for all matters relating to the former BAO. [also in Chinese]",
+    "link": "http://www.chara.gsu.edu/HLCO/"
+  },
+  {
+    "Name": "Hartebeesthoek Radio Astronomy Observatory",
+    "ID": "HartRAO",
+    "description": "",
+    "link": "http://www.hartrao.ac.za/"
+  },
+  {
+    "Name": "Hat Creek Radio Observatory",
+    "ID": "INACTIVE LINK ? - 366 --- UMD",
+    "description": "",
+    "link": "http://astron.berkeley.edu/~plambeck/technical.html"
+  },
+  {
+    "Name": "Haystack Observatory",
+    "ID": "",
+    "description": "The project uses two gamma ray telescopes at a dark site 15 km from Woomera, a small town 500 km north of Adelaide.",
+    "link": "http://www.haystack.mit.edu/"
+  },
+  {
+    "Name": "Herschel Science Centre",
+    "ID": "ex-FIRST",
+    "description": "",
+    "link": "http://www.rssd.esa.int/herschel"
+  },
+  {
+    "Name": "High Energy Astrophysics Observatories",
+    "ID": "HEASARC. GSFC. NASA",
+    "description": "CARMA will merge two university-based millimeter arrays -- OVRO and BIMA -- to form a powerful astronomical tool for the new millennium. Timeline: 2001: Submit site permit application; 2002: Begin OVRO antenna conversion; 2004: Begin site construction, move OVRO antennas & Complete site, move/convert BIMA antennas; 2005: High site is fully operational.",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/corp/observatories.html"
+  },
+  {
+    "Name": "High Energy Stereoscopic System Project",
+    "ID": "HESS",
+    "description": "",
+    "link": "http://www.mpi-hd.mpg.de/hfm/HESS/HESS.html"
+  },
+  {
+    "Name": "High Energy Transient Explorer",
+    "ID": "HETE-2",
+    "description": "The Constellation X-ray Mission (formerly HTXS) is a Next Generation X-ray Observatory dedicated to observations at high spectral resolution, providing as much as a factor of 100 increase in sensitivity over currently planned high resolution X-ray spectroscopy missions.",
+    "link": "http://space.mit.edu/HETE/"
+  },
+  {
+    "Name": "High Energy X-ray Timing Experiment",
+    "ID": "HEXTE",
+    "description": "",
+    "link": "http://mamacass.ucsd.edu/hexte/hexte.html"
+  },
+  {
+    "Name": "High Resolution Fly's Eye Cosmic Ray Detector",
+    "ID": "INACTIVE LINK ? - 338 --- HiRes",
+    "description": "The CAT is a three-element interferometer for cosmic microwave background observations at 13 to 17 GHz.",
+    "link": "http://www.physics.adelaide.edu.au/astrophysics/HiRes.html"
+  },
+  {
+    "Name": "Hobby Eberly Telescope",
+    "ID": "HET",
+    "description": "",
+    "link": "http://www.astro.psu.edu/het/"
+  },
+  {
+    "Name": "Hubble Space Telescope",
+    "ID": "HST",
+    "description": "Continuous observations of solar radio emission in decimeter wavelength have been maintained in Cracow since 1957. Beginning from January 1995 we provide the reduced data on-line. The new instrument for solar radio observations is under construction. It is to start its operation in May, 1995.",
+    "link": "http://www.stsci.edu/hst/"
+  },
+  {
+    "Name": "IAC / Observatorio Roque de los Muchachos",
+    "ID": "",
+    "description": "",
+    "link": "http://www.iac.es/gabinete/orm/orm1.htm"
+  },
+  {
+    "Name": "IAC / Observatorio del Teide",
+    "ID": "",
+    "description": "The Crimean Astrophysical Observatory (CrAO) is one of the largest scientific center in Ukraine. Mirror site: . [also in Russian]",
+    "link": "http://www.iac.es/gabinete/oteide/ot1.html"
+  },
+  {
+    "Name": "INTERBALL",
+    "ID": "",
+    "description": "",
+    "link": "http://www.iki.rssi.ru/interball/"
+  },
+  {
+    "Name": "INTErnational Gamma-Ray Astrophysics Laboratory",
+    "ID": "INTEGRAL",
+    "description": "",
+    "link": "http://sci.esa.int/science-e/www/area/index.cfm?fareaid=21"
+  },
+  {
+    "Name": "IPS Radio & Space Services",
+    "ID": "INACTIVE LINK ? - 379 --- IPS",
+    "description": "The Dark Matter Telescope, also referred to as the Large Synoptic Survey Telescope, is a proposed 8.4 meter, 3-degree-field, synoptic survey telescope.",
+    "link": "http://www.ips.oz.au/"
+  },
+  {
+    "Name": "Indian Astronomical Observatory Hanle",
+    "ID": "IAO, the world's highest observatory for optical and infrared astronomy",
+    "description": "",
+    "link": "http://www.iiap.res.in/iao/iao.html"
+  },
+  {
+    "Name": "Infra-Red Space Interferometer DARWIN",
+    "ID": "IRSI / DARWIN",
+    "description": "The David Dunlap Observatory is located in Richmond Hill, Canada. As part of the University of Toronto's Department of Astronomy it operates optical telescopes for research, the largest being a .88m telescope. DDO is also a centre for student training and public education.",
+    "link": "http://sci.esa.int/science-e/www/area/index.cfm?fareaid=28"
+  },
+  {
+    "Name": "Infra-Red Telescope Facility",
+    "ID": "IRTF",
+    "description": "",
+    "link": "http://irtfweb.ifa.hawaii.edu"
+  },
+  {
+    "Name": "InfraRed Array Camera for Spitzer Space telescope",
+    "ID": "INACTIVE LINK ? - 223 --- IRAC",
+    "description": "The NASA Deep Space Network - or DSN - is an international network of antennas that supports interplanetary spacecraft missions and radio and radar astronomy observations for the exploration of the solar system and the universe. The network also supports some Earth-orbiting missions, including emergency support of the Shuttle Space Transportation System.",
+    "link": "http://cfa-www.harvard.edu/cfa/oir/Research/irac/firstpage.html"
+  },
+  {
+    "Name": "InfraRed Spectrograph on Spitzer Space Telescope",
+    "ID": "IRS",
+    "description": "",
+    "link": "http://isc.astro.cornell.edu/"
+  },
+  {
+    "Name": "Infrared Space Observatory",
+    "ID": "ISO",
+    "description": "DU Astronomy research and Observatories, among which: Mt.Evans Meyer-Womble Observatory located at 14,124 feet above sea level, on Mt.Evans in the Front Range of Colorado, used for infrared astronomy research.",
+    "link": "http://www.iso.vilspa.esa.es/"
+  },
+  {
+    "Name": "Infrared Space Observatory U.S. Support Center",
+    "ID": "ISO",
+    "description": "",
+    "link": "http://www.ipac.caltech.edu/iso/"
+  },
+  {
+    "Name": "Infrared Spectrometer And Array Camera",
+    "ID": "ISAAC, ESO VLT",
+    "description": "The DAO is operated by the National Research Council of Canada's Herzberg Institute of Astrophysics ( ) as a national centre for astronomical research within Canada, with emphasis on UV, optical and IR astronomy. The is a group within the DAO which is responsible for the Canadian archive of data from the Hubble Space Telescope as well the archive of data from the Canada-France-Hawaii Telescope. DAO's Facility Manual is now online.",
+    "link": "http://www.eso.org/instruments/isaac/"
+  },
+  {
+    "Name": "Infrared and Optical Telescope Array",
+    "ID": "IOTA",
+    "description": "",
+    "link": "http://cfa-www.harvard.edu/cfa/oir/IOTA/"
+  },
+  {
+    "Name": "Institut de Radio Astronomie Millimétrique",
+    "ID": "IRAM",
+    "description": "Innovative new optical solar telescope at the Roque de los Muchachos Observatory on La Palma (Canary Islands). The DOT provides extended sequences of solar images in various wavelengths with high angular resolution (0.2 arcsec).",
+    "link": "http://www.iram.fr"
+  },
+  {
+    "Name": "Instituto Argentino de Radioastronomia",
+    "ID": "IAR",
+    "description": "",
+    "link": "http://www.iar.unlp.edu.ar/"
+  },
+  {
+    "Name": "Instituto Nacional de Astrofísica, Óptica y Electrónica. Astrophysics Department",
+    "ID": "INAOE, Mexico",
+    "description": "",
+    "link": "http://www.inaoep.mx/~astrofi/"
+  },
+  {
+    "Name": "Interferometry Center of Excellence",
+    "ID": "ICE, JPL",
+    "description": "The European Space Agency's X-ray Observatory, EXOSAT, was operational from May 1983 to April 1986. During that time, EXOSAT made 780 observations of a wide variety of objects, including active galactic nuclei, stellar coronae, cataclysmic variables, white dwarfs, X-ray binaries, clusters of galaxies, and supernova remnants.",
+    "link": "http://ice.jpl.nasa.gov/"
+  },
+  {
+    "Name": "International Interference Mitigation (for Radio Astronomy)",
+    "ID": "",
+    "description": "",
+    "link": "http://www.atnf.csiro.au/SKA/intmit/"
+  },
+  {
+    "Name": "International Liquid Mirror Telescope Project",
+    "ID": "ILMT",
+    "description": "The \"Extreme Universe Space Observatory - EUSO\" is the first Space mission devoted to the investigation of cosmic rays and neutrinos of extreme energy (E > 5 x 10e19 eV), using the Earth's atmosphere as a giant detector, the detection being performed by looking at the streak of fluorescence light produced when such a particle interacts with the Earth's atmosphere. EUSO is a mission of the European Space Agency ESA, and it is currently under \"Phase A\" study with a goal for a three year mission starting in 2009. EUSO will be accommodated, as an external payload of the Columbus module, on the ISS International Space Station.",
+    "link": "http://vela.astro.ulg.ac.be/themes/telins/lmt/"
+  },
+  {
+    "Name": "Iowa Robotic Telescopes Facilities",
+    "ID": "",
+    "description": "",
+    "link": "http://phobos.physics.uiowa.edu/"
+  },
+  {
+    "Name": "Isaac Newton Group - La Palma",
+    "ID": "ING",
+    "description": "This site offers information about the extensive activities of the Royal Observatory, Edinburgh, a PPARC establishment responsible for building common-user IR and sub-mm instrumentation and managing telescope sites and data archive resources, as well as the UK Schmidt Telescope and the SuperCOSMOS measuring machine. The ROE site also has links to, or acts as the home page for: and much more information besides.",
+    "link": "http://www.ing.iac.es/"
+  },
+  {
+    "Name": "JWST ListServs",
+    "ID": "INACTIVE LINK ? - 482 --- ex-NGST ListServs",
+    "description": "",
+    "link": "http://www.jwst.nasa.gov/News/lists/"
+  },
+  {
+    "Name": "James Clerk Maxwell Telescope",
+    "ID": "JCMT",
+    "description": "The Max-Planck-Institut für Radioastronomie (MPIfR) operates the world's largest movable radio telescope, a 100-m single-dish near Effelsberg, 40 km south of Bonn, Germany.",
+    "link": "http://www.jach.Hawaii.edu/JCMT/"
+  },
+  {
+    "Name": "James Webb Space Telescope",
+    "ID": "JWST, ex-NGST",
+    "description": "",
+    "link": "http://www.jwst.nasa.gov/"
+  },
+  {
+    "Name": "Jicamarca Radio Observatory",
+    "ID": "Peru",
+    "description": "The second of NASA's three High Energy Astrophysical Observatories, HEAO 2, renamed Einstein after launch, was the first fully imaging X-ray telescope put into space. The few arcsecond angular resolution, the field-of-view of tens of arcminutes, and a sensitivity several 00 times greater than any mission before it provided, for the first time, the capability to image extended objects, diffuse emission, and to detect faint sources. It was also the first X-ray NASA mission to have a Guest Observer program. Overall, it was a key mission in X-ray astronomy and its scientific outcome completely changed the view of the X-ray sky.",
+    "link": "http://jicamarca.ece.cornell.edu/"
+  },
+  {
+    "Name": "Jodrell Bank Observatory",
+    "ID": "University of Manchester",
+    "description": "",
+    "link": "http://www.jb.man.ac.uk/"
+  },
+  {
+    "Name": "Joint Astronomy Centre",
+    "ID": "Hilo, Hawaii",
+    "description": "The Complejo Astronómico El Leoncito is an astronomical facility operated under agreement between the Consejo Nacional de Investigaciones Científicas y Técnicas de la República Argentina and the Universities of La Plata, Córdoba and San Juan. Its main telescope is a 2.15 meter reflector, equipped with direct CCD camera, spectrographs, a photopolarimeter and other instruments. It is located at 2552 meters above the sea level, in a high quality astronomical site in the mountains of Calingasta, 240 km away from the city of San Juan (Argentina). The use of this facility is open to the national and international astronomical community. [also in Spanish]",
+    "link": "http://www.jach.hawaii.edu/"
+  },
+  {
+    "Name": "Joint Institute for VLBI in Europe / European VLBI Network",
+    "ID": "JIVE / EVN",
+    "description": "",
+    "link": "http://www.jive.nl"
+  },
+  {
+    "Name": "KLEt Observatory Near Earth and Other unusual objects observations Team and Telescope",
+    "ID": "KLENOT",
+    "description": "The Instituto de Astrofísica de Canarias (IAC) and its Observatories (the Observatorio de Teide, on Tenerife, and the Observatorio del Roque de los Muchachos, on La Palma) make up a Spanish research and observational centre, which, since 1979, has been open to the international scientific community and effectively constitute the European Northern Observatory (ENO). [also in Spanish]",
+    "link": "http://klenot.klet.org/"
+  },
+  {
+    "Name": "Kanzelhoehe Solar Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.solobskh.ac.at/"
+  },
+  {
+    "Name": "Keck Observatory",
+    "ID": "CalTech",
+    "description": "ESO, the European Southern Observatory, is a multinational organisation of eight European member states. It operates astronomical observatories in Chile and has its headquarters in Munich, Germany.",
+    "link": "http://www2.keck.hawaii.edu/"
+  },
+  {
+    "Name": "Kiepenheuer-Institut für Sonnenphysik",
+    "ID": "KIS",
+    "description": "",
+    "link": "http://www.kis.uni-freiburg.de/kiswwwe.html"
+  },
+  {
+    "Name": "Kirkwood Observatory",
+    "ID": "",
+    "description": "The European VLBI network (EVN) home page includes general information on the EVN, including contact adresses around the network, Call for Proposals, the EVN PC page, EVN and global VLBI scheduling, VLBINFO account, EVN experiment feedback facility, Network monitoring reports and other technical documents, the EVN Newsletter archive and a description of the type of science that can be investigated with the EVN array.",
+    "link": "http://www.astro.indiana.edu/facilities/observatories/kirkwood/"
+  },
+  {
+    "Name": "Kitt Peak National Observatory",
+    "ID": "KPNO",
+    "description": "",
+    "link": "http://www.noao.edu/kpno/"
+  },
+  {
+    "Name": "Kodaikanal Solar Observatory",
+    "ID": "INACTIVE LINK ? - 281 --- ",
+    "description": "The Exosat satellite was operational from May 1983 until April 986 and in that time made 1780 observations in the X-ray band of most classes of astronomical object. The payload consisted of three instruments that produced spectra, images and light curves in various energy bands.",
+    "link": "http://www.iiap.res.in/kodai/kodai.html"
+  },
+  {
+    "Name": "Koelner Observatorium fuer SubMillimeter Astronomie",
+    "ID": "KOSMA",
+    "description": "",
+    "link": "http://www.ph1.uni-koeln.de/gg/"
+  },
+  {
+    "Name": "Kvistaberg Observatory",
+    "ID": "",
+    "description": "NASA's plan for the Exploration of Neighboring Planetary Systems (ExNPS) consists of a long term program of continuous scientific discovery and technological development leading ultimately to the detection and characterization of Earth-like planets around nearby stars.",
+    "link": "http://www.astro.uu.se/history/Kvistaberg.html"
+  },
+  {
+    "Name": "LAMOST Sky Survey Project",
+    "ID": "LAMOST",
+    "description": "",
+    "link": "http://www.lamost.org/"
+  },
+  {
+    "Name": "LECS Instrument on BeppoSAX",
+    "ID": "INACTIVE LINK ? - 160 --- SAX, ESTEC, ESA",
+    "description": "The two FORS instruments are designed as all-dioptric focal reducers for the ESO Very Large Telescope. They are capable of doing : direct imaging , long slit grism spectroscopy , multi object grism spectroscopy , polarimetry (FORS1), medium dispersion echelle grism spectroscopy (FORS2), and all sensible combinations of these modes (e.g. imaging- or spectropolarimetry) in the wavelength range from 330nm to 1100nm.",
+    "link": "http://www.rssd.esa.int/SA-general/Research/Sax/index.html"
+  },
+  {
+    "Name": "La Silla - ESO Facilities",
+    "ID": "",
+    "description": "",
+    "link": "http://www.ls.eso.org/"
+  },
+  {
+    "Name": "Lake Afton Public Observatory",
+    "ID": "Wichita State University",
+    "description": "Site of the French team contributing to Far Ultraviolet Spectroscopic Explorer (FUSE). FUSE est un satellite observatoire de la NASA dédié à la spectroscopie haute résolution dans le domaine ultraviolet. Ce programme est realisé en coopération avec l'Agence Spatiale Canadienne et le Centre National d'Etudes Spatiales ( ). [in French]",
+    "link": "http://webs.wichita.edu/lapo/"
+  },
+  {
+    "Name": "Large Angle and Spectrographic Coronagraph for SOHO",
+    "ID": "LASCO/SOHO",
+    "description": "",
+    "link": "http://star.mpae.gwdg.de/indexe.shtml"
+  },
+  {
+    "Name": "Large Binocular Telescope Observatory",
+    "ID": "LBT",
+    "description": "The Far Ultraviolet Spectroscopic Explorer was launched on June 24, 999; this satellite astronomy project is based at The Johns Hopkins University. [also in French]",
+    "link": "http://lbto.org/"
+  },
+  {
+    "Name": "Large Millimeter Telescope / Gran Telescopio Milimétrico",
+    "ID": "LMT",
+    "description": "",
+    "link": "http://www.lmtgtm.org/"
+  },
+  {
+    "Name": "Large Millimeter and Submillimeter Array Project",
+    "ID": "LMSA: ALMA in Japan",
+    "description": "The NASA Fast Auroral SnapshoT explorer (FAST) satellite is designed to investigate the plasma physics of the auroral phenomena which occur around both poles of the earth.",
+    "link": "http://www.nro.nao.ac.jp/~lmsa/"
+  },
+  {
+    "Name": "Laser Guide Star Adaptive Optics",
+    "ID": "LLNL",
+    "description": "",
+    "link": "http://www.llnl.gov/urp/science/lgs_www/lgs.html"
+  },
+  {
+    "Name": "Laser Interferometer Gravitational-Wave Observatory",
+    "ID": "LIGO",
+    "description": "FLAMES is a Fibre Facility for the ESO VLT. It includes a high and intermediate resolution optical spectrograph (GIRAFFE), with its own fibre system.",
+    "link": "http://www.ligo.caltech.edu/"
+  },
+  {
+    "Name": "Lick Observatory - University of California",
+    "ID": "UCOLICK",
+    "description": "",
+    "link": "http://mthamilton.ucolick.org/"
+  },
+  {
+    "Name": "Liquid Mirrors at Université Laval",
+    "ID": "LM",
+    "description": "The FCRAO was founded in 1969 by the University of Massachusetts, together with Amherst College, Hampshire College, Mount Holyoke College and Smith College. The original low frequency telescope was superseded in 1976 by a 14-m diameter radome-enclosed antenna for use at high radio frequencies (mm wavelengths), built primarily to study the physics and chemistry of interstellar clouds, circumstellar envelopes, planetary atmospheres, and comets.",
+    "link": "http://wood.phy.ulaval.ca/"
+  },
+  {
+    "Name": "Liverpool John Moores University, Astrophysics Research Institute",
+    "ID": "ARI, Liverpool JMU",
+    "description": "",
+    "link": "http://cwis.livjm.ac.uk/astro/"
+  },
+  {
+    "Name": "Loiano Telescopes - Bologna",
+    "ID": "",
+    "description": "",
+    "link": "http://www.bo.astro.it/loiano/"
+  },
+  {
+    "Name": "Low Energy Gamma-Ray Imager",
+    "ID": "LEGRI",
+    "description": "The Fred Lawrence Whipple Observatory (FLWO) is the largest field installation of the Smithsonian Institution Astrophysical Observatory (SAO) outside Cambridge, MA (USA). Located near Amado, Arizona on Mount Hopkins, the FLWO has the following facilities: *\tThe 6.5-meter MMT (256-inch) , a joint facility operated with the University of Arizona, for solar system, galactic and extragalactic astronomy. *\tThe 1.5-meter (60-inch) and .2-meter (48-inch) reflector telescopes, for solar system, galactic and extragalactic astronomy. *\tThe 1.3-meter(51-inch) PAIRITEL (Peters Automated IR Imaging Telescope, ex-2MASS) reflector, for infrared observations, especially of gamma-ray bursts, supernovae and other variable sources. *\tThe 10-meter optical Gamma-ray reflector telescope. Also visit VERITAS. *\tThe IOTA Telescopes, used for optical and infrared interferometry (in collaboration with several institutions). *\tThe HAT (Hungarian Automated Telescope) network of optical refractor telescopes, used for robotic observations of the night sky.",
+    "link": "http://www.sr.bham.ac.uk/instrument/legri.html"
+  },
+  {
+    "Name": "Low Frequency Array",
+    "ID": "LOFAR",
+    "description": "",
+    "link": "http://www.lofar.org/"
+  },
+  {
+    "Name": "MDM Observatory",
+    "ID": "",
+    "description": "FASR is a concept for a groundbased synthesis imaging radiotelescope designed specifically for observing the Sun.",
+    "link": "http://www.astro.lsa.umich.edu/obs/mdm/"
+  },
+  {
+    "Name": "MONOPTEC's Fixed Shutter Dome",
+    "ID": "FSD",
+    "description": "",
+    "link": "http://monoptec.com"
+  },
+  {
+    "Name": "MOnitoring X-ray Experiment",
+    "ID": "MOXE",
+    "description": "FAME is an astrometric satellite designed to determine with unprecedented accuracy the positions, distances, and motions of 40 million stars within our galactic neighborhood. It is a collaborative effort between the U.S. Naval Observatory (USNO) and several other institutions. FAME will measure stellar positions to less than 50 microarcseconds. It is a NASA MIDEX mission scheduled for launch in 2004.",
+    "link": "http://nis-www.lanl.gov/nis-projects/moxe/"
+  },
+  {
+    "Name": "MPE Garching site for COMPTEL",
+    "ID": "onboard Compton Gamma-Ray Observatory",
+    "description": "",
+    "link": "http://www.mpe.mpg.de/gamma/COMPTEL/"
+  },
+  {
+    "Name": "Magdelena Ridge Observatory Project",
+    "ID": "MRO",
+    "description": "A Space Ultraviolet imaging and spectroscopic mission that will map the global history and probe the causes of star formation over the redshift range 0 < < 2.",
+    "link": "http://www.mro.nmt.edu/"
+  },
+  {
+    "Name": "Magellan Mission to Venus",
+    "ID": "",
+    "description": "",
+    "link": "http://www.jpl.nasa.gov/magellan/"
+  },
+  {
+    "Name": "Mauna Kea Observatories",
+    "ID": "",
+    "description": "The GLAST Mission is under study for flight in the first decade of the next century. GLAST is a next generation high-energy gamma-ray observatory designed for making observations of celestial gamma-ray sources in the energy band extending from 10 MeV to more than 100 GeV.",
+    "link": "http://www.ifa.hawaii.edu/mko/"
+  },
+  {
+    "Name": "Mauritius Radio Telescope",
+    "ID": "MRT",
+    "description": "",
+    "link": "http://icarus.uom.ac.mu/"
+  },
+  {
+    "Name": "McDonald Observatory",
+    "ID": "University of Texas, Austin",
+    "description": "The U.K. GEMINI Support Group based at Oxford University, England is aimed at supporting the U.K. astronomer community in the use of the GEMINI 8m Telescopes. This site is the main source of information on the telescopes themselves, their instrument compliment, applying for observing time, observing with the GEMINI telecopes and post-observing data reduction/analysis for U.K. researchers.",
+    "link": "http://www.as.utexas.edu/mcdonald/mcdonald.html"
+  },
+  {
+    "Name": "Mees Solar Observatory",
+    "ID": "MSO, Hawaii",
+    "description": "",
+    "link": "http://www.solar.ifa.hawaii.edu/mees.html"
+  },
+  {
+    "Name": "Metsahovi Radio Research Station",
+    "ID": "",
+    "description": "There will be one GMOS for each of the two GEMINI 8-m telescopes ( UK mirror ) which are due for completion in 1998 and 2000. They will provide a versatile low/medium resolution spectroscopic capability which will exploit the excellent image quality delivered by the telescopes at optical and near-infrared wavelengths.",
+    "link": "http://kurp-www.hut.fi/"
+  },
+  {
+    "Name": "Michelle: A mid-infrared spectrometer and imager for the UKIRT and Gemini telescopes",
+    "ID": "",
+    "description": "",
+    "link": "http://www.roe.ac.uk/ukatc/projects/michelle/"
+  },
+  {
+    "Name": "Michigan State Univ. SOuthern Astrophysical Research Telescope",
+    "ID": "SOAR",
+    "description": "The Gemini Observatory consists of twin 8-meter optical/infrared telescopes located on two of the best sites on our planet for observing the universe.  Together these telescopes can access the entire sky. The Gemini South telescope is located at almost 9,000 elevation on a mountain in the Chilean Andes called Cerro Pachón. Cerro Pachón shares resources with the adjacent SOAR Telescope and the nearby telescopes of the Cerro Tololo Inter-American Observatory. The Gemini North Telescope is located on Hawaiis Mauna Kea as part of the international community of observatories that have been built to take advantage of the superb atmospheric conditions on this long dormant volcano that rises almost 14,000' into the dry, stable air of the Pacific. The Gemini Observatorys international headquarters is located in Hilo, Hawaii at the University of Hawaii at Hilos University Park.",
+    "link": "http://www.pa.msu.edu/soarmsu/"
+  },
+  {
+    "Name": "Microlensing Planet Finder Project",
+    "ID": "INACTIVE LINK ? - 81 --- MPF, ex-GEST",
+    "description": "",
+    "link": "http://bustard.phys.nd.edu/GEST/"
+  },
+  {
+    "Name": "Microvariability and Oscillations of STars",
+    "ID": "MOST",
+    "description": "The Deutsches Interferometer fuer Vielkanalphotometrie und Astrometrie (DIVA) is a small astronomy satellite, planned for launch in 2004. It is aimed to measure positions, proper motions and parallaxes, brightness and color of at least 30 million stars. This amount and the high precision is unreached so far by any predecessor mission. In a sense it is a pathfinder mission for the technology of upcoming cornerstone missions in the ESA Horizon 2000+ and the NASA Origins programmes like GAIA, DARWIN, LISA, SIM etc.",
+    "link": "http://www.astro.ubc.ca/MOST/"
+  },
+  {
+    "Name": "Mid-InfraRed Large-well Imager",
+    "ID": "MIRLIN",
+    "description": "",
+    "link": "http://cougar.jpl.nasa.gov/mirlin.html"
+  },
+  {
+    "Name": "Midcourse Space Experiment",
+    "ID": "MSX",
+    "description": "The Giant Metrewave Radio Telescope (GMRT) consists of 30 fully steerable parabolic dish antennas of 45 m diameter and is located in western India about 100 kms east of Bombay (Mumbai). It is in the shape of a `Y' covering an area equivalent to a 25 km. dia. circle. GMRT operates currently in the range 120 to 1450 MHz and is the largest synthesis radio telescope in the world at metre wavelengths. GMRT has been opened for world wide use since January 2002.",
+    "link": "http://www.ipac.caltech.edu/ipac/msx/msx.html"
+  },
+  {
+    "Name": "Millstone Hill Observatory",
+    "ID": "INACTIVE LINK ? - 492 --- MHO, Haystack",
+    "description": "",
+    "link": "http://hyperion.haystack.edu/homepage.html"
+  },
+  {
+    "Name": "Mississippi State University - Howell Observatory",
+    "ID": "",
+    "description": "Astro-C, renamed Ginga (Japanese for 'galaxy'), was launched from the Kagoshima Space Center on 5 February 1987. The primary instrument for observations was the Large Area Counter (LAC). Ginga was the third Japanese X-ray astronomy mission, following Hakucho and Tenma. Ginga reentered the Earth's atmosphere on 1 November 1991.",
+    "link": "http://www.msstate.edu/dept/physics/resources/observatory.php"
+  },
+  {
+    "Name": "Moletai Astronomical Observatory",
+    "ID": "MAO",
+    "description": "",
+    "link": "http://www.itpa.lt/mao/aboutmao.html"
+  },
+  {
+    "Name": "Molonglo Observatory Synthesis Telescope",
+    "ID": "MOST",
+    "description": "GAIA is a preliminary concept for a second space astrometry mission (after HIPPARCOS), recently recommended within the context of ESA's Horizon 2000 Plus long-term scientific programme. It is aimed at the broadest possible astrophysical exploitation of optical interferometry using a modest baseline length.",
+    "link": "http://www.physics.usyd.edu.au/astrop/most/"
+  },
+  {
+    "Name": "Monterey Institute for Research in Astronomy",
+    "ID": "MIRA",
+    "description": "",
+    "link": "http://www.mira.org/"
+  },
+  {
+    "Name": "Mount Evans Meyer-Womble Observatory",
+    "ID": "Denver Univ.",
+    "description": "The Global Oscillation Network Group (GONG) is a community-based program to conduct a detailed study of solar internal structure and dynamics using helioseismology. In order to exploit this new technique, GONG has developed a six-station network of extremely sensitive, and stable velocity imagers located around the Earth to obtain nearly continuous observations of the Sun's \"five-minute\" oscillations, or pulsations.",
+    "link": "http://www.du.edu/~rstencel/MtEvans/"
+  },
+  {
+    "Name": "Mount Graham International Observatory",
+    "ID": "MGIO",
+    "description": "",
+    "link": "http://mgpc3.as.arizona.edu/"
+  },
+  {
+    "Name": "Mount Laguna Observatory",
+    "ID": "",
+    "description": "The Telescopio InfraRosso del GOrnergrat ( TIRGO ) is located on the northern tower of the Kulm Hotel at Gornergrat (3135 m altitude) near Zermatt . It is a 1.5m Cassegrain telescope with a wobbling secondary and optimized for infrared observations.   The telescope and related instrumentation is run by the Istituto di Radioastronomia (IRA - C.N.R. ), sezione di Firenze (former CAISMI) , with the assistance of the Osservatorio Astrofisico di Arcetri and the Dipartimento di Astronomia e Scienza dello Spazio of the Universita' di Firenze.",
+    "link": "http://mintaka.sdsu.edu/"
+  },
+  {
+    "Name": "Mount Pleasant Radio Observatory",
+    "ID": "Tasmania",
+    "description": "",
+    "link": "http://www-ra.phys.utas.edu.au/physics_mt_pleasant.html"
+  },
+  {
+    "Name": "Mount Stromlo and Siding Spring Observatories - Observing facilities",
+    "ID": "MSSSO",
+    "description": "The Gran Telescopio CANARIAS (GTC), is a high performance segmented 0-meter telescope to be installed in one of the best sites of the Northern Hemisphere: the Roque de los Muchachos Observatory (La Palma, Canary Islands, Spain). First light is planed for 2002. The GTC project is a Spanish initiative, led by the IAC ( ) with the aim of becoming an international project. has undertaken the construction of this telescope. [also in Spanish]",
+    "link": "http://msowww.anu.edu.au/observing/"
+  },
+  {
+    "Name": "Mount Suhora Observatory",
+    "ID": "Cracow Pedagogical University",
+    "description": "",
+    "link": "http://www.as.wsp.krakow.pl/"
+  },
+  {
+    "Name": "Mount Wilson Observatory",
+    "ID": "",
+    "description": "The National Radio Astronomy Observatory in Green Bank (West Virginia) is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc.",
+    "link": "http://www.mtwilson.edu/"
+  },
+  {
+    "Name": "Mt John (Canterbury) University Observatory",
+    "ID": "New Zealand",
+    "description": "",
+    "link": "http://www.phys.canterbury.ac.nz/research/mt_john/index.shtml"
+  },
+  {
+    "Name": "Multi-Element Radio Linked Interferometer Network",
+    "ID": "MERLIN - Jodrell Bank",
+    "description": "Groupe Astronomie de Spa (Belgium)",
+    "link": "http://www.jb.man.ac.uk/merlin/"
+  },
+  {
+    "Name": "Multiband Imaging Photometer for Spitzer Space Telescope",
+    "ID": "MIPS",
+    "description": "",
+    "link": "http://mips.as.arizona.edu/"
+  },
+  {
+    "Name": "Multiple Mirror Telescope Observatory (1)",
+    "ID": "INACTIVE LINK ? - 207 --- MMTO",
+    "description": "",
+    "link": "http://cfa-www.harvard.edu/mmt/"
+  },
+  {
+    "Name": "Multiple Mirror Telescope Observatory (2)",
+    "ID": "MMTO",
+    "description": "",
+    "link": "http://www.mmto.org/"
+  },
+  {
+    "Name": "Muriwai Beach Observatory NZ",
+    "ID": "",
+    "description": "",
+    "link": "http://www.observatory.co.nz/"
+  },
+  {
+    "Name": "NFO's Automatic Radio Linked Telescope",
+    "ID": "",
+    "description": "",
+    "link": "http://www.nfo.edu/nfo.html"
+  },
+  {
+    "Name": "Nançay Radio Observatory",
+    "ID": "USN",
+    "description": "",
+    "link": "http://www.obs-nancay.fr/"
+  },
+  {
+    "Name": "Nasmyth Adaptive Optics System - Near-Infrared Imager and Spectrograph",
+    "ID": "NAOS-CONICA -- NaCo -- ESO VLT",
+    "description": "",
+    "link": "http://www.eso.org/instruments/naos/"
+  },
+  {
+    "Name": "National Astronomical Observatory of Spain",
+    "ID": "OAN",
+    "description": "The `Herschel Space Observatory' - the mission formerly known as FIRST - will perform photometry and spectroscopy in the 60-670 µm range.",
+    "link": "http://www.oan.es/"
+  },
+  {
+    "Name": "National Centre for Radio Astrophysics",
+    "ID": "NCRA",
+    "description": "",
+    "link": "http://www.ncra.tifr.res.in/"
+  },
+  {
+    "Name": "National Schools' Observatory",
+    "ID": "",
+    "description": "Comprehensive list of satellites with high energy astrophysics instrumentation. Includes images from these missions.",
+    "link": "http://www.schoolsobservatory.org.uk/"
+  },
+  {
+    "Name": "National Solar Observatory",
+    "ID": "NSO, USA",
+    "description": "",
+    "link": "http://www.nso.edu/"
+  },
+  {
+    "Name": "National Undergraduate Research Observatory",
+    "ID": "NURO",
+    "description": "H.E.S.S. is a next-generation system of Imaging Atmospheric Cherenkov Telescopes for the investigation of cosmic gamma rays in the 100 GeV energy range. The name emphasizes two main features of the proposed installation, namely the simultaneous observation of air showers with several telescopes, under different viewing angles, and the combination of telescopes to a large system to increase the effective detection area for gamma rays. H.E.S.S. will allow to explore gamma-ray sources with intensities at a level of a few thousandth parts of the flux of the Crab nebula. H.E.S.S. is located in Namibia, near the Gamsberg, an area well known for its excellent optical quality. The first of the four telescopes of Phase I of the H.E.S.S. project went into operation in Summer 2002; all four should be complete by 2004.",
+    "link": "http://www.nuro.nau.edu/"
+  },
+  {
+    "Name": "Near Infrared Camera and Multi-Object Spectrometer",
+    "ID": "NICMOS",
+    "description": "",
+    "link": "http://nicmosis.as.arizona.edu:8000/NICMOS.html"
+  },
+  {
+    "Name": "Near-Earth Asteroid Tracking",
+    "ID": "NEAT",
+    "description": "The High Energy Transient Explorer is a small scientific satellite designed to detect and localize gamma-ray bursts.",
+    "link": "http://neat.jpl.nasa.gov/"
+  },
+  {
+    "Name": "New Radio Telescope Technologies Laboratory",
+    "ID": "NRTT Lab",
+    "description": "",
+    "link": "http://brown.nord.nw.ru/nrttlab.htm"
+  },
+  {
+    "Name": "Nobeyama Radio Observatory, NAOJ",
+    "ID": "NRO",
+    "description": "The High Energy X-ray Timing Experiment is one of 3 common-user instruments on board the Rossi X-ray Timing Explorer (RXTE) which was launched on 1995 December 30. The HEXTE is sensitive to X-rays from 15 to 250 keV and is able to time-tag photons in this energy range to 8 microseconds.",
+    "link": "http://www.nro.nao.ac.jp/index-e.html"
+  },
+  {
+    "Name": "Nordic Optical Telescope",
+    "ID": "NOT, La Palma",
+    "description": "",
+    "link": "http://www.not.iac.es/"
+  },
+  {
+    "Name": "Northeastern Space Radio Observatory - VLBI antenna",
+    "ID": "ROEN",
+    "description": "The HiRes detector - an atmospheric fluorescence detector: HiRes currently consists of two sites on top of two mountains separated by 13km in western Utah.",
+    "link": "http://www.roen.inpe.br/index_e.htm"
+  },
+  {
+    "Name": "Noto VLBI Station",
+    "ID": "INACTIVE LINK ? - 299 --- ",
+    "description": "",
+    "link": "http://www.ira.noto.cnr.it/"
+  },
+  {
+    "Name": "Oak Ridge Observatory",
+    "ID": "INACTIVE LINK ? - 559 --- ",
+    "description": "The Hobby-Eberly telescope (HET) is a new 9 meter telescope, built at the University of Texas near Ft. Davis Texas as a result of an international collaboration between the",
+    "link": "http://cfa-www.harvard.edu/cfa/oir/OakRidge/oak.ridge.html"
+  },
+  {
+    "Name": "Observatoire Midi-Pyrenees",
+    "ID": "OMP",
+    "description": "",
+    "link": "http://www.obs-mip.fr/omp/"
+  },
+  {
+    "Name": "Observatoire de Haute-Provence",
+    "ID": "OHP",
+    "description": "The Hubble Space Telescope is a cooperative program of the European Space Agency (ESA) and the National Aeronautics and Space Administration (NASA) to operate a long-lived space-based observatory for the benefit of the international astronomical community. To accomplish this goal and protect the spacecraft against instrument and equipment failures, NASA had always planned on regular servicing missions. Hubble has special grapple fixtures, 76 handholds, and stabilized in all three axes. HST is a 2.4-meter reflecting telescope which was deployed in low-Earth orbit (600 kilometers) by the crew of the space shuttle Discovery (STS-31) on 25 April 1990. HST's current complement of science instruments include three cameras, two spectrographs, and fine guidance sensors (primarily used for astrometric observations). Because of HST's location above the Earth's atmosphere, these science instruments can produce high resolution images of astronomical objects. Ground-based telescopes can seldom provide resolution better than 1.0 arc-seconds, except momentarily under the very best observing conditions. HST's resolution is about 10 times better, or 0.1 arc-seconds.",
+    "link": "http://www.obs-hp.fr/"
+  },
+  {
+    "Name": "Observatoire du Mont Mégantic",
+    "ID": "OMM",
+    "description": "",
+    "link": "http://www.astro.umontreal.ca/omm/"
+  },
+  {
+    "Name": "Observatorio Astronomico da Serra da Piedade",
+    "ID": "OAP, Mainas Gerais, Brazil",
+    "description": "",
+    "link": "http://www.fisica.ufmg.br/OAP/"
+  },
+  {
+    "Name": "Observatorio Astronómico Nacional",
+    "ID": "",
+    "description": "",
+    "link": "http://www.astrosen.unam.mx/"
+  },
+  {
+    "Name": "Observatorium Hoher List",
+    "ID": "Bonn",
+    "description": "INTERBALL is the solar-terrestrial programme aimed to study various plasma processes in the Earth magnetosphere by the system of spacecraft consisting of two pairs (satellite-subsatellite) above the polar aurora and in the magnetospheric tail respectively. The project INTERBALL is a part of of the Programme coordinated by the Inter-Agency Consultative Group (IACG) for Space Science consisting of representatives of ESA, NASA, RKA and Japan Institute of Space and Aeronautics Sciences. According to this Programme a system of ten core spacecraft of the listed above agencies is spatially distributed between the L1 and L2 Sun-Earth libration points to study solar-terrestrial relationship.",
+    "link": "http://www.astro.uni-bonn.de/~webstw/hl.html"
+  },
+  {
+    "Name": "OmegaCAM",
+    "ID": "",
+    "description": "",
+    "link": "http://www.astro.rug.nl/~omegacam/"
+  },
+  {
+    "Name": "Onsala Space Observatory",
+    "ID": "OSO",
+    "description": "ESA's INTErnational Gamma-Ray Astrophysics Laboratory is detecting some of the most energetic radiation that comes from space. It is the most sensitive gamma-ray observatory ever launched. INTEGRAL is an ESA mission in cooperation with Russia and the United States.",
+    "link": "http://www.oso.chalmers.se/"
+  },
+  {
+    "Name": "Orbiting Very Long Baseline Interferometry",
+    "ID": "OVLBI",
+    "description": "",
+    "link": "http://www.gb.nrao.edu/ovlbi/OVLBI.html"
+  },
+  {
+    "Name": "OverWhelmingly Large Telescope Project",
+    "ID": "OWL",
+    "description": "IPS is a unit of the Australian Government Department of Administrative Services and provides the Australian radio propagation and space environment services. Includes: Sydney Regional Warning Centre; Culgoora Solar Observatory; Learmonth Solar Observatory; Prediction Services; Consultancy Services",
+    "link": "http://www.eso.org/projects/owl/"
+  },
+  {
+    "Name": "Owens Valley Radio Observatory",
+    "ID": "OVRO",
+    "description": "",
+    "link": "http://www.ovro.caltech.edu/"
+  },
+  {
+    "Name": "PLANCK",
+    "ID": "ex-COBRAS/SAMBA",
+    "description": "The Indian Astronomical Observatory, the high-altitude station of IIA is situated at an altitude of 4500 metres above mean sea level to the north of Western Himalayas. Atop Mt. Saraswati in the vast Nilamkhul Plain in the Hanle Valley of Changthang, Ladakh (4250m above msl), the site is a dry, cold desert with sparse human population and the ancient Hanle monastery as its nearest neighbour. The cloudless skies and low atmospheric water vapour make it one of the best sites in the world for optical, infrared, sub-millimetre, and millimetre wavelengths. A 2-m optical infrared telescope is installed at the observatory. This telescope is remotely operated from CREST, Hosakote, using dedicated satellite links. In addition, IIA is collaborating with University of Washington, St. Louis, in operating a 0.5-m photometry telescope for continuous monitoring of Active Galactic Nuclei. This telescope will be one of the pair of telescopes constituting Antipodal Transient Observatory. A 0.3-m Differential Image Motion Monitor, a 220-GHz radiometer and an Automated Weather Station have been installed to facilitate continuation of site characterisation.",
+    "link": "http://www.rssd.esa.int/index.php?project=PLANCK"
+  },
+  {
+    "Name": "POLAR Spacecraft",
+    "ID": "",
+    "description": "",
+    "link": "http://istp.gsfc.nasa.gov/istp/polar/"
+  },
+  {
+    "Name": "Palomar Observatory",
+    "ID": "CalTech",
+    "description": "The `InfraRed Space Interferometry Mission' DARWIN (IRSI or DARWIN) is a cornerstone mission in the ESA `Horizon 2000+' science plan. The goals for this space mission is for the first time to detect terrestial planets in orbit around other stars than our Sun.",
+    "link": "http://astro.caltech.edu/observatories/palomar/"
+  },
+  {
+    "Name": "Palomar Testbed Interferometer",
+    "ID": "PTI",
+    "description": "",
+    "link": "http://www.astro.caltech.edu/palomar/pti.html"
+  },
+  {
+    "Name": "Panoramic Survey Telescope & Rapid Response System",
+    "ID": "Pan-STARRS",
+    "description": "The IRTF is a 3.0 meter telescope optimized for use in the infrared. It was first built to support the Voyager missions to Jupiter. It is now the USA National facility for infrared astronomy providing continued support to planetary and deep space applications.",
+    "link": "http://pan-starrs.ifa.hawaii.edu/public/"
+  },
+  {
+    "Name": "Perkins Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.perkins-observatory.org/"
+  },
+  {
+    "Name": "Perugia Univ. Astronomical Observatory & Astrophysics Section",
+    "ID": "OAUP",
+    "description": "The Spitzer Space Telescope (ex-Space InfraRed Telescope Facility ), contains three focal plane instruments, one of which is the Infrared Array Camera (IRAC). IRAC is a four-channel camera that provides simultaneous 5.12 x 5.12 arcmin images at 3.6, 4.5, 5.8, and 8 microns.",
+    "link": "http://astro.fisica.unipg.it/"
+  },
+  {
+    "Name": "Pico dos Dias Observatory",
+    "ID": "OPD",
+    "description": "",
+    "link": "http://www.lna.br/opd/opd_e.html"
+  },
+  {
+    "Name": "Pine Mountain Observatory",
+    "ID": "University of Oregon",
+    "description": "The Infrared Spectrograph (IRS) is one of three instruments to be flown in the Space Infrared Telescope Facility (SIRTF).",
+    "link": "http://pmo-sun.uoregon.edu/"
+  },
+  {
+    "Name": "Planet Sciences Association - Astronomy sector",
+    "ID": "ex-ANSTJ, France",
+    "description": "",
+    "link": "http://www.anstj.org/astro/index.html"
+  },
+  {
+    "Name": "Pushchino Radioastronomy Observatory (PRAO)",
+    "ID": "PRAO",
+    "description": "The Infrared Space Observatory (ISO) has been an ESA (European Space Agency) mission with the participation of ISAS (Japan) and NASA (USA). This WWW server is maintained at the ISO Data Centre, which is based at Villafranca, Madrid, and is part of the Astrophysics Division of the Space Science Department.",
+    "link": "http://www.prao.psn.ru/"
+  },
+  {
+    "Name": "RATAN-600 Radiotelescope",
+    "ID": "SAO-Russia",
+    "description": "",
+    "link": "http://www.sao.ru/ratan/index.html.en"
+  },
+  {
+    "Name": "ROSAT",
+    "ID": "",
+    "description": "U.S. science support center for observers using the Infrared Space Observatory (ISO), a fully approved and funded project of the European Space Agency (ESA).",
+    "link": "http://wave.xray.mpe.mpg.de/rosat/"
+  },
+  {
+    "Name": "ROentgen SATellite",
+    "ID": "ROSAT at GSFC. NASA",
+    "description": "",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/rosat/rosat3.html"
+  },
+  {
+    "Name": "RXTE Guest Observer Facility",
+    "ID": "GFSC",
+    "description": "ISAAC covers the wavelength range 1-5µm and is designed primarily for: 'wide' (2.5x2.5') field imaging and long slit low & medium resolution spectroscopy.",
+    "link": "http://xte.gsfc.nasa.gov/"
+  },
+  {
+    "Name": "Radio Ice Cherenkov Experiment",
+    "ID": "RICE",
+    "description": "",
+    "link": "http://kuhep4.phsx.ku.edu/~iceman/"
+  },
+  {
+    "Name": "RadioAstron",
+    "ID": "Space VLBI Mission",
+    "description": "",
+    "link": "http://www.asc.rssi.ru/radioastron/"
+  },
+  {
+    "Name": "Reuven Ramaty High Energy Solar Spectroscopic Imager",
+    "ID": "RHESSI, ex-HESSI",
+    "description": "IRAM is an international institute for research in millimeter astronomy, cofunded by the CNRS (Centre National de la Recherche Scientifique, France), the MPG (Max Planck Gesellschaft, Germany), and since September 990 the IGN (Instituto Geografico Nacional, Spain). The three IRAM sites are: Grenoble, France: the IRAM headquarters, Laboratories (the SIS junction lab the backend group, the receiver group); Plateau de Bure, France: the interferometer of four 15-m antennas; Granada, Spain: the Granada laboratories, the 30-m telescope located on Pico Veleta.",
+    "link": "http://hesperia.gsfc.nasa.gov/hessi/"
+  },
+  {
+    "Name": "Robotic Lunar Observatory",
+    "ID": "ROLO",
+    "description": "",
+    "link": "http://www.moon-cal.org/"
+  },
+  {
+    "Name": "Robotic Optical Transient Search Experiment",
+    "ID": "ROTSE",
+    "description": "Información sobre las características del Instituto Argentino de Radioastronomía, sus facilidades instrumentales, tareas de investigación y desarrollo en curso, personal científico y técnico y actividades de extensión.",
+    "link": "http://www.umich.edu/~rotse"
+  },
+  {
+    "Name": "Rossi X-Ray Timing Explorer",
+    "ID": "RXTE",
+    "description": "",
+    "link": "http://xte.mit.edu/"
+  },
+  {
+    "Name": "Rothney Astrophysical Observatory",
+    "ID": "RAO",
+    "description": "Information on the Large Millimeter Telescope an about the Cananea observatory",
+    "link": "http://www.ucalgary.ca/~milone/rao.html"
+  },
+  {
+    "Name": "SOlar and Heliospheric Observatory",
+    "ID": "SOHO",
+    "description": "",
+    "link": "http://sohowww.nascom.nasa.gov/"
+  },
+  {
+    "Name": "SOuthern Astrophysical Research telescope Project",
+    "ID": "INACTIVE LINK ? - 338 --- SOAR",
+    "description": "The Interferometry Center of Excellence (ICE), at JPL, has been established to ensure the development and maintenance of a leading edge capability in optical and near-infrared interferometric astrometry and imaging.",
+    "link": "http://www.soartelescope.org/"
+  },
+  {
+    "Name": "STellar Astrophysics & Research on Exoplanets",
+    "ID": "STARE",
+    "description": "",
+    "link": "http://www.hao.ucar.edu/public/research/stare/stare.html"
+  },
+  {
+    "Name": "SUBARU Telescope",
+    "ID": "",
+    "description": "This Web site is a meeting place for anyone interested in the technical problems of making radio astronomical measurements in the presence of other radio signals. Postings on this site are from scientists and engineers around the world on subjects such as suppression of RFI from electronic devices, measurement of the electromagnetic environment, and techniques for separating weak cosmic signals from other radiation in the radio spectrum.",
+    "link": "http://subarutelescope.org/"
+  },
+  {
+    "Name": "Santiago de Compostela Univ. - Ramón María Aller Astronomical Observatory",
+    "ID": "AO RMA",
+    "description": "",
+    "link": "http://www.usc.es/astro/"
+  },
+  {
+    "Name": "Schmidt telescope at Observatoire de la Cote d'Azur",
+    "ID": "",
+    "description": "",
+    "link": "http://wwwrc.obs-azur.fr/schmidt/"
+  },
+  {
+    "Name": "Seoul Radio Astronomy Observatory",
+    "ID": "SRAO",
+    "description": "The University of Iowa maintains these pages as a guide to our suite of robotic, autonomous tasking telescopes. In addition to using these instruments for teaching and faculty and student research, limited observing time is made available to anyone with an interest in Astronomy and a valid observing request.",
+    "link": "http://srao.snu.ac.kr/"
+  },
+  {
+    "Name": "Small Explorers",
+    "ID": "SMEX",
+    "description": "",
+    "link": "http://sunland.gsfc.nasa.gov/smex/"
+  },
+  {
+    "Name": "Soft X-Ray Telescope onboard Yohkoh Satellite, ISAS, Japan",
+    "ID": "description at LMSAL, USA",
+    "description": "The Issac Newton Group consists of three telescopes, the 4.2 metre William Herschel Telescope, the 2.5 metre Isaac Newton Telescope, and the 1 metre Jacobus Kapteyn Telescope. They are situated at the Observatorio del Roque de los Muchachos, on the island of La Palma in the Canary Islands, and are operated by the Royal Observatories of the UK. This resource contains documentation for many of the major instruments, details of how to apply for time, brief descriptions of the telescopes, details and status of the service programme, current telescope schedules, weather information for La Palma, and pointers to other institutions which share the site. The site is mirrored at for faster access to UK users.",
+    "link": "http://www.lmsal.com/SXT/"
+  },
+  {
+    "Name": "Solar Extreme-ultraviolet Rocket Telescope and Spectrograph",
+    "ID": "SERTS",
+    "description": "",
+    "link": "http://serts.gsfc.nasa.gov/"
+  },
+  {
+    "Name": "Solar Group of RATAN-600",
+    "ID": "",
+    "description": "This URL takes you to a WWW page where you can subscribe to a number of listservs devoted to the Next Generation Space Telescope project. You may subscribe to any of them. Posting is restricted. Right now, these are used as ways to inform the community about progress in the project. The web site contains links for feedback to the project team members.",
+    "link": "http://www.sao.ru/hq/sun/"
+  },
+  {
+    "Name": "Solar Observation Station - Carla Sagan Observatory",
+    "ID": "EOS/OCS",
+    "description": "",
+    "link": "http://cosmos.astro.uson.mx/eosdata.htm"
+  },
+  {
+    "Name": "Solar TErrestrial RElations Observatory",
+    "ID": "STEREO",
+    "description": "The 15-m JCMT is situated close to the summit of Mauna Kea, Hawaii, and is the largest submillmetre facility in the world. It is owned and operated by the UK, Canada and the Netherlands on behalf of astronomers worldwide. Its home page contains information about the site, the antenna and the instrumentation, as well as a description of the JCMT-CSO interferometer, and details of the various time allocation processes.",
+    "link": "http://stp.gsfc.nasa.gov/missions/stereo/stereo.htm"
+  },
+  {
+    "Name": "Solar Tower Atmospheric Cherenkov Effect Experiment",
+    "ID": "STACEE",
+    "description": "",
+    "link": "http://www.astro.ucla.edu/~stacee/"
+  },
+  {
+    "Name": "South African Astronomical Observatory",
+    "ID": "SAAO",
+    "description": "The JWST is a critical component of NASA's Origins Program. It will be a telescope of aperture greater than 4m, radiatively cooled to 30 - 60 deg.K, permitting extremely deep exposures at near infrared wavelengths with a 10 year life. A key requirement is to break the HST cost paradigm through the use of new technology and management methods. This site is designed to serve as the starting point for finding online NGST Study documentation. There is also a public at NASA, and a at ST-ECF.",
+    "link": "http://www.saao.ac.za/"
+  },
+  {
+    "Name": "Southeastern Association for Research in Astronomy",
+    "ID": "SARA",
+    "description": "",
+    "link": "http://astro.fit.edu/sara/sara.html"
+  },
+  {
+    "Name": "Southern African Large Telescope Project",
+    "ID": "SALT",
+    "description": "Radar studies of the ionosphere and upper atmosphere.",
+    "link": "http://www.salt.ac.za/"
+  },
+  {
+    "Name": "Southern Columbia Millimeter Telescope",
+    "ID": "1.2 Meter",
+    "description": "",
+    "link": "http://www.ctio.noao.edu/"
+  },
+  {
+    "Name": "Space Interferometry Mission",
+    "ID": "SIM",
+    "description": "Jodrell Bank Observatory is part of the University of Manchester's Department of Physics and Astronomy. The Laboratories are home to the Lovell Telescope and the MERLIN & VLBI National Facility which is operated by the University on behalf of PPARC.",
+    "link": "http://sim.jpl.nasa.gov/"
+  },
+  {
+    "Name": "Special Astrophysical Observatory of Russian Academy of Science - Schedules",
+    "ID": "SAO RAS",
+    "description": "",
+    "link": "http://www.sao.ru/Doc-en/Telescopes/"
+  },
+  {
+    "Name": "Spectrum-X-Gamma Coordination facility",
+    "ID": "SXG. University of Harvard",
+    "description": "The Joint Astronomy Centre incorporates the 15m James Clerk Maxwell Telescope (JCMT) and the 3.8m United Kingdom Infrared Telescope (UKIRT) on the 4200m summit of Mauna Kea along with the Centre's Hawaii headquarters in Hilo. The facility is operated by the Royal Observatory, Edinburgh on behalf of the Science and Engineering Research Council of the United Kingdom, the Nederlandse Organisatie Voor Wetenschappelijk Onderzoek and the National Research Council of Canada.",
+    "link": "http://hea-www.harvard.edu/SXG/sxg.shtml"
+  },
+  {
+    "Name": "Spitzer Space Telescope",
+    "ID": "ex-SIRTF",
+    "description": "",
+    "link": "http://www.spitzer.caltech.edu/"
+  },
+  {
+    "Name": "Square Kilometer Array - Interferometer radio telescope project",
+    "ID": "SKA",
+    "description": "The European VLBI Network (EVN) was formed in 1980 by a consortium of five of the major radio astronomy institutes in Europe (the European Consortium for VLBI). Since 1980, the EVN and the Consortium has grown to include 9 institutes with 12 telescopes in 8 western European countries as well as associated institutes with telescopes in Poland, Russia, Ukraine and China. Proposals for additional telescopes in Spain and Italy are under consideration, and furthermore, the EVN can be linked to the 7-element Jodrell Bank MERLIN interferometer in the UK and to the US Very Long Baseline Array (VLBA) to create a \" global network\" . In 1993 the Joint Institute for VLBI in Europe (JIVE) was created, with the Netherlands Foundation for Research in Astronomy (Dwingeloo) acting as the host institute. It will provide both scientific user support and a correlator facility. Very Long Baseline Interferometry (VLBI) achieves ultra-high angular resolution and is a multi-disciplinary technique e.g. imaging of extragalactic radio sources, geodesy and astrometry.",
+    "link": "http://www.astron.nl/ska/"
+  },
+  {
+    "Name": "Square Kilometre Array",
+    "ID": "SKA - Australian contribution",
+    "description": "",
+    "link": "http://www.atnf.csiro.au/SKA/"
+  },
+  {
+    "Name": "Stardial:an autonomous astronomical camera on the World Wide Web",
+    "ID": "Stardial",
+    "description": "The KLENOT project is a project of the KLEt' observatory Near earth and Other unusual objects observations Team (and Telescope), concentrating particularly on fainter objects, up to a limiting magnitude of m=22.0 V. All the observing time will belong to our team, this will allow us to make changes in the observing programme as necessary.",
+    "link": "http://www.astro.uiuc.edu/stardial/"
+  },
+  {
+    "Name": "Stardust",
+    "ID": "",
+    "description": "",
+    "link": "http://stardust.jpl.nasa.gov/"
+  },
+  {
+    "Name": "Stephen F. Austin State University Observatory",
+    "ID": "SFASU",
+    "description": "The Kanzelhoehe Solar Observatory is operated by the Institute of Geophysics, Astrophysics and Meteorology (IGAM) of the University of Graz, Austria. It is located near Villach, close to the Italian and Slovenian border. Operated continuously and devoted also to Solar surveillance since its foundation in 1943 it houses a rich archive of observations.",
+    "link": "http://www.physics.sfasu.edu/Observatory/obs.htm"
+  },
+  {
+    "Name": "Stereo Photographs of Telescopes and Observatories",
+    "ID": "Stereo Telescope Photos",
+    "description": "",
+    "link": "http://astro.uchicago.edu/cosmus/projects.html#stereopix"
+  },
+  {
+    "Name": "Steward Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.as.arizona.edu/"
+  },
+  {
+    "Name": "Stratospheric Observatory For Infrared Astronomy",
+    "ID": "SOFIA",
+    "description": "The Kiepenheuer-Institut is a research institution of the German state of Baden-Wuerttemberg, dedicated to the study of the Sun. It is located in Freiburg, Germany, and operates solar observing facilities at the Observatorio del Teide, Tenerife, Spain.",
+    "link": "http://www.sofia.usra.edu/"
+  },
+  {
+    "Name": "Submillimeter Array",
+    "ID": "SMA",
+    "description": "",
+    "link": "http://sma-www.harvard.edu/"
+  },
+  {
+    "Name": "Submillimeter Polarimeter for Antarctic Remote Observing",
+    "ID": "SPARO",
+    "description": "",
+    "link": "http://lennon.astro.northwestern.edu/Home/welcome.html"
+  },
+  {
+    "Name": "Submillimeter Receiver Laboratory",
+    "ID": "SAO",
+    "description": " There is also an ",
+    "link": "http://cfa-www.harvard.edu/srlab/"
+  },
+  {
+    "Name": "Submillimetre Common-User Bolometer\n Array for the James Clerk Maxwell Telescope",
+    "ID": "SCUBA",
+    "description": "",
+    "link": "http://www.jach.hawaii.edu/JCMT/continuum/"
+  },
+  {
+    "Name": "Sudbury Neutrino Observatory",
+    "ID": "SNO at Queen's University",
+    "description": "The Kodaikanal Observatory of the Indian Institute of Astrophysics is located in the beautiful Palani range of hills in Southern India. It was established in 1899 as a Solar Physics Observatory and all the activities of the Madras Observatory were shifted to Kodaikanal.",
+    "link": "http://www.sno.phy.queensu.ca/"
+  },
+  {
+    "Name": "Super Dual Auroral Radar Network",
+    "ID": "SuperDARN",
+    "description": "",
+    "link": "http://superdarn.jhuapl.edu/index.html"
+  },
+  {
+    "Name": "Super-Kamiokande",
+    "ID": "",
+    "description": "The 3-m KOSMA telescope at Gornergrat (Switzerland) is operated by the I. Physikalisches Institut (Cologne, Germany). It can be used for observations between 210 and 820 GHz.",
+    "link": "http://www.phys.washington.edu/~superk/"
+  },
+  {
+    "Name": "Supernova / Acceleration Probe",
+    "ID": "SNAP",
+    "description": "",
+    "link": "http://snap.lbl.gov/"
+  },
+  {
+    "Name": "Swedish 1-m Solar Telescope",
+    "ID": "NSST",
+    "description": "The Observing Station of the Uppsala Observatory.",
+    "link": "http://www.solarphysics.kva.se/"
+  },
+  {
+    "Name": "Swedish-ESO SUbmillimetre Telescope",
+    "ID": "SEST",
+    "description": "",
+    "link": "http://www.LS.eso.org/lasilla/Telescopes/SEST/SEST.html"
+  },
+  {
+    "Name": "Swift Gamma Ray Burst Mission",
+    "ID": "",
+    "description": "LAMOST is a meridian reflecting Schmidt telescope. Using active optics technique to control its reflecting corrector makes it a unique astronomical instrument in combining large aperture with wide field of view. The available large focal plane may accommodate up to 4000 fibers, by which the collected light of distant and faint celestial objects down to 20.5 magnitude is fed into the spectrographs, promising a very high spectrum acquiring rate of ten-thousands of spectra per night. The telescope will be located at the Xinglong Station of National Astronomical Observatories. The projects budget is RMB 235 millions yuan, about 28.5 million USD.",
+    "link": "http://swift.gsfc.nasa.gov/"
+  },
+  {
+    "Name": "Sydney University Molonglo Sky Survey",
+    "ID": "SUMSS",
+    "description": "",
+    "link": "http://www.astrop.physics.usyd.edu.au/SUMSS/"
+  },
+  {
+    "Name": "THEMIS - Heliographic Telescope for the Study of the Magnetism and Instabilities on the Sun",
+    "ID": "THEMIS",
+    "description": "SAX is devoted to systematic, integrated and comprehensive studies of galactic and extragalactic X-ray sources in the energy band 0.1 - 200 keV; the observational goal to be addressed is to continue and expand upon previous spectral and timing observations of celestial sources in those areas for which the existing information is missing or inadequate and will remain uncovered in the foreseable future.",
+    "link": "http://www.themis.iac.es/"
+  },
+  {
+    "Name": "Taeduk Radio Astronomy Observatory",
+    "ID": "INACTIVE LINK ? - 272 --- TRAO",
+    "description": "",
+    "link": "http://www.trao.re.kr/trao/index_en.html"
+  },
+  {
+    "Name": "Tartu Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.aai.ee/"
+  },
+  {
+    "Name": "Teide Observatory",
+    "ID": "OT",
+    "description": "",
+    "link": "http://www.iac.es/ot/indice.html"
+  },
+  {
+    "Name": "Telescope Array Project",
+    "ID": "",
+    "description": "This instrument monitors the solar corona above the Sun's limb in a similar way as we perceive the corona during a solar eclipse. It produces images of the corona in the visible spectrum and with distance off the Sun's center ranging from 1.1 to 32 solar radii.",
+    "link": "http://www-ta.icrr.u-tokyo.ac.jp/"
+  },
+  {
+    "Name": "Telescopio Nazionale Galileo - Italian National Telescope Galileo",
+    "ID": "TNG, La Palma",
+    "description": "",
+    "link": "http://www.tng.iac.es/"
+  },
+  {
+    "Name": "Tennessee State University 2-m Automatic Spectroscopic Telescope Project",
+    "ID": "2-m AST",
+    "description": "The Large Binocular Telescope (LBT) is a collaboration between Arizona (25%), Italy (25%, represented by the Arcetri Astrophysical Observatory in Florence), Research Corporation (12.5%), the Ohio State University (12.5%), and Germany (25%, represented by the LBT Beteiligungsgesellschaft). The goal of the LBT project is to construct and exploit a binocular telescope consisting of two 8.4-meter mirrors on a common mount. This telescope will be equivalent in light-gathering power to a single 11.8-meter instrument. Because of its binocular arrangement, the telescope will have a resolving power (ultimate image sharpness) corresponding to a 23-meter telescope.",
+    "link": "http://astro.tsuniv.edu/"
+  },
+  {
+    "Name": "Terrestrial Planet Finder (Origins of Stars, Planets... and Life)",
+    "ID": "TPF",
+    "description": "",
+    "link": "http://tpf.jpl.nasa.gov/"
+  },
+  {
+    "Name": "The European Incoherent SCATter Scientific Association",
+    "ID": "EISCAT",
+    "description": "The Large Millimeter Telescope is a bi-national project sponsored by both U.S. and Mexican governments and institutions to build the largest single-dish millimeter-wavelength radio telescope ontop of the mountain Cerro La Negra near Puebla in Mexico. The telescope is currently under construction with a rough completion date near 2003.",
+    "link": "http://www.eiscat.com/"
+  },
+  {
+    "Name": "The Wilderness Center Astronomy Club",
+    "ID": "WCAC",
+    "description": "",
+    "link": "http://www.twcac.org/"
+  },
+  {
+    "Name": "Thueringer Landessternwarte Tautenburg",
+    "ID": "TLS",
+    "description": "",
+    "link": "http://www.tls-tautenburg.de/"
+  },
+  {
+    "Name": "Torun Radio Astronomy Observatory",
+    "ID": "TRAO",
+    "description": "The focus of the Laser Guide Star Adaptive Optics Program at Lawrence Livermore National Laboratory (LLNL) is the development of integrated adaptive optics (AO) and sodium-layer laser guide star (LGS) systems for use on large astronomical telescopes.",
+    "link": "http://www.astro.uni.torun.pl/"
+  },
+  {
+    "Name": "Transition Region And Coronal Explorer",
+    "ID": "TRACE",
+    "description": "",
+    "link": "http://vestige.lmsal.com/TRACE/"
+  },
+  {
+    "Name": "UK Infra-Red Telescope",
+    "ID": "UKIRT",
+    "description": "",
+    "link": "http://www.jach.hawaii.edu/UKIRT"
+  },
+  {
+    "Name": "UK Schmidt Telescope - Anglo-Australian Observatory",
+    "ID": "UKST / AAO",
+    "description": "Descriptions and users' manuals for Lick Observatory telescopes and facility instruments on Mount Hamilton; local weather; astronomical calendars; telescope time applications; staff and contacts at Lick Observatory.",
+    "link": "http://www.aao.gov.au/ukst/"
+  },
+  {
+    "Name": "UK Schmidt Telescope - Wide Field Astronomy Unit",
+    "ID": "UKST",
+    "description": "",
+    "link": "http://www.roe.ac.uk/ifa/wfau/ukstu/ukst.html"
+  },
+  {
+    "Name": "USA National Solar Observatory / Sacramento Peak, Sunspot, NM",
+    "ID": "NSO/SP",
+    "description": "Liquid Mirror (LM) technology is being developed at Université Laval. A f/1.2, 2.5 meter diameter, mercury mirror is being extensively tested in our testing tower. We are also exploring the use of gallium eutectics as reflecting liquids. The design of novel optical correctors to increase the accessible field of view of liquid mirrors up to 45 degrees is also addressed.",
+    "link": "http://www.sunspot.noao.edu/"
+  },
+  {
+    "Name": "Udaipur Solar Observatory",
+    "ID": "USO",
+    "description": "",
+    "link": "http://www.prl.ernet.in/~uso/"
+  },
+  {
+    "Name": "Uhuru Satellite",
+    "ID": "GSFC. NASA",
+    "description": "Details of the research and teaching interests of the group, as well as information on the project - a fully-robotic 2m telescope to be situated at the Observatorio del Roque de los Muchachos, La Palma. As well as the Astrophysics degree-course with Liverpool University, we also have an innovative .",
+    "link": "http://heasarc.gsfc.nasa.goV/docs/uhuru/uhuru.html"
+  },
+  {
+    "Name": "Ultraviolet Imaging Telescope",
+    "ID": "UIT - Archives at STScI MAST",
+    "description": "",
+    "link": "http://archive.stsci.edu/uit/"
+  },
+  {
+    "Name": "Ulysses Mission",
+    "ID": "ESA and NASA",
+    "description": "",
+    "link": "http://helio.esa.int/ulysses/"
+  },
+  {
+    "Name": "University of California Observatories - Lick Observatory (WWW)",
+    "ID": "UCO/Lick",
+    "description": "LEGRI is a payload for the first mission of the Spanish MINISAT platform. The objective of LEGRI is to demonstrate the viability of HgI2 detectors for space astronomy, providing imaging and spectroscopical capabilities in the 10-100 keV range.",
+    "link": "http://www.ucolick.org/"
+  },
+  {
+    "Name": "University of California, Irvine, Observatory",
+    "ID": "UCI Observatory",
+    "description": "",
+    "link": "http://www.physics.uci.edu/~observat/"
+  },
+  {
+    "Name": "University of Hawaii IfA: 2.2m Telescope",
+    "ID": "",
+    "description": "The Low Frequency Array (LOFAR) is a radio telescope that will operate at the lowest frequencies that are accessible from earth. The current plan is that LOFAR will work in the range from 10-240 MHz. The telescope is being developed by , based in Dwingeloo (the Netherlands).",
+    "link": "http://www.ifa.hawaii.edu/88inch/88inch.html"
+  },
+  {
+    "Name": "University of Louisville - Moore Observatory",
+    "ID": "",
+    "description": "",
+    "link": "http://www.astro.louisville.edu/"
+  },
+  {
+    "Name": "University of Toronto Southern Observatory",
+    "ID": "UTSO",
+    "description": "MDM Observatory was founded by the , , and the . Current operating partners include , , , , and The Observatory is located on the southwest ridge of the near Tucson, AZ. It operates two telescopes: the 2.4-m Hiltner telescope and the 1.3-m McGraw-Hill telescope.",
+    "link": "http://www.astro.utoronto.ca/~utso/"
+  },
+  {
+    "Name": "VIsible and IR MultiObject Spectrographs",
+    "ID": "VIRMOS",
+    "description": "",
+    "link": "http://www.eso.org/instruments/vimos/"
+  },
+  {
+    "Name": "VLBI Space Observatory Programme",
+    "ID": "VSOP",
+    "description": "MONOPTEC licenses the Fixed Shutter Dome, an enabling technology in observatory enclosures and satellite laser ranging systems. Four FSD's now reside in Tokyo, Japan, as part of the Keystone Project.",
+    "link": "http://www.vsop.isas.ac.jp/"
+  },
+  {
+    "Name": "VLT Imager and Spectrometer for mid Infra Red",
+    "ID": "VISIR, ESO VLT",
+    "description": "",
+    "link": "http://www.eso.org/instruments/visir/"
+  },
+  {
+    "Name": "VLT Survey Telescope",
+    "ID": "VST",
+    "description": "The MOnitoring X-ray Experiment (MOXE) is an X-ray all-sky monitor to be launched on the Russian Spectrum-X-Gamma satellite. It will monitor several hundred X-ray sources on a daily basis, and will be the first instrument to monitor the complete X-ray sky simultaneously. MOXE is built by Los Alamos Nat Lab, Goddard Space Flight Center and Space Research Institute (Moscow).",
+    "link": "http://oacosf.na.astro.it/vst/"
+  },
+  {
+    "Name": "Vainu Bappu Observatory",
+    "ID": "INACTIVE LINK ? - 281 --- Kavalur",
+    "description": "",
+    "link": "http://www.iiap.res.in/vbo/vbo.html"
+  },
+  {
+    "Name": "Venezuela Centre for Researches in Astronomy",
+    "ID": "CIDA",
+    "description": "Local project documentation and utilities as well as collaboration-wide information sources are maintained by the MPE COMPTEL people for: COMPTEL Data Reduction Group work: documents, scientific results and utilities used by the data analysts, the processing team and the scientists. COMPASS software system work : technical and management documents, used and maintained by the MPE software team. the local computing environment : documents on system configuration, maintained by the MPE/RZG software team. MPE - COMPTEL People Matters: the weekly activity list individual 'home pages'",
+    "link": "http://www.cida.ve/"
+  },
+  {
+    "Name": "Ventspils International Radioastronomy Center",
+    "ID": "VIRAC",
+    "description": "",
+    "link": "http://www.virac.lv"
+  },
+  {
+    "Name": "Very Large Array",
+    "ID": "VLA",
+    "description": "The Magdalena Ridge Observatory (MRO) project is an international scientific collaboration between New Mexico Tech, the University of Cambridge (UK), New Mexico State University, New Mexico Highlands University, the University of Puerto Rico, and Los Alamos National Laboratory. The project is overseen by the U.S. Naval Research Laboratory. The observatory is primarily intended for astronomical research and will be composed of two facilities, a single telescope and an array of optical/infrared telescopes called the Magdalena Ridge Observatory Interferometer (MROI). Located on the main ridge of the Magdalena mountains, some 30 miles west of the New Mexico Tech campus, at an elevation of 10,600 ft. above sea level, it will be the fourth highest observatory in the world.",
+    "link": "http://www.vla.nrao.edu/"
+  },
+  {
+    "Name": "Very Large Telescope Interferometer",
+    "ID": "VLTI, ESO",
+    "description": "",
+    "link": "http://www.eso.org/projects/vlti/"
+  },
+  {
+    "Name": "Very Long Baseline Array",
+    "ID": "VLBA",
+    "description": "NASA's Magellan spacecraft made a dramatic conclusion to its highly successful mission at Venus when it is commanded to plunge into the planet's dense atmosphere Tuesday, October 11, 1994. During its four years in orbit around Earth's sister planet, the spacecraft has radar-mapped 98 percent of the surface and collected high-resolution gravity data of Venus. The purpose of the crash landing is to gain data on the planet's atmosphere and on the performance of the spacecraft as it descends. Up-to-date status reports will be available from this WWW page, which also offers Venus images and other highlights from the mission.",
+    "link": "http://www.vlba.nrao.edu/"
+  },
+  {
+    "Name": "Very Small Array",
+    "ID": "VSA",
+    "description": "",
+    "link": "http://www.mrao.cam.ac.uk/telescopes/vsa/"
+  },
+  {
+    "Name": "Virgo Interferometer",
+    "ID": "VIRGO",
+    "description": "",
+    "link": "http://www.virgo.infn.it"
+  },
+  {
+    "Name": "Visible and Infrared Survey Telescope for Astronomy",
+    "ID": "VISTA",
+    "description": "MRT is a southern sky survey telescope, which is making a complimentary survey to 6C (southern sky) and observing selected southern sky pulsars. See and MRT pages.",
+    "link": "http://www.vista.ac.uk/"
+  },
+  {
+    "Name": "Vulcan Camera Project",
+    "ID": "",
+    "description": "",
+    "link": "http://web99.arc.nasa.gov/~vulcan/"
+  },
+  {
+    "Name": "WAVES : The Radio and Plasma Wave Investigation on the WIND  Spacecraft",
+    "ID": "waves",
+    "description": "McDonald Observatory is located 450 miles west of Austin, Texas, in the Davis Mountains. At present, there are three operating telescopes: 2.7-meter, 2.1-meter, and .76-meter reflectors. The Observatory is equipped with a wide range of state-of-the-art instrumentation for imaging and spectroscopy in the optical and infrared, and it boasts one of the first and most productive lunar ranging stations.",
+    "link": "http://www-lep.gsfc.nasa.gov/waves/waves.html"
+  },
+  {
+    "Name": "WIND spacecraft",
+    "ID": "",
+    "description": "",
+    "link": "http://www-istp.gsfc.nasa.gov/istp/wind/"
+  },
+  {
+    "Name": "WIYN, from Indiana University",
+    "ID": "",
+    "description": "",
+    "link": "http://www.astro.indiana.edu/facilities/observatories/wiyn/"
+  },
+  {
+    "Name": "Westerbork Synthesis Radio Telescope",
+    "ID": "WSRT - ASTRON",
+    "description": "The Metsähovi Radio Research Station, a separate research institute of the Helsinki University of Technology since May 1988, operates a 4 m diameter radome enclosed radio telescope at Metsähovi, 40 km west of Helsinki, Finland. The Cassegrain telescope system can be used at frequencies 10 - 230 GHz (wavelengths 3 cm - 1.8 mm).",
+    "link": "http://www.astron.nl/p/observing.htm"
+  },
+  {
+    "Name": "Whole Earth Blazar Telescope",
+    "ID": "WEBT",
+    "description": "",
+    "link": "http://www.to.astro.it/blazars/webt/"
+  },
+  {
+    "Name": "Whole Earth Telescope",
+    "ID": "WET, site of University of Texas at Austin",
+    "description": "",
+    "link": "http://bullwinkle.as.utexas.edu/"
+  },
+  {
+    "Name": "Whole Earth Telescope",
+    "ID": "WET",
+    "description": "Outreach efforts to merge astronomy research and non-science education. The SOAR Telescope is located on Cerro Pachon, Chile, and operated by a consortium including Michigan State University, the University of North Carolina at Chapel Hill, the National Optical Astronomy Observatory and the country of Brazil.",
+    "link": "http://wet.physics.iastate.edu/"
+  },
+  {
+    "Name": "Wide Field CAMera for UKIRT",
+    "ID": "WFCAM",
+    "description": "",
+    "link": "http://www.roe.ac.uk/atc/projects/wfcam/"
+  },
+  {
+    "Name": "Wide Field Infrared Explorer",
+    "ID": "WIRE",
+    "description": "The Microlensing Planet Finder Project (MPF) is by far the most powerful proposed observatory for finding large numbers of planetary systems. It answers the following questions: How many planets are there? How are they distributed in mass and distance from their parent stars, and in distance from the Galactic Center? How many have large moons? How many have been expelled from their systems? None of these questions are fully addressed by other techniques particularly if the abundance is low. MPF will do this by observing microlensing signals from 100 million stars in the Galactic bulge for 4 observing seasons, and it will have sensitivity to planets with masses as low as 0.1 M\\oplus at separations > 0.7 AU. MPF will be sensitive to analogs of all the planets in the solar system except for Mercury and Pluto and will complement the Kepler mission.",
+    "link": "http://www.ipac.caltech.edu/wire/"
+  },
+  {
+    "Name": "Wilcox Solar Observatory",
+    "ID": "INACTIVE LINK ? - 341 --- WSO",
+    "description": "",
+    "link": "http://quake.stanford.edu/~wso/wso.html"
+  },
+  {
+    "Name": "Wilkinson Microwave Anisotropy Probe",
+    "ID": "WMAP",
+    "description": "MOST is Canada's first space science microsatellite and its first optical space telescope project, aiming for launch in late 2001. MOST is designed to measure (as its acronym implies) Microvariability & Oscillations of STars in broadband light with a precision of a few micromagnitudes over timescales from minutes to days. The resulting eigenfrequency data will be used primarily for stellar seismology, to probe the structure and ages of Sun-like stars, magnetic stars, Wolf-Rayet stars and halo subdwarfs. The subdwarfs are expected to yield age estimates which would place a meaningful lower limit on the age of the Universe. MOST should also be capable of confirming the presence of giant extrasolar planets identified in Doppler surveys.",
+    "link": "http://lambda.gsfc.nasa.gov/product/map/"
+  },
+  {
+    "Name": "Wilkinson Microwave Anisotropy Probe",
+    "ID": "WMAP",
+    "description": "",
+    "link": "http://map.gsfc.nasa.gov/"
+  },
+  {
+    "Name": "Winer Observatory",
+    "ID": "",
+    "description": "Mid-InfraRed Large-well Imager - No, the \"n\" doesn't stand for anything     ;-) (MIRLIN) - The JPL Deep-Well Mid-Infrared Array Camera. MIRLIN is a 128 x 128 pixel, 7 - 25 micrometer infrared astronomical camera built at JPL by a team led by Dr. Michael Ressler and used on the Palomar 5 meter (200 inch) telescope, the NASA Infrared Telescope Facility 3 meter telescope, and the Keck II 10 meter telescope.",
+    "link": "http://www.winer.org/"
+  },
+  {
+    "Name": "Wisconsin Ultraviolet Photo-Polarimeter Experiment",
+    "ID": "WUPPE",
+    "description": "",
+    "link": "http://www.sal.wisc.edu/WUPPE/"
+  },
+  {
+    "Name": "Wolfgang-Amadeus, The University of Vienna Twin Automatic Photoelectric Telescope",
+    "ID": "APT",
+    "description": "The MSX observatory is a Ballistic Missile Defense Organization project which offers major benefits for both the defense and civilian sectors. It was launched on a Delta II vehicle on April 24, 1996, into a 900 km, polar, near-Sun synchronous orbit. The spacecraft featured an advanced multispectral image capability to gather data on test targets and space background phenomena. The infrared sensors operated at 11 to 12 degrees Kelvin by employing a solid hydrogen cryostat. The IR instruments span the range 4.2 - 26 microns. The focal plane array consists of five bands and the radiometer beam-size is more than 25 times smaller than IRAS. As a result, much greater spatial resolution than anything currently available has been obtained. The cryogen phase of the mission ended on 26 February 997. During the ten month cryogen phase of the mission over 200 Giga Bytes of data on Celestial Backgrounds were obtained. See the for additional details.",
+    "link": "http://www.aip.de/groups/activity/APT/"
+  },
+  {
+    "Name": "Wyoming Infrared Observatory",
+    "ID": "WIRO",
+    "description": "",
+    "link": "http://physics.uwyo.edu/~amonson/wiro/wiro.html"
+  },
+  {
+    "Name": "X-Ray Timing Explorer",
+    "ID": "XTE. GSFC.NASA",
+    "description": "The Millstone Hill Observatory, located in Westford Massachusetts, is a broad-based atmospheric sciences research facility owned and operated by the Massachusetts Institute of Technology. The Atmospheric Sciences Group, which staffs and manages the observatory, is a part of M.I.T's Haystack Observatory, a basic research organization whose focus is radio wave and radar science, instrumentation and techniques. The following resources may be of interest. EISCAT is a particularly good source of data and useful information. See, for example, incoherent scatter radar and magnetosphere Millstone Hill Observatory: Information, data, etc., including real-time radar status and data when the radar is operating. EISCAT: European Incoherent Scatter Association. NCAR: National Center for Atmospheric Research. NSF: National Science Foundation Gopher server. NASA: National Aeronautics and Space Administration. NGDC: National Geophysical Data Center.",
+    "link": "http://heasarc.gsfc.nasa.gov/docs/xte/XTE.html"
+  },
+  {
+    "Name": "XMM-Newton",
+    "ID": "ESA",
+    "description": "",
+    "link": "http://www.esa.int/science/xmmnewton"
+  },
+  {
+    "Name": "XMM-Newton Science Operations Centre",
+    "ID": "XMM, ESA",
+    "description": "",
+    "link": "http://xmm.vilspa.esa.es/"
+  },
+  {
+    "Name": "Yerkes Observatory",
+    "ID": "University of Chicago",
+    "description": "The MAO (Lithuania) has three telescopes: 1.65 m telescope; 63 cm reflector; 35/51 cm Maksutov telescope.",
+    "link": "http://astro.uchicago.edu/yerkes/"
+  }
 ]

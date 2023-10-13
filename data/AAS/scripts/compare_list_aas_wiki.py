@@ -27,12 +27,12 @@ def mon_scorer(q, c):
         else:
              r -= 50
     if "ID" in q and 'itemLabel' in c:
-        if q['ID'] in c['itemLabel']:
+        if q['ID'].lower() in c['itemLabel']:
             r += 500
         else:
             r -= 50
     if "ID" in q and 'aliases' in c:
-        if q['ID'].strip() in c['aliases'].split("|"):
+        if q['ID'].lower().strip() in c['aliases'].lower().split("|"):
             r += 500
         else:
             r -= 50

@@ -1,0 +1,1736 @@
+[
+    [
+        {
+            "Name": "MDM 2.4m Hiltner",
+            "ID": "MDM-2.4"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q104881693",
+            "itemLabel": "boeing-starliner-spacecraft-2",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "spacecraft-2|spacecraft-2",
+            "all_instance_of": "Boeing Starliner",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "spacecraft manufactured by Boeing"
+        }
+    ],
+    [
+        {
+            "Name": "MDM 2.4m Hiltner",
+            "ID": "MDM-2.4"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113274560",
+            "itemLabel": "magnetospheric-multiscale-2",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2015-011B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "all_instance_of": "spacecraft",
+            "all_has_part": "",
+            "all_part_of": "Magnetospheric Multiscale Mission",
+            "itemDescription": "spacecraft in the Magnetospheric Multiscale constellation"
+        }
+    ],
+    [
+        {
+            "Name": "MDM 2.4m Hiltner",
+            "ID": "MDM-2.4"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q89785666",
+            "itemLabel": "boeing-orbital-flight-test-2",
+            "all_COSPAR_ID": "2022-055A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "boe-oft2|boe-oft2|boe-oft2|boe-oft-2",
+            "all_instance_of": "space mission",
+            "all_has_part": "",
+            "all_part_of": "Commercial Crew Development",
+            "itemDescription": "second uncrewed flight test of the Boeing Starliner spacecraft"
+        }
+    ],
+    [
+        {
+            "Name": "Gemini North",
+            "ID": "Gemini-N"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q119807",
+            "itemLabel": "gemini-7",
+            "all_COSPAR_ID": "1965-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "gemini-vii|gemini-vii",
+            "all_instance_of": "Gemini spacecraft|human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "Project Gemini",
+            "itemDescription": "1965 crewed spaceflight in NASA's Gemini program"
+        }
+    ],
+    [
+        {
+            "Name": "Gemini North",
+            "ID": "Gemini-N"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q617651",
+            "itemLabel": "gemini-8",
+            "all_COSPAR_ID": "1966-020A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-020A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "gemini-viii|\u062c\u0645\u0646\u0627\u064a-\u0668|gemini-viii",
+            "all_instance_of": "human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "Project Gemini",
+            "itemDescription": "sixth crewed spaceflight in NASA's Gemini program"
+        }
+    ],
+    [
+        {
+            "Name": "Gemini North",
+            "ID": "Gemini-N"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q725849",
+            "itemLabel": "gemini-5",
+            "all_COSPAR_ID": "1965-068A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1965-068A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u96d9\u5b50\u5ea75\u865f|\u53cc\u5b50\u661f5\u53f7|gemini-v|01516|\u062c\u0645\u06cc\u0646\u0627\u06cc-5|gemini-v|gemini-v|gemini-v",
+            "all_instance_of": "Gemini spacecraft|human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "Project Gemini",
+            "itemDescription": "human spaceflight"
+        }
+    ],
+    [
+        {
+            "Name": "Gemini North",
+            "ID": "Gemini-N"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q110098899",
+            "itemLabel": "gemini-south-multi-conjugate-adaptive-optics",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "gems-mcao|gemini-multi-conjugate-adaptive-optics|gemini-mcao",
+            "all_instance_of": "Multi-Conjugate Adaptive Optics",
+            "all_has_part": "",
+            "all_part_of": "Gemini South",
+            "itemDescription": "Multi-Conjugate Adaptive Optics (MCAO) system of the Gemini South observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Gemini South",
+            "ID": "Gemini-S"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q119807",
+            "itemLabel": "gemini-7",
+            "all_COSPAR_ID": "1965-100A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "gemini-vii|gemini-vii",
+            "all_instance_of": "Gemini spacecraft|human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "Project Gemini",
+            "itemDescription": "1965 crewed spaceflight in NASA's Gemini program"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 2.2m at La Silla",
+            "ID": "ESO-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q106977230",
+            "itemLabel": "axiom-mission-2",
+            "all_COSPAR_ID": "2023-070A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2023-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "axiom-2|ax2|ax-2|axiom-2|ax-2|ax-2|ax-2|ax2|ax-2",
+            "all_instance_of": "private spaceflight|human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "private crewed spaceflight to the International Space Station in 2023"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 2.2m at La Silla",
+            "ID": "ESO-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111497421",
+            "itemLabel": "double-star-2",
+            "all_COSPAR_ID": "2004-029A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2004-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "tan-ce-2|dsp-p|double-star-polar|double-star-dsp-p|tc-2",
+            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_has_part": "",
+            "all_part_of": "Double Star mission",
+            "itemDescription": "former joint Chinese-European magnetospheric research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 2.2m at La Silla",
+            "ID": "ESO-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111851556",
+            "itemLabel": "dmsp-5d-2/f06",
+            "all_COSPAR_ID": "1982-118A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1982-118A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dmsp-block-5d-2|dmsp5d-2-f06|dmsp-f6|13736",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 2.2m at La Silla",
+            "ID": "ESO-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111851643",
+            "itemLabel": "dmsp-5d-2/f07",
+            "all_COSPAR_ID": "1983-113A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-113A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dmsp5d-2-f07|dmsp-f7|14506|dmsp-block-5d-2",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 2.2m at La Silla",
+            "ID": "ESO-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111854237",
+            "itemLabel": "dmsp-5d-2/f11",
+            "all_COSPAR_ID": "1991-082A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1991-082A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "usa-73|dmspf11|dmsp5d-2-f11|dmsp-f11|dmsp-block-5d-2|21798",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 3.6m at La Silla",
+            "ID": "ESO-3.6m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q100440345",
+            "itemLabel": "spacex-crew-3",
+            "all_COSPAR_ID": "2021-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2021-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "uscv-3|\u30b9\u30da\u30fc\u30b9x-\u30af\u30eb\u30fc\uff1d3|uscv-3|crew-3|crew-3|crew-3|uscv-3",
+            "all_instance_of": "human spaceflight",
+            "all_has_part": "Cosmic Kiss",
+            "all_part_of": "Commercial Crew Program",
+            "itemDescription": "NASA Commercial Crew Program mission to the International Space Station"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 3.6m at La Silla",
+            "ID": "ESO-3.6m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q121316180",
+            "itemLabel": "bluewalker-3",
+            "all_COSPAR_ID": "2022-111AL",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2022111AL",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "bw-3",
+            "all_instance_of": "communications satellite|technology demonstration spacecraft",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "American communications and technology demonstration satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 3.6m at La Silla",
+            "ID": "ESO-3.6m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14770087",
+            "itemLabel": "ogo-3",
+            "all_COSPAR_ID": "1966-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-049A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "s49a|orbiting-geophysical-observatory-3|ogo-b|eogo-2|ego-b|ego-2",
+            "all_instance_of": "research satellite",
+            "all_has_part": "",
+            "all_part_of": "Orbiting Geophysical Observatory program",
+            "itemDescription": "American geophysical research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 3.6m at La Silla",
+            "ID": "ESO-3.6m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14771275",
+            "itemLabel": "sbs-3",
+            "all_COSPAR_ID": "1982-110B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1982-110B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "sbs3|sbs-c|satellite-business-systems-3",
+            "all_instance_of": "communications satellite|geostationary satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "American geostationary communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The ESO 3.6m at La Silla",
+            "ID": "ESO-3.6m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16061243",
+            "itemLabel": "dfs-kopernikus-3",
+            "all_COSPAR_ID": "1992-066A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "hellassat-1|dfs-kopernikus-3|dfs-kopernikus-3",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "22175"
+        }
+    ],
+    [
+        {
+            "Name": "Isaac Newton Telescope 2.5m",
+            "ID": "INT-2.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q106977230",
+            "itemLabel": "axiom-mission-2",
+            "all_COSPAR_ID": "2023-070A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2023-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "axiom-2|ax2|ax-2|axiom-2|ax-2|ax-2|ax-2|ax2|ax-2",
+            "all_instance_of": "private spaceflight|human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "private crewed spaceflight to the International Space Station in 2023"
+        }
+    ],
+    [
+        {
+            "Name": "Isaac Newton Telescope 2.5m",
+            "ID": "INT-2.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111497421",
+            "itemLabel": "double-star-2",
+            "all_COSPAR_ID": "2004-029A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2004-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "tan-ce-2|dsp-p|double-star-polar|double-star-dsp-p|tc-2",
+            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_has_part": "",
+            "all_part_of": "Double Star mission",
+            "itemDescription": "former joint Chinese-European magnetospheric research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Isaac Newton Telescope 2.5m",
+            "ID": "INT-2.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111851556",
+            "itemLabel": "dmsp-5d-2/f06",
+            "all_COSPAR_ID": "1982-118A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1982-118A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dmsp-block-5d-2|dmsp5d-2-f06|dmsp-f6|13736",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Isaac Newton Telescope 2.5m",
+            "ID": "INT-2.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111851643",
+            "itemLabel": "dmsp-5d-2/f07",
+            "all_COSPAR_ID": "1983-113A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-113A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dmsp5d-2-f07|dmsp-f7|14506|dmsp-block-5d-2",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Isaac Newton Telescope 2.5m",
+            "ID": "INT-2.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111854237",
+            "itemLabel": "dmsp-5d-2/f11",
+            "all_COSPAR_ID": "1991-082A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1991-082A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "usa-73|dmspf11|dmsp5d-2-f11|dmsp-f11|dmsp-block-5d-2|21798",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "FLWO 1.5m Tillinghast",
+            "ID": "FLWO 1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10492270",
+            "itemLabel": "eutelsat-i-f-1",
+            "all_COSPAR_ID": "1983-058A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ecs-1",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "FLWO 1.5m Tillinghast",
+            "ID": "FLWO 1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q108120278",
+            "itemLabel": "stss-1",
+            "all_COSPAR_ID": "2009-052A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2009-052A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "stss-demo-1|sbirs-low-fds-1|usa-208",
+            "all_instance_of": "reconnaissance satellite",
+            "all_has_part": "",
+            "all_part_of": "Space Tracking and Surveillance System",
+            "itemDescription": "American infrared and visible light reconnaissance satellite"
+        }
+    ],
+    [
+        {
+            "Name": "FLWO 1.5m Tillinghast",
+            "ID": "FLWO 1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11276494",
+            "itemLabel": "gms-1",
+            "all_COSPAR_ID": "1977-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "himawari-1|\u3072\u307e\u308f\u308a1\u53f7|\u3072\u307e\u308f\u308a-(\u4eba\u5de5\u885b\u661f)|geostationary-meteorological-satellite",
+            "all_instance_of": "Himawari",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "weather satellite launched in 1977"
+        }
+    ],
+    [
+        {
+            "Name": "FLWO 1.5m Tillinghast",
+            "ID": "FLWO 1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113275713",
+            "itemLabel": "tip-1",
+            "all_COSPAR_ID": "1972-069A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1972-069A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "triad-oi-1x|triad-a|triad-1|triad|06173|tip1",
+            "all_instance_of": "navigation satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "This three-body spacecraft was connected by booms which served as gravity-gradient stabilizers in the radial direction. A momentum wheel was used for stabilization in roll and yaw."
+        }
+    ],
+    [
+        {
+            "Name": "FLWO 1.5m Tillinghast",
+            "ID": "FLWO 1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113633417",
+            "itemLabel": "sbss-1",
+            "all_COSPAR_ID": "2010-048A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2010-048A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "usa-216|space-based-space-surveillance-1",
+            "all_instance_of": "military satellite",
+            "all_has_part": "",
+            "all_part_of": "Space Based Space Surveillance",
+            "itemDescription": "American surveillance satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The Danish 1.54-m Telescope at La Silla",
+            "ID": "Danish-1.54m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111496922",
+            "itemLabel": "pssc-1",
+            "all_COSPAR_ID": "2008-059B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2008-059B",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "pssct-1|pssc-testbed-1|picosatellite-solar-cell-testbed-1|picosat-solar-cell-testbed-1",
+            "all_instance_of": "small satellite|technology demonstration spacecraft",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "miniaturized satellite operated by the United States Air Force"
+        }
+    ],
+    [
+        {
+            "Name": "The Danish 1.54-m Telescope at La Silla",
+            "ID": "Danish-1.54m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111497470",
+            "itemLabel": "fsw-3-1",
+            "all_COSPAR_ID": "2003-051A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2003-051C",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-2-1|jb-2-1|fsw-18",
+            "all_instance_of": "reconnaissance satellite",
+            "all_has_part": "",
+            "all_part_of": "Fanhui Shi Weixing-3",
+            "itemDescription": "Chinese reconnaissance satellite"
+        }
+    ],
+    [
+        {
+            "Name": "The Danish 1.54-m Telescope at La Silla",
+            "ID": "Danish-1.54m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q112741833",
+            "itemLabel": "fanhui-shi-weixing-1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-1a|jb-1a|fsw-1",
+            "all_instance_of": "spacecraft series",
+            "all_has_part": "FSW-1 5|FSW-1 4|FSW-1 3|FSW-1 2|FSW-1 1",
+            "all_part_of": "Fanhui Shi Weixing",
+            "itemDescription": "second class of Chinese reconnaissance satellites under the FSW program"
+        }
+    ],
+    [
+        {
+            "Name": "The Danish 1.54-m Telescope at La Silla",
+            "ID": "Danish-1.54m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11276494",
+            "itemLabel": "gms-1",
+            "all_COSPAR_ID": "1977-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "himawari-1|\u3072\u307e\u308f\u308a1\u53f7|\u3072\u307e\u308f\u308a-(\u4eba\u5de5\u885b\u661f)|geostationary-meteorological-satellite",
+            "all_instance_of": "Himawari",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "weather satellite launched in 1977"
+        }
+    ],
+    [
+        {
+            "Name": "The Danish 1.54-m Telescope at La Silla",
+            "ID": "Danish-1.54m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113129973",
+            "itemLabel": "vega-1-descent-craft",
+            "all_COSPAR_ID": "1984-125E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1984-125E",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
+            "all_instance_of": "lander",
+            "all_has_part": "Vega 1",
+            "all_part_of": "",
+            "itemDescription": "The Vega 1 lander probe was identical to those of Venera 9 through 14 and similarly had two objectives, the study of the atmosphere and the study of the superficial crust."
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 2.2m Telescope",
+            "ID": "CA-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q106977230",
+            "itemLabel": "axiom-mission-2",
+            "all_COSPAR_ID": "2023-070A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2023-070A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "axiom-2|ax2|ax-2|axiom-2|ax-2|ax-2|ax-2|ax2|ax-2",
+            "all_instance_of": "private spaceflight|human spaceflight",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "private crewed spaceflight to the International Space Station in 2023"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 2.2m Telescope",
+            "ID": "CA-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111497421",
+            "itemLabel": "double-star-2",
+            "all_COSPAR_ID": "2004-029A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2004-029A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "tan-ce-2|dsp-p|double-star-polar|double-star-dsp-p|tc-2",
+            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_has_part": "",
+            "all_part_of": "Double Star mission",
+            "itemDescription": "former joint Chinese-European magnetospheric research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 2.2m Telescope",
+            "ID": "CA-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111851556",
+            "itemLabel": "dmsp-5d-2/f06",
+            "all_COSPAR_ID": "1982-118A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1982-118A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dmsp-block-5d-2|dmsp5d-2-f06|dmsp-f6|13736",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 2.2m Telescope",
+            "ID": "CA-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111851643",
+            "itemLabel": "dmsp-5d-2/f07",
+            "all_COSPAR_ID": "1983-113A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1983-113A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dmsp5d-2-f07|dmsp-f7|14506|dmsp-block-5d-2",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 2.2m Telescope",
+            "ID": "CA-2.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1128040",
+            "itemLabel": "worldview-2",
+            "all_COSPAR_ID": "2009-055A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "worldview-2|wv02|wv-02|worldview-2|wv2|wv-2",
+            "all_instance_of": "Earth observation satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "commercial Earth observation satellite"
+        }
+    ],
+    [
+        {
+            "Name": "ESO 1.5-m Telescope",
+            "ID": "ESO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113275713",
+            "itemLabel": "tip-1",
+            "all_COSPAR_ID": "1972-069A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1972-069A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "triad-oi-1x|triad-a|triad-1|triad|06173|tip1",
+            "all_instance_of": "navigation satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "This three-body spacecraft was connected by booms which served as gravity-gradient stabilizers in the radial direction. A momentum wheel was used for stabilization in roll and yaw."
+        }
+    ],
+    [
+        {
+            "Name": "ESO 1.5-m Telescope",
+            "ID": "ESO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11756909",
+            "itemLabel": "les-1",
+            "all_COSPAR_ID": "1965-008C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "les-1|lincoln-experimental-satellite-1",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "former communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "ESO 1.5-m Telescope",
+            "ID": "ESO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1485465",
+            "itemLabel": "gfz-1",
+            "all_COSPAR_ID": "1986-017JE",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "gfz-1|gfz-1|geo-forschungs-zentrum",
+            "all_instance_of": "geodetic satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "ESO 1.5-m Telescope",
+            "ID": "ESO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16061240",
+            "itemLabel": "tdf-1",
+            "all_COSPAR_ID": "1988-098A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "tdf-1",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "19621"
+        }
+    ],
+    [
+        {
+            "Name": "ESO 1.5-m Telescope",
+            "ID": "ESO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16325215",
+            "itemLabel": "oso-1",
+            "all_COSPAR_ID": "1962-006A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1962-006A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "orbiting-solar-observatory-1|oso-a|orbiting-solar-observatory-1",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "Orbiting Solar Observatory",
+            "itemDescription": "solar space observatory"
+        }
+    ],
+    [
+        {
+            "Name": "2.16m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-2.16m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q104881693",
+            "itemLabel": "boeing-starliner-spacecraft-2",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "spacecraft-2|spacecraft-2",
+            "all_instance_of": "Boeing Starliner",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "spacecraft manufactured by Boeing"
+        }
+    ],
+    [
+        {
+            "Name": "2.16m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-2.16m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1091775",
+            "itemLabel": "ciel-2",
+            "all_COSPAR_ID": "2008-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ciel-2",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "2.16m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-2.16m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115929519",
+            "itemLabel": "bevo-2",
+            "all_COSPAR_ID": "1998-067HQ",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1998067HQ",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "bevo2|bevo-2/lonestar-2",
+            "all_instance_of": "CubeSat|former entity|secondary payload",
+            "all_has_part": "",
+            "all_part_of": "Low Earth Orbiting Navigation Experiment for Spacecraft Testing Autonomous Rendezvous and Docking",
+            "itemDescription": "failed American 3U CubeSat"
+        }
+    ],
+    [
+        {
+            "Name": "2.16m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-2.16m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11727157",
+            "itemLabel": "zhangguo-ziyaun-2",
+            "all_COSPAR_ID": "2000-050A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "zi-yuan-2-1|zhangguo-ziyaun-2-1",
+            "all_instance_of": "reconnaissance satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "2.16m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-2.16m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1329651",
+            "itemLabel": "sich-2",
+            "all_COSPAR_ID": "2011-044G",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "sich-2|\u0441\u0456\u0447-2|sich-2|sich-2",
+            "all_instance_of": "Earth observation satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 3.5m Telescope",
+            "ID": "CA-3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q100440345",
+            "itemLabel": "spacex-crew-3",
+            "all_COSPAR_ID": "2021-103A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2021-103A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "uscv-3|\u30b9\u30da\u30fc\u30b9x-\u30af\u30eb\u30fc\uff1d3|uscv-3|crew-3|crew-3|crew-3|uscv-3",
+            "all_instance_of": "human spaceflight",
+            "all_has_part": "Cosmic Kiss",
+            "all_part_of": "Commercial Crew Program",
+            "itemDescription": "NASA Commercial Crew Program mission to the International Space Station"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 3.5m Telescope",
+            "ID": "CA-3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q121316180",
+            "itemLabel": "bluewalker-3",
+            "all_COSPAR_ID": "2022-111AL",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2022111AL",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "bw-3",
+            "all_instance_of": "communications satellite|technology demonstration spacecraft",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "American communications and technology demonstration satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 3.5m Telescope",
+            "ID": "CA-3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1424715",
+            "itemLabel": "soyuz-tma-3",
+            "all_COSPAR_ID": "2003-047A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2003-047A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "tma-3|soyuz-tma-3|soyuz-tma-3|soyuz-tma-3",
+            "all_instance_of": "human spaceflight|Soyuz-TMA",
+            "all_has_part": "",
+            "all_part_of": "Soyuz programme",
+            "itemDescription": "crewed spaceflight to the International Space Station"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 3.5m Telescope",
+            "ID": "CA-3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16061243",
+            "itemLabel": "dfs-kopernikus-3",
+            "all_COSPAR_ID": "1992-066A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "hellassat-1|dfs-kopernikus-3|dfs-kopernikus-3",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "22175"
+        }
+    ],
+    [
+        {
+            "Name": "Calar Alto 3.5m Telescope",
+            "ID": "CA-3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16064246",
+            "itemLabel": "inmarsat-3-f4",
+            "all_COSPAR_ID": "1997-027A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "inmarsat-3-f4",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Siding Spring Observatory 2.3-m Telescope",
+            "ID": "SSO-2.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q108120821",
+            "itemLabel": "formosat-7-2",
+            "all_COSPAR_ID": "2019-036N",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "cosmic-2-fm2|cosmic-2-2",
+            "all_instance_of": "FORMOSAT-7",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Siding Spring Observatory 2.3-m Telescope",
+            "ID": "SSO-2.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1097408",
+            "itemLabel": "intercosmos-2",
+            "all_COSPAR_ID": "1969-110A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "intercosmos-2|interkosmos-2",
+            "all_instance_of": "DS-U1-IK",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Siding Spring Observatory 2.3-m Telescope",
+            "ID": "SSO-2.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q121509744",
+            "itemLabel": "starship-flight-test-2",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "starship-integrated-flight-test-2|starship-test-flight-2|oft-2",
+            "all_instance_of": "unmanned spaceflight|test flight|future event",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "planned second integrated flight of SpaceX Starship"
+        }
+    ],
+    [
+        {
+            "Name": "Siding Spring Observatory 2.3-m Telescope",
+            "ID": "SSO-2.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q17331480",
+            "itemLabel": "meteor-m-no.2-1",
+            "all_COSPAR_ID": "2014-037A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "meteor-m-no.2",
+            "all_instance_of": "weather satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Siding Spring Observatory 2.3-m Telescope",
+            "ID": "SSO-2.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18327643",
+            "itemLabel": "dongfanghong-3-2",
+            "all_COSPAR_ID": "1997-021A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "zx-6|zhongxing-6|dong-fang-hong-3-2|dfh-3-2|chinasat-6|dfh-3-2",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "Dong Fang Hong 3",
+            "itemDescription": "Chinese communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "3.5m Astrophysical Reaserch Consortium",
+            "ID": "APO 3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q108120837",
+            "itemLabel": "formosat-7-3",
+            "all_COSPAR_ID": "2019-036E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "cosmic-2-fm3|cosmic-2-3",
+            "all_instance_of": "FORMOSAT-7",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "3.5m Astrophysical Reaserch Consortium",
+            "ID": "APO 3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14770087",
+            "itemLabel": "ogo-3",
+            "all_COSPAR_ID": "1966-049A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-049A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "s49a|orbiting-geophysical-observatory-3|ogo-b|eogo-2|ego-b|ego-2",
+            "all_instance_of": "research satellite",
+            "all_has_part": "",
+            "all_part_of": "Orbiting Geophysical Observatory program",
+            "itemDescription": "American geophysical research satellite"
+        }
+    ],
+    [
+        {
+            "Name": "3.5m Astrophysical Reaserch Consortium",
+            "ID": "APO 3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16064246",
+            "itemLabel": "inmarsat-3-f4",
+            "all_COSPAR_ID": "1997-027A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "inmarsat-3-f4",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "3.5m Astrophysical Reaserch Consortium",
+            "ID": "APO 3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16547812",
+            "itemLabel": "eutelsat-i-f-3",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ecs-3",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "decommissioned communication satellite"
+        }
+    ],
+    [
+        {
+            "Name": "3.5m Astrophysical Reaserch Consortium",
+            "ID": "APO 3.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18327596",
+            "itemLabel": "dong-fang-hong-3-1",
+            "all_COSPAR_ID": "1994-080A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dfh-3-1|dfh-3-1",
+            "all_instance_of": "communications satellite|former entity",
+            "all_has_part": "",
+            "all_part_of": "Dong Fang Hong 3",
+            "itemDescription": "Chinese communications satellite, lost due to apogee motor failure"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO - 1.5-Meter Telescope (SMARTS Consortium)",
+            "ID": "CTIO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q112741833",
+            "itemLabel": "fanhui-shi-weixing-1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-1a|jb-1a|fsw-1",
+            "all_instance_of": "spacecraft series",
+            "all_has_part": "FSW-1 5|FSW-1 4|FSW-1 3|FSW-1 2|FSW-1 1",
+            "all_part_of": "Fanhui Shi Weixing",
+            "itemDescription": "second class of Chinese reconnaissance satellites under the FSW program"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO - 1.5-Meter Telescope (SMARTS Consortium)",
+            "ID": "CTIO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q14152752",
+            "itemLabel": "cute-1.7-+-apd",
+            "all_COSPAR_ID": "2006-005C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "oscar-56|cute-1.7+apd-ii",
+            "all_instance_of": "CUTE-1.7",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "CTIO - 1.5-Meter Telescope (SMARTS Consortium)",
+            "ID": "CTIO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15461711",
+            "itemLabel": "aist-1",
+            "all_COSPAR_ID": "2013-078C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "aist-1",
+            "all_instance_of": "artificial satellite|Radio Sputnik",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Russian technology demonstration satellite"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO - 1.5-Meter Telescope (SMARTS Consortium)",
+            "ID": "CTIO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1634466",
+            "itemLabel": "eole-1",
+            "all_COSPAR_ID": "1971-071A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "fr-2|eole-1|cas-1",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO - 1.5-Meter Telescope (SMARTS Consortium)",
+            "ID": "CTIO-1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q18327596",
+            "itemLabel": "dong-fang-hong-3-1",
+            "all_COSPAR_ID": "1994-080A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "dfh-3-1|dfh-3-1",
+            "all_instance_of": "communications satellite|former entity",
+            "all_has_part": "",
+            "all_part_of": "Dong Fang Hong 3",
+            "itemDescription": "Chinese communications satellite, lost due to apogee motor failure"
+        }
+    ],
+    [
+        {
+            "Name": "0.85m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-0.85m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q112242305",
+            "itemLabel": "fanhui-shi-weixing-0",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-1|jb-1|fsw-0",
+            "all_instance_of": "spacecraft series",
+            "all_has_part": "FSW-0 9|FSW-0 8|FSW-0 7|FSW-0 6|FSW-0 5|FSW-0 4|FSW-0 3|FSW-0 2|FSW-0 1",
+            "all_part_of": "Fanhui Shi Weixing",
+            "itemDescription": "first class of Chinese reconnaissance satellites under the FSW program"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO 0.9 Meter (SMARTS Consortium)",
+            "ID": "CTIO-0.9"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q112242305",
+            "itemLabel": "fanhui-shi-weixing-0",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-1|jb-1|fsw-0",
+            "all_instance_of": "spacecraft series",
+            "all_has_part": "FSW-0 9|FSW-0 8|FSW-0 7|FSW-0 6|FSW-0 5|FSW-0 4|FSW-0 3|FSW-0 2|FSW-0 1",
+            "all_part_of": "Fanhui Shi Weixing",
+            "itemDescription": "first class of Chinese reconnaissance satellites under the FSW program"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO 0.9 Meter (SMARTS Consortium)",
+            "ID": "CTIO-0.9"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16061254",
+            "itemLabel": "amc-9",
+            "all_COSPAR_ID": "2003-024A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "amc-9",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "commercial broadcast communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO 0.9 Meter (SMARTS Consortium)",
+            "ID": "CTIO-0.9"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q19636560",
+            "itemLabel": "spacex-crs-9",
+            "all_COSPAR_ID": "2016-046A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "2016-046A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "spx-9|spx-9|crs-9",
+            "all_instance_of": "unmanned spaceflight",
+            "all_has_part": "",
+            "all_part_of": "Commercial Resupply Services",
+            "itemDescription": "cargo resupply mission to the ISS"
+        }
+    ],
+    [
+        {
+            "Name": "CTIO 0.9 Meter (SMARTS Consortium)",
+            "ID": "CTIO-0.9"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2795915",
+            "itemLabel": "ov5-9",
+            "all_COSPAR_ID": "1969-046C",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ov5-9",
+            "all_instance_of": "Orbiting Vehicle",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "CTIO 0.9 Meter (SMARTS Consortium)",
+            "ID": "CTIO-0.9"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6955343",
+            "itemLabel": "nss-9",
+            "all_COSPAR_ID": "2009-008A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "nss-9",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "33749"
+        }
+    ],
+    [
+        {
+            "Name": "2.7m Harlan J Smith Telescope",
+            "ID": "Harlan J Smith"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5658357",
+            "itemLabel": "harlan-j.-smith-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u54c8\u862d\u2022\u53f2\u5bc6\u65af\u671b\u9060\u93e1|\u54c8\u4f26\u00b7j\u00b7\u53f2\u5bc6\u65af\u671b\u8fdc\u955c|\u54c8\u5170\u2022\u53f2\u5bc6\u65af\u671b\u8fdc\u955c|\u54c8\u5170\u00b7\u53f2\u5bc6\u65af\u671b\u8fdc\u955c|\u54c8\u4f26\u00b7j\u00b7\u53f2\u5bc6\u65af\u671b\u8fdc\u955c|harlan-j.-smith-telescope",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "McDonald Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Lijiang 2.4m telescope - Yunnan Obsvervatories",
+            "ID": "Lijiang-2.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q104881693",
+            "itemLabel": "boeing-starliner-spacecraft-2",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "spacecraft-2|spacecraft-2",
+            "all_instance_of": "Boeing Starliner",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "spacecraft manufactured by Boeing"
+        }
+    ],
+    [
+        {
+            "Name": "Lijiang 2.4m telescope - Yunnan Obsvervatories",
+            "ID": "Lijiang-2.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1091775",
+            "itemLabel": "ciel-2",
+            "all_COSPAR_ID": "2008-063A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ciel-2",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "Lijiang 2.4m telescope - Yunnan Obsvervatories",
+            "ID": "Lijiang-2.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q109941204",
+            "itemLabel": "cxbn-2",
+            "all_COSPAR_ID": "1998-067LM",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1998-067LM",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "cosmic-x-ray-background-nanosatellite-2|cosmic-x-ray-background-nanosatellite-2",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "Nanosatellite"
+        }
+    ],
+    [
+        {
+            "Name": "Lijiang 2.4m telescope - Yunnan Obsvervatories",
+            "ID": "Lijiang-2.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111501210",
+            "itemLabel": "dmsp-5d-2-f8-(usa-26)",
+            "all_COSPAR_ID": "1987-053A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1987-053A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "wx9543|usa-26|dmspf8|dmsp5d-2-f08|dmsp-f8|dmsp-5d-2/f08|dmsp-2-03|18123|dmsp-block-5d-2",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "18123"
+        }
+    ],
+    [
+        {
+            "Name": "ANU 2.3m Advanced Technology Telescope",
+            "ID": "ANU 2,3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q108120821",
+            "itemLabel": "formosat-7-2",
+            "all_COSPAR_ID": "2019-036N",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "cosmic-2-fm2|cosmic-2-2",
+            "all_instance_of": "FORMOSAT-7",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "ANU 2.3m Advanced Technology Telescope",
+            "ID": "ANU 2,3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q111854237",
+            "itemLabel": "dmsp-5d-2/f11",
+            "all_COSPAR_ID": "1991-082A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1991-082A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "usa-73|dmspf11|dmsp5d-2-f11|dmsp-f11|dmsp-block-5d-2|21798",
+            "all_instance_of": "artificial satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "meteorological satellite"
+        }
+    ],
+    [
+        {
+            "Name": "ANU 2.3m Advanced Technology Telescope",
+            "ID": "ANU 2,3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113130000",
+            "itemLabel": "vega-2-descent-craft",
+            "all_COSPAR_ID": "1984-128E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1984-128E",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "vega2descentcraft|vega-2-lander|vega-2-balloon-aerostat|15856",
+            "all_instance_of": "lander",
+            "all_has_part": "Vega 2",
+            "all_part_of": "",
+            "itemDescription": "The Vega 2 lander probe was identical to those of Venera 9 through 14 and similarly had two objectives, the study of the atmosphere and the study of the superficial crust."
+        }
+    ],
+    [
+        {
+            "Name": "ANU 2.3m Advanced Technology Telescope",
+            "ID": "ANU 2,3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11756910",
+            "itemLabel": "les-2",
+            "all_COSPAR_ID": "1965-034B",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "les-2",
+            "all_instance_of": "research satellite",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "former communications satellite"
+        }
+    ],
+    [
+        {
+            "Name": "ANU 2.3m Advanced Technology Telescope",
+            "ID": "ANU 2,3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q121509744",
+            "itemLabel": "starship-flight-test-2",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "starship-integrated-flight-test-2|starship-test-flight-2|oft-2",
+            "all_instance_of": "unmanned spaceflight|test flight|future event",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "planned second integrated flight of SpaceX Starship"
+        }
+    ],
+    [
+        {
+            "Name": "Gunma 0.65m",
+            "ID": "GAO-0.65m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q112242305",
+            "itemLabel": "fanhui-shi-weixing-0",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-1|jb-1|fsw-0",
+            "all_instance_of": "spacecraft series",
+            "all_has_part": "FSW-0 9|FSW-0 8|FSW-0 7|FSW-0 6|FSW-0 5|FSW-0 4|FSW-0 3|FSW-0 2|FSW-0 1",
+            "all_part_of": "Fanhui Shi Weixing",
+            "itemDescription": "first class of Chinese reconnaissance satellites under the FSW program"
+        }
+    ],
+    [
+        {
+            "Name": "SkyMapper wide-field survey telescope",
+            "ID": "SkyMapper 1.35m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q3486419",
+            "itemLabel": "skymapper",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "sky-mapper",
+            "all_instance_of": "Cassegrain mirror system|optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Siding Spring Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "0.6m Beijing Astronomical Observatory Telescope",
+            "ID": "BAO-0.6m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q112242305",
+            "itemLabel": "fanhui-shi-weixing-0",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "jianbing-1|jb-1|fsw-0",
+            "all_instance_of": "spacecraft series",
+            "all_has_part": "FSW-0 9|FSW-0 8|FSW-0 7|FSW-0 6|FSW-0 5|FSW-0 4|FSW-0 3|FSW-0 2|FSW-0 1",
+            "all_part_of": "Fanhui Shi Weixing",
+            "itemDescription": "first class of Chinese reconnaissance satellites under the FSW program"
+        }
+    ],
+    [
+        {
+            "Name": "The 1.3 m OGLE Warsaw Telescope",
+            "ID": "OGLE-1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q10492270",
+            "itemLabel": "eutelsat-i-f-1",
+            "all_COSPAR_ID": "1983-058A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "ecs-1",
+            "all_instance_of": "communications satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "The 1.3 m OGLE Warsaw Telescope",
+            "ID": "OGLE-1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q11276494",
+            "itemLabel": "gms-1",
+            "all_COSPAR_ID": "1977-065A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "himawari-1|\u3072\u307e\u308f\u308a1\u53f7|\u3072\u307e\u308f\u308a-(\u4eba\u5de5\u885b\u661f)|geostationary-meteorological-satellite",
+            "all_instance_of": "Himawari",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "weather satellite launched in 1977"
+        }
+    ],
+    [
+        {
+            "Name": "The 1.3 m OGLE Warsaw Telescope",
+            "ID": "OGLE-1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q113129973",
+            "itemLabel": "vega-1-descent-craft",
+            "all_COSPAR_ID": "1984-125E",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1984-125E",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
+            "all_instance_of": "lander",
+            "all_has_part": "Vega 1",
+            "all_part_of": "",
+            "itemDescription": "The Vega 1 lander probe was identical to those of Venera 9 through 14 and similarly had two objectives, the study of the atmosphere and the study of the superficial crust."
+        }
+    ],
+    [
+        {
+            "Name": "The 1.3 m OGLE Warsaw Telescope",
+            "ID": "OGLE-1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115339495",
+            "itemLabel": "irve-1",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "irve-i|inflatable-re-entry-vehicle-experiment-1|41.055np",
+            "all_instance_of": "technology demonstration spacecraft|former entity|inflatable space structure|reentry vehicle",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "NASA spacecraft intended to test an inflatable reentry system, but suffered launch vehicle failure"
+        }
+    ],
+    [
+        {
+            "Name": "The 1.3 m OGLE Warsaw Telescope",
+            "ID": "OGLE-1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1326683",
+            "itemLabel": "elektro-l-no.1",
+            "all_COSPAR_ID": "2011-001A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
+            "all_instance_of": "Elektro\u2013L",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemDescription": "weather satellite"
+        }
+    ]
+]
