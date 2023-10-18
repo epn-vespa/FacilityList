@@ -39,9 +39,6 @@ SELECT
 where = """
  WHERE 
  {      
-  ######## OBSERVATION FACILITIES ########  
-  
-  
   {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
   UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
@@ -51,9 +48,10 @@ where = """
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
   UNION {?item  wdt:P31  wd:Q184356 .} # radiotelescope
   UNION {?item  wdt:P31  wd:Q1369318 .} # X-ray telescope
-  #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
+  UNION {?item  wdt:P31  wd:Q148578 .} # Space telescope
+  UNION {?item  wdt:P31  wd:Q26529 .} # space probe
   
-  #####ASTRONOMICAL INSTRUMENT#####
+  #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
   
   #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
   #UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey

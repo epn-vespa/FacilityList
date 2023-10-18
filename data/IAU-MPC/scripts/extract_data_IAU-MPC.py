@@ -19,24 +19,15 @@ if response.status_code == 200:
     data = []
     lines = pre_text.split('\n')
     for line in lines[2:]:  # Ignorer les deux premières lignes (noms de colonnes et ligne vide)
-        columns = line.split(None, 2)
-        if len(columns) == 3:
-            # La première colonne comme ID
-            obs_id = columns[0]
-            # La dernière colonne comme Name
-            obs_name = columns[2]
-
-            # Utiliser une expression régulière pour exclure les coordonnées et le texte entre parenthèses
-            obs_name = re.sub(r'[-+]?[0-9]*\.?[0-9]+', '', obs_name)
-            obs_name = re.sub(r'\([^)]*\)', '', obs_name).strip()
-
-            # Ajouter les données à la liste
-            data.append({"ID": obs_id, "Name": obs_name.strip()})
+        #C15 132.1656 0.72418 +0.68737 ISON-Ussuriysk Observatory
+        obs_id=line[0:3]
+        obs_name=line[30:]
+        data.append({"ID": obs_id, "Name": obs_name.strip()})
 
     # Enregistrer les données dans un fichier JSON
-    with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/data/iau-mpc.json', 'w') as json_file:
+    output_file='/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/data/iau-mpc.json'
+    with open(output_file, 'w') as json_file:
         json.dump(data, json_file, indent=2)
-
-    print("Les données ont été enregistrées dans observations.json.")
+    print("Les données ont été enregistrées dans " + output_file)
 else:
     print(f"La requête a échoué avec le statut {response.status_code}")

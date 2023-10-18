@@ -1,5 +1,21 @@
 [
   {
+    "Name": "The Square Kilometer Array low telescope",
+    "ID": "SKA-Low"
+  },
+  {
+    "Name": "The Square Kilometer Array mid telescope",
+    "ID": "SKA-Mid"
+  },
+  {
+    "Name": "The French Antarctica Search for Transiting ExoPlanets facility at the Concordia station at Dome C",
+    "ID": "ASTEP"
+  },
+  {
+    "Name": "The Canadian Space Agency (CSA) Near Earth Object Surveillance Satellite",
+    "ID": "NEOSSat"
+  },
+  {
     "Name": "Advanced Space-Based Solar Observatory (ASO-S)",
     "ID": "ASO-S"
   },
