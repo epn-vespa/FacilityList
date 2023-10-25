@@ -50,10 +50,10 @@ def get_scores(t):
 
 def compare_vespa(data_vespa, wikidata):
     # results = [] # results is a list
-    tres_certain = []
-    tres_probable = []
-    probable = []
-    non_trouves = []
+    tres_certain_vespa = []
+    tres_probable_vespa = []
+    probable_vespa = []
+    non_trouves_vespa = []
 
     with Pool(8) as p:
         results = p.map(get_scores, enumerate(data_vespa))
@@ -64,28 +64,28 @@ def compare_vespa(data_vespa, wikidata):
         for r_elem in r:
             if r_elem[1] > 180:
                 trouve = True
-                tres_certain.append((e, r_elem[0]))
-            elif r_elem[1] > 130:
-                 tres_probable.append((e, r_elem[0]))
+                tres_certain_vespa.append((e, r_elem[0]))
+            #elif r_elem[1] > 130:
+            #     tres_probable_vespa.append((e, r_elem[0]))
             # elif r_elem[1] > 150:
-            # probable.append((e, r_elem[0]))
+            # probable_vespa.append((e, r_elem[0]))
         if not trouve:
-            non_trouves.append(e)
+            non_trouves_vespa.append(e)
 
 
-    print("tres_certain : " + str(len(tres_certain)))
-    print("tres_probable : " + str(len(tres_probable)))
-    print("probable : " + str(len(probable)))
-    print("non_trouves : " + str(len(non_trouves)))
+    print("tres_certain_vespa : " + str(len(tres_certain_vespa)))
+    #print("tres_probable_vespa : " + str(len(tres_probable)))
+    #print("probable_vespa : " + str(len(probable)))
+    print("non_trouves_vespa : " + str(len(non_trouves_vespa)))
 
-    with open("tres_certain.json", 'w') as fout:
-        fout.write(json.dumps(tres_certain, indent=4))
-    with open("tres_probable.json", 'w') as fout:
-        fout.write(json.dumps(tres_probable, indent=4))
-    with open("probable.json", 'w') as fout:
-        fout.write(json.dumps(probable, indent=4))
-    with open("non_trouves.json", 'w') as fout:
-        fout.write(json.dumps(non_trouves, indent=4))
+    with open("tres_certain_vespa.json", 'w') as fout:
+        fout.write(json.dumps(tres_certain_vespa, indent=4))
+    with open("tres_probable_vespa.json", 'w') as fout:
+        fout.write(json.dumps(tres_probable_vespa, indent=4))
+    with open("probable_vespa.json", 'w') as fout:
+        fout.write(json.dumps(probable_vespa, indent=4))
+    with open("non_trouves_vespa.json", 'w') as fout:
+        fout.write(json.dumps(non_trouves_vespa, indent=4))
         for i, e in enumerate(data_vespa):
             r = results[i]
             print({"[" + str(i + 1) + "/" + str(len(data_vespa)) + "]" + str(e): r}, file=fout)

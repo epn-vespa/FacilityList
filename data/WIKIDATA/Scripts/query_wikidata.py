@@ -21,8 +21,9 @@ select_main = """
 SELECT
   ?item     
   ?itemLabel
-  ?itemDescription  
-
+  ?itemDescription
+ 
+  
   (GROUP_CONCAT(DISTINCT ?COSPAR_ID; SEPARATOR="|") AS ?all_COSPAR_ID)
   (GROUP_CONCAT(DISTINCT ?NAIF_ID; SEPARATOR="|") AS ?all_NAIF_ID)
   (GROUP_CONCAT(DISTINCT ?NSSDCA_ID; SEPARATOR="|") AS ?all_NSSDCA_ID)
@@ -50,9 +51,11 @@ where = """
   UNION {?item  wdt:P31  wd:Q1369318 .} # X-ray telescope
   UNION {?item  wdt:P31  wd:Q148578 .} # Space telescope
   UNION {?item  wdt:P31  wd:Q26529 .} # space probe
-  
   #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
   
+
+  
+  #instruments
   #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
   #UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
   #UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
@@ -66,6 +69,7 @@ where = """
   #OPTIONAL {?item wdt:P17 ?country .}
   #OPTIONAL {?item wdt:P131 ?located .}
   #OPTIONAL {?item wdt:P625 ?coordinate_location .}
+  
   OPTIONAL {
   ?item wdt:P31 ?instance_of .
   ?instance_of rdfs:label ?instance_ofName .
@@ -82,8 +86,8 @@ where = """
   Filter((LANG(?part_ofName)) = "en")
   }
 
-   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
- }
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
 """
 
 
@@ -148,7 +152,25 @@ for i in range(1 if test == True else (int(results_count) // page_size) + 1):
 
 print("successfully retrieved " + str(len(r)) + " results")
 
-with open("extract_wikidata.json", 'w', encoding='utf-8') as fout:
+with open("raw_extract_wikidata.json", 'w', encoding='utf-8') as fout:
     fout.write(json.dumps(r, ensure_ascii=False, indent=4))
 
+# Filtre exclusion item
+with open("raw_extract_wikidata.json", 'r', encoding='utf-8') as file:
+   data1 = json.load(file)
 
+with open("list-exclusion_extract-wikidata.json", 'r', encoding='utf-8') as file:
+    data2 = json.load(file)
+
+elements_a_exclure = [data2]
+# Nouvelle liste sans les éléments à exclure
+elements_a_exclure = [element['item'] for element in data2]
+
+# Nouvelle liste sans les éléments à exclure
+nouvelle_liste = [element for element in data1 if element['item'] not in elements_a_exclure]
+
+# Écrire la nouvelle liste dans un nouveau fichier
+with open("extract-wikidata.json", 'w', encoding='utf-8') as file:
+    json.dump(nouvelle_liste, file, ensure_ascii=False, indent=4)
+
+print(f"Nombre d'items dans le fichier extract-wikidata.json : {len(nouvelle_liste)}")

@@ -65,7 +65,7 @@
     },
     {
         "instrument_host_name": "Observatoire de Paris- USN",
-        "instrument_host_name_lower": "observatoire-de-paris-usn"
+        "instrument_host_name_lower": "observatoire-de-paris--usn"
     },
     {
         "instrument_host_name": "Observatoire de Paris-Meudon",
@@ -165,7 +165,7 @@
     },
     {
         "instrument_host_name": "Royal Observatory of Belgium",
-        "instrument_host_name_lower": "royal-observatory-of-belguim"
+        "instrument_host_name_lower": "royal-observatory-of-belgium"
     },
     {
         "instrument_host_name": "Ulysses",
@@ -466,7 +466,7 @@
     {
         "instrument_host_name": "JUICE",
         "instrument_host_name_lower": "juice"
-    },   
+    },
     {
         "instrument_host_name": "MC",
         "instrument_host_name_lower": "mc"
