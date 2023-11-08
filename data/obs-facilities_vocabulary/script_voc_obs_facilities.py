@@ -11,7 +11,7 @@ def transform_list(wikidata_list):
             "@id": item["itemLabel-lower"],
             "rdfs:label": item["itemLabel"],
             "rdfs:comment": item.get("itemDescription", ""),
-            "skos:sameAs": [item["aliases"]] if item["aliases"] else [],
+            "skos:sameAs": [item["aliases"].split('|')] if item["aliases"] else [],
             "skos:exactMatch": [
             item["item"]
              ]
