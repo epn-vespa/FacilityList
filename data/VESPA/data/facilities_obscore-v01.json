@@ -1,0 +1,378 @@
+[
+    {
+        "facility": "H.E.S.S.",
+        "instrument": "H.E.S.S."
+    },
+    {
+        "facility": "LOFAR",
+        "instrument": "LOFAR.HBA"
+    },
+    {
+        "facility": "LOFAR",
+        "instrument": "LOFAR.LBA"
+    },
+    {
+        "facility": "LOFAR",
+        "instrument": "None"
+    },
+    {
+        "facility": "WSRT",
+        "instrument": "Apertif"
+    },
+    {
+        "facility": "WSRT",
+        "instrument": "ARTS"
+    },
+    {
+        "facility": "WSRT",
+        "instrument": "WSRT"
+    },
+    {
+        "facility": "",
+        "instrument": "LOFAR"
+    },
+    {
+        "facility": "",
+        "instrument": "None"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Heidelberg Koenigstuhl (24), Bruce Astrograph"
+    },
+    {
+        "facility": "Mount John Observatory; Lake Tekapo; New Zealand",
+        "instrument": "Astrograph (four 10-cm Tessar f/6 cameras)"
+    },
+    {
+        "facility": "La Silla ESO 1.5m telescope",
+        "instrument": "FEROS"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Calar Alto (493), Schmidt"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "ESO La Silla, 2.2m MPG telescope"
+    },
+    {
+        "facility": "Tartu; Estonia (MPC code 075)",
+        "instrument": "Petzval"
+    },
+    {
+        "facility": "VLT",
+        "instrument": "VIMOS"
+    },
+    {
+        "facility": "IAAT",
+        "instrument": ""
+    },
+    {
+        "facility": "Boyden Station, SA",
+        "instrument": "ADH Schmidt"
+    },
+    {
+        "facility": "ESO La Silla",
+        "instrument": "DK-1.54"
+    },
+    {
+        "facility": "ESO",
+        "instrument": "VST"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Calar Alto (493), 1.23m in Cassegrain focus w/corrector"
+    },
+    {
+        "facility": "RoBoTT",
+        "instrument": "Robotic Bochum Twin Telescope (RoBoTT)"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "Grosser Schmidt-Spiegel"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "Kleiner Schmidt-Spiegel II"
+    },
+    {
+        "facility": "Calar Alto 3.5m telescope",
+        "instrument": "Potsdam Multi-aperture Spectrophotometer (PMAS) with the PPaK\nfiber-bundle"
+    },
+    {
+        "facility": "Byurakan Astrophysical Observatory BAO",
+        "instrument": "Byurakan 1m Schmidt"
+    },
+    {
+        "facility": "Universit?tssternwarte Bochum near Cerro Armazones",
+        "instrument": "Robotic Bochum Twin Telescope (RoBoTT)"
+    },
+    {
+        "facility": "Boyden Observatory; Bloemfontein; South Africa",
+        "instrument": "Ross-B 3\""
+    },
+    {
+        "facility": "CAS, NAO",
+        "instrument": "LAMOST"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Heidelberg Koenigstuhl (24), 72cm Walz Reflektor"
+    },
+    {
+        "facility": "AO Potsdam",
+        "instrument": "Great Refractor - POT080"
+    },
+    {
+        "facility": "Tartu; Estonia (MPC code 075)",
+        "instrument": "P"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "Grosser Refraktor"
+    },
+    {
+        "facility": "ESO La Silla",
+        "instrument": "Flash/Heros"
+    },
+    {
+        "facility": "ESO La Silla",
+        "instrument": "ESO/MPG 2.2m"
+    },
+    {
+        "facility": "Potsdam-Telegrafenberg",
+        "instrument": "Small Schmidt Camera"
+    },
+    {
+        "facility": "Potsdam-Telegrafenberg",
+        "instrument": "Great Schmidt Camera"
+    },
+    {
+        "facility": "Boyden Observatory; Bloemfontein; South Africa",
+        "instrument": "Metcalf 10\" (250/1240/167)"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "1m-Spiegelteleskop"
+    },
+    {
+        "facility": "Maidanak Observatory",
+        "instrument": "AZT 22"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Heidelberg Koenigstuhl (24), Wolf's Doppelastrograph"
+    },
+    {
+        "facility": "2m Liverpool robotic telescope (Canary Islands, Spain)",
+        "instrument": "2m Liverpool robotic telescope"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Calar Alto (493), 3.5m in primary focus w/2-lens corrector"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Calar Alto (493), 2.2m in Cassegrain focus w/corrector"
+    },
+    {
+        "facility": "Tartu; Estonia (MPC code 075)",
+        "instrument": "Zeiss + Apo-Tessar "
+    },
+    {
+        "facility": "La Silla; Chile",
+        "instrument": "ESO 1-metre Schmidt telescope"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Calar Alto (493), 3.5m in primary focus w/3-lens corrector"
+    },
+    {
+        "facility": "AO Potsdam",
+        "instrument": "Zeiss-Triplet POT015 - 15"
+    },
+    {
+        "facility": "Apache Point Observatory",
+        "instrument": "3.5m APO"
+    },
+    {
+        "facility": "Calar Alto Observatory; Spain",
+        "instrument": "Hamburger Schmidt-Spiegel"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "Doppel-Reflektor"
+    },
+    {
+        "facility": "ROSAT",
+        "instrument": "ROSAT HRI"
+    },
+    {
+        "facility": "ESO La Silla",
+        "instrument": "40cm GPO"
+    },
+    {
+        "facility": "Very Long Baseline Array, operated by The National Radio Astronomy\nObservatory",
+        "instrument": ""
+    },
+    {
+        "facility": "LAMOST",
+        "instrument": "LAMOST"
+    },
+    {
+        "facility": "Tartu; Estonia (MPC code 075)",
+        "instrument": "Zeiss"
+    },
+    {
+        "facility": "Very Large Telescope",
+        "instrument": "FORS"
+    },
+    {
+        "facility": "Observatorio de Fisica Cosmica; San Miguel; Argentina",
+        "instrument": "Astrograph (six 10-cm Tessar f/6 cameras)"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "Lippert-Astrograph"
+    },
+    {
+        "facility": "AO Potsdam",
+        "instrument": "POT015 Zeiss Triplet 15"
+    },
+    {
+        "facility": "La Silla; Chile",
+        "instrument": "Grand Prisme Objectif telescope"
+    },
+    {
+        "facility": "ROSAT",
+        "instrument": "ROSAT PSPCB"
+    },
+    {
+        "facility": "LOFAR",
+        "instrument": "TPDP"
+    },
+    {
+        "facility": "Palomar Observatory",
+        "instrument": "122-cm Schmidt"
+    },
+    {
+        "facility": "AO Potsdam",
+        "instrument": "Great Refractor  - POT080"
+    },
+    {
+        "facility": "Potsdam-Telegrafenberg",
+        "instrument": "Zeiss Triplet"
+    },
+    {
+        "facility": "ROSAT",
+        "instrument": "ROSAT PSPCC"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "AG-Astrograph"
+    },
+    {
+        "facility": "Tartu; Estonia (MPC code 075)",
+        "instrument": ""
+    },
+    {
+        "facility": "Bonn; Germany",
+        "instrument": "AG-Astrograph"
+    },
+    {
+        "facility": "Potsdam-Telegrafenberg",
+        "instrument": "Ross Camera"
+    },
+    {
+        "facility": "Tartu; Estonia (MPC code 075)",
+        "instrument": "I Tessar"
+    },
+    {
+        "facility": "Landessternwarte Heidelberg-K?nigstuhl, Max-Planck-Institut f?r Astronomie Heidelberg",
+        "instrument": "Max Wolf's residence in Heidelberg, Maerzgasse, Wolf's Doppelastrograph"
+    },
+    {
+        "facility": "Calar Alto 3.5m telescope",
+        "instrument": "Potsdam Multi-aperture Spectrophotometer (PMAS) with the PPaK fiber-bundle"
+    },
+    {
+        "facility": "Hamburg-Bergedorf; Germany",
+        "instrument": "Original Schmidt-Spiegel"
+    },
+    {
+        "facility": "Boyden Observatory; Bloemfontein; South Africa",
+        "instrument": "Astrograph (ten 10-cm Tessar f/6 cameras)"
+    },
+    {
+        "facility": "Boyden Observatory; Bloemfontein; South Africa",
+        "instrument": "Zeiss Objective"
+    },
+    {
+        "facility": "AO Potsdam",
+        "instrument": "Zeiss Triplet 15 cm Potsdam-Telegrafenberg"
+    },
+    {
+        "facility": "CFHT",
+        "instrument": "CFHT 3.6m"
+    },
+    {
+        "facility": "IAAT",
+        "instrument": "TMAP NLTE model-atmosphere spectra"
+    },
+    {
+        "facility": "Fermi",
+        "instrument": "Fermi LAT"
+    },
+    {
+        "facility": "Calar Alto",
+        "instrument": "PMAS/PPAK at 3.5m Calar Alto"
+    },
+    {
+        "facility": "",
+        "instrument": ""
+    },
+    {
+        "facility": "",
+        "instrument": "LAMOST"
+    },
+    {
+        "facility": "ASU CAS - NBI",
+        "instrument": "DK154"
+    },
+    {
+        "facility": "ASU CAS - NBI",
+        "instrument": "DFOSC_FASU"
+    },
+    {
+        "facility": "",
+        "instrument": "Ondrejov Zeiss 2m"
+    },
+    {
+        "facility": "",
+        "instrument": "EVN"
+    },
+    {
+        "facility": "",
+        "instrument": "Le Phare"
+    },
+    {
+        "facility": "VLT",
+        "instrument": "MUSE"
+    },
+    {
+        "facility": "SDSS",
+        "instrument": "SDSS"
+    },
+    {
+        "facility": "Anglo-Australian Telescope (AAO-AAT)",
+        "instrument": "AAOmega"
+    },
+    {
+        "facility": "Liverpool Telescope",
+        "instrument": "FrodoSpec"
+    },
+    {
+        "facility": "UK Schmidt Telescope (AAO-UKST)",
+        "instrument": "6dF"
+    }
+]

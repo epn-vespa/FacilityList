@@ -33,7 +33,7 @@ where = """
   UNION {?item  wdt:P31/wdt:P279*  wd:Q466421 .} # reconnaissance satellite
   UNION {?item  wdt:P31/wdt:P279*  wd:Q2741214 .} # KH-7 Gambit
   UNION {?item  wdt:P31/wdt:P279*  wd:Q973887 .} # military satellite 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q854845 .} # Earth observation satellite
+  #UNION {?item  wdt:P31/wdt:P279*  wd:Q854845 .} # Earth observation satellite
 
 SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }

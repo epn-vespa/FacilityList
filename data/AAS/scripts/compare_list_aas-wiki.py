@@ -1,5 +1,5 @@
 ### Compare les listes en utilisant le module fuzzy
-
+import sys
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from multiprocessing import Pool
@@ -95,6 +95,8 @@ def compare_aas(data_aas, wikidata):
         for t in r:
             print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
 if __name__ == "__main__":
-    # chosse to either run with or without profiling
-    compare_aas(data_aas, wikidata)
-    # cProfile.run("compare_IRAF(data_nssdc[0:10], wikidata)")
+    if len(sys.argv) > 1:
+        results_count_output_file = open(sys.argv[1], 'a')
+    else:
+        results_count_output_file = sys.stdout
+    compare_aas(data_aas, wikidata, results_count_output_file)

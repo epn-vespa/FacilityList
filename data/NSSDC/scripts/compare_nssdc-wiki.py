@@ -5,6 +5,7 @@ from fuzzywuzzy import process
 import json
 import cProfile
 from multiprocessing import Pool
+import sys
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/NSSDC/datas/NSSDC_list1.json') as f:
     data_nssdc = json.load(f)
@@ -91,3 +92,8 @@ if __name__ == "__main__" :
     # chosse to either run with or without profiling
     compare_NSSDC(data_nssdc, wikidata)
     # cProfile.run("compare_NSSDC(data_nssdc[0:10], wikidata)")
+    if len(sys.argv) > 1:
+        results_count_output_file = open(sys.argv[1], 'a')
+    else:
+        results_count_output_file = sys.stdout
+    compare_NSSDC(data_nssdc, wikidata, results_count_output_file)

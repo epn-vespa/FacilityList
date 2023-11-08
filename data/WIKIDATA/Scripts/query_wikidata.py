@@ -42,15 +42,18 @@ where = """
  {      
   {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
+  UNION {?item  wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
   UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
   UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
-  UNION {?item wdt:P31/wdt:P279* wd:Q62832 .} # observatory
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
+  UNION {?item  wdt:P31  wd:Q35221 .} # reflecting telescope
+  UNION {?item  wdt:P31  wd:Q3370723 .} # infrared telescope
   UNION {?item  wdt:P31  wd:Q184356 .} # radiotelescope
   UNION {?item  wdt:P31  wd:Q1369318 .} # X-ray telescope
   UNION {?item  wdt:P31  wd:Q148578 .} # Space telescope
   UNION {?item  wdt:P31  wd:Q26529 .} # space probe
+  UNION {?item  wdt:P31  wd:Q1062138 .} # Ritchey–Chrétien telescope
   #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
   
 
@@ -140,14 +143,11 @@ for i in range(1 if test == True else (int(results_count) // page_size) + 1):
 
     # remplacer les espaces par des tirets dans itemLabel
     for e in new_elements:
-        e['itemLabel'] = e['itemLabel'].replace(' ', '-')
-        e['itemLabel'] = e['itemLabel'].lower()
-        e['aliases'] = e['aliases'].replace(' ', '-')
-        e['aliases'] = e['aliases'].lower()
-        # e['all_has_part'] = e['all_has_part'].replace(' ', '-')
-        # e['all_has_part'] = e['all_has_part'].lower()
-        # e['all_part_of'] = e['all_part_of'].replace(' ', '-')
-        # e['all_part_of'] = e['all_part_of'].lower()
+        e['itemLabel-lower'] = e['itemLabel'].lower().replace(' ', '-')
+        e['aliases-lower'] = e['aliases'].lower().replace(' ', '-')
+        # e['all_has_part'] = e['all_has_part'].lower().replace(' ', '-')
+        # e['all_part_of'] = e['all_part_of'].lower().replace(' ', '-')
+
     r.extend(new_elements)
 
 print("successfully retrieved " + str(len(r)) + " results")
@@ -156,8 +156,9 @@ with open("raw_extract_wikidata.json", 'w', encoding='utf-8') as fout:
     fout.write(json.dumps(r, ensure_ascii=False, indent=4))
 
 # Filtre exclusion item
-with open("raw_extract_wikidata.json", 'r', encoding='utf-8') as file:
-   data1 = json.load(file)
+data1 = r
+#with open("raw_extract_wikidata.json", 'r', encoding='utf-8') as file:
+#  data1 = json.load(file)
 
 with open("list-exclusion_extract-wikidata.json", 'r', encoding='utf-8') as file:
     data2 = json.load(file)
@@ -170,7 +171,7 @@ elements_a_exclure = [element['item'] for element in data2]
 nouvelle_liste = [element for element in data1 if element['item'] not in elements_a_exclure]
 
 # Écrire la nouvelle liste dans un nouveau fichier
-with open("extract-wikidata.json", 'w', encoding='utf-8') as file:
+with open("extract_wikidata.json", 'w', encoding='utf-8') as file:
     json.dump(nouvelle_liste, file, ensure_ascii=False, indent=4)
 
-print(f"Nombre d'items dans le fichier extract-wikidata.json : {len(nouvelle_liste)}")
+print(f"Nombre d'items dans le fichier extract_wikidata.json : {len(nouvelle_liste)}")

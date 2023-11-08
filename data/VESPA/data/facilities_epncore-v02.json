@@ -1,0 +1,2042 @@
+[
+    {
+        "facility": "observatoire-de-paris-meudon",
+        "instrument": "Meudon Heliograph"
+    },
+    {
+        "facility": "observatoire-de-paris---usn",
+        "instrument": "Nancay Decametric Array"
+    },
+    {
+        "facility": "pic-du-midi",
+        "instrument": "Climso Pic du Midi"
+    },
+    {
+        "facility": "pic-du-midi",
+        "instrument": "Pic-du-Midi Halpha Coronograph"
+    },
+    {
+        "facility": "observatoire-de-paris-meudon",
+        "instrument": "SOLEX: the Solar Explorer"
+    },
+    {
+        "facility": "observatoire-de-paris---usn",
+        "instrument": "Nancay Total Radio Flux Antenna"
+    },
+    {
+        "facility": "observatoire-de-paris-meudon",
+        "instrument": "Meudon White light"
+    },
+    {
+        "facility": "royal-observatory-of-belguim",
+        "instrument": "USET-Royal Observatory of Belgium"
+    },
+    {
+        "facility": "observatoire-de-paris-meudon",
+        "instrument": "Meudon Solar Tower"
+    },
+    {
+        "facility": "observatoire-de-paris---usn",
+        "instrument": "Nancay Radioheliograph"
+    },
+    {
+        "facility": "observatoire-de-paris-meudon",
+        "instrument": "Meudon Spectroheliograph"
+    },
+    {
+        "facility": "coimbra-university",
+        "instrument": "Coimbra Spectroheliograph"
+    },
+    {
+        "facility": "",
+        "instrument": ""
+    },
+    {
+        "facility": "teide-observatory",
+        "instrument": "ChroTel"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "RPWS"
+    },
+    {
+        "facility": "",
+        "instrument": "Ionosonde MZ152"
+    },
+    {
+        "facility": "simulation",
+        "instrument": "simu_spheric"
+    },
+    {
+        "facility": "simulation",
+        "instrument": "GEM-Mars_V652"
+    },
+    {
+        "facility": "solar-dynamics-observatory-sdo",
+        "instrument": "Atmospheric Imaging Assembly AIA"
+    },
+    {
+        "facility": "",
+        "instrument": "JASMIN"
+    },
+    {
+        "facility": "mars-express",
+        "instrument": "HIGH RESOLUTION STEREO CAMERA HRSC"
+    },
+    {
+        "facility": "1995-065a-soho",
+        "instrument": "Extreme-ultraviolet Imaging Telescope EIT"
+    },
+    {
+        "facility": "mars-odyssey",
+        "instrument": "THEMIS"
+    },
+    {
+        "facility": "akari-500@399",
+        "instrument": "IRC-MIR-L"
+    },
+    {
+        "facility": "akari-500@399",
+        "instrument": "IRC-MIR-S"
+    },
+    {
+        "facility": "akari-500@399",
+        "instrument": "IRC-NIR"
+    },
+    {
+        "facility": "hso-500@-486",
+        "instrument": "PACS"
+    },
+    {
+        "facility": "iras-500@399",
+        "instrument": " "
+    },
+    {
+        "facility": "msx-500@399",
+        "instrument": " "
+    },
+    {
+        "facility": "wise-500@-163",
+        "instrument": " "
+    },
+    {
+        "facility": "mo-mer-mro",
+        "instrument": "THEMIS Mini-TES MCS"
+    },
+    {
+        "facility": "mgs",
+        "instrument": "TES"
+    },
+    {
+        "facility": "mro",
+        "instrument": "MCS"
+    },
+    {
+        "facility": "mgs-mo",
+        "instrument": "TES THEMIS"
+    },
+    {
+        "facility": "mgs-mo-mer",
+        "instrument": "TES THEMIS Mini-TES"
+    },
+    {
+        "facility": "cassini-orbiter",
+        "instrument": "Cassini Plasma Spectrometer"
+    },
+    {
+        "facility": "omp,-oa,-pic-du-midi",
+        "instrument": "Coronographe H-alpha                    "
+    },
+    {
+        "facility": "omp,-oa,-pic-du-midi",
+        "instrument": "Coronographe H?lium                     "
+    },
+    {
+        "facility": "omp,-oa,-pic-du-midi",
+        "instrument": "Lunette Calcium                         "
+    },
+    {
+        "facility": "omp,-oa,-pic-du-midi",
+        "instrument": "Lunette H-alpha                         "
+    },
+    {
+        "facility": "simulation",
+        "instrument": "MCD"
+    },
+    {
+        "facility": "mars-express",
+        "instrument": "SPICAM"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "UVIS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "STIS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "ACS"
+    },
+    {
+        "facility": "hisaki",
+        "instrument": "EXCEED"
+    },
+    {
+        "facility": "stereo_a",
+        "instrument": "SWAVES"
+    },
+    {
+        "facility": "wind",
+        "instrument": "WAVES"
+    },
+    {
+        "facility": "stereo_b",
+        "instrument": "SWAVES"
+    },
+    {
+        "facility": "teide-observatory",
+        "instrument": "LARS"
+    },
+    {
+        "facility": "teide-observatory",
+        "instrument": "GRIS"
+    },
+    {
+        "facility": "wind",
+        "instrument": "Waves"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "PLANETARY RADIO ASTRONOMY"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "PLANETARY RADIO ASTRONOMY RECEIVER"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "PLANETARY RADIO ASTRONOMY RECEIVER"
+    },
+    {
+        "facility": "nancay-decameter-array",
+        "instrument": "Routine"
+    },
+    {
+        "facility": "wind",
+        "instrument": "waves"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "Waves"
+    },
+    {
+        "facility": "stereo-a",
+        "instrument": "Waves"
+    },
+    {
+        "facility": "nancay",
+        "instrument": "NenuFAR"
+    },
+    {
+        "facility": "demeter",
+        "instrument": "ICE"
+    },
+    {
+        "facility": "nancay",
+        "instrument": "NDA"
+    },
+    {
+        "facility": "radiojove-aj4co",
+        "instrument": "DPS"
+    },
+    {
+        "facility": "expres",
+        "instrument": "Earth"
+    },
+    {
+        "facility": "stereo-e",
+        "instrument": "Waves"
+    },
+    {
+        "facility": "voyagery",
+        "instrument": "PRA"
+    },
+    {
+        "facility": "lofar-lofar4sw",
+        "instrument": "CS001LBA CS002LBA CS003LBA CS004LBA CS005LBA CS006LBA CS007LBA CS011LBA CS013LBA CS017LBA CS021LBA CS024LBA CS026LBA CS028LBA CS030LBA CS031LBA CS032LBA CS101LBA CS103LBA CS201LBA CS301LBA CS302LBA CS401LBA CS501LBA"
+    },
+    {
+        "facility": "lofar-lofar4sw",
+        "instrument": "UK902"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "ExPRES"
+    },
+    {
+        "facility": "earth",
+        "instrument": "ExPRES"
+    },
+    {
+        "facility": "voyager1",
+        "instrument": "ExPRES"
+    },
+    {
+        "facility": "juno",
+        "instrument": "ExPRES"
+    },
+    {
+        "facility": "simulation",
+        "instrument": "Helgeo2"
+    },
+    {
+        "facility": "space-research-centre-of-polish-academy-of-sciences-src-pas",
+        "instrument": "LOFAR PL610"
+    },
+    {
+        "facility": "pl610-lofar,-borowiec-poland,-src-pas",
+        "instrument": "LOFAR PL610"
+    },
+    {
+        "facility": "simulation",
+        "instrument": ""
+    },
+    {
+        "facility": "venus-express",
+        "instrument": "SPICAV Solar Occultation in the InfraRed SPICAV-SOIR SOIR"
+    },
+    {
+        "facility": "trace-gas-orbiter",
+        "instrument": "NOMAD"
+    },
+    {
+        "facility": "uccle",
+        "instrument": "uset_visual_white_light"
+    },
+    {
+        "facility": "",
+        "instrument": "MDISC"
+    },
+    {
+        "facility": "mars-express",
+        "instrument": "omega"
+    },
+    {
+        "facility": "sdo-2010-005a",
+        "instrument": "Atmospheric Imaging Assembly AIA"
+    },
+    {
+        "facility": "terra-aqua",
+        "instrument": ""
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": ""
+    },
+    {
+        "facility": "galileo-voyager",
+        "instrument": ""
+    },
+    {
+        "facility": "lunar-orbiter",
+        "instrument": ""
+    },
+    {
+        "facility": "lro",
+        "instrument": ""
+    },
+    {
+        "facility": "dawn",
+        "instrument": ""
+    },
+    {
+        "facility": "messenger-mariner-10",
+        "instrument": ""
+    },
+    {
+        "facility": "messenger",
+        "instrument": ""
+    },
+    {
+        "facility": "mgs",
+        "instrument": ""
+    },
+    {
+        "facility": "viking-orbiter",
+        "instrument": ""
+    },
+    {
+        "facility": "selene",
+        "instrument": ""
+    },
+    {
+        "facility": "clementine",
+        "instrument": ""
+    },
+    {
+        "facility": "mars-odyssey",
+        "instrument": ""
+    },
+    {
+        "facility": "galileo",
+        "instrument": ""
+    },
+    {
+        "facility": "magellan",
+        "instrument": ""
+    },
+    {
+        "facility": "cassini-voyager",
+        "instrument": ""
+    },
+    {
+        "facility": "cassini",
+        "instrument": ""
+    },
+    {
+        "facility": "mariner-10",
+        "instrument": ""
+    },
+    {
+        "facility": "mro",
+        "instrument": "CRISM"
+    },
+    {
+        "facility": "simulation",
+        "instrument": "Venus Climate Database V1.1"
+    },
+    {
+        "facility": "simulation",
+        "instrument": "Mars Climate Database V5.3"
+    },
+    {
+        "facility": "",
+        "instrument": "Plasma Wave Science"
+    },
+    {
+        "facility": "",
+        "instrument": "Triaxial Fluxgate Magnetometer"
+    },
+    {
+        "facility": "",
+        "instrument": "Fluxgate Magnetometer"
+    },
+    {
+        "facility": "",
+        "instrument": "Magnetometer"
+    },
+    {
+        "facility": "vex",
+        "instrument": "ASPERA4-ELS"
+    },
+    {
+        "facility": "",
+        "instrument": "Station MTSU Receiver"
+    },
+    {
+        "facility": "",
+        "instrument": "Station K4LED Receiver"
+    },
+    {
+        "facility": "",
+        "instrument": "Station HNRAO Receiver"
+    },
+    {
+        "facility": "",
+        "instrument": "Station AJ4CO Receiver"
+    },
+    {
+        "facility": "pioneer-venus-orbiter",
+        "instrument": ""
+    },
+    {
+        "facility": "messenger",
+        "instrument": "Magnetometer"
+    },
+    {
+        "facility": "messenger",
+        "instrument": "EPPS Fast Imaging Plasma Spectrometer"
+    },
+    {
+        "facility": "messenger",
+        "instrument": "EPPS Energetic Particle Spectrometer"
+    },
+    {
+        "facility": "",
+        "instrument": "SWIA"
+    },
+    {
+        "facility": "",
+        "instrument": "Sun Ion Analyzer"
+    },
+    {
+        "facility": "",
+        "instrument": "Sun Electron Analyzer"
+    },
+    {
+        "facility": "",
+        "instrument": "STATIC"
+    },
+    {
+        "facility": "",
+        "instrument": "Solar Energetic Particle Experiment"
+    },
+    {
+        "facility": "",
+        "instrument": "RSE"
+    },
+    {
+        "facility": "",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "maven",
+        "instrument": "LPW"
+    },
+    {
+        "facility": "",
+        "instrument": "Extreme Ultraviolet Monitor"
+    },
+    {
+        "facility": "",
+        "instrument": "Imaging Ultraviolet Spectrograph"
+    },
+    {
+        "facility": "",
+        "instrument": "Neutral Gas and Ion Mass Spectrometer"
+    },
+    {
+        "facility": "",
+        "instrument": "InSight Fluxgate Magnetometer"
+    },
+    {
+        "facility": "",
+        "instrument": "Plasma Science Experiment"
+    },
+    {
+        "facility": "galileo-orbiter",
+        "instrument": "Magnetometer"
+    },
+    {
+        "facility": "galileo-orbitor",
+        "instrument": "Heavy Ion Counter"
+    },
+    {
+        "facility": "galileo-orbiter",
+        "instrument": "Energetic Particle Detector"
+    },
+    {
+        "facility": "",
+        "instrument": "RPWS"
+    },
+    {
+        "facility": "",
+        "instrument": "RADIO AND PLASMA WAVE SCIENCE for CO"
+    },
+    {
+        "facility": "",
+        "instrument": "Cassini Plasma Spectrometer"
+    },
+    {
+        "facility": "mms3",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "CIS-HIA"
+    },
+    {
+        "facility": "maven",
+        "instrument": "NGIMS"
+    },
+    {
+        "facility": "mms2",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "uks",
+        "instrument": "ELX"
+    },
+    {
+        "facility": "psp",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "helios2",
+        "instrument": "AUX"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "CIS-HIA"
+    },
+    {
+        "facility": "helios1",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "mex",
+        "instrument": "MARSIS"
+    },
+    {
+        "facility": "swarm-c",
+        "instrument": "GNSS"
+    },
+    {
+        "facility": "vex",
+        "instrument": "ELS"
+    },
+    {
+        "facility": "irm",
+        "instrument": "PWS"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "isee-1",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "juno",
+        "instrument": "WAVES"
+    },
+    {
+        "facility": "ulysses",
+        "instrument": "SWOOPS"
+    },
+    {
+        "facility": "isee-2",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "swarm-b",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "wind",
+        "instrument": "MFI"
+    },
+    {
+        "facility": "maven",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "messenger",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-2",
+        "instrument": "PEACE"
+    },
+    {
+        "facility": "themis-c",
+        "instrument": "ESA"
+    },
+    {
+        "facility": "irm",
+        "instrument": "PLA"
+    },
+    {
+        "facility": "polar",
+        "instrument": "MFE"
+    },
+    {
+        "facility": "uks",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "rosetta",
+        "instrument": "ROSINA"
+    },
+    {
+        "facility": "geotail",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "LECP"
+    },
+    {
+        "facility": "uks",
+        "instrument": "PWS"
+    },
+    {
+        "facility": "interball-tail",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "irm",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "themis-e",
+        "instrument": "ESA"
+    },
+    {
+        "facility": "geotail",
+        "instrument": "LEP"
+    },
+    {
+        "facility": "themis-d",
+        "instrument": "ESA"
+    },
+    {
+        "facility": "astronomical-objects-ephemerides",
+        "instrument": "Comets"
+    },
+    {
+        "facility": "mex",
+        "instrument": "ELS"
+    },
+    {
+        "facility": "polar",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "PEACE"
+    },
+    {
+        "facility": "phobos-2",
+        "instrument": "ASPERA"
+    },
+    {
+        "facility": "bepicolombo",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "psp",
+        "instrument": "SWEAP SPC"
+    },
+    {
+        "facility": "mms2",
+        "instrument": "HPCA"
+    },
+    {
+        "facility": "doublestar-1",
+        "instrument": "FGM "
+    },
+    {
+        "facility": "interball-tail",
+        "instrument": "MIF-M"
+    },
+    {
+        "facility": "swarm-c",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "isee-1",
+        "instrument": "FVA"
+    },
+    {
+        "facility": "pvo",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "uks",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "geotail",
+        "instrument": "EFD"
+    },
+    {
+        "facility": "maven",
+        "instrument": "SWIA"
+    },
+    {
+        "facility": "swarm-c",
+        "instrument": "MAG (ASM/VFM)"
+    },
+    {
+        "facility": "imp-8",
+        "instrument": "MIT"
+    },
+    {
+        "facility": "ulysses",
+        "instrument": "SWICS"
+    },
+    {
+        "facility": "cluster-2",
+        "instrument": "EFW"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "Ephemeris: Saturn Moons : special"
+    },
+    {
+        "facility": "timed",
+        "instrument": "SEE"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "STAFF"
+    },
+    {
+        "facility": "mariner-10",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "mgs",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "galileo",
+        "instrument": "PLS"
+    },
+    {
+        "facility": "cce",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-2",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "maven",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "galileo",
+        "instrument": "EPD"
+    },
+    {
+        "facility": "imp-8",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "galileo",
+        "instrument": "Ephemeris : Galileo"
+    },
+    {
+        "facility": "ice",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "swarm-a",
+        "instrument": "EFI / TII"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "PLS"
+    },
+    {
+        "facility": "swarm-b",
+        "instrument": "MAG (ASM/VFM)"
+    },
+    {
+        "facility": "swarm-c",
+        "instrument": "EFI / LP"
+    },
+    {
+        "facility": "isee-1",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "psp",
+        "instrument": "FIELDS MAG"
+    },
+    {
+        "facility": "giotto",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "interball-tail",
+        "instrument": "DOK2"
+    },
+    {
+        "facility": "cce",
+        "instrument": "MFE"
+    },
+    {
+        "facility": "messenger",
+        "instrument": "FIPS"
+    },
+    {
+        "facility": "eiscat",
+        "instrument": "VHF"
+    },
+    {
+        "facility": "pvo",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "SEPT"
+    },
+    {
+        "facility": "helios1",
+        "instrument": "E1"
+    },
+    {
+        "facility": "polar",
+        "instrument": "HYDRA"
+    },
+    {
+        "facility": "galileo",
+        "instrument": "Jovian Magnetic Field Models"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "RAPID"
+    },
+    {
+        "facility": "juno",
+        "instrument": "JEDI"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "PEACE"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "CRS"
+    },
+    {
+        "facility": "mms4",
+        "instrument": "EDP"
+    },
+    {
+        "facility": "ace",
+        "instrument": "MFI"
+    },
+    {
+        "facility": "cce",
+        "instrument": "MEPA"
+    },
+    {
+        "facility": "geotail",
+        "instrument": "CPI"
+    },
+    {
+        "facility": "messenger",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "PWS"
+    },
+    {
+        "facility": "pioneer-10",
+        "instrument": "CRT"
+    },
+    {
+        "facility": "mariner-10",
+        "instrument": "PLS"
+    },
+    {
+        "facility": "pioneer-11",
+        "instrument": "CRT"
+    },
+    {
+        "facility": "rosetta",
+        "instrument": "MIP"
+    },
+    {
+        "facility": "themis-b",
+        "instrument": "ESA"
+    },
+    {
+        "facility": "freja",
+        "instrument": "MFE"
+    },
+    {
+        "facility": "jason3",
+        "instrument": "AMBRE"
+    },
+    {
+        "facility": "geotail",
+        "instrument": "EPIC"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "WHISPER"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "PEACE"
+    },
+    {
+        "facility": "maven",
+        "instrument": "SWEA"
+    },
+    {
+        "facility": "vex",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "swarm-c",
+        "instrument": "EFI / TII"
+    },
+    {
+        "facility": "dscovr",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "isee-2",
+        "instrument": "FVA"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "mms2",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "rosetta",
+        "instrument": "AUX"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "PLASTIC"
+    },
+    {
+        "facility": "juno",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "pioneer-10",
+        "instrument": "CPI"
+    },
+    {
+        "facility": "mgs",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "irm",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "mms2",
+        "instrument": "EDP"
+    },
+    {
+        "facility": "maven",
+        "instrument": "EUV"
+    },
+    {
+        "facility": "stereo-a",
+        "instrument": "PLASTIC"
+    },
+    {
+        "facility": "themis-a",
+        "instrument": "ESA"
+    },
+    {
+        "facility": "messenger",
+        "instrument": "EPS"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "LECP"
+    },
+    {
+        "facility": "wind",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "dscovr",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "EFW"
+    },
+    {
+        "facility": "mms2",
+        "instrument": "FPI"
+    },
+    {
+        "facility": "pioneer-10",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "mex",
+        "instrument": "IMA"
+    },
+    {
+        "facility": "themis-d",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "ace",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "giotto",
+        "instrument": "IMS"
+    },
+    {
+        "facility": "mms1",
+        "instrument": "FPI"
+    },
+    {
+        "facility": "themis-a",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "EPD/HET"
+    },
+    {
+        "facility": "eiscat",
+        "instrument": "ESR 42M"
+    },
+    {
+        "facility": "ulysses",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "helios2",
+        "instrument": "E3"
+    },
+    {
+        "facility": "juice",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "pioneer-10",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "vex",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "interball-tail",
+        "instrument": "Corall"
+    },
+    {
+        "facility": "mms3",
+        "instrument": "HPCA"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "RPW"
+    },
+    {
+        "facility": "rosetta",
+        "instrument": "IES"
+    },
+    {
+        "facility": "mms1",
+        "instrument": "HPCA"
+    },
+    {
+        "facility": "eiscat",
+        "instrument": "UHF"
+    },
+    {
+        "facility": "helios1",
+        "instrument": "AUX"
+    },
+    {
+        "facility": "rosetta",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "rosetta",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "doublestar-1",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "PWS"
+    },
+    {
+        "facility": "themis-c",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "pioneer-11",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "mms4",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "helios1",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "mms1",
+        "instrument": "EDP"
+    },
+    {
+        "facility": "stereo-a",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "EPD/EPT"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "MIMI-LEMMS"
+    },
+    {
+        "facility": "helios2",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "doublestar-1",
+        "instrument": "HIA"
+    },
+    {
+        "facility": "themis-e",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "giotto",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "themis-c",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "wind",
+        "instrument": "SWE"
+    },
+    {
+        "facility": "dscovr",
+        "instrument": "Faraday Cup"
+    },
+    {
+        "facility": "galileo",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "vex",
+        "instrument": "IMA"
+    },
+    {
+        "facility": "psp",
+        "instrument": "IS?IS EPI-Lo"
+    },
+    {
+        "facility": "giotto",
+        "instrument": "RPA"
+    },
+    {
+        "facility": "mms3",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "mgs",
+        "instrument": "ER"
+    },
+    {
+        "facility": "themis-b",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "EPD/STEP"
+    },
+    {
+        "facility": "mms3",
+        "instrument": "EDP"
+    },
+    {
+        "facility": "fermi",
+        "instrument": "LAT"
+    },
+    {
+        "facility": "cluster-2",
+        "instrument": "STAFF"
+    },
+    {
+        "facility": "mariner-10",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "psp",
+        "instrument": "SWEAP SPANi"
+    },
+    {
+        "facility": "pioneer-11",
+        "instrument": "CPI"
+    },
+    {
+        "facility": "themis-a",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "uks",
+        "instrument": "ION"
+    },
+    {
+        "facility": "giotto",
+        "instrument": "JPA"
+    },
+    {
+        "facility": "maven",
+        "instrument": "SEP"
+    },
+    {
+        "facility": "pioneer-10",
+        "instrument": "GTT"
+    },
+    {
+        "facility": "solarorbiter",
+        "instrument": "EPD/SIS"
+    },
+    {
+        "facility": "psp",
+        "instrument": "IS?IS EPI-Hi"
+    },
+    {
+        "facility": "mms3",
+        "instrument": "FPI"
+    },
+    {
+        "facility": "swarm-a",
+        "instrument": "GNSS"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "EFW"
+    },
+    {
+        "facility": "voyager-1",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "WHISPER"
+    },
+    {
+        "facility": "cluster-2",
+        "instrument": "WHISPER"
+    },
+    {
+        "facility": "eiscat",
+        "instrument": "ESR 32M"
+    },
+    {
+        "facility": "mex",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "swarm-a",
+        "instrument": "MAG (ASM/VFM)"
+    },
+    {
+        "facility": "ulysses",
+        "instrument": "VHM/FGM"
+    },
+    {
+        "facility": "swarm-b",
+        "instrument": "GNSS"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "SIT"
+    },
+    {
+        "facility": "freja",
+        "instrument": "ESP"
+    },
+    {
+        "facility": "pioneer-11",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "jason3",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "helios2",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "isee-2",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "galileo",
+        "instrument": "PWS"
+    },
+    {
+        "facility": "cluster-2",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "psp",
+        "instrument": "SWEAP SPANe"
+    },
+    {
+        "facility": "mms1",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "LET"
+    },
+    {
+        "facility": "mms1",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "mms4",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "juno",
+        "instrument": "JADE"
+    },
+    {
+        "facility": "themis-e",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "pioneer-11",
+        "instrument": "GTT"
+    },
+    {
+        "facility": "mgs",
+        "instrument": "Proxy"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "CAPS"
+    },
+    {
+        "facility": "maven",
+        "instrument": "STATIC"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "Ephemeris: Cassini"
+    },
+    {
+        "facility": "mms_1234",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "SWEA"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "EFW"
+    },
+    {
+        "facility": "swarm-b",
+        "instrument": "EFI / TII"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "helios2",
+        "instrument": "E1"
+    },
+    {
+        "facility": "mms4",
+        "instrument": "HPCA"
+    },
+    {
+        "facility": "themis-b",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-4",
+        "instrument": "STAFF"
+    },
+    {
+        "facility": "geotail",
+        "instrument": "MGF"
+    },
+    {
+        "facility": "swarm-b",
+        "instrument": "EFI / LP"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "WHISPER"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "STAFF"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "CRS"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "indices",
+        "instrument": "Ground Based"
+    },
+    {
+        "facility": "irm",
+        "instrument": "SUL"
+    },
+    {
+        "facility": "phobos-2",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "swarm-a",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "stereo-b",
+        "instrument": "HET"
+    },
+    {
+        "facility": "imp-8",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "swarm-a",
+        "instrument": "EFI / LP"
+    },
+    {
+        "facility": "phobos-2",
+        "instrument": "MAG"
+    },
+    {
+        "facility": "ulysses",
+        "instrument": "URAP"
+    },
+    {
+        "facility": "helios1",
+        "instrument": "E3"
+    },
+    {
+        "facility": "ace",
+        "instrument": "SWEPAM"
+    },
+    {
+        "facility": "cluster-3",
+        "instrument": "RAPID"
+    },
+    {
+        "facility": "juno",
+        "instrument": "FGM"
+    },
+    {
+        "facility": "mms4",
+        "instrument": "FPI"
+    },
+    {
+        "facility": "themis-d",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "cluster-1",
+        "instrument": "Ephemeris"
+    },
+    {
+        "facility": "voyager-2",
+        "instrument": "PLS"
+    },
+    {
+        "facility": "simulation",
+        "instrument": "Illumination_v01.01.16.c"
+    },
+    {
+        "facility": "venus-express",
+        "instrument": "VIRTIS"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "Visual and Infrared Mapping Spectrometer VIMS"
+    },
+    {
+        "facility": "wise",
+        "instrument": "W4"
+    },
+    {
+        "facility": "herschel",
+        "instrument": "SPIRE"
+    },
+    {
+        "facility": "spitzer",
+        "instrument": "MIPS"
+    },
+    {
+        "facility": "herschel",
+        "instrument": "PACS"
+    },
+    {
+        "facility": "wise",
+        "instrument": "W3"
+    },
+    {
+        "facility": "cassini",
+        "instrument": "Composite Infrared Spectrometer CIRS"
+    },
+    {
+        "facility": "irtf",
+        "instrument": "PGD-CVF"
+    },
+    {
+        "facility": "irtf",
+        "instrument": "SpeX"
+    },
+    {
+        "facility": "nasa-cv-990-model",
+        "instrument": ""
+    },
+    {
+        "facility": "model",
+        "instrument": ""
+    },
+    {
+        "facility": "la-silla-1.52m",
+        "instrument": "Boller & Chivens spectrograph"
+    },
+    {
+        "facility": "atlas-3-eureca-",
+        "instrument": "SOLSPEC SOSP"
+    },
+    {
+        "facility": "phobos-2-mariner-7-mauna-kea-61cm",
+        "instrument": "ISM IRS PGD-CVF"
+    },
+    {
+        "facility": "mauna-kea-uh-2.2-m",
+        "instrument": ""
+    },
+    {
+        "facility": "model-tapas",
+        "instrument": ""
+    },
+    {
+        "facility": "mauna-kea-uh-2.2-m",
+        "instrument": "PGD-CVF"
+    },
+    {
+        "facility": "higashi-hiroshima-observatory",
+        "instrument": "TRISPEC"
+    },
+    {
+        "facility": "iss-atlas-3",
+        "instrument": "SOLAR/SOLSPEC SOLSPEC"
+    },
+    {
+        "facility": "la-silla-ntt",
+        "instrument": "SofI"
+    },
+    {
+        "facility": "subaru",
+        "instrument": "COMICS"
+    },
+    {
+        "facility": "vlt",
+        "instrument": "X-Shooter"
+    },
+    {
+        "facility": "akari",
+        "instrument": "IRC"
+    },
+    {
+        "facility": "keck-i",
+        "instrument": "NIRC"
+    },
+    {
+        "facility": "gtc",
+        "instrument": "OSIRIS"
+    },
+    {
+        "facility": "int",
+        "instrument": "IDS"
+    },
+    {
+        "facility": "",
+        "instrument": "simulation"
+    },
+    {
+        "facility": "vega-1",
+        "instrument": "IKS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "ACS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "FOS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "HRS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "WFPC2"
+    },
+    {
+        "facility": "hst",
+        "instrument": "WFC3"
+    },
+    {
+        "facility": "hst",
+        "instrument": "HSP"
+    },
+    {
+        "facility": "hst",
+        "instrument": "NICMOS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "COS"
+    },
+    {
+        "facility": "hst",
+        "instrument": "FOC"
+    },
+    {
+        "facility": "hst",
+        "instrument": "WFPC"
+    },
+    {
+        "facility": "hst",
+        "instrument": "STIS"
+    },
+    {
+        "facility": "planetary-geosciences-department",
+        "instrument": "IRCVF_UH MR_COFFEE_UH"
+    },
+    {
+        "facility": "relab",
+        "instrument": "BDVNIR_RELAB NIC740_RELAB NIC740_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "BDVNIR_RELAB TN870_RELAB TN870_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "TN870_RELAB TN870_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "BDVNIR_RELAB TN870_RELAB TN870_RELAB TN870_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "NIC740_RELAB NIC740_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "BDVNIR_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "NIC740_RELAB"
+    },
+    {
+        "facility": "relab",
+        "instrument": "BDVNIR_RELAB NIC740_RELAB"
+    },
+    {
+        "facility": "ares-spectroscopy-and-magnetics-laboratory",
+        "instrument": "JSC_CARY14"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "44"
+    },
+    {
+        "facility": "vs",
+        "instrument": ""
+    },
+    {
+        "facility": "ro",
+        "instrument": ""
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "Lunette de 38 cm"
+    },
+    {
+        "facility": "672-mw",
+        "instrument": "24.98"
+    },
+    {
+        "facility": "388-tok",
+        "instrument": ""
+    },
+    {
+        "facility": "532-mu",
+        "instrument": ""
+    },
+    {
+        "facility": "020-ni",
+        "instrument": ""
+    },
+    {
+        "facility": "807-ct",
+        "instrument": ""
+    },
+    {
+        "facility": "md",
+        "instrument": "24\" Cassegrain"
+    },
+    {
+        "facility": "005-me",
+        "instrument": ""
+    },
+    {
+        "facility": "nm",
+        "instrument": "175.80"
+    },
+    {
+        "facility": "j",
+        "instrument": ""
+    },
+    {
+        "facility": "nm",
+        "instrument": "13.63"
+    },
+    {
+        "facility": "mun",
+        "instrument": ""
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "0.60m"
+    },
+    {
+        "facility": "672-mw",
+        "instrument": ""
+    },
+    {
+        "facility": "lh",
+        "instrument": ""
+    },
+    {
+        "facility": "690-lo",
+        "instrument": ""
+    },
+    {
+        "facility": "662-li",
+        "instrument": "t?l.304,8cm"
+    },
+    {
+        "facility": "693-ca",
+        "instrument": ""
+    },
+    {
+        "facility": "mo",
+        "instrument": ""
+    },
+    {
+        "facility": "lon",
+        "instrument": "18''O.G"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "T105"
+    },
+    {
+        "facility": "654-tm",
+        "instrument": "29.46"
+    },
+    {
+        "facility": "299-bos",
+        "instrument": ""
+    },
+    {
+        "facility": "662-li",
+        "instrument": ""
+    },
+    {
+        "facility": "unk",
+        "instrument": "82\" Coude"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": ""
+    },
+    {
+        "facility": "285-ju",
+        "instrument": ""
+    },
+    {
+        "facility": "654-tm",
+        "instrument": "24\" Cass"
+    },
+    {
+        "facility": "078-jb",
+        "instrument": ""
+    },
+    {
+        "facility": "754-ye",
+        "instrument": ""
+    },
+    {
+        "facility": "lon",
+        "instrument": "18''refract."
+    },
+    {
+        "facility": "kw",
+        "instrument": "286.2"
+    },
+    {
+        "facility": "md",
+        "instrument": ""
+    },
+    {
+        "facility": "005-me",
+        "instrument": "T0.60M"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "t?l. 105cm"
+    },
+    {
+        "facility": "md",
+        "instrument": "82\" Coud?"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "52.94"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "167.43"
+    },
+    {
+        "facility": "unk",
+        "instrument": "24\" Cass"
+    },
+    {
+        "facility": "kw",
+        "instrument": ""
+    },
+    {
+        "facility": "711-mc",
+        "instrument": "82\" Coud?"
+    },
+    {
+        "facility": "654-tm",
+        "instrument": ""
+    },
+    {
+        "facility": "go",
+        "instrument": ""
+    },
+    {
+        "facility": "954-ten",
+        "instrument": ""
+    },
+    {
+        "facility": "md",
+        "instrument": "92\" Coude"
+    },
+    {
+        "facility": "mocl",
+        "instrument": ""
+    },
+    {
+        "facility": "662-li",
+        "instrument": "t?l.304.8cm"
+    },
+    {
+        "facility": "711-mc",
+        "instrument": ""
+    },
+    {
+        "facility": "md",
+        "instrument": "82\""
+    },
+    {
+        "facility": "nm",
+        "instrument": ""
+    },
+    {
+        "facility": "unk",
+        "instrument": ""
+    },
+    {
+        "facility": "md",
+        "instrument": "82\" Coude"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "T1M"
+    },
+    {
+        "facility": "066-ath",
+        "instrument": ""
+    },
+    {
+        "facility": "511-hp",
+        "instrument": ""
+    },
+    {
+        "facility": "511-hp",
+        "instrument": "T193"
+    },
+    {
+        "facility": "586-pm",
+        "instrument": "294"
+    },
+    {
+        "facility": "675-pa",
+        "instrument": "Tel.5m"
+    },
+    {
+        "facility": "690-lo",
+        "instrument": "21.62"
+    },
+    {
+        "facility": "nancay-station",
+        "instrument": "Nan?ay Radio Telescope"
+    }
+]

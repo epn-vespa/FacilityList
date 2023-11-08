@@ -1,4 +1,5 @@
 ### Compare les listes en utilisant le module fuzzy
+import sys
 
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
@@ -6,7 +7,7 @@ from multiprocessing import Pool
 import cProfile
 import json
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/VESPA/data/instrument_host_name.json') as f:
+with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/VESPA/data/facilities_epncore-v03.json') as f:
     data_vespa = json.load(f)
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
@@ -14,20 +15,18 @@ with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/script
 
 
 def mon_scorer(q, c):
-    r = 0
-    if 'instrument_host_name_lower' in q:
-        if 'itemLabel' in c:
-            if q['instrument_host_name_lower'] in c['itemLabel']:
-                r += 500
-            else:
-                r -= 50
-        if 'aliases' in c:
-            aliases_parts = c['aliases'].lower().split("|")
-            if q['instrument_host_name_lower'] in aliases_parts:
-                r += 500
-            else:
-                r -= 50
-    r += fuzz.WRatio(q['instrument_host_name_lower'], c['itemLabel']) + fuzz.WRatio(q['instrument_host_name_lower'], c['aliases'])
+    r = fuzz.WRatio(q['facility'], c['itemLabel']) + fuzz.WRatio(q['facility'], c['aliases'])
+    if "facility" in q and 'itemLabel' in c:
+        if q['facility'] in c['itemLabel']:
+            r += 500
+        else:
+            r -= 50
+    if "facility" in q and 'aliases' in c:
+        if q['facility'] in c['aliases'].split("|"):
+            r += 500
+        else:
+            r -= 50
+
     return r
 
 
@@ -40,19 +39,19 @@ def get_scores(t):
     e = t[1]
     r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
     print("[" + str(i + 1) + "/" + str(len(data_vespa)) + "]" + str(e))
-    try :
+    try:
         print("  " + str(r[0][1]) + " : " + str(r[0][0]))
-    except IndexError :
+    except IndexError:
         print(None)
 
     return r
 
 
-def compare_vespa(data_vespa, wikidata):
+def compare_vespa(data_vespa, wikidata, results_count_output_file):
     # results = [] # results is a list
     tres_certain_vespa = []
-    tres_probable_vespa = []
-    probable_vespa = []
+    # tres_probable_vespa = []
+    # probable_vespa = []
     non_trouves_vespa = []
 
     with Pool(8) as p:
@@ -65,25 +64,24 @@ def compare_vespa(data_vespa, wikidata):
             if r_elem[1] > 180:
                 trouve = True
                 tres_certain_vespa.append((e, r_elem[0]))
-            #elif r_elem[1] > 130:
+            # elif r_elem[1] > 130:
             #     tres_probable_vespa.append((e, r_elem[0]))
             # elif r_elem[1] > 150:
             # probable_vespa.append((e, r_elem[0]))
         if not trouve:
             non_trouves_vespa.append(e)
 
-
-    print("tres_certain_vespa : " + str(len(tres_certain_vespa)))
-    #print("tres_probable_vespa : " + str(len(tres_probable)))
-    #print("probable_vespa : " + str(len(probable)))
-    print("non_trouves_vespa : " + str(len(non_trouves_vespa)))
+    print("tres_certain_vespa : " + str(len(tres_certain_vespa)), file=results_count_output_file)
+    # print("tres_probable_vespa : " + str(len(tres_probable)), file=results_count_output_file)
+    # print("probable_vespa : " + str(len(probable)), file=results_count_output_file)
+    print("non_trouves_vespa : " + str(len(non_trouves_vespa)), file=results_count_output_file)
 
     with open("tres_certain_vespa.json", 'w') as fout:
         fout.write(json.dumps(tres_certain_vespa, indent=4))
-    with open("tres_probable_vespa.json", 'w') as fout:
-        fout.write(json.dumps(tres_probable_vespa, indent=4))
-    with open("probable_vespa.json", 'w') as fout:
-        fout.write(json.dumps(probable_vespa, indent=4))
+    # with open("tres_probable_vespa.json", 'w') as fout:
+    #   fout.write(json.dumps(tres_probable_vespa, indent=4))
+    # with open("probable_vespa.json", 'w') as fout:
+    #   fout.write(json.dumps(probable_vespa, indent=4))
     with open("non_trouves_vespa.json", 'w') as fout:
         fout.write(json.dumps(non_trouves_vespa, indent=4))
         for i, e in enumerate(data_vespa):
@@ -94,5 +92,8 @@ def compare_vespa(data_vespa, wikidata):
 
 
 if __name__ == "__main__":
-    # chosse to either run with or without profiling
-    compare_vespa(data_vespa, wikidata)
+    if len(sys.argv) > 1:
+        results_count_output_file = open(sys.argv[1], 'a')
+    else:
+        results_count_output_file = sys.stdout
+    compare_vespa(data_vespa, wikidata, results_count_output_file)

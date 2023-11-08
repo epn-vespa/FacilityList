@@ -2,7 +2,7 @@
 
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
-
+import sys
 import json
 
 import cProfile
@@ -113,6 +113,8 @@ def compare_naif(data_naif, wikidata) :
                 print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
 
 if __name__ == "__main__" :
-    # chosse to either run with or without profiling
-    compare_naif(data_naif, wikidata)
-    # cProfile.run("compare_NSSDC(data_nssdc[0:10], wikidata)")
+    if len(sys.argv) > 1:
+        results_count_output_file = open(sys.argv[1], 'a')
+    else:
+        results_count_output_file = sys.stdout
+    compare_naif(data_naif, wikidata, results_count_output_file)

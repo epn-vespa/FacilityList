@@ -2,7 +2,7 @@
 
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
-
+import sys
 import json
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/harvard_old.json') as f:
@@ -71,3 +71,10 @@ with open("probable.json",'w') as fout:
     fout.write(json.dumps(probable, indent=4))
 with open("non_trouves.json",'w') as fout:
     fout.write(json.dumps(non_trouves, indent=4))
+
+#if __name__ == "__main__":
+ #   if len(sys.argv) > 1:
+ #       results_count_output_file = open(sys.argv[1], 'a')
+ #   else:
+ #       results_count_output_file = sys.stdout
+ #   compare_ads(data_ads, wikidata, results_count_output_file)

@@ -94,7 +94,10 @@ def compare_astroweb(data_astroweb, wikidata):
             print({"[" + str(i + 1) + "/" + str(len(data_astroweb)) + "]" + str(e): r}, file=fout)
         for t in r:
             print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
+
 if __name__ == "__main__":
-    # chosse to either run with or without profiling
-    compare_astroweb(data_astroweb, wikidata)
-    # cProfile.run("compare_astroweb(data_astroweb[0:10], wikidata)")
+    if len(sys.argv) > 1:
+        results_count_output_file = open(sys.argv[1], 'a')
+    else:
+        results_count_output_file = sys.stdout
+    compare_astroweb(data_astroweb, wikidata, results_count_output_file)

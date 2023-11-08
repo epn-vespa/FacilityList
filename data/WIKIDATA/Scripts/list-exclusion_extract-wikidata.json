@@ -20,10 +20,6 @@
         "itemLabel": "q10112593"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q101245802",
-        "itemLabel": "eos-01"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q101246823",
         "itemLabel": "kh-7-20"
     },
@@ -100,14 +96,6 @@
         "itemLabel": "q10238401"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q102424477",
-        "itemLabel": "sentinel-6-michael-freilich"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q102424501",
-        "itemLabel": "sentinel-6b"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q10259782",
         "itemLabel": "q10259782"
     },
@@ -160,16 +148,8 @@
         "itemLabel": "ofeq-7"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q104155803",
-        "itemLabel": "etrss-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1041853",
         "itemLabel": "helios-2a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1046007",
-        "itemLabel": "cartosat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q104843232",
@@ -178,10 +158,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q104849301",
         "itemLabel": "bsat-4b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q104858212",
-        "itemLabel": "napa-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q10492270",
@@ -212,60 +188,12 @@
         "itemLabel": "skylab-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q105323251",
-        "itemLabel": "brik-ii-(satellite)"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q105334563",
         "itemLabel": "spacebee"
     },
     {
         "item": "http://www.wikidata.org/entity/Q105392663",
         "itemLabel": "fox-1e"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105465481",
-        "itemLabel": "ñusat-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105474074",
-        "itemLabel": "ñusat-9"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480627",
-        "itemLabel": "ñusat-10"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480629",
-        "itemLabel": "ñusat-11"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480631",
-        "itemLabel": "ñusat-12"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480632",
-        "itemLabel": "ñusat-13"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480633",
-        "itemLabel": "ñusat-14"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480634",
-        "itemLabel": "ñusat-15"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480635",
-        "itemLabel": "ñusat-17"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480636",
-        "itemLabel": "ñusat-16"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105480637",
-        "itemLabel": "ñusat-18"
     },
     {
         "item": "http://www.wikidata.org/entity/Q105827801",
@@ -276,36 +204,8 @@
         "itemLabel": "kh-8-01"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q105828692",
-        "itemLabel": "okean-o"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q105836035",
         "itemLabel": "arctic-weather-satellite"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q105948293",
-        "itemLabel": "lawkanat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106242767",
-        "itemLabel": "cas500-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106366737",
-        "itemLabel": "spot-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106366903",
-        "itemLabel": "spot-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106366942",
-        "itemLabel": "spot-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106366993",
-        "itemLabel": "spot-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q106453416",
@@ -316,28 +216,8 @@
         "itemLabel": "usa-281"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q106606423",
-        "itemLabel": "pleiades-neo-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106606450",
-        "itemLabel": "pleiades-neo-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106606451",
-        "itemLabel": "pleiades-neo-5"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106606452",
-        "itemLabel": "pleiades-neo-6"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q106608624",
         "itemLabel": "usa-198"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106673675",
-        "itemLabel": "doosti"
     },
     {
         "item": "http://www.wikidata.org/entity/Q106691867",
@@ -378,10 +258,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q106823124",
         "itemLabel": "soyuz-ms-22"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q106865215",
-        "itemLabel": "quiktoms"
     },
     {
         "item": "http://www.wikidata.org/entity/Q106977230",
@@ -438,18 +314,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1076866",
         "itemLabel": "vanguard-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q108100887",
-        "itemLabel": "haiyang-2b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q108100897",
-        "itemLabel": "haiyang-2c"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q108100905",
-        "itemLabel": "haiyang-2d"
     },
     {
         "item": "http://www.wikidata.org/entity/Q108103914",
@@ -512,20 +376,12 @@
         "itemLabel": "kosmos-32"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q10855426",
-        "itemLabel": "stsat-3"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q10857190",
         "itemLabel": "cosmos-43"
     },
     {
         "item": "http://www.wikidata.org/entity/Q10857211",
         "itemLabel": "cosmos-42"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1086610",
-        "itemLabel": "orbiting-carbon-observatory"
     },
     {
         "item": "http://www.wikidata.org/entity/Q108817462",
@@ -536,20 +392,12 @@
         "itemLabel": "hilat"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q109044236",
-        "itemLabel": "q109044236"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1090911",
         "itemLabel": "sts-111"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1091775",
         "itemLabel": "ciel-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q10928755",
-        "itemLabel": "methane-remote-sensing-lidar-mission"
     },
     {
         "item": "http://www.wikidata.org/entity/Q109312264",
@@ -572,44 +420,12 @@
         "itemLabel": "daqi-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q109547219",
-        "itemLabel": "guangmu"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1097401",
-        "itemLabel": "intercosmos-17"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1097402",
-        "itemLabel": "intercosmos-18"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1097405",
-        "itemLabel": "intercosmos-19"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1097412",
-        "itemLabel": "intercosmos-20"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q109804292",
         "itemLabel": "gonets-d1m"
     },
     {
         "item": "http://www.wikidata.org/entity/Q109884074",
         "itemLabel": "expedition-67"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q109968193",
-        "itemLabel": "dynamics-explorer-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q109973765",
-        "itemLabel": "dynamics-explorer-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q109975550",
-        "itemLabel": "phi-sat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q110010611",
@@ -652,10 +468,6 @@
         "itemLabel": "healthsat-2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q110406015",
-        "itemLabel": "q110406015"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q110516908",
         "itemLabel": "gsat-24"
     },
@@ -688,48 +500,12 @@
         "itemLabel": "soyuz-ms-24"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q110623093",
-        "itemLabel": "q110623093"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110623466",
-        "itemLabel": "q110623466"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110623491",
-        "itemLabel": "q110623491"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110623497",
-        "itemLabel": "q110623497"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110623506",
-        "itemLabel": "q110623506"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q110631050",
         "itemLabel": "inmarsat-gx5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q110631147",
         "itemLabel": "chinasat-6c"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110641014",
-        "itemLabel": "rcm-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110641040",
-        "itemLabel": "rcm-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110641058",
-        "itemLabel": "rcm-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q110813183",
-        "itemLabel": "q110813183"
     },
     {
         "item": "http://www.wikidata.org/entity/Q110823547",
@@ -748,10 +524,6 @@
         "itemLabel": "polaris-dawn"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q110972086",
-        "itemLabel": "eos-02"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q110972527",
         "itemLabel": "hades"
     },
@@ -768,24 +540,8 @@
         "itemLabel": "paksat-1r"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q111471028",
-        "itemLabel": "iceye-x1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q111471190",
         "itemLabel": "ursa-maior"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111471574",
-        "itemLabel": "sstl-s1-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111471588",
-        "itemLabel": "sstl-s1-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111471589",
-        "itemLabel": "sstl-s1-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q111471801",
@@ -794,26 +550,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q111471997",
         "itemLabel": "globalstar-m086"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111496951",
-        "itemLabel": "rapideye-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111496952",
-        "itemLabel": "rapideye-5"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111496953",
-        "itemLabel": "rapideye-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111496954",
-        "itemLabel": "rapideye-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111496955",
-        "itemLabel": "rapideye-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q111496959",
@@ -832,26 +568,6 @@
         "itemLabel": "sar-lupe-2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q111497118",
-        "itemLabel": "themis-d"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111497119",
-        "itemLabel": "themis-e"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111497132",
-        "itemLabel": "themis-a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111497133",
-        "itemLabel": "themis-b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111497134",
-        "itemLabel": "themis-c"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q111497195",
         "itemLabel": "sar-lupe-1"
     },
@@ -868,16 +584,8 @@
         "itemLabel": "fsw-3-4"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q111497421",
-        "itemLabel": "double-star-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q111497423",
         "itemLabel": "fsw-3-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111497460",
-        "itemLabel": "double-star-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q111497470",
@@ -994,26 +702,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q11160860",
         "itemLabel": "hitsat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111658821",
-        "itemLabel": "cluster-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111658865",
-        "itemLabel": "cluster-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111658942",
-        "itemLabel": "cluster-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q111658950",
-        "itemLabel": "cluster-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q11189655",
-        "itemLabel": "asnaro-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11191729",
@@ -1196,10 +884,6 @@
         "itemLabel": "cosmos-85"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q111973017",
-        "itemLabel": "i̇mece"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1119733",
         "itemLabel": "cosmos-88"
     },
@@ -1254,10 +938,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q11225564",
         "itemLabel": "jcsat-1b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q11227964",
-        "itemLabel": "kitsat-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11231191",
@@ -1316,20 +996,8 @@
         "itemLabel": "fuji-2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q11277227",
-        "itemLabel": "jers-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q11280113",
-        "itemLabel": "mos-1b"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q112801699",
         "itemLabel": "sbudnic"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1128040",
-        "itemLabel": "worldview-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11280967",
@@ -1364,20 +1032,12 @@
         "itemLabel": "ofeq"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q113149583",
-        "itemLabel": "upper-atmosphere-research-satellite-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q113162393",
         "itemLabel": "applications-technology-satellite-g"
     },
     {
         "item": "http://www.wikidata.org/entity/Q113251550",
         "itemLabel": "ov1-12"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q113274253",
-        "itemLabel": "injun-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q113274421",
@@ -1398,18 +1058,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q113407663",
         "itemLabel": "blue-origin-ns-22"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q113461346",
-        "itemLabel": "azaadisat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q113481807",
-        "itemLabel": "q113481807"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q113499909",
-        "itemLabel": "khayyam"
     },
     {
         "item": "http://www.wikidata.org/entity/Q113547532",
@@ -1580,10 +1228,6 @@
         "itemLabel": "tianlian-i-05"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1148147",
-        "itemLabel": "cartosat-2b"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q114851204",
         "itemLabel": "sun-radio-interferometer-space-experiment"
     },
@@ -1612,20 +1256,12 @@
         "itemLabel": "eutelsat-10b"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1154497",
-        "itemLabel": "dlr-tubsat"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q115563191",
         "itemLabel": "space-travelling-egg-controlled-catadioptric-object"
     },
     {
         "item": "http://www.wikidata.org/entity/Q115576467",
         "itemLabel": "starshield"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q115588701",
-        "itemLabel": "carruthers-geocorona-observatory"
     },
     {
         "item": "http://www.wikidata.org/entity/Q115593337",
@@ -1684,24 +1320,12 @@
         "itemLabel": "ziyuan"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1163948",
-        "itemLabel": "kosmos-2470"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q116457157",
         "itemLabel": "usa-315"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q116468885",
-        "itemLabel": "orbview-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1165956",
         "itemLabel": "sts-104"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1166026",
-        "itemLabel": "epe-a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11668047",
@@ -1710,10 +1334,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q116710233",
         "itemLabel": "amazonas-nexus"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q116739232",
-        "itemLabel": "eos-07"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11691524",
@@ -1810,10 +1430,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q11699147",
         "itemLabel": "poppy-3a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q11712559",
-        "itemLabel": "injun-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q11713318",
@@ -1984,14 +1600,6 @@
         "itemLabel": "comsatbw-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1186059",
-        "itemLabel": "göktürk-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q11862515",
-        "itemLabel": "hi-ros"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q11869645",
         "itemLabel": "kanopus-v"
     },
@@ -2006,10 +1614,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q118864693",
         "itemLabel": "shenzhou-18"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q118905424",
-        "itemLabel": "people's-satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q118907107",
@@ -2088,26 +1692,6 @@
         "itemLabel": "gemini-7"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q120078000",
-        "itemLabel": "proba-v-companion-cubesat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q120674587",
-        "itemLabel": "q120674587"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12073044",
-        "itemLabel": "mk-1ts"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q120826213",
-        "itemLabel": "q120826213"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1208351",
-        "itemLabel": "dial/wika"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q121009015",
         "itemLabel": "echostar-24"
     },
@@ -2176,64 +1760,20 @@
         "itemLabel": "kosmos-98"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q121841901",
-        "itemLabel": "umbra-01"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q121841903",
         "itemLabel": "umbra-sar"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121841939",
-        "itemLabel": "umbra-02"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121841944",
-        "itemLabel": "umbra-03"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121841948",
-        "itemLabel": "umbra-04"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121841953",
-        "itemLabel": "umbra-05"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121841955",
-        "itemLabel": "umbra-06"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121842030",
-        "itemLabel": "umbra-07"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q121842041",
-        "itemLabel": "umbra-08"
     },
     {
         "item": "http://www.wikidata.org/entity/Q121864132",
         "itemLabel": "q121864132"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q121864183",
-        "itemLabel": "q121864183"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q122224342",
         "itemLabel": "planetscope"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12230697",
-        "itemLabel": "gaofen-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q122372315",
         "itemLabel": "expedition-71"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q122398742",
-        "itemLabel": "worldview-legion"
     },
     {
         "item": "http://www.wikidata.org/entity/Q122417769",
@@ -2500,18 +2040,6 @@
         "itemLabel": "cosmos-175"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12605193",
-        "itemLabel": "kompsat-7"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12605194",
-        "itemLabel": "kompsat-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1262830",
-        "itemLabel": "dubaisat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12646524",
         "itemLabel": "cosmos-214"
     },
@@ -2688,10 +2216,6 @@
         "itemLabel": "cosmos-1034"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753070",
-        "itemLabel": "cosmos-1033"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753071",
         "itemLabel": "cosmos-1035"
     },
@@ -2804,24 +2328,12 @@
         "itemLabel": "cosmos-1098"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753108",
-        "itemLabel": "cosmos-1099"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753110",
         "itemLabel": "cosmos-1110"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753111",
-        "itemLabel": "cosmos-1108"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753113",
         "itemLabel": "cosmos-1113"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753114",
-        "itemLabel": "cosmos-1115"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753115",
@@ -2830,10 +2342,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753116",
         "itemLabel": "cosmos-1117"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753118",
-        "itemLabel": "cosmos-1127"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753120",
@@ -2928,14 +2436,6 @@
         "itemLabel": "cosmos-1184"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753147",
-        "itemLabel": "cosmos-1182"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753148",
-        "itemLabel": "cosmos-1185"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753149",
         "itemLabel": "cosmos-1190"
     },
@@ -2968,32 +2468,16 @@
         "itemLabel": "cosmos-1199"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753157",
-        "itemLabel": "cosmos-1201"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753158",
         "itemLabel": "cosmos-1202"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753160",
-        "itemLabel": "cosmos-1207"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753161",
         "itemLabel": "cosmos-1206"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753162",
-        "itemLabel": "cosmos-1209"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753163",
         "itemLabel": "cosmos-1208"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753164",
-        "itemLabel": "cosmos-1212"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753165",
@@ -3110,10 +2594,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753195",
         "itemLabel": "cosmos-1272"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753196",
-        "itemLabel": "cosmos-1273"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753198",
@@ -3264,10 +2744,6 @@
         "itemLabel": "cosmos-1366"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753241",
-        "itemLabel": "cosmos-1369"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753242",
         "itemLabel": "cosmos-1370"
     },
@@ -3388,10 +2864,6 @@
         "itemLabel": "cosmos-1457"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753284",
-        "itemLabel": "cosmos-1462"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753286",
         "itemLabel": "cosmos-1466"
     },
@@ -3424,28 +2896,12 @@
         "itemLabel": "cosmos-1479"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753296",
-        "itemLabel": "cosmos-1483"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753297",
         "itemLabel": "cosmos-1485"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753298",
         "itemLabel": "cosmos-1488"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753299",
-        "itemLabel": "cosmos-1487"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753303",
-        "itemLabel": "cosmos-1495"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753304",
-        "itemLabel": "cosmos-1500"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753306",
@@ -3490,10 +2946,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753323",
         "itemLabel": "cosmos-1533"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753324",
-        "itemLabel": "cosmos-1537"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753325",
@@ -3552,16 +3004,8 @@
         "itemLabel": "cosmos-1574"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753341",
-        "itemLabel": "cosmos-1575"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753342",
         "itemLabel": "cosmos-1576"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753344",
-        "itemLabel": "cosmos-1582"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753345",
@@ -3574,10 +3018,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753347",
         "itemLabel": "cosmos-1585"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753348",
-        "itemLabel": "cosmos-1591"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753350",
@@ -3684,20 +3124,8 @@
         "itemLabel": "cosmos-1649"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753385",
-        "itemLabel": "cosmos-1653"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753386",
-        "itemLabel": "cosmos-1657"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753387",
         "itemLabel": "cosmos-1659"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753388",
-        "itemLabel": "cosmos-1663"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753389",
@@ -3708,24 +3136,12 @@
         "itemLabel": "cosmos-1665"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753392",
-        "itemLabel": "cosmos-1672"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753393",
         "itemLabel": "cosmos-1674"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753394",
         "itemLabel": "cosmos-1673"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753395",
-        "itemLabel": "cosmos-1678"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753396",
-        "itemLabel": "cosmos-1681"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753400",
@@ -3824,10 +3240,6 @@
         "itemLabel": "cosmos-1742"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753431",
-        "itemLabel": "cosmos-1746"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753432",
         "itemLabel": "cosmos-1748"
     },
@@ -3856,10 +3268,6 @@
         "itemLabel": "cosmos-1765"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753440",
-        "itemLabel": "cosmos-1766"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753442",
         "itemLabel": "cosmos-1769"
     },
@@ -3886,10 +3294,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753451",
         "itemLabel": "cosmos-1782"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753452",
-        "itemLabel": "cosmos-1789"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753454",
@@ -4068,10 +3472,6 @@
         "itemLabel": "cosmos-1900"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753510",
-        "itemLabel": "cosmos-1906"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753511",
         "itemLabel": "cosmos-1908"
     },
@@ -4144,10 +3544,6 @@
         "itemLabel": "cosmos-1949"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753534",
-        "itemLabel": "cosmos-1951"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753536",
         "itemLabel": "cosmos-1953"
     },
@@ -4158,10 +3554,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753538",
         "itemLabel": "cosmos-1955"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753539",
-        "itemLabel": "cosmos-1957"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753542",
@@ -4206,10 +3598,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12753553",
         "itemLabel": "cosmos-1986"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12753555",
-        "itemLabel": "cosmos-1990"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12753556",
@@ -5540,10 +4928,6 @@
         "itemLabel": "cosmos-769"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12753992",
-        "itemLabel": "cosmos-771"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12753994",
         "itemLabel": "cosmos-779"
     },
@@ -5606,10 +4990,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12754012",
         "itemLabel": "cosmos-813"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12754014",
-        "itemLabel": "cosmos-820"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12754015",
@@ -5880,10 +5260,6 @@
         "itemLabel": "kosmos-999"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1275965",
-        "itemLabel": "bulgaria-1300"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1280743",
         "itemLabel": "echostar-xv"
     },
@@ -5910,10 +5286,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12907258",
         "itemLabel": "cosmos-1003"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907259",
-        "itemLabel": "cosmos-1010"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907260",
@@ -6008,10 +5380,6 @@
         "itemLabel": "cosmos-1095"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907289",
-        "itemLabel": "cosmos-1105"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907290",
         "itemLabel": "cosmos-1103"
     },
@@ -6026,10 +5394,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12907294",
         "itemLabel": "cosmos-1120"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907295",
-        "itemLabel": "cosmos-1123"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907296",
@@ -6112,10 +5476,6 @@
         "itemLabel": "kosmos-1192"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907326",
-        "itemLabel": "cosmos-1203"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907327",
         "itemLabel": "cosmos-1205"
     },
@@ -6176,10 +5536,6 @@
         "itemLabel": "cosmos-1271"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907345",
-        "itemLabel": "cosmos-1276"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907346",
         "itemLabel": "cosmos-1277"
     },
@@ -6204,16 +5560,8 @@
         "itemLabel": "cosmos-1298"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907353",
-        "itemLabel": "cosmos-1301"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907354",
         "itemLabel": "cosmos-1305"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907357",
-        "itemLabel": "cosmos-1314"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907359",
@@ -6264,10 +5612,6 @@
         "itemLabel": "cosmos-1385"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907376",
-        "itemLabel": "cosmos-1387"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907377",
         "itemLabel": "cosmos-1388"
     },
@@ -6286,10 +5630,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12907381",
         "itemLabel": "cosmos-1395"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907382",
-        "itemLabel": "cosmos-1401"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907383",
@@ -6336,16 +5676,8 @@
         "itemLabel": "cosmos-1437"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907397",
-        "itemLabel": "cosmos-1440"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907399",
         "itemLabel": "cosmos-1446"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907400",
-        "itemLabel": "cosmos-1458"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907401",
@@ -6448,10 +5780,6 @@
         "itemLabel": "cosmos-1570"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907437",
-        "itemLabel": "cosmos-1572"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907439",
         "itemLabel": "cosmos-1579"
     },
@@ -6470,10 +5798,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12907444",
         "itemLabel": "cosmos-1603"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907445",
-        "itemLabel": "cosmos-1602"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907448",
@@ -6544,10 +5868,6 @@
         "itemLabel": "cosmos-1702"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907473",
-        "itemLabel": "cosmos-1708"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907477",
         "itemLabel": "cosmos-1720"
     },
@@ -6576,16 +5896,8 @@
         "itemLabel": "cosmos-1755"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907485",
-        "itemLabel": "cosmos-1762"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907486",
         "itemLabel": "cosmos-1763"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907487",
-        "itemLabel": "cosmos-1768"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907488",
@@ -6664,10 +5976,6 @@
         "itemLabel": "cosmos-1880"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907519",
-        "itemLabel": "cosmos-1882"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907521",
         "itemLabel": "cosmos-1895"
     },
@@ -6706,10 +6014,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q12907534",
         "itemLabel": "cosmos-1952"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q12907535",
-        "itemLabel": "cosmos-1965"
     },
     {
         "item": "http://www.wikidata.org/entity/Q12907536",
@@ -7432,10 +6736,6 @@
         "itemLabel": "cosmos-907"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q12907826",
-        "itemLabel": "cosmos-912"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q12907830",
         "itemLabel": "cosmos-932"
     },
@@ -7578,10 +6878,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1329291",
         "itemLabel": "intelsat-17"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1329651",
-        "itemLabel": "sich-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1329660",
@@ -7824,10 +7120,6 @@
         "itemLabel": "cosmos-1274"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566527",
-        "itemLabel": "cosmos-1280"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566529",
         "itemLabel": "cosmos-1287"
     },
@@ -7884,10 +7176,6 @@
         "itemLabel": "cosmos-1345"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566568",
-        "itemLabel": "cosmos-1353"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566570",
         "itemLabel": "cosmos-1356"
     },
@@ -7900,20 +7188,12 @@
         "itemLabel": "cosmos-1372"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566578",
-        "itemLabel": "cosmos-1376"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566580",
         "itemLabel": "cosmos-1381"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13566586",
         "itemLabel": "cosmos-1392"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13566590",
-        "itemLabel": "cosmos-1406"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13566592",
@@ -7940,10 +7220,6 @@
         "itemLabel": "cosmos-1449"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566616",
-        "itemLabel": "cosmos-1468"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566618",
         "itemLabel": "cosmos-1470"
     },
@@ -7958,10 +7234,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q13566634",
         "itemLabel": "cosmos-1497"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13566635",
-        "itemLabel": "cosmos-1498"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13566641",
@@ -7984,10 +7256,6 @@
         "itemLabel": "cosmos-1548"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566657",
-        "itemLabel": "cosmos-1557"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566659",
         "itemLabel": "cosmos-1562"
     },
@@ -7998,14 +7266,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q13566663",
         "itemLabel": "cosmos-1568"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13566668",
-        "itemLabel": "cosmos-1590"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13566670",
-        "itemLabel": "cosmos-1597"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13566672",
@@ -8132,10 +7392,6 @@
         "itemLabel": "cosmos-1845"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566714",
-        "itemLabel": "cosmos-1846"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566715",
         "itemLabel": "cosmos-1852"
     },
@@ -8146,10 +7402,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q13566717",
         "itemLabel": "cosmos-1862"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13566718",
-        "itemLabel": "cosmos-1869"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13566720",
@@ -8180,10 +7432,6 @@
         "itemLabel": "cosmos-1915"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566730",
-        "itemLabel": "cosmos-1920"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566731",
         "itemLabel": "cosmos-1924"
     },
@@ -8210,10 +7458,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q13566740",
         "itemLabel": "cosmos-1962"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13566741",
-        "itemLabel": "cosmos-1968"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13566743",
@@ -8784,10 +8028,6 @@
         "itemLabel": "cosmos-941"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q13566941",
-        "itemLabel": "cosmos-948"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q13566943",
         "itemLabel": "cosmos-958"
     },
@@ -8896,14 +8136,6 @@
         "itemLabel": "eutelsat-w75/abs-1b"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1384401",
-        "itemLabel": "experimental-geodetic-payload"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1384577",
-        "itemLabel": "explorer-6"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1384792",
         "itemLabel": "ekspress-a3"
     },
@@ -8932,24 +8164,12 @@
         "itemLabel": "formosat-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1389529",
-        "itemLabel": "fr-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1394040",
-        "itemLabel": "solar-mesosphere-explorer"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1397703",
         "itemLabel": "sirius-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q13983567",
         "itemLabel": "metop-a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q13989992",
-        "itemLabel": "pleiades-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1407584",
@@ -8964,24 +8184,12 @@
         "itemLabel": "nigcomsat-1r"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q14083898",
-        "itemLabel": "nigeriasat-x"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14083933",
-        "itemLabel": "kanopus-v-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q14083936",
         "itemLabel": "cosmos-2462"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14083938",
         "itemLabel": "orbcomm-og2-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14083950",
-        "itemLabel": "pleiades-1b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14083951",
@@ -9008,10 +8216,6 @@
         "itemLabel": "cosmos-2453"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q14083964",
-        "itemLabel": "spot-6"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q14083971",
         "itemLabel": "smdc-one-1"
     },
@@ -9022,10 +8226,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q14083985",
         "itemLabel": "usa-204"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14083986",
-        "itemLabel": "mka-fki-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14100170",
@@ -9088,10 +8288,6 @@
         "itemLabel": "oscar-4"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q14174557",
-        "itemLabel": "irs-1c"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q14174561",
         "itemLabel": "insat-1c"
     },
@@ -9102,10 +8298,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q14196834",
         "itemLabel": "nimiq-5"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1422160",
-        "itemLabel": "alouette-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14231040",
@@ -9188,36 +8380,12 @@
         "itemLabel": "abs-1a"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q14290893",
-        "itemLabel": "irs-1b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14290935",
-        "itemLabel": "irs-1a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14291045",
-        "itemLabel": "irs-p2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14291137",
-        "itemLabel": "irs-p3"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q14294239",
         "itemLabel": "rascom-qaf-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14303552",
         "itemLabel": "telstar-301"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1431818",
-        "itemLabel": "topex/poseidon"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1434606",
-        "itemLabel": "flying-laptop"
     },
     {
         "item": "http://www.wikidata.org/entity/Q143846",
@@ -9238,14 +8406,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q14497237",
         "itemLabel": "yubeleiny-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1450140",
-        "itemLabel": "rasat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1454075",
-        "itemLabel": "space-technology-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14554285",
@@ -9368,20 +8528,12 @@
         "itemLabel": "ico-g1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1465904",
-        "itemLabel": "parasol"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q14693950",
         "itemLabel": "zenit-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14752217",
         "itemLabel": "kh-11-16"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1475301",
-        "itemLabel": "international-cometary-explorer"
     },
     {
         "item": "http://www.wikidata.org/entity/Q14753790",
@@ -9616,10 +8768,6 @@
         "itemLabel": "intelsat-iv-f-7"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1479854",
-        "itemLabel": "proba-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1480087",
         "itemLabel": "starshine-3"
     },
@@ -9796,10 +8944,6 @@
         "itemLabel": "kazsat-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q15261047",
-        "itemLabel": "eros-a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q15261052",
         "itemLabel": "radar-fence-transponder"
     },
@@ -9822,26 +8966,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q15283315",
         "itemLabel": "usa-247"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15292905",
-        "itemLabel": "cbers-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15292918",
-        "itemLabel": "cbers-2b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15292930",
-        "itemLabel": "cbers-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15292934",
-        "itemLabel": "cbers-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15300663",
-        "itemLabel": "cbers-4"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1530723",
@@ -9876,18 +9000,6 @@
         "itemLabel": "soyuz-tm-15"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1541111",
-        "itemLabel": "intercosmos-21"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1541116",
-        "itemLabel": "intercosmos-24"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1541118",
-        "itemLabel": "apex-main"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1542629",
         "itemLabel": "us-a"
     },
@@ -9902,10 +9014,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1552187",
         "itemLabel": "thor-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1552666",
-        "itemLabel": "oceansat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1557814",
@@ -9926,10 +9034,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q15631109",
         "itemLabel": "q15631109"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1569638",
-        "itemLabel": "haiyang-2a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1570154",
@@ -9962,10 +9066,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1590475",
         "itemLabel": "oscar-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15915007",
-        "itemLabel": "formosat-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q15915658",
@@ -10006,10 +9106,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1601052",
         "itemLabel": "expedition-43"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q16054810",
-        "itemLabel": "sentinel-1a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q16061067",
@@ -10512,10 +9608,6 @@
         "itemLabel": "soyuz-tma-20m"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q16261847",
-        "itemLabel": "kompsat-3a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q16269421",
         "itemLabel": "ofeq-10"
     },
@@ -10652,18 +9744,6 @@
         "itemLabel": "eole-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q16354696",
-        "itemLabel": "egyptsat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1639511",
-        "itemLabel": "quickbird"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1640169",
-        "itemLabel": "vrss-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1640509",
         "itemLabel": "intelsat-20"
     },
@@ -10768,20 +9848,12 @@
         "itemLabel": "mexsat-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q16599321",
-        "itemLabel": "spot-7"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1661266",
         "itemLabel": "indian-remote-sensing"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1662863",
         "itemLabel": "anik-f3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q16632406",
-        "itemLabel": "irs-1e"
     },
     {
         "item": "http://www.wikidata.org/entity/Q1664373",
@@ -10888,10 +9960,6 @@
         "itemLabel": "palapa-b4"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q16747596",
-        "itemLabel": "kazeosat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1678790",
         "itemLabel": "thor-2a"
     },
@@ -10900,20 +9968,12 @@
         "itemLabel": "cute-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q16840425",
-        "itemLabel": "göktürk-3"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q16894817",
         "itemLabel": "ekspress-am4r"
     },
     {
         "item": "http://www.wikidata.org/entity/Q169018",
         "itemLabel": "sts-68"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q16937207",
-        "itemLabel": "alos-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q16943242",
@@ -11144,10 +10204,6 @@
         "itemLabel": "eutelsat-3b"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q17012906",
-        "itemLabel": "arase"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q17019699",
         "itemLabel": "gsat-15"
     },
@@ -11164,20 +10220,8 @@
         "itemLabel": "cubebug-2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q17053560",
-        "itemLabel": "raijin-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17056511",
-        "itemLabel": "uniform-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q17063790",
         "itemLabel": "ceres"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1710088",
-        "itemLabel": "tubsat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q17122033",
@@ -11216,10 +10260,6 @@
         "itemLabel": "oneweb-satellite-constellation"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q17224758",
-        "itemLabel": "alos-3"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1724109",
         "itemLabel": "soyuz-19"
     },
@@ -11248,28 +10288,8 @@
         "itemLabel": "glomr"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q17285847",
-        "itemLabel": "deimos-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17285851",
-        "itemLabel": "kazeosat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17285875",
-        "itemLabel": "hodoyoshi-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17285879",
-        "itemLabel": "hodoyoshi-4"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q17285883",
         "itemLabel": "unisat-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17285885",
-        "itemLabel": "tabletsat-aurora"
     },
     {
         "item": "http://www.wikidata.org/entity/Q17297112",
@@ -11296,10 +10316,6 @@
         "itemLabel": "rascom-qaf-1r"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q17304903",
-        "itemLabel": "orbiting-carbon-observatory-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q17331408",
         "itemLabel": "gonets-m08"
     },
@@ -11316,10 +10332,6 @@
         "itemLabel": "meteor-m-no.2-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1734511",
-        "itemLabel": "quikscat"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q17385354",
         "itemLabel": "usa-250"
     },
@@ -11334,14 +10346,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1749827",
         "itemLabel": "nilesat-101"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17502490",
-        "itemLabel": "sentinel-5-precursor"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q17505921",
-        "itemLabel": "worldview-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q17512643",
@@ -11418,14 +10422,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q180971",
         "itemLabel": "apollo-17"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q18128754",
-        "itemLabel": "nisar"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1816481",
-        "itemLabel": "landsat-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q18195739",
@@ -12036,10 +11032,6 @@
         "itemLabel": "olymp-k"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q186049",
-        "itemLabel": "ikonos"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q18609252",
         "itemLabel": "luch-1"
     },
@@ -12060,24 +11052,12 @@
         "itemLabel": "expedition-49"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q18669407",
-        "itemLabel": "gaofen"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q18676726",
-        "itemLabel": "resurs-p-no.2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q18759168",
         "itemLabel": "shin'en-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q187605",
         "itemLabel": "ses-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1881170",
-        "itemLabel": "maroc-tubsat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q188168",
@@ -12092,16 +11072,8 @@
         "itemLabel": "apollo-7"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1886982",
-        "itemLabel": "sac-d"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q1887840",
         "itemLabel": "soyuz-tma-10m"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1891271",
-        "itemLabel": "rasad-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q18922584",
@@ -12114,10 +11086,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q19258237",
         "itemLabel": "despatch"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q19283622",
-        "itemLabel": "gaofen-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q19295624",
@@ -12176,14 +11144,6 @@
         "itemLabel": "ses-16/govsat-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q1970012",
-        "itemLabel": "jason-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q1972368",
-        "itemLabel": "navid"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q197921",
         "itemLabel": "chinasat-20a"
     },
@@ -12194,10 +11154,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q1982488",
         "itemLabel": "intelsat-28"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q19838561",
-        "itemLabel": "landsat-9"
     },
     {
         "item": "http://www.wikidata.org/entity/Q19867977",
@@ -12212,26 +11168,6 @@
         "itemLabel": "türksat-6a"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q19986278",
-        "itemLabel": "aprizesat-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q19986312",
-        "itemLabel": "aprizesat-7"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q19986402",
-        "itemLabel": "aprizesat-8"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q19986420",
-        "itemLabel": "aprizesat-9"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q19986438",
-        "itemLabel": "aprizesat-10"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2000754",
         "itemLabel": "palapa"
     },
@@ -12242,14 +11178,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q20016967",
         "itemLabel": "directv-15"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q20022790",
-        "itemLabel": "diwata-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q20050234",
-        "itemLabel": "cbers-4a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q20053299",
@@ -12336,24 +11264,8 @@
         "itemLabel": "kosmos-2155"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2032631",
-        "itemLabel": "viking"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q20354353",
-        "itemLabel": "sentinel-2a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q203651",
         "itemLabel": "apollo-9"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2036857",
-        "itemLabel": "theos"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2038647",
-        "itemLabel": "worldview-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2045696",
@@ -12398,10 +11310,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q20667807",
         "itemLabel": "soyuz-ms-05"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q207045",
-        "itemLabel": "ziyuan-3-01"
     },
     {
         "item": "http://www.wikidata.org/entity/Q20715124",
@@ -12464,10 +11372,6 @@
         "itemLabel": "suitsat"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q21050563",
-        "itemLabel": "carbonite-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q21071020",
         "itemLabel": "cosmos-2507"
     },
@@ -12520,10 +11424,6 @@
         "itemLabel": "fox-1a"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q21405968",
-        "itemLabel": "jilin-1-gx-a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q21406030",
         "itemLabel": "dmsp(65-072a)"
     },
@@ -12534,10 +11434,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q2141441",
         "itemLabel": "wresat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2145867",
-        "itemLabel": "resourcesat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q21481140",
@@ -12594,10 +11490,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q21965475",
         "itemLabel": "q21965475"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q22026427",
-        "itemLabel": "jason-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2205821",
@@ -12660,28 +11552,8 @@
         "itemLabel": "trs-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2227245",
-        "itemLabel": "trs-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q22344439",
-        "itemLabel": "teleos-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q22344441",
-        "itemLabel": "gaofen-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q22350864",
-        "itemLabel": "sentinel-3a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2248280",
         "itemLabel": "ariane-passenger-payload-experiment"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q22668125",
-        "itemLabel": "kwangmyŏngsŏng-4"
     },
     {
         "item": "http://www.wikidata.org/entity/Q22712186",
@@ -12712,24 +11584,12 @@
         "itemLabel": "scatsat-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2291441",
-        "itemLabel": "explorer-10"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2293238",
         "itemLabel": "skyterra-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2298031",
         "itemLabel": "soyuz-tma-16m"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2300867",
-        "itemLabel": "wind"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q23059162",
-        "itemLabel": "resurs-p3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q23059169",
@@ -12758,14 +11618,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q2367342",
         "itemLabel": "superbird-c2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2372295",
-        "itemLabel": "surface-water-ocean-topography"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q23818223",
-        "itemLabel": "sentinel-1b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q238773",
@@ -12852,28 +11704,12 @@
         "itemLabel": "thor-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2431071",
-        "itemLabel": "tianhui-1b"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2431135",
         "itemLabel": "tianlian-i-02"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2474942",
         "itemLabel": "kosmos-1818"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q24820155",
-        "itemLabel": "cartosat-2c"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q24897282",
-        "itemLabel": "hodoyoshi-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q24928614",
-        "itemLabel": "biros"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2498163",
@@ -12884,24 +11720,12 @@
         "itemLabel": "eutelsat-8-west-a"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2509028",
-        "itemLabel": "explorer-7"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2521638",
         "itemLabel": "viasat-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2533763",
         "itemLabel": "kosmos-1402"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q25377815",
-        "itemLabel": "plankton,-aerosol,-cloud,-ocean-ecosystem"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q25379983",
-        "itemLabel": "q25379983"
     },
     {
         "item": "http://www.wikidata.org/entity/Q25403342",
@@ -13012,10 +11836,6 @@
         "itemLabel": "azerspace-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q257020",
-        "itemLabel": "seasat"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2570253",
         "itemLabel": "wildblue-1"
     },
@@ -13028,20 +11848,12 @@
         "itemLabel": "soyuz-ms-10"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q257457",
-        "itemLabel": "landsat-4"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q257797",
         "itemLabel": "vostok-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q25842510",
         "itemLabel": "koreasat-5a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q258697",
-        "itemLabel": "gravity-field-and-steady-state-ocean-circulation-explorer"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2597602",
@@ -13096,28 +11908,12 @@
         "itemLabel": "sts-90"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2633139",
-        "itemLabel": "risat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q264299",
         "itemLabel": "kosmos-1806"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2650602",
-        "itemLabel": "alouette-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q2654877",
         "itemLabel": "fastrac"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2657190",
-        "itemLabel": "sich-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2658896",
-        "itemLabel": "ostm/jason-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2661654",
@@ -13138,10 +11934,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q2681017",
         "itemLabel": "ekspress-md1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q26899009",
-        "itemLabel": "perusat-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q269668",
@@ -13204,24 +11996,12 @@
         "itemLabel": "oscar-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q27976215",
-        "itemLabel": "resourcesat-2a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q279940",
         "itemLabel": "discoverer-36"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q280068",
-        "itemLabel": "soil-moisture-and-ocean-salinity-satellite"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q28017568",
         "itemLabel": "star-one-d1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28057768",
-        "itemLabel": "tansat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q281355",
@@ -13250,14 +12030,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q281633",
         "itemLabel": "sts-112"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28170006",
-        "itemLabel": "cartosat-2e"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28170103",
-        "itemLabel": "pisat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q2819560",
@@ -13292,24 +12064,8 @@
         "itemLabel": "galileo-satellite"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q28473093",
-        "itemLabel": "van-allen-probe-a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28473100",
-        "itemLabel": "van-allen-probe-b"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q28494719",
         "itemLabel": "s-80/t"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28494738",
-        "itemLabel": "auréole-1-and-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28499247",
-        "itemLabel": "altius"
     },
     {
         "item": "http://www.wikidata.org/entity/Q285267",
@@ -13332,10 +12088,6 @@
         "itemLabel": "soyuz-ms-13"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q28666819",
-        "itemLabel": "kanopus-v-ik"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q28668946",
         "itemLabel": "usa-269"
     },
@@ -13346,10 +12098,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q28668994",
         "itemLabel": "gssap-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28695088",
-        "itemLabel": "gaofen-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q28697157",
@@ -13380,14 +12128,6 @@
         "itemLabel": "kh-7-23"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2874243",
-        "itemLabel": "ers-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28790233",
-        "itemLabel": "cartosat-2d"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q28845774",
         "itemLabel": "kh-4a-1027"
     },
@@ -13406,18 +12146,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q28845780",
         "itemLabel": "kh-7-25"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28857865",
-        "itemLabel": "sentinel-2b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28869342",
-        "itemLabel": "jilin-1-03"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q28869431",
-        "itemLabel": "q28869431"
     },
     {
         "item": "http://www.wikidata.org/entity/Q28870615",
@@ -13456,10 +12184,6 @@
         "itemLabel": "dearmoon-project"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q290390",
-        "itemLabel": "adm-aeolus"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q29043279",
         "itemLabel": "dmsp(66-026a)"
     },
@@ -13488,10 +12212,6 @@
         "itemLabel": "tacsat-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2940667",
-        "itemLabel": "cartosat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q294623",
         "itemLabel": "amc-12"
     },
@@ -13514,26 +12234,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q2946685",
         "itemLabel": "cerise"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2949436",
-        "itemLabel": "bilsat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q29565636",
-        "itemLabel": "swarm-a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q29565640",
-        "itemLabel": "swarm-b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q29565641",
-        "itemLabel": "swarm-c"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q2957726",
-        "itemLabel": "charge-composition-explorer"
     },
     {
         "item": "http://www.wikidata.org/entity/Q29611580",
@@ -13568,32 +12268,16 @@
         "itemLabel": "badr-6"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3023248",
-        "itemLabel": "denpa"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q30345520",
         "itemLabel": "chinasat-9a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3044961",
-        "itemLabel": "ørsted"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3046191",
         "itemLabel": "essa-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q30526654",
-        "itemLabel": "egyptsat-a"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3058694",
         "itemLabel": "essaim"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q30739729",
-        "itemLabel": "china-seismo-electromagnetic-satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q30892070",
@@ -13610,10 +12294,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q30916921",
         "itemLabel": "kh-7-29"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3108963",
-        "itemLabel": "global-precipitation-measurement"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3108985",
@@ -13644,10 +12324,6 @@
         "itemLabel": "metop-b"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3178657",
-        "itemLabel": "jikiken"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q318646",
         "itemLabel": "shenzhou-7"
     },
@@ -13660,20 +12336,12 @@
         "itemLabel": "uwe-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3200967",
-        "itemLabel": "kyokko"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q324699",
         "itemLabel": "sts-69"
     },
     {
         "item": "http://www.wikidata.org/entity/Q324704",
         "itemLabel": "sts-67"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3270306",
-        "itemLabel": "polar"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3277100",
@@ -13706,10 +12374,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q3323919",
         "itemLabel": "morelos-satellite-system"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3359841",
-        "itemLabel": "proba-v"
     },
     {
         "item": "http://www.wikidata.org/entity/Q336730",
@@ -14048,10 +12712,6 @@
         "itemLabel": "kosmos-1849"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3399271",
-        "itemLabel": "cosmos-900"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3399279",
         "itemLabel": "kosmos-1261"
     },
@@ -14060,16 +12720,8 @@
         "itemLabel": "kosmos-2001"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3399298",
-        "itemLabel": "cosmos-893"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3399309",
         "itemLabel": "kosmos-1317"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3399317",
-        "itemLabel": "kosmos-1076"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3399327",
@@ -14148,26 +12800,6 @@
         "itemLabel": "kosmos-1191"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3402093",
-        "itemLabel": "kosmos-381"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3415149",
-        "itemLabel": "resourcesat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3431532",
-        "itemLabel": "aissat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3459718",
-        "itemLabel": "soil-moisture-active-passive"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3459966",
-        "itemLabel": "spot-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3462658",
         "itemLabel": "türksat-4b"
     },
@@ -14180,24 +12812,12 @@
         "itemLabel": "molniya-1-no.2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3502357",
-        "itemLabel": "landsat-5"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3503015",
-        "itemLabel": "landsat-6"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3508992",
         "itemLabel": "syracuse-3a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3512063",
         "itemLabel": "q3512063"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3515596",
-        "itemLabel": "taranis"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3540515",
@@ -14216,16 +12836,8 @@
         "itemLabel": "usa-214"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3564198",
-        "itemLabel": "vegetation-and-environment-monitoring-on-a-new-micro-satellite"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3567386",
         "itemLabel": "gsat-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3595879",
-        "itemLabel": "jugnu"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3631031",
@@ -14270,10 +12882,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q3717087",
         "itemLabel": "e-st@r"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q3736073",
-        "itemLabel": "explorer-20"
     },
     {
         "item": "http://www.wikidata.org/entity/Q3739377",
@@ -14336,10 +12944,6 @@
         "itemLabel": "ews-g1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q381602",
-        "itemLabel": "aeronomy-of-ice-in-the-mesosphere"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q38280563",
         "itemLabel": "ors-5"
     },
@@ -14372,10 +12976,6 @@
         "itemLabel": "arktika"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q3912898",
-        "itemLabel": "stsat-2c"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q3920718",
         "itemLabel": "zeya"
     },
@@ -14406,14 +13006,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q4034748",
         "itemLabel": "bsat-3a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q4037149",
-        "itemLabel": "deimos-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q4037819",
-        "itemLabel": "eros-b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q4041719",
@@ -14476,10 +13068,6 @@
         "itemLabel": "saudi-oscar-50"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q41791665",
-        "itemLabel": "vrss-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q41975718",
         "itemLabel": "echostar-105/ses-11"
     },
@@ -14520,10 +13108,6 @@
         "itemLabel": "cosmos-914"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q4241153",
-        "itemLabel": "cryosat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q4247517",
         "itemLabel": "kupon"
     },
@@ -14542,10 +13126,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q4273946",
         "itemLabel": "tdrs-11"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q428048",
-        "itemLabel": "geoeye-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q4291710",
@@ -14584,28 +13164,8 @@
         "itemLabel": "gsat-29"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q4352990",
-        "itemLabel": "x-sat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q4381055",
-        "itemLabel": "munin"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q4393669",
-        "itemLabel": "resurs-p-no.1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q4420782",
         "itemLabel": "sirius-fm-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q4421262",
-        "itemLabel": "sich-1m"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q444263",
-        "itemLabel": "radarsat-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q444582",
@@ -14764,10 +13324,6 @@
         "itemLabel": "noaa-20"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q4703424",
-        "itemLabel": "alsat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q47246047",
         "itemLabel": "crew-dragon-demo-2"
     },
@@ -14778,10 +13334,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q4740877",
         "itemLabel": "amazonas-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q4740919",
-        "itemLabel": "amazônia-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q474206",
@@ -14852,10 +13404,6 @@
         "itemLabel": "kompsat-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q48457994",
-        "itemLabel": "asnaro-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q4855000",
         "itemLabel": "bangabandhu-1"
     },
@@ -14866,14 +13414,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q487279",
         "itemLabel": "kompsat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q48733702",
-        "itemLabel": "cartosat-2f"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q48734064",
-        "itemLabel": "microsat-td"
     },
     {
         "item": "http://www.wikidata.org/entity/Q48750500",
@@ -14900,24 +13440,12 @@
         "itemLabel": "noaa-21"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q48860963",
-        "itemLabel": "q48860963"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q48860968",
-        "itemLabel": "q48860968"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q48867800",
         "itemLabel": "star-one-d2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q493983",
         "itemLabel": "soyuz-tma-12"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q493991",
-        "itemLabel": "kompsat-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q495801",
@@ -14964,10 +13492,6 @@
         "itemLabel": "soyuz-tm-30"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q5098773",
-        "itemLabel": "vnredsat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q5130454",
         "itemLabel": "cleanseanet"
     },
@@ -14988,10 +13512,6 @@
         "itemLabel": "sts-3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q51904592",
-        "itemLabel": "shikisai"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q519533",
         "itemLabel": "gemini-9a"
     },
@@ -15000,44 +13520,12 @@
         "itemLabel": "cyclone-global-navigation-satellite-system"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q519887",
-        "itemLabel": "bka"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q52152678",
-        "itemLabel": "ñusat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q52152685",
-        "itemLabel": "ñusat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q52196628",
-        "itemLabel": "sentinel-3b"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q522425",
         "itemLabel": "cosmos-80"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q52317223",
-        "itemLabel": "kanopus-v-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q52317224",
-        "itemLabel": "kanopus-v-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q52317501",
-        "itemLabel": "kanopus-st"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q52317504",
         "itemLabel": "cosmos-2512"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q52375950",
-        "itemLabel": "toms-ep"
     },
     {
         "item": "http://www.wikidata.org/entity/Q52375962",
@@ -15090,10 +13578,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q524091",
         "itemLabel": "sts-51-j"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q525552",
-        "itemLabel": "ssot"
     },
     {
         "item": "http://www.wikidata.org/entity/Q52726080",
@@ -15160,10 +13644,6 @@
         "itemLabel": "discoverer-35"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q5310494",
-        "itemLabel": "dubaisat-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q531246",
         "itemLabel": "soyuz-17"
     },
@@ -15196,10 +13676,6 @@
         "itemLabel": "sts-65"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q534401",
-        "itemLabel": "upper-atmosphere-research-satellite"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q534559",
         "itemLabel": "soyuz-tma-15"
     },
@@ -15222,14 +13698,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q539769",
         "itemLabel": "score"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5421380",
-        "itemLabel": "injun-6"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5424500",
-        "itemLabel": "fasat-alfa"
     },
     {
         "item": "http://www.wikidata.org/entity/Q5426570",
@@ -15286,14 +13754,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q54801536",
         "itemLabel": "telstar-9"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5482851",
-        "itemLabel": "beijing"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54871041",
-        "itemLabel": "gaofen-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q54933345",
@@ -15428,10 +13888,6 @@
         "itemLabel": "expedition-60"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q5556788",
-        "itemLabel": "sac-c"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q55614192",
         "itemLabel": "itos-b"
     },
@@ -15466,10 +13922,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q55624492",
         "itemLabel": "noaa-9"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q55628381",
-        "itemLabel": "paktes-1a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q55633640",
@@ -15556,20 +14008,12 @@
         "itemLabel": "soyuz-tma-11"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q5626520",
-        "itemLabel": "göktürk-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q56276923",
         "itemLabel": "usa-130"
     },
     {
         "item": "http://www.wikidata.org/entity/Q56301112",
         "itemLabel": "cosmo-skymed-second-generation"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q56306398",
-        "itemLabel": "q56306398"
     },
     {
         "item": "http://www.wikidata.org/entity/Q56307467",
@@ -15596,16 +14040,8 @@
         "itemLabel": "peole"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q565632",
-        "itemLabel": "tandem-x"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q5669061",
         "itemLabel": "bonum-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5679081",
-        "itemLabel": "early-bird-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q568419",
@@ -15632,24 +14068,12 @@
         "itemLabel": "raincube"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q5737476",
-        "itemLabel": "cro"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q574293",
         "itemLabel": "lapan-tubsat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q577280",
         "itemLabel": "soyuz-tm-11"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q577550",
-        "itemLabel": "student-nitric-oxide-explorer"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q57965953",
-        "itemLabel": "saocom-1a"
     },
     {
         "item": "http://www.wikidata.org/entity/Q581712",
@@ -15666,18 +14090,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q5835616",
         "itemLabel": "cosmos-833"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q584697",
-        "itemLabel": "terra"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5853417",
-        "itemLabel": "explorer-45"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5853900",
-        "itemLabel": "fasat-b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q5858670",
@@ -15720,10 +14132,6 @@
         "itemLabel": "cosmos--637"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q59284044",
-        "itemLabel": "hysis"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q592851",
         "itemLabel": "cosmos-260"
     },
@@ -15746,14 +14154,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q596851",
         "itemLabel": "cosmos-71"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5969535",
-        "itemLabel": "icesat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q5972096",
-        "itemLabel": "ims-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q5972399",
@@ -15784,10 +14184,6 @@
         "itemLabel": "insat-4e"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q5973578",
-        "itemLabel": "irs-1d"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q5984917",
         "itemLabel": "oscar-19"
     },
@@ -15798,14 +14194,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q600377",
         "itemLabel": "near-field-infrared-experiment"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q60038349",
-        "itemLabel": "mohammed-vi---a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q60038416",
-        "itemLabel": "mohammed-vi---b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q600770",
@@ -15842,10 +14230,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q603179",
         "itemLabel": "kosmos-78"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6034736",
-        "itemLabel": "musket-ball"
     },
     {
         "item": "http://www.wikidata.org/entity/Q6035073",
@@ -15892,36 +14276,12 @@
         "itemLabel": "intelsat-708"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q6052292",
-        "itemLabel": "oreol-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q60526299",
-        "itemLabel": "cso-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q60526300",
-        "itemLabel": "cso-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q60526302",
-        "itemLabel": "cso-3"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q6055443",
         "itemLabel": "polar-operational-environmental-satellites"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q605802",
-        "itemLabel": "landsat-7"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q606269",
         "itemLabel": "sts-51-c"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6063761",
-        "itemLabel": "ionospheric-connection-explorer"
     },
     {
         "item": "http://www.wikidata.org/entity/Q606848",
@@ -15930,10 +14290,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q6069616",
         "itemLabel": "iridium-7"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6070828",
-        "itemLabel": "pegsat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q60740704",
@@ -15972,10 +14328,6 @@
         "itemLabel": "q60847825"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q60847866",
-        "itemLabel": "gosat-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q60848602",
         "itemLabel": "radio-rosto"
     },
@@ -15984,16 +14336,8 @@
         "itemLabel": "sts-37"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q6094671",
-        "itemLabel": "quickbird-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q609517",
         "itemLabel": "sts-62"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q60982412",
-        "itemLabel": "sstl-s1-4"
     },
     {
         "item": "http://www.wikidata.org/entity/Q60983047",
@@ -16022,10 +14366,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q611541",
         "itemLabel": "soyuz-tm-14"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6116059",
-        "itemLabel": "sabia-mar"
     },
     {
         "item": "http://www.wikidata.org/entity/Q6117043",
@@ -16200,16 +14540,8 @@
         "itemLabel": "radio-8"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q63226666",
-        "itemLabel": "nepalisat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q632761",
         "itemLabel": "sts-83"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q632896",
-        "itemLabel": "vanguard-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q633696",
@@ -16288,18 +14620,6 @@
         "itemLabel": "sts-34"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q6485033",
-        "itemLabel": "landsat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6485034",
-        "itemLabel": "landsat-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6485036",
-        "itemLabel": "landsat-8"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q648581",
         "itemLabel": "soyuz-11"
     },
@@ -16324,14 +14644,6 @@
         "itemLabel": "bluewalker-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q65297417",
-        "itemLabel": "kanopus-v-5"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q65297419",
-        "itemLabel": "kanopus-v-6"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q65297432",
         "itemLabel": "q65297432"
     },
@@ -16352,32 +14664,8 @@
         "itemLabel": "lincoln-experimental-satellite"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q65515867",
-        "itemLabel": "bhaskara-i"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q65516020",
-        "itemLabel": "rohini-satellite-rs-d1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q65516044",
-        "itemLabel": "rohini-satellite-rs-d2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q65560084",
-        "itemLabel": "risat-2b"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q65561404",
-        "itemLabel": "sross-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q656074",
         "itemLabel": "sts-128"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q6580046",
-        "itemLabel": "sentinel-4"
     },
     {
         "item": "http://www.wikidata.org/entity/Q658305",
@@ -16386,10 +14674,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q662021",
         "itemLabel": "soyuz-10"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q66293317",
-        "itemLabel": "cfosat"
     },
     {
         "item": "http://www.wikidata.org/entity/Q663818",
@@ -16462,10 +14746,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q67174946",
         "itemLabel": "dcbb"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q67175843",
-        "itemLabel": "saocom-1b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q672270",
@@ -16652,14 +14932,6 @@
         "itemLabel": "soyuz-tm-22"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q700995",
-        "itemLabel": "formosat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q701840",
-        "itemLabel": "formosat-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q703042",
         "itemLabel": "sts-51-a"
     },
@@ -16668,20 +14940,12 @@
         "itemLabel": "nimiq-4"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q705882",
-        "itemLabel": "terrasar-x"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q7072273",
         "itemLabel": "o3b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q7072859",
         "itemLabel": "ops-3762"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q7076238",
-        "itemLabel": "oceansat-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q7100108",
@@ -16694,10 +14958,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q7118264",
         "itemLabel": "pas-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q7125689",
-        "itemLabel": "pakistan-remote-sensing-satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q7126055",
@@ -16718,10 +14978,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q71962",
         "itemLabel": "sts-57"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q719789",
-        "itemLabel": "sputnik-3"
     },
     {
         "item": "http://www.wikidata.org/entity/Q721238",
@@ -16778,10 +15034,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q73235066",
         "itemLabel": "indian-data-relay-satellite-system"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q733468",
-        "itemLabel": "epe-b"
     },
     {
         "item": "http://www.wikidata.org/entity/Q734249",
@@ -17084,10 +15336,6 @@
         "itemLabel": "sts-101"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q765193",
-        "itemLabel": "earth-observing-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q7669864",
         "itemLabel": "tdrs-1"
     },
@@ -17124,10 +15372,6 @@
         "itemLabel": "tdrs-b"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q7673661",
-        "itemLabel": "tacsat-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q7692568",
         "itemLabel": "technology-experiment-satellite"
     },
@@ -17160,20 +15404,12 @@
         "itemLabel": "cosmos-561"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q7824383",
-        "itemLabel": "topsat"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q783576",
         "itemLabel": "kosmos-64"
     },
     {
         "item": "http://www.wikidata.org/entity/Q784808",
         "itemLabel": "european-data-relay-system"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q7864749",
-        "itemLabel": "uk-dmc-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q7865666",
@@ -17210,18 +15446,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q78805001",
         "itemLabel": "aleph-constellation"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q78808061",
-        "itemLabel": "ñusat-3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q78821814",
-        "itemLabel": "ñusat-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q78828258",
-        "itemLabel": "ñusat-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q7897870",
@@ -17308,14 +15532,6 @@
         "itemLabel": "sts-118"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q82515206",
-        "itemLabel": "ñusat-7"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q82547350",
-        "itemLabel": "ñusat-8"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q826634",
         "itemLabel": "kosmos-29"
     },
@@ -17372,10 +15588,6 @@
         "itemLabel": "at&t-t-16"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q83280522",
-        "itemLabel": "risat-2br1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q834666",
         "itemLabel": "sts-103"
     },
@@ -17390,10 +15602,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q834714",
         "itemLabel": "sts-41"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q8351327",
-        "itemLabel": "cosmos-1809"
     },
     {
         "item": "http://www.wikidata.org/entity/Q835717",
@@ -17418,10 +15626,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q838546",
         "itemLabel": "soyuz-tma-19"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q840293",
-        "itemLabel": "seosat-ingenio"
     },
     {
         "item": "http://www.wikidata.org/entity/Q840706",
@@ -17556,36 +15760,12 @@
         "itemLabel": "sts-100"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q862204",
-        "itemLabel": "kwangmyŏngsŏng-3-unit-2"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q86675323",
         "itemLabel": "soyuz-ms-19"
     },
     {
         "item": "http://www.wikidata.org/entity/Q86696",
         "itemLabel": "echostar-xvi"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q870032",
-        "itemLabel": "worldview-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q870049",
-        "itemLabel": "cryosat-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q87410499",
-        "itemLabel": "q87410499"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q880147",
-        "itemLabel": "enmap"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q884905",
-        "itemLabel": "tet-1"
     },
     {
         "item": "http://www.wikidata.org/entity/Q8880899",
@@ -17642,10 +15822,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q905133",
         "itemLabel": "sts-40"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q9053779",
-        "itemLabel": "paz"
     },
     {
         "item": "http://www.wikidata.org/entity/Q906142",
@@ -17730,10 +15906,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q9174128",
         "itemLabel": "poppy-1a"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q918266",
-        "itemLabel": "kosmos-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q9184129",
@@ -17904,10 +16076,6 @@
         "itemLabel": "fanion-1-/-tripos-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q925312",
-        "itemLabel": "greenhouse-gases-observing-satellite"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q9256448",
         "itemLabel": "eutelsat-ii-f1"
     },
@@ -17918,10 +16086,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q925821",
         "itemLabel": "cosmos-74"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q925863",
-        "itemLabel": "nigeriasat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q9259168",
@@ -18040,10 +16204,6 @@
         "itemLabel": "shenzhou-11"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q9336086",
-        "itemLabel": "shizuku"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q9337182",
         "itemLabel": "sinosat-3"
     },
@@ -18062,10 +16222,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q9344132",
         "itemLabel": "starad"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q935270",
-        "itemLabel": "explorer-8"
     },
     {
         "item": "http://www.wikidata.org/entity/Q9353717",
@@ -18110,10 +16266,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q9361184",
         "itemLabel": "transit-5a3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q936739",
-        "itemLabel": "radarsat-2"
     },
     {
         "item": "http://www.wikidata.org/entity/Q9368342",
@@ -18200,10 +16352,6 @@
         "itemLabel": "brazilsat-2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q96757068",
-        "itemLabel": "nigeriasat-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q96757094",
         "itemLabel": "tianqin-1"
     },
@@ -18238,10 +16386,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q968429",
         "itemLabel": "soyuz-tma-07m"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q969151",
-        "itemLabel": "lewis"
     },
     {
         "item": "http://www.wikidata.org/entity/Q970002",
@@ -18288,10 +16432,6 @@
         "itemLabel": "kosmos-2524"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q97279947",
-        "itemLabel": "haiyang-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q972936",
         "itemLabel": "kosmos-24"
     },
@@ -18318,10 +16458,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q97380305",
         "itemLabel": "q97380305"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q97380530",
-        "itemLabel": "q97380530"
     },
     {
         "item": "http://www.wikidata.org/entity/Q97481006",
@@ -18360,10 +16496,6 @@
         "itemLabel": "q9838854"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q987402",
-        "itemLabel": "ers-1"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q9887185",
         "itemLabel": "q9887185"
     },
@@ -18400,14 +16532,6 @@
         "itemLabel": "q9978330"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q14927",
-        "itemLabel": "adeos-i"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q14933",
-        "itemLabel": "adeos-ii"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q14967",
         "itemLabel": "intelsat-24"
     },
@@ -18424,16 +16548,8 @@
         "itemLabel": "anusat"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q15010",
-        "itemLabel": "acrimsat"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q15012",
         "itemLabel": "advanced-communications-technology-satellite"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q15015",
-        "itemLabel": "argos"
     },
     {
         "item": "http://www.wikidata.org/entity/Q17181",
@@ -18572,10 +16688,6 @@
         "itemLabel": "expedition-34"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q17397",
-        "itemLabel": "aqua"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q17513",
         "itemLabel": "aeros-a"
     },
@@ -18592,36 +16704,12 @@
         "itemLabel": "van-allen-probes"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q23649",
-        "itemLabel": "aura"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q23658",
-        "itemLabel": "aurora-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q23663",
-        "itemLabel": "azur"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q23687",
         "itemLabel": "badr-1"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q23697",
-        "itemLabel": "badr-ii"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q23940",
         "itemLabel": "star-one-c3"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q25264",
-        "itemLabel": "bhaskara-ii"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q26120",
-        "itemLabel": "bird"
     },
     {
         "item": "http://www.wikidata.org/entity/Q27327",
@@ -18652,24 +16740,12 @@
         "itemLabel": "goes-11"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q35494",
-        "itemLabel": "calipso"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q35507",
-        "itemLabel": "cameo"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q36631",
         "itemLabel": "palapa-d"
     },
     {
         "item": "http://www.wikidata.org/entity/Q36698",
         "itemLabel": "telkom-2"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q40518",
-        "itemLabel": "pioneer-5"
     },
     {
         "item": "http://www.wikidata.org/entity/Q40773",
@@ -18688,96 +16764,16 @@
         "itemLabel": "apollo-11"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q48600",
-        "itemLabel": "champ"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q48621",
         "itemLabel": "comets"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49397",
-        "itemLabel": "cloudsat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49480",
-        "itemLabel": "advanced-land-observation-satellite"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49559",
-        "itemLabel": "demeter"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49687",
-        "itemLabel": "earth-radiation-budget-satellite"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49692",
-        "itemLabel": "envisat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49693",
-        "itemLabel": "equator-s"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49877",
-        "itemLabel": "explorer-19"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49883",
-        "itemLabel": "dme"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49886",
-        "itemLabel": "explorer-32"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49891",
-        "itemLabel": "explorer-39"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49893",
-        "itemLabel": "explorer-51"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49894",
-        "itemLabel": "explorer-54"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49895",
-        "itemLabel": "explorer-55"
     },
     {
         "item": "http://www.wikidata.org/entity/Q49905",
         "itemLabel": "forte"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q49912",
-        "itemLabel": "fast-auroral-snapshot-explorer"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49939",
-        "itemLabel": "freja"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q49959",
         "itemLabel": "geosat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49965",
-        "itemLabel": "geotail"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49981",
-        "itemLabel": "heat-capacity-mapping-mission"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q50019",
-        "itemLabel": "icesat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q51151",
-        "itemLabel": "image"
     },
     {
         "item": "http://www.wikidata.org/entity/Q51518",
@@ -18788,32 +16784,8 @@
         "itemLabel": "kosmos-2"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q53038",
-        "itemLabel": "kosmos-3"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q53535",
         "itemLabel": "kosmos-4"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54208",
-        "itemLabel": "magsat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54347",
-        "itemLabel": "razaksat"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54362",
-        "itemLabel": "scisat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54378",
-        "itemLabel": "timed"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54379",
-        "itemLabel": "terriers"
     },
     {
         "item": "http://www.wikidata.org/entity/Q54387",

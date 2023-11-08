@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd $(dirname $(realpath $0))
+workdir=$(dirname $(realpath $0))
+cd $workdir
+
 
 #### update wikidata list
 (
