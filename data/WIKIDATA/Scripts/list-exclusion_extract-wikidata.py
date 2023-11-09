@@ -33,8 +33,24 @@ where = """
   UNION {?item  wdt:P31/wdt:P279*  wd:Q466421 .} # reconnaissance satellite
   UNION {?item  wdt:P31/wdt:P279*  wd:Q2741214 .} # KH-7 Gambit
   UNION {?item  wdt:P31/wdt:P279*  wd:Q973887 .} # military satellite 
-  #UNION {?item  wdt:P31/wdt:P279*  wd:Q854845 .} # Earth observation satellite
-
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q854845 .} # Earth observation satellite
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q512399 .} # unmanned spaceflight
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q61937849 .} # geophysical observatory 
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q1365207 .} # bird observatory
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q95945728 .} # technology demonstration spacecraft
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q2566071 .} # manned weather station
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q1009523 .} # Automated Transfer Vehicle
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q14514346 .} # satellite program
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q7572593 .} # space launch 
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q153257 .} # Automated Transfer Vehicle
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q109743523 .} # Cargo Dragon 
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q236448 .} # Dragon 
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q18812508 .} # space station module 
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q117384805 .} # spacecraft family 
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q190107 .} # weather station
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q127899 .} # Multi-Purpose Logistics Module
+  UNION {?item  wdt:P31/wdt:P279*  wd:Q117384800 .} # spacecraft model
+  
 SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }
 """
