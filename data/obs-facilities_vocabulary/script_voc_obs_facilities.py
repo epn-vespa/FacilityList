@@ -1,33 +1,41 @@
 import json
-
+import unicodedata
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
     wikidata_list = json.load(f)
 
-output_list = []
+
+
+
+# Function to remove accents from strings
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return nfkd_form.encode('ASCII', 'ignore').decode('ASCII')
+
 
 def transform_list(wikidata_list):
+    output_list = []
     for item in wikidata_list:
         transformed_item = {
-            "@id": item["itemLabel-lower"],
-            "rdfs:label": item["itemLabel"],
-            "rdfs:comment": item.get("itemDescription", ""),
-            "skos:sameAs": [item["aliases"].split('|')] if item["aliases"] else [],
+             "@id": remove_accents(item["itemLabel-lower"]),
+            "rdfs:label": remove_accents(item["itemLabel"]),
+            "rdfs:comment": remove_accents(item.get("itemDescription", "")),
+            "skos:sameAs": [remove_accents(alias) for alias in item["aliases"].split('|')] if item.get("aliases") else [],
             "skos:exactMatch": [
-            item["item"]
+                item["item"]
              ]
         }
         # Conditionally add URLs to skos:exactMatch
         if item.get("all_Minor_Planet_Center_observatory_ID"):
             transformed_item["skos:exactMatch"].append(
-                f"https://minorplanetcenter.net/iau/lists/ObsCodesF.html#{item['all_Minor_Planet_Center_observatory_ID'].replace(' ', '_')}"
+                f"https://minorplanetcenter.net/iau/lists/ObsCodesF.html#{remove_accents(item['all_Minor_Planet_Center_observatory_ID']).replace(' ', '_')}"
             )
         if item.get("all_NSSDCA_ID"):
             transformed_item["skos:exactMatch"].append(
-                f"https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id={item['all_NSSDCA_ID'].replace(' ', '_')}"
+                f"https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id={remove_accents(item['all_NSSDCA_ID']).replace(' ', '_')}"
             )
         if item.get("all_NAIF_ID"):
             transformed_item["skos:exactMatch"].append(
-                f"https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/naif_ids.html#Spacecraft{item['all_NAIF_ID'].replace(' ', '_')}"
+                f"https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/naif_ids.html#Spacecraft{remove_accents(item['all_NAIF_ID']).replace(' ', '_')}"
             )
 
         # Append the transformed item to the output list
@@ -36,16 +44,6 @@ def transform_list(wikidata_list):
     return output_list
 
 
-                #item["all_COSPAR_ID"],
-                #item["all_NAIF_ID"],
-                #item["all_NSSDCA_ID"],
-                #item["all_Minor_Planet_Center_observatory_ID"],
-                #item["all_instance_of"],
-                #item["all_part_of"]
-
-
-
-# Call the function to transform the list
 result_list = transform_list(wikidata_list)
 
 # Write the result to a JSON file
