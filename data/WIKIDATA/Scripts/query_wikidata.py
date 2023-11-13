@@ -143,8 +143,10 @@ for i in range(1 if test == True else (int(results_count) // page_size) + 1):
 
     # remplacer les espaces par des tirets dans itemLabel
     for e in new_elements:
-        e['itemLabel-lower'] = e['itemLabel'].lower().replace(' ', '-')
-        e['aliases-lower'] = e['aliases'].lower().replace(' ', '-')
+        e['itemLabel'] = e['itemLabel'].lower().replace(' ', '-')
+        #e['itemLabel-lower'] = e['itemLabel'].lower().replace(' ', '-')
+        e['aliases'] = e['aliases'].lower().replace(' ', '-')
+        #e['aliases-lower'] = e['aliases'].lower().replace(' ', '-')
         # e['all_has_part'] = e['all_has_part'].lower().replace(' ', '-')
         # e['all_part_of'] = e['all_part_of'].lower().replace(' ', '-')
 

@@ -6,16 +6,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2428910",
-            "itemLabel": "samuel-oschin-telescope",
+            "itemLabel": "Samuel Oschin telescope",
             "itemDescription": "48-inch-aperture (1.22 m) Schmidt camera at the Palomar Observatory in northern San Diego County, California",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "palomar-1.2m-oschin|\u585e\u7e46\u723e\u00b7\u5967\u65af\u6b3d\u671b\u9060\u93e1|oschin-schmidt|p48",
-            "all_instance_of": "Schmidt camera|optical telescope",
+            "aliases": "Palomar 1.2m Oschin|\u585e\u7e46\u723e\u00b7\u5967\u65af\u6b3d\u671b\u9060\u93e1|Oschin Schmidt|P48",
+            "all_instance_of": "optical telescope|Schmidt camera",
             "all_has_part": "",
-            "all_part_of": "Palomar Mountain Observatory"
+            "all_part_of": "Palomar Mountain Observatory",
+            "itemLabel-lower": "samuel-oschin-telescope",
+            "aliases-lower": "palomar-1.2m-oschin|\u585e\u7e46\u723e\u00b7\u5967\u65af\u6b3d\u671b\u9060\u93e1|oschin-schmidt|p48"
         }
     ],
     [
@@ -25,16 +27,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2471197",
-            "itemLabel": "hale-telescope",
+            "itemLabel": "Hale Telescope",
             "itemDescription": "telescope at Palomar Observatory in California, US",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "p200|palomar-5.1m-hale|palomar|hale-telescoop|hale-telescoop|hale-telescope",
-            "all_instance_of": "reflecting telescope|optical telescope",
+            "aliases": "P200|Palomar 5.1m Hale|palomar|Hale-telescoop|Hale Telescoop|Hale Telescope",
+            "all_instance_of": "optical telescope|reflecting telescope",
             "all_has_part": "",
-            "all_part_of": "Palomar Mountain Observatory"
+            "all_part_of": "Palomar Mountain Observatory",
+            "itemLabel-lower": "hale-telescope",
+            "aliases-lower": "p200|palomar-5.1m-hale|palomar|hale-telescoop|hale-telescoop|hale-telescope"
         }
     ],
     [
@@ -44,16 +48,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q123182796",
-            "itemLabel": "keck-i-10m",
+            "itemLabel": "Keck I 10m",
             "itemDescription": "Optical telescope at Maunakea in Hawaii,",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "keck1",
+            "aliases": "Keck1",
             "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": "W. M. Keck Observatory"
+            "all_part_of": "W. M. Keck Observatory",
+            "itemLabel-lower": "keck-i-10m",
+            "aliases-lower": "keck1"
         }
     ],
     [
@@ -63,16 +69,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q123182833",
-            "itemLabel": "keck-ii-10m",
+            "itemLabel": "Keck II 10m",
             "itemDescription": "optical telescope at Maunakea in Hawaii, U.S.",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "keck2",
+            "aliases": "Keck2",
             "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": "W. M. Keck Observatory"
+            "all_part_of": "W. M. Keck Observatory",
+            "itemLabel-lower": "keck-ii-10m",
+            "aliases-lower": "keck2"
         }
     ],
     [
@@ -82,54 +90,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3546489",
-            "itemLabel": "nicholas-u.-mayall-telescope",
+            "itemLabel": "Nicholas U. Mayall Telescope",
             "itemDescription": "four-meter reflector telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "4m-ncholas-u.-mayall-telescope|mayall-teleskobu|nicholas-u.-mayalls-teleskop|telescope-mayall|mayall-telescope|mayall-4-meter-telescope|mayall",
+            "aliases": "4m Ncholas U. Mayall Telescope|Mayall Teleskobu|Nicholas U. Mayalls teleskop|Telescope Mayall|Mayall Telescope|Mayall 4-meter Telescope|Mayall",
             "all_instance_of": "optical telescope|Ritchey\u2013Chr\u00e9tien telescope",
             "all_has_part": "Dark Energy Spectroscopic Instrument",
-            "all_part_of": "Kitt Peak National Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Hobby-Eberly Telescope",
-            "ID": "HET"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q46540136",
-            "itemLabel": "high-energy-transient-explorer-2-hete-2",
-            "itemDescription": "NASA artificial satellite",
-            "all_COSPAR_ID": "2000-061A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2000-061A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "hete-2",
-            "all_instance_of": "artificial satellite",
-            "all_has_part": "",
-            "all_part_of": "High Energy Transient Explorer"
-        }
-    ],
-    [
-        {
-            "Name": "Hobby-Eberly Telescope",
-            "ID": "HET"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q3348348",
-            "itemLabel": "observatoire-d'hettange",
-            "itemDescription": "Maginot Line observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatoire-de-hettange-grande",
-            "all_instance_of": "observatory|fort",
-            "all_has_part": "",
-            "all_part_of": "Maginot Line"
+            "all_part_of": "Kitt Peak National Observatory",
+            "itemLabel-lower": "nicholas-u.-mayall-telescope",
+            "aliases-lower": "4m-ncholas-u.-mayall-telescope|mayall-teleskobu|nicholas-u.-mayalls-teleskop|telescope-mayall|mayall-telescope|mayall-4-meter-telescope|mayall"
         }
     ],
     [
@@ -139,35 +111,39 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q139605",
-            "itemLabel": "hobby\u2013eberly-telescope",
+            "itemLabel": "Hobby\u2013Eberly Telescope",
             "itemDescription": "Texan astronomy instrument",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0445\u043e\u0431\u0431\u0438-\u044d\u0431\u0435\u0440\u043b\u0438|het|het",
+            "aliases": "\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0425\u043e\u0431\u0431\u0438-\u042d\u0431\u0435\u0440\u043b\u0438|HET|HET",
             "all_instance_of": "optical telescope|segmented mirror",
             "all_has_part": "",
-            "all_part_of": "McDonald Observatory"
+            "all_part_of": "McDonald Observatory",
+            "itemLabel-lower": "hobby\u2013eberly-telescope",
+            "aliases-lower": "\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0445\u043e\u0431\u0431\u0438-\u044d\u0431\u0435\u0440\u043b\u0438|het|het"
         }
     ],
     [
         {
-            "Name": "Hobby-Eberly Telescope",
-            "ID": "HET"
+            "Name": "William Herschel Telescope",
+            "ID": "WHT-4.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q46540026",
-            "itemLabel": "hete-1",
-            "itemDescription": "satellite",
-            "all_COSPAR_ID": "1996-061A",
+            "item": "http://www.wikidata.org/entity/Q541505",
+            "itemLabel": "William Herschel Telescope",
+            "itemDescription": "telescope in La Palma, Spain",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "",
-            "all_instance_of": "artificial satellite",
+            "aliases": "WHT|WHT",
+            "all_instance_of": "reflecting telescope",
             "all_has_part": "",
-            "all_part_of": "High Energy Transient Explorer"
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemLabel-lower": "william-herschel-telescope",
+            "aliases-lower": "wht|wht"
         }
     ],
     [
@@ -177,15 +153,37 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q4767191",
-            "itemLabel": "anna-l.-nickel-telescope",
+            "itemLabel": "Anna L. Nickel telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lick1m|lick-1m-nickel-reflector",
+            "aliases": "Lick1m|Lick 1m Nickel Reflector",
             "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": "Lick Observatory"
+            "all_part_of": "Lick Observatory",
+            "itemLabel-lower": "anna-l.-nickel-telescope",
+            "aliases-lower": "lick1m|lick-1m-nickel-reflector"
+        }
+    ],
+    [
+        {
+            "Name": "3m Lick Shane Reflector",
+            "ID": "Lick 3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5006395",
+            "itemLabel": "C. Donald Shane Telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "Lick 3m|3m Lick Shane Reflector|\u5510\u7eb3\u5fb7\u00b7\u8096\u6069\u671b\u8fdc\u955c|C. Donald Shane telescope|Shane telescope|Shane Reflector|C. Donald Shane telescope",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Lick Observatory",
+            "itemLabel-lower": "c.-donald-shane-telescope",
+            "aliases-lower": "lick-3m|3m-lick-shane-reflector|\u5510\u7eb3\u5fb7\u00b7\u8096\u6069\u671b\u8fdc\u955c|c.-donald-shane-telescope|shane-telescope|shane-reflector|c.-donald-shane-telescope"
         }
     ],
     [
@@ -195,15 +193,38 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q41796381",
-            "itemLabel": "hiltner-2.4m-telescope",
+            "itemLabel": "Hiltner 2.4m Telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mdm-2.4|mdm-2.4m-hiltner",
+            "aliases": "MDM-2.4|MDM 2.4m Hiltner",
             "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": "Michigan-Dartmouth-MIT Observatory"
+            "all_part_of": "Michigan-Dartmouth-MIT Observatory",
+            "itemLabel-lower": "hiltner-2.4m-telescope",
+            "aliases-lower": "mdm-2.4|mdm-2.4m-hiltner"
+        }
+    ],
+    [
+        {
+            "Name": "Nordic Optical Telescope",
+            "ID": "NOT"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q980966",
+            "itemLabel": "Nordic Optical Telescope",
+            "itemDescription": "architectural structure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u5317\u6b27\u5149\u5b66\u671b\u8fdc\u955c|Telescopio Optico Nordico",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemLabel-lower": "nordic-optical-telescope",
+            "aliases-lower": "\u5317\u6b27\u5149\u5b66\u671b\u8fdc\u955c|telescopio-optico-nordico"
         }
     ],
     [
@@ -213,16 +234,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q50017",
-            "itemLabel": "hinotori",
+            "itemLabel": "Hinotori",
             "itemDescription": "Japanese artificial satellite",
             "all_COSPAR_ID": "1981-017A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1981-017A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "astro-a|astro-a|astro-a|astro-a|astro-a|astro-a|astro-a|hinotori|hinotori|hinotori|hinotori",
+            "aliases": "ASTRO-A|Astro-A|ASTRO-A|ASTRO A|ASTRO-A|ASTRO-A|ASTRO-A|Hinotori|Hinotori|Hinotori|Hinotori",
             "all_instance_of": "space telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "hinotori",
+            "aliases-lower": "astro-a|astro-a|astro-a|astro-a|astro-a|astro-a|astro-a|hinotori|hinotori|hinotori|hinotori"
         }
     ],
     [
@@ -232,16 +255,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3267958",
-            "itemLabel": "kounotori-2",
+            "itemLabel": "Kounotori 2",
             "itemDescription": "second H-II Transfer Vehicle",
             "all_COSPAR_ID": "2011-003A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u300c\u9e73\u300d2\u53f7\u673a|htv-2|kounotori|kountouri2|htv-2|htv-2|htv-2",
+            "aliases": "\u300c\u9e73\u300d2\u53f7\u673a|HTV-2|Kounotori|KOUNTOURI2|HTV-2|HTV-2|HTV-2",
             "all_instance_of": "H-II Transfer Vehicle",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "kounotori-2",
+            "aliases-lower": "\u300c\u9e73\u300d2\u53f7\u673a|htv-2|kounotori|kountouri2|htv-2|htv-2|htv-2"
         }
     ],
     [
@@ -251,16 +276,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q22084842",
-            "itemLabel": "kounotori-9",
+            "itemLabel": "Kounotori 9",
             "itemDescription": "Cargo Resupply mission to the ISS",
             "all_COSPAR_ID": "2020-030A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "kounotori-9|\u300c\u9e73\u300d9\u53f7\u673a|htv-9|htv9|kounotori-9|htv-9",
+            "aliases": "Kounotori 9|\u300c\u9e73\u300d9\u53f7\u673a|HTV-9|HTV9|Kounotori 9|HTV-9",
             "all_instance_of": "H-II Transfer Vehicle",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "kounotori-9",
+            "aliases-lower": "kounotori-9|\u300c\u9e73\u300d9\u53f7\u673a|htv-9|htv9|kounotori-9|htv-9"
         }
     ],
     [
@@ -270,35 +297,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3273069",
-            "itemLabel": "kounotori-3",
+            "itemLabel": "Kounotori 3",
             "itemDescription": "2012 Japanese resupply spaceflight to the ISS",
             "all_COSPAR_ID": "2012-038A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u300c\u9e73\u300d3\u53f7\u673a|htv-3|kounotori3|htv-3|htv-3|htv3|htv-3|htv-3",
+            "aliases": "\u300c\u9e73\u300d3\u53f7\u673a|HTV-3|KOUNOTORI3|HTV-3|HTV 3|HTV3|HTV-3|HTV-3",
             "all_instance_of": "H-II Transfer Vehicle",
             "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Nordic Optical Telescope",
-            "ID": "NOT"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14468029",
-            "itemLabel": "kounotori-4",
-            "itemDescription": "Japanese uncrewed spacecraft",
-            "all_COSPAR_ID": "2013-040A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\ucf54\ub178\ud1a0\ub9ac-4\ud638\uae30|\u300c\u9e73\u300d4\u53f7\u673a|htv-4|\uace0\ub178\ud1a0\ub9ac-4\ud638\uae30|htv-4|kounotori-4|htv-4",
-            "all_instance_of": "H-II Transfer Vehicle",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "kounotori-3",
+            "aliases-lower": "\u300c\u9e73\u300d3\u53f7\u673a|htv-3|kounotori3|htv-3|htv-3|htv3|htv-3|htv-3"
         }
     ],
     [
@@ -308,16 +318,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q123182929",
-            "itemLabel": "peters-automated-infrared-imaging-telescope",
+            "itemLabel": "Peters Automated Infrared Imaging Telescope",
             "itemDescription": "the first meter-class telescope operating as a fully robotic IR imaging system",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "pairitel",
+            "aliases": "PAIRITEL",
             "all_instance_of": "infrared telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "peters-automated-infrared-imaging-telescope",
+            "aliases-lower": "pairitel"
         }
     ],
     [
@@ -327,16 +339,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q16269",
-            "itemLabel": "galileo-national-telescope",
+            "itemLabel": "Galileo National Telescope",
             "itemDescription": "3.58m Italian telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "Z19",
-            "aliases": "\u062a\u06cc\u0627\u0646\u062c\u06cc|\u4f3d\u5229\u7565\u570b\u969b\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u5bb6\u671b\u9060\u93e1|\u30ac\u30ea\u30ec\u30aa\u56fd\u7acb\u671b\u9060\u93e1|tng\u671b\u9060\u93e1|tng|tng",
+            "aliases": "\u062a\u06cc\u0627\u0646\u062c\u06cc|\u4f3d\u5229\u7565\u570b\u969b\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u5bb6\u671b\u9060\u93e1|\u30ac\u30ea\u30ec\u30aa\u56fd\u7acb\u671b\u9060\u93e1|TNG\u671b\u9060\u93e1|TNG|TNG",
             "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
             "all_has_part": "",
-            "all_part_of": "Roque de los Muchachos Observatory"
+            "all_part_of": "Roque de los Muchachos Observatory",
+            "itemLabel-lower": "galileo-national-telescope",
+            "aliases-lower": "\u062a\u06cc\u0627\u0646\u062c\u06cc|\u4f3d\u5229\u7565\u570b\u969b\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u5bb6\u671b\u9060\u93e1|\u30ac\u30ea\u30ec\u30aa\u56fd\u7acb\u671b\u9060\u93e1|tng\u671b\u9060\u93e1|tng|tng"
         }
     ],
     [
@@ -346,16 +360,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q6140627",
-            "itemLabel": "gemini-north",
+            "itemLabel": "Gemini North",
             "itemDescription": "northern hemisphere facility of the Gemini Observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "T15",
-            "aliases": "the-frederick-c.-gillett-gemini-telescope|gemini-north-telescope|gemini-north-observatory|frederick-c.-gillett-gemini-telescope",
+            "aliases": "The Frederick C. Gillett Gemini Telescope|Gemini North telescope|Gemini North Observatory|Frederick C. Gillett Gemini Telescope",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
-            "all_part_of": "Gemini Observatory|Mauna Kea Observatories"
+            "all_part_of": "Gemini Observatory|Mauna Kea Observatories",
+            "itemLabel-lower": "gemini-north",
+            "aliases-lower": "the-frederick-c.-gillett-gemini-telescope|gemini-north-telescope|gemini-north-observatory|frederick-c.-gillett-gemini-telescope"
         }
     ],
     [
@@ -365,73 +381,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q19673584",
-            "itemLabel": "gemini-south",
+            "itemLabel": "Gemini South",
             "itemDescription": "southern hemisphere facility of the Gemini Observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "I11",
-            "aliases": "gemini-south-telescope|gems|gemini-south-observatory",
+            "aliases": "Gemini South telescope|GeMS|Gemini South Observatory",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
-            "all_part_of": "Gemini Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Gemini South",
-            "ID": "Gemini-S"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q47010762",
-            "itemLabel": "gemini-sc-2",
-            "itemDescription": "First reusable space capsule",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gemini-spacecraft-no.-2",
-            "all_instance_of": "Gemini spacecraft",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "UH 88inch",
-            "ID": "UH88"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q4052125",
-            "itemLabel": "uh88",
-            "itemDescription": "telescope at Hawaii",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "T12",
-            "aliases": "88-\u0434\u044e\u0439\u043c\u043e\u0432\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443\u043d\u0456\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0443-\u0433\u0430\u0432\u0430\u0457|2,2-\u043c-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443\u043d\u0456\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0443-\u0433\u0430\u0432\u0430\u0457-(\u0443\u04332,2)|2,2-\u043c-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443\u043d\u0456\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0443-\u0433\u0430\u0432\u0430\u0457|t\u00e9lescope-de-88-pouces-de-l'universit\u00e9-d'hawa\u00ef",
-            "all_instance_of": "optical telescope",
-            "all_has_part": "",
-            "all_part_of": "Mauna Kea Observatories"
-        }
-    ],
-    [
-        {
-            "Name": "Asiago Ekar Telescope",
-            "ID": "Ekar"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q3972165",
-            "itemLabel": "cima-ekar-observing-station",
-            "itemDescription": "Italian astronomical observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "098",
-            "aliases": "estaci\u00f3-d'observaci\u00f3-de-cima-ekar|\u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f-\u0441\u0442\u0430\u043d\u0446\u0438\u044f-\u0430\u0437\u0438\u0430\u0433\u043e-\u0447\u0438\u043c\u0430-\u044d\u043a\u0430\u0440|\u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f-\u0441\u0442\u0430\u043d\u0446\u0438\u044f-\u0430\u0437\u0438\u0430\u0433\u043e-\u0441\u0438\u043c\u0430-\u044d\u043a\u0430\u0440|\u30c1\u30fc\u30de\u30fb\u30a8\u30ab\u30eb\u89b3\u6e2c\u6240|\u30c1\u30fc\u30de\u30fb\u30a8\u30ab\u30eb\u5929\u6587\u53f0|\u30a2\u30b8\u30a2\u30fc\u30b4\u30fb\u30c1\u30fc\u30de\u30fb\u30a8\u30ab\u30eb\u5929\u6587\u53f0",
-            "all_instance_of": "astronomical observatory",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Gemini Observatory",
+            "itemLabel-lower": "gemini-south",
+            "aliases-lower": "gemini-south-telescope|gems|gemini-south-observatory"
         }
     ],
     [
@@ -441,16 +402,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q848021",
-            "itemLabel": "united-kingdom-infrared-telescope",
+            "itemLabel": "United Kingdom Infrared Telescope",
             "itemDescription": "infrared reflecting telescope in Hawaii",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "T11",
-            "aliases": "\uc601\uad6d-\uc801\uc678\uc120\ub9dd\uc6d0\uacbd|ukirt|ukirt|ukirt|ukirt",
+            "aliases": "\uc601\uad6d \uc801\uc678\uc120\ub9dd\uc6d0\uacbd|UKIRT|UKIRT|UKIRT|UKIRT",
             "all_instance_of": "infrared telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "united-kingdom-infrared-telescope",
+            "aliases-lower": "\uc601\uad6d-\uc801\uc678\uc120\ub9dd\uc6d0\uacbd|ukirt|ukirt|ukirt|ukirt"
         }
     ],
     [
@@ -460,111 +423,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q531487",
-            "itemLabel": "david-dunlap-observatory",
+            "itemLabel": "David Dunlap Observatory",
             "itemDescription": "astronomical observatory in Ontario Canada",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "779",
-            "aliases": "\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u81fa|\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u53f0|\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u53f0|ddo",
+            "aliases": "\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u81fa|\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u53f0|\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u53f0|DDO",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Asiago Galileo Telescope",
-            "ID": "Galileo"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q105425030",
-            "itemLabel": "galileo",
-            "itemDescription": "NASA robotic space probe that studied the Jupiter system, as well as asteroids Gaspra and Ida",
-            "all_COSPAR_ID": "1989-084B",
-            "all_NAIF_ID": "-77",
-            "all_NSSDCA_ID": "1989-084B",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u4f3d\u5229\u7565\u822a\u5929\u5668|galileo-spacecraft|galileo-orbiter",
-            "all_instance_of": "orbiter|former entity|planetary probe",
-            "all_has_part": "Jupiter Atmospheric Probe",
-            "all_part_of": "Galileo mission"
-        }
-    ],
-    [
-        {
-            "Name": "Asiago Galileo Telescope",
-            "ID": "Galileo"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q16269",
-            "itemLabel": "galileo-national-telescope",
-            "itemDescription": "3.58m Italian telescope",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "Z19",
-            "aliases": "\u062a\u06cc\u0627\u0646\u062c\u06cc|\u4f3d\u5229\u7565\u570b\u969b\u671b\u9060\u93e1|\u4f3d\u5229\u7565\u570b\u5bb6\u671b\u9060\u93e1|\u30ac\u30ea\u30ec\u30aa\u56fd\u7acb\u671b\u9060\u93e1|tng\u671b\u9060\u93e1|tng|tng",
-            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
-            "all_has_part": "",
-            "all_part_of": "Roque de los Muchachos Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Asiago Galileo Telescope",
-            "ID": "Galileo"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q111471063",
-            "itemLabel": "galileo-19-(2c5)",
-            "itemDescription": "43055",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "",
-            "all_instance_of": "artificial satellite",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Asiago Galileo Telescope",
-            "ID": "Galileo"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q111471064",
-            "itemLabel": "galileo-20-(2c6)",
-            "itemDescription": "43056",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "",
-            "all_instance_of": "artificial satellite",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Asiago Galileo Telescope",
-            "ID": "Galileo"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q111471065",
-            "itemLabel": "galileo-21-(2c7)",
-            "itemDescription": "43057",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "",
-            "all_instance_of": "artificial satellite",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "david-dunlap-observatory",
+            "aliases-lower": "\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u81fa|\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u53f0|\u5927\u885b\u00b7\u9127\u666e\u5929\u6587\u53f0|ddo"
         }
     ],
     [
@@ -574,16 +444,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q779895",
-            "itemLabel": "mmt-observatory",
+            "itemLabel": "MMT Observatory",
             "itemDescription": "astronomical observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "whipple-observatory|multiple-mirror-telescope,-telescopio-a-specchi-multipli|mmto|mmt|multiple-mirror-telescope|mmto|mmto|mmt",
+            "aliases": "Whipple Observatory|Multiple Mirror Telescope, telescopio a specchi multipli|MMTO|MMT|Multiple Mirror Telescope|MMTO|MMTO|MMT",
             "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory"
+            "all_part_of": "Fred Lawrence Whipple Observatory|Steward Observatory",
+            "itemLabel-lower": "mmt-observatory",
+            "aliases-lower": "whipple-observatory|multiple-mirror-telescope,-telescopio-a-specchi-multipli|mmto|mmt|multiple-mirror-telescope|mmto|mmto|mmt"
         }
     ],
     [
@@ -593,16 +465,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q7572501",
-            "itemLabel": "space-solar-telescope",
+            "itemLabel": "Space Solar Telescope",
             "itemDescription": "planned Chinese 1 metre optical space solar telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "sst|space-solar-telescope|sst",
+            "aliases": "SST|Space Solar Telescope|SST",
             "all_instance_of": "optical telescope|space telescope|proposed telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "space-solar-telescope",
+            "aliases-lower": "sst|space-solar-telescope|sst"
         }
     ],
     [
@@ -612,16 +486,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q201953",
-            "itemLabel": "spitzer-space-telescope",
+            "itemLabel": "Spitzer Space Telescope",
             "itemDescription": "former NASA infrared space observatory",
             "all_COSPAR_ID": "2003-038A",
             "all_NAIF_ID": "-79",
             "all_NSSDCA_ID": "2003-038A",
             "all_Minor_Planet_Center_observatory_ID": "245",
-            "aliases": "sirtf|spitzerjev-vesoljski-daljnogled|sirtf|sst|sst|\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u043a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u00ab\u0441\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u043a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\"\u0441\u043f\u0456\u0442\u0446\u0435\u0440\"|spitzer-space-telescope|\u00ab\u0441\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|spitzer-uzay-teleskopu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|spitzer-space-telescope|spitzerov-vesm\u00edrny-teleskop|sirtf|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u043f\u0438\u0442\u0446\u0435\u0440|\u0441\u043f\u0438\u0446\u0435\u0440|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0441\u043f\u0438\u0442\u0446\u0435\u0440\u0430|spitzer-space-telescope|spitzer|sirtf|telesc\u00f3pio-spitzer|spitzer-space-telescope|teleskop-spitzera|spitzer-teleskopet|romteleskopet-spitzer|spitzer-ruimtetelescoop|space-infrared-telescope-facility|sirtf|spitzerteleskopet|spitzer-teleskopet|spitzer-space-telescope|teleskop-spitzer|teleskop-angkasa-spitzer|spitzer-space-telescope|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930-\u0938\u094d\u092a\u0947\u0938-\u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930-\u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937-\u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930-\u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937-\u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|t\u00e9lescope-spatial-spitzer|telescope-spatial-spitzer|t\u00e9lescope-spatial-infrarouge|spitzer-space-telescope|space-infrared-telescope-facility|sirtf|sirtf|avaruusteleskooppi-spitzer|telescopio-spitzer|sst|spitzer|sirtf|sst|space-infrared-telescope-facility|sirtf|spitzer-space-telescope|weltraumteleskop-spitzer|spitzer-weltraumobservatorium|spitzer-teleskop|spitzer-st|spitzer-space-telescope|space-infrared-telescope-facility|sirtf|spitzer\u016fv-kosmick\u00fd-dalekohled|sirtf|spitzer-space-telescope|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u044c\u043f\u0456\u0446\u044d\u0440\u0430|\u0645\u0631\u0642\u0628-\u0633\u0628\u064a\u062a\u0632\u0631-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0642\u0628-\u0633\u0628\u064a\u062a\u0632\u0631|\u0627\u0644\u0645\u0631\u0635\u062f-\u0627\u0644\u0641\u0636\u0627\u0626\u064a-\u0633\u0628\u064a\u062a\u0632\u0631",
+            "aliases": "SIRTF|Spitzerjev vesoljski daljnogled|SIRTF|SST|SST|\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u041a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \"\u0421\u043f\u0456\u0442\u0446\u0435\u0440\"|Spitzer Space Telescope|\u00ab\u0421\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|Spitzer Uzay Teleskopu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|Spitzer Space Telescope|Spitzerov vesm\u00edrny teleskop|SIRTF|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u043f\u0438\u0442\u0446\u0435\u0440|\u0421\u043f\u0438\u0446\u0435\u0440|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0421\u043f\u0438\u0442\u0446\u0435\u0440\u0430|Spitzer Space Telescope|Spitzer|SIRTF|Telesc\u00f3pio Spitzer|Spitzer Space Telescope|Teleskop Spitzera|Spitzer-teleskopet|Romteleskopet Spitzer|Spitzer Ruimtetelescoop|Space Infrared Telescope Facility|SIRTF|Spitzerteleskopet|Spitzer-teleskopet|Spitzer Space Telescope|Teleskop Spitzer|Teleskop angkasa Spitzer|Spitzer Space Telescope|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0938\u094d\u092a\u0947\u0938 \u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930 \u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937 \u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|T\u00e9lescope spatial Spitzer|Telescope spatial Spitzer|T\u00e9lescope spatial infrarouge|Spitzer Space Telescope|Space Infrared Telescope Facility|SIRTF|SIRTF|Avaruusteleskooppi Spitzer|Telescopio Spitzer|SST|Spitzer|SIRTF|SST|Space Infrared Telescope Facility|SIRTF|Spitzer Space Telescope|Weltraumteleskop Spitzer|Spitzer-Weltraumobservatorium|Spitzer-Teleskop|Spitzer ST|Spitzer Space Telescope|Space Infrared Telescope Facility|SIRTF|Spitzer\u016fv kosmick\u00fd dalekohled|SIRTF|Spitzer Space Telescope|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f \u0421\u044c\u043f\u0456\u0446\u044d\u0440\u0430|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0642\u0628 \u0633\u0628\u064a\u062a\u0632\u0631|\u0627\u0644\u0645\u0631\u0635\u062f \u0627\u0644\u0641\u0636\u0627\u0626\u064a \u0633\u0628\u064a\u062a\u0632\u0631",
             "all_instance_of": "space telescope",
             "all_has_part": "",
-            "all_part_of": "Great Observatories program"
+            "all_part_of": "Great Observatories program",
+            "itemLabel-lower": "spitzer-space-telescope",
+            "aliases-lower": "sirtf|spitzerjev-vesoljski-daljnogled|sirtf|sst|sst|\u65af\u76ae\u7b56\u7ea2\u5916\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u95f4\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u7a7a\u9593\u671b\u9060\u93e1|\u65af\u76ae\u7b56\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u76ae\u7b56\u5929\u6587\u671b\u8fdc\u955c|\u65af\u76ae\u6cfd\u592a\u7a7a\u671b\u8fdc\u955c|\u65af\u5fc5\u6cfd\u7a7a\u95f4\u671b\u8fdc\u955c|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u043f\u0456\u0442\u0446\u0435\u0440\u0430|\u043a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u00ab\u0441\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|\u043a\u043e\u0441\u043c\u0456\u0447\u043d\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\"\u0441\u043f\u0456\u0442\u0446\u0435\u0440\"|spitzer-space-telescope|\u00ab\u0441\u043f\u0456\u0442\u0446\u0435\u0440\u00bb|spitzer-uzay-teleskopu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e2a\u0e1b\u0e34\u0e15\u0e40\u0e0b\u0e2d\u0e23\u0e4c|spitzer-space-telescope|spitzerov-vesm\u00edrny-teleskop|sirtf|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u043f\u0438\u0442\u0446\u0435\u0440|\u0441\u043f\u0438\u0446\u0435\u0440|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0441\u043f\u0438\u0442\u0446\u0435\u0440\u0430|spitzer-space-telescope|spitzer|sirtf|telesc\u00f3pio-spitzer|spitzer-space-telescope|teleskop-spitzera|spitzer-teleskopet|romteleskopet-spitzer|spitzer-ruimtetelescoop|space-infrared-telescope-facility|sirtf|spitzerteleskopet|spitzer-teleskopet|spitzer-space-telescope|teleskop-spitzer|teleskop-angkasa-spitzer|spitzer-space-telescope|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930-\u0938\u094d\u092a\u0947\u0938-\u091f\u0947\u0932\u0940\u0938\u094d\u0915\u094b\u092a|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u093c\u0930-\u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937-\u0926\u0942\u0930\u092c\u0940\u0928|\u0938\u094d\u092a\u093f\u091f\u094d\u091c\u0930-\u0905\u0902\u0924\u0930\u093f\u0915\u094d\u0937-\u0926\u0942\u0930\u0926\u0930\u094d\u0936\u0940|t\u00e9lescope-spatial-spitzer|telescope-spatial-spitzer|t\u00e9lescope-spatial-infrarouge|spitzer-space-telescope|space-infrared-telescope-facility|sirtf|sirtf|avaruusteleskooppi-spitzer|telescopio-spitzer|sst|spitzer|sirtf|sst|space-infrared-telescope-facility|sirtf|spitzer-space-telescope|weltraumteleskop-spitzer|spitzer-weltraumobservatorium|spitzer-teleskop|spitzer-st|spitzer-space-telescope|space-infrared-telescope-facility|sirtf|spitzer\u016fv-kosmick\u00fd-dalekohled|sirtf|spitzer-space-telescope|\u0442\u044d\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u044c\u043f\u0456\u0446\u044d\u0440\u0430|\u0645\u0631\u0642\u0628-\u0633\u0628\u064a\u062a\u0632\u0631-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0642\u0628-\u0633\u0628\u064a\u062a\u0632\u0631|\u0627\u0644\u0645\u0631\u0635\u062f-\u0627\u0644\u0641\u0636\u0627\u0626\u064a-\u0633\u0628\u064a\u062a\u0632\u0631"
         }
     ],
     [
@@ -631,15 +507,17 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1569472",
-            "itemLabel": "volkssternwarte-kempten",
+            "itemLabel": "Volkssternwarte Kempten",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "A28",
-            "aliases": "volkssternwarte-kempten-e.v.",
+            "aliases": "Volkssternwarte Kempten e.V.",
             "all_instance_of": "public observatory",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "volkssternwarte-kempten",
+            "aliases-lower": "volkssternwarte-kempten-e.v."
         }
     ],
     [
@@ -649,16 +527,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1546987",
-            "itemLabel": "volkssternwarte-hannover",
+            "itemLabel": "Volkssternwarte Hannover",
             "itemDescription": "public astronomical observatory in Hannover, Germany",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "volkssternwarte-geschwister-herschel-hannover-e.-v.",
+            "aliases": "Volkssternwarte Geschwister Herschel Hannover e. V.",
             "all_instance_of": "public observatory",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "volkssternwarte-hannover",
+            "aliases-lower": "volkssternwarte-geschwister-herschel-hannover-e.-v."
         }
     ],
     [
@@ -667,17 +547,18 @@
             "ID": "SST"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q60982412",
-            "itemLabel": "sstl-s1-4",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2018-071A",
+            "item": "http://www.wikidata.org/entity/Q18379108",
+            "itemLabel": "Solar Submillimeter Telescope",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "2018-071A",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "beijing-2-4|s1-4|sstl-s1-4",
-            "all_instance_of": "Earth observation satellite",
+            "aliases": "CASLEO:SST|SST",
+            "all_instance_of": "radio telescope|Cassegrain mirror system",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Leoncito Astronomical Complex",
+            "itemLabel-lower": "solar-submillimeter-telescope",
+            "aliases-lower": "casleo:sst|sst"
         }
     ],
     [
@@ -687,54 +568,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q4938704",
-            "itemLabel": "bok-telescope",
+            "itemLabel": "Bok Telescope",
             "itemDescription": "the largest telescope operated solely by Steward Observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30dc\u30fc\u30af\u671b\u9060\u93e1|90-pulgadas|the-90-inch",
+            "aliases": "\u30dc\u30fc\u30af\u671b\u9060\u93e1|90 pulgadas|the 90-inch",
             "all_instance_of": "optical telescope|infrared telescope",
             "all_has_part": "",
-            "all_part_of": "Kitt Peak National Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Bok Telescope",
-            "ID": "Bok"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q116162881",
-            "itemLabel": "kitt-peak-bok-observatory",
-            "itemDescription": "Astronomical observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "V00",
-            "aliases": "",
-            "all_instance_of": "astronomical observatory",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Bok Telescope",
-            "ID": "Bok"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q115632264",
-            "itemLabel": "springbok-observatory",
-            "itemDescription": "Astronomical observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "L80",
-            "aliases": "",
-            "all_instance_of": "astronomical observatory",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Kitt Peak National Observatory",
+            "itemLabel-lower": "bok-telescope",
+            "aliases-lower": "\u30dc\u30fc\u30af\u671b\u9060\u93e1|90-pulgadas|the-90-inch"
         }
     ],
     [
@@ -744,16 +589,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q841079",
-            "itemLabel": "subaru-telescope",
+            "itemLabel": "Subaru Telescope",
             "itemDescription": "Japanese telescope and observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "T09",
-            "aliases": "\u6634|subarutelescoop|subaru-telescope|subaru-telescope|subaru-telescope|subaru|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|\u3059\u3070\u308b\u671b\u9060\u93e1|t\u00e9lescope-subaru",
-            "all_instance_of": "reflecting telescope|optical telescope|Ritchey\u2013Chr\u00e9tien telescope",
+            "aliases": "\u6634|Subarutelescoop|Subaru-telescope|Subaru Telescope|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|\u3059\u3070\u308b\u671b\u9060\u93e1|T\u00e9lescope Subaru|Subaru Telescope|Subaru",
+            "all_instance_of": "optical telescope|reflecting telescope|Ritchey\u2013Chr\u00e9tien telescope",
             "all_has_part": "",
-            "all_part_of": "Mauna Kea Observatories|National Astronomical Observatory of Japan"
+            "all_part_of": "Mauna Kea Observatories|National Astronomical Observatory of Japan",
+            "itemLabel-lower": "subaru-telescope",
+            "aliases-lower": "\u6634|subarutelescoop|subaru-telescope|subaru-telescope|\uc2a4\ubc14\ub8e8\ub9dd\uc6d0\uacbd|\u3059\u3070\u308b\u671b\u9060\u93e1|t\u00e9lescope-subaru|subaru-telescope|subaru"
         }
     ],
     [
@@ -763,7 +610,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q114236784",
-            "itemLabel": "new-horizons-kbo-search-subaru",
+            "itemLabel": "New Horizons KBO Search-Subaru",
             "itemDescription": "telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
@@ -772,45 +619,9 @@
             "aliases": "",
             "all_instance_of": "observatory|astronomical instrument",
             "all_has_part": "",
-            "all_part_of": "New Horizons KBO Search"
-        }
-    ],
-    [
-        {
-            "Name": "Wisconsin-Indiana-Yale-NOAO Telescope",
-            "ID": "WIYN"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q7951025",
-            "itemLabel": "wiyn-telescope",
-            "itemDescription": "observatory in Arizona",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "wiyn\u671b\u9060\u93e1|wiyn\u671b\u8fdc\u955c|wiyn\u671b\u8fdc\u955c|wiyn\u5929\u6587\u53f0|wiyn-teleskobu|wiyn\u5929\u6587\u53f0",
-            "all_instance_of": "optical telescope",
-            "all_has_part": "",
-            "all_part_of": "Kitt Peak National Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Crossley Reflector",
-            "ID": "Crossley"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q774840",
-            "itemLabel": "crossley-telescope",
-            "itemDescription": "reflecting telescope located at Lick Observatory in California",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "crossley-reflector",
-            "all_instance_of": "reflecting telescope",
-            "all_has_part": "",
-            "all_part_of": "Lick Observatory"
+            "all_part_of": "New Horizons KBO Search",
+            "itemLabel-lower": "new-horizons-kbo-search-subaru",
+            "aliases-lower": ""
         }
     ],
     [
@@ -820,16 +631,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2513",
-            "itemLabel": "hubble-space-telescope",
+            "itemLabel": "Hubble Space Telescope",
             "itemDescription": "NASA and ESA space telescope (launched 1990)",
             "all_COSPAR_ID": "1990-037B",
             "all_NAIF_ID": "-48",
             "all_NSSDCA_ID": "1990-037B",
             "all_Minor_Planet_Center_observatory_ID": "250",
-            "aliases": "telescopio-espacial-hubble|teh|hubble-(telescopio)|hubbleteleskop|hubble-teleskop|hubble-space-telescope|hubble-space-telescope|hubble-teleskopet|hubble-space-telescope|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc-\u06be\u0627\u0628\u0644|\u0645\u0642\u0631\u0627\u0628-\u0647\u0627\u0628\u0644-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|hst|hubble|hubble|hubble|hst|hst|hst|hst|hst|hst|hst|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd-\u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|hst|hubble|hst|hst|\ud5c8\ube14|hubble|hubble|hst|hst|hst|hst|large-space-telescope|\u54c8\u67cf\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u7a7a\u9593\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u8fdc\u955c|\u54c8\u52c3\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u592a\u7a7a\u671b\u8fdc\u955c|\u54c8\u52c3\u5929\u6587\u671b\u8fdc\u955c|\u54c8\u4f2f\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u201c\u54c8\u52c3\u201d\u7a7a\u95f4\u671b\u8fdc\u955c|hubbleteleskopet|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0445\u0430\u0431\u0431\u043b\u0430|\u043a\u0442\u0445|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0445\u0430\u0431\u0431\u043b\u0430|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u00ab\u0445\u0430\u0431\u0431\u043b\u00bb|hubble-space-telescope|hst|hubble--telescope|hubble-space-telescope|\u07dd.\u07dd.\u07e4|hubbletelescoop|hubble-telescoop|hubble-ruimtetelescoop|hubble-space-telescope|hubble-ruimtetelescoop|hst|telescopio-orbitale-hubble|telescopio-hubble|hubble-space-telescope|hst|hubble-weltraumteleskop|t\u00e9lescope-spatial-hubble|telescope-spatial-hubble|t\u00e9lescope-hubble|large-space-telescope|hubble-space-telescope|telescopio-hubble|telescopio-espacial-hubble",
+            "aliases": "Large Space Telescope|\u54c8\u67cf\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u7a7a\u9593\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u8fdc\u955c|\u54c8\u52c3\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u592a\u7a7a\u671b\u8fdc\u955c|\u54c8\u52c3\u5929\u6587\u671b\u8fdc\u955c|\u54c8\u4f2f\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u201c\u54c8\u52c3\u201d\u7a7a\u95f4\u671b\u8fdc\u955c|Hubbleteleskopet|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u041a\u0422\u0425|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0425\u0430\u0431\u0431\u043b\u0430|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u00ab\u0425\u0430\u0431\u0431\u043b\u00bb|Hubble Space Telescope|HST|Hubble- telescope|Hubble Space Telescope|\u07dd.\u07dd.\u07e4|Hubbletelescoop|Hubble-telescoop|Hubble-ruimtetelescoop|Hubble Space Telescope|Hubble ruimtetelescoop|HST|Telescopio orbitale Hubble|Telescopio Hubble|Hubble Space Telescope|HST|Hubble-Weltraumteleskop|T\u00e9lescope spatial Hubble|Telescope spatial Hubble|t\u00e9lescope Hubble|Large Space Telescope|Hubble Space Telescope|Telescopio Hubble|Telescopio Espacial Hubble|Telescopio espacial Hubble|TEH|Hubble (telescopio)|Hubbleteleskop|Hubble-Teleskop|Hubble-Space-Telescope|Hubble Space Telescope|Hubble-teleskopet|Hubble Space Telescope|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc \u06be\u0627\u0628\u0644|\u0645\u0642\u0631\u0627\u0628 \u0647\u0627\u0628\u0644 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|HST|Hubble|Hubble|Hubble|HST|HST|HST|HST|HST|HST|HST|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|HST|Hubble|HST|HST|\ud5c8\ube14|Hubble|Hubble|HST|HST|HST|HST",
             "all_instance_of": "space telescope",
             "all_has_part": "",
-            "all_part_of": "Great Observatories program"
+            "all_part_of": "Great Observatories program",
+            "itemLabel-lower": "hubble-space-telescope",
+            "aliases-lower": "large-space-telescope|\u54c8\u67cf\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u7a7a\u9593\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u9060\u93e1|\u54c8\u52c3\u671b\u8fdc\u955c|\u54c8\u52c3\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u52c3\u592a\u7a7a\u671b\u8fdc\u955c|\u54c8\u52c3\u5929\u6587\u671b\u8fdc\u955c|\u54c8\u4f2f\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|\u54c8\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u201c\u54c8\u52c3\u201d\u7a7a\u95f4\u671b\u8fdc\u955c|hubbleteleskopet|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0445\u0430\u0431\u0431\u043b\u0430|\u043a\u0442\u0445|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0445\u0430\u0431\u0431\u043b\u0430|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u00ab\u0445\u0430\u0431\u0431\u043b\u00bb|hubble-space-telescope|hst|hubble--telescope|hubble-space-telescope|\u07dd.\u07dd.\u07e4|hubbletelescoop|hubble-telescoop|hubble-ruimtetelescoop|hubble-space-telescope|hubble-ruimtetelescoop|hst|telescopio-orbitale-hubble|telescopio-hubble|hubble-space-telescope|hst|hubble-weltraumteleskop|t\u00e9lescope-spatial-hubble|telescope-spatial-hubble|t\u00e9lescope-hubble|large-space-telescope|hubble-space-telescope|telescopio-hubble|telescopio-espacial-hubble|telescopio-espacial-hubble|teh|hubble-(telescopio)|hubbleteleskop|hubble-teleskop|hubble-space-telescope|hubble-space-telescope|hubble-teleskopet|hubble-space-telescope|\u062a\u06d5\u0644\u06cc\u0633\u06a9\u06c6\u067e\u06cc-\u06be\u0627\u0628\u0644|\u0645\u0642\u0631\u0627\u0628-\u0647\u0627\u0628\u0644-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|hst|hubble|hubble|hubble|hst|hst|hst|hst|hst|hst|hst|\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd-\u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|hst|hubble|hst|hst|\ud5c8\ube14|hubble|hubble|hst|hst|hst|hst"
         }
     ],
     [
@@ -839,7 +652,7 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q22084810",
-            "itemLabel": "elfordstown-earthstation",
+            "itemLabel": "Elfordstown Earthstation",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
@@ -847,7 +660,9 @@
             "aliases": "",
             "all_instance_of": "observatory",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "elfordstown-earthstation",
+            "aliases-lower": ""
         }
     ],
     [
@@ -857,16 +672,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q51509",
-            "itemLabel": "international-ultraviolet-explorer",
+            "itemLabel": "International Ultraviolet Explorer",
             "itemDescription": "astronomical observatory satellite",
             "all_COSPAR_ID": "1978-012A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1978-012A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u570b\u969b\u7d2b\u5916\u7dda\u63a2\u6e2c\u8005\u885b\u661f|\u56fd\u969b\u7d2b\u5916\u7dda\u5929\u6587\u885b\u661f|\u30a8\u30af\u30b9\u30d7\u30ed\u30fc\u30e9\u30fc57\u53f7|explorer-57|iue|iue|iue|iue",
+            "aliases": "\u570b\u969b\u7d2b\u5916\u7dda\u63a2\u6e2c\u8005\u885b\u661f|\u56fd\u969b\u7d2b\u5916\u7dda\u5929\u6587\u885b\u661f|\u30a8\u30af\u30b9\u30d7\u30ed\u30fc\u30e9\u30fc57\u53f7|Explorer 57|IUE|IUE|IUE|IUE",
             "all_instance_of": "space telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "international-ultraviolet-explorer",
+            "aliases-lower": "\u570b\u969b\u7d2b\u5916\u7dda\u63a2\u6e2c\u8005\u885b\u661f|\u56fd\u969b\u7d2b\u5916\u7dda\u5929\u6587\u885b\u661f|\u30a8\u30af\u30b9\u30d7\u30ed\u30fc\u30e9\u30fc57\u53f7|explorer-57|iue|iue|iue|iue"
         }
     ],
     [
@@ -876,16 +693,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q122197952",
-            "itemLabel": "solar-ultraviolet-imaging-telescope",
+            "itemLabel": "Solar Ultraviolet Imaging Telescope",
             "itemDescription": "ultraviolet telescope on the Aditya-L1 spacecraft",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "solar-ultra-violet-imaging-telescope|suit",
+            "aliases": "Solar Ultra-violet Imaging Telescope|SUIT",
             "all_instance_of": "space telescope|ultraviolet telescope",
             "all_has_part": "",
-            "all_part_of": "Aditya-L1"
+            "all_part_of": "Aditya-L1",
+            "itemLabel-lower": "solar-ultraviolet-imaging-telescope",
+            "aliases-lower": "solar-ultra-violet-imaging-telescope|suit"
         }
     ],
     [
@@ -895,16 +714,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49530",
-            "itemLabel": "delta-c",
+            "itemLabel": "Delta C",
             "itemDescription": "American expendable launch vehicle",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "thor-delta-c",
+            "aliases": "Thor-Delta C",
             "all_instance_of": "expendable launch vehicle",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "delta-c",
+            "aliases-lower": "thor-delta-c"
         }
     ],
     [
@@ -914,16 +735,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49527",
-            "itemLabel": "delta-a",
+            "itemLabel": "Delta A",
             "itemDescription": "American expendable launch vehicle",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "thor-delta-a",
+            "aliases": "Thor-Delta A",
             "all_instance_of": "expendable launch vehicle",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "delta-a",
+            "aliases-lower": "thor-delta-a"
         }
     ],
     [
@@ -933,16 +756,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49528",
-            "itemLabel": "delta-b",
+            "itemLabel": "Delta B",
             "itemDescription": "American expendable launch vehicle",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "thor-delta-b",
+            "aliases": "Thor-Delta B",
             "all_instance_of": "expendable launch vehicle",
             "all_has_part": "Thor DM-21|Altair|AJ-10",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "delta-b",
+            "aliases-lower": "thor-delta-b"
         }
     ],
     [
@@ -952,16 +777,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49536",
-            "itemLabel": "delta-f",
+            "itemLabel": "Delta F",
             "itemDescription": "American expendable launch vehicle",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "thor-delta-f",
+            "aliases": "Thor-Delta F",
             "all_instance_of": "expendable launch vehicle",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "delta-f",
+            "aliases-lower": "thor-delta-f"
         }
     ],
     [
@@ -971,16 +798,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q59973",
-            "itemLabel": "talon",
+            "itemLabel": "Talon",
             "itemDescription": "reflecting telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "Z18",
-            "aliases": "\u043d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443-\u0441\u0432\u0456\u0442\u0456|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-the-gran-telescopio-canarias|grantecan|grande-telesc\u00f3pio-das-can\u00e1rias|gran-kanarijos-observatorija|\u30ab\u30ca\u30ea\u30a2\u5927\u5929\u4f53\u671b\u9060\u93e1|grantecan|grand-t\u00e9lescope-des-\u00eeles-canaries|grantecan|gran-telescopio-de-canarias|gran-tecan|gran-telescopio-canarias|grantecan|grantecan|gran-telescopio-canarias|gtc|gtc|gtc|gtc|gtc",
+            "aliases": "\u041d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0443 \u0441\u0432\u0456\u0442\u0456|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f The Gran Telescopio CANARIAS|Grantecan|Grande Telesc\u00f3pio das Can\u00e1rias|Gran Kanarijos observatorija|\u30ab\u30ca\u30ea\u30a2\u5927\u5929\u4f53\u671b\u9060\u93e1|GranTeCan|Grand T\u00e9lescope des \u00eeles Canaries|GRANTECAN|Gran Telescopio de Canarias|GRAN TECAN|Gran Telescopio Canarias|GranTeCan|GRANTECAN|Gran Telescopio Canarias|GTC|GTC|GTC|GTC|GTC",
             "all_instance_of": "optical telescope|Ritchey\u2013Chr\u00e9tien telescope|segmented mirror",
             "all_has_part": "",
-            "all_part_of": "Unique Scientific and Technical Infrastructures|Roque de los Muchachos Observatory"
+            "all_part_of": "Roque de los Muchachos Observatory|Unique Scientific and Technical Infrastructures",
+            "itemLabel-lower": "talon",
+            "aliases-lower": "\u043d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443-\u0441\u0432\u0456\u0442\u0456|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-the-gran-telescopio-canarias|grantecan|grande-telesc\u00f3pio-das-can\u00e1rias|gran-kanarijos-observatorija|\u30ab\u30ca\u30ea\u30a2\u5927\u5929\u4f53\u671b\u9060\u93e1|grantecan|grand-t\u00e9lescope-des-\u00eeles-canaries|grantecan|gran-telescopio-de-canarias|gran-tecan|gran-telescopio-canarias|grantecan|grantecan|gran-telescopio-canarias|gtc|gtc|gtc|gtc|gtc"
         }
     ],
     [
@@ -990,16 +819,81 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q49944",
-            "itemLabel": "galex",
+            "itemLabel": "GALEX",
             "itemDescription": "US space telescope",
             "all_COSPAR_ID": "2003-017A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2003-017A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "galex|galex|galex|explorer-83|galaxy-evolution-explorer|qalaktika-t\u0259kam\u00fcl\u00fc-k\u0259\u015ffiyyat\u0131",
+            "aliases": "GALEX|GALEX|GALEX|Explorer 83|Galaxy Evolution Explorer|Qalaktika T\u0259kam\u00fcl\u00fc K\u0259\u015ffiyyat\u0131",
             "all_instance_of": "space telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "galex",
+            "aliases-lower": "galex|galex|galex|explorer-83|galaxy-evolution-explorer|qalaktika-t\u0259kam\u00fcl\u00fc-k\u0259\u015ffiyyat\u0131"
+        }
+    ],
+    [
+        {
+            "Name": "Faulkes Telescope North",
+            "ID": "FTN"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5438114",
+            "itemLabel": "Faulkes Telescope North",
+            "itemDescription": "telescope at the Haleakala Observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "F65",
+            "aliases": "\u5317\u970d\u57fa\u65af\u671b\u9060\u93e1|Telesc\u00f3pio Faulkes Norte",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Faulkes Telescope Project",
+            "itemLabel-lower": "faulkes-telescope-north",
+            "aliases-lower": "\u5317\u970d\u57fa\u65af\u671b\u9060\u93e1|telesc\u00f3pio-faulkes-norte"
+        }
+    ],
+    [
+        {
+            "Name": "Faulkes Telescope South",
+            "ID": "FTS"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5438110",
+            "itemLabel": "Faulkes Telescope South",
+            "itemDescription": "telescope at the Siding Spring Observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "E10",
+            "aliases": "",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Faulkes Telescope Project|Las Cumbres Observatory Global Telescope Network",
+            "itemLabel-lower": "faulkes-telescope-south",
+            "aliases-lower": ""
+        }
+    ],
+    [
+        {
+            "Name": "Haute-Provence Observatory",
+            "ID": "OHP-1.93m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q2013015",
+            "itemLabel": "Haute-Provence Observatory",
+            "itemDescription": "french astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "511",
+            "aliases": "511 HP|Haute Provence|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041e\u0442-\u041f\u0440\u043e\u0432\u0430\u043d\u0441|Observatoire de Haute-Provence|Haute-Provence Observatory|Haute-Provence Observatory|\u30aa\u30fc\u30c8\u30d7\u30ed\u30d0\u30f3\u30b9\u5929\u6587\u53f0|\u30aa\u30fc\u30c8\u30fb\u30d7\u30ed\u30f4\u30a1\u30f3\u30b9\u5929\u6587\u53f0|Observatoire de haute-provence|Observatoire de Haute-Provence|Observatoire de Haute-Provence|Observatoire de Haute-Provence|OHP",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemLabel-lower": "haute-provence-observatory",
+            "aliases-lower": "511-hp|haute-provence|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043e\u0442-\u043f\u0440\u043e\u0432\u0430\u043d\u0441|observatoire-de-haute-provence|haute-provence-observatory|haute-provence-observatory|\u30aa\u30fc\u30c8\u30d7\u30ed\u30d0\u30f3\u30b9\u5929\u6587\u53f0|\u30aa\u30fc\u30c8\u30fb\u30d7\u30ed\u30f4\u30a1\u30f3\u30b9\u5929\u6587\u53f0|observatoire-de-haute-provence|observatoire-de-haute-provence|observatoire-de-haute-provence|observatoire-de-haute-provence|ohp"
         }
     ],
     [
@@ -1009,16 +903,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q2680765",
-            "itemLabel": "katzman-automatic-imaging-telescope",
+            "itemLabel": "Katzman Automatic Imaging Telescope",
             "itemDescription": "automated telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "kait|kait",
+            "aliases": "KAIT|KAIT",
             "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": "Lick Observatory"
+            "all_part_of": "Lick Observatory",
+            "itemLabel-lower": "katzman-automatic-imaging-telescope",
+            "aliases-lower": "kait|kait"
         }
     ],
     [
@@ -1028,54 +924,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q227807",
-            "itemLabel": "south-african-astronomical-observatory",
+            "itemLabel": "South African Astronomical Observatory",
             "itemDescription": "observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "051(\u043d\u0430\u0431\u043b\u044e\u0434\u0435\u043d\u0438\u044f)",
-            "aliases": "\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043c\u044b\u0441\u0430-\u0434\u043e\u0431\u0440\u043e\u0439-\u043d\u0430\u0434\u0435\u0436\u0434\u044b|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043c\u044b\u0441-\u0434\u043e\u0431\u0440\u043e\u0439-\u043d\u0430\u0434\u0435\u0436\u0434\u044b|south-african-astronomical-observatory|saao|saao|royal-observatory,-tanjung-harapan|south-african-astronomical-observatory|saao|observatoire-astronomique-d'afrique-du-sud|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0627\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|\u0631\u0635\u062f\u062e\u0627\u0646\u0647-\u0627\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0622\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|observatorio-astronomico-sudafricano|saao|saao|saao|south-african-astronomical-observatory|saao|saao",
+            "aliases": "\u042e\u0436\u043d\u043e-\u0410\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u042e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u042e\u0436\u043d\u043e \u0410\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041c\u044b\u0441\u0430 \u0414\u043e\u0431\u0440\u043e\u0439 \u041d\u0430\u0434\u0435\u0436\u0434\u044b|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041c\u044b\u0441 \u0414\u043e\u0431\u0440\u043e\u0439 \u041d\u0430\u0434\u0435\u0436\u0434\u044b|South African Astronomical Observatory|SAAO|SAAO|Royal Observatory, Tanjung Harapan|South African Astronomical Observatory|SAAO|Observatoire astronomique d'Afrique du Sud|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0627\u0641\u0631\u06cc\u0642\u0627\u06cc \u062c\u0646\u0648\u0628\u06cc|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0627\u0641\u0631\u06cc\u0642\u0627\u06cc \u062c\u0646\u0648\u0628\u06cc|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0622\u0641\u0631\u06cc\u0642\u0627\u06cc \u062c\u0646\u0648\u0628\u06cc|Observatorio Astronomico Sudafricano|SAAO|SAAO|SAAO|South African Astronomical Observatory|SAAO|SAAO",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "Royal Observatory, Cape of Good Hope|Southern African Large telescope",
-            "all_part_of": "SuperWASP"
-        }
-    ],
-    [
-        {
-            "Name": "South African Astronomical Observatory",
-            "ID": "SAAO"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q115616856",
-            "itemLabel": "master-saao-observatory",
-            "itemDescription": "Astronomical observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "K95",
-            "aliases": "",
-            "all_instance_of": "astronomical observatory",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "South African Astronomical Observatory",
-            "ID": "SAAO"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q115616898",
-            "itemLabel": "korea-microlensing-telescope-network-saao",
-            "itemDescription": "Astronomical observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "L32",
-            "aliases": "",
-            "all_instance_of": "astronomical observatory",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "SuperWASP",
+            "itemLabel-lower": "south-african-astronomical-observatory",
+            "aliases-lower": "\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043c\u044b\u0441\u0430-\u0434\u043e\u0431\u0440\u043e\u0439-\u043d\u0430\u0434\u0435\u0436\u0434\u044b|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043c\u044b\u0441-\u0434\u043e\u0431\u0440\u043e\u0439-\u043d\u0430\u0434\u0435\u0436\u0434\u044b|south-african-astronomical-observatory|saao|saao|royal-observatory,-tanjung-harapan|south-african-astronomical-observatory|saao|observatoire-astronomique-d'afrique-du-sud|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0627\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|\u0631\u0635\u062f\u062e\u0627\u0646\u0647-\u0627\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0622\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|observatorio-astronomico-sudafricano|saao|saao|saao|south-african-astronomical-observatory|saao|saao"
         }
     ],
     [
@@ -1085,34 +945,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q833639",
-            "itemLabel": "southern-african-large-telescope",
+            "itemLabel": "Southern African Large telescope",
             "itemDescription": "architectural structure",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "B31",
-            "aliases": "jihoafrick\u00fd-velk\u00fd-dalekohled|velk\u00fd-jihoafrick\u00fd-dalekohled|jihoafrick\u00fd-velk\u00fd-teleskop|salt|\u0433\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0438\u0439-\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0431\u043e\u043b\u044c\u0448\u043e\u0439-\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|southern-african-large-telescope|southern-african-large-telescope|\u062a\u0644\u0633\u06a9\u0648\u067e-\u0628\u0632\u0631\u06af-\u0627\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|hego-afrikako-teleskopio-handia|southern-african-large-telescope|southern-african-large-telescope\uff0csalt|gran-telescopi-sud--afric\u00e0|suid-afrikaanse-groot-teleskoop|salt|sagt|salt|salt",
-            "all_instance_of": "reflecting telescope|optical telescope|segmented mirror",
+            "aliases": "SALT|SALT|Jihoafrick\u00fd velk\u00fd dalekohled|Velk\u00fd jihoafrick\u00fd dalekohled|Jihoafrick\u00fd velk\u00fd teleskop|SALT|\u0413\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0438\u0439 \u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|Southern African Large Telescope|Southern African Large Telescope|\u062a\u0644\u0633\u06a9\u0648\u067e \u0628\u0632\u0631\u06af \u0627\u0641\u0631\u06cc\u0642\u0627\u06cc \u062c\u0646\u0648\u0628\u06cc|Hego Afrikako Teleskopio Handia|Southern African Large Telescope|Southern African Large Telescope\uff0cSALT|Gran telescopi sud- afric\u00e0|Suid-Afrikaanse Groot Teleskoop|SALT|SAGT",
+            "all_instance_of": "optical telescope|segmented mirror|reflecting telescope",
             "all_has_part": "",
-            "all_part_of": "South African Astronomical Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Southern African Large Telescope",
-            "ID": "SALT"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q4406224",
-            "itemLabel": "saltsj\u00f6baden-observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "052",
-            "aliases": "stockholms-observatorium",
-            "all_instance_of": "astronomical observatory|architectural ensemble",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "South African Astronomical Observatory",
+            "itemLabel-lower": "southern-african-large-telescope",
+            "aliases-lower": "salt|salt|jihoafrick\u00fd-velk\u00fd-dalekohled|velk\u00fd-jihoafrick\u00fd-dalekohled|jihoafrick\u00fd-velk\u00fd-teleskop|salt|\u0433\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0438\u0439-\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|\u0431\u043e\u043b\u044c\u0448\u043e\u0439-\u044e\u0436\u043d\u043e-\u0430\u0444\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|southern-african-large-telescope|southern-african-large-telescope|\u062a\u0644\u0633\u06a9\u0648\u067e-\u0628\u0632\u0631\u06af-\u0627\u0641\u0631\u06cc\u0642\u0627\u06cc-\u062c\u0646\u0648\u0628\u06cc|hego-afrikako-teleskopio-handia|southern-african-large-telescope|southern-african-large-telescope\uff0csalt|gran-telescopi-sud--afric\u00e0|suid-afrikaanse-groot-teleskoop|salt|sagt"
         }
     ],
     [
@@ -1122,16 +966,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q845304",
-            "itemLabel": "large-binocular-telescope",
+            "itemLabel": "Large Binocular Telescope",
             "itemDescription": "telescope for optical astronomy on Mount Graham, Arizona, USA",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "G83",
-            "aliases": "luci|lbt|large-binocular-telescope|lbt|large-binocular-telescope|lbt|\u062a\u0644\u0633\u06a9\u0648\u067e-\u0627\u0644-\u0628\u06cc-\u062a\u06cc|\u0627\u0644-\u0628\u06cc-\u062a\u06cc|large-binocular-telescope|lbt|lbt|lbt|first-light",
+            "aliases": "LUCI|LBT|Large Binocular Telescope|LBT|Large Binocular Telescope|LBT|\u062a\u0644\u0633\u06a9\u0648\u067e \u0627\u0644 \u0628\u06cc \u062a\u06cc|\u0627\u0644 \u0628\u06cc \u062a\u06cc|Large Binocular Telescope|LBT|LBT|LBT|First Light",
             "all_instance_of": "optical telescope|double telescope",
             "all_has_part": "",
-            "all_part_of": "Mount Graham International Observatory|Steward Observatory"
+            "all_part_of": "Mount Graham International Observatory|Steward Observatory",
+            "itemLabel-lower": "large-binocular-telescope",
+            "aliases-lower": "luci|lbt|large-binocular-telescope|lbt|large-binocular-telescope|lbt|\u062a\u0644\u0633\u06a9\u0648\u067e-\u0627\u0644-\u0628\u06cc-\u062a\u06cc|\u0627\u0644-\u0628\u06cc-\u062a\u06cc|large-binocular-telescope|lbt|lbt|lbt|first-light"
         }
     ],
     [
@@ -1141,16 +987,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1662664",
-            "itemLabel": "nasa-infrared-telescope-facility",
+            "itemLabel": "NASA Infrared Telescope Facility",
             "itemDescription": "infrared telescope in Hawaii",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "T13",
-            "aliases": "\u7f8e\u570b\u592a\u7a7a\u7e3d\u7f72\u671b\u9060\u93e1|nasa\u7d05\u5916\u7dda\u671b\u9060\u93e1\u8a2d\u65bd|\u0456\u043d\u0444\u0440\u0430\u0447\u0435\u0440\u0432\u043e\u043d\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-(\u043c\u0430\u0443\u043d\u0430-\u043a\u0435\u0430)|\u0438\u043d\u0444\u0440\u0430\u043a\u0440\u0430\u0441\u043d\u044b\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-irtf|nasa-irtf|infrared-telescope-facility|nasa\u8d64\u5916\u7dda\u671b\u9060\u93e1\u65bd\u8a2d|nasa\u8d64\u5916\u671b\u9060\u93e1\u65bd\u8a2d|infrared-telescope-facility|telescopio-infrarrojo-de-nasa|nasa-irtf|irtf|irtf|irtf",
-            "all_instance_of": "Cassegrain mirror system|infrared telescope|astronomical observatory",
+            "aliases": "\u7f8e\u570b\u592a\u7a7a\u7e3d\u7f72\u671b\u9060\u93e1|NASA\u7d05\u5916\u7dda\u671b\u9060\u93e1\u8a2d\u65bd|\u0406\u043d\u0444\u0440\u0430\u0447\u0435\u0440\u0432\u043e\u043d\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f (\u041c\u0430\u0443\u043d\u0430 \u041a\u0435\u0430)|\u0418\u043d\u0444\u0440\u0430\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f IRTF|NASA IRTF|Infrared Telescope Facility|NASA\u8d64\u5916\u7dda\u671b\u9060\u93e1\u65bd\u8a2d|NASA\u8d64\u5916\u671b\u9060\u93e1\u65bd\u8a2d|Infrared Telescope Facility|Telescopio infrarrojo de nasa|NASA IRTF|IRTF|IRTF|IRTF",
+            "all_instance_of": "infrared telescope|astronomical observatory|Cassegrain mirror system",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "nasa-infrared-telescope-facility",
+            "aliases-lower": "\u7f8e\u570b\u592a\u7a7a\u7e3d\u7f72\u671b\u9060\u93e1|nasa\u7d05\u5916\u7dda\u671b\u9060\u93e1\u8a2d\u65bd|\u0456\u043d\u0444\u0440\u0430\u0447\u0435\u0440\u0432\u043e\u043d\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-(\u043c\u0430\u0443\u043d\u0430-\u043a\u0435\u0430)|\u0438\u043d\u0444\u0440\u0430\u043a\u0440\u0430\u0441\u043d\u044b\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-irtf|nasa-irtf|infrared-telescope-facility|nasa\u8d64\u5916\u7dda\u671b\u9060\u93e1\u65bd\u8a2d|nasa\u8d64\u5916\u671b\u9060\u93e1\u65bd\u8a2d|infrared-telescope-facility|telescopio-infrarrojo-de-nasa|nasa-irtf|irtf|irtf|irtf"
         }
     ],
     [
@@ -1160,35 +1008,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q787525",
-            "itemLabel": "southern-astrophysical-research-telescope",
+            "itemLabel": "Southern Astrophysical Research Telescope",
             "itemDescription": "observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "I33",
-            "aliases": "southern-astrophysical-research-telescope|soar|southern-astrophysical-research|soar",
+            "aliases": "Southern Astrophysical Research Telescope|SOAR|Southern Astrophysical Research|SOAR",
             "all_instance_of": "optical telescope|segmented mirror",
             "all_has_part": "",
-            "all_part_of": "Cerro Tololo Inter-American Observatory"
-        }
-    ],
-    [
-        {
-            "Name": "Big Telescope Alt-azimuth",
-            "ID": "BTA-6"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q787671",
-            "itemLabel": "bta-6",
-            "itemDescription": "Large telescope in Russia",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0431\u0442\u0430;-\u0431\u043e\u043b\u044c\u0448\u043e\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0430\u0437\u0438\u043c\u0443\u0442\u0430\u043b\u044c\u043d\u044b\u0439|\u0431\u043e\u043b\u044c\u0448\u043e\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0430\u043b\u044c\u0442-\u0430\u0437\u0438\u043c\u0443\u0442\u0430\u043b\u044c\u043d\u044b\u0439|\u0431\u043e\u043b\u044c\u0448\u043e\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0430\u0437\u0438\u043c\u0443\u0442\u0430\u043b\u044c\u043d\u044b\u0439|\u0431\u043e\u043b\u044c\u0448\u043e\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0430\u0437\u0438\u043c\u0443\u0442\u0430\u043b\u044c\u043d\u044b\u0439|grote-alt-azimuttelescoop|bta|bolshoitelescoop|bolshoi-teleskop-alt-azimutalnyi|large-altazimuth-telescope",
-            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
-            "all_has_part": "",
-            "all_part_of": "Special Astrophysical Observatory of the Russian Academy of Science"
+            "all_part_of": "Cerro Tololo Inter-American Observatory",
+            "itemLabel-lower": "southern-astrophysical-research-telescope",
+            "aliases-lower": "southern-astrophysical-research-telescope|soar|southern-astrophysical-research|soar"
         }
     ],
     [
@@ -1198,16 +1029,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1937388",
-            "itemLabel": "special-astrophysical-observatory-of-the-russian-academy-of-science",
+            "itemLabel": "Special Astrophysical Observatory of the Russian Academy of Science",
             "itemDescription": "astronomical observatory near Nizhny Arkhyz, Russia",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "115",
-            "aliases": "\u7279\u8a2d\u5929\u9ad4\u7269\u7406\u53f0|\u4e13\u95e8\u5929\u4f53\u7269\u7406\u89c2\u6d4b\u53f0|\u0444\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0435-\u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435-\u0431\u044e\u0434\u0436\u0435\u0442\u043d\u043e\u0435-\u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435-\u043d\u0430\u0443\u043a\u0438-\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u043e\u0439-\u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0438-\u043d\u0430\u0443\u043a|\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u0441\u0430\u043e-\u0440\u0430\u043d|zelenchuk|ratan-600|ratan|observatoire-special-d'astrophysique|bta6|bta-6|observatorio-astrof\u00edsico-especial|special-astrophysical-observatory|federal-state-institution-of-science-special-astrophysical-observatory-of-the-russian-academy-of-sciences|bta-6|bolschoi-teleskop|ratan-600|radioteleskop-ratan-600",
+            "aliases": "\u7279\u8a2d\u5929\u9ad4\u7269\u7406\u53f0|\u4e13\u95e8\u5929\u4f53\u7269\u7406\u89c2\u6d4b\u53f0|\u0424\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0435 \u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u0431\u044e\u0434\u0436\u0435\u0442\u043d\u043e\u0435 \u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435 \u043d\u0430\u0443\u043a\u0438 \u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0420\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u043e\u0439 \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0438 \u043d\u0430\u0443\u043a|\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u0421\u0410\u041e \u0420\u0410\u041d|Zelenchuk|RATAN-600|RATAN|Observatoire special d'astrophysique|BTA6|BTA-6|Observatorio Astrof\u00edsico Especial|Special Astrophysical Observatory|Federal State Institution of Science Special Astrophysical Observatory of the Russian Academy of Sciences|BTA-6|Bolschoi Teleskop|Ratan-600|Radioteleskop RATAN-600",
             "all_instance_of": "astronomical observatory",
-            "all_has_part": "RATAN-600|BTA-6",
-            "all_part_of": ""
+            "all_has_part": "BTA-6|RATAN-600",
+            "all_part_of": "",
+            "itemLabel-lower": "special-astrophysical-observatory-of-the-russian-academy-of-science",
+            "aliases-lower": "\u7279\u8a2d\u5929\u9ad4\u7269\u7406\u53f0|\u4e13\u95e8\u5929\u4f53\u7269\u7406\u89c2\u6d4b\u53f0|\u0444\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0435-\u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435-\u0431\u044e\u0434\u0436\u0435\u0442\u043d\u043e\u0435-\u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435-\u043d\u0430\u0443\u043a\u0438-\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u043e\u0439-\u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0438-\u043d\u0430\u0443\u043a|\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f-\u0430\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f|\u0441\u0430\u043e-\u0440\u0430\u043d|zelenchuk|ratan-600|ratan|observatoire-special-d'astrophysique|bta6|bta-6|observatorio-astrof\u00edsico-especial|special-astrophysical-observatory|federal-state-institution-of-science-special-astrophysical-observatory-of-the-russian-academy-of-sciences|bta-6|bolschoi-teleskop|ratan-600|radioteleskop-ratan-600"
         }
     ],
     [
@@ -1217,16 +1050,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1501126",
-            "itemLabel": "kuiper-airborne-observatory",
+            "itemLabel": "Kuiper Airborne Observatory",
             "itemDescription": "airborne infrared observatory operated by NASA",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "kuiper-airborne-observatory|\u30ab\u30a4\u30d1\u30fc\u5929\u6587\u53f0|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0647\u0648\u0627\u06cc\u06cc-\u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647-\u0647\u0648\u0627\u06cc\u06cc-\u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0647\u0648\u0627\u06cc\u06cc-\u06a9\u0627\u06cc\u067e\u0631|nasa-714|n714na|gerard-p.-kuiper-airborne-observatory|kao",
+            "aliases": "\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0627\u06cc\u067e\u0631|NASA 714|N714NA|Gerard P. Kuiper Airborne Observatory|KAO|Kuiper Airborne Observatory|\u30ab\u30a4\u30d1\u30fc\u5929\u6587\u53f0|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0647\u0648\u0627\u06cc\u06cc \u06a9\u0648\u0626\u06cc\u067e\u0631",
             "all_instance_of": "C-141A Starlifter|airborne observatory",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "kuiper-airborne-observatory",
+            "aliases-lower": "\u0631\u0635\u062f\u062e\u0627\u0646\u0647-\u0647\u0648\u0627\u06cc\u06cc-\u06a9\u0648\u0626\u06cc\u067e\u0631|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0647\u0648\u0627\u06cc\u06cc-\u06a9\u0627\u06cc\u067e\u0631|nasa-714|n714na|gerard-p.-kuiper-airborne-observatory|kao|kuiper-airborne-observatory|\u30ab\u30a4\u30d1\u30fc\u5929\u6587\u53f0|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0647\u0648\u0627\u06cc\u06cc-\u06a9\u0648\u0626\u06cc\u067e\u0631"
         }
     ],
     [
@@ -1236,16 +1071,39 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q1383460",
-            "itemLabel": "discovery-channel-telescope",
+            "itemLabel": "Discovery Channel Telescope",
             "itemDescription": "observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "G37",
-            "aliases": "discovery-telescope|lowell-discovery-telescope|dct",
+            "aliases": "Discovery Telescope|Lowell Discovery Telescope|DCT",
             "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
             "all_has_part": "",
-            "all_part_of": "Lowell Observatory"
+            "all_part_of": "Lowell Observatory",
+            "itemLabel-lower": "discovery-channel-telescope",
+            "aliases-lower": "discovery-telescope|lowell-discovery-telescope|dct"
+        }
+    ],
+    [
+        {
+            "Name": "Roque de los Muchachos Observatory",
+            "ID": "Mercator Telescope"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1068376",
+            "itemLabel": "Roque de los Muchachos Observatory",
+            "itemDescription": "Spanish astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "950",
+            "aliases": "ORM|Observatorio del Roque de los Muchachos|lapalma|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u043d\u0430 \u041a\u0430\u043d\u0430\u0440\u0441\u044c\u043a\u0438\u0445 \u043e\u0441\u0442\u0440\u043e\u0432\u0430\u0445|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f \u0434\u0435\u043b\u044c \u0420\u043e\u043a \u0434\u0435 \u043b\u043e\u0441 \u041c\u0443\u0447\u0430\u0447\u043e\u0441|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0420\u043e\u043a\u0435 \u0434\u0435 \u043b\u043e\u0441 \u041c\u0443\u0447\u0430\u0447\u043e\u0441|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u043d\u0430 \u043e\u0441\u0442\u0440\u043e\u0432\u0435 \u041f\u0430\u043b\u044c\u043c\u0430|\u041e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u041b\u0430-\u041f\u0430\u043b\u044c\u043c\u0430|Observatorio del Roque de los Muchachos|Observatorio del Roque de los Muchachos|Observat\u00f3rio Astrof\u00edsico do Roque de los Muchachos|Roque de los Muchachos Observatory|ORM|\u30ed\u30af\u30fb\u30c7\u30fb\u30ed\u30b9\u30fb\u30e0\u30c1\u30e3\u30c1\u30e7\u30b9\u5929\u6587\u53f0|\u30e9\u30fb\u30d1\u30eb\u30de\u5929\u6587\u53f0|Observatorio del Roque de los Muchachos|Observatoire de Roque de los Muchachos|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0635\u062e\u0631\u0647\u0654 \u0628\u0686\u0647\u0654 \u0647\u0627|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654 \u0635\u062e\u0631\u0647\u0654 \u0628\u0686\u0647 \u0647\u0627|\u0631\u0635\u062f\u062e\u0627\u0646\u0647 \u0635\u062e\u0631\u0647 \u0628\u0686\u0647 \u0647\u0627|Roque de los Muchachos observatorio|Observatorio astrof\u00edsico del Roque de los Muchachos|Observatorio astrofisico del Roque de los Muchachos|ORM|Observatorio del Roque de los Muchachos|Observatorio del Roque de los Muchachos|Roque de los Muchachos Observatorium|ORM|Observatorio del Roque de los Muchachos|Roque de los Muchachos Observatory|ORM|Roque de los Muchachos Observatory|Observatori Roque de los Muchachos|\u0645\u0631\u0635\u062f|Roque de los Muchachos|ORM",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Isaac Newton Telescope|European Solar Telescope|Mercator Telescope|Dutch Open Telescope|Nordic Optical Telescope|Swedish Solar Telescope|High-Energy-Gamma-Ray Astronomy|SuperWASP|LST-1|DIMM-TNG|MASCARA|FACT|Liverpool Telescope|Jacobus Kapteyn Telescope|Isaac Newton Group of Telescopes|Carlsberg Meridian Telescope|William Herschel Telescope|Talon|Major Atmospheric Gamma Imaging Cherenkov Telescopes|Galileo National Telescope",
+            "all_part_of": "European Northern Observatory|Instituto de Astrof\u00edsica de Canarias|Unique Scientific and Technical Infrastructures",
+            "itemLabel-lower": "roque-de-los-muchachos-observatory",
+            "aliases-lower": "orm|observatorio-del-roque-de-los-muchachos|lapalma|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u043d\u0430-\u043a\u0430\u043d\u0430\u0440\u0441\u044c\u043a\u0438\u0445-\u043e\u0441\u0442\u0440\u043e\u0432\u0430\u0445|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0456\u044f-\u0434\u0435\u043b\u044c-\u0440\u043e\u043a-\u0434\u0435-\u043b\u043e\u0441-\u043c\u0443\u0447\u0430\u0447\u043e\u0441|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u0440\u043e\u043a\u0435-\u0434\u0435-\u043b\u043e\u0441-\u043c\u0443\u0447\u0430\u0447\u043e\u0441|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043d\u0430-\u043e\u0441\u0442\u0440\u043e\u0432\u0435-\u043f\u0430\u043b\u044c\u043c\u0430|\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u043b\u0430-\u043f\u0430\u043b\u044c\u043c\u0430|observatorio-del-roque-de-los-muchachos|observatorio-del-roque-de-los-muchachos|observat\u00f3rio-astrof\u00edsico-do-roque-de-los-muchachos|roque-de-los-muchachos-observatory|orm|\u30ed\u30af\u30fb\u30c7\u30fb\u30ed\u30b9\u30fb\u30e0\u30c1\u30e3\u30c1\u30e7\u30b9\u5929\u6587\u53f0|\u30e9\u30fb\u30d1\u30eb\u30de\u5929\u6587\u53f0|observatorio-del-roque-de-los-muchachos|observatoire-de-roque-de-los-muchachos|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0635\u062e\u0631\u0647\u0654-\u0628\u0686\u0647\u0654-\u0647\u0627|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u0635\u062e\u0631\u0647\u0654-\u0628\u0686\u0647-\u0647\u0627|\u0631\u0635\u062f\u062e\u0627\u0646\u0647-\u0635\u062e\u0631\u0647-\u0628\u0686\u0647-\u0647\u0627|roque-de-los-muchachos-observatorio|observatorio-astrof\u00edsico-del-roque-de-los-muchachos|observatorio-astrofisico-del-roque-de-los-muchachos|orm|observatorio-del-roque-de-los-muchachos|observatorio-del-roque-de-los-muchachos|roque-de-los-muchachos-observatorium|orm|observatorio-del-roque-de-los-muchachos|roque-de-los-muchachos-observatory|orm|roque-de-los-muchachos-observatory|observatori-roque-de-los-muchachos|\u0645\u0631\u0635\u062f|roque-de-los-muchachos|orm"
         }
     ],
     [
@@ -1255,16 +1113,60 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q4046366",
-            "itemLabel": "pan-starrs1",
+            "itemLabel": "Pan-STARRS1",
             "itemDescription": "American automated survey telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "F51",
-            "aliases": "panoramic-survey-telescope-and-rapid-response-system|pan-starrs-1|panoramic-survey-telescope-and-rapid-response-system-1|pan-starrs-1|ps1",
+            "aliases": "Panoramic Survey Telescope and Rapid Response System|Pan-STARRS 1|Panoramic Survey Telescope and Rapid Response System 1|Pan-STARRS-1|PS1",
             "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
             "all_has_part": "",
-            "all_part_of": "Pan-STARRS"
+            "all_part_of": "Pan-STARRS",
+            "itemLabel-lower": "pan-starrs1",
+            "aliases-lower": "panoramic-survey-telescope-and-rapid-response-system|pan-starrs-1|panoramic-survey-telescope-and-rapid-response-system-1|pan-starrs-1|ps1"
+        }
+    ],
+    [
+        {
+            "Name": "Pan-STARRS",
+            "ID": "PS1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q115478095",
+            "itemLabel": "Pan-STARRS2",
+            "itemDescription": "American automated survey telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "F52",
+            "aliases": "Panoramic Survey Telescope and Rapid Response System 2|Pan-STARRS-2|PS2",
+            "all_instance_of": "Ritchey\u2013Chr\u00e9tien telescope",
+            "all_has_part": "",
+            "all_part_of": "Pan-STARRS",
+            "itemLabel-lower": "pan-starrs2",
+            "aliases-lower": "panoramic-survey-telescope-and-rapid-response-system-2|pan-starrs-2|ps2"
+        }
+    ],
+    [
+        {
+            "Name": "Pan-STARRS",
+            "ID": "PS1"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1075600",
+            "itemLabel": "Pan-STARRS",
+            "itemDescription": "array of astronomical telescopes, cameras, and computing equipment which surveys the sky on a continual basis",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u6cdb\u661f\u8ba1\u5212|Pan-STARRS|Panoramic Survey Telescope and Rapid Response System|Panoramic Survey Telescope and Rapid Response System|PANSTARRS",
+            "all_instance_of": "astronomical observatory|astronomical survey",
+            "all_has_part": "Pan-STARRS1|Pan-STARRS2",
+            "all_part_of": "Haleakal\u0101 Observatory",
+            "itemLabel-lower": "pan-starrs",
+            "aliases-lower": "\u6cdb\u661f\u8ba1\u5212|pan-starrs|panoramic-survey-telescope-and-rapid-response-system|panoramic-survey-telescope-and-rapid-response-system|panstarrs"
         }
     ],
     [
@@ -1273,16 +1175,19 @@
             "ID": "AAT"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q15525959",
-            "itemLabel": "staatliche-vogelschutzwarte-garmisch-partenkirchen",
+            "item": "http://www.wikidata.org/entity/Q2632045",
+            "itemLabel": "Anglo-Australian Telescope",
+            "itemDescription": "Australian Astronomical Observatory telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "",
-            "all_instance_of": "bird observatory",
+            "aliases": "\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u0439\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|Angielsko-australijski teleskop|Telescope anglo-australien|Anglo-Australian Telescope",
+            "all_instance_of": "optical telescope|Cassegrain mirror system",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Siding Spring Observatory|Australian Astronomical Observatory",
+            "itemLabel-lower": "anglo-australian-telescope",
+            "aliases-lower": "\u0430\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u0439\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f|angielsko-australijski-teleskop|telescope-anglo-australien|anglo-australian-telescope"
         }
     ],
     [
@@ -1292,35 +1197,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q767805",
-            "itemLabel": "gaia",
+            "itemLabel": "Gaia",
             "itemDescription": "European Space Agency astrometric mission",
             "all_COSPAR_ID": "2013-074A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2013-074A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "gaia-weltraumteleskop|gaia-mission|gaia|global-astrometric-interferometer-for-astrophysics|\u062c\u0627\u064a\u0627-(\u0645\u0633\u0628\u0627\u0631-\u0641\u0636\u0627\u0626\u064a)|\u062c\u0627\u064a\u0627-(\u0627\u0644\u0645\u0631\u0643\u0628\u0629-\u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629)|\u0563\u0561\u0575\u0561|\u0563\u0565\u0561|gaia-(telescopio-espacial)|\u74b0\u7403\u5929\u6587\u5929\u9ad4\u6e2c\u91cf\u5e72\u6d89\u5100|global-astrometric-interferometer-for-astrophysics|global-astrometric-interferometer-for-astrophysics|satellite-gaia|gaia|global-astrometric-interferometer-for-astrophysics|gaia-mission",
+            "aliases": "Gaia (telescopio espacial)|\u74b0\u7403\u5929\u6587\u5929\u9ad4\u6e2c\u91cf\u5e72\u6d89\u5100|Global Astrometric Interferometer for Astrophysics|Global Astrometric Interferometer for Astrophysics|satellite Gaia|Gaia|Global Astrometric Interferometer for Astrophysics|Gaia mission|Gaia-Weltraumteleskop|Gaia-Mission|GAIA|Global Astrometric Interferometer for Astrophysics|\u062c\u0627\u064a\u0627 (\u0645\u0633\u0628\u0627\u0631 \u0641\u0636\u0627\u0626\u064a)|\u062c\u0627\u064a\u0627 (\u0627\u0644\u0645\u0631\u0643\u0628\u0629 \u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629)|\u0533\u0561\u0575\u0561|\u0533\u0565\u0561",
             "all_instance_of": "space telescope",
             "all_has_part": "",
-            "all_part_of": "European Space Agency"
-        }
-    ],
-    [
-        {
-            "Name": "Gaia Spacecraft",
-            "ID": "Gaia"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q114074988",
-            "itemLabel": "gaia",
-            "itemDescription": "space observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "258",
-            "aliases": "",
-            "all_instance_of": "space telescope",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "European Space Agency",
+            "itemLabel-lower": "gaia",
+            "aliases-lower": "gaia-(telescopio-espacial)|\u74b0\u7403\u5929\u6587\u5929\u9ad4\u6e2c\u91cf\u5e72\u6d89\u5100|global-astrometric-interferometer-for-astrophysics|global-astrometric-interferometer-for-astrophysics|satellite-gaia|gaia|global-astrometric-interferometer-for-astrophysics|gaia-mission|gaia-weltraumteleskop|gaia-mission|gaia|global-astrometric-interferometer-for-astrophysics|\u062c\u0627\u064a\u0627-(\u0645\u0633\u0628\u0627\u0631-\u0641\u0636\u0627\u0626\u064a)|\u062c\u0627\u064a\u0627-(\u0627\u0644\u0645\u0631\u0643\u0628\u0629-\u0627\u0644\u0641\u0636\u0627\u0626\u064a\u0629)|\u0563\u0561\u0575\u0561|\u0563\u0565\u0561"
         }
     ],
     [
@@ -1330,35 +1218,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q5564187",
-            "itemLabel": "girawali-observatory",
+            "itemLabel": "Girawali Observatory",
             "itemDescription": "astronomical observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "iucaa-girawali-observatory|igo:2m|iucaa\u30ae\u30e9\u30ef\u30ea\u5929\u6587\u53f0|igo",
+            "aliases": "IUCAA Girawali Observatory|IGO:2m|IUCAA\u30ae\u30e9\u30ef\u30ea\u5929\u6587\u53f0|IGO",
             "all_instance_of": "observatory",
             "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "IUCAA Girawali Observatory",
-            "ID": "IGO"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q51792451",
-            "itemLabel": "ligo-hanford-observatory",
-            "itemDescription": "site of the gravitational wave detector in Hanford, Washington",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "laser-interferometer--gravitational-wave-observatory-hanford",
-            "all_instance_of": "observatory",
-            "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "girawali-observatory",
+            "aliases-lower": "iucaa-girawali-observatory|igo:2m|iucaa\u30ae\u30e9\u30ef\u30ea\u5929\u6587\u53f0|igo"
         }
     ],
     [
@@ -1368,16 +1239,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q3821639",
-            "itemLabel": "goodricke-pigott-observatory",
+            "itemLabel": "Goodricke-Pigott Observatory",
             "itemDescription": "a private astronomical observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "683",
-            "aliases": "goodricke-pigott-observatory|observatorio-astronomico-goodricke-pigott|goodricke-pigott-observatory",
+            "aliases": "Goodricke-Pigott Observatory|Observatorio Astronomico Goodricke-Pigott|Goodricke-Pigott Observatory",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "goodricke-pigott-observatory",
+            "aliases-lower": "goodricke-pigott-observatory|observatorio-astronomico-goodricke-pigott|goodricke-pigott-observatory"
         }
     ],
     [
@@ -1386,17 +1259,18 @@
             "ID": "IGO"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q5249140",
-            "itemLabel": "decigo",
-            "itemDescription": "proposed Japanese gravitational wave observatory",
+            "item": "http://www.wikidata.org/entity/Q4189470",
+            "itemLabel": "Zvenigorod Observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u5206\u8d6b\u5f15\u529b\u6ce2\u5e72\u6d89\u5929\u6587\u53f0|deci-hertz-interferometer-gravitational-wave-observatory|deci-hertz-interferometer-gravitational-wave-observatory",
-            "all_instance_of": "zero-drag satellite|gravitational-wave detector",
+            "all_Minor_Planet_Center_observatory_ID": "102",
+            "aliases": "\u0417\u041d\u0411|\u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f \u0418\u041d\u0410\u0421\u0410\u041d|\u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0441\u0442\u0430\u043d\u0446\u0438\u044f|\u0417\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f \u041d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0411\u0430\u0437\u0430",
+            "all_instance_of": "astronomical observatory",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "zvenigorod-observatory",
+            "aliases-lower": "\u0437\u043d\u0431|\u0437\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f-\u043e\u0431\u0441\u0435\u0440\u0432\u0430\u0442\u043e\u0440\u0438\u044f-\u0438\u043d\u0430\u0441\u0430\u043d|\u0437\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f-\u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f-\u0441\u0442\u0430\u043d\u0446\u0438\u044f|\u0437\u0432\u0435\u043d\u0438\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0430\u044f-\u043d\u0430\u0431\u043b\u044e\u0434\u0430\u0442\u0435\u043b\u044c\u043d\u0430\u044f-\u0431\u0430\u0437\u0430"
         }
     ],
     [
@@ -1405,17 +1279,19 @@
             "ID": "IGO"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q879943",
-            "itemLabel": "heligoland-bird-observatory",
-            "itemDescription": "research institute in Wilhelmshaven, Germany",
+            "item": "http://www.wikidata.org/entity/Q115537130",
+            "itemLabel": "Helios Ontigola observatory",
+            "itemDescription": "Astronomical observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "ifv|ifv|institute-of-avian-research-\"vogelwarte-helgoland\"|institut-f\u00fcr-vogelforschung",
-            "all_instance_of": "research institute|bird observatory",
-            "all_has_part": "Heligoland Bird Observatory",
-            "all_part_of": ""
+            "all_Minor_Planet_Center_observatory_ID": "I62",
+            "aliases": "",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "",
+            "itemLabel-lower": "helios-ontigola-observatory",
+            "aliases-lower": ""
         }
     ],
     [
@@ -1425,16 +1301,18 @@
         },
         {
             "item": "http://www.wikidata.org/entity/Q186447",
-            "itemLabel": "james-webb-space-telescope",
+            "itemLabel": "James Webb Space Telescope",
             "itemDescription": "NASA/ESA/CSA space telescope launched in 2021",
             "all_COSPAR_ID": "2021-130A",
             "all_NAIF_ID": "-170",
             "all_NSSDCA_ID": "2021-130A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0434\u0436\u0435\u0439\u043c\u0441-\u0443\u044d\u0431\u0431|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e-\u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0434\u0436\u0435\u0439\u043c\u0441\u0430-\u0432\u0435\u0431\u0431\u0430|\u0434\u0436\u0435\u0439\u043c\u0441-\u0432\u0435\u0431\u0431-(\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0434\u0436\u0435\u0439\u043c\u0441-\u0432\u0435\u0431\u0431|jwst|telescopul-spa\u0163ial-james-webb|jwst|james-webb-space-telescope|\u062c\u06cc\u0645\u0632-\u0648\u06cc\u0628-\u062e\u0644\u0627\u0626\u06cc-\u062f\u0648\u0631\u0628\u06cc\u0646|jwst|james-webb-space-telescope|\u07e5\u07cd\u07d3-\u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07e5\u07cd\u07d3-\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd-\u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|james-webb|james-webb-telescope|james-webb-space-telescope|jwst|james-webb-space-telescope|james-webb--teleskooppi|ngst|next-generation-space-telescope|jwst|james-webb-teleskopioa|james-webb-(teleskopioa)|hurrengo-belaunaldiko-espazio-teleskopioa|james-webb'i-kosmoseteleskoop|ngst|next-generation-space-telescope|jwst|james-webb-space-telescope|webb-telescope|webb-space-telescope|ngst|next-generation-space-telescope|jwst|\u03c4\u03b6\u03ad\u03b9\u03bc\u03c2-\u03bf\u03c5\u03ad\u03bc\u03c0|next-generation-space-telescope|jwst|james-webb-teleskop|james-webb-weltraumteleskop|james-webb-weltraumteleskop|james-webb-space-telescope|james-webb-space-telescope|webb\u016fv-vesm\u00edrn\u00fd-dalekohled|jwst|james-webb-space-telescope|dalekohled-jamese-webba|\u07d6.\u07e5.\u07dd.\u07dd|ngst|next-generation-space-telescope|jwst|james-webb-space-telescope|jwst|james-webb-ruimtetelescoop|ngst|next-generation-space-telescope|jwst|james-webb-space-telescope|ngst-teleskopas|ngst|next-generation-space-telescope|jwst|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|webb-\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|webb-\ub9dd\uc6d0\uacbd|ngst|jwst|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|jwst|telescopio-webb|jwst|james-webb-space-telescope|jwst|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4-\u05d4\u05d7\u05dc\u05dc-\u05d2'\u05d9\u05d9\u05de\u05e1-\u05d5\u05d5\u05d1|jwst|t\u00e9lescope-spatial-james-webb|ngst|next-generation-space-telescope|jwst|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649-\u0641\u0647\u0632\u0627\u06cc\u0649-\u062c\u06cc\u0645\u0633-\u0648\u06cc\u0628|jwst|james-webb-space-telescope|james-webb-space-telescope|\u0645\u0642\u0631\u0627\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0635\u062f-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628|\u062a\u0644\u0633\u0643\u0648\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628|jwst|james-webb|ngst|jwst|jwst|jwst|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|k\u00ednh-thi\u00ean-v\u0103n-v\u0169-tr\u1ee5-james-webb|k\u00ednh-thi\u00ean-v\u0103n-james-webb|jwst|james-webb-space-telescope|james-webb-uzay-teleskobu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c-\u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|teleskopi-kayhonii-jeyms-webb|teleskopi-kayhonii-jeyms-uebb|teleskopi-kajhoniji-\u00e7ejms-uebb|jeyms-webb-(teleskop)|james-webb-(teleskop)|\u04b7\u0435\u0439\u043c\u0441-\u0443\u044d\u0431\u0431|\u04b7\u0435\u0439\u043c\u0441-\u0432\u0435\u0431\u0431|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438-\u04b7\u0435\u0439\u043c\u0441-\u0443\u044d\u0431\u0431|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d-\u0c35\u0c46\u0c2c\u0c4d-\u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37-\u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|jwst|james-webb-space-telescope|jwst|atiliskup-n-usayrar-jims-wib|\u0443\u044d\u0431\u0431-(\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443\u044d\u0431\u0431",
+            "aliases": "\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0414\u0436\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e \u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|\u041a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0438\u043c\u0435\u043d\u0438 \u0414\u0436\u0435\u0439\u043c\u0441\u0430 \u0412\u0435\u0431\u0431\u0430|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0414\u0436\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|JWST|Telescopul spa\u0163ial James Webb|JWST|James Webb Space Telescope|\u062c\u06cc\u0645\u0632 \u0648\u06cc\u0628 \u062e\u0644\u0627\u0626\u06cc \u062f\u0648\u0631\u0628\u06cc\u0646|JWST|James Webb Space Telescope|\u07e5\u07cd\u07d3 \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07e5\u07cd\u07d3 \u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd \u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07d6.\u07e5.\u07dd.\u07dd|NGST|Next Generation Space Telescope|JWST|James Webb Space Telescope|JWST|James Webb Ruimtetelescoop|NGST|Next Generation Space Telescope|JWST|James Webb Space Telescope|NGST teleskopas|NGST|Next Generation Space Telescope|Jwst|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Webb \uc6b0\uc8fc\ub9dd\uc6d0\uacbd|Webb \ub9dd\uc6d0\uacbd|NGST|JWST|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|JWST|Telescopio Webb|JWST|James Webb Space Telescope|JWST|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4 \u05d4\u05d7\u05dc\u05dc \u05d2'\u05d9\u05d9\u05de\u05e1 \u05d5\u05d5\u05d1|JWST|T\u00e9lescope spatial James Webb|NGST|Next Generation Space Telescope|JWST|James-Webb|James Webb Telescope|James Webb Space Telescope|JWST|James Webb Space Telescope|James Webb -teleskooppi|NGST|Next Generation Space Telescope|JWST|James Webb teleskopioa|James Webb (teleskopioa)|Hurrengo Belaunaldiko Espazio Teleskopioa|James Webb'i kosmoseteleskoop|NGST|Next Generation Space Telescope|JWST|James Webb Space Telescope|Webb Telescope|Webb Space Telescope|NGST|Next Generation Space Telescope|JWST|\u03a4\u03b6\u03ad\u03b9\u03bc\u03c2 \u039f\u03c5\u03ad\u03bc\u03c0|Next Generation Space Telescope|JWST|James-Webb-Teleskop|James Webb-Weltraumteleskop|James Webb Weltraumteleskop|James Webb Space Telescope|James Webb Space Telescope|Webb\u016fv vesm\u00edrn\u00fd dalekohled|JWST|James Webb Space Telescope|Dalekohled Jamese Webba|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649 \u0641\u0647\u0632\u0627\u06cc\u0649 \u062c\u06cc\u0645\u0633 \u0648\u06cc\u0628|JWST|James Webb Space Telescope|James Webb Space Telescope|\u0645\u0642\u0631\u0627\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0635\u062f \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628 \u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|\u062a\u0644\u0633\u0643\u0648\u0628 \u062c\u064a\u0645\u0633 \u0648\u064a\u0628|JWST|James Webb|NGST|JWST|JWST|JWST|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|K\u00ednh thi\u00ean v\u0103n v\u0169 tr\u1ee5 James Webb|K\u00ednh thi\u00ean v\u0103n James Webb|JWST|James Webb Space Telescope|James Webb Uzay Teleskobu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c \u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|Teleskopi kayhonii Jeyms Webb|Teleskopi kayhonii Jeyms Uebb|Teleskopi kajhoniji \u00c7ejms Uebb|Jeyms Webb (teleskop)|James Webb (teleskop)|\u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u04b6\u0435\u0439\u043c\u0441 \u0412\u0435\u0431\u0431|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438 \u04b6\u0435\u0439\u043c\u0441 \u0423\u044d\u0431\u0431|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d \u0c35\u0c46\u0c2c\u0c4d \u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37 \u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|JWST|James Webb Space Telescope|JWST|Atiliskup n usayrar Jims Wib|\u0423\u044d\u0431\u0431 (\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0422\u0435\u043b\u0435\u0441\u043a\u043e\u043f \u0423\u044d\u0431\u0431",
             "all_instance_of": "space telescope",
             "all_has_part": "Optical Telescope Element|Spacecraft Bus|James Webb Space Telescope sunshield|Integrated Science Instrument Module",
-            "all_part_of": ""
+            "all_part_of": "",
+            "itemLabel-lower": "james-webb-space-telescope",
+            "aliases-lower": "\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0434\u0436\u0435\u0439\u043c\u0441-\u0443\u044d\u0431\u0431|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0433\u043e-\u043f\u043e\u043a\u043e\u043b\u0435\u043d\u0438\u044f|\u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439-\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0438\u043c\u0435\u043d\u0438-\u0434\u0436\u0435\u0439\u043c\u0441\u0430-\u0432\u0435\u0431\u0431\u0430|\u0434\u0436\u0435\u0439\u043c\u0441-\u0432\u0435\u0431\u0431-(\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0434\u0436\u0435\u0439\u043c\u0441-\u0432\u0435\u0431\u0431|jwst|telescopul-spa\u0163ial-james-webb|jwst|james-webb-space-telescope|\u062c\u06cc\u0645\u0632-\u0648\u06cc\u0628-\u062e\u0644\u0627\u0626\u06cc-\u062f\u0648\u0631\u0628\u06cc\u0646|jwst|james-webb-space-telescope|\u07e5\u07cd\u07d3-\u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07e5\u07cd\u07d3-\u07dd\u07cf\u07ec\u07df\u07cf\u07f2\u07ec\u07dd\u07ca\u07ec\u07df\u07ca\u07f2\u07ec\u07d5\u07cd-\u07dd\u07cf\u07ec\u07e3\u07ca\u07f2\u07ec\u07e6\u07cb\u07ec\u07df\u07ca\u07f2|\u07d6.\u07e5.\u07dd.\u07dd|ngst|next-generation-space-telescope|jwst|james-webb-space-telescope|jwst|james-webb-ruimtetelescoop|ngst|next-generation-space-telescope|jwst|james-webb-space-telescope|ngst-teleskopas|ngst|next-generation-space-telescope|jwst|\ucc28\uc138\ub300\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|webb-\uc6b0\uc8fc\ub9dd\uc6d0\uacbd|webb-\ub9dd\uc6d0\uacbd|ngst|jwst|\u30b8\u30a7\u30fc\u30e0\u30ba\u30fb\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|\u30a6\u30a7\u30c3\u30d6\u5b87\u5b99\u671b\u9060\u93e1|jwst|telescopio-webb|jwst|james-webb-space-telescope|jwst|\u05d8\u05dc\u05e1\u05e7\u05d5\u05e4-\u05d4\u05d7\u05dc\u05dc-\u05d2'\u05d9\u05d9\u05de\u05e1-\u05d5\u05d5\u05d1|jwst|t\u00e9lescope-spatial-james-webb|ngst|next-generation-space-telescope|jwst|james-webb|james-webb-telescope|james-webb-space-telescope|jwst|james-webb-space-telescope|james-webb--teleskooppi|ngst|next-generation-space-telescope|jwst|james-webb-teleskopioa|james-webb-(teleskopioa)|hurrengo-belaunaldiko-espazio-teleskopioa|james-webb'i-kosmoseteleskoop|ngst|next-generation-space-telescope|jwst|james-webb-space-telescope|webb-telescope|webb-space-telescope|ngst|next-generation-space-telescope|jwst|\u03c4\u03b6\u03ad\u03b9\u03bc\u03c2-\u03bf\u03c5\u03ad\u03bc\u03c0|next-generation-space-telescope|jwst|james-webb-teleskop|james-webb-weltraumteleskop|james-webb-weltraumteleskop|james-webb-space-telescope|james-webb-space-telescope|webb\u016fv-vesm\u00edrn\u00fd-dalekohled|jwst|james-webb-space-telescope|dalekohled-jamese-webba|\u062a\u0647\u0644\u0633\u0643\u06c6\u0628\u0649-\u0641\u0647\u0632\u0627\u06cc\u0649-\u062c\u06cc\u0645\u0633-\u0648\u06cc\u0628|jwst|james-webb-space-telescope|james-webb-space-telescope|\u0645\u0642\u0631\u0627\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u0645\u0631\u0635\u062f-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628-\u0627\u0644\u0641\u0636\u0627\u0626\u064a|\u062a\u0644\u064a\u0633\u0643\u0648\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628|\u062a\u0644\u0633\u0643\u0648\u0628-\u062c\u064a\u0645\u0633-\u0648\u064a\u0628|jwst|james-webb|ngst|jwst|jwst|jwst|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u4e0b\u4e00\u4ee3\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u97e6\u4f2f\u592a\u7a7a\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u5e03\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97e6\u4f2f\u7a7a\u95f4\u671b\u8fdc\u955c|\u8a79\u59c6\u65af\u00b7\u97cb\u4f2f\u671b\u9060\u93e1|\u8a79\u59c6\u58eb\u00b7\u97cb\u4f2f\u592a\u7a7a\u671b\u9060\u93e1|k\u00ednh-thi\u00ean-v\u0103n-v\u0169-tr\u1ee5-james-webb|k\u00ednh-thi\u00ean-v\u0103n-james-webb|jwst|james-webb-space-telescope|james-webb-uzay-teleskobu|\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e42\u0e17\u0e23\u0e17\u0e23\u0e23\u0e28\u0e19\u0e4c\u0e2d\u0e27\u0e01\u0e32\u0e28\u0e40\u0e08\u0e21\u0e2a\u0e4c-\u0e40\u0e27\u0e47\u0e1a\u0e1a\u0e4c|teleskopi-kayhonii-jeyms-webb|teleskopi-kayhonii-jeyms-uebb|teleskopi-kajhoniji-\u00e7ejms-uebb|jeyms-webb-(teleskop)|james-webb-(teleskop)|\u04b7\u0435\u0439\u043c\u0441-\u0443\u044d\u0431\u0431|\u04b7\u0435\u0439\u043c\u0441-\u0432\u0435\u0431\u0431|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f\u0438-\u04b7\u0435\u0439\u043c\u0441-\u0443\u044d\u0431\u0431|\u0c1c\u0c47\u0c2e\u0c4d\u0c38\u0c4d-\u0c35\u0c46\u0c2c\u0c4d-\u0c05\u0c02\u0c24\u0c30\u0c3f\u0c15\u0c4d\u0c37-\u0c1f\u0c46\u0c32\u0c3f\u0c38\u0c4d\u0c15\u0c4b\u0c2a\u0c41|jwst|james-webb-space-telescope|jwst|atiliskup-n-usayrar-jims-wib|\u0443\u044d\u0431\u0431-(\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f)|\u0442\u0435\u043b\u0435\u0441\u043a\u043e\u043f-\u0443\u044d\u0431\u0431"
         }
     ]
 ]
