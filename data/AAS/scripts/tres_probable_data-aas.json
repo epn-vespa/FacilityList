@@ -77,25 +77,6 @@
     ],
     [
         {
-            "Name": "The Five-hundred-meter Aperture Spherical radio Telescope (FAST)",
-            "ID": "FAST:500m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q49912",
-            "itemLabel": "fast-auroral-snapshot-explorer",
-            "itemDescription": "NASA satellite of the Explorer program",
-            "all_COSPAR_ID": "1996-049A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "explorer-70|fast|fast",
-            "all_instance_of": "Earth observation satellite",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "St. Petersburg University 16 inch Meade LX-200 telescope",
             "ID": "LX-200"
         },
@@ -133,25 +114,6 @@
     ],
     [
         {
-            "Name": "NSF\u2019s NOIRLab Gemini Science archive",
-            "ID": "Gemini Science archive"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q935203",
-            "itemLabel": "gns-science",
-            "itemDescription": "New Zealand research institute",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "new-zealand-geological-survey|institute-of-nuclear-sciences|gns-science|dsir-geophysics-division|dsir-geology-and-geophysics|institute-of-geological-and-nuclear-sciences",
-            "all_instance_of": "research institute|Crown Research Institute|volcano observatory",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "NSF\u2019s NOIRLab Astro Data Lab",
             "ID": "Astro Data Lab"
         },
@@ -163,7 +125,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "astro-g|vsop-2|vsop-2|vsop-2|vsop-2|astro-g",
+            "aliases": "vsop-2|vsop-2|vsop-2|astro-g|astro-g|vsop-2",
             "all_instance_of": "radio telescope",
             "all_has_part": "",
             "all_part_of": ""
@@ -208,25 +170,6 @@
     ],
     [
         {
-            "Name": "National Center for Supercomputing Applications Blue Waters",
-            "ID": "Blue Waters"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1803017",
-            "itemLabel": "blue-hill-meteorological-observatory",
-            "itemDescription": "Weather observatory in Milton, United States",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-meteorologico-de-blue-hill",
-            "all_instance_of": "observatory|weather station",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "NASA High Energy Transient Explorer 2 (HETE-2) Satellite Mission",
             "ID": "HETE-2"
         },
@@ -258,7 +201,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "lonochod-2|lunokhod-2|ye-8|\u0644\u0648\u0646\u0627\u062e\u0648\u062f-\u0662",
-            "all_instance_of": "solar vehicle|lunar rover",
+            "all_instance_of": "lunar rover|solar vehicle",
             "all_has_part": "",
             "all_part_of": "Luna 21"
         }
@@ -363,14 +306,15 @@
             "ID": "P78-1"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -381,15 +325,15 @@
             "ID": "P78-1"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -400,17 +344,17 @@
             "ID": "P78-1"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q205308",
-            "itemLabel": "intercosmos-1",
-            "itemDescription": "research satellite",
-            "all_COSPAR_ID": "1969-088A",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "intercosmos-1",
-            "all_instance_of": "former entity|DS-U3-IK",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Interkosmos"
+            "all_part_of": ""
         }
     ],
     [
@@ -486,25 +430,6 @@
             "all_instance_of": "artificial satellite",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "European Space Research Organisation (ESRO) TD-1A (also known as Thor-Delta 1A) Satellite Mission",
-            "ID": "TD-1A"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q261312",
-            "itemLabel": "little-joe-1a",
-            "itemDescription": "launch escape system test flight during Project Mercury",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "LILJOE-1A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lj-1a|little-joe-1a-(lj-1a)",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -650,29 +575,10 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2015-011B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "aliases": "mms-2|mms2|paul|stp-4b|solar-terrestrial-probe-4b",
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "European Southern Observatory (ESO)/Max Planck Gesellschaft (MPG) 2.2m Telescope at La Silla Observatory",
-            "ID": "Max Planck:2.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q862204",
-            "itemLabel": "kwangmy\u014fngs\u014fng-3-unit-2",
-            "itemDescription": "first North Korean satellite",
-            "all_COSPAR_ID": "2012-072A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "kwangmy\u014fngs\u014fng-3-unit-2|kwangmyongsong-3|kwangmyongsong-3|\u5149\u660e\u661f3\u53f7",
-            "all_instance_of": "Earth observation satellite",
-            "all_has_part": "",
-            "all_part_of": ""
         }
     ],
     [
@@ -707,7 +613,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -738,25 +644,6 @@
             "ID": "CTIO:1.0m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "The Small and Medium Research Telescope System (SMARTS) Yale 1.0m Telescope at Cerro Tololo Inter-American Observatory (CTIO)",
-            "ID": "CTIO:1.0m"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q265594",
             "itemLabel": "high-energy-astronomy-observatory-1",
             "itemDescription": "space observatory",
@@ -768,25 +655,6 @@
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "The Small and Medium Research Telescope System (SMARTS) Yale 1.0m Telescope at Cerro Tololo Inter-American Observatory (CTIO)",
-            "ID": "CTIO:1.0m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
         }
     ],
     [
@@ -802,7 +670,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -842,24 +710,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
             "all_instance_of": "space telescope",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "The Small and Medium Research Telescope System (SMARTS) 1.3m Telescope at Cerro Tololo Inter-American Observatory (CTIO) [Duplicate of CTIO:2MASS]",
-            "ID": "CTIO:1.3m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q48523",
-            "itemLabel": "canadian-advanced-nanospace-experiment-1",
-            "all_COSPAR_ID": "2003-031H",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "canadian-advanced-nanospace-experiment-1|canx-5|canx-1|canx-program",
-            "all_instance_of": "CubeSat|technology demonstration spacecraft",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -877,7 +727,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -908,34 +758,15 @@
             "ID": "CTIO:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "The Small and Medium Research Telescope System (SMARTS) 1.5m Telescope at Cerro Tololo Inter-American Observatory (CTIO)",
-            "ID": "CTIO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q265594",
-            "itemLabel": "high-energy-astronomy-observatory-1",
-            "itemDescription": "space observatory",
-            "all_COSPAR_ID": "1977-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1977-075A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
-            "all_instance_of": "space telescope",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -946,17 +777,36 @@
             "ID": "CTIO:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "The Small and Medium Research Telescope System (SMARTS) 1.5m Telescope at Cerro Tololo Inter-American Observatory (CTIO)",
+            "ID": "CTIO:1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -1022,6 +872,25 @@
             "ID": "Danish 1.54m Telescope"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q11698688",
+            "itemLabel": "pehuensat-1",
+            "itemDescription": "Amateur radio satellite",
+            "all_COSPAR_ID": "2007-001D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "pehuensat-1",
+            "all_instance_of": "amateur radio satellite",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory Danish 1.54m Telescope at La Silla Observatory",
+            "ID": "Danish 1.54m Telescope"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q12154868",
             "itemLabel": "zond-l1s-1",
             "itemDescription": "soviet robotic spacecraft of 1969",
@@ -1033,25 +902,6 @@
             "all_instance_of": "Soyuz 7K-L1",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "European Southern Observatory Danish 1.54m Telescope at La Silla Observatory",
-            "ID": "Danish 1.54m Telescope"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q122197952",
-            "itemLabel": "solar-ultraviolet-imaging-telescope",
-            "itemDescription": "ultraviolet telescope on the Aditya-L1 spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "solar-ultra-violet-imaging-telescope|suit",
-            "all_instance_of": "space telescope|ultraviolet telescope",
-            "all_has_part": "",
-            "all_part_of": "Aditya-L1"
         }
     ],
     [
@@ -1097,6 +947,63 @@
             "ID": "ESO:1.52m"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) 1.52m Telescope at La Silla Observatory",
+            "ID": "ESO:1.52m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) 1.52m Telescope at La Silla Observatory",
+            "ID": "ESO:1.52m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "European Southern Observatory (ESO) 1.52m Telescope at La Silla Observatory",
+            "ID": "ESO:1.52m"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q14152752",
             "itemLabel": "cute-1.7-+-apd",
             "all_COSPAR_ID": "2006-005C",
@@ -1107,63 +1014,6 @@
             "all_instance_of": "CUTE-1.7",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "European Southern Observatory (ESO) 1.52m Telescope at La Silla Observatory",
-            "ID": "ESO:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "European Southern Observatory (ESO) 1.52m Telescope at La Silla Observatory",
-            "ID": "ESO:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "European Southern Observatory (ESO) 1.52m Telescope at La Silla Observatory",
-            "ID": "ESO:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q3648861",
-            "itemLabel": "cosmo-skymed-1",
-            "itemDescription": "Italian reconnaissance satellite",
-            "all_COSPAR_ID": "2007-023A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "cosmo-skymed-1|skymed-1|cosmo-1",
-            "all_instance_of": "reconnaissance satellite",
-            "all_has_part": "",
-            "all_part_of": "COSMO-SkyMed"
         }
     ],
     [
@@ -1246,15 +1096,15 @@
             "ID": "ESO:3.6m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1190799",
-            "itemLabel": "high-energy-astronomy-observatory-3",
-            "itemDescription": "space observatory",
-            "all_COSPAR_ID": "1979-082A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1979-082A",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "heao-3|heao-3|heao-3|\u0645\u0631\u0635\u062f-\u0627\u0644\u0641\u0644\u0643-\u0627\u0644\u0639\u0627\u0644\u064a-\u0627\u0644\u0637\u0627\u0642\u0629-\u0663",
-            "all_instance_of": "space telescope",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1359,15 +1209,15 @@
             "ID": "LNA:1.6m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1378,14 +1228,15 @@
             "ID": "LNA:1.6m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1396,15 +1247,15 @@
             "ID": "LNA:1.6m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1422,7 +1273,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -1453,15 +1304,15 @@
             "ID": "MLO:1.25m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1472,14 +1323,15 @@
             "ID": "MLO:1.25m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1490,15 +1342,34 @@
             "ID": "MLO:1.25m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "San Diego State University (SDSU) 1m (42inch) Telescope (also known as the Illinois telescope) at Mount Laguna Observatory (MLO)",
+            "ID": "MLO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1528,6 +1399,63 @@
             "ID": "PO:1.5m"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 1.5m (60inch) Telescope (also known as P60) at Palomar Observatory",
+            "ID": "PO:1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 1.5m (60inch) Telescope (also known as P60) at Palomar Observatory",
+            "ID": "PO:1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 1.5m (60inch) Telescope (also known as P60) at Palomar Observatory",
+            "ID": "PO:1.5m"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q1326683",
             "itemLabel": "elektro-l-no.1",
             "itemDescription": "weather satellite",
@@ -1539,62 +1467,6 @@
             "all_instance_of": "Elektro\u2013L",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "California Institute of Technology 1.5m (60inch) Telescope (also known as P60) at Palomar Observatory",
-            "ID": "PO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "California Institute of Technology 1.5m (60inch) Telescope (also known as P60) at Palomar Observatory",
-            "ID": "PO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "California Institute of Technology 1.5m (60inch) Telescope (also known as P60) at Palomar Observatory",
-            "ID": "PO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -1622,74 +1494,74 @@
             "ID": "PO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "California Institute of Technology 1.2m Samuel Oschin Telescope (also known as 48inch Schmidt) at Palomar Observatory",
-            "ID": "PO:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
-        }
-    ],
-    [
-        {
-            "Name": "California Institute of Technology 1.2m Samuel Oschin Telescope (also known as 48inch Schmidt) at Palomar Observatory",
-            "ID": "PO:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q605607",
-            "itemLabel": "mercury-scout-1",
-            "itemDescription": "test flight of a Scout rocket during Project Mercury",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u043c\u0435\u0440\u043a\u0443\u0440\u0438\u0439-\u0441\u043a\u0430\u0443\u0442|ms-1|ms-1|ms-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "California Institute of Technology 1.2m Samuel Oschin Telescope (also known as 48inch Schmidt) at Palomar Observatory",
-            "ID": "PO:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 1.2m Samuel Oschin Telescope (also known as 48inch Schmidt) at Palomar Observatory",
+            "ID": "PO:1.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 1.2m Samuel Oschin Telescope (also known as 48inch Schmidt) at Palomar Observatory",
+            "ID": "PO:1.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "California Institute of Technology 1.2m Samuel Oschin Telescope (also known as 48inch Schmidt) at Palomar Observatory",
+            "ID": "PO:1.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q932976",
+            "itemLabel": "lunar-orbiter-1",
+            "itemDescription": "first American robotic spacecraft to orbit the Moon",
+            "all_COSPAR_ID": "1966-073A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "1966-073A",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "\u0e22\u0e32\u0e19\u0e25\u0e39\u0e19\u0e32\u0e23\u0e4c\u0e2d\u0e2d\u0e23\u0e4c\u0e1a\u0e34\u0e40\u0e15\u0e2d\u0e23\u0e4c-1|lunar-orbiter|lunar-orbiter-i",
+            "all_instance_of": "space probe",
+            "all_has_part": "",
+            "all_part_of": "Lunar Orbiter program"
         }
     ],
     [
@@ -1705,7 +1577,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -1728,25 +1600,6 @@
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "National Research Council (NRC) Herzberg Institute of Astrophysics 1.85m Plaskett Telescope at Dominion Astrophysical Observatory (DAO)",
-            "ID": "DAO:1.85m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -1770,25 +1623,6 @@
     ],
     [
         {
-            "Name": "National Research Council (NRC) Herzberg Institute of Astrophysics 1.85m Plaskett Telescope at Dominion Astrophysical Observatory (DAO)",
-            "ID": "DAO:1.85m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
             "ID": "Ritter Observatory"
         },
@@ -1801,26 +1635,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "995",
             "aliases": "observatory",
-            "all_instance_of": "building|observatory|astronomical observatory",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
-            "ID": "Ritter Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
+            "all_instance_of": "observatory|building|astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -1840,25 +1655,6 @@
             "aliases": "vermilion-river-radio-observatory|vro",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "Illinois 120-foot telescope|Illinois 400-foot radio telescope",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
-            "ID": "Ritter Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1086610",
-            "itemLabel": "orbiting-carbon-observatory",
-            "itemDescription": "NASA climate satellite destroyed during a 2009 launch failure",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "orbiting-carbon-observatory|oco|orbiting-carbon-observatory|oco|anglies-observatorija|oco\u885b\u661f|oco|orbiting-carbon-observatory|oco|oco",
-            "all_instance_of": "Earth observation satellite",
-            "all_has_part": "",
             "all_part_of": ""
         }
     ],
@@ -1883,6 +1679,44 @@
     ],
     [
         {
+            "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
+            "ID": "Ritter Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456073",
+            "itemLabel": "munich-observatory-(1819-1938)",
+            "itemDescription": "astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "532",
+            "aliases": "532-mu|bogenhausen-observatory",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Toledo 1m (42inch) Telescope at Ritter Observatory",
+            "ID": "Ritter Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456131",
+            "itemLabel": "leipzig-observatory-(since-1861)",
+            "itemDescription": "astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "543",
+            "aliases": "leipzig-observatory-(since-1861)",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
             "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
             "ID": "UMN:1.52m"
         },
@@ -1906,6 +1740,63 @@
             "ID": "UMN:1.52m"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
+            "ID": "UMN:1.52m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
+            "ID": "UMN:1.52m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
+            "ID": "UMN:1.52m"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q14152752",
             "itemLabel": "cute-1.7-+-apd",
             "all_COSPAR_ID": "2006-005C",
@@ -1916,63 +1807,6 @@
             "all_instance_of": "CUTE-1.7",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
-            "ID": "UMN:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
-            "ID": "UMN:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "University of Minnesota (UMN) 1.52m at Mount Lemmon Observing Facility (MLOF)",
-            "ID": "UMN:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q3648861",
-            "itemLabel": "cosmo-skymed-1",
-            "itemDescription": "Italian reconnaissance satellite",
-            "all_COSPAR_ID": "2007-023A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "cosmo-skymed-1|skymed-1|cosmo-1",
-            "all_instance_of": "reconnaissance satellite",
-            "all_has_part": "",
-            "all_part_of": "COSMO-SkyMed"
         }
     ],
     [
@@ -1988,7 +1822,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -2019,25 +1853,6 @@
             "ID": "DAO:1.22m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "National Research Council (NRC) Herzberg Institute of Astrophysics 1.22m McKellar Telescope at Dominion Astrophysical Observatory (DAO)",
-            "ID": "DAO:1.22m"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q265594",
             "itemLabel": "high-energy-astronomy-observatory-1",
             "itemDescription": "space observatory",
@@ -2047,25 +1862,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
             "all_instance_of": "space telescope",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "National Research Council (NRC) Herzberg Institute of Astrophysics 1.22m McKellar Telescope at Dominion Astrophysical Observatory (DAO)",
-            "ID": "DAO:1.22m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2084,7 +1880,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "995",
             "aliases": "observatory",
-            "all_instance_of": "building|observatory|astronomical observatory",
+            "all_instance_of": "observatory|building|astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2113,15 +1909,15 @@
             "ID": "Dunlap Observatory"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1086610",
-            "itemLabel": "orbiting-carbon-observatory",
-            "itemDescription": "NASA climate satellite destroyed during a 2009 launch failure",
+            "item": "http://www.wikidata.org/entity/Q110889375",
+            "itemLabel": "mobil-astronomical-robotics-genon-observatory",
+            "itemDescription": "observatoire mobile de Gennadiy Borisov",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "orbiting-carbon-observatory|oco|orbiting-carbon-observatory|oco|anglies-observatorija|oco\u885b\u661f|oco|orbiting-carbon-observatory|oco|oco",
-            "all_instance_of": "Earth observation satellite",
+            "all_Minor_Planet_Center_observatory_ID": "L51",
+            "aliases": "margo,-nauchnyi|margo,-nauchnyi|margo|margo-observatory",
+            "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2151,14 +1947,14 @@
             "ID": "Dunlap Observatory"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q114642920",
-            "itemLabel": "warren-&-beverly-observatory",
+            "item": "http://www.wikidata.org/entity/Q114456073",
+            "itemLabel": "munich-observatory-(1819-1938)",
             "itemDescription": "astronomical observatory",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "709",
-            "aliases": "w-&-b-observatory|offutt-observatory",
+            "all_Minor_Planet_Center_observatory_ID": "532",
+            "aliases": "532-mu|bogenhausen-observatory",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
@@ -2241,82 +2037,6 @@
     ],
     [
         {
-            "Name": "Universite de Montreal (UdeM)/Universite Laval (ULaval)/McGill University 1.6m telescope at Observatoire du Mont-Megantic (OMM)",
-            "ID": "OMM:1.6"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Universite de Montreal (UdeM)/Universite Laval (ULaval)/McGill University 1.6m telescope at Observatoire du Mont-Megantic (OMM)",
-            "ID": "OMM:1.6"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
-        }
-    ],
-    [
-        {
-            "Name": "Universite de Montreal (UdeM)/Universite Laval (ULaval)/McGill University 1.6m telescope at Observatoire du Mont-Megantic (OMM)",
-            "ID": "OMM:1.6"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Massachusetts Institute of Technology (MIT) 37m Haystack radio Telescope",
-            "ID": "Haystack Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "Massachusetts Institute of Technology (MIT) 37m Haystack radio Telescope",
             "ID": "Haystack Observatory"
         },
@@ -2345,7 +2065,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "radio-observatorio-itapetinga|radio-observatorio-itapetinga|r\u00e1dio-observat\u00f3rio-de-itapetinga|r\u00e1dio-observat\u00f3rio-de-itapetinga|itapetinga-radio-observatory|roi",
+            "aliases": "radio-observatorio-itapetinga|radio-observatorio-itapetinga|r\u00e1dio-observat\u00f3rio-de-itapetinga|r\u00e1dio-observat\u00f3rio-de-itapetinga|roi|itapetinga-radio-observatory",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "Solar Radio Polarimeter|Solar Patrol Equipment|Itapetinga Radio Telescope",
             "all_part_of": ""
@@ -2372,6 +2092,81 @@
     ],
     [
         {
+            "Name": "Embry-Riddle Aeronautical University, Daytona Beach 1m Telescope at Embry-Riddle Observatory",
+            "ID": "ERO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "New Mexico State University (NMSU) 1m Telescope at Apache Point Observatory",
+            "ID": "NMSU:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16089321",
+            "itemLabel": "raduga-1m-1",
+            "all_COSPAR_ID": "2007-058A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-1|raduga-1m-1|globus-1m-11l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "New Mexico State University (NMSU) 1m Telescope at Apache Point Observatory",
+            "ID": "NMSU:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Korea Astronomy and Space Science Institute (KASI) 1m Telescope at Mount Lemmon Optical Astronomy Observatory (LOAO)",
+            "ID": "LOAO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
             "Name": "WIYN Consortium 0.9m (36inch) Telescope (formerly NOAO 0.9m telescope) at Kitt Peak National Observatory (KPNO)",
             "ID": "WIYN:0.9m"
         },
@@ -2387,6 +2182,24 @@
             "all_instance_of": "optical telescope",
             "all_has_part": "",
             "all_part_of": "Kitt Peak National Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Brigham Young University (BYU) 0.4m David Derrick Telescope (DDT) at Orson Pratt Observatory",
+            "ID": "BYU:0.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q41796381",
+            "itemLabel": "hiltner-2.4m-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "mdm-2.4|mdm-2.4m-hiltner",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Michigan-Dartmouth-MIT Observatory"
         }
     ],
     [
@@ -2422,7 +2235,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "dkist|dkist|atst|advanced-technology-solar-telescope",
-            "all_instance_of": "optical telescope|Gregorian telescope|solar telescope",
+            "all_instance_of": "optical telescope|solar telescope|Gregorian telescope",
             "all_has_part": "",
             "all_part_of": "Haleakal\u0101 Observatory"
         }
@@ -2478,7 +2291,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "dkist|dkist|atst|advanced-technology-solar-telescope",
-            "all_instance_of": "optical telescope|Gregorian telescope|solar telescope",
+            "all_instance_of": "optical telescope|solar telescope|Gregorian telescope",
             "all_has_part": "",
             "all_part_of": "Haleakal\u0101 Observatory"
         }
@@ -2544,14 +2357,15 @@
             "ID": "MtW:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2562,36 +2376,36 @@
             "ID": "MtW:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Mount Wilson Institute 1.5m (60inch) Telescope at Mount Wilson Observatory (MWO)",
-            "ID": "MtW:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Project Mercury"
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Mount Wilson Institute 1.5m (60inch) Telescope at Mount Wilson Observatory (MWO)",
+            "ID": "MtW:1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -2607,7 +2421,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -2638,34 +2452,15 @@
             "ID": "FLWO:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Harvard-Smithsonian Center for Astrophysics (CfA) 1.5m Tillinghast Telescope at Fred Lawrence Whipple Observatory (FLWO)",
-            "ID": "FLWO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q265594",
-            "itemLabel": "high-energy-astronomy-observatory-1",
-            "itemDescription": "space observatory",
-            "all_COSPAR_ID": "1977-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1977-075A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
-            "all_instance_of": "space telescope",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2676,17 +2471,36 @@
             "ID": "FLWO:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Harvard-Smithsonian Center for Astrophysics (CfA) 1.5m Tillinghast Telescope at Fred Lawrence Whipple Observatory (FLWO)",
+            "ID": "FLWO:1.5m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -2702,7 +2516,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -2733,15 +2547,15 @@
             "ID": "FLWO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2752,52 +2566,34 @@
             "ID": "FLWO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Smithsonian Astrophysical Observatory (SAO) 1.2m Telescope at Fred Lawrence Whipple Observatory (FLWO)",
-            "ID": "FLWO:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Milagrito Telescope at Milagro TeV All-Sky Gamma Ray Observatory",
-            "ID": "Milagrito Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Smithsonian Astrophysical Observatory (SAO) 1.2m Telescope at Fred Lawrence Whipple Observatory (FLWO)",
+            "ID": "FLWO:1.2m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2878,19 +2674,19 @@
     ],
     [
         {
-            "Name": "New Jersey Institute of Technology (NJIT) 1.6m Big Bear Solar Observatory (BBSO)",
-            "ID": "Big Bear Observatory"
+            "Name": "Milagrito Telescope at Milagro TeV All-Sky Gamma Ray Observatory",
+            "ID": "Milagrito Observatory"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
+            "item": "http://www.wikidata.org/entity/Q116175",
+            "itemLabel": "astronomical-observatory-of-trieste",
+            "itemDescription": "observatory in Trieste, Italy",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
+            "all_Minor_Planet_Center_observatory_ID": "A82|038",
+            "aliases": "trieste-observatory|osservatorio-astronomico-di-trieste|observatoire-astronomique-de-trieste|osservatorio-astronomico-di-trieste|astronomisches-observatorium-triest",
+            "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -2912,6 +2708,25 @@
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": "Beijing Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "New Jersey Institute of Technology (NJIT) 1.6m Big Bear Solar Observatory (BBSO)",
+            "ID": "Big Bear Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456131",
+            "itemLabel": "leipzig-observatory-(since-1861)",
+            "itemDescription": "astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "543",
+            "aliases": "leipzig-observatory-(since-1861)",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -3032,6 +2847,63 @@
             "ID": "USNO:1.3m"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)",
+            "ID": "USNO:1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)",
+            "ID": "USNO:1.3m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)",
+            "ID": "USNO:1.3m"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q1326683",
             "itemLabel": "elektro-l-no.1",
             "itemDescription": "weather satellite",
@@ -3041,100 +2913,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
             "all_instance_of": "Elektro\u2013L",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)",
-            "ID": "USNO:1.3m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)",
-            "ID": "USNO:1.3m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)",
-            "ID": "USNO:1.3m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Mark III Stellar Interferometer at Mount Wilson Observatory",
-            "ID": "Mark III interferometer"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5514330",
-            "itemLabel": "gps-block-iii",
-            "itemDescription": "GPS satellite block",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "navstar-3a|gps-block-3a|gps-3a|gps-3|navstar-3|gps-iiia|gps-iii|gps-block-iiia|gps-block-3",
-            "all_instance_of": "spacecraft model",
-            "all_has_part": "USA-309|USA-293|USA-304|USA-289|USA-319|USA-343",
-            "all_part_of": "Global Positioning System"
-        }
-    ],
-    [
-        {
-            "Name": "University of Washington 0.75m Telescope at Manastash Ridge Observatory (MRO)",
-            "ID": "Manastash Ridge Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3210,7 +2988,26 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "syracuse-university-observatory|syracuse-holden",
-            "all_instance_of": "building|observatory|NRHP contributing property|astronomical observatory",
+            "all_instance_of": "NRHP contributing property|astronomical observatory|building|observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Washington 0.75m Telescope at Manastash Ridge Observatory (MRO)",
+            "ID": "Manastash Ridge Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1225428",
+            "itemLabel": "astronomical-observatory-of-farra-d'isonzo",
+            "itemDescription": "observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "595",
+            "aliases": "\u30d5\u30a1\u30c3\u30e9\u30fb\u30c7\u30a3\u30be\u30f3\u30c4\u30a9\u5929\u6587\u6587\u5316\u30b5\u30fc\u30af\u30eb|osservatorio-astronomico-di-farra-d'isonzo|observatoire-de-farra-d'isonzo|farra-d'isonzo-observatory|osservatorio-astronomico-di-farra-d'isonzo",
+            "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3276,15 +3073,15 @@
             "ID": "SOR:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3295,14 +3092,15 @@
             "ID": "SOR:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3313,15 +3111,15 @@
             "ID": "SOR:1.5m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3459,24 +3257,6 @@
     ],
     [
         {
-            "Name": "University of Arizona/Lunar and Planetary Laboratory (LPL) 1.8m Spacewatch Telescopes at Kitt Peak National Observatory (KPNO)",
-            "ID": "Spacewatch:1.8m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q48523",
-            "itemLabel": "canadian-advanced-nanospace-experiment-1",
-            "all_COSPAR_ID": "2003-031H",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "canadian-advanced-nanospace-experiment-1|canx-5|canx-1|canx-program",
-            "all_instance_of": "CubeSat|technology demonstration spacecraft",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "University of Hawaii 2.2m (88inch) Telescope (also known as UH88, UH2.2 or 88) at Mauna Kea Observatory",
             "ID": "UH:2.2m"
         },
@@ -3526,7 +3306,7 @@
             "all_NSSDCA_ID": "2004-029A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "tan-ce-2|dsp-p|double-star-polar|double-star-dsp-p|tc-2",
-            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_instance_of": "former entity|geomagnetic satellite",
             "all_has_part": "",
             "all_part_of": "Double Star mission"
         }
@@ -3639,7 +3419,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2015-011B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "aliases": "mms-2|mms2|paul|stp-4b|solar-terrestrial-probe-4b",
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
@@ -3651,16 +3431,17 @@
             "ID": "KPNO:2.1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q11727157",
-            "itemLabel": "zhangguo-ziyaun-2",
-            "all_COSPAR_ID": "2000-050A",
+            "item": "http://www.wikidata.org/entity/Q1921530",
+            "itemLabel": "mercury-redstone-2",
+            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "MERCR2",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "zi-yuan-2-1|zhangguo-ziyaun-2-1",
-            "all_instance_of": "reconnaissance satellite",
+            "aliases": "mr-2|mr-2|mercury-2|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0662|mr-2",
+            "all_instance_of": "sub-orbital spaceflight|flight testing",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -3679,6 +3460,25 @@
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": "Tenagra Observatories"
+        }
+    ],
+    [
+        {
+            "Name": "California Association for Research in Astronomy 10m W.M. Keck II Telescope at Mauna Kea Observatory",
+            "ID": "Keck:II"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q6921675",
+            "itemLabel": "gurwin-ii-techsat",
+            "itemDescription": "Technion technology demonstration satellite",
+            "all_COSPAR_ID": "1998-043D",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "gurwin-ii-techsat|techsat-2|techsat-1b",
+            "all_instance_of": "amateur radio satellite",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -3721,57 +3521,19 @@
     ],
     [
         {
-            "Name": "Steward Observatory 1.5m (60inch) Telescope (part of the Catalina Sky Survey; CSS) at Mount Lemmon Observing Facility (MLOF)",
-            "ID": "SO:1.5m"
+            "Name": "Steward Observatory 1m (40inch) Telescope (part of the Catalina Sky Survey; CSS) at Mount Lemmon Observing Facility (MLOF)",
+            "ID": "SO:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Steward Observatory 1.5m (60inch) Telescope (part of the Catalina Sky Survey; CSS) at Mount Lemmon Observing Facility (MLOF)",
-            "ID": "SO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
-        }
-    ],
-    [
-        {
-            "Name": "Steward Observatory 1.5m (60inch) Telescope (part of the Catalina Sky Survey; CSS) at Mount Lemmon Observing Facility (MLOF)",
-            "ID": "SO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3903,7 +3665,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2015-011B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "aliases": "mms-2|mms2|paul|stp-4b|solar-terrestrial-probe-4b",
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
@@ -3941,7 +3703,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -3972,15 +3734,15 @@
             "ID": "OHP:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -3991,14 +3753,15 @@
             "ID": "OHP:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4009,15 +3772,15 @@
             "ID": "OHP:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4035,7 +3798,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4066,15 +3829,15 @@
             "ID": "OHP:1.52m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4085,14 +3848,15 @@
             "ID": "OHP:1.52m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4103,15 +3867,15 @@
             "ID": "OHP:1.52m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4129,7 +3893,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4160,15 +3924,15 @@
             "ID": "OHP:1.93m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4179,14 +3943,15 @@
             "ID": "OHP:1.93m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4197,15 +3962,15 @@
             "ID": "OHP:1.93m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4223,7 +3988,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4263,24 +4028,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
             "all_instance_of": "space telescope",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "University of Crete/Foundation for Research and Technology - Hellas (FORTH) 1.3m Telescope at Skinakas Observatory",
-            "ID": "Skinakas:1.3m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q48523",
-            "itemLabel": "canadian-advanced-nanospace-experiment-1",
-            "all_COSPAR_ID": "2003-031H",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "canadian-advanced-nanospace-experiment-1|canx-5|canx-1|canx-program",
-            "all_instance_of": "CubeSat|technology demonstration spacecraft",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4354,7 +4101,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4442,25 +4189,6 @@
             "ID": "Metsahovi Radio Observatory"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Aalto University 13.7m Telescope at Metsahovi Radio Observatory",
-            "ID": "Metsahovi Radio Observatory"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q112690345",
             "itemLabel": "bgsu-observatory",
             "itemDescription": "observatory on the campus of Bowling Green State University, Ohio, USA",
@@ -4527,8 +4255,27 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "\u5e15\u514b\u65af\u96fb\u6ce2\u5929\u6587\u53f0|\u5e15\u514b\u65af\u8108\u885d\u661f\u8a08\u6642\u9663\u5217|\u5e15\u514b\u65af\u5929\u6587\u53f0|parkes-observatory|parkes-observatoriet|obserwatorium-w-parkes|\ud30c\ud06c\uc2a4-\uc804\ud30c-\ub9dd\uc6d0\uacbd|\u0631\u0635\u062f\u062e\u0627\u0646\u0647\u0654-\u067e\u0627\u0631\u06a9\u0633|\u0631\u0635\u062f-\u062e\u0627\u0646\u0647\u0654-\u067e\u0627\u0631\u06a9\u0633|\u0631\u0635\u062f-\u062e\u0627\u0646\u0647-\u067e\u0627\u0631\u06a9\u0633|parkes-observatorium",
             "all_instance_of": "astronomical observatory",
-            "all_has_part": "Parkes Radio Telescope|Parkes 12-metre telescope|Parkes 18-metre telescope",
+            "all_has_part": "Parkes 12-metre telescope|Parkes 18-metre telescope|Parkes Radio Telescope",
             "all_part_of": "Australia Telescope National Facility"
+        }
+    ],
+    [
+        {
+            "Name": "Aalto University 13.7m Telescope at Metsahovi Radio Observatory",
+            "ID": "Metsahovi Radio Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q1751360",
+            "itemLabel": "\u00e9pendes-observatory",
+            "itemDescription": "Astronomical observatory in \u00c9pendes, Switzerland",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "A13",
+            "aliases": "\u30cd\u30d5\u30fb\u30a8\u30d1\u30f3\u30c9\u5929\u6587\u53f0|observatoire-naef|observatory-of-\u00e9pendes|observatory-of-ependes|observatory-naef-\u00e9pendes|observatory-\u00e9pendes|ependes-observatory|sternwarte-\u00e9pendes|observatoire-d'\u00e9pendes",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -4544,7 +4291,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4575,25 +4322,6 @@
             "ID": "CAO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 1.23m Telescope at Calar Alto Observatory",
-            "ID": "CAO:1.2m"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q265594",
             "itemLabel": "high-energy-astronomy-observatory-1",
             "itemDescription": "space observatory",
@@ -4605,25 +4333,6 @@
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 1.23m Telescope at Calar Alto Observatory",
-            "ID": "CAO:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
         }
     ],
     [
@@ -4677,7 +4386,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2015-011B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "aliases": "mms-2|mms2|paul|stp-4b|solar-terrestrial-probe-4b",
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
@@ -4689,16 +4398,17 @@
             "ID": "CAO:2.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q11727157",
-            "itemLabel": "zhangguo-ziyaun-2",
-            "all_COSPAR_ID": "2000-050A",
+            "item": "http://www.wikidata.org/entity/Q1921530",
+            "itemLabel": "mercury-redstone-2",
+            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "MERCR2",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "zi-yuan-2-1|zhangguo-ziyaun-2-1",
-            "all_instance_of": "reconnaissance satellite",
+            "aliases": "mr-2|mr-2|mercury-2|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0662|mr-2",
+            "all_instance_of": "sub-orbital spaceflight|flight testing",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -4707,15 +4417,15 @@
             "ID": "CAO:2.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q121509744",
-            "itemLabel": "starship-flight-test-2",
-            "itemDescription": "planned second integrated flight of SpaceX Starship",
+            "item": "http://www.wikidata.org/entity/Q21027956",
+            "itemLabel": "mars-orbiter-mission-2",
+            "itemDescription": "proposed Indian Mars orbiter",
             "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
+            "all_NAIF_ID": "-119",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "starship-integrated-flight-test-2|starship-test-flight-2|oft-2",
-            "all_instance_of": "unmanned spaceflight|test flight|future event",
+            "aliases": "mangalyaan-2|mangalyaan-2|\u706b\u661f\u8f68\u9053\u63a2\u6d4b\u56682\u53f7|mom-2",
+            "all_instance_of": "proposed entity|orbiter|planetary probe",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -4760,44 +4470,6 @@
     ],
     [
         {
-            "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 3.5m Telescope at Calar Alto Observatory",
-            "ID": "CAO:3.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q16820617",
-            "itemLabel": "cygnus-crs-orb-3",
-            "itemDescription": "failed ISS resupply mission",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "s.s.-deke-slayton|orb-3|crs-3|\u30aa\u30fc\u30d3\u30bf\u30eb-3",
-            "all_instance_of": "Cygnus|unmanned spaceflight|launch failure",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
-        }
-    ],
-    [
-        {
-            "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 3.5m Telescope at Calar Alto Observatory",
-            "ID": "CAO:3.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q862204",
-            "itemLabel": "kwangmy\u014fngs\u014fng-3-unit-2",
-            "itemDescription": "first North Korean satellite",
-            "all_COSPAR_ID": "2012-072A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "kwangmy\u014fngs\u014fng-3-unit-2|kwangmyongsong-3|kwangmyongsong-3|\u5149\u660e\u661f3\u53f7",
-            "all_instance_of": "Earth observation satellite",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 1.5m Telescope at Calar Alto Observatory",
             "ID": "CAO:1.5m"
         },
@@ -4809,7 +4481,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4832,25 +4504,6 @@
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 1.5m Telescope at Calar Alto Observatory",
-            "ID": "CAO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -4874,25 +4527,6 @@
     ],
     [
         {
-            "Name": "Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 1.5m Telescope at Calar Alto Observatory",
-            "ID": "CAO:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
-        }
-    ],
-    [
-        {
             "Name": "Bologna Astronomical Observatory 1.52m Gian Domenico Cassini Telescope at Loiano Observatory",
             "ID": "Loiano:1.52m"
         },
@@ -4904,7 +4538,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -4931,59 +4565,21 @@
     ],
     [
         {
-            "Name": "Bologna Astronomical Observatory 1.52m Gian Domenico Cassini Telescope at Loiano Observatory",
-            "ID": "Loiano:1.52m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
             "Name": "The 1.25m Telescope (AZT-11) at Crimean Astrophysical Observatory (CrAO)",
             "ID": "CrAO:1.25m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "The 1.25m Telescope (AZT-11) at Crimean Astrophysical Observatory (CrAO)",
-            "ID": "CrAO:1.25m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
+            "all_part_of": ""
         }
     ],
     [
@@ -4992,17 +4588,17 @@
             "ID": "CrAO:1.25m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q605607",
-            "itemLabel": "mercury-scout-1",
-            "itemDescription": "test flight of a Scout rocket during Project Mercury",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u043c\u0435\u0440\u043a\u0443\u0440\u0438\u0439-\u0441\u043a\u0430\u0443\u0442|ms-1|ms-1|ms-1",
-            "all_instance_of": "rocket launch|flight testing",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Project Mercury"
+            "all_part_of": ""
         }
     ],
     [
@@ -5011,15 +4607,15 @@
             "ID": "CrAO:1.25m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5142,15 +4738,15 @@
             "ID": "MtS:1.3m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5161,14 +4757,15 @@
             "ID": "MtS:1.3m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5179,15 +4776,15 @@
             "ID": "MtS:1.3m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5235,15 +4832,15 @@
             "ID": "MtS:1.9m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5254,52 +4851,34 @@
             "ID": "MtS:1.9m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Australian National University (ANU) 1.88m Telescope at Mount Stromlo Observatory (MSO)",
-            "ID": "MtS:1.9m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "University of Sydney Molonglo Observatory Synthesis Telescope (MOST)",
-            "ID": "Molonglo Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Australian National University (ANU) 1.88m Telescope at Mount Stromlo Observatory (MSO)",
+            "ID": "MtS:1.9m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5321,6 +4900,25 @@
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
             "all_part_of": "Beijing Astronomical Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "University of Sydney Molonglo Observatory Synthesis Telescope (MOST)",
+            "ID": "Molonglo Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q114456131",
+            "itemLabel": "leipzig-observatory-(since-1861)",
+            "itemDescription": "astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "543",
+            "aliases": "leipzig-observatory-(since-1861)",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -5380,21 +4978,39 @@
     ],
     [
         {
-            "Name": "University of Tasmania 30m Telescope at Ceduna Radio Observatory",
-            "ID": "Ceduna Radio Observatory"
+            "Name": "Australian National University (ANU) 1m Telescope at Siding Spring Observatory (SSO) part of the LCOGT network",
+            "ID": "SSO:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "University of Tasmania (UTAS) 0.4m (16inch) Telescope at Mount Canopus",
+            "ID": "MtCanopus:0.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q41796381",
+            "itemLabel": "hiltner-2.4m-telescope",
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
+            "aliases": "mdm-2.4|mdm-2.4m-hiltner",
+            "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Michigan-Dartmouth-MIT Observatory"
         }
     ],
     [
@@ -5474,6 +5090,24 @@
     ],
     [
         {
+            "Name": "University of Tasmania 30m Telescope at Ceduna Radio Observatory",
+            "ID": "Ceduna Radio Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q15273525",
+            "itemLabel": "royal-observatory,-cape-of-good-hope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "051",
+            "aliases": "royal-observatory,-cape-of-good-hope",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": "South African Astronomical Observatory"
+        }
+    ],
+    [
+        {
             "Name": "University of Canterbury 1.8m MOA project Telescope at Mount John University Observatory (MJUO)",
             "ID": "MtJohn:1.8m"
         },
@@ -5485,7 +5119,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -5512,38 +5146,19 @@
     ],
     [
         {
-            "Name": "University of Canterbury 1.8m MOA project Telescope at Mount John University Observatory (MJUO)",
-            "ID": "MtJohn:1.8m"
+            "Name": "University of Canterbury 1m McLellan Telescope at Mount John University Observatory (MJUO)",
+            "ID": "MtJohn:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "University of Canterbury 1.8m MOA project Telescope at Mount John University Observatory (MJUO)",
-            "ID": "MtJohn:1.8m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5561,7 +5176,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -5584,25 +5199,6 @@
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "National Astronomical Observatories, Chinese Academy of Sciences (NAOC) 1.26m Telescope at Beijing Astronomical Observatory (BAO) at Xinglong station",
-            "ID": "Beijing:1.26m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1681656",
-            "itemLabel": "science-power-module-1",
-            "itemDescription": "proposed Russian module of the International Space Station",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u79d1\u5b66\u96fb\u529b\u30e2\u30b8\u30e5\u30fc\u30eb1|spm-1|science-and-power-module|nem-1|wissenschafts--und-energiemodule",
-            "all_instance_of": "space station module|proposed entity",
-            "all_has_part": "",
-            "all_part_of": "International Space Station"
         }
     ],
     [
@@ -5620,24 +5216,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
             "all_instance_of": "space telescope",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "National Astronomical Observatories, Chinese Academy of Sciences (NAOC) 1.26m Telescope at Beijing Astronomical Observatory (BAO) at Xinglong station",
-            "ID": "Beijing:1.26m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q48523",
-            "itemLabel": "canadian-advanced-nanospace-experiment-1",
-            "all_COSPAR_ID": "2003-031H",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "canadian-advanced-nanospace-experiment-1|canx-5|canx-1|canx-program",
-            "all_instance_of": "CubeSat|technology demonstration spacecraft",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5693,29 +5271,10 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2015-011B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "aliases": "mms-2|mms2|paul|stp-4b|solar-terrestrial-probe-4b",
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "National Astronomical Observatories, Chinese Academy of Sciences (NAOC) 2.4m optical Telescope at Yunnan Astronomical Observatory (YAO); Lijiang Observatory",
-            "ID": "YAO:2.4m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q121509744",
-            "itemLabel": "starship-flight-test-2",
-            "itemDescription": "planned second integrated flight of SpaceX Starship",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "starship-integrated-flight-test-2|starship-test-flight-2|oft-2",
-            "all_instance_of": "unmanned spaceflight|test flight|future event",
-            "all_has_part": "",
-            "all_part_of": ""
         }
     ],
     [
@@ -5731,8 +5290,83 @@
             "all_NAIF_ID": "-119",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u706b\u661f\u8f68\u9053\u63a2\u6d4b\u56682\u53f7|mom-2|mangalyaan-2|mangalyaan-2",
-            "all_instance_of": "orbiter|planetary probe|proposed entity",
+            "aliases": "mangalyaan-2|mangalyaan-2|\u706b\u661f\u8f68\u9053\u63a2\u6d4b\u56682\u53f7|mom-2",
+            "all_instance_of": "proposed entity|orbiter|planetary probe",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "National Astronomical Observatories, Chinese Academy of Sciences (NAOC) 2.4m optical Telescope at Yunnan Astronomical Observatory (YAO); Lijiang Observatory",
+            "ID": "YAO:2.4m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q41796381",
+            "itemLabel": "hiltner-2.4m-telescope",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "mdm-2.4|mdm-2.4m-hiltner",
+            "all_instance_of": "optical telescope",
+            "all_has_part": "",
+            "all_part_of": "Michigan-Dartmouth-MIT Observatory"
+        }
+    ],
+    [
+        {
+            "Name": "Osaka Prefecture University 1.85m millimeter-submillimeter Telescope",
+            "ID": "OPU:1.85m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Osaka Prefecture University 1.85m millimeter-submillimeter Telescope",
+            "ID": "OPU:1.85m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Osaka Prefecture University 1.85m millimeter-submillimeter Telescope",
+            "ID": "OPU:1.85m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5776,56 +5410,92 @@
     ],
     [
         {
-            "Name": "Osaka Prefecture University 1.85m millimeter-submillimeter Telescope",
-            "ID": "OPU:1.85m"
+            "Name": "National Central University (NCU) 1m Telescope ((LOT) at Lulin Observatory",
+            "ID": "LO:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
+            "item": "http://www.wikidata.org/entity/Q16089321",
+            "itemLabel": "raduga-1m-1",
+            "all_COSPAR_ID": "2007-058A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
+            "aliases": "raduga-1m-1|raduga-1m-1|globus-1m-11l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
-            "all_part_of": "Project Mercury"
+            "all_part_of": ""
         }
     ],
     [
         {
-            "Name": "Osaka Prefecture University 1.85m millimeter-submillimeter Telescope",
-            "ID": "OPU:1.85m"
+            "Name": "National Central University (NCU) 1m Telescope ((LOT) at Lulin Observatory",
+            "ID": "LO:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q3648861",
-            "itemLabel": "cosmo-skymed-1",
-            "itemDescription": "Italian reconnaissance satellite",
-            "all_COSPAR_ID": "2007-023A",
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "cosmo-skymed-1|skymed-1|cosmo-1",
-            "all_instance_of": "reconnaissance satellite",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
-            "all_part_of": "COSMO-SkyMed"
+            "all_part_of": ""
         }
     ],
     [
         {
-            "Name": "Osaka Prefecture University 1.85m millimeter-submillimeter Telescope",
-            "ID": "OPU:1.85m"
+            "Name": "Shandong University 1m Telescope (WHO) at Weihai Observatory",
+            "ID": "WHO:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q4438262",
-            "itemLabel": "vostok-1k-no.1",
-            "all_COSPAR_ID": "",
+            "item": "http://www.wikidata.org/entity/Q16086566",
+            "itemLabel": "raduga-1m",
+            "all_COSPAR_ID": "2013-062A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vostok-1-no.-1|korabl'-sputnik",
-            "all_instance_of": "artificial satellite|former entity",
+            "aliases": "raduga-1m-3|raduga-1m-3|globus-1m-13l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Shandong University 1m Telescope (WHO) at Weihai Observatory",
+            "ID": "WHO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16089321",
+            "itemLabel": "raduga-1m-1",
+            "all_COSPAR_ID": "2007-058A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-1|raduga-1m-1|globus-1m-11l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Shandong University 1m Telescope (WHO) at Weihai Observatory",
+            "ID": "WHO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5843,7 +5513,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -5874,15 +5544,15 @@
             "ID": "OAO:1.88m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5893,14 +5563,15 @@
             "ID": "OAO:1.88m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5911,15 +5582,15 @@
             "ID": "OAO:1.88m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -5937,7 +5608,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -5960,25 +5631,6 @@
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "Canakkale Onsekiz Mart University 1.22m T-122 Telescope at COMU Ulupinar Observatory (also known as Canakkale Observatory or the University Observatory)",
-            "ID": "COMU:1.22m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1681656",
-            "itemLabel": "science-power-module-1",
-            "itemDescription": "proposed Russian module of the International Space Station",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u79d1\u5b66\u96fb\u529b\u30e2\u30b8\u30e5\u30fc\u30eb1|spm-1|science-and-power-module|nem-1|wissenschafts--und-energiemodule",
-            "all_instance_of": "space station module|proposed entity",
-            "all_has_part": "",
-            "all_part_of": "International Space Station"
         }
     ],
     [
@@ -6002,18 +5654,55 @@
     ],
     [
         {
-            "Name": "Canakkale Onsekiz Mart University 1.22m T-122 Telescope at COMU Ulupinar Observatory (also known as Canakkale Observatory or the University Observatory)",
-            "ID": "COMU:1.22m"
+            "Name": "Indian Institute of Astrophysics 1m Telescope at Vainu Bappu Observatory",
+            "ID": "VBO:1m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q48523",
-            "itemLabel": "canadian-advanced-nanospace-experiment-1",
-            "all_COSPAR_ID": "2003-031H",
+            "item": "http://www.wikidata.org/entity/Q16086566",
+            "itemLabel": "raduga-1m",
+            "all_COSPAR_ID": "2013-062A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "canadian-advanced-nanospace-experiment-1|canx-5|canx-1|canx-program",
-            "all_instance_of": "CubeSat|technology demonstration spacecraft",
+            "aliases": "raduga-1m-3|raduga-1m-3|globus-1m-13l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Indian Institute of Astrophysics 1m Telescope at Vainu Bappu Observatory",
+            "ID": "VBO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q16089321",
+            "itemLabel": "raduga-1m-1",
+            "all_COSPAR_ID": "2007-058A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-1|raduga-1m-1|globus-1m-11l",
+            "all_instance_of": "Raduga 1M",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Indian Institute of Astrophysics 1m Telescope at Vainu Bappu Observatory",
+            "ID": "VBO:1m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q5571107",
+            "itemLabel": "globus-1m-no.12l",
+            "itemDescription": "Russian military communications satellite",
+            "all_COSPAR_ID": "2010-002A",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "raduga-1m-2|raduga-1m-2|globus-1m-12l",
+            "all_instance_of": "Raduga 1M",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6031,7 +5720,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -6062,15 +5751,15 @@
             "ID": "MIRO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6081,14 +5770,15 @@
             "ID": "MIRO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6099,15 +5789,15 @@
             "ID": "MIRO:1.2m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6133,40 +5823,20 @@
     ],
     [
         {
-            "Name": "Nobeyama Radio Observatory 1.2m submillimeter-wave Telescope at Mount Fuji",
-            "ID": "MtFuji:1.2m"
+            "Name": "Nagoya University 4m millimeter Telescope",
+            "ID": "NU:4m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
+            "item": "http://www.wikidata.org/entity/Q41796381",
+            "itemLabel": "hiltner-2.4m-telescope",
             "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Nobeyama Radio Observatory 1.2m submillimeter-wave Telescope at Mount Fuji",
-            "ID": "MtFuji:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q765193",
-            "itemLabel": "earth-observing-1",
-            "itemDescription": "Earth observation satellite",
-            "all_COSPAR_ID": "2000-075A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "eo-1|earth-observing-1|eo-1|eo-1",
-            "all_instance_of": "Earth observation satellite",
+            "aliases": "mdm-2.4|mdm-2.4m-hiltner",
+            "all_instance_of": "optical telescope",
             "all_has_part": "",
-            "all_part_of": ""
+            "all_part_of": "Michigan-Dartmouth-MIT Observatory"
         }
     ],
     [
@@ -6182,7 +5852,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -6213,34 +5883,15 @@
             "ID": "SHAO:1.56m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
+            "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "Chinese Academy of Science 1.56m Telescope at Shanghai Astronomical Observatory (SHAO), Sheshan Station",
-            "ID": "SHAO:1.56m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q265594",
-            "itemLabel": "high-energy-astronomy-observatory-1",
-            "itemDescription": "space observatory",
-            "all_COSPAR_ID": "1977-075A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "1977-075A",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
-            "all_instance_of": "space telescope",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6251,17 +5902,36 @@
             "ID": "SHAO:1.56m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Chinese Academy of Science 1.56m Telescope at Shanghai Astronomical Observatory (SHAO), Sheshan Station",
+            "ID": "SHAO:1.56m"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
+            "all_has_part": "",
+            "all_part_of": ""
         }
     ],
     [
@@ -6278,7 +5948,7 @@
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "995",
             "aliases": "observatory",
-            "all_instance_of": "building|observatory|astronomical observatory",
+            "all_instance_of": "observatory|building|astronomical observatory",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6327,25 +5997,6 @@
             "ID": "Wise Observatory"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q103582616",
-            "itemLabel": "meteorological-observatory-of-el-salvador",
-            "itemDescription": "old meteorological observatory in San Salvador, El Salvador",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "observatorio-nacional-de-el-salvador|observatorio-meteorol\u00f3gico-y-astron\u00f3mico-de-el-salvador|national-observatory-of-el-salvador",
-            "all_instance_of": "observatory|weather station",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Tel Aviv University 1m Telescope at Florence and George Wise Observatory",
-            "ID": "Wise Observatory"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q104878674",
             "itemLabel": "nishi-harima-observatory",
             "itemDescription": "Observatory in Japan",
@@ -6356,6 +6007,24 @@
             "aliases": "\u897f\u306f\u308a\u307e\u5929\u6587\u53f0|nishiharima-observatory",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Tel Aviv University 1m Telescope at Florence and George Wise Observatory",
+            "ID": "Wise Observatory"
+        },
+        {
+            "item": "http://www.wikidata.org/entity/Q105997976",
+            "itemLabel": "vermilion-river-observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "",
+            "aliases": "vermilion-river-radio-observatory|vro",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "Illinois 120-foot telescope|Illinois 400-foot radio telescope",
             "all_part_of": ""
         }
     ],
@@ -6372,7 +6041,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -6412,24 +6081,6 @@
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "heao-1|high-energy-astronomy-observatory-1|heao-1|heao-1|heao-1",
             "all_instance_of": "space telescope",
-            "all_has_part": "",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "Ulugh Beg Astronomical Institute (UBAI) 1.5m Telescope (AZT-22) at Maidanak Astronomical Observatory (MAO)",
-            "ID": "Maidanak:1.5m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q48523",
-            "itemLabel": "canadian-advanced-nanospace-experiment-1",
-            "all_COSPAR_ID": "2003-031H",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "canadian-advanced-nanospace-experiment-1|canx-5|canx-1|canx-program",
-            "all_instance_of": "CubeSat|technology demonstration spacecraft",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6503,7 +6154,7 @@
             "all_NSSDCA_ID": "2004-029A",
             "all_Minor_Planet_Center_observatory_ID": "",
             "aliases": "tan-ce-2|dsp-p|double-star-polar|double-star-dsp-p|tc-2",
-            "all_instance_of": "geomagnetic satellite|former entity",
+            "all_instance_of": "former entity|geomagnetic satellite",
             "all_has_part": "",
             "all_part_of": "Double Star mission"
         }
@@ -6540,7 +6191,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -6571,15 +6222,15 @@
             "ID": "BOAO:1.8m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1326683",
-            "itemLabel": "elektro-l-no.1",
-            "itemDescription": "weather satellite",
-            "all_COSPAR_ID": "2011-001A",
+            "item": "http://www.wikidata.org/entity/Q118929207",
+            "itemLabel": "malligyong-1-#3",
+            "itemDescription": "North Korean spy satellite",
+            "all_COSPAR_ID": "2023-179A",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "goms-2|elektro-l-no.1|elektro-l-1|elektro-l|elektro-l",
-            "all_instance_of": "Elektro\u2013L",
+            "aliases": "manligyeong-1-#3",
+            "all_instance_of": "Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6590,14 +6241,15 @@
             "ID": "BOAO:1.8m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14152752",
-            "itemLabel": "cute-1.7-+-apd",
-            "all_COSPAR_ID": "2006-005C",
+            "item": "http://www.wikidata.org/entity/Q123517678",
+            "itemLabel": "malligyong-1-#2",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "oscar-56|cute-1.7+apd-ii",
-            "all_instance_of": "CUTE-1.7",
+            "aliases": "manligyeong-1-#2",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6608,15 +6260,15 @@
             "ID": "BOAO:1.8m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q14610196",
-            "itemLabel": "lituanica-sat-1",
-            "itemDescription": "One of the first  two Lithuanian satellites",
-            "all_COSPAR_ID": "1998-067EQ",
+            "item": "http://www.wikidata.org/entity/Q123517681",
+            "itemLabel": "malligyong-1-#1",
+            "itemDescription": "North Korean spy satellite, lost in a launch failure",
+            "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "lituanicasat-1",
-            "all_instance_of": "CubeSat",
+            "aliases": "manligyeong-1-#1",
+            "all_instance_of": "former entity|Malligyong-1",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6634,7 +6286,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -6657,25 +6309,6 @@
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
-        }
-    ],
-    [
-        {
-            "Name": "National Astronomical Observatories, Chinese Academy of Sciences (NAOC) 1.2m Altazimuth Telescope at Yunnan Astronomical Observatory (YAO)",
-            "ID": "YAO:1.2m"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
         }
     ],
     [
@@ -6767,7 +6400,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "2015-011B",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "stp-4b|solar-terrestrial-probe-4b|mms-2|mms2|paul",
+            "aliases": "mms-2|mms2|paul|stp-4b|solar-terrestrial-probe-4b",
             "all_instance_of": "spacecraft",
             "all_has_part": "",
             "all_part_of": "Magnetospheric Multiscale Mission"
@@ -6779,15 +6412,15 @@
             "ID": "Beijing:2.16m"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q121509744",
-            "itemLabel": "starship-flight-test-2",
-            "itemDescription": "planned second integrated flight of SpaceX Starship",
-            "all_COSPAR_ID": "",
+            "item": "http://www.wikidata.org/entity/Q1242087",
+            "itemLabel": "small-astronomy-satellite-2",
+            "itemDescription": "NASA space observatory launched on 1972",
+            "all_COSPAR_ID": "1972-091A",
             "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
+            "all_NSSDCA_ID": "1972-091A",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "starship-integrated-flight-test-2|starship-test-flight-2|oft-2",
-            "all_instance_of": "unmanned spaceflight|test flight|future event",
+            "aliases": "sas-b|explorer-48|sas-2|sas-b|explorer-48|sas2|sas-2|sas-b|explorer-48|sas-2",
+            "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": ""
         }
@@ -6854,6 +6487,25 @@
             "ID": "Mauritius Observatory"
         },
         {
+            "item": "http://www.wikidata.org/entity/Q1426548",
+            "itemLabel": "astronomical-observatory-leipzig",
+            "itemDescription": "astronomical observatory",
+            "all_COSPAR_ID": "",
+            "all_NAIF_ID": "",
+            "all_NSSDCA_ID": "",
+            "all_Minor_Planet_Center_observatory_ID": "534",
+            "aliases": "astronomical-observatory-leipzig",
+            "all_instance_of": "astronomical observatory",
+            "all_has_part": "",
+            "all_part_of": ""
+        }
+    ],
+    [
+        {
+            "Name": "Mauritius Radio Telescope at Mauritius Observatory",
+            "ID": "Mauritius Observatory"
+        },
+        {
             "item": "http://www.wikidata.org/entity/Q3348419",
             "itemLabel": "c\u00e9gep-de-trois-rivi\u00e8res-observatory",
             "all_COSPAR_ID": "",
@@ -6878,8 +6530,8 @@
             "all_COSPAR_ID": "",
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "813|815|806",
-            "aliases": "observatori-de-cerro-cal\u00e1n|santiago-cerro-cal\u00e1n-observatory|cerro-cal\u00e1n-observatory|\u667a\u5229\u56fd\u5bb6\u5929\u6587\u53f0|\u667a\u5229\u56fd\u5bb6\u5929\u6587\u53f0|observatorio-astronomico-nacional-de-chile",
+            "all_Minor_Planet_Center_observatory_ID": "806|813|815",
+            "aliases": "\u667a\u5229\u56fd\u5bb6\u5929\u6587\u53f0|observatorio-astronomico-nacional-de-chile|observatori-de-cerro-cal\u00e1n|santiago-cerro-cal\u00e1n-observatory|cerro-cal\u00e1n-observatory|\u667a\u5229\u56fd\u5bb6\u5929\u6587\u53f0",
             "all_instance_of": "astronomical observatory",
             "all_has_part": "Cerro El Roble Observatory",
             "all_part_of": ""
@@ -6906,24 +6558,6 @@
     ],
     [
         {
-            "Name": "Mauritius Radio Telescope at Mauritius Observatory",
-            "ID": "Mauritius Observatory"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q6094027",
-            "itemLabel": "pierre-kauffman-radio-observatory",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "radio-observatorio-itapetinga|radio-observatorio-itapetinga|r\u00e1dio-observat\u00f3rio-de-itapetinga|r\u00e1dio-observat\u00f3rio-de-itapetinga|itapetinga-radio-observatory|roi",
-            "all_instance_of": "astronomical observatory",
-            "all_has_part": "Solar Radio Polarimeter|Solar Patrol Equipment|Itapetinga Radio Telescope",
-            "all_part_of": ""
-        }
-    ],
-    [
-        {
             "Name": "National Research Institute of Astronomy and Geophysics (NRIAG) 1.88m Telescope at Kottamia Astronomical observatory (KAO)",
             "ID": "KAO:1.88"
         },
@@ -6935,7 +6569,7 @@
             "all_NAIF_ID": "",
             "all_NSSDCA_ID": "1984-125E",
             "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "vega-1-balloon-aerostat|15858|vega1descentcraft|vega-1-lander",
+            "aliases": "vega1descentcraft|vega-1-lander|vega-1-balloon-aerostat|15858",
             "all_instance_of": "lander",
             "all_has_part": "Vega 1",
             "all_part_of": ""
@@ -6966,25 +6600,6 @@
             "ID": "KAO:1.88"
         },
         {
-            "item": "http://www.wikidata.org/entity/Q1921511",
-            "itemLabel": "mercury-redstone-1",
-            "itemDescription": "test flight of the Redstone rocket and Mercury spacecraft",
-            "all_COSPAR_ID": "",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "MERCR1",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "mercury-1|\u0645\u064a\u0631\u0643\u0648\u0631\u064a-\u0631\u064a\u062f\u0633\u062a\u0648\u0646-\u0661|mr-1|mr-1|mr-1",
-            "all_instance_of": "rocket launch|flight testing",
-            "all_has_part": "",
-            "all_part_of": "Project Mercury"
-        }
-    ],
-    [
-        {
-            "Name": "National Research Institute of Astronomy and Geophysics (NRIAG) 1.88m Telescope at Kottamia Astronomical observatory (KAO)",
-            "ID": "KAO:1.88"
-        },
-        {
             "item": "http://www.wikidata.org/entity/Q265594",
             "itemLabel": "high-energy-astronomy-observatory-1",
             "itemDescription": "space observatory",
@@ -6996,25 +6611,6 @@
             "all_instance_of": "space telescope",
             "all_has_part": "",
             "all_part_of": ""
-        }
-    ],
-    [
-        {
-            "Name": "National Research Institute of Astronomy and Geophysics (NRIAG) 1.88m Telescope at Kottamia Astronomical observatory (KAO)",
-            "ID": "KAO:1.88"
-        },
-        {
-            "item": "http://www.wikidata.org/entity/Q5013945",
-            "itemLabel": "cygnus-crs-orb-1",
-            "itemDescription": "second cargo resupply mission to the International Space Station",
-            "all_COSPAR_ID": "2014-003A",
-            "all_NAIF_ID": "",
-            "all_NSSDCA_ID": "",
-            "all_Minor_Planet_Center_observatory_ID": "",
-            "aliases": "\u30aa\u30fc\u30d3\u30bf\u30eb-1|orbital-1|orb-1",
-            "all_instance_of": "unmanned spaceflight|Cygnus",
-            "all_has_part": "",
-            "all_part_of": "Commercial Resupply Services"
         }
     ]
 ]

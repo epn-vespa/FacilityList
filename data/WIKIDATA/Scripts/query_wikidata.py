@@ -43,9 +43,9 @@ where = """
   {?item wdt:P31/wdt:P279*  wd:Q40218 .} # spacecraft
   UNION {?item wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
   UNION {?item  wdt:P31/wdt:P279* wd:Q62832 .} # observatory
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
-  UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
-  UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
+  #UNION {?item  wdt:P31/wdt:P279*  wd:Q697175 .} # Launch vehicle
+  #UNION {?item  wdt:P31  wd:Q18812508 .} # space station module 
+  #UNION {?item  wdt:P31  wd:Q797476 .} # rocket launch
   UNION {?item  wdt:P31  wd:Q35273 .} # optical telescope
   UNION {?item  wdt:P31  wd:Q35221 .} # reflecting telescope
   UNION {?item  wdt:P31  wd:Q3370723 .} # infrared telescope

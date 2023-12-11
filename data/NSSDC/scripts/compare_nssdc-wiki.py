@@ -45,7 +45,7 @@ def get_scores( t ):
     return r
 
 
-def compare_NSSDC(data_nssdc, wikidata) :
+def compare_NSSDC(data_nssdc, wikidata, results_count_output_file):
     results = []
     tres_certain = []
     tres_probable = []

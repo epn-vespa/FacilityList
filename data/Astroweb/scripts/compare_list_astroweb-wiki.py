@@ -47,12 +47,12 @@ def get_scores(t):
     i = t[0]
     e = t[1]
     r = process.extract(e, wikidata, processor=dummy_proc, scorer=mon_scorer)
-    print("[" + str(i + 1) + "/" + str(len(data_atroweb)) + "]" + str(e))
+    print("[" + str(i + 1) + "/" + str(len(data_astroweb)) + "]" + str(e))
     print("  " + str(r[0][1]) + " : " + str(r[0][0]))
     return r
 
 
-def compare_astroweb(data_astroweb, wikidata):
+def compare_astroweb(data_astroweb, wikidata, results_count_output_file):
     results = []
     tres_certain_data_astroweb = []
     tres_probable_data_astroweb = []

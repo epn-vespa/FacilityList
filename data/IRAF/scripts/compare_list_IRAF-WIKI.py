@@ -38,7 +38,7 @@ def get_scores(t):
     print("  " + str(r[0][1]) + " : " + str(r[0][0]))
     return r
 
-def compare_iraf(data_iraf, wikidata):
+def compare_iraf(data_iraf, wikidata, results_count_output_file):
     results_iraf = []
     tres_certain_iraf = []
     tres_probable_iraf = []

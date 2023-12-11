@@ -26,31 +26,43 @@ SELECT
 where = """
  WHERE 
  {      
-  {?item wdt:P31/wdt:P279*  wd:Q752783 .} # human spaceflight
-  UNION {?item  wdt:P31/wdt:P279* wd:Q149918 .} # communications satellite
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q113255208 .} # spacecraft series
-  UNION {?item  wdt:P31/wdt:P279* wd:Q209363 .} # weather satellite 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q466421 .} # reconnaissance satellite
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q2741214 .} # KH-7 Gambit
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q973887 .} # military satellite 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q854845 .} # Earth observation satellite
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q512399 .} # unmanned spaceflight
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q61937849 .} # geophysical observatory 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q1365207 .} # bird observatory
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q95945728 .} # technology demonstration spacecraft
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q2566071 .} # manned weather station
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q1009523 .} # Automated Transfer Vehicle
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q14514346 .} # satellite program
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q7572593 .} # space launch 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q153257 .} # Automated Transfer Vehicle
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q109743523 .} # Cargo Dragon 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q236448 .} # Dragon 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q18812508 .} # space station module 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q117384805 .} # spacecraft family 
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q190107 .} # weather station
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q127899 .} # Multi-Purpose Logistics Module
-  UNION {?item  wdt:P31/wdt:P279*  wd:Q117384800 .} # spacecraft model
-  
+  {?item wdt:P31  wd:Q752783 .} # human spaceflight
+  UNION {?item  wdt:P31 wd:Q149918 .} # communications satellite
+  UNION {?item  wdt:P31 wd:Q113255208 .} # spacecraft series
+  UNION {?item  wdt:P31 wd:Q209363 .} # weather satellite 
+  UNION {?item  wdt:P31 wd:Q466421 .} # reconnaissance satellite
+  UNION {?item  wdt:P31 wd:Q2741214 .} # KH-7 Gambit
+  UNION {?item  wdt:P31 wd:Q973887 .} # military satellite 
+  UNION {?item  wdt:P31 wd:Q854845 .} # Earth observation satellite
+  UNION {?item  wdt:P31 wd:Q512399 .} # unmanned spaceflight
+  UNION {?item  wdt:P31 wd:Q61937849 .} # geophysical observatory 
+  UNION {?item  wdt:P31 wd:Q1365207 .} # bird observatory
+  UNION {?item  wdt:P31 wd:Q95945728 .} # technology demonstration spacecraft
+  UNION {?item  wdt:P31 wd:Q2566071 .} # manned weather station
+  UNION {?item  wdt:P31 wd:Q1009523 .} # Automated Transfer Vehicle
+  UNION {?item  wdt:P31 wd:Q14514346 .} # satellite program
+  UNION {?item  wdt:P31 wd:Q7572593 .} # space launch 
+  UNION {?item  wdt:P31 wd:Q153257 .} # Automated Transfer Vehicle
+  UNION {?item  wdt:P31 wd:Q109743523 .} # Cargo Dragon 
+  UNION {?item  wdt:P31 wd:Q236448 .} # Dragon 
+  UNION {?item  wdt:P31 wd:Q18812508 .} # space station module 
+  UNION {?item  wdt:P31 wd:Q117384805 .} # spacecraft family 
+  UNION {?item  wdt:P31 wd:Q190107 .} # weather station
+  UNION {?item  wdt:P31 wd:Q127899 .} # Multi-Purpose Logistics Module
+  UNION {?item  wdt:P31 wd:Q117384800 .} # spacecraft model
+  UNION {?item  wdt:P31 wd:Q1778118 .} # volcano observatory
+  UNION {?item  wdt:P31 wd:Q110218336 .} # atmospheric observatory
+  UNION {?item  wdt:P31 wd:Q7865636 .} # seismological station
+  UNION {?item  wdt:P31 wd:Q4538275 .} # Yantar-4K2
+  UNION {?item  wdt:P31 wd:Q7103282 .} # Orlets
+  UNION {?item  wdt:P31 wd:Q1812673 .} # US-KMO
+  UNION {?item  wdt:P31 wd:Q147802 .} # Kosmos
+  UNION {?item  wdt:P31 wd:Q14907192 .} # Tsikada
+  UNION {?item  wdt:P31 wd:Q3400897 .} # Kosmos 775 
+  UNION {?item  wdt:P31 wd:Q300807 .} # DS-U3-S 
+  UNION {?item  wdt:P31 wd:Q14752541 .} # Molniya-1
+
+
 SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }
 """

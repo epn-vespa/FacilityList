@@ -23,7 +23,7 @@ def mon_scorer(q, c):
             else:
                 r -= 50
         if 'aliases' in c:
-            aliases_parts = c['aliases'].lower().split("|")
+            aliases_parts = c['aliases']
             if q['Name'] in aliases_parts:
                 r += 500
             else:
@@ -34,11 +34,11 @@ def mon_scorer(q, c):
             else:
                 r -= 50
         if "ID" in q and 'aliases' in c:
-            if q['ID'].lower().strip() in c['aliases'].lower().split("|"):
+            if q['ID'].lower() in c['aliases']:
                 r += 500
             else:
                 r -= 50
-    r += fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases'])+ fuzz.WRatio(q['ID'], c[
+    r += fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases']) + fuzz.WRatio(q['ID'], c[
         'itemLabel']) + fuzz.WRatio(q['ID'], c['aliases'])
     return r
 

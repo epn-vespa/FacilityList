@@ -69,7 +69,7 @@ def get_scores( t ):
 
 
 
-def compare_naif(data_naif, wikidata) :
+def compare_naif(data_naif, wikidata, results_count_output_file) :
     results = []
     tres_certain = []
     tres_probable = []

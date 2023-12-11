@@ -40,7 +40,7 @@ def get_scores( t ):
 #Initializes several empty lists to store the results of the comparison.
 #Use the "multiprocessing" libray to run the "get_scores"  fucntion in parallel for each element of "data_iau"
 #The results are stored in the "results" list
-def compare_iau(data_iau, wikidata):
+def compare_iau(data_iau, wikidata, results_count_output_file):
     results = []
     tres_certain_iau = []
     #tres_probable_iau = []

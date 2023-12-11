@@ -52,7 +52,7 @@ def get_scores(t):
     return r
 
 
-def compare_aas(data_aas, wikidata):
+def compare_aas(data_aas, wikidata, results_count_output_file):
     results = []
     tres_certain_data_aas = []
     tres_probable_data_aas = []

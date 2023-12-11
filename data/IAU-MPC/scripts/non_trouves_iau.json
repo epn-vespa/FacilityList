@@ -4,16 +4,16 @@
         "Name": "Trieste"
     },
     {
+        "ID": "103",
+        "Name": "Ljubljana"
+    },
+    {
         "ID": "244",
         "Name": "Geocentric Occultation Observation"
     },
     {
         "ID": "270",
         "Name": "Unistellar Network, Roving Observer"
-    },
-    {
-        "ID": "274",
-        "Name": "James Webb Space Telescope"
     },
     {
         "ID": "275",
@@ -26,6 +26,10 @@
     {
         "ID": "291",
         "Name": "LPL/Spacewatch II"
+    },
+    {
+        "ID": "309",
+        "Name": "Cerro Paranal"
     },
     {
         "ID": "310",
@@ -42,6 +46,10 @@
     {
         "ID": "500",
         "Name": "Geocentric"
+    },
+    {
+        "ID": "539",
+        "Name": "Kremsmunster"
     },
     {
         "ID": "561",
@@ -116,6 +124,10 @@
         "Name": "Santiago-Santa Lucia (1849-1861)"
     },
     {
+        "ID": "A80",
+        "Name": "Lindenberg Observatory"
+    },
+    {
         "ID": "A82",
         "Name": "Osservatorio Astronomico di Trieste"
     },
@@ -126,6 +138,14 @@
     {
         "ID": "B39",
         "Name": "Tradate"
+    },
+    {
+        "ID": "C53",
+        "Name": "NEOSSat"
+    },
+    {
+        "ID": "C56",
+        "Name": "LISA-Pathfinder"
     },
     {
         "ID": "C59",
@@ -148,28 +168,8 @@
         "Name": "Nagano"
     },
     {
-        "ID": "E10",
-        "Name": "Siding Spring-Faulkes Telescope South"
-    },
-    {
         "ID": "E12",
         "Name": "Siding Spring Survey"
-    },
-    {
-        "ID": "F51",
-        "Name": "Pan-STARRS 1, Haleakala"
-    },
-    {
-        "ID": "F52",
-        "Name": "Pan-STARRS 2, Haleakala"
-    },
-    {
-        "ID": "F65",
-        "Name": "Haleakala-Faulkes Telescope North"
-    },
-    {
-        "ID": "G37",
-        "Name": "Lowell Discovery Telescope"
     },
     {
         "ID": "G81",
@@ -666,10 +666,6 @@
     {
         "ID": "Z00",
         "Name": "BOOTES-1, Mazagon"
-    },
-    {
-        "ID": "Z19",
-        "Name": "La Palma-TNG"
     },
     {
         "ID": "",
