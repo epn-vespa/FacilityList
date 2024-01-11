@@ -54,13 +54,14 @@ where = """
   UNION {?item  wdt:P31  wd:Q148578 .} # Space telescope
   UNION {?item  wdt:P31  wd:Q26529 .} # space probe
   UNION {?item  wdt:P31  wd:Q1062138 .} # Ritchey–Chrétien telescope
+  UNION {?item  wdt:P31  wd:Q3550679 .} # Unit Telescope
   #{?item wdt:P31/ wdt:P279*  wd:Q117273481.} # observation facility
   
 
   
   #instruments
   #UNION {?item  wdt:P31/wdt:P279*  wd:Q751997 .} # astronomical instrument
-  #UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
+  UNION {?item  wdt:P31  wd:Q550089 .} # astronomical survey
   #UNION {?item  wdt:P31  wd:Q100349043 .} # space instrument 
   
   OPTIONAL {?item wdt:P247 ?COSPAR_ID .}    

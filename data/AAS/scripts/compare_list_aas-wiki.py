@@ -69,8 +69,8 @@ def compare_aas(data_aas, wikidata, results_count_output_file):
             if r_elem[1] > 180:
                 trouve = True
                 tres_certain_data_aas.append((e, r_elem[0]))
-            elif r_elem[1] > 130:
-                 tres_probable_data_aas.append((e, r_elem[0]))
+            #elif r_elem[1] > 130:
+                 #tres_probable_data_aas.append((e, r_elem[0]))
             # elif r_elem[1] > 150:
             # probable_data_aas.append((e, r_elem[0]))
         if not trouve: non_trouves_data_aas.append(e)

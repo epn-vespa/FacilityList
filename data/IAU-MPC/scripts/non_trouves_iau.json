@@ -4,12 +4,20 @@
         "Name": "Trieste"
     },
     {
+        "ID": "046",
+        "Name": "Klet Observatory, Ceske Budejovice"
+    },
+    {
         "ID": "103",
         "Name": "Ljubljana"
     },
     {
         "ID": "244",
         "Name": "Geocentric Occultation Observation"
+    },
+    {
+        "ID": "246",
+        "Name": "Klet Observatory-KLENOT"
     },
     {
         "ID": "270",
@@ -26,6 +34,10 @@
     {
         "ID": "291",
         "Name": "LPL/Spacewatch II"
+    },
+    {
+        "ID": "304",
+        "Name": "Las Campanas Observatory"
     },
     {
         "ID": "309",
@@ -178,6 +190,10 @@
     {
         "ID": "I02",
         "Name": "Cerro Tololo Observatory, La Serena--2MASS"
+    },
+    {
+        "ID": "I05",
+        "Name": "Las Campanas Observatory-TIE"
     },
     {
         "ID": "I41",
