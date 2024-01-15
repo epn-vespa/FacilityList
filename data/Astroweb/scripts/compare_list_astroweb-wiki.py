@@ -5,6 +5,7 @@ from fuzzywuzzy import process
 from multiprocessing import Pool
 import cProfile
 import json
+import sys
 
 with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/Astroweb/data/astroweb.json') as f:
     data_astroweb = json.load(f)
@@ -55,8 +56,8 @@ def get_scores(t):
 def compare_astroweb(data_astroweb, wikidata, results_count_output_file):
     results = []
     tres_certain_data_astroweb = []
-    tres_probable_data_astroweb = []
-    probable_data_astroweb = []
+    #tres_probable_data_astroweb = []
+    #probable_data_astroweb = []
     non_trouves_data_astroweb = []
 
     with Pool(8) as p:
@@ -69,25 +70,26 @@ def compare_astroweb(data_astroweb, wikidata, results_count_output_file):
             if r_elem[1] > 180:
                 trouve = True
                 tres_certain_data_astroweb.append((e, r_elem[0]))
-            elif r_elem[1] > 130:
-                 tres_probable_data_astroweb.append((e, r_elem[0]))
+            #elif r_elem[1] > 130:
+               #tres_probable_data_astroweb.append((e, r_elem[0]))
             # elif r_elem[1] > 150:
             # probable_data_astroweb.append((e, r_elem[0]))
-        if not trouve: non_trouves_data_astroweb.append(e)
+        if not trouve:
+            non_trouves_data_astroweb.append(e)
 
 
     print("tres_certain_data-aas : " + str(len(tres_certain_data_astroweb)))
-    print("tres_probable_data-aas : " + str(len(tres_probable_data_astroweb)))
-    print("probable_data-aas : " + str(len(probable_data_astroweb)))
+    #print("tres_probable_data-aas : " + str(len(tres_probable_data_astroweb)))
+    #print("probable_data-aas : " + str(len(probable_data_astroweb)))
     print("non_trouves_data-aas : " + str(len(non_trouves_data_astroweb)))
 
     with open("tres_certain_data-aas.json", 'w') as fout:
         fout.write(json.dumps(tres_certain_data_astroweb, indent=4))
-    with open("tres_probable_data-aas.json", 'w') as fout:
-        fout.write(json.dumps(tres_probable_data_astroweb, indent=4))
-    with open("probable_data-aas.json", 'w') as fout:
-        fout.write(json.dumps(probable_data_astroweb, indent=4))
-    with open("non_trouves_data-aas.json", 'w') as fout:
+    #with open("tres_probable_data-aas.json", 'w') as fout:
+    #   fout.write(json.dumps(tres_probable_data_astroweb, indent=4))
+    #with open("probable_data-aas.json", 'w') as fout:
+    #    fout.write(json.dumps(probable_data_astroweb, indent=4))
+    with open("non_trouves_data-astroweb.json", 'w') as fout:
         fout.write(json.dumps(non_trouves_data_astroweb, indent=4))
         for i, e in enumerate(data_astroweb):
             r = results[i]
