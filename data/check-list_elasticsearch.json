@@ -1,0 +1,64 @@
+{
+  "urls": {
+    "resolve": "https://voparis-elasticsearch.obspm.fr/obsfacility/resolve?q=",
+    "aliases": "https://voparis-elasticsearch.obspm.fr/obsfacility/aliases?label="
+  "tests": [
+  {
+    "resolve": "nançay",
+    "result": {"total": 4, "results": [{"label": "nenufar"}, {"label": "nancay-radio-telescope"}, {"label": "nancay-radio-observatory"}, {"label": "nancay-decameter-array"}]}
+  },
+  {
+    "resolve": "hubble-space-telescope",
+    "result": {"total": 1, "results": [{"label": "hubble-space-telescope"}]}
+  },
+  {
+    "resolve": "mars-express",
+    "result":   {"total": 101, "results": [{"label": "mars-express"}, {"label": "pluto-kuiper-express"}, {"label": "sso-a-smallsat-express"}, {"label": "beagle-2"}, {"label": "venus-express"}, {"label": "mars-1m-no-2"}, {"label": "2001-mars-odyssey"}, {"label": "ingenuity"}, {"label": "mars-telecommunications-orbiter"}, {"label": "mars-1969a"}, {"label": "mars-1m-no-1"}, {"label": "interstellar-express"}, {"label": "express-2a"}, {"label": "phoenix"}, {"label": "mars-surveyor-2001-lander"}, {"label": "mars-hope"}, {"label": "exomars-trace-gas-orbiter"}, {"label": "mars-3"}, {"label": "nasa-esa-mars-sample-return"}, {"label": "mi-pepe"}, {"label": "maven"}, {"label": "exomars"}, {"label": "mars-2020"}, {"label": "mars-observer"}, {"label": "express-am-8"}, {"label": "express-am-6"}, {"label": "express-am-5"}, {"label": "express-am-44"}, {"label": "express-am-33"}, {"label": "express-am-3"}, {"label": "express-am-2"}, {"label": "express-am-1"}, {"label": "express-am-11"}, {"label": "express-am-22"}, {"label": "zhurong"}, {"label": "mars-pathfinder"}, {"label": "mariner-9"}, {"label": "mars-2m-no-522"}, {"label": "mars-7"}, {"label": "mars-5"}, {"label": "mars-4"}, {"label": "mars-aster"}, {"label": "mars-1m"}, {"label": "mars-2"}, {"label": "mars-96"}, {"label": "mars-1"}, {"label": "mars-6"}, {"label": "mars-2mv-4-no-1"}, {"label": "spirit"}, {"label": "deep-space-2"}, {"label": "mars-cube-one"}, {"label": "phobos-2"}, {"label": "phobos-1"}, {"label": "viking-1-orbiter"}, {"label": "mariner-8"}, {"label": "mars-reconnaissance-orbiter"}, {"label": "mars-life-explorer"}, {"label": "mars-2-lander"}, {"label": "mars-3-lander"}, {"label": "mars-94-cancelled"}, {"label": "mars-96-penetrator"}, {"label": "mars-science-helicopter"}, {"label": "mars-surveyor-2001"}, {"label": "mars-global-surveyor"}, {"label": "mars-orbiter-mission"}, {"label": "mars-terahertz-microsatellite"}, {"label": "mars-climate-orbiter"}, {"label": "mars-polar-lander"}, {"label": "mars-pathfinder-lander"}, {"label": "mars-science-laboratory"}, {"label": "insight"}, {"label": "sojourner"}, {"label": "opportunity"}, {"label": "mars-orbiter-mission-2"}, {"label": "kosmos-419"}, {"label": "rosalind-franklin"}, {"label": "tianwen-1"}, {"label": "maggie"}, {"label": "mars-6-flyby-bus"}, {"label": "mars-96-surface-station"}, {"label": "mars-surveyor-2001-rover"}, {"label": "viking-1"}, {"label": "phobos-program"}, {"label": "curiosity"}, {"label": "mars-2mv-3-no-1"}, {"label": "optimism"}, {"label": "yinghuo-1"}, {"label": "mariner-3"}, {"label": "tianwen-3"}, {"label": "p5a"}, {"label": "mariner-4"}, {"label": "viking-2"}, {"label": "perseverance"}, {"label": "archimedes"}, {"label": "deimos-and-phobos-interior-explorer"}, {"label": "martian-moons-exploration"}, {"label": "pslv-c25"}, {"label": "astrobiology-field-laboratory"}, {"label": "mars7flybybus"}, {"label": "escapade"}, {"label": "viking-2-lander"}]}
+  },
+  {
+    "resolve": "hayabusa",
+    "result": {"total": 4, "results": [{"label": "hayabusa2"}, {"label": "hayabusa"}, {"label": "hayabusa-mk2"}, {"label": "demonstrator-of-atmospheric-reentry-system-and-hypervelocity"}]}
+ },
+ {
+    "resolve": "exomars",
+    "result": {"total": 5, "results": [{"label": "exomars"}, {"label": "rosalind-franklin"}, {"label": "schiaparelli-edm-lander"}, {"label": "exomars-2022"}, {"label": "exomars-trace-gas-orbiter"}]}
+ },
+ {
+    "resolve": "stereo",
+    "result":{"total": 3, "results": [{"label": "stereo-a"}, {"label": "stereo-b"}, {"label": "stereo"}]}
+ },
+ {
+    "resolve": "meudon-observatory",
+    "result":  {"total": 3, "results": [{"label": "meudon-observatory"}, {"label": "paris-observatory-psl-university"}, {"label": "solar-observatory-tower-meudon"}]}
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ {
+    "resolve": "stereo",
+    "result":  
+ },
+ 
+ 
+]
