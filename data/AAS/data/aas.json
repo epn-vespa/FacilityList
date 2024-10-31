@@ -1,5 +1,137 @@
 [
   {
+    "Name": "The BOOTES World-Wide Network of Robotic Telescopes",
+    "ID": "BOOTES"
+  },
+  {
+    "Name": "Marshall Grazing Incidence X-ray Spectrometer sounding rocket",
+    "ID": "MaGIXS"
+  },
+  {
+    "Name": "University of Michigan Curtis Schmidt telescope at NSF Cerro Tololo Inter-American Observatory (CTIO)",
+    "ID": "CTIO:Schmidt"
+  },
+  {
+    "Name": "The MASTER Global Robotic Net",
+    "ID": "MASTER"
+  },
+  {
+    "Name": "The University of Tokyo's 1.05m Schmidt telescope at Kiso Observatory",
+    "ID": "Kiso:Schmidt"
+  },
+  {
+    "Name": "European Southern Observatory (ESO) 1m Schmidt Telescope at La Silla Observatory",
+    "ID": "ESO:Schmidt"
+  },
+  {
+    "Name": "The Colorado Ultraviolet Transit Experiment (CUTE)",
+    "ID": "CUTE"
+  },
+  {
+    "Name": "Asteroid Terrestrial-impact Last Alert System",
+    "ID": "ATLAS"
+  },
+  {
+    "Name": "All-Sky Automated Survey for Supernovae (ASAS-SN)",
+    "ID": "ASAS-SN"
+  },
+  {
+    "Name": "NSF NOIRLab 1.2m Auxiliary Telescope at Vera C. Rubin Observatory at Cerro Pachon",
+    "ID": "Rubin:1.2m"
+  },
+  {
+    "Name": "NSF NOIRLab 4m Victor M. Blanco Telescope at NSF Cerro Tololo Inter-American Observatory (CTIO)",
+    "ID": "Blanco"
+  },
+  {
+    "Name": "The Institute of Astronomy of Nicolaus Copernicus University in Torun's 60cm Cassegrain telescope",
+    "ID": "NCU:60cm"
+  },
+  {
+    "Name": "The Institute of Astronomy of Nicolaus Copernicus University in Torun's 90cm Schmidt-Cassegrain telescope (TSC)",
+    "ID": "NCU:TSC"
+  },
+  {
+    "Name": "The Institute of Astronomy of Nicolaus Copernicus University in Torun's 15m RT3 radio telescope",
+    "ID": "NCU:RT3"
+  },
+  {
+    "Name": "The Institute of Astronomy of Nicolaus Copernicus University in Torun's  32m RT4 radio telescope",
+    "ID": "NCU:RT4"
+  },
+  {
+    "Name": "Wellesley College 0.7m PlaneWave Telescope at Whitin Observatory",
+    "ID": "WCWO:0.7m"
+  },
+  {
+    "Name": "Indian Institute of Astrophysics 1.3m J.C. Bhattacharya Telescope (JCBT) at Vainu Bappu Observatory",
+    "ID": "VBO:JCBT"
+  },
+  {
+    "Name": "The 0.7m GROWTH India Telescope (GIT)",
+    "ID": "GIT"
+  },
+  {
+    "Name": "The Deep Space Network, radio astronomy observations with the Goldstone Apple Valley Radio Telescope (GAVRT)",
+    "ID": "DSN:GAVRT"
+  },
+  {
+    "Name": "Gravitational Wave Treasure Map",
+    "ID": "GWTM"
+  },
+  {
+    "Name": "The European Space Agency (ESA) and the Japan Aerospace Exploration Agency (JAXA) BepiColombo Mercury mission",
+    "ID": "Bepi"
+  },
+  {
+    "Name": "The Canada Foundation for Innovation Canadian Hydrogen Intensity Mapping Experiment (CHIME)",
+    "ID": "CHIME"
+  },
+  {
+    "Name": "European Space Agency (ESA) Euclid",
+    "ID": "Euclid"
+  },
+  {
+    "Name": "European Space Agency (ESA) CHaracterising ExOPlanet Satellite (CHEOPS)",
+    "ID": "CHEOPS"
+  },
+  {
+    "Name": "NASAs Planetary Data System",
+    "ID": "PDS"
+  },
+  {
+    "Name": "The Dutch National Supercomputer Snellius hosted at SURF",
+    "ID": "Snellius"
+  },
+  {
+    "Name": "Sweden's KTH Royal Institute of Technology Dardel supercomputer",
+    "ID": "Dardel"
+  },
+  {
+    "Name": "Research Computing at Arizona State University",
+    "ID": "ASU:RC"
+  },
+  {
+    "Name": "China National Astronomical Data Center (NADC)",
+    "ID": "NADC"
+  },
+  {
+    "Name": "Japan Aerospace Exploration Agency (JAXA)/NASA/European Space Agency (ESA) X-Ray Imaging and Spectroscopy Mission (XRISM)",
+    "ID": "XRISM"
+  },
+  {
+    "Name": "OBSTECH's Observatorio El Sauce 0.6m telescope",
+    "ID": "El Sauce: 0.6m"
+  },
+  {
+    "Name": "The MINERVA-Australis 0.7m telescopes at Mount Kent Observatory",
+    "ID": "MINERVA-Australis"
+  },
+  {
+    "Name": "The MINiature Exoplanet Radial Velocity Array (MINERVA) 0.7m robotic observatory",
+    "ID": "MINERVA"
+  },
+  {
     "Name": "The Square Kilometer Array low telescope",
     "ID": "SKA-Low"
   },
@@ -36,12 +168,12 @@
     "ID": "IRIS"
   },
   {
-    "Name": "European Space Agency's (ESA) Solar Orbiter",
+    "Name": "European Space Agency (ESA) Solar Orbiter",
     "ID": "SolO"
   },
   {
     "Name": "Deep Synoptic Array-110 (DSA-110) at the Owens Valley Radio Observatory (OVRO)",
-    "ID": "DSA-100"
+    "ID": "DSA-110"
   },
   {
     "Name": "The Five-hundred-meter Aperture Spherical radio Telescope (FAST)",
@@ -104,8 +236,8 @@
     "ID": "PUNCH"
   },
   {
-    "Name": "The Vera C. Rubin 8.4m Simonyi Survey Telescope Observatory",
-    "ID": "Rubin"
+    "Name": "NSF NOIRLab 8.4m Simonyi Survey Telescope at Vera C. Rubin Observatory at Cerro Pachon",
+    "ID": "Rubin:Simonyi"
   },
   {
     "Name": "Harvard and Smithsonian Center for Astrophysics' MicroObservatory Robotic Telescope Network",
@@ -176,19 +308,19 @@
     "ID": "DSN:DSS-13"
   },
   {
-    "Name": "NSF’s NOIRLab Arizona-NOIRLab Temporal Analysis and Response to Events System (ANTARES)",
+    "Name": "NSF NOIRLab Arizona-NOIRLab Temporal Analysis and Response to Events System (ANTARES)",
     "ID": "ANTARES"
   },
   {
-    "Name": "NSF’s NOIRLab Gemini Science archive",
+    "Name": "NSF NOIRLab Gemini Science archive",
     "ID": "Gemini Science archive"
   },
   {
-    "Name": "NSF’s NOIRLab Astro Data Lab",
+    "Name": "NSF NOIRLab Astro Data Lab",
     "ID": "Astro Data Lab"
   },
   {
-    "Name": "NSF’s NOIRLab Astro Data Archive",
+    "Name": "NSF NOIRLab Astro Data Archive",
     "ID": "Astro Data Archive"
   },
   {
@@ -328,7 +460,7 @@
     "ID": "SORCE"
   },
   {
-    "Name": "European Space Agency (ESA) Newton-XMM X-Ray Multi-Mirror Mission Satellite",
+    "Name": "European Space Agency (ESA) XMM-Newton X-Ray Multi-Mirror Mission Satellite",
     "ID": "XMM"
   },
   {
@@ -412,7 +544,7 @@
     "ID": "MAXI"
   },
   {
-    "Name": "NASA 6.5m James Webb Space Telescope (JWST) Satellite Mission",
+    "Name": "NASA/European Space Agency (ESA) 6.5m James Webb Space Telescope (JWST) Satellite Mission",
     "ID": "JWST"
   },
   {
@@ -828,8 +960,8 @@
     "ID": "CTIO:1.5m"
   },
   {
-    "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 4m Victor M. Blanco Telescope Cerro Tololo Inter-American Observatory (CTIO)",
-    "ID": "Blanco"
+    "Name": "NSF NOIRLab 4m Nicholas U. Mayall Telescope at NSF Kitt Peak National Observatory",
+    "ID": "Mayall"
   },
   {
     "Name": "Smithsonian Astrophysical Observatory (SAO) 0.8m Receiver Lab Telescope",
@@ -1140,7 +1272,7 @@
     "ID": "LOAO:1m"
   },
   {
-    "Name": "WIYN Consortium 0.9m (36inch) Telescope (formerly NOAO 0.9m telescope) at Kitt Peak National Observatory (KPNO)",
+    "Name": "WIYN Consortium 0.9m (36inch) Telescope (formerly NOAO 0.9m telescope) at NSF Kitt Peak National Observatory (KPNO)",
     "ID": "WIYN:0.9m"
   },
   {
@@ -1228,7 +1360,7 @@
     "ID": "FCRAO"
   },
   {
-    "Name": "WIYN Consortium 3.5m Wisconsin-Indiana-Yale-NOIRLab (WIYN) Telescope at Kitt Peak National Observatory (KPNO)",
+    "Name": "WIYN Consortium 3.5m Wisconsin-Indiana-Yale-NOIRLab (WIYN) Telescope at NSF Kitt Peak National Observatory (KPNO)",
     "ID": "WIYN"
   },
   {
@@ -1424,15 +1556,11 @@
     "ID": "KPVT"
   },
   {
-    "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 4m Nicholas U. Mayall Telescope at Kitt Peak National Observatory (KPNO)",
-    "ID": "Mayall"
-  },
-  {
-    "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) 2.1 meter Telescope at Kitt Peak National Observatory (KPNO)",
+    "Name": "NSF National Optical-Infrared Astronomy Research Laboratory (NOIRLab) NSF 2.1 meter Telescope at NSF Kitt Peak National Observatory (KPNO)",
     "ID": "KPNO:2.1m"
   },
   {
-    "Name": "NSF’s National Optical-Infrared Astronomy Research Laboratory (NOIRLab) Coude Feed Telescope at Kitt Peak National Observatory (KPNO)",
+    "Name": "NSF NOIRLab Coude Feed Telescope at NSF Kitt Peak National Observatory (KPNO)",
     "ID": "KPNO:CFT"
   },
   {

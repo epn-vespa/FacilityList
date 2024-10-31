@@ -1,0 +1,1197 @@
+[
+    {
+        "title": "MMT Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.mmt",
+        "Matches": [
+            {
+                "ID": "mmt-observatory",
+                "Label": "MMT Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [
+                    "whipple-observatory",
+                    "mmto",
+                    "mmt",
+                    "multiple-mirror-telescope,-telescopio-a-specchi-multipli",
+                    "multiple-mirror-telescope"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q779895"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Palmer Divide Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.palmer_divide",
+        "Matches": [
+            {
+                "ID": "palmer-divide-observatory",
+                "Label": "Palmer Divide Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q114643294",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#716"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Lowell Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.lowell",
+        "Matches": [
+            {
+                "ID": "lowell-observatory-near-earth-object-search",
+                "Label": "Lowell Observatory Near-Earth-Object Search",
+                "Comment": "project designed to discover asteroids and comets that orbit near the Earth",
+                "altLabel": [
+                    "լօնեօս",
+                    "洛韦尔天文台近地小天体搜索",
+                    "羅威爾天文台近地小行星搜尋計畫",
+                    "罗威尔天文台近地小行星搜寻计划",
+                    "поиск-околоземных-объектов-в-обсерватории-лоуэлла",
+                    "loneos",
+                    "洛厄尔天文台近地小行星搜寻计划",
+                    "ローウェル天文台近傍小惑星捜索",
+                    "ロウエル天文台近地球天体研究所",
+                    "lowell-observatory-near-earth-object-search"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1165635",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#699"
+                ]
+            },
+            {
+                "ID": "lowell-observatory",
+                "Label": "Lowell Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [
+                    "罗威尔天文台",
+                    "lowell-sternwarte",
+                    "690-lo",
+                    "ローエル天文台",
+                    "anderson-mesa",
+                    "flagstaff-gözlemevi",
+                    "лоуэлловская-обсерватория",
+                    "lowell",
+                    "로웰천문대",
+                    "osservatorio-di-flagstaff",
+                    "羅威爾天文台",
+                    "lowell-observatorium",
+                    "обсерваторія-ловелла",
+                    "رصدخانهٔ-لوول",
+                    "lowell-observatory",
+                    "observatorio-de-lowell",
+                    "lowell-observatoriet",
+                    "thie-rollageydys-lowell",
+                    "lowllov-observatorij",
+                    "observatório-de-lowell",
+                    "رصدخانه-لول",
+                    "flagstaff-station",
+                    "رصدخانهٔ-لاول",
+                    "رصدخانهٔ-لول",
+                    "flagstaff-observatory",
+                    "رصدخانه-لاول",
+                    "anderson-mesa-station",
+                    "lowellobservatoriet"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q466895",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#690"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Hunters Hill Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.hunters_hill",
+        "Matches": [
+            {
+                "ID": "hunters-hill-observatory",
+                "Label": "Hunters Hill observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115522356",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#E14"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Asiago Astrophysical Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.asiago",
+        "Matches": [
+            {
+                "ID": "asiago-astrophysical-observatory",
+                "Label": "Asiago Astrophysical Observatory",
+                "Comment": "Italian astronomical observatory",
+                "altLabel": [
+                    "observatorij-asiago",
+                    "обсерватория-азиаго",
+                    "osservatorio-di-asiago",
+                    "astronomski-observatorij-asiago",
+                    "stazione-osservativa-di-asiago-cima-ekar",
+                    "αστεροσκοπείο-του-ασιάγκο",
+                    "osservatorio-astrofisico-di-vicenza",
+                    "アジアーゴ天体物理観測所",
+                    "osservatorio-astronomico-di-asiago",
+                    "osservatorio-astrofisico,-vicenza",
+                    "αστροφυσικό-αστεροσκοπείο-του-αζιάγκο"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q2034628",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#043"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "South African Astronomical Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.saao",
+        "Matches": [
+            {
+                "ID": "south-african-astronomical-observatory",
+                "Label": "South African Astronomical Observatory",
+                "Comment": "observatory",
+                "altLabel": [
+                    "south-african-astronomical-observatory",
+                    "южно-африканская-обсерватория",
+                    "observatoire-astronomique-d'afrique-du-sud",
+                    "saao",
+                    "رصدخانهٔ-افریقای-جنوبی",
+                    "رصدخانه-افریقای-جنوبی",
+                    "observatorio-astronomico-sudafricano",
+                    "обсерватория-мыс-доброй-надежды",
+                    "обсерватория-мыса-доброй-надежды",
+                    "royal-observatory,-tanjung-harapan",
+                    "южно-африканская-астрономическая-обсерватория",
+                    "رصدخانهٔ-آفریقای-جنوبی"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q227807",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#051()"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Siding Spring Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.siding_spring",
+        "Matches": [
+            {
+                "ID": "siding-spring-observatory:-itelescope-observatory",
+                "Label": "Siding Spring Observatory: iTelescope Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q116161609",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#Q62"
+                ]
+            },
+            {
+                "ID": "siding-spring-observatory",
+                "Label": "Siding Spring Observatory",
+                "Comment": "astronomic observatorium in Coonabarabran, New South Wales, Australia",
+                "altLabel": [
+                    "sso"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q930096",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#413"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Leura",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.leura",
+        "Matches": [
+            {
+                "ID": "leura-observatory",
+                "Label": "Leura observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115522358",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#E17"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Lowell Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.lowell",
+        "Matches": [
+            {
+                "ID": "lowell-observatory-near-earth-object-search",
+                "Label": "Lowell Observatory Near-Earth-Object Search",
+                "Comment": "project designed to discover asteroids and comets that orbit near the Earth",
+                "altLabel": [
+                    "լօնեօս",
+                    "洛韦尔天文台近地小天体搜索",
+                    "羅威爾天文台近地小行星搜尋計畫",
+                    "罗威尔天文台近地小行星搜寻计划",
+                    "поиск-околоземных-объектов-в-обсерватории-лоуэлла",
+                    "loneos",
+                    "洛厄尔天文台近地小行星搜寻计划",
+                    "ローウェル天文台近傍小惑星捜索",
+                    "ロウエル天文台近地球天体研究所",
+                    "lowell-observatory-near-earth-object-search"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1165635",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#699"
+                ]
+            },
+            {
+                "ID": "lowell-observatory",
+                "Label": "Lowell Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [
+                    "罗威尔天文台",
+                    "lowell-sternwarte",
+                    "690-lo",
+                    "ローエル天文台",
+                    "anderson-mesa",
+                    "flagstaff-gözlemevi",
+                    "лоуэлловская-обсерватория",
+                    "lowell",
+                    "로웰천문대",
+                    "osservatorio-di-flagstaff",
+                    "羅威爾天文台",
+                    "lowell-observatorium",
+                    "обсерваторія-ловелла",
+                    "رصدخانهٔ-لوول",
+                    "lowell-observatory",
+                    "observatorio-de-lowell",
+                    "lowell-observatoriet",
+                    "thie-rollageydys-lowell",
+                    "lowllov-observatorij",
+                    "observatório-de-lowell",
+                    "رصدخانه-لول",
+                    "flagstaff-station",
+                    "رصدخانهٔ-لاول",
+                    "رصدخانهٔ-لول",
+                    "flagstaff-observatory",
+                    "رصدخانه-لاول",
+                    "anderson-mesa-station",
+                    "lowellobservatoriet"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q466895",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#690"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "McDonald Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.mcdonald",
+        "Matches": [
+            {
+                "ID": "mcdonald-observatory-lco-elp",
+                "Label": "McDonald Observatory-LCO ELP",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633360",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#V37"
+                ]
+            },
+            {
+                "ID": "mcdonald-observatory-lco-elp-aqawan-a-#1",
+                "Label": "McDonald Observatory-LCO ELP Aqawan A #1",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633361",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#V38"
+                ]
+            },
+            {
+                "ID": "mcdonald-observatory-lco-elp-b",
+                "Label": "McDonald Observatory-LCO ELP B",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633362",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#V39"
+                ]
+            },
+            {
+                "ID": "mcdonald-observatory",
+                "Label": "McDonald Observatory",
+                "Comment": "astronomical observatory in Texas",
+                "altLabel": [
+                    "رصدخانهٔ-مک-دونالد",
+                    "711-mc",
+                    "mcdonald-observatory",
+                    "رصدخانهٔ-مکدونالد",
+                    "رصدخانه-مک-دونالد",
+                    "رصدخانه-مکدونالد",
+                    "mcdonald-observatoire"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1536779",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#711"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "MMT Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.mmt",
+        "Matches": [
+            {
+                "ID": "mmt-observatory",
+                "Label": "MMT Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [
+                    "whipple-observatory",
+                    "mmto",
+                    "mmt",
+                    "multiple-mirror-telescope,-telescopio-a-specchi-multipli",
+                    "multiple-mirror-telescope"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q779895"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Modra",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.modra",
+        "Matches": [
+            {
+                "ID": "modra-observatory",
+                "Label": "Modra Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q4299444",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#118"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Palomar Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.palomar",
+        "Matches": [
+            {
+                "ID": "near-earth-asteroid-tracking-(neat)-at-palomar-observatory",
+                "Label": "Near-Earth Asteroid Tracking (NEAT) at Palomar observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [
+                    "neat"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q114639087",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#644"
+                ]
+            },
+            {
+                "ID": "micro-palomar-observatory",
+                "Label": "Micro Palomar observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115607619",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#K10"
+                ]
+            },
+            {
+                "ID": "national-geographic-society-–-palomar-observatory-sky-survey",
+                "Label": "National Geographic Society – Palomar Observatory Sky Survey",
+                "Comment": "astronomical survey, that took almost 2,000 photographic plates of the night sky",
+                "altLabel": [
+                    "帕洛瑪巡天",
+                    "國家地理學會的帕洛瑪天文台天空調查",
+                    "國家地理學會─帕洛馬山天文台巡天調查",
+                    "palomar-sky-survey",
+                    "帕洛馬山天文台巡天",
+                    "帕洛瑪星巡天",
+                    "khảo-sát-bầu-trời-của-đài-quan-sát-palomar",
+                    "國家地理學會-–-帕洛瑪天文台巡天",
+                    "帕洛马山天文台星空调查项目",
+                    "ngs-poss",
+                    "帕洛馬山天文臺星空調查專案",
+                    "國家地理學會─帕洛馬山天文臺巡天調查",
+                    "帕洛瑪天文台巡天"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1425489"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Cerro Tololo Inter-American Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.ctio-cerro_tololo",
+        "Matches": [
+            {
+                "ID": "cerro-tololo-inter-american-observatory",
+                "Label": "Cerro Tololo Inter-American Observatory",
+                "Comment": "observatory in Chile",
+                "altLabel": [
+                    "رصدخانه-میان-امریکایی-سرو-تولولو",
+                    "رصدخانهٔ-میان-ایالات-متحدهیی-سرو-تولولو",
+                    "межамериканская-обсерватория-серро-тололо",
+                    "obserwatorium-cerro-tololo",
+                    "cerro-tololo-interamerican-observatory",
+                    "رصدخانه-میان-آمریکایی-سرو-تولولو",
+                    "cerro-tololo-inter-american-observatory",
+                    "رصدخانهٔ-اینتر-آمریکن-سرو-تولولو",
+                    "مرقب-كرو-تولولو",
+                    "807-ct",
+                    "observatorio-cerro-tololo",
+                    "رصدخانهٔ-میان-آمریکایی-سرو-تولولو",
+                    "обсерваторія-серро-тололо",
+                    "observatorio-interamericano-de-cerro-tololo-(ctio)",
+                    "observatorio-interamericano-de-cerro-tololo",
+                    "cerro-tololo",
+                    "observatorio-de-cerro-tololo",
+                    "ctio",
+                    "رصدخانه-میان-ایالات-متحدهیی-سرو-تولولو",
+                    "汎美天文台",
+                    "رصدخانه-اینتر-آمریکن-سرو-تولولو",
+                    "رصدخانه-اینتر-امریکن-سرو-تولولو",
+                    "رصدخانهٔ-میان-امریکایی-سرو-تولولو",
+                    "cerro-tololo-observatory",
+                    "托洛洛山美洲天文台",
+                    "observatoire-inter-américain-du-cerro-tololo"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1056113",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#807",
+                    "spase://SMWG/Observatory/Ground/CTIO"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Siding Spring Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.siding_spring",
+        "Matches": [
+            {
+                "ID": "siding-spring-observatory:-itelescope-observatory",
+                "Label": "Siding Spring Observatory: iTelescope Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q116161609",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#Q62"
+                ]
+            },
+            {
+                "ID": "siding-spring-observatory",
+                "Label": "Siding Spring Observatory",
+                "Comment": "astronomic observatorium in Coonabarabran, New South Wales, Australia",
+                "altLabel": [
+                    "sso"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q930096",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#413"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Siding Spring Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.siding_spring",
+        "Matches": [
+            {
+                "ID": "siding-spring-observatory:-itelescope-observatory",
+                "Label": "Siding Spring Observatory: iTelescope Observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q116161609",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#Q62"
+                ]
+            },
+            {
+                "ID": "siding-spring-observatory",
+                "Label": "Siding Spring Observatory",
+                "Comment": "astronomic observatorium in Coonabarabran, New South Wales, Australia",
+                "altLabel": [
+                    "sso"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q930096",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#413"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Paul Wild Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.paul_wild",
+        "Matches": [
+            {
+                "ID": "paul-wild-observatory",
+                "Label": "Paul Wild Observatory",
+                "Comment": "",
+                "altLabel": [
+                    "paul-wild-observatory",
+                    "narrabri-observatory",
+                    "culgoora-observatory"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q7154366"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Stockport Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.stockport",
+        "Matches": [
+            {
+                "ID": "stockport-observatory",
+                "Label": "Stockport observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q114437008",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#427"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Apache Point Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.apache_point",
+        "Matches": [
+            {
+                "ID": "apache-point-observatory",
+                "Label": "Apache Point Observatory",
+                "Comment": "astronomical observatory in Sunspot, New Mexico, United States",
+                "altLabel": [
+                    "apo",
+                    "رصدخانهٔ-اپاچی-پوینت",
+                    "رصدخانهٔ-آپاچی-پوینت",
+                    "apache-point-sternwarte",
+                    "apache-point-observatoire",
+                    "apache-point-observatory",
+                    "رصدخانه-اپاچی-پوینت",
+                    "observatorio-astronomico-de-apache-point"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q616529",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#645|705"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Green Bank Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.gbo",
+        "Matches": [
+            {
+                "ID": "green-bank-observatory",
+                "Label": "Green Bank Observatory",
+                "Comment": "astronomical observatory in Green Bank, West Virginia, United States",
+                "altLabel": [
+                    "national-radio-astronomy-observatory,-green-bank",
+                    "格林班克天文台",
+                    "nacionalni-radioastronomski-observatorij",
+                    "绿岸基地"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q41677406",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#256"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Arecibo Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.arecibo",
+        "Matches": [
+            {
+                "ID": "arecibo-observatory",
+                "Label": "Arecibo Observatory",
+                "Comment": "observatory located in the municipality of Arecibo, Puerto Rico",
+                "altLabel": [
+                    "national-astronomy-and-ionosphere-center",
+                    "naic",
+                    "аресібо-(обсерваторія)",
+                    "centro-nacional-de-astronomía-e-ionosfera",
+                    "arecibo-observatory",
+                    "ulusal-astronomi-ve-i̇yonosfer-merkezi",
+                    "thie-rollageydys-arecibo",
+                    "аресибо-(обсерватория)",
+                    "william-e.-gordon-teleskop",
+                    "arecibo-ionosphere-observatory"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q102327045",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#251"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Mount Stromlo Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.mount_stromlo",
+        "Matches": [
+            {
+                "ID": "74-inch-reflector-at-mount-stromlo-observatory",
+                "Label": "74-inch Reflector at Mount Stromlo Observatory",
+                "Comment": "optical telescope",
+                "altLabel": [
+                    "mso-74in",
+                    "74-inch-reflector---mount-stromlo-observatory"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q124247902"
+                ]
+            },
+            {
+                "ID": "mount-stromlo-observatory",
+                "Label": "Mount Stromlo Observatory",
+                "Comment": "Observatory",
+                "altLabel": [
+                    "mso"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1310548",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#414"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Anderson Mesa Station",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.lowell",
+        "Matches": [
+            {
+                "ID": "anderson-mesa-station",
+                "Label": "Anderson Mesa Station",
+                "Comment": "astronomical observatory in Coconino County, Arizona, United States of America",
+                "altLabel": [
+                    "обсерватория-лоуэлла,-станция-андерсон-меса",
+                    "андерсон-меса",
+                    "アンダーソン・メサ天文台",
+                    "anderson-mesa",
+                    "anderson-mesa-station",
+                    "安德森·梅薩站",
+                    "estacion-anderson-mesa",
+                    "lowell-observatory,-anderson-mesa-station"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q2446595",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#688"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "McDonald Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.mcdonald",
+        "Matches": [
+            {
+                "ID": "mcdonald-observatory-lco-elp",
+                "Label": "McDonald Observatory-LCO ELP",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633360",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#V37"
+                ]
+            },
+            {
+                "ID": "mcdonald-observatory-lco-elp-aqawan-a-#1",
+                "Label": "McDonald Observatory-LCO ELP Aqawan A #1",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633361",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#V38"
+                ]
+            },
+            {
+                "ID": "mcdonald-observatory-lco-elp-b",
+                "Label": "McDonald Observatory-LCO ELP B",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633362",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#V39"
+                ]
+            },
+            {
+                "ID": "mcdonald-observatory",
+                "Label": "McDonald Observatory",
+                "Comment": "astronomical observatory in Texas",
+                "altLabel": [
+                    "رصدخانهٔ-مک-دونالد",
+                    "711-mc",
+                    "mcdonald-observatory",
+                    "رصدخانهٔ-مکدونالد",
+                    "رصدخانه-مک-دونالد",
+                    "رصدخانه-مکدونالد",
+                    "mcdonald-observatoire"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1536779",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#711"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Table Mountain Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.table_mountain",
+        "Matches": [
+            {
+                "ID": "table-mountain-observatory",
+                "Label": "Table Mountain Observatory",
+                "Comment": "astronomical observational facility in Big Pines, California, United States",
+                "altLabel": [
+                    "observatoire-table-mountain",
+                    "observatório-table-mountain"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q3039662",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#673"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Apache Point Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.apache_point",
+        "Matches": [
+            {
+                "ID": "apache-point-observatory",
+                "Label": "Apache Point Observatory",
+                "Comment": "astronomical observatory in Sunspot, New Mexico, United States",
+                "altLabel": [
+                    "apo",
+                    "رصدخانهٔ-اپاچی-پوینت",
+                    "رصدخانهٔ-آپاچی-پوینت",
+                    "apache-point-sternwarte",
+                    "apache-point-observatoire",
+                    "apache-point-observatory",
+                    "رصدخانه-اپاچی-پوینت",
+                    "observatorio-astronomico-de-apache-point"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q616529",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#645|705"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Las Cumbres Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.las_cumbres",
+        "Matches": [
+            {
+                "ID": "las-cumbres-observatory-global-telescope-network",
+                "Label": "Las Cumbres Observatory Global Telescope Network",
+                "Comment": "nonprofit organization and astronomical observatory",
+                "altLabel": [
+                    "拉斯坎布里斯天文台全球望遠鏡網络",
+                    "拉斯康柏瑞斯天文台",
+                    "lcogtn",
+                    "lco",
+                    "拉斯坎布里斯天文台",
+                    "ラスカンブレス天文台",
+                    "las-cumbres-observatory",
+                    "拉斯昆布瑞天文台",
+                    "拉斯坎佈雷斯天文台全球望遠鏡網络",
+                    "拉斯昆布瑞天文臺",
+                    "observatorij-las-cumbras"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q3348332"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Goodricke-Pigott Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.goodricke-pigott",
+        "Matches": [
+            {
+                "ID": "goodricke-pigott-observatory",
+                "Label": "Goodricke-Pigott Observatory",
+                "Comment": "a private astronomical observatory",
+                "altLabel": [
+                    "observatorio-astronomico-goodricke-pigott",
+                    "goodricke-pigott-observatory"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q3821639",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#683"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Mount Stromlo Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.mount_stromlo",
+        "Matches": [
+            {
+                "ID": "74-inch-reflector-at-mount-stromlo-observatory",
+                "Label": "74-inch Reflector at Mount Stromlo Observatory",
+                "Comment": "optical telescope",
+                "altLabel": [
+                    "mso-74in",
+                    "74-inch-reflector---mount-stromlo-observatory"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q124247902"
+                ]
+            },
+            {
+                "ID": "mount-stromlo-observatory",
+                "Label": "Mount Stromlo Observatory",
+                "Comment": "Observatory",
+                "altLabel": [
+                    "mso"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1310548",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#414"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Kuiper Airborne Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.kuiper-airborne",
+        "Matches": [
+            {
+                "ID": "kuiper-airborne-observatory",
+                "Label": "Kuiper Airborne Observatory",
+                "Comment": "airborne infrared observatory operated by NASA",
+                "altLabel": [
+                    "n714na",
+                    "kuiper-airborne-observatory",
+                    "kao",
+                    "رصدخانهٔ-هوایی-کایپر",
+                    "gerard-p.-kuiper-airborne-observatory",
+                    "رصدخانه-هوایی-کوئیپر",
+                    "カイパー天文台",
+                    "nasa-714",
+                    "رصدخانهٔ-هوایی-کوئیپر"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1501126"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Roque de los Muchachos Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.orm",
+        "Matches": [
+            {
+                "ID": "roque-de-los-muchachos-observatory",
+                "Label": "Roque de los Muchachos Observatory",
+                "Comment": "Spanish astronomical observatory",
+                "altLabel": [
+                    "observatori-roque-de-los-muchachos",
+                    "orm",
+                    "observatoire-de-roque-de-los-muchachos",
+                    "lapalma",
+                    "roque-de-los-muchachos-observatory",
+                    "observatorio-del-roque-de-los-muchachos",
+                    "roque-de-los-muchachos",
+                    "رصدخانهٔ-صخرهٔ-بچه-ها",
+                    "observatorio-astrofisico-del-roque-de-los-muchachos",
+                    "обсерваторія-дель-рок-де-лос-мучачос",
+                    "обсерватория-роке-де-лос-мучачос",
+                    "مرصد",
+                    "ラ・パルマ天文台",
+                    "observatório-astrofísico-do-roque-de-los-muchachos",
+                    "رصدخانه-صخره-بچه-ها",
+                    "roque-de-los-muchachos-observatorium",
+                    "roque-de-los-muchachos-observatorio",
+                    "телескоп-на-канарських-островах",
+                    "обсерватория-на-острове-пальма",
+                    "ロク・デ・ロス・ムチャチョス天文台",
+                    "observatorio-astrofísico-del-roque-de-los-muchachos",
+                    "обсерватория-ла-пальма",
+                    "رصدخانهٔ-صخرهٔ-بچهٔ-ها"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1068376",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#950"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "University of Alabama Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.u_alabama",
+        "Matches": [
+            {
+                "ID": "old-university-of-alabama-observatory",
+                "Label": "Old University of Alabama Observatory",
+                "Comment": "observatory in Alabama, United States of America",
+                "altLabel": [
+                    "frederick-r.-maxwell-hall"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q7085360"
+                ]
+            },
+            {
+                "ID": "university-of-alabama-observatory",
+                "Label": "University of Alabama Observatory",
+                "Comment": "astronomical observatory owned and operated by the University of Alabama in Tuscaloosa, Alabama",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q7895030"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Lick Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.lick",
+        "Matches": [
+            {
+                "ID": "vulcan-north,-lick-observatory",
+                "Label": "Vulcan North, Lick observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115523294",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#G65"
+                ]
+            },
+            {
+                "ID": "deerlick-observatory",
+                "Label": "Deerlick Observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115633395",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#W31"
+                ]
+            },
+            {
+                "ID": "lick-observatory",
+                "Label": "Lick Observatory",
+                "Comment": "astronomical observatory, California, USA",
+                "altLabel": [
+                    "lickobservatoriet",
+                    "lick-observatory",
+                    "ucolick.org",
+                    "lick",
+                    "662-li",
+                    "立克天文台",
+                    "osservatorio-di-lick",
+                    "里克天文台",
+                    "رصدخانهٔ-لیک",
+                    "lick-sternwarte",
+                    "observatoire-de-lick",
+                    "observatorio-astronómico-lick",
+                    "observatorio-astronomico-lick",
+                    "ликская-астрономическая-обсерватория"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q461613",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#662"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Cerro Tololo Inter-American Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.ctio",
+        "Matches": [
+            {
+                "ID": "cerro-tololo-inter-american-observatory",
+                "Label": "Cerro Tololo Inter-American Observatory",
+                "Comment": "observatory in Chile",
+                "altLabel": [
+                    "رصدخانه-میان-امریکایی-سرو-تولولو",
+                    "رصدخانهٔ-میان-ایالات-متحدهیی-سرو-تولولو",
+                    "межамериканская-обсерватория-серро-тололо",
+                    "obserwatorium-cerro-tololo",
+                    "cerro-tololo-interamerican-observatory",
+                    "رصدخانه-میان-آمریکایی-سرو-تولولو",
+                    "cerro-tololo-inter-american-observatory",
+                    "رصدخانهٔ-اینتر-آمریکن-سرو-تولولو",
+                    "مرقب-كرو-تولولو",
+                    "807-ct",
+                    "observatorio-cerro-tololo",
+                    "رصدخانهٔ-میان-آمریکایی-سرو-تولولو",
+                    "обсерваторія-серро-тололо",
+                    "observatorio-interamericano-de-cerro-tololo-(ctio)",
+                    "observatorio-interamericano-de-cerro-tololo",
+                    "cerro-tololo",
+                    "observatorio-de-cerro-tololo",
+                    "ctio",
+                    "رصدخانه-میان-ایالات-متحدهیی-سرو-تولولو",
+                    "汎美天文台",
+                    "رصدخانه-اینتر-آمریکن-سرو-تولولو",
+                    "رصدخانه-اینتر-امریکن-سرو-تولولو",
+                    "رصدخانهٔ-میان-امریکایی-سرو-تولولو",
+                    "cerro-tololo-observatory",
+                    "托洛洛山美洲天文台",
+                    "observatoire-inter-américain-du-cerro-tololo"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1056113",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#807",
+                    "spase://SMWG/Observatory/Ground/CTIO"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Las Campanas Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.las_campanas",
+        "Matches": [
+            {
+                "ID": "las-campanas-observatory",
+                "Label": "Las Campanas Observatory",
+                "Comment": "astronomical observatory in Chile",
+                "altLabel": [
+                    "oberwatorium-las-campanas",
+                    "ラス・カンパナス天文台",
+                    "osservatorio-astronomico-di-las-campanas",
+                    "رصدخانهٔ-لاس-کامپاناس",
+                    "lco",
+                    "las-campanas-observatory",
+                    "라스-깜빠나스",
+                    "las-capanas-sterrenwacht",
+                    "las-campanas-observatorium",
+                    "las-campanas",
+                    "라스캄파나스-천문대",
+                    "斯沃普超新星巡天",
+                    "斯沃普"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q1068067",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#I05|304"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Fremont Peak Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.fremont_peak",
+        "Matches": [
+            {
+                "ID": "fremont-peak-observatory",
+                "Label": "Fremont Peak Observatory",
+                "Comment": "astronomical observatory located in California opened in 1986",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q5501613"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "European Southern Observatory",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.eso",
+        "Matches": [
+            {
+                "ID": "european-southern-observatory,-la-silla-dss",
+                "Label": "European Southern Observatory, La Silla-DSS",
+                "Comment": "The Digitized Sky Survey (DSS) is a digitized version of several photographic astronomical surveys of the night sky, produced by the Space Telescope Science Institute between 1983 and 2006.",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q114232967",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#262"
+                ]
+            },
+            {
+                "ID": "european-southern-observatory",
+                "Label": "European Southern Observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [
+                    "eso"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115536730",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#I03"
+                ]
+            },
+            {
+                "ID": "european-southern-observatory",
+                "Label": "European Southern Observatory",
+                "Comment": "intergovernmental organization and observatory in Chile",
+                "altLabel": [
+                    "歐洲南天文台",
+                    "garching-observatory",
+                    "european-southern-observatory",
+                    "หอดูดาวยุโรปใต้",
+                    "유럽남부천문대",
+                    "南歐天文台",
+                    "réadlann-eorpach-an-deiscirt",
+                    "欧州南天天文台",
+                    "есо",
+                    "رصدخانهٔ-جنوبی-اروپا",
+                    "đài-quan-sát-nam-âu",
+                    "europäische-organisation-für-astronomische-forschung-in-der-südlichen-hemisphäre",
+                    "유럽-남반구-천문대",
+                    "observatorio-austral-europeo",
+                    "ايسو",
+                    "the-european-southern-observatory，eso",
+                    "歐洲南天天文台",
+                    "observatorio-europeo-austral",
+                    "the-european-southern-observatory，縮寫：eso",
+                    "欧南台",
+                    "observatorio-del-sur-europeo",
+                    "observatoire-europeen-austral",
+                    "evropska-organizacija-za-astronomsko-raziskovanje-na-južni-polobli",
+                    "eso",
+                    "欧洲南天天文台",
+                    "european-organisation-for-astronomical-research-in-the-southern-hemisphere",
+                    "an-eagraíocht-eorpach-um-thaighde-réalteolaíoch-sa-leathsféar-theas",
+                    "det-europeiske-sydobservatorium",
+                    "유럽남천문대",
+                    "ヨーロッパ南天文台",
+                    "det-sørlege-europeiske-observatoriet",
+                    "эпа",
+                    "observatori-europeu-austral",
+                    "유럽-남천문대"
+                ],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q151991",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#214"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Carbuncle Hill",
+        "logical_identifier": "urn:nasa:pds:context:facility:observatory.carbuncle_hill",
+        "Matches": [
+            {
+                "ID": "carbuncle-hill-observatory",
+                "Label": "Carbuncle Hill observatory",
+                "Comment": "astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115218164",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#912"
+                ]
+            },
+            {
+                "ID": "carbuncle-hill-observatory",
+                "Label": "Carbuncle Hill Observatory",
+                "Comment": "Astronomical observatory",
+                "altLabel": [],
+                "ExactMatch": [
+                    "http://www.wikidata.org/entity/Q115536727",
+                    "https://minorplanetcenter.net/iau/lists/ObsCodesF.html#I00"
+                ]
+            }
+        ]
+    }
+]
