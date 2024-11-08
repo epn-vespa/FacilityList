@@ -4,11 +4,13 @@ workdir=$(dirname $(realpath $0))
 cd $workdir
 
 
-#### update wikidata list
+#### update wikidata list & filter item which are not an observation facilitity
 (
     cd WIKIDATA/scripts
-     python3 query_wikidata.py
+     python3 query_wikidata.py input.json output.json
 )
+
+
 
 #### AAS
 (

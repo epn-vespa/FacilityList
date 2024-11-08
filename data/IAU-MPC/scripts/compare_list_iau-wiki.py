@@ -2,8 +2,8 @@
 # Compare strings of characters between the list IAU_MPC and a list of items extract of wikidata with fuzzywuzzy library ####
 #############################################################################################################################
 
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+from FuzzyWuzzy import fuzz
+from FuzzyWuzzy import process
 from multiprocessing import Pool
 import json
 import sys

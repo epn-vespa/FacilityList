@@ -797,7 +797,7 @@
   },
   {
     "ID": "199",
-    "Name": "Buthiers"
+    "Name": "Telescope Jean-Marc Salomon, Buthiers"
   },
   {
     "ID": "200",
@@ -1070,6 +1070,10 @@
   {
     "ID": "270",
     "Name": "Unistellar Network, Roving Observer"
+  },
+  {
+    "ID": "273",
+    "Name": "Euclid"
   },
   {
     "ID": "274",
@@ -4585,7 +4589,7 @@
   },
   {
     "ID": "B72",
-    "Name": "Soerth"
+    "Name": "Soerth Observatory"
   },
   {
     "ID": "B73",
@@ -4928,6 +4932,10 @@
     "Name": "TESS"
   },
   {
+    "ID": "C58",
+    "Name": "NEO Surveyor"
+  },
+  {
     "ID": "C59",
     "Name": "Yangwang-1"
   },
@@ -5184,6 +5192,10 @@
     "Name": "UWA Observatory, Crawley"
   },
   {
+    "ID": "D23",
+    "Name": "OAIA, Alcarras"
+  },
+  {
     "ID": "D24",
     "Name": "LightBuckets Observatory, Pingelly"
   },
@@ -5192,8 +5204,28 @@
     "Name": "Tzec Maun Observatory, Pingelly (before 2010)"
   },
   {
+    "ID": "D26",
+    "Name": "Peyrole Observatory, Peyrole"
+  },
+  {
+    "ID": "D27",
+    "Name": "Observatoire de Fontcaude, Juvignac"
+  },
+  {
+    "ID": "D28",
+    "Name": "Escaldarium Observatory,Caldes de Montbui"
+  },
+  {
     "ID": "D29",
     "Name": "Purple Mountain Observatory, XuYi Station"
+  },
+  {
+    "ID": "D30",
+    "Name": "Sternwarte Silbergraben, Erfurt"
+  },
+  {
+    "ID": "D31",
+    "Name": "Osservatorio Aldebaran, Rivalba"
   },
   {
     "ID": "D32",
@@ -5220,12 +5252,48 @@
     "Name": "Lulin Widefield Telescope, Mt. Lulin"
   },
   {
+    "ID": "D38",
+    "Name": "Tecnosky Astropark, Felizzano"
+  },
+  {
     "ID": "D39",
     "Name": "Shandong University Observatory, Weihai"
   },
   {
+    "ID": "D40",
+    "Name": "Frosinone"
+  },
+  {
+    "ID": "D41",
+    "Name": "Osservatorio Astronomico Orciatico"
+  },
+  {
+    "ID": "D42",
+    "Name": "Piero Angela Observatory, Scandicci"
+  },
+  {
+    "ID": "D43",
+    "Name": "45th Parallel Obs., Pino Torinese"
+  },
+  {
     "ID": "D44",
     "Name": "Ishigakijima Astronomical Observatory"
+  },
+  {
+    "ID": "D45",
+    "Name": "Kamyk, Trzesn"
+  },
+  {
+    "ID": "D46",
+    "Name": "Observatory Bad Wurzach"
+  },
+  {
+    "ID": "D47",
+    "Name": "BigBang Observatory, Manciano"
+  },
+  {
+    "ID": "D48",
+    "Name": "Niederbexbach Observatory"
   },
   {
     "ID": "D53",
@@ -5248,12 +5316,28 @@
     "Name": "KSA SEM Observatory, Danggam-dong"
   },
   {
+    "ID": "D60",
+    "Name": "Masseris, Savogna"
+  },
+  {
     "ID": "D61",
     "Name": "Suntopia Marina, Sumoto"
   },
   {
     "ID": "D62",
     "Name": "Miyaki-Argenteus"
+  },
+  {
+    "ID": "D63",
+    "Name": "G. Pascoli Observatory, Barga (since June 2023)"
+  },
+  {
+    "ID": "D64",
+    "Name": "Fucama, Casalincontrada"
+  },
+  {
+    "ID": "D67",
+    "Name": "Tula Rooftop Observatory, Tula"
   },
   {
     "ID": "D70",
@@ -7361,7 +7445,7 @@
   },
   {
     "ID": "K63",
-    "Name": "G. Pascoli Observatory, Castelvecchio Pascoli"
+    "Name": "G. Pascoli Observatory, Barga (before June 2023)"
   },
   {
     "ID": "K64",
@@ -7928,6 +8012,10 @@
     "Name": "PeLe's Observatory, Ager"
   },
   {
+    "ID": "M07",
+    "Name": "Siek"
+  },
+  {
     "ID": "M08",
     "Name": "CHON, Stekene"
   },
@@ -7989,7 +8077,7 @@
   },
   {
     "ID": "M24",
-    "Name": "Ardore Marina"
+    "Name": "La Macchina del Tempo, Ardore Marina"
   },
   {
     "ID": "M25",
@@ -8144,6 +8232,18 @@
     "Name": "Lajoux Observatory"
   },
   {
+    "ID": "M63",
+    "Name": "RPF Observatory, Gagliano del Capo"
+  },
+  {
+    "ID": "M64",
+    "Name": "Holbrook, Heathfield"
+  },
+  {
+    "ID": "M65",
+    "Name": "Mustola Observatory, Lappeenranta"
+  },
+  {
     "ID": "M90",
     "Name": "Chervishevo"
   },
@@ -8180,12 +8280,20 @@
     "Name": "GROWTH India Telescope, IAO, Hanle"
   },
   {
+    "ID": "N54",
+    "Name": "Purple Mountain Observatory, Jiama'erdeng"
+  },
+  {
     "ID": "N55",
-    "Name": "Beimian Tianwentai, Ali, Tibet"
+    "Name": "Corona Borealis Observatory, Ngari, Tibet"
   },
   {
     "ID": "N56",
     "Name": "Jiama'erdeng Tianwentai, Ali, Tibet"
+  },
+  {
+    "ID": "N57",
+    "Name": "YLT, NAOC"
   },
   {
     "ID": "N82",
@@ -8228,6 +8336,18 @@
     "Name": "TRT-NEO, Chiangmai"
   },
   {
+    "ID": "O40",
+    "Name": "Xingyuan, Daocheng"
+  },
+  {
+    "ID": "O41",
+    "Name": "Choakanan Observatory, Lampang"
+  },
+  {
+    "ID": "O42",
+    "Name": "Gaomeigu Gemini Observatory, LiJiang"
+  },
+  {
     "ID": "O43",
     "Name": "Observatori Negara, Langkawi"
   },
@@ -8264,6 +8384,18 @@
     "Name": "Akin Observatory, Rayong"
   },
   {
+    "ID": "O52",
+    "Name": "Astro820, Samut Prakan"
+  },
+  {
+    "ID": "O53",
+    "Name": "Pakchong, Nachonratchasima"
+  },
+  {
+    "ID": "O54",
+    "Name": "TSky Observatory, Chonburi"
+  },
+  {
     "ID": "O68",
     "Name": "LW-2, NAOC-Zhongwei"
   },
@@ -8282,6 +8414,14 @@
   {
     "ID": "P07",
     "Name": "Space Surveillance Telescope, HEH Station"
+  },
+  {
+    "ID": "P13",
+    "Name": "Baihuashan Observatory, Beijing"
+  },
+  {
+    "ID": "P14",
+    "Name": "Nedlands Observatory, Perth"
   },
   {
     "ID": "P18",
@@ -8356,6 +8496,10 @@
     "Name": "Kangwon National University Observatory"
   },
   {
+    "ID": "P68",
+    "Name": "DDSHS Biryong Observatory"
+  },
+  {
     "ID": "P71",
     "Name": "Miryang Arirang Astronomical Observatory"
   },
@@ -8380,6 +8524,10 @@
     "Name": "Sakai Observatory, Osaka"
   },
   {
+    "ID": "Q06",
+    "Name": "Tarui Observatory, Tarui"
+  },
+  {
     "ID": "Q10",
     "Name": "Toyokawa Observatory"
   },
@@ -8394,6 +8542,10 @@
   {
     "ID": "Q19",
     "Name": "Machida"
+  },
+  {
+    "ID": "Q20",
+    "Name": "Swan Reach Imaging, Glenalta"
   },
   {
     "ID": "Q21",
@@ -8518,6 +8670,10 @@
   {
     "ID": "R66",
     "Name": "Mooray Observatory, Christchurch"
+  },
+  {
+    "ID": "R78",
+    "Name": "Crystal Lake Observatory, Ngutunui"
   },
   {
     "ID": "T03",
@@ -8800,6 +8956,10 @@
     "Name": "FOAH Observatory, Magdalena"
   },
   {
+    "ID": "V24",
+    "Name": "Sonoran Desert Skies Observatory, Pearce"
+  },
+  {
     "ID": "V25",
     "Name": "Tortugas Mountain Observatory, Las Cruces"
   },
@@ -8872,6 +9032,10 @@
     "Name": "Dimension Point, Mayhill"
   },
   {
+    "ID": "V43",
+    "Name": "Chiricahua Skies Observatory, Sunizona"
+  },
+  {
     "ID": "V54",
     "Name": "Observatoire LAURIER, El Marques"
   },
@@ -8932,6 +9096,10 @@
     "Name": "River Ridge Observatory, Conway"
   },
   {
+    "ID": "V92",
+    "Name": "White County Observatory, Searcy"
+  },
+  {
     "ID": "V93",
     "Name": "Pin Oak Observatory, Fort Madison"
   },
@@ -8954,6 +9122,10 @@
   {
     "ID": "W11",
     "Name": "Northwest Indiana Robotic Telescope, Lowell"
+  },
+  {
+    "ID": "W13",
+    "Name": "Star Quarry Observatory, Bedford"
   },
   {
     "ID": "W14",
@@ -9050,6 +9222,10 @@
   {
     "ID": "W50",
     "Name": "Apex"
+  },
+  {
+    "ID": "W51",
+    "Name": "Custer Institute and Observatory"
   },
   {
     "ID": "W52",
@@ -9304,6 +9480,22 @@
     "Name": "Observatorio Orbis Tertius, Cordoba"
   },
   {
+    "ID": "X15",
+    "Name": "ABYO, San Pedro de Atacama"
+  },
+  {
+    "ID": "X16",
+    "Name": "Astronomia Sigma Octante, Cochabamba"
+  },
+  {
+    "ID": "X17",
+    "Name": "BlackGEM"
+  },
+  {
+    "ID": "X18",
+    "Name": "6R-POL2, San Pedro de Atacama"
+  },
+  {
     "ID": "X31",
     "Name": "Galileo Galilei Observatory, Oro Verde"
   },
@@ -9408,8 +9600,44 @@
     "Name": "Two-Meter Twin Telescope, TTT2, Teide"
   },
   {
+    "ID": "Y67",
+    "Name": "High Atlas Window to the Kosmos,Oukaimeden"
+  },
+  {
+    "ID": "Y70",
+    "Name": "ApolloIV5, Fregenal de la Sierra"
+  },
+  {
+    "ID": "Y75",
+    "Name": "Abraham Zacut, Salamanca"
+  },
+  {
+    "ID": "Y82",
+    "Name": "LPMR Observatory, Broad Chalke"
+  },
+  {
+    "ID": "Y83",
+    "Name": "Observatorio Arcosur, Zaragoza"
+  },
+  {
+    "ID": "Y84",
+    "Name": "Observatoire de Saint Domineuc"
+  },
+  {
     "ID": "Y85",
     "Name": "Magalofes Observatory, Fene"
+  },
+  {
+    "ID": "Y86",
+    "Name": "Observatorio de Seron"
+  },
+  {
+    "ID": "Y87",
+    "Name": "Trevinca Skies-Amalthea, Trevinca"
+  },
+  {
+    "ID": "Y88",
+    "Name": "ASERO, Valdin"
   },
   {
     "ID": "Y89",
@@ -9432,12 +9660,28 @@
     "Name": "Observatorio Azahar, Valoria la Buena"
   },
   {
+    "ID": "Y94",
+    "Name": "LCB Lugueros observatory, Valdelugueros"
+  },
+  {
     "ID": "Y95",
     "Name": "Pradillos Ferez"
   },
   {
+    "ID": "Y96",
+    "Name": "Observatorio de Vega del Codorno"
+  },
+  {
+    "ID": "Y97",
+    "Name": "Bommes Observatory, Bommes"
+  },
+  {
     "ID": "Y98",
     "Name": "Southside Observatory, Steeple Aston"
+  },
+  {
+    "ID": "Y99",
+    "Name": "Observatorio del Lucero del Alba"
   },
   {
     "ID": "Z00",

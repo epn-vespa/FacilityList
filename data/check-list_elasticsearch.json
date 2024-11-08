@@ -30,35 +30,6 @@
  {
     "resolve": "meudon-observatory",
     "result":  {"total": 3, "results": [{"label": "meudon-observatory"}, {"label": "paris-observatory-psl-university"}, {"label": "solar-observatory-tower-meudon"}]}
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- {
-    "resolve": "stereo",
-    "result":  
- },
- 
+ }
  
 ]
