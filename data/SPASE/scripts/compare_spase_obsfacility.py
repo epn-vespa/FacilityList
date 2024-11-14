@@ -53,12 +53,10 @@ def compare_all(items):
 
 
 if __name__ == '__main__':
-    with open('/Users/ldebisschop/PycharmProjects/FacilityList/data/SPASE/scripts/spase_data_V_1.0.json', 'r') as f:
+    with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata-11082024.json', 'r') as f:
         liste1 = json.load(f)
 
-    with open(
-            '/Users/ldebisschop/PycharmProjects/FacilityList/data/obs-facilities_vocabulary/obsfacilities_vocabulary_step1.json',
-            'r') as f:
+    with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/obs-facilities_vocabulary/obsfacilities_vocabulary_step1.json', 'r') as f:
         liste2 = json.load(f)
 
     pool = Pool(cpu_count())
