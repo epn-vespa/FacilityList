@@ -37,10 +37,13 @@ def compare_item(item1, item2):
 
 def compare_all(items):
     item1, liste2 = items
+    if "ResourceName" not in item1:
+        # Skip this item if "ResourceName" is missing
+        return None
     # Formater ResourceName
     res1 = {
         "ResourceName": format_resource_name(item1["ResourceName"]),
-        "ResourceID": item1["ResourceID"],
+        "ResourceID": item1.get("ResourceID", "Unknown"),
         "Matches": [],
     }
 
