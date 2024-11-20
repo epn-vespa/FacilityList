@@ -53,10 +53,11 @@ if response.status_code == 200:
         telescopes_data.append(telescope_data)
 
     # Enregistrer les données dans un fichier JSON avec l'encodage UTF-8
-    with open(data_dir / 'astroweb.json', 'w', encoding='utf-8') as f:
+    output_file = data_dir / 'Astroweb.json'
+    with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(telescopes_data, f, ensure_ascii=False, indent=2)
 
-    print(f"Données des télescopes enregistrées dans le fichier {data_dir / 'astroweb.json'}.")
+    print(f"Données des télescopes enregistrées dans le fichier {output_file}.")
 
 else:
     print(f"Erreur {response.status_code} lors de la requête.")
