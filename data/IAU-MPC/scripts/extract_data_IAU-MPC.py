@@ -30,6 +30,6 @@ if response.status_code == 200:
     output_file= data_dir / 'iau-mpc.json'
     with open(output_file, 'w') as json_file:
         json.dump(data, json_file, indent=2)
-    print("Les données ont été enregistrées dans " + output_file)
+    print(f"Les données ont été enregistrées dans {output_file}")
 else:
     print(f"La requête a échoué avec le statut {response.status_code}")
