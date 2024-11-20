@@ -6,7 +6,7 @@ More info:
 (https://aas.org/about/mission-and-vision-statement)
 
 ## Identifiers
- AAS identifiers are available from [AAS web portal, AAS journals section](https://journals.aas.org/facility-keywords/)
+ AAS identifiers are available from [AAS web portal, AAS journals section](https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/)
 
 
 ## Extract data
