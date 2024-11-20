@@ -42,4 +42,4 @@ for dictionnaire in data:
 # Afficher le résultat
 print(data)
 with open(output_file,"w",encoding='utf-8') as out_f:
-    out_f.write(json.dumps(data, ensure_ascii=False, indent=4))
+    out_f.write(json.dumps(data, ensure_ascii=False))
