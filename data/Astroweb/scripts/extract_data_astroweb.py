@@ -5,7 +5,7 @@ from pathlib import Path
 
 data_dir = Path(__file__).parents[1] / "data"
 
-url = "https://cds.unistra.fr//astroWeb/astroweb/telescope.html"
+url = "https://cds.unistra.fr/astroweb/astroweb/telescope.html"
 
 response = requests.get(url)
 
@@ -56,7 +56,7 @@ if response.status_code == 200:
     with open(data_dir / 'astroweb.json', 'w', encoding='utf-8') as f:
         json.dump(telescopes_data, f, ensure_ascii=False, indent=2)
 
-    print("Données des télescopes enregistrées dans le fichier 'telescopes_data.json'.")
+    print(f"Données des télescopes enregistrées dans le fichier {data_dir / 'astroweb.json'}.")
 
 else:
     print(f"Erreur {response.status_code} lors de la requête.")
