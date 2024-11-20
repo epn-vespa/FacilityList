@@ -3,16 +3,20 @@
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from multiprocessing import Pool
-import cProfile
 import json
 import sys
+from pathlib import Path
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IRAF/data/iraf.json') as f:
+data_dir = Path(__file__).parents[1] / 'data'
+wikidata_dir = Path(__file__).parents[2] / 'WIKIDATA'
+
+with open(data_dir / 'iraf.json') as f:
     data_iraf = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
+with open(wikidata_dir / 'scripts' / 'extract_wikidata.json') as f:
     wikidata = json.load(f)
-    
+
+
 def mon_scorer(q, c):
     r = fuzz.WRatio(q['Name'], c['itemLabel']) + fuzz.WRatio(q['Name'], c['aliases']) + fuzz.WRatio(q['ID'], c[
         'itemLabel']) + fuzz.WRatio(q['ID'], c['aliases'])
@@ -79,6 +83,8 @@ def compare_iraf(data_iraf, wikidata, results_count_output_file):
             print({"[" + str(i + 1) + "/" + str(len(data_iraf)) + "]" + str(e): r}, file=fout)
         for t in r:
             print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         results_count_output_file = open(sys.argv[1], 'a')

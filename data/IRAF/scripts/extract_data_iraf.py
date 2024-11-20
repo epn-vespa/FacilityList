@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / 'data'
 
 url = "http://tdc-www.harvard.edu/iraf/rvsao/bcvcorr/obsdb.html"
 
@@ -21,7 +24,7 @@ if response.status_code == 200:
             obs_name = line.split('"')[1]  # Extraire le nom de l'observatoire
             observatories.append({"ID": obs_id, "Name": obs_name})
             # Enregistrer les données dans un fichier JSON
-            with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IRAF/data/iraf.json', 'w') as json_file:
+            with open(data_dir / 'iraf.json', 'w') as json_file:
                 json.dump(observatories, json_file, indent=2)
     # Afficher les résultats
     print(observatories)
