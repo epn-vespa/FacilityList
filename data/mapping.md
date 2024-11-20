@@ -19,6 +19,15 @@
 
 Other identifiers to be considered: VIAF_ID, ISNI, OpenAlex ID, ROR. 
 
+## Source: AAS
+
+```
+{
+  "label": "full facility name",
+  "identifier": "keyword",
+}
+```
+
 ## Source: Wikidata
 
 ```
