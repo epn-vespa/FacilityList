@@ -23,26 +23,18 @@ Other identifiers to be considered: VIAF_ID, ISNI, OpenAlex ID, ROR.
 
 ```
 {
-  "label": "full facility name",
   "identifier": "keyword",
+  "label": "full facility name"
 }
 ```
 
-## Source: Wikidata
+## Source: IRAF
 
 ```
 {
-  "is_part_of": "wdt:P361",
-  "has_part": ""
-  "VIAF_ID": "wdt:P214",
-  "ISNI": "wdt:P361",
-  "COSPAR ID: ["wdt:P247", wdt:P8913"],
-  "MPC ObsCode": "wdt:P717",
-  "NAIF ID": "wdt:P2956",
-  "OpenAlex ID": "wdt:P10283",
-  "UAT ID": "wdt:P4466":
-  "aliases: "skos:altLabel",
-} 
+  "identifier: "observatory",
+  "label: "name"
+}
 ```
 
 ## Source: NASA/PDS
@@ -66,4 +58,21 @@ Other identifiers to be considered: VIAF_ID, ISNI, OpenAlex ID, ROR.
   ],
   "naif_id" : "context_type.naif_host_id"
 }
+```
+
+## Source: Wikidata
+
+```
+{
+  "is_part_of": "wdt:P361",
+  "has_part": ""
+  "VIAF_ID": "wdt:P214",
+  "ISNI": "wdt:P361",
+  "COSPAR ID: ["wdt:P247", wdt:P8913"],
+  "MPC ObsCode": "wdt:P717",
+  "NAIF ID": "wdt:P2956",
+  "OpenAlex ID": "wdt:P10283",
+  "UAT ID": "wdt:P4466":
+  "aliases: "skos:altLabel"
+} 
 ```
