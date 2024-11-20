@@ -3,13 +3,16 @@ import sys
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from multiprocessing import Pool
-import cProfile
 import json
+from pathlib import Path
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json') as f:
+data_dir = Path(__file__).parents[1] / "data"
+wikidata_dir = Path(__file__).parents[2] / "WIKIDATA"
+
+with open(data_dir / 'aas.json') as f:
     data_aas = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
+with open(wikidata_dir / 'scripts' / 'extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 
@@ -94,6 +97,8 @@ def compare_aas(data_aas, wikidata, results_count_output_file):
             print({"[" + str(i + 1) + "/" + str(len(data_aas)) + "]" + str(e): r}, file=fout)
         for t in r:
             print("  " + str(t[1]) + " : " + str(t[0]), file=fout)
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         results_count_output_file = open(sys.argv[1], 'a')
