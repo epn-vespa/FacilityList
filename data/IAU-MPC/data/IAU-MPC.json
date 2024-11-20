@@ -505,7 +505,7 @@
   },
   {
     "ID": "126",
-    "Name": "Monte Viseggi"
+    "Name": "Monte Viseggi L. Zannoni Observatory"
   },
   {
     "ID": "127",
@@ -3797,7 +3797,7 @@
   },
   {
     "ID": "974",
-    "Name": "Genoa"
+    "Name": "Genoa Observatory"
   },
   {
     "ID": "975",
@@ -5273,7 +5273,7 @@
   },
   {
     "ID": "D43",
-    "Name": "45th Parallel Obs., Pino Torinese"
+    "Name": "45th parallel Observatory, Pino Torinese"
   },
   {
     "ID": "D44",
@@ -5296,6 +5296,22 @@
     "Name": "Niederbexbach Observatory"
   },
   {
+    "ID": "D49",
+    "Name": "L'Ametlla de Mar"
+  },
+  {
+    "ID": "D50",
+    "Name": "Vaucluse Observatoire Celeste, Blauvac"
+  },
+  {
+    "ID": "D51",
+    "Name": "Plateau Astronomique La Couronne"
+  },
+  {
+    "ID": "D52",
+    "Name": "ULU Observatory, Caselle Landi"
+  },
+  {
     "ID": "D53",
     "Name": "ISON-Blagoveschensk Observatory"
   },
@@ -5306,6 +5322,10 @@
   {
     "ID": "D55",
     "Name": "Kangwon Science High School Observatory, Ksho"
+  },
+  {
+    "ID": "D56",
+    "Name": "Osservatorio Sideris Oculus, San Pietro in Gu"
   },
   {
     "ID": "D57",
@@ -5344,8 +5364,24 @@
     "Name": "Tosa"
   },
   {
+    "ID": "D71",
+    "Name": "ObservaSTYRium, Stainz bei Straden"
+  },
+  {
+    "ID": "D72",
+    "Name": "WAA Remote Observatory, Hakos"
+  },
+  {
+    "ID": "D73",
+    "Name": "SNX-NET, Hakos"
+  },
+  {
     "ID": "D74",
     "Name": "Nakagawa"
+  },
+  {
+    "ID": "D75",
+    "Name": "Cariati"
   },
   {
     "ID": "D78",
@@ -5426,6 +5462,10 @@
   {
     "ID": "D97",
     "Name": "Berri"
+  },
+  {
+    "ID": "D98",
+    "Name": "Loiano TANDEM"
   },
   {
     "ID": "E00",
@@ -5534,6 +5574,10 @@
   {
     "ID": "E28",
     "Name": "Kuriwa Observatory, Hawkesbury Heights"
+  },
+  {
+    "ID": "E62",
+    "Name": "Slooh.com Australia, Coonabarabran"
   },
   {
     "ID": "E81",
@@ -8032,6 +8076,10 @@
     "Name": "Novaastro Observatory, Banon"
   },
   {
+    "ID": "M12",
+    "Name": "Puschino"
+  },
+  {
     "ID": "M13",
     "Name": "Lucie Berger Observatory, Strasbourg"
   },
@@ -8244,6 +8292,22 @@
     "Name": "Mustola Observatory, Lappeenranta"
   },
   {
+    "ID": "M66",
+    "Name": "SNX-NET, Prodromos"
+  },
+  {
+    "ID": "M68",
+    "Name": "School 1502 Rooftop Obs., Moscow"
+  },
+  {
+    "ID": "M75",
+    "Name": "Online observatory, Peschany"
+  },
+  {
+    "ID": "M77",
+    "Name": "Mezmay Comet Search Center"
+  },
+  {
     "ID": "M90",
     "Name": "Chervishevo"
   },
@@ -8318,6 +8382,10 @@
   {
     "ID": "N89",
     "Name": "Xingming Observatory #2, Nanshan"
+  },
+  {
+    "ID": "N94",
+    "Name": "Altay Astronomical Observatory"
   },
   {
     "ID": "O02",
@@ -8396,6 +8464,10 @@
     "Name": "TSky Observatory, Chonburi"
   },
   {
+    "ID": "O55",
+    "Name": "Telok Kemang Observatory, Port Dickson"
+  },
+  {
     "ID": "O68",
     "Name": "LW-2, NAOC-Zhongwei"
   },
@@ -8462,6 +8534,10 @@
   {
     "ID": "P37",
     "Name": "HuiWen High School Observatory, Taichung City"
+  },
+  {
+    "ID": "P38",
+    "Name": "Checheng Elementary School Observatory"
   },
   {
     "ID": "P40",
@@ -8552,6 +8628,10 @@
     "Name": "Southern Utsunomiya"
   },
   {
+    "ID": "Q22",
+    "Name": "SNX-NET, Moorook"
+  },
+  {
     "ID": "Q23",
     "Name": "Sukagawa"
   },
@@ -8636,6 +8716,14 @@
     "Name": "Glenlee Observatory, Glenlee"
   },
   {
+    "ID": "Q71",
+    "Name": "SNX-NET, Siding Spring"
+  },
+  {
+    "ID": "Q73",
+    "Name": "Buckthorn, Thornton"
+  },
+  {
     "ID": "Q78",
     "Name": "Woogaroo Observatory, Forest Lake"
   },
@@ -8674,6 +8762,10 @@
   {
     "ID": "R78",
     "Name": "Crystal Lake Observatory, Ngutunui"
+  },
+  {
+    "ID": "T02",
+    "Name": "SNX-NET, Wailuku"
   },
   {
     "ID": "T03",
@@ -8997,7 +9089,7 @@
   },
   {
     "ID": "V34",
-    "Name": "Black Forest"
+    "Name": "Baker Observatory, Black Forest"
   },
   {
     "ID": "V35",
@@ -9034,6 +9126,10 @@
   {
     "ID": "V43",
     "Name": "Chiricahua Skies Observatory, Sunizona"
+  },
+  {
+    "ID": "V44",
+    "Name": "Coyote Watcher, Pie Town"
   },
   {
     "ID": "V54",
@@ -9110,6 +9206,10 @@
   {
     "ID": "W04",
     "Name": "Mark Evans Observatory, Bloomington"
+  },
+  {
+    "ID": "W05",
+    "Name": "Tree Gate Farm Observatory, Starkville"
   },
   {
     "ID": "W08",
@@ -9210,6 +9310,10 @@
   {
     "ID": "W46",
     "Name": "Foxfire Village"
+  },
+  {
+    "ID": "W47",
+    "Name": "SNX-NET, Rio Hurtado"
   },
   {
     "ID": "W48",
@@ -9496,6 +9600,10 @@
     "Name": "6R-POL2, San Pedro de Atacama"
   },
   {
+    "ID": "X19",
+    "Name": "Santel Observatory, El Leoncito"
+  },
+  {
     "ID": "X31",
     "Name": "Galileo Galilei Observatory, Oro Verde"
   },
@@ -9544,6 +9652,10 @@
     "Name": "Centro Astron. Nevoeiro, Antonio Olinto"
   },
   {
+    "ID": "X86",
+    "Name": "Ottoservatorio, Tatui"
+  },
+  {
     "ID": "X87",
     "Name": "Dogsheaven Observatory, Brasilia"
   },
@@ -9558,6 +9670,10 @@
   {
     "ID": "X90",
     "Name": "Carina Observatory, Brasilia"
+  },
+  {
+    "ID": "X91",
+    "Name": "Orion-Colesanti observatory, Mairinque"
   },
   {
     "ID": "X93",
@@ -9588,8 +9704,12 @@
     "Name": "Discovery Observatory, Caruaru"
   },
   {
+    "ID": "Y63",
+    "Name": "SNX-NET, Oukaimeden"
+  },
+  {
     "ID": "Y64",
-    "Name": "ATLAS-TDO, Teide"
+    "Name": "Transient Survey Telescope (TST), Teide"
   },
   {
     "ID": "Y65",
@@ -9610,6 +9730,26 @@
   {
     "ID": "Y75",
     "Name": "Abraham Zacut, Salamanca"
+  },
+  {
+    "ID": "Y77",
+    "Name": "Cotos de Monterrey, Venturada"
+  },
+  {
+    "ID": "Y78",
+    "Name": "Tros Alt"
+  },
+  {
+    "ID": "Y79",
+    "Name": "Observatoire de la grande vallee"
+  },
+  {
+    "ID": "Y80",
+    "Name": "Brenehuen, Grand-Champ"
+  },
+  {
+    "ID": "Y81",
+    "Name": "Forthimage, Edinburgh"
   },
   {
     "ID": "Y82",
@@ -10037,7 +10177,7 @@
   },
   {
     "ID": "Z88",
-    "Name": "Fosseway Observatoy, Stratton-on-the-Fosse"
+    "Name": "Fosseway Observatory, Stratton-on-the-Fosse"
   },
   {
     "ID": "Z89",
