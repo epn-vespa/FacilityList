@@ -1,8 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from pathlib import Path
 
 url = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
+data_dir = Path(__file__).parents[1] / "data"
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
@@ -35,7 +37,7 @@ if response.status_code == 200:
         results.append(filtered_data)
 
     # Enregistrer la liste des résultats dans un fichier JSON
-    with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json', 'w', encoding='utf-8') as f:
+    with open(data_dir / "aas.json", 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
 else:

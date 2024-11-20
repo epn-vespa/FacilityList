@@ -1,7 +1,13 @@
 import json
-input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json"
-output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json"
-data=json.load(open("/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json"))
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / "data"
+
+input_file= data_dir / "aas.json"
+output_file= data_dir / "aas.json"
+
+with open(input_file) as f:
+    data=json.load(f)
 
 cles_a_supprimer = [
     "Facility Location",
