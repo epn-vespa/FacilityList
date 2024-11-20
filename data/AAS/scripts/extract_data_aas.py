@@ -34,11 +34,14 @@ if response.status_code == 200:
 
         # Filtrer et renommer les colonnes selon vos besoins
         filtered_data = {"Name": row_data.get("full facility name", ""), "ID": row_data.get("keyword", "")}
-        results.append(filtered_data)
+
+        # if ID="", skip the record
+        if filtered_data['ID'] != "":
+            results.append(filtered_data)
 
     # Enregistrer la liste des résultats dans un fichier JSON
     with open(data_dir / "aas.json", 'w', encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
+        json.dump(results, f, indent=4, ensure_ascii=True)
 
 else:
     print(f"Erreur {response.status_code} lors de la requête.")

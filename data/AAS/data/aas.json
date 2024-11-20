@@ -1,5 +1,9 @@
 [
     {
+        "Name": "Kyoto University Astronomical Observatory and Department of Astronomy 3.8-meter Seimei Telescope",
+        "ID": "Seimei"
+    },
+    {
         "Name": "Gravitational-wave Optical Transient Observer at La Palma (GOTO-North) and Siding Spring Observatory (GOTO-South).",
         "ID": "GOTO"
     },
@@ -292,7 +296,7 @@
         "ID": "NGTS"
     },
     {
-        "Name": "National Science Foundation’s (NSF) Daniel K. Inouye 4m Solar Telescope operated by the National Solar Observatory (NSO)",
+        "Name": "National Science Foundation\u2019s (NSF) Daniel K. Inouye 4m Solar Telescope operated by the National Solar Observatory (NSO)",
         "ID": "DKIST"
     },
     {
