@@ -1,6 +1,9 @@
-import lxml
 from lxml import etree
 import json
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / "data"
+
 
 def element_path(xmltreeelement):
     # AttributeError: 'NoneType' object has no attribute 'getparent'
@@ -16,8 +19,8 @@ def element_path(xmltreeelement):
             r += "/" + type(xmltreeelement.tag).__name__
     return r
 
-input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/NAIF.xml"
-output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/NAIF.json"
+input_file= data_dir / "NAIF.xml"
+output_file= data_dir / "NAIF.json"
  
 tree = etree.parse(input_file)
 print(tree)

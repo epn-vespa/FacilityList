@@ -1,7 +1,10 @@
 import json
+from pathlib import Path
 
-file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/naif.txt'
-output_file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/NAIF/naif.json'
+data_dir = Path(__file__).parents[1] / "data"
+
+file = data_dir / 'naif.txt'
+output_file = data_dir / 'naif.json'
 
 my_list = []
 # first line flag

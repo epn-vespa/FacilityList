@@ -4,11 +4,11 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 import sys
 import json
-
-import cProfile
-
 from multiprocessing import Pool
+from pathlib import Path
 
+data_dir = Path(__file__).parents[1] / "data"
+wikidata_dir = Path(__file__).parents[2] / "WIKIDATA"
 
 
 def mon_scorer(q, c):
@@ -49,10 +49,10 @@ def mon_scorer(q, c):
 def dummy_proc(x):
     return x
 
-with open('/Users/ldebisschop/Desktop/Europlanet/data/NAIF/data/naif_dsn.json') as f:
+with open(data_dir / 'naif_dsn.json') as f:
     data_naif = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
+with open(wikidata_dir / 'scripts' / 'extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 def get_scores( t ):
