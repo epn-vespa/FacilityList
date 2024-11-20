@@ -1,7 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import re
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / "data"
 
 # Faire une requête HTTP pour récupérer le code HTML de la page
 url = "https://www.minorplanetcenter.net/iau/lists/ObsCodes.html"
@@ -25,7 +27,7 @@ if response.status_code == 200:
         data.append({"ID": obs_id, "Name": obs_name.strip()})
 
     # Enregistrer les données dans un fichier JSON
-    output_file='/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/data/iau-mpc.json'
+    output_file= data_dir / 'iau-mpc.json'
     with open(output_file, 'w') as json_file:
         json.dump(data, json_file, indent=2)
     print("Les données ont été enregistrées dans " + output_file)

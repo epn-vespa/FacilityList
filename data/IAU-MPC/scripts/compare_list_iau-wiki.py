@@ -7,7 +7,11 @@ from FuzzyWuzzy import process
 from multiprocessing import Pool
 import json
 import sys
-import cProfile
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / "data"
+wikidata_dir = Path(__file__).parents[2] / "WIKIDATA"
+
 
 #Takes as input a query object and a candidate object and returns a score indicating the similarity between their names and IAU identifiers
 def mon_scorer(q, c):
@@ -22,10 +26,10 @@ def mon_scorer(q, c):
 def dummy_proc(x):
     return x
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/IAU-MPC/data/iau-mpc.json') as f:
+with open(data_dir / 'iau-mpc.json') as f:
     data_iau = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/scripts/extract_wikidata.json') as f:
+with open(wikidata_dir / 'scripts' / 'extract_wikidata.json') as f:
     wikidata = json.load(f)
 
 # Search for the best match based on the custom scoring function
