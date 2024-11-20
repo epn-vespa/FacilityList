@@ -1,7 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import re
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / "data"
 
 url = "https://cds.unistra.fr//astroWeb/astroweb/telescope.html"
 
@@ -51,7 +53,7 @@ if response.status_code == 200:
         telescopes_data.append(telescope_data)
 
     # Enregistrer les données dans un fichier JSON avec l'encodage UTF-8
-    with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/Astroweb/data/astroweb.json', 'w', encoding='utf-8') as f:
+    with open(data_dir / 'astroweb.json', 'w', encoding='utf-8') as f:
         json.dump(telescopes_data, f, ensure_ascii=False, indent=2)
 
     print("Données des télescopes enregistrées dans le fichier 'telescopes_data.json'.")
