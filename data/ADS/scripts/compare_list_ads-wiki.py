@@ -2,13 +2,16 @@
 
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
-import sys
 import json
+from pathlib import Path
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/harvard_old.json') as f:
+data_dir = Path(__file__).parents[1] / "data"
+wikidata_dir = Path(__file__).parents[2] / "WIKIDATA"
+
+with open(data_dir / 'harvard_old.json') as f:
     data_ads = json.load(f)
 
-with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/WIKIDATA/list_observatories_spacecrafts.json') as f:
+with open(wikidata_dir / 'list_observatories_spacecrafts.json') as f:
     wikidata = json.load(f)
 
 results = []

@@ -10,9 +10,12 @@
 # Imports lxml , json
 # ---------------------------------------------------------------------------
 
-import lxml
 from lxml import etree
 import json
+from pathlib import Path
+
+data_dir = Path(__file__).parents[1] / "data"
+
 
 def element_path(xmltreeelement):
     # AttributeError: 'NoneType' object has no attribute 'getparent'
@@ -21,8 +24,8 @@ def element_path(xmltreeelement):
     except AttributeError: return xmltreeelement.tag
     return r + "/" + xmltreeelement.tag
  
-input_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/harvard.xml"
-output_file="/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/harvard.json"
+input_file= data_dir / "harvard.xml"
+output_file= data_dir / "harvard.json"
  
 tree = etree.parse(input_file)
 #print(tree)

@@ -5,9 +5,12 @@
 
 
 import json
+from pathlib import Path
 
-file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/ADS_facilities.txt'
-output_file = '/Users/ldebisschop/Documents/GitHub/FacilityList/data/ADS/ADS_facilities.json'
+data_dir = Path(__file__).parents[1] / "data"
+
+file = data_dir / 'ADS_facilities.txt'
+output_file = data_dir / 'ADS_facilities.json'
 
 my_list=[]
 
