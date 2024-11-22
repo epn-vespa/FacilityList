@@ -6,13 +6,13 @@ from multiprocessing import Pool
 import json
 from pathlib import Path
 
-data_dir = Path(__file__).parents[1] / "data"
-wikidata_dir = Path(__file__).parents[2] / "WIKIDATA"
+data_dir = Path(__file__).parent / "input_data"
+wikidata_dir = Path(__file__).parents[1] / "WIKIDATA"
 
 with open(data_dir / 'aas.json') as f:
     data_aas = json.load(f)
 
-with open(wikidata_dir / 'scripts' / 'extract_wikidata.json') as f:
+with open(wikidata_dir / 'Scripts' / 'extract_wikidata_V_1.1.json') as f:
     wikidata = json.load(f)
 
 
