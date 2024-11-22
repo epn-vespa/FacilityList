@@ -14,7 +14,7 @@ cd $workdir
 
 #### AAS
 (
-    cd AAS/scripts
+    cd AAS
     python3 extract_data_aas.py
 )
 
