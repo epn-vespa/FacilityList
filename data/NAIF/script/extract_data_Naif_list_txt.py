@@ -14,9 +14,9 @@ with open(file) as f:
         if first_line_flag:
             first_line_flag = False
             continue
-        description =" ".join(line.strip().split()).split("'")
+        description = " ".join(line.strip().split()).split("'")
         dic_line = {
-            "code": description[0].strip(),
+            "ID": description[0].strip(),
             "Name": description[1]
         }
 
