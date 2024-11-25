@@ -66,7 +66,7 @@ WHERE
     FILTER((LANG(?part_ofName)) = "en")
   }
 
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
 """
 
@@ -78,7 +78,6 @@ def page(page, page_size):
     OFFSET {}
     LIMIT {}
     """.format(page * page_size, page_size)
-
 
 
 def get_results(endpoint_url, query):
