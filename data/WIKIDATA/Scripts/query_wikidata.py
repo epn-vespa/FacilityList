@@ -5,6 +5,7 @@ import ssl
 import urllib.request
 import certifi
 import time
+import datetime
 
 endpoint_url = "https://query.wikidata.org/sparql"
 
@@ -81,6 +82,7 @@ def page(page, page_size):
 
 
 def get_results(endpoint_url, query):
+    # We should update this per user:
     user_agent = "Laura.debisschop@obspm.fr - Observatoire de Paris - Python/%s.%s" % (
         sys.version_info[0], sys.version_info[1])
     sparql = SPARQLWrapper(endpoint_url, agent=user_agent)
@@ -109,8 +111,9 @@ for i in range(1 if test else (int(results_count) // page_size) + 1):
     query_page = query_prefix + select_main + where + page(i, page_size)
     try:
         query_page_result = get_results(endpoint_url, query_page)
-    except Exception:
-        print(f"Erreur lors de la récupération de la page {i}, nouvelle tentative...")
+    except Exception as e:
+        print(e)
+        print(f"Erreur lors de la récupération de la page {i}, nouvelle tentative...")  # Ce n'est pas une nouvelle tentative, c'est juste passer à la page suivante...
         time.sleep(5)
         continue  # Essayer la page suivante
     time.sleep(10)
@@ -132,7 +135,9 @@ for i in range(1 if test else (int(results_count) // page_size) + 1):
 
 print("Successfully retrieved " + str(len(r)) + " results")
 
-with open("raw-extract-wikidata-11082024.json", 'w', encoding='utf-8') as fout:
+today = datetime.now().strftime("%Y%m%d")
+
+with open(f"raw-extract-wikidata-{today}.json", 'w', encoding='utf-8') as fout:
     fout.write(json.dumps(r, ensure_ascii=False, indent=4))
 
 data1 = r
@@ -142,7 +147,7 @@ with open("list-exclusion_extract-wikidata.json", 'r', encoding='utf-8') as file
 elements_a_exclure = [element['item'] for element in data2]
 nouvelle_liste = [element for element in data1 if element['item'] not in elements_a_exclure]
 
-with open("extract_wikidata-11082024.json", 'w', encoding='utf-8') as file:
+with open(f"extract_wikidata-{today}.json", 'w', encoding='utf-8') as file:
     json.dump(nouvelle_liste, file, ensure_ascii=False, indent=4)
 
 print(f"Nombre d'items dans le fichier extract_wikidata.json : {len(nouvelle_liste)}")
