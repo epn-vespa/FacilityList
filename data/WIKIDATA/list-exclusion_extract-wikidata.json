@@ -95492,10 +95492,6 @@
         "itemLabel": "optus-d3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q2032631",
-        "itemLabel": "viking"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q20354353",
         "itemLabel": "sentinel-2a"
     },
@@ -137324,10 +137320,6 @@
         "itemLabel": "aqua"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q18539",
-        "itemLabel": "array-of-low-energy-x-ray-imaging-sensors"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q18540",
         "itemLabel": "artemis"
     },
@@ -137464,16 +137456,8 @@
         "itemLabel": "delfi-c3"
     },
     {
-        "item": "http://www.wikidata.org/entity/Q49559",
-        "itemLabel": "demeter"
-    },
-    {
         "item": "http://www.wikidata.org/entity/Q49678",
         "itemLabel": "dong-fang-hong-i"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49687",
-        "itemLabel": "earth-radiation-budget-satellite"
     },
     {
         "item": "http://www.wikidata.org/entity/Q49692",
@@ -137486,10 +137470,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q49877",
         "itemLabel": "explorer-19"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49883",
-        "itemLabel": "dme"
     },
     {
         "item": "http://www.wikidata.org/entity/Q49886",
@@ -137514,14 +137494,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q49905",
         "itemLabel": "forte"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49912",
-        "itemLabel": "fast-auroral-snapshot-explorer"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q49939",
-        "itemLabel": "freja"
     },
     {
         "item": "http://www.wikidata.org/entity/Q49959",
@@ -137586,10 +137558,6 @@
     {
         "item": "http://www.wikidata.org/entity/Q54362",
         "itemLabel": "scisat-1"
-    },
-    {
-        "item": "http://www.wikidata.org/entity/Q54378",
-        "itemLabel": "timed"
     },
     {
         "item": "http://www.wikidata.org/entity/Q54379",
