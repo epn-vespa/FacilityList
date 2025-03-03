@@ -33,7 +33,7 @@ where = """
   UNION {?item  wdt:P31 wd:Q466421 .} # reconnaissance satellite
   UNION {?item  wdt:P31 wd:Q2741214 .} # KH-7 Gambit
   UNION {?item  wdt:P31 wd:Q973887 .} # military satellite 
-  UNION {?item  wdt:P31 wd:Q854845 .} # Earth observation satellite
+  UNION {?item  wdt:P31 wd:Q854845 .} # Earth observation satellite => we should not remove all of those, but no way to filter...
   UNION {?item  wdt:P31 wd:Q512399 .} # unmanned spaceflight
   UNION {?item  wdt:P31 wd:Q61937849 .} # geophysical observatory 
   UNION {?item  wdt:P31 wd:Q1365207 .} # bird observatory
