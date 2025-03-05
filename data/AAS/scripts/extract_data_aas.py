@@ -19,6 +19,7 @@ if response.status_code == 200:
 
     # Récupérer les en-têtes de colonne (en minuscules pour assurer la casse insensible)
     headers = [header.text.strip().lower() for header in rows[0].find_all('th')]
+    print(headers)
 
     # Créer une liste pour stocker les résultats
     results = []
@@ -34,6 +35,8 @@ if response.status_code == 200:
         filtered_data = {"Name": row_data.get("full facility name", ""), "ID": row_data.get("keyword", "")}
         results.append(filtered_data)
 
+        print(row_data)
+        exit()
     # Enregistrer la liste des résultats dans un fichier JSON
     with open('/Users/ldebisschop/Documents/GitHub/FacilityList/data/AAS/data/aas.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
