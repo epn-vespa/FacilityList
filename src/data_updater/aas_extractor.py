@@ -16,9 +16,9 @@ class AasExtractor():
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
 
     HEADERS = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)
-        AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/58.0.3029.110
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
+        AppleWebKit/537.36 (KHTML, like Gecko) \
+        Chrome/58.0.3029.110 \
         Safari/537.3'}
 
     def get_source(self) -> str:
@@ -31,7 +31,7 @@ class AasExtractor():
         try:
             response = requests.get(
                     AasExtractor.URL,
-                    AasExtractor.headers=headers)
+                    headers = AasExtractor.HEADERS)
         except requests.exceptions.RequestException as e:
             raise SystemExit(e)
 
@@ -56,7 +56,7 @@ class AasExtractor():
             # Process page's data into a dictionary.
             # This dictionary can then be processed by the ontology merger.
             result = dict()
-            for row in rows[1:]:
+            for row in rows:
                 cols = row.find_all('td')
                 cols = [col.text.strip() for col in cols]
                 row_data = dict(zip(headers, cols)) # {"h1": "col1", "h2": "col2"}
@@ -64,8 +64,8 @@ class AasExtractor():
                 data = dict() # Dictionary to save the row's data
 
                 uri = row_data["keyword"]
-                label = row_data["full facility name"]
                 location = row_data["location"]
+                label = row_data["full facility name"]
 
                 # Add and filter out facility types
                 for facility_type, col in zip(facility_types, cols[FT:]):
@@ -94,7 +94,7 @@ class AasExtractor():
 
                 # Save the row's dict into the result dict
                 result[uri] = data
-            print(result)
+            #print(result)
             return result
         else:
             print(f"Request to {url} failed with status code {response.status_code}")

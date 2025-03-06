@@ -3,7 +3,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import Type, Union
+from typing import Type, Union, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, Node
 from rdflib.namespace import RDF, SKOS
 import warnings
@@ -12,10 +12,12 @@ class OntologyMapping():
     """
     Metadata mapping between Ontology standards and the extracted dictionaries.
     Use this class for quick dictionary to RDF conversion.
+    Stores the Observation Facilities namespace in the class variable OBS.
+    Also stores other namespaces.
     """
 
-    # TODO remove
-    #_OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities")
+    _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities")
+    _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 
     _MAPPING = {
         "type": RDF.type,
@@ -23,15 +25,13 @@ class OntologyMapping():
         "definition": SKOS.definition,
         "alt_label": SKOS.altLabel,
         "uri": URIRef,
-        "wavelength": Graph._OBS.wavelength # DataProperty
+        "wavelength": _OBS.wavelength, # AAS
+        "location": _GEO.location, # AAS
     }
-
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
-    def __init__(
-            self,
-            graph: Graph):
-        self._graph = graph
+    def __init__(self):
+        pass
 
     @property
     def graph(self):
@@ -50,10 +50,18 @@ class OntologyMapping():
         if type(attr) == str:
             return OntologyMapping._MAPPING.get(
                     attr,
-                    Graph._OBS[attr])
+                    self.OBS[attr])
         else:
             return attr
             # return OntologyMapping._REVERSE_MAPPING.get(attr, None)
+
+    @property
+    def OBS(self):
+        return OntologyMapping._OBS
+
+    @property
+    def GEO(self):
+        return OntologyMapping._GEO
 
     def __getattr__(
             self,
@@ -64,7 +72,6 @@ class Graph():
     """
     Instanciate a rdflib Graph as a singleton to prevent multiple
     instantiation. Replace rdflib.Graph and reuses rdflib.Graph's attributes.
-    Stores the Observation Facilities namespace in the class variable OBS.
 
     Usage:
         from graph import Graph
@@ -75,7 +82,6 @@ class Graph():
         g.add((g.OBS["subj"], URIRef("predicate"), URIRef("obj")))
     """
     _graph = None
-    _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities")
     _OM = OntologyMapping()
     _warned = False # Warn only once for multiple instantiation.
 
@@ -87,6 +93,7 @@ class Graph():
             return
         Graph._graph = G()
         self.bind("obs", self.OBS)
+        self.bind("geo", self.GEO)
         if filename:
             Graph._graph.parse(filename)
             # init graph
@@ -97,7 +104,11 @@ class Graph():
 
     @property
     def OBS(self):
-        return Graph._OBS
+        return self.OM.OBS
+
+    @property
+    def GEO(self):
+        return self.OM.GEO
 
     @property
     def OM(self):
@@ -111,7 +122,7 @@ class Graph():
 
     def add(
             self,
-            params: Tuple[str, str, str]
+            params: Tuple[str, str, str],
             objtype: Type = Literal,
             source: Union[URIRef, str] = None):
         """
@@ -127,6 +138,9 @@ class Graph():
         objtype -- the type of the object (Literal, URIRef...)
         source -- the origin of the added triple (URL, URI...)
         """
+        if len(params) != 3:
+            raise ValueError("params must be a tuple of 3 elements:\
+                    subj, pred, obj")
         subj = params[0]
         predicate = params[1]
         obj = params[2]
@@ -142,7 +156,10 @@ class Graph():
 
         obj_value = objtype(obj)
 
+        # Add to the graph
         self._graph.add((subj_uri, predicate, obj_value))
+
+        # TODO reification to integrate source
 
 if __name__ == "__main__":
     g = Graph()
