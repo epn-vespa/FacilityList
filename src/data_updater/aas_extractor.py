@@ -1,12 +1,15 @@
 #!/bin/python3
 
 """
-This script scraps the AAS webpage and stores data into a dictionary.
-This dictionary is compatible with the ontology merger (merge.py).
+AasExtractor to scrap the AAS webpage and stores data into a dictionary.
+This dictionary is compatible with the ontology mapping (see graph.py).
 
 Troubleshooting:
     Some lines in the data source contain more than one information
     with an "and" or "or" in the label. This is not taken into account yet.
+
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
 """
 
 import requests
@@ -24,14 +27,12 @@ class AasExtractor():
         Chrome/58.0.3029.110 \
         Safari/537.3'}
 
-    def get_source(self) -> str:
-        return AasExtractor.URL
+    URI = "AAS_list"
+
+    DEFAULT_TYPE = "telescope"
 
     def get_community(self) -> str:
         return "" # TODO (heliophysics / astronomy / planetology)
-
-    def default_type(self) -> str:
-        return "telescope"
 
     def extract(self) -> dict:
         try:
@@ -119,7 +120,7 @@ class AasExtractor():
                 if "type" in data and data["type"] in ["computational center", "archive/database"]:
                     continue # Filter out computational center & archive/database.
                 elif "type" not in data:
-                    data["type"] = "telescope"
+                    data["type"] = AasExtractor.DEFAULT_TYPE # telescope
 
                 # Add label to row dict
                 data["label"] = facility_name

@@ -24,6 +24,8 @@ class Merger():
     def __init__(self,
             ontology_file: str = ""):
         self._graph = Graph(ontology_file)
+        if not ontology_file:
+            self.init_graph() # Create basic classes
 
     @property
     def graph(self):
@@ -32,7 +34,7 @@ class Merger():
     def merge(self,
             data: List,
             source: str = "",
-            cat: str = "UFO"):
+            cat: str = "ufo"):
         """
         Adds the data from the dict to the Ontology.
 
@@ -56,13 +58,33 @@ class Merger():
             if "type" not in features: 
                 self.graph.add((subj_uri, "type", cat), source = source)
             # Create the OBS uri
-            
+
+    def init_graph(self):
+        """
+        Create the basic classes (like the list of sources of the project)
+        """
+        COMMUNITIES = {
+                "A": {"label": "celestial astronomy", "alliance": "IVOA"},
+                "H": {"label": "heliophysics", "alliance": "IHDEA"},
+                "G": {"label": "geology", "alliance": "OGC"},
+                "P": {"label": "planetary sciences", "alliance": "IPDA"},
+                "O": {"label": "other, generic"}}
+
+        self.merge(COMMUNITIES, cat = "community")
+
+        SOURCES = {AasExtractor.URI: {"url": AasExtractor.URL,
+            "community": COMMUNITIES["A"]["label"]}}
+        # TODO add other sources (can have more than one community)
+        # every time we create an extraction script for the source.
+
+        self.merge(SOURCES, cat = "facility list")
 
 def main(input_ontology: str = ""):
     aas_extractor = AasExtractor()
     data_aas = aas_extractor.extract()
     merger = Merger(input_ontology)
-    merger.merge(data_aas, source = aas_extractor.get_source())
+    # merger.merge(data_aas, source = aas_extractor.get_source_uri())
+    merger.merge(data_aas, source = AasExtractor.URI)
     print(merger.graph.serialize())
 
 if __name__ == "__main__":

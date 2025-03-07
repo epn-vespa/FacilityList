@@ -32,6 +32,13 @@ class OntologyMapping():
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
+    # Objects after a REFERENCE predicate will be an URI and not a Literal.
+    _REFERENCE = [
+        "type",
+        "part_of",
+        "community", # community of the list's source (see merge.py)
+    ]
+
     def __init__(self):
         pass
 
@@ -126,7 +133,7 @@ class Graph():
             self,
             params: Tuple[str, str, str],
             objtype: Type = Literal,
-            source: Union[URIRef, Literal] = None):
+            source: str = ""):
         """
         Add a RDF triple to the graph.
         Override rdflib's Graph.add() method.
@@ -148,7 +155,8 @@ class Graph():
         obj = params[2]
 
         if type(subj) == str:
-            subj_uri = self.OBS[label_to_uri(subj)]  # Convert subject to URI with _OBS
+            # Convert subject to URI with _OBS
+            subj_uri = self.OBS[label_to_uri(subj)]
 
         if type(predicate) == str:
             predicate_uri = self.OM.convert_attr(predicate)
@@ -177,6 +185,7 @@ class Graph():
             self._graph.add((subj_uri, predicate_uri, obj_value))
 
         # TODO reification to include source
+
 
 if __name__ == "__main__":
     pass
