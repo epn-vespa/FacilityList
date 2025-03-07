@@ -11,7 +11,8 @@ def label_to_uri(label: str) -> str:
     label -- the label of the entity.
     """
     label = label.lower()
-    label = re.sub(r"\s+", ' ', label) # Remove all special characters
+    label = re.sub(r"[^\w\s\.]", ' ', label)
+    label = re.sub(r"\s+", ' ', label) # Remove multiple spaces
     label = label.split(' ')
     label = '_'.join([l for l in label if l])
     label = quote(label)
