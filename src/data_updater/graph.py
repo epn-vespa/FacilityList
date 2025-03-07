@@ -5,7 +5,8 @@ Author:
 
 from typing import Type, Union, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, Node
-from rdflib.namespace import RDF, SKOS
+from rdflib.namespace import RDF, SKOS, DCTERMS
+from utils import label_to_uri
 import warnings
 
 class OntologyMapping():
@@ -16,15 +17,16 @@ class OntologyMapping():
     Also stores other namespaces.
     """
 
-    _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities")
+    _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 
     _MAPPING = {
+        "uri": URIRef,
         "type": RDF.type,
         "label": SKOS.prefLabel,
         "definition": SKOS.definition,
         "alt_label": SKOS.altLabel,
-        "uri": URIRef,
+        "part_of": DCTERMS.isPartOf,
         "wavelength": _OBS.wavelength, # AAS
         "location": _GEO.location, # AAS
     }
@@ -124,7 +126,7 @@ class Graph():
             self,
             params: Tuple[str, str, str],
             objtype: Type = Literal,
-            source: Union[URIRef, str] = None):
+            source: Union[URIRef, Literal] = None):
         """
         Add a RDF triple to the graph.
         Override rdflib's Graph.add() method.
@@ -146,25 +148,35 @@ class Graph():
         obj = params[2]
 
         if type(subj) == str:
-            subj_uri = self.OBS[subj]  # Convert subject to URI with _OBS
+            subj_uri = self.OBS[label_to_uri(subj)]  # Convert subject to URI with _OBS
 
         if type(predicate) == str:
-            predicate = self.OM.convert_attr(predicate)
+            predicate_uri = self.OM.convert_attr(predicate)
 
-        if predicate is None:
+        if predicate_uri is None:
             raise ValueError(f"Predicate can not be None.")
 
-        obj_value = objtype(obj)
+        if type(obj) in (list, tuple, set):
+            # loop and add
+            objs = list(obj)
+            for obj in objs:
+                # Change object type for certain predicates
+                if predicate in ["part_of", "type"]:
+                    obj_value = self.OBS[label_to_uri(obj)]
+                else:
+                    obj_value = objtype(obj)
+                # Add to the graph
+                self._graph.add((subj_uri, predicate_uri, obj_value))
+        else:
+            if predicate in ["part_of", "type"]:
+                obj_value = self.OBS[label_to_uri(obj)]
+            else:
+                obj_value = objtype(obj)
 
-        # Add to the graph
-        self._graph.add((subj_uri, predicate, obj_value))
+            # Add to the graph
+            self._graph.add((subj_uri, predicate_uri, obj_value))
 
-        # TODO reification to integrate source
+        # TODO reification to include source
 
 if __name__ == "__main__":
-    g = Graph()
-    g.add((g.OBS["Liza"], URIRef("eats"), URIRef("pizza")))
-    g2 = Graph() # should print a warning
-    # g and g2 point to the same Graph object (singleton)
-    g2.add((g.OBS["Laura"], URIRef("drinks"), URIRef("coffee")))
-    print(g.serialize()) # both g and g2 have Laura
+    pass

@@ -4,15 +4,18 @@
 This script scraps the AAS webpage and stores data into a dictionary.
 This dictionary is compatible with the ontology merger (merge.py).
 
+Troubleshooting:
+    Some lines in the data source contain more than one information
+    with an "and" or "or" in the label. This is not taken into account yet.
 """
 
 import requests
 from bs4 import BeautifulSoup
+from utils import del_aka, cut_acronyms
 import json
-
+import re
 
 class AasExtractor():
-
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
 
     HEADERS = {
@@ -26,6 +29,9 @@ class AasExtractor():
 
     def get_community(self) -> str:
         return "" # TODO (heliophysics / astronomy / planetology)
+
+    def default_type(self) -> str:
+        return "telescope"
 
     def extract(self) -> dict:
         try:
@@ -63,9 +69,48 @@ class AasExtractor():
 
                 data = dict() # Dictionary to save the row's data
 
-                uri = row_data["keyword"]
+                keyword = row_data["keyword"] # altlabel
+
+                # Add location to data dict
                 location = row_data["location"]
-                label = row_data["full facility name"]
+                if location:
+                    data["location"] = location
+                else:
+                    continue # TGCC is a computer and has no location.
+
+                alt_labels = set()
+
+                # Extract data from the full facility name
+                # The full facility name contains a location (Observatory etc)
+                # We can use a part-of between the facility and location
+                # and acronyms that need to be treated as alternate labels
+                label = del_aka(row_data["full facility name"].strip()) # TODO decompose (using "()" etc)
+                #full_facility_name = row_data["full facility name"].strip()
+                #full_facility_name = del_aka(full_facility_name)
+                # Origin observatory
+                at = re.search(" at ", label)
+                if at:
+                    # Facility name is before the first " at "
+                    facility_name = label[0:at.start()].strip()
+                    facility_location = label[at.end():].strip()
+                else:
+                    facility_name = label
+                    facility_location = ""
+                # Take the first acronym and remove parenthesis
+                facility_name, facility_acronym = cut_acronyms(facility_name)
+                if facility_acronym:
+                    alt_labels.add(facility_acronym)
+                if facility_location:
+                    facility_location_name, facility_location_acronym = cut_acronyms(facility_location)
+                    # TODO if there is more than 1 acronym,
+                    # there might be more than 1 location
+                    result[facility_location_name] = {
+                            "type": "FacilityLocation",
+                            "label": facility_location_name}
+                    if facility_location_acronym:
+                        result[facility_location_name]["alt_label"] = [facility_location_acronym]
+                    data["part_of"] = facility_location_name
+
 
                 # Add and filter out facility types
                 for facility_type, col in zip(facility_types, cols[FT:]):
@@ -73,12 +118,11 @@ class AasExtractor():
                         data["type"] = facility_type
                 if "type" in data and data["type"] in ["computational center", "archive/database"]:
                     continue # Filter out computational center & archive/database.
+                elif "type" not in data:
+                    data["type"] = "telescope"
 
                 # Add label to row dict
-                data["label"] = label
-
-                # Add location to row dict
-                data["location"] = location
+                data["label"] = facility_name
 
                 # Add wavelength to row dict
                 for wavelength, col in zip(wavelengths, cols[WL:FT]):
@@ -88,17 +132,20 @@ class AasExtractor():
                         else:
                             data["wavelength"].append(wavelength)
 
-                # If there is no identifier (or keyword), find it between ().
-                if not uri:
-                    uri = label[label.find('(')+1:label.find(')')]
+                if not keyword:
+                    # If there is no keyword (id), find it between ().
+                    keyword = label[label.find('(')+1:label.find(')')]
+
+                if alt_labels:
+                    data["alt_label"] = alt_labels
 
                 # Save the row's dict into the result dict
-                result[uri] = data
-            #print(result)
+                # keyword = identifier of the data in the source
+                result[keyword] = data
             return result
         else:
             print(f"Request to {url} failed with status code {response.status_code}")
             return None
 
 if __name__ == "__main__":
-    extract()
+    print(extract())
