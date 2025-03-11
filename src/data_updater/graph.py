@@ -21,7 +21,8 @@ class OntologyMapping():
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://http://www.ivoa.net/rdf/messenger#")
 
-    # Mapping from dictionary keys to ontology predicates
+    # Mapping from dictionary keys to ontology properties.
+    # Properties that are not mapped belong to the OBS namespace.
     _MAPPING = {
         "uri": URIRef,
         "type": RDF.type,
@@ -29,19 +30,22 @@ class OntologyMapping():
         "definition": SKOS.definition,
         "alt_label": SKOS.altLabel,
         "part_of": DCTERMS.isPartOf,
+        "is_authoritative_for": _OBS.isAuthoritativeFor,
         "waveband": _OBS.waveband, # AAS
         "location": _GEO.location, # AAS
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
     # Objects after a REFERENCE predicate will be an URI and not a Literal.
+    # SELF_REF's object's URI are standardized, as they use OBS.
     _SELF_REF = [
         "type",
         "part_of",
         "community", # community of the list's source (see merge.py)
+        "is_authoritative_for", # this source is authoritative for the specified communities
     ]
 
-    # Do not standardize URI to keep the external reference's URI
+    # Do not standardize object's URI to keep the external reference URI.
     _EXT_REF = [
         "waveband", # see "http://http://www.ivoa.net/rdf/messenger#"
     ]

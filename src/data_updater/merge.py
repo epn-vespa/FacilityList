@@ -67,13 +67,14 @@ class Merger():
                 "P": {"label": "planetary sciences", "alliance": "IPDA"},
                 "O": {"label": "other, generic"}}
 
-        self.merge(COMMUNITIES, cat = "community")
-
-        SOURCES = {AasExtractor.URI: {"url": AasExtractor.URL,
-            "community": COMMUNITIES["A"]["label"]}}
+        SOURCES = {
+            AasExtractor.URI: {"url": AasExtractor.URL,
+                               "community": COMMUNITIES["A"]["label"],
+                               "is_authoritative_for": [COMMUNITIES["A"]["label"]]}}
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.
 
+        self.merge(COMMUNITIES, cat = "community")
         self.merge(SOURCES, cat = "facility list")
 
 def main(input_ontology: str = ""):
