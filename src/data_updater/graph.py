@@ -20,6 +20,7 @@ class OntologyMapping():
     _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 
+    # Mapping from dictionary keys to ontology predicates
     _MAPPING = {
         "uri": URIRef,
         "type": RDF.type,
@@ -127,13 +128,34 @@ class Graph():
         return Graph._graph
 
     def __getattr__(self, attr):
+        """
+        For other attribute
+        """
         return getattr(Graph._graph, attr)
+
+    def get_namespace(self,
+                      namespace: str) -> Namespace:
+        """
+        Get the namespace for a source and bind it to the graph
+        if it is not binded yet.
+
+        Keyword arguments:
+        namespace -- corresponds to the source list's namespace (AAS, NAIF...)
+        """
+        if namespace == "OBS":
+            return self.OBS
+        elif namespace == "GEO":
+            return self.GEO
+        namespace_uri = Namespace(str(self.OBS)[:-1] + "/" + namespace + "#")
+        # Bind namespace if not binded yet (override = False)
+        self.graph.bind(namespace, namespace_uri, override = False)
+        return namespace_uri
 
     def add(
             self,
             params: Tuple[str, str, str],
             objtype: Type = Literal,
-            source: str = ""):
+            source: Type = None):
         """
         Add a RDF triple to the graph.
         Override rdflib's Graph.add() method.
@@ -145,7 +167,7 @@ class Graph():
         predicate -- the predicate of the triple.
         obj -- the object of the triple.
         objtype -- the type of the object (Literal, URIRef...)
-        source -- the origin of the added triple (URL, URI...)
+        source -- the origin of the added triple (ex: AasExtractor)
         """
         if len(params) != 3:
             raise ValueError("params must be a tuple of 3 elements:\
@@ -154,9 +176,20 @@ class Graph():
         predicate = params[1]
         obj = params[2]
 
+        # Get the namespace
+        if source is not None:
+            namespace_subj = self.get_namespace(source.NAMESPACE)
+            if predicate == "type":
+                namespace_obj = self.OBS # Observation Facility
+            else:
+                namespace_obj = namespace_subj
+        else:
+            namespace_subj = self.OBS
+            namespace_obj = self.OBS
+
         if type(subj) == str:
             # Convert subject to URI with _OBS
-            subj_uri = self.OBS[label_to_uri(subj)]
+            subj_uri = namespace_subj[label_to_uri(subj)]
 
         if type(predicate) == str:
             predicate_uri = self.OM.convert_attr(predicate)
@@ -169,20 +202,20 @@ class Graph():
             objs = list(obj)
             for obj in objs:
                 # Change object type for certain predicates
-                if predicate in ["part_of", "type"]:
-                    obj_value = self.OBS[label_to_uri(obj)]
+                if predicate in self.OM._REFERENCE:
+                    obj_value = namespace_obj[label_to_uri(obj)]
                 else:
                     obj_value = objtype(obj)
                 # Add to the graph
                 self._graph.add((subj_uri, predicate_uri, obj_value))
         else:
-            if predicate in ["part_of", "type"]:
-                obj_value = self.OBS[label_to_uri(obj)]
+            if predicate in self.OM._REFERENCE:
+                obj_value = namespace_obj[label_to_uri(obj)]
             else:
                 obj_value = objtype(obj)
 
             # Add to the graph
-            self._graph.add((subj_uri, predicate_uri, obj_value))
+            self.graph.add((subj_uri, predicate_uri, obj_value))
 
         # TODO reification to include source
 

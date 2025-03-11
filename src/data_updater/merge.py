@@ -1,4 +1,4 @@
-#a!/bin/python3
+#!/bin/python3
 
 """Perform extraction for all lists. Add data to the VO ontology without
 checking if it already exists from another list. This is a preliminary
@@ -11,10 +11,8 @@ Arguments:
    Add it to the concepts' taxonomy otherwise.
 """
 
-from rdflib.namespace import SKOS
-
+from typing import Type
 from argparse import ArgumentParser
-from rdflib import Namespace, URIRef
 from graph import Graph # rdflib.Graph singleton with OBS namespace
 from typing import List
 from aas_extractor import AasExtractor
@@ -33,14 +31,14 @@ class Merger():
 
     def merge(self,
             data: List,
-            source: str = "",
+            source: Type = None,
             cat: str = "ufo"):
         """
         Adds the data from the dict to the Ontology.
 
         Keyword arguments:
         data -- a list of dictionaries like [{"uri":"a", "Label":"b"}]
-        source -- the URL of the data source
+        source -- the class of the extractor of the source (ex: AasExtractor)
         cat -- the category of the objects in the list if they are
         not already in the dictionary's features.
         """
@@ -50,13 +48,13 @@ class Merger():
             # get label
             if "label" in features:
                 label = features["label"]
-                subj_uri = label_to_uri(label)
+                subj = label # label_to_uri(label, source = source)
             else:
-                subj_uri = identifier
+                subj = identifier
             for predicate, obj in features.items():
-                self.graph.add((subj_uri, predicate, obj), source = source)
+                self.graph.add((subj, predicate, obj), source = source)
             if "type" not in features: 
-                self.graph.add((subj_uri, "type", cat), source = source)
+                self.graph.add((subj, "type", cat), source = source)
             # Create the OBS uri
 
     def init_graph(self):
@@ -84,7 +82,7 @@ def main(input_ontology: str = ""):
     data_aas = aas_extractor.extract()
     merger = Merger(input_ontology)
     # merger.merge(data_aas, source = aas_extractor.get_source_uri())
-    merger.merge(data_aas, source = AasExtractor.URI)
+    merger.merge(data_aas, source = AasExtractor)
     print(merger.graph.serialize())
 
 if __name__ == "__main__":

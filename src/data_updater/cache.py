@@ -24,30 +24,27 @@ class CacheManager():
 
     CACHE = "../../cache/"
 
-
-    def get_page(self,
-                 url: str) -> str:
+    def get_page(url: str) -> str:
         """
         Get a page from cache if it is saved in cache, else scrap it online.
 
         Keyword arguments:
         url -- the URL of the page.
         """
-        cache_path = self.get_cache_path(url)
+        cache_path = CacheManager.get_cache_path(url)
         content = ""
         if glob.glob(cache_path):
             with open(cache_path, 'r') as file:
                 content = file.read()
         if not content:
-            content = self.scrap(url)
-            self.save_cache(content, cache_path)
+            content = CacheManager.scrap(url)
+            CacheManager.save_cache(content, cache_path)
         if not content:
             raise("No page content for:", url)
         return content
 
 
-    def get_cache_path(self,
-                       url: str) -> str:
+    def get_cache_path(url: str) -> str:
         """
         Get the cache's path from the url.
         The cache folder is located at the root of the project: /cache
@@ -58,12 +55,11 @@ class CacheManager():
         cache_path = re.sub(r"[^\w\d]+", "_", url)
         if cache_path[-1] == '_':
             cache_path = cache_path[:-1]
-        cache_path = CACHE + cache_path + ".html"
+        cache_path = CacheManager.CACHE + cache_path + ".html"
         cache_path = cache_path.lower()
         return cache_path
 
-    def save_cache(self,
-                   content: str,
+    def save_cache(content: str,
                    cache_path: str) -> None:
         """
         Save the page in the cache folder.
@@ -75,12 +71,11 @@ class CacheManager():
         with open(cache_path, 'w') as file:
             file.write(content)
 
-    def scrap(self,
-              url: str) -> dict:
+    def scrap(url: str) -> dict:
             try:
                 response = requests.get(
                         url,
-                        headers = HEADERS)
+                        headers = CacheManager.HEADERS)
             except requests.exceptions.RequestException as e:
                 raise SystemExit(e)
 

@@ -16,7 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 from utils import del_aka, cut_acronyms
 import re
-from cache import get_page
+from cache import CacheManager
 
 class AasExtractor():
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
@@ -27,7 +27,11 @@ class AasExtractor():
         Chrome/58.0.3029.110 \
         Safari/537.3'}
 
+    # URI to save this source as an entity (obs:AAS_list)
     URI = "AAS_list"
+
+    # URI to save entities from this source
+    NAMESPACE = "aas"
 
     DEFAULT_TYPE = "telescope"
 
@@ -38,7 +42,7 @@ class AasExtractor():
         """
         Extract the page content into a dictionary.
         """
-        content = get_page(AasExtractor.URL)
+        content = CacheManager.get_page(AasExtractor.URL)
         if content:
             soup = BeautifulSoup(content, 'html.parser')
             rows = soup.find('tbody').find_all('tr')
