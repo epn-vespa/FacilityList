@@ -6,7 +6,7 @@ Author:
 from typing import Type, Union, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, Node
 from rdflib.namespace import RDF, SKOS, DCTERMS
-from utils import label_to_uri
+from utils import standardize_uri
 import warnings
 
 class OntologyMapping():
@@ -19,6 +19,7 @@ class OntologyMapping():
 
     _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
+    _WB = Namespace("http://http://www.ivoa.net/rdf/messenger#")
 
     # Mapping from dictionary keys to ontology predicates
     _MAPPING = {
@@ -28,16 +29,21 @@ class OntologyMapping():
         "definition": SKOS.definition,
         "alt_label": SKOS.altLabel,
         "part_of": DCTERMS.isPartOf,
-        "wavelength": _OBS.wavelength, # AAS
+        "waveband": _OBS.waveband, # AAS
         "location": _GEO.location, # AAS
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
     # Objects after a REFERENCE predicate will be an URI and not a Literal.
-    _REFERENCE = [
+    _SELF_REF = [
         "type",
         "part_of",
         "community", # community of the list's source (see merge.py)
+    ]
+
+    # Do not standardize URI to keep the external reference's URI
+    _EXT_REF = [
+        "waveband", # see "http://http://www.ivoa.net/rdf/messenger#"
     ]
 
     def __init__(self):
@@ -73,6 +79,22 @@ class OntologyMapping():
     def GEO(self):
         return OntologyMapping._GEO
 
+    @property
+    def WB(self):
+        return OntologyMapping._WB
+
+    @property
+    def REFERENCE(self):
+        return self._EXT_REF + self._SELF_REF
+
+    @property
+    def EXT_REF(self):
+        return self._EXT_REF
+
+    @property
+    def SELF_REF(self):
+        return self._SELF_REF
+
     def __getattr__(
             self,
             attr):
@@ -102,8 +124,9 @@ class Graph():
                 Graph._warned = True
             return
         Graph._graph = G()
-        self.bind("obs", self.OBS)
-        self.bind("geo", self.GEO)
+        self.bind("obs", self.OM.OBS)
+        self.bind("geo", self.OM.GEO)
+        self.bind("wb", self.OM.WB)
         if filename:
             Graph._graph.parse(filename)
             # init graph
@@ -111,14 +134,6 @@ class Graph():
     @property
     def graph(self):
         return Graph._graph
-
-    @property
-    def OBS(self):
-        return self.OM.OBS
-
-    @property
-    def GEO(self):
-        return self.OM.GEO
 
     @property
     def OM(self):
@@ -143,10 +158,12 @@ class Graph():
         namespace -- corresponds to the source list's namespace (AAS, NAIF...)
         """
         if namespace == "OBS":
-            return self.OBS
+            return self.OM.OBS
         elif namespace == "GEO":
-            return self.GEO
-        namespace_uri = Namespace(str(self.OBS)[:-1] + "/" + namespace + "#")
+            return self.OM.GEO
+        elif namespace == "WB":
+            return self.WB # IVOA Messenger (WaveBand)
+        namespace_uri = Namespace(str(self.OM.OBS)[:-1] + "/" + namespace + "#")
         # Bind namespace if not binded yet (override = False)
         self.graph.bind(namespace, namespace_uri, override = False)
         return namespace_uri
@@ -180,16 +197,18 @@ class Graph():
         if source is not None:
             namespace_subj = self.get_namespace(source.NAMESPACE)
             if predicate == "type":
-                namespace_obj = self.OBS # Observation Facility
+                namespace_obj = self.OM.OBS # Observation Facility
+            elif predicate == "waveband":
+                namespace_obj = self.OM.WB
             else:
                 namespace_obj = namespace_subj
         else:
-            namespace_subj = self.OBS
-            namespace_obj = self.OBS
+            namespace_subj = self.OM.OBS
+            namespace_obj = self.OM.OBS
 
         if type(subj) == str:
             # Convert subject to URI with _OBS
-            subj_uri = namespace_subj[label_to_uri(subj)]
+            subj_uri = namespace_subj[standardize_uri(subj)]
 
         if type(predicate) == str:
             predicate_uri = self.OM.convert_attr(predicate)
@@ -197,22 +216,22 @@ class Graph():
         if predicate_uri is None:
             raise ValueError(f"Predicate can not be None.")
 
+        # Convert object(s) into a list
         if type(obj) in (list, tuple, set):
-            # loop and add
-            objs = list(obj)
-            for obj in objs:
-                # Change object type for certain predicates
-                if predicate in self.OM._REFERENCE:
-                    obj_value = namespace_obj[label_to_uri(obj)]
-                else:
-                    obj_value = objtype(obj)
-                # Add to the graph
-                self._graph.add((subj_uri, predicate_uri, obj_value))
+            objs = list(obj) # convert to list
         else:
-            if predicate in self.OM._REFERENCE:
-                obj_value = namespace_obj[label_to_uri(obj)]
+            objs = [obj]
+        for obj in objs:
+            # Change object type for certain predicates
+            if predicate in self.OM.SELF_REF:
+                obj_value = namespace_obj[standardize_uri(obj)]
+            elif predicate in self.OM.EXT_REF:
+                 # Do not standardize an external URI
+                obj_value = namespace_obj[obj]
             else:
                 obj_value = objtype(obj)
+            # Add to the graph
+            self._graph.add((subj_uri, predicate_uri, obj_value))
 
             # Add to the graph
             self.graph.add((subj_uri, predicate_uri, obj_value))

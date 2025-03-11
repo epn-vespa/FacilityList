@@ -16,7 +16,6 @@ from argparse import ArgumentParser
 from graph import Graph # rdflib.Graph singleton with OBS namespace
 from typing import List
 from aas_extractor import AasExtractor
-from utils import label_to_uri
 
 class Merger():
     def __init__(self,

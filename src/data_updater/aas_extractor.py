@@ -35,6 +35,22 @@ class AasExtractor():
 
     DEFAULT_TYPE = "telescope"
 
+    # Mapping to IVOA's messenger
+    # https://www.ivoa.net/rdf/messenger/
+    # All Waveband categories in AAS:
+    # Gamma-ray
+    # Infared
+    # Infrared
+    # Millimeter
+    # Optical
+    # Radio
+    # Ultraviolet
+    # X-ray
+    _WAVEBAND_MAPPING = {
+        "Ultraviolet": "UV",
+        "Infared": "Infrared",
+    }
+
     def get_community(self) -> str:
         return "" # TODO (heliophysics / astronomy / planetology)
 
@@ -51,15 +67,11 @@ class AasExtractor():
                     for header
                     in headers.find_all('th')]
 
-            # Wavelengths and facility types column indexes
-            WL = 3
+            # wavebands and facility types column indexes
+            WB = 3
             FT = 10
-            wavelengths = headers[WL:FT]
+            wavebands = headers[WB:FT]
             facility_types = headers[FT:]
-            # If you need to get wavelengths as measure units:
-            # wavelengths measurement units are between parenthesis of columns 3-10.
-            # wavelengths = [wl[wl.find('(')+1:wl.find(')')]
-            #       for wl in headers[3:10]]
 
             # Process page's data into a dictionary.
             # This dictionary can then be processed by the ontology merger.
@@ -126,13 +138,18 @@ class AasExtractor():
                 # Add label to row dict
                 data["label"] = facility_name
 
-                # Add wavelength to row dict
-                for wavelength, col in zip(wavelengths, cols[WL:FT]):
-                    if col:
-                        if "wavelength" not in data:
-                            data["wavelength"] = [wavelength]
+                # Add waveband to row dict
+                for waveband_length, waveband in zip(wavebands, cols[WB:FT]):
+                    if waveband:
+                        waveband = waveband.capitalize()
+                        if waveband in AasExtractor._WAVEBAND_MAPPING:
+                            # Get the IVOA Messenger class name
+                            waveband = AasExtractor._WAVEBAND_MAPPING[waveband]
+                        # There can be more than one waveband per facility
+                        if "waveband" not in data:
+                            data["waveband"] = [waveband]
                         else:
-                            data["wavelength"].append(wavelength)
+                            data["waveband"].append(waveband)
 
                 if not keyword:
                     # If there is no keyword (id), find it between ().
