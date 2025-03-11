@@ -2,7 +2,7 @@ from typing import List, Tuple
 from urllib.parse import quote
 import re
 
-def label_to_uri(label: str) -> str:
+def standardize_uri(label: str) -> str:
     """
     Creates a valid uri string from a label using lowercase and hyphens
     between words.
@@ -14,7 +14,7 @@ def label_to_uri(label: str) -> str:
     label = re.sub(r"[^\w\s\.]", ' ', label)
     label = re.sub(r"\s+", ' ', label) # Remove multiple spaces
     label = label.split(' ')
-    label = '_'.join([l for l in label if l])
+    label = '-'.join([l for l in label if l])
     label = quote(label)
     return label
 
