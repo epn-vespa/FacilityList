@@ -15,8 +15,8 @@ Author:
 import requests
 from bs4 import BeautifulSoup
 from utils import del_aka, cut_acronyms
-import json
 import re
+from cache import get_page
 
 class AasExtractor():
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
@@ -35,15 +35,12 @@ class AasExtractor():
         return "" # TODO (heliophysics / astronomy / planetology)
 
     def extract(self) -> dict:
-        try:
-            response = requests.get(
-                    AasExtractor.URL,
-                    headers = AasExtractor.HEADERS)
-        except requests.exceptions.RequestException as e:
-            raise SystemExit(e)
-
-        if response.ok:
-            soup = BeautifulSoup(response.text, 'html.parser')
+        """
+        Extract the page content into a dictionary.
+        """
+        content = get_page(AasExtractor.URL)
+        if content:
+            soup = BeautifulSoup(content, 'html.parser')
             rows = soup.find('tbody').find_all('tr')
             headers = soup.find('thead').find('tr')
             headers = [header.text.strip().lower()
@@ -145,8 +142,7 @@ class AasExtractor():
                 result[keyword] = data
             return result
         else:
-            print(f"Request to {url} failed with status code {response.status_code}")
             return None
 
 if __name__ == "__main__":
-    print(extract())
+    pass
