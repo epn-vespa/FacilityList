@@ -171,7 +171,6 @@ class Graph():
     def add(
             self,
             params: Tuple[str, str, str],
-            objtype: Type = Literal,
             source: Type = None):
         """
         Add a RDF triple to the graph.
@@ -180,10 +179,10 @@ class Graph():
         as an object can be an ontological reference (URIRef) or a value.
 
         Keyword arguments:
-        subj -- the subject of the triple.
-        predicate -- the predicate of the triple.
-        obj -- the object of the triple.
-        objtype -- the type of the object (Literal, URIRef...)
+        params -- a tuple (subj, predicate, obj)
+            subj -- the subject of the triple.
+            predicate -- the predicate of the triple.
+            obj -- the object of the triple.
         source -- the origin of the added triple (ex: AasExtractor)
         """
         if len(params) != 3:
@@ -229,7 +228,7 @@ class Graph():
                  # Do not standardize an external URI
                 obj_value = namespace_obj[obj]
             else:
-                obj_value = objtype(obj)
+                obj_value = Literal(obj)
             # Add to the graph
             self._graph.add((subj_uri, predicate_uri, obj_value))
 
