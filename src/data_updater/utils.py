@@ -23,7 +23,7 @@ def del_aka(label: str) -> str:
     Delete stopwords like 'aka' from the label.
     """
     stopwords = '|'.join(["aka", "also known as", "formerly the", "formerly"])
-    
+
     exp = re.compile(f"\\b({stopwords})\\b")
     for match in re.finditer(exp, label):
         start_index = match.start()
@@ -51,6 +51,7 @@ def cut_acronyms(label: str) -> Tuple[str]:
     acronym_str = ""
     result = []
     prev_acronym_idx = 0
+    acronym = acronyms[0]
     for acronym in acronyms:
         name = label[prev_acronym_idx:acronym.start()-1].strip()
         prev_acronym_idx = acronym.end()+1
@@ -60,6 +61,10 @@ def cut_acronyms(label: str) -> Tuple[str]:
     if label[-1] != ')':
         acronym_str = "" # Acronym for the whole string (last word)
     # Return full name without acronyms + the last acronym
+    if len(acronyms) > 1:
+        # If there are more than one acronym, impossible to detect which
+        # acronym is the right one.
+        acronym_str = ""
     return full_name_without_acronyms.strip(), acronym_str
 
 def get_alternate_name(label: str) -> list:
