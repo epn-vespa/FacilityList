@@ -1,5 +1,5 @@
 """
-IauMpcExtractor scrap the IauMPC webpage and stores data into a dictionary.
+IauMpcExtractor scraps the IauMPC webpage and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
 
 Author:
@@ -12,8 +12,10 @@ import math
 
 class IauMpcExtractor():
     URL = "https://www.minorplanetcenter.net/iau/lists/ObsCodes.html"
+    # Explained data:
+    # https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
 
-    # URI to save this source as an entity (obs:AAS_list)
+    # URI to save this source as an entity
     URI = "IAU-MPC_list"
 
     # URI to save entities from this source
@@ -63,12 +65,12 @@ class IauMpcExtractor():
                     longitude -= 360
                 data["longitude"] = str(longitude)
             cosinus = line[10:18].strip()
-            #if cosinus:
-            #    data["cosinus"] = cosinus
             sinus = line[18:].strip()
             if sinus and cosinus:
-                # data["sinus"] = sinus
-                latitude_rad = math.asin(float(sinus))
+                # geocentric latitude
+                # sin and cos are ρsinφ′ and ρcosφ′ρ
+                # φ′= arctan(ρcosφ′ρsinφ′​)
+                # see https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
                 latitude_rad = math.atan2(float(sinus), float(cosinus))
                 latitude_deg = math.degrees(latitude_rad)
                 data["latitude"] = str(latitude_deg)
@@ -79,5 +81,4 @@ class IauMpcExtractor():
         return result
 
 if __name__ == "__main__":
-    extractor = IauMpcExtractor()
-    extractor.extract()
+    pass

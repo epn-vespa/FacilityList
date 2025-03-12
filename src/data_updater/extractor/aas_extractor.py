@@ -1,5 +1,5 @@
 """
-AasExtractor to scrap the AAS webpage and stores data into a dictionary.
+AasExtractor scraps the AAS webpage and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
 
 Troubleshooting:

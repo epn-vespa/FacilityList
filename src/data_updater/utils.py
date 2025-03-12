@@ -51,7 +51,6 @@ def cut_acronyms(label: str) -> Tuple[str]:
     acronym_str = ""
     result = []
     prev_acronym_idx = 0
-    acronym = acronyms[0]
     for acronym in acronyms:
         name = label[prev_acronym_idx:acronym.start()-1].strip()
         prev_acronym_idx = acronym.end()+1
