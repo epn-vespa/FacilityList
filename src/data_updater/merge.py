@@ -15,7 +15,8 @@ from typing import Type
 from argparse import ArgumentParser
 from graph import Graph # rdflib.Graph singleton with OBS namespace
 from typing import List
-from aas_extractor import AasExtractor
+from extractor.aas_extractor import AasExtractor
+from extractor.iaumpc_extractor import IauMpcExtractor
 
 class Merger():
     def __init__(self,
@@ -78,11 +79,17 @@ class Merger():
         self.merge(SOURCES, cat = "facility list")
 
 def main(input_ontology: str = ""):
+    merger = Merger(input_ontology)
+    # AAS
     aas_extractor = AasExtractor()
     data_aas = aas_extractor.extract()
-    merger = Merger(input_ontology)
-    # merger.merge(data_aas, source = aas_extractor.get_source_uri())
     merger.merge(data_aas, source = AasExtractor)
+
+    #IAU-MPC
+    iaumpc_extractor = IauMpcExtractor()
+    data_iaumpc = iaumpc_extractor.extract()
+    merger.merge(data_iaumpc, source = IauMpcExtractor)
+
     print(merger.graph.serialize())
 
 if __name__ == "__main__":

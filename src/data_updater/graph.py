@@ -5,7 +5,7 @@ Author:
 
 from typing import Type, Union, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, Node
-from rdflib.namespace import RDF, SKOS, DCTERMS
+from rdflib.namespace import RDF, SKOS, DCTERMS, OWL
 from utils import standardize_uri
 import warnings
 
@@ -24,7 +24,8 @@ class OntologyMapping():
     # Mapping from dictionary keys to ontology properties.
     # Properties that are not mapped belong to the OBS namespace.
     _MAPPING = {
-        "uri": URIRef,
+        "code": SKOS.notation, # for non-ontological external resources
+        "uri": OWL.sameAs, # for ontological external resources
         "type": RDF.type,
         "label": SKOS.prefLabel,
         "definition": SKOS.definition,
@@ -33,6 +34,9 @@ class OntologyMapping():
         "is_authoritative_for": _OBS.isAuthoritativeFor,
         "waveband": _OBS.waveband, # AAS
         "location": _GEO.location, # AAS
+        "city": _OBS.city, #IAU-MPC
+        "latitude": _GEO.latitude,
+        "longitude": _GEO.longitude,
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
@@ -129,7 +133,7 @@ class Graph():
             return
         Graph._graph = G()
         self.bind("obs", self.OM.OBS)
-        self.bind("geo", self.OM.GEO)
+        self.bind("geo1", self.OM.GEO)
         self.bind("wb", self.OM.WB)
         if filename:
             Graph._graph.parse(filename)
