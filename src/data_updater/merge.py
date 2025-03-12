@@ -17,6 +17,7 @@ from graph import Graph # rdflib.Graph singleton with OBS namespace
 from typing import List
 from extractor.aas_extractor import AasExtractor
 from extractor.iaumpc_extractor import IauMpcExtractor
+from extractor.naif_extractor import NaifExtractor
 
 class Merger():
     def __init__(self,
@@ -53,7 +54,7 @@ class Merger():
                 subj = identifier
             for predicate, obj in features.items():
                 self.graph.add((subj, predicate, obj), source = source)
-            if "type" not in features: 
+            if "type" not in features:
                 self.graph.add((subj, "type", cat), source = source)
             # Create the OBS uri
 
@@ -61,17 +62,30 @@ class Merger():
         """
         Create the basic classes (like the list of sources of the project)
         """
+        # Labels
+        A = "celestial astronomy"
+        H = "heliophysics"
+        G = "geology"
+        P = "planetary sciences"
+        O = "other, generic"
         COMMUNITIES = {
-                "A": {"label": "celestial astronomy", "alliance": "IVOA"},
-                "H": {"label": "heliophysics", "alliance": "IHDEA"},
-                "G": {"label": "geology", "alliance": "OGC"},
-                "P": {"label": "planetary sciences", "alliance": "IPDA"},
-                "O": {"label": "other, generic"}}
+                "A": {"label": A, "alliance": "IVOA"},
+                "H": {"label": H, "alliance": "IHDEA"},
+                "G": {"label": G, "alliance": "OGC"},
+                "P": {"label": P, "alliance": "IPDA"},
+                "O": {"label": O}}
+
 
         SOURCES = {
             AasExtractor.URI: {"url": AasExtractor.URL,
-                               "community": COMMUNITIES["A"]["label"],
-                               "is_authoritative_for": [COMMUNITIES["A"]["label"]]}}
+                               "community": A,
+                               "is_authoritative_for": A},
+            IauMpcExtractor.URI: {"url": IauMpcExtractor.URL,
+                                  "community": [A, P],
+                                  "is_authoritative_for": [A, P]},
+            NaifExtractor.URI: {"url": NaifExtractor.URL,
+                                "community": [A, H, P],
+                                "is_authoritative_for": [H, P]}}
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.
 
@@ -80,15 +94,18 @@ class Merger():
 
 def main(input_ontology: str = ""):
     merger = Merger(input_ontology)
-    # AAS
-    aas_extractor = AasExtractor()
-    data_aas = aas_extractor.extract()
-    merger.merge(data_aas, source = AasExtractor)
 
-    #IAU-MPC
-    iaumpc_extractor = IauMpcExtractor()
-    data_iaumpc = iaumpc_extractor.extract()
-    merger.merge(data_iaumpc, source = IauMpcExtractor)
+    # Extract for those sources:
+    extractors = [
+        AasExtractor,
+        IauMpcExtractor,
+        NaifExtractor,
+    ]
+
+    for Extractor in extractors:
+        extractor = Extractor()
+        data = extractor.extract()
+        merger.merge(data, source = extractor)
 
     print(merger.graph.serialize())
 
