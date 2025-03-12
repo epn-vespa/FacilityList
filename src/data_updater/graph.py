@@ -204,7 +204,7 @@ class Graph():
         obj = params[2]
 
         # Get the namespace
-        if source is not None:
+        if source:
             namespace_subj = self.get_namespace(source.NAMESPACE)
             if predicate == "type":
                 namespace_obj = self.OM.OBS # Observation Facility
@@ -212,6 +212,7 @@ class Graph():
                 namespace_obj = self.OM.WB
             else:
                 namespace_obj = namespace_subj
+        # TODO reification to include source
         else:
             namespace_subj = self.OM.OBS
             namespace_obj = self.OM.OBS
@@ -246,7 +247,10 @@ class Graph():
             # Add to the graph
             self.graph.add((subj_uri, predicate_uri, obj_value))
 
-        # TODO reification to include source
+        if source:
+            source_uri = self.OM.OBS[standardize_uri(source.URI)]
+            self.graph.add((subj_uri, self.OM.OBS["source"], source_uri))
+
 
 
 if __name__ == "__main__":
