@@ -4,8 +4,9 @@ Author:
 """
 
 from typing import Type, Union, Tuple
-from rdflib import Graph as G, Namespace, Literal, URIRef, Node
-from rdflib.namespace import RDF, SKOS, DCTERMS, OWL
+from rdflib import Graph as G, Namespace, Literal, Node
+from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO
+
 from utils import standardize_uri
 import warnings
 
@@ -33,10 +34,12 @@ class OntologyMapping():
         "part_of": DCTERMS.isPartOf,
         "is_authoritative_for": _OBS.isAuthoritativeFor,
         "waveband": _OBS.waveband, # AAS
-        "location": _GEO.location, # AAS
-        "city": _OBS.city, #IAU-MPC
-        "latitude": _GEO.latitude,
-        "longitude": _GEO.longitude,
+        "location": _GEO.location, # AAS, IAU-MPC
+        "address": SDO.address, # PDS
+        # "city": SDO.addressLocality, #IAU-MPC
+        "country": SDO.addressCountry, # PDS
+        "latitude": _GEO.latitude, # IAU-MPC
+        "longitude": _GEO.longitude, # IAU-MPC
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
@@ -217,11 +220,11 @@ class Graph():
             # Convert subject to URI with _OBS
             subj_uri = namespace_subj[standardize_uri(subj)]
 
+        if predicate is None:
+            raise ValueError(f"Predicate can not be None.")
+
         if type(predicate) == str:
             predicate_uri = self.OM.convert_attr(predicate)
-
-        if predicate_uri is None:
-            raise ValueError(f"Predicate can not be None.")
 
         # Convert object(s) into a list
         if type(obj) in (list, tuple, set):

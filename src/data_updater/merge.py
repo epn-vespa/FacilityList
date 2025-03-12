@@ -18,6 +18,7 @@ from typing import List
 from extractor.aas_extractor import AasExtractor
 from extractor.iaumpc_extractor import IauMpcExtractor
 from extractor.naif_extractor import NaifExtractor
+from extractor.pds_extractor import PdsExtractor
 
 class Merger():
     def __init__(self,
@@ -85,7 +86,10 @@ class Merger():
                                   "is_authoritative_for": [A, P]},
             NaifExtractor.URI: {"url": NaifExtractor.URL,
                                 "community": [A, H, P],
-                                "is_authoritative_for": [H, P]}}
+                                "is_authoritative_for": [H, P]},
+            PdsExtractor.URI: {"url": PdsExtractor.URL,
+                               "community": [H, P, G],
+                               "is_authoritative_for": [P]},}
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.
 
@@ -100,6 +104,7 @@ def main(input_ontology: str = ""):
         AasExtractor,
         IauMpcExtractor,
         NaifExtractor,
+        PdsExtractor,
     ]
 
     for Extractor in extractors:
