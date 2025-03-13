@@ -27,6 +27,7 @@ class OntologyMapping():
     _MAPPING = {
         "code": SKOS.notation, # for non-ontological external resources
         "uri": OWL.sameAs, # for ontological external resources
+        "url": SDO.url, # facility-list, PDS
         "type": RDF.type,
         "label": SKOS.prefLabel,
         "definition": SKOS.definition,

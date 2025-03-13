@@ -1,5 +1,5 @@
 """
-PdsExtractor scraps the NASA's PDF webpage and stores data into a dictionary.
+PdsExtractor scraps the NASA's PDS webpage and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
 
 Author:
@@ -79,6 +79,8 @@ class PdsExtractor():
                 tag_str = tag.tag
                 tag_str = PdsExtractor.FACILITY_ATTRS.get(tag_str, tag_str)
                 data[tag_str] = re.sub("[\n ]+", " ", tag.text.strip())
+
+            data["url"] = resource_url
 
             # label
             label = root.find(".//title").text.strip()
