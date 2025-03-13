@@ -32,16 +32,15 @@ class Merger():
         return self._graph
 
     def merge(self,
-            data: List,
+            data: dict,
             source: Type = None,
             cat: str = "ufo"):
         """
         Adds the data from the dict to the Ontology.
 
         Keyword arguments:
-        data -- a list of dictionaries like [{"uri":"a", "Label":"b"}]
+        data -- a dictionary like {"uri1": {"uri":"a", "label":"b"}}
         source -- the class of the extractor of the source (ex: AasExtractor)
-        cat -- the category of the objects in the list if they are
         not already in the dictionary's features.
         """
         for identifier, features in data.items():
@@ -56,6 +55,8 @@ class Merger():
             for predicate, obj in features.items():
                 self.graph.add((subj, predicate, obj), source = source)
             if "type" not in features:
+                if cat == "ufo" and hasattr(source, "DEFAULT_TYPE"):
+                    cat = source.DEFAULT_TYPE
                 self.graph.add((subj, "type", cat), source = source)
             # Create the OBS uri
 
