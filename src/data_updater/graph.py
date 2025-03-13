@@ -7,7 +7,7 @@ from typing import Type, Union, Tuple
 from rdflib import Graph as G, Namespace, Literal, Node
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO
 
-from utils import standardize_uri
+from utils import standardize_uri, cut_acronyms
 import warnings
 
 class OntologyMapping():
@@ -179,6 +179,31 @@ class Graph():
         self.graph.bind(namespace, namespace_uri, override = False)
         return namespace_uri
 
+    def get_label_and_save_alt_labels(
+            self,
+            label: str,
+            namespace: Type) -> str:
+        """
+        Returns the label with no alternate label or acronym (short label).
+        Add the alt labels to the ontology (acronym and full label) if there
+        was a change.
+
+        Keyword arguments:
+        label -- the label of an entity
+        namespace -- the namespace of the label
+        """
+        short_label, acronym = cut_acronyms(label)
+        short_label_uri = standardize_uri(short_label)
+        if acronym:
+            self.graph.add((namespace[short_label_uri],
+                            SKOS.altLabel,
+                            Literal(acronym)))
+        if short_label != label:
+            self.graph.add((namespace[short_label_uri],
+                            SKOS.altLabel,
+                            Literal(label)))
+        return short_label
+
     def add(
             self,
             params: Tuple[str, str, str],
@@ -212,13 +237,13 @@ class Graph():
                 namespace_obj = self.OM.WB
             else:
                 namespace_obj = namespace_subj
-        # TODO reification to include source
         else:
             namespace_subj = self.OM.OBS
             namespace_obj = self.OM.OBS
 
         if type(subj) == str:
             # Convert subject to URI with _OBS
+            subj = self.get_label_and_save_alt_labels(subj, namespace_subj)
             subj_uri = namespace_subj[standardize_uri(subj)]
 
         if predicate is None:
@@ -234,7 +259,10 @@ class Graph():
             objs = [obj]
         for obj in objs:
             # Change object type for certain predicates
+            if predicate == "label":
+                obj = self.get_label_and_save_alt_labels(obj, namespace_obj)
             if predicate in self.OM.SELF_REF:
+                obj = self.get_label_and_save_alt_labels(obj, namespace_obj)
                 obj_value = namespace_obj[standardize_uri(obj)]
             elif predicate in self.OM.EXT_REF:
                  # Do not standardize an external URI
@@ -250,8 +278,6 @@ class Graph():
         if source:
             source_uri = self.OM.OBS[standardize_uri(source.URI)]
             self.graph.add((subj_uri, self.OM.OBS["source"], source_uri))
-
-
 
 if __name__ == "__main__":
     pass

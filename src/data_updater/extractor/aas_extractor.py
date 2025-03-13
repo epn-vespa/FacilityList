@@ -11,8 +11,7 @@ Author:
 """
 
 from bs4 import BeautifulSoup
-from utils import del_aka, cut_acronyms
-import re
+from utils import cut_location
 from extractor.cache import CacheManager
 
 class AasExtractor():
@@ -78,14 +77,10 @@ class AasExtractor():
 
             data = dict() # Dictionary to save the row's data
 
-            keyword = row_data["keyword"] # code
-            if keyword:
-                data["code"] = keyword
-
             # Add location to data dict
             location = row_data["location"]
             if location:
-                data["location"] = location
+                data["location"] = [location]
             else:
                 continue # TGCC is a computer and has no location.
 
@@ -94,59 +89,31 @@ class AasExtractor():
             # Extract data from the full facility name
             # The full facility name contains a location (Observatory etc)
             # We can use a part-of between the facility and location
-            # and acronyms that need to be treated as alternate labels
-            label = del_aka(row_data["full facility name"].strip())
-            #full_facility_name = row_data["full facility name"].strip()
-            #full_facility_name = del_aka(full_facility_name)
+            facility_name = row_data["full facility name"].strip()
             # Origin observatory
-            at = re.search(" at ", label)
-            facility_name = ""
-            if at:
-                # Facility name is before the first " at "
-                facility_name = label[0:at.start()].strip() # TODO do not use facility name as pref label, but label instead
-                alt_labels.add(facility_name)
-                facility_location = label[at.end():].strip()
-            else:
-                facility_name = label
-                facility_location = ""
-            # Take the first acronym and remove parenthesis
-            facility_name, facility_acronym = cut_acronyms(facility_name)
-            if facility_acronym:
-                alt_labels.add(facility_acronym)
-            if facility_name:
-                alt_labels.add(facility_name)
-            if facility_location:
-                facility_location_name, facility_location_acronym = cut_acronyms(facility_location)
-                # TODO if there is more than 1 acronym,
-                # there might be more than 1 location
-                result[facility_location_name] = {
-                        "type": "FacilityLocation",
-                        "label": facility_location,
-                        }
-                alt_labels_location = []
-                if facility_location != facility_location_name:
-                    alt_labels_location.append(facility_location_name)
-                if facility_location_acronym:
-                    alt_labels_location.append(facility_location_acronym)
-                if alt_labels_location:
-                    result[facility_location_name]["alt_label"] = alt_labels_location
+            location = cut_location(facility_name,
+                                               delimiter = " at ",
+                                               alt_labels = alt_labels)
+            if location:
+                data["part_of"] = location
 
-                data["part_of"] = facility_location_name
-
+            # Add label to row dict
+            data["label"] = facility_name
 
             # Add and filter out facility types
             for facility_type, col in zip(facility_types, cols[FT:]):
                 if col:
-                    data["type"] = facility_type
+                    # Can have more than one type
+                    if "type" in data:
+                        data["type"].append(facility_type)
+                    else:
+                        data["type"] = [facility_type]
             if "type" in data and data["type"] in ["computational center", "archive/database"]:
                 continue # Filter out computational center & archive/database.
             elif "type" not in data:
                 data["type"] = AasExtractor.DEFAULT_TYPE # telescope
 
-            # Add label to row dict
-            data["label"] = label #facility_name
-
-            # Add waveband to row dict
+            # waveband
             for waveband_length, waveband in zip(wavebands, cols[WB:FT]):
                 if waveband:
                     waveband = waveband.capitalize()
@@ -159,15 +126,19 @@ class AasExtractor():
                     else:
                         data["waveband"].append(waveband)
 
-            if not keyword:
-                # If there is no keyword (id), find it between ().
-                keyword = label[label.find('(')+1:label.find(')')]
-
+            # alt labels
             if alt_labels:
                 data["alt_label"] = alt_labels
 
+            # Internal reference
+            keyword = row_data["keyword"] # code
+            if keyword:
+                data["code"] = keyword
+            else:
+                # If there is no keyword (id), find it between ().
+                keyword = facility_name[alt_label.find('(')+1:alt_label.find(')')]
+
             # Save the row's dict into the result dict
-            # keyword = identifier of the data in the source
             result[keyword] = data
         return result
 

@@ -34,6 +34,10 @@ class NaifExtractor():
         Extract the page content into a dictionary.
         """
         content = CacheManager.get_page(NaifExtractor.URL)
+
+        if not content:
+            return dict()
+
         soup = BeautifulSoup(content, "html.parser")
 
         categories = dict()
@@ -41,6 +45,8 @@ class NaifExtractor():
         h3_tags = soup.find_all("h3")
         h3_spacecraft = None
         h3_ground_stations = None
+
+        # Generate list of lines for Spacecraft & Ground Stations categories
         for h3 in h3_tags:
             if h3.text.strip() == "Spacecraft":
                 h3_spacecraft = h3

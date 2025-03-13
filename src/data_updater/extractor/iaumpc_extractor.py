@@ -7,6 +7,7 @@ Author:
 """
 from bs4 import BeautifulSoup
 from extractor.cache import CacheManager
+from utils import cut_location
 import math
 
 
@@ -47,16 +48,21 @@ class IauMpcExtractor():
 
             obs_id = line[0:3].strip()
             obs_name = line[30:].strip()
+            # obs_name = del_aka(obs_name)
 
             if not obs_name:
                 continue # ignore data with no name
 
+            alt_labels = set()
+
             # location
-            if "," in obs_name:
-                comma = obs_name.find(',')
-                location = obs_name[comma + 1:].strip()
+            location = cut_location(obs_name,
+                                    delimiter = ",",
+                                    alt_labels = alt_labels)
+            if location:
                 data["location"] = location # city, lake...
-                data["alt_label"] = [obs_name[:comma].strip()]
+
+            # longitude
             line = line[3:30]
             longitude = line[:10].strip()
             if longitude:
@@ -64,6 +70,8 @@ class IauMpcExtractor():
                 if longitude > 180:
                     longitude -= 360
                 data["longitude"] = str(longitude)
+
+            # latitude
             cosinus = line[10:18].strip()
             sinus = line[18:].strip()
             if sinus and cosinus:
@@ -74,9 +82,17 @@ class IauMpcExtractor():
                 latitude_rad = math.atan2(float(sinus), float(cosinus))
                 latitude_deg = math.degrees(latitude_rad)
                 data["latitude"] = str(latitude_deg)
+
+            # alt labels
+            data["alt_label"] = alt_labels
+
+            # label
             data["label"] = obs_name
+
+            # Internal references
             if obs_id:
                 data["code"] = obs_id # non-ontological identifier
+
             result[obs_name] = data
         return result
 

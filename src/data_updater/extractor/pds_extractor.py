@@ -55,12 +55,14 @@ class PdsExtractor():
             if not cat:
                 continue
 
-            # Download XML files
+            # Download XML file for href
             resource_url = PdsExtractor.URL + href
             content = CacheManager.get_page(resource_url)
 
-            # Remove Product_Context attributes
-            content = re.sub(r"<Product_Context[^>]*>", "<Product_Context>", content,
+            # Remove <Product_Context> attributes from XML
+            content = re.sub(r"<Product_Context[^>]*>",
+                             "<Product_Context>",
+                             content,
                              flags = re.DOTALL)
 
             # Parse XML file
@@ -70,6 +72,7 @@ class PdsExtractor():
             codes = [x.text for x in root.findall(".//lid_reference")]
             data["code"] = codes
 
+            # Other tags
             facility = root.find(".//Facility")
             tags = facility.findall('*')
             for tag in tags:
@@ -77,7 +80,7 @@ class PdsExtractor():
                 tag_str = PdsExtractor.FACILITY_ATTRS.get(tag_str, tag_str)
                 data[tag_str] = re.sub("[\n ]+", " ", tag.text.strip())
 
-            # add label
+            # label
             label = root.find(".//title").text.strip()
             if "label" not in data:
                 data["label"] = label
