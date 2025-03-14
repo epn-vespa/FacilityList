@@ -1,4 +1,4 @@
-from typing import Tuple, Set
+from typing import Tuple, Set, List
 from urllib.parse import quote
 import re
 
@@ -135,6 +135,37 @@ def cut_location(label: str,
         if "" in alt_labels:
             alt_labels.remove("")
     return location
+
+def clean_string(string: str) -> str:
+    """
+    Removes all \n, \t and double spaces from a string.
+
+    Keyword arguments:
+    string -- the string to clean
+    """
+    # string = string.replace("\n", " ")
+    string = string.replace("\r", " ")
+    string = re.sub(r"\t", " ", string)
+    string = re.sub(r"\\n", " ", string)
+    string = re.sub(r"\\r", " ", string)
+    string = re.sub(r" +", " ", string)
+    return string
+
+def extract_items(d: dict) -> List[Tuple]:
+    """
+    Extract items as a list of (key, value) from a recursive dictionary
+    structure. This is necessary to create triplets from for json format.
+
+    Keyword arguments:
+    d -- a recursive dictionary.
+    """
+    result = []
+    for key, value in d.items():
+        if isinstance(value, dict):
+            result.extend(extract_items(value))
+        else:
+            result.append((key, value))
+    return result
 
 if __name__ == "__main__":
     pass
