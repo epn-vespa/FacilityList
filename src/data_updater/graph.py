@@ -4,7 +4,7 @@ Author:
 """
 
 from typing import Type, Union, Tuple
-from rdflib import Graph as G, Namespace, Literal, Node
+from rdflib import Graph as G, Namespace, Literal, Node, URIRef
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO
 
 from utils import standardize_uri, cut_acronyms
@@ -27,7 +27,7 @@ class OntologyMapping():
     _MAPPING = {
         "code": SKOS.notation, # for non-ontological external resources
         "uri": OWL.sameAs, # for ontological external resources
-        "url": SDO.url, # facility-list, PDS
+        "url": SDO.url, # facility-list, PDS, SPASE
         "type": RDF.type,
         "label": SKOS.prefLabel,
         "definition": SKOS.definition,
@@ -35,12 +35,12 @@ class OntologyMapping():
         "part_of": DCTERMS.isPartOf,
         "is_authoritative_for": _OBS.isAuthoritativeFor,
         "waveband": _OBS.waveband, # AAS
-        "location": _GEO.location, # AAS, IAU-MPC
+        "location": _GEO.location, # AAS, IAU-MPC, SPASE
         "address": SDO.address, # PDS
         # "city": SDO.addressLocality, #IAU-MPC
         "country": SDO.addressCountry, # PDS
-        "latitude": _GEO.latitude, # IAU-MPC
-        "longitude": _GEO.longitude, # IAU-MPC
+        "latitude": _GEO.latitude, # IAU-MPC, SPASE
+        "longitude": _GEO.longitude, # IAU-MPC, SPASE
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
@@ -246,6 +246,10 @@ class Graph():
             # Convert subject to URI with _OBS
             subj = self.get_label_and_save_alt_labels(subj, namespace_subj)
             subj_uri = namespace_subj[standardize_uri(subj)]
+        elif type(subj) == URIRef:
+            subj_uri = subj
+        else:
+            raise TypeError(f"Subject can only be a str or an URIRef.")
 
         if predicate is None:
             raise ValueError(f"Predicate can not be None.")
@@ -270,8 +274,6 @@ class Graph():
                 obj_value = namespace_obj[obj]
             else:
                 obj_value = Literal(obj)
-            # Add to the graph
-            self._graph.add((subj_uri, predicate_uri, obj_value))
 
             # Add to the graph
             self.graph.add((subj_uri, predicate_uri, obj_value))

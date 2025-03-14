@@ -13,6 +13,15 @@ Author:
 import glob
 import re
 import requests
+import logging
+import os
+
+# Set up the basic configuration for logging
+
+LOG = "../../cache/error.log"
+os.remove(LOG) # Clear log file
+logging.basicConfig(filename=LOG, level=logging.INFO,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 class CacheManager():
 
@@ -21,6 +30,17 @@ class CacheManager():
         AppleWebKit/537.36 (KHTML, like Gecko) \
         Chrome/58.0.3029.110 \
         Safari/537.3'}
+
+    """
+    # For selenium
+    HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Connection': 'keep-alive',
+    'Referer': 'https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher'}
+    """
 
     CACHE = "../../cache/"
 
@@ -38,9 +58,8 @@ class CacheManager():
                 content = file.read()
         if not content:
             content = CacheManager.scrap(url)
-            CacheManager.save_cache(content, cache_path)
-        if not content:
-            raise("No page content for:", url)
+            if content:
+                CacheManager.save_cache(content, cache_path)
         return content
 
 
@@ -71,7 +90,13 @@ class CacheManager():
         with open(cache_path, 'w') as file:
             file.write(content)
 
-    def scrap(url: str) -> dict:
+    def scrap(url: str) -> str:
+            """
+            Scrap the web page's content.
+
+            Keyword arguments:
+            url -- the url to scrap from.
+            """
             try:
                 response = requests.get(
                         url,
@@ -82,8 +107,10 @@ class CacheManager():
             if response.ok:
                 return response.text
             else:
-                print(f"Request to {url} failed with status code {response.status_code}")
-                return None
+
+                error = f"Request to {url} failed with status code {response.status_code}"
+                logging.info(error)
+                return ""
 
 if __name__ == "__main__":
     pass

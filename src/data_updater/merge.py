@@ -19,6 +19,7 @@ from extractor.aas_extractor import AasExtractor
 from extractor.iaumpc_extractor import IauMpcExtractor
 from extractor.naif_extractor import NaifExtractor
 from extractor.pds_extractor import PdsExtractor
+from extractor.spase_extractor import SpaseExtractor
 
 class Merger():
     def __init__(self,
@@ -90,7 +91,10 @@ class Merger():
                                 "is_authoritative_for": [H, P]},
             PdsExtractor.URI: {"url": PdsExtractor.URL,
                                "community": [H, P, G],
-                               "is_authoritative_for": [P]},}
+                               "is_authoritative_for": [P]},
+            SpaseExtractor.URI: {"url": SpaseExtractor.URL,
+                                 "community": [H, P],
+                                 "is_autoritative_for": [H]}}
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.
 
@@ -106,6 +110,7 @@ def main(input_ontology: str = ""):
         IauMpcExtractor,
         NaifExtractor,
         PdsExtractor,
+        SpaseExtractor,
     ]
 
     for Extractor in extractors:
