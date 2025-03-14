@@ -17,6 +17,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+from typing import List
 from bs4 import BeautifulSoup
 from extractor.cache import CacheManager
 import json
@@ -25,9 +26,8 @@ from utils import clean_string, extract_items
 class SpaseExtractor():
 
     # URL = "https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher?action=CDAW_ELEMENT_LIST_PANE_ACTION&element="
-    URL = "https://hpde.io/SMWG/Observatory/index.html"
-
-    BASE_URL = "https://hpde.io/SMWG/Observatory/"
+    # URL = "https://hpde.io/SMWG/Observatory/index.html" # old version of the code (2025.03.14)
+    URL = "https://github.com/spase-group/spase-info/tree/master/SMWG/Observatory/"
 
     # URI to save this source as an entity
     URI = "SPASE_list"
@@ -52,60 +52,53 @@ class SpaseExtractor():
                       "StartDate": "start_date",
                       "EndDate": "end_date"}
 
+    def _get_all_links(self,
+                      url: str) -> List:
+        """
+        Get a list of all the content links (json files) from the
+        SPASE github repository, recursively.
+        """
+        links = set()
+        content = CacheManager.get_page(url)
+        if not content:
+            return links
+        soup = BeautifulSoup(content, "html.parser")
+        a = soup.find_all("a", attrs = {"class":"Link--primary"})
+        hrefs = list(set([href.attrs["href"] for href in a]))
+        for href in hrefs:
+            if href.endswith(".json"):
+                href = href.replace("blob", "refs/heads")
+                href = "https://raw.githubusercontent.com" + href
+                links.add(href)
+            elif href.endswith(".html"):
+                continue # Ignore HTML pages to take json instead
+            elif href.endswith(".xml"):
+                continue
+            else:
+                # Is an index page
+                href = "https://github.com" + href
+                links.update(self._get_all_links(href))
+        return links
+
     def extract(self) -> dict:
         """
         Extract the page content into a dictionary.
         """
-
-        # content0 = CacheManager.get_page(SpaseExtractor.URL)
-        content = CacheManager.get_page(SpaseExtractor.URL)
-
-        if not content:
+        result = dict()
+        hrefs = self._get_all_links(SpaseExtractor.URL)
+        if not hrefs:
             return dict()
 
-        soup = BeautifulSoup(content, "html.parser")
-        # [1:] to ignore the title's link
-        a = soup.find("ul", attrs = {"class":"listview"}).find_all("a")[1:]
-        a = [aa.text.strip() for aa in a]
-        result = dict()
-        base_url = SpaseExtractor.BASE_URL
-        for href in a:
-            data = dict()
-            if not href:
-                continue
-
-            # First test if there is a json page
-            url = base_url + href + ".json"
-            
-            content = CacheManager.get_page(url)
-
+        for href in hrefs:
+            content = CacheManager.get_page(href)
             if not content:
-                # Try with the html version of the page
-                if self._get_data_from_html(base_url + href + ".html", data):
-                    # HTML could be scrapped.
-                    # We first try to scrap json instead of
-                    # HTML due to HTML errors in some pages.
-                    result[href] = data
-                    continue
-
-                # The page is an index page with new links
-                url = base_url + href  + "/index.html"
-                content = CacheManager.get_page(url)
-                if not content:
-                    continue # No json, no html, not an index.html
-                soup_index = BeautifulSoup(content, "html.parser")
-                a2 = soup_index.find("ul", attrs = {"class":"listview"}).find_all("a")[1:]
-                a2 = [href + "/" + aa.text for aa in a2]
-                a.extend([aa for aa in a2 if aa not in a])
                 continue
-
             dict_content = json.loads(content)
-            # This dictionary is recursive. Get a flat list of (key, value)
-            dict_content = extract_items(dict_content)
 
+            data = dict()
             alt_labels = set()
 
-            for key, values in dict_content:
+            for key, values in extract_items(dict_content):
                 if key not in SpaseExtractor.FACILITY_ATTRS:
                     continue
                 key = SpaseExtractor.FACILITY_ATTRS.get(key)
@@ -124,74 +117,19 @@ class SpaseExtractor():
                         data[key].append(value)
                     else:
                         data[key] = [value]
+
+            # alt labels
             if alt_labels:
                 data["alt_label"] = alt_labels
+
+            # label
             if not data["label"]:
                 data["label"] = href.split('/')[-1]
             result[data["label"]] = data
-            data["url"] = url
+
+            # url
+            data["url"] = href
         return result
-    
-    def _get_data_from_html(self,
-                            url: str,
-                            data: dict):
-        """
-        Extract data from the html version of the page.
-        Save data into the data dict.
-        If the page does not exist, will return False.
-
-        Keyword arguments:
-        url -- the url to extract from
-        data -- the dict to save the extracted data
-        """
-        content = CacheManager.get_page(url)
-        if not content:
-            return False
-        soup = BeautifulSoup(content, features = "xml")
-        div = soup.find("div", attrs = {"class": "product"})
-        cat = div.find("h1").text # Observatory
-        key = ""
-        value = ""
-        alt_labels = set()
-        for subdiv in div.find_all("div"):
-            if subdiv["class"] == "term":
-                key = subdiv.text
-                if key not in SpaseExtractor.FACILITY_ATTRS:
-                    key = ""
-                    continue
-                else:
-                    key = SpaseExtractor.FACILITY_ATTRS.get(key)
-            elif subdiv["class"] == "definition":
-                if not key:
-                    continue
-                value = subdiv.text
-                value = clean_string(value)
-
-                if key == "label":
-                    data[key] = value
-                elif key == "alt_label":
-                    value = value.replace("Observatory Station Code: ", "")
-                    alt_labels.add(value)
-                elif key == "description":
-                    if "description" in data:
-                        key = ""
-                        continue # Only one description per entity
-                    else:
-                        # Sometimes the <div> for Description is not closed properly.
-                        value = value.split("Acknowledgement")[0]
-                        value = value.split("Contacts")[0].strip()
-                        data[key] = value
-                elif key not in data:
-                    data[key] = [value]
-                else:
-                    data[key].append(value)
-                key = ""
-        if alt_labels:
-            data["alt_label"] = alt_labels
-        if cat:
-            data["type"] = cat
-        data["url"] = url
-        return True
 
 if __name__ == "__main__":
     ex = SpaseExtractor()
