@@ -6,6 +6,7 @@ HPDE_IO_DATA_PATH = Path(__file__).parent / 'input_data' / 'hpde.io'
 
 
 def hpde_data_git_pull():
+    # retrieve metadata from HPDE.io git repo
     print("Updating HPDE data:")
     messages = subprocess.Popen(
         ["git", "pull"],
