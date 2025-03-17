@@ -10,6 +10,7 @@ from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO
 from utils import standardize_uri, cut_acronyms
 import warnings
 
+
 class OntologyMapping():
     """
     Metadata mapping between Ontology standards and the extracted dictionaries.
@@ -32,7 +33,8 @@ class OntologyMapping():
         "label": SKOS.prefLabel,
         "definition": SKOS.definition,
         "alt_label": SKOS.altLabel,
-        "part_of": DCTERMS.isPartOf,
+        "is_part_of": DCTERMS.isPartOf, # PDS
+        "has_part": DCTERMS.hasPart, # PDS
         "is_authoritative_for": _OBS.isAuthoritativeFor,
         "waveband": _OBS.waveband, # AAS
         "location": _GEO.location, # AAS, IAU-MPC, SPASE
@@ -48,7 +50,8 @@ class OntologyMapping():
     # SELF_REF's object's URI are standardized, as they use OBS.
     _SELF_REF = [
         "type",
-        "part_of",
+        "is_part_of",
+        "has_part",
         "community", # community of the list's source (see merge.py)
         "is_authoritative_for", # this source is authoritative for the specified communities
     ]
@@ -58,12 +61,15 @@ class OntologyMapping():
         "waveband", # see "http://http://www.ivoa.net/rdf/messenger#"
     ]
 
+
     def __init__(self):
         pass
+
 
     @property
     def graph(self):
         return self._graph
+
 
     def convert_attr(
             self,
@@ -83,29 +89,36 @@ class OntologyMapping():
             return attr
             # return OntologyMapping._REVERSE_MAPPING.get(attr, None)
 
+
     @property
     def OBS(self):
         return OntologyMapping._OBS
+
 
     @property
     def GEO(self):
         return OntologyMapping._GEO
 
+
     @property
     def WB(self):
         return OntologyMapping._WB
+
 
     @property
     def REFERENCE(self):
         return self._EXT_REF + self._SELF_REF
 
+
     @property
     def EXT_REF(self):
         return self._EXT_REF
 
+
     @property
     def SELF_REF(self):
         return self._SELF_REF
+
 
     def __getattr__(
             self,
@@ -129,6 +142,7 @@ class Graph():
     _OM = OntologyMapping()
     _warned = False # Warn only once for multiple instantiation.
 
+
     def __init__(self, filename = ""):
         if Graph._graph is not None:
             if not Graph._warned:
@@ -143,22 +157,27 @@ class Graph():
             Graph._graph.parse(filename)
             # init graph
 
+
     @property
     def graph(self):
         return Graph._graph
+
 
     @property
     def OM(self):
         return Graph._OM
 
+
     def __call__(self):
         return Graph._graph
+
 
     def __getattr__(self, attr):
         """
         For other attribute
         """
         return getattr(Graph._graph, attr)
+
 
     def get_namespace(self,
                       namespace: str) -> Namespace:
@@ -179,6 +198,7 @@ class Graph():
         # Bind namespace if not binded yet (override = False)
         self.graph.bind(namespace, namespace_uri, override = False)
         return namespace_uri
+
 
     def get_label_and_save_alt_labels(
             self,
@@ -205,6 +225,7 @@ class Graph():
                             Literal(label)))
         return short_label
 
+
     def add(
             self,
             params: Tuple[str, str, str],
@@ -228,6 +249,10 @@ class Graph():
         subj = params[0]
         predicate = params[1]
         obj = params[2]
+
+        if not subj:
+            # subj is "" or None
+            return
 
         # Get the namespace
         if source:

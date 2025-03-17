@@ -42,8 +42,13 @@ class AasExtractor():
         "Infared": "Infrared",
     }
 
+    def __init__(self):
+        pass
+
+
     def get_community(self) -> str:
         return "" # TODO (heliophysics / astronomy / planetology)
+
 
     def extract(self) -> dict:
         """
@@ -95,7 +100,7 @@ class AasExtractor():
                                                delimiter = " at ",
                                                alt_labels = alt_labels)
             if location:
-                data["part_of"] = location
+                data["is_part_of"] = location
 
             # Add label to row dict
             data["label"] = facility_name
@@ -136,11 +141,12 @@ class AasExtractor():
                 data["code"] = keyword
             else:
                 # If there is no keyword (id), find it between ().
-                keyword = facility_name[alt_label.find('(')+1:alt_label.find(')')]
+                keyword = facility_name[facility_name.find('(')+1:facility_name.find(')')]
 
             # Save the row's dict into the result dict
             result[keyword] = data
         return result
+
 
 if __name__ == "__main__":
     pass
