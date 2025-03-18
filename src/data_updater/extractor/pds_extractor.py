@@ -48,9 +48,8 @@ class PdsExtractor():
         result = dict()
 
         # Dictionary to save the internal references and replace
-        # them by our ontology's ID in the result dict at the end
+        # them by our ontology's ID in the result dict
         # (used with hasPart & isPartOf)
-        # example: {"": "dss-34-34-m-radio-telescope"}
         pds_references_by_id = dict()
 
         for context_type in PdsExtractor.CONTEXT_TYPES:
@@ -148,12 +147,10 @@ class PdsExtractor():
                 result[data["label"]] = data
 
         # If the PDS identifier does not exists in the
-        # extracted data, create a blank entity with this
+        # extracted data, create a new entity with this
         # identifier.
         pds_missing_ids = dict()
         for key, value in result.items():
-            has_part_extern = []
-            is_part_of_extern = []
             if "has_part" in value:
                 for i, part in enumerate(value["has_part"]):
                     if part in pds_references_by_id:
@@ -182,17 +179,18 @@ class PdsExtractor():
                                 continue
                             pds_missing_ids[part] = data
                         value["is_part_of"][i] = pds_missing_ids[part]["label"]
-            if has_part:
-                value["has_part"] = has_part
-            if is_part_of:
-                value["is_part_of"] = is_part_of
+
+        # If a PDS id is missing, add an artificial entity for this code
+        for key, value in pds_missing_ids.items():
+            result[value["label"]] = value
+
         return result
 
     def _create_entity_from_missing_id(self,
                                        identifier: str) -> dict:
         """
-        Creates a data dictionary for an identifier that does not exist in the PDS
-        database but should still be added to the ontology.
+        Creates a data dictionary for an identifier that does not exist in the
+        PDS database but should still be added to the ontology.
 
         Keyword arguments:
         identifier -- the ID of the entity in PDS

@@ -28,13 +28,14 @@ import os
 
 class SpaseExtractor():
 
+    # Other URLs
     # URL = "https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher?action=CDAW_ELEMENT_LIST_PANE_ACTION&element="
     # URL = "https://hpde.io/SMWG/Observatory/index.html" # first version of the code (2025.03.14)
     # URL = "https://github.com/spase-group/spase-info/tree/master/SMWG/Observatory/"
-    # URL = "https://github.com/spase-group/spase-info/tree/master/" # SMWG/Observatory/
+    # URL = "https://github.com/spase-group/spase-info/tree/master/" # 2nd version of the code: without git pull (2025.03.14)
     # URL = "https://github.com/spase-group/spase-info"
     # URL = "https://github.com/hpde/hpde.io/tree/master/"
-    URL = "https://github.com/hpde/hpde.io"
+    URL = "https://github.com/hpde/hpde.io" # 3rd version of the code: with git pull (2025.03.18)
 
     # Name of the folder after git clone
     GIT_REPO = "hpde.io"
@@ -46,7 +47,10 @@ class SpaseExtractor():
     NAMESPACE = "spase"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = "observation facility"
+    DEFAULT_TYPE = "observatory"
+
+    # Folders that we want to keep must contain
+    KEEP_FOLDER = "Observatory"
 
     # Mapping between PDS xml files and our dictionary format
     FACILITY_ATTRS = {"ResourceID": "code",
@@ -75,6 +79,11 @@ class SpaseExtractor():
 
         result = dict()
 
+        # Dictionary to save the internal references and replace
+        # them by our ontology's ID in the result dict
+        # (used with hasPart & isPartOf)
+        spase_references_by_id = dict()
+
         for file in files:
             with open(file, "r") as f:
                 content = f.read()
@@ -101,19 +110,13 @@ class SpaseExtractor():
                         value = value.replace("Observatory Station Code: ", "")
                         alt_labels.add(value)
                     elif key == "description" and "description" in data:
-                            continue # Only one description per entity
-                    elif key == "is_part_of":
-                        # Save the observatory group
-                        observatory_group = value.split('/')[-1]
-                        if observatory_group not in result:
-                            result[observatory_group] = dict()
-                        result[observatory_group]["label"] = observatory_group
-                        result[observatory_group]["code"] = value
-                        data[key] = observatory_group
+                        continue # Only one description per entity
                     elif key in data:
                         data[key].append(value)
                     else:
                         data[key] = [value]
+            if "code" in data:
+                spase_references_by_id[data["code"][0]] = data["label"]
 
             # alt labels
             if alt_labels:
@@ -128,7 +131,64 @@ class SpaseExtractor():
                 data["label"] = href.split('/')[-1]
 
             result[data["label"]] = data
+
+        # If the PDS identifier does not exists in the
+        # extracted data, create a new entity with this
+        # identifier.
+        spase_missing_ids = dict()
+        for key, value in result.items():
+            if "has_part" in value:
+                for i, part in enumerate(value["has_part"]):
+                    if part in spase_references_by_id:
+                        value["has_part"][i] = spase_references_by_id[part]
+                    else:
+                        # Create the entity from the missing id.
+                        if part not in spase_missing_ids:
+                            data = self._create_entity_from_missing_id(part)
+                            if data["label"] == "individual.none":
+                                # Some entities refer to None
+                                value["has_part"][i] = None
+                                continue
+                            spase_missing_ids[part] = data
+                        value["has_part"][i] = spase_missing_ids[part]["label"]
+            if "is_part_of" in value:
+                for i, part in enumerate(value["is_part_of"]):
+                    if part in spase_references_by_id:
+                        value["is_part_of"][i] = spase_references_by_id[part]
+                    else:
+                        # Create the entity from the missing id.
+                        if part not in spase_missing_ids:
+                            data = self._create_entity_from_missing_id(part)
+                            if data["label"] == "individual.none":
+                                # Some entities refer to None
+                                value["is_part_of"][i] = None
+                                continue
+                            spase_missing_ids[part] = data
+                        value["is_part_of"][i] = spase_missing_ids[part]["label"]
+
+        # If a SPASE id is missing, add an artificial entity for this code
+        for key, value in spase_missing_ids.items():
+            result[value["label"]] = value
         return result
+
+
+    def _create_entity_from_missing_id(self,
+                                       identifier: str) -> dict:
+        """
+        Creates a data dictionary for an identifier that does not exist in the
+        SPASE database but should still be added to the ontology.
+
+        Keyword arguments:
+        identifier -- the ID of the entity in SPASE
+        """
+        data = dict()
+        # Remove .json & add "/"
+        label = identifier.split(SpaseExtractor.KEEP_FOLDER)[1]
+        label = label.split(".json")[0]
+        label = re.sub(r"[_/]", " ", label).strip()
+        data = {"label": label,
+                "code": identifier}
+        return data
 
 
     def _list_files(self,
@@ -147,7 +207,7 @@ class SpaseExtractor():
             visited_folders = set()
         for root, dirs, files in os.walk(folder):
             for file in files:
-                if "Observatory" in folder and file.endswith(".json"):
+                if SpaseExtractor.KEEP_FOLDER in folder and file.endswith(".json"):
                     result.add(root + '/' + file)
             for dir in dirs:
                 # TODO ignore the Deprecated folder ?
@@ -159,6 +219,6 @@ class SpaseExtractor():
             # return dict()
         return result
 
+
 if __name__ == "__main__":
-    ex = SpaseExtractor()
-    ex.extract()
+    pass
