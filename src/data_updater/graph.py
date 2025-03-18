@@ -288,6 +288,9 @@ class Graph():
         else:
             objs = [obj]
         for obj in objs:
+            # Ignore None and empty obj
+            if not obj:
+                continue
             # Change object type for certain predicates
             if predicate == "label":
                 obj = self.get_label_and_save_alt_labels(obj, namespace_obj)

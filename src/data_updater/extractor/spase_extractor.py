@@ -17,18 +17,27 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import List
+from typing import List, Set
 from bs4 import BeautifulSoup
 from extractor.cache import CacheManager
 import json
 from utils import clean_string, extract_items
 import re
+import os
+
 
 class SpaseExtractor():
 
     # URL = "https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher?action=CDAW_ELEMENT_LIST_PANE_ACTION&element="
     # URL = "https://hpde.io/SMWG/Observatory/index.html" # first version of the code (2025.03.14)
-    URL = "https://github.com/spase-group/spase-info/tree/master/SMWG/Observatory/"
+    # URL = "https://github.com/spase-group/spase-info/tree/master/SMWG/Observatory/"
+    # URL = "https://github.com/spase-group/spase-info/tree/master/" # SMWG/Observatory/
+    # URL = "https://github.com/spase-group/spase-info"
+    # URL = "https://github.com/hpde/hpde.io/tree/master/"
+    URL = "https://github.com/hpde/hpde.io"
+
+    # Name of the folder after git clone
+    GIT_REPO = "hpde.io"
 
     # URI to save this source as an entity
     URI = "SPASE_list"
@@ -46,67 +55,33 @@ class SpaseExtractor():
                       #"URL": "url",
                       "AlternateName": "alt_label",
                       "ObservatoryRegion": "location",
-                      "ObservatoryGroupID": "part_of",
+                      "ObservatoryGroupID": "is_part_of",
                       #"Aknowledgement": "",
                       "Latitude": "latitude",
                       "Longitude": "longitude",
                       "StartDate": "start_date",
                       "EndDate": "end_date"}
 
-    def _get_all_links(self,
-                       url: str) -> List:
-        """
-        Get a list of all the content links (json files) from the
-        SPASE github repository, recursively.
-        """
-        links = set()
-        content = CacheManager.get_page(url)
-
-        if not content:
-            return links
-        # Get directories
-        soup = BeautifulSoup(content, "html.parser")
-        a = soup.find_all("a", attrs = {"class":"Link--primary"})
-        hrefs = list(set([href.attrs["href"] for href in a]))
-
-        # Get files at root
-        #if url == SpaseExtractor.URL:
-        # The files are in the <script> and not in the html itself.
-        root_links = re.findall(r'"path":"([^:]*?\.json)"', content)
-        for link in root_links:
-            link = "https://raw.githubusercontent.com/spase-group/spase-info/refs/heads/master/" + link
-            links.add(link)
-
-        for href in hrefs:
-            if href.endswith(".json"):
-                href = href.replace("blob", "refs/heads")
-                href = "https://raw.githubusercontent.com" + href
-                links.add(href)
-            elif href.endswith(".html"):
-                continue # Ignore HTML pages to take json instead
-            elif href.endswith(".xml"):
-                continue
-            else:
-                # Is an index page
-                href = "https://github.com" + href
-                links.update(self._get_all_links(href))
-        return links
 
     def extract(self) -> dict:
         """
-        Extract the page content into a dictionary.
+        Extract the github content into a dictionary.
         """
+        # pull if not exist
+        CacheManager.git_pull(self.URL, self.GIT_REPO)
+
+        # get files from the git repo
+        files = self._list_files(CacheManager.CACHE + self.GIT_REPO)
+
         result = dict()
-        hrefs = self._get_all_links(SpaseExtractor.URL)
 
-        if not hrefs:
-            # No links found
-            return dict()
+        for file in files:
+            with open(file, "r") as f:
+                content = f.read()
 
-        for href in hrefs:
-            content = CacheManager.get_page(href)
             if not content:
                 continue
+
             dict_content = json.loads(content)
 
             data = dict()
@@ -127,7 +102,7 @@ class SpaseExtractor():
                         alt_labels.add(value)
                     elif key == "description" and "description" in data:
                             continue # Only one description per entity
-                    elif key == "part_of":
+                    elif key == "is_part_of":
                         # Save the observatory group
                         observatory_group = value.split('/')[-1]
                         if observatory_group not in result:
@@ -145,6 +120,7 @@ class SpaseExtractor():
                 data["alt_label"] = alt_labels
 
             # url
+            href = self.URL + "/tree/master" + file.split(self.GIT_REPO)[1]
             data["url"] = href
 
             # label
@@ -152,6 +128,35 @@ class SpaseExtractor():
                 data["label"] = href.split('/')[-1]
 
             result[data["label"]] = data
+        return result
+
+
+    def _list_files(self,
+                   folder: str,
+                   visited_folders: Set = None) -> Set:
+        """
+        Get the list of paths recursively in the folder.
+        Only return .json files located in any Observatory folder.
+
+        Keyword arguments:
+        folder -- the root folder
+        visited_folders -- prevent looping in the tree
+        """
+        result = set()
+        if visited_folders is None:
+            visited_folders = set()
+        for root, dirs, files in os.walk(folder):
+            for file in files:
+                if "Observatory" in folder and file.endswith(".json"):
+                    result.add(root + '/' + file)
+            for dir in dirs:
+                # TODO ignore the Deprecated folder ?
+                dir = root + '/' + dir
+                if dir not in visited_folders:
+                    visited_folders.add(dir)
+                    result.update(self._list_files(dir,
+                                  visited_folders = visited_folders))
+            # return dict()
         return result
 
 if __name__ == "__main__":

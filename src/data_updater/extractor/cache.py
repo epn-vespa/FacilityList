@@ -10,18 +10,20 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+from pathlib import Path
 import glob
 import re
 import requests
 import logging
 import os
+import subprocess
 
 # Set up the basic configuration for logging
-
-LOG = "../../cache/error.log"
+LOG = Path(__file__).parent.parent.parent.parent / 'cache' / 'error.log'# "../../cache/error.log"
 os.remove(LOG) # Clear log file
 logging.basicConfig(filename=LOG, level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 
 class CacheManager():
 
@@ -42,7 +44,7 @@ class CacheManager():
     'Referer': 'https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher'}
     """
 
-    CACHE = "../../cache/"
+    CACHE = str(Path(__file__).parent.parent.parent.parent / 'cache') + '/' # "../../cache/"
 
     def get_page(url: str) -> str:
         """
@@ -74,9 +76,10 @@ class CacheManager():
         cache_path = re.sub(r"[^\w\d]+", "_", url)
         if cache_path[-1] == '_':
             cache_path = cache_path[:-1]
-        cache_path = CacheManager.CACHE + cache_path + ".html"
         cache_path = cache_path.lower()
+        cache_path = CacheManager.CACHE + cache_path + ".html"
         return cache_path
+
 
     def save_cache(content: str,
                    cache_path: str) -> None:
@@ -90,27 +93,55 @@ class CacheManager():
         with open(cache_path, 'w') as file:
             file.write(content)
 
+
     def scrap(url: str) -> str:
-            """
-            Scrap the web page's content.
+        """
+        Scrap the web page's content. Encode it using the response's charset.
 
-            Keyword arguments:
-            url -- the url to scrap from.
-            """
-            try:
-                response = requests.get(
-                        url,
-                        headers = CacheManager.HEADERS)
-            except requests.exceptions.RequestException as e:
-                raise SystemExit(e)
+        Keyword arguments:
+        url -- the url to scrap from.
+        """
+        try:
+            response = requests.get(
+                    url,
+                    headers = CacheManager.HEADERS)
+        except requests.exceptions.RequestException as e:
+            raise SystemExit(e)
 
-            if response.ok:
-                return response.text
-            else:
+        if response.ok:
+            return response.text
+        else:
+            error = f"Request to {url} failed with status code {response.status_code}"
+            logging.info(error)
+            return ""
 
-                error = f"Request to {url} failed with status code {response.status_code}"
-                logging.info(error)
-                return ""
+
+    def git_pull(url: str,
+                 git_repo: str):
+        """
+        Pull a github repository and save it in the cache.
+        The name of the created folder is git_repo.
+        If the folder does not exist, do git clone instead.
+        """
+        if url.endswith('/'):
+            url = url[:-1]
+        url += ".git"
+        git_repo_folder = CacheManager.CACHE + git_repo
+        if glob.glob(git_repo_folder):
+            command = ["git", "pull"]
+        else:
+            command = ["git", "clone", url]
+        messages = subprocess.Popen(
+            command,
+            cwd=CacheManager.CACHE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        ).communicate()
+        for item in messages:
+            item_utf8 = item.decode("utf-8")
+            if item_utf8 != "":
+                logging.warning(item_utf8)
+
 
 if __name__ == "__main__":
     pass
