@@ -112,9 +112,9 @@ class PdsExtractor():
                             "telescope_to_facility"]:
                         is_part_of.append(lid_reference.text)
                 if has_part:
-                    data["has_part_extern"] = has_part
+                    data["has_part"] = has_part
                 if is_part_of:
-                    data["is_part_of_extern"] = is_part_of
+                    data["is_part_of"] = is_part_of
 
                 # Facility's tags
                 facility = root.find(f".//{cat.title()}") # ex: ".//Facility"
@@ -147,33 +147,67 @@ class PdsExtractor():
 
                 result[data["label"]] = data
 
-        # Transform has_part_extern into has_part,
-        # and is_part_of_extern into is_part_of
-        # if the PDS identifier exists
+        # If the PDS identifier does not exists in the
+        # extracted data, create a blank entity with this
+        # identifier.
+        pds_missing_ids = dict()
         for key, value in result.items():
-            # If they are not in the internal_references_by_id dict,
-            # they can only be referenced with their PDS identifier.
-            has_part = []
-            is_part_of = []
-            if "has_part_extern" in value:
-                for i, part in enumerate(value["has_part_extern"]):
+            has_part_extern = []
+            is_part_of_extern = []
+            if "has_part" in value:
+                for i, part in enumerate(value["has_part"]):
                     if part in pds_references_by_id:
-                        # value["has_part"][i] = pds_references_by_id[part]
-                        has_part.append(pds_references_by_id[part])
-            if "is_part_of_extern" in value:
-                for i, part in enumerate(value["is_part_of_extern"]):
+                        value["has_part"][i] = pds_references_by_id[part]
+                    else:
+                        # Create the entity from the missing id.
+                        if part not in pds_missing_ids:
+                            data = self._create_entity_from_missing_id(part)
+                            if data["label"] == "individual.none":
+                                # Some entities refer to None
+                                value["has_part"][i] = None
+                                continue
+                            pds_missing_ids[part] = data
+                        value["has_part"][i] = pds_missing_ids[part]["label"]
+            if "is_part_of" in value:
+                for i, part in enumerate(value["is_part_of"]):
                     if part in pds_references_by_id:
-                        # value["is_part_of"][i] = pds_references_by_id[part]
-                        is_part_of.append(pds_references_by_id[part])
+                        value["is_part_of"][i] = pds_references_by_id[part]
+                    else:
+                        # Create the entity from the missing id.
+                        if part not in pds_missing_ids:
+                            data = self._create_entity_from_missing_id(part)
+                            if data["label"] == "individual.none":
+                                # Some entities refer to None
+                                value["is_part_of"][i] = None
+                                continue
+                            pds_missing_ids[part] = data
+                        value["is_part_of"][i] = pds_missing_ids[part]["label"]
             if has_part:
                 value["has_part"] = has_part
             if is_part_of:
                 value["is_part_of"] = is_part_of
         return result
 
+    def _create_entity_from_missing_id(self,
+                                       identifier: str) -> dict:
+        """
+        Creates a data dictionary for an identifier that does not exist in the PDS
+        database but should still be added to the ontology.
+
+        Keyword arguments:
+        identifier -- the ID of the entity in PDS
+        """
+        data = dict()
+        cut = identifier.split(":")
+        label = re.sub(r"[_]", " ", cut[-1])
+        cat = cut[-2]
+        data = {"label": label,
+                "code": identifier,
+                "type": cat}
+        return data
 
     def _get_links_pds(self,
-                      pds_url_f: str) -> list:
+                       pds_url_f: str) -> list:
         """The get_links_pds function processes the provided pds_url
         and extracts the list of xml file links to context products.
 

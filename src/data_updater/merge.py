@@ -14,12 +14,12 @@ Arguments:
 from typing import Type
 from argparse import ArgumentParser
 from graph import Graph # rdflib.Graph singleton with OBS namespace
-from typing import List
 from extractor.aas_extractor import AasExtractor
 from extractor.iaumpc_extractor import IauMpcExtractor
 from extractor.naif_extractor import NaifExtractor
 from extractor.pds_extractor import PdsExtractor
 from extractor.spase_extractor import SpaseExtractor
+
 
 class Merger():
     def __init__(self,
@@ -28,9 +28,11 @@ class Merger():
         if not ontology_file:
             self.init_graph() # Create basic classes
 
+
     @property
     def graph(self):
         return self._graph
+
 
     def merge(self,
             data: dict,
@@ -61,6 +63,7 @@ class Merger():
                 self.graph.add((subj, "type", cat), source = source)
             # Create the OBS uri
 
+
     def init_graph(self):
         """
         Create the basic classes (like the list of sources of the project)
@@ -71,13 +74,13 @@ class Merger():
         G = "geology"
         P = "planetary sciences"
         O = "other, generic"
+
         COMMUNITIES = {
                 "A": {"label": A, "alliance": "IVOA"},
                 "H": {"label": H, "alliance": "IHDEA"},
                 "G": {"label": G, "alliance": "OGC"},
                 "P": {"label": P, "alliance": "IPDA"},
                 "O": {"label": O}}
-
 
         SOURCES = {
             AasExtractor.URI: {"url": AasExtractor.URL,
@@ -101,16 +104,17 @@ class Merger():
         self.merge(COMMUNITIES, cat = "community")
         self.merge(SOURCES, cat = "facility list")
 
+
 def main(input_ontology: str = ""):
     merger = Merger(input_ontology)
 
     # Extract for those sources:
     extractors = [
-        AasExtractor,
-        IauMpcExtractor,
-        NaifExtractor,
+        #AasExtractor,
+        #IauMpcExtractor,
+        #NaifExtractor,
         PdsExtractor,
-        SpaseExtractor,
+        #SpaseExtractor,
     ]
 
     for Extractor in extractors:
@@ -119,6 +123,7 @@ def main(input_ontology: str = ""):
         merger.merge(data, source = extractor)
 
     print(merger.graph.serialize())
+
 
 if __name__ == "__main__":
     parser = ArgumentParser(
