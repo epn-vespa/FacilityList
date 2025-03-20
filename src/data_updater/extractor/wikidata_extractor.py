@@ -15,9 +15,13 @@ import sys
 
 from SPARQLWrapper import SPARQLWrapper, JSON
 from extractor.cache import VersionManager, CacheManager
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
+
 import certifi
 import urllib
-from tqdm import tqdm
+import multiprocessing
+
 
 
 class WikidataExtractor():
@@ -182,9 +186,23 @@ class WikidataExtractor():
         # Also get versions that were not refreshed
         older = controls["results"].keys() - latest
         print("No need to update", len(older), "entities.")
+
+        """
         for wikidata_uri in tqdm(older):
             data = self._extract_entity(wikidata_uri)
             results[data["label"]] = data
+        return results
+        """
+        # Paralellize entity extraction if the cache already has .json files
+        # for most wikidata_uri.
+        # FIXME this may crash if there is a control_file_latest.json
+        # but not cached json files!
+        with ThreadPoolExecutor() as executor:
+            futures = {executor.submit(self._extract_entity, wikidata_uri):
+                    wikidata_uri for wikidata_uri in older}
+            for future in tqdm(as_completed(futures), total = len(futures)):
+                data = future.result()
+                results[data["label"]] = data
         return results
 
     def _get_results(self,
@@ -252,7 +270,7 @@ class WikidataExtractor():
                 if lan == "en":
                     main_label = label
                 else:
-                    alt_labels.add(label + '@' + language["language"])
+                    alt_labels.add(label + '@' + lan)
             aliases = value["aliases"]
             for language in aliases.values():
                 for alias in language:
@@ -266,8 +284,9 @@ class WikidataExtractor():
                 if desc["language"] == "en": # TODO add other descs with @language ?
                     data["description"] = desc["value"]
 
-            data["label"] = main_label,
+            data["label"] = main_label
             data["uri"] = f"https://wikidata.org/wiki/{code}"
+            data["code"] = code
 
             # Other properties
             property_items = value["claims"]
@@ -331,11 +350,7 @@ class WikidataExtractor():
         for binding in bindings:
             item_uri, item_label, modified_date = [binding[k]["value"]
                                                    for k in ['itemURI', 'itemLabel', 'modifiedDate']]
-            """
-            # if there is a duplicate itemURI (should not happen), print out the extra data:
-            if item_uri in control_data["results"].keys():
-                print(item_uri, control_data["results"][item_uri], item_label, modified_date)
-            """
+
             # Add data to results dict
             control_data["results"][item_uri] = dict([
                 ("label", item_label),
