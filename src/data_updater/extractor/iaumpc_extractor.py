@@ -22,6 +22,9 @@ class IauMpcExtractor():
     # URI to save entities from this source
     NAMESPACE = "iaumpc"
 
+    # Folder name to save cache/ and data/
+    CACHE = "IAU-MPC/"
+
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
 
@@ -32,7 +35,8 @@ class IauMpcExtractor():
         """
         Extract the page content into a dictionary.
         """
-        content = CacheManager.get_page(IauMpcExtractor.URL)
+        content = CacheManager.get_page(IauMpcExtractor.URL,
+                                        list_name = self.CACHE)
 
         if not content:
             return dict()

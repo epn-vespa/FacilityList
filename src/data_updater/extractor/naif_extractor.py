@@ -23,6 +23,9 @@ class NaifExtractor():
     # URI to save entities from this source
     NAMESPACE = "naif"
 
+    # Folder name to save cache/ and data/
+    CACHE = "NAIF/"
+
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "spacecraft"
 
@@ -33,7 +36,8 @@ class NaifExtractor():
         """
         Extract the page content into a dictionary.
         """
-        content = CacheManager.get_page(NaifExtractor.URL)
+        content = CacheManager.get_page(NaifExtractor.URL,
+                                        list_name = self.CACHE)
 
         if not content:
             return dict()

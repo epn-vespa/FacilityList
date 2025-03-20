@@ -19,6 +19,7 @@ from extractor.iaumpc_extractor import IauMpcExtractor
 from extractor.naif_extractor import NaifExtractor
 from extractor.pds_extractor import PdsExtractor
 from extractor.spase_extractor import SpaseExtractor
+from extractor.wikidata_extractor import WikidataExtractor
 
 
 class Merger():
@@ -97,7 +98,10 @@ class Merger():
                                "is_authoritative_for": [P]},
             SpaseExtractor.URI: {"url": SpaseExtractor.URL,
                                  "community": [H, P],
-                                 "is_autoritative_for": [H]}}
+                                 "is_autoritative_for": [H]},
+            WikidataExtractor.URI: {"url": WikidataExtractor.URL,
+                                    "community": [A, H, G, P, O]}} # Not authoritative
+
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.
 
@@ -110,11 +114,12 @@ def main(input_ontology: str = ""):
 
     # Extract for those sources:
     extractors = [
-        #AasExtractor,
-        #IauMpcExtractor,
-        #NaifExtractor,
+        AasExtractor,
+        IauMpcExtractor,
+        NaifExtractor,
         PdsExtractor,
-        #SpaseExtractor,
+        SpaseExtractor,
+        WikidataExtractor
     ]
 
     for Extractor in extractors:
@@ -122,7 +127,9 @@ def main(input_ontology: str = ""):
         data = extractor.extract()
         merger.merge(data, source = extractor)
 
-    print(merger.graph.serialize())
+    turtle = merger.graph.serialize()
+    with open("output.ttl", 'w') as file:
+        file.write(turtle)
 
 
 if __name__ == "__main__":

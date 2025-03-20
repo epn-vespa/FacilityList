@@ -43,6 +43,9 @@ class SpaseExtractor():
     # URI to save this source as an entity
     URI = "SPASE_list"
 
+    # Folder name to save cache/ and data/
+    CACHE = "SPASE/"
+
     # URI to save entities from this source
     NAMESPACE = "spase"
 
@@ -72,10 +75,12 @@ class SpaseExtractor():
         Extract the github content into a dictionary.
         """
         # pull if not exist
-        CacheManager.git_pull(self.URL, self.GIT_REPO)
+        CacheManager.git_pull(self.URL,
+                              self.GIT_REPO,
+                              list_name = self.CACHE)
 
-        # get files from the git repo
-        files = self._list_files(CacheManager.CACHE + self.GIT_REPO)
+        # get files from the git repo that are Observatory .json
+        files = self._list_files(CacheManager.CACHE + self.CACHE + self.GIT_REPO)
 
         result = dict()
 
@@ -97,9 +102,9 @@ class SpaseExtractor():
             alt_labels = set()
 
             for key, values in extract_items(dict_content):
-                if key not in SpaseExtractor.FACILITY_ATTRS:
+                if key not in self.FACILITY_ATTRS:
                     continue
-                key = SpaseExtractor.FACILITY_ATTRS.get(key)
+                key = self.FACILITY_ATTRS.get(key)
                 if type(values) == str:
                     values = [values]
                 for value in values:
@@ -183,7 +188,7 @@ class SpaseExtractor():
         """
         data = dict()
         # Remove .json & add "/"
-        label = identifier.split(SpaseExtractor.KEEP_FOLDER)[1]
+        label = identifier.split(self.KEEP_FOLDER)[1]
         label = label.split(".json")[0]
         label = re.sub(r"[_/]", " ", label).strip()
         data = {"label": label,
@@ -207,7 +212,7 @@ class SpaseExtractor():
             visited_folders = set()
         for root, dirs, files in os.walk(folder):
             for file in files:
-                if SpaseExtractor.KEEP_FOLDER in folder and file.endswith(".json"):
+                if self.KEEP_FOLDER in folder and file.endswith(".json"):
                     result.add(root + '/' + file)
             for dir in dirs:
                 # TODO ignore the Deprecated folder ?

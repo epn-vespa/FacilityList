@@ -23,6 +23,9 @@ class AasExtractor():
     # URI to save entities from this source
     NAMESPACE = "aas"
 
+    # Folder name to save cache/ and data/
+    CACHE = "AAS/"
+
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
 
@@ -54,7 +57,8 @@ class AasExtractor():
         """
         Extract the page content into a dictionary.
         """
-        content = CacheManager.get_page(AasExtractor.URL)
+        content = CacheManager.get_page(AasExtractor.URL,
+                                        list_name = self.CACHE)
 
         if not content:
             return dict()

@@ -16,8 +16,8 @@ import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
 from extractor.cache import VersionManager, CacheManager
 import certifi
-import requests
 import urllib
+from tqdm import tqdm
 
 
 class WikidataExtractor():
@@ -28,6 +28,9 @@ class WikidataExtractor():
 
     # URI to save entities from this source
     NAMESPACE = "wikidata"
+
+    # Folder name to save cache/ and data/
+    CACHE = "Wikidata/"
 
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
@@ -147,36 +150,39 @@ class WikidataExtractor():
         """
         Extract wikidata content into a dictionary.
         """
+        print("Extracting wikidata entities...")
         controls = self._get_controls()
 
         # Remove manually excluded entities from the exclusion file.
         self._apply_exclusions(controls)
 
+        print(f"Found {len(controls["results"])} entities.")
+
         # get newer versions' Wikidata URIs
-        latest = VersionManager.get_newer_keys(last_version_file = WikidataExtractor._CONTROL_FILE,
-                                               new_version = controls)
+        latest = VersionManager.get_newer_keys(last_version_file = self._CONTROL_FILE,
+                                               new_version = controls,
+                                               list_name = self.CACHE)
 
         # TODO save those files in data/ or cache/
 
         # Dictionary to save entities that were succesfully downloaded & saved
-        downloaded_and_saved = dict()
         results = dict()
-        print("Going to update", len(latest), "elements")
-        for wikidata_uri in latest:
+        print("Ready to update", len(latest), "entities.")
+        for wikidata_uri in tqdm(latest):
             data = self._extract_entity(wikidata_uri)
             if data:
                 # Downloaded page successfully.
                 # Refresh the version at each loop to keep track of what
                 # has worked in case of crash.
-                VersionManager.refresh(last_version_file = WikidataExtractor._CONTROL_FILE,
-                                       new_version = {wikidata_uri: controls["results"][wikidata_uri]})
+                VersionManager.refresh(last_version_file = self._CONTROL_FILE,
+                                       new_version = {wikidata_uri: controls["results"][wikidata_uri]},
+                                       list_name = self.CACHE)
                 results[data["label"]] = data
 
         # Also get versions that were not refreshed
         older = controls["results"].keys() - latest
-        print("No need to update", len(older))
-        for wikidata_uri in older:
-            wikidata_item = wikidata_uri.split('/')[-1]
+        print("No need to update", len(older), "entities.")
+        for wikidata_uri in tqdm(older):
             data = self._extract_entity(wikidata_uri)
             results[data["label"]] = data
         return results
@@ -189,8 +195,8 @@ class WikidataExtractor():
         Keyword arguments:
         query -- the SPARQL query
         """
-        sparql = SPARQLWrapper(WikidataExtractor._ENDPOINT_URL,
-                               agent = WikidataExtractor._USER_AGENT)
+        sparql = SPARQLWrapper(self._ENDPOINT_URL,
+                               agent = self._USER_AGENT)
         sparql.setQuery(query)
         sparql.setReturnFormat(JSON) # TODO another format ?
         # Use certifi certificates
@@ -241,21 +247,18 @@ class WikidataExtractor():
             labels = value["labels"]
             alt_labels = set()
             for language in labels.values():
-                print(language)
                 label = language["value"]
                 lan = language["language"]
                 if lan == "en":
                     main_label = label
                 else:
-                    alt_labels.add(label + language["language"])
+                    alt_labels.add(label + '@' + language["language"])
             aliases = value["aliases"]
-            print(aliases)
             for language in aliases.values():
                 for alias in language:
-                    alt_labels.add(alias["value"] + "@" + alias["language"])
+                    alt_labels.add(alias["value"] + '@' + alias["language"])
             if alt_labels:
                 data["alt_label"] = alt_labels
-                print("alt labels:", alt_labels)
 
             # Description
             descriptions = value["descriptions"]
@@ -264,7 +267,7 @@ class WikidataExtractor():
                     data["description"] = desc["value"]
 
             data["label"] = main_label,
-            data["code"] = code
+            data["uri"] = f"https://wikidata.org/wiki/{code}"
 
             # Other properties
             property_items = value["claims"]
@@ -284,17 +287,20 @@ class WikidataExtractor():
                     property_data = property_items[property_id]
                     data[property_name] = []
                     for prop in property_data:
-                        datatype = prop["mainsnak"]["datatype"]
-                        if datatype == "external-id":
-                            property_value = prop["mainsnak"]["datavalue"]["value"]
-                        elif datatype == "wikibase-item":
-                            property_value = prop["mainsnak"]["datavalue"]["value"]["id"]
-                        else:
-                            print(f"Warning {property_id}({property_name}) not parsed. datatype: {datatype}")
-                            property_value = None
-                        data[property_name].append(property_value)
-            #print("DATA:", data)
-            #exit()
+                        try:
+                            datatype = prop["mainsnak"]["datatype"]
+
+                            if datatype == "external-id":
+                                property_value = prop["mainsnak"]["datavalue"]["value"]
+                            elif datatype == "wikibase-item":
+                                property_value = prop["mainsnak"]["datavalue"]["value"]["id"]
+                            else:
+                                print(f"Warning {property_id}({property_name}) not parsed. datatype: {datatype}")
+                                property_value = None
+                            data[property_name].append(property_value)
+                        except KeyError:
+                            # Malformated WikiData json (missing keys)
+                            continue
         return data
 
 
@@ -314,15 +320,13 @@ class WikidataExtractor():
             "results": dict()
         }
 
-        query_control = WikidataExtractor._QUERY_CONTROL
+        query_control = self._QUERY_CONTROL
         try:
             query_result = self._get_results(query_control)
         except Exception as e:
             raise(e)
 
         bindings = query_result["results"]["bindings"]
-        print("found", len(bindings), "results.")
-
 
         for binding in bindings:
             item_uri, item_label, modified_date = [binding[k]["value"]
@@ -340,7 +344,6 @@ class WikidataExtractor():
 
         control_data["results_count"] = len(bindings)
 
-        # TODO request to the Wikidata page to get versions (_SELECT_MAIN_SIMPLE)
         return control_data
 
 
@@ -357,6 +360,7 @@ class WikidataExtractor():
         wikidata_item = wikidata_uri.split('/')[-1]
         wikidata_url_json = f"https://www.wikidata.org/wiki/Special:EntityData/{wikidata_item}.json"
         content = CacheManager.get_page(wikidata_url_json,
+                                        list_name = self.CACHE,
                                         from_cache = False)
         # CacheManager.save_cache(content, wikidata_url_json)
 
@@ -375,4 +379,3 @@ class WikidataExtractor():
 if __name__ == "__main__":
     ex = WikidataExtractor()
     ex.extract()
-

@@ -5,7 +5,7 @@ Author:
 
 from typing import Type, Union, Tuple
 from rdflib import Graph as G, Namespace, Literal, Node, URIRef
-from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO
+from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT
 
 from utils import standardize_uri, cut_acronyms
 import warnings
@@ -26,8 +26,9 @@ class OntologyMapping():
     # Mapping from dictionary keys to ontology properties.
     # Properties that are not mapped belong to the OBS namespace.
     _MAPPING = {
-        "code": SKOS.notation, # for non-ontological external resources
+        "code": SKOS.notation, # SKOS.exactMatch, # for non-ontological external resources
         "uri": OWL.sameAs, # for ontological external resources
+        "equivalent_class": OWL.equivalentClass, # for resources that are the same
         "url": SDO.url, # facility-list, PDS, SPASE
         "type": RDF.type,
         "label": SKOS.prefLabel,
@@ -43,6 +44,9 @@ class OntologyMapping():
         "country": SDO.addressCountry, # PDS
         "latitude": _GEO.latitude, # IAU-MPC, SPASE
         "longitude": _GEO.longitude, # IAU-MPC, SPASE
+        "start_date": DCAT.startDate, # SPASE
+        "end_date": DCAT.endDate,
+        "stop_date": DCAT.endDate,
     }
     #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 

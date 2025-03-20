@@ -49,15 +49,17 @@ class CacheManager():
     CACHE = str(Path(__file__).parent.parent.parent.parent / 'cache') + '/' # "../../cache/"
 
     def get_page(url: str,
+                 list_name: str,
                  from_cache: bool = True) -> str:
         """
         Get a page from cache if it is saved in cache, else scrap it online.
 
         Keyword arguments:
         url -- the URL of the page.
+        list_name -- used to access the right folder of the cache.
         from_cache -- whether to get content from cache if it exists.
         """
-        cache_path = CacheManager.get_cache_path(url)
+        cache_path = CacheManager._get_cache_path(url, list_name)
         content = ""
         if from_cache and glob.glob(cache_path):
             with open(cache_path, 'r') as file:
@@ -69,19 +71,26 @@ class CacheManager():
         return content
 
 
-    def get_cache_path(url: str) -> str:
+    def _get_cache_path(url: str,
+                        list_name: str) -> str:
         """
         Get the cache's path from the url.
         The cache folder is located at the root of the project: /cache
 
         Keyword arguments:
         url -- the URL of the page.
+        list_name -- used to access the right folder of the cache.
         """
+        # Create folder CACHE
+        Path(CacheManager.CACHE + list_name).mkdir(parents = True,
+                                                   exist_ok = True)
+
+        # Create folder list_name
         cache_path = re.sub(r"[^\w\d]+", "_", url)
         if cache_path[-1] == '_':
             cache_path = cache_path[:-1]
         cache_path = cache_path.lower()
-        cache_path = CacheManager.CACHE + cache_path + ".html"
+        cache_path = CacheManager.CACHE + list_name + cache_path + ".html"
         return cache_path
 
 
@@ -121,7 +130,8 @@ class CacheManager():
 
 
     def git_pull(url: str,
-                 git_repo: str):
+                 git_repo: str,
+                 list_name: str):
         """
         Pull a github repository and save it in the cache.
         The name of the created folder is git_repo.
@@ -130,17 +140,18 @@ class CacheManager():
         Keyword arguments:
         url -- the github repository's url (clone)
         git_repo -- the name of the repository / folder of the repository
+        list_name -- used to access the right folder of the cache.
         """
         if url.endswith('/'):
             url = url[:-1]
         url += ".git"
-        git_repo_folder = CacheManager.CACHE + git_repo
+        git_repo_folder = CacheManager.CACHE + list_name + git_repo
         if glob.glob(git_repo_folder):
             command = ["git", "pull"]
             cwd = git_repo_folder
         else:
             command = ["git", "clone", url]
-            cwd = CacheManager.CACHE
+            cwd = CacheManager.CACHE + list_name
         messages = subprocess.Popen(
             command,
             cwd = cwd,
@@ -158,10 +169,13 @@ class VersionManager():
     contains utility functions to check for updates.
     """
 
+    DATA = str(Path(__file__).parent.parent.parent.parent / 'data') + '/' # "../../data/"
+
     _TODAY = datetime.datetime.now(tz=datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     def get_newer_keys(last_version_file: str,
-                       new_version: dict) -> set:
+                       new_version: dict,
+                       list_name: str) -> set:
         """
         Get a list of keys which are newer compared to the last version date
         of the version file and necessitate to be refreshed.
@@ -169,10 +183,11 @@ class VersionManager():
         Keyword arguments:
         last_version_file -- the json file containing last versions for each uri
         new_version -- the dict with newer versions
+        list_name -- used to access the right folder of the cache.
         """
         result = set()
 
-        # last_version_file = CacheManager.CACHE + last_version_file
+        last_version_file = VersionManager.DATA + list_name + last_version_file
 
         if not os.path.exists(last_version_file):
             # We create the path to save the versions from the
@@ -192,7 +207,8 @@ class VersionManager():
 
 
     def refresh(last_version_file: str,
-                new_version: dict):
+                new_version: dict,
+                list_name: str):
         """
         Replace URIs that are in newer_version dict into last_version_file.
 
@@ -202,6 +218,9 @@ class VersionManager():
         """
         # Open last_version_file with read+write access
         save_last_version = False
+
+        last_version_file = VersionManager._get_path(last_version_file,
+                                                     list_name)
         if os.path.exists(last_version_file):
             with open(last_version_file, "r") as f:
                 content = f.read()
@@ -219,6 +238,8 @@ class VersionManager():
                         # If the file is malformated
                         logging.error("FATAL - Error while decoding", last_version_file)
                         raise(json.JSONDecodeError)
+                        # to ignore this and still continue even if
+                        # the last_version_file is corrupted:
                         return # Still continue to run code
             if save_last_version:
                 with open(last_version_file, "w") as f:
@@ -233,6 +254,20 @@ class VersionManager():
                 "results": new_version["results"]
             }
             json.dump(new_version, f, indent = 4)
+
+
+    def _get_data_path(file: str,
+                  list_name: str) -> str:
+        """
+        Get the data folder's path from the url.
+        The data folder is located at the root of the project: /data
+
+        Keyword arguments:
+        file -- the name of the file to access.
+        list_name -- used to access the right folder of the data folder.
+        """
+        return VersionManager.DATA + list_name + file
+
 
 if __name__ == "__main__":
     pass

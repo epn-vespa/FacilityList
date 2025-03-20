@@ -22,6 +22,9 @@ class PdsExtractor():
     # URI to save entities from this source
     NAMESPACE = "pds"
 
+    # Folder name to save cache/ and data/
+    CACHE = "PDS/"
+
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
 
@@ -54,7 +57,7 @@ class PdsExtractor():
 
         for context_type in PdsExtractor.CONTEXT_TYPES:
             url = PdsExtractor.URL + context_type
-            # content = CacheManager.get_page(PdsExtractor.URL)
+
             links = self._get_links_pds(url)
 
             links = [link for link in links
@@ -80,7 +83,8 @@ class PdsExtractor():
 
                 # Download XML file for href
                 resource_url = PdsExtractor.URL + context_type + '/' + href
-                content = CacheManager.get_page(resource_url)
+                content = CacheManager.get_page(resource_url,
+                                                list_name = self.CACHE)
 
                 # Remove default namespace for lookup
                 content = re.sub(r'xmlns="[^"]+"', '', content)
@@ -214,7 +218,7 @@ class PdsExtractor():
         """
 
         # get pds_url_f
-        content = CacheManager.get_page(pds_url_f)
+        content = CacheManager.get_page(pds_url_f, list_name = self.CACHE)
 
         # parse content with BeautifulSoup
         soup = BeautifulSoup(content, "html.parser")
