@@ -278,7 +278,7 @@ class Graph():
         elif type(subj) == URIRef:
             subj_uri = subj
         else:
-            raise TypeError(f"Subject can only be a str or an URIRef.")
+            raise TypeError(f"Subject ({subj}) can only be a str or an URIRef.")
 
         if predicate is None:
             raise ValueError(f"Predicate can not be None.")

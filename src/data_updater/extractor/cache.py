@@ -219,8 +219,8 @@ class VersionManager():
         # Open last_version_file with read+write access
         save_last_version = False
 
-        last_version_file = VersionManager._get_path(last_version_file,
-                                                     list_name)
+        last_version_file = VersionManager._get_data_path(last_version_file,
+                                                          list_name)
         if os.path.exists(last_version_file):
             with open(last_version_file, "r") as f:
                 content = f.read()

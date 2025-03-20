@@ -109,7 +109,8 @@ class Merger():
         self.merge(SOURCES, cat = "facility list")
 
 
-def main(input_ontology: str = ""):
+def main(input_ontology: str = "",
+         output_ontology: str = "output.ttl"):
     merger = Merger(input_ontology)
 
     # Extract for those sources:
@@ -128,7 +129,7 @@ def main(input_ontology: str = ""):
         merger.merge(data, source = extractor)
 
     turtle = merger.graph.serialize()
-    with open("output.ttl", 'w') as file:
+    with open(output_ontology, 'w') as file:
         file.write(turtle)
 
 
@@ -143,5 +144,12 @@ if __name__ == "__main__":
             type = str,
             required = False,
             help = "Input ontology that will be merged with new data.")
+    parser.add_argument("-o",
+            "--output-ontology",
+            dest = "output_ontology",
+            default = "",
+            type = str,
+            required = False,
+            help = "Output ontology file to save the merged data.")
     args = parser.parse_args()
-    main(args.input_ontology)
+    main(args.input_ontology, args.output_ontology)
