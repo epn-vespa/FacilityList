@@ -59,9 +59,11 @@ class Merger():
             for predicate, obj in features.items():
                 self.graph.add((subj, predicate, obj), source = source)
             if "type" not in features:
-                if cat == "ufo" and hasattr(source, "DEFAULT_TYPE"):
-                    cat = source.DEFAULT_TYPE
-                self.graph.add((subj, "type", cat), source = source)
+                if (not hasattr(source, "IS_ONTOLOGICAL") or
+                    not source.IS_ONTOLOGICAL):
+                    if cat == "ufo" and hasattr(source, "DEFAULT_TYPE"):
+                        cat = source.DEFAULT_TYPE
+                    self.graph.add((subj, "type", cat), source = source)
             # Create the OBS uri
 
 
@@ -115,11 +117,11 @@ def main(input_ontology: str = "",
 
     # Extract for those sources:
     extractors = [
-        AasExtractor,
-        IauMpcExtractor,
-        NaifExtractor,
-        PdsExtractor,
-        SpaseExtractor,
+        #AasExtractor,
+        #IauMpcExtractor,
+        #NaifExtractor,
+        #PdsExtractor,
+        #SpaseExtractor,
         WikidataExtractor
     ]
 
@@ -147,7 +149,7 @@ if __name__ == "__main__":
     parser.add_argument("-o",
             "--output-ontology",
             dest = "output_ontology",
-            default = "",
+            default = "output.ttl",
             type = str,
             required = False,
             help = "Output ontology file to save the merged data.")

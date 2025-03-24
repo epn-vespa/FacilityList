@@ -167,5 +167,19 @@ def extract_items(d: dict) -> List[Tuple]:
             result.append((key, value))
     return result
 
+def get_datetime_from_iso(datetime_str: str):
+    """
+    Fix datetime string :
+        month 00 day 00 -> 1st of January
+        & remove '+' sign
+
+    Keyword arguments:
+    datetime_str -- the ISO datetime string
+    """
+    if datetime_str.startswith('+'): # datetime module
+        datetime_str = datetime_str[1:]
+    return datetime_str.replace("-00T", "-01T").replace("-00-", "-01-")
+
+
 if __name__ == "__main__":
     pass

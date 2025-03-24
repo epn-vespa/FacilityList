@@ -7,21 +7,24 @@ Author:
 """
 
 
-import datetime
+from datetime import datetime
+from datetime import UTC
 import json
 import os
 import ssl
 import sys
+import re
 
+from typing import List
 from SPARQLWrapper import SPARQLWrapper, JSON
 from extractor.cache import VersionManager, CacheManager
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
+from utils import get_datetime_from_iso
+from rdflib import XSD, Literal
 
 import certifi
 import urllib
-import multiprocessing
-
 
 
 class WikidataExtractor():
@@ -35,6 +38,9 @@ class WikidataExtractor():
 
     # Folder name to save cache/ and data/
     CACHE = "Wikidata/"
+
+    # If is ontological, all superclasses will use the wikidata namespace
+    IS_ONTOLOGICAL = True
 
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
@@ -170,10 +176,10 @@ class WikidataExtractor():
         # TODO save those files in data/ or cache/
 
         # Dictionary to save entities that were succesfully downloaded & saved
-        results = dict()
+        result = dict()
         print("Ready to update", len(latest), "entities.")
         for wikidata_uri in tqdm(latest):
-            data = self._extract_entity(wikidata_uri)
+            data = self._extract_entity(wikidata_uri, result)
             if data:
                 # Downloaded page successfully.
                 # Refresh the version at each loop to keep track of what
@@ -181,7 +187,7 @@ class WikidataExtractor():
                 VersionManager.refresh(last_version_file = self._CONTROL_FILE,
                                        new_version = {wikidata_uri: controls["results"][wikidata_uri]},
                                        list_name = self.CACHE)
-                results[data["label"]] = data
+                result[data["label"]] = data
 
         # Also get versions that were not refreshed
         older = controls["results"].keys() - latest
@@ -198,12 +204,12 @@ class WikidataExtractor():
         # FIXME this may crash if there is a control_file_latest.json
         # but not cached json files!
         with ThreadPoolExecutor() as executor:
-            futures = {executor.submit(self._extract_entity, wikidata_uri):
+            futures = {executor.submit(self._extract_entity, wikidata_uri, result):
                     wikidata_uri for wikidata_uri in older}
             for future in tqdm(as_completed(futures), total = len(futures)):
                 data = future.result()
-                results[data["label"]] = data
-        return results
+                result[data["label"]] = data
+        return result
 
     def _get_results(self,
                      query: str) -> dict:
@@ -246,10 +252,19 @@ class WikidataExtractor():
 
 
     def _properties_to_dict(self,
-                            entity_response: str) -> dict:
+                            entity_response: str,
+                            result: dict) -> dict:
         """
         Transform the response of a request for a Wikidata entity
         into a dictionary compatible with the ontology merger.
+
+        Some relations point to a Wikidata URI that can be resolved and added
+        to the result dict.
+        (like: sub_class_of, has_part, is_part_of, unit)
+
+        Keyword arguments:
+        entity_response -- json string of the wikidata response of an entity
+        result -- dictionary of all data.
         """
         if not entity_response:
             return dict()
@@ -288,6 +303,11 @@ class WikidataExtractor():
             data["uri"] = f"https://wikidata.org/wiki/{code}"
             data["code"] = code
 
+            # English wikipedia page
+            sitelinks = value['sitelinks']
+            if 'enwiki' in sitelinks:
+                data["ext_ref"] = sitelinks['enwiki']['url']
+
             # Other properties
             property_items = value["claims"]
             property_ids = {
@@ -297,6 +317,23 @@ class WikidataExtractor():
                 "P2956": "ObsCode_MPC_ID",
                 "P527": "has_part",
                 "P361": "is_part_of",
+                #"P17": "country", # can be found using coordinate_location
+                #"P276": "location", # same
+                "P625": "coordinate_location",
+                "P1619": "start_date", # date of official opening
+                "P571": "start_date", # time when an entity begins to exist. Not same as P1619.
+                # "P2044": "altitude", # elevation above see level
+                "P619": "launch_date", # UTC date of spacecraft launch
+                "P1427": "launch_place", # start point
+                "P856": "url", # official website
+                #"P137": "operator", # operator
+                #"P397": "orbites", # parent astronomical body
+                #"P1096": "orbital_eccentricity", # orbital eccentricity
+                #"P2045": "orbital_inclination", # orbital inclination
+                #"P2146": "orbital_period", # orbital period
+                #"P2233": "semimajor_axis_of_orbit", # semi-major axis of an orbit
+                #"P2243": "apoapsis",
+                #"P2244": "periapsis",
             }
 
             for property_id in property_items.keys():
@@ -304,23 +341,120 @@ class WikidataExtractor():
                     # Only keep the ids mentioned above
                     property_name = property_ids[property_id]
                     property_data = property_items[property_id]
-                    data[property_name] = []
+                    # data[property_name] = []
                     for prop in property_data:
+                        property_value = ""
                         try:
                             datatype = prop["mainsnak"]["datatype"]
-
-                            if datatype == "external-id":
+                            value = prop["mainsnak"]["datavalue"]["value"] 
+                            if (type(value) == dict
+                                and "id" in value
+                                and value['id'] == "Q797476"):
+                                # property_name = spatial_events[prop["mainsnak"]["datavalue"]["value"]["id"]]
+                                # rocket launch
+                                property_name = "launch_date"
+                                property_value = Literal(get_datetime_from_iso(
+                                    prop["qualifiers"]["P585"][0]["datavalue"]["value"]["time"]),
+                                    datatype = XSD.dateTime)
+                            elif datatype == "external-id":
                                 property_value = prop["mainsnak"]["datavalue"]["value"]
                             elif datatype == "wikibase-item":
-                                property_value = prop["mainsnak"]["datavalue"]["value"]["id"]
+                                property_value = self._get_label(prop["mainsnak"]["datavalue"]["value"]["id"], result)
+                            elif datatype == "quantity":
+                                property = prop["mainsnak"]["datavalue"]["value"]
+                                property_value = property["amount"]
+                                if "unit" in property:
+                                    property_value += " " + self._get_label(property["unit"])
+                                    # do not add the unit as an entity, only get its label
+                            elif datatype == "time":
+                                property_value = Literal(get_datetime_from_iso(
+                                    prop["mainsnak"]["datavalue"]["value"]["time"]),
+                                    datatype = XSD.dateTime)
+                            elif datatype == "globe-coordinate":
+                                data["latitude"] = prop["mainsnak"]["datavalue"]["value"]["latitude"]
+                                data["longitude"] = prop["mainsnak"]["datavalue"]["value"]["longitude"]
+                            elif datatype == "url":
+                                property_value = prop["mainsnak"]["datavalue"]["value"]
                             else:
                                 print(f"Warning {property_id}({property_name}) not parsed. datatype: {datatype}")
                                 property_value = None
-                            data[property_name].append(property_value)
+                            
+                            if property_value:
+                                """
+                                if re.match(r"^Q\d+$", property_value):
+                                    # The value is an URI. Get the URI's label
+                                    # and add it (label, uri) to our ontology.
+
+                                    if property_name in ["type", "has_part", "is_part_of"]:
+                                        property_value = self._get_label(property_value, result)
+                                    else:
+                                        property_value = self._get_label(property_value)
+                                    property_value = self._get_label(property_value, result)
+                                """
+                                if property_name in data:
+                                    data[property_name].append(property_value)
+                                else:
+                                    data[property_name] = [property_value]
                         except KeyError:
                             # Malformated WikiData json (missing keys)
                             continue
         return data
+
+
+    LABEL_BY_WIKIDATA_ITEM = dict()
+    def _get_label(self,
+                   wikidata_item: str,
+                   result: dict = None) -> str:
+        """
+        Returns the label of a Wikidata entity and add the wikidata entity
+        into the result dict (only add its label and uri).
+
+        Keyword arguments:
+        wikidata_item -- the URI of the Wikidata entity (Qxxxxxxx)
+        result -- the result dict. If set, we add a data inside of it.
+        """
+        label = ""
+        if wikidata_item in self.LABEL_BY_WIKIDATA_ITEM:
+            label = self.LABEL_BY_WIKIDATA_ITEM[wikidata_item]
+            return label # the dict for this data is already in result dict
+        else:
+            wikidata_url_json = f"https://www.wikidata.org/wiki/Special:EntityData/{wikidata_item}.json"
+            content = CacheManager.get_page(wikidata_url_json,
+                                            list_name = self.CACHE,
+                                            from_cache = False)
+            entities = json.loads(content)
+
+            entities = entities["entities"]
+
+            alt_labels = []
+            for key, value in entities.items():
+                if label:
+                    break
+                # Label & alt labels
+                labels = value["labels"]
+                for language in labels.values():
+                    lab = language["value"]
+                    lan = language["language"]
+                    if lan == "en":
+                        label = lab
+                        break
+                    else:
+                        alt_labels.append(lab)
+            if not label and alt_labels:
+                # If no English label, return the first other label.
+                label = alt_labels[0]
+        
+        # Prevent requesting wikidata multiple time for
+        # the same item
+        self.LABEL_BY_WIKIDATA_ITEM[wikidata_item] = label
+
+        # Add the entity into result dict if set
+        if result is not None:
+            result[label] = {"label": label,
+                             "code": wikidata_item,
+                             "url": f"https://wikidata.org/wiki/{wikidata_item}"}
+        return label
+
 
 
     def _get_controls(self) -> dict:
@@ -333,7 +467,7 @@ class WikidataExtractor():
         # - the result count
         # - the result data as a dictionary {itemURI: {"label": itemLabel, "modified_date": modifiedDate}}
         control_data = {
-            "processing_date": datetime.datetime.now(tz=datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "processing_date": datetime.now(tz=UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "previous_date": None,
             "results_count": 0,
             "results": dict()
@@ -363,7 +497,8 @@ class WikidataExtractor():
 
 
     def _extract_entity(self,
-                        wikidata_uri: str) -> dict:
+                        wikidata_uri: str,
+                        result: dict) -> dict:
         """
         Connect to the https://www.wikidata.org/wiki/Special:EntityData endpoint
         to get the JSON response from the Wikidata item.
@@ -371,6 +506,7 @@ class WikidataExtractor():
 
         Keyword arguments:
         wikidata_uri -- Wikidata URI (Qxxxxxxx) to retrieve
+        result -- the result dictionary
         """
         wikidata_item = wikidata_uri.split('/')[-1]
         wikidata_url_json = f"https://www.wikidata.org/wiki/Special:EntityData/{wikidata_item}.json"
@@ -384,7 +520,7 @@ class WikidataExtractor():
         # there is no new version to download.
         # Select the wikidata properties to keep and organize
         # them in the data dict.
-        return self._properties_to_dict(content)
+        return self._properties_to_dict(content, result)
 
 
     def __init__(self):
