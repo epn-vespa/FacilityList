@@ -252,10 +252,11 @@ class Graph():
             objtype = None
 
         # Get and save alt labels
-        if source is None:
-            namespace_obj = self.OM.OBS
-        else:
+        if source:
             namespace_obj = self.get_namespace(source.NAMESPACE)
+        else:
+            namespace_obj = self.OM.OBS
+
         if pred == "label" or pred in self.OM.SELF_REF:
             obj = self.get_label_and_save_alt_labels(obj,
                                                      namespace_obj,
@@ -274,17 +275,15 @@ class Graph():
                 if pred == "type":
                     if hasattr(source, "IS_ONTOLOGICAL") and source.IS_ONTOLOGICAL:
                         # The object's namespace is the source's namespace
-                        namespace_obj = namespace_obj
+                        pass
                     else:
                         namespace_obj = self.OM.OBS
                 elif pred == "waveband":
                     # waveband is in IVOA vocabulary so it has its own ns
                     namespace_obj = self.OM.WB
-                else:
-                    namespace_obj = self.get_namespace(namespace_obj)
             else:
                 namespace_obj = self.OM.OBS
-            
+
             obj = self.get_label_and_save_alt_labels(obj,
                                                         namespace_obj,
                                                         language = language)
