@@ -17,16 +17,16 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import List, Set
-from bs4 import BeautifulSoup
+from typing import Set
 from extractor.cache import CacheManager
-import json
+from extractor.extractor import Extractor
 from utils import clean_string, extract_items
+import json
 import re
 import os
 
 
-class SpaseExtractor():
+class SpaseExtractor(Extractor):
 
     # Other URLs
     # URL = "https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher?action=CDAW_ELEMENT_LIST_PANE_ACTION&element="

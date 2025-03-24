@@ -7,11 +7,12 @@ Author:
 """
 from bs4 import BeautifulSoup
 from extractor.cache import CacheManager
+from extractor.extractor import Extractor
 from utils import cut_location
 import math
 
 
-class IauMpcExtractor():
+class IauMpcExtractor(Extractor):
     URL = "https://www.minorplanetcenter.net/iau/lists/ObsCodes.html"
     # Explained data:
     # https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
@@ -73,7 +74,7 @@ class IauMpcExtractor():
                 longitude = float(longitude)
                 if longitude > 180:
                     longitude -= 360
-                data["longitude"] = str(longitude)
+                data["longitude"] = longitude # keep a float
 
             # latitude
             cosinus = line[10:18].strip()
@@ -85,7 +86,7 @@ class IauMpcExtractor():
                 # see https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
                 latitude_rad = math.atan2(float(sinus), float(cosinus))
                 latitude_deg = math.degrees(latitude_rad)
-                data["latitude"] = str(latitude_deg)
+                data["latitude"] = latitude_deg # keep a float
 
             # alt labels
             data["alt_label"] = alt_labels

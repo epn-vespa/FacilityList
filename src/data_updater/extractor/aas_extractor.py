@@ -13,8 +13,9 @@ Author:
 from bs4 import BeautifulSoup
 from utils import cut_location
 from extractor.cache import CacheManager
+from extractor.extractor import Extractor
 
-class AasExtractor():
+class AasExtractor(Extractor):
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
 
     # URI to save this source as an entity (obs:AAS_list)
@@ -90,6 +91,7 @@ class AasExtractor():
             location = row_data["location"]
             if location:
                 data["location"] = [location]
+                # TODO get latitude & longitude from location
             else:
                 continue # TGCC is a computer and has no location.
 

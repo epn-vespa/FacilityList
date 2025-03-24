@@ -7,11 +7,12 @@ Author:
 """
 from bs4 import BeautifulSoup
 from extractor.cache import CacheManager
+from extractor.extractor import Extractor
 from xml.etree import ElementTree as ET
-import re
-from lxml import etree, objectify
 
-class PdsExtractor():
+import re
+
+class PdsExtractor(Extractor):
     # List of documents to scrap
     # URL = "https://pds.nasa.gov/data/pds4/context-pds4/facility/"
     URL = "https://pds.nasa.gov/data/pds4/context-pds4/"

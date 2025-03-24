@@ -13,10 +13,11 @@ Author:
 """
 from bs4 import BeautifulSoup
 from extractor.cache import CacheManager
+from extractor.extractor import Extractor
 from rdflib import Graph
 
 
-class NaifExtractor():
+class NaifExtractor(Extractor):
     URL = "https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/naif_ids.html"
 
     # URI to save this source as an entity

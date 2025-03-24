@@ -4,10 +4,11 @@ Author:
 """
 
 from typing import Type, Union, Tuple
-from rdflib import Graph as G, Namespace, Literal, Node, URIRef
-from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT
+from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
+from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
+from extractor.extractor import Extractor
 
-from utils import standardize_uri, cut_acronyms
+from utils import standardize_uri, cut_acronyms, get_datetime_from_iso
 import warnings
 
 
@@ -19,36 +20,62 @@ class OntologyMapping():
     Also stores other namespaces.
     """
 
-    _OBS = Namespace("http://semanticweb.org/obspm/ontologies/2025/2/VO-schema/obsfacilities#")
+    _OBS = Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://http://www.ivoa.net/rdf/messenger#")
 
     # Mapping from dictionary keys to ontology properties.
     # Properties that are not mapped belong to the OBS namespace.
     _MAPPING = {
-        "code": SKOS.notation, # SKOS.exactMatch, # for non-ontological external resources
-        "uri": OWL.sameAs, # for ontological external resources
-        "equivalent_class": OWL.equivalentClass, # for resources that are the same
-        "url": SDO.url, # facility-list, PDS, SPASE
-        "type": RDF.type,
-        "label": SKOS.prefLabel,
-        "definition": SKOS.definition,
-        "alt_label": SKOS.altLabel,
-        "is_part_of": DCTERMS.isPartOf, # PDS
-        "has_part": DCTERMS.hasPart, # PDS
-        "is_authoritative_for": _OBS.isAuthoritativeFor,
-        "waveband": _OBS.waveband, # AAS
-        "location": _GEO.location, # AAS, IAU-MPC, SPASE
-        "address": SDO.address, # PDS
-        # "city": SDO.addressLocality, #IAU-MPC
-        "country": SDO.addressCountry, # PDS
-        "latitude": _GEO.latitude, # IAU-MPC, SPASE
-        "longitude": _GEO.longitude, # IAU-MPC, SPASE
-        "start_date": DCAT.startDate, # SPASE
-        "end_date": DCAT.endDate,
-        "stop_date": DCAT.endDate,
+        "code": {"pred": SKOS.notation,
+                 "objtype": XSD.string}, # SKOS.exactMatch, # for non-ontological external resources
+        "uri": {"pred": OWL.sameAs,
+                "objtype": XSD.string}, # for ontological external resources
+        "equivalent_class": {"pred": OWL.equivalentClass,
+                             "objtype": None}, # for resources that are the same
+        "url": {"pred": SDO.url,
+                "objtype": XSD.string}, # facility-list, PDS, SPASE
+        "ext_ref": {"pred": FOAF.page,
+                    "objtype": XSD.string}, #SDO.about, # RDFS.seeAlso, # for corpus pages (wikipedia etc)
+        "type": {"pred": RDF.type,
+                 "objtype": URIRef},
+        "label": {"pred": SKOS.prefLabel,
+                  "objtype": XSD.string},
+        "definition": {"pred": SKOS.definition,
+                       "objtype": XSD.string},
+        "alt_label": {"pred": SKOS.altLabel,
+                      "objtype": XSD.string},
+        "is_part_of": {"pred": DCTERMS.isPartOf,
+                       "objtype": URIRef}, # PDS
+        "has_part": {"pred": DCTERMS.hasPart,
+                     "objtype": URIRef}, # PDS
+        "is_authoritative_for": {"pred": _OBS.isAuthoritativeFor,
+                                 "objtype": URIRef},
+        "community": {"pred": _OBS.community,
+                      "objtype": URIRef},
+        "waveband": {"pred": _OBS.waveband,
+                     "objtype": XSD.string}, # AAS
+        "location": {"pred": _GEO.location,
+                     "objtype": XSD.string}, # AAS, IAU-MPC, SPASE
+        "address": {"pred": SDO.address,
+                    "objtype": XSD.string}, # PDS
+        # "city": {"pred": SDO.addressLocality,
+        #          "objtype": XSD.string}, #IAU-MPC
+        "country": {"pred": SDO.addressCountry,
+                    "objtype": XSD.string},# PDS
+        "latitude": {"pred": _GEO.latitude,
+                     "objtype": XSD.float}, # IAU-MPC, SPASE
+        "longitude": {"pred": _GEO.longitude,
+                      "objtype": XSD.float}, # IAU-MPC, SPASE
+        "start_date": {"pred": DCAT.startDate,
+                       "objtype": XSD.dateTime}, # SPASE
+        "end_date": {"pred": DCAT.endDate,
+                     "objtype": XSD.dateTime},
+        "stop_date": {"pred": DCAT.endDate,
+                      "objtype": XSD.dateTime},
+        "launch_date": {"pred": _OBS.launch_date,
+                        "objtype": XSD.dateTime} # Wikidata
     }
-    #_REVERSE_MAPPING = {v: k for k, v in _MAPPING.items()}
 
     # Objects after a REFERENCE predicate will be an URI and not a Literal.
     # SELF_REF's object's URI are standardized, as they use OBS.
@@ -73,25 +100,6 @@ class OntologyMapping():
     @property
     def graph(self):
         return self._graph
-
-
-    def convert_attr(
-            self,
-            attr: Union[str, Node]):
-        """
-        Convert an attribute accordingly to the mapping.
-        For example, if attribute is "definition", returns SKOS.definition.
-
-        Keyword arguments:
-        attr -- the attribute to convert
-        """
-        if type(attr) == str:
-            return OntologyMapping._MAPPING.get(
-                    attr,
-                    self.OBS[attr])
-        else:
-            return attr
-            # return OntologyMapping._REVERSE_MAPPING.get(attr, None)
 
 
     @property
@@ -122,6 +130,28 @@ class OntologyMapping():
     @property
     def SELF_REF(self):
         return self._SELF_REF
+
+
+    def convert_attr(
+            self,
+            attr: str):
+            """
+            Convert an attribute accordingly to the mapping.
+            For example, if attribute is "definition", returns SKOS.definition.
+
+            Keyword arguments:
+            attr -- the attribute to convert
+            """
+            if type(attr) == str:
+                attr = OntologyMapping._MAPPING.get(
+                    attr,
+                    self.OBS[attr])
+                if type(attr) == dict:
+                    attr = attr["pred"]
+                return attr
+            else:
+                return attr
+                # return OntologyMapping._REVERSE_MAPPING.get(attr, None)
 
 
     def __getattr__(
@@ -183,6 +213,103 @@ class Graph():
         return getattr(Graph._graph, attr)
 
 
+    def convert_pred_and_obj(
+            self,
+            pred: str,
+            obj: str,
+            language: str,
+            source: Extractor) -> Tuple:
+        """
+        Convert a predicate and an object accordingly to the mapping.
+        For example, for "definition", predicate becomes SKOS.definition,
+        and obj becomes Literal(obj, datatype = XSD.string, lang = language).
+
+        Keyword arguments:
+        pred -- the predicate to convert
+        obj -- the object to convert
+        language -- the language of the XSD.string of the object if any
+        source -- the extractor used to extract the data
+        """
+        if type(pred) != str:
+            return pred, obj
+
+        pred_objtype = OntologyMapping._MAPPING.get(pred, None)
+        if pred_objtype is None:
+            # The predicate is not mapped, use the OBS namespace
+            # and create the predicate.
+            pred_uri = self.OM.OBS[pred]
+            obj_uri = Literal(obj, lang = language)
+            return pred_uri, obj_uri
+
+        pred_uri = pred_objtype["pred"]
+        objtype = pred_objtype["objtype"]
+        if objtype != XSD.string:
+            language = None
+        elif language is not None:
+            # Constraint in rdflib:
+            # a new term can only have language or objtype
+            objtype = None
+
+        # Get and save alt labels
+        if source is None:
+            namespace_obj = self.OM.OBS
+        else:
+            namespace_obj = self.get_namespace(source.NAMESPACE)
+        if pred == "label" or pred in self.OM.SELF_REF:
+            obj = self.get_label_and_save_alt_labels(obj,
+                                                     namespace_obj,
+                                                     language = language)
+
+        # Convert obj to obj_uri using datatype
+        if objtype != URIRef:
+            if objtype == XSD.dateTime:
+                obj = get_datetime_from_iso(obj)
+            obj_uri = Literal(obj,
+                                lang = language,
+                                datatype = objtype)
+        else:
+            # objtype is URIRef
+            if source:
+                if pred == "type":
+                    if hasattr(source, "IS_ONTOLOGICAL") and source.IS_ONTOLOGICAL:
+                        # The object's namespace is the source's namespace
+                        namespace_obj = namespace_obj
+                    else:
+                        namespace_obj = self.OM.OBS
+                elif pred == "waveband":
+                    # waveband is in IVOA vocabulary so it has its own ns
+                    namespace_obj = self.OM.WB
+                else:
+                    namespace_obj = self.get_namespace(namespace_obj)
+            else:
+                namespace_obj = self.OM.OBS
+            
+            obj = self.get_label_and_save_alt_labels(obj,
+                                                        namespace_obj,
+                                                        language = language)
+            # standardize obj_uri
+            obj = standardize_uri(obj)
+            obj_uri = namespace_obj[obj]
+
+        """
+        if predicate == "label":
+            obj = self.get_label_and_save_alt_labels(obj,
+                                                        namespace_obj,
+                                                        language = language)
+        if predicate in self.OM.SELF_REF:
+            obj = self.get_label_and_save_alt_labels(obj,
+                                                        namespace_obj,
+                                                        language = language)
+            obj_value = namespace_obj[standardize_uri(obj)]
+        elif predicate in self.OM.EXT_REF:
+                # Do not standardize an external URI
+            obj_value = namespace_obj[obj]
+        else:
+            obj_value = Literal(obj, lang = language, type = xsdtype)"
+        """
+        return pred_uri, obj_uri
+
+
     def get_namespace(self,
                       namespace: str) -> Namespace:
         """
@@ -207,7 +334,8 @@ class Graph():
     def get_label_and_save_alt_labels(
             self,
             label: str,
-            namespace: Type) -> str:
+            namespace: Type,
+            language: str = None) -> Tuple[str, str]:
         """
         Returns the label with no alternate label or acronym (short label).
         Add the alt labels to the ontology (acronym and full label) if there
@@ -216,36 +344,39 @@ class Graph():
         Keyword arguments:
         label -- the label of an entity
         namespace -- the namespace of the label
+        language -- the language of the label if any
         """
         short_label, acronym = cut_acronyms(label)
         short_label_uri = standardize_uri(short_label)
         if acronym:
             self.graph.add((namespace[short_label_uri],
                             SKOS.altLabel,
-                            Literal(acronym)))
+                            Literal(acronym, lang = language)))
         if short_label != label:
             self.graph.add((namespace[short_label_uri],
                             SKOS.altLabel,
-                            Literal(label)))
+                            Literal(label, lang = language)))
         return short_label
 
 
     def add(
             self,
             params: Tuple[str, str, str],
-            source: Type = None):
+            source: Extractor = None):
         """
         Add a RDF triple to the graph.
         Override rdflib's Graph.add() method.
         For conversion from a dictionary, the object type has to be specified,
-        as an object can be an ontological reference (URIRef) or a value.
+        as an object can be an ontological reference (URIRef) or a value. If
+        the object is a str that converts to a Literal, it will be parsed
+        on '@' to detect the language.
 
         Keyword arguments:
         params -- a tuple (subj, predicate, obj)
             subj -- the subject of the triple.
             predicate -- the predicate of the triple.
             obj -- the object of the triple.
-        source -- the origin of the added triple (ex: AasExtractor)
+        source -- the extractor of the added triple (ex: AasExtractor)
         """
         if len(params) != 3:
             raise ValueError("params must be a tuple of 3 elements:\
@@ -258,18 +389,11 @@ class Graph():
             # subj is "" or None
             return
 
-        # Get the namespace
+        # Get the namespace of the subject
         if source:
             namespace_subj = self.get_namespace(source.NAMESPACE)
-            if predicate == "type":
-                namespace_obj = self.OM.OBS # Observation Facility
-            elif predicate == "waveband":
-                namespace_obj = self.OM.WB
-            else:
-                namespace_obj = namespace_subj
         else:
             namespace_subj = self.OM.OBS
-            namespace_obj = self.OM.OBS
 
         if type(subj) == str:
             # Convert subject to URI with _OBS
@@ -291,24 +415,39 @@ class Graph():
             objs = list(obj) # convert to list
         else:
             objs = [obj]
+
         for obj in objs:
             # Ignore None and empty obj
+            language = None
             if not obj:
                 continue
+            # Get the language of the obj
+            if type(obj) == str and obj.count('@') == 1:
+                obj, language = obj.split('@')
             # Change object type for certain predicates
+            predicate_uri, obj_uri = self.convert_pred_and_obj(predicate,
+                                                               obj,
+                                                               language = language,
+                                                               source = source)
+            """
             if predicate == "label":
-                obj = self.get_label_and_save_alt_labels(obj, namespace_obj)
+                obj = self.get_label_and_save_alt_labels(obj,
+                                                         namespace_obj,
+                                                         language = language)
             if predicate in self.OM.SELF_REF:
-                obj = self.get_label_and_save_alt_labels(obj, namespace_obj)
+                obj = self.get_label_and_save_alt_labels(obj,
+                                                         namespace_obj,
+                                                         language = language)
                 obj_value = namespace_obj[standardize_uri(obj)]
             elif predicate in self.OM.EXT_REF:
                  # Do not standardize an external URI
                 obj_value = namespace_obj[obj]
             else:
-                obj_value = Literal(obj)
+                obj_value = Literal(obj, lang = language, type = xsdtype)"
+            """
 
             # Add to the graph
-            self.graph.add((subj_uri, predicate_uri, obj_value))
+            self.graph.add((subj_uri, predicate_uri, obj_uri))
 
         if source:
             source_uri = self.OM.OBS[standardize_uri(source.URI)]

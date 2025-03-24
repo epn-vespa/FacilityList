@@ -13,21 +13,18 @@ import json
 import os
 import ssl
 import sys
-import re
 
-from typing import List
 from SPARQLWrapper import SPARQLWrapper, JSON
 from extractor.cache import VersionManager, CacheManager
+from extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
-from utils import get_datetime_from_iso
-from rdflib import XSD, Literal
 
 import certifi
 import urllib
 
 
-class WikidataExtractor():
+class WikidataExtractor(Extractor):
     URL = "https://wikidata.org/wiki/" # + Q123
 
     # URI to save this source as an entity (obs:wikidata_list)
@@ -202,7 +199,8 @@ class WikidataExtractor():
         # Paralellize entity extraction if the cache already has .json files
         # for most wikidata_uri.
         # FIXME this may crash if there is a control_file_latest.json
-        # but not cached json files!
+        # but there are no cached json files (too many requests). It should not
+        # be executed with a multithread in this case.
         with ThreadPoolExecutor() as executor:
             futures = {executor.submit(self._extract_entity, wikidata_uri, result):
                     wikidata_uri for wikidata_uri in older}
@@ -341,21 +339,17 @@ class WikidataExtractor():
                     # Only keep the ids mentioned above
                     property_name = property_ids[property_id]
                     property_data = property_items[property_id]
-                    # data[property_name] = []
                     for prop in property_data:
                         property_value = ""
                         try:
                             datatype = prop["mainsnak"]["datatype"]
-                            value = prop["mainsnak"]["datavalue"]["value"] 
+                            value = prop["mainsnak"]["datavalue"]["value"]
                             if (type(value) == dict
                                 and "id" in value
                                 and value['id'] == "Q797476"):
                                 # property_name = spatial_events[prop["mainsnak"]["datavalue"]["value"]["id"]]
-                                # rocket launch
                                 property_name = "launch_date"
-                                property_value = Literal(get_datetime_from_iso(
-                                    prop["qualifiers"]["P585"][0]["datavalue"]["value"]["time"]),
-                                    datatype = XSD.dateTime)
+                                property_value = prop["qualifiers"]["P585"][0]["datavalue"]["value"]["time"]
                             elif datatype == "external-id":
                                 property_value = prop["mainsnak"]["datavalue"]["value"]
                             elif datatype == "wikibase-item":
@@ -367,9 +361,7 @@ class WikidataExtractor():
                                     property_value += " " + self._get_label(property["unit"])
                                     # do not add the unit as an entity, only get its label
                             elif datatype == "time":
-                                property_value = Literal(get_datetime_from_iso(
-                                    prop["mainsnak"]["datavalue"]["value"]["time"]),
-                                    datatype = XSD.dateTime)
+                                property_value = prop["mainsnak"]["datavalue"]["value"]["time"]
                             elif datatype == "globe-coordinate":
                                 data["latitude"] = prop["mainsnak"]["datavalue"]["value"]["latitude"]
                                 data["longitude"] = prop["mainsnak"]["datavalue"]["value"]["longitude"]
@@ -378,19 +370,8 @@ class WikidataExtractor():
                             else:
                                 print(f"Warning {property_id}({property_name}) not parsed. datatype: {datatype}")
                                 property_value = None
-                            
-                            if property_value:
-                                """
-                                if re.match(r"^Q\d+$", property_value):
-                                    # The value is an URI. Get the URI's label
-                                    # and add it (label, uri) to our ontology.
 
-                                    if property_name in ["type", "has_part", "is_part_of"]:
-                                        property_value = self._get_label(property_value, result)
-                                    else:
-                                        property_value = self._get_label(property_value)
-                                    property_value = self._get_label(property_value, result)
-                                """
+                            if property_value:
                                 if property_name in data:
                                     data[property_name].append(property_value)
                                 else:
@@ -443,7 +424,7 @@ class WikidataExtractor():
             if not label and alt_labels:
                 # If no English label, return the first other label.
                 label = alt_labels[0]
-        
+
         # Prevent requesting wikidata multiple time for
         # the same item
         self.LABEL_BY_WIKIDATA_ITEM[wikidata_item] = label
