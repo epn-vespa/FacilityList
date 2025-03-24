@@ -1,0 +1,1361 @@
+@prefix : <http://voparis-ns.obspm.fr/obs-facility/naif-codes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ivoasem: <http://www.ivoa.net/rdf/ivoasem#> .
+@base <http://www.ivoa.net/rdf/event_cite> .
+
+<http://www.ivoa.net/rdf/event_cite> rdf:type owl:Ontology ;
+                                      dc:created "2023-11-15"@en ;
+                                      dc:creator [ ] ;
+dc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+dc:title "List of NAIF/SPICE spacecraft codes"@en ;
+ivoasem:vocflavour "RDF Class"@en ;
+rdfs:label "List of NAIF/SPICE spacecraft codes"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dc:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#subClassOf
+:subClassOf rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ivoa.net/rdf/ivoasem#vocflavour
+ivoasem:vocflavour rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#endDate
+dcat:endDate rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#startDate
+dcat:startDate rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-1
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-1> rdf:type owl:Class ;
+                                                        rdfs:comment "GEOTAIL Spacecraft"@en ;
+                                                        rdfs:label "GOETAIL"@en ;
+                                                        skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-044A"@en ;
+                                                        dcat:startDate "1992-07-24"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-107
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-107> rdf:type owl:Class ;
+                                                          rdfs:label "TRMM"@en ;
+                                                          skos:altLabel "TROPICAL RAINFALL MEASURING MISSION"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-074A"@en ;
+                                                          dcat:startDate "1997-11-27"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-112
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-112> rdf:type owl:Class ;
+                                                          rdfs:label "ICE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-079A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.ice"@en ;
+                                                          dcat:startDate "1978-08-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-116
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-116> rdf:type owl:Class ;
+                                                          rdfs:label "MARS POLAR LANDER"@en ;
+                                                          skos:altLabel "MPL"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-001A"@en ;
+                                                          dcat:endDate "1999-12-03"@en ;
+                                                          dcat:startDate "1999-01-03"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-119
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-119> rdf:type owl:Class ;
+                                                          rdfs:label "MARS_ORBITER_MISSION_2"@en ;
+                                                          skos:altLabel "MOM2"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12> rdf:type owl:Class ;
+                                                         rdfs:comment "Spacecraft NAIF ID -12 correspond to two spacecraft: P12 and LADEE."@en ;
+                                                         rdfs:label "NAIF ID -12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12.LADE
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12.LADE> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12> ;
+                                                              rdfs:comment """Spacecraft NAIF ID -12 correspond to two spacecraft: P12 and
+            LADEE."""@en ;
+                                                              rdfs:label "LADEE"@en ;
+                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-047A"@en ;
+                                                              dcat:startDate "2013-09-07"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12.PVO
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12.PVO> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-12> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -12 correspond to two spacecraft: P12 and
+            LADEE."""@en ;
+                                                             rdfs:label "VENUS ORBITER"@en ;
+                                                             skos:altLabel "PIONEER-12"@en ,
+                                                                           "PVO"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-051A"@en ;
+                                                             dcat:endDate "1992-10-22"@en ;
+                                                             dcat:startDate "1978-05-20"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-121
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-121> rdf:type owl:Class ;
+                                                          rdfs:label "MERCURY PLANETARY ORBITER"@en ;
+                                                          skos:altLabel "BEPICOLOMBO MPO"@en ,
+                                                                        "MPO"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-080A"@en ;
+                                                          dcat:startDate "2018-10-20"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-127
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-127> rdf:type owl:Class ;
+                                                          rdfs:label "MARS CLIMATE ORBITER"@en ;
+                                                          skos:altLabel "MCO"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-073A"@en ;
+                                                          dcat:startDate "1998-12-11"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-13
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-13> rdf:type owl:Class ;
+                                                         rdfs:label "POLAR"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-013A"@en ;
+                                                         dcat:startDate "1996-02-24"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-130
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-130> rdf:type owl:Class ;
+                                                          rdfs:label "HAYABUSA"@en ;
+                                                          skos:altLabel "MUSES-C"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-019A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.hay"@en ;
+                                                          dcat:startDate "2003-05-09"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-131
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-131> rdf:type owl:Class ;
+                                                          rdfs:label "KAGUYA"@en ;
+                                                          skos:altLabel "SELENE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-039A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.kaguya"@en ;
+                                                          dcat:startDate "2007-09-14"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-135
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-135> rdf:type owl:Class ;
+                                                          rdfs:label "DART"@en ;
+                                                          skos:altLabel "DOUBLE ASTEROID REDIRECTION TEST"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-110A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.dart"@en ;
+                                                          dcat:startDate "2021-11-24"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-140
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-140> rdf:type owl:Class ;
+                                                          rdfs:label "EPOXI"@en ;
+                                                          skos:altLabel "DEEP IMPACT FLYBY SPACECRAFT"@en ,
+                                                                        "DIXI"@en ,
+                                                                        "EPOCH"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-001A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.dif"@en ;
+                                                          dcat:startDate "2005-01-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-142
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-142> rdf:type owl:Class ;
+                                                          rdfs:label "TERRA"@en ;
+                                                          skos:altLabel "EOS-AM1"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-068A"@en ;
+                                                          dcat:startDate "1999-12-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-143
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-143> rdf:type owl:Class ;
+                                                          rdfs:label "TRACE GAS ORBITER"@en ;
+                                                          skos:altLabel "EXOMARS 2016 TGO"@en ,
+                                                                        "TGO"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-017A"@en ,
+                                                                          "urn:esa:psa:context:instrument_host:spacecraft.tgo"@en ;
+                                                          dcat:startDate "2016-03-14"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-144
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-144> rdf:type owl:Class ;
+                                                          rdfs:label "SOLAR ORBITER"@en ;
+                                                          skos:altLabel "SOLO"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-010A"@en ;
+                                                          dcat:startDate "2020-02-10"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-146
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-146> rdf:type owl:Class ;
+                                                          rdfs:label "LUNAR-A"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=LUNAR-A"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-148
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-148> rdf:type owl:Class ;
+                                                          rdfs:label "DRAGONFLY"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DRAGONFLY"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-150
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-150> rdf:type owl:Class ;
+                                                          rdfs:label "HUYGENS PROBE"@en ;
+                                                          skos:altLabel "CASP"@en ,
+                                                                        "CASSINI PROBE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-061C"@en ,
+                                                                          "urn:esa:psa:context:instrument_host:spacecraft.hp"@en ;
+                                                          dcat:startDate "2004-12-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-151
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-151> rdf:type owl:Class ;
+                                                          rdfs:label "CHANDRA"@en ;
+                                                          skos:altLabel "AXAF"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-040B"@en ;
+                                                          dcat:startDate "1999-07-23"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-152
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-152> rdf:type owl:Class ;
+                                                          rdfs:label "CHANDRAYAAN-2 ORBITER"@en ;
+                                                          skos:altLabel "CH2O"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2019-042A"@en ;
+                                                          dcat:startDate ""@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-153
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-153> rdf:type owl:Class ;
+                                                          rdfs:label "CHANDRAYAAN-2 LANDER"@en ;
+                                                          skos:altLabel "CH2L"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-154
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-154> rdf:type owl:Class ;
+                                                          rdfs:label "AQUA"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id="@en ;
+                                                          dcat:startDate ""@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-155
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-155> rdf:type owl:Class ;
+                                                          rdfs:label "KOREAN PATHFINDER LUNAR ORBITER"@en ;
+                                                          skos:altLabel "KPLO"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2022-094A"@en ;
+                                                          dcat:startDate "2022-08-04"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-156
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-156> rdf:type owl:Class ;
+                                                          rdfs:label "ADITYA"@en ;
+                                                          skos:altLabel "ADIT"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-132A"@en ;
+                                                          dcat:startDate "2023-09-02"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-159
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-159> rdf:type owl:Class ;
+                                                          rdfs:label "EUROPA CLIPPER"@en ;
+                                                          skos:altLabel "EURC"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EUROPA-CL"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-164
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-164> rdf:type owl:Class ;
+                                                          rdfs:label "LUNAR FLASHLIGHT"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2022-168B"@en ;
+                                                          dcat:startDate "2022-12-11"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-165
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-165> rdf:type owl:Class ;
+                                                          rdfs:label "MAP"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-027A"@en ;
+                                                          dcat:startDate "2001-06-30"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-166
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-166> rdf:type owl:Class ;
+                                                          rdfs:label "IMAGE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-017A"@en ;
+                                                          dcat:startDate "2000-03-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-168
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-168> rdf:type owl:Class ;
+                                                          rdfs:label "PERSEVERANCE"@en ;
+                                                          skos:altLabel "M2020"@en ,
+                                                                        "MARS 2020"@en ,
+                                                                        "MARS2020"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-052A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.mars2020"@en ;
+                                                          dcat:startDate "2020-07-30"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-170
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-170> rdf:type owl:Class ;
+                                                          rdfs:label "JWST"@en ;
+                                                          skos:altLabel "JAMES WEBB SPACE TELESCOPE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A"@en ;
+                                                          dcat:startDate "2021-12-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-172
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-172> rdf:type owl:Class ;
+                                                          rdfs:label "EXM SPACECRAFT COMPOSITE"@en ;
+                                                          skos:altLabel "EXM RSP SCC"@en ,
+                                                                        "EXOMARS SCC"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id="@en ;
+                                                          dcat:startDate ""@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-173
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-173> rdf:type owl:Class ;
+                                                          rdfs:label "EXM ROVER"@en ,
+                                                                     "EXM SPACECRAFT PLATFORM"@en ;
+                                                          skos:altLabel "EXM RSP RM"@en ,
+                                                                        "EXM RSP SP"@en ,
+                                                                        "EXOMARS ROVER"@en ,
+                                                                        "EXOMARS SP"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EXOMARS22"@en ;
+                                                          dcat:startDate ""@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-177
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-177> rdf:type owl:Class ;
+                                                          rdfs:label "GRAIL-A"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-046A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.grail-a"@en ;
+                                                          dcat:startDate "2011-09-10"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-178
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-178> rdf:type owl:Class ;
+                                                          rdfs:label "NOZOMI"@en ;
+                                                          skos:altLabel "PLANET-B"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-041A"@en ;
+                                                          dcat:startDate "1998-07-03"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18> rdf:type owl:Class ;
+                                                         rdfs:comment "Spacecraft NAIF ID -18 correspond to two spacecraft: MGN and LCROSS."@en ;
+                                                         rdfs:label "NAIF ID -18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18.LCROS
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18.LCROS> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18> ;
+                                                               rdfs:comment """Spacecraft NAIF ID -18 correspond to two spacecraft: MGN and
+            LCROSS."""@en ;
+                                                               rdfs:label "LCROSS"@en ;
+                                                               skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031B"@en ;
+                                                               dcat:startDate "2009-06-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18.MGN
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18.MGN> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-18> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -18 correspond to two spacecraft: MGN and
+            LCROSS."""@en ;
+                                                             rdfs:label "MAGELLAN"@en ;
+                                                             skos:altLabel "MGN"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-033B"@en ,
+                                                                             "urn:nasa:pds:context:instrument_host:spacecraft.mgn"@en ;
+                                                             dcat:endDate "1994-10-12"@en ;
+                                                             dcat:startDate "1989-05-04"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-181
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-181> rdf:type owl:Class ;
+                                                          rdfs:label "GRAIL-B"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-046B"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.grail-b"@en ;
+                                                          dcat:startDate "2011-09-10"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-183
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-183> rdf:type owl:Class ;
+                                                          rdfs:label "CLUSTER 1"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-045A"@en ;
+                                                          dcat:startDate "2000-08-09"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-185
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-185> rdf:type owl:Class ;
+                                                          rdfs:label "CLUSTER 2"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-041B"@en ;
+                                                          dcat:startDate "2000-07-16"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-188
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-188> rdf:type owl:Class ;
+                                                          rdfs:label "MUSES-B"@en ,
+                                                                     "SIM"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-005A"@en ;
+                                                          dcat:startDate "1997-02-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-189
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-189> rdf:type owl:Class ;
+                                                          rdfs:label "INSIGHT"@en ;
+                                                          skos:altLabel "NSYT"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-042A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.insight"@en ;
+                                                          dcat:startDate "2018-05-05"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-194
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-194> rdf:type owl:Class ;
+                                                          rdfs:label "CLUSTER 3"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-041A"@en ;
+                                                          dcat:startDate "2000-07-16"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-196
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-196> rdf:type owl:Class ;
+                                                          rdfs:label "CLUSTER 4"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2000-045B"@en ;
+                                                          dcat:startDate "2000-08-09"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-197
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-197> rdf:type owl:Class ;
+                                                          rdfs:label "EXOMARS_LARA"@en ;
+                                                          skos:altLabel "LARA"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198> rdf:type owl:Class ;
+                                                          rdfs:comment "Spacecraft NAIF ID -198 correspond to two spacecraft: INTEGRAL and NISAR."@en ;
+                                                          rdfs:label "NAIF ID -198"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198.INTE
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198.INTE> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198> ;
+                                                               rdfs:comment "Spacecraft NAIF ID -198 correspond to two spacecraft: INTEGRAL and NISAR."@en ;
+                                                               rdfs:label "INTEGRAL"@en ;
+                                                               skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2002-048A"@en ;
+                                                               dcat:startDate "2002-10-17"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198.NISA
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198.NISA> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-198> ;
+                                                               rdfs:comment "Spacecraft NAIF ID -198 correspond to two spacecraft: INTEGRAL and NISAR."@en ;
+                                                               rdfs:label "NISAR"@en ;
+                                                               skos:altLabel "NASA-ISRO SAR MISSION"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-20
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-20> rdf:type owl:Class ;
+                                                         rdfs:label "P8"@en ;
+                                                         skos:altLabel "PIONEER-8"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-123A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.p8"@en ;
+                                                         dcat:startDate "1967-12-13"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-200
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-200> rdf:type owl:Class ;
+                                                          rdfs:label "CONTOUR"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2002-034A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.con"@en ;
+                                                          dcat:startDate "2002-07-03"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-202
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-202> rdf:type owl:Class ;
+                                                          rdfs:label "MAVEN"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-063A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.maven"@en ;
+                                                          dcat:startDate "2013-11-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-203
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-203> rdf:type owl:Class ;
+                                                          rdfs:label "DAWN"@en ,
+                                                                     "LICIA"@en ;
+                                                          skos:altLabel "LICIACUBE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A"@en ,
+                                                                          "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-11-24"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.dawn"@en ;
+                                                          dcat:startDate "2007-09-27"@en ,
+                                                                         "2021-110C"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-205
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-205> rdf:type owl:Class ;
+                                                          rdfs:label "SMAP"@en ;
+                                                          skos:altLabel "SOIL MOISTURE ACTIVE AND PASSIVE"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2015-003A"@en ;
+                                                          dcat:startDate "2015-01-31"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-21
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-21> rdf:type owl:Class ;
+                                                         rdfs:label "SOHO"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1995-065A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.soho"@en ;
+                                                         dcat:startDate "1995-12-02"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-212
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-212> rdf:type owl:Class ;
+                                                          rdfs:label "STV51"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-213
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-213> rdf:type owl:Class ;
+                                                          rdfs:label "STV52"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-214
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-214> rdf:type owl:Class ;
+                                                          rdfs:label "STV53"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-226
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-226> rdf:type owl:Class ;
+                                                          rdfs:label "ROSETTA"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-006A"@en ,
+                                                                          "urn:esa:psa:context:instrument_host:spacecraft.ro"@en ;
+                                                          dcat:startDate "2004-03-02"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227> rdf:type owl:Class ;
+                                                          rdfs:comment "Spacecraft NAIF ID -227 correspond to two spacecraft: KEPLER and GALILEO PROBE."@en ;
+                                                          rdfs:label "NAIF ID -227"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227.GLLP
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227.GLLP> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227> ;
+                                                               rdfs:comment "Spacecraft NAIF ID -227 correspond to two spacecraft: KEPLER and GALILEO PROBE."@en ;
+                                                               rdfs:label "GALILEO PROBE"@en ;
+                                                               skos:altLabel "GLL PROBE"@en ;
+                                                               skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-084E"@en ,
+                                                                               "urn:nasa:pds:context:instrument_host:spacecraft.gp"@en ;
+                                                               dcat:startDate "1995-07-13"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227.KEPL
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227.KEPL> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-227> ;
+                                                               rdfs:comment "Spacecraft NAIF ID -227 correspond to two spacecraft: KEPLER and GALILEO PROBE."@en ;
+                                                               rdfs:label "KEPLER"@en ;
+                                                               skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-011A"@en ;
+                                                               dcat:startDate "2009-03-07"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-23
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-23> rdf:type owl:Class ;
+                                                         rdfs:label "P10"@en ;
+                                                         skos:altLabel "PIONEER-10"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.p10"@en ;
+                                                         dcat:startDate "1972-03-03"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-234
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-234> rdf:type owl:Class ;
+                                                          rdfs:label "STEREO AHEAD"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-047A"@en ;
+                                                          dcat:startDate "2006-10-26"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-235
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-235> rdf:type owl:Class ;
+                                                          rdfs:label "STEREO BEHIND"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-047B"@en ;
+                                                          dcat:startDate "2006-10-26"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-236
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-236> rdf:type owl:Class ;
+                                                          rdfs:label "MESSENGER"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-030A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.mess"@en ;
+                                                          dcat:startDate "2004-08-03"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-238
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-238> rdf:type owl:Class ;
+                                                          rdfs:label "SMART1"@en ;
+                                                          skos:altLabel "S1"@en ,
+                                                                        "SM1"@en ,
+                                                                        "SMART-1"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-043C"@en ;
+                                                          dcat:startDate "2003-09-27"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-239
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-239> rdf:type owl:Class ;
+                                                          rdfs:label "MMX"@en ;
+                                                          skos:altLabel "MARTIAN MOONS EXPLORATION"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=MMX-MARS"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-24
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-24> rdf:type owl:Class ;
+                                                         rdfs:label "P11"@en ;
+                                                         skos:altLabel "PIONEER-11"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-019A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.p11"@en ;
+                                                         dcat:startDate "1973-04-06"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-240
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-240> rdf:type owl:Class ;
+                                                          rdfs:label "SLIM"@en ;
+                                                          skos:altLabel "SMART LANDER FOR INVESTIGATING MOON"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-137D"@en ;
+                                                          dcat:startDate "2023-09-06"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-242
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-242> rdf:type owl:Class ;
+                                                          rdfs:label "LUNAR TRAILBLAZER"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=L-TRLBLZR"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-243
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-243> rdf:type owl:Class ;
+                                                          rdfs:label "VIPER"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=VIPER"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-248
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-248> rdf:type owl:Class ;
+                                                          rdfs:label "VEX"@en ;
+                                                          skos:altLabel "VENUS EXPRESS"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-045A"@en ,
+                                                                          "urn:esa:psa:context:instrument_host:spacecraft.vex"@en ;
+                                                          dcat:startDate "2005-11-09"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-25
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-25> rdf:type owl:Class ;
+                                                         rdfs:label "LP"@en ;
+                                                         skos:altLabel "LUNAR PROSPECTOR"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-001A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.lp"@en ;
+                                                         dcat:startDate "1998-01-07"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-253
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-253> rdf:type owl:Class ;
+                                                          rdfs:label "OPPORTUNITY"@en ;
+                                                          skos:altLabel "MER-1"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-032A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.mer1"@en ;
+                                                          dcat:startDate "2003-07-08"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-254
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-254> rdf:type owl:Class ;
+                                                          rdfs:label "SPIRIT"@en ;
+                                                          skos:altLabel "MER-2"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-027A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.mer2"@en ;
+                                                          dcat:startDate "2003-06-10"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-255
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-255> rdf:type owl:Class ;
+                                                          rdfs:label "PSYC"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-157A"@en ,
+                                                                          "urn:nasa:pds:context:instrument_host:spacecraft.psyche"@en ;
+                                                          dcat:startDate "2023-10-13"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-27
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-27> rdf:type owl:Class ;
+                                                         rdfs:label "VK1"@en ;
+                                                         skos:altLabel "VIKING 1 ORBITER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.vo1"@en ;
+                                                         dcat:startDate "1975-08-20"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-28
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-28> rdf:type owl:Class ;
+                                                         rdfs:label "JUICE"@en ;
+                                                         skos:altLabel "JUPITER ICY MOONS EXPLORER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-053A"@en ;
+                                                         dcat:startDate "2023-04-14"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-29
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-29> rdf:type owl:Class ;
+                                                         rdfs:label "STARDUST"@en ;
+                                                         skos:altLabel "NEXT"@en ,
+                                                                       "SDU"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-003A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.sdu"@en ;
+                                                         dcat:startDate "1999-02-07"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-3
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-3> rdf:type owl:Class ;
+                                                        rdfs:label "MARS ORBITER MISSION"@en ;
+                                                        skos:altLabel "MOM"@en ,
+                                                                      "Mangalyaan"@en ;
+                                                        skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-060A"@en ;
+                                                        dcat:startDate "2013-11-05"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30> rdf:type owl:Class ;
+                                                         rdfs:label "NAIF ID -30"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30.DS1
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30.DS1> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -30 correspond to two spacecraft: VK2 and
+            DS1."""@en ;
+                                                             rdfs:label "DS-1"@en ;
+                                                             skos:altLabel "DEEP SPACE 1"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-061A"@en ,
+                                                                             "urn:nasa:pds:context:instrument_host:spacecraft.ds1"@en ;
+                                                             dcat:startDate "1998-10-24"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30.VK2
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30.VK2> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-30> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -30 correspond to two spacecraft: VK2 and
+            DS1."""@en ;
+                                                             rdfs:label "VIKING 2 ORBITER"@en ;
+                                                             skos:altLabel "VK2"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-083A"@en ,
+                                                                             "urn:nasa:pds:context:instrument_host:spacecraft.vo2"@en ;
+                                                             dcat:endDate "1978-07-25"@en ;
+                                                             dcat:startDate "1975-09-09"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-301
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-301> rdf:type owl:Class ;
+                                                          rdfs:label "HELIOS 1"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1974-097A"@en ;
+                                                          dcat:startDate "1974-12-10"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-302
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-302> rdf:type owl:Class ;
+                                                          rdfs:label "HELIOS 2"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1976-003A"@en ;
+                                                          dcat:startDate "1976-01-15"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-31
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-31> rdf:type owl:Class ;
+                                                         rdfs:label "VG1"@en ;
+                                                         skos:altLabel "VOYAGER 1"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.vg1"@en ;
+                                                         dcat:startDate "1977-09-05"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-32
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-32> rdf:type owl:Class ;
+                                                         rdfs:label "VG2"@en ;
+                                                         skos:altLabel "VOYAGER 2"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.vg2"@en ;
+                                                         dcat:startDate "1977-08-20"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-33
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-33> rdf:type owl:Class ;
+                                                         rdfs:label "NEOS"@en ;
+                                                         skos:altLabel "NEO SURVEYOR"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-362
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-362> rdf:type owl:Class ;
+                                                          rdfs:label "RADIATION BELT STORM PROBE A"@en ;
+                                                          skos:altLabel "RBSP_A"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2012-046A"@en ;
+                                                          dcat:startDate "2012-08-30"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-363
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-363> rdf:type owl:Class ;
+                                                          rdfs:label "RADIATION BELT STORM PROBE B"@en ;
+                                                          skos:altLabel "RBSP_B"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2012-046B"@en ;
+                                                          dcat:startDate "2012-08-30"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-37
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-37> rdf:type owl:Class ;
+                                                         rdfs:label "HYB2"@en ;
+                                                         skos:altLabel "HAYABUSA 2"@en ,
+                                                                       "HAYABUSA2"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2014-076A"@en ,
+                                                                         "urn:jaxa:darts:context:instrument_host:spacecraft.hyb2"@en ;
+                                                         dcat:startDate "2014-12-03"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-39
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-39> rdf:type owl:Class ;
+                                                         rdfs:label "LUNAH-MAP"@en ;
+                                                         skos:altLabel "LUNAR POLAR HYDROGEN MAPPER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2022-156J"@en ;
+                                                         dcat:startDate "2022-11-16"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-40
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-40> rdf:type owl:Class ;
+                                                         rdfs:label "CLEMENTINE"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1994-004A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.clem1"@en ;
+                                                         dcat:startDate "1994-01-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-41
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-41> rdf:type owl:Class ;
+                                                         rdfs:label "MEX"@en ;
+                                                         skos:altLabel "MARS EXPRESS"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-022A"@en ,
+                                                                         "urn:esa:psa:context:instrument_host:spacecraft.mex"@en ;
+                                                         dcat:startDate "2003-06-02"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-43
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-43> rdf:type owl:Class ;
+                                                         rdfs:label "IMAP"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-44
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-44> rdf:type owl:Class ;
+                                                         rdfs:label "BEAGLE2"@en ;
+                                                         skos:altLabel "BEAGLE 2"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-022C"@en ;
+                                                         dcat:endDate "2003-12-25"@en ;
+                                                         dcat:startDate "2003-06-02"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-45
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-45> rdf:type owl:Class ;
+                                                         rdfs:label "JNSA"@en ;
+                                                         skos:altLabel "JANUS_A"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-46
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-46> rdf:type owl:Class ;
+                                                         rdfs:label "MS-T5"@en ;
+                                                         skos:altLabel "SAKIGAKE"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1985-001A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.sakig"@en ;
+                                                         dcat:startDate "1985-01-08"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47> rdf:type owl:Class ;
+                                                         rdfs:comment """Spacecraft NAIF ID -47 correspond to two spacecraft: SUISEI and
+            GENESIS."""@en ;
+                                                         rdfs:label "NAIF ID -47"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47.GNS
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47.GNS> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47> ;
+                                                             :subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -47 correspond to two spacecraft: SUISEI and
+            GENESIS."""@en ;
+                                                             rdfs:label "GENESIS"@en ;
+                                                             skos:altLabel "GNS"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-034A"@en ;
+                                                             dcat:startDate "2001-08-08"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47.SUIS
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47.SUIS> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47> ;
+                                                              :subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-47> ;
+                                                              rdfs:comment """Spacecraft NAIF ID -47 correspond to two spacecraft: SUISEI and
+            GENESIS."""@en ;
+                                                              rdfs:label "SUISEI"@en ;
+                                                              skos:altLabel "PLANET-A"@en ;
+                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1985-073A"@en ,
+                                                                              "urn:nasa:pds:context:instrument_host:spacecraft.suisei"@en ;
+                                                              dcat:endDate "1992-08-20"@en ;
+                                                              dcat:startDate "1985-08-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-48
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-48> rdf:type owl:Class ;
+                                                         rdfs:label "HST"@en ;
+                                                         skos:altLabel "HUBBLE SPACE TELESCOPE"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-037B"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.hst"@en ;
+                                                         dcat:startDate "1990-04-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-49
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-49> rdf:type owl:Class ;
+                                                         rdfs:label "LUCY"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-037B"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.hst"@en ;
+                                                         dcat:startDate "1990-04-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-5
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-5> rdf:type owl:Class ;
+                                                        rdfs:label "AKATSUKI"@en ;
+                                                        skos:altLabel "PLANET-C"@en ,
+                                                                      "PLC"@en ,
+                                                                      "VCO"@en ;
+                                                        skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2010-020D"@en ,
+                                                                        "urn:jaxa:darts:context:instrument_host:spacecraft.vco"@en ;
+                                                        dcat:startDate "2010-05-20"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-500
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-500> rdf:type owl:Class ;
+                                                          rdfs:label "RSAT"@en ;
+                                                          skos:altLabel "Rstar"@en ,
+                                                                        "SELENE Relay Satellite"@en ,
+                                                                        "SELENE Rstar"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-039B"@en ;
+                                                          dcat:startDate "2007-09-14"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-502
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-502> rdf:type owl:Class ;
+                                                          rdfs:label "VSAT"@en ;
+                                                          skos:altLabel "SELENE VLBI Radio Satellite"@en ,
+                                                                        "SELENE VRAD Satellite"@en ,
+                                                                        "SELENE Vstar"@en ,
+                                                                        "Vstar"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-039C"@en ;
+                                                          dcat:startDate "2007-09-14"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53> rdf:type owl:Class ;
+                                                         rdfs:comment """Spacecraft NAIF ID -53 correspond to two spacecraft: MARS PATHFINDER and MARS
+            ODYSSEY."""@en ;
+                                                         rdfs:label "NAIF ID -53"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53.MODY
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53.MODY> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53> ;
+                                                              rdfs:comment """Spacecraft NAIF ID -53 correspond to two spacecraft: MARS PATHFINDER and MARS
+            ODYSSEY."""@en ;
+                                                              rdfs:label "MARS ODYSSEY"@en ;
+                                                              skos:altLabel "MARS SURVEYOR 01 ORBITER"@en ;
+                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2001-013A"@en ,
+                                                                              "urn:nasa:pds:context:instrument_host:spacecraft.ody"@en ;
+                                                              dcat:startDate "2001-04-07"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53.MPF
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53.MPF> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-53> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -53 correspond to two spacecraft: MARS PATHFINDER and MARS
+            ODYSSEY."""@en ;
+                                                             rdfs:label "MARS PATHFINDER"@en ;
+                                                             skos:altLabel "MPF"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-068A"@en ,
+                                                                             "urn:nasa:pds:context:instrument_host:spacecraft.mpfl"@en ;
+                                                             dcat:endDate "1997-09-27"@en ;
+                                                             dcat:startDate "1996-12-04"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-55
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-55> rdf:type owl:Class ;
+                                                         rdfs:label "ULYSSES"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-090B"@en ,
+                                                                         "urn:esa:psa:context:instrument_host:spacecraft.uly"@en ;
+                                                         dcat:startDate "1990-10-06"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-550.MA96
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-550.MA96> rdf:type owl:Class ;
+                                                               rdfs:comment "Spacecraft NAIF ID -500 correspond to two spacecraft: MARS-96 and BEPICOLOMBO MTM."@en ;
+                                                               rdfs:label "MARS-96"@en ;
+                                                               skos:altLabel "M96"@en ,
+                                                                             "MARS 96"@en ,
+                                                                             "MARS96"@en ;
+                                                               skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-064A"@en ;
+                                                               dcat:startDate "1996-11-16"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-57
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-57> rdf:type owl:Class ;
+                                                         rdfs:label "LUNAR ICECUBE"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2022-156C"@en ;
+                                                         dcat:startDate "2022-11-16"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-58
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-58> rdf:type owl:Class ;
+                                                         rdfs:label "HALCA"@en ;
+                                                         skos:altLabel "VSOP"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-005A"@en ;
+                                                         dcat:startDate "1997-02-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-59
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-59> rdf:type owl:Class ;
+                                                         rdfs:label "RADIOASTRON"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-037A"@en ;
+                                                         dcat:startDate "2011-07-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-6
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-6> rdf:type owl:Class ;
+                                                        rdfs:label "PIONEER-6"@en ;
+                                                        skos:altLabel "P6"@en ;
+                                                        skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1965-105A"@en ;
+                                                        dcat:startDate "1965-12-16"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-61
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-61> rdf:type owl:Class ;
+                                                         rdfs:label "JUNO"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A"@en ;
+                                                         dcat:startDate "2011-08-05"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-62
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-62> rdf:type owl:Class ;
+                                                         rdfs:label "EMM"@en ;
+                                                         skos:altLabel "EMIRATES MARS MISSION"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-047A"@en ;
+                                                         dcat:startDate "2020-07-19"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-64
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-64> rdf:type owl:Class ;
+                                                         rdfs:label "ORX"@en ;
+                                                         skos:altLabel "OSIRIS-REX"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.orex"@en ;
+                                                         dcat:startDate "2016-09-08"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-65
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-65> rdf:type owl:Class ;
+                                                         rdfs:label "MCOA"@en ;
+                                                         skos:altLabel "MARCO-A"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-042B"@en ;
+                                                         dcat:startDate "2018-05-05"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-652
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-652> rdf:type owl:Class ;
+                                                          rdfs:label "MERCURY TRANSFER MODULE"@en ;
+                                                          skos:altLabel "BEPICOLOMBO MTM"@en ,
+                                                                        "MTM"@en ;
+                                                          dcat:startDate ""@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66> rdf:type owl:Class ;
+                                                         rdfs:comment """Spacecraft NAIF ID -66 correspond to two spacecraft: VEGA 1 and MARCO
+            B."""@en ;
+                                                         rdfs:label "NAIF ID -66"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66.MCOB
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66.MCOB> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66> ;
+                                                              rdfs:comment """Spacecraft NAIF ID -66 correspond to two spacecraft: VEGA 1 and MARCO
+            B."""@en ;
+                                                              rdfs:label "MARCO-B"@en ;
+                                                              skos:altLabel "MCOB"@en ;
+                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-042C"@en ;
+                                                              dcat:startDate "2018-05-05"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66.VEG1
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66.VEG1> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-66> ;
+                                                              rdfs:comment """Spacecraft NAIF ID -66 correspond to two spacecraft: VEGA 1 and MARCO
+            B."""@en ;
+                                                              rdfs:label "VEGA 1"@en ;
+                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1984-125A"@en ,
+                                                                              "urn:nasa:pds:context:instrument_host:spacecraft.vega1"@en ;
+                                                              dcat:endDate "1987-01-30"@en ;
+                                                              dcat:startDate "1984-12-15"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-67
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-67> rdf:type owl:Class ;
+                                                         rdfs:label "VEGA 2"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1984-128A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.vega2"@en ;
+                                                         dcat:startDate "1984-12-21"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-68
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-68> rdf:type owl:Class ;
+                                                         rdfs:label "MMO"@en ;
+                                                         skos:altLabel "BEPICOLOMBO MMO"@en ,
+                                                                       "MERCURY MAGNETOSPHERIC ORBITER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-080A"@en ;
+                                                         dcat:startDate "2018-10-20"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-7
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-7> rdf:type owl:Class ;
+                                                        rdfs:label "PIONEER-7"@en ;
+                                                        skos:altLabel "P7"@en ;
+                                                        skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-075A"@en ;
+                                                        dcat:startDate "1966-08-17"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-70
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-70> rdf:type owl:Class ;
+                                                         rdfs:label "DEEP IMPACT IMPACTOR SPACECRAFT"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-001D"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.dii"@en ;
+                                                         dcat:startDate "2005-01-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-72
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-72> rdf:type owl:Class ;
+                                                         rdfs:label "JNSB"@en ;
+                                                         skos:altLabel "JANUS_B"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-74
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-74> rdf:type owl:Class ;
+                                                         rdfs:label "MRO"@en ;
+                                                         skos:altLabel "MARS RECON ORBITER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-029A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.mro"@en ;
+                                                         dcat:startDate "2005-08-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-750
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-750> rdf:type owl:Class ;
+                                                          rdfs:label "SPRINT-A"@en ;
+                                                          skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2013-049A"@en ;
+                                                          dcat:startDate "2013-09-14"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-76
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-76> rdf:type owl:Class ;
+                                                         rdfs:label "CURIOSITY"@en ;
+                                                         skos:altLabel "MARS SCIENCE LABORATORY"@en ,
+                                                                       "MSL"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-070A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.msl"@en ;
+                                                         dcat:startDate "2011-11-26"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-77
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-77> rdf:type owl:Class ;
+                                                         rdfs:label "GLL"@en ;
+                                                         skos:altLabel "GALILEO ORBITER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-084B"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.go"@en ;
+                                                         dcat:startDate "1989-10-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-78
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-78> rdf:type owl:Class ;
+                                                         rdfs:label "GIOTTO"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1985-056A"@en ,
+                                                                         "urn:esa:psa:context:instrument_host:spacecraft.gio"@en ;
+                                                         dcat:startDate "1985-07-02"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-79
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-79> rdf:type owl:Class ;
+                                                         rdfs:label "SPITZER"@en ;
+                                                         skos:altLabel "SIRTF"@en ,
+                                                                       "SPACE INFRARED TELESCOPE FACILITY"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-038A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.spitzer"@en ;
+                                                         dcat:startDate "2003-08-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-8
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-8> rdf:type owl:Class ;
+                                                        rdfs:label "WIND"@en ;
+                                                        skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1994-071A"@en ;
+                                                        dcat:startDate "1994-11-01"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-82
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-82> rdf:type owl:Class ;
+                                                         rdfs:label "CASSINI"@en ;
+                                                         skos:altLabel "CAS"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-061A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.co"@en ;
+                                                         dcat:startDate "1997-10-15"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-84
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-84> rdf:type owl:Class ;
+                                                         rdfs:label "PHOENIX"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-034A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.phx"@en ;
+                                                         dcat:startDate "2007-08-04"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-85
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-85> rdf:type owl:Class ;
+                                                         rdfs:label "LRO"@en ;
+                                                         skos:altLabel "LUNAR RECON ORBITER"@en ,
+                                                                       "LUNAR RECONNAISSANCE ORBITER"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-031A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.lro"@en ;
+                                                         dcat:startDate "2009-06-18"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-86
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-86> rdf:type owl:Class ;
+                                                         rdfs:label "CHANDRAYAAN-1"@en ;
+                                                         skos:altLabel "CH1"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2008-052A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb"@en ;
+                                                         dcat:startDate "2008-10-22"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-93
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-93> rdf:type owl:Class ;
+                                                         rdfs:label "NEAR EARTH ASTEROID RENDEZVOUS"@en ;
+                                                         skos:altLabel "NEAR"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-008A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.near"@en ;
+                                                         dcat:startDate "1996-02-17"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94> rdf:type owl:Class ;
+                                                         rdfs:comment """Spacecraft NAIF ID -94 correspond to two spacecraft: MARS OBSERVER and MARS
+            GLOBAL SURVEYOR."""@en ;
+                                                         rdfs:label "NAIF ID -94"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94.MGS
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94.MGS> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94> ;
+                                                             rdfs:comment """Spacecraft NAIF ID -94 correspond to two spacecraft: MARS OBSERVER and MARS
+            GLOBAL SURVEYOR."""@en ;
+                                                             rdfs:label "MARS GLOBAL SURVEYOR"@en ;
+                                                             skos:altLabel "MGS"@en ;
+                                                             skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-062A"@en ,
+                                                                             "urn:nasa:pds:context:instrument_host:spacecraft.mgs"@en ;
+                                                             dcat:startDate "1996-11-07"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94.MOBS
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94.MOBS> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-94> ;
+                                                              rdfs:comment """Spacecraft NAIF ID -94 correspond to two spacecraft: MARS OBSERVER and MARS
+            GLOBAL SURVEYOR."""@en ;
+                                                              rdfs:label "MARS OBSERVER"@en ;
+                                                              skos:altLabel "MO"@en ;
+                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-063A"@en ,
+                                                                              "urn:nasa:pds:context:instrument_host:spacecraft.mo"@en ;
+                                                              dcat:endDate "1993-08-21"@en ;
+                                                              dcat:startDate "1992-09-25"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-96
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-96> rdf:type owl:Class ;
+                                                         rdfs:label "SPP"@en ;
+                                                         skos:altLabel "PARKER SOLAR PROBE"@en ,
+                                                                       "SOLAR PROBE PLUS"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-065A"@en ;
+                                                         dcat:startDate "2018-08-12"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-97
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-97> rdf:type owl:Class ;
+                                                         rdfs:label "TOPEX/POSEIDON"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1992-052A"@en ;
+                                                         dcat:startDate "1992-08-10"@en .
+
+
+###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-98
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-98> rdf:type owl:Class ;
+                                                         rdfs:label "NEW HORIZONS"@en ;
+                                                         skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A"@en ,
+                                                                         "urn:nasa:pds:context:instrument_host:spacecraft.nh"@en ;
+                                                         dcat:startDate "2006-01-19"@en .
+
+
+[ foaf:name "Cecconi, B."@en
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-117> rdfs:label "EDL DEMONSTRATOR MODULE"@en ;
+                                                           skos:altLabel "EXOMARS 2016 EDM"@en ,
+                                                                         "EDM"@en ;
+                                                           owl:deprecated "true"^^xsd:boolean .
+
+
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-81> rdfs:label "CASSINI ITL"@en ;
+                                                         owl:deprecated "true"^^xsd:boolean .
+
+
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-90> owl:deprecated "true"^^xsd:boolean ;
+                                                         rdfs:label "CASSINI SIMULATION"@en .
+
+
+<http://voparis-ns.obspm.fr/obs-facility/naif-codes#-95> owl:deprecated "true"^^xsd:boolean ;
+                                                         rdfs:label "MGS SIMULATION"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
