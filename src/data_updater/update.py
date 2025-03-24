@@ -11,7 +11,7 @@ Arguments:
    Add it to the concepts' taxonomy otherwise.
 """
 
-from typing import Type
+from typing import Type, List
 from argparse import ArgumentParser
 from graph import Graph # rdflib.Graph singleton with OBS namespace
 from extractor.aas_extractor import AasExtractor
@@ -22,7 +22,7 @@ from extractor.spase_extractor import SpaseExtractor
 from extractor.wikidata_extractor import WikidataExtractor
 
 
-class Merger():
+class Updater():
     def __init__(self,
             ontology_file: str = ""):
         self._graph = Graph(ontology_file)
@@ -35,10 +35,10 @@ class Merger():
         return self._graph
 
 
-    def merge(self,
-            data: dict,
-            source: Type = None,
-            cat: str = "ufo"):
+    def update(self,
+               data: dict,
+               source: Type = None,
+               cat: str = "ufo"):
         """
         Adds the data from the dict to the Ontology.
 
@@ -107,51 +107,77 @@ class Merger():
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.
 
-        self.merge(COMMUNITIES, cat = "community")
-        self.merge(SOURCES, cat = "facility list")
+        self.update(COMMUNITIES, cat = "community")
+        self.update(SOURCES, cat = "facility list")
 
 
-def main(input_ontology: str = "",
+def main(lists: List[str],
+         input_ontology: str = "",
          output_ontology: str = "output.ttl"):
-    merger = Merger(input_ontology)
+    updater = Updater(input_ontology)
 
     # Extract for those sources:
-    extractors = [
-        #AasExtractor,
-        #IauMpcExtractor,
-        #NaifExtractor,
-        #PdsExtractor,
-        #SpaseExtractor,
+    all_extractors = [
+        AasExtractor,
+        IauMpcExtractor,
+        NaifExtractor,
+        PdsExtractor,
+        SpaseExtractor,
         WikidataExtractor
     ]
+
+    extractors = []
+
+    if "all" in lists:
+        extractors = all_extractors
+    else:
+        for list_to_extract in lists:
+            for extractor in all_extractors:
+                if list_to_extract == extractor.NAMESPACE:
+                    extractors.append(extractor)
+
+    print("extractors:", extractors)
 
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract()
-        merger.merge(data, source = extractor)
+        updater.update(data, source = extractor)
 
-    turtle = merger.graph.serialize()
+    turtle = updater.graph.serialize()
     with open(output_ontology, 'w') as file:
         file.write(turtle)
 
 
 if __name__ == "__main__":
     parser = ArgumentParser(
-        prog = "merge.py",
-        description = "Merge data from different lists to ontology.")
+        prog = "updater.py",
+        description = "Download data from different lists and merge them into\
+              an output ontology.")
+    parser.add_argument("-l",
+                        "--lists",
+                        dest = "lists",
+                        default = ["all"],
+                        nargs = '*',
+                        type = str,
+                        required = False,
+                        help = "Name of the lists to extract. 'all' will extract for " +
+                         "all of the lists. " +
+                         "Available lists: aas iaumpc naif pds spase wikidata")
     parser.add_argument("-i",
-            "--input-ontology",
-            dest = "input_ontology",
-            default = "",
-            type = str,
-            required = False,
-            help = "Input ontology that will be merged with new data.")
+                        "--input-ontology",
+                        dest = "input_ontology",
+                        default = "",
+                        type = str,
+                        required = False,
+                        help = "Input ontology. The triples in this ontology will be " +
+                        "added in the output ontology with new data. Useful to split " +
+                        "the data extraction into different steps.")
     parser.add_argument("-o",
-            "--output-ontology",
-            dest = "output_ontology",
-            default = "output.ttl",
-            type = str,
-            required = False,
-            help = "Output ontology file to save the merged data.")
+                        "--output-ontology",
+                        dest = "output_ontology",
+                        default = "output.ttl",
+                        type = str,
+                        required = False,
+                        help = "Output ontology file to save the merged data.")
     args = parser.parse_args()
-    main(args.input_ontology, args.output_ontology)
+    main(args.lists, args.input_ontology, args.output_ontology)
