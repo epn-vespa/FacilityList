@@ -136,8 +136,6 @@ def main(lists: List[str],
                 if list_to_extract == extractor.NAMESPACE:
                     extractors.append(extractor)
 
-    print("extractors:", extractors)
-
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract()
@@ -153,16 +151,17 @@ if __name__ == "__main__":
         prog = "updater.py",
         description = "Download data from different lists and merge them into\
               an output ontology.")
+
     parser.add_argument("-l",
                         "--lists",
                         dest = "lists",
                         default = ["all"],
+                        choices = ["all", "aas", "iaumpc", "naif", "pds", "spase", "wikidata"],
                         nargs = '*',
                         type = str,
                         required = False,
-                        help = "Name of the lists to extract. 'all' will extract for " +
-                         "all of the lists. " +
-                         "Available lists: aas iaumpc naif pds spase wikidata")
+                        help = "Name of the lists to extract. 'all' will" + ""
+                        "extract from all of the lists.")
     parser.add_argument("-i",
                         "--input-ontology",
                         dest = "input_ontology",
@@ -170,7 +169,7 @@ if __name__ == "__main__":
                         type = str,
                         required = False,
                         help = "Input ontology. The triples in this ontology will be " +
-                        "added in the output ontology with new data. Useful to split " +
+                        "added in the output ontology with new data. Use to split " +
                         "the data extraction into different steps.")
     parser.add_argument("-o",
                         "--output-ontology",
