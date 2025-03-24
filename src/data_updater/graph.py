@@ -3,13 +3,14 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import Type, Union, Tuple
+from typing import Type, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from extractor.extractor import Extractor
-
 from utils import standardize_uri, cut_acronyms, get_datetime_from_iso
+
 import warnings
+import os
 
 
 class OntologyMapping():
@@ -187,7 +188,7 @@ class Graph():
         self.bind("obs", self.OM.OBS)
         self.bind("geo1", self.OM.GEO)
         self.bind("wb", self.OM.WB)
-        if filename:
+        if os.path.exists(filename):
             Graph._graph.parse(filename)
             # init graph
 
