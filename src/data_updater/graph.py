@@ -9,7 +9,7 @@ from typing import Type, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from data_updater.extractor.extractor import Extractor
-from data_updater.utils import standardize_uri, cut_acronyms, get_datetime_from_iso
+from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso
 
 
 
@@ -160,6 +160,7 @@ class OntologyMapping():
             attr):
         return self.convert_attr(attr)
 
+
 class Graph():
     """
     Instanciate a rdflib Graph as a singleton to prevent multiple
@@ -252,6 +253,13 @@ class Graph():
 
         pred_uri = pred_objtype["pred"]
         objtype = pred_objtype["objtype"]
+
+        if objtype == XSD.dateTime:
+            # If the date is negative, it is not taken into account by
+            # isoformat. We need to save it as a string instead.
+            if obj[0] == '-':
+                objtype = XSD.string
+
         if objtype != XSD.string:
             language = None
         elif language is not None:
@@ -293,8 +301,8 @@ class Graph():
                 namespace_obj = self.OM.OBS
 
             obj = self.get_label_and_save_alt_labels(obj,
-                                                        namespace_obj,
-                                                        language = language)
+                                                     namespace_obj,
+                                                     language = language)
             # standardize obj_uri
             obj = standardize_uri(obj)
             obj_uri = namespace_obj[obj]
