@@ -13,13 +13,14 @@ Arguments:
 
 from typing import Type, List
 from argparse import ArgumentParser
-from graph import Graph # rdflib.Graph singleton with OBS namespace
-from extractor.aas_extractor import AasExtractor
-from extractor.iaumpc_extractor import IauMpcExtractor
-from extractor.naif_extractor import NaifExtractor
-from extractor.pds_extractor import PdsExtractor
-from extractor.spase_extractor import SpaseExtractor
-from extractor.wikidata_extractor import WikidataExtractor
+from data_updater.graph import Graph # rdflib.Graph singleton with OBS namespace
+from data_updater.extractor.extractor import Extractor
+from data_updater.extractor.aas_extractor import AasExtractor
+from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
+from data_updater.extractor.naif_extractor import NaifExtractor
+from data_updater.extractor.pds_extractor import PdsExtractor
+from data_updater.extractor.spase_extractor import SpaseExtractor
+from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
 
 class Updater():
@@ -156,7 +157,7 @@ if __name__ == "__main__":
                         "--lists",
                         dest = "lists",
                         default = ["all"],
-                        choices = ["all", "aas", "iaumpc", "naif", "pds", "spase", "wikidata"],
+                        choices = ["all"] + Extractor.AVAILABLE_NAMESPACES,
                         nargs = '*',
                         type = str,
                         required = False,

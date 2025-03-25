@@ -6,8 +6,8 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 from bs4 import BeautifulSoup
-from extractor.cache import CacheManager
-from extractor.extractor import Extractor
+from data_updater.extractor.cache import CacheManager
+from data_updater.extractor.extractor import Extractor
 from xml.etree import ElementTree as ET
 
 import re

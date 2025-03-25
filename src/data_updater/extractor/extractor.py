@@ -3,4 +3,5 @@ Define the superclass Extractor.
 """
 
 class Extractor:
-    pass
+
+    AVAILABLE_NAMESPACES = ["aas", "iaumpc", "naif", "pds", "spase", "wikidata"]

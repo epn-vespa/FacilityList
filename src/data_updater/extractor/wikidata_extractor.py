@@ -7,19 +7,18 @@ Author:
 """
 
 
-from datetime import datetime
-from datetime import UTC
 import json
 import os
 import ssl
 import sys
 
 from SPARQLWrapper import SPARQLWrapper, JSON
-from extractor.cache import VersionManager, CacheManager
-from extractor.extractor import Extractor
+from data_updater.extractor.cache import VersionManager, CacheManager
+from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from pathlib import Path
+from datetime import datetime, UTC
 
 import certifi
 import urllib

@@ -11,9 +11,9 @@ Author:
 """
 
 from bs4 import BeautifulSoup
-from utils import cut_location
-from extractor.cache import CacheManager
-from extractor.extractor import Extractor
+from data_updater.utils import cut_location
+from data_updater.extractor.cache import CacheManager
+from data_updater.extractor.extractor import Extractor
 
 class AasExtractor(Extractor):
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"

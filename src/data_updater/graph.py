@@ -2,15 +2,15 @@
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+import os
+import warnings
 
 from typing import Type, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
-from extractor.extractor import Extractor
-from utils import standardize_uri, cut_acronyms, get_datetime_from_iso
+from data_updater.extractor.extractor import Extractor
+from data_updater.utils import standardize_uri, cut_acronyms, get_datetime_from_iso
 
-import warnings
-import os
 
 
 class OntologyMapping():
@@ -55,7 +55,7 @@ class OntologyMapping():
         "community": {"pred": _OBS.community,
                       "objtype": URIRef},
         "waveband": {"pred": _OBS.waveband,
-                     "objtype": XSD.string}, # AAS
+                     "objtype": URIRef}, # AAS. Reference to IVOA's Messengers
         "location": {"pred": _GEO.location,
                      "objtype": XSD.string}, # AAS, IAU-MPC, SPASE
         "address": {"pred": SDO.address,
@@ -178,7 +178,15 @@ class Graph():
     _warned = False # Warn only once for multiple instantiation.
 
 
-    def __init__(self, filename = ""):
+    def __init__(self,
+                 filename = ""):
+        """
+        Initialise the graph. Bind basic namespaces to the graph.
+        Return the namespaces already in the graph.
+
+        Keyword arguments:
+        filename -- the input ontology to parse
+        """
         if Graph._graph is not None:
             if not Graph._warned:
                 warnings.warn("Can not create another instance of MyGraph. Ignored.")
@@ -188,9 +196,9 @@ class Graph():
         self.bind("obs", self.OM.OBS)
         self.bind("geo1", self.OM.GEO)
         self.bind("wb", self.OM.WB)
+
         if os.path.exists(filename):
             Graph._graph.parse(filename)
-            # init graph
 
 
     @property

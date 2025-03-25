@@ -18,9 +18,9 @@ Author:
 """
 
 from typing import Set
-from extractor.cache import CacheManager
-from extractor.extractor import Extractor
-from utils import clean_string, extract_items
+from data_updater.extractor.cache import CacheManager
+from data_updater.extractor.extractor import Extractor
+from data_updater.utils import clean_string, extract_items
 import json
 import re
 import os
