@@ -176,7 +176,9 @@ class WikidataExtractor(Extractor):
         result = dict()
         print("Ready to update", len(latest), "entities.")
         for wikidata_uri in tqdm(latest):
-            data = self._extract_entity(wikidata_uri, result)
+            data = self._extract_entity(wikidata_uri,
+                                        result,
+                                        from_cache = False)
             if data:
                 # Downloaded page successfully.
                 # Refresh the version at each loop to keep track of what
@@ -202,7 +204,10 @@ class WikidataExtractor(Extractor):
         # but there are no cached json files (too many requests). It should not
         # be executed with a multithread in this case.
         with ThreadPoolExecutor() as executor:
-            futures = {executor.submit(self._extract_entity, wikidata_uri, result):
+            futures = {executor.submit(self._extract_entity,
+                                       wikidata_uri,
+                                       result,
+                                       True):
                     wikidata_uri for wikidata_uri in older}
             for future in tqdm(as_completed(futures), total = len(futures)):
                 data = future.result()
@@ -479,7 +484,8 @@ class WikidataExtractor(Extractor):
 
     def _extract_entity(self,
                         wikidata_uri: str,
-                        result: dict) -> dict:
+                        result: dict,
+                        from_cache: bool) -> dict:
         """
         Connect to the https://www.wikidata.org/wiki/Special:EntityData endpoint
         to get the JSON response from the Wikidata item.
@@ -493,7 +499,7 @@ class WikidataExtractor(Extractor):
         wikidata_url_json = f"https://www.wikidata.org/wiki/Special:EntityData/{wikidata_item}.json"
         content = CacheManager.get_page(wikidata_url_json,
                                         list_name = self.CACHE,
-                                        from_cache = False)
+                                        from_cache = from_cache)
         # CacheManager.save_cache(content, wikidata_url_json)
 
         # Save cache for latest versions.

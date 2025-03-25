@@ -20,7 +20,7 @@ Author:
 from typing import Set
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
-from data_updater.utils import clean_string, extract_items
+from utils.utils import clean_string, extract_items
 import json
 import re
 import os

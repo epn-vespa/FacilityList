@@ -5,10 +5,12 @@ checking if it already exists from another list. This is a preliminary
 step before we filter out the duplicate entities.
 
 Arguments:
--- VO ontology file (turtle)
--- objects type (ex: Observatory if it is a list of observatories).
-   The object type must be in the taxonomy of the ontology.
-   Add it to the concepts' taxonomy otherwise.
+-- list names to extract (optional, default "all")
+-- input ontology to merge data with (optional, default None)
+-- output ontology (optional, default "output.ttl")
+
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
 """
 
 from typing import Type, List
@@ -24,8 +26,10 @@ from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
 
 class Updater():
+
+
     def __init__(self,
-            ontology_file: str = ""):
+                 ontology_file: str = ""):
         self._graph = Graph(ontology_file)
         if not ontology_file:
             self.init_graph() # Create basic classes

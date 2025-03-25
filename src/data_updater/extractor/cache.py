@@ -230,8 +230,10 @@ class VersionManager():
                         last_version = json.loads(content)
                         for key, value in new_version.items():
                             last_version["results"][key] = value
-                        last_version["previous_date"] = last_version["processing_date"]
-                        last_version["processing_date"] = VersionManager._TODAY
+                        if last_version["processing_date"] != VersionManager._TODAY:
+                            # Only update date for a different run.
+                            last_version["previous_date"] = last_version["processing_date"]
+                            last_version["processing_date"] = VersionManager._TODAY
                         last_version["results_count"] = len(last_version["results"])
                         save_last_version = True
                     except json.JSONDecodeError:

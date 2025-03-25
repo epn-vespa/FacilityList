@@ -2,6 +2,7 @@ from typing import Tuple, Set, List
 from urllib.parse import quote
 import re
 
+
 def standardize_uri(label: str) -> str:
     """
     Creates a valid uri string from a label using lowercase and hyphens
@@ -18,6 +19,7 @@ def standardize_uri(label: str) -> str:
     label = '-'.join([l for l in label if l])
     label = quote(label)
     return label
+
 
 def del_aka(label: str) -> Tuple[str]:
     """
@@ -72,6 +74,7 @@ def del_aka(label: str) -> Tuple[str]:
     #    return label.strip(), aka# last is a )
     return label, ""
 
+
 def cut_acronyms(label: str) -> Tuple[str]:
     """
     Acronyms are alternate names that are between ().
@@ -109,6 +112,7 @@ def cut_acronyms(label: str) -> Tuple[str]:
     # Return full name without acronyms + the last acronym
     return full_name_without_acronyms.strip(), acronym_str
 
+
 def cut_location(label: str,
                  delimiter: str,
                  alt_labels: Set[str]) -> Tuple[str]:
@@ -136,6 +140,7 @@ def cut_location(label: str,
             alt_labels.remove("")
     return location
 
+
 def clean_string(string: str) -> str:
     """
     Removes all \n, \t and double spaces from a string.
@@ -150,6 +155,7 @@ def clean_string(string: str) -> str:
     string = re.sub(r"\\r", " ", string)
     string = re.sub(r" +", " ", string)
     return string
+
 
 def extract_items(d: dict) -> List[Tuple]:
     """
@@ -166,6 +172,7 @@ def extract_items(d: dict) -> List[Tuple]:
         else:
             result.append((key, value))
     return result
+
 
 def get_datetime_from_iso(datetime_str: str):
     """

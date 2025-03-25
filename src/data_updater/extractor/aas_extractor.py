@@ -11,7 +11,7 @@ Author:
 """
 
 from bs4 import BeautifulSoup
-from data_updater.utils import cut_location
+from utils.utils import cut_location
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
