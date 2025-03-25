@@ -316,8 +316,9 @@ class WikidataExtractor(Extractor):
             property_ids = {
                 "P31": "type", # "instance_of"
                 "P247": "COSPAR_ID",
-                "P8913": "NAIF_ID",
-                "P2956": "ObsCode_MPC_ID",
+                "P8913": "NSSDCA_ID",
+                "P2956": "NAIF_ID",
+                "P717": "MPC_Obs_ID",
                 "P527": "has_part",
                 "P361": "is_part_of",
                 #"P17": "country", # can be found using coordinate_location
