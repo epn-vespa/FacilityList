@@ -212,6 +212,11 @@ class Graph():
         return Graph._OM
 
 
+    @property
+    def OBS(self):
+        return self.OM.OBS
+
+
     def __call__(self):
         return Graph._graph
 
