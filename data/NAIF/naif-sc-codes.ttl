@@ -136,7 +136,8 @@ foaf:name rdf:type owl:AnnotationProperty .
                                                              rdfs:comment """Spacecraft NAIF ID -12 correspond to two spacecraft: P12 and
             LADEE."""@en ;
                                                              rdfs:label "VENUS ORBITER"@en ;
-                                                             skos:altLabel "PIONEER 12"@en ,
+                                                             skos:altLabel "P12"@en ,
+                                                                           "PIONEER 12"@en ,
                                                                            "PIONEER-12"@en ,
                                                                            "PVO"@en ;
                                                              skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1978-051A"@en ;
