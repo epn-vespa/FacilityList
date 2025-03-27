@@ -5,10 +5,11 @@ Author:
 import os
 import warnings
 
-from typing import List
+from typing import List, Union
 from rdflib import URIRef
 from data_updater.graph import Graph as G
 from data_updater.extractor.extractor import Extractor
+from utils.utils import standardize_uri
 
 
 class Graph(G):
@@ -100,22 +101,87 @@ class Graph(G):
 
 
     def get_entities_from_list(self,
-                               # namespace: str,
-                               source: Extractor) -> List[URIRef]:
+                               source: Extractor,
+                               no_equivalent_in: Extractor = None,
+                               ) -> List[URIRef]:
         """
         Get all the entities that come from a list.
+        If an entity is already in a synset, it will get the synset
+        too.
 
         Keyword arguments:
-        namespace -- the list's namespace
         source -- the source extractor to get entities from
+        no_equivalent_in -- the entities from source are not linked with
+                        owl:equivalentClass to any entity from this list.
         """
 
+        if isinstance(source, Extractor):
+            source = source.URI
+            source = standardize_uri(source)
+        else:
+            raise TypeError(f"'source' ({source}) should be an Extractor. " +
+                            f"Got {type(source)}.")
+
+        if no_equivalent_in is None:
+        #if True:
+            # Get entitis with their corresponding synonym sets
+            # if they are a members of a synonym set already.
+            query = f"""
+            SELECT ?entity ?synset
+            WHERE {{
+                ?entity obs:source obs:{source} .
+                OPTIONAL {{ ?synset obs:hasMember ?entity . }}
+            }}
+            """
+            results = self.query(query)
+            return [(x[0], x[1]) for x in results]
+
+        else:
+            if isinstance(no_equivalent_in, Extractor):
+                no_equivalent_in = no_equivalent_in.URI
+                no_equivalent_in = standardize_uri(no_equivalent_in)
+            else:
+                raise TypeError(f"'no_equivalent_in' ({source}) should be an Extractor. "
+                                + f"Got {type(source)}.")
+
+            query = f"""
+            SELECT ?entity ?synset
+            WHERE {{
+                ?entity obs:source obs:{source} .
+                FILTER NOT EXISTS {{
+                    ?entity owl:equivalentClass ?entity2 .
+                    ?entity2 obs:source obs:{no_equivalent_in} .
+                }}
+                OPTIONAL {{ ?synset obs:hasMember ?entity . }}
+            }}
+            """
+            results = self.query(query)
+            return [(x[0], x[1]) for x in results]
+
+
+    # Prevent multi querying labels of the same entity
+    _saved_labels = dict()
+
+    def get_labels_and_alt_labels(self,
+                                  entity: URIRef) -> List[str]:
+        """
+        Get a list of label and alt labels for entity
+        """
+        if entity in Graph._saved_labels:
+            return Graph._saved_labels[entity]
         query = f"""
-        SELECT ?entity
-        WHERE {{
-            ?entity obs:source obs:{source.URI} .
-        }}
-        """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-        results = self.graph.query(query)
-        return [x[0] for x in results]
+            SELECT (GROUP_CONCAT(DISTINCT(COALESCE(?altLabel, "")); separator=" | ") AS ?allAltLabels) ?label
+            WHERE {{
+                OPTIONAL {{ <{entity}> skos:altLabel ?altLabel . }}
+                <{entity}> skos:prefLabel ?label .
+            }}
+            GROUP BY ?label
+            """
+        for alt_labels, label in self.query(query):
+            labels = alt_labels.split('|')
+            labels.insert(0, label)
+        # Prevent multi querying
+        Graph._saved_labels[entity] = labels
+        return labels

@@ -16,11 +16,16 @@ from argparse import ArgumentParser
 from data_merger.candidate_pair import CandidatePairsManager
 from data_merger.identifier_merger import IdentifierMerger
 from data_merger.graph import Graph
+from data_merger.synset import SynonymSetManager
+from data_updater.extractor.naif_extractor import NaifExtractor
+from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
 
 class Merger():
 
-    _CMP = CandidatePairsManager()
+    _CPM = CandidatePairsManager()
+
+    _SSM = SynonymSetManager()
 
 
     def __init__(self,
@@ -36,8 +41,19 @@ class Merger():
 
 
     @property
-    def CMP(self):
-        return self._CMP
+    def CPM(self):
+        """
+        Candidate Pair Manager getter
+        """
+        return self._CPM
+
+
+    @property
+    def SSM(self):
+        """
+        Synonym Set Manager getter
+        """
+        return self._SSM
 
 
     def init_graph(self):
@@ -49,10 +65,20 @@ class Merger():
 
     def merge_identifiers(self):
         im = IdentifierMerger(self._graph)
-        candidate_pairs_wiki_naif = im.merge_wikidata_naif()
-        self.CMP.add_candidate_pairs(candidate_pairs_wiki_naif,
-                                     "naif",
-                                     "wikidata")
+        candidate_pairs_wiki_naif = im.merge_wikidata_naif(self.SSM)
+        self.CPM.add_candidate_pairs(candidate_pairs_wiki_naif,
+                                     NaifExtractor.NAMESPACE,
+                                     WikidataExtractor.NAMESPACE)
+        # Disambiguate cases with two candidates
+        # (necessary because NAIF has duplicate identifiers
+        # for different entities)
+        self.CPM.disambiguate(self.graph,
+                              self.SSM,
+                              NaifExtractor(),
+                              WikidataExtractor())
+
+        # /!\ Save the synonym sets in the graph (do not remove)
+        self.SSM.save_all()
 
 
 def main(input_ontology: str = "",
@@ -62,7 +88,7 @@ def main(input_ontology: str = "",
 
     if output_ontology:
         # save the CandidatePairs.
-        merger.CMP.save_all()
+        merger.CPM.save_all()
         with open(output_ontology, 'w') as file:
             file.write(merger.graph.serialize())
 

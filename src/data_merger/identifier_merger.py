@@ -9,21 +9,27 @@ Author:
 """
 
 from typing import List
-import uuid
 from data_merger.candidate_pair import CandidatePair
 from data_merger.graph import Graph
+from data_merger.synset import SynonymSetManager
 from data_updater.extractor import wikidata_extractor
 
 from rdflib.namespace import OWL, SKOS
 from rdflib import Literal, XSD
 
+from data_updater.extractor.naif_extractor import NaifExtractor
+
+
 class IdentifierMerger():
+
 
     def __init__(self,
                  graph: Graph):
         self._graph = graph
 
-    def merge_wikidata_naif(self) -> List[CandidatePair]:
+
+    def merge_wikidata_naif(self,
+                            SSM: SynonymSetManager) -> List[CandidatePair]:
         """
         Merge Wikidata and NAIF entities if both namespaces
         exist using the NAIF_ID relation of Wikidata.
@@ -45,7 +51,7 @@ class IdentifierMerger():
             # Loop on each wikidata class
             wde = wikidata_extractor.WikidataExtractor()
             wikidata_entities = graph.get_entities_from_list(wde)
-            for wikidata_entity in wikidata_entities:
+            for wikidata_entity, synset in wikidata_entities:
                 for _, _, naif_code in graph.triples((wikidata_entity,
                                                       graph.OBS["NAIF_ID"],
                                                       None)):
@@ -56,14 +62,17 @@ class IdentifierMerger():
                         naif_ids.append(naif_id)
                     if len(naif_ids) == 1:
                         # There is only one NAIF entity with this ID.
-                        graph.add((wikidata_entity, OWL.equivalentClass, naif_ids[0]))
-                        graph.add((naif_ids[0], OWL.equivalentClass, wikidata_entity))
+                        SSM.add_synset(wikidata_entity, naif_ids[0])
                     elif len(naif_ids) > 1:
                         # need further disambiguation. Use a CandidatePair.
                         for naif_id in naif_ids:
-                            candidate_pairs.append(CandidatePair(naif_id, wikidata_entity))
+                            candidate_pairs.append(CandidatePair(naif_id,
+                                                                 wikidata_entity,
+                                                                 NaifExtractor().URI,
+                                                                 wde.URI))
+                            # TODO if the synset is not none, is it well linked ?
         return candidate_pairs
 
+
 if __name__ == "__main__":
-    im = IdentifierMerger()
-    im.merge_wikidata_naif()
+    pass
