@@ -11,7 +11,7 @@ Author:
 """
 
 from bs4 import BeautifulSoup
-from utils.utils import cut_location
+from utils.utils import cut_location, cut_acronyms
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -103,10 +103,15 @@ class AasExtractor(Extractor):
             facility_name = row_data["full facility name"].strip()
             # Origin observatory
             location = cut_location(facility_name,
-                                               delimiter = " at ",
-                                               alt_labels = alt_labels)
+                                    delimiter = " at ",
+                                    alt_labels = alt_labels)
             if location:
+                location, acronym = cut_acronyms(location)
                 data["is_part_of"] = location
+                # add location to the results dict too.
+                result[location] = {"label": location}
+                if acronym:
+                    result[location]["alt_label"] = [location]
 
             # Add label to row dict
             data["label"] = facility_name
