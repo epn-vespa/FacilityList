@@ -20,7 +20,6 @@ from data_merger.synset import SynonymSetManager
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
-
 class Merger():
 
     _CPM = CandidatePairsManager()
@@ -76,9 +75,10 @@ class Merger():
                               self.SSM,
                               NaifExtractor(),
                               WikidataExtractor())
+        print("DONE")
 
         # /!\ Save the synonym sets in the graph (do not remove)
-        self.SSM.save_all()
+        # self.SSM.save_all() (deprecated)
 
 
 def main(input_ontology: str = "",
