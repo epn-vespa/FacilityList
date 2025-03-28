@@ -158,7 +158,7 @@ class OntologyMapping():
     def __getattr__(
             self,
             attr):
-        return self.convert_attr(attr)
+        return getattr(Graph._graph, attr)
 
 
 class Graph():

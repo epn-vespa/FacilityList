@@ -9,11 +9,14 @@ Author:
 """
 
 
-from rdflib import URIRef
+from typing import Union
 from fuzzywuzzy import fuzz
 
+from data_merger.entity import Entity
 from data_merger.graph import Graph
 from data_merger.scorer.score import Score
+from data_merger.synonym_set import SynonymSet
+from utils.utils import remove_punct
 
 
 class FuzzyScorer(Score):
@@ -23,8 +26,8 @@ class FuzzyScorer(Score):
 
 
     def compute(graph: Graph,
-                entity1: URIRef,
-                entity2: URIRef) -> float:
+                entity1: Entity,
+                entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute a fuzzy score between the two entities' labels and alt labels.
         Return the highest match between any labels.
@@ -35,14 +38,17 @@ class FuzzyScorer(Score):
         """
         highest_score = 0
 
-        labels1 = graph.get_labels_and_alt_labels(entity1)
-        labels2 = graph.get_labels_and_alt_labels(entity2)
+        labels1 = entity1.get_values_for("alt_label")
+        labels1.update(entity1.get_values_for("label"))
+        labels2 = entity2.get_values_for("alt_label")
+        labels2.update(entity2.get_values_for("label"))
         for label1 in labels1:
             for label2 in labels2:
-                # partial: ignore punctuation
+                # partial: ignore punctuation?
                 # token sort: different word order does not impact
-                score = fuzz.partial_token_sort_ratio(label1, label2)
+                # ignore case (lower())
+                score = fuzz.token_sort_ratio(remove_punct(label1.lower()),
+                                              remove_punct(label2.lower()))
                 if score > highest_score:
                     highest_score = score
-
         return highest_score / 100

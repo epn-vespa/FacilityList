@@ -5,7 +5,7 @@ Author:
 import os
 import warnings
 
-from typing import List, Union
+from typing import List
 from rdflib import URIRef
 from data_updater.graph import Graph as G
 from data_updater.extractor.extractor import Extractor
@@ -29,8 +29,7 @@ class Graph(G):
     """
 
 
-    def __init__(self,
-                 filename: str):
+    def __init__(self):
         """
         Initialize the graph.
 
@@ -44,15 +43,22 @@ class Graph(G):
             return
         Graph._graph = G()
 
+
+    def parse(self,
+              filename: str):
+        """
+        Overrides rdflib.Graph's parse to extract the namespaces and
+        save them in this object.
+        """
         input_ontology_namespaces = []
         if os.path.exists(filename):
             Graph._graph.parse(filename)
-            for namespace in list(Graph._graph.namespaces()):
-                if namespace[0] in Extractor.AVAILABLE_NAMESPACES:
-                    input_ontology_namespaces.append(namespace[0])
-        # Used to control inter-list identifiers (example: NAIF-Wikidata)
-        # If two lists that have cross identifiers are in the namespaces,
-        # then they can be linked with OWL.equivalentClass.
+            for prefix, namespace in Graph._graph.namespaces():
+                if prefix in Extractor.AVAILABLE_NAMESPACES:
+                    input_ontology_namespaces.append(prefix)
+        else:
+            raise FileNotFoundError(f"File {filename} does not exist.")
+
         self._available_namespaces = input_ontology_namespaces
 
 
@@ -123,8 +129,7 @@ class Graph(G):
                             f"Got {type(source)}.")
 
         if no_equivalent_in is None:
-        #if True:
-            # Get entitis with their corresponding synonym sets
+            # Get entities with their corresponding synonym sets
             # if they are a members of a synonym set already.
             query = f"""
             SELECT ?entity ?synset
@@ -133,9 +138,6 @@ class Graph(G):
                 OPTIONAL {{ ?synset obs:hasMember ?entity . }}
             }}
             """
-            results = self.query(query)
-            return [(x[0], x[1]) for x in results]
-
         else:
             if isinstance(no_equivalent_in, Extractor):
                 no_equivalent_in = no_equivalent_in.URI
@@ -155,33 +157,9 @@ class Graph(G):
                 OPTIONAL {{ ?synset obs:hasMember ?entity . }}
             }}
             """
-            results = self.query(query)
-            return [(x[0], x[1]) for x in results]
+        results = self.query(query)
+        return [(x[0], x[1]) for x in results]
 
 
-    # Prevent multi querying labels of the same entity
-    _saved_labels = dict()
-
-    def get_labels_and_alt_labels(self,
-                                  entity: URIRef) -> List[str]:
-        """
-        Get a list of label and alt labels for entity
-        """
-        if entity in Graph._saved_labels:
-            return Graph._saved_labels[entity]
-        query = f"""
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-
-            SELECT (GROUP_CONCAT(DISTINCT(COALESCE(?altLabel, "")); separator=" | ") AS ?allAltLabels) ?label
-            WHERE {{
-                OPTIONAL {{ <{entity}> skos:altLabel ?altLabel . }}
-                <{entity}> skos:prefLabel ?label .
-            }}
-            GROUP BY ?label
-            """
-        for alt_labels, label in self.query(query):
-            labels = alt_labels.split('|')
-            labels.insert(0, label)
-        # Prevent multi querying
-        Graph._saved_labels[entity] = labels
-        return labels
+if __name__ == "__main__":
+    pass

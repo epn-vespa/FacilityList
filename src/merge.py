@@ -16,35 +16,28 @@ from argparse import ArgumentParser
 from data_merger.candidate_pair import CandidatePairsManager
 from data_merger.identifier_merger import IdentifierMerger
 from data_merger.graph import Graph
-from data_merger.synset import SynonymSetManager
+from data_merger.synonym_set import SynonymSetManager
+from data_merger.scorer.fuzzy_scorer import FuzzyScorer
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
 class Merger():
 
-    _CPM = CandidatePairsManager()
+    _graph = Graph()
 
     _SSM = SynonymSetManager()
 
 
     def __init__(self,
                  ontology_file: str = ""):
-        self._graph = Graph(ontology_file)
-        if not ontology_file:
+        self._graph.parse(ontology_file) # = Graph(ontology_file)
+        if ontology_file:
             self.init_graph() # Create basic classes
 
 
     @property
     def graph(self):
         return self._graph
-
-
-    @property
-    def CPM(self):
-        """
-        Candidate Pair Manager getter
-        """
-        return self._CPM
 
 
     @property
@@ -64,21 +57,27 @@ class Merger():
 
     def merge_identifiers(self):
         im = IdentifierMerger(self._graph)
-        candidate_pairs_wiki_naif = im.merge_wikidata_naif(self.SSM)
-        self.CPM.add_candidate_pairs(candidate_pairs_wiki_naif,
-                                     NaifExtractor.NAMESPACE,
-                                     WikidataExtractor.NAMESPACE)
+        CPM = CandidatePairsManager(WikidataExtractor.NAMESPACE,
+                                    NaifExtractor.NAMESPACE)
+
+        im.merge_wikidata_naif(self.SSM, CPM)
+
         # Disambiguate cases with two candidates
         # (necessary because NAIF has duplicate identifiers
         # for different entities)
-        self.CPM.disambiguate(self.graph,
-                              self.SSM,
-                              NaifExtractor(),
-                              WikidataExtractor())
-        print("DONE")
+        CPM.disambiguate_candidates(self.SSM,
+                                    # candidate_pairs_wiki_naif,
+                                    scores = [FuzzyScorer])
+        CPM.save_all() # Save remaining candidate pairs.
+
+        # Deal with remaining candidate pairs (TODO)
+        #self.CPM.disambiguate(self.graph,
+        #                      self.SSM,
+        #                      NaifExtractor(),
+        #                      WikidataExtractor())
 
         # /!\ Save the synonym sets in the graph (do not remove)
-        # self.SSM.save_all() (deprecated)
+        self.SSM.save_all()
 
 
 def main(input_ontology: str = "",
@@ -88,7 +87,6 @@ def main(input_ontology: str = "",
 
     if output_ontology:
         # save the CandidatePairs.
-        merger.CPM.save_all()
         with open(output_ontology, 'w') as file:
             file.write(merger.graph.serialize())
 

@@ -1,6 +1,7 @@
 from typing import Tuple, Set, List
 from urllib.parse import quote
 import re
+import string
 
 
 def standardize_uri(label: str) -> str:
@@ -141,20 +142,25 @@ def cut_location(label: str,
     return location
 
 
-def clean_string(string: str) -> str:
+def clean_string(text: str) -> str:
     """
     Removes all \n, \t and double spaces from a string.
 
     Keyword arguments:
     string -- the string to clean
     """
-    # string = string.replace("\n", " ")
-    string = string.replace("\r", " ")
-    string = re.sub(r"\t", " ", string)
-    string = re.sub(r"\\n", " ", string)
-    string = re.sub(r"\\r", " ", string)
-    string = re.sub(r" +", " ", string)
-    return string
+    # text = text.replace("\n", " ")
+    text = text.replace("\r", " ")
+    text = re.sub(r"\t", " ", text)
+    text = re.sub(r"\\n", " ", text)
+    text = re.sub(r"\\r", " ", text)
+    text = re.sub(r" +", " ", text)
+    return text
+
+
+def remove_punct(text: str) -> str:
+    text = re.sub(r"[^a-zA-Z0-9 ]+", ' ', text)
+    return text
 
 
 def extract_items(d: dict) -> List[Tuple]:

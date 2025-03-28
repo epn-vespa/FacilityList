@@ -10,16 +10,16 @@ Author:
 """
 
 from collections import defaultdict
-from typing import List, Type, Union
+from typing import Dict, List, Union
 import uuid
 import hashlib
 
-from rdflib import RDF, XSD, Literal, Node, URIRef
-from tqdm import tqdm
+from rdflib import RDF, XSD, Literal, URIRef
 from data_merger.graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.scorer.scorer_lists import ScorerLists
-from data_merger.synset import SynonymSet, SynonymSetManager
+from data_merger.synonym_set import SynonymSet, SynonymSetManager
+from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -30,14 +30,10 @@ class CandidatePair():
 
 
 class CandidatePair():
-
-
     def __init__(self,
-                 first: URIRef,
-                 second: URIRef,
-                 list1: str,
-                 list2: str,
-                 uri: str = ""):
+                 first: Entity,
+                 second: Union[Entity, SynonymSet],
+                 uri: URIRef = None):
         """
         Instantiate a CandidatePair object. When reading a graph
         with some CandidatePair, use the node argument to save the
@@ -46,48 +42,54 @@ class CandidatePair():
 
         Keyword arguments:
         first -- first member of the pair
-        second -- second member of the pair
+        second -- second member of the pair. Can be an entity or a synonym set.
+        list1 -- list or namespace of the first member.
+        list2 -- list or namespace of the second member.
         node -- the node of the candidate pair in the graph if exists
         """
         self._member1 = first
         self._member2 = second
-        self._list1 = list1
-        self._list2 = list2
+        #self._list1 = list1
+        #self._list2 = list2
         self._scores = dict()
 
         if not uri:
-            self._uri = str(uuid.uuid4())
+            self._uri = Graph._graph.OBS[str(uuid.uuid4())]
+            # self._uri = str(uuid.uuid4())
         else:
             self._uri = uri
 
+        self._list1 = str(first.uri).split('#')[0].split('/')[-1]
+        self._list2 = str(second.uri).split('#')[0].split('/')[-1]
+
 
     @property
-    def member1(self):
+    def member1(self) -> Entity:
         return self._member1
 
 
     @property
-    def member2(self):
+    def member2(self) -> Union[Entity, SynonymSet]:
         return self._member2
 
 
     @property
-    def list1(self):
+    def list1(self) -> str:
         return self._list1
 
 
     @property
-    def list2(self):
+    def list2(self) -> str:
         return self._list2
 
 
     @property
-    def uri(self):
+    def uri(self) -> URIRef:
         return self._uri
 
 
     @property
-    def scores(self):
+    def scores(self) -> dict:
         return self._scores
 
 
@@ -119,11 +121,12 @@ class CandidatePair():
 
 
     def __eq__(self,
-               candidate_pair: CandidatePair):
+               candidate_pair: CandidatePair) -> bool:
         return (candidate_pair.member1 == self.member1 and candidate_pair.member2 == self.member2
                 or candidate_pair.member1 == self.member2 and candidate_pair.member2 == self.member1)
 
-    def __hash__(self):
+
+    def __hash__(self) -> int:
         m1 = str(self.member1)
         m2 = str(self.member2)
         str_ver = m1 + '_' + m2 if m1 < m2 else m2 + '_' + m1
@@ -133,95 +136,91 @@ class CandidatePair():
 class CandidatePairsManager():
     """
     Save the candidate pairs inside a dictionary of sets. Useful to manage
-    candidate pairs by facility lists.
+    candidate pairs by facility lists. Every mapping of two lists should have
+    its own CandidatePairsManager.
     """
 
 
-    def __init__(self):
-        # to get candidate pairs by namespace
-        self._candidate_pairs_dict = defaultdict(lambda: defaultdict(list))
+    def __init__(self,
+                 list1: str,
+                 list2: str):
+        # to get candidate pairs by entity
+        self._candidate_pairs_dict = defaultdict(list)
         # to loop over candidate pairs
         self._candidate_pairs = list()
+        self._list1 = list1
+        self._list2 = list2
 
 
     @property
-    def candidate_pairs(self):
+    def candidate_pairs(self) -> List[CandidatePair]:
         return self._candidate_pairs
 
 
     @property
-    def candidate_pairs_dict(self):
+    def candidate_pairs_dict(self) -> Dict[str, CandidatePair]:
         return self._candidate_pairs_dict
 
 
     def add_candidate_pairs(self,
                             candidate_pairs: Union[CandidatePair,
-                                                   List[CandidatePair]],
-                            list1: str,
-                            list2: str):
+                                                   List[CandidatePair]]):
         """
         Add a candidate pair to the candidate pairs manager.
 
         Keyword arguments:
         candidate_pairs -- the candidate pair(s) to add
-        list1 -- name of the 1st list (must be same as namespace of member1)
-        list2 -- name of the 2nd list (must be same as namespace of member2)
         """
         if type(candidate_pairs) != list:
             candidate_pairs = [candidate_pairs]
         for candidate_pair in candidate_pairs:
             #self.candidate_pairs_dict[list1].add(candidate_pair)
             #self.candidate_pairs_dict[list2].add(candidate_pair)
-            if candidate_pair not in self.candidate_pairs_dict[list1][candidate_pair.member1]:
-                self.candidate_pairs_dict[list1][candidate_pair.member1].append(candidate_pair)
-            if candidate_pair not in self.candidate_pairs_dict[list2][candidate_pair.member2]:
-                self.candidate_pairs_dict[list2][candidate_pair.member2].append(candidate_pair)
+            if candidate_pair not in self.candidate_pairs_dict[candidate_pair.member1]:
+                self.candidate_pairs_dict[candidate_pair.member1].append(candidate_pair)
+            if candidate_pair not in self.candidate_pairs_dict[candidate_pair.member2]:
+                self.candidate_pairs_dict[candidate_pair.member2].append(candidate_pair)
             if candidate_pair not in self.candidate_pairs:
                 self.candidate_pairs.append(candidate_pair)
 
 
     def remove_candidate_pair(self,
-                              graph: Graph,
-                              candidate_pair: CandidatePair,
-                              list1: str,
-                              list2: str):
+                              candidate_pair: CandidatePair):
         """
         Remove a candidate pair from the Candidate Pair manager
         and from the graph.
 
+        Use after an entity has been disambiguated and is in a synset.
+        This will remove all candidate pairs containing the entity
+        that are between list1 & list2.
+
         Keyword arguments:
         graph -- the graph to remove the candidate pair from
         candidate_pair -- the candidate pair to remove
-        list1 -- the list or namespace of the first pair's member
-        list2 -- the list or namespace of the second pair's member
         """
-        try:
-            self.candidate_pairs_dict[list1][candidate_pair.member1].remove(candidate_pair)
-        except ValueError:
-            # print("candidate pair not saved in the dict:", candidate_pair)
-            pass
-        try:
-            self.candidate_pairs_dict[list2][candidate_pair.member2].remove(candidate_pair)
-        except ValueError:
-            # print("candidate pair not saved in the dict:", candidate_pair)
-            pass
+        graph = Graph._graph
         self.candidate_pairs.remove(candidate_pair)
         # Remove the candidate pair from the graph.
         graph.remove((graph.OBS[candidate_pair.uri], None, None))
         graph.remove((None, None, graph.OBS[candidate_pair.uri]))
+
         # Remove pairs that contain the entity and point to the other list.
-        self._remove_all_pairs_with_entity(candidate_pair.member1, list1, list2)
-        self._remove_all_pairs_with_entity(candidate_pair.member2, list1, list2)
         del(candidate_pair)
 
+        # Remove candidate pairs from the graph
+        Graph._graph.remove((candidate_pair.node, None, None))
+        Graph._graph.remove((None, None, candidate_pair.node))
 
-    def _remove_all_pairs_with_entity(self,
-                                      entity: URIRef,
-                                      list1: str,
-                                      list2: str):
+
+    @DeprecationWarning
+    def remove_all_pairs_with_entity(self,
+                                     entity: Entity,
+                                     list1: str,
+                                     list2: str):
         """
         Use after an entity has been disambiguated and is in a synset.
-        This will remove all candidate pairs containing the entity.
+        This will remove all candidate pairs containing the entity
+        that are between list1 & list2.
 
         Keyword arguments:
         entity -- disambiguated entity to remove from candidate pair manager
@@ -231,101 +230,149 @@ class CandidatePairsManager():
                 entity == candidate_pair.member2 and list1 == candidate_pair.list1):
                 # If the pair is between the first member and second list or
                 # between the second member and first list, then it should be removed.
-
                 self.candidate_pairs.remove(candidate_pair)
                 # Remove the candidate pair from the graph.
                 Graph._graph.remove((candidate_pair.node, None, None))
                 Graph._graph.remove((None, None, candidate_pair.node))
                 del(candidate_pair)
+                return # Only one candidate pair is allowed
 
 
     def get_candidate_pairs(self,
-                            list1: str,
-                            list2: str = None) -> set:
+                            entity: URIRef) -> set:
         """
-        Get the candidate pairs for a namespace or list or two namespaces or
-        lists.
+        Get the candidate pairs for an entity.
 
         Keword arguments:
-        list1 -- the list or namespace
-        list2 -- if set, get intersection of candidate pairs from both lists
+        entity -- the entity to get candidate pairs from.
         """
-        candidate_pairs = self._candidate_pairs_dict[list1].values()
-        if list2:
-            candidate_pairs = candidate_pairs.intersection(
-                self._candidate_pairs_dict[list2])
-        # Only keep candidate pairs that still exist
-        candidate_pairs = candidate_pairs.intersection(self.candidate_pairs)
-        return candidate_pairs
+        if entity not in self._candidate_pairs_dict:
+            return []
+        return self._candidate_pairs_dict[entity]
 
 
     def get_candidate_pair(self,
-                           entity1: URIRef,
-                           entity2: URIRef,
-                           list1: str,
-                           list2: str,) -> CandidatePair:
+                           entity1: Entity,
+                           entity2: Entity) -> CandidatePair:
         """
         Get a candidate pair object from the namespaces and entities.
         """
-        if (list1 in self.candidate_pairs_dict.keys() and
-            list2 in self.candidate_pairs_dict.keys()):
-            candidate_pairs = self.candidate_pairs_dict[list1][list2]
-
-            for pair in candidate_pairs:
-                if (pair.member1.node == entity1 and pair.member2.node == entity2
-                    or pair.member2.node == entity1 and pair.member1.node == entity2):
-                    return pair
+        for pair in self.candidate_pairs:
+            if (pair.member1 == entity1 and pair.member2 == entity2
+                or pair.member2 == entity1 and pair.member1 == entity2):
+                return pair
         # Absent from the Candidate Pair Manager.
         # We create a new candidate_pair, save it and return it.
-        candidate_pair = CandidatePair(entity1, entity2,
-                                       list1, list2)
-        self.add_candidate_pairs(candidate_pair,
-                                 list1,
-                                 list2)
+        candidate_pair = CandidatePair(entity1, entity2)
+
+        self.add_candidate_pairs(candidate_pair)
+
         return candidate_pair
+
+
+    def del_candidate_pairs(self,
+                            entity: Union[Entity, SynonymSet]):
+        """
+        Remove all candidate pairs that contain an entity.
+
+        Keyword arguments:
+        entity -- the entity to remove pairs.
+        """
+        for pair in self.candidate_pairs:
+            if (pair.member1 == entity or
+                pair.member2 == entity):
+                self.candidate_pairs.remove(pair)
+        if entity in self.candidate_pairs_dict:
+            del self.candidate_pairs_dict[entity]
 
 
     def save_all(self):
         """
-        Save the candidate pairs.
+        Save the remaining candidate pairs into the graph.
+        This will add CandidatePair entities in the graph
+        in case they were not all disambiguated.
         """
         graph = Graph._graph
 
         for candidate_pair in self.candidate_pairs:
-            candidate_pair_uri = graph.OBS[candidate_pair.uri]
+            candidate_pair_uri = candidate_pair.uri
 
             # Add the candidate pair in the graph
             graph.add((candidate_pair_uri, RDF.type,
                        graph.OBS["CandidatePair"]))
             graph.add((candidate_pair_uri, graph.OBS["hasMember"],
-                       candidate_pair.member1))
+                       candidate_pair.member1.uri))
             graph.add((candidate_pair_uri, graph.OBS["hasMember"],
-                       candidate_pair.member2))
+                       candidate_pair.member2.uri))
             for score, value in candidate_pair.scores.items():
                 graph.add((candidate_pair_uri,
                            graph.OBS[score],
                            Literal(value, datatype = XSD.float)))
 
 
-    def disambiguate_only_candidates(self,
-                                     graph: Graph,
-                                     list1: Extractor,
-                                     list2: Extractor,
-                                     scores: List[Score] = None):
+    def disambiguate_candidates(self,
+                                SSM: SynonymSetManager,
+                                scores: List[Score] = None):
         """
         Disambiguate only entities that already have a candidate pair.
         This is useful for lists where we already have an idea of what to
         disambiguate (example: wikidata / naif with ambiguous identifiers).
 
         Keyword arguments:
-        graph -- used to get the entities' informations to help disambiguate
-        list1 -- the name of the first list
-        list2 -- the name of the second list
-        scores -- list of Score classes to use. If None, perform on all scores
+        SSM - the Synonym Set Manager used to save synonym sets
+        scores -- list of scores to perform. If None, perform on all scores.
         """
-        # TODO for wikidata/naif
+        for score in ScorerLists.DISCRIMINANT_SCORES:
+            if score not in scores:
+                continue
+            print(f"Computing {score.NAME}")
+            for candidate_pair in self.candidate_pairs.copy():
+                # discriminant
+                self.compute(score = score,
+                             ssm = SSM,
+                             candidate_pair = candidate_pair)
+                """
+                with ThreadPoolExecutor() as executor:
+                    futures = {executor.submit(self.compute,
+                                               score,
+                                               SSM,
+                                               candidate_pair)}
+                """
 
 
+    def compute(self,
+                score: Score,
+                ssm: SynonymSetManager,
+                candidate_pair: CandidatePair):
+        """
+        Compute the score for a candidate pair. Add the candidate pair
+        in a synset if the score was discriminant and remove the
+        candidate pair from the candidate pairs list.
+        """
+        graph = Graph._graph
+        score_value = score.compute(graph,
+                                    candidate_pair.member1,
+                                    candidate_pair.member2)
+        candidate_pair.add_score(score.NAME, score_value)
+        if ScorerLists.ELIMINATE.get(score, lambda x: False)(score_value):
+            self.candidate_pairs.remove(candidate_pair)
+        elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
+            # Remove from candidate pairs
+            self.candidate_pairs.remove(candidate_pair)
+
+            # Remove the candidate pairs that contain member1 & member2
+            # (they do not need to be mapped anymore)
+            self.del_candidate_pairs(candidate_pair.member1)
+            self.del_candidate_pairs(candidate_pair.member2)
+
+            # Add it to the graph
+            ssm.add_synset(candidate_pair.member1,
+                           candidate_pair.member2)
+        else:
+            # The candidate pair needs to be re-processed with other scores
+            pass
+
+    @DeprecationWarning
     def disambiguate(self,
                      graph: Graph,
                      SSM: SynonymSetManager,
@@ -371,7 +418,6 @@ class CandidatePairsManager():
 
                 # create graph's table
                 print(f"Computing {score.NAME} between {list1.URI} and {list2.URI}")
-                print(len(entities_list_1), entities_list_1[0])
                 with ThreadPoolExecutor() as executor:
                     futures = {executor.submit(self._compute_score(graph,
                                                                    score,
@@ -385,17 +431,15 @@ class CandidatePairsManager():
                         (entity1, synset1) for entity1, synset1 in entities_list_1}
                     for futures in as_completed(futures):
                         pass # TODO no need to use as_completed
-                for entity1, synset1 in entities_list_1: # No synset
-                    print(len(entities_list_1))
 
-
+    @DeprecationWarning
     def _compute_score(self,
                        graph: Graph,
                        score: Score,
                        SSM: SynonymSetManager,
-                       entity1: URIRef,
+                       entity1: Entity,
                        synset1: SynonymSet,
-                       entities_list_1: List,
+                       entities_list_1: List[Entity],
                        entities_list_2: List,
                        list1: Extractor,
                        list2: Extractor):
@@ -407,36 +451,42 @@ class CandidatePairsManager():
         Keyword arguments:
         graph -- to add triples
         """
+
+        counter = 0
+        entity1 = Entity(entity1)
+        # synset1 & synset2 are only used to verify if they exist in the list.
         for entity2, synset2 in entities_list_2:
-            print(len(entities_list_2))
+            counter += 1
+            print(counter, "/", len(entities_list_2))
+            entity2 = Entity(entity2)
             score_value = score.compute(graph, entity1, entity2)
             candidate_pair = self.get_candidate_pair(entity1,
-                                                     entity2,
-                                                     list1.NAMESPACE,
-                                                     list2.NAMESPACE)
+                                                     entity2)
             candidate_pair.add_score(score.NAME, score_value)
             # If the score is discriminant, we link the entities
             # in the graph and remove them from the list of entities
             # to discriminate.
-            if ScorerLists.DISCRIMINATE[score](score_value):
-                """
-                if entity1 in entities_list_1:
-                    print("INSIDE", entity1)
-                    entities_list_1.remove(entity1)
-                else:
-                    print("OUTSIDE", entity1)"
-                """
+            if (score in ScorerLists.ELIMINATE and
+                ScorerLists.ELIMINATE[score](score_value)):
+                # remove the CandidatePair itself
+                self.remove_candidate_pair(graph, candidate_pair)
+            if (score in ScorerLists.ADMIT and
+                ScorerLists.ADMIT[score](score_value)):
                 # Do not loop again on those entities.
-                entities_list_1.remove((entity1, synset1))
-                entities_list_2.remove((entity2, synset2))
+                if (entity1, synset1) in entities_list_1:
+                    entities_list_1.remove((entity1, synset1))
+                if (entity2, synset2) in entities_list_2:
+                    entities_list_2.remove((entity2, synset2))
 
                 SSM.add_synset(entity1, entity2) # SynSet Manager
                 # Remove candidate pair from the manager & graph.
                 # This has to be done every time we add a synset.
-                self.remove_candidate_pair(graph, candidate_pair, list1, list2)
+                # remove all other candidate pairs with the members that are linked
+                self.remove_all_pairs_with_entity(candidate_pair.member1)
+                self.remove_all_pairs_with_entity(candidate_pair.member2)
                 break
             else:
-                self.add_candidate_pairs(candidate_pair, list1, list2)
+                self.add_candidate_pairs(candidate_pair)
 
 
 if __name__ == "__main__":
