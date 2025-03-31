@@ -180,6 +180,26 @@ def extract_items(d: dict) -> List[Tuple]:
     return result
 
 
+def cut_language_from_string(text: str) -> Tuple[str, str]:
+    """
+    Cut the language tag on '@' if there is a language tag.
+    Returns the text without language tag and the language tag.
+    Language tag example: @en
+    The language tag should be at the end of the string.
+
+    Keyword arguments:
+    text -- will be split into a text and its language.
+    """
+    lang = re.findall(r"@[a-zA-Z]{2,3}$", text)
+    if lang:
+        lang = lang[0]
+        text = text[:-len(lang)]
+    else:
+        lang = ""
+    return text, lang
+
+
+
 def get_datetime_from_iso(datetime_str: str):
     """
     Fix datetime string :

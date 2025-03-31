@@ -9,7 +9,7 @@ from typing import Type, Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from data_updater.extractor.extractor import Extractor
-from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso
+from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
 
 
 
@@ -444,29 +444,14 @@ class Graph():
             if not obj:
                 continue
             # Get the language of the obj
-            if type(obj) == str and obj.count('@') == 1:
-                obj, language = obj.split('@')
+            if type(obj) == str:
+                # language tag example: @en
+                obj, language = cut_language_from_string(obj)
             # Change object type for certain predicates
             predicate_uri, obj_uri = self.convert_pred_and_obj(predicate,
                                                                obj,
                                                                language = language,
                                                                source = source)
-            """
-            if predicate == "label":
-                obj = self.get_label_and_save_alt_labels(obj,
-                                                         namespace_obj,
-                                                         language = language)
-            if predicate in self.OM.SELF_REF:
-                obj = self.get_label_and_save_alt_labels(obj,
-                                                         namespace_obj,
-                                                         language = language)
-                obj_value = namespace_obj[standardize_uri(obj)]
-            elif predicate in self.OM.EXT_REF:
-                 # Do not standardize an external URI
-                obj_value = namespace_obj[obj]
-            else:
-                obj_value = Literal(obj, lang = language, type = xsdtype)"
-            """
 
             # Add to the graph
             self.graph.add((subj_uri, predicate_uri, obj_uri))

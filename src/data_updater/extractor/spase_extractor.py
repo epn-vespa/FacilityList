@@ -109,6 +109,10 @@ class SpaseExtractor(Extractor):
                     values = [values]
                 for value in values:
                     value = clean_string(value)
+                    if key == "longitude":
+                        # Remove final 'E' (East) to have a valid float value
+                        if value[-1] == 'E':
+                            value = value[:-1]
                     if key == "label":
                         data[key] = value
                     elif key == "alt_label":
