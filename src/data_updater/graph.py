@@ -23,7 +23,7 @@ class OntologyMapping():
 
     _OBS = Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
-    _WB = Namespace("http://http://www.ivoa.net/rdf/messenger#")
+    _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
 
     # Mapping from dictionary keys to ontology properties.
     # Properties that are not mapped belong to the OBS namespace.
@@ -459,6 +459,7 @@ class Graph():
         if source:
             source_uri = self.OM.OBS[standardize_uri(source.URI)]
             self.graph.add((subj_uri, self.OM.OBS["source"], source_uri))
+
 
 if __name__ == "__main__":
     pass
