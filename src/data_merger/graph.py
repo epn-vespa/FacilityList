@@ -5,10 +5,11 @@ Author:
 import os
 import warnings
 
-from typing import List
+from typing import Iterator, Tuple
 from rdflib import URIRef
 from data_updater.graph import Graph as G
 from data_updater.extractor.extractor import Extractor
+from utils.performances import timeit
 from utils.utils import standardize_uri
 
 
@@ -106,13 +107,14 @@ class Graph(G):
         return namespace in self._available_namespaces
 
 
+    @timeit
     def get_entities_from_list(self,
                                source: Extractor,
                                no_equivalent_in: Extractor = None,
-                               ) -> List[URIRef]:
+                               ) -> Iterator[Tuple[URIRef]]:
         """
         Get all the entities that come from a list.
-        If an entity is already in a synset, it will get the synset
+        If an entity is already in a synset, it will return the synset
         too.
 
         Keyword arguments:
@@ -157,8 +159,7 @@ class Graph(G):
                 OPTIONAL {{ ?synset obs:hasMember ?entity . }}
             }}
             """
-        results = self.query(query)
-        return [(x[0], x[1]) for x in results]
+        return self.query(query)
 
 
 if __name__ == "__main__":

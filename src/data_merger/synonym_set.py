@@ -214,6 +214,10 @@ class SynonymSetManager():
         self._synsets = set()
 
 
+    def __del__(self):
+        del(self._synsets)
+
+
     def add_synset(self,
                    entity1: Entity,
                    entity2: Union[Entity, SynonymSet]) -> SynonymSet:

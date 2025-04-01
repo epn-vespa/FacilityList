@@ -13,24 +13,24 @@ Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
 from argparse import ArgumentParser
-from data_merger.candidate_pair import CandidatePairsManager
+from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
 from data_merger.identifier_merger import IdentifierMerger
 from data_merger.graph import Graph
 from data_merger.synonym_set import SynonymSetManager
 from data_merger.scorer.fuzzy_scorer import FuzzyScorer
+from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
+from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
 class Merger():
 
-    _graph = Graph()
-
-    _SSM = SynonymSetManager()
-
 
     def __init__(self,
                  ontology_file: str = ""):
+        self._graph = Graph()
         self._graph.parse(ontology_file) # = Graph(ontology_file)
+        self._SSM = SynonymSetManager()
         if ontology_file:
             self.init_graph() # Create basic classes
 
@@ -48,6 +48,11 @@ class Merger():
         return self._SSM
 
 
+    @SSM.deleter
+    def SSM(self):
+        del(self._SSM)
+
+
     def init_graph(self):
         """
         Add CandidatePair & SynSet classes in the OBS namespace.
@@ -57,18 +62,40 @@ class Merger():
 
     def merge_identifiers(self):
         im = IdentifierMerger(self._graph)
-        CPM = CandidatePairsManager(WikidataExtractor.NAMESPACE,
-                                    NaifExtractor.NAMESPACE)
+        CPM_wiki_naif = CandidatePairsManager(WikidataExtractor.NAMESPACE,
+                                              NaifExtractor.NAMESPACE)
 
-        im.merge_wikidata_naif(self.SSM, CPM)
+        # merge wiki naif if the namespaces are available.
+        if im.merge_wikidata_naif(self.SSM, CPM_wiki_naif):
 
-        # Disambiguate cases with two candidates
-        # (necessary because NAIF has duplicate identifiers
-        # for different entities)
-        CPM.disambiguate_candidates(self.SSM,
-                                    # candidate_pairs_wiki_naif,
-                                    scores = [FuzzyScorer])
-        CPM.save_all() # Save remaining candidate pairs.
+            # Disambiguate cases with two candidates
+            # (necessary because NAIF has duplicate identifiers
+            # for different entities)
+            CPM_wiki_naif.disambiguate_candidates(self.SSM,
+                                                scores = [FuzzyScorer])
+            CPM_wiki_naif.save_all() # Save remaining candidate pairs.
+        del(CPM_wiki_naif)
+        del(im)
+
+
+    def merge_mapping(self):
+        """
+        Computes a mapping between classes from namespaces two by two.
+        Generates candidate pairs before performing disambiguation.
+        Repeat for every mapping until the mapping is done.
+        Mapping will take already existing Synonym Sets into account,
+        and link a term to a synonym set instead of creating a new one
+        if there is a synonym set that already exists for one of the
+        candidates.
+        TODO FIXME if there are two candidates in a synset, then merge synsets
+        """
+
+        # Create mapping between unlinked available lists
+        CPM_aas_spase = CandidatePairsMapping(AasExtractor(),
+                                              SpaseExtractor())
+        CPM_aas_spase.generate_mapping(self.graph)
+        CPM_aas_spase.disambiguate(self.SSM,
+                                   scores = [FuzzyScorer])
 
         # Deal with remaining candidate pairs (TODO)
         #self.CPM.disambiguate(self.graph,
@@ -78,12 +105,16 @@ class Merger():
 
         # /!\ Save the synonym sets in the graph (do not remove)
         self.SSM.save_all()
+        CPM_aas_spase.save_all()
+        del(CPM_aas_spase)
+        del(self.SSM)
 
 
 def main(input_ontology: str = "",
          output_ontology: str = ""):
     merger = Merger(input_ontology)
     merger.merge_identifiers()
+    merger.merge_mapping()
 
     if output_ontology:
         # save the CandidatePairs.
@@ -110,7 +141,7 @@ if __name__ == "__main__":
     parser.add_argument("-o",
                     "--output-ontology",
                     dest = "output_ontology",
-                    default = "",
+                    default = "output_merged.ttl",
                     type = str,
                     required = False,
                     help = "Output ontology file to save the merged data.")
