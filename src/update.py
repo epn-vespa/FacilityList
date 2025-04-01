@@ -25,6 +25,17 @@ from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
 
+# Extract for those sources:
+all_extractors = [
+    AasExtractor,
+    IauMpcExtractor,
+    NaifExtractor,
+    PdsExtractor,
+    SpaseExtractor,
+    WikidataExtractor
+]
+
+
 class Updater():
 
 
@@ -42,7 +53,7 @@ class Updater():
 
     def update(self,
                data: dict,
-               source: Type = None,
+               extractor: Extractor = None,
                cat: str = "ufo"):
         """
         Adds the data from the dict to the Ontology.
@@ -62,13 +73,15 @@ class Updater():
             else:
                 subj = identifier
             for predicate, obj in features.items():
-                self.graph.add((subj, predicate, obj), source = source)
+                self.graph.add((subj, predicate, obj),
+                               extractor = extractor)
             if "type" not in features:
-                if (not hasattr(source, "IS_ONTOLOGICAL") or
-                    not source.IS_ONTOLOGICAL):
-                    if cat == "ufo" and hasattr(source, "DEFAULT_TYPE"):
-                        cat = source.DEFAULT_TYPE
-                    self.graph.add((subj, "type", cat), source = source)
+                if (not hasattr(extractor, "IS_ONTOLOGICAL") or
+                    not extractor.IS_ONTOLOGICAL):
+                    if cat == "ufo" and hasattr(extractor, "DEFAULT_TYPE"):
+                        cat = extractor.DEFAULT_TYPE
+                    self.graph.add((subj, "type", cat),
+                                   extractor = extractor)
             # Create the OBS uri
 
 
@@ -115,21 +128,12 @@ class Updater():
         self.update(COMMUNITIES, cat = "community")
         self.update(SOURCES, cat = "facility list")
 
-
 def main(lists: List[str],
          input_ontology: str = "",
          output_ontology: str = "output.ttl"):
     updater = Updater(input_ontology)
 
-    # Extract for those sources:
-    all_extractors = [
-        AasExtractor,
-        IauMpcExtractor,
-        NaifExtractor,
-        PdsExtractor,
-        SpaseExtractor,
-        WikidataExtractor
-    ]
+
 
     extractors = []
 
@@ -144,7 +148,7 @@ def main(lists: List[str],
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract()
-        updater.update(data, source = extractor)
+        updater.update(data, extractor = extractor)
 
     turtle = updater.graph.serialize()
     with open(output_ontology, 'w') as file:
@@ -161,7 +165,7 @@ if __name__ == "__main__":
                         "--lists",
                         dest = "lists",
                         default = ["all"],
-                        choices = ["all"] + Extractor.AVAILABLE_NAMESPACES,
+                        choices = ["all"] + [e.NAMESPACE for e in all_extractors],
                         nargs = '*',
                         type = str,
                         required = False,

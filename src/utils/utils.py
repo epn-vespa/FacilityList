@@ -114,6 +114,45 @@ def cut_acronyms(label: str) -> Tuple[str]:
     return full_name_without_acronyms.strip(), acronym_str
 
 
+def cut_part_of(label: str):
+    """
+    In AAS, some entities have "part of the" in their label.
+    We want to cut them out and create a relation isPartOf.
+    Sometimes, the "part of the" keyword is after the location,
+    sometimes it is before, so we must be careful about which
+    one is part of something.
+
+    Returns:
+        the label without the part of & the part of.
+
+    Keyword arguments:
+    label -- the label to cut.
+    """
+    part_of_keyword = "part of the"
+    part_of_begin = label.lower().find(part_of_keyword)
+    if part_of_begin == -1:
+        part_of_keyword = "part of" # there are no cases like this in AAS
+        part_of_begin = label.lower().find(part_of_keyword)
+        if part_of_begin == -1:
+            return label, ""
+    before_part_of = label[:part_of_begin].strip()
+    parenthesis_opened = False
+    # The parenthesis opened before the "part of" keyword
+    if before_part_of and before_part_of[-1] == '(':
+        parenthesis_opened = True
+        before_part_of = before_part_of[:-1].strip()
+    after_part_of = label[part_of_begin + len(part_of_keyword):].strip()
+    if parenthesis_opened:
+        part_of_end = after_part_of.find(')')
+        part_of = after_part_of[:part_of_end].strip()
+        after_part_of = after_part_of[part_of_end+1:].strip()
+    else:
+        part_of = after_part_of
+        after_part_of = ""
+    label_without_part_of = before_part_of + ' ' + after_part_of
+    return label_without_part_of.strip(), part_of
+
+
 def cut_location(label: str,
                  delimiter: str,
                  alt_labels: Set[str]) -> Tuple[str]:
@@ -123,7 +162,7 @@ def cut_location(label: str,
     Add alternate labels in alt_labels for:
     - the entity without the location,
     - the entity without the location and acronyms,
-    - the entity without the location's acronym.
+    - the entity's acronym without the location.
 
     Keyword arguments:
     label -- the label of an entity
@@ -139,7 +178,7 @@ def cut_location(label: str,
         alt_labels.add(label_acronym)
         if "" in alt_labels:
             alt_labels.remove("")
-    return location
+    return label.strip(), location.strip()
 
 
 def clean_string(text: str) -> str:

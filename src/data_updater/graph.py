@@ -5,7 +5,7 @@ Author:
 import os
 import warnings
 
-from typing import Type, Tuple
+from typing import Tuple
 from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from data_updater.extractor.extractor import Extractor
@@ -233,7 +233,7 @@ class Graph():
             pred: str,
             obj: str,
             language: str,
-            source: Extractor) -> Tuple:
+            extractor: Extractor) -> Tuple:
         """
         Convert a predicate and an object accordingly to the mapping.
         For example, for "definition", predicate becomes SKOS.definition,
@@ -243,7 +243,7 @@ class Graph():
         pred -- the predicate to convert
         obj -- the object to convert
         language -- the language of the XSD.string of the object if any
-        source -- the extractor used to extract the data
+        extractor -- the extractor used to extract the data
         """
         if type(pred) != str:
             return pred, obj
@@ -273,14 +273,15 @@ class Graph():
             objtype = None
 
         # Get and save alt labels
-        if source:
-            namespace_obj = self.get_namespace(source.NAMESPACE)
+        if extractor:
+            namespace_obj = self.get_namespace(extractor.NAMESPACE)
         else:
             namespace_obj = self.OM.OBS
 
         if pred == "label" or pred in self.OM.SELF_REF:
             obj = self.get_label_and_save_alt_labels(obj,
                                                      namespace_obj,
+                                                     extractor = extractor,
                                                      language = language)
 
         # Convert obj to obj_uri using datatype
@@ -288,13 +289,14 @@ class Graph():
             if objtype == XSD.dateTime:
                 obj = get_datetime_from_iso(obj)
             obj_uri = Literal(obj,
-                                lang = language,
-                                datatype = objtype)
+                              lang = language,
+                              datatype = objtype)
         else:
             # objtype is URIRef
-            if source:
+            if extractor:
                 if pred == "type":
-                    if hasattr(source, "IS_ONTOLOGICAL") and source.IS_ONTOLOGICAL:
+                    if (hasattr(extractor, "IS_ONTOLOGICAL")
+                        and extractor.IS_ONTOLOGICAL):
                         # The object's namespace is the source's namespace
                         pass
                     else:
@@ -307,7 +309,9 @@ class Graph():
 
             obj = self.get_label_and_save_alt_labels(obj,
                                                      namespace_obj,
+                                                     extractor = extractor,
                                                      language = language)
+
             # standardize obj_uri
             obj = standardize_uri(obj)
             obj_uri = namespace_obj[obj]
@@ -355,35 +359,50 @@ class Graph():
     def get_label_and_save_alt_labels(
             self,
             label: str,
-            namespace: Type,
+            namespace: Namespace,
+            extractor: Extractor,
             language: str = None) -> Tuple[str, str]:
         """
-        Returns the label with no alternate label or acronym (short label).
+        Returns the label with no alternate label nor acronym (short label).
         Add the alt labels to the ontology (acronym and full label) if there
         was a change.
+
+        Do not add acronym if the acronym is for the location (or other entities in the label)
 
         Keyword arguments:
         label -- the label of an entity
         namespace -- the namespace of the label
         language -- the language of the label if any
         """
+        acronym_of_location = False
+        if hasattr(extractor, "LOCATION_DELIMITER"):
+            #label_without_location = cut_location(label,
+            #                                      delimiter = extractor.LOCATION_DELIMITER,
+            #                                      alt_labels = set())
+            if label.count(extractor.LOCATION_DELIMITER) == 1:
+                # if there is an acronym, it is the acronym of the location,
+                # not of the entity.
+                acronym_of_location = True
+
         short_label, acronym = cut_acronyms(label)
         short_label_uri = standardize_uri(short_label)
-        if acronym:
+
+        if acronym and not acronym_of_location:
             self.graph.add((namespace[short_label_uri],
                             SKOS.altLabel,
                             Literal(acronym, lang = language)))
+        # location's acronym may become the whole entity's acronym.
         if short_label != label:
             self.graph.add((namespace[short_label_uri],
                             SKOS.altLabel,
                             Literal(label, lang = language)))
-        return short_label
+        return short_label # Do not return an URI
 
 
     def add(
             self,
             params: Tuple[str, str, str],
-            source: Extractor = None):
+            extractor: Extractor = None):
         """
         Add a RDF triple to the graph.
         Override rdflib's Graph.add() method.
@@ -397,7 +416,7 @@ class Graph():
             subj -- the subject of the triple.
             predicate -- the predicate of the triple.
             obj -- the object of the triple.
-        source -- the extractor of the added triple (ex: AasExtractor)
+        extractor -- the extractor of the added triple (ex: AasExtractor)
         """
         if len(params) != 3:
             raise ValueError("params must be a tuple of 3 elements:\
@@ -411,14 +430,17 @@ class Graph():
             return
 
         # Get the namespace of the subject
-        if source:
-            namespace_subj = self.get_namespace(source.NAMESPACE)
+        if extractor:
+            namespace_subj = self.get_namespace(extractor.NAMESPACE)
         else:
             namespace_subj = self.OM.OBS
 
         if type(subj) == str:
             # Convert subject to URI with _OBS
-            subj = self.get_label_and_save_alt_labels(subj, namespace_subj)
+            # FIXME do we need to save alt labels for subj ?
+            subj = self.get_label_and_save_alt_labels(subj,
+                                                      namespace = namespace_subj,
+                                                      extractor = extractor)
             subj_uri = namespace_subj[standardize_uri(subj)]
         elif type(subj) == URIRef:
             subj_uri = subj
@@ -448,16 +470,17 @@ class Graph():
                 # language tag example: @en
                 obj, language = cut_language_from_string(obj)
             # Change object type for certain predicates
+
             predicate_uri, obj_uri = self.convert_pred_and_obj(predicate,
                                                                obj,
                                                                language = language,
-                                                               source = source)
+                                                               extractor = extractor)
 
             # Add to the graph
             self.graph.add((subj_uri, predicate_uri, obj_uri))
 
-        if source:
-            source_uri = self.OM.OBS[standardize_uri(source.URI)]
+        if extractor:
+            source_uri = self.OM.OBS[standardize_uri(extractor.URI)]
             self.graph.add((subj_uri, self.OM.OBS["source"], source_uri))
 
 

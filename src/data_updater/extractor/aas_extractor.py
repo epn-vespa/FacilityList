@@ -11,7 +11,7 @@ Author:
 """
 
 from bs4 import BeautifulSoup
-from utils.utils import cut_location, cut_acronyms
+from utils.utils import cut_location, cut_acronyms, cut_part_of
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -45,6 +45,9 @@ class AasExtractor(Extractor):
         "Ultraviolet": "UV",
         "Infared": "Infrared",
     }
+
+    # Used to split the label into entity / location
+    LOCATION_DELIMITER = " at "
 
     def __init__(self):
         pass
@@ -106,16 +109,47 @@ class AasExtractor(Extractor):
             # We can use a part-of between the facility and location
             facility_name = row_data["full facility name"].strip()
             # Origin observatory
-            location = cut_location(facility_name,
-                                    delimiter = " at ",
-                                    alt_labels = alt_labels)
+            label_without_location, location = cut_location(facility_name,
+                                               delimiter = self.LOCATION_DELIMITER,
+                                               alt_labels = alt_labels)
+            # TODO sometimes in the label, there is a "part of the". It may be before or after the location.
+
+            # If the entity is a part of something else
+            label_without_part_of, part_of_label = cut_part_of(label_without_location)
+            if part_of_label:
+                print("PART OF pour le label.")
+                data["is_part_of"] = [part_of_label]
+                result[part_of_label] = {"label": part_of_label}
+                label_without_location = label_without_part_of
+
             if location:
-                location, acronym = cut_acronyms(location)
-                data["is_part_of"] = location
-                # add location to the results dict too.
-                result[location] = {"label": location}
+                location_without_part_of, part_of_location = cut_part_of(location)
+                # If the location is a part of something else
+
+                location, acronym = cut_acronyms(location_without_part_of)
+
+                if not location in result:
+                    result[location] = dict()
+                if part_of_location:
+                    result[location]["alt_label"] = [location_without_part_of]
+                    if "is_part_of" not in result[location]:
+                        result[location]["is_part_of"] = [part_of_location]
+                    else:
+                        result[location]["is_part_of"].append(part_of_location)
+                    # add the location's part of to the result
+                    result[part_of_location] = {"label": part_of_location}
+
+                result[location]["label"] = location
+
+                if "is_part_of" in data:
+                    data["is_part_of"].append(location)
+                else:
+                    data["is_part_of"] = [location]
                 if acronym:
-                    result[location]["alt_label"] = [location]
+                    if "alt_label" in result[location]:
+                        result[location]["alt_label"].append(acronym)
+                    else:
+                        result[location]["alt_label"] = [acronym]
 
             # Add label to row dict
             data["label"] = facility_name

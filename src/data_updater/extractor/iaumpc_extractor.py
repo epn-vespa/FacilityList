@@ -29,6 +29,8 @@ class IauMpcExtractor(Extractor):
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
 
+    # Used to split the label into entity / location
+    LOCATION_DELIMITER = ","
 
     def __init__(self):
         pass
@@ -67,9 +69,9 @@ class IauMpcExtractor(Extractor):
             alt_labels = set()
 
             # location
-            location = cut_location(obs_name,
-                                    delimiter = ",",
-                                    alt_labels = alt_labels)
+            _, location = cut_location(obs_name,
+                                       delimiter = self.LOCATION_DELIMITER,
+                                       alt_labels = alt_labels)
             if location:
                 data["location"] = location # city, lake...
 
