@@ -69,6 +69,13 @@ class SpaseExtractor(Extractor):
                       "StartDate": "start_date",
                       "EndDate": "end_date"}
 
+    def __init__(self):
+        pass
+
+
+    def __str__(self):
+        return self.NAMESPACE
+
 
     def extract(self) -> dict:
         """

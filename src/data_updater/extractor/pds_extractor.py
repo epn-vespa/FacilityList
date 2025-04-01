@@ -45,6 +45,11 @@ class PdsExtractor(Extractor):
     if __name__ == "__main__":
         pass
 
+
+    def __str__(self):
+        return self.NAMESPACE
+
+
     def extract(self) -> dict:
         """
         Extract the page content into a dictionary.

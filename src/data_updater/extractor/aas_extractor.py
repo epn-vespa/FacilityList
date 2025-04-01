@@ -50,6 +50,10 @@ class AasExtractor(Extractor):
         pass
 
 
+    def __str__(self):
+        return self.NAMESPACE
+
+
     def get_community(self) -> str:
         return "" # TODO (heliophysics / astronomy / planetology)
 

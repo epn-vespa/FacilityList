@@ -38,6 +38,10 @@ class NaifExtractor(Extractor):
         pass
 
 
+    def __str__(self):
+        return self.NAMESPACE
+
+
     def extract(self) -> dict:
         """
         Extract the page content into a dictionary.
