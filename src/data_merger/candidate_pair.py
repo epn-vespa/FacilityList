@@ -35,7 +35,7 @@ class CandidatePair():
 
 class CandidatePair():
     def __init__(self,
-                 first: Entity,
+                 first: Union[Entity, SynonymSet],
                  second: Union[Entity, SynonymSet],
                  uri: URIRef = None):
         """
@@ -68,7 +68,7 @@ class CandidatePair():
 
 
     @property
-    def member1(self) -> Entity:
+    def member1(self) -> Union[Entity, SynonymSet]:
         return self._member1
 
 
@@ -218,8 +218,8 @@ class CandidatePairsManager():
 
 
     def get_candidate_pair(self,
-                           entity1: Entity,
-                           entity2: Entity) -> CandidatePair:
+                           entity1: Union[Entity, SynonymSet],
+                           entity2: Union[Entity, SynonymSet]) -> CandidatePair:
         """
         Get a candidate pair object from the namespaces and entities.
         """
@@ -330,6 +330,11 @@ class CandidatePairsManager():
         Compute the score for a candidate pair. Add the candidate pair
         in a synset if the score was discriminant and remove the
         candidate pair from the candidate pairs list.
+
+        Keyword arguments:
+        score -- the Score to compute
+        ssm -- the synonym set manager of this run
+        candidate_pair -- the candidate pair of entities to compare
         """
         graph = Graph._graph
         score_value = score.compute(graph,
@@ -358,7 +363,7 @@ class CandidatePairsManager():
             return State.UNCLEAR
 
 
-class CandidatePairsMapping(CandidatePairsManager):
+class CandidatePairsMapping():
     """
     Generate a mapping between all entities of two lists.
     Use a 2D list instead of a list and dict (see CandidatePairsManager).
@@ -376,7 +381,6 @@ class CandidatePairsMapping(CandidatePairsManager):
         # columns: list2
         self._list1_indexes = [] # indexes by entity in the mapping
         self._list2_indexes = [] # indexes by entity in the mapping
-        super().__init__(list1, list2) # TODO remove this and be independant
 
 
     def __del__(self):
@@ -406,14 +410,7 @@ class CandidatePairsMapping(CandidatePairsManager):
                                                  no_equivalent_in = self._list2)
         entities2 = graph.get_entities_from_list(self._list2,
                                                  no_equivalent_in = self._list1)
-        """
-        with ThreadPoolExecutor() as executor:
-            tqdm(executor.map(self._gen_all,
-                              entities1,
-                              entities2))
 
-    def _gen_all(self, entities1, entities2):
-        """
         for entity1, synset1 in tqdm(entities1,
                                      desc = f"Generating mapping for {self._list1}, {self._list2}"):
             if synset1 is not None:
@@ -431,7 +428,6 @@ class CandidatePairsMapping(CandidatePairsManager):
                 candidate_pair = CandidatePair(entity1, entity2)
                 mapping_list2.append(candidate_pair)
             self._mapping.append(mapping_list2)
-            # super().add_candidate_pairs(mapping_list2)
 
 
     def del_candidate_pairs(self,
@@ -454,7 +450,6 @@ class CandidatePairsMapping(CandidatePairsManager):
 
         else:
             raise ValueError(f"{entity} not in mapping.")
-        # super().del_candidate_pairs(entity)
 
 
     def del_candidate_pair(self,
@@ -470,8 +465,6 @@ class CandidatePairsMapping(CandidatePairsManager):
         index1, index2 = self._get_indexes(candidate_pair)
         if index1 is not None:
             self._mapping[index1][index2] = None
-        # super().del_candidate_pair(candidate_pair)
-        # TODO prevent other functions to loop on a deleted CandidatePair too
 
 
     def _get_indexes(self,
@@ -496,19 +489,40 @@ class CandidatePairsMapping(CandidatePairsManager):
             except ValueError:
                 return None, None
 
+
     def compute(self,
                 score: Score,
                 ssm: SynonymSetManager,
-                candidate_pair: CandidatePair):
+                candidate_pair: CandidatePair) -> State:
+        """
+        Compute the score for a candidate pair. Add the candidate pair
+        in a synset if the score was discriminant and remove the
+        candidate pair from the candidate pairs list.
 
-        state = super().compute(score, ssm, candidate_pair)
-        if state == State.ADMITTED:
+        Keyword arguments:
+        score -- the Score to compute
+        ssm -- the synonym set manager of this run
+        candidate_pair -- the candidate pair of entities to compare
+        """
+
+        graph = Graph._graph
+        score_value = score.compute(graph,
+                                    candidate_pair.member1,
+                                    candidate_pair.member2)
+
+        candidate_pair.add_score(score.NAME, score_value)
+        if ScorerLists.ELIMINATE.get(score, lambda x: False)(score_value):
+            self.del_candidate_pair(candidate_pair) # TODO
+            return State.ELIMINATED
+        elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
             self.del_candidate_pairs(candidate_pair.member1)
             self.del_candidate_pairs(candidate_pair.member2)
-        elif state == State.ELIMINATED:
-            self.del_candidate_pair(candidate_pair) # TODO
+            # Add it to the graph
+            ssm.add_synset(candidate_pair.member1,
+                           candidate_pair.member2)
+            return State.ADMITTED
         else:
-            pass
+            return State.UNCLEAR
 
 
     @timeit
@@ -522,12 +536,11 @@ class CandidatePairsMapping(CandidatePairsManager):
         SSM - the Synonym Set Manager used to save synonym sets
         scores -- list of scores to perform. If None, perform on all scores.
         """
-        print(f"Candidate pairs to disambiguate: {len(self._mapping) * len(self._mapping[0])}")
+        print(f"Count of pairs to disambiguate: {len(self._mapping) * len(self._mapping[0])}")
 
         for score in ScorerLists.DISCRIMINANT_SCORES:
             if score not in scores:
                 continue
-            print(f"Computing {score.NAME}")
             state = None
             for candidate_pair_list in tqdm(self._mapping,
                                             desc = f"Computing {score.NAME} on {self._list1}, {self._list2}"):
@@ -548,7 +561,6 @@ class CandidatePairsMapping(CandidatePairsManager):
                                      candidate_pair = candidate_pair):
                                      candidate_pair for candidate_pair in candidate_pair_list}
                 """
-        pass # TODO
 
 
     def save_all(self):

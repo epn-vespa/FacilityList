@@ -22,6 +22,7 @@ from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
+from utils.performances import timeit
 
 class Merger():
 
@@ -109,17 +110,20 @@ class Merger():
         del(CPM_aas_spase)
         del(self.SSM)
 
+    @timeit
+    def write(self,
+              output_ontology: str):
+        print(f"Writing the result ontology into {output_ontology}...")
+        with open(output_ontology, 'w') as file:
+            file.write(self.graph.serialize())
+
 
 def main(input_ontology: str = "",
          output_ontology: str = ""):
     merger = Merger(input_ontology)
     merger.merge_identifiers()
     merger.merge_mapping()
-
-    if output_ontology:
-        # save the CandidatePairs.
-        with open(output_ontology, 'w') as file:
-            file.write(merger.graph.serialize())
+    merger.write(output_ontology)
 
 
 if __name__ == "__main__":
