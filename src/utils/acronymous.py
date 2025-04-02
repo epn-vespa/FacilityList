@@ -167,7 +167,7 @@ def _get_matrixes(label,
     second_letters = []
     stopwords_letters = []
     uppercases_letters = []
-    words = re.findall(f"[\w\d]+", label)
+    words = re.findall(r"[\w\d]+", label)
     for word in words:
         state = 'out'
         for letter in word:

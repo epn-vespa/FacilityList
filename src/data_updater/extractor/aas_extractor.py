@@ -10,6 +10,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+import re
 from bs4 import BeautifulSoup
 from utils.utils import cut_location, cut_acronyms, cut_part_of
 from data_updater.extractor.cache import CacheManager
@@ -112,12 +113,10 @@ class AasExtractor(Extractor):
             label_without_location, location = cut_location(facility_name,
                                                delimiter = self.LOCATION_DELIMITER,
                                                alt_labels = alt_labels)
-            # TODO sometimes in the label, there is a "part of the". It may be before or after the location.
 
             # If the entity is a part of something else
             label_without_part_of, part_of_label = cut_part_of(label_without_location)
             if part_of_label:
-                print("PART OF pour le label.")
                 data["is_part_of"] = [part_of_label]
                 result[part_of_label] = {"label": part_of_label}
                 label_without_location = label_without_part_of
@@ -153,6 +152,13 @@ class AasExtractor(Extractor):
 
             # Add label to row dict
             data["label"] = facility_name
+
+            sizes = re.findall(r"(\d+)(\.\d+)?(cm|mm|m)", facility_name)
+            if sizes:
+                size = ""
+                for s in sizes:
+                    size += ''.join(s)
+                data["size"] = size
 
             # Add and filter out facility types
             for facility_type, col in zip(facility_types, cols[FT:]):

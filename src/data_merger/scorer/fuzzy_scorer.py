@@ -21,18 +21,19 @@ from utils.utils import remove_punct
 
 class FuzzyScorer(Score):
 
-    # Name of the score computed by this class (as in score.py)
+    # Name of the score computed by this class
     NAME = "fuzzy_levenshtein"
 
 
     def compute(graph: Graph,
-                entity1: Entity,
+                entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute a fuzzy score between the two entities' labels and alt labels.
         Return the highest match between any labels.
 
         Keyword arguments:
+        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """

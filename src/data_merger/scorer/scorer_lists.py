@@ -3,14 +3,17 @@ Define the superclass Extractor.
 """
 
 from enum import Enum
-from data_merger.scorer import fuzzy_scorer
+from data_merger.scorer import acronym_scorer, fuzzy_scorer
 
 
 class ScorerLists():
 
-    AVAILABLE_SCORES = [fuzzy_scorer.FuzzyScorer]
-
+    # Scores that might help reduce the amount of candidate pairs if they
+    # are above or below a certain threshold. They are computed first.
     DISCRIMINANT_SCORES = [fuzzy_scorer.FuzzyScorer]
+
+    # Scores that are computed for all of the candidate pairs.
+    OTHER_SCORES = [acronym_scorer.AcronymScorer]
 
     # Lambda functions that return a boolean for discriminant criteria.
 

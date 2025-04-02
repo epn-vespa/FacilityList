@@ -1,5 +1,5 @@
 """
-Define the superclass Extractor.
+Define the superclass Score.
 """
 
 
