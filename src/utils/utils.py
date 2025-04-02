@@ -3,6 +3,8 @@ from urllib.parse import quote
 import re
 import string
 
+from utils.acronymous import proba_acronym_of
+
 
 def standardize_uri(label: str) -> str:
     """
@@ -111,6 +113,10 @@ def cut_acronyms(label: str) -> Tuple[str]:
         # acronym is the right one.
         acronym_str = ""
     # Return full name without acronyms + the last acronym
+    # Compute the probability of the acronym string to be an acronym
+    # of the label without its acronyms.
+    if proba_acronym_of(full_name_without_acronyms, acronym_str) != 1:
+        acronym_str = ""
     return full_name_without_acronyms.strip(), acronym_str
 
 

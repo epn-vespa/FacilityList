@@ -18,9 +18,18 @@ def _compute_for(acronym: list[str],
     """
     Recursive method. Do not call. Returns a score between 0 and 1
     for the probability of acronym to be the acronym of the data.
+    The parameters are lists of the same size that have either a letter or
+    a blank (' '). Example for NASA's label:
+    ['n', ' ', 'a', ' ', ' ', ' ', ' ', 's', ' ', 'a', ' ']
+    [' ', 'a', ' ', 'e', ' ', ' ', ' ', ' ', 'p', ' ', 'd']
+    [' ', ' ', ' ', ' ', 'a', 'n', 'd', ' ', ' ', ' ', ' ']
+    [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
     Keyword arguments:
-    first_letters -- list of characters of the first letters, with blanks when it is in another list.
+    first_letters --  first letters of each word (except in stopwords)
+    second_letters -- second letters of each word (except in stopwords)
+    stopwords_letters -- stopwords letters
+    uppercases_letters -- uppercases that are not in 1st or 2nd and not in a stopword
     """
     if remove_letter >= 0:
         first_letters[remove_letter] = ' '
@@ -30,6 +39,8 @@ def _compute_for(acronym: list[str],
     if len(acronym) == 0:
         # return the proportion of first letters used.
         return 1 - len([x for x in first_letters if x != ' ']) / len(first_letters)
+
+    # Debug
     """
     print(f"----state {acronym}----")
     print(first_letters)
