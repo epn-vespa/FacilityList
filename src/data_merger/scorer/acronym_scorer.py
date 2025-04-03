@@ -41,10 +41,14 @@ class AcronymScorer(Score):
         labels2.update(entity2.get_values_for("label"))
         for label1 in labels1:
             for label2 in labels2:
+                if len(label2) < len(label1):
+                    label2, label1 = label1, label2
                 score = proba_acronym_of(label1, label2)
+                if score == 1:
+                    return 1
                 if score > highest_score:
                     highest_score = score
-                score = proba_acronym_of(label2, label1)
-                if score > highest_score:
-                    highest_score = score
+                #score = proba_acronym_of(label2, label1)
+                #if score > highest_score:
+                #    highest_score = score
         return highest_score
