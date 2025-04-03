@@ -32,7 +32,6 @@ class IdentifierMerger():
 
     @timeit
     def merge_wikidata_naif(self,
-                            SSM: SynonymSetManager,
                             CPM: CandidatePairsManager) -> bool:
         """
         Merge Wikidata and NAIF entities if both namespaces
@@ -59,7 +58,7 @@ class IdentifierMerger():
 
         for wikidata_uri, synset in wikidata_entities:
             if synset is not None:
-                wikidata_entity = SSM.get_synset_for_entity(wikidata_uri)
+                wikidata_entity = SynonymSetManager().get_synset_for_entity(wikidata_uri)
             else:
                 wikidata_entity = Entity(wikidata_uri)
             naif_codes = wikidata_entity.get_values_for("NAIF_ID")
@@ -72,8 +71,8 @@ class IdentifierMerger():
                 if len(naif_ids) == 1:
                     # There is only one NAIF entity with this ID.
                     naif_entity = Entity(naif_ids[0])
-                    SSM.add_synset(wikidata_entity,
-                                    naif_entity)
+                    SynonymSetManager._SSM.add_synset(wikidata_entity,
+                                                      naif_entity)
                 elif len(naif_ids) > 1:
                     # Ambiguous NAIF identifier.
                     # need further disambiguation with CandidatePair.

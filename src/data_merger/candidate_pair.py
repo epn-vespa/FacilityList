@@ -24,6 +24,7 @@ from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from multiprocessing import Pool
 
 from utils.performances import timeit
 
@@ -293,7 +294,6 @@ class CandidatePairsManager():
 
     @timeit
     def disambiguate_candidates(self,
-                                SSM: SynonymSetManager,
                                 scores: List[Score] = None):
         """
         Disambiguate only entities that already have a candidate pair.
@@ -301,7 +301,6 @@ class CandidatePairsManager():
         disambiguate (example: wikidata / naif with ambiguous identifiers).
 
         Keyword arguments:
-        SSM - the Synonym Set Manager used to save synonym sets
         scores -- list of scores to perform. If None, perform on all scores.
         """
         for score in ScorerLists.DISCRIMINANT_SCORES:
@@ -311,20 +310,17 @@ class CandidatePairsManager():
                                        desc = f"Computing {score.NAME} on {self._list1}, {self._list2}"):
                 # discriminant
                 #self.compute(score = score,
-                #             ssm = SSM,
                 #             candidate_pair = candidate_pair)
                 #"""
                 with ThreadPoolExecutor() as executor:
                     executor.submit(self.compute,
                                     score = score,
-                                    ssm = SSM,
                                     candidate_pair = candidate_pair)
                # """
 
 
     def compute(self,
                 score: Score,
-                ssm: SynonymSetManager,
                 candidate_pair: CandidatePair) -> State:
         """
         Compute the score for a candidate pair. Add the candidate pair
@@ -333,7 +329,6 @@ class CandidatePairsManager():
 
         Keyword arguments:
         score -- the Score to compute
-        ssm -- the synonym set manager of this run
         candidate_pair -- the candidate pair of entities to compare
         """
         graph = Graph._graph
@@ -355,8 +350,8 @@ class CandidatePairsManager():
             self.del_candidate_pairs(candidate_pair.member2)
 
             # Add it to the graph
-            ssm.add_synset(candidate_pair.member1,
-                           candidate_pair.member2)
+            SynonymSetManager._SSM.add_synset(candidate_pair.member1,
+                                              candidate_pair.member2)
             return State.ADMITTED
         else:
             # The candidate pair needs to be re-processed with other scores
@@ -389,6 +384,12 @@ class CandidatePairsMapping():
         del(self._list2_indexes)
 
 
+    def __len__(self):
+        if not self._mapping:
+            return 0
+        return len(self._mapping) * len(self._mapping[0])
+
+
     @timeit
     def generate_mapping(self,
                          graph: Graph):
@@ -413,7 +414,9 @@ class CandidatePairsMapping():
         entities2 = graph.get_entities_from_list(self._list2,
                                                  no_equivalent_in = self._list1)
         entities2 = list(entities2)
-        self._mapping = [[None] * len(entities2)] * len(entities1)
+        self._mapping = []
+        for i in range(len(entities1)):
+            self._mapping.append([None] * len(entities2))
 
         for i, (entity1, synset1) in enumerate(tqdm(entities1,
                                                     desc = f"Generating mapping for {self._list1}, {self._list2}")):
@@ -534,7 +537,6 @@ class CandidatePairsMapping():
 
     def compute(self,
                 score: Score,
-                ssm: SynonymSetManager,
                 candidate_pair: CandidatePair) -> State:
         """
         Compute the score for a candidate pair. Add the candidate pair
@@ -543,7 +545,6 @@ class CandidatePairsMapping():
 
         Keyword arguments:
         score -- the Score to compute
-        ssm -- the synonym set manager of this run
         candidate_pair -- the candidate pair of entities to compare
         """
         if candidate_pair is None:
@@ -562,25 +563,57 @@ class CandidatePairsMapping():
             self.del_candidate_pairs(candidate_pair.member1)
             self.del_candidate_pairs(candidate_pair.member2)
             # Add it to the graph
-            ssm.add_synset(candidate_pair.member1,
-                           candidate_pair.member2)
+            SynonymSetManager._SSM.add_synset(candidate_pair.member1,
+                                              candidate_pair.member2)
             return State.ADMITTED
         else:
             return State.UNCLEAR
 
+    def _compute_all(self,
+                     candidate_pair_list: List,
+                     score: Score) -> None:
+        """
+        Compute all the scores & save them in the candidate pairs.
+        Use this function to loop on the mapping on non-discriminant scores.
+        It can be used with multithreading as it won't remove candidate pairs
+        from the mapping.
+
+        Keyword arguments:
+        candidate_pair_list -- a row of the mapping
+        score -- the score to compute
+        """
+        for candidate_pair in candidate_pair_list:
+            if candidate_pair is None:
+                continue
+            score_value = score.compute(Graph._graph,
+                                        candidate_pair.member1,
+                                        candidate_pair.member2)
+            candidate_pair.add_score(score.NAME, score_value)
+
+
+    def _compute_for_index(self,
+                           index_score) -> None:
+        """
+        Used to compute a score on the nth candidate pair.
+        """
+        index, score = index_score
+        i = index / len(self._mapping)
+        j = index % len(self._mapping)
+        candidate_pair = self._mapping[i][j]
+        self.compute()
+
 
     @timeit
     def disambiguate(self,
-                     SSM: SynonymSetManager,
                      scores: List[Score]):
         """
         Eliminate entities that are incompatible and select
         entities that are compatible.
+
         Keyword arguments:
-        SSM - the Synonym Set Manager used to save synonym sets
         scores -- list of scores to perform. If None, perform on all scores.
         """
-        print(f"Count of pairs to disambiguate: {len(self._mapping) * len(self._mapping[0])}")
+        print(f"Count of pairs to disambiguate: {len(self)}")# {len(self._mapping) * len(self._mapping[0])}")
 
         for score in ScorerLists.DISCRIMINANT_SCORES:
             if score not in scores:
@@ -595,13 +628,14 @@ class CandidatePairsMapping():
                 # discriminant
                 for candidate_pair in candidate_pair_list:
                     state = self.compute(score = score,
-                                         ssm = SSM,
                                          candidate_pair = candidate_pair)
                     if state == State.ADMITTED:
                         break
                 if state == State.ADMITTED:
                     i += 0 # The mapping's size was reduced so
                     # if we increment i, it will jump over the next element.
+                    print("admitted", len(self._mapping), i, candidate_pair.member1,  candidate_pair.member2)
+                    # self._mapping[i][self._list2_indexes.index(candidate_pair.member2)]
                 else:
                     i += 1
             """
@@ -610,7 +644,6 @@ class CandidatePairsMapping():
                 # discriminant
                 for candidate_pair in candidate_pair_list:
                     state = self.compute(score = score,
-                                         ssm = SSM,
                                          candidate_pair = candidate_pair)
                     if state == State.ADMITTED:
                         break
@@ -619,24 +652,49 @@ class CandidatePairsMapping():
                 with ThreadPoolExecutor() as executor:
                     {executor.submit(self.compute,
                                      score = score,
-                                     ssm = SSM,
                                      candidate_pair = candidate_pair):
                                      candidate_pair for candidate_pair in candidate_pair_list}
             """
-        # TODO compute other scores:
-
         for score in ScorerLists.OTHER_SCORES:
             if score not in scores:
                 continue
-            print(f"Computing {score.NAME} on {self._list1, self._list2}")
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {len(self)} candidate pairs.")
+
+            """
+            for candidate_pair_list in tqdm(self._mapping):
+                for candidate_pair in candidate_pair_list:
+                    self.compute(score = score,
+                                 candidate_pair = candidate_pair)
+                
+            """
+            ### TOO SLOW
             with ThreadPoolExecutor() as executor:
-                for candidate_pair_list in tqdm(executor.map(self._mapping)):
-                    for candidate_pair in candidate_pair_list:
-                        if candidate_pair is None:
-                            continue
-                        self.compute(score = score,
-                                     ssm = SSM,
-                                     candidate_pair = candidate_pair)
+                futures = {executor.submit(self._compute_all,
+                                           candidate_pair_list,
+                                           score):
+                                           candidate_pair_list for candidate_pair_list in self._mapping}
+                for future in tqdm(as_completed(futures), total = len(futures)):
+                    #data = future.result()
+                    pass
+                print(len(futures))
+
+            """
+            tasks = [(i, score) for i in range(0, len(self))]
+
+            with Pool() as pool:
+                # results = list(tqdm(pool.imap_unordered(self._compute_all, )))
+                results = list(tqdm(pool.imap_unordered(self._compute_for_index,
+                                                        tasks),
+                                    total = len(self)))
+            """
+            """
+            Example:
+            futures = {executor.submit(self._extract_entity,
+                                       wikidata_uri,
+                                       result,
+                                       True):
+                    wikidata_uri for wikidata_uri in older}
+            """
 
 
     def save_all(self):
@@ -661,9 +719,10 @@ class CandidatePairsMapping():
                 graph.add((candidate_pair_uri, graph.OBS["hasMember"],
                         candidate_pair.member2.uri))
                 for score, value in candidate_pair.scores.items():
+                    print("add score for", score, value, candidate_pair.member1, candidate_pair.member2)
                     graph.add((candidate_pair_uri,
-                            graph.OBS[score],
-                            Literal(value, datatype = XSD.float)))
+                               graph.OBS[score],
+                               Literal(value, datatype = XSD.float)))
 
 
 if __name__ == "__main__":
