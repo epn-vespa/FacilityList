@@ -16,6 +16,8 @@ from argparse import ArgumentParser
 from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
 from data_merger.identifier_merger import IdentifierMerger
 from data_merger.graph import Graph
+from data_merger.scorer.acronym_scorer import AcronymScorer
+from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from data_merger.synonym_set import SynonymSetManager
 from data_merger.scorer.fuzzy_scorer import FuzzyScorer
 from data_updater.extractor.aas_extractor import AasExtractor
@@ -96,7 +98,9 @@ class Merger():
                                               SpaseExtractor())
         CPM_aas_spase.generate_mapping(self.graph)
         CPM_aas_spase.disambiguate(self.SSM,
-                                   scores = [FuzzyScorer])
+                                   scores = [FuzzyScorer,
+                                             CosineSimilarityScorer,
+                                             AcronymScorer])
 
         # Deal with remaining candidate pairs (TODO)
         #self.CPM.disambiguate(self.graph,

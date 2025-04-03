@@ -408,9 +408,51 @@ class CandidatePairsMapping():
             return
         entities1 = graph.get_entities_from_list(self._list1,
                                                  no_equivalent_in = self._list2)
+        entities1 = list(entities1)
+
         entities2 = graph.get_entities_from_list(self._list2,
                                                  no_equivalent_in = self._list1)
+        entities2 = list(entities2)
+        self._mapping = [[None] * len(entities2)] * len(entities1)
 
+        for i, (entity1, synset1) in enumerate(tqdm(entities1,
+                                                    desc = f"Generating mapping for {self._list1}, {self._list2}")):
+            if synset1 is not None:
+                entity1 = SynonymSet(synset1)
+            else:
+                entity1 = Entity(entity1)
+            self._list1_indexes.append(entity1)
+            for j, (entity2, synset2) in enumerate(entities2):
+
+                if synset2 is not None:
+                    entity2 = SynonymSet(synset2)
+                else:
+                    entity2 = Entity(entity2)
+                self._list2_indexes
+                self._mapping[i][j] = CandidatePair(entity1, entity2)
+
+
+    @timeit
+    def old_generate_mapping(self,
+                         graph: Graph):
+        """
+        Generate candidate pairs between both lists. Only
+        generate candidate pairs for entities that are not linked
+        to each other's list already.
+        [[CandidatePair1.1, CandidatePair1.2],
+         [CandidatePair2.1, CandidatePair2.2]]
+
+        TODO create a relation differentFrom for each relation
+        that is eliminated, in order to prevent multiple mapping ?
+        /!\ OR create a relation "noEquivalentInList source_list" (easier)
+        """
+        if self._mapping:
+            # do not generate twice
+            return
+        entities1 = graph.get_entities_from_list(self._list1,
+                                                 no_equivalent_in = self._list2)
+        entities2 = graph.get_entities_from_list(self._list2,
+                                                 no_equivalent_in = self._list1)
         for entity1, synset1 in tqdm(entities1,
                                      desc = f"Generating mapping for {self._list1}, {self._list2}"):
             if synset1 is not None:
@@ -421,7 +463,7 @@ class CandidatePairsMapping():
             self._list1_indexes.append(entity1)
             for entity2, synset2 in entities2:
                 if synset2 is not None:
-                    entity2 = SynonymSet(entity2)
+                    entity2 = SynonymSet(synset2)
                 else:
                     entity2 = Entity(entity2)
                 self._list2_indexes.append(entity2)
@@ -504,6 +546,8 @@ class CandidatePairsMapping():
         ssm -- the synonym set manager of this run
         candidate_pair -- the candidate pair of entities to compare
         """
+        if candidate_pair is None:
+            return None
 
         graph = Graph._graph
         score_value = score.compute(graph,
@@ -512,7 +556,7 @@ class CandidatePairsMapping():
 
         candidate_pair.add_score(score.NAME, score_value)
         if ScorerLists.ELIMINATE.get(score, lambda x: False)(score_value):
-            self.del_candidate_pair(candidate_pair) # TODO
+            self.del_candidate_pair(candidate_pair)
             return State.ELIMINATED
         elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
             self.del_candidate_pairs(candidate_pair.member1)
@@ -542,6 +586,25 @@ class CandidatePairsMapping():
             if score not in scores:
                 continue
             state = None
+            i = 0
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2}")
+            print(f"0/{len(self._mapping)}")
+            while i < len(self._mapping):
+                print(f"\033[F\033[{0}G {i+1}/{len(self._mapping)}")
+                candidate_pair_list = self._mapping[i]
+                # discriminant
+                for candidate_pair in candidate_pair_list:
+                    state = self.compute(score = score,
+                                         ssm = SSM,
+                                         candidate_pair = candidate_pair)
+                    if state == State.ADMITTED:
+                        break
+                if state == State.ADMITTED:
+                    i += 0 # The mapping's size was reduced so
+                    # if we increment i, it will jump over the next element.
+                else:
+                    i += 1
+            """
             for candidate_pair_list in tqdm(self._mapping,
                                             desc = f"Computing {score.NAME} on {self._list1}, {self._list2}"):
                 # discriminant
@@ -551,16 +614,29 @@ class CandidatePairsMapping():
                                          candidate_pair = candidate_pair)
                     if state == State.ADMITTED:
                         break
-                if state == State.ADMITTED:
-                    break
-                """
+            """
+            """
                 with ThreadPoolExecutor() as executor:
                     {executor.submit(self.compute,
                                      score = score,
                                      ssm = SSM,
                                      candidate_pair = candidate_pair):
                                      candidate_pair for candidate_pair in candidate_pair_list}
-                """
+            """
+        # TODO compute other scores:
+
+        for score in ScorerLists.OTHER_SCORES:
+            if score not in scores:
+                continue
+            print(f"Computing {score.NAME} on {self._list1, self._list2}")
+            with ThreadPoolExecutor() as executor:
+                for candidate_pair_list in tqdm(executor.map(self._mapping)):
+                    for candidate_pair in candidate_pair_list:
+                        if candidate_pair is None:
+                            continue
+                        self.compute(score = score,
+                                     ssm = SSM,
+                                     candidate_pair = candidate_pair)
 
 
     def save_all(self):
@@ -570,7 +646,7 @@ class CandidatePairsMapping():
         """
 
         graph = Graph._graph
-        for candidate_pair_list in tqdm(self._mapping,
+        for candidate_pair_list in tqdm(self._mapping, #.copy(), # DOING try to see if we need .copy() or not
                                         desc = f"Saving Candidate Pairs for {self._list1}, {self._list2}"):
             for candidate_pair in candidate_pair_list:
                 if not candidate_pair:
