@@ -12,7 +12,7 @@ Author:
 
 import re
 from bs4 import BeautifulSoup
-from utils.utils import cut_location, cut_acronyms, cut_part_of
+from utils.utils import cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -105,14 +105,24 @@ class AasExtractor(Extractor):
 
             alt_labels = set()
 
+            # Internal reference
+            keyword = row_data["keyword"] # code
+            if keyword:
+                data["code"] = keyword
+            else:
+                # If there is no keyword (id), find it between ().
+                keyword = facility_name[facility_name.find('(')+1:facility_name.find(')')]
+
             # Extract data from the full facility name
             # The full facility name contains a location (Observatory etc)
             # We can use a part-of between the facility and location
             facility_name = row_data["full facility name"].strip()
             # Origin observatory
             label_without_location, location = cut_location(facility_name,
-                                               delimiter = self.LOCATION_DELIMITER,
-                                               alt_labels = alt_labels)
+                                                            delimiter = self.LOCATION_DELIMITER,
+                                                            alt_labels = alt_labels)
+            if label_without_location != facility_name:
+                alt_labels.add(label_without_location)
 
             # If the entity is a part of something else
             label_without_part_of, part_of_label = cut_part_of(label_without_location)
@@ -121,11 +131,33 @@ class AasExtractor(Extractor):
                 result[part_of_label] = {"label": part_of_label}
                 label_without_location = label_without_part_of
 
+            # Get the size of the facility
+            label_without_size, size = get_size(label_without_part_of)
+            if size:
+                data["size"] = size
+
+            # Get the acronym
+            label_without_acronyms, label_acronym = cut_acronyms(label_without_size)
+            if label_acronym:
+                label_without_acronyms, _ = cut_acronyms(facility_name)
+                alt_labels.add(label_without_acronyms)
+                label_without_acronyms, _ = cut_acronyms(label_without_location)
+                alt_labels.add(label_without_acronyms)
+                if label_acronym in keyword:
+                    alt_labels.add(keyword)
+
             if location:
                 location_without_part_of, part_of_location = cut_part_of(location)
                 # If the location is a part of something else
 
-                location, acronym = cut_acronyms(location_without_part_of)
+                location, location_acronym = cut_acronyms(location_without_part_of)
+
+                if location_acronym and proba_acronym_of(label_without_size,
+                                                         location_acronym) == 1:
+                    if "alt_label" in result[location]:
+                        result[location]["alt_label"].append(location_acronym)
+                    else:
+                        result[location]["alt_label"] = [location_acronym]
 
                 if not location in result:
                     result[location] = dict()
@@ -144,21 +176,10 @@ class AasExtractor(Extractor):
                     data["is_part_of"].append(location)
                 else:
                     data["is_part_of"] = [location]
-                if acronym:
-                    if "alt_label" in result[location]:
-                        result[location]["alt_label"].append(acronym)
-                    else:
-                        result[location]["alt_label"] = [acronym]
 
             # Add label to row dict
             data["label"] = facility_name
 
-            sizes = re.findall(r"(\d+)(\.\d+)?(cm|mm|m)", facility_name)
-            if sizes:
-                size = ""
-                for s in sizes:
-                    size += ''.join(s)
-                data["size"] = size
 
             # Add and filter out facility types
             for facility_type, col in zip(facility_types, cols[FT:]):
@@ -189,14 +210,6 @@ class AasExtractor(Extractor):
             # alt labels
             if alt_labels:
                 data["alt_label"] = alt_labels
-
-            # Internal reference
-            keyword = row_data["keyword"] # code
-            if keyword:
-                data["code"] = keyword
-            else:
-                # If there is no keyword (id), find it between ().
-                keyword = facility_name[facility_name.find('(')+1:facility_name.find(')')]
 
             # Save the row's dict into the result dict
             result[keyword] = data

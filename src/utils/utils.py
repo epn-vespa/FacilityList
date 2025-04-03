@@ -115,9 +115,27 @@ def cut_acronyms(label: str) -> Tuple[str]:
     # Return full name without acronyms + the last acronym
     # Compute the probability of the acronym string to be an acronym
     # of the label without its acronyms.
-    if proba_acronym_of(full_name_without_acronyms, acronym_str) != 1:
+
+    if proba_acronym_of(acronym_str, full_name_without_acronyms) != 1:
         acronym_str = ""
     return full_name_without_acronyms.strip(), acronym_str
+
+
+def get_size(label: str) -> str:
+    """
+    Get the size of the facility from the label (in AAS).
+    Return the size and the label without the size.
+
+    Keyword arguments:
+    label -- the label to extract the size from.
+    """
+    size = ""
+    sizes = re.findall(r"(\d+)(\.\d+)?(cm|mm|m)", label)
+    if sizes:
+        for s in sizes:
+            size += ''.join(s)
+    label_without_size = re.sub(size, "", label)
+    return label_without_size, size
 
 
 def cut_part_of(label: str):
@@ -176,15 +194,18 @@ def cut_location(label: str,
     alt_labels -- the set of alternate labels to add to
     """
     location = ""
+    label_without_location = label
     if label.count(delimiter) == 1:
-        label, location = [a.strip() for a in label.split(delimiter)]
+        label_without_location, location = [a.strip() for a in label.split(delimiter)]
+        """
         label_without_acronyms, label_acronym = cut_acronyms(label)
         alt_labels.add(label)
         alt_labels.add(label_without_acronyms)
         alt_labels.add(label_acronym)
         if "" in alt_labels:
             alt_labels.remove("")
-    return label.strip(), location.strip()
+        """
+    return label_without_location.strip(), location.strip()
 
 
 def clean_string(text: str) -> str:
