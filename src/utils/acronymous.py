@@ -200,6 +200,14 @@ def _get_matrixes(label,
     return first_letters, second_letters, stopwords_letters, uppercases_letters
 
 
+def _clean_acronym(acronym: str) -> str:
+    """
+    Remove non-alphanumeric characters from the acronym.
+    """
+    acronym = re.sub(r"[^\w\d]", "", acronym)
+    return acronym
+
+
 def proba_acronym_of(acronym: str,
                      label: str,
                      languages: list[str] = ['english',
@@ -217,6 +225,7 @@ def proba_acronym_of(acronym: str,
     label -- the label without the acronym
     languages -- used to delete stopwords from the label in those languages
     """
+    acronym = _clean_acronym(acronym)
     acronym = acronym.strip()
     if len(acronym) > len(label):
         return 0
@@ -281,7 +290,8 @@ if __name__ == "__main__":
             ("System for Audio-Visual Event Modeling", "SyfAuViEvMo"), # 1
             ("SUMmarization in Open Context", "SUMINO" ), # 1
             ("Développement et Administration Internet et Intranet", "DA2I"), # 1 after 2*i
-            ("extensible Markup Language", "XML") # 1
+            ("extensible Markup Language", "XML"), # 1
+            ("Southern Photometric Local Universe Survey", "S-PLUS")
     ]
     for label, acronym in test:
         __test__(label, acronym)
