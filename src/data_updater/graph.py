@@ -463,14 +463,13 @@ class Graph():
         for obj in objs:
             # Ignore None and empty obj
             language = None
-            if not obj:
+            if obj is None or obj == "":
                 continue
             # Get the language of the obj
             if type(obj) == str:
                 # language tag example: @en
                 obj, language = cut_language_from_string(obj)
             # Change object type for certain predicates
-
             predicate_uri, obj_uri = self.convert_pred_and_obj(predicate,
                                                                obj,
                                                                language = language,

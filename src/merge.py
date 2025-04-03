@@ -31,9 +31,9 @@ class Merger():
 
     def __init__(self,
                  ontology_file: str = ""):
+        SynonymSetManager()
         self._graph = Graph()
         self._graph.parse(ontology_file) # = Graph(ontology_file)
-        self._SSM = SynonymSetManager()
         if ontology_file:
             self.init_graph() # Create basic classes
 
@@ -41,19 +41,6 @@ class Merger():
     @property
     def graph(self):
         return self._graph
-
-
-    @property
-    def SSM(self):
-        """
-        Synonym Set Manager getter
-        """
-        return self._SSM
-
-
-    @SSM.deleter
-    def SSM(self):
-        del(self._SSM)
 
 
     def init_graph(self):
@@ -69,13 +56,12 @@ class Merger():
                                               NaifExtractor.NAMESPACE)
 
         # merge wiki naif if the namespaces are available.
-        if im.merge_wikidata_naif(self.SSM, CPM_wiki_naif):
+        if im.merge_wikidata_naif(CPM_wiki_naif):
 
             # Disambiguate cases with two candidates
             # (necessary because NAIF has duplicate identifiers
             # for different entities)
-            CPM_wiki_naif.disambiguate_candidates(self.SSM,
-                                                scores = [FuzzyScorer])
+            CPM_wiki_naif.disambiguate_candidates(scores = [FuzzyScorer])
             CPM_wiki_naif.save_all() # Save remaining candidate pairs.
         del(CPM_wiki_naif)
         del(im)
@@ -97,22 +83,20 @@ class Merger():
         CPM_aas_spase = CandidatePairsMapping(AasExtractor(),
                                               SpaseExtractor())
         CPM_aas_spase.generate_mapping(self.graph)
-        CPM_aas_spase.disambiguate(self.SSM,
-                                   scores = [FuzzyScorer,
-                                             CosineSimilarityScorer,
+        CPM_aas_spase.disambiguate(scores = [#FuzzyScorer,
+                                             #CosineSimilarityScorer,
                                              AcronymScorer])
 
         # Deal with remaining candidate pairs (TODO)
         #self.CPM.disambiguate(self.graph,
-        #                      self.SSM,
         #                      NaifExtractor(),
         #                      WikidataExtractor())
 
-        # /!\ Save the synonym sets in the graph (do not remove)
-        self.SSM.save_all()
         CPM_aas_spase.save_all()
         del(CPM_aas_spase)
-        del(self.SSM)
+
+        # /!\ Save the synonym sets in the graph (do not remove)
+        SynonymSetManager._SSM.save_all()
 
     @timeit
     def write(self,

@@ -2,6 +2,8 @@ import re
 import nltk
 import math
 from nltk.corpus import stopwords
+
+from utils.performances import timeit
 try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
@@ -231,6 +233,12 @@ def proba_acronym_of(acronym: str,
         return 0
     if ' ' in acronym:
         return 0
+    # Acronym is at most 3 times shorter
+    if len(acronym) > len(label) / 3:
+        return 0
+    # Acronym has only uppercase
+    if acronym.upper() != acronym:
+        return 0
 
     first_letters, second_letters, stopwords_letters, uppercases_letters = _get_matrixes(label,
                                                                                          languages)
@@ -240,7 +248,7 @@ def proba_acronym_of(acronym: str,
                          stopwords_letters,
                          uppercases_letters)
     if score == 0:
-        new_acronym = del_numbers(acronym)
+        new_acronym = _del_numbers(acronym)
         if new_acronym != acronym:
             score = _compute_for(new_acronym.lower(),
                                  first_letters,
@@ -250,7 +258,7 @@ def proba_acronym_of(acronym: str,
     return math.pow(score, 4)
 
 
-def del_numbers(acronym: str) -> str:
+def _del_numbers(acronym: str) -> str:
     """
     Get a version of the acronym with multiplied letters (ex: DA2I => DAII)
     """
@@ -270,6 +278,8 @@ def del_numbers(acronym: str) -> str:
         else:
             number = 0
             res += letter
+    if number > 0:
+        res += str(number)
     return res
 
 def __test__(label, acronym):
@@ -277,8 +287,8 @@ def __test__(label, acronym):
     score = proba_acronym_of(acronym, label)
     print("score:", score)
 
-if __name__ == "__main__":
-    # Test
+@timeit
+def main():
     test = [("COVID-19 Vaccines Global Access", "COVAX"), # 1
             ("National Aeronautics of Space Administration", "SAeNA"), # 1
             ("National Aeronautics and Space Administration", "SAoNAe"), # 0
@@ -295,3 +305,7 @@ if __name__ == "__main__":
     ]
     for label, acronym in test:
         __test__(label, acronym)
+
+if __name__ == "__main__":
+    # Test
+    main()

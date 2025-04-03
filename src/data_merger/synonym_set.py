@@ -209,6 +209,13 @@ class SynonymSetManager():
     saved with save_all() before calling graph.serialize()
     """
 
+    _SSM = None
+
+    def __new__(cls, *args, **kargs):
+        if cls._SSM is None:
+            cls._SSM = super(SynonymSetManager, cls).__new__(cls)
+        return cls._SSM
+
 
     def __init__(self):
         self._synsets = set()
