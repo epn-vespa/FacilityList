@@ -3,7 +3,7 @@ import nltk
 import math
 from nltk.corpus import stopwords
 
-from utils.performances import timeit
+
 try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
@@ -16,7 +16,7 @@ def _compute_for(acronym: list[str],
                  second_letters: list[str],
                  stopwords_letters: list[str],
                  uppercases_letters: list[str],
-                 remove_letter: int = -1):
+                 removed_letter: int = -1):
     """
     Recursive method. Do not call. Returns a score between 0 and 1
     for the probability of acronym to be the acronym of the data.
@@ -32,15 +32,11 @@ def _compute_for(acronym: list[str],
     second_letters -- second letters of each word (except in stopwords)
     stopwords_letters -- stopwords letters
     uppercases_letters -- uppercases that are not in 1st or 2nd and not in a stopword
+    removed_letter -- the index of the previously removed letter
     """
-    if remove_letter >= 0:
-        first_letters[remove_letter] = ' '
-        second_letters[remove_letter] = ' '
-        stopwords_letters[remove_letter] = ' '
-        uppercases_letters[remove_letter] = ' '
     if len(acronym) == 0:
         # return the proportion of first letters used.
-        return 1 - len([x for x in first_letters if x != ' ']) / len(first_letters)
+        return 1 - len([x for x in first_letters if x not in " _"]) / len(first_letters)
 
     # Debug
     """
@@ -60,12 +56,11 @@ def _compute_for(acronym: list[str],
                 if (second_letters[index] == letter and
                     first_letters[index - 1] != ' '):
                     # the first letter is still here. We remove both.
-                    first_letters[index - 1] = ' '
-                    second_letters[index - 1] = ' '
-                    stopwords_letters[index - 1] = ' '
-                    uppercases_letters[index - 1] = ' '
+                    first_letters_copy = first_letters.copy()
+                    first_letters_copy[index - 1] = '_' # Deleted
+                    second_letters[index] = '_' # Deleted
                     score = _compute_for(acronym[1:],
-                                         first_letters,
+                                         first_letters_copy,
                                          second_letters,
                                          stopwords_letters,
                                          uppercases_letters,
@@ -90,27 +85,40 @@ def _compute_for(acronym: list[str],
     if letter in first_letters:
         # find all indexes of letter in first_letters.
         for index, matched in enumerate(first_letters):
+        # TODO add a word order malus for first letters.
             if matched == letter:
+                before_letters = first_letters[:index]
+                if before_letters.count(' ') + before_letters.count('_') == len(before_letters):
+                    # if index == 0 or ''.join(first_letters[:index]):
+                    malus = 0
+                    # First letter, do not need to give a score malus
+                else:
+                    malus = 1 / (len(acronym) * 2)
+                    # the malus is 2x less important as having a missing 1st letter in the acronym
+                first_letters_copy = first_letters.copy()
+                first_letters_copy[index] = '_' # Deleted
                 score = _compute_for(acronym[1:],
-                                     first_letters.copy(),
+                                     first_letters_copy,
                                      second_letters,
                                      stopwords_letters,
                                      uppercases_letters,
-                                     remove_letter = index)
+                                     removed_letter = index)
                 if score == 1:
-                    return score # found the best path
-                if score > best_score:
-                    best_score = score
+                    return score - malus # found the best path
+                if score - malus > best_score:
+                    best_score = score - malus
     if letter in second_letters:
         # index of prev letter is remove_letter.
-        if (len(second_letters) > remove_letter + 1
-            and second_letters[remove_letter + 1] == letter):
+        if (len(second_letters) > removed_letter + 1
+            and second_letters[removed_letter + 1] == letter):
+            second_letters_copy = second_letters.copy()
+            second_letters_copy[removed_letter + 1] = '_' # deleted
             score = _compute_for(acronym[1:],
                                  first_letters,
-                                 second_letters.copy(),
+                                 second_letters_copy,
                                  stopwords_letters,
                                  uppercases_letters,
-                                 remove_letter = remove_letter + 1)
+                                 removed_letter = removed_letter + 1)
             if score == 1:
                 return score # found the best path
             if score > best_score:
@@ -118,28 +126,36 @@ def _compute_for(acronym: list[str],
     if letter in stopwords_letters:
         for index, matched in enumerate(stopwords_letters):
             if matched == letter:
+                if (stopwords_letters[index - 1] == '_' and removed_letter != index - 1
+                    or stopwords_letters[index - 1] not in ' _'):
+                    # The acronym can not have a letter from the middle of a stopword.
+                    return 0
+                stopwords_letters_copy = stopwords_letters.copy()
+                stopwords_letters_copy[index] = '_'
                 score = _compute_for(acronym[1:],
                                      first_letters,
                                      second_letters,
-                                     stopwords_letters.copy(),
+                                     stopwords_letters_copy,
                                      uppercases_letters,
-                                     remove_letter = index)
+                                     removed_letter = index)
                 if score == 1:
                     return score # found the best path
                 if score > best_score:
                     best_score  = score
 
     if letter in uppercases_letters:
-        #if (len(uppercases_letters) > remove_letter + 1
-        #    and uppercases_letters[remove_letter + 1] == letter): # following another letter
+        #if (len(uppercases_letters) > removed_letter + 1
+        #    and uppercases_letters[removed_letter + 1] == letter): # following another letter
         for index, matched in enumerate(uppercases_letters):
                 if matched == letter:
+                    uppercases_letters_copy = uppercases_letters.copy()
+                    uppercases_letters_copy[index] = '_'
                     score = _compute_for(acronym[1:],
                                         first_letters,
                                         second_letters,
                                         stopwords_letters,
-                                        uppercases_letters.copy(),
-                                        remove_letter = index)
+                                        uppercases_letters_copy,
+                                        removed_letter = index)
                     if score == 1:
                         return score # found the best path
                     if score > best_score:
@@ -236,7 +252,7 @@ def proba_acronym_of(acronym: str,
     # Acronym is at most 3 times shorter
     if len(acronym) > len(label) / 3:
         return 0
-    # Acronym has only uppercase
+    # Acronym has only uppercases
     if acronym.upper() != acronym:
         return 0
 
@@ -287,21 +303,24 @@ def __test__(label, acronym):
     score = proba_acronym_of(acronym, label)
     print("score:", score)
 
-@timeit
+
 def main():
     test = [("COVID-19 Vaccines Global Access", "COVAX"), # 1
-            ("National Aeronautics of Space Administration", "SAeNA"), # 1
-            ("National Aeronautics and Space Administration", "SAoNAe"), # 0
+            ("National Aeronautics and Space Administration", "NASA"), # 1
+            ("National Aeronautics of Space Administration", "SAONAE"), # 0
             ("Taxe sur la Valeur Ajoutée", "TVA"), # 1
             ("United Nations Educational, Scientific and Cultural Organization", "UNESCO"), # 1
             ("Société Nationale des Chemins de fer Français ", "SNCF"), # not 1 because of "fer"
             ("Société Nationale des Chemins de fer Français ", "SNCFF"), # 1
             ("System for Audio-Visual Event Modeling", "SAVEM"), # 1
             ("System for Audio-Visual Event Modeling", "SyfAuViEvMo"), # 1
-            ("SUMmarization in Open Context", "SUMINO" ), # 1
+            ("SUMmarization in Open Context", "SUMINO" ), # ~0.6 because of Context
             ("Développement et Administration Internet et Intranet", "DA2I"), # 1 after 2*i
             ("extensible Markup Language", "XML"), # 1
-            ("Southern Photometric Local Universe Survey", "S-PLUS")
+            ("Southern Photometric Local Universe Survey", "S-PLUS"),
+            #("Telescopea Action Rapide pour les Objets Transitoires, Rapid Action Telescope for transient objects at Calern Observatory", "Explorer 32"),
+            #("international vlbi service for geodesy and astrometry", "SONMIANI"),
+            #("international vlbi service for geodesy and astrometry", "IAGA:SON"),
     ]
     for label, acronym in test:
         __test__(label, acronym)
