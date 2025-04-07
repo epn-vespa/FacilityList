@@ -12,7 +12,6 @@ from data_updater.extractor.extractor import Extractor
 from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
 
 
-
 class OntologyMapping():
     """
     Metadata mapping between Ontology standards and the extracted dictionaries.

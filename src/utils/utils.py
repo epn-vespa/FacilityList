@@ -1,7 +1,6 @@
 from typing import Tuple, Set, List
 from urllib.parse import quote
 import re
-import string
 
 from utils.acronymous import proba_acronym_of
 
@@ -258,8 +257,8 @@ def cut_language_from_string(text: str) -> Tuple[str, str]:
     """
     lang = re.findall(r"@[a-zA-Z]{2,3}$", text)
     if lang:
-        lang = lang[0]
-        text = text[:-len(lang)]
+        lang = lang[0][1:] # remove @
+        text = text[:-len(lang) - 1]
     else:
         lang = ""
     return text, lang

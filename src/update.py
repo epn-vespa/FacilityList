@@ -64,8 +64,6 @@ class Updater():
         not already in the dictionary's features.
         """
         for identifier, features in data.items():
-            # TODO Identifier is the identifier according to the source list.
-            # We want to save it with the source. Maybe use reification.
             # get label
             if "label" in features:
                 label = features["label"]
@@ -74,14 +72,14 @@ class Updater():
                 subj = identifier
             for predicate, obj in features.items():
                 self.graph.add((subj, predicate, obj),
-                               extractor = extractor)
+                                extractor = extractor)
             if "type" not in features:
                 if (not hasattr(extractor, "IS_ONTOLOGICAL") or
                     not extractor.IS_ONTOLOGICAL):
                     if cat == "ufo" and hasattr(extractor, "DEFAULT_TYPE"):
                         cat = extractor.DEFAULT_TYPE
                     self.graph.add((subj, "type", cat),
-                                   extractor = extractor)
+                                    extractor = extractor)
             # Create the OBS uri
 
 
