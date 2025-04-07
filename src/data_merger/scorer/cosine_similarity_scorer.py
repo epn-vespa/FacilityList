@@ -10,52 +10,79 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import Union
+from typing import List, Union
 
 from sentence_transformers import SentenceTransformer, util
 from data_merger.entity import Entity
 from data_merger.graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
+from utils.performances import timeall, timeit
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 class CosineSimilarityScorer(Score):
 
     # Name of the score computed by this class (as in score.py)
-    NAME = "cosine_similarity"
+    NAME = "sentence_cosine_similarity"
 
 
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+
+
+    @timeall
     def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
-                entity2: Union[Entity, SynonymSet]) -> float:
+                entities1: List[Union[Entity, SynonymSet]],
+                entities2: List[Union[Entity, SynonymSet]]) -> float:
         """
         Compute a cosine similarity score between the two entities' textual
-        informations ()
+        informations (). We use lists and batches.
+
+        Troubleshooting:
+            Cuda cannot be used in a multithread with fork().
+            https://pytorch.org/docs/main/notes/multiprocessing.html
 
         Keyword arguments:
         graph -- the graph
-        entity1 -- reference entity
-        entity2 -- compared entity
+        entities1 -- reference entities
+        entities2 -- compared entities
         """
-        encoded_entity1 = CosineSimilarityScorer.encode(entity1)
-        encoded_entity2 = CosineSimilarityScorer.encode(entity2)
-        cosine_similarity = util.pytorch_cos_sim(encoded_entity1, encoded_entity2)
-        return cosine_similarity
+        encoded_entities12 = CosineSimilarityScorer.encode_batch(entities1 + entities2)
+        encoded_entities1 = encoded_entities12[:len(entities1)]
+        encoded_entities2 = encoded_entities12[len(entities1):]
+        # encoded_entities2 = CosineSimilarityScorer.encode_batch(entities2)
+
+        cosine_similarities = [util.pytorch_cos_sim(e1, e2)[0][0].item()
+                               for e1, e2 in zip(encoded_entities1,
+                                                 encoded_entities2)]
+        return cosine_similarities
 
 
-    def encode(entity: Entity):
+    @timeit
+    def encode_batch(entities: List[Entity],
+                     batch_size: int = 128):
         """
-        Get the encoded tensors of the entity's textual informations.
+        Get the encoded tensors of the entities' textual informations.
         Those informations include the label, alternate labels, description,
         location...
+        Return a list of tensors for each entity.
 
         Keyword arguments:
-        entity -- the entity to encode
+        entities -- the list of entities to encode
         """
-        text = ""
-        text += " " + entity.get_values_for("label")
-        text += " ".join(entity.get_values_for("alt_label"))
-        text += " ".join(entity.get_values_for("description"))
-        text += " Location: ".join(entity.get_values_for("location"))
-        return model.encode(text, convert_to_tensor = True)
+        print(f"Encoding the entities with {CosineSimilarityScorer.model}")
+        texts = []
+        for entity in entities:
+            text = ""
+            text += " ".join(entity.get_values_for("label"))  + ', '
+            text += " ".join(entity.get_values_for("alt_label"))  + ', '
+            text += " Location: ".join(entity.get_values_for("location")) + ', '
+            text += " ".join(entity.get_values_for("description")) + ', '
+            texts.append(text)
+         # no need to normalize the tensors as we compute a cosine similarity.
+        return CosineSimilarityScorer.model.encode(texts,
+                                                   batch_size = batch_size,
+                                                   show_progress_bar = True,
+                                                   convert_to_tensor = True,
+                                                   normalize_embeddings = False)

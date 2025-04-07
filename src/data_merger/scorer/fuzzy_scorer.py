@@ -17,6 +17,7 @@ from data_merger.graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
 from utils.utils import remove_punct
+from utils.performances import timeall
 
 
 class FuzzyScorer(Score):
@@ -25,6 +26,7 @@ class FuzzyScorer(Score):
     NAME = "fuzzy_levenshtein"
 
 
+    @timeall
     def compute(graph: Graph,
                 entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:

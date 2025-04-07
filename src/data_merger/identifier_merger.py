@@ -8,17 +8,15 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import List
 from data_merger.candidate_pair import CandidatePair, CandidatePairsManager
 from data_merger.entity import Entity
 from data_merger.graph import Graph
 from data_merger.synonym_set import SynonymSetManager
 from data_updater.extractor import wikidata_extractor
 
-from rdflib.namespace import OWL, SKOS
+from rdflib.namespace import SKOS
 from rdflib import Literal, XSD
 
-from data_updater.extractor.naif_extractor import NaifExtractor
 from utils.performances import timeit
 
 
@@ -79,7 +77,7 @@ class IdentifierMerger():
                     for naif_id in naif_ids:
                         naif_entity = Entity(naif_id)
                         CPM.add_candidate_pairs(CandidatePair(naif_entity,
-                                                                wikidata_entity))
+                                                              wikidata_entity))
         return True
 
 

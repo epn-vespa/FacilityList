@@ -23,8 +23,7 @@ class Entity():
 
     def __new__(cls,
                 uri: URIRef):
-        cls._uri = uri
-
+        # cls._uri = uri
         if uri in cls.entities:
             return cls.entities[uri]
         else:
@@ -42,12 +41,21 @@ class Entity():
             self._data[property].add(value)
 
 
+    def __reduce__(self):
+        # When the object is pickled, we return the class and the necessary arguments
+        return (self.__class__, (self.uri,))
+
+
     @property
     def uri(self):
         return self._uri
 
 
     def __str__(self):
+        return str(self.uri)
+
+
+    def __repr__(self):
         return str(self.uri)
 
 

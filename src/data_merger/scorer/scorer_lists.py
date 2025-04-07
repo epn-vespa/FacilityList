@@ -3,7 +3,7 @@ Define the superclass Extractor.
 """
 
 from enum import Enum
-from data_merger.scorer import acronym_scorer, fuzzy_scorer
+from data_merger.scorer import acronym_scorer, fuzzy_scorer, cosine_similarity_scorer
 
 
 class ScorerLists():
@@ -14,6 +14,9 @@ class ScorerLists():
 
     # Scores that are computed for all of the candidate pairs.
     OTHER_SCORES = [acronym_scorer.AcronymScorer]
+
+    # Scores that use CUDA and cannot be computed in a forked thread
+    CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer]
 
     # Lambda functions that return a boolean for discriminant criteria.
 

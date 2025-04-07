@@ -83,8 +83,8 @@ class Merger():
         CPM_aas_spase = CandidatePairsMapping(AasExtractor(),
                                               SpaseExtractor())
         CPM_aas_spase.generate_mapping(self.graph)
-        CPM_aas_spase.disambiguate(scores = [#FuzzyScorer,
-                                             #CosineSimilarityScorer,
+        CPM_aas_spase.disambiguate(scores = [FuzzyScorer,
+                                             CosineSimilarityScorer,
                                              AcronymScorer])
 
         # Deal with remaining candidate pairs (TODO)
@@ -92,7 +92,8 @@ class Merger():
         #                      NaifExtractor(),
         #                      WikidataExtractor())
 
-        CPM_aas_spase.save_all()
+        # CPM_aas_spase.save_all()
+        CPM_aas_spase.save_to_graph()
         del(CPM_aas_spase)
 
         # /!\ Save the synonym sets in the graph (do not remove)
