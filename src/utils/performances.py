@@ -1,5 +1,4 @@
 import time
-import atexit
 from collections import defaultdict
 from multiprocessing import Manager
 
@@ -50,8 +49,6 @@ def printtimes():
         times = sorted(times.items(), key = lambda x: x[1])
         for func_name, time in times:
             print(f"{func_name}\t\t{time}")
-
-atexit.register(printtimes)
 
 
 def deprecated(func):

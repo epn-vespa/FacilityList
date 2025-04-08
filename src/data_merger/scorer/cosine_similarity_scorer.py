@@ -10,9 +10,10 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import List, Union
+from typing import Generator, List, Union
 
 from sentence_transformers import SentenceTransformer, util
+from tqdm import tqdm
 from data_merger.entity import Entity
 from data_merger.graph import Graph
 from data_merger.scorer.score import Score
@@ -21,6 +22,12 @@ from utils.performances import timeall, timeit
 
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+BATCH_SIZE = 8
+
+# MODEL = "all-MiniLM-L6-v2"
+MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+
 
 class CosineSimilarityScorer(Score):
 
@@ -28,13 +35,13 @@ class CosineSimilarityScorer(Score):
     NAME = "sentence_cosine_similarity"
 
 
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    model = None
 
 
     @timeall
     def compute(graph: Graph,
                 entities1: List[Union[Entity, SynonymSet]],
-                entities2: List[Union[Entity, SynonymSet]]) -> float:
+                entities2: List[Union[Entity, SynonymSet]]) -> Generator[float, None, None]:
         """
         Compute a cosine similarity score between the two entities' textual
         informations (). We use lists and batches.
@@ -48,20 +55,19 @@ class CosineSimilarityScorer(Score):
         entities1 -- reference entities
         entities2 -- compared entities
         """
+        if CosineSimilarityScorer.model is None:
+            CosineSimilarityScorer.model = SentenceTransformer(MODEL)
+
         encoded_entities12 = CosineSimilarityScorer.encode_batch(entities1 + entities2)
         encoded_entities1 = encoded_entities12[:len(entities1)]
         encoded_entities2 = encoded_entities12[len(entities1):]
-        # encoded_entities2 = CosineSimilarityScorer.encode_batch(entities2)
-
-        cosine_similarities = [util.pytorch_cos_sim(e1, e2)[0][0].item()
-                               for e1, e2 in zip(encoded_entities1,
-                                                 encoded_entities2)]
-        return cosine_similarities
+        for entity1 in tqdm(encoded_entities1, desc = "Computing cosinus similarity for encoded entities"):
+            for entity2 in encoded_entities2:
+                yield util.pytorch_cos_sim(entity1, entity2)[0][0].item()
 
 
     @timeit
-    def encode_batch(entities: List[Entity],
-                     batch_size: int = 128):
+    def encode_batch(entities: List[Entity]):
         """
         Get the encoded tensors of the entities' textual informations.
         Those informations include the label, alternate labels, description,
@@ -80,9 +86,9 @@ class CosineSimilarityScorer(Score):
             text += " Location: ".join(entity.get_values_for("location")) + ', '
             text += " ".join(entity.get_values_for("description")) + ', '
             texts.append(text)
-         # no need to normalize the tensors as we compute a cosine similarity.
+        # no need to normalize embeddings as we compute a cosine similarity.
         return CosineSimilarityScorer.model.encode(texts,
-                                                   batch_size = batch_size,
+                                                   batch_size = BATCH_SIZE,
                                                    show_progress_bar = True,
                                                    convert_to_tensor = True,
                                                    normalize_embeddings = False)

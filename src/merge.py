@@ -13,6 +13,7 @@ Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
 from argparse import ArgumentParser
+import atexit
 from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
 from data_merger.identifier_merger import IdentifierMerger
 from data_merger.graph import Graph
@@ -24,7 +25,7 @@ from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
-from utils.performances import timeit
+from utils.performances import printtimes, timeit
 
 class Merger():
 
@@ -87,12 +88,7 @@ class Merger():
                                              CosineSimilarityScorer,
                                              AcronymScorer])
 
-        # Deal with remaining candidate pairs (TODO)
-        #self.CPM.disambiguate(self.graph,
-        #                      NaifExtractor(),
-        #                      WikidataExtractor())
-
-        # CPM_aas_spase.save_all()
+        # CPM_aas_spase.save_all() # will save a json file for candidate pairs
         CPM_aas_spase.save_to_graph()
         del(CPM_aas_spase)
 
@@ -114,8 +110,11 @@ def main(input_ontology: str = "",
     merger.merge_mapping()
     merger.write(output_ontology)
 
+    # atexit.register(merger.save_all)
 
 if __name__ == "__main__":
+
+    atexit.register(printtimes)
 
     parser = ArgumentParser(
         prog = "updater.py",

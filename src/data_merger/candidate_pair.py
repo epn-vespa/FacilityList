@@ -390,14 +390,41 @@ class CandidatePairsMapping():
         self._list1_indexes = [] # indexes by entity in the mapping
         self._list2_indexes = [] # indexes by entity in the mapping
 
-        self._candidate_pairs = []
+        # self._candidate_pairs = []
 
 
     def __len__(self):
         if not self._mapping:
             return 0
-        return len(self._candidate_pairs)
-        # return len(self._mapping) * len(self._mapping[0])
+        # return len(self._candidate_pairs)
+        return len(self._mapping) * len(self._mapping[0])
+
+
+    def __iter__(self):
+        # Initialisation de l'itérateur : on itère sur les sous-listes
+        self.row_index = len(self._mapping) - 1
+        self.col_index = len(self._mapping[0]) - 1
+        return self
+
+
+    def _increment(self):
+        self.col_index -= 1
+        if self.col_index < 0:
+            self.row_index -= 1
+            self.col_index = len(self._mapping[0]) - 1
+
+
+    def __next__(self):
+        if self.row_index < 0:
+            raise StopIteration
+        current_element = None
+        while current_element is None:
+            current_element = self._mapping[self.row_index][self.col_index]
+            self._increment()
+            if (current_element is None and
+                self.row_index < 0):
+                raise StopIteration
+        return current_element
 
 
     @timeit
@@ -425,9 +452,12 @@ class CandidatePairsMapping():
                                                  no_equivalent_in = self._list1)
         entities2 = list(entities2)
         self._mapping = []
+
+        # Initialize the 2D array
         for i in range(len(entities1)):
             self._mapping.append([None] * len(entities2))
 
+        # Fill the 2D array
         for i, (entity1, synset1) in enumerate(tqdm(entities1,
                                                     desc = f"Generating mapping for {self._list1}, {self._list2}")):
             if synset1 is not None:
@@ -441,10 +471,11 @@ class CandidatePairsMapping():
                     entity2 = SynonymSet(synset2)
                 else:
                     entity2 = Entity(entity2)
-                self._list2_indexes
+                if i == 0: # Only append for the first loop.
+                    self._list2_indexes.append(entity2)
                 cp = CandidatePair(entity1, entity2)
                 self._mapping[i][j] = cp
-                self._candidate_pairs.append(cp)
+                # self._candidate_pairs.append(cp)
 
 
     def del_candidate_pairs(self,
@@ -458,23 +489,27 @@ class CandidatePairsMapping():
         """
         if entity in self._list1_indexes:
             entity_index = self._list1_indexes.index(entity)
-            del(self._mapping[entity_index])
-            del(self._list1_indexes[entity_index])
+            del self._mapping[entity_index]
+            del self._list1_indexes[entity_index]
         elif entity in self._list2_indexes:
             entity_index = self._list2_indexes.index(entity)
             for e1 in self._mapping:
-                del(e1[entity_index])
+                del e1[entity_index]
+            del self._list2_indexes[entity_index]
         else:
-            raise ValueError(f"{entity} not in mapping.")
+            pass # it can be removed twice when removing a line and a column
+            # raise ValueError(f"{entity} not in mapping.")
 
 
         # Remove from the list too
+        """
         i = len(self._candidate_pairs) - 1
         while i >= 0:
             pair = self._candidate_pairs[i]
             if pair.member1 == entity or pair.member2 == entity:
                 del(self._candidate_pairs[i])
             i -= 1
+        """
 
     def del_candidate_pair(self,
                            candidate_pair: CandidatePair):
@@ -491,7 +526,7 @@ class CandidatePairsMapping():
             self._mapping[index1][index2] = None
 
         # Remove from the list too
-        del(self._candidate_pairs[index1 * len(self._mapping) + index2])
+        # del(self._candidate_pairs[index1 * len(self._mapping) + index2])
 
     def _get_indexes(self,
                      candidate_pair: CandidatePair):
@@ -625,6 +660,7 @@ class CandidatePairsMapping():
         self._compute_other_scores(other_scores)
 
 
+    @timeit
     def _disambiguate_discriminant(self,
                                    scores: List[Score]):
         """
@@ -651,15 +687,15 @@ class CandidatePairsMapping():
                 if state == State.ADMITTED:
                     i += 0 # The mapping's size was reduced so
                     # if we increment i, it will jump over the next element.
-                    print("admitted", len(self._mapping), i, candidate_pair.member1,  candidate_pair.member2)
+                    # print("admitted", len(self._mapping), i, candidate_pair.member1, candidate_pair.member2)
                     # self._mapping[i][self._list2_indexes.index(candidate_pair.member2)]
                 else:
                     i += 1
 
 
+    @timeit
     def _compute_cuda_scores(self,
-                             scores: List[Score],
-                             batch_size = 128):
+                             scores: List[Score]):
         """
         Compute scores that cannot be computed in a multiprocess (because they
         use CUDA) for the remaining candidate pairs.
@@ -667,25 +703,21 @@ class CandidatePairsMapping():
 
         Keyword arguments:
             scores -- Scores that use CUDA
-            batch_size -- how many scores to compute at a time by the models
         """
         for score in scores:
-            # n = 0
-            """
-            while n < len(self._candidate_pairs):
-                candidate_pairs = self._candidate_pairs[n:n + batch_size]
-            """
-            entities1 = []
-            entities2 = []
-            for cp in self._candidate_pairs:
-                entities1.append(cp.member1)
-                entities2.append(cp.member2)
-            scores = score.compute(Graph._graph, entities1, entities2)
-            for candidate_pair, score_value in zip(self._candidate_pairs, scores):
-                candidate_pair.add_score(score.NAME, score_value)
-            #   n += batch_size
+            len_e1 = len(self._list1_indexes)
+            len_e2 = len(self._list2_indexes)
+            print(f"Computing {score.NAME} for {self._list1}, {self._list2}" +
+                  f" on {len_e1 * len_e2} entities.")
+            scores = list(score.compute(Graph._graph, self._list1_indexes, self._list2_indexes))
+            for n, score_value in enumerate(scores):
+                i = n % len_e1
+                j = int((n - i) / len_e1)
+                if self._mapping[i][j] is not None:
+                    self._mapping[i][j].add_score(score.NAME, score_value)
 
 
+    @timeit
     def _compute_other_scores(self, scores: List[Score]):
         """
         Compute other scores for the remaining candidate pairs.
@@ -698,7 +730,7 @@ class CandidatePairsMapping():
             print(f"Computing other scores for the remaining candidate pairs.")
             futures = [executor.submit(_compute_scores,
                                        candidate_pair,
-                                       scores) for candidate_pair in self._candidate_pairs]
+                                       scores) for candidate_pair in self]#._candidate_pairs]
 
             for i, future in tqdm(enumerate(as_completed(futures)), total = len(futures)):
                 score_values, candidate_pair_uri = future.result()
@@ -744,7 +776,7 @@ class CandidatePairsMapping():
         filename = f"{self._list1}_{self._list2}_{now}.json"
         with open(filename, 'w') as file:
             file.write("{\n")
-            for cp in self._candidate_pairs:# ._candidate_pairs:
+            for cp in self:#._candidate_pairs:# ._candidate_pairs:
                 file.write("\"" + str(cp.member1.uri) + '\t' + str(cp.member2.uri) + "\":")
                 file.write(str(cp.scores))
                 #for score, value in cp.scores.items():
