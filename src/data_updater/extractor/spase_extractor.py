@@ -69,6 +69,7 @@ class SpaseExtractor(Extractor):
                       "StartDate": "start_date",
                       "EndDate": "end_date"}
 
+
     def __init__(self):
         pass
 

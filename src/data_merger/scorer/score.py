@@ -20,4 +20,4 @@ class Score():
         Return a score value between 0 and 1.
         This method is implemented in the different Scorers.
         """
-        return 0
+        ...

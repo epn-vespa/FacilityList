@@ -120,7 +120,9 @@ class Graph(G):
         Keyword arguments:
         source -- the source extractor to get entities from
         no_equivalent_in -- the entities from source are not linked with
-                        owl:equivalentClass to any entity from this list.
+                        owl:equivalentClass to any entity from this list,
+                        and is not a member of a synonym set with an entity
+                        of the other source.
         """
 
         if isinstance(source, Extractor):
@@ -137,7 +139,10 @@ class Graph(G):
             SELECT ?entity ?synset
             WHERE {{
                 ?entity obs:source obs:{source} .
-                OPTIONAL {{ ?synset obs:hasMember ?entity . }}
+                OPTIONAL {{
+                    ?synset obs:hasMember ?entity .
+                    ?synset a obs:SynonymSet .
+                }}
             }}
             """
         else:
@@ -152,14 +157,75 @@ class Graph(G):
             SELECT ?entity ?synset
             WHERE {{
                 ?entity obs:source obs:{source} .
+                OPTIONAL {{
+                    ?synset a obs:SynonymSet .
+                    ?synset obs:hasMember ?entity .
+                }}
                 FILTER NOT EXISTS {{
                     ?entity owl:equivalentClass ?entity2 .
                     ?entity2 obs:source obs:{no_equivalent_in} .
                 }}
-                OPTIONAL {{ ?synset obs:hasMember ?entity . }}
+                FILTER NOT EXISTS {{
+                    ?synset a obs:SynonymSet .
+                    ?synset obs:hasMember ?entity .
+                    ?synset obs:hasMember ?entity3 .
+                    ?entity3 obs:source obs:{no_equivalent_in} .
+                }}
             }}
             """
         return self.query(query)
+
+    # TODO function to get CandidatePairs from two entities
+    def get_candidate_pair_uri(self,
+                               entity1: URIRef,
+                               entity2: URIRef) -> URIRef:
+        """
+        If there is a CandidatePair between two entities, get
+        its URI to prevent duplicating the Candidate Pair.
+        Entity1 and entity2 must be entities' URI and not Synonym Sets.
+
+        Keyword arguments:
+        entity1 -- the first member of the pair (use an entity not a synset)
+        entity2 -- the second member of the pair (use an entity not a synset)
+        """
+        query = f"""
+        SELECT ?candidate_pair
+        WHERE {{
+            ?candidate_pair a obs:CandidatePair .
+
+            # Member 1
+            {{
+                ?candidate_pair obs:hasMember <{entity1}> .
+            }} UNION {{
+                ?someSynonymSet1 a obs:SynonymSet .
+                ?candidate_pair obs:hasMember ?someSynonymSet1 .
+                ?someSynonymSet1 obs:hasMember <{entity1}> .
+            }} UNION {{
+                <{entity1}> a obs:SynonymSet .
+                <{entity1}> obs:hasMember ?member1 .
+                ?candidate_pair obs:hasMember ?member1 .
+            }}
+
+            # Member 2
+            {{
+                ?candidate_pair obs:hasMember <{entity2}> .
+            }} UNION {{
+                ?someSynonymSet2 a obs:SynonymSet .
+                ?candidate_pair obs:hasMember ?someSynonymSet2 .
+                ?someSynonymSet2 obs:hasMember <{entity2}> .
+            }} UNION {{
+                <{entity2}> a obs:SynonymSet .
+                <{entity2}> obs:hasMember ?member2 .
+                ?candidate_pair obs:hasMember ?member2 .
+            }}
+        }}
+        """
+        return self.query(query)
+
+
+    def get_descriptions(self) -> Iterator[str]:
+        for _, _, desc in self._graph.triples((None, self.OBS["description"], None)):
+            yield desc
 
 
 if __name__ == "__main__":

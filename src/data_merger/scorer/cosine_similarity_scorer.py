@@ -61,7 +61,7 @@ class CosineSimilarityScorer(Score):
         encoded_entities12 = CosineSimilarityScorer.encode_batch(entities1 + entities2)
         encoded_entities1 = encoded_entities12[:len(entities1)]
         encoded_entities2 = encoded_entities12[len(entities1):]
-        for entity1 in tqdm(encoded_entities1, desc = "Computing cosinus similarity for encoded entities"):
+        for entity1 in tqdm(encoded_entities1, desc = "Computing cosine similarity for encoded entities"):
             for entity2 in encoded_entities2:
                 yield util.pytorch_cos_sim(entity1, entity2)[0][0].item()
 

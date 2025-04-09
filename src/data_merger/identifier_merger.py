@@ -46,10 +46,6 @@ class IdentifierMerger():
         """
         graph = self._graph
 
-        if not (graph.is_available("wikidata")
-            and graph.is_available("naif")):
-            return False
-
         # Loop on each wikidata class
         wde = wikidata_extractor.WikidataExtractor()
         wikidata_entities = graph.get_entities_from_list(wde)

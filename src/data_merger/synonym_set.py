@@ -11,7 +11,7 @@ Author:
 """
 
 from collections import defaultdict
-from typing import List, Set, Union
+from typing import Set, Union
 import uuid
 
 from rdflib import OWL, RDF, URIRef
@@ -39,50 +39,59 @@ class SynonymSet():
     """
     synonym_sets = dict()
 
+
     def __new__(cls,
-                synonyms: List[Entity] = [],
-                uri: str = None):
+                uri: str = "",
+                synonyms: Set[URIRef] = set()):
         """
         Object factory for SynonymSet.
 
         Keyword arguments:
-        synonyms -- the list of members of this synonym set
         uri -- the uri of the list if the synonym set was loaded from
                an existing ontology
+        synonyms -- the list of members of this synonym set if it is
+               a newly created synonym set.
         """
         if uri:
             if uri in cls.synonym_sets:
-                cls.synonym_sets[uri]._synset.update(synonyms)
+                cls.add_synonyms
+                cls.synonym_sets[uri]._synonyms.update(synonyms)
                 return cls.synonym_sets[uri]
             # check if any entity is in any of the synonym sets
-            for uri_, synonym_set_ in cls.synonym_sets:
+            for uri_, synonym_set_ in cls.synonym_sets.items():
                 for synonym_ in synonym_set_:
                     if synonym_ in synonyms:
                         synonym_set_.add_synonyms(synonyms)
                         return synonym_set_
         else:
-            #uri = str(uuid.uuid4())
-            instance = super().__new__(cls)
-            #cls.synonym_sets[uri] = instance
-            #instance._uri = uri
-            #instance._synonyms = set(synonyms)
-            #instance.init_data()
-            return instance
+            uri = str(uuid.uuid4())
+        instance = super().__new__(cls)
+        cls.synonym_sets[uri] = instance
+        return instance
 
 
     def __init__(self,
-                 synonyms: List[Entity],
-                 uri: str = None):
+                 uri: str = "",
+                 synonyms: Set[URIRef] = set()):
+        """
+        Keyword arguments:
+        uri -- the URI of the list if the synonym set was loaded from
+               an existing ontology
+        synonyms -- the list of synonyms' URIs of this synonym set.
+        """
         if not uri:
             uri = str(uuid.uuid4())
         self._uri = uri
-        self._data = defaultdict(set)
-        for synonym in synonyms:
-            assert(type(synonym) == Entity)
-            for key, value in synonym.data.items():
-                self._data[key].update(value)
-        self._synonyms = synonyms
+
+        if synonyms:
+            self.add_synonyms(synonyms)
+        else:
+            self.update_synonyms()
         self.init_data()
+
+
+    def __repr__(self):
+        return f"SynonymSet@{self.uri}"
 
 
     @property
@@ -108,29 +117,49 @@ class SynonymSet():
         """
         Add data from the graph's SynonymSet entity to this object's data.
         """
-        self._data = defaultdict(list)
+        self._data = defaultdict(set)
         for entity, property, value in Graph._graph.triples((self.uri, None, None)):
+            if entity in (Graph._graph.OBS["hasMember"],
+                          RDF.type):
+                continue
             self._data[property].update(value)
 
 
-    def add_synonyms(self,
-                    synonyms: Union[Entity, List]):
+    def update_synonyms(self):
         """
-        Add a synonym in a synset. Also add all of its
-        data in the _data of the synset (for example, its label
-        and alt labels, its location, etc)
+        Update the synonym set by using its URI and members in the graph.
+        """
+        synonyms = set()
+        for _, _, synonym in Graph._graph.triples((self.uri,
+                                                   Graph._graph.OBS["hasMember"],
+                                                   None)):
+            synonyms.add(synonym)
+        # We reload the data
+        self._data = defaultdict(set)
+        self._synonyms = set()
+        self.add_synonyms(synonyms)
+
+
+    def add_synonyms(self,
+                     synonyms: Union[Entity, Set[Entity]]):
+        """
+        Add synonyms into a synset. Also add all of their
+        data in the _data of the synset (for example, their label
+        and alt labels, their location, etc.)
 
         Keyword arguments:
-        synonym -- the new synonym to add
+        synonyms -- the new synonyms to add
         """
-        if not isinstance(synonyms, list):
+        if not isinstance(synonyms, set):
             synonyms = [synonyms]
 
-        for synonym in synonyms:
+        for synonym_uri in synonyms:
+            synonym = Entity(synonym_uri)
             self.synonyms.add(synonym)
             # Update the synonym set's data
-            for key, value in synonym.data.items():
-                self._data[key].add(value)
+            for relation, values in synonym.data.items():
+                # Value is a dict of values for an entity
+                self._data[relation].update(values)
 
 
     def has_member(self,

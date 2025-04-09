@@ -1,9 +1,11 @@
 """
-Define the superclass Extractor.
+List the available scorers and categorize them.
+
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from enum import Enum
-from data_merger.scorer import acronym_scorer, fuzzy_scorer, cosine_similarity_scorer
+from data_merger.scorer import acronym_scorer, fuzzy_scorer, cosine_similarity_scorer, tfidf_scorer
 
 
 class ScorerLists():
@@ -13,10 +15,15 @@ class ScorerLists():
     DISCRIMINANT_SCORES = [fuzzy_scorer.FuzzyScorer]
 
     # Scores that are computed for all of the candidate pairs.
-    OTHER_SCORES = [acronym_scorer.AcronymScorer]
+    OTHER_SCORES = [acronym_scorer.AcronymScorer, tfidf_scorer.TfIdfScorer]
 
     # Scores that use CUDA and cannot be computed in a forked thread
     CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer]
+
+
+    ALL_SCORES = DISCRIMINANT_SCORES + OTHER_SCORES + CUDA_SCORES
+    SCORES_BY_NAMES = {scorer.NAME: scorer for scorer in ALL_SCORES}
+
 
     # Lambda functions that return a boolean for discriminant criteria.
 

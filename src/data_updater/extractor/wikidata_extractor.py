@@ -153,6 +153,15 @@ class WikidataExtractor(Extractor):
     # Query to get control pages
     _QUERY_CONTROL = _QUERY_PREFIX + _SELECT_MAIN_SIMPLE + _WHERE_SIMPLE
 
+
+    def __init__(self):
+        pass
+
+
+    def __str__(self):
+        return self.NAMESPACE
+
+
     def extract(self) -> dict:
         """
         Extract wikidata content into a dictionary.

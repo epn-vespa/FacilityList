@@ -11,7 +11,8 @@ Author:
 
 from collections import defaultdict
 from enum import Enum
-from typing import Dict, List, Tuple, Union
+from pathlib import Path
+from typing import Dict, List, Union
 import uuid
 import hashlib
 
@@ -24,11 +25,12 @@ from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
-from multiprocessing import Manager, Pool
-import multiprocessing
 
 from utils.performances import deprecated, timeit
 
+
+JSON = Path(__file__).parent.parent.parent / 'data' / 'processed_data'# "../../cache/error.log"
+JSON.mkdir(parents = True, exist_ok = True)
 
 
 class CandidatePair():
@@ -56,9 +58,8 @@ class CandidatePair():
                  uri: URIRef = None):
         """
         Instantiate a CandidatePair object. When reading a graph
-        with some CandidatePair, use the node argument to save the
-        URIRef of the CandidatePair. It will be used later if the
-        CandidatePair can be removed. Can use first, second or uri.
+        with some CandidatePair, use its original URI. Then, retrieve its
+        scores and scores values and add it to this candidate pair's scores.
 
         Keyword arguments:
         first -- first member of the pair
@@ -71,13 +72,21 @@ class CandidatePair():
 
         if uri is None:
             uri = Graph._graph.OBS[str(uuid.uuid4())]
+            self._uri = uri
             # self._uri = str(uuid.uuid4())
-        self._uri = uri
+        else:
+            # Retrieve and save the scores of the graph's candidate pair.
+            self._uri = uri
+            self.init_data()
 
         CandidatePair.candidate_pairs[uri] = self
 
         self._list1 = str(first.uri).split('#')[0].split('/')[-1]
         self._list2 = str(second.uri).split('#')[0].split('/')[-1]
+
+
+    def __repr__(self):
+        return f"CandidatePair@{self.uri}"
 
 
     @property
@@ -108,6 +117,16 @@ class CandidatePair():
     @property
     def scores(self) -> dict:
         return self._scores
+
+
+    def init_data(self):
+        for _, score_name, score_value in Graph._graph.triples((self.uri, None, None)):
+            if score_name in (Graph._graph.OBS["hasMember"],
+                              RDF.type):
+                continue
+            score_name = str(score_name).split('#')[-1]
+            score_value = float(score_value)
+            self.add_score(score_name, score_value)
 
 
     def add_score(self,
@@ -306,6 +325,34 @@ class CandidatePairsManager():
 
 
     @timeit
+    def save_json(self,
+                  execution_id: str):
+        """
+        Save candidate pairs in a json format to prevents saving
+        all Candidate Pairs in the ontology (there might be billions of CP).
+        Save the scores into a json file. For scores, unlike synonym sets,
+        we do not save them in the ontology.
+
+        Keyword arguments:
+        execution_id -- the id of this execution (generated in merge.py)
+        """
+        filename = f"{self._list1}_{self._list2}_{execution_id}.json"
+        path = JSON / filename
+        with open(str(path), 'w') as file:
+            file.write("{\n")
+            for cp in self:#._candidate_pairs:# ._candidate_pairs:
+                file.write("\"" + str(cp.member1.uri) + '\t' + str(cp.member2.uri) + "\":")
+                file.write(str(cp.scores))
+                #for score, value in cp.scores.items():
+                #    file.write('\t' + score + '\t' + str(value))
+                file.write(',\n')
+
+            file.write("\n}")
+        #with open(filename, 'w') as file:
+        #    json.dump(data, file)
+
+
+    @timeit
     def disambiguate_candidates(self,
                                 scores: List[Score] = None):
         """
@@ -401,13 +448,17 @@ class CandidatePairsMapping():
 
 
     def __iter__(self):
-        # Initialisation de l'itérateur : on itère sur les sous-listes
         self.row_index = len(self._mapping) - 1
+        if len(self._mapping) == 0:
+            return self
         self.col_index = len(self._mapping[0]) - 1
         return self
 
 
     def _increment(self):
+        """
+        Increment from bottom to top & from left to write.
+        """
         self.col_index -= 1
         if self.col_index < 0:
             self.row_index -= 1
@@ -416,6 +467,8 @@ class CandidatePairsMapping():
 
     def __next__(self):
         if self.row_index < 0:
+            raise StopIteration
+        if len(self._mapping) == 0 or len(self._mapping[0]) == 0:
             raise StopIteration
         current_element = None
         while current_element is None:
@@ -458,22 +511,29 @@ class CandidatePairsMapping():
             self._mapping.append([None] * len(entities2))
 
         # Fill the 2D array
-        for i, (entity1, synset1) in enumerate(tqdm(entities1,
-                                                    desc = f"Generating mapping for {self._list1}, {self._list2}")):
-            if synset1 is not None:
-                entity1 = SynonymSet(synset1)
+        for i, (entity1_uri, synset1_uri) in enumerate(tqdm(entities1,
+                                                       desc = f"Generating mapping for {self._list1}, {self._list2}")):
+            if synset1_uri is not None:
+                entity1 = SynonymSet(synset1_uri)
             else:
-                entity1 = Entity(entity1)
+                entity1 = Entity(entity1_uri)
             self._list1_indexes.append(entity1)
-            for j, (entity2, synset2) in enumerate(entities2):
+            for j, (entity2_uri, synset2_uri) in enumerate(entities2):
 
-                if synset2 is not None:
-                    entity2 = SynonymSet(synset2)
+                if synset2_uri is not None:
+                    entity2 = SynonymSet(synset2_uri)
                 else:
-                    entity2 = Entity(entity2)
+                    entity2 = Entity(entity2_uri)
                 if i == 0: # Only append for the first loop.
                     self._list2_indexes.append(entity2)
-                cp = CandidatePair(entity1, entity2)
+
+                cp_uri = list(graph.get_candidate_pair_uri(entity1.uri,
+                                                           entity2.uri))
+                if cp_uri:
+                    cp_uri, = cp_uri[0]
+                else:
+                    cp_uri = None
+                cp = CandidatePair(entity1, entity2, cp_uri)
                 self._mapping[i][j] = cp
                 # self._candidate_pairs.append(cp)
 
@@ -740,9 +800,11 @@ class CandidatePairsMapping():
 
 
     @timeit
+    @deprecated
     def save_to_graph(self):
         """
-        We do not want to save a whole mapping into the Ontology.
+        Deprecated:
+            We do not want to save a whole mapping into the Ontology.
         """
         graph = Graph._graph
         for candidate_pair_list in tqdm(self._mapping, #.copy(), # DOING try to see if we need .copy() or not
@@ -766,22 +828,27 @@ class CandidatePairsMapping():
 
 
     @timeit
-    def save_all(self):
+    def save_json(self,
+                  execution_id: str):
         """
+        Save candidate pairs in a json format to prevents saving
+        all Candidate Pairs in the ontology (there might be billions of CP).
         Save the scores into a json file. For scores, unlike synonym sets,
         we do not save them in the ontology.
+
+        Keyword arguments:
+        execution_id -- the id of this execution (generated in merge.py)
         """
-        import datetime
-        now = datetime.datetime.now()
-        filename = f"{self._list1}_{self._list2}_{now}.json"
-        with open(filename, 'w') as file:
+        filename = f"{self._list1}_{self._list2}_{execution_id}.json"
+        path = JSON / filename
+        with open(str(path), 'w') as file:
             file.write("{\n")
-            for cp in self:#._candidate_pairs:# ._candidate_pairs:
+            for cp in self:#._candidate_pairs:
                 file.write("\"" + str(cp.member1.uri) + '\t' + str(cp.member2.uri) + "\":")
                 file.write(str(cp.scores))
                 #for score, value in cp.scores.items():
                 #    file.write('\t' + score + '\t' + str(value))
-                file.write('\n')
+                file.write(',\n')
 
             file.write("\n}")
         #with open(filename, 'w') as file:

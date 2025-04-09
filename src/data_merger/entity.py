@@ -41,6 +41,10 @@ class Entity():
             self._data[property].add(value)
 
 
+    def __repr__(self):
+        return f"Entity@{self.uri}"
+
+
     def __reduce__(self):
         # When the object is pickled, we return the class and the necessary arguments
         return (self.__class__, (self.uri,))
