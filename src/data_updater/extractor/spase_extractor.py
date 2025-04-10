@@ -58,7 +58,7 @@ class SpaseExtractor(Extractor):
     # Mapping between PDS xml files and our dictionary format
     FACILITY_ATTRS = {"ResourceID": "code",
                       "ResourceName": "label",
-                      "Description": "description",
+                      "Description": "definition",
                       #"URL": "url",
                       "AlternateName": "alt_label",
                       "ObservatoryRegion": "location",
