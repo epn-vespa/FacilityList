@@ -1,15 +1,19 @@
 """
+Graph class that is used in the packages update & merge.
+
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import os
-import warnings
 
-from typing import Tuple
-from rdflib import Graph as G, Namespace, Literal, URIRef, XSD
+from typing import Iterator, List, Tuple
+from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
+# from data_updater.graph import Graph as G
 from data_updater.extractor.extractor import Extractor
+from utils.performances import timeit
 from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
+
 
 
 class OntologyMapping():
@@ -99,6 +103,7 @@ class OntologyMapping():
 
     @property
     def graph(self):
+        raise ValueError()
         return self._graph
 
 
@@ -156,14 +161,19 @@ class OntologyMapping():
 
     def __getattr__(
             self,
-            attr):
-        return getattr(Graph._graph, attr)
+            attr: str):
+        return self.convert_attr(attr)
+        #return getattr(self.graph, attr)
+        #return getattr(Graph._graph, attr)
 
 
-class Graph():
+
+class Graph(G):
+
     """
     Instanciate a rdflib Graph as a singleton to prevent multiple
     instantiation. Replace rdflib.Graph and reuses rdflib.Graph's attributes.
+    This overrides data_updater's Graph to add other functions.
 
     Usage:
         from graph import Graph
@@ -173,37 +183,69 @@ class Graph():
         # Then, use g as a rdflib graph object:
         g.add((g.OBS["subj"], URIRef("predicate"), URIRef("obj")))
     """
-    _graph = None
-    _OM = OntologyMapping()
-    _warned = False # Warn only once for multiple instantiation.
+
+    # Singleton graph
+    _GRAPH = None
+    _initialized = False
+
+    def __new__(cls,
+                filename: str = ""):
+        """
+        Instanciate the graph singleton.
+        """
+        if cls._GRAPH is None:
+            cls._GRAPH = super(Graph, cls).__new__(cls)
+        return cls._GRAPH
 
 
     def __init__(self,
-                 filename = ""):
+                 filename: str = ""):
         """
-        Initialise the graph. Bind basic namespaces to the graph.
-        Return the namespaces already in the graph.
+        Instanciate the graph singleton.
 
         Keyword arguments:
-        filename -- the input ontology to parse
         """
-        if Graph._graph is not None:
-            if not Graph._warned:
-                warnings.warn("Can not create another instance of MyGraph. Ignored.")
-                Graph._warned = True
+        if Graph._initialized:
             return
-        Graph._graph = G()
+        self._graph = G() # instanciate rdflib.Graph
+        if filename:
+            self.parse(filename)
+        Graph._OM = OntologyMapping()
         self.bind("obs", self.OM.OBS)
         self.bind("geo1", self.OM.GEO)
         self.bind("wb", self.OM.WB)
-
-        if os.path.exists(filename):
-            Graph._graph.parse(filename)
-
+        #if filename and os.path.exists(filename):
+        #    Graph._graph.parse(filename)
+        Graph._initialized = True
 
     @property
     def graph(self):
-        return Graph._graph
+        return self._graph
+
+
+    def parse(self,
+              filename: str):
+        """
+        Overrides rdflib.Graph's parse to extract the namespaces and
+        save them in this object.
+        """
+        input_ontology_namespaces = []
+        if os.path.exists(filename):
+            self.graph.parse(filename)
+            for prefix, namespace in self.graph.namespaces():
+                if prefix in Extractor.AVAILABLE_NAMESPACES:
+                    input_ontology_namespaces.append(prefix)
+        else:
+            raise FileNotFoundError(f"File {filename} does not exist.")
+
+        self._available_namespaces = input_ontology_namespaces
+
+
+    def __getattr__(self, attr):
+        if hasattr(self.graph, attr):
+            return getattr(self.graph, attr)
+        return None
+        # return getattr(self.graph, attr)
 
 
     @property
@@ -213,19 +255,164 @@ class Graph():
 
     @property
     def OBS(self):
-        return self.OM.OBS
+        return OntologyMapping._OBS
 
 
-    def __call__(self):
-        return Graph._graph
+    @property
+    def GEO(self):
+        return OntologyMapping._GEO
 
 
-    def __getattr__(self, attr):
+    @property
+    def WB(self):
+        return OntologyMapping._WB
+
+    ##### Methods for merge #####
+
+
+    def is_available(self,
+                     namespace: str) -> bool:
         """
-        For other attribute
-        """
-        return getattr(Graph._graph, attr)
+        Returns true if the namespace of a list is available in the graph.
 
+        Keyword arguments:
+        namespace -- the namespace to test
+        """
+        return namespace in self._available_namespaces
+
+
+    @timeit
+    def get_entities_from_list(self,
+                               source: Extractor,
+                               no_equivalent_in: Extractor = None,
+                               ) -> Iterator[Tuple[URIRef]]:
+        """
+        Get all the entities that come from a list.
+        If an entity is already in a synset, it will return the synset
+        too.
+
+        Keyword arguments:
+        source -- the source extractor to get entities from
+        no_equivalent_in -- the entities from source are not linked with
+                        owl:equivalentClass to any entity from this list,
+                        and is not a member of a synonym set with an entity
+                        of the other source.
+        """
+
+        if isinstance(source, Extractor):
+            source = source.URI
+            source = standardize_uri(source)
+        else:
+            raise TypeError(f"'source' ({source}) should be an Extractor. " +
+                            f"Got {type(source)}.")
+
+        if no_equivalent_in is None:
+            # Get entities with their corresponding synonym sets
+            # if they are a members of a synonym set already.
+            query = f"""
+            SELECT ?entity ?synset
+            WHERE {{
+                ?entity obs:source obs:{source} .
+                OPTIONAL {{
+                    ?synset obs:hasMember ?entity .
+                    ?synset a obs:SynonymSet .
+                }}
+            }}
+            """
+        else:
+            if isinstance(no_equivalent_in, Extractor):
+                no_equivalent_in = no_equivalent_in.URI
+                no_equivalent_in = standardize_uri(no_equivalent_in)
+            else:
+                raise TypeError(f"'no_equivalent_in' ({source}) should be an Extractor. "
+                                + f"Got {type(source)}.")
+
+            query = f"""
+            SELECT ?entity ?synset
+            WHERE {{
+                ?entity obs:source obs:{source} .
+                OPTIONAL {{
+                    ?synset a obs:SynonymSet .
+                    ?synset obs:hasMember ?entity .
+                }}
+                FILTER NOT EXISTS {{
+                    ?entity owl:equivalentClass ?entity2 .
+                    ?entity2 obs:source obs:{no_equivalent_in} .
+                }}
+                FILTER NOT EXISTS {{
+                    ?synset a obs:SynonymSet .
+                    ?synset obs:hasMember ?entity .
+                    ?synset obs:hasMember ?entity3 .
+                    ?entity3 obs:source obs:{no_equivalent_in} .
+                }}
+            }}
+            """
+        return self.query(query)
+
+
+    def get_candidate_pair_uri(self,
+                               member1: URIRef,
+                               member2: URIRef) -> URIRef:
+        """
+        Get a candidate pair's URI from its two members that can be
+        the uri of Entity or SynonymSet. Use this method to prevent
+        duplicating a Candidate Pair if one was created in another run.
+
+        Keyword arguments:
+        member1 -- the first member of the pair (entity or synset URIRef)
+        member2 -- the second member of the pair (entity or synset URIRef)
+        """
+        query = f"""
+        SELECT ?candidate_pair
+        WHERE {{
+            ?candidate_pair a obs:CandidatePair .
+
+            # Member 1
+            {{
+                ?candidate_pair obs:hasMember <{member1}> .
+            }} UNION {{
+                ?someSynonymSet1 a obs:SynonymSet .
+                ?candidate_pair obs:hasMember ?someSynonymSet1 .
+                ?someSynonymSet1 obs:hasMember <{member1}> .
+            }} UNION {{
+                <{member1}> a obs:SynonymSet .
+                <{member1}> obs:hasMember ?member1 .
+                ?candidate_pair obs:hasMember ?member1 .
+            }}
+
+            # Member 2
+            {{
+                ?candidate_pair obs:hasMember <{member2}> .
+            }} UNION {{
+                ?someSynonymSet2 a obs:SynonymSet .
+                ?candidate_pair obs:hasMember ?someSynonymSet2 .
+                ?someSynonymSet2 obs:hasMember <{member2}> .
+            }} UNION {{
+                <{member2}> a obs:SynonymSet .
+                <{member2}> obs:hasMember ?member2 .
+                ?candidate_pair obs:hasMember ?member2 .
+            }}
+        }}
+        """
+        return self.query(query)
+
+
+    def get_definitions(self) -> List[str]:
+        """
+        Return all the descriptions in the graph. Use this to generate
+        a corpus for statistical computations such as TfIdf etc.
+        """
+        descriptions = []
+        #for _, _, desc in self._graph.triples((None,
+        #                                       self.OM.convert_attr("definition"),
+        #                                       None)):
+        for _, _, desc in self.triples((None,
+                                        self.OM.definition,# self.OBS["description"], 
+                                        None)):
+            descriptions.append(str(desc))
+        return descriptions
+
+    ###### Methods for update #######
 
     def convert_pred_and_obj(
             self,
