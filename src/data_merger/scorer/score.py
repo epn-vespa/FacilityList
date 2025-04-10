@@ -4,8 +4,8 @@ Define the superclass Score.
 
 
 from typing import Union
+from graph import Graph
 from data_merger.entity import Entity
-from data_merger.graph import Graph
 from data_merger.synonym_set import SynonymSet
 
 

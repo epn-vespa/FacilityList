@@ -13,9 +13,10 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import Type, List
+from typing import List
 from argparse import ArgumentParser
-from data_updater.graph import Graph # rdflib.Graph singleton with OBS namespace
+from graph import Graph
+#from data_updater.graph import Graph # rdflib.Graph singleton with OBS namespace
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
@@ -126,12 +127,12 @@ class Updater():
         self.update(COMMUNITIES, cat = "community")
         self.update(SOURCES, cat = "facility list")
 
+
 def main(lists: List[str],
          input_ontology: str = "",
-         output_ontology: str = "output.ttl"):
+         output_ontology: str = "output.ttl",
+         format: str = "turtle"):
     updater = Updater(input_ontology)
-
-
 
     extractors = []
 
@@ -148,9 +149,8 @@ def main(lists: List[str],
         data = extractor.extract()
         updater.update(data, extractor = extractor)
 
-    turtle = updater.graph.serialize()
     with open(output_ontology, 'w') as file:
-        file.write(turtle)
+        file.write(updater.graph.serialize(format = format))
 
 
 if __name__ == "__main__":
@@ -185,5 +185,11 @@ if __name__ == "__main__":
                         type = str,
                         required = False,
                         help = "Output ontology file to save the merged data.")
+    parser.add_argument("-f",
+                        "--output-format",
+                        type = str,
+                        default = "turtle",
+                        choices = ["turtle", "rdf", "xml"],
+                        required = False)
     args = parser.parse_args()
     main(args.lists, args.input_ontology, args.output_ontology)

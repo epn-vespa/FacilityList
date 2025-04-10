@@ -12,8 +12,8 @@ Author:
 from typing import Union
 from fuzzywuzzy import fuzz
 
+from graph import Graph
 from data_merger.entity import Entity
-from data_merger.graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
 from utils.utils import remove_punct

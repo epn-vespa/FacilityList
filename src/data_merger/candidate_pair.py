@@ -18,7 +18,7 @@ import hashlib
 
 from rdflib import RDF, XSD, Literal, URIRef
 from tqdm import tqdm
-from data_merger.graph import Graph
+from graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.scorer.scorer_lists import ScorerLists
 from data_merger.synonym_set import SynonymSet, SynonymSetManager
@@ -70,8 +70,12 @@ class CandidatePair():
         self._member2 = second
         self._scores = dict()
 
+        self._list1 = str(first.uri).split('#')[0].split('/')[-1]
+        self._list2 = str(second.uri).split('#')[0].split('/')[-1]
+
         if uri is None:
-            uri = Graph._graph.OBS[str(uuid.uuid4())]
+            uri_str = first.uri.replace('#', '-').replace('/', '_')
+            uri = Graph().OBS[str(uuid.uuid4())]
             self._uri = uri
             # self._uri = str(uuid.uuid4())
         else:
@@ -80,9 +84,6 @@ class CandidatePair():
             self.init_data()
 
         CandidatePair.candidate_pairs[uri] = self
-
-        self._list1 = str(first.uri).split('#')[0].split('/')[-1]
-        self._list2 = str(second.uri).split('#')[0].split('/')[-1]
 
 
     def __repr__(self):
@@ -120,8 +121,11 @@ class CandidatePair():
 
 
     def init_data(self):
-        for _, score_name, score_value in Graph._graph.triples((self.uri, None, None)):
-            if score_name in (Graph._graph.OBS["hasMember"],
+        graph = Graph()
+        for _, score_name, score_value in graph.triples((self.uri,
+                                                         None,
+                                                         None)):
+            if score_name in (graph.OBS["hasMember"],
                               RDF.type):
                 continue
             score_name = str(score_name).split('#')[-1]
@@ -306,7 +310,7 @@ class CandidatePairsManager():
         This will add CandidatePair entities in the graph
         in case they were not all disambiguated.
         """
-        graph = Graph._graph
+        graph = Graph()
         for candidate_pair in tqdm(self.candidate_pairs,
                                    desc = f"Saving Candidate Pairs for {self._list1}, {self._list2}"):
             candidate_pair_uri = candidate_pair.uri
@@ -391,7 +395,7 @@ class CandidatePairsManager():
         score -- the Score to compute
         candidate_pair -- the candidate pair of entities to compare
         """
-        graph = Graph._graph
+        graph = Graph()
         score_value = score.compute(graph,
                                     candidate_pair.member1,
                                     candidate_pair.member2)
@@ -527,12 +531,15 @@ class CandidatePairsMapping():
                 if i == 0: # Only append for the first loop.
                     self._list2_indexes.append(entity2)
 
+                """
                 cp_uri = list(graph.get_candidate_pair_uri(entity1.uri,
                                                            entity2.uri))
                 if cp_uri:
                     cp_uri, = cp_uri[0]
                 else:
                     cp_uri = None
+                """
+                cp_uri = None
                 cp = CandidatePair(entity1, entity2, cp_uri)
                 self._mapping[i][j] = cp
                 # self._candidate_pairs.append(cp)
@@ -625,7 +632,7 @@ class CandidatePairsMapping():
         """
         if candidate_pair is None:
             return None
-        graph = Graph._graph
+        graph = Graph()
         score_value = score.compute(graph,
                                     candidate_pair.member1,
                                     candidate_pair.member2)
@@ -653,7 +660,7 @@ class CandidatePairsMapping():
         """
         if candidate_pair is None:
             return
-        graph = Graph._graph
+        graph = Graph()
         score_value = score.compute(graph,
                                     candidate_pair.member1,
                                     candidate_pair.member2)
@@ -680,7 +687,7 @@ class CandidatePairsMapping():
         for candidate_pair in candidate_pair_list:
             if candidate_pair is None:
                 continue
-            score_value = score.compute(Graph._graph,
+            score_value = score.compute(Graph(),
                                         candidate_pair.member1,
                                         candidate_pair.member2)
             candidate_pair.add_score(score.NAME, score_value)
@@ -769,7 +776,7 @@ class CandidatePairsMapping():
             len_e2 = len(self._list2_indexes)
             print(f"Computing {score.NAME} for {self._list1}, {self._list2}" +
                   f" on {len_e1 * len_e2} entities.")
-            scores = list(score.compute(Graph._graph, self._list1_indexes, self._list2_indexes))
+            scores = list(score.compute(Graph(), self._list1_indexes, self._list2_indexes))
             for n, score_value in enumerate(scores):
                 i = n % len_e1
                 j = int((n - i) / len_e1)
@@ -785,7 +792,15 @@ class CandidatePairsMapping():
         Keyword arguments:
             scores -- Scores that use CUDA
         """
-
+        """
+        DEBUG = True
+        if DEBUG:
+            for candidate_pair in self:
+                score_values = _compute_scores(candidate_pair, scores)
+                for score, score_value in zip(scores, score_values):
+                    candidate_pair.add_score(score.NAME, score_values)
+            return
+        """
         with ProcessPoolExecutor() as executor:
             print(f"Computing other scores for the remaining candidate pairs.")
             futures = [executor.submit(_compute_scores,
@@ -806,7 +821,7 @@ class CandidatePairsMapping():
         Deprecated:
             We do not want to save a whole mapping into the Ontology.
         """
-        graph = Graph._graph
+        graph = Graph()
         for candidate_pair_list in tqdm(self._mapping, #.copy(), # DOING try to see if we need .copy() or not
                                         desc = f"Saving Candidate Pairs for {self._list1}, {self._list2}"):
             for candidate_pair in candidate_pair_list:
@@ -888,7 +903,7 @@ def _compute_one_score(score: Score,
     """
     if candidate_pair is None:
         return
-    graph = Graph._graph
+    graph = Graph()
     score_value = score.compute(graph,
                                 candidate_pair.member1,
                                 candidate_pair.member2)

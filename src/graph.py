@@ -9,11 +9,9 @@ import os
 from typing import Iterator, List, Tuple
 from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
-# from data_updater.graph import Graph as G
 from data_updater.extractor.extractor import Extractor
 from utils.performances import timeit
 from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
-
 
 
 class OntologyMapping():

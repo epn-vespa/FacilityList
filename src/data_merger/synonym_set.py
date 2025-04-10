@@ -16,7 +16,7 @@ import uuid
 
 from rdflib import OWL, RDF, URIRef
 
-from data_merger.graph import Graph
+from graph import Graph
 from data_merger.entity import Entity
 
 
@@ -118,8 +118,9 @@ class SynonymSet():
         Add data from the graph's SynonymSet entity to this object's data.
         """
         self._data = defaultdict(set)
-        for entity, property, value in Graph._graph.triples((self.uri, None, None)):
-            if entity in (Graph._graph.OBS["hasMember"],
+        graph = Graph()
+        for entity, property, value in graph.triples((self.uri, None, None)):
+            if entity in (graph.OBS["hasMember"],
                           RDF.type):
                 continue
             self._data[property].update(value)
@@ -130,9 +131,9 @@ class SynonymSet():
         Update the synonym set by using its URI and members in the graph.
         """
         synonyms = set()
-        for _, _, synonym in Graph._graph.triples((self.uri,
-                                                   Graph._graph.OBS["hasMember"],
-                                                   None)):
+        for _, _, synonym in Graph().triples((self.uri,
+                                              Graph().OBS["hasMember"],
+                                              None)):
             synonyms.add(synonym)
         # We reload the data
         self._data = defaultdict(set)
@@ -182,7 +183,7 @@ class SynonymSet():
         Keyword arguments:
         synset -- the synonym set to add.
         """
-        graph = Graph._graph
+        graph = Graph()
         synset_uri = graph.OBS[self.uri]
         for member1 in self:
             # add member1 to synset
@@ -203,7 +204,7 @@ class SynonymSet():
         Keyword arguments:
         property -- the property name (ex: "label")
         """
-        property = Graph.OM.convert_attr(property)
+        property = Graph().OM.convert_attr(property)
         if property in self._data:
             return self._data[property]
         else:

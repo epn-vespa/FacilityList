@@ -17,9 +17,10 @@ import atexit
 from pathlib import Path
 from typing import List
 import uuid
+
+from graph import Graph
 from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
 from data_merger.identifier_merger import IdentifierMerger
-from data_merger.graph import Graph
 from data_merger.scorer.acronym_scorer import AcronymScorer
 from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from data_merger.scorer.score import Score
@@ -43,9 +44,10 @@ class Merger():
                  input_ontology: str = "",
                  output_ontology: str = "",
                  scores: List[Score] = ScorerLists.ALL_SCORES):
+        # Instanciate the Synonym Set Manager
         SynonymSetManager()
-        self._graph = Graph()
-        self._graph.parse(input_ontology) # = Graph(ontology_file)
+        # Instanciate the Graph's singleton
+        self._graph = Graph(input_ontology)
         if input_ontology:
             self.init_graph() # Create basic classes
         self._scores = scores
@@ -212,6 +214,7 @@ class Merger():
         print("Execution id:", self.execution_id)
 
 
+@timeit
 def main(input_ontology: str = "",
          output_ontology: str = "",
          scores: List[Score] = None):

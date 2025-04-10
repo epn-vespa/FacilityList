@@ -8,11 +8,10 @@ Author:
 """
 
 from collections import defaultdict
-from typing import List, Set
+from typing import Set
 from rdflib import URIRef
 
-from data_merger.graph import Graph
-from data_updater.graph import OntologyMapping
+from graph import Graph
 
 
 class Entity():
@@ -36,7 +35,7 @@ class Entity():
                  uri: URIRef):
         self._uri = uri
         self._data = defaultdict(set)
-        graph = Graph._graph
+        graph = Graph()
         for entity, property, value in graph.triples((self.uri, None, None)):
             self._data[property].add(value)
 
@@ -80,7 +79,7 @@ class Entity():
         Keyword arguments:
         property -- the property name (ex: "label")
         """
-        property = Graph._graph.OM.convert_attr(property)
+        property = Graph().OM.convert_attr(property)
         if property in self._data:
             return self._data[property]
         else:

@@ -10,13 +10,16 @@ Author:
 
 from typing import Union
 from data_merger.entity import Entity
-from data_merger.graph import Graph
+from graph import Graph
 from data_merger.scorer.score import Score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from data_merger.synonym_set import SynonymSet
 from utils.performances import timeall
+from nltk.corpus import stopwords
+
+import re
 
 
 class TfIdfScorer(Score):
@@ -24,9 +27,10 @@ class TfIdfScorer(Score):
     # Name of the score computed by this class (as in score.py)
     NAME = "tfidf_cosine_similarity"
 
-
+    tokenizer = None
     vectorizer = None
 
+    no_corpus = False
 
     @timeall
     def compute(graph: Graph,
@@ -40,16 +44,42 @@ class TfIdfScorer(Score):
         entity1 -- reference entity
         entity2 -- compared entity
         """
+        if TfIdfScorer.no_corpus:
+            return 0 # No corpus in the ontology.
         # Compute the embeddings of the documents
         if TfIdfScorer.vectorizer is None:
-            TfIdfScorer.vectorizer = TfidfVectorizer().fit_transform(graph.get_descriptions(),
-                                                                     lowercase = True)
+            stop_words = set()
+            languages = ['english', 'french', 'spanish']
+            for lang in languages:
+                stop_words = stop_words.union(set(stopwords.words(lang)))
+            TfIdfScorer.vectorizer = TfidfVectorizer(lowercase=True,
+                                                     preprocessor=TfIdfScorer.preprocess,
+                                                     stop_words=list(stop_words))
+            TfIdfScorer.tokenizer = TfIdfScorer.vectorizer.build_tokenizer()
+            definitions = graph.get_definitions()
+            if not definitions:
+                TfIdfScorer.no_corpus = True
+                return 0
+            TfIdfScorer.vectorizer.fit_transform(definitions)
         # TODO test with analyzer == 'char'
         # & ngram_range == (1, 3)
 
-        description1 = ' '.join(entity1.get_values_for("description"))
-        description2 = ' '.join(entity2.get_values_for("description"))
+        definition1 = ' '.join(entity1.get_values_for("definition"))
+        definition2 = ' '.join(entity2.get_values_for("definition"))
+
+        if not definition1 or not definition2:
+            # We need both entities to have a description to compute
+            # a cosine similarity.
+            return 0
         
-        
-        return cosine_similarity(TfIdfScorer.vectorizer.transform(description1),
-                                 TfIdfScorer.vectorizer.transform(description2))
+        definition1 = TfIdfScorer.tokenizer(definition1)
+        definition2 = TfIdfScorer.tokenizer(definition2)
+        return cosine_similarity(TfIdfScorer.vectorizer.transform(definition1),
+                                 TfIdfScorer.vectorizer.transform(definition2))
+    
+    def preprocess(text: str) -> str:
+        """
+        Preprocessing operations for the TfidfVectorizer.
+        """
+        text = re.sub(r"[0-9]+", r" [0-9]+ ", text)
+        return text

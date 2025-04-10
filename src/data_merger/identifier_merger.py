@@ -8,9 +8,9 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+from graph import Graph
 from data_merger.candidate_pair import CandidatePair, CandidatePairsManager
 from data_merger.entity import Entity
-from data_merger.graph import Graph
 from data_merger.synonym_set import SynonymSetManager
 from data_updater.extractor import wikidata_extractor
 
