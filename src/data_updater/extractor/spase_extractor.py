@@ -67,7 +67,9 @@ class SpaseExtractor(Extractor):
                       "Latitude": "latitude",
                       "Longitude": "longitude",
                       "StartDate": "start_date",
-                      "EndDate": "end_date"}
+                      "EndDate": "end_date",
+                      "PriorIDs": "prior_id", # TODO After we get the result dict, Change the relation prior_id to alt_label if it is a label and not a code & it is not in the labels.
+                      "PriorID": "prior_id"}
 
 
     def __init__(self):
@@ -97,6 +99,10 @@ class SpaseExtractor(Extractor):
         # (used with hasPart & isPartOf)
         spase_references_by_id = dict()
 
+        # Dictionary to save the internal PriorIDs and merge the entities
+        # when there are the same.
+        data_by_prior_id = dict()
+
         for file in files:
             with open(file, "r") as f:
                 content = f.read()
@@ -109,25 +115,42 @@ class SpaseExtractor(Extractor):
             data = dict()
             alt_labels = set()
 
-            for key, values in extract_items(dict_content):
-                if key not in self.FACILITY_ATTRS:
+            prior_id = ""
+            for rel, values in extract_items(dict_content):
+                if rel not in self.FACILITY_ATTRS:
                     continue
-                key = self.FACILITY_ATTRS.get(key)
+                key = self.FACILITY_ATTRS.get(rel)
                 if type(values) == str:
                     values = [values]
                 for value in values:
                     value = clean_string(value)
+                    if value == "None":
+                        continue
+                    if "PriorID" in rel:
+                        if "\n" in value or len(value) > 150:
+                            key = self.FACILITY_ATTRS["Description"]
+                        else:
+                            if value[-1] == '.':
+                                value = value[:-1] # Remove final '.'
+                            prior_id = value
                     if key == "longitude":
                         # Remove final 'E' (East) to have a valid float value
                         if value[-1] == 'E':
                             value = value[:-1]
+                        value = float(value)
+                    if key == "latitude":
+                        value = float(value)
+                    if key == "description":
+                        if value.startswith("includes observatory/station name,"):
+                            continue # Ignore this description
+
                     if key == "label":
                         data[key] = value
                     elif key == "alt_label":
                         value = value.replace("Observatory Station Code: ", "")
                         alt_labels.add(value)
-                    elif key == "description" and "description" in data:
-                        continue # Only one description per entity
+                    #elif key == "description" and "description" in data:
+                    #    continue # Only one description per entity
                     elif key in data:
                         data[key].append(value)
                     else:
@@ -144,12 +167,25 @@ class SpaseExtractor(Extractor):
             data["url"] = href
 
             # label
-            if not data["label"]:
+            if "label" not in data or not data["label"]:
                 data["label"] = href.split('/')[-1]
 
-            result[data["label"]] = data
+            if prior_id:
+                data_by_prior_id[prior_id] = data["label"]
 
-        # If the PDS identifier does not exists in the
+            if data["label"] not in result:
+                result[data["label"]] = data
+            else:
+                self._merge_into(result[data["label"]], data)
+
+        # Merge entities on prior_id
+        for prior_id, newer_id in data_by_prior_id.items():
+            # Find in results the data for which id is the prior id (to remove)
+            for label, data in result.copy().items():
+                if "code" in data and prior_id in data["code"]:
+                    self._merge_into(result[newer_id], data)
+                    del result[label]
+        # If the SPASE id of a part does not exists in the
         # extracted data, create a new entity with this
         # identifier.
         spase_missing_ids = dict()
@@ -169,19 +205,26 @@ class SpaseExtractor(Extractor):
                             spase_missing_ids[part] = data
                         value["has_part"][i] = spase_missing_ids[part]["label"]
             if "is_part_of" in value:
-                for i, part in enumerate(value["is_part_of"]):
+                deleted = 0
+                for i, part in enumerate(value["is_part_of"].copy()):
                     if part in spase_references_by_id:
-                        value["is_part_of"][i] = spase_references_by_id[part]
+                        reference_label = spase_references_by_id[part]
+                        if reference_label not in result:
+                            del value["is_part_of"][i-deleted]
+                            deleted += 1
+                        else:
+                            value["is_part_of"][i-deleted] = spase_references_by_id[part]
                     else:
                         # Create the entity from the missing id.
                         if part not in spase_missing_ids:
                             data = self._create_entity_from_missing_id(part)
                             if data["label"] == "individual.none":
-                                # Some entities refer to None
-                                value["is_part_of"][i] = None
+                                # Remove entities that refer to None
+                                del value["is_part_of"][i-deleted]
+                                deleted += 1
                                 continue
                             spase_missing_ids[part] = data
-                        value["is_part_of"][i] = spase_missing_ids[part]["label"]
+                        value["is_part_of"][i-deleted] = spase_missing_ids[part]["label"]
 
         # If a SPASE id is missing, add an artificial entity for this code
         for key, value in spase_missing_ids.items():
@@ -235,6 +278,56 @@ class SpaseExtractor(Extractor):
                                   visited_folders = visited_folders))
             # return dict()
         return result
+
+
+    def _merge_into(self,
+                    newer_entity_dict: dict,
+                    prior_entity_dict: dict):
+        """
+        Merge data from the prior dict into the newer dict.
+
+        Keyword arguments:
+        newer_entity_dict -- the entity dict to save data in
+        prior_entity_dict -- the prior entity dict to merge with the newer
+        """
+        for key, values in prior_entity_dict.copy().items():
+            if key == "prior_id":
+                continue
+            if key == "label":
+                if not isinstance(values, set):
+                    values = {values}
+                if "alt_label" in newer_entity_dict:
+                    newer_entity_dict["alt_label"].update(values) # Keep the new label
+                else:
+                    newer_entity_dict["alt_label"] = values
+            elif key in newer_entity_dict:
+                merge_into = newer_entity_dict[key]
+                if not isinstance(values, list) and not isinstance(values, set):
+                    values = [values]
+                for value in values:
+                    if isinstance(merge_into, set):
+                        merge_into.add(value)
+                        continue
+                    elif not isinstance(merge_into, list):
+                        merge_into = [merge_into]
+                    if value not in merge_into:
+                        if key in ["latitude", "longitude"]:
+                            # Keep the most precise value
+                            old_value = newer_entity_dict[key]
+                            if isinstance(old_value, list):
+                                old_value = old_value[0]
+                            if len(str(value)) > len(str(old_value)):
+                                merge_into = [value]
+                            elif len(str(value)) == len(str(old_value)):
+                                if value != 0.0:
+                                    merge_into = [value]
+                                else:
+                                    merge_into = [old_value]
+                        else:
+                            merge_into.append(value)
+                newer_entity_dict[key] = merge_into
+            else:
+                newer_entity_dict[key] = values
 
 
 if __name__ == "__main__":
