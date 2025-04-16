@@ -31,7 +31,11 @@ class PdsExtractor(Extractor):
 
     # Mapping between PDS xml files and our dictionary format
     FACILITY_ATTRS = {"logical_identifier": "code",
-                      "name": "label"}
+                      "name": "label",
+                      "telescope_latitude": "latitude",
+                      "telescope_longitude": "longitude",
+                      "telescope_altitude": "altitude",
+                      "description": "definition"}
 
     # List context products types to be retreived and the applicable subtypes
     # examples:
