@@ -10,9 +10,8 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-import re
 from bs4 import BeautifulSoup
-from utils.utils import cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of
+from utils.utils import cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of, merge_into
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -88,6 +87,10 @@ class AasExtractor(Extractor):
         # Process page's data into a dictionary.
         # This dictionary can then be processed by the ontology merger.
         result = dict()
+
+        # To merge duplicate entities
+        duplicate_codes = dict() # code1, duplicate of, code2 (code1, code2)
+
         for row in rows:
             cols = row.find_all('td')
             cols = [col.text.strip() for col in cols]
@@ -117,6 +120,13 @@ class AasExtractor(Extractor):
             # The full facility name contains a location (Observatory etc)
             # We can use a part-of between the facility and location
             facility_name = row_data["full facility name"].strip()
+            duplicate_idx = facility_name.find("[Duplicate of ")
+            duplicate_of = ""
+            if duplicate_idx >= 0:
+                facility_name, duplicate_of = facility_name.split("[Duplicate of ")
+                duplicate_of = duplicate_of.strip()[:-1]
+                facility_name = facility_name.strip()
+
             # Origin observatory
             label_without_location, location = cut_location(facility_name,
                                                             delimiter = self.LOCATION_DELIMITER,
@@ -180,7 +190,6 @@ class AasExtractor(Extractor):
             # Add label to row dict
             data["label"] = facility_name
 
-
             # Add and filter out facility types
             for facility_type, col in zip(facility_types, cols[FT:]):
                 if col:
@@ -213,6 +222,16 @@ class AasExtractor(Extractor):
 
             # Save the row's dict into the result dict
             result[keyword] = data
+
+            # Add duplicate entities code pairs
+            if duplicate_of:
+                duplicate_codes[keyword] = duplicate_of
+
+        # Merge the duplicate entities
+        for code1, code2 in duplicate_codes.items():
+            if code1 in result and code2 in result:
+                merge_into(result[code1], result[code2])
+                del(result[code2])
         return result
 
 
