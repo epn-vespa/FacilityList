@@ -97,9 +97,13 @@ class Merger():
             # (necessary because NAIF has duplicate identifiers
             # for different entities)
             CPM_wiki_naif.disambiguate_candidates(scores = [FuzzyScorer])
-            CPM_wiki_naif.save_json() # Save remaining candidate pairs.
+            # Save the remaining candidate pairs.
+            CPM_wiki_naif.save_json(execution_id = self.execution_id)
+
         del(CPM_wiki_naif)
         del(im)
+
+        #TODO Merge identifiers between wikidata & IAUMPC
 
 
     def make_mapping_between_lists(self,
@@ -218,20 +222,19 @@ class Merger():
 def main(input_ontology: str = "",
          output_ontology: str = "",
          scores: List[Score] = None):
+
     merger = Merger(input_ontology,
                     output_ontology,
                     scores = scores)
     atexit.register(merger.print_execution_id)
+    # atexit.register(merger.write)
 
     merger.merge_identifiers()
     merger.merge_mapping()
     merger.write()
 
-    # atexit.register(merger.save_all)
 
 if __name__ == "__main__":
-
-    atexit.register(printtimes)
 
     parser = ArgumentParser(
         prog = "updater.py",
