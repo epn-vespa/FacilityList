@@ -26,6 +26,7 @@ class OntologyMapping():
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
 
+
     # Mapping from dictionary keys to ontology properties.
     # Properties that are not mapped belong to the OBS namespace.
     _MAPPING = {
@@ -61,10 +62,12 @@ class OntologyMapping():
                      "objtype": XSD.string}, # AAS, IAU-MPC, SPASE
         "address": {"pred": SDO.address,
                     "objtype": XSD.string}, # PDS
-        # "city": {"pred": SDO.addressLocality,
-        #          "objtype": XSD.string}, #IAU-MPC
+        "city": {"pred": SDO.addressLocality,
+                  "objtype": XSD.string}, #IAU-MPC
         "country": {"pred": SDO.addressCountry,
                     "objtype": XSD.string},# PDS
+        "continent": {"pred": SDO.Continent,
+                      "objtype": XSD.string},
         "latitude": {"pred": _GEO.latitude,
                      "objtype": XSD.float}, # IAU-MPC, SPASE
         "longitude": {"pred": _GEO.longitude,
