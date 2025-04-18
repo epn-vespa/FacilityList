@@ -1,15 +1,7 @@
 import re
-import nltk
 import math
-from nltk.corpus import stopwords
 
-
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    print("Downloading nltk stopwords...")
-    nltk.download('stopwords')
-
+from utils.nlp_processing import stop_words
 
 def _compute_for(acronym: list[str],
                  first_letters: list[str],
@@ -163,8 +155,7 @@ def _compute_for(acronym: list[str],
     return best_score
 
 
-def _get_matrixes(label,
-                  languages):
+def _get_matrixes(label):
     """
     Generate and return matrixes for the label:
     - a matrix containing the first letters of the words in the label,
@@ -174,11 +165,7 @@ def _get_matrixes(label,
 
     Keyword arguments:
     label -- the label without the acronym
-    languages -- used to delete stopwords from the label in those languages
     """
-    stop_words = set()
-    for lang in languages:
-        stop_words = stop_words.union(set(stopwords.words(lang)))
 
     # Create matrixes of letters that are likely to be in the acronym
     first_letters = []
@@ -227,10 +214,7 @@ def _clean_acronym(acronym: str) -> str:
 
 
 def proba_acronym_of(acronym: str,
-                     label: str,
-                     languages: list[str] = ['english',
-                                             'french',
-                                             'spanish']) -> bool:
+                     label: str) -> bool:
     """
     Returns the probability of an acronym to be the acronym of a label.
     Authorized characters in acronym are alphanumeric characters.
@@ -241,7 +225,6 @@ def proba_acronym_of(acronym: str,
     Keyword arguments:
     acronym -- acronym to compute probability from
     label -- the label without the acronym
-    languages -- used to delete stopwords from the label in those languages
     """
     acronym = _clean_acronym(acronym)
     acronym = acronym.strip()
@@ -256,8 +239,7 @@ def proba_acronym_of(acronym: str,
     if acronym.upper() != acronym:
         return 0
 
-    first_letters, second_letters, stopwords_letters, uppercases_letters = _get_matrixes(label,
-                                                                                         languages)
+    first_letters, second_letters, stopwords_letters, uppercases_letters = _get_matrixes(label)
     score = _compute_for(acronym.lower(),
                          first_letters,
                          second_letters,

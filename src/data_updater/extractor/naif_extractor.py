@@ -15,7 +15,8 @@ from bs4 import BeautifulSoup
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from rdflib import Graph
-from pathlib import Path
+
+from utils import config
 
 
 class NaifExtractor(Extractor):
@@ -99,7 +100,7 @@ class NaifExtractor(Extractor):
         result: the result dict with all entities' subdicts.
         """
         g = Graph()
-        naif_file = Path(__file__).parent.parent.parent.parent / "data" / self.CACHE / "naif-sc-codes.ttl"
+        naif_file = config.data_dir / self.CACHE / "naif-sc-codes.ttl"
         g.parse(str(naif_file))
 
         # Query to get entities that share the same identifier

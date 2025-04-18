@@ -70,7 +70,7 @@ class CosineSimilarityScorer(Score):
     def encode_batch(entities: List[Entity]):
         """
         Get the encoded tensors of the entities' textual informations.
-        Those informations include the label, alternate labels, description,
+        Those informations include the label, alternate labels, definition,
         location...
         Return a list of tensors for each entity.
 
@@ -84,7 +84,7 @@ class CosineSimilarityScorer(Score):
             text += " ".join(entity.get_values_for("label"))  + ', '
             text += " ".join(entity.get_values_for("alt_label"))  + ', '
             text += " Location: ".join(entity.get_values_for("location")) + ', '
-            text += " ".join(entity.get_values_for("description")) + ', '
+            text += " ".join(entity.get_values_for("definition")) + ', '
             texts.append(text)
         # no need to normalize embeddings as we compute a cosine similarity.
         return CosineSimilarityScorer.model.encode(texts,

@@ -1,8 +1,26 @@
-from typing import Tuple, Set, List
-from urllib.parse import quote
-import re
+"""
+Define utility functions to manipulate data.
 
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
+"""
+import json
+import re
+import time
+from typing import Optional, Tuple, List
+from urllib.parse import quote
+import geopy
+import pycountry_convert
+from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
+import atexit
+
+from utils import config
 from utils.acronymous import proba_acronym_of
+from utils.performances import timeall
+
+
+geolocator = Nominatim(user_agent="obspm.fr")
 
 
 def standardize_uri(label: str) -> str:
@@ -122,18 +140,21 @@ def cut_acronyms(label: str) -> Tuple[str]:
 
 def get_size(label: str) -> str:
     """
-    Get the size of the facility from the label (in AAS).
+    Get the size of the facility from the label (in AAS & SPASE).
     Return the size and the label without the size.
+
+    Troubleshooting:
+        MM (or mm) is not for millimeter (see SPASE)
 
     Keyword arguments:
     label -- the label to extract the size from.
     """
     size = ""
-    sizes = re.findall(r"(\d+)(\.\d+)?(cm|mm|m)", label)
+    sizes = re.findall(r"(\d+)([\.\,]\d+)? ?(cm|mm|m|km|MM|CM|M|KM)", label)
     if sizes:
         for s in sizes:
             size += ''.join(s)
-    label_without_size = re.sub(size, "", label)
+    label_without_size = re.sub(size, "", label).strip()
     return label_without_size, size
 
 
@@ -173,12 +194,12 @@ def cut_part_of(label: str):
         part_of = after_part_of
         after_part_of = ""
     label_without_part_of = before_part_of + ' ' + after_part_of
-    return label_without_part_of.strip(), part_of
+    return label_without_part_of.strip(), clean_string(part_of)
 
 
 def cut_location(label: str,
                  delimiter: str,
-                 alt_labels: Set[str]) -> Tuple[str]:
+                 second_delimiter: str = ';') -> Tuple[str]:
     """
     Get the location of an entity by splitting it on a
     certain delimiter and add new alternate labels.
@@ -186,16 +207,18 @@ def cut_location(label: str,
     - the entity without the location,
     - the entity without the location and acronyms,
     - the entity's acronym without the location.
+    Then, call clean_string to remove the first "the " in the location.
 
     Keyword arguments:
     label -- the label of an entity
     delimiter -- the delimiter (" at ", ","...)
+    second_delimiter -- if there are more than one locations
     alt_labels -- the set of alternate labels to add to
     """
     location = ""
     label_without_location = label
-    if label.count(delimiter) == 1:
-        label_without_location, location = [a.strip() for a in label.split(delimiter)]
+    if delimiter in label:
+        label_without_location, location = [a.strip() for a in label.split(delimiter, maxsplit = 1)]
         """
         label_without_acronyms, label_acronym = cut_acronyms(label)
         alt_labels.add(label)
@@ -204,7 +227,10 @@ def cut_location(label: str,
         if "" in alt_labels:
             alt_labels.remove("")
         """
-    return label_without_location.strip(), location.strip()
+
+    # More than one location (example AAS: 'Yunnan Astronomical Observatory (YAO); Lijiang Observatory')
+    # locations = [l.strip() for l in location.split(second_delimiter)]
+    return label_without_location, location
 
 
 def clean_string(text: str) -> str:
@@ -219,8 +245,10 @@ def clean_string(text: str) -> str:
     text = re.sub(r"\t", " ", text)
     text = re.sub(r"\\n", " ", text)
     text = re.sub(r"\\r", " ", text)
-    text = re.sub(r" +", " ", text)
-    return text
+    text = re.sub(r" +", " ", text).strip()
+    if text.startswith("the "):
+        text = text[4:]
+    return text.strip()
 
 
 def remove_punct(text: str) -> str:
@@ -230,8 +258,8 @@ def remove_punct(text: str) -> str:
 
 def extract_items(d: dict) -> List[Tuple]:
     """
-    Extract items as a list of (key, value) from a recursive dictionary
-    structure. This is necessary to create triplets from for json format.
+    Flatten a recursive dictionary to a list of (key, value).
+    This is necessary to create triplets from for json format.
 
     Keyword arguments:
     d -- a recursive dictionary.
@@ -264,19 +292,484 @@ def cut_language_from_string(text: str) -> Tuple[str, str]:
     return text, lang
 
 
-
 def get_datetime_from_iso(datetime_str: str):
     """
     Fix datetime string :
         month 00 day 00 -> 1st of January
         & remove '+' sign
+    Also complete the incomplete iso dates.
 
     Keyword arguments:
     datetime_str -- the ISO datetime string
     """
     if datetime_str.startswith('+'): # datetime module
         datetime_str = datetime_str[1:]
-    return datetime_str.replace("-00T", "-01T").replace("-00-", "-01-")
+    datetime_str.replace("-00T", "-01T").replace("-00-", "-01-")
+    if re.match(r"^\d\d\d\d$", datetime_str):
+        datetime_str += "-01-01T00:00:00"
+    elif re.match(r"^\d\d\d\d-\d\d$", datetime_str):
+        datetime_str += "-01T00:00:00"
+    elif re.match(r"^\d\d\d\d-\d\d-\d\d$", datetime_str):
+        datetime_str += "T00:00:00"
+
+    return datetime_str
+
+
+def merge_into(newer_entity_dict: dict,
+               prior_entity_dict: dict):
+    """
+    Merge data from the prior dict into the newer dict.
+
+    Keyword arguments:
+    newer_entity_dict -- the entity dict to save data in
+    prior_entity_dict -- the prior entity dict to merge with the newer
+    """
+    for key, values in prior_entity_dict.copy().items():
+        if key == "prior_id":
+            continue
+        if key == "label":
+            if not isinstance(values, set):
+                values = {values}
+            if "alt_label" in newer_entity_dict:
+                newer_entity_dict["alt_label"].update(values) # Keep the new label
+            else:
+                newer_entity_dict["alt_label"] = values
+        elif key in newer_entity_dict:
+            merge_into = newer_entity_dict[key]
+            if not isinstance(values, list) and not isinstance(values, set):
+                values = [values]
+            for value in values:
+                if isinstance(merge_into, set):
+                    merge_into.add(value)
+                    continue
+                elif not isinstance(merge_into, list):
+                    merge_into = [merge_into]
+                if value not in merge_into:
+                    if key in ["latitude", "longitude"]:
+                        # Keep the most precise value
+                        old_value = newer_entity_dict[key]
+                        if isinstance(old_value, list):
+                            old_value = old_value[0]
+                        if len(str(value)) > len(str(old_value)):
+                            merge_into = [value]
+                        elif len(str(value)) == len(str(old_value)):
+                            if value != 0.0:
+                                merge_into = [value]
+                            else:
+                                merge_into = [old_value]
+                    else:
+                        merge_into.append(value)
+            newer_entity_dict[key] = merge_into
+        else:
+            newer_entity_dict[key] = values
+
+
+# Prevent computing location info multiple times
+# as it requires to request a server.
+location_infos = {}
+
+def _save_location_infos_in_cache():
+    global location_infos
+    if location_infos:
+        path = config.cache_dir
+        if not path.exists():
+            path.mkdir(parents = True, exist_ok = True)
+        path = str(path / "location_infos.json")
+        print(f"dumping {len(location_infos)} elements.")
+        with open(path, "w", encoding = "utf-8") as f:
+            json.dump(location_infos, f, indent=" ")
+
+def load_location_infos_from_cache():
+    atexit.register(_save_location_infos_in_cache)
+    global location_infos
+    path = config.cache_dir / "location_infos.json"
+    if not path.exists():
+        return
+    path = str(path)
+    with open(path, "r", encoding = "utf-8") as f:
+        location_infos = json.load(f)
+
+@timeall
+def get_location_info(label: Optional[str] = None,
+                      location: Optional[str] = None,
+                      address: Optional[str] = None,
+                      latitude: Optional[float]  = None,
+                      longitude: Optional[float]  = None,
+                      part_of: Optional[str] = None,
+                      language: str = "en",
+                      retries: int = 4,
+                      from_cache = True) -> dict:
+    """
+    From an entity's location information such as its latitude,
+    longitude, location (as in the source), address...,
+    return the complete information dict if it is a ground address (on earth).
+    This function uses geopy and saves information in a cache.
+
+    FIXME: Once we have the superclass of the entities,
+    if it is not a Ground entity, it has no location. Then, we do not
+    need to use isupper(), islower() and hasdigit to filter location.
+    Example: "Cassini" is a place according to Geopy.
+
+    Keyword arguments:
+    label -- the label of the entity
+    location -- the location string as in the source
+    address -- the address as in the source
+    latitude -- a float of the latitude of the entity if on earth
+    longitude -- a float of the longitude of the entity if on earth
+    part_of -- entity name for which this entity is a subpart
+    language -- language in which to retrieve addresses
+    retries -- how many retries left if the first geopy request failed
+    from_cache -- do not request geopy again. Set to False for debug only
+    """
+    global location_infos
+    if not location_infos:
+        load_location_infos_from_cache()
+    result = None
+    saved_in = ""
+    if not isinstance(location, list):
+        location = [location]
+    if not isinstance(part_of, list):
+        part_of = [part_of]
+    if isinstance(latitude, list):
+        if len(latitude) == 0:
+            latitude = None
+        else:
+            latitude = latitude[0]
+    if isinstance(longitude, list):
+        if len(longitude) == 0:
+            longitude = None
+        else:
+            longitude = longitude[0]
+
+    # Remove labels that cannot be used for location
+    if label:
+        label, _ = get_size(label) # Remove the size of the facility
+        if (re.match(r".*\d.*", label) or
+            # Labels that contain any number are not place names.
+            label.isupper() or label.islower() or
+            # A location label can't be only made of lower or uppercases.
+            not ' ' in label.strip()
+            # A label that refers to a place is almost never a single
+            # word (city/country). It is usually called "...observatory"
+            # or "...station".
+        ):
+            label = None
+
+    # Remove initial "the" from the label as it performs very bad with geopy
+    if label and label.startswith("the "):
+        label = label[4:].strip()
+
+    # Return information if already in the cache
+    if from_cache:
+        latlong_empty = False
+        address_empty = False
+        location_empty = False
+        part_of_empty = False
+        label_empty = False
+
+        if (latitude is not None and longitude is not None and
+             (latitude != 0 or longitude != 0)):
+            saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
+            data = location_infos.get(saved_in, None)
+            if data is not None:
+                return data
+            elif data == {}:
+                latlong_empty = True
+        else:
+            latlong_empty = True
+
+        if address:
+            saved_in = "geocode/" + str(address)
+            data = location_infos.get(saved_in, None)
+            if data is not None and data:
+                return data
+            elif data == {}:
+                address_empty = True
+            # else: not in cache yet.
+        else:
+            address_empty = True
+
+        if part_of:
+            only_none = True
+            for part in part_of:
+                if part is None:
+                    continue
+                only_none = False
+                saved_in = "geocode/" + str(part)
+                data = location_infos.get(saved_in, None)
+                if data is not None and data:
+                    return data
+                elif data == {}:
+                    part_of_empty = True
+        else:
+            part_of_empty = True
+        part_of_empty = part_of_empty or only_none
+
+        if location:
+            only_none = True
+            for loc in location: # Can have more than one location
+                if loc is None:
+                    continue
+                only_none = False
+                saved_in = "geocode/" + str(loc)
+                data = location_infos.get(saved_in, None)
+                if data is not None and data:
+                    return data
+                elif data == {}:
+                    location_empty = True
+                    continue
+                if ("earth." in loc.lower()):
+                    location_infos[saved_in] = {}
+                    return {}
+                elif "space" == loc.lower():
+                    location_infos[saved_in] = {}
+                    return {}
+        else:
+            location_empty = True
+        location_empty = location_empty or only_none
+
+        if label:
+            saved_in = "geocode/" + str(label)
+            data = location_infos.get(saved_in, None)
+            if data is not None and data:
+                return data
+            elif data == {}:
+                label_empty = True
+        else:
+            label_empty = True
+
+
+        # If the cache's data was empty for any of the provided information
+        if latlong_empty and part_of_empty and location_empty and address_empty and label_empty:
+            return {}
+
+    # Get information with geolocator
+    try:
+        if latitude is not None and longitude is not None:
+            if latitude != 0 or longitude != 0:
+                saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
+                result = geolocator.reverse((latitude, longitude),
+                                            exactly_one=True,
+                                            language=language)
+                if result is None:
+                    # No address, in the sea
+                    if retries == 0:
+                        location_infos[saved_in] = {"location": "Ocean"}
+                        return {"location": "Ocean"}
+                    else:
+                        print("Retrying for", saved_in, ".\nretries:", retries)
+                        return get_location_info(latitude=latitude,
+                                                 longitude=longitude,
+                                                 retries = retries - 1)
+
+        if address:
+            saved_in = "geocode/" + str(address)
+            result = geolocator.geocode(address,
+                                        exactly_one=True,
+                                        language=language)
+
+        if result is None and part_of:
+            for part in part_of:
+                if part is None:
+                    continue
+                if result is not None:
+                    break
+                saved_in = "geocode/" + str(part)
+                result = geolocator.geocode(part,
+                                            exactly_one=True,
+                                            language=language)
+
+        if result is None and location:
+            for loc in location: # Can have more than one location
+                if loc is None:
+                    continue
+                if result is not None:
+                    break
+                saved_in = "geocode/" + str(loc)
+                result = geolocator.geocode(loc,
+                                            exactly_one=True,
+                                            language=language)
+                if result is None:
+                    # This place does not exist
+                    location_infos[saved_in] = {}
+
+
+        if result is None and label:
+            saved_in = "geocode/" + str(label)
+            result = geolocator.geocode(label,
+                                        exactly_one=True,
+                                        language=language)
+
+        if not result:
+            # Did not find the location for the provided data.
+            location_infos[saved_in] = {}
+            return {}
+
+    except KeyboardInterrupt:
+            print("Shutdown requested...exiting")
+            exit()
+    except geopy.exc.GeocoderUnavailable as e:
+        # Retry after 0.5s
+        retries -= 1
+        if retries < 0:
+            location_infos[saved_in] = {}
+            return {}
+        print(f"Warning: {e}.\n{retries} retries left. Retrying...")
+        print(f"label={label}=")
+        return get_location_info(label=label,
+                                 location=location,
+                                 address=address,
+                                 latitude=latitude,
+                                 longitude=longitude,
+                                 retries=retries)
+
+    # Transform the result into a compatible data dict
+    result_dict = {"location": "Earth"}
+    raw = result.raw
+
+    # Add the location type
+    location_type = raw.get("addresstype")
+    name = raw.get("name")
+
+    # Resolve for continent names
+    # (for Africa, the geolocator returns a place in Chad)
+    for continent_code, continent_name in continent_dict.items():
+        if name.lower() == continent_name.lower():
+            result_dict["continent"] = continent_name
+            result_dict["continent_code"] = continent_code
+            location_infos[saved_in] = result_dict
+            return result_dict
+
+    if location_type in ["village", "town", "city", "administrative", "municipality"]:
+        location_type = "city"
+        result_dict[location_type] = raw.get("name") # not "display_name"
+    elif location_type in ["country", "continent", "address"]:
+        result_dict[location_type] = raw.get("name") # not "display_name"
+
+    # Add a city for non-city locations
+    if location_type != "city":
+        city = raw.get("city") or raw.get("town") or raw.get("village") or raw.get("administrative") or None
+        if city is not None:
+            result_dict["city"] = city
+
+    # Add latitude & longitude
+    if location_type != "continent" and location_type != "country":
+        if latitude is None and "lat" in raw:
+            latitude = float(result.raw.get("lat"))
+            result_dict["latitude"] = latitude
+        if longitude is None and "lon" in raw:
+            longitude = float(result.raw.get("lon"))
+            result_dict["longitude"] = longitude
+
+    # Get address from latitude & longitude
+    address = None
+    address_str = ""
+    country = None
+    # Continents and countries do not have latitude & longitude.
+    if location_type not in ["continent", "country"] and not "address" in raw:
+        # get an address for lat & long
+        address_result = _get_address(latitude, longitude)
+        if address_result is None:
+            pass
+            #address = None
+            #address_str = None
+        else:
+            address = address_result.raw.get("address")
+            address_str = address_result.address
+    elif location_type not in ["continent", "country"] and "address" in raw:
+        address = raw.get("address")# .address
+        address_str = raw.get("display_name")
+    elif "display_name" in raw:
+        address_str = str(raw.get("display_name"))
+    
+    # Add the address
+    if address_str and location_type not in ["continent", "country", "city"]:
+        result_dict["address"] = address_str
+
+    # Get the country's name from the address
+    if location_type != "continent":
+        if address is not None:
+            if "country" in address:
+                country = address["country"]
+        if not country:
+            country = address_str.split(',')[-1].strip()
+
+    # Get the continent from the country
+    country_code = None
+    if location_type != "continent" and country:
+        if address and "country_code" in address:
+            country_code = address["country_code"].upper()
+        else:
+            try:
+                country_code = pycountry_convert.country_name_to_country_alpha2(country)
+            except KeyError:
+                # Country name does not exist.
+                country = None
+                country_code = None
+                result_dict["continent"] = "Antarctica"
+        if country:
+            result_dict["country"] = country
+
+        if country_code:
+            # result_dict["country_code"] = country_code
+            if country_code == "RU": # Russia
+                continent = "Europe" if longitude < 59 else "Asia"
+            else:
+                continent_code = pycountry_convert.country_alpha2_to_continent_code(country_code)
+                continent = continent_dict[continent_code]
+            # result_dict["continent_code"] = continent_code
+            result_dict["continent"] = continent
+
+    # Save the computed result for future calls
+    location_infos[saved_in] = result_dict
+    return result_dict
+
+
+def _get_address(latitude: float,
+                 longitude: float,
+                 retries: int = 3) -> dict[str]:
+    """
+    Get a dictionary of the location for a latitude and a longitude.
+    Use it to get an address (with country name).
+    """
+    try:
+        result = geolocator.reverse((latitude, longitude),
+                                    exactly_one=True,
+                                    language="en")
+    except Exception as e:
+        # Retry after 0.5s
+        retries -= 1
+        if retries == 0:
+            return None
+        time.sleep(0.5)
+        print(f"Warning: {e}.\nRetrying...")
+        return _get_address(latitude,
+                            longitude,
+                            retries)
+    return result
+
+
+continent_dict = {
+    "NA": "North America",
+    "SA": "South America",
+    "AS": "Asia",
+    "AF": "Africa",
+    "OC": "Oceania",
+    "EU": "Europe",
+    "AQ" : "Antarctica"
+}
+
+
+def distance(latlong1: Tuple[float],
+             latlong2: Tuple[float]) -> float:
+    """
+    Get the distance between two points on earth (in km).
+
+    Keyword arguments:
+    latlong1 -- tuple (latitude, longitude) of the first point.
+    latlong1 -- tuple (latitude, longitude) of the second point.
+    """
+    return geodesic(latlong1, latlong2)
 
 
 if __name__ == "__main__":

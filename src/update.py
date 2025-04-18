@@ -13,11 +13,14 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+import atexit
 from typing import List
 from argparse import ArgumentParser
+
+from tqdm import tqdm
 from graph import Graph
-#from data_updater.graph import Graph # rdflib.Graph singleton with OBS namespace
 from data_updater.extractor.extractor import Extractor
+from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
@@ -25,26 +28,19 @@ from data_updater.extractor.pds_extractor import PdsExtractor
 from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 
-
-# Extract for those sources:
-all_extractors = [
-    AasExtractor,
-    IauMpcExtractor,
-    NaifExtractor,
-    PdsExtractor,
-    SpaseExtractor,
-    WikidataExtractor
-]
+from utils.utils import get_location_info
 
 
 class Updater():
 
 
     def __init__(self,
-                 ontology_file: str = ""):
+                 ontology_file: str = "",
+                 output_ontology: str = ""):
         self._graph = Graph(ontology_file)
         if not ontology_file:
             self.init_graph() # Create basic classes
+        self._output_ontology = output_ontology
 
 
     @property
@@ -52,19 +48,38 @@ class Updater():
         return self._graph
 
 
+    @property
+    def output_ontology(self):
+        return self._output_ontology
+
+
     def update(self,
                data: dict,
                extractor: Extractor = None,
                cat: str = "ufo"):
         """
-        Adds the data from the dict to the Ontology.
+        Add the data from the dict to the Ontology.
 
         Keyword arguments:
         data -- a dictionary like {"uri1": {"uri":"a", "label":"b"}}
         source -- the class of the extractor of the source (ex: AasExtractor)
         not already in the dictionary's features.
         """
-        for identifier, features in data.items():
+
+        for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
+            # Get complete location information and add them to the features
+            if extractor: # Only for extracted entities
+                location_info = get_location_info(label = features.get("label", None),
+                                                  latitude = features.get("latitude", None),
+                                                  longitude = features.get("longitude", None),
+                                                  address = features.get("address", None),
+                                                  location = features.get("location", None),
+                                                  part_of = features.get("is_part_of", None))
+                # Retrieved information include country, continent. We also set location to
+                # Earth or Space.
+                for key, value in location_info.items():
+                    if key not in features or features[key] is None:
+                        features[key] = value
             # get label
             if "label" in features:
                 label = features["label"]
@@ -75,6 +90,9 @@ class Updater():
                 self.graph.add((subj, predicate, obj),
                                 extractor = extractor)
             if "type" not in features:
+                # For non-ontological entities, if it has a default type and
+                # does not have a type, we use the extractor's default type as
+                # the entity's superclass.
                 if (not hasattr(extractor, "IS_ONTOLOGICAL") or
                     not extractor.IS_ONTOLOGICAL):
                     if cat == "ufo" and hasattr(extractor, "DEFAULT_TYPE"):
@@ -128,19 +146,28 @@ class Updater():
         self.update(SOURCES, cat = "facility list")
 
 
+    def write(self):
+        """
+        """
+        with open(self.output_ontology, 'wb') as file:
+            file.write(self.graph.serialize(format = "turtle",
+                                            encoding = "utf-8"))
+
 def main(lists: List[str],
          input_ontology: str = "",
-         output_ontology: str = "output.ttl",
-         format: str = "turtle"):
-    updater = Updater(input_ontology)
+         output_ontology: str = "output.ttl"):
+
+    updater = Updater(input_ontology,
+                      output_ontology)
+    atexit.register(updater.write)
 
     extractors = []
 
     if "all" in lists:
-        extractors = all_extractors
+        extractors = ExtractorLists.AVAILABLE_EXTRACTORS
     else:
         for list_to_extract in lists:
-            for extractor in all_extractors:
+            for extractor in ExtractorLists.AVAILABLE_EXTRACTORS:
                 if list_to_extract == extractor.NAMESPACE:
                     extractors.append(extractor)
 
@@ -148,9 +175,6 @@ def main(lists: List[str],
         extractor = Extractor()
         data = extractor.extract()
         updater.update(data, extractor = extractor)
-
-    with open(output_ontology, 'w') as file:
-        file.write(updater.graph.serialize(format = format))
 
 
 if __name__ == "__main__":
@@ -163,7 +187,7 @@ if __name__ == "__main__":
                         "--lists",
                         dest = "lists",
                         default = ["all"],
-                        choices = ["all"] + [e.NAMESPACE for e in all_extractors],
+                        choices = ["all"] + list(ExtractorLists.EXTRACTORS_BY_NAMES.keys()),
                         nargs = '*',
                         type = str,
                         required = False,

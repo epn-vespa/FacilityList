@@ -11,7 +11,6 @@ Author:
 
 from collections import defaultdict
 from enum import Enum
-from pathlib import Path
 from typing import Dict, List, Union
 import uuid
 import hashlib
@@ -26,10 +25,11 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
+from utils import config
 from utils.performances import deprecated, timeit
 
 
-JSON = Path(__file__).parent.parent.parent / 'data' / 'processed_data'# "../../cache/error.log"
+JSON = config.data_dir / 'checkpoint'# "../../cache/error.log"
 JSON.mkdir(parents = True, exist_ok = True)
 
 
@@ -340,11 +340,14 @@ class CandidatePairsManager():
         Keyword arguments:
         execution_id -- the id of this execution (generated in merge.py)
         """
-        filename = f"{self._list1}_{self._list2}_{execution_id}.json"
-        path = JSON / filename
+        directory = JSON / execution_id
+        directory.mkdir(parents = True, exist_ok = True)
+
+        filename = f"{self._list1}_{self._list2}.json"
+        path = directory / filename
         with open(str(path), 'w') as file:
             file.write("{\n")
-            for cp in self:#._candidate_pairs:# ._candidate_pairs:
+            for cp in self._candidate_pairs:# ._candidate_pairs:
                 file.write("\"" + str(cp.member1.uri) + '\t' + str(cp.member2.uri) + "\":")
                 file.write(str(cp.scores))
                 #for score, value in cp.scores.items():
@@ -792,6 +795,8 @@ class CandidatePairsMapping():
         Keyword arguments:
             scores -- Scores that use CUDA
         """
+        if not scores:
+            return
         """
         DEBUG = True
         if DEBUG:
@@ -854,12 +859,15 @@ class CandidatePairsMapping():
         Keyword arguments:
         execution_id -- the id of this execution (generated in merge.py)
         """
-        filename = f"{self._list1}_{self._list2}_{execution_id}.json"
-        path = JSON / filename
+
+        directory = JSON / execution_id
+        directory.mkdir(parents = True, exist_ok = True)
+        filename = f"{self._list1}_{self._list2}.json"
+        path = directory / filename
         with open(str(path), 'w') as file:
             file.write("{\n")
             for cp in self:#._candidate_pairs:
-                file.write("\"" + str(cp.member1.uri) + '\t' + str(cp.member2.uri) + "\":")
+                file.write("\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":")
                 file.write(str(cp.scores))
                 #for score, value in cp.scores.items():
                 #    file.write('\t' + score + '\t' + str(value))

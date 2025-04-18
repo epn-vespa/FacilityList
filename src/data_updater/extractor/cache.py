@@ -10,8 +10,8 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from pathlib import Path
 import glob
+from pathlib import Path
 import re
 import requests
 import logging
@@ -20,8 +20,10 @@ import subprocess
 import json
 import datetime
 
+from utils import config
+
 # Set up the basic configuration for logging
-LOG = Path(__file__).parent.parent.parent.parent / 'cache' / 'error.log'# "../../cache/error.log"
+LOG = config.logs_dir / 'error.log'# "../../cache/error.log"
 os.remove(LOG) # Clear log file
 logging.basicConfig(filename=LOG, level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -46,7 +48,7 @@ class CacheManager():
     'Referer': 'https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher'}
     """
 
-    CACHE = str(Path(__file__).parent.parent.parent.parent / 'cache') + '/' # "../../cache/"
+    CACHE = config.cache_dir
 
     def get_page(url: str,
                  list_name: str,
@@ -82,15 +84,15 @@ class CacheManager():
         list_name -- used to access the right folder of the cache.
         """
         # Create folder CACHE
-        Path(CacheManager.CACHE + list_name).mkdir(parents = True,
-                                                   exist_ok = True)
+        (CacheManager.CACHE / list_name).mkdir(parents = True,
+                                               exist_ok = True)
 
         # Create folder list_name
         cache_path = re.sub(r"[^\w\d]+", "_", url)
         if cache_path[-1] == '_':
             cache_path = cache_path[:-1]
         cache_path = cache_path.lower()
-        cache_path = CacheManager.CACHE + list_name + cache_path + ".html"
+        cache_path = str(CacheManager.CACHE / list_name / cache_path) + ".html"
         return cache_path
 
 
@@ -142,26 +144,29 @@ class CacheManager():
         git_repo -- the name of the repository / folder of the repository
         list_name -- used to access the right folder of the cache.
         """
-        if url.endswith('/'):
-            url = url[:-1]
-        url += ".git"
-        git_repo_folder = CacheManager.CACHE + list_name + git_repo
-        if glob.glob(git_repo_folder):
-            command = ["git", "pull"]
-            cwd = git_repo_folder
-        else:
-            command = ["git", "clone", url]
-            cwd = CacheManager.CACHE + list_name
-        messages = subprocess.Popen(
-            command,
-            cwd = cwd,
-            stdout = subprocess.PIPE,
-            stderr = subprocess.PIPE
-        ).communicate()
-        for item in messages:
-            item_utf8 = item.decode("utf-8")
-            if item_utf8 != "":
-                logging.warning(item_utf8)
+        try:
+            if url.endswith('/'):
+                url = url[:-1]
+            url += ".git"
+            git_repo_folder = str(CacheManager.CACHE / list_name / git_repo)
+            if glob.glob(git_repo_folder):
+                command = ["git", "pull"]
+                cwd = git_repo_folder
+            else:
+                command = ["git", "clone", url]
+                cwd = str(CacheManager.CACHE / list_name)
+            messages = subprocess.Popen(
+                command,
+                cwd = cwd,
+                stdout = subprocess.PIPE,
+                stderr = subprocess.PIPE
+            ).communicate()
+            for item in messages:
+                item_utf8 = item.decode("utf-8")
+                if item_utf8 != "":
+                    logging.warning(item_utf8)
+        except:
+            logging.warning(' '.join(command), "failed for", git_repo)
 
 class VersionManager():
     """
@@ -169,7 +174,7 @@ class VersionManager():
     contains utility functions to check for updates.
     """
 
-    DATA = str(Path(__file__).parent.parent.parent.parent / 'data') + '/' # "../../data/"
+    DATA = config.data_dir
 
     _TODAY = datetime.datetime.now(tz=datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -187,7 +192,7 @@ class VersionManager():
         """
         result = set()
 
-        last_version_file = VersionManager.DATA + list_name + last_version_file
+        last_version_file = str(VersionManager.DATA / list_name / last_version_file)
 
         if not os.path.exists(last_version_file):
             # We create the path to save the versions from the

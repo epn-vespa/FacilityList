@@ -14,28 +14,22 @@ Author:
 """
 from argparse import ArgumentParser
 import atexit
-from pathlib import Path
 from typing import List
 import uuid
 
 from graph import Graph
 from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
 from data_merger.identifier_merger import IdentifierMerger
-from data_merger.scorer.acronym_scorer import AcronymScorer
-from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from data_merger.scorer.score import Score
 from data_merger.scorer.scorer_lists import ScorerLists
 from data_merger.synonym_set import SynonymSetManager
 from data_merger.scorer.fuzzy_scorer import FuzzyScorer
-from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
-from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
-from data_updater.extractor.pds_extractor import PdsExtractor
-from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
-from utils.performances import printtimes, timeit
+from utils import config
+from utils.performances import timeit
 
 class Merger():
 
@@ -119,11 +113,11 @@ class Merger():
             CPM.generate_mapping(self.graph)
             CPM.disambiguate(scores = scores)
             # CPM.save_to_graph()
+            print("saving json!!!", list1, list2)
             CPM.save_json(self.execution_id)
         except InterruptedError:
             CPM.save_json(self.execution_id)
             SynonymSetManager._SSM.save_all()
-            self.write()
             exit()
         del(CPM)
 
@@ -141,7 +135,7 @@ class Merger():
         candidates.
         TODO FIXME if there are two candidates in a synset, then merge synsets
         """
-        conf_file = Path(__file__).parent.parent / 'conf' / 'merging_strategy.conf'
+        conf_file = config.conf_dir / 'merging_strategy.conf'
         conf_file = str(conf_file)
         with open(conf_file, 'r') as file:
             for i, line in enumerate(file.readlines()):
@@ -183,8 +177,8 @@ class Merger():
                     elif score == 'all':
                         scores_to_compute.update(ScorerLists.ALL_SCORES)
                     elif score not in ScorerLists.SCORES_BY_NAMES.keys():
-                            raise ValueError(f"Error at line {line} in {file}: {score} is not a valid score name.\n" +
-                                             f"Available score names: {' '.join(ScorerLists.SCORES_BY_NAMES.keys())}")
+                        raise ValueError(f"Error at line {line} in {file}: {score} is not a valid score name.\n" +
+                                         f"Available score names: {' '.join(ScorerLists.SCORES_BY_NAMES.keys())}")
                     else:
                         scores_to_compute.add(ScorerLists.SCORES_BY_NAMES[score])
                 if (self.graph.is_available(extractor1_str) and
@@ -207,8 +201,8 @@ class Merger():
     @timeit
     def write(self):
         print(f"Writing the result ontology into {self.output_ontology}...")
-        with open(self.output_ontology, 'w') as file:
-            file.write(self.graph.serialize())
+        with open(self.output_ontology, 'wb') as file:
+            file.write(self.graph.serialize(encoding = "utf-8"))
 
 
     def print_execution_id(self):

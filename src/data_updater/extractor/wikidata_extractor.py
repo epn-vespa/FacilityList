@@ -17,11 +17,12 @@ from data_updater.extractor.cache import VersionManager, CacheManager
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
-from pathlib import Path
 from datetime import datetime, UTC
 
 import certifi
 import urllib
+
+from utils import config
 
 
 class WikidataExtractor(Extractor):
@@ -250,7 +251,7 @@ class WikidataExtractor(Extractor):
         Keyword arguments:
         control_data -- the wikidata control dictionary {uri: control_data}
         """
-        exclusion_file = str(Path(__file__).parent.parent.parent.parent / "data" / self.CACHE / "wikidata_excluded_entities.json")
+        exclusion_file = str(config.data_dir / self.CACHE / "wikidata_excluded_entities.json")
         if os.path.exists(exclusion_file):
             with open(exclusion_file, 'r', encoding='utf-8') as file:
                 exclusion_data = json.load(file)
