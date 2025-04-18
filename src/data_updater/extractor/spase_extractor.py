@@ -1,26 +1,16 @@
 """
-SpaseExtractor scraps the SPASE webpage and stores data into a dictionary.
+SpaseExtractor scraps the SPASE github and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
-
-Troubleshooting:
-    SPASE does not allow scrapping (even with selenium).
-    We extract data from https://hpde.io/SMWG/Observatory/index.html
-    instead. ** SMWG: SPASE Metadata Working Group **
-
-    For SPASE original data, we can use the previously downloaded data
-    from the /data/SPASE folder.
-
-    In some descriptions, there are tables (like Orbital parameters, etc)
-    that could be extracted as entity's attributes or as hasPart relation.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+from pathlib import Path
 from typing import Set
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
-from utils.utils import clean_string, extract_items
+from utils.utils import clean_string, extract_items, merge_into
 import json
 import re
 import os
@@ -176,14 +166,14 @@ class SpaseExtractor(Extractor):
             if data["label"] not in result:
                 result[data["label"]] = data
             else:
-                self._merge_into(result[data["label"]], data)
+                merge_into(result[data["label"]], data)
 
         # Merge entities on prior_id
         for prior_id, newer_id in data_by_prior_id.items():
             # Find in results the data for which id is the prior id (to remove)
             for label, data in result.copy().items():
                 if "code" in data and prior_id in data["code"]:
-                    self._merge_into(result[newer_id], data)
+                    merge_into(result[newer_id], data)
                     del result[label]
         # If the SPASE id of a part does not exists in the
         # extracted data, create a new entity with this
@@ -252,8 +242,8 @@ class SpaseExtractor(Extractor):
 
 
     def _list_files(self,
-                   folder: str,
-                   visited_folders: Set = None) -> Set:
+                    folder: str,
+                    visited_folders: Set = None) -> Set:
         """
         Get the list of paths recursively in the folder.
         Only return .json files located in any Observatory folder.
@@ -268,66 +258,16 @@ class SpaseExtractor(Extractor):
         for root, dirs, files in os.walk(folder):
             for file in files:
                 if self.KEEP_FOLDER in folder and file.endswith(".json"):
-                    result.add(root + '/' + file)
+                    result.add(str(Path(root) /  file))
             for dir in dirs:
                 # TODO ignore the Deprecated folder ?
-                dir = root + '/' + dir
+                dir = str(Path(root) / dir)
                 if dir not in visited_folders:
                     visited_folders.add(dir)
                     result.update(self._list_files(dir,
                                   visited_folders = visited_folders))
             # return dict()
         return result
-
-
-    def _merge_into(self,
-                    newer_entity_dict: dict,
-                    prior_entity_dict: dict):
-        """
-        Merge data from the prior dict into the newer dict.
-
-        Keyword arguments:
-        newer_entity_dict -- the entity dict to save data in
-        prior_entity_dict -- the prior entity dict to merge with the newer
-        """
-        for key, values in prior_entity_dict.copy().items():
-            if key == "prior_id":
-                continue
-            if key == "label":
-                if not isinstance(values, set):
-                    values = {values}
-                if "alt_label" in newer_entity_dict:
-                    newer_entity_dict["alt_label"].update(values) # Keep the new label
-                else:
-                    newer_entity_dict["alt_label"] = values
-            elif key in newer_entity_dict:
-                merge_into = newer_entity_dict[key]
-                if not isinstance(values, list) and not isinstance(values, set):
-                    values = [values]
-                for value in values:
-                    if isinstance(merge_into, set):
-                        merge_into.add(value)
-                        continue
-                    elif not isinstance(merge_into, list):
-                        merge_into = [merge_into]
-                    if value not in merge_into:
-                        if key in ["latitude", "longitude"]:
-                            # Keep the most precise value
-                            old_value = newer_entity_dict[key]
-                            if isinstance(old_value, list):
-                                old_value = old_value[0]
-                            if len(str(value)) > len(str(old_value)):
-                                merge_into = [value]
-                            elif len(str(value)) == len(str(old_value)):
-                                if value != 0.0:
-                                    merge_into = [value]
-                                else:
-                                    merge_into = [old_value]
-                        else:
-                            merge_into.append(value)
-                newer_entity_dict[key] = merge_into
-            else:
-                newer_entity_dict[key] = values
 
 
 if __name__ == "__main__":

@@ -197,19 +197,29 @@ class SynonymSet():
 
 
     def get_values_for(self,
-                       property: str) -> Set:
+                       property: str,
+                       unique: bool = False) -> Set:
         """
         Get values of the synonym set for a property.
 
         Keyword arguments:
         property -- the property name (ex: "label")
+        unique -- if there was more than one values,
+                  return only the first non-None value.
         """
         property = Graph().OM.convert_attr(property)
         if property in self._data:
-            return self._data[property]
+            res = self._data[property]
         else:
             # No value for this property
-            return set()
+            res = []
+        if unique:
+            if hasattr(res, "len") and not isinstance(res, str):
+                if len(res):
+                    return res[0]
+                else:
+                    return None
+        return res
 
 
     def __iter__(self):
