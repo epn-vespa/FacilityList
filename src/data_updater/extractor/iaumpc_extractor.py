@@ -5,7 +5,10 @@ The output dictionary is compatible with the ontology mapping (see graph.py).
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+import astropy
+import astropy.coordinates
 from bs4 import BeautifulSoup
+from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from utils.utils import cut_location
@@ -27,7 +30,7 @@ class IauMpcExtractor(Extractor):
     CACHE = "IAU-MPC/"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = "observation facility"
+    DEFAULT_TYPE = entity_types.GROUND_OBSERVATORY
 
     # Used to split the label into entity / location
     LOCATION_DELIMITER = ","
@@ -70,8 +73,7 @@ class IauMpcExtractor(Extractor):
 
             # location
             _, location = cut_location(obs_name,
-                                       delimiter = self.LOCATION_DELIMITER,
-                                       alt_labels = alt_labels)
+                                       delimiter = self.LOCATION_DELIMITER)
             if location:
                 data["location"] = location # city, lake...
 
@@ -80,22 +82,35 @@ class IauMpcExtractor(Extractor):
             longitude = line[:10].strip()
             if longitude:
                 longitude = float(longitude)
-                if longitude > 180:
-                    longitude -= 360
+                #if longitude > 180:
+                #    longitude -= 360
                 data["longitude"] = longitude # keep a float
 
             # latitude
-            cosinus = line[10:18].strip()
-            sinus = line[18:].strip()
+            cosinus = line[10:18].strip() # geocentric
+            sinus = line[18:].strip() # geocentric
             if sinus and cosinus:
+                sinus = float(sinus)
+                cosinus = float(cosinus)
                 # geocentric latitude
                 # sin and cos are ρsinφ′ and ρcosφ′ρ
                 # φ′= arctan(ρcosφ′ρsinφ′​)
                 # see https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
-                latitude_rad = math.atan2(float(sinus), float(cosinus))
-                latitude_deg = math.degrees(latitude_rad)
-                data["latitude"] = latitude_deg # keep a float
 
+                # old method was wrong because it computed a geocentric latitude:
+                # latitude_rad = math.atan2(float(sinus), float(cosinus))
+                # latitude_deg = math.degrees(latitude_rad)
+                earth_radius = 6378137 # meters
+
+                # rho is the earth radius at cos&sin
+                # rho = math.sqrt(math.pow(cosinus, 2) + math.pow(sinus, 2)) * earth_radius
+
+                el = astropy.coordinates.EarthLocation(earth_radius * cosinus * math.cos(math.radians(longitude)),
+                                                       earth_radius * cosinus * math.sin(math.radians(longitude)),
+                                                       earth_radius * sinus,
+                                                       unit = "m")
+                data["latitude"] = float(el.to_geodetic().lat.deg) # lat.deg => numpy.float64
+                data["type"] = entity_types.GROUND_OBSERVATORY
             # alt labels
             data["alt_label"] = alt_labels
 
