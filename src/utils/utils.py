@@ -32,67 +32,12 @@ def standardize_uri(label: str) -> str:
     label -- the label of the entity.
     """
     label = label.lower()
-    # label = del_aka(label)
     label = re.sub(r"[^\w\s\.]", ' ', label)
     label = re.sub(r"\s+", ' ', label) # Remove multiple spaces
     label = label.split(' ')
     label = '-'.join([l for l in label if l])
     label = quote(label)
     return label
-
-
-def del_aka(label: str) -> Tuple[str]:
-    """
-    Delete stopwords like 'aka' from the label.
-    Add parenthesis around the other name (after the aka), so that
-    we can extract it as an acronym (alternate name).
-    Returns:
-        Tuple(Label without akas, aka)
-
-    Keyword arguments:
-    label -- the label to delete akas and get the alternate name from.
-    """
-    stopwords = '|'.join(["aka",
-                          "a.k.a.",
-                          "also known as",
-                          "formerly the",
-                          "formerly"])
-
-    exp = re.compile(f"\\b({stopwords})\\b")
-    alt_label = "" # Alt label for the whole entity
-    for match in re.finditer(exp, label):
-        start_index = match.start()
-        end_index = match.end()
-        if label[start_index-1] != '(': # The aka is not between ()
-            # Add () around the aka
-            after_aka = label[end_index:]
-            # The aka end after a ','
-            comma = after_aka.find(',')
-            if comma > 0: # not the last thing
-                aka = after_aka[0:comma]
-                after_aka = after_aka[comma:]
-            else:
-                aka = after_aka
-                after_aka = "" # end
-                alt_label = aka # if end of string, is alt label of entity
-            label = f"{label[:start_index]} ({aka}) {after_aka}"
-        else:
-            # Find the aka for alt_label (if at the end of the string)
-            if label[end_index:].count(')') == 1 and label.endswith(')'):
-                alt_label = label[end_index:-1]
-                label = label[:start_index-1]
-    label = re.sub(exp, "", label)
-    label = re.sub(r" +", " ", label)
-    label = re.sub(r"\( ", "(", label)
-    label = label.strip()
-
-    # If the altLabel is in the location of the entity
-    # it is not an altLabel of the entity.
-    if alt_label and " at " not in label:
-        return label, alt_label
-    #if label[-1] == ')':
-    #    return label.strip(), aka# last is a )
-    return label, ""
 
 
 def cut_acronyms(label: str) -> Tuple[str]:
@@ -106,7 +51,7 @@ def cut_acronyms(label: str) -> Tuple[str]:
     label -- the label containing acronyms
     """
     label = label.strip()
-    label, acronym_aka = del_aka(label)
+    # label, acronym_aka = cut_aka(label)
     acronyms = list(re.finditer(r"\([^(]+?\)", label))
     if not acronyms:
         return label, ""
@@ -122,12 +67,9 @@ def cut_acronyms(label: str) -> Tuple[str]:
     full_name_without_acronyms += label[prev_acronym_idx:]
     if label[-1] != ')':
         acronym_str = "" # Acronym for the whole string (last word)
-    if not acronyms:
-        if acronym_aka:
-            acronym_str = acronym_aka
     if len(acronyms) > 1:
         # If there are more than one acronym, impossible to detect which
-        # acronym is the right one.
+        # acronym is the right one
         acronym_str = ""
     # Return full name without acronyms + the last acronym
     # Compute the probability of the acronym string to be an acronym
@@ -135,7 +77,60 @@ def cut_acronyms(label: str) -> Tuple[str]:
 
     if proba_acronym_of(acronym_str, full_name_without_acronyms) != 1:
         acronym_str = ""
-    return full_name_without_acronyms.strip(), acronym_str
+    return clean_string(full_name_without_acronyms), acronym_str
+
+
+def cut_aka(label: str) -> Tuple[str]:
+    """
+    Delete stopwords like 'aka' from the label.
+    Return the label without the aka and its aka.
+
+    Keyword arguments:
+    label -- the label to delete akas and get the alternate name from.
+    """
+    stopwords = '|'.join(["aka",
+                          "a.k.a.",
+                          "also known as",
+                          "formerly the",
+                          "formerly"])
+    exp = re.compile(f"\\b({stopwords})\\b")
+
+    alt_label = "" # Alt label for the whole entity
+    for match in re.finditer(exp, label.lower()):
+        start_index = match.start()
+        end_index = match.end()
+        if label[start_index-1] != '(': # The aka is not between ()
+            after_aka = label[end_index:]
+            # The aka end after a ','
+            comma = after_aka.find(',')
+            if comma > 0: # not the last substring
+                aka = after_aka[0:comma]
+                after_aka = after_aka[comma:]
+            else:
+                aka = after_aka
+                after_aka = "" # end
+                alt_label = aka # if end of string, is alt label of entity
+            # label = f"{label[:start_index]} ({aka}) {after_aka}"
+            label = f"{label[:start_index]} {after_aka}"
+
+        else:
+            # Find the aka for alt_label (if at the end of the string)
+            if label[end_index:].count(')') == 1 and label.endswith(')'):
+                alt_label = label[end_index:-1]
+                label = label[:start_index-1]
+
+    label = re.sub(exp, "", label)
+    label = re.sub(r" +", " ", label)
+    label = re.sub(r"\( ", "(", label)
+    label = clean_string(label)
+
+    # If the altLabel is in the location of the entity
+    # it is not an altLabel of the entity.
+    if alt_label and " at " not in label:
+        return label, alt_label
+    #if label[-1] == ')':
+    #    return label.strip(), aka# last is a )
+    return label, ""
 
 
 def get_size(label: str) -> str:
@@ -155,7 +150,7 @@ def get_size(label: str) -> str:
         for s in sizes:
             size += ''.join(s)
     label_without_size = re.sub(size, "", label).strip()
-    return label_without_size, size
+    return clean_string(label_without_size), size
 
 
 def cut_part_of(label: str):
@@ -194,7 +189,7 @@ def cut_part_of(label: str):
         part_of = after_part_of
         after_part_of = ""
     label_without_part_of = before_part_of + ' ' + after_part_of
-    return label_without_part_of.strip(), clean_string(part_of)
+    return clean_string(label_without_part_of), clean_string(part_of)
 
 
 def cut_location(label: str,
@@ -217,7 +212,7 @@ def cut_location(label: str,
     """
     location = ""
     label_without_location = label
-    if delimiter in label:
+    if label.count(delimiter) == 1:
         label_without_location, location = [a.strip() for a in label.split(delimiter, maxsplit = 1)]
         """
         label_without_acronyms, label_acronym = cut_acronyms(label)
@@ -236,18 +231,24 @@ def cut_location(label: str,
 def clean_string(text: str) -> str:
     """
     Removes all \n, \t and double spaces from a string.
+    as it was probably a cut string.
 
     Keyword arguments:
     string -- the string to clean
     """
     # text = text.replace("\n", " ")
+    # add a closing parentheses if never closed
+    #if (text[::-1].find('(') < text[::-1].find(')') or
+    #    '(' in text and ')' not in text):
+    #    text += ')'
+    # remove final parentheses if never opened
+    #if text.count(')') > text.count('('):
+    #    text = text[::-1].replace(')', ' ', 1)[::-1]
     text = text.replace("\r", " ")
     text = re.sub(r"\t", " ", text)
     text = re.sub(r"\\n", " ", text)
     text = re.sub(r"\\r", " ", text)
     text = re.sub(r" +", " ", text).strip()
-    if text.startswith("the "):
-        text = text[4:]
     return text.strip()
 
 
@@ -456,7 +457,7 @@ def get_location_info(label: Optional[str] = None,
             label = None
 
     # Remove initial "the" from the label as it performs very bad with geopy
-    if label and label.startswith("the "):
+    if label and label.lower().startswith("the "):
         label = label[4:].strip()
 
     # Return information if already in the cache
@@ -614,8 +615,7 @@ def get_location_info(label: Optional[str] = None,
         if retries < 0:
             location_infos[saved_in] = {}
             return {}
-        print(f"Warning: {e}.\n{retries} retries left. Retrying...")
-        print(f"label={label}=")
+        print(f"Warning: {e}.\n{retries} retries left for {label}. Retrying...")
         return get_location_info(label=label,
                                  location=location,
                                  address=address,

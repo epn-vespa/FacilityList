@@ -13,7 +13,7 @@ Author:
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 from data_updater import entity_types
-from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of, merge_into
+from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of, merge_into, cut_aka
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -126,6 +126,13 @@ class AasExtractor(Extractor):
             # The full facility name contains a location (Observatory etc)
             # We can use a part-of between the facility and location
             facility_name = row_data["full facility name"].strip()
+
+            # Akas
+            facility_name, aka = cut_aka(facility_name)
+            if aka:
+                alt_labels.add(aka)
+
+            # Duplicate identifiers
             duplicate_idx = facility_name.find("[Duplicate of ")
             duplicate_of = ""
             if duplicate_idx >= 0:
@@ -270,9 +277,8 @@ class AasExtractor(Extractor):
                 merge_into(result[code1], result[code2])
                 del(result[code2])
 
-        return result
         # Add a type to the entities
-        for code, data in tqdm(result.items()):
+        for code, data in tqdm(result.items(), desc = f"Classify {self.NAMESPACE}"):
             choices = [entity_types.TELESCOPE, entity_types.MISSION, entity_types.GROUND_OBSERVATORY]
             label = data["label"]# + ' ' + ' '.join(data.get("alt_label", []))
             # label = label.strip()
