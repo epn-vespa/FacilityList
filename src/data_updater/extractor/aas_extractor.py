@@ -11,7 +11,9 @@ Author:
 """
 
 from bs4 import BeautifulSoup
-from utils.utils import cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of, merge_into
+from tqdm import tqdm
+from data_updater import entity_types
+from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of, merge_into
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -28,8 +30,12 @@ class AasExtractor(Extractor):
     CACHE = "AAS/"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = "observation facility"
+    DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
 
+    POSSIBLE_CATEGORES = {entity_types.GROUND_OBSERVATORY,
+                          entity_types.MISSION,
+                          entity_types.OBSERVATORY_NETWORK,
+                          entity_types.TELESCOPE}
     # Mapping to IVOA's messenger
     # https://www.ivoa.net/rdf/messenger/
     # All Waveband categories in AAS:
@@ -125,21 +131,32 @@ class AasExtractor(Extractor):
             if duplicate_idx >= 0:
                 facility_name, duplicate_of = facility_name.split("[Duplicate of ")
                 duplicate_of = duplicate_of.strip()[:-1]
-                facility_name = facility_name.strip()
+            facility_name = clean_string(facility_name)
+            alt_labels.add(facility_name)
 
             # Origin observatory
             label_without_location, location = cut_location(facility_name,
-                                                            delimiter = self.LOCATION_DELIMITER,
-                                                            alt_labels = alt_labels)
-            if label_without_location != facility_name:
-                alt_labels.add(label_without_location)
+                                                            delimiter = self.LOCATION_DELIMITER)
 
-            # If the entity is a part of something else
+            if location.lower().startswith("the "):
+                location = location[4:] # often location starts with " at the ..."
+
+            # If the entity is a part of some other entity
             label_without_part_of, part_of_label = cut_part_of(label_without_location)
             if part_of_label:
                 data["is_part_of"] = [part_of_label]
-                result[part_of_label] = {"label": part_of_label}
+                if part_of_label in result:
+                    if "has_part" in result[part_of_label]:
+                        result[part_of_label]["has_part"].append(facility_name)
+                    else:
+                        result[part_of_label]["has_part"] = [facility_name]
+                else:
+                    result[part_of_label] = {"label": part_of_label,
+                                             "has_part": [facility_name]}
                 label_without_location = label_without_part_of
+
+            # Add label to row dict
+            data["label"] = label_without_part_of
 
             # Get the size of the facility
             label_without_size, size = get_size(label_without_part_of)
@@ -160,48 +177,68 @@ class AasExtractor(Extractor):
                 location_without_part_of, part_of_location = cut_part_of(location)
                 # If the location is a part of something else
 
-                location, location_acronym = cut_acronyms(location_without_part_of)
+                location_without_acronym, location_acronym = cut_acronyms(location_without_part_of)
 
-                if location_acronym and proba_acronym_of(label_without_size,
+                if location_acronym and proba_acronym_of(location_without_acronym,
                                                          location_acronym) == 1:
-                    if "alt_label" in result[location]:
-                        result[location]["alt_label"].append(location_acronym)
+                    if "alt_label" in result[location_without_acronym]:
+                        result[location_without_acronym]["alt_label"].extend([location_acronym,
+                                                                              location_without_acronym])
                     else:
-                        result[location]["alt_label"] = [location_acronym]
+                        result[location_without_acronym]["alt_label"] = [location_acronym,
+                                                                         location_without_acronym]
 
-                if not location in result:
-                    result[location] = dict()
-                if part_of_location:
-                    result[location]["alt_label"] = [location_without_part_of]
-                    if "is_part_of" not in result[location]:
-                        result[location]["is_part_of"] = [part_of_location]
+                if label_without_location != facility_name:
+                    alt_labels.add(label_without_location)
+                    data["is_part_of"] = [location_without_acronym]
+                    # location_without_acronym, location_acronym = cut_acronyms(location)
+                    if location_without_acronym in result:
+                        if "has_part" in result[location_without_acronym]:
+                            result[location_without_acronym]["has_part"].append(facility_name)
+                        else:
+                            result[location_without_acronym]["has_part"] = [facility_name]
                     else:
-                        result[location]["is_part_of"].append(part_of_location)
+                        result[location_without_acronym] = {"label": location_without_acronym,
+                                            "has_part": [facility_name],
+                                            "alt_label": [location]}
+                if not location_without_acronym in result:
+                    result[location_without_acronym] = {"label": location_without_acronym}
+
+                if part_of_location:
+                    if "alt_label" in result[location_without_acronym]:
+                        result[location_without_acronym]["alt_label"].append(location_without_part_of)
+                    else:
+                        result[location_without_acronym]["alt_label"] = [location_without_part_of]
+                    if "is_part_of" not in result[location_without_acronym]:
+                        result[location_without_acronym]["is_part_of"] = [part_of_location]
+                    else:
+                        result[location_without_acronym]["is_part_of"].append(part_of_location)
                     # add the location's part of to the result
                     result[part_of_location] = {"label": part_of_location}
 
-                result[location]["label"] = location
+                result[location_without_acronym]["label"] = location
 
                 if "is_part_of" in data:
                     data["is_part_of"].append(location)
                 else:
-                    data["is_part_of"] = [location]
+                    data["is_part_of"] = [location_without_acronym]
 
-            # Add label to row dict
-            data["label"] = facility_name
+            # Alt labels
+            alt_labels = alt_labels - {facility_name}
 
-            # Add and filter out facility types
+            # Add and filter out observed objects (previously facility types)
             for facility_type, col in zip(facility_types, cols[FT:]):
                 if col:
                     # Can have more than one type
-                    if "type" in data:
-                        data["type"].append(facility_type)
+                    if "observed_object" in data:
+                        data["observed_object"].append(facility_type)
                     else:
-                        data["type"] = [facility_type]
-            if "type" in data and data["type"] in ["computational center", "archive/database"]:
-                continue # Filter out computational center & archive/database.
-            elif "type" not in data:
-                data["type"] = AasExtractor.DEFAULT_TYPE # telescope
+                        data["observed_object"] = [facility_type]
+            if "observed_object" in data:
+                if any([x in ["computational center", "archive/database"] for x in data["observed_object"]]):
+                    continue # Filter out computational center & archive/database.
+            #elif "type" not in data:
+            #    data["type"] = AasExtractor.DEFAULT_TYPE # telescope
 
             # waveband
             for waveband_length, waveband in zip(wavebands, cols[WB:FT]):
@@ -232,6 +269,51 @@ class AasExtractor(Extractor):
             if code1 in result and code2 in result:
                 merge_into(result[code1], result[code2])
                 del(result[code2])
+
+        return result
+        # Add a type to the entities
+        for code, data in tqdm(result.items()):
+            choices = [entity_types.TELESCOPE, entity_types.MISSION, entity_types.GROUND_OBSERVATORY]
+            label = data["label"]# + ' ' + ' '.join(data.get("alt_label", []))
+            # label = label.strip()
+            description = ""
+            if "location" in data:
+                for l in data["location"]:
+                    l = l.lower()
+                    if "space" in l:
+                        data["type"] = entity_types.SPACECRAFT
+                        break
+                    if "airborne" in l:
+                        data["type"] = entity_types.AIRBORNE
+                        break
+                    if l == "earth":
+                        data["type"] = entity_types.OBSERVATORY_NETWORK
+                        break
+            if "type" in data:
+                continue
+            if "alt_label" in data:
+                description += "Also known as " + ' '.join(data["alt_label"])
+            if "has_part" in data:
+                choices = [entity_types.MISSION,
+                           entity_types.GROUND_OBSERVATORY,
+                           entity_types.OBSERVATORY_NETWORK]
+            elif "waveband" in data:
+                description += " Wavelength: " + ' '.join(data.get("waveband", "")) + '.'
+                choices = [entity_types.MISSION,
+                           entity_types.GROUND_OBSERVATORY,
+                           entity_types.OBSERVATORY_NETWORK,
+                           entity_types.TELESCOPE]
+            elif "observed_object" in data:
+                description += " Observed objects: " + ' '.join(data.get("observed_object", "")) + '.'
+                choices = [entity_types.MISSION,
+                           entity_types.GROUND_OBSERVATORY,
+                           entity_types.TELESCOPE,
+                           entity_types.OBSERVATORY_NETWORK]
+            category = entity_types.classify(label,
+                                             description,
+                                             choices = choices)
+            data["type"] = category
+
         return result
 
 
