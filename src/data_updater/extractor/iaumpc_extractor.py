@@ -111,6 +111,8 @@ class IauMpcExtractor(Extractor):
                                                        unit = "m")
                 data["latitude"] = float(el.to_geodetic().lat.deg) # lat.deg => numpy.float64
                 data["type"] = entity_types.GROUND_OBSERVATORY
+            else:
+                data["type"] = entity_types.SPACECRAFT
             # alt labels
             data["alt_label"] = alt_labels
 

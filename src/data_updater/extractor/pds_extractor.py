@@ -6,6 +6,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 from bs4 import BeautifulSoup
+from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from xml.etree import ElementTree as ET
@@ -45,6 +46,14 @@ class PdsExtractor(Extractor):
                      "facility": ["observatory"],
                      "instrument_host": ["lander", "rover", "spacecraft"],
                      "investigation": ["mission"]}
+
+    # Convert type of the entities
+    TYPES = {"telescope": entity_types.TELESCOPE,
+             "observatory": entity_types.GROUND_OBSERVATORY,
+             "spacecraft": entity_types.SPACECRAFT,
+             "lander": entity_types.SPACECRAFT,
+             "rover": entity_types.SPACECRAFT,
+             "mission": entity_types.MISSION}
 
     if __name__ == "__main__":
         pass
@@ -90,6 +99,9 @@ class PdsExtractor(Extractor):
                 elif cat not in PdsExtractor.CONTEXT_TYPES[context_type]:
                     # ignore this subtype
                     continue
+
+                # We already know the type (no need to disambiguate with LLM)
+                data["type"] = PdsExtractor.TYPES[cat]
 
                 # Download XML file for href
                 resource_url = PdsExtractor.URL + context_type + '/' + href

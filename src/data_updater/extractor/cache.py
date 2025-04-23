@@ -24,7 +24,8 @@ from utils import config
 
 # Set up the basic configuration for logging
 LOG = config.logs_dir / 'error.log'# "../../cache/error.log"
-os.remove(LOG) # Clear log file
+if os.path.exists(LOG):
+    os.remove(LOG) # Clear log file
 logging.basicConfig(filename=LOG, level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 

@@ -12,6 +12,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 from bs4 import BeautifulSoup
+from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from rdflib import Graph
@@ -32,7 +33,10 @@ class NaifExtractor(Extractor):
     CACHE = "NAIF/"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = "spacecraft"
+    DEFAULT_TYPE = entity_types.SPACECRAFT
+
+    TYPES = {"spacecraft": entity_types.SPACECRAFT,
+             "ground station": entity_types.GROUND_OBSERVATORY}
 
 
     def __init__(self):
@@ -82,7 +86,7 @@ class NaifExtractor(Extractor):
                 label = rows[1].strip()
                 result[label] = {"code": code,
                                 "label": label,
-                                "type": cat}
+                                "type": NaifExtractor.TYPES[cat]}
 
         # Delete duplicate identifiers and add alt labels
         # only when they are the same entity (see naif-sc-codes.ttl)

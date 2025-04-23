@@ -127,7 +127,7 @@ def cut_aka(label: str) -> Tuple[str]:
     # If the altLabel is in the location of the entity
     # it is not an altLabel of the entity.
     if alt_label and " at " not in label:
-        return label, alt_label
+        return label, clean_string(alt_label)
     #if label[-1] == ')':
     #    return label.strip(), aka# last is a )
     return label, ""
@@ -231,7 +231,7 @@ def cut_location(label: str,
 def clean_string(text: str) -> str:
     """
     Removes all \n, \t and double spaces from a string.
-    as it was probably a cut string.
+    Remove final '.'
 
     Keyword arguments:
     string -- the string to clean
@@ -249,6 +249,8 @@ def clean_string(text: str) -> str:
     text = re.sub(r"\\n", " ", text)
     text = re.sub(r"\\r", " ", text)
     text = re.sub(r" +", " ", text).strip()
+    if text and text[-1] == '.':
+        text = text[:-1]
     return text.strip()
 
 
@@ -332,7 +334,8 @@ def merge_into(newer_entity_dict: dict,
             if not isinstance(values, set):
                 values = {values}
             if "alt_label" in newer_entity_dict:
-                newer_entity_dict["alt_label"].update(values) # Keep the new label
+                 # Keep the old label as an alternate label of the new entity
+                newer_entity_dict["alt_label"].update(values)
             else:
                 newer_entity_dict["alt_label"] = values
         elif key in newer_entity_dict:
@@ -363,6 +366,9 @@ def merge_into(newer_entity_dict: dict,
             newer_entity_dict[key] = merge_into
         else:
             newer_entity_dict[key] = values
+        if "alt_label" in newer_entity_dict and "label" in newer_entity_dict:
+            # Prevent label to be in alt_label.
+            newer_entity_dict["alt_label"] -= {newer_entity_dict["label"]}
 
 
 # Prevent computing location info multiple times
@@ -681,7 +687,7 @@ def get_location_info(label: Optional[str] = None,
         address_str = raw.get("display_name")
     elif "display_name" in raw:
         address_str = str(raw.get("display_name"))
-    
+
     # Add the address
     if address_str and location_type not in ["continent", "country", "city"]:
         result_dict["address"] = address_str

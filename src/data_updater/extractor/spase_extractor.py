@@ -8,6 +8,7 @@ Author:
 
 from pathlib import Path
 from typing import Set
+from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from utils.utils import clean_string, extract_items, merge_into
@@ -80,7 +81,7 @@ class SpaseExtractor(Extractor):
                               list_name = self.CACHE)
 
         # get files from the git repo that are Observatory .json
-        files = self._list_files(CacheManager.CACHE + self.CACHE + self.GIT_REPO)
+        files = self._list_files(str(CacheManager.CACHE / self.CACHE / self.GIT_REPO))
 
         result = dict()
 
@@ -219,6 +220,10 @@ class SpaseExtractor(Extractor):
         # If a SPASE id is missing, add an artificial entity for this code
         for key, value in spase_missing_ids.items():
             result[value["label"]] = value
+
+        # Get types
+        for data in result.values():
+            self._get_type(data)
         return result
 
 
@@ -269,6 +274,42 @@ class SpaseExtractor(Extractor):
             # return dict()
         return result
 
+    def _get_type(self,
+                  data: dict):
+        """
+        Add the type of the entity to the data dictionary
+        """
+        location_space = [
+            "Earth.Magnetosphere",
+            "Earth.Magnetosphere.Polar",
+            "Earth.NearSurface",
+            "Earth.NearSurface.AuroralRegion",
+            "Earth.NearSurface.EquatorialRegion",
+            "Earth.NearSurface.Ionosphere",
+            "Earth.NearSurface.PolarCap"]
+        location_ground = [
+            "Earth.Surface",
+            "Earth"
+        ]
+        choices = None # None choices will disambiguate for all categories.
+        if "latitude" in data and "longitude" in data:
+            choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
+                       entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
+        elif "location" in data:
+            for l in data["location"]:
+                if l in location_space:
+                    choices = [entity_types.AIRBORNE, entity_types.MISSION,
+                               entity_types.SPACECRAFT]
+                    break
+                if l in location_ground:
+                    choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
+                               entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
+                    break
+        else:
+            print(data)
+            exit()
+        data["type"] = entity_types.classify(entity_types.to_string(data),
+                                             choices = choices)
 
 if __name__ == "__main__":
     pass
