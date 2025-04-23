@@ -6,13 +6,9 @@ import json
 import requests
 
 from utils import config # for ollama
-
-# Ollama Configuration
-OLLAMA_HOST = 'http://localhost:11434'
-# MODEL = 'gemma3:1b'
-# MODEL = 'gemma3:4b'
-MODEL = 'gemma3:12b' # 8.1GB, 12 Billion parameters. Very slow. Only use on powerful servers.
-# MODEL = 'llama3.1'
+MODEL = config.OLLAMA_MODEL
+TEMPERATURE = config.OLLAMA_TEMPERATURE
+OLLAMA_HOST = config.OLLAMA_HOST
 
 # Pretty bad classifier:
 #from transformers import pipeline
@@ -247,7 +243,8 @@ def classify(text: str,
         json={
             'model': MODEL,
             'prompt': prompt,
-            'stream': False
+            'stream': False,
+            'temperature': TEMPERATURE, # low temperature = more determinist. Default = 0.8
         }
     )
     if response.ok:
