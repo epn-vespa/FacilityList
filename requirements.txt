@@ -1,7 +1,6 @@
 astropy==7.0.1
 pyvo==1.6.1
 requests==2.32.3
-bs4==4.13.3
 beautifulsoup4==4.13.3
 fuzzywuzzy==0.18.0
 tqdm==4.66.4
@@ -25,3 +24,6 @@ nltk==3.9.1
 sklearn==1.6.1
 geopy==2.4.1
 pycountry-convert==0.7.2
+seaborn==0.13.2
+matplotlib==3.10.1
+pandas==2.2.3
