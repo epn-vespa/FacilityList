@@ -58,6 +58,11 @@ class PdsExtractor(Extractor):
              "facility": entity_types.OBSERVATION_FACILITY,
              }
 
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = set(TYPES.values())
+
     def __str__(self):
         return self.NAMESPACE
 

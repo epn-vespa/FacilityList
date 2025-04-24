@@ -38,6 +38,11 @@ class NaifExtractor(Extractor):
     TYPES = {"spacecraft": entity_types.SPACECRAFT,
              "ground station": entity_types.GROUND_OBSERVATORY}
 
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
+                      entity_types.SPACECRAFT}
 
     def __init__(self):
         pass

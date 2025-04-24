@@ -35,6 +35,12 @@ class IauMpcExtractor(Extractor):
     # Used to split the label into entity / location
     LOCATION_DELIMITER = ","
 
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
+                      entity_types.SPACECRAFT}
+
     def __init__(self):
         pass
 

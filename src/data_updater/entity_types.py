@@ -1,5 +1,7 @@
 """
-Types (superclasses) names in OBS.
+Types (superclasses) names in the OBS namespace.
+Those types are mostly used for categorisation purposes and to
+manage lists and entities' compatibility during the merging step.
 """
 import atexit
 import json
@@ -21,8 +23,8 @@ OBSERVATION_FACILITY = "observation facility" # network
 GROUND_OBSERVATORY = "ground observatory"
 OBSERVATORY_NETWORK = "observatory network" # ground or space
 SPACECRAFT = "spacecraft" # = space observatory
-AIRBORNE = "airborne" # in the atmosphere
 TELESCOPE = "telescope" # Space or Ground. = observation instruments: inside a telescope.
+AIRBORNE = "airborne" # in the atmosphere
 MISSION = "space mission" # More than one spacecraft in 1 mission: ~= observatory network ?
 # mission contains an instrument host (spacecrafts, ...)
 # Other category: Lander / Rover: on Mars, on a comet, asteroid... (maybe same as spacecraft, everything that is not on ground)
@@ -30,6 +32,15 @@ UFO = "unknown" # Unknown type (unrelated to our observation facilities)
 # MISC = "miscellaneous"
 ERROR = "error" # LLM error in return format
 
+# Types except ERROR
+ALL_TYPES = {OBSERVATION_FACILITY,
+             GROUND_OBSERVATORY,
+             OBSERVATORY_NETWORK,
+             SPACECRAFT,
+             TELESCOPE,
+             AIRBORNE,
+             MISSION,
+             UFO}
 
 # Category labels used to classify entities with the XNLI model
 categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,

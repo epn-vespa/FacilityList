@@ -13,6 +13,7 @@ import ssl
 import sys
 
 from SPARQLWrapper import SPARQLWrapper, JSON
+from data_updater import entity_types
 from data_updater.extractor.cache import VersionManager, CacheManager
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -42,6 +43,11 @@ class WikidataExtractor(Extractor):
 
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = "observation facility"
+
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = entity_types.ALL_TYPES
 
     # Enpoint for requesting wikidata
     _ENDPOINT_URL = "https://query.wikidata.org/sparql"

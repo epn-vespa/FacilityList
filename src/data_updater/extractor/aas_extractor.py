@@ -32,10 +32,16 @@ class AasExtractor(Extractor):
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
 
-    POSSIBLE_CATEGORES = {entity_types.GROUND_OBSERVATORY,
-                          entity_types.MISSION,
-                          entity_types.OBSERVATORY_NETWORK,
-                          entity_types.TELESCOPE}
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
+                      entity_types.MISSION,
+                      entity_types.OBSERVATORY_NETWORK,
+                      entity_types.TELESCOPE,
+                      entity_types.AIRBORNE,
+                      entity_types.SPACECRAFT}
+
     # Mapping to IVOA's messenger
     # https://www.ivoa.net/rdf/messenger/
     # All Waveband categories in AAS:

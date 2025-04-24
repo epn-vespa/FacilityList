@@ -54,6 +54,10 @@ class NssdcExtractor(Extractor):
                       "discipline": "discipline", # Keep disciplines
                       #"nominal power": "nominal_power" # watts (maximum power required by a facility)
                       }
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = {entity_types.SPACECRAFT}
 
     def extract(self) -> dict:
         """

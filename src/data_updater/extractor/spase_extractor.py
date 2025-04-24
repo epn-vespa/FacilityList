@@ -41,7 +41,17 @@ class SpaseExtractor(Extractor):
     NAMESPACE = "spase"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = "observatory"
+    DEFAULT_TYPE = entity_types.GROUND_OBSERVATORY
+
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
+                      entity_types.MISSION,
+                      entity_types.OBSERVATORY_NETWORK,
+                      entity_types.TELESCOPE,
+                      entity_types.AIRBORNE,
+                      entity_types.SPACECRAFT}
 
     # Folders that we want to keep must contain
     KEEP_FOLDER = "Observatory"
@@ -49,7 +59,7 @@ class SpaseExtractor(Extractor):
     # Mapping between PDS xml files and our dictionary format
     FACILITY_ATTRS = {"ResourceID": "code",
                       "ResourceName": "label",
-                      "Description": "definition",
+                      "Description": "description",
                       #"URL": "url",
                       "AlternateName": "alt_label",
                       "ObservatoryRegion": "location",
@@ -282,11 +292,16 @@ class SpaseExtractor(Extractor):
         location_space = [
             "Earth.Magnetosphere",
             "Earth.Magnetosphere.Polar",
+            "Earth.Magnetosphere.Magnetotail"
+            "Earth.Magnetosphere.Main",
+            "Earth.Magnetosheath",
             "Earth.NearSurface",
             "Earth.NearSurface.AuroralRegion",
             "Earth.NearSurface.EquatorialRegion",
             "Earth.NearSurface.Ionosphere",
-            "Earth.NearSurface.PolarCap"]
+            "Earth.NearSurface.PolarCap",
+            "Heliosphere.NearEarth",
+        ]
         location_ground = [
             "Earth.Surface",
             "Earth"
