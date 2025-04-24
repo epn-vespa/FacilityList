@@ -28,7 +28,7 @@ class PdsExtractor(Extractor):
     CACHE = "PDS/"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = "observation facility"
+    DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
 
     # Mapping between PDS xml files and our dictionary format
     FACILITY_ATTRS = {"logical_identifier": "code",
@@ -36,7 +36,7 @@ class PdsExtractor(Extractor):
                       "telescope_latitude": "latitude",
                       "telescope_longitude": "longitude",
                       "telescope_altitude": "altitude",
-                      "description": "definition"}
+                      "description": "description"}
 
     # List context products types to be retreived and the applicable subtypes
     # examples:
@@ -53,11 +53,10 @@ class PdsExtractor(Extractor):
              "spacecraft": entity_types.SPACECRAFT,
              "lander": entity_types.SPACECRAFT,
              "rover": entity_types.SPACECRAFT,
-             "mission": entity_types.MISSION}
-
-    if __name__ == "__main__":
-        pass
-
+             "mission": entity_types.MISSION,
+             "investigation": entity_types.MISSION,
+             "facility": entity_types.OBSERVATION_FACILITY,
+             }
 
     def __str__(self):
         return self.NAMESPACE
@@ -99,9 +98,6 @@ class PdsExtractor(Extractor):
                 elif cat not in PdsExtractor.CONTEXT_TYPES[context_type]:
                     # ignore this subtype
                     continue
-
-                # We already know the type (no need to disambiguate with LLM)
-                data["type"] = PdsExtractor.TYPES[cat]
 
                 # Download XML file for href
                 resource_url = PdsExtractor.URL + context_type + '/' + href
@@ -170,7 +166,13 @@ class PdsExtractor(Extractor):
                     data["code"] = code
                     pds_references_by_id[code] = label
 
+                # We already know the type (no need to disambiguate with LLM)
+                # /!\ do not move this line earlier in the code as
+                # it overwrites the page's type
+                data["type"] = PdsExtractor.TYPES[cat]
+                print(data["type"])
                 result[data["label"]] = data
+                print(data["type"])
 
         # If the PDS identifier does not exists in the
         # extracted data, create a new entity with this
@@ -227,7 +229,7 @@ class PdsExtractor(Extractor):
         cat = cut[-2]
         data = {"label": label,
                 "code": identifier,
-                "type": cat}
+                "type": self.TYPES[cat]}
         return data
 
     def _get_links_pds(self,
