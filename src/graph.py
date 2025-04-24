@@ -44,6 +44,8 @@ class OntologyMapping():
                  "objtype": URIRef},
         "label": {"pred": SKOS.prefLabel,
                   "objtype": XSD.string},
+        "description": {"pred": DCTERMS.description,
+                       "objtype": XSD.string},
         "definition": {"pred": SKOS.definition,
                        "objtype": XSD.string},
         "alt_label": {"pred": SKOS.altLabel,

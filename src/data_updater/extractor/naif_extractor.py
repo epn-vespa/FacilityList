@@ -85,8 +85,8 @@ class NaifExtractor(Extractor):
                 code = rows[0].strip()
                 label = rows[1].strip()
                 result[label] = {"code": code,
-                                "label": label,
-                                "type": NaifExtractor.TYPES[cat]}
+                                 "label": label,
+                                 "type": NaifExtractor.TYPES[cat]}
 
         # Delete duplicate identifiers and add alt labels
         # only when they are the same entity (see naif-sc-codes.ttl)

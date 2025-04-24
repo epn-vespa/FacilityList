@@ -246,8 +246,8 @@ def clean_string(text: str) -> str:
     #    text = text[::-1].replace(')', ' ', 1)[::-1]
     text = text.replace("\r", " ")
     text = re.sub(r"\t", " ", text)
-    text = re.sub(r"\\n", " ", text)
-    text = re.sub(r"\\r", " ", text)
+    text = re.sub(r"\n+", "\n", text)
+    text = re.sub(r"\r", " ", text)
     text = re.sub(r" +", " ", text).strip()
     if text and text[-1] == '.':
         text = text[:-1]

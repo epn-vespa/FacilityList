@@ -53,7 +53,9 @@ class CacheManager():
 
     def get_page(url: str,
                  list_name: str,
-                 from_cache: bool = True) -> str:
+                 from_cache: bool = True,
+                 data: dict = None,
+                 data_str: str = "") -> str:
         """
         Get a page from cache if it is saved in cache, else scrap it online.
 
@@ -61,21 +63,28 @@ class CacheManager():
         url -- the URL of the page.
         list_name -- used to access the right folder of the cache.
         from_cache -- whether to get content from cache if it exists.
+        data -- the data dict in case of a POST query.
+        data_str -- a string to save the response in a specific cache file
+                    as the url of the page may not change.
         """
-        cache_path = CacheManager._get_cache_path(url, list_name)
+        cache_path = CacheManager._get_cache_path(url, list_name, data_str)
         content = ""
         if from_cache and glob.glob(cache_path):
             with open(cache_path, 'r') as file:
                 content = file.read()
         if not content:
-            content = CacheManager.scrap(url)
+            if not data:
+                content = CacheManager.get(url)
+            else:
+                content = CacheManager.post(url, data)
             if content:
                 CacheManager.save_cache(content, cache_path)
         return content
 
 
     def _get_cache_path(url: str,
-                        list_name: str) -> str:
+                        list_name: str,
+                        data_str: str = "") -> str:
         """
         Get the cache's path from the url.
         The cache folder is located at the root of the project: /cache
@@ -83,6 +92,8 @@ class CacheManager():
         Keyword arguments:
         url -- the URL of the page.
         list_name -- used to access the right folder of the cache.
+        data_str -- a string to save the response in a specific cache file
+                    as the url of the page may not change.
         """
         # Create folder CACHE
         (CacheManager.CACHE / list_name).mkdir(parents = True,
@@ -93,7 +104,12 @@ class CacheManager():
         if cache_path[-1] == '_':
             cache_path = cache_path[:-1]
         cache_path = cache_path.lower()
-        cache_path = str(CacheManager.CACHE / list_name / cache_path) + ".html"
+        cache_path = CacheManager.CACHE / list_name / cache_path
+        if data_str:
+            if not os.path.exists(cache_path):
+                os.mkdir(cache_path)
+            cache_path = cache_path / data_str
+        cache_path = str(cache_path) + ".html"
         return cache_path
 
 
@@ -110,7 +126,7 @@ class CacheManager():
             file.write(content)
 
 
-    def scrap(url: str) -> str:
+    def get(url: str) -> str:
         """
         Scrap the web page's content. Encode it using the response's charset.
 
@@ -131,6 +147,21 @@ class CacheManager():
             logging.info(error)
             return ""
 
+    def post(url: str,
+             data: dict) -> str:
+        try:
+            response = requests.post(url,
+                                     data,
+                                     headers = CacheManager.HEADERS)
+        except requests.exceptions.RequestException as e:
+            raise SystemExit(e)
+
+        if response.ok:
+            return response.text
+        else:
+            error = f"Request to {url} failed with status code {response.status_code}"
+            logging.info(error)
+            return ""
 
     def git_pull(url: str,
                  git_repo: str,
