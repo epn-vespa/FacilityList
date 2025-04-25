@@ -31,7 +31,7 @@ from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 from utils.performances import timeit
 
-from config import CONF_DIR
+from config import CONF_DIR # type: ignore
 
 class Merger():
 

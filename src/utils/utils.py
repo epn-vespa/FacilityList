@@ -15,7 +15,7 @@ from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 import atexit
 
-from config import CACHE_DIR
+from config import CACHE_DIR # type: ignore
 from utils.acronymous import proba_acronym_of
 from utils.performances import timeall
 
@@ -372,7 +372,7 @@ def merge_into(newer_entity_dict: dict,
 
 # Prevent computing location info multiple times
 # as it requires to request a server.
-location_infos = {}
+location_infos = None # uninitialized
 
 def _save_location_infos_in_cache():
     global location_infos
@@ -381,13 +381,14 @@ def _save_location_infos_in_cache():
         if not path.exists():
             path.mkdir(parents = True, exist_ok = True)
         path = str(path / "location_infos.json")
-        print(f"dumping {len(location_infos)} elements.")
+        print(f"dumping {len(location_infos)} elements in {path}.")
         with open(path, "w", encoding = "utf-8") as f:
             json.dump(location_infos, f, indent=" ")
 
 def load_location_infos_from_cache():
     atexit.register(_save_location_infos_in_cache)
     global location_infos
+    location_infos = {}
     path = CACHE_DIR / "location_infos.json"
     if not path.exists():
         return
@@ -428,7 +429,7 @@ def get_location_info(label: Optional[str] = None,
     from_cache -- do not request geopy again. Set to False for debug only
     """
     global location_infos
-    if not location_infos:
+    if location_infos is None:
         load_location_infos_from_cache()
     result = None
     saved_in = ""
@@ -448,6 +449,7 @@ def get_location_info(label: Optional[str] = None,
             longitude = longitude[0]
 
     # Remove labels that cannot be used for location
+    """
     if label:
         label, _ = get_size(label) # Remove the size of the facility
         if (re.match(r".*\d.*", label) or
@@ -460,6 +462,7 @@ def get_location_info(label: Optional[str] = None,
             # or "...station".
         ):
             label = None
+    """
 
     # Remove initial "the" from the label as it performs very bad with geopy
     if label and label.lower().startswith("the "):
@@ -467,6 +470,7 @@ def get_location_info(label: Optional[str] = None,
 
     # Return information if already in the cache
     if from_cache:
+
         latlong_empty = False
         address_empty = False
         location_empty = False
@@ -477,6 +481,7 @@ def get_location_info(label: Optional[str] = None,
              (latitude != 0 or longitude != 0)):
             saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
             data = location_infos.get(saved_in, None)
+            data["location_confidence"] = 1
             if data is not None:
                 return data
             elif data == {}:
@@ -488,6 +493,7 @@ def get_location_info(label: Optional[str] = None,
             saved_in = "geocode/" + str(address)
             data = location_infos.get(saved_in, None)
             if data is not None and data:
+                data["location_confidence"] = 0.75
                 return data
             elif data == {}:
                 address_empty = True
@@ -495,6 +501,8 @@ def get_location_info(label: Optional[str] = None,
         else:
             address_empty = True
 
+        # TODO: find part_of in the result dict and call get_location_info again.
+        """
         if part_of:
             only_none = True
             for part in part_of:
@@ -504,12 +512,14 @@ def get_location_info(label: Optional[str] = None,
                 saved_in = "geocode/" + str(part)
                 data = location_infos.get(saved_in, None)
                 if data is not None and data:
+                    data["location_confidence"] = 0.25
                     return data
                 elif data == {}:
                     part_of_empty = True
         else:
             part_of_empty = True
         part_of_empty = part_of_empty or only_none
+        """
 
         if location:
             only_none = True
@@ -520,6 +530,7 @@ def get_location_info(label: Optional[str] = None,
                 saved_in = "geocode/" + str(loc)
                 data = location_infos.get(saved_in, None)
                 if data is not None and data:
+                    data["location_confidence"] = 0.5
                     return data
                 elif data == {}:
                     location_empty = True
@@ -538,42 +549,51 @@ def get_location_info(label: Optional[str] = None,
             saved_in = "geocode/" + str(label)
             data = location_infos.get(saved_in, None)
             if data is not None and data:
+                data["location_confidence"] = 0.25
                 return data
             elif data == {}:
                 label_empty = True
         else:
             label_empty = True
 
-
         # If the cache's data was empty for any of the provided information
         if latlong_empty and part_of_empty and location_empty and address_empty and label_empty:
             return {}
 
     # Get information with geolocator
+    result_dict = {"location": "Earth"}
     try:
         if latitude is not None and longitude is not None:
             if latitude != 0 or longitude != 0:
                 saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
                 result = geolocator.reverse((latitude, longitude),
-                                            exactly_one=True,
-                                            language=language)
+                                             exactly_one=True,
+                                             language=language)
                 if result is None:
                     # No address, in the sea
                     if retries == 0:
-                        location_infos[saved_in] = {"location": "Ocean"}
-                        return {"location": "Ocean"}
+                        data = {"location": "Ocean",
+                                "location_confidence": 0.9}
+                        location_infos[saved_in] = data
+                        return data
                     else:
                         print("Retrying for", saved_in, ".\nretries:", retries)
                         return get_location_info(latitude=latitude,
                                                  longitude=longitude,
                                                  retries = retries - 1)
+                else:
+                    result_dict["location_confidence"] = 1.0
 
-        if address:
+        if result is None and address:
             saved_in = "geocode/" + str(address)
             result = geolocator.geocode(address,
                                         exactly_one=True,
                                         language=language)
+            if result is not None:
+                result_dict["location_confidence"] = 0.75
 
+        # TODO call get_location_info with part_of
+        """
         if result is None and part_of:
             for part in part_of:
                 if part is None:
@@ -584,6 +604,7 @@ def get_location_info(label: Optional[str] = None,
                 result = geolocator.geocode(part,
                                             exactly_one=True,
                                             language=language)
+        """
 
         if result is None and location:
             for loc in location: # Can have more than one location
@@ -598,6 +619,8 @@ def get_location_info(label: Optional[str] = None,
                 if result is None:
                     # This place does not exist
                     location_infos[saved_in] = {}
+                else:
+                    result_dict["location_confidence"] = 0.5
 
 
         if result is None and label:
@@ -605,6 +628,20 @@ def get_location_info(label: Optional[str] = None,
             result = geolocator.geocode(label,
                                         exactly_one=True,
                                         language=language)
+            if result and label not in str(result).split(',')[0] or not result:
+                # the label is not identical to the first part of the address
+                retrieved = False
+                for keyword in ["antenna", "observatory", "telescope"]:
+                    result = geolocator.geocode(label + " " + keyword,
+                                                exactly_one=True,
+                                                language=language)
+                    if result and label.lower() in str(result).lower():
+                        retrieved = True
+                if not retrieved:
+                    location_infos[saved_in] = {}
+                    return {}
+            if result:
+                result_dict["location_confidence"] = 0.25
 
         if not result:
             # Did not find the location for the provided data.
@@ -629,7 +666,6 @@ def get_location_info(label: Optional[str] = None,
                                  retries=retries)
 
     # Transform the result into a compatible data dict
-    result_dict = {"location": "Earth"}
     raw = result.raw
 
     # Add the location type
