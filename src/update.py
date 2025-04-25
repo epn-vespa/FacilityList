@@ -20,6 +20,7 @@ from argparse import ArgumentParser
 
 from tqdm import tqdm
 from graph import Graph
+from data_updater import entity_types
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.aas_extractor import AasExtractor
@@ -70,17 +71,25 @@ class Updater():
         for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
             # Get complete location information and add them to the features
             if extractor: # Only for extracted entities
-                location_info = get_location_info(label = features.get("label", None),
-                                                  latitude = features.get("latitude", None),
-                                                  longitude = features.get("longitude", None),
-                                                  address = features.get("address", None),
-                                                  location = features.get("location", None),
-                                                  part_of = features.get("is_part_of", None))
-                # Retrieved information include country, continent. We also set location to
-                # Earth or Space.
-                for key, value in location_info.items():
-                    if key not in features or features[key] is None:
-                        features[key] = value
+                cat = features.get("type", None)
+                if (cat == entity_types.GROUND_OBSERVATORY or
+                    cat in entity_types.MAY_HAVE_ADDR and (
+                     "latitude" in features and "longitude" in features or
+                     "location" in features or
+                     "is_part_of" in features and cat == entity_types.TELESCOPE and
+                     data[features["is_part_of"]].get("type", None) in entity_types.GROUND_TYPES
+                    )):
+                    location_info = get_location_info(label = features.get("label", None),
+                                                      latitude = features.get("latitude", None),
+                                                      longitude = features.get("longitude", None),
+                                                      address = features.get("address", None),
+                                                      location = features.get("location", None),
+                                                      part_of = features.get("is_part_of", None))
+                    # Retrieved information include country, continent. We also set location to
+                    # Earth or Space.
+                    for key, value in location_info.items():
+                        if key not in features or features[key] is None:
+                            features[key] = value
             # get label
             if "label" in features:
                 label = features["label"]

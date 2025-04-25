@@ -29,14 +29,28 @@ UFO = "unknown" # Unknown type (unrelated to our observation facilities)
 ERROR = "error" # LLM error in return format
 
 # Types except ERROR
-ALL_TYPES = {OBSERVATION_FACILITY,
+ALL_TYPES = {
+             OBSERVATION_FACILITY,
              GROUND_OBSERVATORY,
              OBSERVATORY_NETWORK,
-             SPACECRAFT,
              TELESCOPE,
+             SPACECRAFT,
              AIRBORNE,
              MISSION,
-             UFO}
+             UFO
+            }
+
+GROUND_TYPES = {
+                GROUND_OBSERVATORY,
+               }
+
+# A telescope may have an address if it is located in an observatory.
+# An observatory network may be a telescope array with only one location.
+MAY_HAVE_ADDR = {
+                 OBSERVATION_FACILITY,
+                 OBSERVATORY_NETWORK,
+                 TELESCOPE
+                }
 
 # Labels used to classify entities with the model to project's labels
 categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
