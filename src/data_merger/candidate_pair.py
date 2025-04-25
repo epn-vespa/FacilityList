@@ -25,11 +25,11 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from utils import config
+from config import DATA_DIR
 from utils.performances import deprecated, timeit
 
 
-JSON = config.data_dir / 'checkpoint'# "../../cache/error.log"
+JSON = DATA_DIR / 'checkpoint'# "../../cache/error.log"
 JSON.mkdir(parents = True, exist_ok = True)
 
 

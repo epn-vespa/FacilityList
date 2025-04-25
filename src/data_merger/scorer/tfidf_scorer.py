@@ -71,12 +71,12 @@ class TfIdfScorer(Score):
             # We need both entities to have a description to compute
             # a cosine similarity.
             return 0
-        
+
         definition1 = TfIdfScorer.tokenizer(definition1)
         definition2 = TfIdfScorer.tokenizer(definition2)
         return cosine_similarity(TfIdfScorer.vectorizer.transform(definition1),
                                  TfIdfScorer.vectorizer.transform(definition2))
-    
+
     def preprocess(text: str) -> str:
         """
         Preprocessing operations for the TfidfVectorizer.

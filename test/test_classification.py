@@ -1,3 +1,11 @@
+"""
+Tests for LLM entity classification.
+
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
+"""
+import setup_path
+
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
@@ -21,7 +29,8 @@ if __name__ == "__main__":
               ["La Palma (GOTO-North) and Siding Spring Observatory (GOTO-South)", "", "observatory network"],
               ["The Instituto de Astrofísica de Canarias (IAC) Two-meter Twin Telescope facility. Wavelength: Optical.", "", "telescope"],# or observatory network ?
               ["The Kodaikanal Solar Observatory's Solar tunnel telescope. Location: Asia. Observed object: solar facility. Waveband: Optical. ", "", "telescope"],
-              ["Kyoto University Astronomical Observatory and Department of Astronomy 3.8-meter Seimei Telescope. Location: Asia. Waveband: Optical, Infrared.", "", "telescope"]]
+              ["Kyoto University Astronomical Observatory and Department of Astronomy 3.8-meter Seimei Telescope. Location: Asia. Waveband: Optical, Infrared.", "", "telescope"],
+              ["Asteroid Terrestrial-impact Last Alert System", "Optical (3000 - 10,000 Angstroms or 0.3 - 1 micron):	Optical", "mission"]]
     ok = 0
     all = len(dataset)
     errors = []
@@ -45,7 +54,7 @@ if __name__ == "__main__":
     print(f"---{len(errors)} errors---")
     for error in errors:
         print(error, "\n")
-    print(f"score of the model {MODEL}:", score)
+    print(f"score of the model {OLLAMA_MODEL}:", score)
 
     cm = confusion_matrix(y_true, y_pred, labels=possible_categories)
 
@@ -56,7 +65,7 @@ if __name__ == "__main__":
 
     plt.xlabel("Predicted")
     plt.ylabel("Expected")
-    plt.title(f"Confusion matrix of {MODEL}")
+    plt.title(f"Confusion matrix of {OLLAMA_MODEL}")
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
     plt.tight_layout()

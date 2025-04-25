@@ -68,7 +68,6 @@ class NssdcExtractor(Extractor):
         # 1. Get the entities' URL pages
         entities_url = set()
 
-        # 
         for discipline in self.DISCIPLINES.keys():
             content = CacheManager.get_page(NssdcExtractor.URL,
                                             self.CACHE,
@@ -83,6 +82,7 @@ class NssdcExtractor(Extractor):
             for a_tag in table.find_all('a', href=True):
                 entities_url.add(a_tag['href'])
 
+        # 2. Extract pages data
         for entity_url in entities_url:
             entity_url = "https://nssdc.gsfc.nasa.gov" + entity_url
             content = CacheManager.get_page(entity_url,
@@ -112,7 +112,7 @@ class NssdcExtractor(Extractor):
             # type
             data["type"] = self.DEFAULT_TYPE
 
-            # Check for uncompatible disciplines
+            # Ignore entities that have one or more uncompatible discipline
             """
             ignore = False
             for key, value in data.items():

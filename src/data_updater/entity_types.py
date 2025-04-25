@@ -6,11 +6,7 @@ manage lists and entities' compatibility during the merging step.
 import atexit
 import json
 import requests
-
-from utils import config # for ollama
-MODEL = config.OLLAMA_MODEL
-TEMPERATURE = config.OLLAMA_TEMPERATURE
-OLLAMA_HOST = config.OLLAMA_HOST
+from config import OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_TEMPERATURE, CACHE_DIR
 
 # Pretty bad classifier:
 #from transformers import pipeline
@@ -42,7 +38,7 @@ ALL_TYPES = {OBSERVATION_FACILITY,
              MISSION,
              UFO}
 
-# Category labels used to classify entities with the XNLI model
+# Labels used to classify entities with the model to project's labels
 categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
                               "research institute": GROUND_OBSERVATORY,
                               "university": GROUND_OBSERVATORY,
@@ -101,7 +97,8 @@ def to_string(data: dict,
             value = [value]
         if key == "alt_label":
             key = "Also known as"
-        key = key.replace('_', ' ').capitalize()
+        else:
+            key = key.replace('_', ' ').capitalize()
         res += f"{key}: {', '.join([str(v) for v in value])}. "
     return res
 
@@ -113,7 +110,7 @@ def _classify_xnli(text):
 """
 
 # File to save the LLM's results in
-path = config.cache_dir / "llm_categories.json"
+path = CACHE_DIR / "llm_categories.json"
 llm_categories = dict()
 
 def _save_llm_results_in_cache():
@@ -129,7 +126,7 @@ def _save_llm_results_in_cache():
 def load_llm_results_from_cache():
     atexit.register(_save_llm_results_in_cache)
     global llm_categories
-    path = config.cache_dir / "llm_categories.json"
+    path = CACHE_DIR / "llm_categories.json"
     if not path.exists():
         return
     path = str(path)
@@ -252,10 +249,10 @@ def classify(text: str,
     response = requests.post(
         f'{OLLAMA_HOST}/api/generate',
         json={
-            'model': MODEL,
+            'model': OLLAMA_MODEL,
             'prompt': prompt,
             'stream': False,
-            'temperature': TEMPERATURE, # low temperature = more determinist. Default = 0.8
+            'temperature': OLLAMA_TEMPERATURE, # low temperature = more determinist. Default = 0.8
         }
     )
     if response.ok:

@@ -20,10 +20,10 @@ import subprocess
 import json
 import datetime
 
-from utils import config
+from config import CACHE_DIR, LOGS_DIR, DATA_DIR
 
 # Set up the basic configuration for logging
-LOG = config.logs_dir / 'error.log'# "../../cache/error.log"
+LOG = LOGS_DIR / 'error.log'# "../../cache/error.log"
 if os.path.exists(LOG):
     os.remove(LOG) # Clear log file
 logging.basicConfig(filename=LOG, level=logging.INFO,
@@ -48,8 +48,6 @@ class CacheManager():
     'Connection': 'keep-alive',
     'Referer': 'https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher'}
     """
-
-    CACHE = config.cache_dir
 
     def get_page(url: str,
                  list_name: str,
@@ -96,7 +94,7 @@ class CacheManager():
                     as the url of the page may not change.
         """
         # Create folder CACHE
-        (CacheManager.CACHE / list_name).mkdir(parents = True,
+        (CACHE_DIR / list_name).mkdir(parents = True,
                                                exist_ok = True)
 
         # Create folder list_name
@@ -104,7 +102,7 @@ class CacheManager():
         if cache_path[-1] == '_':
             cache_path = cache_path[:-1]
         cache_path = cache_path.lower()
-        cache_path = CacheManager.CACHE / list_name / cache_path
+        cache_path = CACHE_DIR / list_name / cache_path
         if data_str:
             if not os.path.exists(cache_path):
                 os.mkdir(cache_path)
@@ -186,7 +184,7 @@ class CacheManager():
                 cwd = git_repo_folder
             else:
                 command = ["git", "clone", url]
-                cwd = str(CacheManager.CACHE / list_name)
+                cwd = str(CACHE_DIR / list_name)
             messages = subprocess.Popen(
                 command,
                 cwd = cwd,
@@ -206,8 +204,6 @@ class VersionManager():
     contains utility functions to check for updates.
     """
 
-    DATA = config.data_dir
-
     _TODAY = datetime.datetime.now(tz=datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     def get_newer_keys(last_version_file: str,
@@ -224,7 +220,7 @@ class VersionManager():
         """
         result = set()
 
-        last_version_file = str(VersionManager.DATA / list_name / last_version_file)
+        last_version_file = str(DATA_DIR / list_name / last_version_file)
 
         if not os.path.exists(last_version_file):
             # We create the path to save the versions from the
@@ -296,7 +292,7 @@ class VersionManager():
 
 
     def _get_data_path(file: str,
-                  list_name: str) -> str:
+                       list_name: str) -> str:
         """
         Get the data folder's path from the url.
         The data folder is located at the root of the project: /data
@@ -305,7 +301,7 @@ class VersionManager():
         file -- the name of the file to access.
         list_name -- used to access the right folder of the data folder.
         """
-        return VersionManager.DATA + list_name + file
+        return str(DATA_DIR / list_name / file)
 
 
 if __name__ == "__main__":

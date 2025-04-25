@@ -17,7 +17,7 @@ from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from rdflib import Graph
 
-from utils import config
+from config import DATA_DIR
 
 
 class NaifExtractor(Extractor):
@@ -109,7 +109,7 @@ class NaifExtractor(Extractor):
         result: the result dict with all entities' subdicts.
         """
         g = Graph()
-        naif_file = config.data_dir / self.CACHE / "naif-sc-codes.ttl"
+        naif_file = DATA_DIR / self.CACHE / "naif-sc-codes.ttl"
         g.parse(str(naif_file))
 
         # Query to get entities that share the same identifier

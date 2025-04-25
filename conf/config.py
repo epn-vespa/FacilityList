@@ -1,25 +1,38 @@
 # ***************** SCRIPT CONFIGURATION - change with care! ******************
-
-# filenames
-result_file_name = 'merged_list.json'
-log_file_name = 'name_merge.log'
-fuzzy_hints_file_name = 'fuzzy_merge.log'
-partial_hints_file_name = 'partial_merge.log'
+from pathlib import Path
+import os
 
 # directories
-conf_dir = "conf/"
-logs_dir = "logs/"
-output_dir = "output/"
-data_dir = "data/"
+ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+LOGS_DIR = ROOT / "logs"
+CONF_DIR = ROOT / "conf"
+if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
+    # tycho
+    USERNAME = os.environ.get("USER") or os.environ.get("USERNAME") or os.getlogin()
+    CACHE_DIR = Path("/data") / USERNAME / "cache"
+else:
+    # local
+    CACHE_DIR = ROOT / "cache"
+
+# Ollama Configuration
+if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
+    # tycho
+    try:
+        OLLAMA_HOST = os.environ["OLLAMA_HOST"]
+    except:
+        print("OLLAMA_HOST is not an environment variable.")
+        print("To add OLLAMA_HOST in your environment, add in your ~/.bashrc:")
+        print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
+    OLLAMA_MODEL = 'llama3.3:latest'
+else:
+    # local
+    OLLAMA_HOST = "http://localhost:11434"
+    OLLAMA_MODEL = 'gemma3:4b'
+    # MODEL = 'gemma3:1b'
+    # MODEL = 'gemma3:12b'
+OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
+
 
 # precision of longitude/latitude comparison
-precision = 3
-
-# ***************** input parsers and files - add the name of the respective function (no brakets), the funtion must exist in parsers.py!
-# ***************** In case of json files or URLs to web services returning JSON in the required format just add the name of the json file
-# ***************** or the URL of respective web service.
-# example: 'load_xephem_list', 'load_naif_list', 'matrix_json_export_20170731.json', 'load_ads_list'
-configured_inputs = [
-    'load_aas_list',
-    'load_ads_list'
-]
+precision = 3 # km distance ? digits after comma ?

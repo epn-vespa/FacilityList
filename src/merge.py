@@ -12,6 +12,7 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
+import setup_path
 from argparse import ArgumentParser
 import atexit
 from typing import List
@@ -28,8 +29,9 @@ from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
-from utils import config
 from utils.performances import timeit
+
+from config import CONF_DIR
 
 class Merger():
 
@@ -135,7 +137,7 @@ class Merger():
         candidates.
         TODO FIXME if there are two candidates in a synset, then merge synsets
         """
-        conf_file = config.conf_dir / 'merging_strategy.conf'
+        conf_file = CONF_DIR / 'merging_strategy.conf'
         conf_file = str(conf_file)
         with open(conf_file, 'r') as file:
             for i, line in enumerate(file.readlines()):

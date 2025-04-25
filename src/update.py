@@ -13,6 +13,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+import setup_path
 import atexit
 from typing import List
 from argparse import ArgumentParser

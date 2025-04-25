@@ -15,13 +15,11 @@ from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 import atexit
 
-from utils import config
+from config import CACHE_DIR
 from utils.acronymous import proba_acronym_of
 from utils.performances import timeall
 
-
 geolocator = Nominatim(user_agent="obspm.fr")
-
 
 def standardize_uri(label: str) -> str:
     """
@@ -195,6 +193,7 @@ def cut_part_of(label: str):
 def cut_location(label: str,
                  delimiter: str,
                  second_delimiter: str = ';') -> Tuple[str]:
+    # TODO remove second_delimiter
     """
     Get the location of an entity by splitting it on a
     certain delimiter and add new alternate labels.
@@ -378,7 +377,7 @@ location_infos = {}
 def _save_location_infos_in_cache():
     global location_infos
     if location_infos:
-        path = config.cache_dir
+        path = CACHE_DIR
         if not path.exists():
             path.mkdir(parents = True, exist_ok = True)
         path = str(path / "location_infos.json")
@@ -389,7 +388,7 @@ def _save_location_infos_in_cache():
 def load_location_infos_from_cache():
     atexit.register(_save_location_infos_in_cache)
     global location_infos
-    path = config.cache_dir / "location_infos.json"
+    path = CACHE_DIR / "location_infos.json"
     if not path.exists():
         return
     path = str(path)

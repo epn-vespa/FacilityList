@@ -23,7 +23,7 @@ from datetime import datetime, UTC
 import certifi
 import urllib
 
-from utils import config
+from config import DATA_DIR
 
 
 class WikidataExtractor(Extractor):
@@ -257,7 +257,7 @@ class WikidataExtractor(Extractor):
         Keyword arguments:
         control_data -- the wikidata control dictionary {uri: control_data}
         """
-        exclusion_file = str(config.data_dir / self.CACHE / "wikidata_excluded_entities.json")
+        exclusion_file = str(DATA_DIR / self.CACHE / "wikidata_excluded_entities.json")
         if os.path.exists(exclusion_file):
             with open(exclusion_file, 'r', encoding='utf-8') as file:
                 exclusion_data = json.load(file)
