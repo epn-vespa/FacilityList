@@ -17,7 +17,7 @@ from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from rdflib import Graph
 
-from config import DATA_DIR
+from config import DATA_DIR # type: ignore
 
 
 class NaifExtractor(Extractor):

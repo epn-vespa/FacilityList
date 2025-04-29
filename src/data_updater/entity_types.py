@@ -6,7 +6,7 @@ manage lists and entities' compatibility during the merging step.
 import atexit
 import json
 import requests
-from config import OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_TEMPERATURE, CACHE_DIR
+from config import OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_TEMPERATURE, CACHE_DIR # type: ignore
 
 # Pretty bad classifier:
 #from transformers import pipeline
@@ -58,7 +58,7 @@ categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
                               "university": GROUND_OBSERVATORY,
                               "ground station": GROUND_OBSERVATORY,
                               "observatory network": OBSERVATORY_NETWORK,
-                              "telescopes array": OBSERVATORY_NETWORK,
+                              "telescope array": OBSERVATORY_NETWORK,
                               "spacecraft/space probe": SPACECRAFT,
                               #"space probe": SPACECRAFT,
                               "airborne": AIRBORNE,
@@ -127,6 +127,7 @@ def _classify_xnli(text):
 path = CACHE_DIR / "llm_categories.json"
 llm_categories = dict()
 
+
 def _save_llm_results_in_cache():
     global llm_categories
     if llm_categories:
@@ -136,6 +137,7 @@ def _save_llm_results_in_cache():
         print(f"dumping {len(llm_categories)} LLM results in {path}.")
         with open(path, "w", encoding = "utf-8") as f:
             json.dump(llm_categories, f, indent=" ")
+
 
 def load_llm_results_from_cache():
     atexit.register(_save_llm_results_in_cache)
@@ -192,50 +194,17 @@ def classify(text: str,
             if choice == key:
                 possible_categories.add(value)
                 llm_choices.add(key)
-    """
+
+    # Preambule
     prompt = "Only return the category, do not explain. "
     prompt += "Do not create a category from the text or your prior knowledge. "
-    if GROUND_OBSERVATORY in possible_categories:
-        prompt += f"Universities, bases, laboratories, stations and observatories (or Obs.) are usually {get_reversed(GROUND_OBSERVATORY)}. "
-    if TELESCOPE in possible_categories:
-        prompt += f"Cosmos observation instruments and {get_reversed(TELESCOPE)} can have a wavelength and a size. "
-    if MISSION in possible_categories:
-    #    prompt += "Ground observation facilities, instruments can be part of a space mission. "
 
-        prompt += f"{get_reversed(MISSION)} aim at observing celest objects and might have observation wavelength. "
-    if SPACECRAFT in possible_categories:
-        prompt += f"{get_reversed(SPACECRAFT)} are in orbitation or in the space. "
-    if UFO in possible_categories:
-        prompt += f"Everything that is not for cosmos observation, such as weather or geographic facilities, space debris or other objects are {get_reversed(UFO)}."
-        prompt += f"If you are unsure, always return {UFO}. "
-    prompt += f"Return a label from the list : [{','.join(choices)}].\n\n"
-    prompt += f"Text to classify: {text}"
-
-    # Old prompt V2
-    prompt = "Only return the category, do not explain. "
-    prompt += "Do not create a category."# or your prior knowledge. "
-    # prompt += "To help yourself decide, first identify the described facility's noun using POS. "
-    prompt += "University, base, laboratory, station, observatory (Obs.) are ground observatories. "#observation facilities. "
-    prompt += "Cosmos observation instruments such as telescopes can have a wavelength and a size and may be located somewhere. " # in an observatory
-    # prompt += "Space mission are observation mission that may require the cooperation of observatories, telescopes etc."
-    # prompt += f"Space missions are a collaboration between researchers to achieve the exploration of a cosmos object or event. "
-    prompt += f"Space missions are planned to achieve the exploration of a cosmos object or event. "
-    prompt += "Spacecrafts or space probes are orbiting earth or other cosmos object. "
-    prompt += "Objects that are not cosmos observation facilities, such as weather or geographic facilities, debris etc are unknown. "
-    prompt += "If you are unsure, return unknown. "
-    # prompt += "If you do not have enough information (text too short and no evident keyword), always return unkown. "
-    #prompt += f"Return a label from the list : [{','.join(categories_by_descriptions.keys())}].\n\n"
-    prompt += f"Return a label from the list :\n-{'\n-'.join(set(categories_by_descriptions.keys()))}\n\n"
-    prompt += f"Text to classify: {text}"
-    """
-
-    prompt = "Only return the category, do not explain. "
-    prompt += "Do not create a category from the text or your prior knowledge. "
+    # Explainations
     if GROUND_OBSERVATORY in possible_categories:
         prompt += "University, station and observatory (obs) are ground observation facilities (on earth). "
     if OBSERVATORY_NETWORK in possible_categories:
-        prompt += "A group of more than one observatory is an observatory network. "
-        prompt += "A group of more than one telescope is a telescope array. "
+        prompt += "More than one observatory is an observatory network. "
+        prompt += "More than one telescope is a telescope array. "
     if TELESCOPE in possible_categories:
         prompt += "Cosmos observation instruments and telescopes can have a wavelength, a size, a host observatory etc. "
         # prompt += "Cosmos observation instruments and telescopes are used to observe cosmos bodies, radiations and particles."
@@ -253,9 +222,10 @@ def classify(text: str,
     # prompt += f"Return a label from the list : [{','.join(categories_by_descriptions.keys())}].\n\n"
     # prompt += f"Return a category from the list : \n-{'\n-'.join(llm_choices)}\n\n"
 
+    # Categories
     prompt += f"Categories : \n-{'\n-'.join(llm_choices)}\n\n"
 
-
+    # Entity representation
     prompt += f"Text to classify: {text}"
     print(prompt)
 
@@ -271,6 +241,7 @@ def classify(text: str,
     )
     if response.ok:
         cat = response.json()['response'].strip().lower()
+        cat = cat.lstrip('-').lstrip()
         print("cat=", cat)# categories_by_descriptions[cat])
         if cat not in categories_by_descriptions:
             print(f"Error: the Ollama model did not return an category from :\n" +

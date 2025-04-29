@@ -320,9 +320,7 @@ class SpaseExtractor(Extractor):
                     choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
                                entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
                     break
-        else:
-            print(data)
-            exit()
+
         data["type"] = entity_types.classify(entity_types.to_string(data),
                                              choices = choices)
 

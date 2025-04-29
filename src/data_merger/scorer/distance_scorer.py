@@ -28,7 +28,8 @@ class DistanceScorer(Score):
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Return the distance between the two entities using their coordinates.
-        If they do not have coordinates, test their compatibility:
+
+        If one of them does not have coordinates, test their compatibility:
         - continent is the same;
         - country is the same;
         - city is the same.
@@ -51,7 +52,6 @@ class DistanceScorer(Score):
 
         continent1 = entity1.get_values_for("continent", unique=True)
         continent2 = entity2.get_values_for("continent", unique=True)
-        print("c1=", continent1, "c2=", continent2)
 
         if (continent1 != continent2 and
             continent1 is not None and continent2 is not None):
@@ -66,8 +66,8 @@ class DistanceScorer(Score):
 
         city1 = entity1.get_values_for("city", unique=True)
         city2 = entity2.get_values_for("city", unique=True)
-        if (country1 != country2 and
-            country1 is not None and country2 is not None):
+        if (city1 != city2 and
+            city1 is not None and city2 is not None):
             return -2
 
         return -1 # No incompatibility found.

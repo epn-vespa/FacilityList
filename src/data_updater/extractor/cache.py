@@ -56,12 +56,13 @@ class CacheManager():
                  data_str: str = "") -> str:
         """
         Get a page from cache if it is saved in cache, else scrap it online.
+        If data & data_str are set, send a POST request instead of GET.
 
         Keyword arguments:
         url -- the URL of the page.
         list_name -- used to access the right folder of the cache.
         from_cache -- whether to get content from cache if it exists.
-        data -- the data dict in case of a POST query.
+        data -- the data dict in case of a POST request.
         data_str -- a string to save the response in a specific cache file
                     as the url of the page may not change.
         """
