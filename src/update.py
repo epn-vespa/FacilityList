@@ -67,29 +67,44 @@ class Updater():
         source -- the class of the extractor of the source (ex: AasExtractor)
         not already in the dictionary's features.
         """
-
         for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
             # Get complete location information and add them to the features
             if extractor: # Only for extracted entities
+                location_info = dict()
                 cat = features.get("type", None)
+
+                part_of = None
+                if "is_part_of" in features:
+                    if type(features["is_part_of"]) == list:
+                        part_of_uri = None
+                        for p in features["is_part_of"]:
+                            if p:
+                                part_of_uri = p
+                                break # Keep the first non-none part-of only
+                        if data[part_of_uri].get("type", None) in entity_types.GROUND_TYPES:
+                            part_of = data[part_of_uri]
+                    elif type(features["is_part_of"]) == str:
+                        part_of_uri = features["is_part_of"]
                 if (cat == entity_types.GROUND_OBSERVATORY or
                     cat in entity_types.MAY_HAVE_ADDR and (
                      "latitude" in features and "longitude" in features or
                      "location" in features or
-                     "is_part_of" in features and cat == entity_types.TELESCOPE and
-                     data[features["is_part_of"]].get("type", None) in entity_types.GROUND_TYPES
+                     part_of is not None
                     )):
+
                     location_info = get_location_info(label = features.get("label", None),
                                                       latitude = features.get("latitude", None),
                                                       longitude = features.get("longitude", None),
                                                       address = features.get("address", None),
                                                       location = features.get("location", None),
-                                                      part_of = features.get("is_part_of", None))
-                    # Retrieved information include country, continent. We also set location to
-                    # Earth or Space.
-                    for key, value in location_info.items():
-                        if key not in features or features[key] is None:
-                            features[key] = value
+                                                      part_of = part_of)
+                                                      # features.get("is_part_of", None))
+                # Retrieved information include country, continent. We also set location to
+                # Earth or Space.
+                for key, value in location_info.items():
+                    if key not in features or features[key] is None:
+                        features[key] = value
+
             # get label
             if "label" in features:
                 label = features["label"]

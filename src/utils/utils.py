@@ -213,15 +213,6 @@ def cut_location(label: str,
     label_without_location = label
     if label.count(delimiter) == 1:
         label_without_location, location = [a.strip() for a in label.split(delimiter, maxsplit = 1)]
-        """
-        label_without_acronyms, label_acronym = cut_acronyms(label)
-        alt_labels.add(label)
-        alt_labels.add(label_without_acronyms)
-        alt_labels.add(label_acronym)
-        if "" in alt_labels:
-            alt_labels.remove("")
-        """
-
     # More than one location (example AAS: 'Yunnan Astronomical Observatory (YAO); Lijiang Observatory')
     # locations = [l.strip() for l in location.split(second_delimiter)]
     return label_without_location, location
@@ -235,7 +226,6 @@ def clean_string(text: str) -> str:
     Keyword arguments:
     string -- the string to clean
     """
-    # text = text.replace("\n", " ")
     # add a closing parentheses if never closed
     #if (text[::-1].find('(') < text[::-1].find(')') or
     #    '(' in text and ')' not in text):
@@ -283,7 +273,7 @@ def cut_language_from_string(text: str) -> Tuple[str, str]:
     The language tag should be at the end of the string.
 
     Keyword arguments:
-    text -- will be split into a text and its language.
+    text -- will be split on '@' into a text and its language.
     """
     lang = re.findall(r"@[a-zA-Z]{2,3}$", text)
     if lang:
@@ -299,7 +289,7 @@ def get_datetime_from_iso(datetime_str: str):
     Fix datetime string :
         month 00 day 00 -> 1st of January
         & remove '+' sign
-    Also complete the incomplete iso dates.
+    Also complete the incomplete ISO dates (only year, year-month).
 
     Keyword arguments:
     datetime_str -- the ISO datetime string
@@ -402,7 +392,7 @@ def get_location_info(label: Optional[str] = None,
                       address: Optional[str] = None,
                       latitude: Optional[float]  = None,
                       longitude: Optional[float]  = None,
-                      part_of: Optional[str] = None,
+                      part_of: Optional[dict] = None,
                       language: str = "en",
                       retries: int = 4,
                       from_cache = True) -> dict:
@@ -423,7 +413,7 @@ def get_location_info(label: Optional[str] = None,
     address -- the address as in the source
     latitude -- a float of the latitude of the entity if on earth
     longitude -- a float of the longitude of the entity if on earth
-    part_of -- entity name for which this entity is a subpart
+    part_of -- data dictionary of the entity which the entity is a part of
     language -- language in which to retrieve addresses
     retries -- how many retries left if the first geopy request failed
     from_cache -- do not request geopy again. Set to False for debug only
@@ -470,95 +460,14 @@ def get_location_info(label: Optional[str] = None,
 
     # Return information if already in the cache
     if from_cache:
-
-        latlong_empty = False
-        address_empty = False
-        location_empty = False
-        part_of_empty = False
-        label_empty = False
-
-        if (latitude is not None and longitude is not None and
-             (latitude != 0 or longitude != 0)):
-            saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
-            data = location_infos.get(saved_in, None)
-            data["location_confidence"] = 1
-            if data is not None:
-                return data
-            elif data == {}:
-                latlong_empty = True
-        else:
-            latlong_empty = True
-
-        if address:
-            saved_in = "geocode/" + str(address)
-            data = location_infos.get(saved_in, None)
-            if data is not None and data:
-                data["location_confidence"] = 0.75
-                return data
-            elif data == {}:
-                address_empty = True
-            # else: not in cache yet.
-        else:
-            address_empty = True
-
-        # TODO: find part_of in the result dict and call get_location_info again.
-        """
-        if part_of:
-            only_none = True
-            for part in part_of:
-                if part is None:
-                    continue
-                only_none = False
-                saved_in = "geocode/" + str(part)
-                data = location_infos.get(saved_in, None)
-                if data is not None and data:
-                    data["location_confidence"] = 0.25
-                    return data
-                elif data == {}:
-                    part_of_empty = True
-        else:
-            part_of_empty = True
-        part_of_empty = part_of_empty or only_none
-        """
-
-        if location:
-            only_none = True
-            for loc in location: # Can have more than one location
-                if loc is None:
-                    continue
-                only_none = False
-                saved_in = "geocode/" + str(loc)
-                data = location_infos.get(saved_in, None)
-                if data is not None and data:
-                    data["location_confidence"] = 0.5
-                    return data
-                elif data == {}:
-                    location_empty = True
-                    continue
-                if ("earth." in loc.lower()):
-                    location_infos[saved_in] = {}
-                    return {}
-                elif "space" == loc.lower():
-                    location_infos[saved_in] = {}
-                    return {}
-        else:
-            location_empty = True
-        location_empty = location_empty or only_none
-
-        if label:
-            saved_in = "geocode/" + str(label)
-            data = location_infos.get(saved_in, None)
-            if data is not None and data:
-                data["location_confidence"] = 0.25
-                return data
-            elif data == {}:
-                label_empty = True
-        else:
-            label_empty = True
-
-        # If the cache's data was empty for any of the provided information
-        if latlong_empty and part_of_empty and location_empty and address_empty and label_empty:
-            return {}
+        result = _get_location_from_cache(label = label,
+                                          location = location,
+                                          address = address,
+                                          latitude = latitude,
+                                          longitude = longitude,
+                                          part_of = part_of)
+        if result:
+            return result
 
     # Get information with geolocator
     result_dict = {"location": "Earth"}
@@ -593,8 +502,27 @@ def get_location_info(label: Optional[str] = None,
                 result_dict["location_confidence"] = 0.75
 
         # TODO call get_location_info with part_of
-        """
         if result is None and part_of:
+            for part in part_of:
+                if part is None:
+                    continue
+                result = get_location_info(label = part.get("label", None),
+                                           location = part.get("location", None),
+                                           latitude = part.get("latitude", None),
+                                           longitude = part.get("longitude", None),
+                                           address = part.get("address", None))
+                if result:
+                    return result
+                else:
+                    result = None
+            """
+                #saved_in = "geocode/" + str(part)
+                #data = location_infos.get(saved_in, None)
+                #if data is not None and data:
+                #    data["location_confidence"] = 0.25
+                #    return data
+                #elif data == {}:
+                #    part_of_empty = True
             for part in part_of:
                 if part is None:
                     continue
@@ -604,7 +532,7 @@ def get_location_info(label: Optional[str] = None,
                 result = geolocator.geocode(part,
                                             exactly_one=True,
                                             language=language)
-        """
+            """
 
         if result is None and location:
             for loc in location: # Can have more than one location
@@ -812,6 +740,112 @@ def distance(latlong1: Tuple[float],
     """
     return geodesic(latlong1, latlong2)
 
+
+def _get_location_from_cache(label: Optional[str] = None,
+                             location: Optional[list[str]] = None,
+                             address: Optional[str] = None,
+                             latitude: Optional[float]  = None,
+                             longitude: Optional[float]  = None,
+                             part_of: Optional[dict] = None):
+    """
+    If any information exists in the cache for any of the non-empty
+    parameter, returns the location information dict.
+
+    Keyword arguments:
+    label -- the label of the entity
+    location -- the location string as in the source
+    address -- the address as in the source
+    latitude -- a float of the latitude of the entity if on earth
+    longitude -- a float of the longitude of the entity if on earth
+    part_of -- data dictionary of the entity which the entity is a part of
+    """
+    latlong_empty = False
+    address_empty = False
+    location_empty = False
+    part_of_empty = False
+    label_empty = False
+
+    if (latitude is not None and longitude is not None and
+            (latitude != 0 or longitude != 0)):
+        saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
+        data = location_infos.get(saved_in, None)
+        if data is not None:
+            data["location_confidence"] = 1
+            return data
+        elif data == {}:
+            latlong_empty = True
+    else:
+        latlong_empty = True
+
+    if address:
+        saved_in = "geocode/" + str(address)
+        data = location_infos.get(saved_in, None)
+        if data is not None and data:
+            data["location_confidence"] = 0.75
+            return data
+        elif data == {}:
+            address_empty = True
+        # else: not in cache yet.
+    else:
+        address_empty = True
+
+    only_none = True
+    if part_of:
+        for part in part_of:
+            if part is None:
+                continue
+            only_none = False
+            data = _get_location_from_cache(label = part.get("label", None),
+                                            location = part.get("location", None),
+                                            address = part.get("address", None),
+                                            latitude = part.get("latitude", None),
+                                            longitude = part.get("longitude", None)
+                                            )
+            if data:
+                return data
+    else:
+        part_of_empty = True
+    part_of_empty = part_of_empty or only_none
+
+    only_none = True
+    if location:
+        for loc in location: # Can have more than one location
+            if loc is None:
+                continue
+            only_none = False
+            saved_in = "geocode/" + str(loc)
+            data = location_infos.get(saved_in, None)
+            if data is not None and data:
+                data["location_confidence"] = 0.5
+                return data
+            elif data == {}:
+                location_empty = True
+                continue
+            if ("earth." in loc.lower()):
+                location_infos[saved_in] = {}
+                return {}
+            elif "space" == loc.lower():
+                location_infos[saved_in] = {}
+                return {}
+    else:
+        location_empty = True
+    location_empty = location_empty or only_none
+
+    if label:
+        saved_in = "geocode/" + str(label)
+        data = location_infos.get(saved_in, None)
+        if data is not None and data:
+            data["location_confidence"] = 0.25
+            return data
+        elif data == {}:
+            label_empty = True
+    else:
+        label_empty = True
+
+    # If the cache's data was empty for any of the provided information
+    if latlong_empty and part_of_empty and location_empty and address_empty and label_empty:
+        return {}
+    return data
 
 if __name__ == "__main__":
     pass
