@@ -13,7 +13,7 @@ Author:
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 from data_updater import entity_types
-from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, proba_acronym_of, merge_into, cut_aka
+from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, merge_into, cut_aka
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 
@@ -102,18 +102,31 @@ class AasExtractor(Extractor):
 
         # To merge duplicate entities
         duplicate_codes = dict() # code1, duplicate of, code2 (code1, code2)
+        # Used to find duplicates by labels instead of codes after processing
+        # all the entities
+        labels_by_code = dict()
 
         for row in rows:
+            data = dict() # Dictionary to save the row's data
+
             cols = row.find_all('td')
             cols = [col.text.strip() for col in cols]
             row_data = dict(zip(headers, cols)) # {"h1": "col1", "h2": "col2"}
 
-            data = dict() # Dictionary to save the row's data
+            # Get facility name
+            facility_name = row_data["full facility name"].strip()
+            if facility_name.startswith("Deprecated"):
+                continue
 
             # Add location to data dict
             location = row_data["location"]
             if location:
-                data["location"] = [location]
+                if ' & ' in location:
+                    data["location"] = [l.strip() for l in location.split(' & ')]
+                elif ' and 'in location:
+                    data["location"] = [l.strip() for l in location.split(' and ')]
+                else:
+                    data["location"] = [location]
                 # TODO get latitude & longitude from location
             else:
                 continue # TGCC is a computer and has no location.
@@ -131,21 +144,24 @@ class AasExtractor(Extractor):
             # Extract data from the full facility name
             # The full facility name contains a location (Observatory etc)
             # We can use a part-of between the facility and location
-            facility_name = row_data["full facility name"].strip()
 
             # Akas
             facility_name, aka = cut_aka(facility_name)
             if aka:
                 alt_labels.add(aka)
 
+
             # Duplicate identifiers
             duplicate_idx = facility_name.find("[Duplicate of ")
             duplicate_of = ""
             if duplicate_idx >= 0:
                 facility_name, duplicate_of = facility_name.split("[Duplicate of ")
-                duplicate_of = duplicate_of.strip()[:-1]
+                duplicate_of = duplicate_of.strip()[:-1] # remove ']'
+
+            # Add label to row dict
             facility_name = clean_string(facility_name)
-            alt_labels.add(facility_name)
+            data["label"] = facility_name
+
 
             # Origin observatory
             label_without_location, location = cut_location(facility_name,
@@ -157,12 +173,10 @@ class AasExtractor(Extractor):
             # If the entity is a part of some other entity
             label_without_part_of, part_of_label = cut_part_of(label_without_location)
 
-            # Add label to row dict
-            facility_name = label_without_part_of
-            data["label"] = facility_name
-
             if part_of_label:
+                alt_labels.add(label_without_part_of)
                 data["is_part_of"] = [part_of_label]
+                # The host observatory might already exist in the result dict
                 if part_of_label in result:
                     if "has_part" in result[part_of_label]:
                         result[part_of_label]["has_part"].append(facility_name)
@@ -182,12 +196,13 @@ class AasExtractor(Extractor):
             # Get the acronym
             label_without_acronyms, label_acronym = cut_acronyms(label_without_size)
             if label_acronym:
+                # get other labels without any acronyms too
                 label_without_acronyms, _ = cut_acronyms(facility_name)
                 alt_labels.add(label_without_acronyms)
                 label_without_acronyms, _ = cut_acronyms(label_without_location)
                 alt_labels.add(label_without_acronyms)
                 if label_acronym in keyword:
-                    alt_labels.add(keyword)
+                    alt_labels.add(keyword) # keyword often is acronym:size
 
             if location:
                 alt_labels_location = set()
@@ -199,8 +214,7 @@ class AasExtractor(Extractor):
 
                 location_without_acronym, location_acronym = cut_acronyms(location_without_part_of)
 
-                if location_acronym and proba_acronym_of(location_without_acronym,
-                                                         location_acronym) == 1:
+                if location_acronym:
                     alt_labels_location.update((location_acronym, location))
 
                 if location_without_acronym in result:
@@ -235,7 +249,6 @@ class AasExtractor(Extractor):
                     data["is_part_of"].append(location_without_acronym)
                 else:
                     data["is_part_of"] = [location_without_acronym]
-
             # Alt labels
             alt_labels = alt_labels - {facility_name}
 
@@ -268,14 +281,13 @@ class AasExtractor(Extractor):
 
             # alt labels
             alt_labels = alt_labels - set(facility_name)
-            if "The Instituto de Astrofísica" in facility_name:
-                print("Alt labels:::", alt_labels)
-                print(facility_name)
             if alt_labels:
                 data["alt_label"] = alt_labels
 
             # Save the row's dict into the result dict
-            result[keyword] = data
+            result[facility_name] = data
+            labels_by_code[keyword] = facility_name
+
 
             # Add duplicate entities code pairs
             if duplicate_of:
@@ -283,9 +295,11 @@ class AasExtractor(Extractor):
 
         # Merge the duplicate entities
         for code1, code2 in duplicate_codes.items():
-            if code1 in result and code2 in result:
-                merge_into(result[code1], result[code2])
-                del(result[code2])
+            label1 = labels_by_code[code1]
+            label2 = labels_by_code[code2]
+            if label1 in result and label2 in result:
+                merge_into(result[label1], result[label2])
+                del(result[label2])
 
         # Add a type to the entities
         for code, data in tqdm(result.items(), desc = f"Classify {self.NAMESPACE}"):
@@ -296,8 +310,12 @@ class AasExtractor(Extractor):
             if label.lower().endswith("telescopes"):
                 data["type"] = entity_types.OBSERVATORY_NETWORK
                 continue
+            elif " array" in label.lower() or "telescope network" in label.lower():
+                data["type"] = entity_types.OBSERVATORY_NETWORK
+                continue
             elif label.lower().endswith("telescope"):
                 data["type"] = entity_types.TELESCOPE
+                continue
 
             if "location" in data:
                 for l in data["location"]:
@@ -312,6 +330,7 @@ class AasExtractor(Extractor):
                         data["type"] = entity_types.OBSERVATORY_NETWORK
                         break
             if "type" in data:
+                # No need to disambiguate type with LLM
                 continue
 
             description = entity_types.to_string(data, exclude = ("has_part", "is_part_of", "alt_label", "code"))
@@ -327,14 +346,13 @@ class AasExtractor(Extractor):
             elif "observed_object" in data:
                 choices = [entity_types.MISSION,
                            entity_types.GROUND_OBSERVATORY,
-                           entity_types.TELESCOPE,
-                           entity_types.OBSERVATORY_NETWORK]
-            choices += entity_types.UFO # La Villa
+                           entity_types.OBSERVATORY_NETWORK,
+                           entity_types.TELESCOPE]
+            choices.append(entity_types.UFO) # La Villa, Madrid...
             category = entity_types.classify(description,
                                              choices = choices,
-                                             from_cache = False)
+                                             from_cache = True)
             data["type"] = category
-
         return result
 
 
