@@ -6,7 +6,7 @@ Author:
 """
 import os
 
-from typing import Iterator, List, Tuple
+from typing import Iterator, List, Tuple, Union
 from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from data_updater.extractor.extractor import Extractor
@@ -81,7 +81,9 @@ class OntologyMapping():
         "stop_date": {"pred": DCAT.endDate,
                       "objtype": XSD.dateTime},
         "launch_date": {"pred": _OBS.launch_date,
-                        "objtype": XSD.dateTime} # Wikidata
+                        "objtype": XSD.dateTime}, # Wikidata
+        "location_confidence": {"pred": _OBS.location_confidence,
+                                "objtype": XSD.float}
     }
 
     # Objects after a REFERENCE predicate will be an URI and not a Literal.
@@ -107,7 +109,6 @@ class OntologyMapping():
     @property
     def graph(self):
         raise ValueError()
-        return self._graph
 
 
     @property
@@ -192,7 +193,7 @@ class Graph(G):
     _initialized = False
 
     def __new__(cls,
-                filename: str = ""):
+                filename: Union[str,list[str]] = ""):
         """
         Instanciate the graph singleton.
         """
@@ -202,11 +203,12 @@ class Graph(G):
 
 
     def __init__(self,
-                 filename: str = ""):
+                 filename: Union[str, list[str]] = ""):
         """
         Instanciate the graph singleton.
 
         Keyword arguments:
+        filename -- the input ontology's filename or filenames for a merge.
         """
         if Graph._initialized:
             return
@@ -227,19 +229,25 @@ class Graph(G):
 
 
     def parse(self,
-              filename: str):
+              filename: Union[str, list[str]]):
         """
         Overrides rdflib.Graph's parse to extract the namespaces and
         save them in this object.
+        Can parse one or more files.
         """
-        input_ontology_namespaces = []
-        if os.path.exists(filename):
-            self.graph.parse(filename)
-            for prefix, namespace in self.graph.namespaces():
-                if prefix in Extractor.AVAILABLE_NAMESPACES:
-                    input_ontology_namespaces.append(prefix)
+        if isinstance(filename, str):
+            filenames = [filename]
         else:
-            raise FileNotFoundError(f"File {filename} does not exist.")
+            filenames = filename
+        input_ontology_namespaces = []
+        for filename in filenames:
+            if os.path.exists(filename):
+                self.graph.parse(filename)
+                for prefix, namespace in self.graph.namespaces():
+                    if prefix in Extractor.AVAILABLE_NAMESPACES:
+                        input_ontology_namespaces.append(prefix)
+            else:
+                raise FileNotFoundError(f"File {filename} does not exist.")
 
         self._available_namespaces = input_ontology_namespaces
 

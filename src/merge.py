@@ -12,6 +12,7 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
+import os
 import setup_path
 from argparse import ArgumentParser
 import atexit
@@ -37,16 +38,16 @@ class Merger():
 
 
     def __init__(self,
-                 input_ontology: str = "",
-                 output_ontology: str = "",
-                 scores: List[Score] = ScorerLists.ALL_SCORES):
+                 input_ontologies: list[str],
+                 output_ontology: str = ""):
         # Instanciate the Synonym Set Manager
         SynonymSetManager()
         # Instanciate the Graph's singleton
-        self._graph = Graph(input_ontology)
-        if input_ontology:
+
+        # merge ontologies' triples into one ontology
+        self._graph = Graph(input_ontologies)
+        if input_ontologies:
             self.init_graph() # Create basic classes
-        self._scores = scores
         self._output_ontology = output_ontology
         self._execution_id = str(uuid.uuid4())
 
@@ -54,11 +55,6 @@ class Merger():
     @property
     def graph(self):
         return self._graph
-
-
-    @property
-    def scores(self):
-        return self._scores
 
 
     @property
@@ -79,24 +75,33 @@ class Merger():
 
 
     def merge_identifiers(self):
+        im = IdentifierMerger(self.graph)
 
-        if not (self._graph.is_available("wikidata")
-            and self._graph.is_available("naif")):
-            return
-        im = IdentifierMerger(self._graph)
-        CPM_wiki_naif = CandidatePairsManager(WikidataExtractor.NAMESPACE,
-                                              NaifExtractor.NAMESPACE)
+        if (self.graph.is_available("naif") and
+            self.graph.is_available("wikidata")):
+            CPM_wiki_naif = CandidatePairsManager(WikidataExtractor.NAMESPACE,
+                                                  NaifExtractor.NAMESPACE)
 
-        # merge wiki naif if the namespaces are available.
-        if im.merge_wikidata_naif(CPM_wiki_naif):
-            # Disambiguate cases with two candidates
-            # (necessary because NAIF has duplicate identifiers
-            # for different entities)
-            CPM_wiki_naif.disambiguate_candidates(scores = [FuzzyScorer])
-            # Save the remaining candidate pairs.
-            CPM_wiki_naif.save_json(execution_id = self.execution_id)
+            # merge wiki naif if the namespaces are available.
+            if im.merge_wikidata_naif(CPM_wiki_naif):
+                # Disambiguate cases with two candidates
+                # (necessary because NAIF has duplicate identifiers
+                # for different entities)
+                CPM_wiki_naif.disambiguate_candidates(scores = [FuzzyScorer])
+                # Save the remaining candidate pairs.
+                CPM_wiki_naif.save_json(execution_id = self.execution_id)
 
-        del(CPM_wiki_naif)
+            del(CPM_wiki_naif)
+
+        if (self.graph.is_available("iaumpc") and
+            self.graph.is_available("wikidata")):
+            print("TODO: merge IAUMPC ID with Wikidata")
+            # P717. Doublon: P5736 # TODO check for this
+        if (self.graph.is_available("nssdc") and
+            self.graph.is_available("wikidata")):
+            # P247 (COSPAR ID) Doublon: P8913 (NSSDCA) # TODO check for this
+            print("TODO: merge NSSDC ID with Wikidata")
+
         del(im)
 
         #TODO Merge identifiers between wikidata & IAUMPC
@@ -108,6 +113,11 @@ class Merger():
                                    scores: List[Score]):
         """
         Computes a mapping between two lists and disambiguate.
+
+        Keyword arguments:
+        list1 -- the first list's Extractor
+        list2 -- the second list's Extractor
+        scores -- scores to compute for those lists
         """
         try:
             CPM = CandidatePairsMapping(list1,
@@ -115,7 +125,6 @@ class Merger():
             CPM.generate_mapping(self.graph)
             CPM.disambiguate(scores = scores)
             # CPM.save_to_graph()
-            print("saving json!!!", list1, list2)
             CPM.save_json(self.execution_id)
         except InterruptedError:
             CPM.save_json(self.execution_id)
@@ -124,7 +133,8 @@ class Merger():
         del(CPM)
 
 
-    def merge_mapping(self):
+    def merge_mapping(self,
+                      conf_file: str = ""):
         """
         Define the merging strategy (merging order).
 
@@ -137,8 +147,7 @@ class Merger():
         candidates.
         TODO FIXME if there are two candidates in a synset, then merge synsets
         """
-        conf_file = CONF_DIR / 'merging_strategy.conf'
-        conf_file = str(conf_file)
+
         with open(conf_file, 'r') as file:
             for i, line in enumerate(file.readlines()):
                 line = line.split('#')[0].strip()
@@ -147,19 +156,24 @@ class Merger():
                 if line.count(':') != 1:
                     raise ValueError(f"Error line {i}: There must be exactly one ':' per line.")
                 extractors, scores = line.split(':')
+                if not scores.strip():
+                    raise ValueError(f"Error on line {i} of {conf_file}: " +
+                                     f"No score set.")
                 extractors = extractors.split(',')
                 extractors = [e.strip() for e in extractors if e.strip()]
                 if len(extractors) != 2:
-                    raise ValueError(f"Error on line {i} of {file}: " +
-                                     f"There must be two list names and at least one score name.")
+                    raise ValueError(f"Error on line {i} of {conf_file}: " +
+                                     f"There must be two list names per line.")
                 extractor1_str = extractors[0]
                 extractor2_str = extractors[1]
                 if extractor1_str not in ExtractorLists.EXTRACTORS_BY_NAMES.keys():
-                    raise ValueError(f"Error at line {line} in {file}: {extractor1_str} is not a valid list name.\n" +
+                    raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                     f"{extractor1_str} is not a valid list name.\n" +
                                      f"Available list names: {' '.join(ExtractorLists.EXTRACTORS_BY_NAMES.keys())}")
                 extractor1 = ExtractorLists.EXTRACTORS_BY_NAMES[extractor1_str]
                 if extractor2_str not in ExtractorLists.EXTRACTORS_BY_NAMES.keys():
-                    raise ValueError(f"Error at line {line} in {file}: {extractor2_str} is not a valid list name.\n" +
+                    raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                     f"{extractor2_str} is not a valid list name.\n" +
                                      f"Available list names: {' '.join(ExtractorLists.EXTRACTORS_BY_NAMES.keys())}")
                 extractor2 = ExtractorLists.EXTRACTORS_BY_NAMES[extractor2_str]
 
@@ -172,20 +186,31 @@ class Merger():
                         # Do not compute those scores
                         score = score[1:].strip()
                         if score not in ScorerLists.SCORES_BY_NAMES.keys():
-                            raise ValueError(f"Error at line {line} in {file}: {score} is not a valid score name.\n" +
+                            raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                             f"{score} is not a valid score name.\n" +
                                              f"Available score names: {' '.join(ScorerLists.SCORES_BY_NAMES.keys())}")
                         else:
                             except_scores.add(ScorerLists.SCORES_BY_NAMES[score])
                     elif score == 'all':
                         scores_to_compute.update(ScorerLists.ALL_SCORES)
                     elif score not in ScorerLists.SCORES_BY_NAMES.keys():
-                        raise ValueError(f"Error at line {line} in {file}: {score} is not a valid score name.\n" +
+                        raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                         f"{score} is not a valid score name.\n" +
                                          f"Available score names: {' '.join(ScorerLists.SCORES_BY_NAMES.keys())}")
                     else:
                         scores_to_compute.add(ScorerLists.SCORES_BY_NAMES[score])
                 if (self.graph.is_available(extractor1_str) and
                     self.graph.is_available(extractor2_str)):
-                    self.make_mapping_between_lists(extractor1(), extractor2(), scores_to_compute - except_scores)
+
+                    scores = scores_to_compute - except_scores
+                    if scores:
+                        self.make_mapping_between_lists(extractor1(), extractor2(), scores)
+                    else:
+                        print(f"Warning at line {i} in {conf_file}: " +
+                              f"no scores to compute for {extractor1_str} and {extractor2_str}. Ignoring.")
+                else:
+                    print(f"Warning at line {i} in {conf_file}: " +
+                          f"{extractor1_str} and/or {extractor2_str} are not available in the provided ontologies. Ignoring.")
         """
         self.make_mapping_between_lists(AasExtractor(),
                                         WikidataExtractor())
@@ -215,18 +240,17 @@ class Merger():
 
 
 @timeit
-def main(input_ontology: str = "",
+def main(input_ontologies: list[str] = [],
          output_ontology: str = "",
-         scores: List[Score] = None):
+         merging_strategy_file: str = ""):
 
-    merger = Merger(input_ontology,
-                    output_ontology,
-                    scores = scores)
+    merger = Merger(input_ontologies,
+                    output_ontology)
     atexit.register(merger.print_execution_id)
     # atexit.register(merger.write)
 
     merger.merge_identifiers()
-    merger.merge_mapping()
+    merger.merge_mapping(conf_file = merging_strategy_file)
     merger.write()
 
 
@@ -238,41 +262,35 @@ if __name__ == "__main__":
             "and create CandidatePair with similarity scores between entities.")
 
     parser.add_argument("-i",
-                    "--input-ontology",
-                    dest = "input_ontology",
-                    default = "",
-                    type = str,
-                    required = True,
-                    help = "Input ontology on which we will perform " +
-                    "entity mapping between different sources.")
+                        "--input-ontologies",
+                        dest = "input_ontologies",
+                        nargs = "+",
+                        default = "",
+                        type = str,
+                        required = True,
+                        help = "Input ontology or ontologies on which we will perform " +
+                        "entity mapping between different sources.")
 
     parser.add_argument("-o",
-                    "--output-ontology",
-                    dest = "output_ontology",
-                    default = "output_merged.ttl",
-                    type = str,
-                    required = False,
-                    help = "Output ontology file to save the merged data.")
-
-    """
-    parser.add_argument("-s",
-                        "--scores",
-                        default = ["all"],
+                        "--output-ontology",
+                        dest = "output_ontology",
+                        default = "output_merged.ttl",
                         type = str,
-                        nargs = "+",
                         required = False,
-                        choices = ["all"] + list(ScorerLists.SCORES_BY_NAMES.keys()),
-                        help = "Scores to compute")
-    """
-    args = parser.parse_args()
-    """
-    if args.scores != ["all"]:
-        scores = []
-        for score in args.scores:
-            scores.append(ScorerLists.SCORES_BY_NAMES[score])
-    else:
-        scores = ScorerLists.ALL_SCORES
-    """
+                        help = "Output ontology file to save the merged data.")
 
-    main(args.input_ontology,
-         args.output_ontology)
+    parser.add_argument("-m",
+                        "--merging-strategy",
+                        dest = "merging_strategy_file",
+                        default = CONF_DIR / "merging_strategy.conf",
+                        type = str,
+                        required = False,
+                        help = "Merging strategy file name."
+)
+
+    args = parser.parse_args()
+
+
+    main(args.input_ontologies,
+         args.output_ontology,
+         args.merging_strategy_file)
