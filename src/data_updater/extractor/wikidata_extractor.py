@@ -19,11 +19,13 @@ from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from datetime import datetime, UTC
+from bs4 import BeautifulSoup
+
 
 import certifi
 import urllib
 
-from config import DATA_DIR
+from config import DATA_DIR # type: ignore
 
 
 class WikidataExtractor(Extractor):
@@ -86,15 +88,19 @@ class WikidataExtractor(Extractor):
 
     # Filter on classes:
     {?itemURI wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
-    UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight
+    UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight (mission)
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q62832 .} # observatory
+
+    # NAIF Spacecraft ids
+    # UNION {?q wdt:P2956 ?x .
+    #       FILTER ( ?x <= "-750" )
+    #       FILTER ( ?x >= "-1" )}
 
     # Filter out unwanted classes:
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
     MINUS { ?itemURI wdt:P31 wd:Q209363. }  # weather satellite
     MINUS { ?itemURI wdt:P31 wd:Q149918. }  # communications satellite
     MINUS { ?itemURI wdt:P31 wd:Q113255208. }  # spacecraft series
-    MINUS { ?itemURI wdt:P31 wd:Q209363. }  # weather satellite
     MINUS { ?itemURI wdt:P31 wd:Q466421. }  # reconnaissance satellite
     MINUS { ?itemURI wdt:P31 wd:Q2741214. }  # KH-7 Gambit
     MINUS { ?itemURI wdt:P31 wd:Q973887. }  # military satellite
@@ -153,6 +159,8 @@ class WikidataExtractor(Extractor):
     MINUS { ?itemURI wdt:P31 wd:Q211727. }  # Orion rentry capsule
     MINUS { ?itemURI wdt:P361 wd:Q1109103. }  # RADARSAT constellation
     MINUS { ?itemURI wdt:P361 wd:Q589786. }  # Yaogan satellites
+    MINUS { ?itemURI wdt:P31 wd:Q73610. } # Strela
+    MINUS { ?itemURI wdt:P31 wd:Q573942. } # Parus
     MINUS { ?itemURI schema:description ?desc. ?itemURI wdt:P4839 ?wolfstr. FILTER CONTAINS (?wolfstr, ?desc) }  # remove bare records from Geek surine
     }
     """
@@ -160,6 +168,14 @@ class WikidataExtractor(Extractor):
     # Query to get control pages
     _QUERY_CONTROL = _QUERY_PREFIX + _SELECT_MAIN_SIMPLE + _WHERE_SIMPLE
 
+
+    # Conversion from Wikidata superclass to entity types (including UFO)
+    TYPES_CONVERSION = {"astronomical observatory": entity_types.GROUND_OBSERVATORY,
+                        "space mission": entity_types.MISSION,
+                        "space probe": entity_types.SPACECRAFT}
+
+    # Strings to eliminate from types
+    UFO_KEYWORDS = ["meteo", "data relay"]
 
     def __init__(self):
         pass
@@ -208,11 +224,15 @@ class WikidataExtractor(Extractor):
         older = controls["results"].keys() - latest
         print("No need to update", len(older), "entities.")
 
+        # DEBUG (no multithread)
         """
         for wikidata_uri in tqdm(older):
-            data = self._extract_entity(wikidata_uri)
-            results[data["label"]] = data
-        return results
+            data = self._extract_entity(wikidata_uri,
+                                        result,
+                                        True)
+            self._get_type(data)
+            result[data["label"]] = data
+        return result
         """
         # Paralellize entity extraction if the cache already has .json files
         # for most wikidata_uri.
@@ -228,7 +248,12 @@ class WikidataExtractor(Extractor):
             for future in tqdm(as_completed(futures), total = len(futures)):
                 data = future.result()
                 result[data["label"]] = data
+
+        # Get wikidata types as in entity_types
+        for data in result.values():
+            self._get_type(data)
         return result
+
 
     def _get_results(self,
                      query: str) -> dict:
@@ -525,6 +550,71 @@ class WikidataExtractor(Extractor):
         # Select the wikidata properties to keep and organize
         # them in the data dict.
         return self._properties_to_dict(content, result)
+
+    def _get_type(self,
+                  data: dict):
+        """
+        Use a type from entity_types and remove the type list of the entity.
+
+        Keyword arguments:
+        data -- the data dict of one entity
+        """
+        if "type" in data:
+            for t in data["type"]:
+                t = t.lower()
+                entity_type = self.TYPES_CONVERSION.get(t, None)
+                if entity_type:
+                    data["type"] = entity_type
+                    return
+                else:
+                    if any(k in t for k in self.UFO_KEYWORDS):
+                        data["type"] = entity_type.UFO
+            print(data) # Data to add type in types_conversion
+            print(data["type"])
+            choices = entity_types.ALL_TYPES
+            repr = entity_types.to_string(data,
+                                          exclude = ["code",
+                                                     "url",
+                                                     "ext_ref",
+                                                     "COSPAR_ID",
+                                                     "alt_label"])
+            # Get a description from Wikidata as well
+            if "ext_ref" in data:
+                repr += " " + self._get_wikidata_page(data["ext_ref"])
+            cat = entity_types.classify(repr,
+                                        choices,
+                                        from_cache = False)
+            print(cat)
+            data[type] = cat
+            if "ext_ref" in data:
+                exit()
+
+    def _get_wikidata_page(self,
+                           url: str) -> str:
+        """
+        Get the Wikidata's first paragraph that describes an entity.
+
+        Keyword arguments:
+        url -- the Wikidata page full url.
+        """
+        content = CacheManager.get_page(url,
+                                        self.CACHE)
+        if not content:
+            return ""
+        soup = BeautifulSoup(content,
+                             "html.parser")
+        ps = soup.find_all('p')
+        for i, p in enumerate(ps):
+            if i > 4:
+                # Prevent returning a footer
+                return ""
+            p = p.get_text().strip()
+            if not p:
+                continue
+            # Return the first non-empty paragraph
+            print("non empty p:", p)
+            return p
+        return ""
 
 
     def __init__(self):
