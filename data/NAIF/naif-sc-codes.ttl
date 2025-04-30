@@ -242,6 +242,7 @@ foaf:name rdf:type owl:AnnotationProperty .
 ###  http://voparis-ns.obspm.fr/obs-facility/naif-codes#-148
 <http://voparis-ns.obspm.fr/obs-facility/naif-codes#-148> rdf:type owl:Class ;
                                                           rdfs:label "DRAGONFLY"@en ;
+                                                          skos:altLabel "DFLY"@en ;
                                                           skos:exactMatch "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=DRAGONFLY"@en .
 
 
