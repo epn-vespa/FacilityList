@@ -351,7 +351,8 @@ class AasExtractor(Extractor):
             choices.append(entity_types.UFO) # La Villa, Madrid...
             category = entity_types.classify(description,
                                              choices = choices,
-                                             from_cache = True)
+                                             from_cache = True,
+                                             cache_key = self.NAMESPACE + '#' + data["label"])
             data["type"] = category
         return result
 

@@ -64,9 +64,9 @@ categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
                               "airborne": AIRBORNE,
                               "cosmos observation instrument": TELESCOPE,
                               "telescope": TELESCOPE,
+                              "space telescope": TELESCOPE,
                               "space mission": MISSION,
                               "space investigation": MISSION,
-                              "earth observation probe": UFO,
                               "unknown": UFO,
                               "miscellaneous": UFO,
                                # "military facility": UFO
@@ -95,14 +95,18 @@ def to_string(data: dict,
               exclude: list[str] = ["code",
                                     "url",]) -> str:
     """
-    Convert an entity's data into a dictionary.
+    Convert an entity's data into its string representation.
+    Keys are sorted so that the generated string is always the same.
+
+    Exclude entries from the data to ignore values that will not help LLM,
+    such as any URL/URI, codes, etc.
 
     Keyword arguments:
     data -- the entity data dict
-    exclude -- columns to exclude
+    exclude -- dict entries to exclude
     """
     res = data["label"] + '. '
-    for key, value in data.items():
+    for key, value in sorted(data.items()):
         if key in exclude:
             continue
         if key == "label":
@@ -139,7 +143,7 @@ def _save_llm_results_in_cache():
             json.dump(llm_categories, f, indent=" ")
 
 
-def load_llm_results_from_cache():
+def _load_llm_results_from_cache():
     atexit.register(_save_llm_results_in_cache)
     global llm_categories
     path = CACHE_DIR / "llm_categories.json"
@@ -152,7 +156,8 @@ def load_llm_results_from_cache():
 
 def classify(text: str,
              choices: list[str] = None,
-             from_cache: bool = True):
+             from_cache: bool = True,
+             cache_key: str = None):
     """
     Use a LLM to classify a text to one of the categories.
     Return the category's string that can be used as a superclass of the
@@ -174,24 +179,28 @@ def classify(text: str,
     choices -- the list of categories to classify from.
                Set carefully accordingly to the data in a list.
     from_cache -- whether to retrieve the category from a previous LLM run.
+    cache_key -- key of the entity in the cache dict. List name + uri.
     """
     global llm_categories
+    if from_cache and not cache_key:
+        raise ValueError("Provided from_cache but not cache_key.")
     if from_cache and not llm_categories:
-        load_llm_results_from_cache()
+        _load_llm_results_from_cache()
 
-    if from_cache and llm_categories and text in llm_categories:
-        category = llm_categories[text]
+    if (from_cache and llm_categories and
+        cache_key and cache_key in llm_categories):
+        category = llm_categories[cache_key]
         if category != ERROR:
-            return llm_categories[text]
+            return category # if error, re-compute.
 
     if not choices:
-        choices = categories_by_descriptions.keys()
+        choices = categories_by_descriptions.values()
 
     possible_categories = set()
     llm_choices = set()
     for key, value in categories_by_descriptions.items():
         for choice in choices:
-            if choice == key:
+            if choice == value:
                 possible_categories.add(value)
                 llm_choices.add(key)
 
@@ -215,8 +224,10 @@ def classify(text: str,
         prompt += f"Space missions are the observation of a cosmos body or event. "
     if AIRBORNE in possible_categories:
         prompt += "Airbornes are planes sent into the atmosphere to make cosmos observations. "
+    if SPACECRAFT in possible_categories:
+        prompt += "A spacecraft or space probe can also be a satellite that observe cosmos events. "
     if UFO in possible_categories:
-        prompt += "Everything that is not space observation, such as weather or geographic facilities, space debris or other objects are miscellaneous. "
+        prompt += "Everything that is not space observation, such as weather or geographic probes (or satellites), space debris, telecommunication satellites, military facilities or other objects are miscellaneous. "
         prompt += "If you are unsure, always return unknown. "
         prompt += "If you lack information in the text to classify, always return unknown. "
     # prompt += f"Return a label from the list : [{','.join(categories_by_descriptions.keys())}].\n\n"
@@ -243,17 +254,18 @@ def classify(text: str,
         cat = response.json()['response'].strip().lower()
         cat = cat.lstrip('-').lstrip()
         print("cat=", cat)# categories_by_descriptions[cat])
-        if cat not in categories_by_descriptions:
+        if cat in categories_by_descriptions:
+            cat = categories_by_descriptions[cat]
+        else:
             print(f"Error: the Ollama model did not return an category from :\n" +
                   f"{','.join(categories_by_descriptions.keys())}.\n" +
                   f"It returned {cat} instead.\n " +
                   f"Return {UFO} for prompt \"{prompt}\"")
+            llm_categories[cache_key] = ERROR
             return UFO
-        if cat in categories_by_descriptions:
-            cat = categories_by_descriptions[cat]
-        llm_categories[text] = cat
+        llm_categories[cache_key] = cat
         return cat
     else:
-        llm_categories[text] = ERROR
+        llm_categories[cache_key] = ERROR
         print(f"Ollama error: {response.text}.\nReturn {UFO} for prompt \"{prompt}\"")
         return None

@@ -244,11 +244,12 @@ class VersionManager():
                 new_version: dict,
                 list_name: str):
         """
-        Replace URIs that are in newer_version dict into last_version_file.
+        Replace URIs that are in new_version dict into last_version_file.
 
         Keyword arguments:
         last_version_file -- the json file containing last versions for each uri
         new_version -- a dict of {uri: {last-modified, name}}
+        list_name -- the cache folder of the list to save data in
         """
         # Open last_version_file with read+write access
         save_last_version = False

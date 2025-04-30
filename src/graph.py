@@ -418,7 +418,7 @@ class Graph(G):
         #                                       self.OM.convert_attr("definition"),
         #                                       None)):
         for _, _, desc in self.triples((None,
-                                        self.OM.definition,# self.OBS["description"], 
+                                        self.OM.definition,# self.OBS["description"],
                                         None)):
             descriptions.append(str(desc))
         return descriptions

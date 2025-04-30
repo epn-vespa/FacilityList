@@ -26,6 +26,7 @@ import certifi
 import urllib
 
 from config import DATA_DIR # type: ignore
+from data_updater.extractor.naif_extractor import NaifExtractor # type: ignore
 
 
 class WikidataExtractor(Extractor):
@@ -100,12 +101,14 @@ class WikidataExtractor(Extractor):
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
     MINUS { ?itemURI wdt:P31 wd:Q209363. }  # weather satellite
     MINUS { ?itemURI wdt:P31 wd:Q149918. }  # communications satellite
+    MINUS { ?itemURI wdt:P279 wd:Q149918. }  # communications satellite
     MINUS { ?itemURI wdt:P31 wd:Q113255208. }  # spacecraft series
     MINUS { ?itemURI wdt:P31 wd:Q466421. }  # reconnaissance satellite
     MINUS { ?itemURI wdt:P31 wd:Q2741214. }  # KH-7 Gambit
     MINUS { ?itemURI wdt:P31 wd:Q973887. }  # military satellite
     MINUS { ?itemURI wdt:P31 wd:Q512399. }  # unmanned spaceflight
     MINUS { ?itemURI wdt:P31 wd:Q61937849. }  # geophysical observatory
+    MINUS { ?itemURI wdt:P31 wd:Q71135998. } # underwater observatory
     MINUS { ?itemURI wdt:P31 wd:Q1365207. }  # bird observatory
     MINUS { ?itemURI wdt:P31 wd:Q95945728. }  # technology demonstration spacecraft
     MINUS { ?itemURI wdt:P31 wd:Q2566071. }  # manned weather station
@@ -172,10 +175,18 @@ class WikidataExtractor(Extractor):
     # Conversion from Wikidata superclass to entity types (including UFO)
     TYPES_CONVERSION = {"astronomical observatory": entity_types.GROUND_OBSERVATORY,
                         "space mission": entity_types.MISSION,
-                        "space probe": entity_types.SPACECRAFT}
+                        "space probe": entity_types.SPACECRAFT,
+                        "university observatory": entity_types.GROUND_OBSERVATORY,
+                        "q124652943": entity_types.UFO, # weather station
+                        "seismological station": entity_types.UFO,
+                        "lander": entity_types.SPACECRAFT,
+                        "rover": entity_types.SPACECRAFT,
+                        "space telescope": entity_types.TELESCOPE,
+                        "sar satellite": entity_types.UFO,
+                       }
 
-    # Strings to eliminate from types
-    UFO_KEYWORDS = ["meteo", "data relay"]
+    # Strings that mean an entity is an UFO in the type
+    UFO_KEYWORDS = ["meteo", "data relay", "gps", "navigation"]
 
     def __init__(self):
         pass
@@ -250,6 +261,7 @@ class WikidataExtractor(Extractor):
                 result[data["label"]] = data
 
         # Get wikidata types as in entity_types
+        # Cannot use multithreading as it calls LLMs
         for data in result.values():
             self._get_type(data)
         return result
@@ -355,13 +367,14 @@ class WikidataExtractor(Extractor):
             # Other properties
             property_items = value["claims"]
             property_ids = {
-                "P31": "type", # "instance_of"
-                "P247": "COSPAR_ID",
-                "P8913": "NSSDCA_ID",
+                "P31": "wikidata_type", # "instance_of"
+                "P247": "COSPAR_ID", # similar to NSSDCA_ID
+                "P8913": "NSSDCA_ID", # similar to COSPAR_ID
                 "P2956": "NAIF_ID",
-                "P717": "MPC_Obs_ID",
+                "P717": "MPC_ID", #P5736: for astronomical body
                 "P527": "has_part",
                 "P361": "is_part_of",
+                "P137": "funding_agency", #operator (also in NSSDC extractor)
                 #"P17": "country", # can be found using coordinate_location
                 #"P276": "location", # same
                 "P625": "coordinate_location",
@@ -371,7 +384,6 @@ class WikidataExtractor(Extractor):
                 "P619": "launch_date", # UTC date of spacecraft launch
                 "P1427": "launch_place", # start point
                 "P856": "url", # official website
-                #"P137": "operator", # operator
                 #"P397": "orbites", # parent astronomical body
                 #"P1096": "orbital_eccentricity", # orbital eccentricity
                 #"P2045": "orbital_inclination", # orbital inclination
@@ -400,6 +412,7 @@ class WikidataExtractor(Extractor):
                             elif datatype == "external-id":
                                 property_value = prop["mainsnak"]["datavalue"]["value"]
                             elif datatype == "wikibase-item":
+                                # get label of the class of the item
                                 property_value = self._get_label(prop["mainsnak"]["datavalue"]["value"]["id"], result)
                             elif datatype == "quantity":
                                 property = prop["mainsnak"]["datavalue"]["value"]
@@ -476,7 +489,7 @@ class WikidataExtractor(Extractor):
         # the same item
         self.LABEL_BY_WIKIDATA_ITEM[wikidata_item] = label
 
-        # Add the entity into result dict if set
+        # Add the entity into result dict (used for classes)
         if result is not None:
             result[label] = {"label": label,
                              "code": wikidata_item,
@@ -536,6 +549,7 @@ class WikidataExtractor(Extractor):
         Keyword arguments:
         wikidata_uri -- Wikidata URI (Qxxxxxxx) to retrieve
         result -- the result dictionary
+        from_cache -- whether to retrieve entities from cache
         """
         wikidata_item = wikidata_uri.split('/')[-1]
         wikidata_url_json = f"https://www.wikidata.org/wiki/Special:EntityData/{wikidata_item}.json"
@@ -551,6 +565,7 @@ class WikidataExtractor(Extractor):
         # them in the data dict.
         return self._properties_to_dict(content, result)
 
+
     def _get_type(self,
                   data: dict):
         """
@@ -559,38 +574,58 @@ class WikidataExtractor(Extractor):
         Keyword arguments:
         data -- the data dict of one entity
         """
-        if "type" in data:
-            for t in data["type"]:
+        choices = entity_types.ALL_TYPES
+        if "wikidata_type" not in data:
+            # Do not get a type for classes and part_of.
+            return
+        if "COSPAR_ID" in data or "NSSDCA_ID" in data:
+            # NSSDC only has spacecrafts
+            data["type"] = entity_types.SPACECRAFT
+            return
+        if "NAIF_ID" in data:
+            choices = NaifExtractor.POSSIBLE_TYPES
+        if "wikidata_type" in data:
+            for t in data["wikidata_type"]:
                 t = t.lower()
                 entity_type = self.TYPES_CONVERSION.get(t, None)
                 if entity_type:
                     data["type"] = entity_type
-                    return
+                    if entity_type == entity_types.UFO:
+                        return
                 else:
+                    # if there is any UFO type, use UFO, do not add another type.
                     if any(k in t for k in self.UFO_KEYWORDS):
-                        data["type"] = entity_type.UFO
-            print(data) # Data to add type in types_conversion
-            print(data["type"])
-            choices = entity_types.ALL_TYPES
-            repr = entity_types.to_string(data,
-                                          exclude = ["code",
-                                                     "url",
-                                                     "ext_ref",
-                                                     "COSPAR_ID",
-                                                     "alt_label"])
-            # Get a description from Wikidata as well
-            if "ext_ref" in data:
-                repr += " " + self._get_wikidata_page(data["ext_ref"])
-            cat = entity_types.classify(repr,
-                                        choices,
-                                        from_cache = False)
-            print(cat)
-            data[type] = cat
-            if "ext_ref" in data:
-                exit()
+                        data["type"] = entity_types.UFO
+                        return
+            if "type" in data:
+                return
 
-    def _get_wikidata_page(self,
-                           url: str) -> str:
+        repr = entity_types.to_string(data,
+                                      exclude = ["code",
+                                                 "uri",
+                                                 "url",
+                                                 "ext_ref",
+                                                 "alt_label",
+                                                 "launch_date",
+                                                 "start_date",
+                                                 #"launch_place",
+                                                 "COSPAR_ID",
+                                                 "NSSDCA_ID",
+                                                 "NAIF_ID",
+                                                 "MPC_ID"])
+        # Get a description from Wikidata as well
+        if "ext_ref" in data:
+            repr += " " + self._get_wikipedia_intro(data["ext_ref"])
+
+        cat = entity_types.classify(repr,
+                                    choices,
+                                    from_cache = True,
+                                    cache_key = self.NAMESPACE + '#' + data["label"])
+        data["type"] = cat
+
+
+    def _get_wikipedia_intro(self,
+                             url: str) -> str:
         """
         Get the Wikidata's first paragraph that describes an entity.
 
@@ -612,7 +647,6 @@ class WikidataExtractor(Extractor):
             if not p:
                 continue
             # Return the first non-empty paragraph
-            print("non empty p:", p)
             return p
         return ""
 

@@ -322,7 +322,9 @@ class SpaseExtractor(Extractor):
                     break
 
         data["type"] = entity_types.classify(entity_types.to_string(data),
-                                             choices = choices)
+                                             choices = choices,
+                                             from_cache = True,
+                                             cache_key = self.NAMESPACE + '#' + data["label"])
 
 if __name__ == "__main__":
     pass

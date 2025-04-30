@@ -64,7 +64,7 @@ class IauMpcExtractor(Extractor):
 
         result = dict()
         lines = text.split('\n')
-        for line in lines[2:]:  # Ignorer les deux premières lignes (noms de colonnes et ligne vide)
+        for line in lines[2:]:  # Ignore two first lines (col names & empty line)
             #C15 132.1656 0.72418 +0.68737 ISON-Ussuriysk Observatory
             data = dict()
 
