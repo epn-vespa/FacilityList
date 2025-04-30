@@ -12,8 +12,9 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+import setup_path # Import first
 
-import setup_path
+from data_updater.extractor.nssdc_extractor import NssdcExtractor
 import atexit
 from typing import List
 from argparse import ArgumentParser
@@ -162,7 +163,10 @@ class Updater():
                                  "community": [H, P],
                                  "is_autoritative_for": [H]},
             WikidataExtractor.URI: {"url": WikidataExtractor.URL,
-                                    "community": [A, H, G, P, O]}} # Not authoritative
+                                    "community": [A, H, G, P, O]},
+            NssdcExtractor.URI: {"url": NssdcExtractor.URL,
+                                 "community": [A, H, P, O],
+                                 "is_authoritative_for": [A, H, P, O]}} # Not authoritative
 
         # TODO add other sources (can have more than one community)
         # every time we create an extraction script for the source.

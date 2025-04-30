@@ -87,11 +87,11 @@ class Entity():
             res = self._data[property]
         else:
             # No value for this property
-            res = []
+            res = set()
         if unique:
             if hasattr(res, "len") and not isinstance(res, str):
                 if len(res):
-                    return res[0]
+                    return list(res)[0]
                 else:
                     return None
             else:

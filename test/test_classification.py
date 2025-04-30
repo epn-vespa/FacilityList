@@ -30,7 +30,10 @@ if __name__ == "__main__":
               ["The Instituto de Astrofísica de Canarias (IAC) Two-meter Twin Telescope facility. Wavelength: Optical.", "", "telescope"],# or observatory network ?
               ["The Kodaikanal Solar Observatory's Solar tunnel telescope. Location: Asia. Observed object: solar facility. Waveband: Optical. ", "", "telescope"],
               ["Kyoto University Astronomical Observatory and Department of Astronomy 3.8-meter Seimei Telescope. Location: Asia. Waveband: Optical, Infrared.", "", "telescope"],
-              ["Asteroid Terrestrial-impact Last Alert System", "Optical (3000 - 10,000 Angstroms or 0.3 - 1 micron):	Optical", "mission"]]
+              ["Asteroid Terrestrial-impact Last Alert System", "Optical (3000 - 10,000 Angstroms or 0.3 - 1 micron):	Optical", "mission"],
+              ["ITOS-J. Description: TOS-J was the 4th in a series of third-generation spacecraft in the National Operational Meteorlogical Satellite System (NOMSS).. Type: Improved TIROS Operational System. ", "", "unknown"],
+              ["CSO-3. Description: French Earth observation satellite. Type: Earth observation satellite. Is part of: Composante Spatiale Optique.", "", ""]
+    ]
     ok = 0
     all = len(dataset)
     errors = []
@@ -46,7 +49,7 @@ if __name__ == "__main__":
         if predicted == expected:
             ok += 1
         else:
-            errors.append((label, predicted, expected))  
+            errors.append((label, predicted, expected))
         y_true.append(expected)
         y_pred.append(predicted)
     score = ok / all

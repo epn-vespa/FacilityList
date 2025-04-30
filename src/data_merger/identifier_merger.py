@@ -60,7 +60,7 @@ class IdentifierMerger():
                 naif_ids = []
                 for naif_id, _, _ in graph.triples((None,
                                                     SKOS.notation,
-                                                    Literal(naif_code, datatype = XSD.string))):
+                                                    Literal(naif_code))):#, datatype = XSD.string))):
                     naif_ids.append(naif_id)
                 if len(naif_ids) == 1:
                     # There is only one NAIF entity with this ID.

@@ -47,10 +47,10 @@ class SynonymSet():
         Object factory for SynonymSet.
 
         Keyword arguments:
-        uri -- the uri of the list if the synonym set was loaded from
-               an existing ontology
         synonyms -- the list of members of this synonym set if it is
                a newly created synonym set.
+        uri -- the uri of the list if the synonym set was loaded from
+               an existing ontology
         """
         if uri:
             if uri in cls.synonym_sets:
@@ -71,22 +71,27 @@ class SynonymSet():
 
 
     def __init__(self,
-                 uri: str = "",
-                 synonyms: Set[URIRef] = set()):
+                 synonyms: Set[URIRef] = set(),
+                 uri: str = "",):
         """
         Keyword arguments:
+        synonyms -- the set of synonyms' URIs of this synonym set.
         uri -- the URI of the list if the synonym set was loaded from
                an existing ontology
-        synonyms -- the list of synonyms' URIs of this synonym set.
         """
+
         if not uri:
             uri = str(uuid.uuid4())
         self._uri = uri
+
+        self._synonyms = set()
+        self._data = defaultdict(set)
 
         if synonyms:
             self.add_synonyms(synonyms)
         else:
             self.update_synonyms()
+
         self.init_data()
 
 
@@ -113,12 +118,17 @@ class SynonymSet():
         return self._synonyms
 
 
+    @property
+    def data(self):
+        return self._data
+
+
     def init_data(self):
         """
         Add data from the graph's SynonymSet entity to this object's data.
+        Use to load from the graph.
         """
-        self._data = defaultdict(set)
-        graph = Graph()
+        graph = Graph() # get singleton
         for entity, property, value in graph.triples((self.uri, None, None)):
             if entity in (graph.OBS["hasMember"],
                           RDF.type):
@@ -131,11 +141,12 @@ class SynonymSet():
         Update the synonym set by using its URI and members in the graph.
         """
         synonyms = set()
-        for _, _, synonym in Graph().triples((self.uri,
-                                              Graph().OBS["hasMember"],
-                                              None)):
+        graph = Graph()
+        for _, _, synonym in graph.triples((self.uri,
+                                            graph.OBS["hasMember"],
+                                            None)):
             synonyms.add(synonym)
-        # We reload the data
+        # reload the data
         self._data = defaultdict(set)
         self._synonyms = set()
         self.add_synonyms(synonyms)
@@ -151,11 +162,15 @@ class SynonymSet():
         Keyword arguments:
         synonyms -- the new synonyms to add
         """
-        if not isinstance(synonyms, set):
-            synonyms = [synonyms]
+        if not isinstance(synonyms, set) and not isinstance(synonyms, list):
+            assert(isinstance(synonyms, Entity))
+            synonyms = set(synonyms)
+        else:
+            assert(all([isinstance(s, Entity) for s in synonyms]))
+
 
         for synonym_uri in synonyms:
-            synonym = Entity(synonym_uri)
+            synonym = synonym_uri #Entity(synonym_uri)
             self.synonyms.add(synonym)
             # Update the synonym set's data
             for relation, values in synonym.data.items():
@@ -187,13 +202,15 @@ class SynonymSet():
         synset_uri = graph.OBS[self.uri]
         for member1 in self:
             # add member1 to synset
-            graph.add((synset_uri, RDF.type, graph.OBS["SynonymSet"]))
-            graph.add((synset_uri, graph.OBS["hasMember"], member1.uri))
+            graph.add((URIRef(synset_uri), RDF.type, graph.OBS["SynonymSet"]))
+            graph.add((URIRef(synset_uri),
+                       graph.OBS["hasMember"],
+                       URIRef(member1.uri)))
             for member2 in self:
                 if member1 == member2:
                     continue
                 # add equivalentClass relation
-                graph.add((member1.uri, OWL.equivalentClass, member2.uri))
+                graph.add((URIRef(member1.uri), OWL.equivalentClass, URIRef(member2.uri)))
 
 
     def get_values_for(self,
@@ -209,14 +226,14 @@ class SynonymSet():
         """
         property = Graph().OM.convert_attr(property)
         if property in self._data:
-            res = self._data[property]
+            res = set(self._data[property])
         else:
             # No value for this property
-            res = []
+            res = set()
         if unique:
             if hasattr(res, "len") and not isinstance(res, str):
                 if len(res):
-                    return res[0]
+                    return list(res)[0]
                 else:
                     return None
         return res
@@ -266,32 +283,38 @@ class SynonymSetManager():
 
 
     def add_synset(self,
-                   entity1: Entity,
-                   entity2: Union[Entity, SynonymSet]) -> SynonymSet:
+                   entity1: Union[Entity, SynonymSet],
+                   entity2: Union[Entity, SynonymSet]):
         """
         Add a pair in the synonym set manager.
         If one of the entities is in any synonym set, then it
         adds the other one in it. If none of the entities are
         in a synset, it creates a new one with both entites.
+        If both are synsets, it merges the synsets into one.
 
         Keyword arguments:
         entity1 -- first entity to add
         entity2 -- second entity to add
         """
-        assert(type(entity1) == Entity)
+        assert(type(entity1) in [Entity, SynonymSet])
         assert(type(entity2) in [Entity, SynonymSet])
 
-        if isinstance(entity2, SynonymSet):
-            entity2.add_synonym(entity1)
+        if isinstance(entity1, Entity) and isinstance(entity2, SynonymSet):
+            entity2.add_synonyms(entity1)
             self._synsets.add(entity2)
-            return
+        elif isinstance(entity1, SynonymSet) and isinstance(entity2, Entity):
+            entity1.add_synonyms(entity2)
+            self._synsets.add(entity1)
         # Check if there is a synonym set containing one of the entities.
         # There is no synset for any of entity1 or entity2
         # so we create it.
-        else:
-            synset = SynonymSet([entity1, entity2])
+        elif isinstance(entity1, Entity) and isinstance(entity2, Entity):
+            synset = SynonymSet(synonyms = {entity1, entity2})
             self._synsets.add(synset)
-            return synset
+        elif isinstance(entity1, SynonymSet) and isinstance(entity2, SynonymSet):
+            entity1.add_synonyms(entity2.synonyms)
+            self._synsets.add(entity1)
+            self._synsets.remove(entity2)
 
 
     def get_synset_for_entity(self,

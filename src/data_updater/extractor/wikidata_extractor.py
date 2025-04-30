@@ -186,7 +186,10 @@ class WikidataExtractor(Extractor):
                        }
 
     # Strings that mean an entity is an UFO in the type
-    UFO_KEYWORDS = ["meteo", "data relay", "gps", "navigation"]
+    UFO_KEYWORDS = ["meteo",
+                    "data relay",
+                    "gps",
+                    "navigation"]
 
     def __init__(self):
         pass

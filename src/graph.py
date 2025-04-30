@@ -7,8 +7,9 @@ Author:
 import os
 
 from typing import Iterator, List, Tuple, Union
-from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
+from rdflib import RDFS, Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
+from data_updater import entity_types
 from data_updater.extractor.extractor import Extractor
 from utils.performances import timeit
 from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
@@ -216,12 +217,22 @@ class Graph(G):
         if filename:
             self.parse(filename)
         Graph._OM = OntologyMapping()
+
+        # Bind namespaces
         self.bind("obs", self.OM.OBS)
         self.bind("geo1", self.OM.GEO)
         self.bind("wb", self.OM.WB)
-        #if filename and os.path.exists(filename):
-        #    Graph._graph.parse(filename)
+
+        # Initialize types
+        obs_facility = standardize_uri(entity_types.OBSERVATION_FACILITY)
+        for t in entity_types.ALL_TYPES - {entity_types.OBSERVATION_FACILITY}:
+            t = standardize_uri(t)
+            self.add((self.OBS[t],
+                      RDFS.subClassOf,
+                      self.OBS[obs_facility]))
+
         Graph._initialized = True
+
 
     @property
     def graph(self):
@@ -470,9 +481,10 @@ class Graph(G):
             objtype = None
 
         # Get and save alt labels
-        if extractor:
+        if extractor and pred != "type":
             namespace_obj = self.get_namespace(extractor.NAMESPACE)
         else:
+            # Non-extracted data & OBS types.
             namespace_obj = self.OM.OBS
 
         if pred == "label" or pred in self.OM.SELF_REF:

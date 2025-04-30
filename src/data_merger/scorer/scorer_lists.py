@@ -5,7 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, tfidf_scorer
+from data_merger.scorer import acronym_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, llm_embedding_scorer, tfidf_scorer
 
 
 class ScorerLists():
@@ -20,7 +20,8 @@ class ScorerLists():
                     tfidf_scorer.TfIdfScorer]
 
     # Scores that use CUDA and cannot be computed in a forked thread
-    CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer]
+    CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer,
+                   llm_embedding_scorer.LlmEmbeddingScorer]
 
 
     ALL_SCORES = DISCRIMINANT_SCORES + OTHER_SCORES + CUDA_SCORES
@@ -30,8 +31,9 @@ class ScorerLists():
     # Lambda functions that return a boolean for discriminant criteria.
 
     # If the criteria is respected, then the candidate pair is admited.
-    ADMIT = {fuzzy_scorer.FuzzyScorer: lambda x: x == 1.0 # Perfect label match
-             }
+    ADMIT = {fuzzy_scorer.FuzzyScorer: lambda x: x == 1.0, # Perfect label match
+             acronym_scorer.AcronymScorer: lambda x: x == 1.0
+            }
     #ADMIT.setdefault(0, lambda x: False)
 
     # If the criteria is not respected, then the candidate pair is eliminated.

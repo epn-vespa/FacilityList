@@ -284,13 +284,13 @@ class CandidatePairsManager():
         self._candidate_pairs.remove(candidate_pair)
         self._candidate_pairs_dict[candidate_pair.member1].remove(candidate_pair)
         self._candidate_pairs_dict[candidate_pair.member2].remove(candidate_pair)
-        del CandidatePair[candidate_pair.uri]
+        del CandidatePair.candidate_pairs[candidate_pair.uri]
 
 
     def del_candidate_pairs(self,
                             entity: Union[Entity, SynonymSet]):
         """
-        Remove all candidate pairs that contain an entity.
+        Remove all candidate pairs that contain the entity.
 
         Keyword arguments:
         entity -- the entity to remove pairs that contain it.
@@ -298,10 +298,10 @@ class CandidatePairsManager():
         for pair in self.candidate_pairs:
             if (pair.member1 == entity or
                 pair.member2 == entity):
-                # self.candidate_pairs.remove(pair)
                 self.del_candidate_pair(pair)
         if entity in self.candidate_pairs_dict:
             del self.candidate_pairs_dict[entity]
+
 
     @timeit
     def save_all(self):
@@ -369,6 +369,7 @@ class CandidatePairsManager():
 
         Keyword arguments:
         scores -- list of scores to perform. If None, perform on all scores.
+                  Only take discriminant scores.
         """
         for score in ScorerLists.DISCRIMINANT_SCORES:
             if score not in scores:
@@ -376,19 +377,18 @@ class CandidatePairsManager():
             for candidate_pair in tqdm(self.candidate_pairs.copy(),
                                        desc = f"Computing {score.NAME} on {self._list1}, {self._list2}"):
                 # discriminant
-                #self.compute(score = score,
-                #             candidate_pair = candidate_pair)
-                #"""
-                with ThreadPoolExecutor() as executor:
-                    executor.submit(self.compute,
-                                    score = score,
-                                    candidate_pair = candidate_pair)
-               # """
+                self.compute(score = score,
+                             candidate_pair = candidate_pair,
+                             create_synset = True)
+            # TODO verify that there is no candidate pairs left and no orpheline from the smaller list
+            # (naif/wikidata: DSS-05 is orpheline)
+            # for candidate pairs that remain, we must perform the disambiguation algorithm (eliminate candidates from highest average score to lowest)
 
 
     def compute(self,
                 score: Score,
-                candidate_pair: CandidatePair) -> State:
+                candidate_pair: CandidatePair,
+                create_synset: bool = False) -> State:
         """
         Compute the score for a candidate pair. Add the candidate pair
         in a synset if the score was discriminant and remove the
@@ -407,7 +407,8 @@ class CandidatePairsManager():
             # self.candidate_pairs.remove(candidate_pair)
             self.del_candidate_pair(candidate_pair)
             return State.ELIMINATED
-        elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
+        elif (create_synset and
+              ScorerLists.ADMIT.get(score, lambda x: False)(score_value)):
             # Remove from candidate pairs
             self.candidate_pairs.remove(candidate_pair)
 
@@ -419,6 +420,7 @@ class CandidatePairsManager():
             # Add it to the graph
             SynonymSetManager._SSM.add_synset(candidate_pair.member1,
                                               candidate_pair.member2)
+
             return State.ADMITTED
         else:
             # The candidate pair needs to be re-processed with other scores
@@ -521,16 +523,16 @@ class CandidatePairsMapping():
         for i, (entity1_uri, synset1_uri) in enumerate(tqdm(entities1,
                                                        desc = f"Generating mapping for {self._list1}, {self._list2}")):
             if synset1_uri is not None:
-                entity1 = SynonymSet(synset1_uri)
+                entity1 = SynonymSet(uri = synset1_uri)
             else:
                 entity1 = Entity(entity1_uri)
             self._list1_indexes.append(entity1)
             for j, (entity2_uri, synset2_uri) in enumerate(entities2):
 
                 if synset2_uri is not None:
-                    entity2 = SynonymSet(synset2_uri)
+                    entity2 = SynonymSet(uri = synset2_uri)
                 else:
-                    entity2 = Entity(entity2_uri)
+                    entity2 = Entity(uri = entity2_uri)
                 if i == 0: # Only append for the first loop.
                     self._list2_indexes.append(entity2)
 
@@ -757,7 +759,6 @@ class CandidatePairsMapping():
                 if state == State.ADMITTED:
                     i += 0 # The mapping's size was reduced so
                     # if we increment i, it will jump over the next element.
-                    # print("admitted", len(self._mapping), i, candidate_pair.member1, candidate_pair.member2)
                     # self._mapping[i][self._list2_indexes.index(candidate_pair.member2)]
                 else:
                     i += 1

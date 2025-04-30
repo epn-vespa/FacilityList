@@ -12,8 +12,9 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
-import os
-import setup_path
+import setup_path # import first
+
+from data_merger.scorer.acronym_scorer import AcronymScorer
 from argparse import ArgumentParser
 import atexit
 from typing import List
@@ -81,13 +82,16 @@ class Merger():
             self.graph.is_available("wikidata")):
             CPM_wiki_naif = CandidatePairsManager(WikidataExtractor.NAMESPACE,
                                                   NaifExtractor.NAMESPACE)
+            #CPM_wiki_naif = CandidatePairsMapping(WikidataExtractor,
+            #                                      NaifExtractor)
 
             # merge wiki naif if the namespaces are available.
             if im.merge_wikidata_naif(CPM_wiki_naif):
                 # Disambiguate cases with two candidates
                 # (necessary because NAIF has duplicate identifiers
                 # for different entities)
-                CPM_wiki_naif.disambiguate_candidates(scores = [FuzzyScorer])
+                CPM_wiki_naif.disambiguate_candidates(scores = [AcronymScorer,
+                                                                FuzzyScorer])
                 # Save the remaining candidate pairs.
                 CPM_wiki_naif.save_json(execution_id = self.execution_id)
 
@@ -176,6 +180,10 @@ class Merger():
                                      f"{extractor2_str} is not a valid list name.\n" +
                                      f"Available list names: {' '.join(ExtractorLists.EXTRACTORS_BY_NAMES.keys())}")
                 extractor2 = ExtractorLists.EXTRACTORS_BY_NAMES[extractor2_str]
+
+                if not (extractor1.POSSIBLE_TYPES.union(extractor2.POSSIBLE_TYPES)):
+                    print(f"Warning at line {i} in {conf_file}: " +
+                          f"No type intersection between {extractor1.NAMESPACE} and {extractor2.NAMESPACE}. Ignoring.")
 
                 scores = scores.split(',')
                 scores = [s.strip() for s in scores if s.strip()]

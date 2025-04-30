@@ -12,7 +12,6 @@ from data_merger.synonym_set import SynonymSet
 class Score():
 
 
-
     def compute(graph: Graph,
                 entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:

@@ -45,7 +45,7 @@ class DistanceScorer(Score):
         lat2 = entity2.get_values_for("latitude", unique=True)
         long1 = entity1.get_values_for("longitude", unique=True)
         long2 = entity2.get_values_for("longitude", unique=True)
-        
+
         if not (lat1 is None or lat2 is None or long1 is None or long2 is None):
             if (lat1 != 0 or long1 != 0) and (lat2 != 0 or long2 != 0):
                 return distance((lat1, long1), (lat2, long2))
@@ -56,7 +56,7 @@ class DistanceScorer(Score):
         if (continent1 != continent2 and
             continent1 is not None and continent2 is not None):
             return -2 # Incompatible
-        
+
         country1 = entity1.get_values_for("country", unique=True)
         country2 = entity2.get_values_for("country", unique=True)
 
