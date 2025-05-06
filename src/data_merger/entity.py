@@ -9,7 +9,7 @@ Author:
 
 from collections import defaultdict
 from typing import Set
-from rdflib import URIRef
+from rdflib import Literal, URIRef
 
 from graph import Graph
 
@@ -37,7 +37,10 @@ class Entity():
         self._data = defaultdict(set)
         graph = Graph()
         for entity, property, value in graph.triples((self.uri, None, None)):
-            self._data[property].add(value)
+            if isinstance(value, Literal):
+                self._data[property].add(value.value)
+            else:
+                self._data[property].add(str(value))
 
 
     def __repr__(self):
@@ -89,11 +92,13 @@ class Entity():
             # No value for this property
             res = set()
         if unique:
-            if hasattr(res, "len") and not isinstance(res, str):
+            if type(res) in [set, list, tuple]:
                 if len(res):
                     return list(res)[0]
                 else:
                     return None
+            elif res:
+                return res
             else:
                 return None
         return res

@@ -318,7 +318,7 @@ class SynonymSetManager():
 
 
     def get_synset_for_entity(self,
-                              entity: URIRef) -> Union[URIRef, None]:
+                              entity: URIRef) -> Union[SynonymSet, None]:
         """
         Get the synset the entity is in. If it is not in a synset,
         returns None.
