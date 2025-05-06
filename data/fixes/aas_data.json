@@ -1,0 +1,10 @@
+{
+    "update": {
+        "Nagoya University 4m Radio Telescope at Atacama": {
+            "is_part_of": [],
+            "location": ["Atacama"]
+        }
+    },
+    "delete": ["Atacama"],
+    "append": {}
+}
