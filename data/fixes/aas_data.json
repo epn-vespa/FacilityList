@@ -5,6 +5,8 @@
             "location": ["Atacama"]
         }
     },
-    "delete": ["Atacama"],
-    "append": {}
+    "delete": [
+        "Atacama",
+        "American Association of Variable Star Observers International Database"
+    ]
 }

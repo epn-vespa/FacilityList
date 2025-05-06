@@ -18,7 +18,7 @@ from data_updater.extractor.cache import VersionManager, CacheManager
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
-from datetime import datetime
+from datetime import UTC, datetime
 from bs4 import BeautifulSoup
 
 import certifi
@@ -373,7 +373,7 @@ class WikidataExtractor(Extractor):
             # Other properties
             property_items = value["claims"]
             property_ids = {
-                "P31": "wikidata_type", # "instance_of"
+                "P31": "source_type", # "instance_of"
                 "P247": "COSPAR_ID", # similar to NSSDCA_ID
                 "P8913": "NSSDCA_ID", # similar to COSPAR_ID
                 "P2956": "NAIF_ID",
@@ -514,7 +514,7 @@ class WikidataExtractor(Extractor):
         # - the result count
         # - the result data as a dictionary {itemURI: {"label": itemLabel, "modified_date": modifiedDate}}
         control_data = {
-            "processing_date": datetime.now(tz=UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "processing_date": datetime.now(tz = UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "previous_date": None,
             "results_count": 0,
             "results": dict()
