@@ -248,19 +248,24 @@ def remove_punct(text: str) -> str:
     return text
 
 
-def extract_items(d: dict) -> List[Tuple]:
+def extract_items(d: dict,
+                  parent: str = "") -> List[Tuple]:
     """
     Flatten a recursive dictionary to a list of (key, value).
     This is necessary to create triplets from for json format.
 
     Keyword arguments:
     d -- a recursive dictionary.
+    parent -- the parent XML div type.
     """
     result = []
     for key, value in d.items():
         if isinstance(value, dict):
-            result.extend(extract_items(value))
+            result.extend(extract_items(value, parent = key))
         else:
+            if parent == "InformationURL" and key != "URL":
+                # SPASE: ignore every side information about the url.
+                continue
             result.append((key, value))
     return result
 
@@ -536,7 +541,7 @@ def get_location_info(label: Optional[str] = None,
 
         if result is None and location:
             for loc in location: # Can have more than one location
-                if loc is None:
+                if loc is None or loc.lower().startswith("earth"):
                     continue
                 if result is not None:
                     break
