@@ -175,9 +175,7 @@ class PdsExtractor(Extractor):
                 # /!\ do not move this line earlier in the code as
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
-                print(data["type"])
                 result[data["label"]] = data
-                print(data["type"])
 
         # If the PDS identifier does not exists in the
         # extracted data, create a new entity with this

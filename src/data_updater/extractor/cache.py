@@ -20,7 +20,7 @@ import subprocess
 import json
 import datetime
 
-from config import CACHE_DIR, LOGS_DIR, DATA_DIR
+from config import CACHE_DIR, LOGS_DIR, DATA_DIR # type: ignore
 
 # Set up the basic configuration for logging
 LOG = LOGS_DIR / 'error.log'# "../../cache/error.log"
@@ -179,7 +179,7 @@ class CacheManager():
             if url.endswith('/'):
                 url = url[:-1]
             url += ".git"
-            git_repo_folder = str(CacheManager.CACHE / list_name / git_repo)
+            git_repo_folder = str(CACHE_DIR / list_name / git_repo)
             if glob.glob(git_repo_folder):
                 command = ["git", "pull"]
                 cwd = git_repo_folder
