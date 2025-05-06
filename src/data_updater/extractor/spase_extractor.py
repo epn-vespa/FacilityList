@@ -11,10 +11,13 @@ from typing import Set
 from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
+from utils.llm_connection import LLM
 from utils.utils import clean_string, extract_items, merge_into
 import json
 import re
 import os
+
+from config import CACHE_DIR # type: ignore
 
 
 class SpaseExtractor(Extractor):
@@ -64,12 +67,13 @@ class SpaseExtractor(Extractor):
                       "AlternateName": "alt_label",
                       "ObservatoryRegion": "location",
                       "ObservatoryGroupID": "is_part_of",
+                      "Agency": "funding_agency",
                       #"Aknowledgement": "",
                       "Latitude": "latitude",
                       "Longitude": "longitude",
                       "StartDate": "start_date",
                       "EndDate": "end_date",
-                      "PriorIDs": "prior_id", # TODO After we get the result dict, Change the relation prior_id to alt_label if it is a label and not a code & it is not in the labels.
+                      "PriorIDs": "prior_id",
                       "PriorID": "prior_id"}
 
 
@@ -91,7 +95,7 @@ class SpaseExtractor(Extractor):
                               list_name = self.CACHE)
 
         # get files from the git repo that are Observatory .json
-        files = self._list_files(str(CacheManager.CACHE / self.CACHE / self.GIT_REPO))
+        files = self._list_files(str(CACHE_DIR / self.CACHE / self.GIT_REPO))
 
         result = dict()
 
@@ -117,8 +121,10 @@ class SpaseExtractor(Extractor):
             alt_labels = set()
 
             prior_id = ""
+            parent_rel = ""
             for rel, values in extract_items(dict_content):
                 if rel not in self.FACILITY_ATTRS:
+                    parent_rel = rel
                     continue
                 key = self.FACILITY_ATTRS.get(rel)
                 if type(values) == str:
@@ -321,10 +327,17 @@ class SpaseExtractor(Extractor):
                                entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
                     break
 
-        data["type"] = entity_types.classify(entity_types.to_string(data),
-                                             choices = choices,
-                                             from_cache = True,
-                                             cache_key = self.NAMESPACE + '#' + data["label"])
+        repr = LLM().to_string(data, exclude = ["start_date",
+                                                "end_date",
+                                                "code",
+                                                "end_date",
+                                                "url",
+                                                "uri",
+                                                "prior_id"])
+        data["type"] = LLM().classify(repr,
+                                      choices = choices,
+                                      from_cache = True,
+                                      cache_key = self.NAMESPACE + '#' + data["label"])
 
 if __name__ == "__main__":
     pass

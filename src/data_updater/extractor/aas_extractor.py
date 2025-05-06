@@ -13,9 +13,11 @@ Author:
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 from data_updater import entity_types
+from data_updater.extractor.data_fixer import fix
 from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, merge_into, cut_aka
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
+from utils.llm_connection import LLM
 
 class AasExtractor(Extractor):
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
@@ -301,16 +303,20 @@ class AasExtractor(Extractor):
                 merge_into(result[label1], result[label2])
                 del(result[label2])
 
+        # Fix errors in source page
+        fix(result, self)
+
         # Add a type to the entities
         for code, data in tqdm(result.items(), desc = f"Classify {self.NAMESPACE}"):
             choices = [entity_types.TELESCOPE, entity_types.MISSION, entity_types.GROUND_OBSERVATORY]
             label = data["label"]# + ' ' + ' '.join(data.get("alt_label", []))
             # label = label.strip()
             description = ""
-            if label.lower().endswith("telescopes"):
-                data["type"] = entity_types.OBSERVATORY_NETWORK
-                continue
-            elif " array" in label.lower() or "telescope network" in label.lower():
+            if ("telescopes" in label.lower() or
+               "twin telescope" in label.lower() or
+               " array" in label.lower() or
+               "telescope network" in label.lower() or
+               label == "La Palma" in label and "Siding Spring" in label):
                 data["type"] = entity_types.OBSERVATORY_NETWORK
                 continue
             elif label.lower().endswith("telescope"):
@@ -349,11 +355,12 @@ class AasExtractor(Extractor):
                            entity_types.OBSERVATORY_NETWORK,
                            entity_types.TELESCOPE]
             choices.append(entity_types.UFO) # La Villa, Madrid...
-            category = entity_types.classify(description,
-                                             choices = choices,
-                                             from_cache = True,
-                                             cache_key = self.NAMESPACE + '#' + data["label"])
+            category = LLM().classify(description,
+                                      choices = choices,
+                                      from_cache = True,
+                                      cache_key = self.NAMESPACE + '#' + data["label"])
             data["type"] = category
+
         return result
 
 

@@ -15,6 +15,11 @@ else:
     # local
     CACHE_DIR = ROOT / "cache"
 
+
+# Specific computation result files
+LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
+
+
 # Ollama Configuration
 if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
     # tycho
@@ -24,13 +29,13 @@ if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
         print("OLLAMA_HOST is not an environment variable.")
         print("To add OLLAMA_HOST in your environment, add in your ~/.bashrc:")
         print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
-    OLLAMA_MODEL = 'llama3.3:latest'
+    # OLLAMA_MODEL = 'llama3.3:latest' # 'fr', 'it', 'pt', 'hi', 'es', 'th', 'en'
+    # OLLAMA_MODEL = 'deepseek-v3:latest' # 400 GB
+    OLLAMA_MODEL = 'gemma3:27b'
 else:
     # local
     OLLAMA_HOST = "http://localhost:11434"
     OLLAMA_MODEL = 'gemma3:4b'
-    # MODEL = 'gemma3:1b'
-    # MODEL = 'gemma3:12b'
 OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
 
 

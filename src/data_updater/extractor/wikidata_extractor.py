@@ -18,15 +18,15 @@ from data_updater.extractor.cache import VersionManager, CacheManager
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
-from datetime import datetime, UTC
+from datetime import datetime
 from bs4 import BeautifulSoup
-
 
 import certifi
 import urllib
 
 from config import DATA_DIR # type: ignore
-from data_updater.extractor.naif_extractor import NaifExtractor # type: ignore
+from data_updater.extractor.naif_extractor import NaifExtractor
+from utils.llm_connection import LLM # type: ignore
 
 
 class WikidataExtractor(Extractor):
@@ -92,11 +92,6 @@ class WikidataExtractor(Extractor):
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight (mission)
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q62832 .} # observatory
 
-    # NAIF Spacecraft ids
-    # UNION {?q wdt:P2956 ?x .
-    #       FILTER ( ?x <= "-750" )
-    #       FILTER ( ?x >= "-1" )}
-
     # Filter out unwanted classes:
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
     MINUS { ?itemURI wdt:P31 wd:Q209363. }  # weather satellite
@@ -111,6 +106,7 @@ class WikidataExtractor(Extractor):
     MINUS { ?itemURI wdt:P31 wd:Q71135998. } # underwater observatory
     MINUS { ?itemURI wdt:P31 wd:Q1365207. }  # bird observatory
     MINUS { ?itemURI wdt:P31 wd:Q95945728. }  # technology demonstration spacecraft
+    MINUS { ?itemURI wdt:P31 wd:Q14637321. }  # fictional spacecraft
     MINUS { ?itemURI wdt:P31 wd:Q2566071. }  # manned weather station
     MINUS { ?itemURI wdt:P31 wd:Q1009523. }  # Automated Transfer Vehicle
     MINUS { ?itemURI wdt:P31 wd:Q14514346. }  # satellite program
@@ -232,6 +228,9 @@ class WikidataExtractor(Extractor):
                 VersionManager.refresh(last_version_file = self._CONTROL_FILE,
                                        new_version = {wikidata_uri: controls["results"][wikidata_uri]},
                                        list_name = self.CACHE)
+                # Get a description from Wikipedia
+                self._get_wikipedia_intro(data)
+
                 result[data["label"]] = data
 
         # Also get versions that were not refreshed
@@ -261,6 +260,10 @@ class WikidataExtractor(Extractor):
                     wikidata_uri for wikidata_uri in older}
             for future in tqdm(as_completed(futures), total = len(futures)):
                 data = future.result()
+
+                # Get a description from Wikipedia
+                self._get_wikipedia_intro(data)
+
                 result[data["label"]] = data
 
         # Get wikidata types as in entity_types
@@ -356,8 +359,8 @@ class WikidataExtractor(Extractor):
             descriptions = value["descriptions"]
             for desc in descriptions.values():
                 if desc["language"] == "en": # TODO add other descs with @language ?
-                    data["description"] = desc["value"]
-
+                    # definition not description. Description is for the wikipedia page.
+                    data["definition"] = desc["value"]
             data["label"] = main_label
             data["uri"] = f"https://wikidata.org/wiki/{code}"
             data["code"] = code
@@ -377,7 +380,7 @@ class WikidataExtractor(Extractor):
                 "P717": "MPC_ID", #P5736: for astronomical body
                 "P527": "has_part",
                 "P361": "is_part_of",
-                "P137": "funding_agency", #operator (also in NSSDC extractor)
+                "P137": "funding_agency", #operator (also in NSSDC extractor, SPASE extractor)
                 #"P17": "country", # can be found using coordinate_location
                 #"P276": "location", # same
                 "P625": "coordinate_location",
@@ -577,6 +580,8 @@ class WikidataExtractor(Extractor):
         Keyword arguments:
         data -- the data dict of one entity
         """
+        if "type" in data:
+            return
         choices = entity_types.ALL_TYPES
         if "wikidata_type" not in data:
             # Do not get a type for classes and part_of.
@@ -616,25 +621,28 @@ class WikidataExtractor(Extractor):
                                                  "NSSDCA_ID",
                                                  "NAIF_ID",
                                                  "MPC_ID"])
-        # Get a description from Wikidata as well
-        if "ext_ref" in data:
-            repr += " " + self._get_wikipedia_intro(data["ext_ref"])
 
-        cat = entity_types.classify(repr,
-                                    choices,
-                                    from_cache = True,
-                                    cache_key = self.NAMESPACE + '#' + data["label"])
+        cat = LLM().classify(repr,
+                             choices,
+                             from_cache = True,
+                             cache_key = self.NAMESPACE + '#' + data["label"])
         data["type"] = cat
 
 
     def _get_wikipedia_intro(self,
-                             url: str) -> str:
+                             data: dict) -> str:
         """
         Get the Wikidata's first paragraph that describes an entity.
+        Save it in the data's description.
 
         Keyword arguments:
         url -- the Wikidata page full url.
         """
+        if "ext_ref" not in data:
+            return ""
+        url = data["ext_ref"]
+        if "description" in data:
+            return data["description"]
         content = CacheManager.get_page(url,
                                         self.CACHE)
         if not content:
@@ -650,6 +658,7 @@ class WikidataExtractor(Extractor):
             if not p:
                 continue
             # Return the first non-empty paragraph
+            data["description"] = p
             return p
         return ""
 
