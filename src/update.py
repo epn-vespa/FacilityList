@@ -81,9 +81,9 @@ class Updater():
                         for p in features["is_part_of"]:
                             if p:
                                 part_of_uri = p
+                                if data[part_of_uri].get("type", None) in entity_types.GROUND_TYPES:
+                                    part_of = data[part_of_uri]
                                 break # Keep the first non-none part-of only
-                        if data[part_of_uri].get("type", None) in entity_types.GROUND_TYPES:
-                            part_of = data[part_of_uri]
                     elif type(features["is_part_of"]) == str:
                         part_of_uri = features["is_part_of"]
                 if (cat == entity_types.GROUND_OBSERVATORY or
