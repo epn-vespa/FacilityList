@@ -113,12 +113,9 @@ class PdsExtractor(Extractor):
                 content = re.sub(r'xmlns="[^"]+"', '', content)
 
                 # Parse XML file
-                #root = ET.fromstring(content)
-
-                # Parse XML file using lxml
                 root = ET.fromstring(content.encode("utf-8"))#, etree.XMLParser())
 
-                # Internal references
+                # Internal references part_of / is_part_of
                 has_part = []
                 is_part_of = []
                 internal_references = root.findall(f".//Internal_Reference")
@@ -141,6 +138,7 @@ class PdsExtractor(Extractor):
                     data["has_part"] = has_part
                 if is_part_of:
                     data["is_part_of"] = is_part_of
+
 
                 # Facility's tags
                 facility = root.find(f".//{cat.title()}") # ex: ".//Facility"
@@ -181,11 +179,17 @@ class PdsExtractor(Extractor):
         # extracted data, create a new entity with this
         # identifier.
         pds_missing_ids = dict()
-        for key, value in result.items():
+        for key in result.copy().keys():
+            value = result[key]
             if "has_part" in value:
                 for i, part in enumerate(value["has_part"]):
                     if part in pds_references_by_id:
-                        value["has_part"][i] = pds_references_by_id[part]
+                        part_label = pds_references_by_id[part]
+                        value["has_part"][i] = part_label
+                        if part_label not in result:
+                            # Create the missing referenced entity
+                            result[part_label] = {"label": part_label,
+                                                  "code": part}
                     else:
                         # Create the entity from the missing id.
                         if part not in pds_missing_ids:
@@ -199,7 +203,12 @@ class PdsExtractor(Extractor):
             if "is_part_of" in value:
                 for i, part in enumerate(value["is_part_of"]):
                     if part in pds_references_by_id:
-                        value["is_part_of"][i] = pds_references_by_id[part]
+                        part_label = pds_references_by_id[part]
+                        value["is_part_of"][i] = part_label
+                        if not part_label in result:
+                            # Create the missing referenced entity
+                            result[part_label] = {"label": part_label,
+                                                  "code": part}
                     else:
                         # Create the entity from the missing id.
                         if part not in pds_missing_ids:
@@ -211,7 +220,8 @@ class PdsExtractor(Extractor):
                             pds_missing_ids[part] = data
                         value["is_part_of"][i] = pds_missing_ids[part]["label"]
 
-        # If a PDS id is missing, add an artificial entity for this code
+
+        # If a PDS id is missing, add an entity for this code
         for key, value in pds_missing_ids.items():
             result[value["label"]] = value
 
