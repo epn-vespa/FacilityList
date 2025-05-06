@@ -103,3 +103,5 @@ ENV/
 # mac
 .DS_Store
 
+# ttl
+*.ttl
