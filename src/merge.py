@@ -29,6 +29,7 @@ from data_merger.synonym_set import SynonymSetManager
 from data_merger.scorer.fuzzy_scorer import FuzzyScorer
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
+from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 from utils.performances import timeit
@@ -76,12 +77,13 @@ class Merger():
 
 
     def merge_identifiers(self):
-        im = IdentifierMerger(self.graph)
+        im = IdentifierMerger()
 
-        if (self.graph.is_available("naif") and
-            self.graph.is_available("wikidata")):
-            CPM_wiki_naif = CandidatePairsManager(WikidataExtractor.NAMESPACE,
-                                                  NaifExtractor.NAMESPACE)
+        if False:
+        #if (self.graph.is_available("naif") and
+        #    self.graph.is_available("wikidata")):
+            CPM_wiki_naif = CandidatePairsManager(WikidataExtractor(),
+                                                  NaifExtractor())
             #CPM_wiki_naif = CandidatePairsMapping(WikidataExtractor,
             #                                      NaifExtractor)
 
@@ -99,8 +101,14 @@ class Merger():
 
         if (self.graph.is_available("iaumpc") and
             self.graph.is_available("wikidata")):
-            print("TODO: merge IAUMPC ID with Wikidata")
-            # P717. Doublon: P5736 # TODO check for this
+            # P717. Doublon: P5736 # TODO check if this causes any trouble
+
+            CPM_wiki_iaumpc = CandidatePairsMapping(WikidataExtractor(),
+                                                    IauMpcExtractor())
+            im.merge_on(CPM_wiki_iaumpc,
+                        attr1 = "MPC_Obs_ID",
+                        attr2 = "code")
+            del(CPM_wiki_iaumpc)
         if (self.graph.is_available("nssdc") and
             self.graph.is_available("wikidata")):
             # P247 (COSPAR ID) Doublon: P8913 (NSSDCA) # TODO check for this
@@ -126,7 +134,7 @@ class Merger():
         try:
             CPM = CandidatePairsMapping(list1,
                                         list2)
-            CPM.generate_mapping(self.graph)
+            CPM.generate_mapping()
             CPM.disambiguate(scores = scores)
             # CPM.save_to_graph()
             CPM.save_json(self.execution_id)

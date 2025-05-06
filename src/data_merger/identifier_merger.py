@@ -8,14 +8,15 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
+from tqdm import tqdm
 from graph import Graph
-from data_merger.candidate_pair import CandidatePair, CandidatePairsManager
+from data_merger.candidate_pair import CandidatePair, CandidatePairsManager, CandidatePairsMapping
 from data_merger.entity import Entity
 from data_merger.synonym_set import SynonymSetManager
 from data_updater.extractor import wikidata_extractor
 
 from rdflib.namespace import SKOS
-from rdflib import Literal, XSD
+from rdflib import Literal
 
 from utils.performances import timeit
 
@@ -23,9 +24,8 @@ from utils.performances import timeit
 class IdentifierMerger():
 
 
-    def __init__(self,
-                 graph: Graph):
-        self._graph = graph
+    def __init__(self):
+        pass
 
 
     @timeit
@@ -44,11 +44,10 @@ class IdentifierMerger():
             naif:lunar-flashlight / wikidata:yohkoh-gamma-and-x-ray-solar-satellite
                 (NAIF ID -164)
         """
-        graph = self._graph
+        graph = Graph()
 
         # Loop on each wikidata class
-        wde = wikidata_extractor.WikidataExtractor()
-        wikidata_entities = graph.get_entities_from_list(wde)
+        wikidata_entities = graph.get_entities_from_list(CPM.list1)
 
         for wikidata_uri, synset in wikidata_entities:
             if synset is not None:
@@ -75,6 +74,73 @@ class IdentifierMerger():
                         CPM.add_candidate_pairs(CandidatePair(naif_entity,
                                                               wikidata_entity))
         return True
+
+
+    @timeit
+    def merge_on(self,
+                 CPM: CandidatePairsMapping,
+                 attr1: str,
+                 attr2: str,
+                 map_remaining: bool = False):
+        """
+        Merge entities from two lists if their attributes (attr1 & attr2)
+        are identical. Use this for external identifiers that are not
+        ambiguous (NAIF is ambiguous).
+
+        Keyword arguments:
+        CPM -- Candidate Pairs Mapping of the two lists
+        attr1 -- attribute of list1 to compare with attr2
+        attr2 -- attribute of list2 to compare with attr1
+        map_remaining -- whether to generate a mapping for the entities that
+                         were not merged after merging on attr1 & attr2.
+        """
+        graph = Graph()
+        list1_entities = graph.get_entities_from_list(CPM.list1,
+                                                      no_equivalent_in=CPM.list2,
+                                                      has_attr = [attr1])
+        list2_entities = graph.get_entities_from_list(CPM.list2,
+                                                      no_equivalent_in=CPM.list1,
+                                                      has_attr = [attr2])
+        list2 = []
+
+        total_entity2 = 0
+        # Pre-loop to get entity2 and its value for attr2
+        for entity2, synset2 in list2_entities:
+            if synset2 is not None:
+                entity2 = SynonymSetManager().get_synset_for_entity(synset2)
+            else:
+                entity2 = Entity(entity2)
+            value2 = entity2.get_values_for(attr2, unique = True)
+            if not value2:
+                continue
+            list2.append((entity2, value2))
+        if len(list2) == 0:
+            # Generate mapping for remaining entities
+            return
+
+        merged = 0
+        total_entity1 = 0
+
+        for entity1, synset1 in list1_entities:
+            total_entity1 += 1
+            if synset1 is not None:
+                entity1 = SynonymSetManager().get_synset_for_entity(synset1)
+            else:
+                entity1 = Entity(entity1)
+            value1 = entity1.get_values_for(attr1, unique = True)
+            if not value1:
+                break
+
+            for entity2, value2 in list2:
+                if value1 == value2:
+                    # Merge entities or synsets
+                    SynonymSetManager._SSM.add_synset(entity1, entity2)
+                    merged += 1
+
+        # Generate mapping for the remaining entities
+        if (map_remaining and
+            merged < total_entity1 and merged < len(list2)):
+            CPM.generate_mapping()
 
 
 if __name__ == "__main__":

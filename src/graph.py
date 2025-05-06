@@ -307,6 +307,7 @@ class Graph(G):
     def get_entities_from_list(self,
                                source: Extractor,
                                no_equivalent_in: Extractor = None,
+                               has_attr: list[str] = [],
                                ) -> Iterator[Tuple[URIRef]]:
         """
         Get all the entities that come from a list.
@@ -319,6 +320,7 @@ class Graph(G):
                         owl:equivalentClass to any entity from this list,
                         and is not a member of a synonym set with an entity
                         of the other source.
+        has_attr -- only return entities that have has_attr as a relation.
         """
 
         if isinstance(source, Extractor):
@@ -327,14 +329,18 @@ class Graph(G):
         else:
             raise TypeError(f"'source' ({source}) should be an Extractor. " +
                             f"Got {type(source)}.")
-
+        has_attr_str = ""
+        if has_attr:
+            for attr in has_attr:
+                attr = self.OM.convert_attr(attr)
+                has_attr_str += f"\n?entity <{attr}> ?v ."
         if no_equivalent_in is None:
             # Get entities with their corresponding synonym sets
             # if they are a members of a synonym set already.
             query = f"""
             SELECT ?entity ?synset
             WHERE {{
-                ?entity obs:source obs:{source} .
+                ?entity obs:source obs:{source} .{has_attr_str}
                 OPTIONAL {{
                     ?synset obs:hasMember ?entity .
                     ?synset a obs:SynonymSet .
@@ -352,15 +358,15 @@ class Graph(G):
             query = f"""
             SELECT ?entity ?synset
             WHERE {{
-                ?entity obs:source obs:{source} .
+                ?entity obs:source obs:{source} .{has_attr_str}
                 OPTIONAL {{
                     ?synset a obs:SynonymSet .
                     ?synset obs:hasMember ?entity .
                 }}
-                FILTER NOT EXISTS {{
-                    ?entity owl:equivalentClass ?entity2 .
-                    ?entity2 obs:source obs:{no_equivalent_in} .
-                }}
+                #FILTER NOT EXISTS {{
+                #    ?entity owl:equivalentClass ?entity2 .
+                #    ?entity2 obs:source obs:{no_equivalent_in} .
+                #}}
                 FILTER NOT EXISTS {{
                     ?synset a obs:SynonymSet .
                     ?synset obs:hasMember ?entity .
@@ -369,6 +375,7 @@ class Graph(G):
                 }}
             }}
             """
+            # Only use one of the FILTER NOT EXISTS for performance
         return self.query(query)
 
 
