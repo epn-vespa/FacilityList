@@ -14,6 +14,7 @@ from enum import Enum
 from typing import Dict, List, Union
 import uuid
 import hashlib
+import os
 
 from rdflib import RDF, XSD, Literal, URIRef
 from tqdm import tqdm
@@ -25,12 +26,13 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from config import DATA_DIR
+from config import DATA_DIR # type: ignore
 from utils.performances import deprecated, timeit
 
 
-JSON = DATA_DIR / 'checkpoint'# "../../cache/error.log"
+JSON = DATA_DIR / "checkpoint"# "../../cache/error.log"
 JSON.mkdir(parents = True, exist_ok = True)
+LATEST = JSON / "latest"
 
 
 class CandidatePair():
@@ -218,6 +220,16 @@ class CandidatePairsManager():
         return self._candidate_pairs_dict
 
 
+    @property
+    def list1(self):
+        return self._list1
+
+
+    @property
+    def list2(self):
+        return self._list2
+
+
     def add_candidate_pairs(self,
                             candidate_pairs: Union[CandidatePair,
                                                    List[CandidatePair]]):
@@ -340,7 +352,11 @@ class CandidatePairsManager():
         Keyword arguments:
         execution_id -- the id of this execution (generated in merge.py)
         """
-        directory = JSON / execution_id
+        # Empty latest directory
+        LATEST.mkdir(parents = True, exist_ok = True)
+        for latest in os.listdir(LATEST):
+            os.rename(LATEST / latest, JSON / latest)
+        directory = LATEST / execution_id
         directory.mkdir(parents = True, exist_ok = True)
 
         filename = f"{self._list1}_{self._list2}.json"
@@ -348,7 +364,7 @@ class CandidatePairsManager():
         with open(str(path), 'w') as file:
             file.write("{\n")
             for cp in self._candidate_pairs:# ._candidate_pairs:
-                file.write("\"" + str(cp.member1.uri) + '\t' + str(cp.member2.uri) + "\":")
+                file.write("\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":")
                 file.write(str(cp.scores))
                 #for score, value in cp.scores.items():
                 #    file.write('\t' + score + '\t' + str(value))
@@ -449,6 +465,16 @@ class CandidatePairsMapping():
         # self._candidate_pairs = []
 
 
+    @property
+    def list1(self):
+        return self._list1
+
+
+    @property
+    def list2(self):
+        return self._list2
+
+
     def __len__(self):
         if not self._mapping:
             return 0
@@ -490,8 +516,7 @@ class CandidatePairsMapping():
 
 
     @timeit
-    def generate_mapping(self,
-                         graph: Graph):
+    def generate_mapping(self):
         """
         Generate candidate pairs between both lists. Only
         generate candidate pairs for entities that are not linked
@@ -503,6 +528,7 @@ class CandidatePairsMapping():
         that is eliminated, in order to prevent multiple mapping ?
         /!\ OR create a relation "noEquivalentInList source_list" (easier)
         """
+        graph = Graph()
         if self._mapping:
             # do not generate twice
             return
@@ -671,8 +697,6 @@ class CandidatePairsMapping():
                                     candidate_pair.member2)
 
         candidate_pair.add_score(score.NAME, score_value)
-        with open("out", "w") as f:
-            f.write(candidate_pair)
 
 
     @deprecated
@@ -860,21 +884,26 @@ class CandidatePairsMapping():
         Keyword arguments:
         execution_id -- the id of this execution (generated in merge.py)
         """
-
-        directory = JSON / execution_id
+ 
+        directory = JSON / "latest" / execution_id
         directory.mkdir(parents = True, exist_ok = True)
         filename = f"{self._list1}_{self._list2}.json"
         path = directory / filename
+        res = ""
         with open(str(path), 'w') as file:
             file.write("{\n")
             for cp in self:#._candidate_pairs:
-                file.write("\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":")
-                file.write(str(cp.scores))
+                res += "\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":"
+                res += "{"
+                for score, value in cp.scores:
+                    res += f"\"{score}\":{value}"
+                res += "}"
                 #for score, value in cp.scores.items():
                 #    file.write('\t' + score + '\t' + str(value))
-                file.write(',\n')
-
-            file.write("\n}")
+                res += ",\n"
+            res = res[:-2] # remove last ",\n"
+            res += "\n}"
+            file.write(res)
         #with open(filename, 'w') as file:
         #    json.dump(data, file)
 
