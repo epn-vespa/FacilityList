@@ -111,7 +111,7 @@ def to_string(data: dict,
             key = "Also known as"
         else:
             key = key.replace('_', ' ').capitalize()
-        res += f"{key}: {', '.join([str(v) for v in value])}. "
+        res += f"{key}: {', '.join([str(v)[:512] for v in value])}. "
     return res
 
 """

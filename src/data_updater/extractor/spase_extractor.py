@@ -327,13 +327,13 @@ class SpaseExtractor(Extractor):
                                entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
                     break
 
-        repr = LLM().to_string(data, exclude = ["start_date",
-                                                "end_date",
-                                                "code",
-                                                "end_date",
-                                                "url",
-                                                "uri",
-                                                "prior_id"])
+        repr = entity_types.to_string(data, exclude = ["start_date",
+                                                       "end_date",
+                                                       "code",
+                                                       "end_date",
+                                                       "url",
+                                                       "uri",
+                                                       "prior_id"])
         data["type"] = LLM().classify(repr,
                                       choices = choices,
                                       from_cache = True,

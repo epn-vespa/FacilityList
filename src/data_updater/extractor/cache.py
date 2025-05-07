@@ -108,7 +108,7 @@ class CacheManager():
             if not os.path.exists(cache_path):
                 os.mkdir(cache_path)
             cache_path = cache_path / data_str
-        cache_path = str(cache_path) + ".html"
+        cache_path = str(cache_path)
         return cache_path
 
 
