@@ -103,7 +103,6 @@ class IdentifierMerger():
                                                       has_attr = [attr2])
         list2 = []
 
-        total_entity2 = 0
         # Pre-loop to get entity2 and its value for attr2
         for entity2, synset2 in list2_entities:
             if synset2 is not None:
@@ -139,7 +138,8 @@ class IdentifierMerger():
 
         # Generate mapping for the remaining entities
         if (map_remaining and
-            merged < total_entity1 and merged < len(list2)):
+            merged < total_entity1 and
+            merged < len(list2)):
             CPM.generate_mapping()
 
 

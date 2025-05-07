@@ -13,6 +13,7 @@ Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
 import setup_path # import first
+from data_updater.extractor.nssdc_extractor import NssdcExtractor
 
 from data_merger.scorer.acronym_scorer import AcronymScorer
 from argparse import ArgumentParser
@@ -79,9 +80,8 @@ class Merger():
     def merge_identifiers(self):
         im = IdentifierMerger()
 
-        if False:
-        #if (self.graph.is_available("naif") and
-        #    self.graph.is_available("wikidata")):
+        if (self.graph.is_available("naif") and
+            self.graph.is_available("wikidata")):
             CPM_wiki_naif = CandidatePairsManager(WikidataExtractor(),
                                                   NaifExtractor())
             #CPM_wiki_naif = CandidatePairsMapping(WikidataExtractor,
@@ -101,7 +101,7 @@ class Merger():
 
         if (self.graph.is_available("iaumpc") and
             self.graph.is_available("wikidata")):
-            # P717. Doublon: P5736 # TODO check if this causes any trouble
+            # P717. Doublon: P5736
 
             CPM_wiki_iaumpc = CandidatePairsMapping(WikidataExtractor(),
                                                     IauMpcExtractor())
@@ -111,8 +111,18 @@ class Merger():
             del(CPM_wiki_iaumpc)
         if (self.graph.is_available("nssdc") and
             self.graph.is_available("wikidata")):
-            # P247 (COSPAR ID) Doublon: P8913 (NSSDCA) # TODO check for this
-            print("TODO: merge NSSDC ID with Wikidata")
+            # P247 (COSPAR ID) Doublon: P8913 (NSSDCA)
+            # Some of them appear more than once in wikidata.
+
+            CPM_wiki_nssdc = CandidatePairsMapping(WikidataExtractor(),
+                                                   NssdcExtractor())
+            im.merge_on(CPM_wiki_nssdc,
+                        attr1 = "NSSDCA_ID",
+                        attr2 = "code")
+            im.merge_on(CPM_wiki_nssdc,
+                        attr1 = "COSPAR_ID",
+                        attr2 = "code")
+            del(CPM_wiki_nssdc)
 
         del(im)
 

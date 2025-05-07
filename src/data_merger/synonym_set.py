@@ -42,7 +42,7 @@ class SynonymSet():
 
     def __new__(cls,
                 uri: str = "",
-                synonyms: Set[URIRef] = set()):
+                synonyms: Set[Entity] = set()):
         """
         Object factory for SynonymSet.
 
@@ -52,17 +52,18 @@ class SynonymSet():
         uri -- the uri of the list if the synonym set was loaded from
                an existing ontology
         """
+
+        # check if any entity is in any of the synonym sets
+        for uri_, synonym_set_ in cls.synonym_sets.items():
+            for synonym_ in synonym_set_:
+                if synonym_ in synonyms:
+                    synonym_set_.add_synonyms(synonyms)
+                    return synonym_set_
         if uri:
             if uri in cls.synonym_sets:
                 cls.add_synonyms
                 cls.synonym_sets[uri]._synonyms.update(synonyms)
                 return cls.synonym_sets[uri]
-            # check if any entity is in any of the synonym sets
-            for uri_, synonym_set_ in cls.synonym_sets.items():
-                for synonym_ in synonym_set_:
-                    if synonym_ in synonyms:
-                        synonym_set_.add_synonyms(synonyms)
-                        return synonym_set_
         else:
             uri = str(uuid.uuid4())
         instance = super().__new__(cls)
@@ -179,7 +180,7 @@ class SynonymSet():
 
 
     def has_member(self,
-                  entity: Entity) -> bool:
+                   entity: Entity) -> bool:
         """
         Check if an entity is in the synset.
 
@@ -254,7 +255,7 @@ class SynonymSet():
 
     def __hash__(self):
         res = 0
-        for x in self.synonyms:
+        for x in sorted(self.synonyms, key = lambda x: x.uri):
             res += x.__hash__()
         return res
         #return self._synset.__hash__()
@@ -345,6 +346,7 @@ class SynonymSetManager():
     def __iter__(self):
         for item in list(self._synsets):
             yield(item)
+
 
 
 if __name__ == "__main__":

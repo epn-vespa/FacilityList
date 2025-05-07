@@ -13,6 +13,9 @@ from rdflib import Literal, URIRef
 
 from graph import Graph
 
+class Entity:
+    pass
+
 
 class Entity():
 
@@ -45,6 +48,14 @@ class Entity():
 
     def __repr__(self):
         return f"Entity@{self.uri}"
+
+
+    def __eq__(self, entity: Entity):
+        return self.uri == entity.uri
+
+
+    def __hash__(self):
+        return hash(self.uri)
 
 
     def __reduce__(self):
