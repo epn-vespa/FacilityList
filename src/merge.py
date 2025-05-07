@@ -7,8 +7,6 @@ and create CandidatePair entities to save the similarity scores.
 Finally, group entities in a Synonym Set if their similarity score
 is high enough.
 
-Arguments:
-
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
@@ -311,8 +309,7 @@ if __name__ == "__main__":
                         default = CONF_DIR / "merging_strategy.conf",
                         type = str,
                         required = False,
-                        help = "Merging strategy file name."
-)
+                        help = "Merging strategy file name.")
 
     args = parser.parse_args()
 

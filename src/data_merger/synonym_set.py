@@ -31,7 +31,7 @@ class SynonymSet():
     and some alt labels: all the labels of all entities.
 
     All member entities of a Synonym Set are linked together with
-    an OWL.equivalentClass relation in the graph.
+    an OWL.sameAs relation in the graph.
 
     This class also provides methods to get the source list(s)
     of a certain synonym of the set.
@@ -193,7 +193,7 @@ class SynonymSet():
     def save(self):
         """
         Save one synonym set's entities into the graph and add an
-        owl:equivalentClass relation 'between all the entities in the
+        owl:sameAs relation 'between all the entities in the
         synset.
 
         Keyword arguments:
@@ -210,8 +210,8 @@ class SynonymSet():
             for member2 in self:
                 if member1 == member2:
                     continue
-                # add equivalentClass relation
-                graph.add((URIRef(member1.uri), OWL.equivalentClass, URIRef(member2.uri)))
+                # add equivalence mapping relation
+                graph.add((URIRef(member1.uri), OWL.sameAs, URIRef(member2.uri)))
 
 
     def get_values_for(self,
@@ -336,7 +336,7 @@ class SynonymSetManager():
     def save_all(self):
         """
         Save all synonym set entities to the graph and add an
-        owl:equivalentClass relation between all the entities in a
+        owl:sameAs relation between all the entities in a
         synset.
         """
         for synset in self._synsets:

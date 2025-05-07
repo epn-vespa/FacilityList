@@ -884,7 +884,7 @@ class CandidatePairsMapping():
         Keyword arguments:
         execution_id -- the id of this execution (generated in merge.py)
         """
- 
+
         directory = JSON / "latest" / execution_id
         directory.mkdir(parents = True, exist_ok = True)
         filename = f"{self._list1}_{self._list2}.json"
@@ -895,7 +895,7 @@ class CandidatePairsMapping():
             for cp in self:#._candidate_pairs:
                 res += "\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":"
                 res += "{"
-                for score, value in cp.scores:
+                for score, value in cp.scores.items():
                     res += f"\"{score}\":{value}"
                 res += "}"
                 #for score, value in cp.scores.items():

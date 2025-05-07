@@ -30,8 +30,8 @@ if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
         print("To add OLLAMA_HOST in your environment, add in your ~/.bashrc:")
         print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
     # OLLAMA_MODEL = 'llama3.3:latest' # 'fr', 'it', 'pt', 'hi', 'es', 'th', 'en'
-    # OLLAMA_MODEL = 'deepseek-v3:latest' # 400 GB
-    OLLAMA_MODEL = 'gemma3:27b'
+    OLLAMA_MODEL = 'deepseek-v3:latest' # 400 GB
+    # OLLAMA_MODEL = 'gemma3:27b'
 else:
     # local
     OLLAMA_HOST = "http://localhost:11434"
