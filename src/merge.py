@@ -11,6 +11,9 @@ Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
 import setup_path # import first
+
+from data_merger.scorer.distance_scorer import DistanceScorer
+from data_updater import entity_types
 from data_updater.extractor.nssdc_extractor import NssdcExtractor
 
 from data_merger.scorer.acronym_scorer import AcronymScorer
@@ -128,8 +131,8 @@ class Merger():
 
 
     def make_mapping_between_lists(self,
-                                   list1: Extractor,
-                                   list2: Extractor,
+                                   list1: type[Extractor],
+                                   list2: type[Extractor],
                                    scores: List[Score]):
         """
         Computes a mapping between two lists and disambiguate.
@@ -139,6 +142,9 @@ class Merger():
         list2 -- the second list's Extractor
         scores -- scores to compute for those lists
         """
+        if not scores:
+            print("No scores to compute. Ignoring.")
+            return
         try:
             CPM = CandidatePairsMapping(list1,
                                         list2)
@@ -223,6 +229,14 @@ class Merger():
                                          f"Available score names: {' '.join(ScorerLists.SCORES_BY_NAMES.keys())}")
                     else:
                         scores_to_compute.add(ScorerLists.SCORES_BY_NAMES[score])
+                    if DistanceScorer in scores_to_compute:
+                        if ((entity_types.GROUND_OBSERVATORY not in extractor1.POSSIBLE_TYPES or
+                             entity_types.GROUND_OBSERVATORY not in extractor2.POSSIBLE_TYPES) and
+                            (entity_types.TELESCOPE not in extractor1.POSSIBLE_TYPES or
+                             entity_types.TELESCOPE not in extractor2.POSSIBLE_TYPES)):
+                            scores_to_compute.remove(DistanceScorer)
+                            print(f"Warning at line {i} in {conf_file}: " +
+                                  f"Can not compute distance between {extractor1_str} and {extractor2_str}. Ignoring.")
                 if (self.graph.is_available(extractor1_str) and
                     self.graph.is_available(extractor2_str)):
 
@@ -231,7 +245,7 @@ class Merger():
                         self.make_mapping_between_lists(extractor1(), extractor2(), scores)
                     else:
                         print(f"Warning at line {i} in {conf_file}: " +
-                              f"no scores to compute for {extractor1_str} and {extractor2_str}. Ignoring.")
+                              f"No score to compute for {extractor1_str} and {extractor2_str}. Ignoring.")
                 else:
                     print(f"Warning at line {i} in {conf_file}: " +
                           f"{extractor1_str} and/or {extractor2_str} are not available in the provided ontologies. Ignoring.")
