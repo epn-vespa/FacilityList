@@ -16,8 +16,9 @@ else:
     CACHE_DIR = ROOT / "cache"
 
 
-# Specific computation result files
+# LLM computation result files
 LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
+LLM_EMBEDDINGS_FILE = CACHE_DIR / "llm_embeddings.json"
 
 
 # Ollama Configuration
