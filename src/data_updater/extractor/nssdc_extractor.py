@@ -43,7 +43,7 @@ class NssdcExtractor(Extractor):
                       "description":"description",
                       "alternate names": "alt_label",
                       "launch date": "launch_date",
-                      "launch site": "launch_site",
+                      "launch site": "launch_place", # launch_place in Wikidata
                       "mass": "mass",
                       "additional information": "ext_ref",
                       "url": "url",

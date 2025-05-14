@@ -26,7 +26,7 @@ import urllib
 
 from config import DATA_DIR # type: ignore
 from data_updater.extractor.naif_extractor import NaifExtractor
-from utils.llm_connection import LLM # type: ignore
+from utils.llm_connection import LLM
 
 
 class WikidataExtractor(Extractor):
@@ -91,6 +91,7 @@ class WikidataExtractor(Extractor):
     {?itemURI wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight (mission)
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q62832 .} # observatory
+    # UNION {?itemURI wdt:P31/wdt:P279* wd:Q4213 .} # telescope
 
     # Filter out unwanted classes:
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
