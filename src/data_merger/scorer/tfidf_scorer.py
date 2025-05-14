@@ -64,18 +64,24 @@ class TfIdfScorer(Score):
         # TODO test with analyzer == 'char'
         # & ngram_range == (1, 3)
 
-        definition1 = ' '.join(entity1.get_values_for("definition"))
-        definition2 = ' '.join(entity2.get_values_for("definition"))
+        repr1 = ' '.join(entity1.get_values_for("definition").
+                         union(entity1.get_values_for("description")).
+                         union(entity1.get_values_for("label")))
+        repr2 = ' '.join(entity2.get_values_for("definition").
+                         union(entity2.get_values_for("description")).
+                         union(entity2.get_values_for("label")))
 
-        if not definition1 or not definition2:
+        if not repr1 or not repr2:
             # We need both entities to have a description to compute
             # a cosine similarity.
-            return 0
+            return -1 # No score could be computed.
 
-        definition1 = TfIdfScorer.tokenizer(definition1)
-        definition2 = TfIdfScorer.tokenizer(definition2)
-        return cosine_similarity(TfIdfScorer.vectorizer.transform(definition1),
-                                 TfIdfScorer.vectorizer.transform(definition2))
+        #repr1 = TfIdfScorer.tokenizer(repr1)
+        #repr2 = TfIdfScorer.tokenizer(repr2)
+        sim = cosine_similarity(TfIdfScorer.vectorizer.transform([repr1]),
+                                TfIdfScorer.vectorizer.transform([repr2]))
+        return sim[0][0]
+
 
     def preprocess(text: str) -> str:
         """
