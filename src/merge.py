@@ -43,7 +43,11 @@ class Merger():
 
     def __init__(self,
                  input_ontologies: list[str],
-                 output_ontology: str = ""):
+                 output_ontology: str = "",
+                 limit: int = -1):
+        """
+        limit -- maximum entities per list (for debug)
+        """
         # Instanciate the Synonym Set Manager
         SynonymSetManager()
         # Instanciate the Graph's singleton
@@ -54,6 +58,7 @@ class Merger():
             self.init_graph() # Create basic classes
         self._output_ontology = output_ontology
         self._execution_id = str(uuid.uuid4())
+        self._limit = limit
 
 
     @property
@@ -69,6 +74,11 @@ class Merger():
     @property
     def execution_id(self):
         return self._execution_id
+
+
+    @property
+    def limit(self):
+        return self._limit
 
 
     def init_graph(self):
@@ -133,7 +143,8 @@ class Merger():
     def make_mapping_between_lists(self,
                                    list1: type[Extractor],
                                    list2: type[Extractor],
-                                   scores: List[Score]):
+                                   scores: List[Score],
+                                   checkpoint_id: str):
         """
         Computes a mapping between two lists and disambiguate.
 
@@ -147,11 +158,19 @@ class Merger():
             return
         try:
             CPM = CandidatePairsMapping(list1,
-                                        list2)
-            CPM.generate_mapping()
-            CPM.disambiguate(scores = scores)
+                                        list2,
+                                        checkpoint_id)
+
+            atexit.register(CPM.save_json,
+                            self.execution_id)
+            if not checkpoint_id:
+                CPM.generate_mapping(limit = self.limit)
+                CPM.compute_scores(scores = scores)
+                CPM.save_json(self.execution_id)
+            else:
+                CPM.disambiguate(SynonymSetManager._SSM)
             # CPM.save_to_graph()
-            CPM.save_json(self.execution_id)
+            atexit.unregister(CPM.save_json)
         except InterruptedError:
             CPM.save_json(self.execution_id)
             SynonymSetManager._SSM.save_all()
@@ -160,7 +179,8 @@ class Merger():
 
 
     def merge_mapping(self,
-                      conf_file: str = ""):
+                      conf_file: str = "",
+                      checkpoint_id: str = None):
         """
         Define the merging strategy (merging order).
 
@@ -242,7 +262,10 @@ class Merger():
 
                     scores = scores_to_compute - except_scores
                     if scores:
-                        self.make_mapping_between_lists(extractor1(), extractor2(), scores)
+                        self.make_mapping_between_lists(extractor1(),
+                                                        extractor2(),
+                                                        scores,
+                                                        checkpoint_id)
                     else:
                         print(f"Warning at line {i} in {conf_file}: " +
                               f"No score to compute for {extractor1_str} and {extractor2_str}. Ignoring.")
@@ -280,15 +303,19 @@ class Merger():
 @timeit
 def main(input_ontologies: list[str] = [],
          output_ontology: str = "",
-         merging_strategy_file: str = ""):
+         limit: int = -1,
+         merging_strategy_file: str = "",
+         checkpoint_id: str = None):
 
     merger = Merger(input_ontologies,
-                    output_ontology)
+                    output_ontology,
+                    limit)
     atexit.register(merger.print_execution_id)
     # atexit.register(merger.write)
 
     merger.merge_identifiers()
-    merger.merge_mapping(conf_file = merging_strategy_file)
+    merger.merge_mapping(conf_file = merging_strategy_file,
+                         checkpoint_id = checkpoint_id)
     merger.write()
 
 
@@ -317,6 +344,14 @@ if __name__ == "__main__":
                         required = False,
                         help = "Output ontology file to save the merged data.")
 
+    parser.add_argument("-l",
+                        "--limit",
+                        default = -1,
+                        type = int,
+                        required = False,
+                        help = "Set a limit to fasten tests. " +
+                        "Only N x N entities will be mapped between each pair of lists.")
+
     parser.add_argument("-m",
                         "--merging-strategy",
                         dest = "merging_strategy_file",
@@ -325,9 +360,17 @@ if __name__ == "__main__":
                         required = False,
                         help = "Merging strategy file name.")
 
-    args = parser.parse_args()
+    parser.add_argument("-c",
+                        "--checkpoint",
+                        default = None,
+                        type = str,
+                        help = "Restart scores computation & merging from a previous checkpoint.")
 
+
+    args = parser.parse_args()
 
     main(args.input_ontologies,
          args.output_ontology,
-         args.merging_strategy_file)
+         args.limit,
+         args.merging_strategy_file,
+         args.checkpoint)

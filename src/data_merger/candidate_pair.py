@@ -11,6 +11,7 @@ Author:
 
 from collections import defaultdict
 from enum import Enum
+import json
 from typing import Dict, List, Union
 import uuid
 import hashlib
@@ -18,6 +19,7 @@ import os
 
 from rdflib import RDF, XSD, Literal, URIRef
 from tqdm import tqdm
+from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.scorer.scorer_lists import ScorerLists
@@ -25,6 +27,7 @@ from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+import pandas as pd
 
 from config import DATA_DIR # type: ignore
 from utils.performances import deprecated, timeit
@@ -160,6 +163,59 @@ class CandidatePair():
             return self._scores[score_name]
         else:
             return -1
+
+
+    def compute_global_score(self) -> float:
+        """
+        Return a unique score, taking all scores into account.
+        Weighted sum or average.
+        """
+        score = 0
+        n_scores = 0
+        for score_name, score_value in self._scores.items():
+            if score_value < 0:
+                # no score were computed
+                # negative scores are often used by scorers
+                # for candidate pair elimination or when no
+                # score could be computed.
+                pass
+            else:
+                score += score_value
+                n_scores += 1
+        score = score / n_scores
+        self.add_score(score_name = "global",
+                       score = score) # averaged score
+        return score
+
+
+    def save_to_graph(self,
+                      decisive_score: str):
+        """
+        Add a Candidate Pair in the graph. Use it after
+        a Synonym Set was created from this Candidate Pair to keep
+        track of the Synonym Set's origin.
+
+        Keyword arguments:
+        decisive_score -- score on which the Synonym Set was decided
+        """
+        graph = Graph()
+
+        candidate_pair_uri = self.uri
+
+        # Add the candidate pair in the graph
+        graph.add((candidate_pair_uri, RDF.type,
+                   graph.OBS["SynonymPair"])) # Not a Candidate anymore
+        graph.add((candidate_pair_uri, graph.OBS["hasMember"],
+                   self.member1.uri))
+        graph.add((candidate_pair_uri, graph.OBS["hasMember"],
+                   self.member2.uri))
+        for score, value in self.scores.items():
+            graph.add((candidate_pair_uri,
+                        graph.OBS[score],
+                        Literal(value, datatype = XSD.float)))
+        graph.add((candidate_pair_uri,
+                   graph.OBS["provenance"],
+                   Literal(decisive_score)))
 
 
     def __eq__(self,
@@ -355,7 +411,8 @@ class CandidatePairsManager():
         # Empty latest directory
         LATEST.mkdir(parents = True, exist_ok = True)
         for latest in os.listdir(LATEST):
-            os.rename(LATEST / latest, JSON / latest)
+            if not execution_id in latest:
+                os.rename(LATEST / latest, JSON / latest)
         directory = LATEST / execution_id
         directory.mkdir(parents = True, exist_ok = True)
 
@@ -436,7 +493,8 @@ class CandidatePairsManager():
             # Add it to the graph
             SynonymSetManager._SSM.add_synset(candidate_pair.member1,
                                               candidate_pair.member2)
-
+            # Add Candidate Pair to graph for traceability
+            candidate_pair.save_to_graph(decisive_score = score.NAME)
             return State.ADMITTED
         else:
             # The candidate pair needs to be re-processed with other scores
@@ -452,7 +510,8 @@ class CandidatePairsMapping():
 
     def __init__(self,
                  list1: Extractor,
-                 list2: Extractor):
+                 list2: Extractor,
+                 checkpoint_id: str):
         self._list1 = list1
         self._list2 = list2
 
@@ -462,7 +521,8 @@ class CandidatePairsMapping():
         self._list1_indexes = [] # indexes by entity in the mapping
         self._list2_indexes = [] # indexes by entity in the mapping
 
-        # self._candidate_pairs = []
+        if checkpoint_id:
+            self.load_checkpoint(checkpoint_id)
 
 
     @property
@@ -516,7 +576,8 @@ class CandidatePairsMapping():
 
 
     @timeit
-    def generate_mapping(self):
+    def generate_mapping(self,
+                         limit: int = -1):
         """
         Generate candidate pairs between both lists. Only
         generate candidate pairs for entities that are not linked
@@ -527,17 +588,22 @@ class CandidatePairsMapping():
         TODO create a relation differentFrom for each relation
         that is eliminated, in order to prevent multiple mapping ?
         /!\ OR create a relation "noEquivalentInList source_list" (easier)
+
+        Keyword arguments:
+        limit -- do not generate a mapping for the whole lists (use for tests)
         """
         graph = Graph()
         if self._mapping:
             # do not generate twice
             return
         entities1 = graph.get_entities_from_list(self._list1,
-                                                 no_equivalent_in = self._list2)
+                                                 no_equivalent_in = self._list2,
+                                                 limit = limit)
         entities1 = list(entities1)
 
         entities2 = graph.get_entities_from_list(self._list2,
-                                                 no_equivalent_in = self._list1)
+                                                 no_equivalent_in = self._list1,
+                                                 limit = limit)
         entities2 = list(entities2)
         self._mapping = []
 
@@ -626,6 +692,7 @@ class CandidatePairsMapping():
         # Remove from the list too
         # del(self._candidate_pairs[index1 * len(self._mapping) + index2])
 
+
     def _get_indexes(self,
                      candidate_pair: CandidatePair):
         """
@@ -676,11 +743,14 @@ class CandidatePairsMapping():
             self.del_candidate_pairs(candidate_pair.member2)
             # Add it to the graph
             SynonymSetManager._SSM.add_synset(candidate_pair.member1,
-                                            candidate_pair.member2)
+                                              candidate_pair.member2)
+            # Add Candidate Pair to graph for traceability
+            candidate_pair.save_to_graph(decisive_score = score.NAME)
             return State.ADMITTED
 
         candidate_pair.add_score(score.NAME, score_value)
         return State.UNCLEAR
+
 
     def _compute_one_score(self,
                            score: Score,
@@ -722,9 +792,8 @@ class CandidatePairsMapping():
             candidate_pair.add_score(score.NAME, score_value)
 
 
-    # @timeit
-    def disambiguate(self,
-                     scores: List[Score]):
+    def compute_scores(self,
+                       scores: List[Score]):
         """
         Eliminate entities that are incompatible and select
         entities that are compatible.
@@ -751,9 +820,65 @@ class CandidatePairsMapping():
                     cuda_scores.append(score)
 
         print(f"Count of candidate pairs: {len(self)}")
-        self._compute_cuda_scores(cuda_scores)
         self._disambiguate_discriminant(discriminant_scores)
+        self._compute_cuda_scores(cuda_scores)
         self._compute_other_scores(other_scores)
+
+        # Create a global score for each candidate pair
+        self._compute_global()
+
+
+    def disambiguate(self,
+                     SSM: SynonymSetManager):
+        """
+        Disambiguation algorithm: find the best global score,
+        create a Synonym Set if high enough and start until stop.
+
+        Human verification (input): Assisted Disambiguation.
+
+        Keyword arguments:
+        SSM -- this run's SynonymSetManager
+        """
+        import numpy as np
+        scores = []
+        for l in self._mapping:
+            scores_l = []
+            for c in l:
+                if c is None:
+                    scores_l.append(np.nan)
+                else:
+                    if "global" in c.scores:
+                        scores_l.append(c.scores.get("global"))
+                    else:
+                        scores_l.append(c.compute_global_score())
+            scores.append(scores_l)
+        scores = np.array(scores)
+        choice = None
+        while len(scores) and choice != "2":
+            x, y = np.unravel_index(np.argmax(scores), scores.shape)
+            score = scores[x][y]
+            scores = np.delete(scores, x, axis = 0)
+            scores = np.delete(scores, y, axis = 1)
+            best_candidate_pair = self._mapping[x][y]
+            member1 = best_candidate_pair.member1
+            member2 = best_candidate_pair.member2
+            choice = input(f"Highest score {score} for\n{member1},\n{member2}.\nSame: 0 (default)\nDifferent: 1\nStop: 2\n>>> ")
+            if choice == "2":
+                break
+            elif choice == "1":
+                cancel = input("Did not create a Synonym Set.")
+                if cancel:
+                    continue
+                self.del_candidate_pair(best_candidate_pair)
+                scores[x][y] = np.nan
+                continue
+            cancel = input(f"Create a synonym set with {member1}, {member2}")
+            if cancel:
+                continue
+            self.del_candidate_pairs(member1)
+            self.del_candidate_pairs(member2)
+            SSM.add_synset(member1, member2)
+            best_candidate_pair.save_to_graph(decisive_score = "global")
 
 
     @timeit
@@ -763,6 +888,9 @@ class CandidatePairsMapping():
         Disambiguate discriminant scores. This will remove
         the candidate pairs for which we are sure that they are not
         compatible or they refer to the same entity.
+
+        Keyword arguments:
+        scores -- list of scores to compute.
         """
         for score in ScorerLists.DISCRIMINANT_SCORES:
             if score not in scores:
@@ -802,14 +930,23 @@ class CandidatePairsMapping():
         for score in scores:
             len_e1 = len(self._list1_indexes)
             len_e2 = len(self._list2_indexes)
+            n_candidates = len_e1 * len_e2
             print(f"Computing {score.NAME} for {self._list1}, {self._list2}" +
-                  f" on {len_e1 * len_e2} entities.")
-            scores = list(score.compute(Graph(), self._list1_indexes, self._list2_indexes))
-            for n, score_value in enumerate(scores):
-                i = n % len_e1
-                j = int((n - i) / len_e1)
-                if self._mapping[i][j] is not None:
-                    self._mapping[i][j].add_score(score.NAME, score_value)
+                  f" on {n_candidates} candidate pairs.")
+            if score == CosineSimilarityScorer:
+                # this score does batches for performances.
+                entities1, entities2 = zip(*[(x.member1, x.member2) for x in self])
+                score_values = score.compute(Graph(),
+                                             entities1,
+                                             entities2)
+                for score_value, candidate_pair in zip(score_values, self):
+                    candidate_pair.add_score(score.NAME, score_value)
+                continue
+            for candidate_pair in self:
+                score_value = score.compute(Graph(),
+                                            candidate_pair.member1,
+                                            candidate_pair.member2)
+                candidate_pair.add_score(score.NAME, score_value)
 
 
     @timeit
@@ -826,22 +963,35 @@ class CandidatePairsMapping():
         DEBUG = True
         if DEBUG:
             for candidate_pair in self:
-                score_values = _compute_scores(candidate_pair, scores)
+                score_values = _compute_scores(candidate_pair.member1,
+                                               candidate_pair.member2,
+                                               candidate_pair.uri,
+                                               scores)
                 for score, score_value in zip(scores, score_values):
                     candidate_pair.add_score(score.NAME, score_values)
             return
         """
         with ProcessPoolExecutor() as executor:
             print(f"Computing other scores for the remaining candidate pairs.")
+            candidate_pairs = [(pair.member1, pair.member2, pair.uri) for pair in self]
             futures = [executor.submit(_compute_scores,
-                                       candidate_pair,
-                                       scores) for candidate_pair in self]#._candidate_pairs]
-
-            for i, future in tqdm(enumerate(as_completed(futures)), total = len(futures)):
+                                   member1,
+                                   member2,
+                                   uri,
+                                   scores) for member1, member2, uri in candidate_pairs]
+            for future in tqdm(as_completed(futures)):
                 score_values, candidate_pair_uri = future.result()
                 for score, score_value in zip(scores, score_values):
-                        # Make sure that we add it in the right CandidatePair.
-                        CandidatePair.candidate_pairs[candidate_pair_uri].add_score(score.NAME, score_value)
+                    # Make sure that we add it in the right CandidatePair.
+                    CandidatePair.candidate_pairs[candidate_pair_uri].add_score(score.NAME, score_value)
+
+
+    def _compute_global(self):
+        """
+        Compute the global score for each candidate pair.
+        """
+        for candidate_pair in self:
+            candidate_pair.compute_global_score()
 
 
     @timeit
@@ -872,7 +1022,59 @@ class CandidatePairsMapping():
                                Literal(value, datatype = XSD.float)))
 
 
-    @timeit
+    def load_checkpoint(self,
+                        checkpoint_id: str):
+        """
+        Load a checkpoint
+
+        Keyword arguments:
+        checkpoint_id -- the checkpoint ID to retrieve candidate pairs from
+        """
+        if checkpoint_id == "latest":
+            latest = os.listdir(LATEST)
+            if len(latest) > 1:
+                raise ValueError(f"There are more than one latest checkpoints. Please move out a checkpoint from {LATEST}.")
+            elif len(latest) == 0:
+                raise FileExistsError(f"There is no checkpoint in {LATEST}.")
+            checkpoint = LATEST / latest[0]
+
+        elif (LATEST / checkpoint_id).exists():
+            checkpoint = LATEST / checkpoint_id
+        elif (JSON / checkpoint_id).exists():
+            checkpoint = JSON / checkpoint_id
+        elif os.path.exists(checkpoint_id):
+            checkpoint = checkpoint_id
+        else:
+            raise FileExistsError(checkpoint_id)
+        checkpoint_file = checkpoint / f"{self.list1}_{self.list2}.json"
+        with open(checkpoint_file, 'r') as file:
+            candidate_pairs = json.load(file)
+            for uris in candidate_pairs.keys():
+                uri1, uri2 = uris.split('|')
+                entity1 = Entity(URIRef(uri1))
+                entity2 = Entity(URIRef(uri2))
+                if entity1 not in self._list1_indexes:
+                    self._list1_indexes.append(entity1)
+                if entity2 not in self._list2_indexes:
+                    self._list2_indexes.append(entity2)
+            for _ in range(len(self._list1_indexes)):
+                line = []
+                for _ in range(len(self._list2_indexes)):
+                    line.append(None)
+                self._mapping.append(line)
+
+            for uris, scores in candidate_pairs.items():
+                uri1, uri2 = uris.split('|')
+                entity1 = Entity(URIRef(uri1))
+                entity2 = Entity(URIRef(uri2))
+                cp = CandidatePair(first = entity1,
+                                   second = entity2)
+                for score_name, score_value in scores.items():
+                    cp.add_score(score_name = score_name,
+                                 score = score_value)
+                self._mapping[self._list1_indexes.index(entity1)][self._list2_indexes.index(entity2)] = cp
+
+
     def save_json(self,
                   execution_id: str):
         """
@@ -884,9 +1086,14 @@ class CandidatePairsMapping():
         Keyword arguments:
         execution_id -- the id of this execution (generated in merge.py)
         """
-
-        directory = JSON / "latest" / execution_id
+        # Empty latest directory
+        LATEST.mkdir(parents = True, exist_ok = True)
+        for latest in os.listdir(LATEST):
+            if not execution_id in str(latest):
+                os.rename(LATEST / latest, JSON / latest)
+        directory = LATEST / execution_id
         directory.mkdir(parents = True, exist_ok = True)
+
         filename = f"{self._list1}_{self._list2}.json"
         path = directory / filename
         res = ""
@@ -896,7 +1103,8 @@ class CandidatePairsMapping():
                 res += "\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":"
                 res += "{"
                 for score, value in cp.scores.items():
-                    res += f"\"{score}\":{value}"
+                    res += f"\"{score}\":{value}, "
+                res = res[:-2]# remove last ", "
                 res += "}"
                 #for score, value in cp.scores.items():
                 #    file.write('\t' + score + '\t' + str(value))
@@ -908,7 +1116,9 @@ class CandidatePairsMapping():
         #    json.dump(data, file)
 
 
-def _compute_scores(candidate_pair: CandidatePair,
+def _compute_scores(member1: Union[Entity, SynonymSet],
+                    member2: Union[Entity, SynonymSet],
+                    uri: str,
                     scores: List[Score]) -> List[float]:
 
     """
@@ -918,33 +1128,37 @@ def _compute_scores(candidate_pair: CandidatePair,
     Use this for non-discriminant scores.
 
     Keyword arguments:
-    candidate_pair -- the candidate pair
+    member1 -- the candidate pair's first member
+    member1 -- the candidate pair's second member
+    uri -- the candidate pair's uri.
     scores -- the scores to compute
     """
     scores_values = []
     for score in scores:
-        score_value = _compute_one_score(score, candidate_pair)
+        score_value = _compute_one_score(score, member1, member2)
         scores_values.append(score_value)
-    return scores_values, candidate_pair.uri
+    return scores_values, uri
 
 
 def _compute_one_score(score: Score,
-                       candidate_pair: CandidatePair) -> float:
+                       member1: Union[Entity, SynonymSet],
+                       member2: Union[Entity, SynonymSet]) -> float:
     """
     Asynchronous method to compute a score without removing the
     candidate pair from the mapping at all.
     Use this for non-discriminant scores.
 
     Keyword arguments:
-    candidate_pair -- the candidate pair
+    member1 -- the candidate pair's first member
+    member1 -- the candidate pair's second member
     scores -- the score to compute
     """
-    if candidate_pair is None:
+    if not member1 or not member2:
         return
     graph = Graph()
     score_value = score.compute(graph,
-                                candidate_pair.member1,
-                                candidate_pair.member2)
+                                member1,
+                                member2)
     return score_value
 
 

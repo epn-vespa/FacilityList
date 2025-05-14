@@ -124,6 +124,13 @@ class SynonymSet():
         return self._data
 
 
+    def to_string(self) -> str:
+        res = ""
+        for synonym in self.synonyms:
+            res += synonym.to_string() + ' '
+        return res.rstrip()
+
+
     def init_data(self):
         """
         Add data from the graph's SynonymSet entity to this object's data.

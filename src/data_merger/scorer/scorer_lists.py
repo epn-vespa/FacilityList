@@ -5,14 +5,15 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, llm_embedding_scorer, tfidf_scorer
+from data_merger.scorer import acronym_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
 
 
 class ScorerLists():
 
     # Scores that might help reduce the amount of candidate pairs if they
     # are above or below a certain threshold. They are computed first.
-    DISCRIMINANT_SCORES = [fuzzy_scorer.FuzzyScorer,
+    DISCRIMINANT_SCORES = [type_incompatibility_scorer.TypeIncompatibilityScorer,
+                           fuzzy_scorer.FuzzyScorer,
                            distance_scorer.DistanceScorer]
 
     # Scores that are computed for all of the candidate pairs.
@@ -38,6 +39,7 @@ class ScorerLists():
 
     # If the criteria is not respected, then the candidate pair is eliminated.
     ELIMINATE = {"launch_date": lambda dist: dist != 0, # time distance
-                 "distance": lambda dist: dist > 4 or dist == -2, # kilometers
+                 "distance": lambda dist: dist > 4 or dist == -2, # kilometers or incompatible
+                 "type": lambda t: t == -2, # incompatible type
                  }
     #ELIMINATE.setdefault(0, lambda x: False)

@@ -221,6 +221,8 @@ def proba_acronym_of(acronym: str,
     The case is ignored except if there are uppercases in the label,
     they are taken into account when matching with the acronym.
     To penalize probabilities that are lower than 1, we return proba ^ 4.
+    If "acronym" cannot be the label's acronym (e.g. it is too long),
+    then return -1.
 
     Keyword arguments:
     acronym -- acronym to compute probability from
@@ -229,15 +231,15 @@ def proba_acronym_of(acronym: str,
     acronym = _clean_acronym(acronym)
     acronym = acronym.strip()
     if len(acronym) > len(label):
-        return 0
+        return -1
     if ' ' in acronym:
-        return 0
+        return -1
     # Acronym is at most 3 times shorter
     if len(acronym) > len(label) / 3:
-        return 0
+        return -1
     # Acronym has only uppercases
-    if acronym.upper() != acronym:
-        return 0
+    #if acronym.upper() != acronym:
+    #    return -1
 
     first_letters, second_letters, stopwords_letters, uppercases_letters = _get_matrixes(label)
     score = _compute_for(acronym.lower(),

@@ -4,6 +4,7 @@ Graph class that is used in the packages update & merge.
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+from collections import defaultdict
 import os
 
 from typing import Iterator, List, Tuple, Union
@@ -87,6 +88,11 @@ class OntologyMapping():
                                 "objtype": XSD.float}
     }
 
+
+    # To get a simplified attribute name (for string representation purposes)
+    _INVERSE_MAPPING = {value["pred"]: key for (key, value) in _MAPPING.items()}
+
+
     # Objects after a REFERENCE predicate will be an URI and not a Literal.
     # SELF_REF's object's URI are standardized, as they use OBS.
     _SELF_REF = [
@@ -166,11 +172,26 @@ class OntologyMapping():
 
     def __getattr__(
             self,
-            attr: str):
+            attr: str) -> URIRef:
         return self.convert_attr(attr)
         #return getattr(self.graph, attr)
         #return getattr(Graph._graph, attr)
 
+
+    def get_attr_name(
+            self,
+            attr: URIRef) -> str:
+        """
+        Get the attribute name (use for str representation purposes)
+
+        Keyword arguments:
+        attr -- URIRef attribute (predicate)
+        """
+        res = self._INVERSE_MAPPING.get(attr, None)
+        if res is None:
+            # Not in the mapping. Probably an OBS.
+            res = attr[attr.rfind('#') + 1:]
+        return res
 
 
 class Graph(G):
@@ -307,6 +328,7 @@ class Graph(G):
                                source: Extractor,
                                no_equivalent_in: Extractor = None,
                                has_attr: list[str] = [],
+                               limit: int = -1
                                ) -> Iterator[Tuple[URIRef]]:
         """
         Get all the entities that come from a list.
@@ -320,6 +342,7 @@ class Graph(G):
                         and is not a member of a synonym set with an entity
                         of the other source.
         has_attr -- only return entities that have has_attr as a relation.
+        limit -- limits the amout of results. -1 to get the whole list
         """
 
         if isinstance(source, Extractor):
@@ -375,6 +398,8 @@ class Graph(G):
             }}
             """
             # Only use one of the FILTER NOT EXISTS for performance
+        if limit >= 0:
+            query += f" LIMIT {limit}"
         return self.query(query)
 
 
@@ -428,17 +453,18 @@ class Graph(G):
     def get_definitions(self) -> List[str]:
         """
         Return all the descriptions in the graph. Use this to generate
-        a corpus for statistical computations such as TfIdf etc.
+        a corpus for statistical computations such as TfIdf.
+        Returns definitions, descriptions & labels to string.
         """
-        descriptions = []
-        #for _, _, desc in self._graph.triples((None,
-        #                                       self.OM.convert_attr("definition"),
-        #                                       None)):
-        for _, _, desc in self.triples((None,
-                                        self.OM.definition,# self.OBS["description"],
-                                        None)):
-            descriptions.append(str(desc))
-        return descriptions
+        descr_by_entities = defaultdict(str)
+        for entity, rel, desc in self.triples((None,
+                                               None,# self.OBS["description"],
+                                               None)):
+            if rel in [self.OM.convert_attr("description"),
+                       self.OM.convert_attr("definition"),
+                       self.OM.convert_attr("label")]:
+                descr_by_entities[entity] += " " + desc
+        return list(descr_by_entities.values())
 
     ###### Methods for update #######
 

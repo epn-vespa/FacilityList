@@ -114,5 +114,42 @@ class Entity():
                 return None
         return res
 
+    def to_string(self,
+                  exclude: list[str] = ["code",
+                                        "url",]) -> str:
+        """
+        Convert an entity's data dict into its string representation.
+        Keys are sorted so that the generated string is always the same.
+
+        Exclude entries from the data to ignore values that will not help LLM,
+        such as any URL/URI, codes, etc.
+
+        Keyword arguments:
+        data -- the entity data dict
+        exclude -- dict entries to exclude
+        """
+        res = ""
+        label = self.get_values_for("label")
+        if label:
+            if type(label) == set:
+                res = ", ".join(label)
+            else:
+                res = label + '. '
+        for key, value in sorted(self.data.items()):
+            key = Graph().OM.get_attr_name(key)
+            if key in exclude:
+                continue
+            if key == "label":
+                continue
+            if type(value) not in [list, set, tuple]:
+                value = [value]
+            if key == "alt_label":
+                key = "Also known as"
+            else:
+                key = key.replace('_', ' ').capitalize()
+            res += f"{key}: {', '.join([str(v)[:512] for v in value])}. "
+        return res
+
+
 if __name__ == "__main__":
     pass
