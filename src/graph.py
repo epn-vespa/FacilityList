@@ -85,7 +85,9 @@ class OntologyMapping():
         "launch_date": {"pred": _OBS.launch_date,
                         "objtype": XSD.dateTime}, # Wikidata
         "location_confidence": {"pred": _OBS.location_confidence,
-                                "objtype": XSD.float}
+                                "objtype": XSD.float},
+        "type_confidence": {"pred": _OBS.type_confidence,
+                            "objtype": XSD.float}
     }
 
 

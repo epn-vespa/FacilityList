@@ -56,6 +56,14 @@ class SpaseExtractor(Extractor):
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
 
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 0.5
+
     # Folders that we want to keep must contain
     KEEP_FOLDER = "Observatory"
 
@@ -312,6 +320,7 @@ class SpaseExtractor(Extractor):
             "Earth.Surface",
             "Earth"
         ]
+        data["type_confidence"] = 1
         choices = None # None choices will disambiguate for all categories.
         if "latitude" in data and "longitude" in data:
             choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
@@ -338,6 +347,7 @@ class SpaseExtractor(Extractor):
                                       choices = choices,
                                       from_cache = True,
                                       cache_key = self.NAMESPACE + '#' + data["label"])
+        data["type_confidence"] = 0
 
 if __name__ == "__main__":
     pass

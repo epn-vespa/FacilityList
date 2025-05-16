@@ -58,6 +58,14 @@ class PdsExtractor(Extractor):
              "facility": entity_types.OBSERVATION_FACILITY,
              }
 
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 1
+
     # List's types.
     # For merging strategies. Prevent merging data from lists
     # that do not have types in common
@@ -173,6 +181,7 @@ class PdsExtractor(Extractor):
                 # /!\ do not move this line earlier in the code as
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
+                data["type_confidence"] = 1
                 result[data["label"]] = data
 
         # If the PDS identifier does not exists in the

@@ -32,14 +32,23 @@ class IauMpcExtractor(Extractor):
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = entity_types.GROUND_OBSERVATORY
 
-    # Used to split the label into entity / location
-    LOCATION_DELIMITER = ","
-
     # List's types.
     # For merging strategies. Prevent merging data from lists
     # that do not have types in common
     POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
                       entity_types.SPACECRAFT}
+
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 1
+
+    # Used to split the label into entity / location
+    LOCATION_DELIMITER = ","
+
 
     def __init__(self):
         pass
@@ -119,6 +128,8 @@ class IauMpcExtractor(Extractor):
                 data["type"] = entity_types.GROUND_OBSERVATORY
             else:
                 data["type"] = entity_types.SPACECRAFT
+            data["type_confidence"] = 1
+
             # alt labels
             data["alt_label"] = alt_labels
 

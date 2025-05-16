@@ -44,6 +44,14 @@ class NaifExtractor(Extractor):
     POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
                       entity_types.SPACECRAFT}
 
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 1
+
     def __init__(self):
         pass
 
@@ -91,7 +99,8 @@ class NaifExtractor(Extractor):
                 label = rows[1].strip()
                 result[label] = {"code": code,
                                  "label": label,
-                                 "type": NaifExtractor.TYPES[cat]}
+                                 "type": NaifExtractor.TYPES[cat],
+                                 "type_confidence": 1}
 
         # Delete duplicate identifiers and add alt labels
         # only when they are the same entity (see naif-sc-codes.ttl)

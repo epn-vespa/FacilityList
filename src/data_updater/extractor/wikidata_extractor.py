@@ -52,6 +52,14 @@ class WikidataExtractor(Extractor):
     # that do not have types in common
     POSSIBLE_TYPES = entity_types.ALL_TYPES
 
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 0.5
+
     # Enpoint for requesting wikidata
     _ENDPOINT_URL = "https://query.wikidata.org/sparql"
 
@@ -91,7 +99,7 @@ class WikidataExtractor(Extractor):
     {?itemURI wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight (mission)
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q62832 .} # observatory
-    # UNION {?itemURI wdt:P31/wdt:P279* wd:Q4213 .} # telescope
+    UNION {?itemURI wdt:P31/wdt:P279* wd:Q4213 .} # telescope
 
     # Filter out unwanted classes:
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
@@ -180,6 +188,8 @@ class WikidataExtractor(Extractor):
                         "rover": entity_types.SPACECRAFT,
                         "space telescope": entity_types.TELESCOPE,
                         "sar satellite": entity_types.UFO,
+                        "telescope": entity_types.TELESCOPE,
+                        "optical telescope": entity_types.TELESCOPE
                        }
 
     # Strings that mean an entity is an UFO in the type
@@ -209,7 +219,7 @@ class WikidataExtractor(Extractor):
         print(f"Found {len(controls["results"])} entities.")
 
         # get newer versions' Wikidata URIs
-        latest = VersionManager.get_newer_keys(last_version_file = self._CONTROL_FILE,
+        latest = VersionManager.get_newer_keys(prev_version_file = self._CONTROL_FILE,
                                                new_version = controls,
                                                list_name = self.CACHE)
 
@@ -587,6 +597,7 @@ class WikidataExtractor(Extractor):
         if "wikidata_type" not in data:
             # Do not get a type for classes and part_of.
             return
+        data["type_confidence"] = 1
         if "COSPAR_ID" in data or "NSSDCA_ID" in data:
             # NSSDC only has spacecrafts
             data["type"] = entity_types.SPACECRAFT
@@ -628,6 +639,7 @@ class WikidataExtractor(Extractor):
                              from_cache = True,
                              cache_key = self.NAMESPACE + '#' + data["label"])
         data["type"] = cat
+        data["type_confidence"] = 0
 
 
     def _get_wikipedia_intro(self,

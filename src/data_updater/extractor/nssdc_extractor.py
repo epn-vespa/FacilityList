@@ -32,7 +32,20 @@ class NssdcExtractor(Extractor):
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = entity_types.SPACECRAFT
 
+    # List's types.
+    # For merging strategies. Prevent merging data from lists
+    # that do not have types in common
+    POSSIBLE_TYPES = {entity_types.SPACECRAFT}
 
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 1
+
+    # Extracted categories
     DISCIPLINES = {"ASNO": "Astronomy",
                    "PSNO": "Planetary Science",
                    "SONO": "Solar Physics",
@@ -54,10 +67,6 @@ class NssdcExtractor(Extractor):
                       "discipline": "discipline", # Keep disciplines
                       #"nominal power": "nominal_power" # watts (maximum power required by a facility)
                       }
-    # List's types.
-    # For merging strategies. Prevent merging data from lists
-    # that do not have types in common
-    POSSIBLE_TYPES = {entity_types.SPACECRAFT}
 
     def extract(self) -> dict:
         """
@@ -111,6 +120,7 @@ class NssdcExtractor(Extractor):
 
             # type
             data["type"] = self.DEFAULT_TYPE
+            data["type_confidence"] = 1
 
             # Ignore entities that have one or more uncompatible discipline
             """

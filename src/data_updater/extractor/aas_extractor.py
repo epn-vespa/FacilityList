@@ -44,6 +44,15 @@ class AasExtractor(Extractor):
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
 
+    # No need to disambiguate the type with LLM.
+    # Useful for merging strategy: when the type is ambiguous,
+    # it is recommanded to not discriminate on types.
+    # 1: always known.
+    # 0.5: partially known (see individuals)
+    # 0: never known.
+    TYPE_KNOWN = 0.5
+
+
     # Mapping to IVOA's messenger
     # https://www.ivoa.net/rdf/messenger/
     # All Waveband categories in AAS:
@@ -62,6 +71,7 @@ class AasExtractor(Extractor):
 
     # Used to split the label into entity / location
     LOCATION_DELIMITER = " at "
+
 
     def __init__(self):
         pass
@@ -312,6 +322,8 @@ class AasExtractor(Extractor):
             label = data["label"]# + ' ' + ' '.join(data.get("alt_label", []))
             # label = label.strip()
             description = ""
+            data["type_confidence"] = 1
+
             if ("telescopes" in label.lower() or
                "twin telescope" in label.lower() or
                " array" in label.lower() or
@@ -321,6 +333,9 @@ class AasExtractor(Extractor):
                 continue
             elif label.lower().endswith("telescope"):
                 data["type"] = entity_types.TELESCOPE
+                continue
+            elif label.lower().endswith("mission"):
+                data["type"] = entity_types.MISSION
                 continue
 
             if "location" in data:
@@ -340,6 +355,7 @@ class AasExtractor(Extractor):
                 continue
 
             description = entity_types.to_string(data, exclude = ("has_part", "is_part_of", "alt_label", "code"))
+            data["type_confidence"] = 0
             if "has_part" in data:
                 choices = [entity_types.MISSION,
                            entity_types.GROUND_OBSERVATORY,
