@@ -743,7 +743,7 @@ def distance(latlong1: Tuple[float],
     latlong1 -- tuple (latitude, longitude) of the first point.
     latlong1 -- tuple (latitude, longitude) of the second point.
     """
-    return geodesic(latlong1, latlong2)
+    return geodesic(latlong1, latlong2).km
 
 
 def _get_location_from_cache(label: Optional[str] = None,
