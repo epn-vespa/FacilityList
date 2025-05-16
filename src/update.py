@@ -12,6 +12,7 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+from rdflib import Namespace
 import setup_path # Import first
 
 from data_updater.extractor.nssdc_extractor import NssdcExtractor
@@ -68,6 +69,13 @@ class Updater():
         source -- the class of the extractor of the source (ex: AasExtractor)
         not already in the dictionary's features.
         """
+        # Remove the old entities for the extractor in order to update the source.
+        if extractor:
+            namespace_uri = Namespace(str(self.graph.OM.OBS)[:-1] + "/" + extractor.NAMESPACE + "#")
+            for triple in self.graph:
+                if triple[0].startswith(namespace_uri):
+                    self.graph.remove(triple)
+
         for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
             # Get complete location information and add them to the features
             if extractor: # Only for extracted entities
@@ -177,10 +185,12 @@ class Updater():
 
     def write(self):
         """
+        Serialize the updated graph into the output ontology file.
         """
         with open(self.output_ontology, 'wb') as file:
             file.write(self.graph.serialize(format = "turtle",
                                             encoding = "utf-8"))
+        print(f"Ontology saved in {self.output_ontology}")
 
 def main(lists: List[str],
          input_ontology: str = "",
