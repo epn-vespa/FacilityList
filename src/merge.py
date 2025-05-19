@@ -10,13 +10,10 @@ is high enough.
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
-from data_updater.extractor.pds_extractor import PdsExtractor
 import setup_path # import first
 
 from data_merger.scorer.distance_scorer import DistanceScorer
 from data_updater import entity_types
-from data_updater.extractor.nssdc_extractor import NssdcExtractor
-
 from data_merger.scorer.acronym_scorer import AcronymScorer
 from argparse import ArgumentParser
 import atexit
@@ -35,6 +32,9 @@ from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
+from data_updater.extractor.nssdc_extractor import NssdcExtractor
+from data_updater.extractor.pds_extractor import PdsExtractor
+
 from utils.performances import timeit
 
 from config import CONF_DIR # type: ignore

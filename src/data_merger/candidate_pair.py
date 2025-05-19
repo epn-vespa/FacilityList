@@ -626,7 +626,7 @@ class CandidatePairsMapping():
         self._mapping = []
 
         # Initialize the 2D array
-        for i in range(len(entities1)):
+        for _ in range(len(entities1)):
             self._mapping.append([None] * len(entities2))
 
         # Fill the 2D array
@@ -706,9 +706,6 @@ class CandidatePairsMapping():
         index1, index2 = self._get_indexes(candidate_pair)
         if index1 is not None:
             self._mapping[index1][index2] = None
-
-        # Remove from the list too
-        # del(self._candidate_pairs[index1 * len(self._mapping) + index2])
 
 
     def _get_indexes(self,
