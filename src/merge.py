@@ -10,6 +10,7 @@ is high enough.
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
+from data_updater.extractor.pds_extractor import PdsExtractor
 import setup_path # import first
 
 from data_merger.scorer.distance_scorer import DistanceScorer
@@ -107,7 +108,6 @@ class Merger():
                                                                 FuzzyScorer])
                 # Save the remaining candidate pairs.
                 CPM_wiki_naif.save_json(execution_id = self.execution_id)
-
             del(CPM_wiki_naif)
 
         if (self.graph.is_available("iaumpc") and
@@ -135,6 +135,14 @@ class Merger():
                         attr2 = "code")
             del(CPM_wiki_nssdc)
 
+        if (self.graph.is_available("pds") and
+            self.graph.is_available("nssdc")):
+            CPM_nssdc_pds = CandidatePairsMapping(NssdcExtractor(),
+                                                  PdsExtractor())
+            im.merge_on(CPM_nssdc_pds,
+                        attr1 = "alt_label",
+                        attr2 = "code")
+            del(CPM_nssdc_pds)
         del(im)
 
         #TODO Merge identifiers between wikidata & IAUMPC
@@ -144,7 +152,8 @@ class Merger():
                                    list1: type[Extractor],
                                    list2: type[Extractor],
                                    scores: List[Score],
-                                   checkpoint_id: str):
+                                   checkpoint_id: str,
+                                   human_validation: bool = False):
         """
         Computes a mapping between two lists and disambiguate.
 
@@ -160,27 +169,31 @@ class Merger():
             CPM = CandidatePairsMapping(list1,
                                         list2,
                                         checkpoint_id)
-
-            atexit.register(CPM.save_json,
-                            self.execution_id)
             if not checkpoint_id:
                 CPM.generate_mapping(limit = self.limit)
-                CPM.compute_scores(scores = scores)
-                CPM.save_json(self.execution_id)
+                try:
+                    CPM.compute_scores(scores = scores)
+                except:
+                    CPM.disambiguate(SynonymSetManager._SSM,
+                                     human_validation)
+                    CPM.save_json()
+                CPM.disambiguate(SynonymSetManager._SSM,
+                                 human_validation)
             else:
-                CPM.disambiguate(SynonymSetManager._SSM)
-            # CPM.save_to_graph()
-            atexit.unregister(CPM.save_json)
+                CPM.disambiguate(SynonymSetManager._SSM,
+                                 human_validation)
         except InterruptedError:
-            CPM.save_json(self.execution_id)
+            # CPM.save_json(self.execution_id)
             SynonymSetManager._SSM.save_all()
+            self.write()
             exit()
         del(CPM)
 
 
     def merge_mapping(self,
                       conf_file: str = "",
-                      checkpoint_id: str = None):
+                      checkpoint_id: str = None,
+                      human_validation: bool = False):
         """
         Define the merging strategy (merging order).
 
@@ -196,6 +209,7 @@ class Merger():
 
         with open(conf_file, 'r') as file:
             for i, line in enumerate(file.readlines()):
+                i = i + 1
                 line = line.split('#')[0].strip()
                 if not line:
                     continue # skip line if empty or comment line
@@ -250,9 +264,9 @@ class Merger():
                     else:
                         scores_to_compute.add(ScorerLists.SCORES_BY_NAMES[score])
                     if DistanceScorer in scores_to_compute:
-                        if ((entity_types.GROUND_OBSERVATORY not in extractor1.POSSIBLE_TYPES or
-                             entity_types.GROUND_OBSERVATORY not in extractor2.POSSIBLE_TYPES) and
-                            (entity_types.TELESCOPE not in extractor1.POSSIBLE_TYPES or
+                        if ((entity_types.GROUND_OBSERVATORY not in extractor1.POSSIBLE_TYPES and
+                             entity_types.TELESCOPE not in extractor1.POSSIBLE_TYPES) or
+                            (entity_types.GROUND_OBSERVATORY not in extractor2.POSSIBLE_TYPES and
                              entity_types.TELESCOPE not in extractor2.POSSIBLE_TYPES)):
                             scores_to_compute.remove(DistanceScorer)
                             print(f"Warning at line {i} in {conf_file}: " +
@@ -265,26 +279,18 @@ class Merger():
                         self.make_mapping_between_lists(extractor1(),
                                                         extractor2(),
                                                         scores,
-                                                        checkpoint_id)
+                                                        checkpoint_id,
+                                                        human_validation)
+
+                        # /!\ Save the synonym sets in the graph (do not remove)
+                        SynonymSetManager._SSM.save_all()
                     else:
                         print(f"Warning at line {i} in {conf_file}: " +
                               f"No score to compute for {extractor1_str} and {extractor2_str}. Ignoring.")
                 else:
                     print(f"Warning at line {i} in {conf_file}: " +
                           f"{extractor1_str} and/or {extractor2_str} are not available in the provided ontologies. Ignoring.")
-        """
-        self.make_mapping_between_lists(AasExtractor(),
-                                        WikidataExtractor())
-        self.make_mapping_between_lists(SpaseExtractor(),
-                                        WikidataExtractor())
-        self.make_mapping_between_lists(IauMpcExtractor(),
-                                        WikidataExtractor())
-        self.make_mapping_between_lists(PdsExtractor(),
-                                        WikidataExtractor())
-        """
 
-        # /!\ Save the synonym sets in the graph (do not remove)
-        SynonymSetManager._SSM.save_all()
 
     @timeit
     def write(self):
@@ -305,17 +311,17 @@ def main(input_ontologies: list[str] = [],
          output_ontology: str = "",
          limit: int = -1,
          merging_strategy_file: str = "",
-         checkpoint_id: str = None):
-
+         checkpoint_id: str = None,
+         human_validation: bool = False):
     merger = Merger(input_ontologies,
                     output_ontology,
                     limit)
     atexit.register(merger.print_execution_id)
-    # atexit.register(merger.write)
 
     merger.merge_identifiers()
     merger.merge_mapping(conf_file = merging_strategy_file,
-                         checkpoint_id = checkpoint_id)
+                         checkpoint_id = checkpoint_id,
+                         human_validation = human_validation)
     merger.write()
 
 
@@ -352,7 +358,7 @@ if __name__ == "__main__":
                         help = "Set a limit to fasten tests. " +
                         "Only N x N entities will be mapped between each pair of lists.")
 
-    parser.add_argument("-m",
+    parser.add_argument("-s",
                         "--merging-strategy",
                         dest = "merging_strategy_file",
                         default = CONF_DIR / "merging_strategy.conf",
@@ -367,10 +373,18 @@ if __name__ == "__main__":
                         help = "Restart scores computation & merging from a previous checkpoint.")
 
 
+    parser.add_argument("--human-validation",
+                        dest = "human_validation",
+                        action = "store_true",
+                        help = "Disambiguate manually after score computation (use for test purpose).")
+
+
+
     args = parser.parse_args()
 
     main(args.input_ontologies,
          args.output_ontology,
          args.limit,
          args.merging_strategy_file,
-         args.checkpoint)
+         args.checkpoint,
+         args.human_validation)

@@ -12,10 +12,13 @@ Author:
 from collections import defaultdict
 from enum import Enum
 import json
-from typing import Dict, List, Union
+import shutil
+from typing import Dict, List, Type, Union
 import uuid
 import hashlib
 import os
+import numpy as np
+import re
 
 from rdflib import RDF, XSD, Literal, URIRef
 from tqdm import tqdm
@@ -27,9 +30,9 @@ from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
-import pandas as pd
 
-from config import DATA_DIR # type: ignore
+from config import DATA_DIR, OLLAMA_MODEL # type: ignore
+from utils.llm_connection import LLM
 from utils.performances import deprecated, timeit
 
 
@@ -167,9 +170,11 @@ class CandidatePair():
 
     def compute_global_score(self) -> float:
         """
-        Return a unique score, taking all scores into account.
-        Weighted sum or average.
+        Return a unique score from the candidate pair's other scores.
+        Weighted sum with ReLU (only scores > 0).
         """
+        weights = {"fuzzy_levenshtein": 0.3,
+                   "acronym": 0.7}
         score = 0
         n_scores = 0
         for score_name, score_value in self._scores.items():
@@ -180,16 +185,19 @@ class CandidatePair():
                 # score could be computed.
                 pass
             else:
-                score += score_value
-                n_scores += 1
-        score = score / n_scores
+                weight = weights.get(score_name, 1)
+                score += score_value * weight
+                n_scores += weight
+        if n_scores > 0:
+            score = score / n_scores
         self.add_score(score_name = "global",
                        score = score) # averaged score
         return score
 
 
     def save_to_graph(self,
-                      decisive_score: str):
+                      decisive_score: str,
+                      justification: str = None):
         """
         Add a Candidate Pair in the graph. Use it after
         a Synonym Set was created from this Candidate Pair to keep
@@ -197,6 +205,7 @@ class CandidatePair():
 
         Keyword arguments:
         decisive_score -- score on which the Synonym Set was decided
+        justification -- text that explains why this decision was taken
         """
         graph = Graph()
 
@@ -213,9 +222,14 @@ class CandidatePair():
             graph.add((candidate_pair_uri,
                         graph.OBS[score],
                         Literal(value, datatype = XSD.float)))
-        graph.add((candidate_pair_uri,
-                   graph.OBS["provenance"],
-                   Literal(decisive_score)))
+        if decisive_score:
+            graph.add((candidate_pair_uri,
+                    graph.OBS["provenance"],
+                    Literal(decisive_score)))
+        if justification:
+            graph.add((candidate_pair_uri,
+                       graph.OBS["justification"],
+                       Literal(justification)))
 
 
     def __eq__(self,
@@ -494,6 +508,7 @@ class CandidatePairsManager():
             SynonymSetManager._SSM.add_synset(candidate_pair.member1,
                                               candidate_pair.member2)
             # Add Candidate Pair to graph for traceability
+            candidate_pair.add_score(score_name = score.NAME, score = score_value)
             candidate_pair.save_to_graph(decisive_score = score.NAME)
             return State.ADMITTED
         else:
@@ -511,7 +526,7 @@ class CandidatePairsMapping():
     def __init__(self,
                  list1: Extractor,
                  list2: Extractor,
-                 checkpoint_id: str):
+                 checkpoint_id: str = None):
         self._list1 = list1
         self._list2 = list2
 
@@ -538,8 +553,11 @@ class CandidatePairsMapping():
     def __len__(self):
         if not self._mapping:
             return 0
-        # return len(self._candidate_pairs)
-        return len(self._mapping) * len(self._mapping[0])
+        # count None
+        none = 0
+        for l in self._mapping:
+            none += l.count(None)
+        return len(self._mapping) * len(self._mapping[0]) - none
 
 
     def __iter__(self):
@@ -745,6 +763,7 @@ class CandidatePairsMapping():
             SynonymSetManager._SSM.add_synset(candidate_pair.member1,
                                               candidate_pair.member2)
             # Add Candidate Pair to graph for traceability
+            candidate_pair.add_score(score_name = score.NAME, score = score_value)
             candidate_pair.save_to_graph(decisive_score = score.NAME)
             return State.ADMITTED
 
@@ -829,61 +848,305 @@ class CandidatePairsMapping():
 
 
     def disambiguate(self,
-                     SSM: SynonymSetManager):
+                     SSM: SynonymSetManager,
+                     human_validation: bool):
         """
         Disambiguation algorithm: find the best global score,
-        create a Synonym Set if high enough and start until stop.
+        create a Synonym Set if high enough until stop.
 
         Human verification (input): Assisted Disambiguation.
 
         Keyword arguments:
         SSM -- this run's SynonymSetManager
         """
-        import numpy as np
         scores = []
+        none_cp = 0
         for l in self._mapping:
             scores_l = []
-            for c in l:
-                if c is None:
+            for candidate_pair in l:
+                if candidate_pair is None:
+                    none_cp += 1
                     scores_l.append(np.nan)
                 else:
-                    if "global" in c.scores:
-                        scores_l.append(c.scores.get("global"))
+                    if "global" in candidate_pair.scores:
+                        scores_l.append(candidate_pair.scores.get("global"))
                     else:
-                        scores_l.append(c.compute_global_score())
+                        scores_l.append(candidate_pair.compute_global_score())
             scores.append(scores_l)
-        scores = np.array(scores)
+        scores = np.array(scores, dtype = float)
+        # Standardize scores with mean and standard deviation by cols:
+        col_means = np.nanmean(scores, axis = 0, keepdims = True)
+        col_std = np.nanstd(scores, axis = 0, keepdims = True)
+        col_std[col_std == 0] = 1.0
+        scores = (scores - col_means) / col_std # Standardize
+
+        # Standardize scores by rows too:
+        row_means = np.nanmean(scores, axis = 1, keepdims = True)
+        row_std = np.nanstd(scores, axis = 1, keepdims = True)
+        row_std[row_std == 0] = 1.0
+        scores = (scores - row_means) / row_std
+
+        # Human validation
+        if human_validation:
+            self.human_validation(scores, SSM)
+
+        # LLM validation
+        else:
+            self.ai_validation(scores, SSM)
+
+    PROMPT_BASE = "You are an ontology matching tool, able to detect semantical, spatio-temporal differences and similarities within entities. " + \
+        "You have to answer this questions: are those two entities the same ? " + \
+        "Additionally, a satellite that is part of a mission, " + \
+        "or telescope that is a part of an observatory, are distinct.\n" + \
+        "Only select one choice from below:" + \
+        "\nsame\ndistinct\n" + \
+        "Reply with this format:\n" + \
+        "**<choice>**\n" + \
+        "<Justification (why do you think it is the good choice)>\n\n" + \
+        "Example:\n" + \
+        "**same**\n" + \
+        "both refer to the same observatory, just with slightly different naming conventions. therefore, they are the same entity.\n" + \
+        "\n\nExample 2:\n" + \
+        "**distinct**\n" + \
+        "one of the entities refer to the spacecraft, while the other to the mission. therefore, the second entity is a part of the first one.\n"
+
+
+    def ai_validation(self,
+                      scores: np.array,
+                      SSM: SynonymSetManager):
+        """
+        Ask a LLM to take decisions for the highest scores
+        iteratively, like in human_validation.
+
+        Keyword arguments:
+        scores -- a 2D array of the scores of the candidate pairs
+        SSM -- this run's SynonymSetManager
+        """
         choice = None
-        while len(scores) and choice != "2":
-            x, y = np.unravel_index(np.argmax(scores), scores.shape)
+
+
+        # TODO: define a stop condition (looped unsuccessfully n times, for example 5% of the CandidatePairs ?)
+        begin_size = scores.size
+        n_rows = scores.shape[0]
+        n_cols = scores.shape[1]
+        best_score = np.nanargmax(scores)
+        n_fail = 0
+        score = np.nanargmax(scores)
+        n_success = 0
+        # std_dev
+        std_dev = np.nanstd(scores)
+        mean = np.nanmean(scores)
+        # 5 %
+        threshold = (mean - 1.96) * std_dev
+        print(threshold)
+        while len(scores) and choice != "2" and score > threshold:
+            #if n_fail > n_success :
+                # Failed more time than it succeeded:
+            #    break
+
+            left = np.sum(np.where(np.isnan(scores), 0, 1))
+            # Stop condition: nans are more than 5% of the table ?
+            print(f"\n\n\tThere are {left} candidate pairs to review.")
+            if np.isnan(scores).all():
+                break
+            x, y = np.unravel_index(np.nanargmax(scores), scores.shape)
             score = scores[x][y]
-            scores = np.delete(scores, x, axis = 0)
-            scores = np.delete(scores, y, axis = 1)
+            if score < 0:
+                break # Stop condition: score is too low
+
             best_candidate_pair = self._mapping[x][y]
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
-            choice = input(f"Highest score {score} for\n{member1},\n{member2}.\nSame: 0 (default)\nDifferent: 1\nStop: 2\n>>> ")
-            if choice == "2":
+
+            exclude = ["code", "url", "NSSDCA_ID", "uri", "ext_ref", "COSPAR_ID", "NAIF_ID", "MPC_ID", "equivalent_class"]
+            prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
+            prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"
+            prompt += self.PROMPT_BASE
+            response = LLM().generate(prompt)
+            answer, justification = self._parse_ai_response(response)
+            if answer == "same":
+                best_candidate_pair.save_to_graph(decisive_score = f"{OLLAMA_MODEL} validation",
+                                                  justification = justification)
+                scores = np.delete(scores, x, axis = 0)
+                scores = np.delete(scores, y, axis = 1)
+                self.del_candidate_pairs(member1)
+                self.del_candidate_pairs(member2)
+                SSM.add_synset(member1, member2)
+                n_success += 1
+            elif answer == "distinct":
+                self.del_candidate_pair(best_candidate_pair)
+                scores[x][y] = np.nan
+                n_fail += 1
+        # Now review once the best scores in lines & cols
+        for x in range(len(self._mapping)):
+            y = np.unravel_index(np.nanargmax(scores[x]), scores[x].shape)
+
+
+    def _parse_ai_response(self,
+                           response: str) -> tuple:
+        """
+        Parse the AI's response. Return the answer and the justification.
+
+        Keyword arguments:
+        repsonse -- a string generated by a LLM.
+        """
+        answers = re.findall(r"\*\*.+\*\*", response)
+        if len(answers) == 1:
+            answer_str = answers[0]
+            answer = answer_str[2:-2]
+        elif len(answers) == 0:
+            raise ValueError(f"{OLLAMA_MODEL} did not reply a valid answer (format: **<answer>**).\nResponse was: {response}")
+        else:
+            raise ValueError(f"{OLLAMA_MODEL} replied more than one answer.\nResponse was: {response}")
+        print("answer:", answer)
+        justification = response.replace(answer_str, "").strip()
+        print("justification:", justification)
+        return answer, justification
+
+
+    def human_validation(self,
+                         scores: np.array,
+                         SSM: SynonymSetManager):
+        """
+        Human validation algorithm. Propose candidate pairs that are
+        the most likely to be correct according to the computed scores.
+        Ask the user for a feedback interactively at each step.
+
+        Keyword arguments:
+        scores -- a 2D array of the scores of the candidate pairs
+        SSM -- this run's SynonymSetManager
+        """
+        choice = None
+        while len(scores) and choice != "2":
+            left = np.sum(np.where(np.isnan(scores), 0, 1))
+            print(f"\n\n\tThere are {left} candidate pairs to review.")
+            if np.isnan(scores).all():
+                break
+            x, y = np.unravel_index(np.nanargmax(scores), scores.shape)
+            score = scores[x][y]
+
+            #if score == 0:
+            #    print("Best score is 0. Every Candidate Pair is eliminated.")
+            #    break
+            best_candidate_pair = self._mapping[x][y]
+            member1 = best_candidate_pair.member1
+            member2 = best_candidate_pair.member2
+            self._align_repr(member1, member2)
+
+            # Human validation
+            choice = input(f"Highest score {score} for\n{member1},\n{member2}.\nSame: 0 (default)\nDifferent: 1\nStop: 2\nisPartOf: 3\nhasPart: 4\ncheck 5 best: 5\n>>> ")
+            if choice == "5":
+                non_nan_idx = ~np.isnan(scores[x])
+                top5_idx = np.argsort(scores[x][non_nan_idx])[-5:][::-1]
+                for i, idx in enumerate(top5_idx):
+                    pair = self._mapping[x][idx]
+                    print(f"{i}. {round(scores[x][idx], 2)} {pair.member2.get_values_for('label')}")
+                choice2 = input(f"Which entity seems to match {member1.get_values_for('label')} ? None of them (default)\n>>> ")
+                if choice2.strip().isdigit() and int(choice2) in range(0, 5):
+                    print("choice2 = ", choice2)
+                    y2 = top5_idx[int(choice2)]
+                    scores[x][y2] = score + 1 # higher than the current CP's score.
+                    continue # Will check for this pair next.
+                else:
+                    # Delete 5 pairs (& replace score by np.nan)
+                    print("choice2 = ", choice2)
+                    for y2 in top5_idx:
+                        self.del_candidate_pair(self._mapping[x][y2])
+                        scores[x][y2] = np.nan
+
+            elif choice == "4":
+                Graph().add((member1.uri, "has_part", member2.uri))
+                Graph().add((member2.uri, "is_part_of", member1.uri))
+                self.del_candidate_pair(best_candidate_pair)
+                scores[x][y] = np.nan
+                continue
+            elif choice == "3":
+                Graph().add((member1.uri, "is_part_of", member2.uri))
+                Graph().add((member2.uri, "has_part", member1.uri))
+                self.del_candidate_pair(best_candidate_pair)
+                scores[x][y] = np.nan
+                continue
+            elif choice == "2":
+                cancel = input("Leaving disambiguation... Type anything to cancel: ")
                 break
             elif choice == "1":
-                cancel = input("Did not create a Synonym Set.")
-                if cancel:
+                cancel = input("Did not create a Synonym Set. Type anything to cancel: ")
+                if cancel != "":
                     continue
                 self.del_candidate_pair(best_candidate_pair)
                 scores[x][y] = np.nan
                 continue
-            cancel = input(f"Create a synonym set with {member1}, {member2}")
+            cancel = input(f"Create a synonym set with {member1}, {member2}. Type anything to cancel: ")
             if cancel:
                 continue
+            scores = np.delete(scores, x, axis = 0)
+            scores = np.delete(scores, y, axis = 1)
             self.del_candidate_pairs(member1)
             self.del_candidate_pairs(member2)
             SSM.add_synset(member1, member2)
-            best_candidate_pair.save_to_graph(decisive_score = "global")
+            best_candidate_pair.save_to_graph(decisive_score = "human validation")
+
+
+    def _align_repr(self,
+                    member1: Union[Entity, SynonymSet],
+                    member2: Union[Entity, SynonymSet]):
+        """
+        Print representation of two candidate pairs aligned on their attributes
+        in a string.
+
+        Keyword arguments:
+        member1 -- the first entity (or synonym set).
+        member2 -- the second entity (or synonym set).
+        """
+        n_cols = shutil.get_terminal_size(fallback=(80,20)).columns
+        col_width = n_cols // 2 - 4
+
+        all_keys = sorted(set(member1.data.keys()) | set(member2.data.keys()))
+
+        rows = []
+        largest_key_len = 0
+        for key in all_keys:
+            key = Graph().OM.get_attr_name(key)
+            if len(key) > largest_key_len:
+                largest_key_len = len(key)
+            val1 = '\n'.join([str(x) for x in member1.get_values_for(key)])
+            val2 = '\n'.join([str(x) for x in member2.get_values_for(key)])
+            rows.append([key, val1, val2])
+        col_width -= largest_key_len // 2
+        print("*" * largest_key_len + " " + "*" * col_width + " " + "*" * col_width )
+        for key, val1, val2 in rows:
+            if key in ["source"]:
+                continue
+            val1 = str(val1) if val1 else ""
+            val2 = str(val2) if val2 else ""
+            # split val1 & val2 to a table
+            val1_rows = []
+            val2_rows = []
+            while val1:
+                val1_rows.extend([x[:col_width] for x in val1.split("\n")])
+                val1 = val1[col_width:]
+            while val2:
+                # val2_rows.extend(val2[:col_width])
+                val2_rows.extend([x[:col_width] for x in val2.split("\n")])
+                val2 = val2[col_width:]
+            if len(val1_rows) < len(val2_rows):
+                val1_rows.extend([""] * (len(val2_rows)-len(val1_rows)))
+            elif len(val2_rows) < len(val1_rows):
+                val2_rows.extend([""] * (len(val1_rows)-len(val2_rows)))
+            for i, (col1, col2) in enumerate(zip(val1_rows, val2_rows)):
+                if i == 0:
+                    print(key + " " * (largest_key_len - len(key)), end = "|")
+                else:
+                    print(" " * (largest_key_len), end = "|")
+                print(col1 + " " * (col_width - len(col1)), end = "|")
+                print(col2) # \n
+                if i == 3:
+                    break # Only print 3 lines per attr
 
 
     @timeit
     def _disambiguate_discriminant(self,
-                                   scores: List[Score]):
+                                   scores: List[Type[Score]]):
         """
         Disambiguate discriminant scores. This will remove
         the candidate pairs for which we are sure that they are not
@@ -918,7 +1181,7 @@ class CandidatePairsMapping():
 
     @timeit
     def _compute_cuda_scores(self,
-                             scores: List[Score]):
+                             scores: List[Type[Score]]):
         """
         Compute scores that cannot be computed in a multiprocess (because they
         use CUDA) for the remaining candidate pairs.
@@ -979,7 +1242,7 @@ class CandidatePairsMapping():
                                    member2,
                                    uri,
                                    scores) for member1, member2, uri in candidate_pairs]
-            for future in tqdm(as_completed(futures)):
+            for future in tqdm(as_completed(futures), total = len(candidate_pairs)):
                 score_values, candidate_pair_uri = future.result()
                 for score, score_value in zip(scores, score_values):
                     # Make sure that we add it in the right CandidatePair.
@@ -1099,7 +1362,9 @@ class CandidatePairsMapping():
         res = ""
         with open(str(path), 'w') as file:
             file.write("{\n")
-            for cp in self:#._candidate_pairs:
+            print("") # To not erase the previous printed line
+            for i, cp in enumerate(self):#._candidate_pairs:
+                print(f"\033[F\033[{0}G Saving candidate pairs to checkpoint:{i}/{len(CandidatePair.candidate_pairs)}")
                 res += "\"" + str(cp.member1.uri) + '|' + str(cp.member2.uri) + "\":"
                 res += "{"
                 for score, value in cp.scores.items():

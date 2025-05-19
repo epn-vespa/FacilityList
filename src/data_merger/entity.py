@@ -116,7 +116,8 @@ class Entity():
 
     def to_string(self,
                   exclude: list[str] = ["code",
-                                        "url",]) -> str:
+                                        "url"],
+                  limit: int = 512) -> str:
         """
         Convert an entity's data dict into its string representation.
         Keys are sorted so that the generated string is always the same.
@@ -127,6 +128,8 @@ class Entity():
         Keyword arguments:
         data -- the entity data dict
         exclude -- dict entries to exclude
+        limit -- maximum string length for each attribute of the entity.
+                 -1 for no limit.
         """
         res = ""
         label = self.get_values_for("label")
@@ -141,13 +144,16 @@ class Entity():
                 continue
             if key == "label":
                 continue
-            if type(value) not in [list, set, tuple]:
-                value = [value]
             if key == "alt_label":
                 key = "Also known as"
+                # Only keep ten alt labels
+                #res += f" {key}: {', '.join(sorted(value, key = lambda x: 1/len(x))[:10])}"
+                #continue
+            if type(value) not in [list, set, tuple]:
+                value = [value]
             else:
                 key = key.replace('_', ' ').capitalize()
-            res += f"{key}: {', '.join([str(v)[:512] for v in value])}. "
+            res += f" {key}: {', '.join([str(v) for v in value])[:limit]}."
         return res
 
 
