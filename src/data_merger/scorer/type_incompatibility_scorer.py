@@ -22,7 +22,7 @@ from graph import Graph
 
 class TypeIncompatibilityScorer(Score):
 
-    NAME = "type_incompatibility"
+    NAME = "type"
 
 
     ground_types = {entity_types.GROUND_OBSERVATORY,
@@ -50,8 +50,20 @@ class TypeIncompatibilityScorer(Score):
         entity1 -- reference entity
         entity2 -- compared entity
         """
-        types1 = entity1.get_values_for("type")
-        types2 = entity2.get_values_for("type")
+        type1 = entity1.get_values_for("type")
+        type2 = entity2.get_values_for("type")
+        confidence1 = entity1.get_values_for("type_confidence")
+        confidence2 = entity2.get_values_for("type_confidence")
+        if confidence1 != 1 or confidence2 != 1:
+            # The type was determined by a LLM, cannot disambiguate
+            # on the type (not enough control)
+            return -1
+
+        if type1.union(type2):
+            return -1
+        else:
+            return -2
+        """
         if any(t1 in TypeIncompatibilityScorer.ground_types for t1 in types1):
             if any(t2 in TypeIncompatibilityScorer.space_types for t2 in types2):
                 return -2 # Ground / Space
@@ -60,3 +72,4 @@ class TypeIncompatibilityScorer(Score):
             if any(t2 in TypeIncompatibilityScorer.ground_types for t2 in types2):
                 return -2 # Space / Ground
         return -1
+        """
