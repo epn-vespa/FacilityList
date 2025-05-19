@@ -207,7 +207,7 @@ class VersionManager():
 
     _TODAY = datetime.datetime.now(tz=datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    def get_newer_keys(last_version_file: str,
+    def get_newer_keys(prev_version_file: str,
                        new_version: dict,
                        list_name: str) -> set:
         """
@@ -215,26 +215,36 @@ class VersionManager():
         of the version file and necessitate to be refreshed.
 
         Keyword arguments:
-        last_version_file -- the json file containing last versions for each uri
-        new_version -- the dict with newer versions
+        prev_version_file -- json file containing previous versions of uris
+        new_version -- dict with newer versions
         list_name -- used to access the right folder of the cache.
         """
         result = set()
 
-        last_version_file = str(DATA_DIR / list_name / last_version_file)
+        prev_version_file = str(DATA_DIR / list_name / prev_version_file)
 
-        if not os.path.exists(last_version_file):
+        if not os.path.exists(prev_version_file):
             # We create the path to save the versions from the
             # newer version.
-            return new_version.keys()
+            print("do not exist.")
+            print(prev_version_file)
+            with open(prev_version_file, "w") as f:
+                prev_version = {
+                    "processing_date": VersionManager._TODAY,
+                    "previous_date": VersionManager._TODAY,
+                    "results_count": 0,
+                    "results": {}
+                }
+                json.dump(prev_version, f, indent = 4)
+            # return new_version.keys()
         else:
-            with open(last_version_file, "r") as f:
-                last_version = json.load(f)
+            with open(prev_version_file, "r") as f:
+                prev_version = json.load(f)
 
         for uri in new_version["results"]:
-            if uri not in last_version["results"]:
+            if uri not in prev_version["results"]:
                 result.add(uri)
-            elif (last_version["results"][uri]["modified_date"]
+            elif (prev_version["results"][uri]["modified_date"]
                  < new_version["results"][uri]["modified_date"]):
                 result.add(uri)
         return result
