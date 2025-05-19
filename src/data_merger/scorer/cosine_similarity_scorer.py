@@ -13,17 +13,22 @@ Author:
 from typing import Generator, List, Union
 
 from sentence_transformers import SentenceTransformer, util
+import torch
 from tqdm import tqdm
 from graph import Graph
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
 from utils.performances import timeall, timeit
+import multiprocessing
+import numpy as np
+from config import CACHE_DIR
 
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-BATCH_SIZE = 8
+BATCH_SIZE = 32
+N_THREADS = 4
 
 # MODEL = "all-MiniLM-L6-v2"
 MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
@@ -56,11 +61,21 @@ class CosineSimilarityScorer(Score):
         entities2 -- compared entities
         """
         if CosineSimilarityScorer.model is None:
-            CosineSimilarityScorer.model = SentenceTransformer(MODEL)
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+            if device == "cpu":
+                N_THREADS = multiprocessing.cpu_count()
+                torch.set_num_threads(N_THREADS)
+            CosineSimilarityScorer.model = SentenceTransformer(MODEL, device = device)
 
-        encoded_entities12 = CosineSimilarityScorer.encode_batch(entities1 + entities2)
+        EMBEDDINGS_FILE = CACHE_DIR / f"embeddings{len(entities1)}_{len(entities2)}.npy"
+        if os.path.exists(EMBEDDINGS_FILE):
+            encoded_entities12 = np.load(EMBEDDINGS_FILE)
+        else:
+            encoded_entities12 = CosineSimilarityScorer.encode_batch(entities1 + entities2)
+            np.save(EMBEDDINGS_FILE, encoded_entities12)
         encoded_entities1 = encoded_entities12[:len(entities1)]
         encoded_entities2 = encoded_entities12[len(entities1):]
+
         for entity1 in tqdm(encoded_entities1, desc = "Computing cosine similarity for encoded entities"):
             for entity2 in encoded_entities2:
                 yield util.pytorch_cos_sim(entity1, entity2)[0][0].item()
