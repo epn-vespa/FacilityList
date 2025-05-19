@@ -16,11 +16,6 @@ else:
     CACHE_DIR = ROOT / "cache"
 
 
-# LLM computation result files
-LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
-LLM_EMBEDDINGS_FILE = CACHE_DIR / "llm_embeddings.json"
-
-
 # Ollama Configuration
 if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
     # tycho
@@ -31,13 +26,18 @@ if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
         print("To add OLLAMA_HOST in your environment, add in your ~/.bashrc:")
         print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
     # OLLAMA_MODEL = 'llama3.3:latest' # 'fr', 'it', 'pt', 'hi', 'es', 'th', 'en'
-    OLLAMA_MODEL = 'deepseek-v3:latest' # 400 GB
+    OLLAMA_MODEL = 'deepseek-v3:latest' # 400 GB (~12s)
     # OLLAMA_MODEL = 'gemma3:27b'
 else:
     # local
     OLLAMA_HOST = "http://localhost:11434"
     OLLAMA_MODEL = 'gemma3:4b'
 OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
+
+
+# LLM computation result files
+LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
+LLM_EMBEDDINGS_FILE = CACHE_DIR / f"llm_embeddings_{OLLAMA_MODEL}.json"
 
 
 # precision of longitude/latitude comparison
