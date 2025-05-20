@@ -46,10 +46,6 @@ class Entity():
                 self._data[property].add(str(value))
 
 
-    def __repr__(self):
-        return f"Entity@{self.uri}"
-
-
     def __eq__(self, entity: Entity):
         return self.uri == entity.uri
 
@@ -73,7 +69,7 @@ class Entity():
 
 
     def __repr__(self):
-        return str(self.uri)
+        return f"Entity@{self.uri}"
 
 
     @property

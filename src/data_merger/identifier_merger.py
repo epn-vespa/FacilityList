@@ -12,7 +12,7 @@ from tqdm import tqdm
 from graph import Graph
 from data_merger.candidate_pair import CandidatePair, CandidatePairsManager, CandidatePairsMapping
 from data_merger.entity import Entity
-from data_merger.synonym_set import SynonymSetManager
+from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_updater.extractor import wikidata_extractor
 
 from rdflib.namespace import SKOS
@@ -51,7 +51,7 @@ class IdentifierMerger():
 
         for wikidata_uri, synset in wikidata_entities:
             if synset is not None:
-                wikidata_entity = SynonymSetManager().get_synset_for_entity(wikidata_uri)
+                wikidata_entity = SynonymSetManager._SSM.get_synset_for_entity(wikidata_uri)
             else:
                 wikidata_entity = Entity(wikidata_uri)
             naif_codes = wikidata_entity.get_values_for("NAIF_ID")
@@ -103,10 +103,11 @@ class IdentifierMerger():
                                                       has_attr = [attr2])
         list2 = []
 
+
         # Pre-loop to get entity2 and its value for attr2
         for entity2, synset2 in list2_entities:
             if synset2 is not None:
-                entity2 = SynonymSetManager().get_synset_for_entity(synset2)
+                entity2 = SynonymSetManager._SSM.get_synset_for_entity(entity2)
             else:
                 entity2 = Entity(entity2)
             value2 = entity2.get_values_for(attr2, unique = True)
@@ -123,7 +124,7 @@ class IdentifierMerger():
         for entity1, synset1 in list1_entities:
             total_entity1 += 1
             if synset1 is not None:
-                entity1 = SynonymSetManager().get_synset_for_entity(synset1)
+                entity1 = SynonymSet(synset1) # SynonymSetManager._SSM.get_synset_for_entity(entity1)
             else:
                 entity1 = Entity(entity1)
             value1 = entity1.get_values_for(attr1, unique = True)
@@ -135,6 +136,9 @@ class IdentifierMerger():
                     # Merge entities or synsets
                     SynonymSetManager._SSM.add_synset(entity1, entity2)
                     merged += 1
+
+        # Save the newly added synonym sets into the graph
+        SynonymSetManager._SSM.save_all()
 
         # Generate mapping for the remaining entities
         if (map_remaining and

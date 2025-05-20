@@ -375,9 +375,9 @@ class Graph(G):
             SELECT ?entity ?synset
             WHERE {{
                 ?entity obs:source obs:{source} .{has_attr_str}
-                # OPTIONAL {{
-                #    ?synset obs:hasMember ?entity .
-                #}}
+                OPTIONAL {{
+                    ?synset obs:hasMember ?entity .
+                }}
                 FILTER NOT EXISTS {{
                     ?entity2 owl:equivalentClass ?entity .
                     ?entity2 obs:source obs:{no_equivalent_in} .

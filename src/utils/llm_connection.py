@@ -28,8 +28,6 @@ class LLM():
             self._context_length = dict()
             self._llm_categories = dict()
             self._llm_embeddings = dict()
-            self._load_llm_categories_from_cache()
-            self._load_llm_embeddings_from_cache()
             self._initialized = True
 
 
@@ -106,8 +104,7 @@ class LLM():
 
     def _save_llm_embeddings_in_cache(self):
         if self.llm_embeddings:
-            if not LLM_EMBEDDINGS_FILE.parent.exists():
-                LLM_EMBEDDINGS_FILE.parent.mkdir(parents = True, exist_ok = True)
+            LLM_EMBEDDINGS_FILE.parent.mkdir(parents = True, exist_ok = True)
             print(f"dumping {len(self.llm_embeddings)} LLM embeddings in {str(LLM_EMBEDDINGS_FILE)}.")
             with open(LLM_EMBEDDINGS_FILE, "w") as f:
                 json.dump(self.llm_embeddings, f)
@@ -143,6 +140,8 @@ class LLM():
         """
         if from_cache and not cache_key:
             raise ValueError("Provided from_cache but not cache_key.")
+        if (from_cache and not self.llm_embeddings):
+            self._load_llm_embeddings_from_cache()
         if (from_cache and self.llm_embeddings and
             cache_key and cache_key in self.llm_embeddings):
             embeddings = self.llm_embeddings[cache_key]
@@ -198,6 +197,9 @@ class LLM():
         """
         if from_cache and not cache_key:
             raise ValueError("Provided from_cache but not cache_key.")
+
+        if from_cache and not self.llm_categories:
+            self._load_llm_categories_from_cache()
 
         if (from_cache and self.llm_categories and
             cache_key and cache_key in self.llm_categories):
@@ -286,7 +288,7 @@ class LLM():
 
     def generate(self,
                  prompt: str,
-                 model: str = OLLAMA_MODEL):
+                 model: str = OLLAMA_MODEL) -> str:
 
         """
         Send a simple generate query to the Ollama API.
