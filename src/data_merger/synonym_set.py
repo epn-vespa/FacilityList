@@ -11,14 +11,17 @@ Author:
 """
 
 from collections import defaultdict
-from typing import Set, Union
+from typing import Set, Tuple, Union
 import uuid
 
 from rdflib import OWL, RDF, URIRef
 
+from data_updater.extractor.extractor import Extractor
 from graph import Graph
 from data_merger.entity import Entity
 
+class SynonymSet:
+    pass
 
 class SynonymSet():
     """
@@ -52,7 +55,6 @@ class SynonymSet():
         uri -- the uri of the list if the synonym set was loaded from
                an existing ontology
         """
-
         # check if any entity is in any of the synonym sets
         for uri_, synonym_set_ in cls.synonym_sets.items():
             for synonym_ in synonym_set_:
@@ -61,9 +63,13 @@ class SynonymSet():
                     return synonym_set_
         if uri:
             if uri in cls.synonym_sets:
-                cls.add_synonyms
+                cls.add_synonyms(synonyms)
                 cls.synonym_sets[uri]._synonyms.update(synonyms)
                 return cls.synonym_sets[uri]
+            elif not synonyms:
+                # Load synonym sets:
+                synonyms = Graph().get_members(uri)
+                cls.synonym_sets[uri] = super().__new__(cls)
         else:
             uri = str(uuid.uuid4())
         instance = super().__new__(cls)
@@ -72,7 +78,7 @@ class SynonymSet():
 
 
     def __init__(self,
-                 synonyms: Set[URIRef] = set(),
+                 synonyms: Set[Entity] = set(),
                  uri: str = "",):
         """
         Keyword arguments:
@@ -124,10 +130,12 @@ class SynonymSet():
         return self._data
 
 
-    def to_string(self) -> str:
+    def to_string(self,
+                  exclude: list[str] = ["code",
+                                        "url"]) -> str:
         res = ""
         for synonym in self.synonyms:
-            res += synonym.to_string() + ' '
+            res += synonym.to_string(exclude = exclude) + ' '
         return res.rstrip()
 
 
@@ -153,7 +161,7 @@ class SynonymSet():
         for _, _, synonym in graph.triples((self.uri,
                                             graph.OBS["hasMember"],
                                             None)):
-            synonyms.add(synonym)
+            synonyms.add(Entity(synonym))
         # reload the data
         self._data = defaultdict(set)
         self._synonyms = set()
@@ -161,7 +169,10 @@ class SynonymSet():
 
 
     def add_synonyms(self,
-                     synonyms: Union[Entity, Set[Entity]]):
+                     synonyms: Union[Union[Entity,
+                                           SynonymSet],
+                                     Set[Union[Entity,
+                                               SynonymSet]]]):
         """
         Add synonyms into a synset. Also add all of their
         data in the _data of the synset (for example, their label
@@ -171,19 +182,26 @@ class SynonymSet():
         synonyms -- the new synonyms to add
         """
         if not isinstance(synonyms, set) and not isinstance(synonyms, list):
-            assert(isinstance(synonyms, Entity))
-            synonyms = set(synonyms)
+            # assert(isinstance(synonyms, Entity))
+            if isinstance(synonyms, Entity):
+                synonyms = {synonyms}
+            elif isinstance(synonyms, SynonymSet):
+                self.add_synonyms(synonyms.synonyms)
+                return
+            else:
+                raise TypeError(f"synonyms must be a (set of) SynonymSet and/or Entity.")
         else:
-            assert(all([isinstance(s, Entity) for s in synonyms]))
+            assert(all([isinstance(s, Entity) or isinstance(s, SynonymSet) for s in synonyms]))
 
-
-        for synonym_uri in synonyms:
-            synonym = synonym_uri #Entity(synonym_uri)
-            self.synonyms.add(synonym)
-            # Update the synonym set's data
-            for relation, values in synonym.data.items():
-                # Value is a dict of values for an entity
-                self._data[relation].update(values)
+        for synonym in synonyms:
+            if isinstance(synonym, SynonymSet):
+                self.add_synonyms(synonym.synonyms)
+            else:
+                self.synonyms.add(synonym)
+                # Update the synonym set's data
+                for relation, values in synonym.data.items():
+                    # Value is a dict of values for an entity
+                    self._data[relation].update(values)
 
 
     def has_member(self,
@@ -194,7 +212,7 @@ class SynonymSet():
         Keyword arguments:
         entity -- the entity to check
         """
-        return entity in self.synset
+        return entity in self.synonyms
 
 
     def save(self):
@@ -218,7 +236,7 @@ class SynonymSet():
                 if member1 == member2:
                     continue
                 # add equivalence mapping relation
-                graph.add((URIRef(member1.uri), OWL.sameAs, URIRef(member2.uri)))
+                graph.add((URIRef(member1.uri), OWL.equivalentClass, URIRef(member2.uri)))
 
 
     def get_values_for(self,
@@ -254,6 +272,10 @@ class SynonymSet():
 
     def __str__(self):
         return str(f"<Object {self.__class__}> {self.uri} {self._synonyms}")
+
+
+    def __repr__(self):
+        return str(self)
 
 
     def __eq__(self, synset):
@@ -304,6 +326,7 @@ class SynonymSetManager():
         entity1 -- first entity to add
         entity2 -- second entity to add
         """
+
         assert(type(entity1) in [Entity, SynonymSet])
         assert(type(entity2) in [Entity, SynonymSet])
 
@@ -317,8 +340,16 @@ class SynonymSetManager():
         # There is no synset for any of entity1 or entity2
         # so we create it.
         elif isinstance(entity1, Entity) and isinstance(entity2, Entity):
+            for synset in self._synsets:
+                if entity1 in synset:
+                    synset.add_synonyms(entity2)
+                    return
+                elif entity2 in synset:
+                    synset.add_synonyms(entity1)
+                    return
             synset = SynonymSet(synonyms = {entity1, entity2})
             self._synsets.add(synset)
+
         elif isinstance(entity1, SynonymSet) and isinstance(entity2, SynonymSet):
             entity1.add_synonyms(entity2.synonyms)
             self._synsets.add(entity1)
@@ -346,7 +377,8 @@ class SynonymSetManager():
         owl:sameAs relation between all the entities in a
         synset.
         """
-        for synset in self._synsets:
+        # for synset in self._synsets:
+        for synset in SynonymSet.synonym_sets.values():
             synset.save()
 
 
