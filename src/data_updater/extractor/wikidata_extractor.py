@@ -279,7 +279,7 @@ class WikidataExtractor(Extractor):
 
         # Get wikidata types as in entity_types
         # Cannot use multithreading as it calls LLMs
-        for data in result.values():
+        for data in tqdm(result.values(), desc = "Get LLM types for Wikidata"):
             self._get_type(data)
         return result
 
@@ -594,7 +594,7 @@ class WikidataExtractor(Extractor):
         if "type" in data:
             return
         choices = entity_types.ALL_TYPES
-        if "wikidata_type" not in data:
+        if "source_type" not in data:
             # Do not get a type for classes and part_of.
             return
         data["type_confidence"] = 1
@@ -604,8 +604,8 @@ class WikidataExtractor(Extractor):
             return
         if "NAIF_ID" in data:
             choices = NaifExtractor.POSSIBLE_TYPES
-        if "wikidata_type" in data:
-            for t in data["wikidata_type"]:
+        if "source_type" in data:
+            for t in data["source_type"]:
                 t = t.lower()
                 entity_type = self.TYPES_CONVERSION.get(t, None)
                 if entity_type:
