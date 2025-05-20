@@ -301,7 +301,7 @@ def get_datetime_from_iso(datetime_str: str):
     """
     if datetime_str.startswith('+'): # datetime module
         datetime_str = datetime_str[1:]
-    datetime_str.replace("-00T", "-01T").replace("-00-", "-01-")
+    datetime_str = datetime_str.replace("-00T", "-01T").replace("-00-", "-01-")
     if re.match(r"^\d\d\d\d$", datetime_str):
         datetime_str += "-01-01T00:00:00"
     elif re.match(r"^\d\d\d\d-\d\d$", datetime_str):
