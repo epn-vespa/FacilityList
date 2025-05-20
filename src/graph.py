@@ -12,7 +12,7 @@ from rdflib import RDFS, Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from data_updater import entity_types
 from data_updater.extractor.extractor import Extractor
-from utils.performances import timeit
+from utils.performances import deprecated, timeit
 from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
 
 
@@ -325,7 +325,7 @@ class Graph(G):
         """
         return namespace in self._available_namespaces
 
-
+    @timeit
     def get_entities_from_list(self,
                                source: Extractor,
                                no_equivalent_in: Extractor = None,
@@ -358,53 +358,65 @@ class Graph(G):
             for attr in has_attr:
                 attr = self.OM.convert_attr(attr)
                 has_attr_str += f"\n?entity <{attr}> ?v ."
-        if no_equivalent_in is None:
-            # Get entities with their corresponding synonym sets
-            # if they are a members of a synonym set already.
+
+        if not no_equivalent_in:
             query = f"""
             SELECT ?entity ?synset
             WHERE {{
                 ?entity obs:source obs:{source} .{has_attr_str}
                 OPTIONAL {{
                     ?synset obs:hasMember ?entity .
-                    ?synset a obs:SynonymSet .
                 }}
             }}
             """
         else:
-            if isinstance(no_equivalent_in, Extractor):
-                no_equivalent_in = no_equivalent_in.URI
-                no_equivalent_in = standardize_uri(no_equivalent_in)
-            else:
-                raise TypeError(f"'no_equivalent_in' ({source}) should be an Extractor. "
-                                + f"Got {type(source)}.")
-
+            no_equivalent_in = standardize_uri(no_equivalent_in.URI)
             query = f"""
             SELECT ?entity ?synset
             WHERE {{
                 ?entity obs:source obs:{source} .{has_attr_str}
-                OPTIONAL {{
-                    ?synset a obs:SynonymSet .
-                    ?synset obs:hasMember ?entity .
-                }}
-                #FILTER NOT EXISTS {{
-                #    ?entity owl:sameAs ?entity2 .
-                #    ?entity2 obs:source obs:{no_equivalent_in} .
+                # OPTIONAL {{
+                #    ?synset obs:hasMember ?entity .
                 #}}
                 FILTER NOT EXISTS {{
-                    ?synset a obs:SynonymSet .
-                    ?synset obs:hasMember ?entity .
-                    ?synset obs:hasMember ?entity3 .
-                    ?entity3 obs:source obs:{no_equivalent_in} .
+                    ?entity2 owl:equivalentClass ?entity .
+                    ?entity2 obs:source obs:{no_equivalent_in} .
                 }}
+
             }}
             """
-            # Only use one of the FILTER NOT EXISTS for performance
         if limit >= 0:
             query += f" LIMIT {limit}"
         return self.query(query)
 
 
+    def count_synonym_sets(self) -> int:
+        query = f"""SELECT ?synset WHERE {{
+            ?synset a obs:SynonymSet .
+        }}"""
+        resp = self.query(query)
+        return len(resp)
+
+
+    def _get_synset(self,
+                    entity: URIRef) -> Iterator[URIRef]:
+        """
+        Get the synset of an entity
+        """
+        for synonym, _, _ in self.triples(None, self.OM["hasMember"], entity):
+            yield synonym
+
+
+    def get_members(self,
+                    synset_uri: URIRef) -> Iterator[URIRef]:
+        """
+        Get members of a synonym set using the synonym set's URI.
+        """
+        for _, _, syn in self.triples((synset_uri, self.OM["hasMember"], None)):
+            yield syn
+
+
+    @deprecated
     def get_candidate_pair_uri(self,
                                member1: URIRef,
                                member2: URIRef) -> URIRef:
@@ -558,23 +570,6 @@ class Graph(G):
             # standardize obj_uri
             obj = standardize_uri(obj)
             obj_uri = namespace_obj[obj]
-
-        """
-        if predicate == "label":
-            obj = self.get_label_and_save_alt_labels(obj,
-                                                        namespace_obj,
-                                                        language = language)
-        if predicate in self.OM.SELF_REF:
-            obj = self.get_label_and_save_alt_labels(obj,
-                                                        namespace_obj,
-                                                        language = language)
-            obj_value = namespace_obj[standardize_uri(obj)]
-        elif predicate in self.OM.EXT_REF:
-                # Do not standardize an external URI
-            obj_value = namespace_obj[obj]
-        else:
-            obj_value = Literal(obj, lang = language, type = xsdtype)"
-        """
         return pred_uri, obj_uri
 
 
