@@ -109,7 +109,6 @@ class Merger():
                 # Save the remaining candidate pairs.
                 CPM_wiki_naif.save_json(execution_id = self.execution_id)
             del(CPM_wiki_naif)
-
         if (self.graph.is_available("iaumpc") and
             self.graph.is_available("wikidata")):
             # P717. Doublon: P5736
@@ -117,8 +116,10 @@ class Merger():
             CPM_wiki_iaumpc = CandidatePairsMapping(WikidataExtractor(),
                                                     IauMpcExtractor())
             im.merge_on(CPM_wiki_iaumpc,
-                        attr1 = "MPC_Obs_ID",
-                        attr2 = "code")
+                        attr1 = "MPC_ID",
+                        attr2 = "code",
+                        map_remaining = False) # TODO: True
+            # CPM_wiki_iaumpc.compute_scores()
             del(CPM_wiki_iaumpc)
         if (self.graph.is_available("nssdc") and
             self.graph.is_available("wikidata")):
@@ -145,12 +146,10 @@ class Merger():
             del(CPM_nssdc_pds)
         del(im)
 
-        #TODO Merge identifiers between wikidata & IAUMPC
-
 
     def make_mapping_between_lists(self,
-                                   list1: type[Extractor],
-                                   list2: type[Extractor],
+                                   list1: Extractor,
+                                   list2: Extractor,
                                    scores: List[Score],
                                    checkpoint_id: str,
                                    human_validation: bool = False):
@@ -176,7 +175,7 @@ class Merger():
                 except:
                     CPM.disambiguate(SynonymSetManager._SSM,
                                      human_validation)
-                    CPM.save_json()
+                    CPM.save_json(execution_id = self.execution_id)
                 CPM.disambiguate(SynonymSetManager._SSM,
                                  human_validation)
             else:

@@ -13,7 +13,7 @@ from collections import defaultdict
 from enum import Enum
 import json
 import shutil
-from typing import Dict, List, Type, Union
+from typing import Dict, Generator, List, Type, Union
 import uuid
 import hashlib
 import os
@@ -33,7 +33,7 @@ from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_compl
 
 from config import DATA_DIR, OLLAMA_MODEL # type: ignore
 from utils.llm_connection import LLM
-from utils.performances import deprecated, timeit
+from utils.performances import deprecated, timeall, timeit
 
 
 JSON = DATA_DIR / "checkpoint"# "../../cache/error.log"
@@ -234,8 +234,10 @@ class CandidatePair():
 
     def __eq__(self,
                candidate_pair: CandidatePair) -> bool:
-        return (candidate_pair.member1 == self.member1 and candidate_pair.member2 == self.member2
-                or candidate_pair.member1 == self.member2 and candidate_pair.member2 == self.member1)
+        if candidate_pair is None:
+            return False
+        return (candidate_pair.member1 == self.member1 and candidate_pair.member2 == self.member2 or
+                candidate_pair.member1 == self.member2 and candidate_pair.member2 == self.member1)
 
 
     def __hash__(self) -> int:
@@ -570,7 +572,7 @@ class CandidatePairsMapping():
 
     def _increment(self):
         """
-        Increment from bottom to top & from left to write.
+        Increment from bottom to top & from right to left.
         """
         self.col_index -= 1
         if self.col_index < 0:
@@ -579,23 +581,39 @@ class CandidatePairsMapping():
 
 
     def __next__(self):
-        if self.row_index < 0:
-            raise StopIteration
-        if len(self._mapping) == 0 or len(self._mapping[0]) == 0:
+        mapping = self._mapping
+        rows = len(mapping)
+        if self.row_index < 0 or rows == 0 or len(mapping[0]) == 0:
             raise StopIteration
         current_element = None
-        while current_element is None:
-            current_element = self._mapping[self.row_index][self.col_index]
+        while self.row_index >= 0:
+            current_element = mapping[self.row_index][self.col_index]
             self._increment()
-            if (current_element is None and
-                self.row_index < 0):
-                raise StopIteration
-        return current_element
+            if current_element is not None:
+                return current_element
+        raise StopIteration
+
+
+    def iter_mapping(self) -> Generator[int, int, CandidatePair]:
+        """
+        Optimized method to loop over Candidate Pairs.
+        """
+        mapping = self._mapping
+        if not mapping or not mapping[0]:
+            return  # mapping vide ou lignes vides
+
+        for i in reversed(range(len(self._mapping))):
+            for j in reversed(range(len(self._mapping[0]))):
+                candidate_pair = self._mapping[i][j]
+                if candidate_pair is not None:
+                    yield (i, j, candidate_pair)
 
 
     @timeit
     def generate_mapping(self,
-                         limit: int = -1):
+                         limit: int = -1,
+                         entities1: List[Entity] = None,
+                         entities2: List[Entity] = None):
         """
         Generate candidate pairs between both lists. Only
         generate candidate pairs for entities that are not linked
@@ -623,6 +641,7 @@ class CandidatePairsMapping():
                                                  no_equivalent_in = self._list1,
                                                  limit = limit)
         entities2 = list(entities2)
+
         self._mapping = []
 
         # Initialize the 2D array
@@ -657,30 +676,27 @@ class CandidatePairsMapping():
                 cp_uri = None
                 cp = CandidatePair(entity1, entity2, cp_uri)
                 self._mapping[i][j] = cp
-                # self._candidate_pairs.append(cp)
 
 
     def del_candidate_pairs(self,
                             entity: Union[Entity, SynonymSet]):
         """
-        Remove all candidate pairs that contain an entity from the
-        mapping and the CandidatePairManager.
+        Remove all candidate pairs involving the given entity from the
+        mapping and index lists.
 
         Keyword arguments:
-        entity -- remove all pairs with this entity.
+        entity -- the Entity or SynonymSet to remove from mapping
         """
         if entity in self._list1_indexes:
             entity_index = self._list1_indexes.index(entity)
-            del self._mapping[entity_index]
-            del self._list1_indexes[entity_index]
+            self._mapping.pop(entity_index)
+            self._list1_indexes.pop(entity_index)
         elif entity in self._list2_indexes:
             entity_index = self._list2_indexes.index(entity)
-            for e1 in self._mapping:
-                del e1[entity_index]
-            del self._list2_indexes[entity_index]
-        else:
-            pass # it can be removed twice when removing a line and a column
-            # raise ValueError(f"{entity} not in mapping.")
+            for row in self._mapping:
+                if entity_index < len(row):
+                    row.pop(entity_index)
+            self._list2_indexes.pop(entity_index)
 
 
         # Remove from the list too
@@ -844,6 +860,7 @@ class CandidatePairsMapping():
         self._compute_global()
 
 
+    @timeit
     def disambiguate(self,
                      SSM: SynonymSetManager,
                      human_validation: bool):
@@ -870,18 +887,10 @@ class CandidatePairsMapping():
                     else:
                         scores_l.append(candidate_pair.compute_global_score())
             scores.append(scores_l)
-        scores = np.array(scores, dtype = float)
-        # Standardize scores with mean and standard deviation by cols:
-        col_means = np.nanmean(scores, axis = 0, keepdims = True)
-        col_std = np.nanstd(scores, axis = 0, keepdims = True)
-        col_std[col_std == 0] = 1.0
-        scores = (scores - col_means) / col_std # Standardize
-
-        # Standardize scores by rows too:
-        row_means = np.nanmean(scores, axis = 1, keepdims = True)
-        row_std = np.nanstd(scores, axis = 1, keepdims = True)
-        row_std[row_std == 0] = 1.0
-        scores = (scores - row_means) / row_std
+        if not scores:
+            print("Nothing to disambiguate.")
+            return
+        scores = self._transform_scores(scores)
 
         # Human validation
         if human_validation:
@@ -890,6 +899,31 @@ class CandidatePairsMapping():
         # LLM validation
         else:
             self.ai_validation(scores, SSM)
+
+    def _transform_scores(self,
+                         scores: List[float]) -> np.array:
+        """
+        Transform scores array into a numpy array
+        while standardizing it.
+
+        Keyword arguments:
+        scores -- list of scores with the same coordinates as
+                  the mapping
+        """
+        scores = np.array(scores, dtype = float)
+        # Standardize scores with mean and standard deviation by cols
+        col_means = np.nanmean(scores, axis = 0, keepdims = True)
+        col_std = np.nanstd(scores, axis = 0, keepdims = True)
+        col_std[col_std == 0] = 1.0
+        scores = (scores - col_means) / col_std # Standardize
+
+        # Standardize scores by rows too
+        row_means = np.nanmean(scores, axis = 1, keepdims = True)
+        row_std = np.nanstd(scores, axis = 1, keepdims = True)
+        row_std[row_std == 0] = 1.0
+        scores = (scores - row_means) / row_std
+        return scores
+
 
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical, spatio-temporal differences and similarities within entities. " + \
         "You have to answer this questions: are those two entities the same ? " + \
@@ -908,6 +942,7 @@ class CandidatePairsMapping():
         "one of the entities refer to the spacecraft, while the other to the mission. therefore, the second entity is a part of the first one.\n"
 
 
+    @timeall
     def ai_validation(self,
                       scores: np.array,
                       SSM: SynonymSetManager):
@@ -923,18 +958,14 @@ class CandidatePairsMapping():
 
 
         # TODO: define a stop condition (looped unsuccessfully n times, for example 5% of the CandidatePairs ?)
-        begin_size = scores.size
-        n_rows = scores.shape[0]
-        n_cols = scores.shape[1]
-        best_score = np.nanargmax(scores)
         n_fail = 0
         score = np.nanargmax(scores)
         n_success = 0
         # std_dev
         std_dev = np.nanstd(scores)
         mean = np.nanmean(scores)
-        # 5 %
-        threshold = (mean - 1.96) * std_dev
+        # Eliminate 97.5 %
+        threshold = mean + 1.96 * std_dev
         print(threshold)
         while len(scores) and choice != "2" and score > threshold:
             #if n_fail > n_success :
@@ -955,7 +986,17 @@ class CandidatePairsMapping():
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
 
-            exclude = ["code", "url", "NSSDCA_ID", "uri", "ext_ref", "COSPAR_ID", "NAIF_ID", "MPC_ID", "equivalent_class"]
+            exclude = ["code",
+                       "url",
+                       "NSSDCA_ID",
+                       "uri",
+                       "ext_ref",
+                       "COSPAR_ID",
+                       "NAIF_ID",
+                       "MPC_ID",
+                       "equivalent_class",
+                       "type_confidence",
+                       "location_confidence"]
             prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += self.PROMPT_BASE
@@ -1191,7 +1232,7 @@ class CandidatePairsMapping():
             len_e1 = len(self._list1_indexes)
             len_e2 = len(self._list2_indexes)
             n_candidates = len_e1 * len_e2
-            print(f"Computing {score.NAME} for {self._list1}, {self._list2}" +
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2}" +
                   f" on {n_candidates} candidate pairs.")
             if score == CosineSimilarityScorer:
                 # this score does batches for performances.
@@ -1202,7 +1243,7 @@ class CandidatePairsMapping():
                 for score_value, candidate_pair in zip(score_values, self):
                     candidate_pair.add_score(score.NAME, score_value)
                 continue
-            for candidate_pair in self:
+            for _, _, candidate_pair in self.iter_mapping():
                 score_value = score.compute(Graph(),
                                             candidate_pair.member1,
                                             candidate_pair.member2)
@@ -1222,7 +1263,7 @@ class CandidatePairsMapping():
         """
         DEBUG = True
         if DEBUG:
-            for candidate_pair in self:
+            for _, _, candidate_pair in self.iter_mapping():
                 score_values = _compute_scores(candidate_pair.member1,
                                                candidate_pair.member2,
                                                candidate_pair.uri,
@@ -1233,12 +1274,13 @@ class CandidatePairsMapping():
         """
         with ProcessPoolExecutor() as executor:
             print(f"Computing other scores for the remaining candidate pairs.")
-            candidate_pairs = [(pair.member1, pair.member2, pair.uri) for pair in self]
+            candidate_pairs = [(pair.member1, pair.member2, pair.uri)
+                               for _, _, pair in self.iter_mapping()]
             futures = [executor.submit(_compute_scores,
-                                   member1,
-                                   member2,
-                                   uri,
-                                   scores) for member1, member2, uri in candidate_pairs]
+                                       member1,
+                                       member2,
+                                       uri,
+                                       scores) for member1, member2, uri in candidate_pairs]
             for future in tqdm(as_completed(futures), total = len(candidate_pairs)):
                 score_values, candidate_pair_uri = future.result()
                 for score, score_value in zip(scores, score_values):
@@ -1250,12 +1292,12 @@ class CandidatePairsMapping():
         """
         Compute the global score for each candidate pair.
         """
-        for candidate_pair in self:
+        for _, _, candidate_pair in self.iter_mapping():
             candidate_pair.compute_global_score()
 
 
-    @timeit
     @deprecated
+    @timeit
     def save_to_graph(self):
         """
         Deprecated:
