@@ -8,7 +8,7 @@ Author:
 """
 
 from collections import defaultdict
-from typing import Set
+from typing import Set, Union
 from rdflib import Literal, URIRef
 
 from graph import Graph
@@ -46,7 +46,9 @@ class Entity():
                 self._data[property].add(str(value))
 
 
-    def __eq__(self, entity: Entity):
+    def __eq__(self, entity: Union[Entity, URIRef]):
+        if type(entity) == URIRef:
+            return self.uri == entity
         return self.uri == entity.uri
 
 

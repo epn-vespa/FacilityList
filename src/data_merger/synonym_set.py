@@ -11,7 +11,7 @@ Author:
 """
 
 from collections import defaultdict
-from typing import Set, Tuple, Union
+from typing import List, Set, Union
 import uuid
 
 from rdflib import OWL, RDF, URIRef
@@ -44,7 +44,7 @@ class SynonymSet():
 
 
     def __new__(cls,
-                uri: str = "",
+                uri: URIRef = None,
                 synonyms: Set[Entity] = set()):
         """
         Object factory for SynonymSet.
@@ -59,12 +59,11 @@ class SynonymSet():
         for uri_, synonym_set_ in cls.synonym_sets.items():
             for synonym_ in synonym_set_:
                 if synonym_ in synonyms:
-                    synonym_set_.add_synonyms(synonyms)
+                    synonym_set_.add_synonyms(synonyms = synonyms)
                     return synonym_set_
         if uri:
             if uri in cls.synonym_sets:
-                cls.add_synonyms(synonyms)
-                cls.synonym_sets[uri]._synonyms.update(synonyms)
+                cls.synonym_sets[uri].add_synonyms(synonyms = synonyms)
                 return cls.synonym_sets[uri]
             elif not synonyms:
                 # Load synonym sets:
@@ -79,7 +78,7 @@ class SynonymSet():
 
     def __init__(self,
                  synonyms: Set[Entity] = set(),
-                 uri: str = "",):
+                 uri: URIRef = None):
         """
         Keyword arguments:
         synonyms -- the set of synonyms' URIs of this synonym set.
@@ -89,6 +88,8 @@ class SynonymSet():
 
         if not uri:
             uri = str(uuid.uuid4())
+        elif type(uri) == str:
+            uri = Graph().OM.OBS[uri]
         self._uri = uri
 
         self._synonyms = set()
@@ -189,7 +190,7 @@ class SynonymSet():
                 self.add_synonyms(synonyms.synonyms)
                 return
             else:
-                raise TypeError(f"synonyms must be a (set of) SynonymSet and/or Entity.")
+                raise TypeError(f"synonyms must be a (set of) SynonymSet and/or Entity. Got {type(synonyms)}.")
         else:
             assert(all([isinstance(s, Entity) or isinstance(s, SynonymSet) for s in synonyms]))
 
@@ -205,14 +206,19 @@ class SynonymSet():
 
 
     def has_member(self,
-                   entity: Entity) -> bool:
+                   entity: Union[Entity, URIRef]) -> bool:
         """
         Check if an entity is in the synset.
 
         Keyword arguments:
         entity -- the entity to check
         """
-        return entity in self.synonyms
+        if type(entity) == URIRef:
+            return entity in [syn.uri for syn in self.synonyms]
+        elif type(entity) == Entity:
+            return entity in self.synonyms
+        else:
+            raise TypeError(f"entity must be an Entity or URIRef. Got {type(entity)}")
 
 
     def save(self):
@@ -225,11 +231,15 @@ class SynonymSet():
         synset -- the synonym set to add.
         """
         graph = Graph()
-        synset_uri = graph.OBS[self.uri]
+        if type(self.uri) == URIRef:
+            synset_uri = self.uri
+        else:
+            synset_uri = graph.OBS[self.uri]
+
         for member1 in self:
             # add member1 to synset
-            graph.add((URIRef(synset_uri), RDF.type, graph.OBS["SynonymSet"]))
-            graph.add((URIRef(synset_uri),
+            graph.add((synset_uri, RDF.type, graph.OBS["SynonymSet"]))
+            graph.add((synset_uri,
                        graph.OBS["hasMember"],
                        URIRef(member1.uri)))
             for member2 in self:
@@ -313,8 +323,19 @@ class SynonymSetManager():
 
 
     def add_synset(self,
-                   entity1: Union[Entity, SynonymSet],
-                   entity2: Union[Entity, SynonymSet]):
+                   entities: Union[SynonymSet, Set[Entity]],
+                   uri: URIRef = None):
+        if uri:
+            assert(type(uri) == URIRef)
+        if isinstance(entities, SynonymSet):
+            self._synsets.add(entities)
+        elif isinstance(entities, set) and uri:
+            self._synsets.add(SynonymSet(entities, uri = uri))
+
+
+    def add_synpair(self,
+                    entity1: Union[Entity, SynonymSet],
+                    entity2: Union[Entity, SynonymSet]):
         """
         Add a pair in the synonym set manager.
         If one of the entities is in any synonym set, then it
@@ -323,8 +344,8 @@ class SynonymSetManager():
         If both are synsets, it merges the synsets into one.
 
         Keyword arguments:
-        entity1 -- first entity to add
-        entity2 -- second entity to add
+        entity1 -- first entity (or synset) to add
+        entity2 -- second entity (or synset) to add
         """
 
         assert(type(entity1) in [Entity, SynonymSet])
@@ -357,7 +378,8 @@ class SynonymSetManager():
 
 
     def get_synset_for_entity(self,
-                              entity: URIRef) -> Union[SynonymSet, None]:
+                              entity: URIRef,
+                              synset_uri: URIRef = None) -> Union[SynonymSet, None]:
         """
         Get the synset the entity is in. If it is not in a synset,
         returns None.
@@ -368,7 +390,46 @@ class SynonymSetManager():
         for synset in self._synsets:
             if synset.has_member(entity):
                 return synset
+        # Create a synset
+        if synset_uri:
+            if synset_uri:
+                assert type(synset_uri) == URIRef
+            g = Graph()
+            members = set()
+            for _, _, member in g.triples((synset_uri, g.OM.OBS["hasMember"], None)):
+                members.add(Entity(member))
+            synonym_set = SynonymSet(synonyms = members, uri = synset_uri)
+            self.add_synset(synonym_set, uri = synset_uri)
+            return synonym_set
         return None
+
+
+    def get_entities_in_synset(self,
+                               list1: Extractor,
+                               list2: Extractor) -> Set[Entity]:
+        """
+        Get entities that are already linked between list1 & list2,
+        (meaning that they are in a synset with each other already).
+        Return entities from both list1 & list2 as a set.
+
+        This method can accelerate the SparQL query to remove entities
+        that are already linked to the other list in CandidatePair.
+
+        Keyword arguments:
+        list1 -- source the entities must belong to
+        list2 -- source the entities must belong to
+        """
+        result = set()
+        for synset in SynonymSet.synonym_sets.values():
+            synonym_pair = []
+            for entity in synset:
+                source = entity.get_values_for("source", unique = True)
+                source = source[source.rfind("#")+1:]
+                if source == list1.URI.lower() or source == list2.URI.lower():
+                    synonym_pair.append(entity)
+            if len(synonym_pair) >= 2:
+                result.update(synonym_pair)
+        return result
 
 
     def save_all(self):

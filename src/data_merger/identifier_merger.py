@@ -51,7 +51,8 @@ class IdentifierMerger():
 
         for wikidata_uri, synset in wikidata_entities:
             if synset is not None:
-                wikidata_entity = SynonymSetManager._SSM.get_synset_for_entity(wikidata_uri)
+                wikidata_entity = SynonymSetManager._SSM.get_synset_for_entity(wikidata_uri,
+                                                                               synset)
             else:
                 wikidata_entity = Entity(wikidata_uri)
             naif_codes = wikidata_entity.get_values_for("NAIF_ID")
@@ -64,7 +65,7 @@ class IdentifierMerger():
                 if len(naif_ids) == 1:
                     # There is only one NAIF entity with this ID.
                     naif_entity = Entity(naif_ids[0])
-                    SynonymSetManager._SSM.add_synset(wikidata_entity,
+                    SynonymSetManager._SSM.add_synpair(wikidata_entity,
                                                       naif_entity)
                 elif len(naif_ids) > 1:
                     # Ambiguous NAIF identifier.
@@ -96,18 +97,23 @@ class IdentifierMerger():
         """
         graph = Graph()
         list1_entities = graph.get_entities_from_list(CPM.list1,
-                                                      no_equivalent_in=CPM.list2,
+                                                      # no_equivalent_in=CPM.list2,
                                                       has_attr = [attr1])
         list2_entities = graph.get_entities_from_list(CPM.list2,
-                                                      no_equivalent_in=CPM.list1,
+                                                      # no_equivalent_in=CPM.list1,
                                                       has_attr = [attr2])
+        already_linked = SynonymSetManager._SSM.get_entities_in_synset(CPM.list1,
+                                                                       CPM.list2)
         list2 = []
 
 
         # Pre-loop to get entity2 and its value for attr2
         for entity2, synset2 in list2_entities:
+            if entity2 in already_linked:
+                print(entity2, "already linked!")
+                continue
             if synset2 is not None:
-                entity2 = SynonymSetManager._SSM.get_synset_for_entity(entity2)
+                entity2 = SynonymSetManager._SSM.get_synset_for_entity(entity2, synset2)
             else:
                 entity2 = Entity(entity2)
             value2 = entity2.get_values_for(attr2, unique = True)
@@ -122,9 +128,12 @@ class IdentifierMerger():
         total_entity1 = 0
 
         for entity1, synset1 in list1_entities:
+            if entity1 in already_linked:
+                print(entity1, "already linked...")
+                continue
             total_entity1 += 1
             if synset1 is not None:
-                entity1 = SynonymSet(synset1) # SynonymSetManager._SSM.get_synset_for_entity(entity1)
+                entity1 = SynonymSetManager._SSM.get_synset_for_entity(entity1, synset1)
             else:
                 entity1 = Entity(entity1)
             value1 = entity1.get_values_for(attr1, unique = True)
@@ -134,7 +143,7 @@ class IdentifierMerger():
             for entity2, value2 in list2:
                 if value1 == value2:
                     # Merge entities or synsets
-                    SynonymSetManager._SSM.add_synset(entity1, entity2)
+                    SynonymSetManager._SSM.add_synpair(entity1, entity2)
                     merged += 1
 
         # Save the newly added synonym sets into the graph

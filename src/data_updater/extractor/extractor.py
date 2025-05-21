@@ -18,6 +18,7 @@ class Extractor:
 
     # Define some default constants to be overlapped by subclasses
     NAMESPACE = "extractor"
+    URI = "extractor_list"
     TYPE_KNOWN = 1
     POSSIBLE_TYPES = entity_types.ALL_TYPES
     DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY

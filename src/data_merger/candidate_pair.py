@@ -507,7 +507,7 @@ class CandidatePairsManager():
             self.del_candidate_pairs(candidate_pair.member2)
 
             # Add it to the graph
-            SynonymSetManager._SSM.add_synset(candidate_pair.member1,
+            SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
                                               candidate_pair.member2)
             # Add Candidate Pair to graph for traceability
             candidate_pair.add_score(score_name = score.NAME, score = score_value)
@@ -611,19 +611,13 @@ class CandidatePairsMapping():
 
     @timeit
     def generate_mapping(self,
-                         limit: int = -1,
-                         entities1: List[Entity] = None,
-                         entities2: List[Entity] = None):
+                         limit: int = -1):
         """
         Generate candidate pairs between both lists. Only
         generate candidate pairs for entities that are not linked
         to each other's list already.
         [[CandidatePair1.1, CandidatePair1.2],
          [CandidatePair2.1, CandidatePair2.2]]
-
-        TODO create a relation differentFrom for each relation
-        that is eliminated, in order to prevent multiple mapping ?
-        /!\ OR create a relation "noEquivalentInList source_list" (easier)
 
         Keyword arguments:
         limit -- do not generate a mapping for the whole lists (use for tests)
@@ -632,15 +626,31 @@ class CandidatePairsMapping():
         if self._mapping:
             # do not generate twice
             return
+        # Because SparQL is too slow, do not use no_equivalent_in,
+        # use Synonym Set Manager's get_entities_in_synset and
+        # remove entities that are in a synset with the other list.
         entities1 = graph.get_entities_from_list(self._list1,
-                                                 no_equivalent_in = self._list2,
+                                                 # no_equivalent_in = self._list2,
                                                  limit = limit)
         entities1 = list(entities1)
 
         entities2 = graph.get_entities_from_list(self._list2,
-                                                 no_equivalent_in = self._list1,
+                                                 # no_equivalent_in = self._list1,
                                                  limit = limit)
         entities2 = list(entities2)
+        already_paired = SynonymSetManager._SSM.get_entities_in_synset(self._list1,
+                                                                       self._list2)
+        # already_paired is a list of Entity
+        # entities1 & entities2 are list of tuples: [(URIRef, URIRef)]
+        for entity1, synset1 in entities1.copy():
+            for paired in already_paired:
+                if entity1 == paired.uri:
+                    entities1.remove((entity1, synset1))
+
+        for entity2, synset2 in entities2.copy():
+            for paired in already_paired:
+                if entity2 == paired.uri:
+                    entities2.remove((entity2, synset2))
 
         self._mapping = []
 
@@ -665,16 +675,7 @@ class CandidatePairsMapping():
                 if i == 0: # Only append for the first loop.
                     self._list2_indexes.append(entity2)
 
-                """
-                cp_uri = list(graph.get_candidate_pair_uri(entity1.uri,
-                                                           entity2.uri))
-                if cp_uri:
-                    cp_uri, = cp_uri[0]
-                else:
-                    cp_uri = None
-                """
-                cp_uri = None
-                cp = CandidatePair(entity1, entity2, cp_uri)
+                cp = CandidatePair(entity1, entity2, None)
                 self._mapping[i][j] = cp
 
 
@@ -773,7 +774,7 @@ class CandidatePairsMapping():
             self.del_candidate_pairs(candidate_pair.member1)
             self.del_candidate_pairs(candidate_pair.member2)
             # Add it to the graph
-            SynonymSetManager._SSM.add_synset(candidate_pair.member1,
+            SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
                                               candidate_pair.member2)
             # Add Candidate Pair to graph for traceability
             candidate_pair.add_score(score_name = score.NAME, score = score_value)
@@ -1009,7 +1010,7 @@ class CandidatePairsMapping():
                 scores = np.delete(scores, y, axis = 1)
                 self.del_candidate_pairs(member1)
                 self.del_candidate_pairs(member2)
-                SSM.add_synset(member1, member2)
+                SSM.add_synpair(member1, member2)
                 n_success += 1
             elif answer == "distinct":
                 self.del_candidate_pair(best_candidate_pair)
@@ -1121,7 +1122,7 @@ class CandidatePairsMapping():
             scores = np.delete(scores, y, axis = 1)
             self.del_candidate_pairs(member1)
             self.del_candidate_pairs(member2)
-            SSM.add_synset(member1, member2)
+            SSM.add_synpair(member1, member2)
             best_candidate_pair.save_to_graph(decisive_score = "human validation")
 
 
