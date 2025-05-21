@@ -53,4 +53,6 @@ class AcronymScorer(Score):
                     return 1
                 if score > highest_score:
                     highest_score = score
+        if score < 0.5:
+            return -1 # Do not penalize
         return highest_score
