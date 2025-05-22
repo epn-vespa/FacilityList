@@ -5,7 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
+from data_merger.scorer import acronym_scorer, date_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
 
 
 class ScorerLists():
@@ -13,15 +13,16 @@ class ScorerLists():
     # Scores that might help reduce the amount of candidate pairs if they
     # are above or below a certain threshold. They are computed first.
     DISCRIMINANT_SCORES = [type_incompatibility_scorer.TypeIncompatibilityScorer,
-                           fuzzy_scorer.FuzzyScorer,
+                           date_scorer.DateScorer,
                            distance_scorer.DistanceScorer]
 
     # Scores that are computed for all of the candidate pairs.
     OTHER_SCORES = [acronym_scorer.AcronymScorer,
-                    tfidf_scorer.TfIdfScorer]
+                    tfidf_scorer.TfIdfScorer,
+                    fuzzy_scorer.FuzzyScorer]
 
     # Scores that use CUDA and cannot be computed in a forked thread
-    CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer,
+    CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer, # Too long without GPU
                    llm_embedding_scorer.LlmEmbeddingScorer]
 
 
@@ -33,13 +34,14 @@ class ScorerLists():
 
     # If the criteria is respected, then the candidate pair is admited.
     ADMIT = {fuzzy_scorer.FuzzyScorer: lambda x: x == 1.0, # Perfect label match
-             acronym_scorer.AcronymScorer: lambda x: x == 1.0
+             # acronym_scorer.AcronymScorer: lambda x: x == 1.0
             }
     #ADMIT.setdefault(0, lambda x: False)
 
     # If the criteria is not respected, then the candidate pair is eliminated.
-    ELIMINATE = {"launch_date": lambda dist: dist != 0, # time distance
-                 "distance": lambda dist: dist > 4 or dist == -2, # kilometers or incompatible
-                 "type": lambda t: t == -2, # incompatible type
-                 }
+    ELIMINATE = {
+                 distance_scorer.DistanceScorer: lambda dist: dist == -2, # dist > 10km or incompatible
+                 type_incompatibility_scorer.TypeIncompatibilityScorer: lambda t: t == -2, # incompatible type
+                 date_scorer.DateScorer: lambda d: d == -2, # not the same year (as sources have different precision on months/days)
+                }
     #ELIMINATE.setdefault(0, lambda x: False)

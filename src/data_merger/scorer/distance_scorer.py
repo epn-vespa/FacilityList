@@ -27,9 +27,9 @@ class DistanceScorer(Score):
                 entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
-        Return the distance score between the two entities coordinates
-        divided by the longest distance on earth (equator's diameter):
-        score = 1 - distance / (equator perimeter / 2)
+        If the entities are more than 10km away from each other, the can
+        not be the same (incompatible). If they do not have geolocation,
+        they might be compatible.
 
         If one of them does not have coordinates, test their compatibility:
         - continent is the same;
@@ -50,7 +50,11 @@ class DistanceScorer(Score):
 
         if not (lat1 is None or lat2 is None or long1 is None or long2 is None):
             if (lat1 != 0 or long1 != 0) and (lat2 != 0 or long2 != 0):
-                return 1 - distance((lat1, long1), (lat2, long2)) / 20004 # perimeter / 2
+                if distance((lat1, long1), (lat2, long2)) > 10:
+                    return -2 # More than 10km away
+                else:
+                    return -1
+                # return 1 - distance((lat1, long1), (lat2, long2)) / 20004 # perimeter / 2
 
         continent1 = entity1.get_values_for("continent", unique=True)
         continent2 = entity2.get_values_for("continent", unique=True)
