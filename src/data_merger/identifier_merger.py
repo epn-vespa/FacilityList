@@ -102,16 +102,15 @@ class IdentifierMerger():
         list2_entities = graph.get_entities_from_list(CPM.list2,
                                                       # no_equivalent_in=CPM.list1,
                                                       has_attr = [attr2])
-        already_linked = SynonymSetManager._SSM.get_entities_in_synset(CPM.list1,
-                                                                       CPM.list2)
+        #already_linked = SynonymSetManager._SSM.get_entities_in_synset(CPM.list1,
+        #                                                               CPM.list2)
         list2 = []
 
 
         # Pre-loop to get entity2 and its value for attr2
         for entity2, synset2 in list2_entities:
-            if entity2 in already_linked:
-                print(entity2, "already linked!")
-                continue
+            #if entity2 in already_linked:
+            #    continue
             if synset2 is not None:
                 entity2 = SynonymSetManager._SSM.get_synset_for_entity(entity2, synset2)
             else:
@@ -128,9 +127,8 @@ class IdentifierMerger():
         total_entity1 = 0
 
         for entity1, synset1 in list1_entities:
-            if entity1 in already_linked:
-                print(entity1, "already linked...")
-                continue
+            #if entity1 in already_linked:
+            #    continue
             total_entity1 += 1
             if synset1 is not None:
                 entity1 = SynonymSetManager._SSM.get_synset_for_entity(entity1, synset1)
