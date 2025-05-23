@@ -213,6 +213,7 @@ class Graph(G):
     """
 
     # Singleton graph
+    # TODO: one graph per (list to fasten SparQL)
     _GRAPH = None
     _initialized = False
 
@@ -325,9 +326,10 @@ class Graph(G):
         """
         return namespace in self._available_namespaces
 
-    @timeit
+
     def get_entities_from_list(self,
                                source: Extractor,
+                               ent_type: str = None,
                                no_equivalent_in: Extractor = None,
                                has_attr: list[str] = [],
                                limit: int = -1
@@ -359,10 +361,15 @@ class Graph(G):
                 attr = self.OM.convert_attr(attr)
                 has_attr_str += f"\n?entity <{attr}> ?v ."
 
+        ent_type_str = ""
+        if ent_type:
+            ent_type_str += f"?entity a obs:{standardize_uri(ent_type)} ."
+
         if not no_equivalent_in:
             query = f"""
             SELECT ?entity ?synset
             WHERE {{
+                {ent_type_str}
                 ?entity obs:source obs:{source} .{has_attr_str}
                 OPTIONAL {{
                     ?synset obs:hasMember ?entity .
@@ -374,6 +381,7 @@ class Graph(G):
             query = f"""
             SELECT ?entity ?synset
             WHERE {{
+                {ent_type_str}
                 ?entity obs:source obs:{source} .{has_attr_str}
                 OPTIONAL {{
                     ?synset obs:hasMember ?entity .
@@ -464,7 +472,7 @@ class Graph(G):
         return self.query(query)
 
 
-    def get_definitions(self) -> List[str]:
+    def get_graph_semantic_fields(self) -> List[str]:
         """
         Return all the descriptions in the graph. Use this to generate
         a corpus for statistical computations such as TfIdf.
