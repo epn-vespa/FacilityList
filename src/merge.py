@@ -106,8 +106,9 @@ class Merger():
                 # for different entities)
                 CPM_wiki_naif.disambiguate_candidates(scores = [AcronymScorer,
                                                                 FuzzyScorer])
-                # Save the remaining candidate pairs.
-                CPM_wiki_naif.save_json(execution_id = self.execution_id)
+                # Save the remaining candidate pairs
+                # (should be 0 as wikidata/naif is well mapped)
+                # CPM_wiki_naif.save_json(execution_id = self.execution_id)
             del(CPM_wiki_naif)
         if (self.graph.is_available("iaumpc") and
             self.graph.is_available("wikidata")):
@@ -162,33 +163,39 @@ class Merger():
         scores -- scores to compute for those lists
         """
         if not scores:
-            print("No scores to compute. Ignoring.")
+            print(f"No scores to compute for {list1}, {list2}. Ignoring.")
             return
-        try:
-            CPM = CandidatePairsMapping(list1,
-                                        list2,
-                                        checkpoint_id)
-            if not checkpoint_id:
-                CPM.generate_mapping(limit = self.limit)
+        for type1 in list1.POSSIBLE_TYPES:
+            for type2 in list2.POSSIBLE_TYPES:
+                if type1 != type2 or type1 == entity_types.UFO:
+                    continue
+                ent_type = type1
+                do_not_compute = set()
+                if ent_type not in entity_types.GROUND_TYPES:
+                    do_not_compute.add(DistanceScorer)
                 try:
-                    CPM.compute_scores(scores = scores)
-                except:
-                    CPM.disambiguate(SynonymSetManager._SSM,
-                                     human_validation)
-                    CPM.save_json(execution_id = self.execution_id)
-                CPM.disambiguate(SynonymSetManager._SSM,
-                                 human_validation)
-            else:
-                CPM.disambiguate(SynonymSetManager._SSM,
-                                 human_validation)
-        except InterruptedError:
-            # CPM.save_json(self.execution_id)
-            SynonymSetManager._SSM.save_all()
-            self.write()
-            exit()
-        del(CPM)
+                    CPM = CandidatePairsMapping(list1,
+                                                list2,
+                                                ent_type = ent_type,
+                                                checkpoint_id = checkpoint_id)
+                    if not checkpoint_id:
+                        CPM.generate_mapping(limit = self.limit)
+                        CPM.compute_scores(scores = scores - do_not_compute)
+                        CPM.disambiguate(SynonymSetManager._SSM,
+                                            human_validation)
+                    else:
+                        CPM.disambiguate(SynonymSetManager._SSM,
+                                         human_validation)
+                    del(CPM)
+                except InterruptedError:
+                    # CPM.save_json(self.execution_id)
+                    SynonymSetManager._SSM.save_all()
+                    self.write()
+                    exit()
+        # TODO: Also make a mapping for uncertain types (unknown and/or type_confidence != 1)
 
 
+    @timeit
     def merge_mapping(self,
                       conf_file: str = "",
                       checkpoint_id: str = None,
