@@ -521,6 +521,7 @@ class CandidatePairsManager():
 class CandidatePairsMapping():
     """
     Generate a mapping between all entities of two lists.
+    Only map pairs with the same entity type.
     Use a 2D list instead of a list and dict (see CandidatePairsManager).
     This mapping is then used to optimize the selection of the right mapping.
     """
@@ -528,9 +529,11 @@ class CandidatePairsMapping():
     def __init__(self,
                  list1: Extractor,
                  list2: Extractor,
+                 ent_type: str = None,
                  checkpoint_id: str = None):
         self._list1 = list1
         self._list2 = list2
+        self._ent_type = ent_type
 
         self._mapping = [] # 2D list to represent the mapping (graph)
         # lines: list1,
@@ -629,12 +632,15 @@ class CandidatePairsMapping():
         # Because SparQL is too slow, do not use no_equivalent_in,
         # use Synonym Set Manager's get_entities_in_synset and
         # remove entities that are in a synset with the other list.
+        # Only generate mapping for the same entity types.
         entities1 = graph.get_entities_from_list(self._list1,
+                                                 ent_type = self._ent_type,
                                                  # no_equivalent_in = self._list2,
                                                  limit = limit)
         entities1 = list(entities1)
 
         entities2 = graph.get_entities_from_list(self._list2,
+                                                 ent_type = self._ent_type,
                                                  # no_equivalent_in = self._list1,
                                                  limit = limit)
         entities2 = list(entities2)
@@ -901,29 +907,35 @@ class CandidatePairsMapping():
         else:
             self.ai_validation(scores, SSM)
 
-    def _transform_scores(self,
-                         scores: List[float]) -> np.array:
+    def _2d_standardization(self,
+                            scores: List[float],
+                            max_iter: int = 100) -> np.array:
         """
-        Transform scores array into a numpy array
-        while standardizing it.
+        Transform scores array into a numpy array while
+        standardizing scores iteratively (col, lines, cols, lines...)
+        until converging.
 
         Keyword arguments:
         scores -- list of scores with the same coordinates as
                   the mapping
         """
-        scores = np.array(scores, dtype = float)
+        scores = np.array(scores, dtype = float, tol = 1e-2)
+
+        def standardize(scores, axis):
+            # Standardize scores by rows
+            means = np.nanmean(scores, axis = axis, keepdims = True)
+            stds = np.nanstd(scores, axis = axis, keepdims = True)
+            scores = (scores - means) / (stds + 1e-8)
+            return scores
+        for i in range(max_iter):
+            prev_scores = scores.copy()
+        standardize(scores, axis = 0)
         # Standardize scores with mean and standard deviation by cols
         col_means = np.nanmean(scores, axis = 0, keepdims = True)
         col_std = np.nanstd(scores, axis = 0, keepdims = True)
         col_std[col_std == 0] = 1.0
         scores = (scores - col_means) / col_std # Standardize
 
-        # Standardize scores by rows too
-        row_means = np.nanmean(scores, axis = 1, keepdims = True)
-        row_std = np.nanstd(scores, axis = 1, keepdims = True)
-        row_std[row_std == 0] = 1.0
-        scores = (scores - row_means) / row_std
-        return scores
 
 
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical, spatio-temporal differences and similarities within entities. " + \
@@ -1037,7 +1049,7 @@ class CandidatePairsMapping():
             raise ValueError(f"{OLLAMA_MODEL} did not reply a valid answer (format: **<answer>**).\nResponse was: {response}")
         else:
             raise ValueError(f"{OLLAMA_MODEL} replied more than one answer.\nResponse was: {response}")
-        print("answer:", answer)
+        print(f"{OLLAMA_MODEL} answer:", answer)
         justification = response.replace(answer_str, "").strip()
         print("justification:", justification)
         return answer, justification
@@ -1199,7 +1211,7 @@ class CandidatePairsMapping():
                 continue
             state = None
             i = 0
-            print(f"Computing {score.NAME} on {self._list1}, {self._list2}")
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type}")
             print(f"0/{len(self._mapping)}")
             while i < len(self._mapping):
                 print(f"\033[F\033[{0}G {i+1}/{len(self._mapping)}")
@@ -1233,7 +1245,7 @@ class CandidatePairsMapping():
             len_e1 = len(self._list1_indexes)
             len_e2 = len(self._list2_indexes)
             n_candidates = len_e1 * len_e2
-            print(f"Computing {score.NAME} on {self._list1}, {self._list2}" +
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type}" +
                   f" on {n_candidates} candidate pairs.")
             if score == CosineSimilarityScorer:
                 # this score does batches for performances.
@@ -1274,7 +1286,8 @@ class CandidatePairsMapping():
             return
         """
         with ProcessPoolExecutor() as executor:
-            print(f"Computing other scores for the remaining candidate pairs.")
+            print(f"Computing other scores for the remaining candidate pairs" + \
+                  f"on {self.list1}, {self.list2} for {self._ent_type}.")
             candidate_pairs = [(pair.member1, pair.member2, pair.uri)
                                for _, _, pair in self.iter_mapping()]
             futures = [executor.submit(_compute_scores,
@@ -1397,7 +1410,7 @@ class CandidatePairsMapping():
         directory = LATEST / execution_id
         directory.mkdir(parents = True, exist_ok = True)
 
-        filename = f"{self._list1}_{self._list2}.json"
+        filename = f"{self._list1}_{self._list2}_{self._ent_type}.json"
         path = directory / filename
         res = ""
         with open(str(path), 'w') as file:
