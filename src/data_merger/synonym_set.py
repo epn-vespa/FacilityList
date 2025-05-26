@@ -19,6 +19,7 @@ from rdflib import OWL, RDF, URIRef
 from data_updater.extractor.extractor import Extractor
 from graph import Graph
 from data_merger.entity import Entity
+from utils.performances import timeit
 
 class SynonymSet:
     pass
@@ -56,7 +57,7 @@ class SynonymSet():
                an existing ontology
         """
         # check if any entity is in any of the synonym sets
-        for uri_, synonym_set_ in cls.synonym_sets.items():
+        for uri_, synonym_set_ in cls.synonym_sets.copy().items():
             for synonym_ in synonym_set_:
                 if synonym_ in synonyms:
                     synonym_set_.add_synonyms(synonyms = synonyms)
@@ -276,8 +277,7 @@ class SynonymSet():
 
 
     def __iter__(self):
-        for item in list(self._synonyms):
-            yield(item)
+        return iter(self._synonyms)
 
 
     def __str__(self):
@@ -404,6 +404,7 @@ class SynonymSetManager():
         return None
 
 
+    @timeit
     def get_entities_in_synset(self,
                                list1: Extractor,
                                list2: Extractor) -> Set[Entity]:
@@ -444,9 +445,7 @@ class SynonymSetManager():
 
 
     def __iter__(self):
-        for item in list(self._synsets):
-            yield(item)
-
+        return iter(self._synsets)
 
 
 if __name__ == "__main__":
