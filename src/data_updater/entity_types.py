@@ -36,9 +36,11 @@ ALL_TYPES = {
             UFO
             }
 
-# We are sure that Ground Observatories have an address
+# Entities that might have an address
 GROUND_TYPES = {
-                GROUND_OBSERVATORY
+                GROUND_OBSERVATORY,
+                TELESCOPE,
+                OBSERVATORY_NETWORK,
                 }
 
 # A telescope may have an address if it is located in an observatory.
