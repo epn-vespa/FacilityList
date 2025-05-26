@@ -6,7 +6,7 @@ import atexit
 import json
 import requests
 from config import OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE  # type: ignore
-from utils.performances import timeall
+from utils.performances import timeall, timeit
 from data_updater.entity_types import *
 
 class LLM():
@@ -110,6 +110,7 @@ class LLM():
                 json.dump(self.llm_embeddings, f)
 
 
+    @timeit
     def _load_llm_embeddings_from_cache(self):
         atexit.register(self._save_llm_embeddings_in_cache)
         if not LLM_EMBEDDINGS_FILE.exists():
@@ -142,9 +143,8 @@ class LLM():
             raise ValueError("Provided from_cache but not cache_key.")
         if (from_cache and not self.llm_embeddings):
             self._load_llm_embeddings_from_cache()
-        if (from_cache and self.llm_embeddings and
-            cache_key and cache_key in self.llm_embeddings):
-            embeddings = self.llm_embeddings[cache_key]
+        if (from_cache and self.llm_embeddings):
+            embeddings = self.llm_embeddings.get(cache_key, None)
             if embeddings:
                 return embeddings # if error, re-compute.
         prompt = "Represent this entity for search: " + text

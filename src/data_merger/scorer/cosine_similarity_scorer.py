@@ -15,6 +15,7 @@ from typing import Generator, List, Union
 from sentence_transformers import SentenceTransformer, util
 import torch
 from tqdm import tqdm
+from data_updater.extractor.extractor import Extractor
 from graph import Graph
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
@@ -46,14 +47,13 @@ class CosineSimilarityScorer(Score):
     @timeall
     def compute(graph: Graph,
                 entities1: List[Union[Entity, SynonymSet]],
-                entities2: List[Union[Entity, SynonymSet]]) -> Generator[float, None, None]:
+                entities2: List[Union[Entity, SynonymSet]],
+                list1: Extractor,
+                list2: Extractor) -> Generator[float, None, None]:
         """
         Compute a cosine similarity score between the two entities' textual
-        informations (). We use lists and batches.
-
-        Troubleshooting:
-            Cuda cannot be used in a multithread with fork().
-            https://pytorch.org/docs/main/notes/multiprocessing.html
+        informations (label, description, definition). Use lists and batches
+        for better performances. Save embeddings in numpy files (cache).
 
         Keyword arguments:
         graph -- the graph
@@ -67,14 +67,19 @@ class CosineSimilarityScorer(Score):
                 torch.set_num_threads(N_THREADS)
             CosineSimilarityScorer.model = SentenceTransformer(MODEL, device = device)
 
-        EMBEDDINGS_FILE = CACHE_DIR / f"embeddings{len(entities1)}_{len(entities2)}.npy"
-        if os.path.exists(EMBEDDINGS_FILE):
-            encoded_entities12 = np.load(EMBEDDINGS_FILE)
+        EMBEDDINGS_FILE_1 = CACHE_DIR / f"embeddings{len(entities1)}_{list1.NAMESPACE}.npy"
+        if os.path.exists(EMBEDDINGS_FILE_1):
+            encoded_entities1 = np.load(EMBEDDINGS_FILE_1)
         else:
-            encoded_entities12 = CosineSimilarityScorer.encode_batch(entities1 + entities2)
-            np.save(EMBEDDINGS_FILE, encoded_entities12)
-        encoded_entities1 = encoded_entities12[:len(entities1)]
-        encoded_entities2 = encoded_entities12[len(entities1):]
+            encoded_entities1 = CosineSimilarityScorer.encode_batch(entities1)
+            np.save(EMBEDDINGS_FILE_1, encoded_entities1)
+
+        EMBEDDINGS_FILE_2 = CACHE_DIR / f"embeddings{len(entities2)}_{list2.NAMESPACE}.npy"
+        if os.path.exists(EMBEDDINGS_FILE_2):
+            encoded_entities2 = np.load(EMBEDDINGS_FILE_2)
+        else:
+            encoded_entities2 = CosineSimilarityScorer.encode_batch(entities2)
+            np.save(EMBEDDINGS_FILE_2, encoded_entities2)
 
         for entity1 in tqdm(encoded_entities1, desc = "Computing cosine similarity for encoded entities"):
             for entity2 in encoded_entities2:

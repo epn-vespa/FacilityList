@@ -637,13 +637,16 @@ class CandidatePairsMapping():
                                                  ent_type = self._ent_type,
                                                  # no_equivalent_in = self._list2,
                                                  limit = limit)
-        entities1 = list(entities1)
-
         entities2 = graph.get_entities_from_list(self._list2,
                                                  ent_type = self._ent_type,
                                                  # no_equivalent_in = self._list1,
                                                  limit = limit)
-        entities2 = list(entities2)
+
+        # Sorting entities for improved performances
+        # (some scores save .npy files according to this order)
+        entities1 = sorted(entities1, key = lambda e: str(e))
+        entities2 = sorted(entities2, key = lambda e: str(e))
+
         already_paired = SynonymSetManager._SSM.get_entities_in_synset(self._list1,
                                                                        self._list2)
         # already_paired is a list of Entity
@@ -897,7 +900,7 @@ class CandidatePairsMapping():
         if not scores:
             print("Nothing to disambiguate.")
             return
-        scores = self._transform_scores(scores)
+        scores = self._2d_standardization(scores)
 
         # Human validation
         if human_validation:
@@ -907,9 +910,10 @@ class CandidatePairsMapping():
         else:
             self.ai_validation(scores, SSM)
 
+
     def _2d_standardization(self,
                             scores: List[float],
-                            max_iter: int = 100) -> np.array:
+                            max_iter: int = 10) -> np.array:
         """
         Transform scores array into a numpy array while
         standardizing scores iteratively (col, lines, cols, lines...)
@@ -919,23 +923,16 @@ class CandidatePairsMapping():
         scores -- list of scores with the same coordinates as
                   the mapping
         """
-        scores = np.array(scores, dtype = float, tol = 1e-2)
+        scores = np.array(scores, dtype = float)
 
         def standardize(scores, axis):
             # Standardize scores by rows
             means = np.nanmean(scores, axis = axis, keepdims = True)
             stds = np.nanstd(scores, axis = axis, keepdims = True)
             scores = (scores - means) / (stds + 1e-8)
-            return scores
         for i in range(max_iter):
-            prev_scores = scores.copy()
-        standardize(scores, axis = 0)
-        # Standardize scores with mean and standard deviation by cols
-        col_means = np.nanmean(scores, axis = 0, keepdims = True)
-        col_std = np.nanstd(scores, axis = 0, keepdims = True)
-        col_std[col_std == 0] = 1.0
-        scores = (scores - col_means) / col_std # Standardize
-
+            standardize(scores, axis = i % 2)
+        return scores
 
 
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical, spatio-temporal differences and similarities within entities. " + \
@@ -979,8 +976,9 @@ class CandidatePairsMapping():
         mean = np.nanmean(scores)
         # Eliminate 97.5 %
         threshold = mean + 1.96 * std_dev
-        print(threshold)
+        print("Stop at:", threshold)
         while len(scores) and choice != "2" and score > threshold:
+            print("score =", score)
             #if n_fail > n_success :
                 # Failed more time than it succeeded:
             #    break
@@ -1028,9 +1026,10 @@ class CandidatePairsMapping():
                 self.del_candidate_pair(best_candidate_pair)
                 scores[x][y] = np.nan
                 n_fail += 1
-        # Now review once the best scores in lines & cols
+        # Review once the best scores in each line & col
         for x in range(len(self._mapping)):
             y = np.unravel_index(np.nanargmax(scores[x]), scores[x].shape)
+            # TODO
 
 
     def _parse_ai_response(self,
@@ -1249,18 +1248,36 @@ class CandidatePairsMapping():
                   f" on {n_candidates} candidate pairs.")
             if score == CosineSimilarityScorer:
                 # this score does batches for performances.
-                entities1, entities2 = zip(*[(x.member1, x.member2) for x in self])
+                #entities1, entities2 = zip(*[(x.member1, x.member2) for x in self])
+                #entities1 = set(entities1)
+                #entities2 = set(entities2)
+
+                #entities1 = sorted(entities1, key = lambda e: e.get_values_for("label", unique = True))
+                #entities2 = sorted(entities2, key = lambda e: e.get_values_for("label", unique = True))
+                entities1 = self._list1_indexes
+                entities2 = self._list2_indexes
                 score_values = score.compute(Graph(),
                                              entities1,
-                                             entities2)
-                for score_value, candidate_pair in zip(score_values, self):
+                                             entities2,
+                                             self.list1,
+                                             self.list2)
+                score_values = list(score_values)
+                #for score_value, candidate_pair in zip(score_values, self):
+                #    candidate_pair.add_score(score.NAME, score_value)
+                for i, entity1 in enumerate(entities1):
+                    for j, entity2 in enumerate(entities2):
+                        candidate_pair = self._mapping[i][j]
+                        if candidate_pair is not None:
+                            score_value = score_values[i * len(entities2) + j]
+                            assert(entity1 == candidate_pair.member1)
+                            assert(entity2 == candidate_pair.member2)
+                            candidate_pair.add_score(score.NAME, score_value)
+            else:
+                for _, _, candidate_pair in self.iter_mapping():
+                    score_value = score.compute(Graph(),
+                                                candidate_pair.member1,
+                                                candidate_pair.member2)
                     candidate_pair.add_score(score.NAME, score_value)
-                continue
-            for _, _, candidate_pair in self.iter_mapping():
-                score_value = score.compute(Graph(),
-                                            candidate_pair.member1,
-                                            candidate_pair.member2)
-                candidate_pair.add_score(score.NAME, score_value)
 
 
     @timeit
