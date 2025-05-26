@@ -56,7 +56,7 @@ class TfIdfScorer(Score):
                                                      preprocessor=TfIdfScorer.preprocess,
                                                      stop_words=list(stop_words))
             TfIdfScorer.tokenizer = TfIdfScorer.vectorizer.build_tokenizer()
-            definitions = graph.get_definitions()
+            definitions = graph.get_graph_semantic_fields()
             if not definitions:
                 TfIdfScorer.no_corpus = True
                 return 0
