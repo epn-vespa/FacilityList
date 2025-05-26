@@ -62,7 +62,7 @@ class CacheManager():
         url -- the URL of the page.
         list_name -- used to access the right folder of the cache.
         from_cache -- whether to get content from cache if it exists.
-        data -- the data dict in case of a POST request.
+        data -- the extractor's data dict in case of a POST request.
         data_str -- a string to save the response in a specific cache file
                     as the url of the page may not change.
         """
@@ -226,8 +226,6 @@ class VersionManager():
         if not os.path.exists(prev_version_file):
             # We create the path to save the versions from the
             # newer version.
-            print("do not exist.")
-            print(prev_version_file)
             with open(prev_version_file, "w") as f:
                 prev_version = {
                     "processing_date": VersionManager._TODAY,

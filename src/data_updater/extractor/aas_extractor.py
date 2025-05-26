@@ -21,8 +21,8 @@ from utils.llm_connection import LLM
 
 class AasExtractor(Extractor):
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
+    # "https://journals.aas.org/facility-keywords/"
 
-    # URI to save this source as an entity (obs:AAS_list)
     URI = "AAS_list"
 
     # URI to save entities from this source
@@ -90,7 +90,8 @@ class AasExtractor(Extractor):
         Extract the page content into a dictionary.
         """
         content = CacheManager.get_page(AasExtractor.URL,
-                                        list_name = self.CACHE)
+                                        list_name = self.CACHE,
+                                        from_cache = True)
 
         if not content:
             return dict()

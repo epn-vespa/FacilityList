@@ -2,6 +2,10 @@
 WikidataExtractor collects the WD entities and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
 
+Entities such as:
+https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1985-110A
+are filtered out by the SparQL query as they are not observation facilities.
+
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
