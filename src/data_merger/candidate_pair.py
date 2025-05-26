@@ -13,12 +13,14 @@ from collections import defaultdict
 from enum import Enum
 import json
 import shutil
+import atexit
 from typing import Dict, Generator, List, Type, Union
 import uuid
 import hashlib
 import os
 import numpy as np
 import re
+import matplotlib.pyplot as plt
 
 from rdflib import RDF, XSD, Literal, URIRef
 from tqdm import tqdm
@@ -31,7 +33,7 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from config import DATA_DIR, OLLAMA_MODEL # type: ignore
+from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR # type: ignore
 from utils.llm_connection import LLM
 from utils.performances import deprecated, timeall, timeit
 
@@ -908,7 +910,12 @@ class CandidatePairsMapping():
 
         # LLM validation
         else:
-            self.ai_validation(scores, SSM)
+            try:
+                history = self.ai_validation(scores, SSM)
+            except KeyboardInterrupt:
+                # TODO plot history
+                print(history)
+                pass
 
 
     def _2d_standardization(self,
@@ -952,6 +959,22 @@ class CandidatePairsMapping():
         "one of the entities refer to the spacecraft, while the other to the mission. therefore, the second entity is a part of the first one.\n"
 
 
+    LLM_VALIDATION = None
+    def _load_llm_validation(self):
+        filename = CACHE_DIR / "llm_validation.json"
+        self.LLM_VALIDATION = dict()
+        if os.path.exists(filename):
+            with open(filename, "r") as file:
+                self.LLM_VALIDATION = json.load(file)
+        atexit.register(self._save_llm_validation)
+
+
+    def _save_llm_validation(self):
+        filename = CACHE_DIR / "llm_validation.json"
+        with open(filename, "w") as file:
+            json.dump(self.LLM_VALIDATION, file)
+
+
     @timeall
     def ai_validation(self,
                       scores: np.array,
@@ -965,29 +988,48 @@ class CandidatePairsMapping():
         SSM -- this run's SynonymSetManager
         """
         choice = None
-
+        self._load_llm_validation()
 
         # TODO: define a stop condition (looped unsuccessfully n times, for example 5% of the CandidatePairs ?)
         n_fail = 0
         score = np.nanargmax(scores)
         n_success = 0
+        history = [] # draw the evolution of same/distinct ratio over time
         # std_dev
         std_dev = np.nanstd(scores)
         mean = np.nanmean(scores)
         # Eliminate 97.5 %
         threshold = mean + 1.96 * std_dev
         print("Stop at:", threshold)
+
+        # Plot settings
+        plt.ion()
+        fig, ax = plt.subplots()
+        line_ratio, = ax.plot([], [], label = "Ratio same/distinct", color = "blue")
+        line_score, = ax.plot([], [], label = "Standardized global score", color = "red")
+        ax.set_ylim(0, 1.1)
+        ax.set_xlabel("n iterations")
+        ax.set_ylabel("ratio")
+        ax.set_title("Evolution of same/distinct ratio and scores over iterations")
+        ax.legend()
+        ax.grid(True)
+
         while len(scores) and choice != "2" and score > threshold:
-            print("score =", score)
-            #if n_fail > n_success :
+            print("score =", score, "threshold = ", threshold)
+            print("n_success =", n_success, "n_fail =", n_fail)
+            #if n_fail > n_success:
                 # Failed more time than it succeeded:
             #    break
-
-            left = np.sum(np.where(np.isnan(scores), 0, 1))
-            # Stop condition: nans are more than 5% of the table ?
-            print(f"\n\n\tThere are {left} candidate pairs to review.")
             if np.isnan(scores).all():
                 break
+
+            if n_fail > 100 and n_fail > n_success:
+                break
+
+            # Count non nan
+            left = np.sum(np.where(np.isnan(scores), 0, 1))
+            print(f"\n\n\tThere are {left} candidate pairs to review.")
+
             x, y = np.unravel_index(np.nanargmax(scores), scores.shape)
             score = scores[x][y]
             if score < 0:
@@ -997,6 +1039,12 @@ class CandidatePairsMapping():
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
 
+            # We exclude links, identifiers, numbers
+            # (the LLM does not understand numbers), and source
+            # (prevent LLM from replying "distinct" due to different sources)
+            # Type is always identical and if different, it is not relevant to
+            # indicate it to the LLM (it might be an error, entities might
+            # still be the same).
             exclude = ["code",
                        "url",
                        "NSSDCA_ID",
@@ -1007,7 +1055,15 @@ class CandidatePairsMapping():
                        "MPC_ID",
                        "equivalent_class",
                        "type_confidence",
-                       "location_confidence"]
+                       "location_confidence",
+                       "source",
+                       "type",
+                       #"latitude",
+                       #"longitude",
+                       #"location",
+                       #"address",
+                       #"type",
+                       ]
             prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += self.PROMPT_BASE
@@ -1021,16 +1077,50 @@ class CandidatePairsMapping():
                 self.del_candidate_pairs(member1)
                 self.del_candidate_pairs(member2)
                 SSM.add_synpair(member1, member2)
+                key = member1.uri + '|' + member2.uri
+                self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
                 n_success += 1
+                # history.append(1)
             elif answer == "distinct":
                 self.del_candidate_pair(best_candidate_pair)
                 scores[x][y] = np.nan
+                self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
                 n_fail += 1
+                # history.append(0)
+            else:
+                continue
+            ratio = n_success / (n_fail + n_success)
+            history.append((ratio, score))
+
+            # Update plot
+            line_ratio.set_data(range(len(history)), [r for r, s in history])
+            line_score.set_data(range(len(history)), [s for r, s in history])
+            ax.relim()
+            ax.autoscale_view()
+            fig.canvas.draw()
+            fig.canvas.flush_events()
         # Review once the best scores in each line & col
+        """
         for x in range(len(self._mapping)):
             y = np.unravel_index(np.nanargmax(scores[x]), scores[x].shape)
             # TODO
+        """
 
+    def _plot_history(self,
+                      history: list[tuple[float, float]]):
+        """
+        Plot history of a
+        """
+        print(history)
+        plt.ion()
+        # plt.figure(figsize = (10, 5))
+        plt.plot(history, label = "Cumulative ratio of same/distinct entities over iterations")
+        plt.xlabel("N-Iterations")
+        plt.ylabel("Same/distinct Ratio")
+        plt.title("Cumulative ratio of same/distinct entities over iterations")
+        plt.legend()
+        plt.grid(True)
+        plt.show()
 
     def _parse_ai_response(self,
                            response: str) -> tuple:
@@ -1040,18 +1130,36 @@ class CandidatePairsMapping():
         Keyword arguments:
         repsonse -- a string generated by a LLM.
         """
-        answers = re.findall(r"\*\*.+\*\*", response)
+        answers = re.findall(r"\*\*(same|distinct)\*\*", response)
         if len(answers) == 1:
-            answer_str = answers[0]
-            answer = answer_str[2:-2]
+            answer = answers[0]
         elif len(answers) == 0:
-            raise ValueError(f"{OLLAMA_MODEL} did not reply a valid answer (format: **<answer>**).\nResponse was: {response}")
+            raise ValueError(f"{OLLAMA_MODEL} did not reply a with valid answer (format: **<answer>**).\nResponse was: {response}")
         else:
-            raise ValueError(f"{OLLAMA_MODEL} replied more than one answer.\nResponse was: {response}")
+            print(f"{OLLAMA_MODEL} replied more than one answer.\nResponse was: {response}")
+            answer = answers[0]
         print(f"{OLLAMA_MODEL} answer:", answer)
-        justification = response.replace(answer_str, "").strip()
+        justification = response.replace("**" + answer + "**", "").strip()
         print("justification:", justification)
-        return answer, justification
+        return answer.strip().lower(), justification
+
+
+
+    @timeall
+    def direct_validation(self,
+                          scores: np.array,
+                          SSM: SynonymSetManager):
+        """
+        Do not ask for the user or LLM to judge the Candidate Pairs,
+        validate the highest score until reaching the stopping condition.
+
+        Use to evaluate the scores system compared to the scores + LLM review.
+        """
+        mean = np.nanmean(scores)
+        std_dev = np.nanstd(scores)
+        threshold = mean + 1.96 * std_dev
+        # TODO
+
 
 
     def human_validation(self,
