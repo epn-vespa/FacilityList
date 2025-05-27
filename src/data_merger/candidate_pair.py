@@ -992,23 +992,23 @@ class CandidatePairsMapping():
         scores -- a 2D array of the scores of the candidate pairs
         SSM -- this run's SynonymSetManager
         """
-        choice = None
         self._load_llm_validation()
 
         # TODO: define a stop condition (looped unsuccessfully n times, for example 5% of the CandidatePairs ?)
         n_fail = 0
-        score = np.nanargmax(scores)
         n_success = 0
-        history = [] # draw the evolution of same/distinct ratio over time
+        n_fail_in_a_row = 0
+        n_pairs_to_disambiguate = np.sum(np.where(np.isnan(scores), 0, 1))
+        stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores)[0])
+
         # std_dev
         std_dev = np.nanstd(scores)
         mean = np.nanmean(scores)
         # Eliminate 97.5 %
         threshold = mean + 1.96 * std_dev
-        # print("Stop at:", threshold)
-        # TODO
 
         # Plot settings
+        history = [] # to draw the evolution of same/distinct ratio over time
         plt.ion()
         fig, ax = plt.subplots()
         line_ratio, = ax.plot([], [], label = "Ratio same/distinct", color = "blue")
@@ -1020,18 +1020,14 @@ class CandidatePairsMapping():
         ax.legend()
         ax.grid(True)
 
-        while len(scores) and choice != "2" and score > threshold:
+        score = np.nanargmax(scores)
+        while len(scores) and score > threshold:
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
-            #if n_fail > n_success:
-                # Failed more time than it succeeded:
-            #    break
+            if n_fail_in_a_row == stop_at_n_fails:
+                break
             if np.isnan(scores).all():
                 break
-
-            if n_fail > 100 and n_fail > n_success:
-                break
-
             # Count non nan
             left = np.sum(np.where(np.isnan(scores), 0, 1))
             print(f"\n\n\tThere are {left} candidate pairs to review.")
