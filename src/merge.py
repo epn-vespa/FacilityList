@@ -49,14 +49,13 @@ class Merger():
         """
         limit -- maximum entities per list (for debug)
         """
-        # Instanciate the Synonym Set Manager
-        SynonymSetManager()
         # Instanciate the Graph's singleton
-
         # merge ontologies' triples into one ontology
         self._graph = Graph(input_ontologies)
-        if input_ontologies:
-            self.init_graph() # Create basic classes
+
+        # Instanciate the Synonym Set Manager
+        SynonymSetManager()
+
         self._output_ontology = output_ontology
         self._execution_id = str(uuid.uuid4())
         self._limit = limit
@@ -80,13 +79,6 @@ class Merger():
     @property
     def limit(self):
         return self._limit
-
-
-    def init_graph(self):
-        """
-        Add CandidatePair & SynSet classes in the OBS namespace.
-        """
-        # TODO use update() on graph.
 
 
     def merge_identifiers(self):
@@ -165,7 +157,7 @@ class Merger():
         if not scores:
             print(f"No scores to compute for {list1}, {list2}. Ignoring.")
             return
-        for ent_types in (entity_types.MAY_HAVE_ADDR, entity_types.NO_ADDR):
+        for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
             do_not_compute = set()
             if ent_types == entity_types.NO_ADDR:
                 do_not_compute.add(DistanceScorer)

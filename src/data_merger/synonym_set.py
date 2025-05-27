@@ -57,7 +57,8 @@ class SynonymSet():
                an existing ontology
         """
         # check if any entity is in any of the synonym sets
-        for uri_, synonym_set_ in cls.synonym_sets.copy().items():
+        # for uri_, synonym_set_ in cls.synonym_sets.copy().items():
+        for uri_, synonym_set_ in cls.synonym_sets.items():
             for synonym_ in synonym_set_:
                 if synonym_ in synonyms:
                     synonym_set_.add_synonyms(synonyms = synonyms)
@@ -68,10 +69,13 @@ class SynonymSet():
                 return cls.synonym_sets[uri]
             elif not synonyms:
                 # Load synonym sets:
-                synonyms = Graph().get_members(uri)
-                cls.synonym_sets[uri] = super().__new__(cls)
+                synonyms = set(Graph().get_members(uri))
+                instance = super().__new__(cls)
+                cls.synonym_sets[uri] = instance
+                return instance
         else:
             uri = str(uuid.uuid4())
+        # Create the SynonymSet object
         instance = super().__new__(cls)
         cls.synonym_sets[uri] = instance
         return instance
@@ -125,6 +129,12 @@ class SynonymSet():
         A set of entities.
         """
         return self._synonyms
+
+
+    @synonyms.setter
+    def synonyms(self,
+                 synonyms: set[URIRef]):
+        self._synonyms = synonyms
 
 
     @property
@@ -317,6 +327,16 @@ class SynonymSetManager():
     def __init__(self):
         self._synsets = set()
 
+        # Load Synonym Sets from graph
+        g = Graph()
+        for synset_uri in g.get_synsets():
+            members = g.get_members(synset_uri)
+            entities = set()
+            for member_uri in members:
+                entities.add(Entity(uri = member_uri))
+            self.add_synset(entities = entities,
+                            uri = synset_uri)
+
 
     def __del__(self):
         del(self._synsets)
@@ -330,7 +350,7 @@ class SynonymSetManager():
         if isinstance(entities, SynonymSet):
             self._synsets.add(entities)
         elif isinstance(entities, set) and uri:
-            self._synsets.add(SynonymSet(entities, uri = uri))
+            self._synsets.add(SynonymSet(synonyms = entities, uri = uri))
 
 
     def add_synpair(self,
@@ -405,9 +425,9 @@ class SynonymSetManager():
 
 
     @timeit
-    def get_entities_in_synset(self,
-                               list1: Extractor,
-                               list2: Extractor) -> Set[Entity]:
+    def get_mapped_entities(self,
+                            list1: Extractor,
+                            list2: Extractor) -> Set[Entity]:
         """
         Get entities that are already linked between list1 & list2,
         (meaning that they are in a synset with each other already).

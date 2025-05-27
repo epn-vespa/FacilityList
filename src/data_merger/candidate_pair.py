@@ -649,19 +649,25 @@ class CandidatePairsMapping():
         entities1 = sorted(entities1, key = lambda e: str(e))
         entities2 = sorted(entities2, key = lambda e: str(e))
 
-        already_paired = SynonymSetManager._SSM.get_entities_in_synset(self._list1,
-                                                                       self._list2)
+        already_paired = SynonymSetManager._SSM.get_mapped_entities(self._list1,
+                                                                    self._list2)
+
         # already_paired is a list of Entity
         # entities1 & entities2 are list of tuples: [(URIRef, URIRef)]
         for entity1, synset1 in entities1.copy():
             for paired in already_paired:
                 if entity1 == paired.uri:
                     entities1.remove((entity1, synset1))
+                    break
+
 
         for entity2, synset2 in entities2.copy():
             for paired in already_paired:
                 if entity2 == paired.uri:
                     entities2.remove((entity2, synset2))
+                    break
+
+        print(f"Unmapped entities for {self.list1}, {self.list2}:", len(entities1), len(entities2))
 
         self._mapping = []
 

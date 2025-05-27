@@ -237,9 +237,11 @@ class Graph(G):
         """
         if Graph._initialized:
             return
+
         self._graph = G() # instanciate rdflib.Graph
         if filename:
             self.parse(filename)
+
         Graph._OM = OntologyMapping()
 
         # Bind namespaces
@@ -412,13 +414,13 @@ class Graph(G):
         return len(resp)
 
 
-    def _get_synset(self,
-                    entity: URIRef) -> Iterator[URIRef]:
+
+    def get_synsets(self) -> Iterator[URIRef]:
         """
-        Get the synset of an entity
+        Get all synsets (used to initialize SynonymSets)
         """
-        for synonym, _, _ in self.triples(None, self.OM["hasMember"], entity):
-            yield synonym
+        for synset_uri, _, _ in self.triples((None, RDF.type, self.OM.OBS["SynonymSet"])):
+            yield synset_uri
 
 
     def get_members(self,
@@ -426,7 +428,7 @@ class Graph(G):
         """
         Get members of a synonym set using the synonym set's URI.
         """
-        for _, _, syn in self.triples((synset_uri, self.OM["hasMember"], None)):
+        for _, _, syn in self.triples((synset_uri, self.OM.convert_attr("hasMember"), None)):
             yield syn
 
 
