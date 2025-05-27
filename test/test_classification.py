@@ -125,5 +125,5 @@ if __name__ == "__main__":
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
     plt.tight_layout()
-    plt.savefig(f"confusion_matrix_types_{OLLAMA_MODEL}_score_{score}")
+    plt.savefig(f"confusion_matrix_types_{OLLAMA_MODEL}_score_{score}.jpg")
 
