@@ -531,7 +531,7 @@ class CandidatePairsMapping():
     def __init__(self,
                  list1: Extractor,
                  list2: Extractor,
-                 ent_type: str = None,
+                 ent_type: Union[str, list[str]] = None,
                  checkpoint_id: str = None):
         self._list1 = list1
         self._list2 = list2
@@ -911,10 +911,9 @@ class CandidatePairsMapping():
         # LLM validation
         else:
             try:
-                history = self.ai_validation(scores, SSM)
+                self.ai_validation(scores, SSM)
             except KeyboardInterrupt:
-                # TODO plot history
-                print(history)
+                # Allow code to keep running
                 pass
 
 
@@ -1000,7 +999,8 @@ class CandidatePairsMapping():
         mean = np.nanmean(scores)
         # Eliminate 97.5 %
         threshold = mean + 1.96 * std_dev
-        print("Stop at:", threshold)
+        # print("Stop at:", threshold)
+        # TODO
 
         # Plot settings
         plt.ion()

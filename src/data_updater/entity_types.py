@@ -36,11 +36,8 @@ ALL_TYPES = {
             UFO
             }
 
-# Entities that might have an address
 GROUND_TYPES = {
                 GROUND_OBSERVATORY,
-                TELESCOPE,
-                OBSERVATORY_NETWORK,
                 }
 
 # A telescope may have an address if it is located in an observatory.
@@ -50,6 +47,12 @@ MAY_HAVE_ADDR = {
                 OBSERVATORY_NETWORK,
                 TELESCOPE
                 }
+
+NO_ADDR = {
+    MISSION,
+    SPACECRAFT,
+    AIRBORNE
+}
 
 # Labels used to classify entities with the model to project's labels
 categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,

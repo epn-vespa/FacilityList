@@ -329,7 +329,7 @@ class Graph(G):
 
     def get_entities_from_list(self,
                                source: Extractor,
-                               ent_type: str = None,
+                               ent_type: Union[str, list[str]] = None,
                                no_equivalent_in: Extractor = None,
                                has_attr: list[str] = [],
                                limit: int = -1
@@ -363,7 +363,13 @@ class Graph(G):
 
         ent_type_str = ""
         if ent_type:
-            ent_type_str += f"?entity a obs:{standardize_uri(ent_type)} ."
+            if type(ent_type) == str:
+                ent_type_str += f"?entity a obs:{standardize_uri(ent_type)} ."
+            elif type(ent_type) == list:
+                ent_type_list = []
+                for et in ent_type:
+                    ent_type_list += f"{{ ?entity a obs:{et} . }}\n"
+                ent_type_str += "\n UNION ".join(ent_type_list)
 
         if not no_equivalent_in:
             query = f"""

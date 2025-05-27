@@ -165,33 +165,29 @@ class Merger():
         if not scores:
             print(f"No scores to compute for {list1}, {list2}. Ignoring.")
             return
-        for type1 in list1.POSSIBLE_TYPES:
-            for type2 in list2.POSSIBLE_TYPES:
-                if type1 != type2 or type1 == entity_types.UFO:
-                    continue
-                ent_type = type1
-                do_not_compute = set()
-                if ent_type not in entity_types.GROUND_TYPES:
-                    do_not_compute.add(DistanceScorer)
-                try:
-                    CPM = CandidatePairsMapping(list1,
-                                                list2,
-                                                ent_type = ent_type,
-                                                checkpoint_id = checkpoint_id)
-                    if not checkpoint_id:
-                        CPM.generate_mapping(limit = self.limit)
-                        CPM.compute_scores(scores = scores - do_not_compute)
-                        CPM.disambiguate(SynonymSetManager._SSM,
-                                            human_validation)
-                    else:
-                        CPM.disambiguate(SynonymSetManager._SSM,
-                                         human_validation)
-                    del(CPM)
-                except InterruptedError:
-                    # CPM.save_json(self.execution_id)
-                    SynonymSetManager._SSM.save_all()
-                    self.write()
-                    exit()
+        for ent_types in (entity_types.MAY_HAVE_ADDR, entity_types.NO_ADDR):
+            do_not_compute = set()
+            if ent_types == entity_types.NO_ADDR:
+                do_not_compute.add(DistanceScorer)
+            try:
+                CPM = CandidatePairsMapping(list1,
+                                            list2,
+                                            ent_type = ent_types,
+                                            checkpoint_id = checkpoint_id)
+                if not checkpoint_id:
+                    CPM.generate_mapping(limit = self.limit)
+                    CPM.compute_scores(scores = scores - do_not_compute)
+                    CPM.disambiguate(SynonymSetManager._SSM,
+                                        human_validation)
+                else:
+                    CPM.disambiguate(SynonymSetManager._SSM,
+                                        human_validation)
+                del(CPM)
+            except InterruptedError:
+                # CPM.save_json(self.execution_id)
+                SynonymSetManager._SSM.save_all()
+                self.write()
+                exit()
         # TODO: Also make a mapping for uncertain types (unknown and/or type_confidence != 1)
 
 
