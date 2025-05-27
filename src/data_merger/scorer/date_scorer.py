@@ -57,14 +57,3 @@ class DateScorer(Score):
         years1 = {date1.year for date1 in dates1 if date1 is not None}
         years2 = {date2.year for date2 in dates2 if date2 is not None}
         return not years1.isdisjoint(years2)
-        for date1 in dates1:
-            if date1 is None:
-                continue
-            year1 = date1.year
-            for date2 in dates2:
-                if date2 is None:
-                    continue
-                year2 = date2.year
-                if year1 == year2:
-                    return True # Same year found
-        return False # No matching year found
