@@ -36,8 +36,8 @@ class OntologyMapping():
                  "objtype": XSD.string}, # SKOS.exactMatch, # for non-ontological external resources
         "uri": {"pred": OWL.sameAs,
                 "objtype": XSD.string}, # for ontological external resources
-        "equivalent_class": {"pred": OWL.sameAs,
-                             "objtype": None}, # for resources that are the same
+        "exact_match": {"pred": SKOS.exactMatch,
+                        "objtype": None}, # for resources that are the same. TODO: use SKOS.exactMatch instead
         "url": {"pred": SDO.url,
                 "objtype": XSD.string}, # facility-list, PDS, SPASE
         "ext_ref": {"pred": FOAF.page,
@@ -344,7 +344,7 @@ class Graph(G):
         Keyword arguments:
         source -- the source extractor to get entities from
         no_equivalent_in -- the entities from source are not linked with
-                        owl:sameAs to any entity from this list,
+                        skos:exactMatch to any entity from this list,
                         and is not a member of a synonym set with an entity
                         of the other source.
         has_attr -- only return entities that have has_attr as a relation.
@@ -395,7 +395,7 @@ class Graph(G):
                     ?synset obs:hasMember ?entity .
                 }}
                 FILTER NOT EXISTS {{
-                    ?entity2 owl:equivalentClass ?entity .
+                    ?entity2 skos:exactMatch ?entity .
                     ?entity2 obs:source obs:{no_equivalent_in} .
                 }}
 

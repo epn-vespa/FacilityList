@@ -999,13 +999,14 @@ class CandidatePairsMapping():
         n_success = 0
         n_fail_in_a_row = 0
         n_pairs_to_disambiguate = np.sum(np.where(np.isnan(scores), 0, 1))
-        stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores)[0])
+        stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0]))
 
         # std_dev
         std_dev = np.nanstd(scores)
         mean = np.nanmean(scores)
-        # Eliminate 97.5 %
-        threshold = mean + 1.96 * std_dev
+        # z_score = 1.95 # 97.5 %
+        z_score = 1.65 # 95 %
+        threshold = mean + z_score * std_dev
 
         # Plot settings
         history = [] # to draw the evolution of same/distinct ratio over time
@@ -1055,7 +1056,7 @@ class CandidatePairsMapping():
                        "COSPAR_ID",
                        "NAIF_ID",
                        "MPC_ID",
-                       "equivalent_class",
+                       "exact_match",
                        "type_confidence",
                        "location_confidence",
                        "source",
