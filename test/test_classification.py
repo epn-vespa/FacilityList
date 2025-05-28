@@ -53,7 +53,7 @@ def load_dataset():
                                     "COSPAR_ID",
                                     "NSSDCA_ID",
                                     "NAIF_ID",
-                                    "equivalent_class",
+                                    "exact_match",
                                     "source",
                                     "type",
                                     "MPC_ID"])

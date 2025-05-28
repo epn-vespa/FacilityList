@@ -26,3 +26,8 @@ class ExtractorLists():
                             WikidataExtractor]
 
     EXTRACTORS_BY_NAMES = {extractor.NAMESPACE: extractor for extractor in AVAILABLE_EXTRACTORS}
+
+    NON_AUTHORITATIVE_EXTRACTORS = [NssdcExtractor,
+                                    WikidataExtractor]
+
+    AUTHORITATIVE_EXTRACTORS = set(AVAILABLE_EXTRACTORS) - set(NON_AUTHORITATIVE_EXTRACTORS)
