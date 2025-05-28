@@ -12,6 +12,7 @@ from typing import Set, Union
 from rdflib import Literal, URIRef
 
 from graph import Graph
+from utils.utils import cut_language_from_string
 
 class Entity:
     pass
@@ -41,9 +42,16 @@ class Entity():
         graph = Graph()
         for entity, property, value in graph.triples((self.uri, None, None)):
             if isinstance(value, Literal):
-                self._data[property].add(value.value)
+                if not value.language and type(value.value) == str:
+                    # check in the string as some languages may have '-' but
+                    # languages with '-' are not returned by rdflib's Literal
+                    value_str, lang = cut_language_from_string(value.value)
+                    if lang:
+                        self._data[property].add((value_str, lang))
+                        continue
+                self._data[property].add((value.value, value.language))
             else:
-                self._data[property].add(str(value))
+                self._data[property].add((str(value), None))
 
 
     def __eq__(self, entity: Union[Entity, URIRef]):
@@ -85,7 +93,8 @@ class Entity():
 
     def get_values_for(self,
                        property: str,
-                       unique: bool = False) -> Set:
+                       unique: bool = False,
+                       language: str = None) -> Set:
         """
         Get values of the entity for a property.
 
@@ -101,16 +110,21 @@ class Entity():
             # No value for this property
             res = set()
         if unique:
-            if type(res) in [set, list, tuple]:
-                if len(res):
-                    return list(res)[0]
-                else:
-                    return None
-            elif res:
-                return res
-            else:
-                return None
-        return res
+            if type(res) == set:
+                for value, lang in res:
+                    if lang == None or language == None or lang == language:
+                        return value
+            elif type(res) == tuple:
+                value, lang = res
+                if lang == None or language == None or lang == language:
+                    return value
+            return None
+        res_for_lang = set()
+        for value, lang in res:
+            if lang == None or language == None or lang == language:
+                res_for_lang.add(value)
+        return res_for_lang
+
 
     def to_string(self,
                   exclude: list[str] = ["code",

@@ -14,7 +14,7 @@ from collections import defaultdict
 from typing import List, Set, Union
 import uuid
 
-from rdflib import OWL, RDF, URIRef
+from rdflib import OWL, RDF, SKOS, URIRef, Literal
 
 from data_updater.extractor.extractor import Extractor
 from graph import Graph
@@ -161,7 +161,10 @@ class SynonymSet():
             if entity in (graph.OBS["hasMember"],
                           RDF.type):
                 continue
-            self._data[property].update(value)
+            if isinstance(value, Literal):
+                self._data[property].add((value.value, value.language))
+            else:
+                self._data[property].add((str(value), None))
 
 
     def update_synonyms(self):
@@ -257,12 +260,13 @@ class SynonymSet():
                 if member1 == member2:
                     continue
                 # add equivalence mapping relation
-                graph.add((URIRef(member1.uri), OWL.equivalentClass, URIRef(member2.uri)))
+                graph.add((URIRef(member1.uri), SKOS.exactMatch, URIRef(member2.uri)))
 
 
     def get_values_for(self,
                        property: str,
-                       unique: bool = False) -> Set:
+                       unique: bool = False,
+                       language: str = None) -> Set:
         """
         Get values of the synonym set for a property.
 
@@ -273,17 +277,25 @@ class SynonymSet():
         """
         property = Graph().OM.convert_attr(property)
         if property in self._data:
-            res = set(self._data[property])
+            res = self._data[property]
         else:
             # No value for this property
             res = set()
         if unique:
-            if hasattr(res, "len") and not isinstance(res, str):
-                if len(res):
-                    return list(res)[0]
-                else:
-                    return None
-        return res
+            if type(res) == set:
+                for value, lang in res:
+                    if lang == None or language == None or lang == language:
+                        return value
+            elif type(res) == tuple:
+                value, lang = res
+                if lang == None or language == None or lang == language:
+                    return value
+            return None
+        res_for_lang = set()
+        for value, lang in res:
+            if lang == None or language == None or lang == language:
+                res_for_lang.add(value)
+        return res_for_lang
 
 
     def __iter__(self):

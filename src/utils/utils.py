@@ -280,7 +280,7 @@ def cut_language_from_string(text: str) -> Tuple[str, str]:
     Keyword arguments:
     text -- will be split on '@' into a text and its language.
     """
-    lang = re.findall(r"@[a-zA-Z]{2,3}$", text)
+    lang = re.findall(r"@[^ @]+$", text)
     if lang:
         lang = lang[0][1:] # remove @
         text = text[:-len(lang) - 1]
