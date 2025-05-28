@@ -322,15 +322,15 @@ def main(input_ontologies: list[str] = [],
 if __name__ == "__main__":
 
     parser = ArgumentParser(
-        prog = "updater.py",
+        prog = "merge.py",
         description = "Compute scores between entities from different lists " +
-            "and create CandidatePair with similarity scores between entities.")
+            "and create SynonymPairs & SynonymSets into an output ontology.")
 
     parser.add_argument("-i",
                         "--input-ontologies",
                         dest = "input_ontologies",
                         nargs = "+",
-                        default = "",
+                        default = [],
                         type = str,
                         required = True,
                         help = "Input ontology or ontologies on which we will perform " +

@@ -28,3 +28,4 @@ seaborn==0.13.2
 matplotlib==3.10.1
 sentence-transformers==4.0.1
 python-Levenshtein
+numba
