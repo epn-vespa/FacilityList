@@ -992,6 +992,9 @@ class CandidatePairsMapping():
         scores -- a 2D array of the scores of the candidate pairs
         SSM -- this run's SynonymSetManager
         """
+        if not scores or np.isnan(scores).all():
+            return
+
         self._load_llm_validation()
 
         # TODO: define a stop condition (looped unsuccessfully n times, for example 5% of the CandidatePairs ?)
@@ -999,7 +1002,7 @@ class CandidatePairsMapping():
         n_success = 0
         n_fail_in_a_row = 0
         n_pairs_to_disambiguate = np.sum(np.where(np.isnan(scores), 0, 1))
-        stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0]))
+        stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0])) + 1
 
         # std_dev
         std_dev = np.nanstd(scores)
@@ -1026,8 +1029,10 @@ class CandidatePairsMapping():
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
             if n_fail_in_a_row == stop_at_n_fails:
+                print("stop at n_fails")
                 break
             if np.isnan(scores).all():
+                print("all nan")
                 break
             # Count non nan
             left = np.sum(np.where(np.isnan(scores), 0, 1))
@@ -1061,11 +1066,10 @@ class CandidatePairsMapping():
                        "location_confidence",
                        "source",
                        "type",
-                       #"latitude",
-                       #"longitude",
-                       #"location",
-                       #"address",
-                       #"type",
+                        #"latitude",
+                        #"longitude",
+                        #"location",
+                        #"address",
                        ]
             prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"
