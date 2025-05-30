@@ -33,11 +33,11 @@ class OntologyMapping():
     # Properties that are not mapped belong to the OBS namespace.
     _MAPPING = {
         "code": {"pred": SKOS.notation,
-                 "objtype": XSD.string}, # SKOS.exactMatch, # for non-ontological external resources
+                 "objtype": XSD.string}, # for non-ontological external resources
         "uri": {"pred": OWL.sameAs,
                 "objtype": XSD.string}, # for ontological external resources
         "exact_match": {"pred": SKOS.exactMatch,
-                        "objtype": None}, # for resources that are the same. TODO: use SKOS.exactMatch instead
+                        "objtype": URIRef}, # for internal resources that are the same.
         "url": {"pred": SDO.url,
                 "objtype": XSD.string}, # facility-list, PDS, SPASE
         "ext_ref": {"pred": FOAF.page,
