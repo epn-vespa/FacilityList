@@ -92,6 +92,8 @@ class CandidatePair():
             # Retrieve and save the scores of the graph's candidate pair.
             self._uri = uri
             self.init_data()
+        if "|" in self._uri:
+            raise ValueError ("| in uri", self._uri)
 
         CandidatePair.candidate_pairs[uri] = self
 
@@ -949,7 +951,8 @@ class CandidatePairsMapping():
 
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical, spatio-temporal differences and similarities within entities. " + \
         "You have to answer this questions: are those two entities the same ? " + \
-        "Additionally, a satellite that is part of a mission, " + \
+        "The entities' type can be different but the entities might still be the same. " + \
+        "A satellite that is part of a mission, " + \
         "or telescope that is a part of an observatory, are distinct.\n" + \
         "Only select one choice from below:" + \
         "\nsame\ndistinct\n" + \
@@ -992,7 +995,7 @@ class CandidatePairsMapping():
         scores -- a 2D array of the scores of the candidate pairs
         SSM -- this run's SynonymSetManager
         """
-        if not scores or np.isnan(scores).all():
+        if not len(scores) or np.isnan(scores).all():
             return
 
         self._load_llm_validation()
@@ -1000,9 +1003,14 @@ class CandidatePairsMapping():
         # TODO: define a stop condition (looped unsuccessfully n times, for example 5% of the CandidatePairs ?)
         n_fail = 0
         n_success = 0
-        n_fail_in_a_row = 0
+        n_fails_in_a_row = 0
         n_pairs_to_disambiguate = np.sum(np.where(np.isnan(scores), 0, 1))
-        stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0])) + 1
+        if n_pairs_to_disambiguate == 0:
+            return
+
+        # stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0])) + 1
+        # Logarithmic value
+        stop_at_n_fails = int(500 * np.log(1 + 0.0001 * n_pairs_to_disambiguate))
 
         # std_dev
         std_dev = np.nanstd(scores)
@@ -1025,12 +1033,9 @@ class CandidatePairsMapping():
         ax.grid(True)
 
         score = np.nanargmax(scores)
-        while len(scores) and score > threshold:
+        while len(scores) and n_fails_in_a_row < stop_at_n_fails:# and score > threshold:
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
-            if n_fail_in_a_row == stop_at_n_fails:
-                print("stop at n_fails")
-                break
             if np.isnan(scores).all():
                 print("all nan")
                 break
@@ -1065,11 +1070,11 @@ class CandidatePairsMapping():
                        "type_confidence",
                        "location_confidence",
                        "source",
-                       "type",
-                        #"latitude",
-                        #"longitude",
-                        #"location",
-                        #"address",
+                       #"type",
+                       #"latitude",
+                       #"longitude",
+                       #"location",
+                       #"address",
                        ]
             prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"
@@ -1087,12 +1092,14 @@ class CandidatePairsMapping():
                 key = member1.uri + '|' + member2.uri
                 self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
                 n_success += 1
+                n_fails_in_a_row = 0
                 # history.append(1)
             elif answer == "distinct":
                 self.del_candidate_pair(best_candidate_pair)
                 scores[x][y] = np.nan
                 self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
                 n_fail += 1
+                n_fails_in_a_row += 1
                 # history.append(0)
             else:
                 continue
@@ -1419,7 +1426,7 @@ class CandidatePairsMapping():
         """
         with ProcessPoolExecutor() as executor:
             print(f"Computing other scores for the remaining candidate pairs" + \
-                  f"on {self.list1}, {self.list2} for {self._ent_type}.")
+                  f" on {self.list1}, {self.list2} for {self._ent_type}.")
             candidate_pairs = [(pair.member1, pair.member2, pair.uri)
                                for _, _, pair in self.iter_mapping()]
             futures = [executor.submit(_compute_scores,
