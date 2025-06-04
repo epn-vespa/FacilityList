@@ -62,7 +62,7 @@ class WikidataExtractor(Extractor):
     # 1: always known.
     # 0.5: partially known (see individuals)
     # 0: never known.
-    TYPE_KNOWN = 0.5
+    TYPE_KNOWN = 1
 
     # Enpoint for requesting wikidata
     _ENDPOINT_URL = "https://query.wikidata.org/sparql"
@@ -93,18 +93,36 @@ class WikidataExtractor(Extractor):
     ?modifiedDate
     """
 
+
     _WHERE_SIMPLE = """
     WHERE
     {
     ?itemURI rdfs:label ?itemLabel filter (lang(?itemLabel) = "en") . # get itemLabel only for lang = @en
     ?itemURI schema:dateModified ?modifiedDate . # get last modification date
+    """
 
     # Filter on classes:
+    """
     {?itemURI wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight (mission)
+    UNION {?itemURI wdt:P31/wdt:P279* wd:Q2133344 .} # space mission
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q62832 .} # observatory
     UNION {?itemURI wdt:P31/wdt:P279* wd:Q4213 .} # telescope
+    """
+    _TYPES = {entity_types.MISSION: ["wd:Q5916", # Spaceflight
+                                     #"wd:Q2133344", # Space mission (manned missions)
+                                     #"wd:Q60054001" # Space program (government related: not an obs facility)
+                                     ],
+              entity_types.SPACECRAFT: ["wd:Q40218"], # Spacecraft
+              entity_types.GROUND_OBSERVATORY: ["wd:Q62832"], # Observatory
+              entity_types.TELESCOPE: ["wd:Q148578", # Space telescope
+                                       "wd:Q4213"] # Telescope
+                            }
+    _QUERY_TYPES = {k: "UNION".join(f" {{?itemURI wdt:P31/wdt:P279* {v} .}} "
+                                    for v in vv ) for k, vv in _TYPES.items()}
 
+
+    _MINUS = """
     # Filter out unwanted classes:
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
     MINUS { ?itemURI wdt:P31 wd:Q209363. }  # weather satellite
@@ -177,30 +195,9 @@ class WikidataExtractor(Extractor):
     }
     """
 
-    # Query to get control pages
-    _QUERY_CONTROL = _QUERY_PREFIX + _SELECT_MAIN_SIMPLE + _WHERE_SIMPLE
+    # Query to get control pages (by type)
+    _QUERY_CONTROL = lambda type: WikidataExtractor._QUERY_PREFIX + WikidataExtractor._SELECT_MAIN_SIMPLE + WikidataExtractor._WHERE_SIMPLE + WikidataExtractor._QUERY_TYPES[type] + WikidataExtractor._MINUS
 
-
-    # Conversion from Wikidata superclass to entity types (including UFO)
-    TYPES_CONVERSION = {"astronomical observatory": entity_types.GROUND_OBSERVATORY,
-                        "space mission": entity_types.MISSION,
-                        "space probe": entity_types.SPACECRAFT,
-                        "university observatory": entity_types.GROUND_OBSERVATORY,
-                        "q124652943": entity_types.UFO, # weather station
-                        "seismological station": entity_types.UFO,
-                        "lander": entity_types.SPACECRAFT,
-                        "rover": entity_types.SPACECRAFT,
-                        "space telescope": entity_types.TELESCOPE,
-                        "sar satellite": entity_types.UFO,
-                        "telescope": entity_types.TELESCOPE,
-                        "optical telescope": entity_types.TELESCOPE
-                       }
-
-    # Strings that mean an entity is an UFO in the type
-    UFO_KEYWORDS = ["meteo",
-                    "data relay",
-                    "gps",
-                    "navigation"]
 
     def __init__(self):
         pass
@@ -215,81 +212,87 @@ class WikidataExtractor(Extractor):
         Extract wikidata content into a dictionary.
         """
         print("Extracting wikidata entities...")
-        controls = self._get_controls()
-
-        # Remove manually excluded entities from the exclusion file.
-        self._apply_exclusions(controls)
-
-        print(f"Found {len(controls["results"])} entities.")
-
-        # get newer versions' Wikidata URIs
-        latest = VersionManager.get_newer_keys(prev_version_file = self._CONTROL_FILE,
-                                               new_version = controls,
-                                               list_name = self.CACHE)
-
-        # TODO save those files in data/ or cache/
 
         # Dictionary to save entities that were succesfully downloaded & saved
         result = dict()
-        print("Ready to update", len(latest), "entities.")
-        for wikidata_uri in tqdm(latest):
-            data = self._extract_entity(wikidata_uri,
-                                        result,
-                                        from_cache = False)
-            if data:
-                # Downloaded page successfully.
-                # Refresh the version at each loop to keep track of what
-                # has worked in case of crash.
-                VersionManager.refresh(last_version_file = self._CONTROL_FILE,
-                                       new_version = {wikidata_uri: controls["results"][wikidata_uri]},
-                                       list_name = self.CACHE)
-                # Get a description from Wikipedia
-                self._get_wikipedia_intro(data)
 
+        # Divide query by type
+        controls_by_types = dict()
+
+        for ent_type in self._TYPES.keys():
+            controls = self._get_controls(ent_type)
+
+            # Remove manually excluded entities from the exclusion file.
+            self._apply_exclusions(controls)
+
+            controls_by_types[ent_type] = controls
+
+            print(f"Found {len(controls["results"])} entities for {ent_type}.")
+
+        for ent_type, controls in controls_by_types.items():
+            # Get newer versions' Wikidata URIs
+            latest = VersionManager.get_newer_keys(prev_version_file = self._CONTROL_FILE,
+                                                                       new_version = controls,
+                                                                       list_name = self.CACHE)
+            print(f"Ready to update {len(latest)} entities for {ent_type}.")
+            for wikidata_uri in tqdm(latest):
+                data = self._extract_entity(wikidata_uri,
+                                            result,
+                                            from_cache = False)
+                if data:
+                    # Downloaded page successfully.
+                    # Refresh the version at each loop to keep track of what
+                    # has worked in case of crash.
+                    VersionManager.refresh(last_version_file = self._CONTROL_FILE,
+                                        new_version = {wikidata_uri: controls["results"][wikidata_uri]},
+                                        list_name = self.CACHE)
+                    # Get a description from Wikipedia
+                    self._get_wikipedia_intro(data)
+
+                    data["type"] = ent_type
+                    data["type_confidence"] = 1
+                    result[data["label"]] = data
+
+
+            # Also get versions that were not refreshed
+            older = controls["results"].keys() - latest
+            print(f"No need to update {len(older)} entities for {ent_type}.")
+
+            # DEBUG (no multithread)
+            """
+            for wikidata_uri in tqdm(older):
+                data = self._extract_entity(wikidata_uri,
+                                            result,
+                                            True)
                 result[data["label"]] = data
-
-        # Also get versions that were not refreshed
-        older = controls["results"].keys() - latest
-        print("No need to update", len(older), "entities.")
-
-        # DEBUG (no multithread)
-        """
-        for wikidata_uri in tqdm(older):
-            data = self._extract_entity(wikidata_uri,
+            return result
+            """
+            # Paralellize entity extraction if the cache already has .json files
+            # for most wikidata_uri.
+            # FIXME this may crash if there is a control_file_latest.json
+            # but there are no cached json files (too many requests). It should not
+            # be executed with a multithread in this case.
+            with ThreadPoolExecutor() as executor:
+                futures = {executor.submit(self._extract_entity,
+                                        wikidata_uri,
                                         result,
-                                        True)
-            self._get_type(data)
-            result[data["label"]] = data
-        return result
-        """
-        # Paralellize entity extraction if the cache already has .json files
-        # for most wikidata_uri.
-        # FIXME this may crash if there is a control_file_latest.json
-        # but there are no cached json files (too many requests). It should not
-        # be executed with a multithread in this case.
-        with ThreadPoolExecutor() as executor:
-            futures = {executor.submit(self._extract_entity,
-                                       wikidata_uri,
-                                       result,
-                                       True):
-                    wikidata_uri for wikidata_uri in older}
-            for future in tqdm(as_completed(futures), total = len(futures)):
-                data = future.result()
+                                        True):
+                        wikidata_uri for wikidata_uri in older}
+                for future in tqdm(as_completed(futures), total = len(futures)):
+                    data = future.result()
 
-                # Get a description from Wikipedia
-                self._get_wikipedia_intro(data)
+                    # Get a description from Wikipedia
+                    self._get_wikipedia_intro(data)
 
-                result[data["label"]] = data
+                    data["type"] = ent_type
+                    data["type_confidence"] = 1
+                    result[data["label"]] = data
 
-        # Get wikidata types as in entity_types
-        # Cannot use multithreading as it calls LLMs
-        for data in tqdm(result.values(), desc = "Get LLM types for Wikidata"):
-            self._get_type(data)
         return result
 
 
     def _get_results(self,
-                     query: str) -> dict:
+                    query: str) -> dict:
         """
         Send a request to the enpoint url.
 
@@ -519,9 +522,13 @@ class WikidataExtractor(Extractor):
 
 
 
-    def _get_controls(self) -> dict:
+    def _get_controls(self,
+                      ent_type: str) -> dict:
         """
         Get the controls for every entity with their last update time.
+
+        Keyword arguments:
+        ent_type -- filter on one type
         """
 
         # control_data contains:
@@ -535,7 +542,7 @@ class WikidataExtractor(Extractor):
             "results": dict()
         }
 
-        query_control = self._QUERY_CONTROL
+        query_control = WikidataExtractor._QUERY_CONTROL(ent_type)
         try:
             query_result = self._get_results(query_control)
         except Exception as e:
@@ -550,7 +557,7 @@ class WikidataExtractor(Extractor):
             # Add data to results dict
             control_data["results"][item_uri] = dict([
                 ("label", item_label),
-                ("modified_date", modified_date)
+                ("modified_date", modified_date),
                 ])
 
         control_data["results_count"] = len(bindings)
@@ -585,65 +592,6 @@ class WikidataExtractor(Extractor):
         # Select the wikidata properties to keep and organize
         # them in the data dict.
         return self._properties_to_dict(content, result)
-
-
-    def _get_type(self,
-                  data: dict):
-        """
-        Use a type from entity_types and remove the type list of the entity.
-
-        Keyword arguments:
-        data -- the data dict of one entity
-        """
-        if "type" in data:
-            return
-        choices = entity_types.ALL_TYPES
-        if "source_type" not in data:
-            # Do not get a type for classes and part_of.
-            return
-        data["type_confidence"] = 1
-        if "COSPAR_ID" in data or "NSSDCA_ID" in data:
-            # NSSDC only has spacecrafts
-            data["type"] = entity_types.SPACECRAFT
-            return
-        if "NAIF_ID" in data:
-            choices = NaifExtractor.POSSIBLE_TYPES
-        if "source_type" in data:
-            for t in data["source_type"]:
-                t = t.lower()
-                entity_type = self.TYPES_CONVERSION.get(t, None)
-                if entity_type:
-                    data["type"] = entity_type
-                    if entity_type == entity_types.UFO:
-                        return
-                else:
-                    # if there is any UFO type, use UFO, do not add another type.
-                    if any(k in t for k in self.UFO_KEYWORDS):
-                        data["type"] = entity_types.UFO
-                        return
-            if "type" in data:
-                return
-
-        repr = entity_types.to_string(data,
-                                      exclude = ["code",
-                                                 "uri",
-                                                 "url",
-                                                 "ext_ref",
-                                                 "alt_label",
-                                                 "launch_date",
-                                                 "start_date",
-                                                 #"launch_place",
-                                                 "COSPAR_ID",
-                                                 "NSSDCA_ID",
-                                                 "NAIF_ID",
-                                                 "MPC_ID"])
-
-        cat = LLM().classify(repr,
-                             choices,
-                             from_cache = True,
-                             cache_key = self.NAMESPACE + '#' + data["label"])
-        data["type"] = cat
-        data["type_confidence"] = 0
 
 
     def _get_wikipedia_intro(self,
