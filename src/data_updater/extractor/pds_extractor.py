@@ -157,8 +157,11 @@ class PdsExtractor(Extractor):
                     if tag.text is None:
                         continue # empty tag
                     tag_str = tag.tag
+                    tag_text = tag.text.strip()
+                    if tag_text in ["NULL", "Unknown"]:
+                        continue
                     tag_str = PdsExtractor.FACILITY_ATTRS.get(tag_str, tag_str)
-                    data[tag_str] = re.sub("[\n ]+", " ", tag.text.strip())
+                    data[tag_str] = re.sub("[\n ]+", " ", tag_text)
 
                 data["url"] = resource_url
 
@@ -236,6 +239,7 @@ class PdsExtractor(Extractor):
 
         return result
 
+
     def _create_entity_from_missing_id(self,
                                        identifier: str) -> dict:
         """
@@ -253,6 +257,7 @@ class PdsExtractor(Extractor):
                 "code": identifier,
                 "type": self.TYPES[cat]}
         return data
+
 
     def _get_links_pds(self,
                        pds_url_f: str) -> list:
