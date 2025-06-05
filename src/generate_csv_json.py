@@ -7,6 +7,8 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import setup_path # import first
+
+from data_updater.extractor.wikidata_extractor import WikidataExtractor
 from argparse import ArgumentParser
 from collections import Counter, defaultdict
 import json
@@ -26,9 +28,9 @@ class CSVJsonGenerator():
     # Mapping between IVOA authorized relations and Obs Facilities relations
     _IVOA_RELATIONS = {
             "is_part_of": "skos:broader",
-            "url": "owl:equivalentClass",
-            "uri": "owl:equivalentClass",
-            "alt_label": "skos:altLabel",
+            # "url": "owl:equivalentClass",
+            "uri": "skos:sameAs",
+            # "alt_label": "skos:altLabel",
             }
 
 
@@ -76,7 +78,7 @@ class CSVJsonGenerator():
         relation_str -- if set, use this as a relation
         """
         res = ""
-        value_set = entity.get_values_for(relation)
+        value_set = entity.get_values_for(relation, language = "en")
         if self._graph.OM._MAPPING[relation].get("objtype") == URIRef:
             return ""
         relation = self._IVOA_RELATIONS[relation]
@@ -105,6 +107,7 @@ class CSVJsonGenerator():
         # TODO keep track of hasPart & isPartOf between synsets (intermediate step?)
         for synset in synsets:
             all_labels = []
+            pref_label = None
             identifiers = set() # Cannot be used as main label but should appear in aliases
             # TODO see if we can merge both functions ? (also write the csv)
             for synonym in synset:
@@ -113,22 +116,27 @@ class CSVJsonGenerator():
                 all_labels.append(label)
                 alt_labels = synonym.get_values_for("alt_label", language = "en")
                 all_labels.extend(alt_labels)
+                source = synonym.get_values_for("source", unique = True)
+                if source == WikidataExtractor.URI:
+                    pref_label = label
                 identifiers.update(synonym.get_values_for("code"))
                 identifiers.update(synonym.get_values_for("MPC_ID"))
                 identifiers.update(synonym.get_values_for("NAIF_ID"))
                 identifiers.update(synonym.get_values_for("NSSDCA_ID"))
                 identifiers.update(synonym.get_values_for("COSPAR_ID"))
 
-            count_labels = Counter(all_labels)
-            # Remove identifiers from labels
-            """
-            if not all(label in identifiers for label in count_labels):
-                for label in count_labels.copy():
-                    if label in identifiers:
-                        del count_labels[label]
-            """
-            labels = sorted(count_labels, key = lambda x: x[1], reverse = True)
-            pref_label = labels[0]
+            # Get the shortest label from the most represented labels
+            if not pref_label:
+                if not set(all_labels).issubset(identifiers):
+                    # Remove identifiers from labels that may become pref label
+                    all_labels = [label for label in all_labels if label not in identifiers]
+                count_labels = Counter(all_labels)
+                labels = sorted(count_labels.items(), key = lambda x: x[1], reverse = True)
+                candidate_labels = [label for label, count in labels if count == labels[0][1]]
+                candidate_labels = {label: len(label) for label in candidate_labels}
+                labels = sorted(candidate_labels, key = lambda x: x[1], reverse = False)
+
+                pref_label = labels[0]
             all_labels = set(all_labels)
             all_labels.update(identifiers)
 
@@ -154,35 +162,25 @@ class CSVJsonGenerator():
                     description = ""
             description = description.replace("\n", "")[:500]
 
-            # More relations (for IVOA csv)
-            """
-            ivoasem:preliminary,
-            ivoasem:deprecated,
-            ivoasem:useInstead,
-            rdfs:subClassOf,
-            rdfs:subPropertyOf,
-            skos:broader,
-            skos:exactMatch,
-            skos:related,
-            skos:altLabel
-            """
             more_relations = ""
             for entity in synset:
                 # Only get relations that are not internal references
                 # in the first place
                 # After all external relations have a pref "term", we can
                 # restore internal relations using term_by_synonym_uri.
-                fields = ["alt_label", "uri"]
+                fields = [#"alt_label",
+                          "uri"]
                 for field in fields:
                     more_relations += self._to_string(entity, relation = field)
-            for alt_label in alt_labels:
-                more_relations += f'skos:altLabel("{alt_label}") '
+            # altLabel is not yet supported by IVOA
+            #for alt_label in alt_labels:
+            #    more_relations += f'skos:altLabel("{alt_label}") '
 
             # Json
             json_res[term] = list(all_labels)
 
             # CSV
-            csv_res[term] = {"level": 1, "label": label, "description": description, "more_relations": more_relations, "synset": synset}
+            csv_res[term] = {"level": 1, "label": pref_label, "description": description, "more_relations": more_relations, "synset": synset}
 
         with open(self._output_json, "w", encoding = "utf-8") as file:
             json.dump(json_res, file, indent = 2, ensure_ascii = False)
@@ -206,6 +204,7 @@ class CSVJsonGenerator():
                     for relation in internal_relations:
                         parts = entity.get_values_for(relation)
                         for part in parts:
+                            # Only keep parts that will be in the CSV
                             part_of = term_by_synonym_uri.get(part, None)
                             if part_of:
                                 csv_res_str += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
