@@ -13,7 +13,6 @@ manage lists and entities' compatibility during the merging step.
 
 OBSERVATION_FACILITY = "observation facility" # network
 GROUND_OBSERVATORY = "ground observatory"
-OBSERVATORY_NETWORK = "observatory network" # ground or space
 SPACECRAFT = "spacecraft" # = space observatory
 TELESCOPE = "telescope" # Space or Ground. = observation instruments: inside a telescope.
 AIRBORNE = "airborne" # in the atmosphere
@@ -28,7 +27,6 @@ ERROR = "error" # LLM error in return format
 ALL_TYPES = {
             OBSERVATION_FACILITY,
             GROUND_OBSERVATORY,
-            OBSERVATORY_NETWORK,
             TELESCOPE,
             SPACECRAFT,
             AIRBORNE,
@@ -36,15 +34,12 @@ ALL_TYPES = {
             UFO
             }
 
-GROUND_TYPES = {
-                GROUND_OBSERVATORY,
-                }
 
 # A telescope may have an address if it is located in an observatory.
 # An observatory network may be a telescope array with only one location.
 MAY_HAVE_ADDR = {
                 OBSERVATION_FACILITY,
-                OBSERVATORY_NETWORK,
+                GROUND_OBSERVATORY,
                 TELESCOPE
                 }
 
@@ -54,13 +49,17 @@ NO_ADDR = {
     AIRBORNE
 }
 
+# Types that can not co-exist with GROUND_OBSERVATORY
+SPACE_TYPES = {
+    SPACECRAFT,
+    AIRBORNE
+}
+
 # Labels used to classify entities with the model to project's labels
 categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
                             "research institute": GROUND_OBSERVATORY,
                             "university": GROUND_OBSERVATORY,
                             "ground station": GROUND_OBSERVATORY,
-                            "observatory network": OBSERVATORY_NETWORK,
-                            "telescope array": OBSERVATORY_NETWORK,
                             "spacecraft/space probe": SPACECRAFT,
                             #"space probe": SPACECRAFT,
                             "airborne": AIRBORNE,

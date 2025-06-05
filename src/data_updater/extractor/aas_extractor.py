@@ -39,7 +39,6 @@ class AasExtractor(Extractor):
     # that do not have types in common
     POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
                       entity_types.MISSION,
-                      entity_types.OBSERVATORY_NETWORK,
                       entity_types.TELESCOPE,
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
@@ -330,7 +329,7 @@ class AasExtractor(Extractor):
                " array" in label.lower() or
                "telescope network" in label.lower() or
                label == "La Palma" in label and "Siding Spring" in label):
-                data["type"] = entity_types.OBSERVATORY_NETWORK
+                data["type"] = entity_types.GROUND_OBSERVATORY
                 continue
             elif label.lower().endswith("telescope"):
                 data["type"] = entity_types.TELESCOPE
@@ -349,7 +348,7 @@ class AasExtractor(Extractor):
                         data["type"] = entity_types.AIRBORNE
                         break
                     if l == "earth":
-                        data["type"] = entity_types.OBSERVATORY_NETWORK
+                        data["type"] = entity_types.GROUND_OBSERVATORY
                         break
             if "type" in data:
                 # No need to disambiguate type with LLM
@@ -360,17 +359,17 @@ class AasExtractor(Extractor):
             if "has_part" in data:
                 choices = [entity_types.MISSION,
                            entity_types.GROUND_OBSERVATORY,
-                           entity_types.OBSERVATORY_NETWORK]
+                           ]
             elif "waveband" in data:
                 choices = [entity_types.MISSION,
                            entity_types.GROUND_OBSERVATORY,
-                           entity_types.OBSERVATORY_NETWORK,
-                           entity_types.TELESCOPE]
+                           entity_types.TELESCOPE
+                           ]
             elif "observed_object" in data:
                 choices = [entity_types.MISSION,
                            entity_types.GROUND_OBSERVATORY,
-                           entity_types.OBSERVATORY_NETWORK,
-                           entity_types.TELESCOPE]
+                           entity_types.TELESCOPE
+                           ]
             choices.append(entity_types.UFO) # La Villa, Madrid...
             category = LLM().classify(description,
                                       choices = choices,

@@ -80,34 +80,48 @@ class Updater():
             # Get complete location information and add them to the features
             if extractor: # Only for extracted entities
                 location_info = dict()
-                cat = features.get("type", None)
-
+                ent_type = features.get("type", None)
                 part_of = None
-                if "is_part_of" in features:
+
+                if ent_type is not None and "is_part_of" in features:
                     if type(features["is_part_of"]) == list:
                         part_of_uri = None
                         for p in features["is_part_of"]:
                             if p:
                                 part_of_uri = p
-                                if data[part_of_uri].get("type", None) in entity_types.GROUND_TYPES:
-                                    part_of = data[part_of_uri]
+                                if part_of_uri not in data:
+                                    continue
+                                part_of_type = data[part_of_uri].get("type", [])
+                                if type(part_of_type) == str:
+                                    part_of_type = [part_of_type]
+                                for po_t in part_of_type:
+                                    if po_t in entity_types.MAY_HAVE_ADDR:
+                                        part_of = data[part_of_uri]
+                                        break
+                            if part_of:
                                 break # Keep the first non-none part-of only
                     elif type(features["is_part_of"]) == str:
-                        part_of_uri = features["is_part_of"]
-                if (cat == entity_types.GROUND_OBSERVATORY or
-                    cat in entity_types.MAY_HAVE_ADDR and (
-                     "latitude" in features and "longitude" in features or
-                     "location" in features or
-                     part_of is not None
-                    )):
+                        # Wikidata
+                        part_of = features["is_part_of"]
 
-                    location_info = get_location_info(label = features.get("label", None),
-                                                      latitude = features.get("latitude", None),
-                                                      longitude = features.get("longitude", None),
-                                                      address = features.get("address", None),
-                                                      location = features.get("location", None),
-                                                      part_of = part_of)
-                                                      # features.get("is_part_of", None))
+                if type(ent_type) == str:
+                    ent_type = {ent_type}
+                if ent_type is not None:
+                    for cat in ent_type:
+                        if (# cat == entity_types.GROUND_OBSERVATORY or
+                            cat in entity_types.MAY_HAVE_ADDR and (
+                            "latitude" in features and "longitude" in features or
+                            "location" in features # or
+                            #part_of is not None or
+                            )):
+
+                            location_info = get_location_info(label = features.get("label", None),
+                                                              latitude = features.get("latitude", None),
+                                                              longitude = features.get("longitude", None),
+                                                              address = features.get("address", None),
+                                                              location = features.get("location", None),
+                                                              part_of = part_of)
+                            break
                 # Retrieved information include country, continent. We also set location to
                 # Earth or Space.
                 for key, value in location_info.items():

@@ -116,7 +116,9 @@ class WikidataExtractor(Extractor):
               entity_types.SPACECRAFT: ["wd:Q40218"], # Spacecraft
               entity_types.GROUND_OBSERVATORY: ["wd:Q62832"], # Observatory
               entity_types.TELESCOPE: ["wd:Q148578", # Space telescope
-                                       "wd:Q4213"] # Telescope
+                                       "wd:Q4213"], # Telescope
+              entity_types.AIRBORNE: ["wd:Q1414565", # Space plane
+                                      "wd:Q1875651"] # Airborne observatory
                             }
     _QUERY_TYPES = {k: "UNION".join(f" {{?itemURI wdt:P31/wdt:P279* {v} .}} "
                                     for v in vv ) for k, vv in _TYPES.items()}
@@ -154,6 +156,7 @@ class WikidataExtractor(Extractor):
     MINUS { ?itemURI wdt:P31 wd:Q1778118. }  # volcano observatory
     MINUS { ?itemURI wdt:P31 wd:Q110218336. }  # atmospheric observatory
     MINUS { ?itemURI wdt:P31 wd:Q7865636. }  # seismological station
+    MINUS { ?itemURI wdt:P31 wd:Q5152581. }  # commercial space station
     MINUS { ?itemURI wdt:P31 wd:Q4538275. }  # Yantar-4K2
     MINUS { ?itemURI wdt:P31 wd:Q7103282. }  # Orlets
     MINUS { ?itemURI wdt:P31 wd:Q1812673. }  # US-KMO
@@ -244,13 +247,24 @@ class WikidataExtractor(Extractor):
                     # Refresh the version at each loop to keep track of what
                     # has worked in case of crash.
                     VersionManager.refresh(last_version_file = self._CONTROL_FILE,
-                                        new_version = {wikidata_uri: controls["results"][wikidata_uri]},
-                                        list_name = self.CACHE)
+                                           new_version = {wikidata_uri: controls["results"][wikidata_uri]},
+                                           list_name = self.CACHE)
                     # Get a description from Wikipedia
                     self._get_wikipedia_intro(data)
 
-                    data["type"] = ent_type
+                    if "type" not in data:
+                        data["type"] = [ent_type]
+                    else:
+                        data["type"].append(ent_type)
                     data["type_confidence"] = 1
+                    if data["label"] in result: # Already found with another query (more than 1 type)
+                        old_types = result[data["label"]]["type"]
+                        data["type"].extend(old_types)
+
+                        # Remove ground types if any space type is in type
+                        if any([t in entity_types.SPACE_TYPES for t in data["type"]]):
+                            if entity_types.GROUND_OBSERVATORY in data["type"]:
+                                data["type"].remove(entity_types.GROUND_OBSERVATORY)
                     result[data["label"]] = data
 
 
@@ -274,9 +288,9 @@ class WikidataExtractor(Extractor):
             # be executed with a multithread in this case.
             with ThreadPoolExecutor() as executor:
                 futures = {executor.submit(self._extract_entity,
-                                        wikidata_uri,
-                                        result,
-                                        True):
+                                           wikidata_uri,
+                                           result,
+                                           True):
                         wikidata_uri for wikidata_uri in older}
                 for future in tqdm(as_completed(futures), total = len(futures)):
                     data = future.result()
@@ -284,8 +298,20 @@ class WikidataExtractor(Extractor):
                     # Get a description from Wikipedia
                     self._get_wikipedia_intro(data)
 
-                    data["type"] = ent_type
+                    if "type" not in data:
+                        data["type"] = [ent_type]
+                    else:
+                        data["type"].append(ent_type)
                     data["type_confidence"] = 1
+                    if data["label"] in result: # Already found with another query (more than one type)
+                        if "type" in result[data["label"]]:
+                            prev_types = result[data["label"]]["type"]
+                            data["type"].extend(prev_types)
+
+                            # Remove ground types if any space type is in type
+                            if any([t in entity_types.SPACE_TYPES for t in data["type"]]):
+                                if entity_types.GROUND_OBSERVATORY in data["type"]:
+                                    data["type"].remove(entity_types.GROUND_OBSERVATORY)
                     result[data["label"]] = data
 
         return result
@@ -437,6 +463,7 @@ class WikidataExtractor(Extractor):
                                 property_value = prop["mainsnak"]["datavalue"]["value"]
                             elif datatype == "wikibase-item":
                                 # get label of the class of the item
+                                # (or the isPartOf / hasPart)
                                 property_value = self._get_label(prop["mainsnak"]["datavalue"]["value"]["id"], result)
                             elif datatype == "quantity":
                                 property = prop["mainsnak"]["datavalue"]["value"]
@@ -471,8 +498,9 @@ class WikidataExtractor(Extractor):
                    wikidata_item: str,
                    result: dict = None) -> str:
         """
-        Returns the label of a Wikidata entity and add the wikidata entity
-        into the result dict (only add its label and uri).
+        Returns the label of a Wikidata entity or relation
+        and add the wikidata entity into the result dict
+        (only add its label, uri & link) if result is set.
 
         Keyword arguments:
         wikidata_item -- the URI of the Wikidata entity (Qxxxxxxx)
@@ -513,11 +541,13 @@ class WikidataExtractor(Extractor):
         # the same item
         self.LABEL_BY_WIKIDATA_ITEM[wikidata_item] = label
 
-        # Add the entity into result dict (used for classes)
+        # Add the entity into result dict (used for classes, hasPart & isPartOf)
+        """
         if result is not None:
             result[label] = {"label": label,
                              "code": wikidata_item,
                              "url": f"https://wikidata.org/wiki/{wikidata_item}"}
+        """
         return label
 
 

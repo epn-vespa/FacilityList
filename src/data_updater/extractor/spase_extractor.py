@@ -51,7 +51,6 @@ class SpaseExtractor(Extractor):
     # that do not have types in common
     POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
                       entity_types.MISSION,
-                      entity_types.OBSERVATORY_NETWORK,
                       entity_types.TELESCOPE,
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
@@ -324,7 +323,7 @@ class SpaseExtractor(Extractor):
         choices = None # None choices will disambiguate for all categories.
         if "latitude" in data and "longitude" in data:
             choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
-                       entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
+                       entity_types.TELESCOPE]
         elif "location" in data:
             for l in data["location"]:
                 if l in location_space:
@@ -333,7 +332,7 @@ class SpaseExtractor(Extractor):
                     break
                 if l in location_ground:
                     choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
-                               entity_types.OBSERVATORY_NETWORK, entity_types.TELESCOPE]
+                               entity_types.TELESCOPE]
                     break
 
         repr = entity_types.to_string(data, exclude = ["start_date",

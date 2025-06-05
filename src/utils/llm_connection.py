@@ -181,7 +181,6 @@ class LLM():
         are provided, it will use :
             OBSERVATION_FACILITY (default)
             GROUND_OBSERVATORY
-            OBSERVATORY_NETWORK
             SPACECRAFT
             TELESCOPE
             MISSION
@@ -225,9 +224,6 @@ class LLM():
         # Explainations
         if GROUND_OBSERVATORY in possible_categories:
             prompt += "University, station and observatory (obs) are ground observation facilities (on earth). "
-        if OBSERVATORY_NETWORK in possible_categories:
-            prompt += "More than one observatory is an observatory network. "
-            prompt += "More than one telescope is a telescope array. "
         if TELESCOPE in possible_categories:
             prompt += "Cosmos observation instruments and telescopes can have a wavelength, a size, a host observatory etc. "
             # prompt += "Cosmos observation instruments and telescopes are used to observe cosmos bodies, radiations and particles."
@@ -237,7 +233,7 @@ class LLM():
         if MISSION in possible_categories:
             prompt += f"Space missions are the observation of a cosmos body or event. "
         if AIRBORNE in possible_categories:
-            prompt += "Airbornes are planes sent into the atmosphere to make cosmos observations. "
+            prompt += "An airborne is a plane or balloon sent into the atmosphere to make cosmos observations. "
         if SPACECRAFT in possible_categories:
             prompt += "A spacecraft or space probe can also be a satellite that observe cosmos events. "
         if UFO in possible_categories:
