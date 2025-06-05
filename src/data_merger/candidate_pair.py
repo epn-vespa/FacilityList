@@ -1070,11 +1070,11 @@ class CandidatePairsMapping():
                        "type_confidence",
                        "location_confidence",
                        "source",
-                       #"type",
-                       #"latitude",
-                       #"longitude",
-                       #"location",
-                       #"address",
+                       "type",
+                       "latitude",
+                       "longitude",
+                       "location",
+                       "address",
                        ]
             prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
             prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"

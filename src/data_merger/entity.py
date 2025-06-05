@@ -52,6 +52,8 @@ class Entity():
                 self._data[property].add((value.value, value.language))
             else:
                 self._data[property].add((str(value), None))
+        if "|" in self.uri:
+            raise ValueError("| in uri:", self.uri)
 
 
     def __eq__(self, entity: Union[Entity, URIRef]):

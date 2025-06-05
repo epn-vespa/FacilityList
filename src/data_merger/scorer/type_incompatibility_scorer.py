@@ -25,15 +25,16 @@ class TypeIncompatibilityScorer(Score):
     NAME = "type"
 
 
-    ground_types = {entity_types.GROUND_OBSERVATORY,
-                    entity_types.OBSERVATORY_NETWORK}
+    ground_types = {entity_types.GROUND_OBSERVATORY}
 
     space_types = {entity_types.AIRBORNE,
                    entity_types.SPACECRAFT}
 
     ambiguous_types = {entity_types.MISSION,
                        entity_types.TELESCOPE,
-                       entity_types.UFO}
+                       entity_types.UFO,
+                       entity_types.OBSERVATION_FACILITY}
+
 
     def compute(graph: Graph,
                 entity1: Union[Entity, SynonymSet],
@@ -58,18 +59,10 @@ class TypeIncompatibilityScorer(Score):
             # The type was determined by a LLM, cannot disambiguate
             # on the type (not enough control)
             return -1
+            # TODO check if the types are both in ground or space
+            # else return -2
 
-        if type1.union(type2):
+        if type1.intersection(type2):
             return -1
         else:
             return -2
-        """
-        if any(t1 in TypeIncompatibilityScorer.ground_types for t1 in types1):
-            if any(t2 in TypeIncompatibilityScorer.space_types for t2 in types2):
-                return -2 # Ground / Space
-        
-        if any(t1 in TypeIncompatibilityScorer.space_types for t1 in types1):
-            if any(t2 in TypeIncompatibilityScorer.ground_types for t2 in types2):
-                return -2 # Space / Ground
-        return -1
-        """

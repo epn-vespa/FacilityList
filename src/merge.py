@@ -25,6 +25,7 @@ from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapp
 from data_merger.identifier_merger import IdentifierMerger
 from data_merger.scorer.score import Score
 from data_merger.scorer.scorer_lists import ScorerLists
+from data_merger.scorer.type_incompatibility_scorer import TypeIncompatibilityScorer
 from data_merger.synonym_set import SynonymSetManager
 from data_merger.scorer.fuzzy_scorer import FuzzyScorer
 from data_updater.extractor.extractor import Extractor
@@ -157,30 +158,58 @@ class Merger():
         if not scores:
             print(f"No scores to compute for {list1}, {list2}. Ignoring.")
             return
-        for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
-            do_not_compute = set()
-            if ent_types == entity_types.NO_ADDR:
-                do_not_compute.add(DistanceScorer)
-            try:
-                CPM = CandidatePairsMapping(list1,
-                                            list2,
-                                            ent_type = ent_types,
-                                            checkpoint_id = checkpoint_id)
-                if not checkpoint_id:
-                    CPM.generate_mapping(limit = self.limit)
-                    CPM.compute_scores(scores = scores - do_not_compute)
-                    CPM.disambiguate(SynonymSetManager._SSM,
-                                        human_validation)
-                else:
-                    CPM.disambiguate(SynonymSetManager._SSM,
-                                        human_validation)
-                del(CPM)
-            except InterruptedError:
-                # CPM.save_json(self.execution_id)
-                SynonymSetManager._SSM.save_all()
-                self.write()
-                exit()
-        # TODO: Also make a mapping for uncertain types (unknown and/or type_confidence != 1)
+
+        # If the program gets interrupted by an error, save the output
+        # ontology anyways.
+        atexit.register(SynonymSetManager._SSM.save_all)
+        atexit.register(self.write)
+        try:
+            if list1.TYPE_KNOWN == 1 and list2.TYPE_KNOWN == 1:
+                # If types are known in both lists, do one mapping per type
+                if TypeIncompatibilityScorer in scores:
+                    print(f"Warning: {list1.NAMESPACE} and {list2.NAMESPACE}'s types are known." + \
+                          "Therefore, they are mapped on types, no need to use the type score.")
+                for ent_type in list1.POSSIBLE_TYPES:
+                    if ent_type not in list2.POSSIBLE_TYPES:
+                        continue
+                    do_not_compute = {TypeIncompatibilityScorer}
+                    if ent_type in entity_types.NO_ADDR:
+                        do_not_compute.add(DistanceScorer)
+                    CPM = CandidatePairsMapping(list1,
+                                                list2,
+                                                ent_type = ent_type,
+                                                checkpoint_id = checkpoint_id)
+                    if not checkpoint_id:
+                        CPM.generate_mapping(limit = self.limit)
+                        CPM.compute_scores(scores = scores - do_not_compute)
+                        CPM.disambiguate(SynonymSetManager._SSM,
+                                            human_validation)
+                    else:
+                        CPM.disambiguate(SynonymSetManager._SSM,
+                                            human_validation)
+                    del(CPM)
+            else:
+                # Types are partially known or unknown in at least one of both lists
+                for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
+                    do_not_compute = set()
+                    if ent_types == entity_types.NO_ADDR:
+                        do_not_compute.add(DistanceScorer)
+                        CPM = CandidatePairsMapping(list1,
+                                                    list2,
+                                                    ent_type = ent_types,
+                                                    checkpoint_id = checkpoint_id)
+                        if not checkpoint_id:
+                            CPM.generate_mapping(limit = self.limit)
+                            CPM.compute_scores(scores = scores - do_not_compute)
+                            CPM.disambiguate(SynonymSetManager._SSM,
+                                                human_validation)
+                        else:
+                            CPM.disambiguate(SynonymSetManager._SSM,
+                                                human_validation)
+                        del(CPM)
+        except InterruptedError:
+            # CPM.save_json(self.execution_id)
+            exit()
 
 
     @timeit

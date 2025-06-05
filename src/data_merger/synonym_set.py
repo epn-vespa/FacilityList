@@ -105,6 +105,8 @@ class SynonymSet():
         else:
             self.update_synonyms()
 
+        if "|" in self.uri:
+            raise ValueError("| in uri:", self.uri)
         self.init_data()
 
 
