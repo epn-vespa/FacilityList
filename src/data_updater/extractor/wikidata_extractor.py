@@ -24,13 +24,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from datetime import UTC, datetime
 from bs4 import BeautifulSoup
+from data_updater.extractor.data_fixer import fix
 
 import certifi
 import urllib
 
 from config import DATA_DIR # type: ignore
-from data_updater.extractor.naif_extractor import NaifExtractor
-from utils.llm_connection import LLM
 
 
 class WikidataExtractor(Extractor):
@@ -314,6 +313,9 @@ class WikidataExtractor(Extractor):
                                     data["type"].remove(entity_types.GROUND_OBSERVATORY)
                     result[data["label"]] = data
 
+        # Fix errors in source
+        fix(result, self)
+
         return result
 
 
@@ -548,6 +550,11 @@ class WikidataExtractor(Extractor):
                              "code": wikidata_item,
                              "url": f"https://wikidata.org/wiki/{wikidata_item}"}
         """
+        # TODO also add the latitude & longitude.
+        # Impossible to add a type ?
+        # if spacecraft isPartOf => mission
+        # if anything else isPartOf => ground obs
+        # or if there are lat/long, then ground obs, else mission.
         return label
 
 

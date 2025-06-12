@@ -6,7 +6,7 @@ from config import DATA_DIR # type: ignore
 from data_updater.extractor.extractor import Extractor
 
 def fix(result: dict,
-        source: Extractor) -> str:
+        source: Extractor):
     """
     Fix a result dict (after retrieving the whole data dicts for
     the source). Some entities can be deleted, added or updated.
