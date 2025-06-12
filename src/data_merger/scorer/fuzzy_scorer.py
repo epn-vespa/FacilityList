@@ -18,6 +18,7 @@ Author:
 from typing import List, Union
 # from fuzzywuzzy import fuzz as wuzz
 from rapidfuzz import fuzz, utils
+from unidecode import unidecode
 
 from graph import Graph
 from data_merger.entity import Entity
@@ -63,9 +64,13 @@ class FuzzyScorer(Score):
                 """
 
                 # RapidFuzz
+                label1 = unidecode(label1).lower()
+                label2 = unidecode(label2).lower()
+
                 score = fuzz.token_sort_ratio(label1,
                                               label2,
-                                              processor = utils.default_process)
+                                              # processor = utils.default_process
+                                              )
 
                 if score == 100:
                     return 1.0

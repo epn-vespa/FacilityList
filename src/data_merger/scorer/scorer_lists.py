@@ -14,12 +14,14 @@ class ScorerLists():
     # are above or below a certain threshold. They are computed first.
     DISCRIMINANT_SCORES = [type_incompatibility_scorer.TypeIncompatibilityScorer,
                            date_scorer.DateScorer,
-                           distance_scorer.DistanceScorer]
+                           distance_scorer.DistanceScorer,
+                           fuzzy_scorer.FuzzyScorer]
 
     # Scores that are computed for all of the candidate pairs.
     OTHER_SCORES = [acronym_scorer.AcronymScorer,
                     tfidf_scorer.TfIdfScorer,
-                    fuzzy_scorer.FuzzyScorer]
+                    #fuzzy_scorer.FuzzyScorer
+                    ]
 
     # Scores that use CUDA and cannot be computed in a forked thread
     CUDA_SCORES = [cosine_similarity_scorer.CosineSimilarityScorer, # Too long without GPU

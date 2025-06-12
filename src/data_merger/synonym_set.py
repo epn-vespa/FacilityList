@@ -11,10 +11,10 @@ Author:
 """
 
 from collections import defaultdict
-from typing import List, Set, Union
+from typing import Set, Union
 import uuid
 
-from rdflib import OWL, RDF, SKOS, URIRef, Literal
+from rdflib import RDF, SKOS, URIRef, Literal
 
 from data_updater.extractor.extractor import Extractor
 from graph import Graph
@@ -46,7 +46,7 @@ class SynonymSet():
 
     def __new__(cls,
                 uri: URIRef = None,
-                synonyms: Set[Entity] = set()):
+                synonyms: Set[Entity] = set()) -> SynonymSet:
         """
         Object factory for SynonymSet.
 
