@@ -19,6 +19,11 @@ class Entity:
 
 
 class Entity():
+    """
+    Troubleshooting:
+        if it is a SynonymSet's URI, it should prevent adding it
+        into the entities' dict.
+    """
 
     # Save entities' uri to prevent multi instanciation
     entities = dict()
@@ -26,7 +31,6 @@ class Entity():
 
     def __new__(cls,
                 uri: URIRef):
-        # cls._uri = uri
         if uri in cls.entities:
             return cls.entities[uri]
         else:
@@ -37,7 +41,7 @@ class Entity():
 
     def __init__(self,
                  uri: URIRef):
-        self._uri = uri
+        self._uri = URIRef(uri)
         self._data = defaultdict(set)
         graph = Graph()
         for entity, property, value in graph.triples((self.uri, None, None)):
@@ -149,11 +153,13 @@ class Entity():
         label = self.get_values_for("label")
         if label:
             if type(label) == set:
-                res = ", ".join(label)
+                res = ', '.join(label)
+                res += '. '
             else:
                 res = label + '. '
         for key, value in sorted(self.data.items()):
             key = Graph().OM.get_attr_name(key)
+            value = self.get_values_for(key)
             if key in exclude:
                 continue
             if key == "label":
@@ -167,7 +173,10 @@ class Entity():
                 value = [value]
             else:
                 key = key.replace('_', ' ').capitalize()
-            res += f" {key}: {', '.join([str(v) for v in value])[:limit]}."
+            values = []
+            for v in value:
+                values.append(str(v).rsplit('#')[-1]) # remove namespace
+            res += f" {key}: {', '.join([str(v) for v in values])[:limit]}."
         return res
 
 
