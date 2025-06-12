@@ -895,18 +895,18 @@ class CandidatePairsMapping():
         """
         scores = []
         none_cp = 0
-        for l in self._mapping:
-            scores_l = []
-            for candidate_pair in l:
+        for i, line in enumerate(self._mapping):
+            scores_line = []
+            for candidate_pair in line:
                 if candidate_pair is None:
                     none_cp += 1
-                    scores_l.append(np.nan)
+                    scores_line.append(np.nan)
                 else:
                     if "global" in candidate_pair.scores:
-                        scores_l.append(candidate_pair.scores.get("global"))
+                        scores_line.append(candidate_pair.scores.get("global"))
                     else:
-                        scores_l.append(candidate_pair.compute_global_score())
-            scores.append(scores_l)
+                        scores_line.append(candidate_pair.compute_global_score())
+            scores.append(scores_line)
         if not scores:
             print("Nothing to disambiguate.")
             return
@@ -944,14 +944,16 @@ class CandidatePairsMapping():
             means = np.nanmean(scores, axis = axis, keepdims = True)
             stds = np.nanstd(scores, axis = axis, keepdims = True)
             scores = (scores - means) / (stds + 1e-8)
+            return scores
         for i in range(max_iter):
-            standardize(scores, axis = i % 2)
+            scores = standardize(scores, axis = i % 2)
         return scores
 
 
-    PROMPT_BASE = "You are an ontology matching tool, able to detect semantical, spatio-temporal differences and similarities within entities. " + \
+    PROMPT_BASE = "You are an ontology matching tool, able to detect semantical similarities within observation facilities. " + \
         "You have to answer this questions: are those two entities the same ? " + \
-        "The entities' type can be different but the entities might still be the same. " + \
+        "All entities are cosmos observation facilities, no matter their name. " + \
+        "The entities' name and type can be different but they might still be the same. " + \
         "A satellite that is part of a mission, " + \
         "or telescope that is a part of an observatory, are distinct.\n" + \
         "Only select one choice from below:" + \
@@ -967,12 +969,38 @@ class CandidatePairsMapping():
         "one of the entities refer to the spacecraft, while the other to the mission. therefore, the second entity is a part of the first one.\n"
 
 
+    # We exclude links, identifiers, numbers
+    # (the LLM does not understand numbers), and source
+    # (prevent LLM from replying "distinct" due to different sources)
+    # Type is always identical and if different, it is not relevant to
+    # indicate it to the LLM (it might be an error, entities might
+    # still be the same).
+    EXCLUDE = ["code",
+                "url",
+                "NSSDCA_ID",
+                "uri",
+                "ext_ref",
+                "COSPAR_ID",
+                "NAIF_ID",
+                "MPC_ID",
+                "exact_match",
+                "type_confidence",
+                "location_confidence",
+                "source",
+                #"type",
+                "latitude",
+                "longitude",
+                "location",
+                "address", # Sometimes the label of an entity is related to its address
+                ]
+
     LLM_VALIDATION = None
     def _load_llm_validation(self):
         filename = CACHE_DIR / "llm_validation.json"
         self.LLM_VALIDATION = dict()
         if os.path.exists(filename):
             with open(filename, "r") as file:
+                print("loading LLM_VALIDATION")
                 self.LLM_VALIDATION = json.load(file)
         atexit.register(self._save_llm_validation)
 
@@ -980,7 +1008,8 @@ class CandidatePairsMapping():
     def _save_llm_validation(self):
         filename = CACHE_DIR / "llm_validation.json"
         with open(filename, "w") as file:
-            json.dump(self.LLM_VALIDATION, file)
+            print(f"Saving {len(self.LLM_VALIDATION)} LLM validation results in {filename}")
+            json.dump(self.LLM_VALIDATION, file, indent = 2)
 
 
     @timeall
@@ -1010,7 +1039,7 @@ class CandidatePairsMapping():
 
         # stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0])) + 1
         # Logarithmic value
-        stop_at_n_fails = int(500 * np.log(1 + 0.0001 * n_pairs_to_disambiguate))
+        stop_at_n_fails = int(500 * np.log(1 + 0.00001 * n_pairs_to_disambiguate))
 
         # std_dev
         std_dev = np.nanstd(scores)
@@ -1052,35 +1081,19 @@ class CandidatePairsMapping():
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
 
-            # We exclude links, identifiers, numbers
-            # (the LLM does not understand numbers), and source
-            # (prevent LLM from replying "distinct" due to different sources)
-            # Type is always identical and if different, it is not relevant to
-            # indicate it to the LLM (it might be an error, entities might
-            # still be the same).
-            exclude = ["code",
-                       "url",
-                       "NSSDCA_ID",
-                       "uri",
-                       "ext_ref",
-                       "COSPAR_ID",
-                       "NAIF_ID",
-                       "MPC_ID",
-                       "exact_match",
-                       "type_confidence",
-                       "location_confidence",
-                       "source",
-                       "type",
-                       "latitude",
-                       "longitude",
-                       "location",
-                       "address",
-                       ]
-            prompt = "Entity1: " + member1.to_string(exclude=exclude)[:500] + "\n\n"
-            prompt += "Entity2: " + member2.to_string(exclude=exclude)[:500] + "\n\n"
-            prompt += self.PROMPT_BASE
-            response = LLM().generate(prompt)
-            answer, justification = self._parse_ai_response(response)
+            key = str(member1.uri) + '|' + str(member2.uri)
+
+            # Get answer from cache
+            if key in self.LLM_VALIDATION:
+                answer = self.LLM_VALIDATION[key]["answer"]
+                justification = self.LLM_VALIDATION[key]["justification"]
+            else:
+                prompt = "Entity1: " + member1.to_string(exclude=self.EXCLUDE)[:500] + "\n\n"
+                prompt += "Entity2: " + member2.to_string(exclude=self.EXCLUDE)[:500] + "\n\n"
+                prompt += self.PROMPT_BASE
+                response = LLM().generate(prompt)
+                answer, justification = self._parse_ai_response(response)
+                self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
             if answer == "same":
                 best_candidate_pair.save_to_graph(decisive_score = f"{OLLAMA_MODEL} validation",
                                                   justification = justification)
@@ -1089,18 +1102,13 @@ class CandidatePairsMapping():
                 self.del_candidate_pairs(member1)
                 self.del_candidate_pairs(member2)
                 SSM.add_synpair(member1, member2)
-                key = member1.uri + '|' + member2.uri
-                self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
                 n_success += 1
                 n_fails_in_a_row = 0
-                # history.append(1)
             elif answer == "distinct":
                 self.del_candidate_pair(best_candidate_pair)
                 scores[x][y] = np.nan
-                self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
                 n_fail += 1
                 n_fails_in_a_row += 1
-                # history.append(0)
             else:
                 continue
             ratio = n_success / (n_fail + n_success)
@@ -1113,6 +1121,7 @@ class CandidatePairsMapping():
             ax.autoscale_view()
             fig.canvas.draw()
             fig.canvas.flush_events()
+        fig.savefig(f"progression_{self.list1}_{self.list2}.png")
         # Review once the best scores in each line & col
         """
         for x in range(len(self._mapping)):
@@ -1125,7 +1134,6 @@ class CandidatePairsMapping():
         """
         Plot history of a
         """
-        print(history)
         plt.ion()
         # plt.figure(figsize = (10, 5))
         plt.plot(history, label = "Cumulative ratio of same/distinct entities over iterations")
@@ -1135,6 +1143,7 @@ class CandidatePairsMapping():
         plt.legend()
         plt.grid(True)
         plt.show()
+
 
     def _parse_ai_response(self,
                            response: str) -> tuple:
@@ -1154,9 +1163,7 @@ class CandidatePairsMapping():
             answer = answers[0]
         print(f"{OLLAMA_MODEL} answer:", answer)
         justification = response.replace("**" + answer + "**", "").strip()
-        print("justification:", justification)
         return answer.strip().lower(), justification
-
 
 
     @timeall
@@ -1215,13 +1222,11 @@ class CandidatePairsMapping():
                     print(f"{i}. {round(scores[x][idx], 2)} {pair.member2.get_values_for('label')}")
                 choice2 = input(f"Which entity seems to match {member1.get_values_for('label')} ? None of them (default)\n>>> ")
                 if choice2.strip().isdigit() and int(choice2) in range(0, 5):
-                    print("choice2 = ", choice2)
                     y2 = top5_idx[int(choice2)]
                     scores[x][y2] = score + 1 # higher than the current CP's score.
                     continue # Will check for this pair next.
                 else:
                     # Delete 5 pairs (& replace score by np.nan)
-                    print("choice2 = ", choice2)
                     for y2 in top5_idx:
                         self.del_candidate_pair(self._mapping[x][y2])
                         scores[x][y2] = np.nan
