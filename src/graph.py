@@ -5,6 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 from collections import defaultdict
+import datetime
 import os
 
 from typing import Iterator, List, Tuple, Union
@@ -12,8 +13,9 @@ from rdflib import RDFS, Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import RDF, SKOS, DCTERMS, OWL, SDO, DCAT, FOAF
 from data_updater import entity_types
 from data_updater.extractor.extractor import Extractor
-from utils.performances import deprecated, timeit
+from utils.performances import deprecated
 from utils.utils import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
+from config import USERNAME # type: ignore
 
 
 class OntologyMapping():
@@ -735,6 +737,27 @@ class Graph(G):
         if extractor:
             source_uri = self.OM.OBS[standardize_uri(extractor.URI)]
             self.graph.add((subj_uri, self.OM.OBS["source"], source_uri))
+
+
+    def add_metadata(self,
+                     description: str,
+                     date: str = datetime.date.today().isoformat(),
+                     author: str = USERNAME
+                     ):
+        """
+        Add description, date and author to the ontology.
+        The description is to precise whether the ontology was created with the
+        update script (declare which lists were used) or the merge script
+        (describe the merging strategy).
+
+        Keyword arguments:
+        description -- how the ontology is created
+        date -- last modification date
+        author -- name of the user creating this ontology
+        """
+        self.graph.add((OWL.Ontology, DCTERMS.description, Literal(description)))
+        self.graph.add((OWL.Ontology, DCTERMS.modified, Literal(date, datatype = XSD.date)))
+        self.graph.add((OWL.Ontology, DCTERMS.creator, Literal(author)))
 
 
 if __name__ == "__main__":

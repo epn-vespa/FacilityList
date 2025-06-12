@@ -12,13 +12,14 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-from rdflib import Namespace
 import setup_path # Import first
 
-from data_updater.extractor.nssdc_extractor import NssdcExtractor
 import atexit
+from rdflib import Namespace
 from typing import List
 from argparse import ArgumentParser
+import os
+import sys
 
 from tqdm import tqdm
 from graph import Graph
@@ -28,6 +29,7 @@ from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
+from data_updater.extractor.nssdc_extractor import NssdcExtractor
 from data_updater.extractor.pds_extractor import PdsExtractor
 from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
@@ -40,11 +42,21 @@ class Updater():
 
     def __init__(self,
                  ontology_file: str = "",
-                 output_ontology: str = ""):
+                 output_ontology: str = "",
+                 lists: list[str] = []):
+        """
+        ontology_file -- input ontology (will be merged with this ontology)
+        output_ontology -- filename of the output ontology
+        lists -- lists to extract
+        """
         self._graph = Graph(ontology_file)
         if not ontology_file:
             self.init_graph() # Create basic classes
         self._output_ontology = output_ontology
+        self._description = f"script: {os.path.basename(sys.argv[0])} {' '.join(sys.argv[1:])}\n" + \
+            f"input ontology: {ontology_file}\n" + \
+            f"filename: {output_ontology}\n" + \
+            f"lists: {' '.join(lists)}"
 
 
     @property
@@ -201,17 +213,20 @@ class Updater():
         """
         Serialize the updated graph into the output ontology file.
         """
+        self.graph.add_metadata(description = self._description)
         with open(self.output_ontology, 'wb') as file:
             file.write(self.graph.serialize(format = "turtle",
                                             encoding = "utf-8"))
         print(f"Ontology saved in {self.output_ontology}")
+
 
 def main(lists: List[str],
          input_ontology: str = "",
          output_ontology: str = "output.ttl"):
 
     updater = Updater(input_ontology,
-                      output_ontology)
+                      output_ontology,
+                      lists)
     atexit.register(updater.write)
 
     extractors = []
