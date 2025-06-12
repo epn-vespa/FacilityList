@@ -19,6 +19,8 @@ from argparse import ArgumentParser
 import atexit
 from typing import List
 import uuid
+import os
+import sys
 
 from graph import Graph
 from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
@@ -60,6 +62,10 @@ class Merger():
         self._output_ontology = output_ontology
         self._execution_id = str(uuid.uuid4())
         self._limit = limit
+        self._description = f"script: {os.path.basename(sys.argv[0])}\n" + \
+            f"execution id: {self._execution_id}\n" + \
+            f"source: {' '.join(input_ontologies)}\n" + \
+            f"filename: {output_ontology}\n"
 
 
     @property
@@ -102,6 +108,7 @@ class Merger():
                 # Save the remaining candidate pairs
                 # (should be 0 as wikidata/naif is well mapped)
                 # CPM_wiki_naif.save_json(execution_id = self.execution_id)
+            self._description += "merge identifiers: naif, wikidata\n"
             del(CPM_wiki_naif)
         if (self.graph.is_available("iaumpc") and
             self.graph.is_available("wikidata")):
@@ -114,6 +121,7 @@ class Merger():
                         attr2 = "code",
                         map_remaining = False) # TODO: True
             # CPM_wiki_iaumpc.compute_scores()
+            self._description += "merge identifiers: iaumpc, wikidata\n"
             del(CPM_wiki_iaumpc)
         if (self.graph.is_available("nssdc") and
             self.graph.is_available("wikidata")):
@@ -128,6 +136,7 @@ class Merger():
             im.merge_on(CPM_wiki_nssdc,
                         attr1 = "COSPAR_ID",
                         attr2 = "code")
+            self._description += "merge identifiers: nssdc, wikidata\n"
             del(CPM_wiki_nssdc)
 
         if (self.graph.is_available("pds") and
@@ -137,7 +146,9 @@ class Merger():
             im.merge_on(CPM_nssdc_pds,
                         attr1 = "alt_label",
                         attr2 = "code")
+            self._description += "merge identifiers: pds, nssdc\n"
             del(CPM_nssdc_pds)
+
         del(im)
 
 
@@ -184,6 +195,8 @@ class Merger():
                         CPM.compute_scores(scores = scores - do_not_compute)
                         CPM.disambiguate(SynonymSetManager._SSM,
                                             human_validation)
+                        self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
+                            f"with scores: {' '.join(scores - do_not_compute)}\n"
                     else:
                         CPM.disambiguate(SynonymSetManager._SSM,
                                             human_validation)
@@ -203,6 +216,8 @@ class Merger():
                             CPM.compute_scores(scores = scores - do_not_compute)
                             CPM.disambiguate(SynonymSetManager._SSM,
                                                 human_validation)
+                            self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
+                                f"with scores: {' '.join(scores - do_not_compute)}\n"
                         else:
                             CPM.disambiguate(SynonymSetManager._SSM,
                                                 human_validation)
@@ -318,6 +333,7 @@ class Merger():
     @timeit
     def write(self):
         print(f"Writing the result ontology into {self.output_ontology}...")
+        self.graph.add_metadata(self._description)
         with open(self.output_ontology, 'wb') as file:
             file.write(self.graph.serialize(encoding = "utf-8"))
 
