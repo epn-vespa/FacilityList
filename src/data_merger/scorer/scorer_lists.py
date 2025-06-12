@@ -5,7 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, date_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
+from data_merger.scorer import acronym_scorer, date_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
 
 
 class ScorerLists():
@@ -15,12 +15,12 @@ class ScorerLists():
     DISCRIMINANT_SCORES = [type_incompatibility_scorer.TypeIncompatibilityScorer,
                            date_scorer.DateScorer,
                            distance_scorer.DistanceScorer,
-                           fuzzy_scorer.FuzzyScorer]
+                           label_match_scorer.LabelMatchScorer]
 
     # Scores that are computed for all of the candidate pairs.
     OTHER_SCORES = [acronym_scorer.AcronymScorer,
                     tfidf_scorer.TfIdfScorer,
-                    #fuzzy_scorer.FuzzyScorer
+                    fuzzy_scorer.FuzzyScorer
                     ]
 
     # Scores that use CUDA and cannot be computed in a forked thread
@@ -35,8 +35,9 @@ class ScorerLists():
     # Lambda functions that return a boolean for discriminant criteria.
 
     # If the criteria is respected, then the candidate pair is admited.
-    ADMIT = {fuzzy_scorer.FuzzyScorer: lambda x: x == 1.0, # Perfect label match
+    ADMIT = {
              # acronym_scorer.AcronymScorer: lambda x: x == 1.0
+             label_match_scorer.LabelMatchScorer: lambda x: x == 1.0,  # Perfect label match
             }
     #ADMIT.setdefault(0, lambda x: False)
 
