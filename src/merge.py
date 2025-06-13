@@ -37,10 +37,11 @@ from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 from data_updater.extractor.nssdc_extractor import NssdcExtractor
 from data_updater.extractor.pds_extractor import PdsExtractor
-
 from utils.performances import timeit
+from collections import defaultdict
 
 from config import CONF_DIR # type: ignore
+
 
 class Merger():
 
@@ -155,8 +156,9 @@ class Merger():
     def make_mapping_between_lists(self,
                                    list1: Extractor,
                                    list2: Extractor,
-                                   scores: List[Score],
-                                   checkpoint_id: str,
+                                   scores: set[Score],
+                                   types: set[str] = None,
+                                   checkpoint_id: str = None,
                                    human_validation: bool = False):
         """
         Computes a mapping between two lists and disambiguate.
@@ -165,6 +167,7 @@ class Merger():
         list1 -- the first list's Extractor
         list2 -- the second list's Extractor
         scores -- scores to compute for those lists
+        types -- types the scores apply to
         """
         if not scores:
             print(f"No scores to compute for {list1}, {list2}. Ignoring.")
@@ -179,9 +182,13 @@ class Merger():
                 # If types are known in both lists, do one mapping per type
                 if TypeIncompatibilityScorer in scores:
                     print(f"Warning: {list1.NAMESPACE} and {list2.NAMESPACE}'s types are known." + \
-                          "Therefore, they are mapped on types, no need to use the type score.")
-                for ent_type in list1.POSSIBLE_TYPES:
+                           "Therefore, they are mapped on types, no need to use the type score. Ignoring.")
+                for ent_type in types:
+                    if ent_type not in list1.POSSIBLE_TYPES:
+                        print(f"Warning: {ent_type} is not available for {list1}. Ignoring.")
+                        continue
                     if ent_type not in list2.POSSIBLE_TYPES:
+                        print(f"Warning: {ent_type} is not available for {list2}. Ignoring.")
                         continue
                     do_not_compute = {TypeIncompatibilityScorer}
                     if ent_type in entity_types.NO_ADDR:
@@ -189,6 +196,37 @@ class Merger():
                     CPM = CandidatePairsMapping(list1,
                                                 list2,
                                                 ent_type = ent_type,
+                                                checkpoint_id = checkpoint_id)
+                    if not checkpoint_id:
+                        CPM.generate_mapping(limit = self.limit)
+                        CPM.compute_scores(scores = scores - do_not_compute)
+                        if all([score in ScorerLists.DISCRIMINANT_SCORES for score in scores]):
+                            # Only discriminant scores
+                            print("Only discriminant scores. No disambiguation required. Returning.")
+                            del(CPM)
+                            return
+                        CPM.disambiguate(SynonymSetManager._SSM,
+                                         human_validation)
+                        scores_str = []
+                        for score in scores - do_not_compute:
+                            scores_str.append(str(score))
+                        scores_str = ', '.join(scores_str)
+                        self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
+                                             f"with scores: {scores_str}"
+                    else:
+                        CPM.disambiguate(SynonymSetManager._SSM,
+                                         human_validation)
+                    del(CPM)
+            else:
+                # Types are partially known or unknown in at least one of both lists
+                for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
+                    do_not_compute = set()
+                    if ent_types == entity_types.NO_ADDR:
+                        do_not_compute.add(DistanceScorer)
+                    ent_types -= set(types)
+                    CPM = CandidatePairsMapping(list1,
+                                                list2,
+                                                ent_type = ent_types,
                                                 checkpoint_id = checkpoint_id)
                     if not checkpoint_id:
                         CPM.generate_mapping(limit = self.limit)
@@ -201,31 +239,13 @@ class Merger():
                         CPM.disambiguate(SynonymSetManager._SSM,
                                             human_validation)
                     del(CPM)
-            else:
-                # Types are partially known or unknown in at least one of both lists
-                for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
-                    do_not_compute = set()
-                    if ent_types == entity_types.NO_ADDR:
-                        do_not_compute.add(DistanceScorer)
-                        CPM = CandidatePairsMapping(list1,
-                                                    list2,
-                                                    ent_type = ent_types,
-                                                    checkpoint_id = checkpoint_id)
-                        if not checkpoint_id:
-                            CPM.generate_mapping(limit = self.limit)
-                            CPM.compute_scores(scores = scores - do_not_compute)
-                            CPM.disambiguate(SynonymSetManager._SSM,
-                                                human_validation)
-                            self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
-                                f"with scores: {' '.join(scores - do_not_compute)}\n"
-                        else:
-                            CPM.disambiguate(SynonymSetManager._SSM,
-                                                human_validation)
-                        del(CPM)
         except InterruptedError:
             # CPM.save_json(self.execution_id)
             exit()
 
+
+    # {list1-list2: type: [scores]}
+    strategy = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
     @timeit
     def merge_mapping(self,
@@ -242,7 +262,6 @@ class Merger():
         and link a term to a synonym set instead of creating a new one
         if there is a synonym set that already exists for one of the
         candidates.
-        TODO FIXME if there are two candidates in a synset, then merge synsets
         """
 
         with open(conf_file, 'r') as file:
@@ -252,18 +271,51 @@ class Merger():
                 if not line:
                     continue # skip line if empty or comment line
                 if line.count(':') != 1:
-                    raise ValueError(f"Error line {i}: There must be exactly one ':' per line.")
+                    raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                     f"There must be exactly one ':' per line.")
                 extractors, scores = line.split(':')
                 if not scores.strip():
-                    raise ValueError(f"Error on line {i} of {conf_file}: " +
+                    raise ValueError(f"Error at line {i} in {conf_file}: " +
                                      f"No score set.")
+                 # Types
+                on_types = set(entity_types.ALL_TYPES)
+                begin_types = extractors.find("[")
+                if begin_types > 0:
+                    end_types = extractors.find("]")
+                    if end_types < begin_types:
+                        raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                         f"[ and ] do not match. There must be exactly one [ and one ].")
+                    types_str = extractors[begin_types+1:end_types]
+                    on_types_lst = set(types_str.split(','))
+                    extractors = extractors[:begin_types] + extractors[end_types+1:].strip()
+                    except_types = set()
+                    on_types = set()
+                    for i, type_ in enumerate(on_types_lst):
+                        type_ = type_.strip()
+                        if type_ == "all":
+                            on_types = set(entity_types.ALL_TYPES)
+                        elif type_.startswith('-'):
+                            type_ = type_[1:].strip()
+                            except_types.add(type_)
+                        else:
+                            on_types.add(type_)
+                        if type_ not in entity_types.ALL_TYPES:
+                            raise ValueError(f"Error at line {i} in {conf_file}: " +
+                                                f"{type_} is not a valid type.\n" +
+                                                f"Valid types are: {' '.join(entity_types.ALL_TYPES)}")
+                    on_types -= except_types
+                if len(on_types) == 0:
+                    print(f"Warning at line {i} in {conf_file}: " +
+                          f"No types selected. Ignoring.")
+                    continue
                 extractors = extractors.split(',')
                 extractors = [e.strip() for e in extractors if e.strip()]
                 if len(extractors) != 2:
-                    raise ValueError(f"Error on line {i} of {conf_file}: " +
+                    raise ValueError(f"Error at line {i} in {conf_file}: " +
                                      f"There must be two list names per line.")
                 extractor1_str = extractors[0]
                 extractor2_str = extractors[1]
+
                 if extractor1_str not in ExtractorLists.EXTRACTORS_BY_NAMES.keys():
                     raise ValueError(f"Error at line {i} in {conf_file}: " +
                                      f"{extractor1_str} is not a valid list name.\n" +
@@ -314,20 +366,28 @@ class Merger():
 
                     scores = scores_to_compute - except_scores
                     if scores:
-                        self.make_mapping_between_lists(extractor1(),
-                                                        extractor2(),
-                                                        scores,
-                                                        checkpoint_id,
-                                                        human_validation)
-
-                        # /!\ Save the synonym sets in the graph (do not remove)
-                        SynonymSetManager._SSM.save_all()
+                        if extractor2_str < extractor1_str:
+                            extractor1, extractor2 = extractor2, extractor1
+                            extractor1_str, extractor2_str = extractor2_str, extractor1_str
+                        #for type in on_types:
+                        self.strategy[extractor1][extractor2][frozenset(on_types)] = scores
                     else:
                         print(f"Warning at line {i} in {conf_file}: " +
                               f"No score to compute for {extractor1_str} and {extractor2_str}. Ignoring.")
                 else:
                     print(f"Warning at line {i} in {conf_file}: " +
                           f"{extractor1_str} and/or {extractor2_str} are not available in the provided ontologies. Ignoring.")
+
+        # execute the strategy
+        for extractor1, extractor2_ in self.strategy.items():
+            for extractor2, types_ in extractor2_.items():
+                for types, scores in types_.items():
+                    self.make_mapping_between_lists(extractor1(),
+                                                    extractor2(),
+                                                    scores = scores,
+                                                    types = types,
+                                                    checkpoint_id = checkpoint_id,
+                                                    human_validation = human_validation)
 
 
     @timeit
@@ -361,6 +421,9 @@ def main(input_ontologies: list[str] = [],
     merger.merge_mapping(conf_file = merging_strategy_file,
                          checkpoint_id = checkpoint_id,
                          human_validation = human_validation)
+
+    # /!\ Save the synonym sets in the graph (do not remove)
+    SynonymSetManager._SSM.save_all()
     merger.write()
 
 
