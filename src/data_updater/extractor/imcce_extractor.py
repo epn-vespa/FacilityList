@@ -92,13 +92,14 @@ class ImcceExtractor(Extractor):
         for elem in results:
             data = dict()
             for key, value in elem.items():
+                if key == "parent" and value == "Neptune":
+                    # Neptune is used as a default value currently
+                    continue
                 if key == "links":
                     for key2, value2 in value.items():
                         data[self.ATTRS["links"][key2]] = value2
-                    continue
                 else:
                     if key not in self.ATTRS:
-                        print("key:", key, "not in ATTRS")
                         continue
                     data[self.ATTRS[key]] = value
             result[data["label"]] = data
