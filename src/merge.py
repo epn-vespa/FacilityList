@@ -161,7 +161,15 @@ class Merger():
                                    checkpoint_id: str = None,
                                    human_validation: bool = False):
         """
-        Computes a mapping between two lists and disambiguate.
+        Compute a mapping between two lists and disambiguate.
+        Compute the mapping for a set of scores and types if both
+        sources' types are known. Else, split the mapping into
+        2 kinds: space (spacecraft, mission) and ground (all the others).
+
+        Troubleshooting:
+            It would be better to ignore type and compute the full mapping,
+            but it is currently too time consuming (theoretically
+            4 times slower in the worst case)
 
         Keyword arguments:
         list1 -- the first list's Extractor

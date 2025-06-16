@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.npy
 *$py.class
 
 # C extensions
@@ -105,3 +106,7 @@ ENV/
 
 # ttl
 *.ttl
+
+# cache
+/cache/
+/data/checkpoint/
