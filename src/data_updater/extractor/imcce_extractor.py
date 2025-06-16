@@ -93,7 +93,7 @@ class ImcceExtractor(Extractor):
             data = dict()
             for key, value in elem.items():
                 if key == "links":
-                    for key2, value2 in value:
+                    for key2, value2 in value.items():
                         data[self.ATTRS["links"][key2]] = value2
                     continue
                 else:
