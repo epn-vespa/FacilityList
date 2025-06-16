@@ -10,6 +10,7 @@ class Extractor:
 
     AVAILABLE_NAMESPACES = ["aas",
                             "iaumpc",
+                            "imcce",
                             "naif",
                             "nssdc",
                             "pds",

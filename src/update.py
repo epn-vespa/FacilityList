@@ -28,6 +28,7 @@ from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
+from data_updater.extractor.imcce_extractor import ImcceExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.nssdc_extractor import NssdcExtractor
 from data_updater.extractor.pds_extractor import PdsExtractor
@@ -187,6 +188,9 @@ class Updater():
             IauMpcExtractor.URI: {"url": IauMpcExtractor.URL,
                                   "community": [A, P],
                                   "is_authoritative_for": [A, P]},
+            ImcceExtractor.URI: {"url": ImcceExtractor.URL,
+                                 "community": [A, H, P],
+                                 "is_authoritative_for": [A, H, P]},
             NaifExtractor.URI: {"url": NaifExtractor.URL,
                                 "community": [A, H, P],
                                 "is_authoritative_for": [H, P]},

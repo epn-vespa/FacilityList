@@ -89,7 +89,9 @@ class OntologyMapping():
         "location_confidence": {"pred": _OBS.location_confidence,
                                 "objtype": XSD.float},
         "type_confidence": {"pred": _OBS.type_confidence,
-                            "objtype": XSD.float}
+                            "objtype": XSD.float},
+        "modified": {"pred": DCTERMS.modified,
+                     "objtype": XSD.dateTime}
     }
 
 

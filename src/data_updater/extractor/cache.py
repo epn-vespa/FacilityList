@@ -51,6 +51,7 @@ class CacheManager():
 
     def get_page(url: str,
                  list_name: str,
+                 params: str = None,
                  from_cache: bool = True,
                  data: dict = None,
                  data_str: str = "") -> str:
@@ -73,7 +74,7 @@ class CacheManager():
                 content = file.read()
         if not content:
             if not data:
-                content = CacheManager.get(url)
+                content = CacheManager.get(url, params = params)
             else:
                 content = CacheManager.post(url, data)
             if content:
@@ -125,7 +126,8 @@ class CacheManager():
             file.write(content)
 
 
-    def get(url: str) -> str:
+    def get(url: str,
+            params: dict = None) -> str:
         """
         Scrap the web page's content. Encode it using the response's charset.
 
@@ -135,6 +137,7 @@ class CacheManager():
         try:
             response = requests.get(
                     url,
+                    params = params,
                     headers = CacheManager.HEADERS)
         except requests.exceptions.RequestException as e:
             raise SystemExit(e)
@@ -145,6 +148,7 @@ class CacheManager():
             error = f"Request to {url} failed with status code {response.status_code}"
             logging.info(error)
             return ""
+
 
     def post(url: str,
              data: dict) -> str:
@@ -161,6 +165,7 @@ class CacheManager():
             error = f"Request to {url} failed with status code {response.status_code}"
             logging.info(error)
             return ""
+
 
     def git_pull(url: str,
                  git_repo: str,
@@ -198,6 +203,7 @@ class CacheManager():
                     logging.warning(item_utf8)
         except:
             logging.warning(' '.join(command), "failed for", git_repo)
+
 
 class VersionManager():
     """
