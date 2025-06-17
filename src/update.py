@@ -19,11 +19,13 @@ from rdflib import Namespace
 from typing import List
 from argparse import ArgumentParser
 import os
+import json
 import sys
 
 from tqdm import tqdm
 from graph import Graph
 from data_updater import entity_types
+from data_updater.extractor.cache import VersionManager
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.aas_extractor import AasExtractor
@@ -34,6 +36,8 @@ from data_updater.extractor.nssdc_extractor import NssdcExtractor
 from data_updater.extractor.pds_extractor import PdsExtractor
 from data_updater.extractor.spase_extractor import SpaseExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
+
+from config import CACHE_DIR # type: ignore
 
 from utils.utils import get_location_info
 
@@ -226,8 +230,8 @@ class Updater():
 
 def main(lists: List[str],
          input_ontology: str = "",
-         output_ontology: str = "output.ttl"):
-
+         output_ontology: str = "output.ttl",
+         from_cache: bool = True):
     updater = Updater(input_ontology,
                       output_ontology,
                       lists)
@@ -242,10 +246,22 @@ def main(lists: List[str],
             for extractor in ExtractorLists.AVAILABLE_EXTRACTORS:
                 if list_to_extract == extractor.NAMESPACE:
                     extractors.append(extractor)
-
+    cache_dir = CACHE_DIR / "json"
+    if not os.path.exists(cache_dir):
+        cache_dir.mkdir(parents = True,
+                        exist_ok = True)
     for Extractor in extractors:
         extractor = Extractor()
-        data = extractor.extract()
+        data = extractor.extract(from_cache = from_cache)
+        # Save data dict/ extractor.CACHE
+        filename = cache_dir / (extractor.NAMESPACE + ".json")
+        old_data = None
+        if os.path.exists(filename):
+            with open(filename, 'r') as file:
+                old_data = json.load(file)
+        VersionManager.compare_versions(old_data, data)
+        with open(filename, 'w') as file:
+            json.dump(data, file) # Replace version
         updater.update(data, extractor = extractor)
 
 
@@ -281,11 +297,14 @@ if __name__ == "__main__":
                         type = str,
                         required = False,
                         help = "Output ontology file to save the merged data.")
-    parser.add_argument("-f",
-                        "--output-format",
-                        type = str,
-                        default = "turtle",
-                        choices = ["turtle", "rdf", "xml"],
-                        required = False)
+    parser.add_argument("-c",
+                        "--no-cache",
+                        dest = "no_cache",
+                        action = "store_true",
+                        help = "If set, will download cache again and compare versions.")
+
     args = parser.parse_args()
-    main(args.lists, args.input_ontology, args.output_ontology)
+    main(args.lists,
+         args.input_ontology,
+         args.output_ontology,
+         not args.no_cache)

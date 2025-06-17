@@ -209,7 +209,8 @@ class WikidataExtractor(Extractor):
         return self.NAMESPACE
 
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract wikidata content into a dictionary.
         """
@@ -240,7 +241,7 @@ class WikidataExtractor(Extractor):
             for wikidata_uri in tqdm(latest):
                 data = self._extract_entity(wikidata_uri,
                                             result,
-                                            from_cache = False)
+                                            from_cache = from_cache)
                 if data:
                     # Downloaded page successfully.
                     # Refresh the version at each loop to keep track of what

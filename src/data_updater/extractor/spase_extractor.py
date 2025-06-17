@@ -92,7 +92,8 @@ class SpaseExtractor(Extractor):
         return self.NAMESPACE
 
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract the github content into a dictionary.
         """

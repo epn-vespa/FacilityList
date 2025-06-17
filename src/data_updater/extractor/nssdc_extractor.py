@@ -68,7 +68,8 @@ class NssdcExtractor(Extractor):
                       #"nominal power": "nominal_power" # watts (maximum power required by a facility)
                       }
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract the page content into a dictionary.
         """
@@ -80,7 +81,7 @@ class NssdcExtractor(Extractor):
         for discipline in self.DISCIPLINES.keys():
             content = CacheManager.get_page(NssdcExtractor.URL,
                                             self.CACHE,
-                                            from_cache = True,
+                                            from_cache = from_cache,
                                             data = {"name": "",
                                                     "discipline": discipline,
                                                     "launch": ""},

@@ -29,6 +29,7 @@ class OntologyMapping():
     _OBS = Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
+    _IVOASEM = Namespace("http://www.ivoa.net/rdf/ivoasem#")
 
 
     # Mapping from dictionary keys to ontology properties.
@@ -91,7 +92,9 @@ class OntologyMapping():
         "type_confidence": {"pred": _OBS.type_confidence,
                             "objtype": XSD.float},
         "modified": {"pred": DCTERMS.modified,
-                     "objtype": XSD.dateTime}
+                     "objtype": XSD.dateTime},
+        "deprecated": {"pred": _IVOASEM.Deprecated,
+                       "objtype": XSD.boolean},
     }
 
 
@@ -137,6 +140,11 @@ class OntologyMapping():
     @property
     def WB(self):
         return OntologyMapping._WB
+
+
+    @property
+    def IVOASEM(self):
+        return OntologyMapping._IVOASEM
 
 
     @property
@@ -252,6 +260,7 @@ class Graph(G):
         self.bind("obs", self.OM.OBS)
         self.bind("geo1", self.OM.GEO)
         self.bind("wb", self.OM.WB)
+        self.bind("ivoasem", self.OM.IVOASEM)
 
         # Initialize types
         obs_facility = standardize_uri(entity_types.OBSERVATION_FACILITY)
@@ -318,6 +327,11 @@ class Graph(G):
     @property
     def WB(self):
         return OntologyMapping._WB
+
+
+    @property
+    def IVOASEM(self):
+        return OntologyMapping._IVOASEM
 
     ##### Methods for merge #####
 
@@ -608,6 +622,8 @@ class Graph(G):
             return self.OM.GEO
         elif namespace == "WB":
             return self.WB # IVOA Messenger (WaveBand)
+        elif namespace == "IVOASEM":
+            return self.IVOASEM
         namespace_uri = Namespace(str(self.OM.OBS)[:-1] + "/" + namespace + "#")
         # Bind namespace if not binded yet (override = False)
         self.graph.bind(namespace, namespace_uri, override = False)

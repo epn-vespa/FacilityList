@@ -97,7 +97,7 @@ class CacheManager():
         """
         # Create folder CACHE
         (CACHE_DIR / list_name).mkdir(parents = True,
-                                               exist_ok = True)
+                                      exist_ok = True)
 
         # Create folder list_name
         cache_path = re.sub(r"[^\w\d]+", "_", url)
@@ -320,5 +320,40 @@ class VersionManager():
         return str(DATA_DIR / list_name / file)
 
 
+    def compare_versions(old_data: dict,
+                         new_data: dict):
+        """
+        Add a Deprecated relation on removed entities.
+        Add to_merge True to new entities.
+        Add a latest modification date on new entities, old entities
+        and modified entities.
+        Update content of modified entities.
+
+        Keyword arguments:
+        old_data -- the loaded data dictionary (json) from cache
+        new_data -- the newly extracted data dictionary
+        """
+        # First download
+        if not old_data:
+            for value in new_data.values():
+                value["modified"] = VersionManager._TODAY
+            return
+
+        deleted = old_data.keys() - new_data.keys()
+        added = new_data.keys() - old_data.keys()
+        updated = set(new_data.keys()).intersection(old_data.keys())
+        for uri in added:
+            new_data[uri]["modified"] = VersionManager._TODAY
+        for uri in deleted:
+            new_data[uri] = old_data[uri]
+            new_data[uri]["deprecated"] = True
+        # Check for updated content
+        for uri in updated:
+            for key in set(new_data[uri].keys()).union(old_data[uri].keys()) - {"modified"}:
+                if (key != "modified" and (key not in old_data[uri] or
+                    key not in new_data[uri] or
+                    old_data[uri][key] != new_data[uri][key])):
+                    new_data[uri]["modified"] = VersionManager._TODAY
+                    break # modified
 if __name__ == "__main__":
     pass

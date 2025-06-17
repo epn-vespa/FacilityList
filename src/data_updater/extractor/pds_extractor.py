@@ -75,7 +75,8 @@ class PdsExtractor(Extractor):
         return self.NAMESPACE
 
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract the page content into a dictionary.
         """
@@ -115,6 +116,7 @@ class PdsExtractor(Extractor):
                 # Download XML file for href
                 resource_url = PdsExtractor.URL + context_type + '/' + href
                 content = CacheManager.get_page(resource_url,
+                                                from_cache = from_cache,
                                                 list_name = self.CACHE)
 
                 # Remove default namespace for lookup

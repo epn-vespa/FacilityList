@@ -84,13 +84,14 @@ class AasExtractor(Extractor):
         return "" # TODO (heliophysics / astronomy / planetology)
 
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract the page content into a dictionary.
         """
         content = CacheManager.get_page(AasExtractor.URL,
                                         list_name = self.CACHE,
-                                        from_cache = True)
+                                        from_cache = from_cache)
 
         if not content:
             return dict()

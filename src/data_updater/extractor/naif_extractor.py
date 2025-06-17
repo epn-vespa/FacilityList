@@ -60,11 +60,13 @@ class NaifExtractor(Extractor):
         return self.NAMESPACE
 
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract the page content into a dictionary.
         """
         content = CacheManager.get_page(NaifExtractor.URL,
+                                        from_cache = from_cache,
                                         list_name = self.CACHE)
 
         if not content:

@@ -56,7 +56,8 @@ class ImcceExtractor(Extractor):
              "links": {"self": "uri"}}
 
 
-    def extract(self):
+    def extract(self,
+                from_cache: bool = True) -> dict:
         """
         Extract the page content into a dictionary.
         """
@@ -70,7 +71,8 @@ class ImcceExtractor(Extractor):
 
         while True:
             data_str =  params["q"] + '_' + str(params["offset"]) + '-' + str(params["offset"] + params["limit"])
-            response = CacheManager.get_page(self.URL, 
+            response = CacheManager.get_page(self.URL,
+                                             from_cache = from_cache,
                                              list_name = self.CACHE,
                                              params = params,
                                              data_str = data_str)#url=self.URL, params=params
