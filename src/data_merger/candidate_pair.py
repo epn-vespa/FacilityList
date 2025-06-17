@@ -28,6 +28,7 @@ from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from graph import Graph
 from data_merger.scorer.score import Score
 from data_merger.scorer.scorer_lists import ScorerLists
+from data_merger.scorer.llm_embedding_scorer import LlmEmbeddingScorer
 from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
@@ -845,7 +846,7 @@ class CandidatePairsMapping():
 
 
     def compute_scores(self,
-                       scores: List[Score]):
+                       scores: List[Type[Score]]):
         """
         Eliminate entities that are incompatible and select
         entities that are compatible.
@@ -874,6 +875,8 @@ class CandidatePairsMapping():
         print(f"Count of candidate pairs: {len(self)}")
         self._disambiguate_discriminant(discriminant_scores)
         self._compute_cuda_scores(cuda_scores)
+        if LlmEmbeddingScorer in cuda_scores:
+            LLM()._save_llm_embeddings_in_cache()
         self._compute_other_scores(other_scores)
 
         # Create a global score for each candidate pair
