@@ -12,6 +12,7 @@ from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from utils.llm_connection import LLM
+from utils.performances import timeall
 from utils.utils import clean_string, extract_items, merge_into
 import json
 import re
@@ -298,6 +299,8 @@ class SpaseExtractor(Extractor):
             # return dict()
         return result
 
+
+    @timeall
     def _get_type(self,
                   data: dict):
         """

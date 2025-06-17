@@ -12,6 +12,7 @@ Author:
 
 import glob
 from pathlib import Path
+import pickle
 import re
 import requests
 import logging
@@ -21,6 +22,7 @@ import json
 import datetime
 
 from config import CACHE_DIR, LOGS_DIR, DATA_DIR # type: ignore
+from data_updater.extractor.extractor import Extractor
 
 # Set up the basic configuration for logging
 LOG = LOGS_DIR / 'error.log'# "../../cache/error.log"
@@ -213,6 +215,11 @@ class VersionManager():
 
     _TODAY = datetime.datetime.now(tz=datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    VERSION_MANAGER = CACHE_DIR / "version_manager"
+    if not os.path.exists(VERSION_MANAGER):
+        VERSION_MANAGER.mkdir(parents = True,
+                              exist_ok = True)
+
     def get_newer_keys(prev_version_file: str,
                        new_version: dict,
                        list_name: str) -> set:
@@ -320,9 +327,10 @@ class VersionManager():
         return str(DATA_DIR / list_name / file)
 
 
-    def compare_versions(old_data: dict,
-                         new_data: dict):
+    def compare_versions(new_data: dict,
+                         extractor: Extractor):
         """
+        Load, compare and save data dict for version management.
         Add a Deprecated relation on removed entities.
         Add to_merge True to new entities.
         Add a latest modification date on new entities, old entities
@@ -330,30 +338,42 @@ class VersionManager():
         Update content of modified entities.
 
         Keyword arguments:
-        old_data -- the loaded data dictionary (json) from cache
         new_data -- the newly extracted data dictionary
+        extractor -- the extractor used to extract the new_data dict
         """
         # First download
+        filename = VersionManager.VERSION_MANAGER / (extractor.NAMESPACE + ".pkl")
+        old_data = None
+        if os.path.exists(filename):
+            try:
+                with open(filename, 'rb') as file:
+                    old_data = pickle.load(file)
+            except:
+                logging.error("Error while decoding", filename)
+                old_data = None
+
         if not old_data:
             for value in new_data.values():
                 value["modified"] = VersionManager._TODAY
-            return
+        else:
+            deleted = old_data.keys() - new_data.keys()
+            added = new_data.keys() - old_data.keys()
+            updated = set(new_data.keys()).intersection(old_data.keys())
+            for uri in added:
+                new_data[uri]["modified"] = VersionManager._TODAY
+            for uri in deleted:
+                new_data[uri] = old_data[uri]
+                new_data[uri]["deprecated"] = True
+            # Check for updated content
+            for uri in updated:
+                for key in set(new_data[uri].keys()).union(old_data[uri].keys()) - {"modified"}:
+                    if (key != "modified" and (key not in old_data[uri] or
+                        key not in new_data[uri] or
+                        old_data[uri][key] != new_data[uri][key])):
+                        new_data[uri]["modified"] = VersionManager._TODAY
+                        break # modified
+        with open(filename, 'wb') as file:
+            pickle.dump(new_data, file) # Replace version
 
-        deleted = old_data.keys() - new_data.keys()
-        added = new_data.keys() - old_data.keys()
-        updated = set(new_data.keys()).intersection(old_data.keys())
-        for uri in added:
-            new_data[uri]["modified"] = VersionManager._TODAY
-        for uri in deleted:
-            new_data[uri] = old_data[uri]
-            new_data[uri]["deprecated"] = True
-        # Check for updated content
-        for uri in updated:
-            for key in set(new_data[uri].keys()).union(old_data[uri].keys()) - {"modified"}:
-                if (key != "modified" and (key not in old_data[uri] or
-                    key not in new_data[uri] or
-                    old_data[uri][key] != new_data[uri][key])):
-                    new_data[uri]["modified"] = VersionManager._TODAY
-                    break # modified
 if __name__ == "__main__":
     pass

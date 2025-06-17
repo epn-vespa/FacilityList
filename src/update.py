@@ -19,7 +19,7 @@ from rdflib import Namespace
 from typing import List
 from argparse import ArgumentParser
 import os
-import json
+import pickle
 import sys
 
 from tqdm import tqdm
@@ -246,22 +246,10 @@ def main(lists: List[str],
             for extractor in ExtractorLists.AVAILABLE_EXTRACTORS:
                 if list_to_extract == extractor.NAMESPACE:
                     extractors.append(extractor)
-    cache_dir = CACHE_DIR / "json"
-    if not os.path.exists(cache_dir):
-        cache_dir.mkdir(parents = True,
-                        exist_ok = True)
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract(from_cache = from_cache)
-        # Save data dict/ extractor.CACHE
-        filename = cache_dir / (extractor.NAMESPACE + ".json")
-        old_data = None
-        if os.path.exists(filename):
-            with open(filename, 'r') as file:
-                old_data = json.load(file)
-        VersionManager.compare_versions(old_data, data)
-        with open(filename, 'w') as file:
-            json.dump(data, file) # Replace version
+        VersionManager.compare_versions(data, extractor)
         updater.update(data, extractor = extractor)
 
 
