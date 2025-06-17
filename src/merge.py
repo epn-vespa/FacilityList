@@ -33,6 +33,7 @@ from data_merger.scorer.fuzzy_scorer import FuzzyScorer
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
+from data_updater.extractor.imcce_extractor import ImcceExtractor
 from data_updater.extractor.naif_extractor import NaifExtractor
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 from data_updater.extractor.nssdc_extractor import NssdcExtractor
@@ -102,7 +103,8 @@ class Merger():
             # merge wiki naif if the namespaces are available.
             if im.merge_wikidata_naif(CPM_wiki_naif):
                 # Disambiguate cases with two candidates
-                # (necessary because NAIF has duplicate identifiers
+                # (necessary to have a separate function
+                # because NAIF has duplicate identifiers
                 # for different entities)
                 CPM_wiki_naif.disambiguate_candidates(scores = [AcronymScorer,
                                                                 FuzzyScorer])
@@ -139,7 +141,25 @@ class Merger():
                         attr2 = "code")
             self._description += "merge identifiers: nssdc, wikidata\n"
             del(CPM_wiki_nssdc)
-
+        if (self.graph.is_available("imcce") and
+            self.graph.is_available("wikidata")):
+            CPM_wiki_imcce = CandidatePairsMapping(WikidataExtractor(),
+                                                   ImcceExtractor())
+            im.merge_on(CPM_wiki_imcce,
+                        attr1 = "NSSDCA_ID",
+                        attr2 = "alt_label")
+            im.merge_on(CPM_wiki_imcce,
+                        attr1 = "COSPAR_ID",
+                        attr2 = "alt_label")
+            del(CPM_wiki_imcce)
+        if (self.graph.is_available("imcce") and
+            self.graph.is_available("nssdc")):
+            CPM_nssdc_imcce = CandidatePairsMapping(NssdcExtractor(),
+                                                    ImcceExtractor())
+            im.merge_on(CPM_nssdc_imcce,
+                        attr1 = "code",
+                        attr2 = "alt_label")
+            del(CPM_nssdc_imcce)
         if (self.graph.is_available("pds") and
             self.graph.is_available("nssdc")):
             CPM_nssdc_pds = CandidatePairsMapping(NssdcExtractor(),
@@ -205,6 +225,12 @@ class Merger():
                                                 list2,
                                                 ent_type = ent_type,
                                                 checkpoint_id = checkpoint_id)
+
+                    for score in scores - do_not_compute:
+                        scores_str.append(str(score))
+                    scores_str = ', '.join(scores_str)
+                    self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
+                                         f"with scores: {scores_str}"
                     if not checkpoint_id:
                         CPM.generate_mapping(limit = self.limit)
                         CPM.compute_scores(scores = scores - do_not_compute)
@@ -216,11 +242,6 @@ class Merger():
                         CPM.disambiguate(SynonymSetManager._SSM,
                                          human_validation)
                         scores_str = []
-                        for score in scores - do_not_compute:
-                            scores_str.append(str(score))
-                        scores_str = ', '.join(scores_str)
-                        self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
-                                             f"with scores: {scores_str}"
                     else:
                         CPM.disambiguate(SynonymSetManager._SSM,
                                          human_validation)
