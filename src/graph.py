@@ -352,7 +352,8 @@ class Graph(G):
                                ent_type: Union[str, list[str]] = None,
                                no_equivalent_in: Extractor = None,
                                has_attr: list[str] = [],
-                               limit: int = -1
+                               limit: int = -1,
+                               ignore_deprecated: bool = True
                                ) -> Iterator[Tuple[URIRef]]:
         """
         Get all the entities that come from a list.
@@ -367,6 +368,8 @@ class Graph(G):
                         of the other source.
         has_attr -- only return entities that have has_attr as a relation.
         limit -- limits the amout of results. -1 to get the whole list
+        ignore_deprecated -- if True, only entities that are not deprecated
+                             will be returned.
         """
 
         if isinstance(source, Extractor):
@@ -391,6 +394,9 @@ class Graph(G):
                     ent_type_list += f"{{ ?entity a obs:{et} . }}\n"
                 ent_type_str += "\n UNION ".join(ent_type_list)
 
+        ignore_deprecated_str = ""
+        if ignore_deprecated:
+            ignore_deprecated_str = "FILTER NOT EXISTS { ?entity ivoasem:Deprecated true }"
         if not no_equivalent_in:
             query = f"""
             SELECT ?entity ?synset
@@ -400,6 +406,7 @@ class Graph(G):
                 OPTIONAL {{
                     ?synset obs:hasMember ?entity .
                 }}
+                {ignore_deprecated_str}
             }}
             """
         else:
@@ -416,6 +423,7 @@ class Graph(G):
                     ?entity2 skos:exactMatch ?entity .
                     ?entity2 obs:source obs:{no_equivalent_in} .
                 }}
+                {ignore_deprecated_str}
 
             }}
             """
