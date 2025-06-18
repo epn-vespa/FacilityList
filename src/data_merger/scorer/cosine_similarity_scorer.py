@@ -98,7 +98,7 @@ class CosineSimilarityScorer(Score):
             np.save(EMBEDDINGS_FILE_1, encoded_entities1)
 
         EMBEDDINGS_FILE_2 = CACHE_DIR / f"embeddings{len(entities2)}_{list2.NAMESPACE}.npy"
-        if os.path.exists(EMBEDDINGS_FILE_2):
+        if False:# os.path.exists(EMBEDDINGS_FILE_2):
             encoded_entities2 = np.load(EMBEDDINGS_FILE_2)
         else:
             encoded_entities2 = CosineSimilarityScorer.encode_batch(entities2)
@@ -130,8 +130,21 @@ class CosineSimilarityScorer(Score):
             text += " ".join(entity.get_values_for("definition")) + ', '
             texts.append(text)
         # no need to normalize embeddings as we compute a cosine similarity.
+        inputs = CosineSimilarityScorer.tokenizer(texts,
+                                                  return_tensors = "pt",
+                                                  return_token_type_ids = False,
+                                                  padding = True,
+                                                  truncation = True,
+                                                  max_length = 4096
+                                                 )
+        inputs.to(CosineSimilarityScorer.model.device)
+        return CosineSimilarityScorer.model(**inputs,
+                                            output_hidden_states = True)
+        """
+        # Bert:
         return CosineSimilarityScorer.model.encode(texts,
                                                    batch_size = BATCH_SIZE,
                                                    show_progress_bar = True,
                                                    convert_to_tensor = True,
                                                    normalize_embeddings = False)
+        """
