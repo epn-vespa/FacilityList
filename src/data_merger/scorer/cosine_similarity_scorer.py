@@ -35,13 +35,20 @@ N_THREADS = 4
 MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 
+### Astrollama ###
+from transformers import AutoModelForCausalLM
+from transformers import AutoTokenizer
+
+
+
 class CosineSimilarityScorer(Score):
 
     # Name of the score computed by this class (as in score.py)
     NAME = "sentence_cosine_similarity"
 
-
     model = None
+
+    tokenizer = None
 
 
     @timeall
@@ -60,15 +67,31 @@ class CosineSimilarityScorer(Score):
         entities1 -- reference entities
         entities2 -- compared entities
         """
+        """
         if CosineSimilarityScorer.model is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
             if device == "cpu":
                 N_THREADS = multiprocessing.cpu_count()
                 torch.set_num_threads(N_THREADS)
             CosineSimilarityScorer.model = SentenceTransformer(MODEL, device = device)
+        """
+        ### Astrollama ###
+        if CosineSimilarityScorer.model is None:
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+
+            CosineSimilarityScorer.tokenizer = AutoTokenizer.from_pretrained(
+                pretrained_model_name_or_path="universeTBD/astrollama",
+                device=device
+            )
+            CosineSimilarityScorer.model = AutoModelForCausalLM.from_pretrained(
+                pretrained_model_name_or_path="universeTBD/astrollama",
+                device_map="auto",
+                device=device
+            )
+
 
         EMBEDDINGS_FILE_1 = CACHE_DIR / f"embeddings{len(entities1)}_{list1.NAMESPACE}.npy"
-        if os.path.exists(EMBEDDINGS_FILE_1):
+        if False:# os.path.exists(EMBEDDINGS_FILE_1):
             encoded_entities1 = np.load(EMBEDDINGS_FILE_1)
         else:
             encoded_entities1 = CosineSimilarityScorer.encode_batch(entities1)
