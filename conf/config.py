@@ -1,15 +1,21 @@
 # ***************** SCRIPT CONFIGURATION - change with care! ******************
 from pathlib import Path
 import os
+import atexit
+
+import subprocess
+import time
+
+import requests
 
 # directories
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 LOGS_DIR = ROOT / "logs"
 CONF_DIR = ROOT / "conf"
+USERNAME = os.environ.get("USER") or os.environ.get("USERNAME") or os.getlogin()
 if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
     # tycho
-    USERNAME = os.environ.get("USER") or os.environ.get("USERNAME") or os.getlogin()
     CACHE_DIR = Path("/data") / USERNAME / "cache"
 else:
     # local
@@ -26,12 +32,24 @@ if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
         print("To add OLLAMA_HOST in your environment, add in your ~/.bashrc:")
         print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
     # OLLAMA_MODEL = 'llama3.3:latest' # 'fr', 'it', 'pt', 'hi', 'es', 'th', 'en'
-    OLLAMA_MODEL = 'deepseek-v3:latest' # 400 GB (~12s)
+    OLLAMA_MODEL = "deepseek-v3:latest" # 400 GB (~12s)
     # OLLAMA_MODEL = 'gemma3:27b'
 else:
     # local
-    OLLAMA_HOST = "http://localhost:11434"
-    OLLAMA_MODEL = 'gemma3:4b'
+    # OLLAMA_HOST = "http://localhost:11434"
+
+    # Open shuttle
+    port = 11435
+    try:
+        OLLAMA_HOST = f"http://localhost:{port}"
+        OLLAMA_MODEL = "mistral-large:latest" #"llama3.3:latest" # "deepseek-v3:latest"
+        # curl to this port
+        requests.get(OLLAMA_HOST)
+        print(f"Successfully connected to armstrong's ollama. Using model {OLLAMA_MODEL}.")
+    except:
+        OLLAMA_HOST = "http://localhost:11434"
+        OLLAMA_MODEL = "gemma3:4b"
+        print(f"Unable to redirect armstrong's ollama to port localhost:{port}. Using local ollama instead, with model {OLLAMA_MODEL}.")
 OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
 
 
