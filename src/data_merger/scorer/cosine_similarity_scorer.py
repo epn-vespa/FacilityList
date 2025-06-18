@@ -85,7 +85,7 @@ class CosineSimilarityScorer(Score):
             )
             CosineSimilarityScorer.model = AutoModelForCausalLM.from_pretrained(
                 pretrained_model_name_or_path="universeTBD/astrollama",
-                device_map="auto",
+                # device_map="auto",
                 device=device
             )
 
