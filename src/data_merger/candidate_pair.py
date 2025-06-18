@@ -1084,7 +1084,16 @@ class CandidatePairsMapping():
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
 
-            key = str(member1.uri) + '|' + str(member2.uri)
+            if type(member1) == Entity:
+                key1 = str(member1.uri)
+            else:
+                key1 = '$'.join(sorted([s.uri for s in member1.synonyms]))
+            if type(member2) == Entity:
+                key2 = str(member2.uri)
+            else:
+                key2 = '$'.join(sorted([s.uri for s in member2.synonyms]))
+            key = '|'.join(sorted([key1, key2]))# str(member1.uri) + '|' + str(member2.uri)
+            print(key)
 
             # Get answer from cache
             if key in self.LLM_VALIDATION:
