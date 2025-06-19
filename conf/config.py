@@ -1,10 +1,6 @@
 # ***************** SCRIPT CONFIGURATION - change with care! ******************
 from pathlib import Path
 import os
-import atexit
-
-import subprocess
-import time
 
 import requests
 
@@ -60,3 +56,10 @@ LLM_EMBEDDINGS_FILE = CACHE_DIR / f"llm_embeddings_{OLLAMA_MODEL}.json"
 
 # precision of longitude/latitude comparison
 precision = 3 # km distance ? digits after comma ?
+
+
+# HuggingFace, sentence transformers environment variables
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface" / "hub") # Must import before transformers
+SENTENCE_TRANSFORMERS_MODEL = "UniverseTBD/astrollama"

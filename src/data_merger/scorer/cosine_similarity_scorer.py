@@ -21,25 +21,19 @@ from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
 from utils.performances import timeall, timeit
-import multiprocessing
 import numpy as np
-from config import CACHE_DIR
+from config import CACHE_DIR, SENTENCE_TRANSFORMERS_MODEL
 
-import os
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 BATCH_SIZE = 32
 N_THREADS = 4
 
 # MODEL = "all-MiniLM-L6-v2"
-MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+# MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 
 ### Astrollama ###
-from transformers import AutoModelForCausalLM
+from transformers import AutoConfig, AutoModelForCausalLM
 from transformers import AutoTokenizer
-
-
 
 class CosineSimilarityScorer(Score):
 
@@ -79,14 +73,20 @@ class CosineSimilarityScorer(Score):
         if CosineSimilarityScorer.model is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
 
+            # https://huggingface.co/UniverseTBD/astrollama
             CosineSimilarityScorer.tokenizer = AutoTokenizer.from_pretrained(
-                pretrained_model_name_or_path="universeTBD/astrollama",
+                pretrained_model_name_or_path=SENTENCE_TRANSFORMERS_MODEL,
                 device=device
             )
             CosineSimilarityScorer.model = AutoModelForCausalLM.from_pretrained(
-                pretrained_model_name_or_path="universeTBD/astrollama",
+                pretrained_model_name_or_path=SENTENCE_TRANSFORMERS_MODEL,
                 # device_map="auto",
-                device=device
+                config = AutoConfig.from_pretrained(pretrained_model_name_or_path = SENTENCE_TRANSFORMERS_MODEL),
+                use_safetensors = True,
+                trust_remote_code = True,
+                load_in_4bit = True,
+                torch_dtype = torch.bfloat16,
+                device = device
             )
 
 
