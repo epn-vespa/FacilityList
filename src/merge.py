@@ -225,7 +225,7 @@ class Merger():
                                                 list2,
                                                 ent_type = ent_type,
                                                 checkpoint_id = checkpoint_id)
-
+                    scores_str = []
                     for score in scores - do_not_compute:
                         scores_str.append(str(score))
                     scores_str = ', '.join(scores_str)
@@ -323,6 +323,7 @@ class Merger():
                         type_ = type_.strip()
                         if type_ == "all":
                             on_types = set(entity_types.ALL_TYPES)
+                            continue
                         elif type_.startswith('-'):
                             type_ = type_[1:].strip()
                             except_types.add(type_)
