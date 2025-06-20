@@ -8,6 +8,7 @@ Author:
 
 from pathlib import Path
 from typing import Set
+from collections import defaultdict
 from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
@@ -117,6 +118,9 @@ class SpaseExtractor(Extractor):
         # when there are the same.
         data_by_prior_id = dict()
 
+        # Same entities with different sources
+        to_merge = defaultdict(list) # {"short-id": ["long-id1", "long-id2"]}
+
         for file in files:
             with open(file, "r") as f:
                 content = f.read()
@@ -130,10 +134,9 @@ class SpaseExtractor(Extractor):
             alt_labels = set()
 
             prior_id = ""
-            parent_rel = ""
+
             for rel, values in extract_items(dict_content):
                 if rel not in self.FACILITY_ATTRS:
-                    parent_rel = rel
                     continue
                 key = self.FACILITY_ATTRS.get(rel)
                 if type(values) == str:
@@ -159,8 +162,16 @@ class SpaseExtractor(Extractor):
                     if key == "description":
                         if value.startswith("includes observatory/station name,"):
                             continue # Ignore this description
-
+                    if key in ["start_date", "end_date"]:
+                        if value.startswith("2000-01-01"):
+                            continue # Default date, ignore
                     if key == "label":
+                        source = file.split('/')[-2]
+                        if (value.startswith("210MM") and "MM210" == source or
+                            value.startswith(source)):
+                            if "station" in value:
+                                alt_labels.add(value)
+                                to_merge[value[len(source):].strip()].append(value)
                         data[key] = value
                     elif key == "alt_label":
                         value = value.replace("Observatory Station Code: ", "")
@@ -201,6 +212,8 @@ class SpaseExtractor(Extractor):
                 if "code" in data and prior_id in data["code"]:
                     merge_into(result[newer_id], data)
                     del result[label]
+
+
         # If the SPASE id of a part does not exists in the
         # extracted data, create a new entity with this
         # identifier.
@@ -249,6 +262,29 @@ class SpaseExtractor(Extractor):
         # Get types
         for data in result.values():
             self._get_type(data)
+
+
+        # Merge entities on label
+        for short_label, long_labels in to_merge.items():
+            i = 0
+            ll = long_labels[i]
+            while ll not in result:
+                i += 1
+                if i >= len(long_labels) + 1:
+                    break
+                ll = long_labels[i]
+            if ll not in result:
+                continue
+            for long_label in long_labels[i+1:]:
+                if long_label in result:
+                    merge_into(result[ll], result[long_label])
+                    del result[long_label]
+            if ll in result and short_label != ll:
+                result[short_label] = result[ll]
+                result[short_label]["label"] = short_label
+                if ll in result:
+                    del result[ll]
+
         return result
 
 
@@ -351,6 +387,7 @@ class SpaseExtractor(Extractor):
                                       from_cache = True,
                                       cache_key = self.NAMESPACE + '#' + data["label"])
         data["type_confidence"] = 0
+
 
 if __name__ == "__main__":
     pass

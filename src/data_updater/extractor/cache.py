@@ -350,6 +350,7 @@ class VersionManager():
                     old_data = pickle.load(file)
             except:
                 logging.error("Error while decoding", filename)
+                print(f"Error while decoding {filename}")
                 old_data = None
 
         if not old_data:
