@@ -134,8 +134,8 @@ class CSVJsonGenerator():
                 labels = sorted(count_labels.items(), key = lambda x: x[1], reverse = True)
                 candidate_labels = [label for label, count in labels if count == labels[0][1]]
                 candidate_labels = {label: len(label) for label in candidate_labels}
-                labels = sorted(candidate_labels, key = lambda x: x[1], reverse = False)
-
+                labels = sorted(candidate_labels.items(), key = lambda x: x[1], reverse = True)
+                labels = [label[0] for label in labels]
                 pref_label = labels[0]
             all_labels = set(all_labels)
             all_labels.update(identifiers)
