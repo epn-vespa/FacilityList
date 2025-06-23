@@ -41,6 +41,11 @@ class LabelMatchScorer(Score):
         labels2.update(entity2.get_values_for("alt_label"))
 
         for label1 in labels1:
+            if len(label1) < 5:
+                # TNG can be Tangerang Geomagnetic Observatory & Telescopio Nazionale Galileo.
+                # Need to ignore labels that are too short and thus likely to be the same
+                # eventhough entities are distinct.
+                continue
             for label2 in labels2:
                 label1 = unidecode(label1).lower()
                 label2 = unidecode(label2).lower()
