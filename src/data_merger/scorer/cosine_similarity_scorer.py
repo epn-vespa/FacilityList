@@ -76,7 +76,7 @@ class CosineSimilarityScorer(Score):
             # https://huggingface.co/UniverseTBD/astrollama
             CosineSimilarityScorer.tokenizer = AutoTokenizer.from_pretrained(
                 pretrained_model_name_or_path=SENTENCE_TRANSFORMERS_MODEL,
-                device=device
+                # device=device
             )
             CosineSimilarityScorer.model = AutoModelForCausalLM.from_pretrained(
                 pretrained_model_name_or_path=SENTENCE_TRANSFORMERS_MODEL,
@@ -84,9 +84,9 @@ class CosineSimilarityScorer(Score):
                 config = AutoConfig.from_pretrained(pretrained_model_name_or_path = SENTENCE_TRANSFORMERS_MODEL),
                 use_safetensors = True,
                 trust_remote_code = True,
-                load_in_4bit = True,
+                # load_in_4bit = True,
                 torch_dtype = torch.bfloat16,
-                device = device
+                # device = device
             )
 
 

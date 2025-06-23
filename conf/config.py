@@ -61,5 +61,5 @@ precision = 3 # km distance ? digits after comma ?
 # HuggingFace, sentence transformers environment variables
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface" / "hub") # Must import before transformers
+os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface" ) # Must import before transformers
 SENTENCE_TRANSFORMERS_MODEL = "UniverseTBD/astrollama"
