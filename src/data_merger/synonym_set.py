@@ -213,12 +213,14 @@ class SynonymSet():
         for synonym in synonyms:
             if isinstance(synonym, SynonymSet):
                 self.add_synonyms(synonym.synonyms)
-            else:
+            elif isinstance(synonym, Entity):
                 self.synonyms.add(synonym)
                 # Update the synonym set's data
                 for relation, values in synonym.data.items():
                     # Value is a dict of values for an entity
                     self._data[relation].update(values)
+            else:
+                raise TypeError(f"synonyms must be a (set of) SynonymSet and/or Entity. Got {type(synonyms)}.")
 
 
     def has_member(self,
@@ -359,6 +361,14 @@ class SynonymSetManager():
     def add_synset(self,
                    entities: Union[SynonymSet, Set[Entity]],
                    uri: URIRef = None):
+        """
+        Add a synonym set from its URI into the Synonym Set Manager.
+        Use for loading an ontology's SynonymSet objects.
+
+        Keyword arguments:
+        entities -- members of the synonym set to be created
+        uri -- the URI of the synonym set in the loaded graph
+        """
         if uri:
             assert(type(uri) == URIRef)
         if isinstance(entities, SynonymSet):
@@ -371,7 +381,7 @@ class SynonymSetManager():
                     entity1: Union[Entity, SynonymSet],
                     entity2: Union[Entity, SynonymSet]):
         """
-        Add a pair in the synonym set manager.
+        Add a pair of entities (or synonym set) in the synonym set manager.
         If one of the entities is in any synonym set, then it
         adds the other one in it. If none of the entities are
         in a synset, it creates a new one with both entites.
@@ -381,7 +391,6 @@ class SynonymSetManager():
         entity1 -- first entity (or synset) to add
         entity2 -- second entity (or synset) to add
         """
-
         assert(type(entity1) in [Entity, SynonymSet])
         assert(type(entity2) in [Entity, SynonymSet])
 
@@ -402,13 +411,15 @@ class SynonymSetManager():
                 elif entity2 in synset:
                     synset.add_synonyms(entity1)
                     return
+            # None of the entities are in synsets yet
             synset = SynonymSet(synonyms = {entity1, entity2})
             self._synsets.add(synset)
 
         elif isinstance(entity1, SynonymSet) and isinstance(entity2, SynonymSet):
             entity1.add_synonyms(entity2.synonyms)
+            if entity2 in self._synsets:
+                self._synsets.remove(entity2)
             self._synsets.add(entity1)
-            self._synsets.remove(entity2)
 
 
     def get_synset_for_entity(self,
@@ -426,8 +437,7 @@ class SynonymSetManager():
                 return synset
         # Create a synset
         if synset_uri:
-            if synset_uri:
-                assert type(synset_uri) == URIRef
+            assert type(synset_uri) == URIRef
             g = Graph()
             members = set()
             for _, _, member in g.triples((synset_uri, g.OM.OBS["hasMember"], None)):

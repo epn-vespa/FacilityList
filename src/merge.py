@@ -201,10 +201,6 @@ class Merger():
             print(f"No scores to compute for {list1}, {list2}. Ignoring.")
             return
 
-        # If the program gets interrupted by an error, save the output
-        # ontology anyways.
-        atexit.register(SynonymSetManager._SSM.save_all)
-        atexit.register(self.write)
         try:
             if list1.TYPE_KNOWN == 1 and list2.TYPE_KNOWN == 1:
                 # If types are known in both lists, do one mapping per type
@@ -241,10 +237,11 @@ class Merger():
                             return
                         CPM.disambiguate(SynonymSetManager._SSM,
                                          human_validation)
+                        self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
+                            f"with scores: {scores_str}\n"
                         scores_str = []
                     else:
-                        CPM.disambiguate(SynonymSetManager._SSM,
-                                         human_validation)
+                        CPM.disambiguate(human_validation)
                     del(CPM)
             else:
                 # Types are partially known or unknown in at least one of both lists
@@ -260,13 +257,16 @@ class Merger():
                     if not checkpoint_id:
                         CPM.generate_mapping(limit = self.limit)
                         CPM.compute_scores(scores = scores - do_not_compute)
-                        CPM.disambiguate(SynonymSetManager._SSM,
-                                            human_validation)
+                        if all([score in ScorerLists.DISCRIMINANT_SCORES for score in scores]):
+                            # Only discriminant scores
+                            print("Only discriminant scores. No disambiguation required. Returning.")
+                            del(CPM)
+                            return
+                        CPM.disambiguate(human_validation)
                         self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
                             f"with scores: {' '.join(scores - do_not_compute)}\n"
                     else:
-                        CPM.disambiguate(SynonymSetManager._SSM,
-                                            human_validation)
+                        CPM.disambiguate(human_validation)
                     del(CPM)
         except InterruptedError:
             # CPM.save_json(self.execution_id)
@@ -357,9 +357,11 @@ class Merger():
                                      f"Available list names: {' '.join(ExtractorLists.EXTRACTORS_BY_NAMES.keys())}")
                 extractor2 = ExtractorLists.EXTRACTORS_BY_NAMES[extractor2_str]
 
-                if not (extractor1.POSSIBLE_TYPES.union(extractor2.POSSIBLE_TYPES)):
+                if not (extractor1.POSSIBLE_TYPES.intersection(extractor2.POSSIBLE_TYPES)):
                     print(f"Warning at line {i} in {conf_file}: " +
                           f"No type intersection between {extractor1.NAMESPACE} and {extractor2.NAMESPACE}. Ignoring.")
+                if begin_types < 0:
+                    on_types = extractor1.POSSIBLE_TYPES.intersection(extractor2.POSSIBLE_TYPES)
 
                 scores = scores.split(',')
                 scores = [s.strip() for s in scores if s.strip()]
@@ -409,6 +411,8 @@ class Merger():
                           f"{extractor1_str} and/or {extractor2_str} are not available in the provided ontologies. Ignoring.")
 
         # execute the strategy
+        atexit.register(SynonymSetManager._SSM.save_all)
+        atexit.register(self.write)
         for extractor1, extractor2_ in self.strategy.items():
             for extractor2, types_ in extractor2_.items():
                 for types, scores in types_.items():

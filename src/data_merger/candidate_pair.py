@@ -138,7 +138,9 @@ class CandidatePair():
         for _, score_name, score_value in graph.triples((self.uri,
                                                          None,
                                                          None)):
-            if score_name in (graph.OBS["hasMember"],
+            if score_name in (# graph.OBS["hasMember"],
+                              graph.OBS["firstMember"],
+                              graph.OBS["secondMember"],
                               RDF.type):
                 continue
             score_name = str(score_name).split('#')[-1]
@@ -219,9 +221,9 @@ class CandidatePair():
         # Add the candidate pair in the graph
         graph.add((candidate_pair_uri, RDF.type,
                    graph.OBS["SynonymPair"])) # Not a Candidate anymore
-        graph.add((candidate_pair_uri, graph.OBS["hasMember"],
+        graph.add((candidate_pair_uri, graph.OBS["firstMember"],
                    self.member1.uri))
-        graph.add((candidate_pair_uri, graph.OBS["hasMember"],
+        graph.add((candidate_pair_uri, graph.OBS["secondMember"],
                    self.member2.uri))
         for score, value in self.scores.items():
             graph.add((candidate_pair_uri,
@@ -393,36 +395,10 @@ class CandidatePairsManager():
 
 
     @timeit
-    def save_all(self):
-        """
-        Save the remaining candidate pairs into the graph.
-        This will add CandidatePair entities in the graph
-        in case they were not all disambiguated.
-        """
-        graph = Graph()
-        for candidate_pair in tqdm(self.candidate_pairs,
-                                   desc = f"Saving Candidate Pairs for {self._list1}, {self._list2}"):
-            candidate_pair_uri = candidate_pair.uri
-
-            # Add the candidate pair in the graph
-            graph.add((candidate_pair_uri, RDF.type,
-                       graph.OBS["CandidatePair"]))
-            graph.add((candidate_pair_uri, graph.OBS["hasMember"],
-                       candidate_pair.member1.uri))
-            graph.add((candidate_pair_uri, graph.OBS["hasMember"],
-                       candidate_pair.member2.uri))
-            for score, value in candidate_pair.scores.items():
-                graph.add((candidate_pair_uri,
-                           graph.OBS[score],
-                           Literal(value, datatype = XSD.float)))
-
-
-    @timeit
     def save_json(self,
                   execution_id: str):
         """
-        Save candidate pairs in a json format to prevents saving
-        all Candidate Pairs in the ontology (there might be billions of CP).
+        Save candidate pairs in a json format.
         Save the scores into a json file. For scores, unlike synonym sets,
         we do not save them in the ontology.
 
@@ -505,18 +481,17 @@ class CandidatePairsManager():
               ScorerLists.ADMIT.get(score, lambda x: False)(score_value)):
             # Remove from candidate pairs
             self.candidate_pairs.remove(candidate_pair)
+            candidate_pair.add_score(score_name = score.NAME, score = score_value)
 
             # Remove the candidate pairs that contain member1 & member2
             # (they do not need to be mapped anymore)
             self.del_candidate_pairs(candidate_pair.member1)
             self.del_candidate_pairs(candidate_pair.member2)
 
-            # Add it to the graph
-            SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
-                                              candidate_pair.member2)
             # Add Candidate Pair to graph for traceability
-            candidate_pair.add_score(score_name = score.NAME, score = score_value)
             candidate_pair.save_to_graph(decisive_score = score.NAME)
+            SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
+                                               candidate_pair.member2)
             return State.ADMITTED
         else:
             # The candidate pair needs to be re-processed with other scores
@@ -654,7 +629,6 @@ class CandidatePairsMapping():
 
         already_paired = SynonymSetManager._SSM.get_mapped_entities(self._list1,
                                                                     self._list2)
-
         # already_paired is a list of Entity
         # entities1 & entities2 are list of tuples: [(URIRef, URIRef)]
         for entity1, synset1 in entities1.copy():
@@ -791,18 +765,35 @@ class CandidatePairsMapping():
             self.del_candidate_pair(candidate_pair)
             return State.ELIMINATED
         elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
-            self.del_candidate_pairs(candidate_pair.member1)
-            self.del_candidate_pairs(candidate_pair.member2)
-            # Add it to the graph
-            SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
-                                              candidate_pair.member2)
             # Add Candidate Pair to graph for traceability
             candidate_pair.add_score(score_name = score.NAME, score = score_value)
-            candidate_pair.save_to_graph(decisive_score = score.NAME)
+            self.admit(candidate_pair, decisive_score = score.NAME)
             return State.ADMITTED
 
         candidate_pair.add_score(score.NAME, score_value)
         return State.UNCLEAR
+
+
+    def admit(self,
+              candidate_pair: CandidatePair,
+              decisive_score: str,
+              justification: str = ""
+              ):
+        """
+        Add a Synonym in the SynonymSetManager.
+        Remove the Candidate Pair from the CandidatePairsMapping.
+
+        Keyword arguments:
+        candidate_pair -- a Candidate Pair that was admitted
+        score_name -- the label of the decisive score
+        score_value -- the value of that decisive score
+        """
+        candidate_pair.save_to_graph(decisive_score = decisive_score,
+                                     justification = justification)
+        SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
+                                           candidate_pair.member2)
+        self.del_candidate_pairs(candidate_pair.member1)
+        self.del_candidate_pairs(candidate_pair.member2)
 
 
     def _compute_one_score(self,
@@ -885,7 +876,6 @@ class CandidatePairsMapping():
 
     @timeit
     def disambiguate(self,
-                     SSM: SynonymSetManager,
                      human_validation: bool):
         """
         Disambiguation algorithm: find the best global score,
@@ -894,7 +884,7 @@ class CandidatePairsMapping():
         Human verification (input): Assisted Disambiguation.
 
         Keyword arguments:
-        SSM -- this run's SynonymSetManager
+        human_validation -- if False, use AI to validate the disambiguation
         """
         scores = []
         none_cp = 0
@@ -917,12 +907,12 @@ class CandidatePairsMapping():
 
         # Human validation
         if human_validation:
-            self.human_validation(scores, SSM)
+            self.human_validation(scores)
 
         # LLM validation
         else:
             try:
-                self.ai_validation(scores, SSM)
+                self.ai_validation(scores)
             except KeyboardInterrupt:
                 # Allow code to keep running
                 pass
@@ -1017,15 +1007,13 @@ class CandidatePairsMapping():
 
     @timeall
     def ai_validation(self,
-                      scores: np.array,
-                      SSM: SynonymSetManager):
+                      scores: np.array):
         """
         Ask a LLM to take decisions for the highest scores
         iteratively, like in human_validation.
 
         Keyword arguments:
         scores -- a 2D array of the scores of the candidate pairs
-        SSM -- this run's SynonymSetManager
         """
         if not len(scores) or np.isnan(scores).all():
             return
@@ -1069,7 +1057,6 @@ class CandidatePairsMapping():
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
             if np.isnan(scores).all():
-                print("all nan")
                 break
             # Count non nan
             left = np.sum(np.where(np.isnan(scores), 0, 1))
@@ -1107,13 +1094,11 @@ class CandidatePairsMapping():
                 answer, justification = self._parse_ai_response(response)
                 self.LLM_VALIDATION[key] = {"answer": answer, "justification": justification}
             if answer == "same":
-                best_candidate_pair.save_to_graph(decisive_score = f"{OLLAMA_MODEL} validation",
-                                                  justification = justification)
                 scores = np.delete(scores, x, axis = 0)
                 scores = np.delete(scores, y, axis = 1)
-                self.del_candidate_pairs(member1)
-                self.del_candidate_pairs(member2)
-                SSM.add_synpair(member1, member2)
+                self.admit(best_candidate_pair,
+                           decisive_score = f"{OLLAMA_MODEL} validation",
+                           justification = justification)
                 n_success += 1
                 n_fails_in_a_row = 0
             elif answer == "distinct":
@@ -1180,8 +1165,7 @@ class CandidatePairsMapping():
 
     @timeall
     def direct_validation(self,
-                          scores: np.array,
-                          SSM: SynonymSetManager):
+                          scores: np.array):
         """
         Do not ask for the user or LLM to judge the Candidate Pairs,
         validate the highest score until reaching the stopping condition.
@@ -1196,8 +1180,7 @@ class CandidatePairsMapping():
 
 
     def human_validation(self,
-                         scores: np.array,
-                         SSM: SynonymSetManager):
+                         scores: np.array):
         """
         Human validation algorithm. Propose candidate pairs that are
         the most likely to be correct according to the computed scores.
@@ -1205,7 +1188,6 @@ class CandidatePairsMapping():
 
         Keyword arguments:
         scores -- a 2D array of the scores of the candidate pairs
-        SSM -- this run's SynonymSetManager
         """
         choice = None
         while len(scores) and choice != "2":
@@ -1270,10 +1252,8 @@ class CandidatePairsMapping():
                 continue
             scores = np.delete(scores, x, axis = 0)
             scores = np.delete(scores, y, axis = 1)
-            self.del_candidate_pairs(member1)
-            self.del_candidate_pairs(member2)
-            SSM.add_synpair(member1, member2)
-            best_candidate_pair.save_to_graph(decisive_score = "human validation")
+            self.admit(best_candidate_pair,
+                       decisive_score = "human validation")
 
 
     def _align_repr(self,
@@ -1464,34 +1444,6 @@ class CandidatePairsMapping():
         """
         for _, _, candidate_pair in self.iter_mapping():
             candidate_pair.compute_global_score()
-
-
-    @deprecated
-    @timeit
-    def save_to_graph(self):
-        """
-        Deprecated:
-            We do not want to save a whole mapping into the Ontology.
-        """
-        graph = Graph()
-        for candidate_pair_list in tqdm(self._mapping, #.copy(), # DOING try to see if we need .copy() or not
-                                        desc = f"Saving Candidate Pairs for {self._list1}, {self._list2}"):
-            for candidate_pair in candidate_pair_list:
-                if not candidate_pair:
-                    continue
-                candidate_pair_uri = candidate_pair.uri
-
-                # Add the candidate pair in the graph
-                graph.add((candidate_pair_uri, RDF.type,
-                        graph.OBS["CandidatePair"]))
-                graph.add((candidate_pair_uri, graph.OBS["hasMember"],
-                        candidate_pair.member1.uri))
-                graph.add((candidate_pair_uri, graph.OBS["hasMember"],
-                        candidate_pair.member2.uri))
-                for score, value in candidate_pair.scores.items():
-                    graph.add((candidate_pair_uri,
-                               graph.OBS[score],
-                               Literal(value, datatype = XSD.float)))
 
 
     def load_checkpoint(self,

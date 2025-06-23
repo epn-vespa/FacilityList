@@ -66,7 +66,7 @@ class IdentifierMerger():
                     # There is only one NAIF entity with this ID.
                     naif_entity = Entity(naif_ids[0])
                     SynonymSetManager._SSM.add_synpair(wikidata_entity,
-                                                      naif_entity)
+                                                       naif_entity)
                 elif len(naif_ids) > 1:
                     # Ambiguous NAIF identifier.
                     # need further disambiguation with CandidatePair.
