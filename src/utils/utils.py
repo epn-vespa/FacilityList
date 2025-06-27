@@ -362,6 +362,8 @@ def merge_into(newer_entity_dict: dict,
             newer_entity_dict[key] = values
         if "alt_label" in newer_entity_dict and "label" in newer_entity_dict:
             # Prevent label to be in alt_label.
+            if type(newer_entity_dict["alt_label"]) == str:
+                newer_entity_dict["alt_label"] = {newer_entity_dict["alt_label"]}
             newer_entity_dict["alt_label"] -= {newer_entity_dict["label"]}
 
 
@@ -437,11 +439,21 @@ def get_location_info(label: Optional[str] = None,
             latitude = None
         else:
             latitude = latitude[0]
+    elif isinstance(latitude, set):
+        if len(latitude) == 0:
+            latitude = None
+        else:
+            latitude = list(latitude)[0]
     if isinstance(longitude, list):
         if len(longitude) == 0:
             longitude = None
         else:
             longitude = longitude[0]
+    elif isinstance(longitude, set):
+        if len(longitude) == 0:
+            longitude = None
+        else:
+            longitude = list(longitude)[0]
 
     # Remove labels that cannot be used for location
     """
