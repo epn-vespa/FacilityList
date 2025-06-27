@@ -18,8 +18,9 @@ TELESCOPE = "telescope" # Space or Ground. = observation instruments: inside a t
 AIRBORNE = "airborne" # in the atmosphere
 MISSION = "space mission" # More than one spacecraft in 1 mission: ~= observatory network ?
 # mission contains an instrument host (spacecrafts, ...)
-# Other category: Lander / Rover: on Mars, on a comet, asteroid... (maybe same as spacecraft, everything that is not on ground)
+# Other category: Lander / Rover: on Mars, on a comet, asteroid... (considered same as spacecraft, everything that is not on ground)
 UFO = "unknown" # Unknown type (unrelated to our observation facilities)
+INSTRUMENT = "instrument" # Not used in ALL_TYPES, only for PDS that makes links to instruments
 # MISC = "miscellaneous"
 ERROR = "error" # LLM error in return format
 

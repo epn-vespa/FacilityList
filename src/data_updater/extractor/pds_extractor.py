@@ -36,7 +36,8 @@ class PdsExtractor(Extractor):
                       "telescope_latitude": "latitude",
                       "telescope_longitude": "longitude",
                       "telescope_altitude": "altitude",
-                      "description": "description"}
+                      "description": "description",
+                      "naif_instrument_id": "NAIF_ID"}
 
     # List context products types to be retreived and the applicable subtypes
     # examples:
@@ -56,6 +57,7 @@ class PdsExtractor(Extractor):
              "mission": entity_types.MISSION,
              "investigation": entity_types.MISSION,
              "facility": entity_types.OBSERVATION_FACILITY,
+             "instrument": entity_types.INSTRUMENT
              }
 
     # No need to disambiguate the type with LLM.
@@ -110,7 +112,7 @@ class PdsExtractor(Extractor):
                     # keep all subtypes from this type
                     cat = context_type
                 elif cat not in PdsExtractor.CONTEXT_TYPES[context_type]:
-                    # ignore this subtype
+                    # ignore this subtype (ex: laboratory, individual, other_investigation...)
                     continue
 
                 # Download XML file for href
@@ -135,13 +137,14 @@ class PdsExtractor(Extractor):
                         continue
                     # lid_reference = lid_reference.text.split(':')[-1]
                     reference_type = internal_reference.find("reference_type")
-                    # TODO add the has_part & is_part_of with the other reference in result before returning result
                     if reference_type.text in [
                             "investigation_to_instrument_host",
+                            "investigation_to_instrument",
                             "facility_to_telescope"]:
                         has_part.append(lid_reference.text)
                     elif reference_type.text in [
                             "instrument_host_to_investigation",
+                            "instrument_to_investigation",
                             "telescope_to_facility"]:
                         is_part_of.append(lid_reference.text)
                 if has_part:
@@ -186,8 +189,8 @@ class PdsExtractor(Extractor):
                 # /!\ do not move this line earlier in the code as
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
-                data["type_confidence"] = 1
-                result[data["label"]] = data
+
+                result[data["label"] + '-' + data["type"]] = data
 
         # If the PDS identifier does not exists in the
         # extracted data, create a new entity with this
@@ -233,7 +236,6 @@ class PdsExtractor(Extractor):
                                 continue
                             pds_missing_ids[part] = data
                         value["is_part_of"][i] = pds_missing_ids[part]["label"]
-
 
         # If a PDS id is missing, add an entity for this code
         for key, value in pds_missing_ids.items():

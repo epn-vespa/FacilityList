@@ -145,19 +145,15 @@ class Updater():
                     if key not in features or features[key] is None:
                         features[key] = value
 
-            # get label
-            if "label" in features:
-                label = features["label"]
-                subj = label # label_to_uri(label, source = source)
-            else:
-                subj = identifier
+            # Add triple <subj, pred, obj>
+            subj = identifier
             for predicate, obj in features.items():
                 self.graph.add((subj, predicate, obj),
                                 extractor = extractor)
+
+            # Add type on non-typed entities
             if "type" not in features:
-                # For non-ontological entities, if it has a default type and
-                # does not have a type, we use the extractor's default type as
-                # the entity's superclass.
+                # If an entity has a default type, use it as the entity's type
                 if (not hasattr(extractor, "IS_ONTOLOGICAL") or
                     not extractor.IS_ONTOLOGICAL):
                     if cat == "ufo" and hasattr(extractor, "DEFAULT_TYPE"):
