@@ -146,7 +146,6 @@ class CSVJsonGenerator():
                 uri = synonym.uri
                 uri = str(uri)
                 term_by_synonym_uri[uri] = term
-
             # Level
             level = 1
 
@@ -182,12 +181,18 @@ class CSVJsonGenerator():
             # CSV
             csv_res[term] = {"level": 1, "label": pref_label, "description": description, "more_relations": more_relations, "synset": synset}
 
+        self.term_by_synonym_uri = term_by_synonym_uri
+        self.json_res = json_res
+        self.csv_res = csv_res
+
+
+    def write_json_csv(self):
         with open(self._output_json, "w", encoding = "utf-8") as file:
-            json.dump(json_res, file, indent = 2, ensure_ascii = False)
+            json.dump(self.json_res, file, indent = 2, ensure_ascii = False)
 
         with open(self._output_csv, "w") as file:
             csv_res_str = ""
-            for term, values in csv_res.items():
+            for term, values in self.csv_res.items():
                 level = values["level"]
                 label = values["label"]
                 description = values["description"]
@@ -205,7 +210,7 @@ class CSVJsonGenerator():
                         parts = entity.get_values_for(relation)
                         for part in parts:
                             # Only keep parts that will be in the CSV
-                            part_of = term_by_synonym_uri.get(part, None)
+                            part_of = self.term_by_synonym_uri.get(part, None)
                             if part_of:
                                 csv_res_str += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
                 csv_res_str += "\n"
@@ -219,6 +224,7 @@ def main(input_ontologies: list[str],
                                      output_csv,
                                      output_json)
     csv_generator.to_synonym_list()
+    csv_generator.write_json_csv()
 
 
 if __name__ == "__main__":
