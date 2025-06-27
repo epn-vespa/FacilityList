@@ -13,6 +13,8 @@ from xml.etree import ElementTree as ET
 
 import re
 
+from utils.utils import merge_into
+
 class PdsExtractor(Extractor):
     # List of documents to scrap
     # URL = "https://pds.nasa.gov/data/pds4/context-pds4/facility/"
@@ -37,7 +39,9 @@ class PdsExtractor(Extractor):
                       "telescope_longitude": "longitude",
                       "telescope_altitude": "altitude",
                       "description": "description",
-                      "naif_instrument_id": "NAIF_ID"}
+                      "naif_host_id": "NAIF_ID",
+                      "alternate_id": "alt_label",
+                      "alternate_title": "alt_label"}
 
     # List context products types to be retreived and the applicable subtypes
     # examples:
@@ -159,14 +163,44 @@ class PdsExtractor(Extractor):
                     facility = root.findall('*')[-1] # last div is the facility
                 tags = facility.findall('*')
                 for tag in tags:
-                    if tag.text is None:
+                    if tag.text is None: # or tag.text not in self.FACILITY_ATTRS:
                         continue # empty tag
                     tag_str = tag.tag
                     tag_text = tag.text.strip()
                     if tag_text in ["NULL", "Unknown"]:
                         continue
                     tag_str = PdsExtractor.FACILITY_ATTRS.get(tag_str, tag_str)
-                    data[tag_str] = re.sub("[\n ]+", " ", tag_text)
+                    tag_text = re.sub("[\n ]+", " ", tag_text)
+
+                    if tag_str == "label":
+                        data["label"] = tag_text
+                        continue
+                    if tag_str in data:
+                        data[tag_str].add(tag_text)
+                    else:
+                        data[tag_str] = {tag_text}
+
+                # Again but for Identification_Area
+                facility = (root.find(f".//Alias_List"))
+                if facility:
+                    tags = facility.findall('*')
+                    for tag in facility.iter():
+                        if tag.text is None or tag.tag not in self.FACILITY_ATTRS:
+                            # Descriptions in Identification_Area are modification descriptions
+                            continue
+                        tag_str = tag.tag
+                        tag_text = tag.text.strip()
+                        if tag_text in ["NULL", "Unknown"]:
+                            continue
+                        tag_str = PdsExtractor.FACILITY_ATTRS.get(tag_str, tag_str)
+                        tag_text = re.sub("[\n ]+", " ", tag_text)
+                        if tag_str == "label":
+                            data["label"] = tag_text
+                            continue
+                        if tag_str in data:
+                            data[tag_str].add(tag_text)
+                        else:
+                            data[tag_str] = {tag_text}
 
                 data["url"] = resource_url
 
@@ -190,7 +224,12 @@ class PdsExtractor(Extractor):
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
 
-                result[data["label"] + '-' + data["type"]] = data
+                # result[data["label"] + '-' + data["type"]] = data
+                if data["label"] in result:
+                    merge_into(result[data["label"]], data)
+                    # Merge entities with the same label
+                else:
+                    result[data["label"]] = data
 
         # If the PDS identifier does not exists in the
         # extracted data, create a new entity with this
@@ -335,6 +374,7 @@ class PdsExtractor(Extractor):
             max_version = max(versions.keys())
             new_list.append(versions[max_version])
         return new_list
+
 
 if __name__ == "__main__":
     pass
