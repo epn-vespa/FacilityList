@@ -248,7 +248,10 @@ class Merger():
                     do_not_compute = set()
                     if ent_types == entity_types.NO_ADDR:
                         do_not_compute.add(DistanceScorer)
-                    ent_types -= set(types)
+                    if types:
+                        ent_types = ent_types.intersection(set(types))
+                    if not ent_types:
+                        continue
                     CPM = CandidatePairsMapping(list1,
                                                 list2,
                                                 ent_type = ent_types,

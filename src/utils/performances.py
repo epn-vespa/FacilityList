@@ -23,7 +23,7 @@ def timeall(func):
     Print it in the end.
     """
     def wrapper(*args, **kwargs):
-        if hasattr(func, '__self__'):  # Si c'est une méthode d'une classe
+        if hasattr(func, '__self__'):
             class_name = func.__self__.__class__.__name__
             func_name = func.__name__
             key = f"{class_name}.{func_name}"
@@ -54,7 +54,7 @@ atexit.register(printtimes)
 
 def deprecated(func):
     def wrapper(*args, **kwargs):
-        if hasattr(func, '__self__'):  # Si c'est une méthode d'une classe
+        if hasattr(func, '__self__'):
             class_name = func.__self__.__class__.__name__
             func_name = func.__name__
             key = f"{class_name}.{func_name}"
