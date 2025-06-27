@@ -4,6 +4,7 @@ Fix data errors in sources.
 import json
 from config import DATA_DIR # type: ignore
 from data_updater.extractor.extractor import Extractor
+from utils.utils import merge_into
 
 def fix(result: dict,
         source: Extractor):
@@ -29,8 +30,19 @@ def fix(result: dict,
                 print(f"Error in {str(filename)}: {key} not in the result dict. Perhaps the resource label changed ?")
                 continue
             source_data = result[key]
+            new_key = key
             for attr, new_value in fixed_data.items():
                 source_data[attr] = new_value
+                if attr == "label":
+                    # fix label
+                    new_key = new_value
+            if new_key != key:
+                # Label was fixed, so update identifier
+                if new_key not in source:
+                    source[new_key] = source_data
+                else:
+                    merge_into(source_data, source[new_key])
+                del source[key]
 
         # Delete data entries
         for key in fixes["delete"]:
