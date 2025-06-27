@@ -364,7 +364,8 @@ class VersionManager():
                 new_data[uri]["modified"] = VersionManager._TODAY
             for uri in deleted:
                 new_data[uri] = old_data[uri]
-                new_data[uri]["deprecated"] = True
+                new_data[uri]["deprecated"] = ":__"
+                # TODO try to use ivoasem:useInstead <#ICRS>
             # Check for updated content
             for uri in updated:
                 for key in set(new_data[uri].keys()).union(old_data[uri].keys()) - {"modified"}:
