@@ -1,5 +1,8 @@
 """
 Define the superclass Score.
+
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
 """
 
 
@@ -12,6 +15,9 @@ from data_merger.synonym_set import SynonymSet
 class Score():
 
 
+    NAME = "Generic Score (superclass)"
+
+
     def compute(graph: Graph,
                 entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
@@ -20,3 +26,8 @@ class Score():
         This method is implemented in the different Scorers.
         """
         ...
+
+
+
+    def __str__(self):
+        return self.NAME

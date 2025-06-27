@@ -94,7 +94,7 @@ class OntologyMapping():
         "modified": {"pred": DCTERMS.modified,
                      "objtype": XSD.dateTime},
         "deprecated": {"pred": _IVOASEM.Deprecated,
-                       "objtype": XSD.boolean},
+                       "objtype": XSD.string},
     }
 
 
@@ -396,7 +396,7 @@ class Graph(G):
 
         ignore_deprecated_str = ""
         if ignore_deprecated:
-            ignore_deprecated_str = "FILTER NOT EXISTS { ?entity ivoasem:Deprecated true }"
+            ignore_deprecated_str = "FILTER NOT EXISTS { ?entity ivoasem:Deprecated ':__' }"
         if not no_equivalent_in:
             query = f"""
             SELECT ?entity ?synset
@@ -781,9 +781,15 @@ class Graph(G):
         date -- last modification date
         author -- name of the user creating this ontology
         """
+        self.graph.remove((OWL.Ontology, DCTERMS.description, None))
+        self.graph.remove((OWL.Ontology, DCTERMS.modified, None))
         self.graph.add((OWL.Ontology, DCTERMS.description, Literal(description)))
         self.graph.add((OWL.Ontology, DCTERMS.modified, Literal(date, datatype = XSD.date)))
+        for s, p, o in self.graph.triples((OWL.Ontology, DCTERMS.creator, None)):
+            self.graph.add((OWL.Ontology, DCTERMS.contributor, o))
+        self.graph.remove((OWL.Ontology, DCTERMS.creator, None))
         self.graph.add((OWL.Ontology, DCTERMS.creator, Literal(author)))
+
 
 
 if __name__ == "__main__":

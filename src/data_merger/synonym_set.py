@@ -270,7 +270,7 @@ class SynonymSet():
     def get_values_for(self,
                        property: str,
                        unique: bool = False,
-                       language: str = None) -> Set:
+                       language: str = None) -> Union[Set, object]:
         """
         Get values of the synonym set for a property.
 
