@@ -169,6 +169,14 @@ class Merger():
                         attr2 = "code")
             self._description += "merge identifiers: pds, nssdc\n"
             del(CPM_nssdc_pds)
+        if (self.graph.is_available("naif") and
+            self.graph.is_available("pds")):
+            CPM_naif_pds = CandidatePairsManager(NaifExtractor(),
+                                                 PdsExtractor())
+            im.merge_on(CPM_naif_pds,
+                        attr1 = "code",
+                        attr2 = "NAIF_ID")
+            self._description += "merge identifiers: pds, naif\n"
 
         del(im)
 
