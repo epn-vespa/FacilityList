@@ -52,8 +52,33 @@ class DateScorer(Score):
                        dates2: set) -> bool:
         """
         If any date from dates1 & dates2 are the same year,
-        return True.
+        return True. Dates can be isoformat string or date type,
+        as turtle does not support negative dates
+        (example: Chankillo observatory from Wikidata)
+
+        Keyword arguments:
+        dates1 -- set of dates or isoformat str date of entity 1
+        dates2 -- set of dates or isoformat str date of entity 2
         """
-        years1 = {date1.year for date1 in dates1 if date1 is not None}
-        years2 = {date2.year for date2 in dates2 if date2 is not None}
+        years1 = set()
+        for date in dates1:
+            if date is None:
+                continue
+            elif type(date) == str:
+                year = int(date.split('-')[0])
+            else:
+                year = date.year
+            years1.add(year)
+
+        years2 = set()
+        for date in dates2:
+            if date is None:
+                continue
+            elif type(date) == str:
+                year = int(date.split('-')[0])
+            else:
+                year = date.year
+            years2.add(year)
+        #years1 = {date1.year for date1 in dates1 if date1 is not None}
+        #years2 = {date2.year for date2 in dates2 if date2 is not None}
         return not years1.isdisjoint(years2)

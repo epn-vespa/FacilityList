@@ -5,7 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, date_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
+from data_merger.scorer import acronym_scorer, date_scorer, digit_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
 
 
 class ScorerLists():
@@ -20,7 +20,8 @@ class ScorerLists():
     # Scores that are computed for all of the candidate pairs.
     OTHER_SCORES = [acronym_scorer.AcronymScorer,
                     tfidf_scorer.TfIdfScorer,
-                    fuzzy_scorer.FuzzyScorer
+                    fuzzy_scorer.FuzzyScorer,
+                    digit_scorer.DigitScorer,
                     ]
 
     # Scores that use CUDA and cannot be computed in a forked thread

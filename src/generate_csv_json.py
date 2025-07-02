@@ -179,11 +179,78 @@ class CSVJsonGenerator():
             json_res[term] = list(all_labels)
 
             # CSV
-            csv_res[term] = {"level": 1, "label": pref_label, "description": description, "more_relations": more_relations, "synset": synset}
+            csv_res[term] = {"level": None, "label": pref_label, "description": description, "more_relations": more_relations, "synset": synset}
 
         self.term_by_synonym_uri = term_by_synonym_uri
         self.json_res = json_res
         self.csv_res = csv_res
+
+
+    def sort_csv(self) -> list[str]:
+        """
+        Sort CSV by hierarchy of broaders and use different levels.
+        self.csv_res is transformed into a list of dictionaries.
+        """
+        # First, retrieve broader entities
+        for term, values in self.csv_res.items():
+
+            more_relations = values["more_relations"]
+
+            # Finally, get relations that are internal references
+            synset = values["synset"] # From synset, get internal relations
+            for entity in synset:
+                internal_relations = [
+                        "is_part_of",
+                        #"has_part",
+                        ]
+                for relation in internal_relations:
+                    parts = entity.get_values_for(relation)
+                    for part in parts:
+                        # Only keep parts that will be in the CSV
+                        part_of = self.term_by_synonym_uri.get(part, None)
+                        if part_of:
+                            #    csv_res_str += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
+                            values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
+
+        children_by_broader = defaultdict(list)
+        broader_by_children = defaultdict(list)
+
+        # First, we feed the children & broader dicts
+        for term, values in self.csv_res.items():
+            more_relations = values["more_relations"].split(' ')
+            for relation in more_relations:
+                if relation.startswith('skos:broader'):
+                    broader = re.findall(r'\((.+)\)', relation)[0]
+                    children_by_broader[broader].append(term)
+                    broader_by_children[term].append(broader)
+                    # Remove broader from more_relations
+                    values["more_relations"] = values["more_relations"].replace(relation, "") # Remove this broader relation
+
+        csv_res = []
+        already_in = set()
+        for broader in children_by_broader.copy().keys():
+            if broader in already_in:
+                continue
+            self.get_recursive(children_by_broader, broader, csv_res, already_in)
+        for term, entity in self.csv_res.items():
+            entity["term"] = term
+            entity["level"] = 1
+            csv_res.append(entity)
+        self.csv_res = csv_res
+
+
+
+    def get_recursive(self, children_by_broader, broader, csv_res: list, already_in: set, level: int = 1):
+        entity = self.csv_res.pop(broader)
+        entity["level"] = level
+        entity["term"] = broader
+        csv_res.append(entity)
+        already_in.add(broader)
+        for child in children_by_broader.pop(broader, []):
+            if child in already_in:
+                continue
+            self.get_recursive(children_by_broader, child, csv_res, already_in, level + 1)
+
 
 
     def write_json_csv(self):
@@ -192,27 +259,14 @@ class CSVJsonGenerator():
 
         with open(self._output_csv, "w") as file:
             csv_res_str = ""
-            for term, values in self.csv_res.items():
+            #for term, values in self.csv_res.items():
+            for values in self.csv_res:
+                term = values["term"]
                 level = values["level"]
                 label = values["label"]
                 description = values["description"]
                 more_relations = values["more_relations"]
                 csv_res_str += f'"{term}";{level};"{label}";"{description}";{more_relations}'
-
-                # Finally, get relations that are internal references
-                synset = values["synset"] # From synset, get internal relations
-                for entity in synset:
-                    internal_relations = [
-                            "is_part_of",
-                            #"has_part",
-                            ]
-                    for relation in internal_relations:
-                        parts = entity.get_values_for(relation)
-                        for part in parts:
-                            # Only keep parts that will be in the CSV
-                            part_of = self.term_by_synonym_uri.get(part, None)
-                            if part_of:
-                                csv_res_str += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
                 csv_res_str += "\n"
             file.write(re.sub(r" +", " ", csv_res_str))
 
@@ -224,6 +278,7 @@ def main(input_ontologies: list[str],
                                      output_csv,
                                      output_json)
     csv_generator.to_synonym_list()
+    csv_generator.sort_csv()
     csv_generator.write_json_csv()
 
 
