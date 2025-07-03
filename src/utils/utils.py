@@ -375,8 +375,6 @@ def _save_location_infos_in_cache():
     global location_infos
     if location_infos:
         path = CACHE_DIR
-        if not path.exists():
-            path.mkdir(parents = True, exist_ok = True)
         path = str(path / "location_infos.json")
         print(f"dumping {len(location_infos)} elements in {path}.")
         with open(path, "w", encoding = "utf-8") as f:
@@ -808,16 +806,21 @@ def _get_location_from_cache(label: Optional[str] = None,
 
     only_none = True
     if part_of:
+        if type(part_of) == dict:
+            part_of = [part_of]
         for part in part_of:
             if part is None:
                 continue
             only_none = False
-            data = _get_location_from_cache(label = part.get("label", None),
-                                            location = part.get("location", None),
-                                            address = part.get("address", None),
-                                            latitude = part.get("latitude", None),
-                                            longitude = part.get("longitude", None)
-                                            )
+            if type(part) == str:
+                data = _get_location_from_cache(label = part)
+            else:
+                data = _get_location_from_cache(label = part.get("label", None),
+                                                location = part.get("location", None),
+                                                address = part.get("address", None),
+                                                latitude = part.get("latitude", None),
+                                                longitude = part.get("longitude", None)
+                                                )
             if data:
                 return data
     else:
