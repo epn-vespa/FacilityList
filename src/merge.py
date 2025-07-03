@@ -194,11 +194,6 @@ class Merger():
         sources' types are known. Else, split the mapping into
         2 kinds: space (spacecraft, mission) and ground (all the others).
 
-        Troubleshooting:
-            It would be better to ignore type and compute the full mapping,
-            but it is currently too time consuming (theoretically
-            4 times slower in the worst case)
-
         Keyword arguments:
         list1 -- the first list's Extractor
         list2 -- the second list's Extractor
@@ -227,7 +222,8 @@ class Merger():
                         do_not_compute.add(DistanceScorer)
                     CPM = CandidatePairsMapping(list1,
                                                 list2,
-                                                ent_type = ent_type,
+                                                ent_type1 = ent_type,
+                                                ent_type2 = ent_type,
                                                 checkpoint_id = checkpoint_id)
                     scores_str = []
                     for score in scores - do_not_compute:
@@ -245,39 +241,58 @@ class Merger():
                             return
                         CPM.disambiguate(human_validation)
                         self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
-                            f"with scores: {scores_str}\n"
+                                             f"with scores: {scores_str}\n"
                         scores_str = []
                     else:
                         CPM.disambiguate(human_validation)
                     del(CPM)
             else:
                 # Types are partially known or unknown in at least one of both lists
-                for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
-                    do_not_compute = set()
-                    if ent_types == entity_types.NO_ADDR:
-                        do_not_compute.add(DistanceScorer)
-                    if types:
-                        ent_types = ent_types.intersection(set(types))
-                    if not ent_types:
-                        continue
-                    CPM = CandidatePairsMapping(list1,
-                                                list2,
-                                                ent_type = ent_types,
-                                                checkpoint_id = checkpoint_id)
-                    if not checkpoint_id:
-                        CPM.generate_mapping(limit = self.limit)
-                        CPM.compute_scores(scores = scores - do_not_compute)
-                        if all([score in ScorerLists.DISCRIMINANT_SCORES for score in scores]):
-                            # Only discriminant scores
-                            print("Only discriminant scores. No disambiguation required. Returning.")
-                            del(CPM)
-                            return
-                        CPM.disambiguate(human_validation)
-                        self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
-                            f"with scores: {' '.join(scores - do_not_compute)}\n"
-                    else:
-                        CPM.disambiguate(human_validation)
-                    del(CPM)
+
+                types_to_compute = []
+                if any(t in entity_types.NO_ADDR for t in types):
+                    types_to_compute.extend(entity_types.NO_ADDR.intersection(list1.POSSIBLE_TYPES).intersection(list2.POSSIBLE_TYPES))
+                if any(t in entity_types.MAY_HAVE_ADDR for t in types):
+                    types_to_compute.extend(entity_types.MAY_HAVE_ADDR.intersection(list1.POSSIBLE_TYPES).intersection(list2.POSSIBLE_TYPES))
+                #for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
+                if list1.TYPE_KNOWN == 1:
+                    ent_types1 = types
+                else:
+                    ent_types1 = types_to_compute
+                if list2.TYPE_KNOWN == 1:
+                    ent_types2 = types
+                else:
+                    ent_types2 = types_to_compute
+                do_not_compute = set()
+                if ent_types1.isdisjoint(entity_types.MAY_HAVE_ADDR) or ent_types2.isdisjoint(entity_types.MAY_HAVE_ADDR):
+                    do_not_compute.add(DistanceScorer)
+                if not ent_types1 or not ent_types2:
+                    print(f"Warning: no type intersection found between {list1.NAMESPACE} and {list2.NAMESPACE}")
+                    return
+                CPM = CandidatePairsMapping(list1,
+                                            list2,
+                                            ent_type1 = ent_types1,
+                                            ent_type2 = ent_types2,
+                                            checkpoint_id = checkpoint_id)
+                scores_str = []
+                scores = scores - do_not_compute
+                for score in scores:
+                    scores_str.append(score.NAME)
+                scores_str = ', '.join(scores_str)
+                if not checkpoint_id:
+                    CPM.generate_mapping(limit = self.limit)
+                    CPM.compute_scores(scores = scores)
+                    if all([score in ScorerLists.DISCRIMINANT_SCORES for score in scores]):
+                        # Only discriminant scores
+                        print("Only discriminant scores. No disambiguation required. Returning.")
+                        del(CPM)
+                        return
+                    CPM.disambiguate(human_validation)
+                    self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
+                                         f"with scores: {scores_str}\n"
+                else:
+                    CPM.disambiguate(human_validation)
+                del(CPM)
         except InterruptedError:
             # CPM.save_json(self.execution_id)
             exit()
