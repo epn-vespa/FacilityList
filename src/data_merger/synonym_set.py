@@ -146,10 +146,11 @@ class SynonymSet():
 
     def to_string(self,
                   exclude: list[str] = ["code",
-                                        "url"]) -> str:
+                                        "url"],
+                  language: list[str] = None) -> str:
         res = ""
         for synonym in self.synonyms:
-            res += synonym.to_string(exclude = exclude) + ' '
+            res += synonym.to_string(exclude=exclude, language=language) + ' '
         return res.rstrip()
 
 
@@ -270,7 +271,7 @@ class SynonymSet():
     def get_values_for(self,
                        property: str,
                        unique: bool = False,
-                       language: str = None) -> Union[Set, object]:
+                       language: Union[str, list[str]] = None) -> Union[Set, object]:
         """
         Get values of the synonym set for a property.
 
@@ -278,6 +279,7 @@ class SynonymSet():
         property -- the property name (ex: "label")
         unique -- if there was more than one values,
                   return only the first non-None value.
+        language -- language(s) for string values if known.
         """
         property = Graph().OM.convert_attr(property)
         if property in self._data:
@@ -285,19 +287,21 @@ class SynonymSet():
         else:
             # No value for this property
             res = set()
+        if type(language) == str:
+            language = [language]
         if unique:
             if type(res) == set:
                 for value, lang in res:
-                    if lang == None or language == None or lang == language:
+                    if lang == None or language == None or lang in language:
                         return value
             elif type(res) == tuple:
                 value, lang = res
-                if lang == None or language == None or lang == language:
+                if lang == None or language == None or lang in language:
                     return value
             return None
         res_for_lang = set()
         for value, lang in res:
-            if lang == None or language == None or lang == language:
+            if lang == None or language == None or lang in language:
                 res_for_lang.add(value)
         return res_for_lang
 

@@ -100,7 +100,7 @@ class Entity():
     def get_values_for(self,
                        property: str,
                        unique: bool = False,
-                       language: str = None) -> Set:
+                       language: list[str] = None) -> Set:
         """
         Get values of the entity for a property.
 
@@ -118,16 +118,16 @@ class Entity():
         if unique:
             if type(res) == set:
                 for value, lang in res:
-                    if lang == None or language == None or lang == language:
+                    if lang == None or language == None or lang in language:
                         return value
             elif type(res) == tuple:
                 value, lang = res
-                if lang == None or language == None or lang == language:
+                if lang == None or language == None or lang in language:
                     return value
             return None
         res_for_lang = set()
         for value, lang in res:
-            if lang == None or language == None or lang == language:
+            if lang == None or language == None or lang in language:
                 res_for_lang.add(value)
         return res_for_lang
 
@@ -135,7 +135,8 @@ class Entity():
     def to_string(self,
                   exclude: list[str] = ["code",
                                         "url"],
-                  limit: int = 512) -> str:
+                  limit: int = 512,
+                  language: list[str] = None) -> str:
         """
         Convert an entity's data dict into its string representation.
         Keys are sorted so that the generated string is always the same.
@@ -159,7 +160,7 @@ class Entity():
                 res = label + '. '
         for key, value in sorted(self.data.items()):
             key = Graph().OM.get_attr_name(key)
-            value = self.get_values_for(key)
+            value = self.get_values_for(key, language = language)
             if key in exclude:
                 continue
             if key == "label":
