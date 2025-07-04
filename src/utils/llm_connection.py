@@ -3,7 +3,7 @@ LLM connection utility functions
 
 """
 import atexit
-import json
+import json, pickle
 import requests
 from config import OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE  # type: ignore
 from utils.performances import timeall, timeit
@@ -107,7 +107,7 @@ class LLM():
             LLM_EMBEDDINGS_FILE.parent.mkdir(parents = True, exist_ok = True)
             print(f"dumping {len(self.llm_embeddings)} LLM embeddings in {str(LLM_EMBEDDINGS_FILE)}.")
             with open(LLM_EMBEDDINGS_FILE, "w") as f:
-                json.dump(self.llm_embeddings, f)
+                pickle.dump(self.llm_embeddings, f)
 
 
     @timeit
@@ -117,7 +117,7 @@ class LLM():
             return
         with open(LLM_EMBEDDINGS_FILE, "r") as f:
             try:
-                self.llm_embeddings = json.load(f)
+                self.llm_embeddings = pickle.load(f)
             except:
                 self.llm_embeddings = dict()
 
