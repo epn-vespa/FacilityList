@@ -36,14 +36,12 @@ class TfIdfScorer(Score):
 
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute a cosine similarity score between the two entities.
 
         Keyword arguments:
-        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """
@@ -60,13 +58,12 @@ class TfIdfScorer(Score):
                                                      stop_words=list(stop_words),
                                                      max_features=20000)
             TfIdfScorer.tokenizer = TfIdfScorer.vectorizer.build_tokenizer()
+            graph = Graph()
             definitions = graph.get_graph_semantic_fields(language = ["en", "ca", "fr", "es"])
             if not definitions:
                 TfIdfScorer.no_corpus = True
                 return 0
-            print("Starting fit_transform")
             TfIdfScorer.vectorizer.fit_transform(definitions)
-            print("Ending fit transform")
         # TODO test with analyzer == 'char'
         # & ngram_range == (1, 3)
 
@@ -96,6 +93,6 @@ class TfIdfScorer(Score):
         - Remove multiple spaces
         """
         text = re.sub(r"[0-9]+", r" [0-9]+ ", text)
-        text = re.sub(r"[^a-z ]", " ", text)
+        text = re.sub(r"[^\w\W ]", " ", text)
         text = re.sub(r" +", " ", text)
         return text

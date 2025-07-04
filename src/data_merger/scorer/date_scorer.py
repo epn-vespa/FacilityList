@@ -2,7 +2,6 @@ from typing import Union
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
-from graph import Graph
 from utils.performances import timeall
 
 
@@ -12,8 +11,7 @@ class DateScorer(Score):
     NAME = "date"
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Check if any of the entity's date are incompatible (launch_date,
@@ -65,7 +63,9 @@ class DateScorer(Score):
             if date is None:
                 continue
             elif type(date) == str:
-                year = int(date.split('-')[0])
+                # Negative date
+                year = int('-' + date.split('-')[1])
+                raise ValueError("date is a str:", year, date)
             else:
                 year = date.year
             years1.add(year)
@@ -75,7 +75,9 @@ class DateScorer(Score):
             if date is None:
                 continue
             elif type(date) == str:
-                year = int(date.split('-')[0])
+                # Negative date
+                year = int('-' + date.split('-')[1])
+                raise ValueError("date is a str:", year, date)
             else:
                 year = date.year
             years2.add(year)
