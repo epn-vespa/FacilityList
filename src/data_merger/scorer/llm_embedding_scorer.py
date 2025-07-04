@@ -11,7 +11,6 @@ from typing import Union
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
-from graph import Graph
 from utils.performances import timeall
 from utils import llm_connection
 from sklearn.metrics.pairwise import cosine_similarity
@@ -26,15 +25,13 @@ class LlmEmbeddingScorer(Score):
 
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute the embeddings of both entities and a cosine
         distance.
 
         Keyword arguments:
-        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """

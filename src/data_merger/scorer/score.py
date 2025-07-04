@@ -18,7 +18,7 @@ class Score():
     NAME = "Generic Score (superclass)"
 
 
-    def compute(graph: Graph,
+    def compute(self,
                 entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """

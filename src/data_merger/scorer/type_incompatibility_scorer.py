@@ -36,8 +36,7 @@ class TypeIncompatibilityScorer(Score):
                        entity_types.OBSERVATION_FACILITY}
 
 
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]):
         """
         If any type of one entity (an Entity or Synonym Set) is a ground type
@@ -47,7 +46,6 @@ class TypeIncompatibilityScorer(Score):
         If an incompatibility was found, return -2.
 
         Keyword arguments:
-        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """

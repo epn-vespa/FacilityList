@@ -16,7 +16,6 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 from tqdm import tqdm
 from data_updater.extractor.extractor import Extractor
-from graph import Graph
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
@@ -46,8 +45,7 @@ class CosineSimilarityScorer(Score):
 
 
     @timeall
-    def compute(graph: Graph,
-                entities1: List[Union[Entity, SynonymSet]],
+    def compute(entities1: List[Union[Entity, SynonymSet]],
                 entities2: List[Union[Entity, SynonymSet]],
                 list1: Extractor,
                 list2: Extractor) -> Generator[float, None, None]:
@@ -57,7 +55,6 @@ class CosineSimilarityScorer(Score):
         for better performances. Save embeddings in numpy files (cache).
 
         Keyword arguments:
-        graph -- the graph
         entities1 -- reference entities
         entities2 -- compared entities
         """

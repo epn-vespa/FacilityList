@@ -20,7 +20,6 @@ from typing import List, Union
 from rapidfuzz import fuzz, utils
 from unidecode import unidecode
 
-from graph import Graph
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
@@ -34,8 +33,7 @@ class FuzzyScorer(Score):
 
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute a fuzzy score between the two entities' labels and alt labels.

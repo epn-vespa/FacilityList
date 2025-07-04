@@ -11,8 +11,8 @@ from typing import Union
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
-from graph import Graph
 from utils.performances import timeall
+
 import re
 
 class DigitScorer(Score):
@@ -21,14 +21,12 @@ class DigitScorer(Score):
     NAME = "digit_scorer"
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute a digit inclusion ratio between two entities.
 
         Keyword arguments:
-        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """

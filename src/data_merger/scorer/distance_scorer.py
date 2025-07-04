@@ -12,7 +12,6 @@ from typing import Union
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
-from graph import Graph
 from utils.performances import timeall
 from utils.utils import distance
 
@@ -23,8 +22,7 @@ class DistanceScorer(Score):
     NAME = "distance"
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         If the entities are more than 10km away from each other, the can
@@ -39,7 +37,6 @@ class DistanceScorer(Score):
         If an incompatibility was found, return -2.
 
         Keyword arguments:
-        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """

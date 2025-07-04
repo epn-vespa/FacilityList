@@ -7,7 +7,6 @@ Author:
 """
 
 from typing import Union
-from graph import Graph
 from data_merger.entity import Entity
 from data_merger.scorer.score import Score
 from data_merger.synonym_set import SynonymSet
@@ -23,15 +22,13 @@ class AcronymScorer(Score):
 
 
     @timeall
-    def compute(graph: Graph,
-                entity1: Union[Entity, SynonymSet],
+    def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
         Compute a fuzzy score between the two entities' labels and alt labels.
         Return the highest match between any labels.
 
         Keyword arguments:
-        graph -- the graph
         entity1 -- reference entity
         entity2 -- compared entity
         """
