@@ -225,7 +225,6 @@ class Graph(G):
     """
 
     # Singleton graph
-    # TODO: one graph per (list to fasten SparQL)
     _GRAPH = None
     _initialized = False
 
@@ -506,20 +505,27 @@ class Graph(G):
         return self.query(query)
 
 
-    def get_graph_semantic_fields(self) -> List[str]:
+    def get_graph_semantic_fields(self,
+                                  language: Union[str, list[str]] = None
+                                  ) -> List[str]:
         """
         Return all the descriptions in the graph. Use this to generate
         a corpus for statistical computations such as TfIdf.
         Returns definitions, descriptions & labels to string.
         """
+
+        desc_pred = self.OM.convert_attr("description")
+        def_pred = self.OM.convert_attr("definition")
+        label_pred = self.OM.convert_attr("label")
+
         descr_by_entities = defaultdict(str)
-        for entity, rel, desc in self.triples((None,
-                                               None,# self.OBS["description"],
-                                               None)):
-            if rel in [self.OM.convert_attr("description"),
-                       self.OM.convert_attr("definition"),
-                       self.OM.convert_attr("label")]:
-                descr_by_entities[entity] += " " + desc
+
+        for entity, pred, obj in self.triples((None, None, None)):
+            if pred in [desc_pred, def_pred, label_pred]:
+                if isinstance(obj, Literal):
+                    if obj.language is None or not language or obj.language in language:
+                        descr_by_entities[entity] += " " + str(obj)
+
         return list(descr_by_entities.values())
 
     ###### Methods for update #######
