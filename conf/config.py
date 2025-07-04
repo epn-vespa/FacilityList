@@ -13,9 +13,16 @@ USERNAME = os.environ.get("USER") or os.environ.get("USERNAME") or os.getlogin()
 if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
     # tycho
     CACHE_DIR = Path("/data") / USERNAME / "cache"
+    TMP_DIR = Path("/scratch") / USERNAME / "tmp"
 else:
     # local
     CACHE_DIR = ROOT / "cache"
+    TMP_DIR = CACHE_DIR / "tmp"
+# mkdir
+LOGS_DIR.mkdir(parents = True, exist_ok = True)
+DATA_DIR.mkdir(parents = True, exist_ok = True)
+CACHE_DIR.mkdir(parents = True, exist_ok = True)
+TMP_DIR.mkdir(parents = True, exist_ok = True)
 
 
 # Ollama Configuration
@@ -51,7 +58,7 @@ OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
 
 # LLM computation result files
 LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
-LLM_EMBEDDINGS_FILE = CACHE_DIR / f"llm_embeddings_{OLLAMA_MODEL}.json"
+LLM_EMBEDDINGS_FILE = CACHE_DIR / f"llm_embeddings_{OLLAMA_MODEL}.pkl"
 
 
 # precision of longitude/latitude comparison

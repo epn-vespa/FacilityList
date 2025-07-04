@@ -12,6 +12,7 @@ Author:
 from collections import defaultdict
 from enum import Enum
 import json
+import pickle
 import shutil
 import atexit
 from typing import Dict, Generator, List, Type, Union
@@ -24,6 +25,7 @@ import matplotlib.pyplot as plt
 
 from rdflib import RDF, XSD, Literal, URIRef
 from tqdm import tqdm
+from data_merger.mapping_graph import MappingGraph
 from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from graph import Graph
 from data_merger.scorer.score import Score
@@ -34,7 +36,7 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR # type: ignore
+from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR # type: ignore
 from utils.llm_connection import LLM
 from utils.performances import deprecated, timeall, timeit
 
@@ -180,8 +182,10 @@ class CandidatePair():
         Return a unique score from the candidate pair's other scores.
         Weighted sum with ReLU (only scores > 0).
         """
+        # Coefficients that are not 1
         weights = {"fuzzy_levenshtein": 0.3,
-                   "acronym": 0.7}
+                   "acronym": 0.7,
+                   "digit_scorer": 0.5}
         score = 0
         n_scores = 0
         for score_name, score_value in self._scores.items():
@@ -202,9 +206,10 @@ class CandidatePair():
         return score
 
 
-    def save_to_graph(self,
-                      decisive_score: str,
-                      justification: str = None):
+    def admit(self,
+              decisive_score: str,
+              justification: str = None,
+              human_validation: bool = False):
         """
         Add a Candidate Pair in the graph. Use it after
         a Synonym Set was created from this Candidate Pair to keep
@@ -216,27 +221,15 @@ class CandidatePair():
         """
         graph = Graph()
 
-        candidate_pair_uri = self.uri
+        mapping_graph = MappingGraph()
 
-        # Add the candidate pair in the graph
-        graph.add((candidate_pair_uri, RDF.type,
-                   graph.OBS["SynonymPair"])) # Not a Candidate anymore
-        graph.add((candidate_pair_uri, graph.OBS["firstMember"],
-                   self.member1.uri))
-        graph.add((candidate_pair_uri, graph.OBS["secondMember"],
-                   self.member2.uri))
-        for score, value in self.scores.items():
-            graph.add((candidate_pair_uri,
-                        graph.OBS[score],
-                        Literal(value, datatype = XSD.float)))
-        if decisive_score:
-            graph.add((candidate_pair_uri,
-                    graph.OBS["provenance"],
-                    Literal(decisive_score)))
-        if justification:
-            graph.add((candidate_pair_uri,
-                       graph.OBS["justification"],
-                       Literal(justification)))
+        mapping_graph.add_mapping(self.uri,
+                                  self.member1.uri,
+                                  self.member2.uri,
+                                  scores = self.scores,
+                                  decisive_score_name = decisive_score,
+                                  justification_string = justification,
+                                  is_human_validation = human_validation)
 
 
     def __eq__(self,
@@ -489,7 +482,8 @@ class CandidatePairsManager():
             self.del_candidate_pairs(candidate_pair.member2)
 
             # Add Candidate Pair to graph for traceability
-            candidate_pair.save_to_graph(decisive_score = score.NAME)
+            candidate_pair.admit(decisive_score = score.NAME,
+                                 human_validation = False)
             SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
                                                candidate_pair.member2)
             return State.ADMITTED
@@ -509,11 +503,17 @@ class CandidatePairsMapping():
     def __init__(self,
                  list1: Extractor,
                  list2: Extractor,
-                 ent_type: Union[str, list[str]] = None,
+                 ent_type1: Union[str, set[str]] = None,
+                 ent_type2: Union[str, set[str]] = None,
                  checkpoint_id: str = None):
         self._list1 = list1
         self._list2 = list2
-        self._ent_type = ent_type
+        if type(ent_type1) == str:
+            ent_type1 = {ent_type1}
+        self._ent_type1 = ent_type1
+        if type(ent_type2) == str:
+            ent_type2 = {ent_type2}
+        self._ent_type2 = ent_type2
 
         self._mapping = [] # 2D list to represent the mapping (graph)
         # lines: list1,
@@ -614,11 +614,11 @@ class CandidatePairsMapping():
         # remove entities that are in a synset with the other list.
         # Only generate mapping for the same entity types.
         entities1 = graph.get_entities_from_list(self._list1,
-                                                 ent_type = self._ent_type,
+                                                 ent_type = self._ent_type1,
                                                  # no_equivalent_in = self._list2,
                                                  limit = limit)
         entities2 = graph.get_entities_from_list(self._list2,
-                                                 ent_type = self._ent_type,
+                                                 ent_type = self._ent_type2,
                                                  # no_equivalent_in = self._list1,
                                                  limit = limit)
 
@@ -653,24 +653,80 @@ class CandidatePairsMapping():
             self._mapping.append([None] * len(entities2))
 
         # Fill the 2D array
-        for i, (entity1_uri, synset1_uri) in enumerate(tqdm(entities1,
-                                                       desc = f"Generating mapping for {self._list1}, {self._list2}")):
-            if synset1_uri is not None:
-                entity1 = SynonymSet(uri = synset1_uri)
-            else:
-                entity1 = Entity(entity1_uri)
-            self._list1_indexes.append(entity1)
-            for j, (entity2_uri, synset2_uri) in enumerate(entities2):
+        self._parallelize_mapping_generation(entities1, entities2)
 
-                if synset2_uri is not None:
-                    entity2 = SynonymSet(uri = synset2_uri)
-                else:
-                    entity2 = Entity(uri = entity2_uri)
-                if i == 0: # Only append for the first loop.
-                    self._list2_indexes.append(entity2)
 
-                cp = CandidatePair(entity1, entity2, None)
-                self._mapping[i][j] = cp
+    @timeit
+    def _parallelize_mapping_generation(self,
+                                        entities1: list[tuple[Entity, SynonymSet]],
+                                        entities2: list[tuple[Entity, SynonymSet]]):
+        """
+        Use fork and pickle to parallelize the mapping's 2d array generation.
+        This accelerates the mapping generation : 35 minutes instead of 2h30.
+
+        Keyword arguments:
+        entities1 -- entities or synonym sets from the first list
+        entities2 -- entities or synonym sets from the second list
+        """
+        chunk_size = 10 # Each process receives 10 rows
+        rows = len(entities1)
+        cols = len(entities2)
+        for start in range(0, rows, chunk_size):
+            end = min(start + chunk_size, rows)
+            pid = os.fork()
+            if pid == 0:
+                try:
+                    block = []
+                    for i in range(start, end):
+                        entity1_uri, synset1_uri = entities1[i]
+                        if synset1_uri is not None:
+                            entity1 = SynonymSet(uri = synset1_uri)
+                        else:
+                            entity1 = Entity(entity1_uri)
+                        row = []
+                        for j in range(cols):
+                            entity2_uri, synset2_uri = entities2[j]
+                            if synset2_uri is not None:
+                                entity2 = SynonymSet(uri = synset2_uri)
+                            else:
+                                entity2 = Entity(uri = entity2_uri)
+                            if i == 0: # Only append for the first line.
+                                self._list2_indexes.append(entity2)
+                            row.append(CandidatePair(first = entity1, second = entity2))
+                        block.append(row)
+                    with open(TMP_DIR / f"block_{start}_{end}.pkl", "wb") as file:
+                        pickle.dump((start, block), file)
+                finally:
+                    os._exit(0) # Leave subprocess
+
+
+        total = rows // chunk_size
+        if rows % chunk_size != 0:
+            total += 1
+        print(f"Mapping lists: {self.list1}, {self.list2}")
+        print(f"Mapping types: {self._ent_type1}, {self._ent_type2}")
+
+        pbar = tqdm(total = total, desc = "Generating mapping")
+
+        for _ in range(0, rows, chunk_size):
+            os.wait() # Wait for subprocesses to finish
+            pbar.update(1)
+        pbar.close()
+
+
+        # Re-build the mapping from the chunks
+        for start in range(0, rows, chunk_size):
+            end = min(start + chunk_size, rows)
+            with open(TMP_DIR / f"block_{start}_{end}.pkl", "rb") as file:
+                start_index, block = pickle.load(file)
+                for i, row in enumerate(block):
+                    self._mapping[start_index + i] = row
+
+        # Build list1_indexes & list2_indexes from the mapping
+        for cp_row in self._mapping:
+            for cp in cp_row:
+                self._list1_indexes.append(cp.member1)
+
 
 
     def del_candidate_pairs(self,
@@ -693,16 +749,6 @@ class CandidatePairsMapping():
                     row.pop(entity_index)
             self._list2_indexes.pop(entity_index)
 
-
-        # Remove from the list too
-        """
-        i = len(self._candidate_pairs) - 1
-        while i >= 0:
-            pair = self._candidate_pairs[i]
-            if pair.member1 == entity or pair.member2 == entity:
-                del(self._candidate_pairs[i])
-            i -= 1
-        """
 
     def del_candidate_pair(self,
                            candidate_pair: CandidatePair):
@@ -767,7 +813,9 @@ class CandidatePairsMapping():
         elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
             # Add Candidate Pair to graph for traceability
             candidate_pair.add_score(score_name = score.NAME, score = score_value)
-            self.admit(candidate_pair, decisive_score = score.NAME)
+            self.admit(candidate_pair,
+                       decisive_score = score.NAME,
+                       human_validation = False)
             return State.ADMITTED
 
         candidate_pair.add_score(score.NAME, score_value)
@@ -777,19 +825,22 @@ class CandidatePairsMapping():
     def admit(self,
               candidate_pair: CandidatePair,
               decisive_score: str,
-              justification: str = ""
+              justification: str = "",
+              human_validation: bool = False
               ):
         """
         Add a Synonym in the SynonymSetManager.
         Remove the Candidate Pair from the CandidatePairsMapping.
+        Add the pair in the mapping ontology (Mapping object of SSSOM).
 
         Keyword arguments:
         candidate_pair -- a Candidate Pair that was admitted
         score_name -- the label of the decisive score
         score_value -- the value of that decisive score
         """
-        candidate_pair.save_to_graph(decisive_score = decisive_score,
-                                     justification = justification)
+        candidate_pair.admit(decisive_score = decisive_score,
+                             justification = justification,
+                             human_validation = human_validation)
         SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
                                            candidate_pair.member2)
         self.del_candidate_pairs(candidate_pair.member1)
@@ -876,7 +927,8 @@ class CandidatePairsMapping():
 
     @timeit
     def disambiguate(self,
-                     human_validation: bool):
+                     human_validation: bool,
+                     generate_dataset: bool = True):
         """
         Disambiguation algorithm: find the best global score,
         create a Synonym Set if high enough until stop.
@@ -900,14 +952,21 @@ class CandidatePairsMapping():
                     else:
                         scores_line.append(candidate_pair.compute_global_score())
             scores.append(scores_line)
-        if not scores:
-            print("Nothing to disambiguate.")
+        scores = np.array(scores, dtype = float)
+        if np.isnan(scores).all():
+            print("Only NaN in scores. All candidate pairs were eliminated beforehand. No disambiguation to perform.")
             return
-        scores = self._2d_standardization(scores)
+
+        scores = self._2d_standardization_minmax(scores, max_iter = 2)
+
+        if generate_dataset:
+            self.direct_validation(scores)
+            return
 
         # Human validation
         if human_validation:
             self.human_validation(scores)
+
 
         # LLM validation
         else:
@@ -919,7 +978,7 @@ class CandidatePairsMapping():
 
 
     def _2d_standardization(self,
-                            scores: List[float],
+                            scores: np.array,
                             max_iter: int = 10) -> np.array:
         """
         Transform scores array into a numpy array while
@@ -941,6 +1000,34 @@ class CandidatePairsMapping():
         for i in range(max_iter):
             scores = standardize(scores, axis = i % 2)
         return scores
+
+
+    def _2d_standardization_minmax(self,
+                                   scores: np.array,
+                                   max_iter: int = 10) -> np.array:
+        """
+        Transform scores array into a numpy array while
+        standardizing scores iteratively (col, lines, cols, lines...)
+        until converging.
+        Standardization by bin/max.
+
+        Keyword arguments:
+        scores -- list of scores with the same coordinates as
+                  the mapping
+        """
+        scores = np.array(scores, dtype = float)
+
+        def standardize(scores, axis):
+            # Standardize scores by rows
+            maxs = np.nanmax(scores, axis = axis, keepdims = True)
+            mins = np.nanmin(scores, axis = axis, keepdims = True)
+            scores = (scores - mins) / (maxs - mins)
+            return scores
+        for i in range(max_iter):
+            scores = standardize(scores, axis = i % 2)
+        return scores
+
+
 
 
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical similarities within observation facilities. " + \
@@ -1098,7 +1185,8 @@ class CandidatePairsMapping():
                 scores = np.delete(scores, y, axis = 1)
                 self.admit(best_candidate_pair,
                            decisive_score = f"{OLLAMA_MODEL} validation",
-                           justification = justification)
+                           justification = justification,
+                           human_validation = False)
                 n_success += 1
                 n_fails_in_a_row = 0
             elif answer == "distinct":
@@ -1172,11 +1260,48 @@ class CandidatePairsMapping():
 
         Use to evaluate the scores system compared to the scores + LLM review.
         """
-        mean = np.nanmean(scores)
-        std_dev = np.nanstd(scores)
-        threshold = mean + 1.96 * std_dev
-        # TODO
+        flat_scores = scores.ravel()
+        no_nan = ~np.isnan(flat_scores)
+        flat_scores_no_nan = flat_scores[no_nan]
 
+        indexes_no_nan = np.where(no_nan)[0]
+
+        top_k = 1000
+
+        indexes = np.argpartition(flat_scores_no_nan, -top_k)[-top_k:]
+        sorted_indexes = indexes[np.argsort(-flat_scores_no_nan[indexes])]
+        final_flat_indexes = indexes_no_nan[sorted_indexes]
+        coords = np.unravel_index(final_flat_indexes, scores.shape)
+
+        values = flat_scores[final_flat_indexes]
+
+        results = list(zip(values, zip(coords[0], coords[1])))
+
+        if type(self._ent_type1) == str:
+            ent_type = {self._ent_type1}
+        else:
+            ent_type = self._ent_type1
+        with open(f"saved_pairs_{self.list1.NAMESPACE}_{self.list2.NAMESPACE}_{'-'.join(ent_type)}.tsv", "w") as file:
+            res = "Mireille\tSébastien\tMarkus\tBaptiste\tLaura\tEntity1\tEntity2\tEntity1 more information\tEntity2 more information\n"
+            for score, (x, y) in results:
+                candidate_pair = self._mapping[x][y]
+
+                entity1 = candidate_pair.member1
+                entity2 = candidate_pair.member2
+                entity1_url = entity1.get_values_for("url")
+                entity2_url = entity2.get_values_for("url")
+                entity1_label = entity1.get_values_for("label", unique = True)
+                entity2_label = entity2.get_values_for("label", unique = True)
+                entity1_ext_ref = entity1.get_values_for("ext_ref")
+                entity2_ext_ref = entity2.get_values_for("ext_ref")
+                entity1_repr = f"{entity1_label} {' '.join(entity1_url)} {' '.join(entity1_ext_ref)}"
+                entity1_repr = entity1_repr.replace('"', "'").replace("\n", " ")
+                entity2_repr = f"{entity2_label} {' '.join(entity2_url)} {' '.join(entity2_ext_ref)}"
+                entity2_repr = entity2_repr.replace('"', "'").replace("\n", " ")
+                entity1_string = entity1.to_string(language = "en").replace('"', "'").replace("\n", " ")
+                entity2_string = entity2.to_string(language = "en").replace('"', "'").replace("\n", " ")
+                res += f"\t\t\t\t\t\"{entity1_repr}\"\t\"{entity2_repr}\"\t\"{entity1_string}\"\t\"{entity2_string}\"\n"
+            file.write(res)
 
 
     def human_validation(self,
@@ -1204,7 +1329,7 @@ class CandidatePairsMapping():
             best_candidate_pair = self._mapping[x][y]
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
-            self._align_repr(member1, member2)
+            print(self._align_repr(member1, member2))
 
             # Human validation
             choice = input(f"Highest score {score} for\n{member1},\n{member2}.\nSame: 0 (default)\nDifferent: 1\nStop: 2\nisPartOf: 3\nhasPart: 4\ncheck 5 best: 5\n>>> ")
@@ -1253,12 +1378,13 @@ class CandidatePairsMapping():
             scores = np.delete(scores, x, axis = 0)
             scores = np.delete(scores, y, axis = 1)
             self.admit(best_candidate_pair,
-                       decisive_score = "human validation")
+                       decisive_score = "human validation",
+                       human_validation = True)
 
 
     def _align_repr(self,
                     member1: Union[Entity, SynonymSet],
-                    member2: Union[Entity, SynonymSet]):
+                    member2: Union[Entity, SynonymSet]) -> str:
         """
         Print representation of two candidate pairs aligned on their attributes
         in a string.
@@ -1267,6 +1393,7 @@ class CandidatePairsMapping():
         member1 -- the first entity (or synonym set).
         member2 -- the second entity (or synonym set).
         """
+        res = ""
         n_cols = shutil.get_terminal_size(fallback=(80,20)).columns
         col_width = n_cols // 2 - 4
 
@@ -1282,7 +1409,7 @@ class CandidatePairsMapping():
             val2 = '\n'.join([str(x) for x in member2.get_values_for(key)])
             rows.append([key, val1, val2])
         col_width -= largest_key_len // 2
-        print("*" * largest_key_len + " " + "*" * col_width + " " + "*" * col_width )
+        res += "*" * largest_key_len + " " + "*" * col_width + " " + "*" * col_width
         for key, val1, val2 in rows:
             if key in ["source"]:
                 continue
@@ -1304,14 +1431,14 @@ class CandidatePairsMapping():
                 val2_rows.extend([""] * (len(val1_rows)-len(val2_rows)))
             for i, (col1, col2) in enumerate(zip(val1_rows, val2_rows)):
                 if i == 0:
-                    print(key + " " * (largest_key_len - len(key)), end = "|")
+                    res += key + " " * (largest_key_len - len(key)) + "|"
                 else:
                     print(" " * (largest_key_len), end = "|")
-                print(col1 + " " * (col_width - len(col1)), end = "|")
-                print(col2) # \n
+                res += col1 + " " * (col_width - len(col1)) + "|"
+                res += col2 # \n
                 if i == 3:
                     break # Only print 3 lines per attr
-
+        return res
 
     @timeit
     def _disambiguate_discriminant(self,
@@ -1329,7 +1456,7 @@ class CandidatePairsMapping():
                 continue
             state = None
             i = 0
-            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type}")
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type1}")
             print(f"0/{len(self._mapping)}")
             while i < len(self._mapping):
                 print(f"\033[F\033[{0}G {i+1}/{len(self._mapping)}")
@@ -1363,7 +1490,7 @@ class CandidatePairsMapping():
             len_e1 = len(self._list1_indexes)
             len_e2 = len(self._list2_indexes)
             n_candidates = len_e1 * len_e2
-            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type}" +
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type1}" +
                   f" on {n_candidates} candidate pairs.")
             if score == CosineSimilarityScorer:
                 # this score does batches for performances.
@@ -1409,21 +1536,22 @@ class CandidatePairsMapping():
         """
         if not scores:
             return
-        """
         DEBUG = True
         if DEBUG:
-            for _, _, candidate_pair in self.iter_mapping():
+            print(f"Computing other scores for the remaining candidate pairs" + \
+                  f" on {self.list1}, {self.list2} for {' '.join(sorted(self._ent_type1))}.")
+            for _, _, candidate_pair in tqdm(self.iter_mapping(), total = len(self._mapping) * len(self._mapping[0])):
                 score_values = _compute_scores(candidate_pair.member1,
                                                candidate_pair.member2,
                                                candidate_pair.uri,
                                                scores)
                 for score, score_value in zip(scores, score_values):
-                    candidate_pair.add_score(score.NAME, score_values)
+                    candidate_pair.add_score(score.NAME, score_value)
             return
         """
         with ProcessPoolExecutor() as executor:
             print(f"Computing other scores for the remaining candidate pairs" + \
-                  f" on {self.list1}, {self.list2} for {self._ent_type}.")
+                  f" on {self.list1}, {self.list2} for {' '.join(sorted(self._ent_type1))}.")
             candidate_pairs = [(pair.member1, pair.member2, pair.uri)
                                for _, _, pair in self.iter_mapping()]
             futures = [executor.submit(_compute_scores,
@@ -1436,6 +1564,7 @@ class CandidatePairsMapping():
                 for score, score_value in zip(scores, score_values):
                     # Make sure that we add it in the right CandidatePair.
                     CandidatePair.candidate_pairs[candidate_pair_uri].add_score(score.NAME, score_value)
+        """
 
 
     def _compute_global(self):
@@ -1518,7 +1647,7 @@ class CandidatePairsMapping():
         directory = LATEST / execution_id
         directory.mkdir(parents = True, exist_ok = True)
 
-        filename = f"{self._list1}_{self._list2}_{self._ent_type}.json"
+        filename = f"{self._list1}_{self._list2}_{self._ent_type1}.json"
         path = directory / filename
         res = ""
         with open(str(path), 'w') as file:
