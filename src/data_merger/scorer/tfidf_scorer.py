@@ -56,7 +56,7 @@ class TfIdfScorer(Score):
             TfIdfScorer.vectorizer = TfidfVectorizer(lowercase=True,
                                                      preprocessor=TfIdfScorer.preprocess,
                                                      stop_words=list(stop_words),
-                                                     max_features=20000)
+                                                     max_features=1000000)
             TfIdfScorer.tokenizer = TfIdfScorer.vectorizer.build_tokenizer()
             graph = Graph()
             definitions = graph.get_graph_semantic_fields(language = ["en", "ca", "fr", "es"])
@@ -82,17 +82,18 @@ class TfIdfScorer(Score):
         repr1 = TfIdfScorer.vectorizer.transform([repr1])
         repr2 = TfIdfScorer.vectorizer.transform([repr2])
         sim = cosine_similarity(repr1, repr2)
-        return sim[0][0]
+        return float(sim[0][0])
 
 
     def preprocess(text: str) -> str:
         """
         Preprocessing operations for the TfidfVectorizer.
-        - Remove numbers (covered by digit_scorer)
+        - Add spaces around digits
         - Remove characters that are not alphabetic
         - Remove multiple spaces
         """
-        text = re.sub(r"[0-9]+", r" [0-9]+ ", text)
-        text = re.sub(r"[^\w\W ]", " ", text)
+        text = re.sub(r'(?<=[a-zA-Z])(?=\d)', ' ', text)
+        text = re.sub(r'(?<=\d)(?=[a-zA-Z])', ' ', text)
+        text = re.sub(r"[^\w\W\d ]", " ", text)
         text = re.sub(r" +", " ", text)
         return text
