@@ -126,10 +126,15 @@ class AasExtractor(Extractor):
             cols = [col.text.strip() for col in cols]
             row_data = dict(zip(headers, cols)) # {"h1": "col1", "h2": "col2"}
 
+            alt_labels = set()
+
             # Get facility name
             facility_name = row_data["full facility name"].strip()
             if facility_name.startswith("Deprecated"):
                 continue
+            split_labels = facility_name.split('/')
+            facility_name = split_labels[0]
+            alt_labels.update(split_labels[1:])
 
             # Add location to data dict
             location = row_data["location"]
@@ -143,8 +148,6 @@ class AasExtractor(Extractor):
                 # TODO get latitude & longitude from location
             else:
                 continue # TGCC is a computer and has no location.
-
-            alt_labels = set()
 
             # Internal reference
             keyword = row_data["keyword"] # code
@@ -293,7 +296,7 @@ class AasExtractor(Extractor):
                         data["waveband"].append(waveband)
 
             # alt labels
-            alt_labels = alt_labels - set(facility_name)
+            alt_labels.pop(facility_name)
             if alt_labels:
                 data["alt_label"] = alt_labels
 
