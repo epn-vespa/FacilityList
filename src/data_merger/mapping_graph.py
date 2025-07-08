@@ -33,7 +33,7 @@ class MappingGraph():
         """
         if cls._graph is None:
             cls._graph = super(MappingGraph, cls).__new__(cls)
-        return cls
+        return cls._graph
 
 
     def __init__(self):
@@ -107,8 +107,9 @@ class MappingGraph():
 
 
     def serialize(self,
-                  output_dir: str):
+                  output_dir: str,
+                  execution_id: str):
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
-        path = output_dir / "mapping.ttl"
-        self._graph.serialize(destination=path, format="ttl")
+        path = output_dir / (execution_id + "_mapping.ttl")
+        self._graph.serialize(destination = path, format="ttl")

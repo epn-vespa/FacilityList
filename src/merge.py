@@ -11,13 +11,10 @@ Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
 import setup_path # import first
+from pathlib import Path
 
-from data_merger.scorer.distance_scorer import DistanceScorer
-from data_updater import entity_types
-from data_merger.scorer.acronym_scorer import AcronymScorer
 from argparse import ArgumentParser
 import atexit
-from typing import List
 import uuid
 import os
 import sys
@@ -30,6 +27,10 @@ from data_merger.scorer.scorer_lists import ScorerLists
 from data_merger.scorer.type_incompatibility_scorer import TypeIncompatibilityScorer
 from data_merger.synonym_set import SynonymSetManager
 from data_merger.scorer.fuzzy_scorer import FuzzyScorer
+from data_merger.scorer.distance_scorer import DistanceScorer
+from data_merger.scorer.acronym_scorer import AcronymScorer
+from data_merger.mapping_graph import MappingGraph
+from data_updater import entity_types
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
@@ -40,8 +41,9 @@ from data_updater.extractor.nssdc_extractor import NssdcExtractor
 from data_updater.extractor.pds_extractor import PdsExtractor
 from utils.performances import timeit
 from collections import defaultdict
+from datetime import datetime
 
-from config import CONF_DIR # type: ignore
+from config import CONF_DIR
 
 
 class Merger():
@@ -49,7 +51,7 @@ class Merger():
 
     def __init__(self,
                  input_ontologies: list[str],
-                 output_ontology: str = "",
+                 output_dir: str = "",
                  limit: int = -1):
         """
         limit -- maximum entities per list (for debug)
@@ -60,14 +62,13 @@ class Merger():
 
         # Instanciate the Synonym Set Manager
         SynonymSetManager()
-
-        self._output_ontology = output_ontology
+        self._output_dir = output_dir
         self._execution_id = str(uuid.uuid4())
         self._limit = limit
         self._description = f"script: {os.path.basename(sys.argv[0])}\n" + \
             f"execution id: {self._execution_id}\n" + \
             f"source: {' '.join(input_ontologies)}\n" + \
-            f"filename: {output_ontology}\n"
+            f"folder: {output_dir}\n"
 
 
     @property
@@ -76,8 +77,8 @@ class Merger():
 
 
     @property
-    def output_ontology(self):
-        return self._output_ontology
+    def output_dir(self):
+        return self._output_dir
 
 
     @property
@@ -249,11 +250,11 @@ class Merger():
             else:
                 # Types are partially known or unknown in at least one of both lists
 
-                types_to_compute = []
+                types_to_compute = set()
                 if any(t in entity_types.NO_ADDR for t in types):
-                    types_to_compute.extend(entity_types.NO_ADDR.intersection(list1.POSSIBLE_TYPES).intersection(list2.POSSIBLE_TYPES))
+                    types_to_compute.update(entity_types.NO_ADDR.intersection(list1.POSSIBLE_TYPES).intersection(list2.POSSIBLE_TYPES))
                 if any(t in entity_types.MAY_HAVE_ADDR for t in types):
-                    types_to_compute.extend(entity_types.MAY_HAVE_ADDR.intersection(list1.POSSIBLE_TYPES).intersection(list2.POSSIBLE_TYPES))
+                    types_to_compute.update(entity_types.MAY_HAVE_ADDR.intersection(list1.POSSIBLE_TYPES).intersection(list2.POSSIBLE_TYPES))
                 #for ent_types in (entity_types.NO_ADDR, entity_types.MAY_HAVE_ADDR):
                 if list1.TYPE_KNOWN == 1:
                     ent_types1 = types
@@ -451,10 +452,17 @@ class Merger():
 
     @timeit
     def write(self):
-        print(f"Writing the result ontology into {self.output_ontology}...")
+        print(f"Writing the result ontology into {self.output_dir}...")
         self.graph.add_metadata(self._description)
-        with open(self.output_ontology, 'wb') as file:
-            file.write(self.graph.serialize(encoding = "utf-8"))
+        output_dir = Path(self.output_dir)
+        output_dir.mkdir(parents = True, exist_ok = True)
+        output_ontology = output_dir / (self.execution_id + '.ttl')
+        self.graph.serialize(destination = output_ontology,
+                             format = "turtle",
+                             encoding = "utf-8")
+        mapping_graph = MappingGraph()
+        mapping_graph.serialize(output_dir = self.output_dir,
+                                 execution_id = self.execution_id)
 
 
     def print_execution_id(self):
@@ -466,13 +474,13 @@ class Merger():
 
 @timeit
 def main(input_ontologies: list[str] = [],
-         output_ontology: str = "",
+         output_dir: str = "",
          limit: int = -1,
          merging_strategy_file: str = "",
          checkpoint_id: str = None,
          human_validation: bool = False):
     merger = Merger(input_ontologies,
-                    output_ontology,
+                    output_dir,
                     limit)
     atexit.register(merger.print_execution_id)
 
@@ -504,12 +512,12 @@ if __name__ == "__main__":
                         "entity mapping between different sources.")
 
     parser.add_argument("-o",
-                        "--output-ontology",
-                        dest = "output_ontology",
-                        default = "output_merged.ttl",
+                        "--output-dir",
+                        dest = "output_dir",
+                        default = datetime.isoformat(datetime.now()),
                         type = str,
                         required = False,
-                        help = "Output ontology file to save the merged data.")
+                        help = "Output ontology folder to save the merged ontology.")
 
     parser.add_argument("-l",
                         "--limit",
@@ -544,7 +552,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.input_ontologies,
-         args.output_ontology,
+         args.output_dir,
          args.limit,
          args.merging_strategy_file,
          args.checkpoint,
