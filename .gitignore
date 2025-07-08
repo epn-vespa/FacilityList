@@ -107,6 +107,9 @@ ENV/
 # ttl
 *.ttl
 
+# tsv
+src/*.tsv
+
 # cache
 /cache/
 /data/checkpoint/

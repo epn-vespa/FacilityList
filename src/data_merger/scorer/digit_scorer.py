@@ -139,5 +139,4 @@ class DigitScorer(Score):
                     break
             if found:
                 continue
-        print("inclusion ratio:", scores_e1 / len(numbers_e1))
         return scores_e1 / len(numbers_e1)
