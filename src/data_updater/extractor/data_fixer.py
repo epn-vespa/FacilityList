@@ -25,7 +25,7 @@ def fix(result: dict,
         fixes = json.load(file)
 
         # Data update (fix)
-        for key, fixed_data in fixes["update"].items():
+        for key, fixed_data in fixes.get("update", {}).items():
             if key not in result:
                 print(f"Error in {str(filename)}: {key} not in the result dict. Perhaps the resource label changed ?")
                 continue
@@ -38,14 +38,14 @@ def fix(result: dict,
                     new_key = new_value
             if new_key != key:
                 # Label was fixed, so update identifier
-                if new_key not in source:
-                    source[new_key] = source_data
+                if new_key not in result:
+                    result[new_key] = source_data
                 else:
-                    merge_into(source_data, source[new_key])
-                del source[key]
+                    merge_into(source_data, result[new_key])
+                del result[key]
 
         # Delete data entries
-        for key in fixes["delete"]:
+        for key in fixes.get("delete", []):
             if key not in result:
                 print(f"Warning: {key} not in {filename}, cannot be deleted. Perhaps the resource label changed ?")
                 continue

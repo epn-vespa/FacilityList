@@ -108,8 +108,8 @@ class CacheManager():
         cache_path = cache_path.lower()
         cache_path = CACHE_DIR / list_name / cache_path
         if data_str:
-            if not os.path.exists(cache_path):
-                os.mkdir(cache_path)
+            cache_path.mkdir(parents = True,
+                             exist_ok = True)
             cache_path = cache_path / data_str
         cache_path = str(cache_path)
         return cache_path
