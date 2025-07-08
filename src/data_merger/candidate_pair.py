@@ -15,7 +15,7 @@ import json
 import pickle
 import shutil
 import atexit
-from typing import Dict, Generator, List, Type, Union
+from typing import Dict, Generator, List, Tuple, Type, Union
 import uuid
 import hashlib
 import os
@@ -23,7 +23,7 @@ import numpy as np
 import re
 import matplotlib.pyplot as plt
 
-from rdflib import RDF, XSD, Literal, URIRef
+from rdflib import RDF, URIRef
 from tqdm import tqdm
 from data_merger.mapping_graph import MappingGraph
 from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
@@ -34,11 +34,12 @@ from data_merger.scorer.llm_embedding_scorer import LlmEmbeddingScorer
 from data_merger.synonym_set import SynonymSet, SynonymSetManager
 from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+# from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR # type: ignore
+from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR
 from utils.llm_connection import LLM
 from utils.performances import deprecated, timeall, timeit
+from utils.utils import clear_tmp
 
 
 JSON = DATA_DIR / "checkpoint"# "../../cache/error.log"
@@ -152,7 +153,7 @@ class CandidatePair():
 
     def add_score(self,
                   score_name: str,
-                  score: float):
+                  score_value: Union[float, int]):
         """
         Add a score to the candidate pair.
 
@@ -160,7 +161,9 @@ class CandidatePair():
         score_name -- the name of the score (ex: "cos_similarity")
         score -- the float value (between 0 and 1)
         """
-        self._scores[score_name] = score
+        if type(score_value) != float and type(score_value) != int:
+            raise TypeError(f"score_value must be a float. Got {type(score_value)} instead.")
+        self._scores[score_name] = score_value
 
 
     def get_score(self,
@@ -202,7 +205,7 @@ class CandidatePair():
         if n_scores > 0:
             score = score / n_scores
         self.add_score(score_name = "global",
-                       score = score) # averaged score
+                       score_value = score) # averaged score
         return score
 
 
@@ -461,9 +464,7 @@ class CandidatePairsManager():
         score -- the Score to compute
         candidate_pair -- the candidate pair of entities to compare
         """
-        graph = Graph()
-        score_value = score.compute(graph,
-                                    candidate_pair.member1,
+        score_value = score.compute(candidate_pair.member1,
                                     candidate_pair.member2)
         candidate_pair.add_score(score.NAME, score_value)
         if ScorerLists.ELIMINATE.get(score, lambda x: False)(score_value):
@@ -668,6 +669,7 @@ class CandidatePairsMapping():
         entities1 -- entities or synonym sets from the first list
         entities2 -- entities or synonym sets from the second list
         """
+        atexit.register(clear_tmp)
         chunk_size = 10 # Each process receives 10 rows
         rows = len(entities1)
         cols = len(entities2)
@@ -690,8 +692,6 @@ class CandidatePairsMapping():
                                 entity2 = SynonymSet(uri = synset2_uri)
                             else:
                                 entity2 = Entity(uri = entity2_uri)
-                            if i == 0: # Only append for the first line.
-                                self._list2_indexes.append(entity2)
                             row.append(CandidatePair(first = entity1, second = entity2))
                         block.append(row)
                     with open(TMP_DIR / f"block_{start}_{end}.pkl", "wb") as file:
@@ -715,18 +715,24 @@ class CandidatePairsMapping():
 
 
         # Re-build the mapping from the chunks
-        for start in range(0, rows, chunk_size):
+        for start in tqdm(range(0, rows, chunk_size), desc = "Building mapping"):
             end = min(start + chunk_size, rows)
             with open(TMP_DIR / f"block_{start}_{end}.pkl", "rb") as file:
                 start_index, block = pickle.load(file)
                 for i, row in enumerate(block):
                     self._mapping[start_index + i] = row
 
-        # Build list1_indexes & list2_indexes from the mapping
-        for cp_row in self._mapping:
-            for cp in cp_row:
-                self._list1_indexes.append(cp.member1)
+        # Empty tmp
+        clear_tmp()
+        atexit.unregister(clear_tmp)
 
+        # Build list1_indexes & list2_indexes from the mapping
+        for i, line in enumerate(self._mapping):
+            for j, cp in enumerate(line):
+                if j == 0:
+                    self._list1_indexes.append(cp.member1)
+                if i == 0:
+                    self._list2_indexes.append(cp.member2)
 
 
     def del_candidate_pairs(self,
@@ -802,9 +808,7 @@ class CandidatePairsMapping():
         """
         if candidate_pair is None:
             return None
-        graph = Graph()
-        score_value = score.compute(graph,
-                                    candidate_pair.member1,
+        score_value = score.compute(candidate_pair.member1,
                                     candidate_pair.member2)
 
         if ScorerLists.ELIMINATE.get(score, lambda x: False)(score_value):
@@ -857,8 +861,7 @@ class CandidatePairsMapping():
         if candidate_pair is None:
             return
         graph = Graph()
-        score_value = score.compute(graph,
-                                    candidate_pair.member1,
+        score_value = score.compute(candidate_pair.member1,
                                     candidate_pair.member2)
 
         candidate_pair.add_score(score.NAME, score_value)
@@ -957,7 +960,7 @@ class CandidatePairsMapping():
             print("Only NaN in scores. All candidate pairs were eliminated beforehand. No disambiguation to perform.")
             return
 
-        scores = self._2d_standardization_minmax(scores, max_iter = 2)
+        scores = self._2d_standardization(scores, max_iter = 2)
 
         if generate_dataset:
             self.direct_validation(scores)
@@ -1266,7 +1269,7 @@ class CandidatePairsMapping():
 
         indexes_no_nan = np.where(no_nan)[0]
 
-        top_k = 1000
+        top_k = min(1000, scores.size)
 
         indexes = np.argpartition(flat_scores_no_nan, -top_k)[-top_k:]
         sorted_indexes = indexes[np.argsort(-flat_scores_no_nan[indexes])]
@@ -1282,7 +1285,8 @@ class CandidatePairsMapping():
         else:
             ent_type = self._ent_type1
         with open(f"saved_pairs_{self.list1.NAMESPACE}_{self.list2.NAMESPACE}_{'-'.join(ent_type)}.tsv", "w") as file:
-            res = "Mireille\tSébastien\tMarkus\tBaptiste\tLaura\tEntity1\tEntity2\tEntity1 more information\tEntity2 more information\n"
+            res = "Mireille\tSébastien\tMarkus\tBaptiste\tLaura\tsemantic score\tEntity1\tEntity2\tEntity1 more information\tEntity2 more information\n"
+            exclude = ["exact_match", "Parent", "modified", "deprecated", "type_confidence", "location_confidence", "source", "type"]
             for score, (x, y) in results:
                 candidate_pair = self._mapping[x][y]
 
@@ -1298,9 +1302,9 @@ class CandidatePairsMapping():
                 entity1_repr = entity1_repr.replace('"', "'").replace("\n", " ")
                 entity2_repr = f"{entity2_label} {' '.join(entity2_url)} {' '.join(entity2_ext_ref)}"
                 entity2_repr = entity2_repr.replace('"', "'").replace("\n", " ")
-                entity1_string = entity1.to_string(language = "en").replace('"', "'").replace("\n", " ")
-                entity2_string = entity2.to_string(language = "en").replace('"', "'").replace("\n", " ")
-                res += f"\t\t\t\t\t\"{entity1_repr}\"\t\"{entity2_repr}\"\t\"{entity1_string}\"\t\"{entity2_string}\"\n"
+                entity1_string = entity1.to_string(language = "en", exclude = exclude).replace('"', "'").replace("\n", " ")
+                entity2_string = entity2.to_string(language = "en", exclude = exclude).replace('"', "'").replace("\n", " ")
+                res += f"\t\t\t\t\t{score}\t\"{entity1_repr}\"\t\"{entity2_repr}\"\t\"{entity1_string}\"\t\"{entity2_string}\"\n"
             file.write(res)
 
 
@@ -1454,7 +1458,6 @@ class CandidatePairsMapping():
         for score in ScorerLists.DISCRIMINANT_SCORES:
             if score not in scores:
                 continue
-            state = None
             i = 0
             print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type1}")
             print(f"0/{len(self._mapping)}")
@@ -1545,9 +1548,10 @@ class CandidatePairsMapping():
                                                candidate_pair.member2,
                                                candidate_pair.uri,
                                                scores)
-                for score, score_value in zip(scores, score_values):
+                for score, score_value in zip(scores, score_values[0]):
                     candidate_pair.add_score(score.NAME, score_value)
             return
+        # TODO use fork() & pickle
         """
         with ProcessPoolExecutor() as executor:
             print(f"Computing other scores for the remaining candidate pairs" + \
@@ -1674,7 +1678,7 @@ class CandidatePairsMapping():
 def _compute_scores(member1: Union[Entity, SynonymSet],
                     member2: Union[Entity, SynonymSet],
                     uri: str,
-                    scores: List[Score]) -> List[float]:
+                    scores: List[Score]) -> Tuple[List[float], URIRef]:
 
     """
     Asynchronous method to compute all scores for one candidate pair.
@@ -1690,31 +1694,9 @@ def _compute_scores(member1: Union[Entity, SynonymSet],
     """
     scores_values = []
     for score in scores:
-        score_value = _compute_one_score(score, member1, member2)
+        score_value = score.compute(member1, member2)
         scores_values.append(score_value)
     return scores_values, uri
-
-
-def _compute_one_score(score: Score,
-                       member1: Union[Entity, SynonymSet],
-                       member2: Union[Entity, SynonymSet]) -> float:
-    """
-    Asynchronous method to compute a score without removing the
-    candidate pair from the mapping at all.
-    Use this for non-discriminant scores.
-
-    Keyword arguments:
-    member1 -- the candidate pair's first member
-    member1 -- the candidate pair's second member
-    scores -- the score to compute
-    """
-    if not member1 or not member2:
-        return
-    graph = Graph()
-    score_value = score.compute(graph,
-                                member1,
-                                member2)
-    return score_value
 
 
 if __name__ == "__main__":
