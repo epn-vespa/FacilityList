@@ -7,19 +7,31 @@ Author:
 import json
 import re
 import time
-from typing import Optional, Tuple, List
-from urllib.parse import quote
 import geopy
 import pycountry_convert
-from geopy.geocoders import Nominatim
-from geopy.distance import geodesic
+import math
+import os
 import atexit
 
-from config import CACHE_DIR # type: ignore
+from typing import Optional, Tuple, List
+from urllib.parse import quote
+from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
+from config import CACHE_DIR, TMP_DIR # type: ignore
 from utils.acronymous import proba_acronym_of
 from utils.performances import timeall
 
 geolocator = Nominatim(user_agent="obspm.fr")
+
+def clear_tmp():
+    import shutil
+    for file in os.listdir(TMP_DIR):
+        file_path = TMP_DIR / file
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+        else:
+            shutil.rmtree(file_path)
+
 
 def standardize_uri(label: str) -> str:
     """
@@ -743,7 +755,6 @@ continent_dict = {
     "AQ" : "Antarctica"
 }
 
-
 def distance(latlong1: Tuple[float],
              latlong2: Tuple[float]) -> float:
     """
@@ -754,6 +765,7 @@ def distance(latlong1: Tuple[float],
     latlong1 -- tuple (latitude, longitude) of the second point.
     """
     return geodesic(latlong1, latlong2).km
+    #return math.sqrt((latlong1[0] - latlong2[0])**2 + (latlong1[1] - latlong2[1])**2)
 
 
 def _get_location_from_cache(label: Optional[str] = None,
@@ -866,6 +878,7 @@ def _get_location_from_cache(label: Optional[str] = None,
     if latlong_empty and part_of_empty and location_empty and address_empty and label_empty:
         return {}
     return data
+
 
 if __name__ == "__main__":
     pass

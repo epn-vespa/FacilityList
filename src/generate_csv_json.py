@@ -91,6 +91,74 @@ class CSVJsonGenerator():
         return res
 
 
+    def standardize_label_format(self,
+                                 label: str) -> str:
+        """
+        Standardize label format for labels that are only
+        slightly different from other labels.
+        - Replace '_' by space
+        """
+        label = label.replace('_', ' ')
+        return label
+
+
+    def get_pref_label(self,
+                       synset: SynonymSet):
+        """
+        Returns the pref label (str) and all other labels (set)
+
+        Keyword arguments:
+        synset -- a Synonym Set
+        """
+        pref_label = None
+        all_labels = []
+        identifiers = set() # Cannot be used as main label but should appear in aliases
+
+        for synonym in synset:
+            label = synonym.get_values_for("label", unique = True, language = "en")
+            all_labels.append(label)
+            alt_labels = synonym.get_values_for("alt_label", language = "en")
+            all_labels.extend(alt_labels)
+            # Standardize label format
+            all_labels = [self.standardize_label_format(label) for label in all_labels]
+            source = synonym.get_values_for("source", unique = True)
+            if source.rsplit('#')[-1] == WikidataExtractor.URI:
+                pref_label = label
+            identifiers.update(synonym.get_values_for("MPC_ID"))
+            identifiers.update(synonym.get_values_for("NAIF_ID"))
+            identifiers.update(synonym.get_values_for("NSSDCA_ID"))
+            identifiers.update(synonym.get_values_for("COSPAR_ID"))
+
+        # Get the shortest label from the most represented labels
+        # Get the label with the most letters from the most represented labels
+        if not pref_label:
+            if not set(all_labels).issubset(identifiers):
+                # Remove identifiers from labels that may become pref label
+                all_labels = [label for label in all_labels if label not in identifiers]
+            count_labels = Counter(all_labels)
+            labels = sorted(count_labels.items(), key = lambda x: x[1], reverse = True)
+            candidate_labels = [label for label, count in labels if count == labels[0][1]]
+            #candidate_labels = {label: len(label) for label in candidate_labels}
+            # Candidate label with the most letters
+            candidate_labels = {label: len(re.findall(r"[a-zA-Z]", label)) for label in candidate_labels}
+            labels = sorted(candidate_labels.items(), key = lambda x: x[1], reverse = True)
+            labels = [label[0] for label in labels]
+            pref_label = labels[0]
+            if '(' in pref_label:
+                clean_pref_label = pref_label
+                while '(' in clean_pref_label:
+                    # Repeat for each parenthesis
+                    clean_pref_label = clean_pref_label[0:clean_pref_label.find('(')] + ' ' + clean_pref_label[clean_pref_label.find(')') + 1:]
+                clean_pref_label = re.sub(' +', ' ', clean_pref_label).strip()
+                if clean_pref_label:
+                    pref_label = clean_pref_label
+                    all_labels.append(pref_label)
+        identifiers.update({self.standardize_label_format(code) for code in synonym.get_values_for("code")})
+        all_labels = set(all_labels)
+        all_labels.update(identifiers)
+        return pref_label, all_labels
+
+
     def to_synonym_list(self):
         """
         Generate the Synonym list in a json format:
@@ -103,42 +171,9 @@ class CSVJsonGenerator():
         csv_res = {}
         synsets = self.get_synsets()
         term_by_synonym_uri = dict() # used to find the term if we know the original URI
-        all_uris = 0
-        # TODO keep track of hasPart & isPartOf between synsets (intermediate step?)
-        for synset in synsets:
-            all_labels = []
-            pref_label = None
-            identifiers = set() # Cannot be used as main label but should appear in aliases
-            # TODO see if we can merge both functions ? (also write the csv)
-            for synonym in synset:
-                all_uris += 1
-                label = synonym.get_values_for("label", unique = True, language = "en")
-                all_labels.append(label)
-                alt_labels = synonym.get_values_for("alt_label", language = "en")
-                all_labels.extend(alt_labels)
-                source = synonym.get_values_for("source", unique = True)
-                if source == WikidataExtractor.URI:
-                    pref_label = label
-                identifiers.update(synonym.get_values_for("code"))
-                identifiers.update(synonym.get_values_for("MPC_ID"))
-                identifiers.update(synonym.get_values_for("NAIF_ID"))
-                identifiers.update(synonym.get_values_for("NSSDCA_ID"))
-                identifiers.update(synonym.get_values_for("COSPAR_ID"))
 
-            # Get the shortest label from the most represented labels
-            if not pref_label:
-                if not set(all_labels).issubset(identifiers):
-                    # Remove identifiers from labels that may become pref label
-                    all_labels = [label for label in all_labels if label not in identifiers]
-                count_labels = Counter(all_labels)
-                labels = sorted(count_labels.items(), key = lambda x: x[1], reverse = True)
-                candidate_labels = [label for label, count in labels if count == labels[0][1]]
-                candidate_labels = {label: len(label) for label in candidate_labels}
-                labels = sorted(candidate_labels.items(), key = lambda x: x[1], reverse = True)
-                labels = [label[0] for label in labels]
-                pref_label = labels[0]
-            all_labels = set(all_labels)
-            all_labels.update(identifiers)
+        for synset in synsets:
+            pref_label, all_labels = self.get_pref_label(synset)
 
             # Term
             term = standardize_uri(pref_label)
