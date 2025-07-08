@@ -12,10 +12,32 @@
                           "NASA 0.85m Spitzer Space Telescope (SST formerly Space Infrared Telescope Facility or SIRTIF) Satellite Mission",
                           "SIRTIF"],
             "label": "NASA 0.85m Spitzer Space Telescope"
+        },
+        "Nagoya University Nobeyama Radioheliograph at Nobeyama Solar Radio Observatory": {
+            "label": "Nagoya University Nobeyama Radioheliograph at Nobeyama Radio Observatory",
+            "alt_label": ["Nagoya University Nobeyama Radioheliograph",
+                         "Nagoya University Nobeyama Radioheliograph at Nobeyama Solar Radio Observatory"],
+            "is_part_of": "Nobeyama Radio Observatory"
+        },
+        "National Astronomical Observatory of Japan Nobeyama Radio Polarimeters at Nobeyama Solar Radio Observatory": {
+            "label": "National Astronomical Observatory of Japan Nobeyama Radio Polarimeters at Nobeyama Radio Observatory",
+            "alt_label": ["National Astronomical Observatory of Japan Nobeyama Radio Polarimeters at Nobeyama Radio Observatory",
+                          "National Astronomical Observatory of Japan (NAOJ) Nobeyama Radio Polarimeters",
+                          "National Astronomical Observatory of Japan (NAOJ) Nobeyama Radio Polarimeters at Nobeyama Radio Observatory"],
+            "is_part_of": "Nobeyama Radio Observatory"
+        },
+        "Nobeyama Radio Observatory": {
+            "has_part": ["National Astronomical Observatory of Japan Nobeyama Radio Polarimeters at Nobeyama Radio Observatory",
+                         "Nagoya University Nobeyama Radioheliograph at Nobeyama Radio Observatory",
+                         "National Astronomical Observatory of Japan 45m Radio Telescope at Nobeyama Radio Observatory",
+                         "National Astronomical Observatory of Japan Nobeyama Millimeter Array at Nobeyama Radio Observatory"],
+            "alt_label": "Nobeyama Solar Radio Observatory"
         }
+
     },
     "delete": [
         "Atacama",
-        "American Association of Variable Star Observers International Database"
+        "American Association of Variable Star Observers International Database",
+        "Nobeyama Solar Radio Observatory"
     ]
 }
