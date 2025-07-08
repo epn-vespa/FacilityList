@@ -348,7 +348,7 @@ class Graph(G):
 
     def get_entities_from_list(self,
                                source: Extractor,
-                               ent_type: Union[str, list[str]] = None,
+                               ent_type: Union[str, Union[list[str], set[str]]] = None,
                                no_equivalent_in: Extractor = None,
                                has_attr: list[str] = [],
                                limit: int = -1,
@@ -387,10 +387,10 @@ class Graph(G):
         if ent_type:
             if type(ent_type) == str:
                 ent_type_str += f"?entity a obs:{standardize_uri(ent_type)} ."
-            elif type(ent_type) == list:
+            elif type(ent_type) in [list, set]:
                 ent_type_list = []
                 for et in ent_type:
-                    ent_type_list += f"{{ ?entity a obs:{et} . }}\n"
+                    ent_type_list.append(f"{{ ?entity a obs:{standardize_uri(et)} . }}\n")
                 ent_type_str += "\n UNION ".join(ent_type_list)
 
         ignore_deprecated_str = ""
