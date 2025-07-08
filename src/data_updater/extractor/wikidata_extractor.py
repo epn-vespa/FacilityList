@@ -100,20 +100,13 @@ class WikidataExtractor(Extractor):
     ?itemURI schema:dateModified ?modifiedDate . # get last modification date
     """
 
-    # Filter on classes:
-    """
-    {?itemURI wdt:P31/wdt:P279* wd:Q40218 .} # spacecraft
-    UNION {?itemURI wdt:P31/wdt:P279* wd:Q5916 .} # spaceflight (mission)
-    UNION {?itemURI wdt:P31/wdt:P279* wd:Q2133344 .} # space mission
-    UNION {?itemURI wdt:P31/wdt:P279* wd:Q62832 .} # observatory
-    UNION {?itemURI wdt:P31/wdt:P279* wd:Q4213 .} # telescope
-    """
     _TYPES = {entity_types.MISSION: ["wd:Q5916", # Spaceflight
                                      #"wd:Q2133344", # Space mission (manned missions)
                                      #"wd:Q60054001" # Space program (government related: not an obs facility)
                                      ],
               entity_types.SPACECRAFT: ["wd:Q40218"], # Spacecraft
-              entity_types.GROUND_OBSERVATORY: ["wd:Q62832"], # Observatory
+              entity_types.GROUND_OBSERVATORY: [#"wd:Q62832", # Observatory
+                                                "wd:Q1254933"], # Astronomical observatory
               entity_types.TELESCOPE: ["wd:Q148578", # Space telescope
                                        "wd:Q4213"], # Telescope
               entity_types.AIRBORNE: ["wd:Q1414565", # Space plane
