@@ -595,13 +595,14 @@ class CandidatePairsMapping():
 
     @timeit
     def generate_mapping(self,
-                         limit: int = -1):
+                         limit: int = -1) -> bool:
         """
         Generate candidate pairs between both lists. Only
         generate candidate pairs for entities that are not linked
         to each other's list already.
         [[CandidatePair1.1, CandidatePair1.2],
          [CandidatePair2.1, CandidatePair2.2]]
+        Return False if no mapping could be generated.
 
         Keyword arguments:
         limit -- do not generate a mapping for the whole lists (use for tests)
@@ -645,6 +646,9 @@ class CandidatePairsMapping():
                     entities2.remove((entity2, synset2))
                     break
 
+        if not entities1 or not entities2:
+            return False
+
         print(f"Unmapped entities for {self.list1}, {self.list2}:", len(entities1), len(entities2))
 
         self._mapping = []
@@ -655,6 +659,8 @@ class CandidatePairsMapping():
 
         # Fill the 2D array
         self._parallelize_mapping_generation(entities1, entities2)
+
+        return True
 
 
     @timeit
@@ -1286,7 +1292,7 @@ class CandidatePairsMapping():
             ent_type = self._ent_type1
         with open(f"saved_pairs_{self.list1.NAMESPACE}_{self.list2.NAMESPACE}_{'-'.join(ent_type)}.tsv", "w") as file:
             res = "Mireille\tSébastien\tMarkus\tBaptiste\tLaura\tsemantic score\tEntity1\tEntity2\tEntity1 more information\tEntity2 more information\n"
-            exclude = ["exact_match", "Parent", "modified", "deprecated", "type_confidence", "location_confidence", "source", "type"]
+            exclude = ["exact_match", "Parent", "modified", "deprecated", "type_confidence", "location_confidence"]
             for score, (x, y) in results:
                 candidate_pair = self._mapping[x][y]
 
@@ -1464,6 +1470,7 @@ class CandidatePairsMapping():
             while i < len(self._mapping):
                 print(f"\033[F\033[{0}G {i+1}/{len(self._mapping)}")
                 candidate_pair_list = self._mapping[i]
+                state = 0
                 # discriminant
                 for candidate_pair in candidate_pair_list:
                     state = self._compute(score = score,

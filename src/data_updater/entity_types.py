@@ -11,8 +11,8 @@ manage lists and entities' compatibility during the merging step.
 # Using LLM with Ollama: test gemma3:1b
 # llm_classifier = None
 
-OBSERVATION_FACILITY = "observation facility" # network
-GROUND_OBSERVATORY = "ground observatory"
+OBSERVATION_FACILITY = "observation facility" # unused for classification
+GROUND_OBSERVATORY = "ground observatory" # contain ground observatory network
 SPACECRAFT = "spacecraft" # = space observatory
 TELESCOPE = "telescope" # Space or Ground. = observation instruments: inside a telescope.
 AIRBORNE = "airborne" # in the atmosphere

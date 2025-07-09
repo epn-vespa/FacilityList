@@ -32,7 +32,7 @@ class AasExtractor(Extractor):
     CACHE = "AAS/"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
+    DEFAULT_TYPE = entity_types.TELESCOPE
 
     # List's types.
     # For merging strategies. Prevent merging data from lists
