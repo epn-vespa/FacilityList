@@ -233,13 +233,18 @@ class Merger():
                     self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
                                          f"with scores: {scores_str}"
                     if not checkpoint_id:
-                        CPM.generate_mapping(limit = self.limit)
+                        if not CPM.generate_mapping(limit = self.limit):
+                            # No mapping generated
+                            print(f"No mapping could be generated between {list1} and {list2} on {' '.join(ent_types1)}.\
+                                   They might already be mapped or no entity corresponds to this type.")
+                            del(CPM)
+                            continue
                         CPM.compute_scores(scores = scores - do_not_compute)
                         if all([score in ScorerLists.DISCRIMINANT_SCORES for score in scores]):
                             # Only discriminant scores
                             print("Only discriminant scores. No disambiguation required. Returning.")
                             del(CPM)
-                            return
+                            continue
                         CPM.disambiguate(human_validation)
                         self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
                                              f"with scores: {scores_str}\n"
@@ -281,7 +286,12 @@ class Merger():
                     scores_str.append(score.NAME)
                 scores_str = ', '.join(scores_str)
                 if not checkpoint_id:
-                    CPM.generate_mapping(limit = self.limit)
+                    if not CPM.generate_mapping(limit = self.limit):
+                        # No mapping generated
+                            print(f"No mapping could be generated between {list1} and {list2} on {' '.join(ent_types1)}.\
+                                   They might already be mapped or no entity corresponds to this type.")
+                            del(CPM)
+                            return
                     CPM.compute_scores(scores = scores)
                     if all([score in ScorerLists.DISCRIMINANT_SCORES for score in scores]):
                         # Only discriminant scores
