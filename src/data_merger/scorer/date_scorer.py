@@ -21,7 +21,7 @@ class DateScorer(Score):
         If an incompatibility was found, return -2.
         """
         # Check all relevant date fields
-        date_attrs = ["launch_date", "start_date", "end_date"]
+        date_attrs = [["launch_date", "start_date"], "end_date"]
         for attr in date_attrs:
             if not DateScorer._compare_entity_dates(entity1,
                                                     entity2,
@@ -32,13 +32,18 @@ class DateScorer(Score):
     @staticmethod
     def _compare_entity_dates(entity1: Union[Entity, SynonymSet],
                               entity2: Union[Entity, SynonymSet],
-                              attr: str) -> bool:
+                              attrs: Union[str, list[str]]) -> bool:
         """
         Compare the year of the dates for a given field in both entities.
         Return True if dates are compatible, False if not.
         """
-        dates1 = entity1.get_values_for(attr)
-        dates2 = entity2.get_values_for(attr)
+        dates1 = set()
+        dates2 = set()
+        if type(attrs) == str:
+            attrs = [attrs]
+        for attr in attrs:
+            dates1.update(entity1.get_values_for(attr))
+            dates2.update(entity2.get_values_for(attr))
 
         # Only compare if both sets have dates
         if dates1 and dates2:
@@ -65,7 +70,6 @@ class DateScorer(Score):
             elif type(date) == str:
                 # Negative date
                 year = int('-' + date.split('-')[1])
-                raise ValueError("date is a str:", year, date)
             else:
                 year = date.year
             years1.add(year)
@@ -77,10 +81,10 @@ class DateScorer(Score):
             elif type(date) == str:
                 # Negative date
                 year = int('-' + date.split('-')[1])
-                raise ValueError("date is a str:", year, date)
             else:
                 year = date.year
             years2.add(year)
         #years1 = {date1.year for date1 in dates1 if date1 is not None}
         #years2 = {date2.year for date2 in dates2 if date2 is not None}
         return not years1.isdisjoint(years2)
+        # True if not disjoint, False if disjoint.
