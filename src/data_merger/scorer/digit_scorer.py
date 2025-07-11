@@ -18,7 +18,7 @@ import re
 class DigitScorer(Score):
 
 
-    NAME = "digit_scorer"
+    NAME = "digit"
 
     @timeall
     def compute(entity1: Union[Entity, SynonymSet],

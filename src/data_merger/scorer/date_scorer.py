@@ -19,9 +19,13 @@ class DateScorer(Score):
 
         If no incompatibility was found, return -1.
         If an incompatibility was found, return -2.
+
+        Keyword arguments:
+        entity1 -- reference entity
+        entity2 -- compared entity
         """
         # Check all relevant date fields
-        date_attrs = [["launch_date", "start_date"], "end_date"]
+        date_attrs = ["launch_date", "start_date", "end_date"]
         for attr in date_attrs:
             if not DateScorer._compare_entity_dates(entity1,
                                                     entity2,
@@ -36,6 +40,10 @@ class DateScorer(Score):
         """
         Compare the year of the dates for a given field in both entities.
         Return True if dates are compatible, False if not.
+
+        Keyword arguments:
+        entity1 -- reference entity
+        entity2 -- compared entity
         """
         dates1 = set()
         dates2 = set()
