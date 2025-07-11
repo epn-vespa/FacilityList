@@ -13,6 +13,7 @@ from config import DATA_DIR # type: ignore
 from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
+from utils.utils import has_cospar_nssdc_id, get_datetime_from_iso
 import time
 import json
 from urllib.parse import urlencode
@@ -97,12 +98,18 @@ class ImcceExtractor(Extractor):
                 if key == "parent" and value == "Neptune":
                     # Neptune is used as a default value currently
                     continue
-                if key == "links":
+                elif key == "links":
                     for key2, value2 in value.items():
                         data[self.ATTRS["links"][key2]] = value2
+                elif key == "aliases":
+                    ok, cospar_ids, years = has_cospar_nssdc_id(value)
+                    if ok:
+                        for cospar_id, year in zip(cospar_ids, years):
+                            data["launch_date"] = get_datetime_from_iso(year)
+                            data["COSPAR_ID"] = cospar_id
+                            data["NSSDCA_ID"] = cospar_id
                 else:
-                    if key not in self.ATTRS:
-                        continue
-                    data[self.ATTRS[key]] = value
+                    if key in self.ATTRS:
+                        data[self.ATTRS[key]] = value
             result[data["label"]] = data
         return result

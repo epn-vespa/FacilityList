@@ -301,7 +301,27 @@ def cut_language_from_string(text: str) -> Tuple[str, str]:
     return text, lang
 
 
-def get_datetime_from_iso(datetime_str: str):
+def has_cospar_nssdc_id(text: str) -> Tuple[bool, list[str], list[str]]:
+    """
+    Return True if the provided label contains a COSPAR id
+    or NSSDC id, return the matched NSSDC id and
+    the year, associated with the launch date of a spacecraft.
+
+    Keyword arguments:
+    text -- string that may contain an NSSDC or COSPAR id.
+    """
+    pattern = re.compile(r"\b(19|20)[0-2]{2}-[A-Z0-9]{4,5}\b")
+    cospar_ids = re.findall(pattern, text)
+    if not cospar_ids:
+        return False, None, None
+    years = []
+    for cospar_id in cospar_ids:
+        year = cospar_id.split('-')[0]
+        years.append(year)
+    return True, cospar_ids, years
+
+
+def get_datetime_from_iso(datetime_str: str) -> str:
     """
     Fix datetime string :
         month 00 day 00 -> 1st of January
@@ -392,6 +412,7 @@ def _save_location_infos_in_cache():
         with open(path, "w", encoding = "utf-8") as f:
             json.dump(location_infos, f, indent=" ")
 
+
 def load_location_infos_from_cache():
     atexit.register(_save_location_infos_in_cache)
     global location_infos
@@ -402,6 +423,7 @@ def load_location_infos_from_cache():
     path = str(path)
     with open(path, "r", encoding = "utf-8") as f:
         location_infos = json.load(f)
+
 
 @timeall
 def get_location_info(label: Optional[str] = None,
@@ -754,6 +776,7 @@ continent_dict = {
     "EU": "Europe",
     "AQ" : "Antarctica"
 }
+
 
 def distance(latlong1: Tuple[float],
              latlong2: Tuple[float]) -> float:

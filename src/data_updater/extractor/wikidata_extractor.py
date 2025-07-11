@@ -25,6 +25,7 @@ from tqdm import tqdm
 from datetime import UTC, datetime
 from bs4 import BeautifulSoup
 from data_updater.extractor.data_fixer import fix
+from utils.utils import get_datetime_from_iso
 
 import certifi
 import urllib
@@ -109,7 +110,7 @@ class WikidataExtractor(Extractor):
                                                 "wd:Q1254933"], # Astronomical observatory
               entity_types.TELESCOPE: ["wd:Q148578", # Space telescope
                                        "wd:Q4213"], # Telescope
-              entity_types.AIRBORNE: ["wd:Q1414565", # Space plane
+              entity_types.AIRBORNE: [#"wd:Q1414565", # Space plane
                                       "wd:Q1875651"] # Airborne observatory
                             }
     _QUERY_TYPES = {k: "UNION".join(f" {{?itemURI wdt:P31/wdt:P279* {v} .}} "
@@ -118,6 +119,7 @@ class WikidataExtractor(Extractor):
 
     _MINUS = """
     # Filter out unwanted classes:
+    MINUS { ?itemURI wdt:P31 wd:Q64728694. } # proposed entity
     MINUS { ?itemURI wdt:P31 wd:Q752783. }  # human spaceflight
     MINUS { ?itemURI wdt:P31 wd:Q209363. }  # weather satellite
     MINUS { ?itemURI wdt:P31 wd:Q149918. }  # communications satellite
@@ -142,6 +144,7 @@ class WikidataExtractor(Extractor):
     MINUS { ?itemURI wdt:P31 wd:Q105095031. } # Crew Dragon
     MINUS { ?itemURI wdt:P31 wd:Q18812508. }  # space station module
     MINUS { ?itemURI wdt:P31 wd:Q117384805. }  # spacecraft family
+    MINUS { ?itemURI wdt:P31 wd:Q1285444. } # navigation satellite
     MINUS { ?itemURI wdt:P31 wd:Q190107. }  # weather station
     MINUS { ?itemURI wdt:P31 wd:Q127899. }  # Multi-Purpose Logistics Module
     MINUS { ?itemURI wdt:P31 wd:Q117384800. }  # spacecraft model
@@ -486,6 +489,13 @@ class WikidataExtractor(Extractor):
                         except KeyError:
                             # Malformated WikiData json (missing keys)
                             continue
+
+        if "NSSDCA_ID" in data or "COSPAR_ID" in data:
+            if "launch_date" not in data:
+                cospar_id = data.get("NSSDCA_ID", data.get("COSPAR_ID"))
+                launch_date = get_datetime_from_iso(cospar_id.split("-")[0])
+                data["launch_date"] = launch_date
+
         return data
 
 

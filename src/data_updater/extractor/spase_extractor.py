@@ -14,7 +14,7 @@ from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from utils.llm_connection import LLM
 from utils.performances import timeall
-from utils.utils import clean_string, extract_items, merge_into
+from utils.utils import clean_string, extract_items, merge_into, has_cospar_nssdc_id, get_datetime_from_iso
 import json
 import re
 import os
@@ -134,6 +134,7 @@ class SpaseExtractor(Extractor):
             alt_labels = set()
 
             prior_id = ""
+            launch_year = ""
 
             for rel, values in extract_items(dict_content):
                 if rel not in self.FACILITY_ATTRS:
@@ -174,8 +175,13 @@ class SpaseExtractor(Extractor):
                                 to_merge[value[len(source):].strip()].append(value)
                         data[key] = value
                     elif key == "alt_label":
-                        value = value.replace("Observatory Station Code: ", "")
-                        alt_labels.add(value)
+                        ok, nssdc_id, year = has_cospar_nssdc_id(value)
+                        if ok:
+                            data["NSSDC_ID"] = nssdc_id
+                            launch_year = get_datetime_from_iso(year)
+                        else:
+                            value = value.replace("Observatory Station Code: ", "")
+                            alt_labels.add(value)
                     #elif key == "description" and "description" in data:
                     #    continue # Only one description per entity
                     elif key in data:
@@ -188,6 +194,10 @@ class SpaseExtractor(Extractor):
             # alt labels
             if alt_labels:
                 data["alt_label"] = alt_labels
+
+            # launch date
+            if launch_year and "launch_date" not in data:
+                data["launch_date"] = launch_year
 
             # url
             href = self.URL + "/tree/master" + file.split(self.GIT_REPO)[1]
