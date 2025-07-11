@@ -123,20 +123,6 @@ class NssdcExtractor(Extractor):
             data["type"] = self.DEFAULT_TYPE
             data["type_confidence"] = 1
 
-            # Ignore entities that have one or more uncompatible discipline
-            """
-            ignore = False
-            for key, value in data.items():
-                if key == "disciplines":
-                    for discipline in value:
-                        if discipline not in self.CAN_INCLUDE:
-                            ignore = True
-                            break
-                    if ignore:
-                        break
-            if ignore:
-                continue # do not add in result
-            """
             result[label] = data
         return result
 

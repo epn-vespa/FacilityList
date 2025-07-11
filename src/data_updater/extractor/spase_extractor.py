@@ -14,7 +14,7 @@ from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from utils.llm_connection import LLM
 from utils.performances import timeall
-from utils.utils import clean_string, extract_items, merge_into, has_cospar_nssdc_id, get_datetime_from_iso
+from utils.utils import clean_string, extract_items, merge_into, has_cospar_nssdc_id
 import json
 import re
 import os
@@ -175,10 +175,11 @@ class SpaseExtractor(Extractor):
                                 to_merge[value[len(source):].strip()].append(value)
                         data[key] = value
                     elif key == "alt_label":
-                        ok, nssdc_id, year = has_cospar_nssdc_id(value)
+                        ok, nssdc_id, launch_date = has_cospar_nssdc_id(value)
                         if ok:
-                            data["NSSDC_ID"] = nssdc_id
-                            launch_year = get_datetime_from_iso(year)
+                            data["NSSDCA_ID"] = nssdc_id
+                            data["COSPAR_ID"] = nssdc_id
+                            launch_year = launch_date
                         else:
                             value = value.replace("Observatory Station Code: ", "")
                             alt_labels.add(value)

@@ -13,7 +13,7 @@ from config import DATA_DIR # type: ignore
 from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
-from utils.utils import has_cospar_nssdc_id, get_datetime_from_iso
+from utils.utils import has_cospar_nssdc_id
 import time
 import json
 from urllib.parse import urlencode
@@ -101,15 +101,17 @@ class ImcceExtractor(Extractor):
                 elif key == "links":
                     for key2, value2 in value.items():
                         data[self.ATTRS["links"][key2]] = value2
+                    continue
                 elif key == "aliases":
-                    ok, cospar_ids, years = has_cospar_nssdc_id(value)
-                    if ok:
-                        for cospar_id, year in zip(cospar_ids, years):
-                            data["launch_date"] = get_datetime_from_iso(year)
-                            data["COSPAR_ID"] = cospar_id
-                            data["NSSDCA_ID"] = cospar_id
-                else:
-                    if key in self.ATTRS:
-                        data[self.ATTRS[key]] = value
+                    for v in value:
+                        ok, cospar_ids, launch_dates = has_cospar_nssdc_id(v)
+                        if ok:
+                            for cospar_id, launch_date in zip(cospar_ids, launch_dates):
+                                data["launch_date"] = launch_date
+                                data["COSPAR_ID"] = cospar_id
+                                data["NSSDCA_ID"] = cospar_id
+                   
+                if key in self.ATTRS:
+                    data[self.ATTRS[key]] = value
             result[data["label"]] = data
         return result

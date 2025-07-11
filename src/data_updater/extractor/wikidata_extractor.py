@@ -25,7 +25,7 @@ from tqdm import tqdm
 from datetime import UTC, datetime
 from bs4 import BeautifulSoup
 from data_updater.extractor.data_fixer import fix
-from utils.utils import get_datetime_from_iso
+from utils.utils import has_cospar_nssdc_id
 
 import certifi
 import urllib
@@ -490,11 +490,15 @@ class WikidataExtractor(Extractor):
                             # Malformated WikiData json (missing keys)
                             continue
 
+        # Add a launch date if 
         if "NSSDCA_ID" in data or "COSPAR_ID" in data:
             if "launch_date" not in data:
                 cospar_id = data.get("NSSDCA_ID", data.get("COSPAR_ID"))
-                launch_date = get_datetime_from_iso(cospar_id.split("-")[0])
-                data["launch_date"] = launch_date
+                if type(cospar_id) == list:
+                    cospar_id = cospar_id[0]
+                ok, cospar_id, launch_date = has_cospar_nssdc_id(cospar_id)
+                if ok:
+                    data["launch_date"] = launch_date
 
         return data
 

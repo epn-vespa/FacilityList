@@ -310,15 +310,15 @@ def has_cospar_nssdc_id(text: str) -> Tuple[bool, list[str], list[str]]:
     Keyword arguments:
     text -- string that may contain an NSSDC or COSPAR id.
     """
-    pattern = re.compile(r"\b(19|20)[0-2]{2}-[A-Z0-9]{4,5}\b")
+    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{4,5}\b"
     cospar_ids = re.findall(pattern, text)
     if not cospar_ids:
         return False, None, None
-    years = []
+    launch_dates = []
     for cospar_id in cospar_ids:
         year = cospar_id.split('-')[0]
-        years.append(year)
-    return True, cospar_ids, years
+        launch_dates.append(get_datetime_from_iso(year))
+    return True, cospar_ids, launch_dates
 
 
 def get_datetime_from_iso(datetime_str: str) -> str:
