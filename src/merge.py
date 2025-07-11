@@ -235,7 +235,7 @@ class Merger():
                     if not checkpoint_id:
                         if not CPM.generate_mapping(limit = self.limit):
                             # No mapping generated
-                            print(f"No mapping could be generated between {list1} and {list2} on {' '.join(ent_types1)}.\
+                            print(f"No mapping could be generated between {list1} and {list2} on {ent_type}.\
                                    They might already be mapped or no entity corresponds to this type.")
                             del(CPM)
                             continue

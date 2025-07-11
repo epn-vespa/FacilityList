@@ -188,7 +188,7 @@ class CandidatePair():
         # Coefficients that are not 1
         weights = {"fuzzy_levenshtein": 0.3,
                    "acronym": 0.7,
-                   "digit_scorer": 0.5}
+                   "digit_scorer": 0.2}
         score = 0
         n_scores = 0
         for score_name, score_value in self._scores.items():

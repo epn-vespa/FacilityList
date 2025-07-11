@@ -5,7 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, date_scorer, digit_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer
+from data_merger.scorer import acronym_scorer, date_scorer, digit_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer, identifier_scorer
 
 
 class ScorerLists():
@@ -15,7 +15,8 @@ class ScorerLists():
     DISCRIMINANT_SCORES = [type_incompatibility_scorer.TypeIncompatibilityScorer,
                            date_scorer.DateScorer,
                            distance_scorer.DistanceScorer,
-                           label_match_scorer.LabelMatchScorer]
+                           label_match_scorer.LabelMatchScorer,
+                           identifier_scorer.IdentifierScorer]
 
     # Scores that are computed for all of the candidate pairs.
     OTHER_SCORES = [acronym_scorer.AcronymScorer,
@@ -47,5 +48,6 @@ class ScorerLists():
                  distance_scorer.DistanceScorer: lambda dist: dist == -2, # dist > 10km or incompatible
                  type_incompatibility_scorer.TypeIncompatibilityScorer: lambda t: t == -2, # incompatible type
                  date_scorer.DateScorer: lambda d: d == -2, # not the same year (as sources have different precision on months/days)
+                 identifier_scorer.IdentifierScorer: lambda i: i == -2,
                 }
     #ELIMINATE.setdefault(0, lambda x: False)
