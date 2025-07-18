@@ -1,5 +1,5 @@
 """
-Class where to save the mapping graph, which is saved
+Singleton class of the SSSOM mapping graph, which is saved
 in a distinct file from the output ontology.
 
 Formerly adding SynonymPair entities to the output ontology,
@@ -70,6 +70,7 @@ class MappingGraph():
                     decisive_score_name: str,
                     justification_string: str = "",
                     is_human_validation: bool = False,
+                    validator_name: str = "",
                     predicate: Node = SKOS.exactMatch):
         """
         mapping_uri: the CandidatePair's uri.
@@ -80,10 +81,11 @@ class MappingGraph():
         mapping_tool: what tool generated this mapping.
         justification_string: written by reviewer or by a validation tool.
         is_human_validation: whether it was validated by a reviewer.
+        validator_name: the name of the validator.
         predicate: relation added between the two entities.
         """
-        self.bind_namespace(entity1.n3)
-        self.bind_namespace(entity2.n3)
+        self.bind_namespace(entity1.n3())
+        self.bind_namespace(entity2.n3())
         decisive_score = scores[decisive_score_name]
         if is_human_validation:
             justification_source = self._SEMAPV.ManualMappingCuration
@@ -97,6 +99,7 @@ class MappingGraph():
         self._graph.add((mapping_uri, self._SSSOM.similarity_score, Literal(decisive_score, datatype=XSD.float)))
         self._graph.add((mapping_uri, self._SSSOM.similarity_measure, Literal(decisive_score_name, datatype=XSD.string)))
         self._graph.add((mapping_uri, RDFS.comment, Literal(justification_string, datatype=XSD.string)))
+        self._graph.add((mapping_uri, self._SSSOM.reviewer_label, Literal(validator_name, datatype=XSD.string)))
         self._graph.add((mapping_uri, self._SSSOM.mapping_tool, Literal("FacilityList/merge.py", datatype=XSD.string)))
         self._graph.add((mapping_uri, self._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
 

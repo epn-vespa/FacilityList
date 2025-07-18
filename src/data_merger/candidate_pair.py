@@ -232,7 +232,8 @@ class CandidatePair():
                                   scores = self.scores,
                                   decisive_score_name = decisive_score,
                                   justification_string = justification,
-                                  is_human_validation = human_validation)
+                                  is_human_validation = human_validation,
+                                  validator_name = OLLAMA_MODEL)
 
 
     def __eq__(self,
@@ -937,7 +938,7 @@ class CandidatePairsMapping():
     @timeit
     def disambiguate(self,
                      human_validation: bool,
-                     generate_dataset: bool = True):
+                     generate_dataset: bool = False):
         """
         Disambiguation algorithm: find the best global score,
         create a Synonym Set if high enough until stop.
@@ -1193,7 +1194,7 @@ class CandidatePairsMapping():
                 scores = np.delete(scores, x, axis = 0)
                 scores = np.delete(scores, y, axis = 1)
                 self.admit(best_candidate_pair,
-                           decisive_score = f"{OLLAMA_MODEL} validation",
+                           decisive_score = "global",
                            justification = justification,
                            human_validation = False)
                 n_success += 1
