@@ -45,7 +45,7 @@ def timeall(func):
 
 def printtimes():
     global times
-    if times:
+    if times is not None and times:
         # Sort on times
         times = sorted(times.items(), key = lambda x: x[1])
         for func_name, time in times:

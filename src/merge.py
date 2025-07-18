@@ -463,7 +463,6 @@ class Merger():
                                                     human_validation = human_validation)
 
 
-    @timeit
     def write(self):
         print(f"Writing the result ontology into {self.output_dir}...")
         self.graph.add_metadata(self._description)
