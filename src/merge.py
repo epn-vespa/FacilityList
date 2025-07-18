@@ -299,11 +299,11 @@ class Merger():
                         print("Only discriminant scores. No disambiguation required. Returning.")
                         del(CPM)
                         return
-                    CPM.disambiguate(human_validation)
+                    CPM.disambiguate(direct_validation, human_validation)
                     self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
                                          f"with scores: {scores_str}\n"
                 else:
-                    CPM.disambiguate(human_validation)
+                    CPM.disambiguate(direct_validation, human_validation)
                 del(CPM)
         except InterruptedError:
             # CPM.save_json(self.execution_id)

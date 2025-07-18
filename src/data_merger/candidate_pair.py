@@ -838,7 +838,7 @@ class CandidatePairsMapping():
             return State.ELIMINATED
         elif ScorerLists.ADMIT.get(score, lambda x: False)(score_value):
             # Add Candidate Pair to graph for traceability
-            candidate_pair.add_score(score_name = score.NAME, score = score_value)
+            candidate_pair.add_score(score.NAME, score_value)
             self.admit(candidate_pair,
                        decisive_score = score.NAME,
                        no_validation = True, # No need to validate
@@ -986,8 +986,6 @@ class CandidatePairsMapping():
             print("Only NaN in scores. All candidate pairs were eliminated beforehand. No disambiguation to perform.")
             return
 
-        scores = self._2d_standardization(scores, max_iter = 2)
-
         if generate_dataset:
             self.generate_dataset(scores)
             return
@@ -995,6 +993,8 @@ class CandidatePairsMapping():
         if no_validation:
             self.no_validation(scores)
             return
+
+        # scores = self._2d_standardization(scores, max_iter = 2)
 
         # Human validation
         if human_validation:
@@ -1476,7 +1476,7 @@ class CandidatePairsMapping():
     @timeall
     def no_validation(self,
                       scores: np.array,
-                      threshold: float = 0.6):
+                      threshold: float = 0.21):
 
         score = np.nanargmax(scores)
         while len(scores) and score > threshold:
@@ -1484,8 +1484,6 @@ class CandidatePairsMapping():
                 break
             # Count non nan
             left = np.sum(np.where(np.isnan(scores), 0, 1))
-            print(f"\n\n\tThere are {left} candidate pairs to review.")
-
             x, y = np.unravel_index(np.nanargmax(scores), scores.shape)
             score = scores[x][y]
 

@@ -55,7 +55,6 @@ class MappingGraph():
         Keyword arguments:
         namespace -- corresponds to the source list's namespace (AAS, NAIF...)
         """
-        print("namespace=", namespace)
         namespace_uri = Namespace(str(self._OBS)[:-1] + "/" + namespace + "#")
 
         # Bind namespace if not binded yet (override = False)
