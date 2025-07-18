@@ -188,6 +188,7 @@ class Merger():
                                    scores: set[Score],
                                    types: set[str] = None,
                                    checkpoint_id: str = None,
+                                   direct_validation: bool = False,
                                    human_validation: bool = False):
         """
         Compute a mapping between two lists and disambiguate.
@@ -245,12 +246,12 @@ class Merger():
                             print("Only discriminant scores. No disambiguation required. Returning.")
                             del(CPM)
                             continue
-                        CPM.disambiguate(human_validation)
+                        CPM.disambiguate(direct_validation, human_validation)
                         self._description += f"mapping on: {list1.NAMESPACE}, {list2.NAMESPACE}," + \
                                              f"with scores: {scores_str}\n"
                         scores_str = []
                     else:
-                        CPM.disambiguate(human_validation)
+                        CPM.disambiguate(direct_validation, human_validation)
                     del(CPM)
             else:
                 # Types are partially known or unknown in at least one of both lists
@@ -316,7 +317,8 @@ class Merger():
     def merge_mapping(self,
                       conf_file: str = "",
                       checkpoint_id: str = None,
-                      human_validation: bool = False):
+                      human_validation: bool = False,
+                      direct_validation: bool = False):
         """
         Define the merging strategy (merging order).
 
@@ -457,6 +459,7 @@ class Merger():
                                                     scores = scores,
                                                     types = types,
                                                     checkpoint_id = checkpoint_id,
+                                                    direct_validation = direct_validation,
                                                     human_validation = human_validation)
 
 
@@ -488,6 +491,7 @@ def main(input_ontologies: list[str] = [],
          limit: int = -1,
          merging_strategy_file: str = "",
          checkpoint_id: str = None,
+         direct_validation: bool = False,
          human_validation: bool = False):
     merger = Merger(input_ontologies,
                     output_dir,
@@ -497,6 +501,7 @@ def main(input_ontologies: list[str] = [],
     merger.merge_identifiers()
     merger.merge_mapping(conf_file = merging_strategy_file,
                          checkpoint_id = checkpoint_id,
+                         direct_validation = direct_validation,
                          human_validation = human_validation)
 
     # /!\ Save the synonym sets in the graph (do not remove)
@@ -552,10 +557,17 @@ if __name__ == "__main__":
                         help = "Restart scores computation & merging from a previous checkpoint.")
 
 
+    parser.add_argument("-d",
+                        "--direct-validation",
+                        dest = "direct_validation",
+                        action = "store_true",
+                        help = "Validate candidate pairs directly, without reviewing them.")
+
+
     parser.add_argument("--human-validation",
                         dest = "human_validation",
                         action = "store_true",
-                        help = "Disambiguate manually after score computation (use for test purpose).")
+                        help = "Disambiguate manually after score computation.")
 
 
 
@@ -566,4 +578,5 @@ if __name__ == "__main__":
          args.limit,
          args.merging_strategy_file,
          args.checkpoint,
+         args.direct_validation,
          args.human_validation)

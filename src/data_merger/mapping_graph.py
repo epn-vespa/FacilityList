@@ -8,7 +8,7 @@ created from a validated CandidatePair.
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-from rdflib import Graph, URIRef, Namespace, Node, Literal, XSD, SKOS, RDFS
+from rdflib import Graph, URIRef, Namespace, Node, Literal, XSD, SKOS, RDFS, RDF
 from pathlib import Path
 
 from datetime import datetime
@@ -70,6 +70,7 @@ class MappingGraph():
                     decisive_score_name: str,
                     justification_string: str = "",
                     is_human_validation: bool = False,
+                    no_validation: bool = False,
                     validator_name: str = "",
                     predicate: Node = SKOS.exactMatch):
         """
@@ -81,6 +82,7 @@ class MappingGraph():
         mapping_tool: what tool generated this mapping.
         justification_string: written by reviewer or by a validation tool.
         is_human_validation: whether it was validated by a reviewer.
+        no_validation: if the candidate pair were not reviewed.
         validator_name: the name of the validator.
         predicate: relation added between the two entities.
         """
@@ -89,19 +91,23 @@ class MappingGraph():
         decisive_score = scores[decisive_score_name]
         if is_human_validation:
             justification_source = self._SEMAPV.ManualMappingCuration
+        elif no_validation:
+            justification_source = None
         else:
             justification_source = self._SEMAPV.LexicalMatching
 
+        self._graph.add((mapping_uri, RDF.type, self._SSSOM.Mapping))
         self._graph.add((mapping_uri, self._SSSOM.predicate_id, predicate))
         self._graph.add((mapping_uri, self._SSSOM.object_id,  entity1))
         self._graph.add((mapping_uri, self._SSSOM.subject_id, entity2))
-        self._graph.add((mapping_uri, self._SSSOM.justification, justification_source))
         self._graph.add((mapping_uri, self._SSSOM.similarity_score, Literal(decisive_score, datatype=XSD.float)))
         self._graph.add((mapping_uri, self._SSSOM.similarity_measure, Literal(decisive_score_name, datatype=XSD.string)))
-        self._graph.add((mapping_uri, RDFS.comment, Literal(justification_string, datatype=XSD.string)))
-        self._graph.add((mapping_uri, self._SSSOM.reviewer_label, Literal(validator_name, datatype=XSD.string)))
         self._graph.add((mapping_uri, self._SSSOM.mapping_tool, Literal("FacilityList/merge.py", datatype=XSD.string)))
         self._graph.add((mapping_uri, self._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
+        if not no_validation:
+            self._graph.add((mapping_uri, self._SSSOM.justification, justification_source))
+            self._graph.add((mapping_uri, self._SSSOM.reviewer_label, Literal(validator_name, datatype=XSD.string)))
+            self._graph.add((mapping_uri, RDFS.comment, Literal(justification_string, datatype=XSD.string)))
 
         for score_name, score_value in scores.items():
             if score_value < 0:

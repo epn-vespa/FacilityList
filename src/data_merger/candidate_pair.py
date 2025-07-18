@@ -36,7 +36,7 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 # from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR, USERNAME
+from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR, USERNAME #type: ignore
 from utils.llm_connection import LLM
 from utils.performances import deprecated, timeall, timeit
 from utils.utils import clear_tmp
@@ -88,7 +88,6 @@ class CandidatePair():
         self._list2 = str(second.uri).split('#')[0].split('/')[-1]
 
         if uri is None:
-            uri_str = first.uri.replace('#', '-').replace('/', '_')
             uri = Graph().OBS[str(uuid.uuid4())]
             self._uri = uri
             # self._uri = str(uuid.uuid4())
@@ -156,6 +155,8 @@ class CandidatePair():
                   score_value: Union[float, int]):
         """
         Add a score to the candidate pair.
+        score_value must be between 0 and 1, but can also be -1 or -2
+        for compatibility scores (-1: compatible, -2: incompatible)
 
         Keyword arguments:
         score_name -- the name of the score (ex: "cos_similarity")
@@ -163,6 +164,8 @@ class CandidatePair():
         """
         if type(score_value) != float and type(score_value) != int:
             raise TypeError(f"score_value must be a float. Got {type(score_value)} instead.")
+        if (score_value < 0 or score_value > 1) and score_value != -1 and score_value != -2:
+            raise ValueError(f"score_value must be -1, -2 or a value between 0 and 1.")
         self._scores[score_name] = score_value
 
 
@@ -212,6 +215,7 @@ class CandidatePair():
     def admit(self,
               decisive_score: str,
               justification: str = None,
+              no_validation: bool = False,
               human_validation: bool = False):
         """
         Add a Candidate Pair in the graph. Use it after
@@ -221,6 +225,8 @@ class CandidatePair():
         Keyword arguments:
         decisive_score -- score on which the Synonym Set was decided
         justification -- text that explains why this decision was taken
+        no_validation -- if the candidate pair were not reviewed
+        human_validation -- if a human has validated the pair
         """
         graph = Graph()
 
@@ -228,6 +234,8 @@ class CandidatePair():
 
         if human_validation:
             validator_name = USERNAME
+        elif no_validation:
+            validator_name = None
         else:
             validator_name = OLLAMA_MODEL
 
@@ -238,6 +246,7 @@ class CandidatePair():
                                   decisive_score_name = decisive_score,
                                   justification_string = justification,
                                   is_human_validation = human_validation,
+                                  no_validation = no_validation,
                                   validator_name = validator_name)
 
 
@@ -490,6 +499,7 @@ class CandidatePairsManager():
 
             # Add Candidate Pair to graph for traceability
             candidate_pair.admit(decisive_score = score.NAME,
+                                 no_validation = True, # No need to validate
                                  human_validation = False)
             SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
                                                candidate_pair.member2)
@@ -831,6 +841,7 @@ class CandidatePairsMapping():
             candidate_pair.add_score(score_name = score.NAME, score = score_value)
             self.admit(candidate_pair,
                        decisive_score = score.NAME,
+                       no_validation = True, # No need to validate
                        human_validation = False)
             return State.ADMITTED
 
@@ -842,6 +853,7 @@ class CandidatePairsMapping():
               candidate_pair: CandidatePair,
               decisive_score: str,
               justification: str = "",
+              no_validation: bool = False,
               human_validation: bool = False
               ):
         """
@@ -856,6 +868,7 @@ class CandidatePairsMapping():
         """
         candidate_pair.admit(decisive_score = decisive_score,
                              justification = justification,
+                             no_validation = no_validation,
                              human_validation = human_validation)
         SynonymSetManager._SSM.add_synpair(candidate_pair.member1,
                                            candidate_pair.member2)
@@ -942,6 +955,7 @@ class CandidatePairsMapping():
 
     @timeit
     def disambiguate(self,
+                     no_validation: bool,
                      human_validation: bool,
                      generate_dataset: bool = False):
         """
@@ -975,13 +989,16 @@ class CandidatePairsMapping():
         scores = self._2d_standardization(scores, max_iter = 2)
 
         if generate_dataset:
-            self.direct_validation(scores)
+            self.generate_dataset(scores)
+            return
+
+        if no_validation:
+            self.no_validation(scores)
             return
 
         # Human validation
         if human_validation:
             self.human_validation(scores)
-
 
         # LLM validation
         else:
@@ -1201,6 +1218,7 @@ class CandidatePairsMapping():
                 self.admit(best_candidate_pair,
                            decisive_score = "global",
                            justification = justification,
+                           no_validation = False,
                            human_validation = False)
                 n_success += 1
                 n_fails_in_a_row = 0
@@ -1267,13 +1285,10 @@ class CandidatePairsMapping():
 
 
     @timeall
-    def direct_validation(self,
-                          scores: np.array):
+    def generate_dataset(self,
+                         scores: np.array):
         """
-        Do not ask for the user or LLM to judge the Candidate Pairs,
-        validate the highest score until reaching the stopping condition.
-
-        Use to evaluate the scores system compared to the scores + LLM review.
+        Generate CSV dataset of candidate pairs from the 1000's highest scores.
         """
         flat_scores = scores.ravel()
         no_nan = ~np.isnan(flat_scores)
@@ -1297,7 +1312,7 @@ class CandidatePairsMapping():
         else:
             ent_type = self._ent_type1
         with open(f"saved_pairs_{self.list1.NAMESPACE}_{self.list2.NAMESPACE}_{'-'.join(ent_type)}.tsv", "w") as file:
-            res = "Mireille\tSébastien\tMarkus\tBaptiste\tLaura\tsemantic score\tEntity1\tEntity2\tEntity1 more information\tEntity2 more information\n"
+            res = "semantic score\tEntity1\tEntity2\tEntity1 more information\tEntity2 more information\n"
             exclude = ["exact_match", "Parent", "modified", "deprecated", "type_confidence", "location_confidence"]
             for score, (x, y) in results:
                 candidate_pair = self._mapping[x][y]
@@ -1316,7 +1331,7 @@ class CandidatePairsMapping():
                 entity2_repr = entity2_repr.replace('"', "'").replace("\n", " ")
                 entity1_string = entity1.to_string(language = "en", exclude = exclude).replace('"', "'").replace("\n", " ")
                 entity2_string = entity2.to_string(language = "en", exclude = exclude).replace('"', "'").replace("\n", " ")
-                res += f"\t\t\t\t\t{score}\t\"{entity1_repr}\"\t\"{entity2_repr}\"\t\"{entity1_string}\"\t\"{entity2_string}\"\n"
+                res += f"{score}\t\"{entity1_repr}\"\t\"{entity2_repr}\"\t\"{entity1_string}\"\t\"{entity2_string}\"\n"
             file.write(res)
 
 
@@ -1395,6 +1410,7 @@ class CandidatePairsMapping():
             scores = np.delete(scores, y, axis = 1)
             self.admit(best_candidate_pair,
                        decisive_score = "global",
+                       no_validation = False,
                        human_validation = True)
 
 
@@ -1455,6 +1471,31 @@ class CandidatePairsMapping():
                 if i == 3:
                     break # Only print 3 lines per attr
         return res
+
+
+    @timeall
+    def no_validation(self,
+                      scores: np.array,
+                      threshold: float = 0.6):
+
+        score = np.nanargmax(scores)
+        while len(scores) and score > threshold:
+            if np.isnan(scores).all():
+                break
+            # Count non nan
+            left = np.sum(np.where(np.isnan(scores), 0, 1))
+            print(f"\n\n\tThere are {left} candidate pairs to review.")
+
+            x, y = np.unravel_index(np.nanargmax(scores), scores.shape)
+            score = scores[x][y]
+
+            best_candidate_pair = self._mapping[x][y]
+            scores = np.delete(scores, x, axis = 0)
+            scores = np.delete(scores, y, axis = 1)
+            self.admit(best_candidate_pair,
+                       decisive_score = "global",
+                       no_validation = True,
+                       human_validation = False)
 
     @timeit
     def _disambiguate_discriminant(self,
