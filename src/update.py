@@ -147,6 +147,7 @@ class Updater():
 
             # Add triple <subj, pred, obj>
             subj = identifier
+
             for predicate, obj in features.items():
                 self.graph.add((subj, predicate, obj),
                                 extractor = extractor)
@@ -175,11 +176,11 @@ class Updater():
         O = "other, generic"
 
         COMMUNITIES = {
-                "A": {"label": A, "alliance": "IVOA"},
-                "H": {"label": H, "alliance": "IHDEA"},
-                "G": {"label": G, "alliance": "OGC"},
-                "P": {"label": P, "alliance": "IPDA"},
-                "O": {"label": O}}
+                A: {"label": A, "alliance": "IVOA"},
+                H: {"label": H, "alliance": "IHDEA"},
+                G: {"label": G, "alliance": "OGC"},
+                P: {"label": P, "alliance": "IPDA"},
+                O: {"label": O}}
 
         SOURCES = {
             AasExtractor.URI: {"url": AasExtractor.URL,
