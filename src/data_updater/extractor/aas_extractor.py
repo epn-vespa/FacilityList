@@ -296,7 +296,8 @@ class AasExtractor(Extractor):
                         data["waveband"].append(waveband)
 
             # alt labels
-            alt_labels.pop(facility_name)
+            if facility_name in alt_labels:
+                alt_labels.remove(facility_name)
             if alt_labels:
                 data["alt_label"] = alt_labels
 
