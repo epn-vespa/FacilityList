@@ -248,7 +248,6 @@ class CSVJsonGenerator():
                             values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
 
         children_by_broader = defaultdict(list)
-        broader_by_children = defaultdict(list)
 
         # First, we feed the children & broader dicts
         for term, values in self.csv_res.items():
@@ -257,9 +256,9 @@ class CSVJsonGenerator():
                 if relation.startswith('skos:broader'):
                     broader = re.findall(r'\((.+)\)', relation)[0]
                     children_by_broader[broader].append(term)
-                    broader_by_children[term].append(broader)
                     # Remove broader from more_relations
                     values["more_relations"] = values["more_relations"].replace(relation, "") # Remove this broader relation
+                    break # TODO test
 
         csv_res = []
         already_in = set()
@@ -272,7 +271,6 @@ class CSVJsonGenerator():
             entity["level"] = 1
             csv_res.append(entity)
         self.csv_res = csv_res
-
 
 
     def get_recursive(self, children_by_broader, broader, csv_res: list, already_in: set, level: int = 1):

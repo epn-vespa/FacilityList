@@ -36,7 +36,7 @@ from data_merger.entity import Entity
 from data_updater.extractor.extractor import Extractor
 # from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
-from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR
+from config import DATA_DIR, OLLAMA_MODEL, CACHE_DIR, TMP_DIR, USERNAME
 from utils.llm_connection import LLM
 from utils.performances import deprecated, timeall, timeit
 from utils.utils import clear_tmp
@@ -226,6 +226,11 @@ class CandidatePair():
 
         mapping_graph = MappingGraph()
 
+        if human_validation:
+            validator_name = USERNAME
+        else:
+            validator_name = OLLAMA_MODEL
+
         mapping_graph.add_mapping(self.uri,
                                   self.member1.uri,
                                   self.member2.uri,
@@ -233,7 +238,7 @@ class CandidatePair():
                                   decisive_score_name = decisive_score,
                                   justification_string = justification,
                                   is_human_validation = human_validation,
-                                  validator_name = OLLAMA_MODEL)
+                                  validator_name = validator_name)
 
 
     def __eq__(self,
@@ -1389,7 +1394,7 @@ class CandidatePairsMapping():
             scores = np.delete(scores, x, axis = 0)
             scores = np.delete(scores, y, axis = 1)
             self.admit(best_candidate_pair,
-                       decisive_score = "human validation",
+                       decisive_score = "global",
                        human_validation = True)
 
 
