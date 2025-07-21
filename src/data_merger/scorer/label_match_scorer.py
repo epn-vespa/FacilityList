@@ -25,7 +25,8 @@ class LabelMatchScorer(Score):
     def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
-        Return 1 if any of the labels match, else 0.
+        Return 1 if any of the labels match, else -1.
+        -1 is a negative number so it will not influence the global score.
 
         Keyword arguments:
         entity1 -- reference entity
@@ -48,4 +49,4 @@ class LabelMatchScorer(Score):
                 label2 = unidecode(label2).lower()
                 if label1 == label2:
                     return 1
-        return 0
+        return -1
