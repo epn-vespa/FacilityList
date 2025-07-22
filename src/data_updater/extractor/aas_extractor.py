@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 from data_updater import entity_types
 from data_updater.extractor.data_fixer import fix
-from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_size, merge_into, cut_aka
+from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_aperture, merge_into, cut_aka
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
 from utils.llm_connection import LLM
@@ -139,10 +139,11 @@ class AasExtractor(Extractor):
             # Add location to data dict
             location = row_data["location"]
             if location:
+                # Remove "and Canary Islands" and "& Hawaii"
                 if ' & ' in location:
-                    data["location"] = [l.strip() for l in location.split(' & ')]
+                    data["location"] = location.split(' & ')[0]
                 elif ' and 'in location:
-                    data["location"] = [l.strip() for l in location.split(' and ')]
+                    data["location"] = location.split(' and ')[0]
                 else:
                     data["location"] = [location]
                 # TODO get latitude & longitude from location
@@ -205,12 +206,12 @@ class AasExtractor(Extractor):
 
 
             # Get the size of the facility
-            label_without_size, size = get_size(label_without_part_of)
-            if size:
-                data["size"] = size
+            label_without_aperture, aperture = get_aperture(label_without_part_of)
+            if aperture:
+                data["aperture"] = aperture
 
             # Get the acronym
-            label_without_acronyms, label_acronym = cut_acronyms(label_without_size)
+            label_without_acronyms, label_acronym = cut_acronyms(label_without_aperture)
             if label_acronym:
                 # get other labels without any acronyms too
                 label_without_acronyms, _ = cut_acronyms(facility_name)

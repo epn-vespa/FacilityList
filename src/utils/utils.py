@@ -13,7 +13,8 @@ import math
 import os
 import atexit
 
-from typing import Optional, Tuple, List
+from typing import Optional, Tuple, List, Union
+from collections import defaultdict
 from urllib.parse import quote
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
@@ -143,24 +144,87 @@ def cut_aka(label: str) -> Tuple[str]:
     return label, ""
 
 
-def get_size(label: str) -> str:
+def get_aperture(label: str) -> Tuple[str, set[str]]:
     """
-    Get the size of the facility from the label (in AAS & SPASE).
-    Return the size and the label without the size.
+    Get the aperture of the facility from the label (in AAS & SPASE).
+    Return label without apertures and apertures string converted to meters.
 
     Troubleshooting:
-        MM (or mm) is not for millimeter (see SPASE)
+        MM (or mm) is not for millimeter but for magnometer (see SPASE).
 
     Keyword arguments:
     label -- the label to extract the size from.
     """
-    size = ""
-    sizes = re.findall(r"(\d+)([\.\,]\d+)? ?(cm|mm|m|km|MM|CM|M|KM)", label)
-    if sizes:
-        for s in sizes:
-            size += ''.join(s)
-    label_without_size = re.sub(size, "", label).strip()
-    return clean_string(label_without_size), size
+    aperture_lst = []
+    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(cm|m|CM|M| ?inche?s?)\b", label.lower())
+    if apertures:
+        for s in apertures:
+            aperture_lst.append(''.join(s))
+    result = set()
+    ms = set() # meter values
+    inches = defaultdict(set)
+    for aperture in aperture_lst:
+        # Remove apertures from label and convert to meters.
+        # Merge apertures that have rounded identical values after conversion
+        label = re.sub(aperture, "", label).strip()
+        aperture = aperture.lower()
+        value = extract_number(aperture)
+        if aperture.endswith("inch") or aperture.endswith("inches"):
+            value = convert_to_meters(value, "inch")
+            inches[round(value, ndigits = 1)].add(round(value, ndigits=2))
+            inches[round(value, ndigits = 0)].add(round(value, ndigits=2))
+            inches[value.__trunc__()].add(round(value, ndigits=2))
+        elif aperture.endswith("cm"):
+            value = convert_to_meters(value, "cm")
+            ms.add(value)
+        else:
+            ms.add(round(value, ndigits = 2))
+        result.add(round(value, ndigits = 2))
+    # label without apertures & apertures list
+
+    # If there were cm or m and inches, remove the inches value
+    # if they were close enough after rounding or truncation.
+    for value in ms:
+        if value in inches:
+            for value2 in inches[value]:
+                result.remove(value2)
+    result = {str(r) + 'm' for r in result}
+    return clean_string(label), result
+
+
+def extract_number(string: str) -> float:
+    """
+    Extract a number (float or int) from a string.
+    Only for positive numbers.
+
+    Keyword arguments:
+    string -- extract number from this string
+    """
+    value = re.findall(r"(\d+)([\.\,]\d+)?", string)
+    value = float(''.join(value[0]))
+    return value
+
+
+def convert_to_meters(value: Union[float, str],
+                      unit: str = "") -> float:
+    """
+    Convert an unit to meters.
+
+    Keyword arguments:
+    value -- string with value+unit or only float value
+    unit -- if unit is not in value, use this parameter
+    """
+    if type(value) == str:
+        value_float = extract_number(value)
+        if not unit:
+            unit = value.removeprefix(value_float).strip()
+    else:
+        value_float = value
+    if unit.lower() in ["inch", "inches"]:
+        return value_float * 0.0254
+    elif unit.lower() == "cm":
+        return value_float / 100
+    return value_float # Could not convert
 
 
 def cut_part_of(label: str):
