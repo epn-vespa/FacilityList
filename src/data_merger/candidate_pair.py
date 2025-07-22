@@ -957,7 +957,7 @@ class CandidatePairsMapping():
     def disambiguate(self,
                      no_validation: bool,
                      human_validation: bool,
-                     generate_dataset: bool = False):
+                     generate_dataset: bool = True):
         """
         Disambiguation algorithm: find the best global score,
         create a Synonym Set if high enough until stop.
@@ -1296,7 +1296,7 @@ class CandidatePairsMapping():
 
         indexes_no_nan = np.where(no_nan)[0]
 
-        top_k = min(1000, scores.size)
+        top_k = min(1000, flat_scores_no_nan.size)
 
         indexes = np.argpartition(flat_scores_no_nan, -top_k)[-top_k:]
         sorted_indexes = indexes[np.argsort(-flat_scores_no_nan[indexes])]
@@ -1473,17 +1473,25 @@ class CandidatePairsMapping():
         return res
 
 
-    @timeall
     def no_validation(self,
                       scores: np.array,
-                      threshold: float = 0.21):
+                      threshold: float = 0.25):
+        """
+        Takes candidate pairs which have a score above
+        the threshold, iteratively, by removing other pairs that
+        contain the pair's members, and without validating any
+        pair.
+        This function quickly creates mappings with no validation,
+        it relies entirely on the semantic scores.
 
+        Keyword arguments:
+        scores -- a 2D array of the scores of the candidate pairs
+        threshold -- minimum accepting score value
+        """
         score = np.nanargmax(scores)
         while len(scores) and score > threshold:
             if np.isnan(scores).all():
                 break
-            # Count non nan
-            left = np.sum(np.where(np.isnan(scores), 0, 1))
             x, y = np.unravel_index(np.nanargmax(scores), scores.shape)
             score = scores[x][y]
 
