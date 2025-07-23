@@ -2,6 +2,11 @@
 IauMpcExtractor scraps the IauMPC webpage and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
 
+Troubleshooting:
+    Some labels appear twice in the list. We have to split them
+    by using the code instead of the label in the URIs.
+    To merge them instead, it is possible to use utils' merge_into function.
+
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
@@ -58,12 +63,14 @@ class IauMpcExtractor(Extractor):
         return self.NAMESPACE
 
 
-    def extract(self) -> dict:
+    def extract(self,
+                from_cache: bool = False) -> dict:
         """
         Extract the page content into a dictionary.
         """
         content = CacheManager.get_page(IauMpcExtractor.URL,
-                                        list_name = self.CACHE)
+                                        list_name = self.CACHE,
+                                        from_cache = from_cache)
 
         if not content:
             return dict()
@@ -138,9 +145,17 @@ class IauMpcExtractor(Extractor):
 
             # Internal references
             if obs_id:
-                data["code"] = obs_id # non-ontological identifier
+                data["code"] = [obs_id] # non-ontological identifiers
 
-            result[obs_name] = data
+            # Some obs facilities have the same name.
+            #if obs_name in result:
+                # Merge their data (probably a bad idea)
+                # merge_into(result[obs_name], data)
+                # Other solution: add the code for the second one
+                #result[obs_name + '-' + obs_id] = data
+            #else:
+            #    result[obs_name] = data
+            result[obs_name + '-' + obs_id] = data
         return result
 
 if __name__ == "__main__":

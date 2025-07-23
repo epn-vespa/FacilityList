@@ -156,7 +156,7 @@ def get_aperture(label: str) -> Tuple[str, set[str]]:
     label -- the label to extract the size from.
     """
     aperture_lst = []
-    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(cm|m|CM|M| ?inche?s?)\b", label.lower())
+    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(cm|m|km|CM|M|KM| ?inche?s?)\b", label.lower())
     if apertures:
         for s in apertures:
             aperture_lst.append(''.join(s))
@@ -412,6 +412,7 @@ def merge_into(newer_entity_dict: dict,
                prior_entity_dict: dict):
     """
     Merge data from the prior dict into the newer dict.
+    Only keep the most precise latitude & longitude.
 
     Keyword arguments:
     newer_entity_dict -- the entity dict to save data in
@@ -444,13 +445,20 @@ def merge_into(newer_entity_dict: dict,
                         old_value = newer_entity_dict[key]
                         if isinstance(old_value, list):
                             old_value = old_value[0]
-                        if len(str(value)) > len(str(old_value)):
+                        if (len(str(value)) > len(str(old_value)) and
+                            str(value).startswith(str(old_value))):
                             merge_into = [value]
+                        elif (len(str(old_value)) > len(str(value)) and
+                              str(old_value).startswith(str(value))):
+                            merge_into = [old_value]
                         elif len(str(value)) == len(str(old_value)):
-                            if value != 0.0:
-                                merge_into = [value]
+                            if value != old_value:
+                                merge_into = [value, old_value] # Keep both
                             else:
                                 merge_into = [old_value]
+                        elif value != old_value:
+                            # Keep both
+                            merge_into = [value, old_value]
                     else:
                         merge_into.append(value)
             newer_entity_dict[key] = merge_into
