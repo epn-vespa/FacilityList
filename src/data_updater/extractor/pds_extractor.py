@@ -13,7 +13,7 @@ from xml.etree import ElementTree as ET
 
 import re
 
-from utils.utils import merge_into
+from utils.utils import merge_into, get_aperture
 
 class PdsExtractor(Extractor):
     # List of documents to scrap
@@ -41,7 +41,8 @@ class PdsExtractor(Extractor):
                       "description": "description",
                       "naif_host_id": "NAIF_ID",
                       "alternate_id": "alt_label",
-                      "alternate_title": "alt_label"}
+                      "alternate_title": "alt_label",
+                      "aperture": "aperture"}
 
     # List context products types to be retreived and the applicable subtypes
     # examples:
@@ -171,11 +172,17 @@ class PdsExtractor(Extractor):
                         continue
                     tag_str = PdsExtractor.FACILITY_ATTRS.get(tag_str, tag_str)
                     tag_text = re.sub("[\n ]+", " ", tag_text)
-
+                    if tag_str == "aperture":
+                        unit = tag.attrib["unit"]
+                        tag_text = tag_text + unit
+                        # Convert to meters
+                        if unit != 'm':
+                            _, tag_text = get_aperture(tag_text)
+                             # get_aperture returns a set
+                            tag_text = list(tag_text)[0]
                     if tag_str == "label":
                         data["label"] = tag_text
-                        continue
-                    if tag_str in data:
+                    elif tag_str in data:
                         data[tag_str].add(tag_text)
                     else:
                         data[tag_str] = {tag_text}
