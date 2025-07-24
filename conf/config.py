@@ -45,7 +45,8 @@ else:
     port = 11435
     try:
         OLLAMA_HOST = f"http://localhost:{port}"
-        OLLAMA_MODEL = "mistral-large:latest" #"llama3.3:latest" # "deepseek-v3:latest"
+        OLLAMA_MODEL = "deepseek-v3:latest" # "mistral-large:latest" #"llama3.3:latest"
+        OLLAMA_MODEL_NAME = "deepseek-v3:671b-q4_K_M"
         # curl to this port
         requests.get(OLLAMA_HOST)
         print(f"Successfully connected to armstrong's ollama. Using model {OLLAMA_MODEL}.")
@@ -59,10 +60,6 @@ OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
 # LLM computation result files
 LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
 LLM_EMBEDDINGS_FILE = CACHE_DIR / f"llm_embeddings_{OLLAMA_MODEL}.pkl"
-
-
-# precision of longitude/latitude comparison
-precision = 3 # km distance ? digits after comma ?
 
 
 # HuggingFace, sentence transformers environment variables

@@ -85,8 +85,8 @@ class MappingGraph():
         validator_name: the name of the validator.
         predicate: relation added between the two entities.
         """
-        self.bind_namespace(entity1.n3())
-        self.bind_namespace(entity2.n3())
+        self.bind_namespace(entity1.n3().rsplit('#', 1)[0] + '#')
+        self.bind_namespace(entity2.n3().rsplit('#', 1)[0] + '#')
         decisive_score = scores[decisive_score_name]
         if is_human_validation:
             justification_source = self._SEMAPV.ManualMappingCuration

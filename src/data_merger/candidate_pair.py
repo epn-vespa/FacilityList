@@ -957,7 +957,7 @@ class CandidatePairsMapping():
     def disambiguate(self,
                      no_validation: bool,
                      human_validation: bool,
-                     generate_dataset: bool = True):
+                     generate_dataset: bool = False):
         """
         Disambiguation algorithm: find the best global score,
         create a Synonym Set if high enough until stop.
@@ -1149,7 +1149,8 @@ class CandidatePairsMapping():
 
         # stop_at_n_fails = n_pairs_to_disambiguate // (len(scores) + len(scores[0])) + 1
         # Logarithmic value
-        stop_at_n_fails = int(500 * np.log(1 + 0.00001 * n_pairs_to_disambiguate))
+        # stop_at_n_fails = int(500 * np.log(1 + 0.00001 * n_pairs_to_disambiguate))
+        stop_at_n_fails = 40
 
         # std_dev
         std_dev = np.nanstd(scores)

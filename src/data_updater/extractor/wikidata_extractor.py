@@ -440,6 +440,8 @@ class WikidataExtractor(Extractor):
                 #"P2233": "semimajor_axis_of_orbit", # semi-major axis of an orbit
                 #"P2243": "apoapsis",
                 #"P2244": "periapsis",
+                #"P2151": "focal length",
+                #"P2067": "mass",
             }
 
             for property_id in property_items.keys():

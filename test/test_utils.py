@@ -8,7 +8,8 @@ class TestDigitScorer(unittest.TestCase):
 
 
     def test_get_aperture(self):
-        test = [("0.4 inches, 5.0m", {'0.01m', '5.0m'})]
+        test = [("0.4 inches, 5.0m", {'0.01m', '5.0m'}),
+                ("65cm", {'0.65m'})]
         for string, expected in test:
             _, res = get_aperture(string)
             assert(res == expected)
