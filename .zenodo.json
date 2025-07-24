@@ -1,0 +1,52 @@
+{
+    "creators": [
+        {
+            "name": "Fretel, Liza",
+            "orcid": "0009-0001-4600-9954",
+            "affiliation": "hhttps://ror.org/017zz7s54"
+        },
+        {
+            "name": "Debisschop, Laura",
+            "orcid": "0000-0003-4688-6575",
+            "affiliation": "https://ror.org/017zz7s54"
+        },
+        {
+            "name": "Cecconi, Baptiste",
+            "orcid": "0000-0001-7915-5571",
+            "affiliation": "https://ror.org/017zz7s54"
+        },
+        {
+            "name": "Louys, Mireille",
+            "orcid": "0000-0002-4334-1142",
+            "affiliation": "https://ror.org/00pg6eq24"
+        },
+        {
+            "name": "Perret, Emmanuelle",
+            "orcid": "0000-0002-4068-8175",
+            "affiliation": "https://ror.org/04xsj2p07"
+        },
+        {
+            "name": "Al-Ubaidi, Tarek",
+            "affiliation": "https://ror.org/002w0jp71"
+        }
+    ],
+
+    "license": "GPL-3.0",
+
+    "title": "epn-vespa/FacilityList",
+
+    "description": "Astronomy Observation Facilities Matcher",
+
+    "Notes": "This work has also been supported by: the Europlanet 2020 Research Infrastructure project, which received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 654208; the Europlanet 2024 Research Infrastructure project, which received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 871149; the FAIR-IMPACT project, which received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement no 101057344; and OPAL cascading grant from the the OSCARS project, which received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement no 101129751.",
+
+    "keywords": ["Instance mapping strategy", "Controlled Vocabularies", "FAIR Mapping", "Astronomy Observation Facilities"],
+
+    "communities": [
+        {"identifier": "Europlanet-VESPA"}
+    ],
+
+    "grants": [{"id": "654208"},
+               {"id": "871149"},
+               {"id": "101057344"},
+               {"id": "101129751"}]
+}
