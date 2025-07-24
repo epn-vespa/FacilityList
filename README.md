@@ -1,6 +1,5 @@
-# FacilityList: Observation Facilities Matcher
+# FacilityList: Astronomy Observation Facilities Matcher
 
-This activity is a joint effort of the EPN-VESPA, IVOA and IPDA projects.
 
 ## [data](data)
 
@@ -60,3 +59,10 @@ python merge.py -i input_ontology.ttl [options]
 | `-s`, `--merging-strategy`  | Path to the merging strategy config file. Default is `conf/merging_strategy.conf`.                                                     |
 | `-d`, `--direct-validation` | Skip manual review. Candidate matches will be validated automatically based on scores and logic.                                       |
 | `--human-validation`        | Enable human-in-the-loop disambiguation after scoring. This disables LLM-based validation.                                             |
+
+
+## Acknowledgments
+
+This activity is a joint effort of the EPN-VESPA, IVOA and IPDA projects.
+
+This work has also been supported by: the Europlanet 2020 Research Infrastructure project, which received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 654208; the Europlanet 2024 Research Infrastructure project, which received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 871149; the FAIR-IMPACT project, which received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement no 101057344; and OPAL cascading grant from the the OSCARS project, which received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement no 101129751.
