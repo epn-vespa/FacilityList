@@ -132,9 +132,10 @@ class AasExtractor(Extractor):
             facility_name = row_data["full facility name"].strip()
             if facility_name.startswith("Deprecated"):
                 continue
-            split_labels = facility_name.split('/')
-            facility_name = split_labels[0]
-            alt_labels.update(split_labels[1:])
+            # '/' are used to separate multiple broader entities
+            #split_labels = facility_name.split('/')
+            #facility_name = split_labels[0]
+            #alt_labels.update(split_labels[1:])
 
             # Add location to data dict
             location = row_data["location"]

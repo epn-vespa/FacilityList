@@ -429,7 +429,7 @@ class WikidataExtractor(Extractor):
                 "P625": "coordinate_location",
                 "P1619": "start_date", # date of official opening
                 "P571": "start_date", # time when an entity begins to exist. Not same as P1619.
-                # "P2044": "altitude", # elevation above see level
+                "P2044": "altitude", # elevation above see level
                 "P619": "launch_date", # UTC date of spacecraft launch
                 "P1427": "launch_place", # start point
                 "P856": "url", # official website
