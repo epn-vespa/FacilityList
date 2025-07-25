@@ -1,7 +1,7 @@
 #!/bin/python3
 
 """
-Perform merging between all lists.
+Perform mapping between lists following a mapping strategy.
 Compute scores between entities from the lists in the input ontology
 and create CandidatePair entities to save the similarity scores.
 Finally, group entities in a Synonym Set if their similarity score
@@ -320,7 +320,7 @@ class Merger():
                       human_validation: bool = False,
                       direct_validation: bool = False):
         """
-        Define the merging strategy (merging order).
+        Define the mapping strategy (mapping order).
 
         Compute a mapping between classes from namespaces two by two.
         Generates candidate pairs before performing disambiguation.
@@ -488,7 +488,7 @@ class Merger():
 def main(input_ontologies: list[str] = [],
          output_dir: str = "",
          limit: int = -1,
-         merging_strategy_file: str = "",
+         mapping_strategy_file: str = "",
          checkpoint_id: str = None,
          direct_validation: bool = False,
          human_validation: bool = False):
@@ -498,7 +498,7 @@ def main(input_ontologies: list[str] = [],
     atexit.register(merger.print_execution_id)
 
     merger.merge_identifiers()
-    merger.merge_mapping(conf_file = merging_strategy_file,
+    merger.merge_mapping(conf_file = mapping_strategy_file,
                          checkpoint_id = checkpoint_id,
                          direct_validation = direct_validation,
                          human_validation = human_validation)
@@ -512,8 +512,9 @@ if __name__ == "__main__":
 
     parser = ArgumentParser(
         prog = "merge.py",
-        description = "Compute scores between entities from different lists " +
-            "and create SynonymPairs & SynonymSets into an output ontology.")
+        description = "Compute scores between entities from different lists." +
+            "Add SynonymSets into the output ontology. Create an auxiliary " +
+            "SSSOM mapping ontology.")
 
     parser.add_argument("-i",
                         "--input-ontologies",
@@ -531,20 +532,21 @@ if __name__ == "__main__":
                         default = datetime.isoformat(datetime.now()),
                         type = str,
                         required = False,
-                        help = "Output ontology folder to save the merged ontology.")
+                        help = "Output ontology folder to save the merged ontology " +
+                        "with its SSSOM ontology.")
 
     parser.add_argument("-l",
                         "--limit",
                         default = -1,
                         type = int,
                         required = False,
-                        help = "Set a limit to fasten tests. " +
+                        help = "Set an entity limit to fasten tests. " +
                         "Only N x N entities will be mapped between each pair of lists.")
 
     parser.add_argument("-s",
-                        "--merging-strategy",
-                        dest = "merging_strategy_file",
-                        default = CONF_DIR / "merging_strategy.conf",
+                        "--mapping-strategy",
+                        dest = "mapping_strategy_file",
+                        default = CONF_DIR / "mapping_strategy.conf",
                         type = str,
                         required = False,
                         help = "Merging strategy file name.")
@@ -553,7 +555,7 @@ if __name__ == "__main__":
                         "--checkpoint",
                         default = None,
                         type = str,
-                        help = "Restart scores computation & merging from a previous checkpoint.")
+                        help = "Restart scores computation & mapping from a previous checkpoint.")
 
 
     parser.add_argument("-d",
@@ -566,7 +568,7 @@ if __name__ == "__main__":
     parser.add_argument("--human-validation",
                         dest = "human_validation",
                         action = "store_true",
-                        help = "Disambiguate manually after score computation.")
+                        help = "Disambiguate manually after score computation. This will disable LLM validation.")
 
 
 
@@ -575,7 +577,7 @@ if __name__ == "__main__":
     main(args.input_ontologies,
          args.output_dir,
          args.limit,
-         args.merging_strategy_file,
+         args.mapping_strategy_file,
          args.checkpoint,
          args.direct_validation,
          args.human_validation)

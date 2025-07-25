@@ -19,7 +19,6 @@ from rdflib import Namespace
 from typing import List
 from argparse import ArgumentParser
 import os
-import pickle
 import sys
 
 from tqdm import tqdm
@@ -252,7 +251,7 @@ def main(lists: List[str],
 
 if __name__ == "__main__":
     parser = ArgumentParser(
-        prog = "updater.py",
+        prog = "update.py",
         description = "Download data from different lists and merge them into\
               an output ontology.")
 
