@@ -97,7 +97,8 @@ class PdsExtractor(Extractor):
         for context_type in PdsExtractor.CONTEXT_TYPES:
             url = PdsExtractor.URL + context_type
 
-            links = self._get_links_pds(url)
+            links = self._get_links_pds(url,
+                                        from_cache = from_cache)
 
             links = [link for link in links
                      if link.endswith(".xml") and not link.startswith("Collection")]
@@ -310,7 +311,8 @@ class PdsExtractor(Extractor):
 
 
     def _get_links_pds(self,
-                       pds_url_f: str) -> list:
+                       pds_url_f: str,
+                       from_cache: bool) -> list:
         """The get_links_pds function processes the provided pds_url
         and extracts the list of xml file links to context products.
 
@@ -319,7 +321,9 @@ class PdsExtractor(Extractor):
         """
 
         # get pds_url_f
-        content = CacheManager.get_page(pds_url_f, list_name = self.CACHE)
+        content = CacheManager.get_page(pds_url_f,
+                                        list_name = self.CACHE,
+                                        from_cache = from_cache)
 
         # parse content with BeautifulSoup
         soup = BeautifulSoup(content, "html.parser")
