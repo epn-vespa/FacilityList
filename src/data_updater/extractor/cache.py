@@ -81,6 +81,8 @@ class CacheManager():
                 content = CacheManager.post(url, data)
             if content:
                 CacheManager.save_cache(content, cache_path)
+        if not content:
+            print(f"Content could not be download for {url}.")
         return content
 
 

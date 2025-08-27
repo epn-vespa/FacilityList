@@ -74,10 +74,15 @@ class LLM():
                     'model': ollama_model,
                 }
         )
-        infos = response.json()['model_info']
-        architecture = infos['general.architecture']
-        context_length = infos[architecture + '.context_length']
-        self._context_length[ollama_model] = context_length
+        try:
+            infos = response.json()['model_info']
+            architecture = infos['general.architecture']
+            context_length = infos[architecture + '.context_length']
+            self._context_length[ollama_model] = context_length
+        except KeyError:
+            print(response.json()['error'])
+            print("To download an Ollama model, use 'ollama pull [model_name]'.")
+            exit(code=1)
         return context_length
 
 
