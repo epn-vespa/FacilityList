@@ -36,6 +36,8 @@ class ApertureScorer(Score):
         """
         apertures1 = entity1.get_values_for("aperture", unique = False)
         apertures2 = entity2.get_values_for("aperture", unique = False)
+        if not apertures1 or not apertures2:
+            return -1
         apertures1 = [convert_to_meters(extract_number(a)) for a in apertures1]
         apertures2 = [convert_to_meters(extract_number(a)) for a in apertures2]
 
