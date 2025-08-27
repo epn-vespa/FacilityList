@@ -20,7 +20,6 @@ from utils.performances import timeall
 from nltk.corpus import stopwords
 
 import re
-import pickle
 
 
 class TfIdfScorer(Score):
@@ -82,7 +81,10 @@ class TfIdfScorer(Score):
         repr1 = TfIdfScorer.vectorizer.transform([repr1])
         repr2 = TfIdfScorer.vectorizer.transform([repr2])
         sim = cosine_similarity(repr1, repr2)
-        return float(sim[0][0])
+        sim = float(sim[0][0])
+        if sim > 1:
+            sim = 1
+        return sim
 
 
     def preprocess(text: str) -> str:
