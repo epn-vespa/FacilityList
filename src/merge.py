@@ -357,7 +357,7 @@ class Merger():
                     extractors = extractors[:begin_types] + extractors[end_types+1:].strip()
                     except_types = set()
                     on_types = set()
-                    for i, type_ in enumerate(on_types_lst):
+                    for type_ in on_types_lst:
                         type_ = type_.strip()
                         if type_ == "all":
                             on_types = set(entity_types.ALL_TYPES)

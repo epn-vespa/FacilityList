@@ -163,9 +163,9 @@ class CandidatePair():
         score -- the float value (between 0 and 1)
         """
         if type(score_value) != float and type(score_value) != int:
-            raise TypeError(f"score_value must be a float. Got {type(score_value)} instead.")
+            raise TypeError(f"score_value must be a float. Got {type(score_value)} instead, for score {score_name}.")
         if (score_value < 0 or score_value > 1) and score_value != -1 and score_value != -2:
-            raise ValueError(f"score_value must be -1, -2 or a value between 0 and 1.")
+            raise ValueError(f"score_value must be -1, -2 or a value between 0 and 1. Got {score_value} instead, for score {score_name}.")
         self._scores[score_name] = score_value
 
 
@@ -1519,7 +1519,7 @@ class CandidatePairsMapping():
             if score not in scores:
                 continue
             i = 0
-            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {self._ent_type1}")
+            print(f"Computing {score.NAME} on {self._list1}, {self._list2} for {' '.join(self._ent_type1)}")
             print(f"0/{len(self._mapping)}")
             while i < len(self._mapping):
                 print(f"\033[F\033[{0}G {i+1}/{len(self._mapping)}")
