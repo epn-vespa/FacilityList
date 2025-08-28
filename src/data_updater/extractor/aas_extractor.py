@@ -344,6 +344,9 @@ class AasExtractor(Extractor):
             elif label.lower().endswith("mission"):
                 data["type"] = entity_types.MISSION
                 continue
+            elif "aperture" in data:
+                data["type"] = entity_types.TELESCOPE
+                continue
 
             if "location" in data:
                 for l in data["location"]:
