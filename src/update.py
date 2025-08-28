@@ -94,11 +94,11 @@ class Updater():
 
         for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
             # Get complete location information and add them to the features
-            if extractor: # Only for extracted entities
+            # Only for extracted ground entities
+            if extractor and (features["type_confidence"] != 1 or features["type"] not in entity_types.SPACE_TYPES):
                 location_info = dict()
                 ent_type = features.get("type", None)
                 part_of = None
-
                 if ent_type is not None and "is_part_of" in features:
                     if type(features["is_part_of"]) == list:
                         part_of_uri = None
