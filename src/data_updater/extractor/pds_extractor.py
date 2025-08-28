@@ -62,8 +62,9 @@ class PdsExtractor(Extractor):
              "mission": entity_types.MISSION,
              "investigation": entity_types.MISSION,
              "facility": entity_types.OBSERVATION_FACILITY,
-             "instrument": entity_types.INSTRUMENT
-             }
+             "instrument": entity_types.INSTRUMENT,
+             "instrument_host": entity_types.SPACECRAFT
+    }
 
     # No need to disambiguate the type with LLM.
     # Useful for merging strategy: when the type is ambiguous,
@@ -231,62 +232,39 @@ class PdsExtractor(Extractor):
                 # /!\ do not move this line earlier in the code as
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
+                data["type_confidence"] = 1
 
                 # result[data["label"] + '-' + data["type"]] = data
-                if data["label"] in result:
-                    merge_into(result[data["label"]], data)
+                if data["code"] in result:
+                    merge_into(result[data["code"]], data)
                     # Merge entities with the same label
                 else:
-                    result[data["label"]] = data
+                    result[data["code"]] = data
 
         # If the PDS identifier does not exists in the
         # extracted data, create a new entity with this
         # identifier.
-        pds_missing_ids = dict()
-        for key in result.copy().keys():
-            value = result[key]
+        for code in result.copy().keys():
+            value = result[code]
             if "has_part" in value:
                 for i, part in enumerate(value["has_part"]):
-                    if part in pds_references_by_id:
-                        part_label = pds_references_by_id[part]
-                        value["has_part"][i] = part_label
-                        if part_label not in result:
-                            # Create the missing referenced entity
-                            result[part_label] = {"label": part_label,
-                                                  "code": part}
-                    else:
-                        # Create the entity from the missing id.
-                        if part not in pds_missing_ids:
-                            data = self._create_entity_from_missing_id(part)
-                            if data["label"] == "individual.none":
-                                # Some entities refer to None
-                                value["has_part"][i] = None
-                                continue
-                            pds_missing_ids[part] = data
-                        value["has_part"][i] = pds_missing_ids[part]["label"]
+                    if part not in result:
+                        data = self._create_entity_from_missing_id(part)
+                        if data["label"] == "individual.none":
+                            # Some entities refer to None
+                            value["has_part"][i] = None
+                            continue
+                        result[part] = data#{"label": part_label,
+                                        #code": part}
             if "is_part_of" in value:
                 for i, part in enumerate(value["is_part_of"]):
-                    if part in pds_references_by_id:
-                        part_label = pds_references_by_id[part]
-                        value["is_part_of"][i] = part_label
-                        if not part_label in result:
-                            # Create the missing referenced entity
-                            result[part_label] = {"label": part_label,
-                                                  "code": part}
-                    else:
-                        # Create the entity from the missing id.
-                        if part not in pds_missing_ids:
-                            data = self._create_entity_from_missing_id(part)
-                            if data["label"] == "individual.none":
-                                # Some entities refer to None
-                                value["is_part_of"][i] = None
-                                continue
-                            pds_missing_ids[part] = data
-                        value["is_part_of"][i] = pds_missing_ids[part]["label"]
-
-        # If a PDS id is missing, add an entity for this code
-        for key, value in pds_missing_ids.items():
-            result[value["label"]] = value
+                    if part not in result:
+                        data = self._create_entity_from_missing_id(part)
+                        if data["label"] == "individual.none":
+                            # Some entities refer to None
+                            value["is_part_of"][i] = None
+                            continue
+                        result[part] = data
 
         return result
 
@@ -306,7 +284,7 @@ class PdsExtractor(Extractor):
         cat = cut[-2]
         data = {"label": label,
                 "code": identifier,
-                "type": self.TYPES[cat]}
+                "type": self.TYPES.get(cat, "")}
         return data
 
 
