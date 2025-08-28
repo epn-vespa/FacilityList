@@ -18,7 +18,7 @@ from rdflib import RDF, SKOS, URIRef, Literal
 
 from data_updater.extractor.extractor import Extractor
 from graph import Graph
-from data_merger.entity import Entity
+from data_mapper.entity import Entity
 from utils.performances import timeit
 
 class SynonymSet:

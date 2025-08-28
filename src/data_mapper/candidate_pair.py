@@ -25,14 +25,14 @@ import matplotlib.pyplot as plt
 
 from rdflib import RDF, URIRef
 from tqdm import tqdm
-from data_merger.mapping_graph import MappingGraph
-from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
+from data_mapper.mapping_graph import MappingGraph
+from data_mapper.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from graph import Graph
-from data_merger.scorer.score import Score
-from data_merger.scorer.scorer_lists import ScorerLists
-from data_merger.scorer.llm_embedding_scorer import LlmEmbeddingScorer
-from data_merger.synonym_set import SynonymSet, SynonymSetManager
-from data_merger.entity import Entity
+from data_mapper.scorer.score import Score
+from data_mapper.scorer.scorer_lists import ScorerLists
+from data_mapper.scorer.llm_embedding_scorer import LlmEmbeddingScorer
+from data_mapper.synonym_set import SynonymSet, SynonymSetManager
+from data_mapper.entity import Entity
 from data_updater.extractor.extractor import Extractor
 # from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
@@ -1062,17 +1062,17 @@ class CandidatePairsMapping():
 
 
 
+    #"All entities are cosmos observation facilities, no matter their name. "
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical similarities within observation facilities. " + \
         "You have to answer this questions: are those two entities the same ? " + \
-        "All entities are cosmos observation facilities, no matter their name. " + \
         "The entities' name and type can be different but they might still be the same. " + \
         "A satellite that is part of a mission, " + \
         "or telescope that is a part of an observatory, are distinct.\n" + \
         "Only select one choice from below:" + \
         "\nsame\ndistinct\n" + \
         "Reply with this format:\n" + \
-        "**<choice>**\n" + \
-        "<Justification (why do you think it is the good choice)>\n\n" + \
+        "**answer**\n" + \
+        "Justification (why do you think it is the good choice)\n\n" + \
         "Example:\n" + \
         "**same**\n" + \
         "both refer to the same observatory, just with slightly different naming conventions. therefore, they are the same entity.\n" + \
@@ -1104,6 +1104,7 @@ class CandidatePairsMapping():
                 "longitude",
                 "location",
                 "address", # Sometimes the label of an entity is related to its address
+                "modified"
                 ]
 
     LLM_VALIDATION = None

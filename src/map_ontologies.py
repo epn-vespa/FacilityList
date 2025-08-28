@@ -20,16 +20,16 @@ import os
 import sys
 
 from graph import Graph
-from data_merger.candidate_pair import CandidatePairsManager, CandidatePairsMapping
-from data_merger.identifier_merger import IdentifierMerger
-from data_merger.scorer.score import Score
-from data_merger.scorer.scorer_lists import ScorerLists
-from data_merger.scorer.type_incompatibility_scorer import TypeIncompatibilityScorer
-from data_merger.synonym_set import SynonymSetManager
-from data_merger.scorer.fuzzy_scorer import FuzzyScorer
-from data_merger.scorer.distance_scorer import DistanceScorer
-from data_merger.scorer.acronym_scorer import AcronymScorer
-from data_merger.mapping_graph import MappingGraph
+from data_mapper.candidate_pair import CandidatePairsManager, CandidatePairsMapping
+from data_mapper.identifier_merger import IdentifierMerger
+from data_mapper.scorer.score import Score
+from data_mapper.scorer.scorer_lists import ScorerLists
+from data_mapper.scorer.type_incompatibility_scorer import TypeIncompatibilityScorer
+from data_mapper.synonym_set import SynonymSetManager
+from data_mapper.scorer.fuzzy_scorer import FuzzyScorer
+from data_mapper.scorer.distance_scorer import DistanceScorer
+from data_mapper.scorer.acronym_scorer import AcronymScorer
+from data_mapper.mapping_graph import MappingGraph
 from data_updater import entity_types
 from data_updater.extractor.extractor import Extractor
 from data_updater.extractor.extractor_lists import ExtractorLists

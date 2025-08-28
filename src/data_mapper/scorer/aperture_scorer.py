@@ -1,6 +1,6 @@
 """
-Compute a score from two entities' digits that are in any of
-their attribute except identifiers.
+Compare two entities' aperture's similarity by rounding
+the values and converting units to meters if necessary.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
@@ -8,40 +8,44 @@ Author:
 
 from numbers import Number
 from typing import Union
-from data_merger.entity import Entity
-from data_merger.scorer.score import Score
-from data_merger.synonym_set import SynonymSet
+from data_mapper.entity import Entity
+from data_mapper.scorer.score import Score
+from data_mapper.synonym_set import SynonymSet
 from utils.performances import timeall
+from utils.utils import convert_to_meters, extract_number
 
 import re
 
-class DigitScorer(Score):
+class ApertureScorer(Score):
 
 
-    NAME = "digit"
+    NAME = "aperture"
 
     @timeall
     def compute(entity1: Union[Entity, SynonymSet],
                 entity2: Union[Entity, SynonymSet]) -> float:
         """
-        Compute a digit inclusion ratio between two entities.
+        Check if the two entities have the same aperture.
+        Return -1 if they do, -2 otherwise.
+        Return -1 if one of them do not have any information
+        about its aperture.
 
         Keyword arguments:
         entity1 -- reference entity
         entity2 -- compared entity
         """
-        identifiers = set()
-        for key, values in entity1._data.items():
-            if "uri" in key.lower() or "id" in key.lower():
-                identifiers.update([str(value) for value in values])
+        apertures1 = entity1.get_values_for("aperture", unique = False)
+        apertures2 = entity2.get_values_for("aperture", unique = False)
+        if not apertures1 or not apertures2:
+            return -1
+        apertures1 = [convert_to_meters(extract_number(a)) for a in apertures1]
+        apertures2 = [convert_to_meters(extract_number(a)) for a in apertures2]
 
-        for key, values in entity2._data.items():
-            if "uri" in key.lower() or "id" in key.lower():
-                identifiers.update([str(value) for value in values])
-        numbers_e1 = DigitScorer._get_numbers(entity1, identifiers = identifiers)
-        numbers_e2 = DigitScorer._get_numbers(entity2, identifiers = identifiers)
-
-        return DigitScorer._inclusion_ratio(numbers_e1, numbers_e2)
+        inclusion_ratio = ApertureScorer._inclusion_ratio(apertures1, apertures2)
+        if inclusion_ratio != 1:
+            return -2
+        else:
+            return -1
 
 
     def _get_numbers(entity: Entity,
@@ -132,7 +136,7 @@ class DigitScorer(Score):
         for number_e1 in numbers_e1:
             found = False
             for number_e2 in numbers_e2:
-                score = DigitScorer.compare_numbers(number_e1, number_e2)
+                score = ApertureScorer.compare_numbers(number_e1, number_e2)
                 if score == 1:
                     scores_e1 += 1
                     found = True
