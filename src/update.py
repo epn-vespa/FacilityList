@@ -95,54 +95,63 @@ class Updater():
         for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
             # Get complete location information and add them to the features
             # Only for extracted ground entities
-            if extractor and (features["type_confidence"] != 1 or features["type"] not in entity_types.SPACE_TYPES):
-                location_info = dict()
-                ent_type = features.get("type", None)
-                part_of = None
-                if ent_type is not None and "is_part_of" in features:
-                    if type(features["is_part_of"]) == list:
-                        part_of_uri = None
-                        for p in features["is_part_of"]:
-                            if p:
-                                part_of_uri = p
-                                if part_of_uri not in data:
-                                    continue
-                                part_of_type = data[part_of_uri].get("type", [])
-                                if type(part_of_type) == str:
-                                    part_of_type = [part_of_type]
-                                for po_t in part_of_type:
-                                    if po_t in entity_types.MAY_HAVE_ADDR:
-                                        part_of = data[part_of_uri]
-                                        break
-                            if part_of:
-                                break # Keep the first non-none part-of only
-                    elif type(features["is_part_of"]) == str:
-                        # Wikidata
-                        part_of = features["is_part_of"]
+            if extractor:
 
-                if type(ent_type) == str:
-                    ent_type = {ent_type}
-                if ent_type is not None:
-                    for cat in ent_type:
-                        if (# cat == entity_types.GROUND_OBSERVATORY or
-                            cat in entity_types.MAY_HAVE_ADDR and (
-                            "latitude" in features and "longitude" in features or
-                            "location" in features # or
-                            #part_of is not None or
-                            )):
+                types = features["type"]
+                if type(types) != str:
+                    is_space_type = any(x in entity_types.SPACE_TYPES for x in types)
+                else:
+                    is_space_type = types in entity_types.SPACE_TYPES
+                if("type_confidence" in features and
+                              (features["type_confidence"] != 1 or
+                               not is_space_type)):
+                    location_info = dict()
+                    ent_type = features.get("type", None)
+                    part_of = None
+                    if ent_type is not None and "is_part_of" in features:
+                        if type(features["is_part_of"]) == list:
+                            part_of_uri = None
+                            for p in features["is_part_of"]:
+                                if p:
+                                    part_of_uri = p
+                                    if part_of_uri not in data:
+                                        continue
+                                    part_of_type = data[part_of_uri].get("type", [])
+                                    if type(part_of_type) == str:
+                                        part_of_type = [part_of_type]
+                                    for po_t in part_of_type:
+                                        if po_t in entity_types.MAY_HAVE_ADDR:
+                                            part_of = data[part_of_uri]
+                                            break
+                                if part_of:
+                                    break # Keep the first non-none part-of only
+                        elif type(features["is_part_of"]) == str:
+                            # Wikidata
+                            part_of = features["is_part_of"]
 
-                            location_info = get_location_info(label = features.get("label", None),
-                                                              latitude = features.get("latitude", None),
-                                                              longitude = features.get("longitude", None),
-                                                              address = features.get("address", None),
-                                                              location = features.get("location", None),
-                                                              part_of = part_of)
-                            break
-                # Retrieved information include country, continent. We also set location to
-                # Earth or Space.
-                for key, value in location_info.items():
-                    if key not in features or features[key] is None:
-                        features[key] = value
+                    if type(ent_type) == str:
+                        ent_type = {ent_type}
+                    if ent_type is not None:
+                        for cat in ent_type:
+                            if (# cat == entity_types.GROUND_OBSERVATORY or
+                                cat in entity_types.MAY_HAVE_ADDR and (
+                                "latitude" in features and "longitude" in features or
+                                "location" in features # or
+                                #part_of is not None or
+                                )):
+
+                                location_info = get_location_info(label = features.get("label", None),
+                                                                latitude = features.get("latitude", None),
+                                                                longitude = features.get("longitude", None),
+                                                                address = features.get("address", None),
+                                                                location = features.get("location", None),
+                                                                part_of = part_of)
+                                break
+                    # Retrieved information include country, continent. We also set location to
+                    # Earth or Space.
+                    for key, value in location_info.items():
+                        if key not in features or features[key] is None:
+                            features[key] = value
 
             # Add triple <subj, pred, obj>
             subj = identifier
