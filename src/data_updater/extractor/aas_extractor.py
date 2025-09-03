@@ -9,11 +9,11 @@ Troubleshooting:
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-
+import json
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 from data_updater import entity_types
-from data_updater.extractor.data_fixer import fix
+from data_updater.extractor.data_fixer import fix, link_has_part
 from utils.utils import clean_string, cut_location, cut_acronyms, cut_part_of, get_aperture, merge_into, cut_aka
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
@@ -43,13 +43,16 @@ class AasExtractor(Extractor):
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
 
+    with open("../data/gold_categories.json", "r") as file:
+        CATEGORIES = json.load(file)
+
     # No need to disambiguate the type with LLM.
     # Useful for merging strategy: when the type is ambiguous,
     # it is recommanded to not discriminate on types.
     # 1: always known.
     # 0.5: partially known (see individuals)
     # 0: never known.
-    TYPE_KNOWN = 0.5
+    TYPE_KNOWN = 1 # 1 since we typed AAS manually in ../data/gold_categories.json
 
 
     # Mapping to IVOA's messenger
@@ -127,6 +130,21 @@ class AasExtractor(Extractor):
             row_data = dict(zip(headers, cols)) # {"h1": "col1", "h2": "col2"}
 
             alt_labels = set()
+
+            # Filter out observed objects (facility types)
+            ignore = False
+            for facility_type, col in zip(facility_types, cols[FT:]):
+                if col:
+                    if facility_type in ["computational center", "archive/database"]:
+                        ignore = True
+                        break # Filter out computational center & archive/database.
+                    # Can have more than one type
+                    if "observed_object" in data:
+                        data["observed_object"].append(facility_type)
+                    else:
+                        data["observed_object"] = [facility_type]
+            if ignore:
+                continue
 
             # Get facility name
             facility_name = row_data["full facility name"].strip()
@@ -267,22 +285,6 @@ class AasExtractor(Extractor):
                     data["is_part_of"].append(location_without_acronym)
                 else:
                     data["is_part_of"] = [location_without_acronym]
-            # Alt labels
-            alt_labels = alt_labels - {facility_name}
-
-            # Add and filter out observed objects (previously facility types)
-            for facility_type, col in zip(facility_types, cols[FT:]):
-                if col:
-                    # Can have more than one type
-                    if "observed_object" in data:
-                        data["observed_object"].append(facility_type)
-                    else:
-                        data["observed_object"] = [facility_type]
-            if "observed_object" in data:
-                if any([x in ["computational center", "archive/database"] for x in data["observed_object"]]):
-                    continue # Filter out computational center & archive/database.
-            #elif "type" not in data:
-            #    data["type"] = AasExtractor.DEFAULT_TYPE # telescope
 
             # waveband
             for waveband_length, waveband in zip(wavebands, cols[WB:FT]):
@@ -297,9 +299,9 @@ class AasExtractor(Extractor):
                     else:
                         data["waveband"].append(waveband)
 
-            # alt labels
-            if facility_name in alt_labels:
-                alt_labels.remove(facility_name)
+            # Alt labels
+            alt_labels = alt_labels - {facility_name}
+
             if alt_labels:
                 data["alt_label"] = alt_labels
 
@@ -322,6 +324,7 @@ class AasExtractor(Extractor):
 
         # Fix errors in source page
         fix(result, self)
+        link_has_part(result)
 
         # Add a type to the entities
         for code, data in tqdm(result.items(), desc = f"Classify {self.NAMESPACE}"):
@@ -330,18 +333,18 @@ class AasExtractor(Extractor):
             # label = label.strip()
             description = ""
             data["type_confidence"] = 1
-
-            if ("telescopes" in label.lower() or
-               "twin telescope" in label.lower() or
-               " array" in label.lower() or
-               "telescope network" in label.lower() or
+            label_l = label.lower()
+            if ("telescopes" in label_l or
+               "twin telescope" in label_l or
+               " array" in label_l or
+               "telescope network" in label_l or
                label == "La Palma" in label and "Siding Spring" in label):
                 data["type"] = entity_types.GROUND_OBSERVATORY
                 continue
-            elif label.lower().endswith("telescope"):
+            elif "telescope" in label_l or "interferometer" in label_l or "experiment" in label_l:
                 data["type"] = entity_types.TELESCOPE
                 continue
-            elif label.lower().endswith("mission"):
+            elif label_l.endswith("mission"):
                 data["type"] = entity_types.MISSION
                 continue
             elif "aperture" in data:
@@ -363,6 +366,12 @@ class AasExtractor(Extractor):
             if "type" in data:
                 # No need to disambiguate type with LLM
                 continue
+
+            cat = self.CATEGORIES.get("aas#" + data["label"], None)
+            if cat:
+                data["type"] = cat
+                continue
+
 
             description = entity_types.to_string(data, exclude = ("has_part", "is_part_of", "alt_label", "code"))
             data["type_confidence"] = 0

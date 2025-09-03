@@ -32,12 +32,87 @@
                          "National Astronomical Observatory of Japan 45m Radio Telescope at Nobeyama Radio Observatory",
                          "National Astronomical Observatory of Japan Nobeyama Millimeter Array at Nobeyama Radio Observatory"],
             "alt_label": "Nobeyama Solar Radio Observatory"
-        }
+        },
+        "NASA Wallops Flight Facility at Wallops Island, Virginia": {
+            "is_part_of": [],
+            "location": "Wallops Island, Virginia"
+        },
+        "Massachusetts Institute of Technology (MIT) 24inch Telescope at George R. Wallace, Jr., Astrophysical Observatory": {
+            "alt_label": ["Massachusetts Institute of Technology (MIT) 24inch Telescope",
+                          "Massachusetts Institute of Technology (MIT) 24inch Telescope at George R. Wallace, Jr. Astrophysical Observatory"
+            ],
+            "label": "Massachusetts Institute of Technology 24inch Telescope at George R. Wallace, Jr. Astrophysical Observatory"
+        },
+        "Cerro Tololo Inter-American Observatory": {
+            "alt_label": ["CTIO",
+                          "Cerro Tololo Inter-American Observatory (CTIO)",
+                          "Cerro Tololo International Observatory",
+                          "NSF Cerro Tololo Inter-American Observatory (CTIO)",
+                          "NSF Cerro Tololo Inter-American Observatory"
+            ],
+            "funding_agency": "National Science Foundation (NSF)"
+        },
+        "University of Michigan Curtis Schmidt telescope at NSF Cerro Tololo Inter-American Observatory (CTIO)": {
+            "is_part_of": "Cerro Tololo Inter-American Observatory"
+        },
+        "NSF NOIRLab 4m Victor M. Blanco Telescope at NSF Cerro Tololo Inter-American Observatory (CTIO)": {
+            "is_part_of": "Cerro Tololo Inter-American Observatory"
+        },
+        "YALO consortium 1m Yale-AURA-Lisbon-Ohio State (YALO) Telescope at Cerro Tololo International Observatory (CTIO)": {
+            "is_part_of": "Cerro Tololo Inter-American Observatory",
+            "label": "YALO consortium 1m Yale-AURA-Lisbon-Ohio State Telescope at Cerro Tololo Inter-American Observatory",
+            "alt_label": ["YALO consortium 1m Yale-AURA-Lisbon-Ohio State (YALO) Telescope at Cerro Tololo International Observatory (CTIO)",
+                          "YALO consortium 1m Yale-AURA-Lisbon-Ohio State Telescope",
+                          "YALO consortium 1m Yale-AURA-Lisbon-Ohio State (YALO) Telescope",
+                          "YALO consortium 1m Yale-AURA-Lisbon-Ohio State (YALO) Telescope at Cerro Tololo Inter-American Observatory (CTIO)"
+                         ]
+        },
+        "Kitt Peak National Observatory": {
+            "alt_label": ["NSF Kitt Peak National Observatory (KPNO)",
+                          "NSF Kitt Peak National Observatory",
+                          "KPNO",
+                          "Kitt Peak National Observatory (KPNO)"
+                        ],
+            "funding_agency": "National Science Foundation (NSF)"
+        },
+        "WIYN Consortium 0.9m (36inch) Telescope (NOAO 0.9m telescope) at NSF Kitt Peak National Observatory (KPNO)": {
+            "is_part_of": "Kitt Peak National Observatory"
+        },
+        "WIYN Consortium 3.5m Wisconsin-Indiana-Yale-NOIRLab (WIYN) Telescope at NSF Kitt Peak National Observatory (KPNO)": {
+            "is_part_of": "Kitt Peak National Observatory"
+        },
+        "NSF National Optical-Infrared Astronomy Research Laboratory (NOIRLab) NSF 2.1 meter Telescope at NSF Kitt Peak National Observatory (KPNO)": {
+            "is_part_of": "Kitt Peak National Observatory",
+            "funding_agency": "National Science Foundation (NSF)"
+        },
+        "NSF NOIRLab 4m Nicholas U. Mayall Telescope at NSF Kitt Peak National Observatory": {
+            "is_part_of": "Kitt Peak National Observatory",
+            "funding_agency": "National Science Foundation (NSF)"
+        },
+        "NSF NOIRLab Coude Feed Telescope at NSF Kitt Peak National Observatory (KPNO)" : {
+            "is_part_of": "Kitt Peak National Observatory",
+            "funding_agency": "National Science Foundation (NSF)"
+        },
+        "The European Research Council and the French Agence National de la Recherche Exoplanets in Transits and their Atmospheres (ExTrA) facility of three 60 cm telescopes at La Villa": {
+            "is_part_of": "La Silla Observatory",
+            "label": "The European Research Council and the French Agence National de la Recherche Exoplanets in Transits and their Atmospheres facility of three 60 cm telescopes at La Silla Observatory",
+            "alt_label": ["The European Research Council and the French Agence National de la Recherche Exoplanets in Transits and their Atmospheres (ExTrA) facility of three 60 cm telescopes",
+                          "The European Research Council and the French Agence National de la Recherche Exoplanets in Transits and their Atmospheres (ExTrA) facility of three 60 cm telescopes at La Villa",
+                          "The European Research Council and the French Agence National de la Recherche Exoplanets in Transits and their Atmospheres (ExTrA) facility of three 60 cm telescopes at La Silla Observatory"
 
+            ]
+        }
     },
     "delete": [
         "Atacama",
         "American Association of Variable Star Observers International Database",
-        "Nobeyama Solar Radio Observatory"
+        "Nobeyama Solar Radio Observatory",
+        "Wallops Island, Virginia",
+        "US Army White Sands Missile Range in New Mexico",
+        "George R. Wallace, Jr., Astrophysical Observatory",
+        "Cerro Tololo International Observatory",
+        "NSF Cerro Tololo Inter-American Observatory",
+        "NSF Kitt Peak National Observatory",
+        "La Villa"
     ]
 }
