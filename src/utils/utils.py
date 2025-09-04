@@ -156,7 +156,7 @@ def get_aperture(label: str) -> Tuple[str, set[str]]:
     label -- the label to extract the size from.
     """
     aperture_lst = []
-    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(cm|m|km|CM|M|KM| ?inche?s?)\b", label.lower())
+    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|m|km|centimeter|meter|kilometer|CM|M|KM| ?inche?s?)\b", label.lower())
     if apertures:
         for s in apertures:
             aperture_lst.append(''.join(s))
@@ -558,22 +558,6 @@ def get_location_info(label: Optional[str] = None,
             longitude = None
         else:
             longitude = list(longitude)[0]
-
-    # Remove labels that cannot be used for location
-    """
-    if label:
-        label, _ = get_size(label) # Remove the size of the facility
-        if (re.match(r".*\d.*", label) or
-            # Labels that contain any number are not place names.
-            label.isupper() or label.islower() or
-            # A location label can't be only made of lower or uppercases.
-            not ' ' in label.strip()
-            # A label that refers to a place is almost never a single
-            # word (city/country). It is usually called "...observatory"
-            # or "...station".
-        ):
-            label = None
-    """
 
     # Remove initial "the" from the label as it performs very bad with geopy
     if label and label.lower().startswith("the "):
