@@ -1348,6 +1348,11 @@ class CandidatePairsMapping():
         scores -- a 2D array of the scores of the candidate pairs
         """
         choice = None
+
+        n_pairs_to_disambiguate = np.sum(np.where(np.isnan(scores), 0, 1))
+        if n_pairs_to_disambiguate == 0:
+            return
+
         while len(scores) and choice != "2":
             left = np.sum(np.where(np.isnan(scores), 0, 1))
             print(f"\n\n\tThere are {left} candidate pairs to review.")
@@ -1442,7 +1447,7 @@ class CandidatePairsMapping():
             val1 = '\n'.join([str(x) for x in member1.get_values_for(key)])
             val2 = '\n'.join([str(x) for x in member2.get_values_for(key)])
             rows.append([key, val1, val2])
-        col_width -= largest_key_len // 2
+        col_width -= largest_key_len // 2 - 1
         res += "*" * largest_key_len + " " + "*" * col_width + " " + "*" * col_width
         for key, val1, val2 in rows:
             if key in ["source"]:
@@ -1452,12 +1457,16 @@ class CandidatePairsMapping():
             # split val1 & val2 to a table
             val1_rows = []
             val2_rows = []
+            val1 = val1.replace('\n', ' ')
             while val1:
-                val1_rows.extend([x[:col_width] for x in val1.split("\n")])
+                # val1_rows.extend([x[:col_width] for x in val1.split("\n")])
+                val1_rows.append(val1[:col_width])
                 val1 = val1[col_width:]
+            val2 = val2.replace('\n', ' ')
             while val2:
                 # val2_rows.extend(val2[:col_width])
-                val2_rows.extend([x[:col_width] for x in val2.split("\n")])
+                # val2_rows.extend([x[:col_width] for x in val2.split("\n")])
+                val2_rows.append(val1[:col_width])
                 val2 = val2[col_width:]
             if len(val1_rows) < len(val2_rows):
                 val1_rows.extend([""] * (len(val2_rows)-len(val1_rows)))
@@ -1465,11 +1474,11 @@ class CandidatePairsMapping():
                 val2_rows.extend([""] * (len(val1_rows)-len(val2_rows)))
             for i, (col1, col2) in enumerate(zip(val1_rows, val2_rows)):
                 if i == 0:
-                    res += key + " " * (largest_key_len - len(key)) + "|"
+                    res += key + " " * (col_width - len(largest_key_len)) + "|"
                 else:
                     print(" " * (largest_key_len), end = "|")
                 res += col1 + " " * (col_width - len(col1)) + "|"
-                res += col2 # \n
+                res += col2 + "\n"
                 if i == 3:
                     break # Only print 3 lines per attr
         return res
@@ -1567,8 +1576,7 @@ class CandidatePairsMapping():
                 #entities2 = sorted(entities2, key = lambda e: e.get_values_for("label", unique = True))
                 entities1 = self._list1_indexes
                 entities2 = self._list2_indexes
-                score_values = score.compute(Graph(),
-                                             entities1,
+                score_values = score.compute(entities1,
                                              entities2,
                                              self.list1,
                                              self.list2)
