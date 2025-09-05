@@ -15,6 +15,7 @@ import json
 import os
 import ssl
 import sys
+import re
 
 from SPARQLWrapper import SPARQLWrapper, JSON
 from data_updater import entity_types
@@ -102,8 +103,11 @@ class WikidataExtractor(Extractor):
     """
 
     _TYPES = {entity_types.MISSION: ["wd:Q5916", # Spaceflight
+                                     #"wd:Q550089" # Astronomical survey
                                      #"wd:Q2133344", # Space mission (manned missions)
                                      #"wd:Q60054001" # Space program (government related: not an obs facility)
+                                     ],
+              entity_types.SURVEY: ["wd:Q550089" # Astronomical survey
                                      ],
               entity_types.SPACECRAFT: ["wd:Q40218"], # Spacecraft
               entity_types.GROUND_OBSERVATORY: [#"wd:Q62832", # Observatory
@@ -465,7 +469,7 @@ class WikidataExtractor(Extractor):
                             elif datatype == "wikibase-item":
                                 # get label of the class of the item
                                 # (or the isPartOf / hasPart)
-                                property_value = self._get_label(prop["mainsnak"]["datavalue"]["value"]["id"], result)
+                                property_value = self._get_label(prop["mainsnak"]["datavalue"]["value"]["id"])
                             elif datatype == "quantity":
                                 property = prop["mainsnak"]["datavalue"]["value"]
                                 property_value = property["amount"]
@@ -507,26 +511,24 @@ class WikidataExtractor(Extractor):
 
     LABEL_BY_WIKIDATA_ITEM = dict()
     def _get_label(self,
-                   wikidata_item: str,
-                   result: dict = None) -> str:
+                   wikidata_item: str) -> str:
         """
-        Returns the label of a Wikidata entity or relation
-        and add the wikidata entity into the result dict
-        (only add its label, uri & link) if result is set.
+        Returns the label of a Wikidata entity or relation.
 
         Keyword arguments:
         wikidata_item -- the URI of the Wikidata entity (Qxxxxxxx)
-        result -- the result dict. If set, we add a data inside of it.
         """
         label = ""
         if wikidata_item in self.LABEL_BY_WIKIDATA_ITEM:
             label = self.LABEL_BY_WIKIDATA_ITEM[wikidata_item]
             return label # the dict for this data is already in result dict
         else:
+            if "wikidata" in wikidata_item:
+                wikidata_item = re.findall(r"Q\d+", wikidata_item)[0]
             wikidata_url_json = f"https://www.wikidata.org/wiki/Special:EntityData/{wikidata_item}.json"
             content = CacheManager.get_page(wikidata_url_json,
                                             list_name = self.CACHE,
-                                            from_cache = False)
+                                            from_cache = True)
             entities = json.loads(content)
 
             entities = entities["entities"]

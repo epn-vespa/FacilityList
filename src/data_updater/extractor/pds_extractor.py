@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
+from data_updater.extractor.data_fixer import fix
 from xml.etree import ElementTree as ET
 
 import re
@@ -19,6 +20,8 @@ class PdsExtractor(Extractor):
     # List of documents to scrap
     # URL = "https://pds.nasa.gov/data/pds4/context-pds4/facility/"
     URL = "https://pds.nasa.gov/data/pds4/context-pds4/"
+    # github: https://github.com/NASA-PDS/pds4-context-products/
+    # with query to URI: https://pds.mcp.nasa.gov/api/search/1/products/urn:nasa:pds:context:instrument_host:spacecraft.hst
 
     # URI to save this source as an entity
     URI = "NASA-PDS_list"
@@ -266,6 +269,7 @@ class PdsExtractor(Extractor):
                             continue
                         result[part] = data
 
+        fix(result, source = self)
         return result
 
 
