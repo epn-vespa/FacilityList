@@ -17,6 +17,7 @@ SPACECRAFT = "spacecraft" # = space observatory
 TELESCOPE = "telescope" # Space or Ground. = observation instruments: inside a telescope.
 AIRBORNE = "airborne" # in the atmosphere
 MISSION = "space mission" # More than one spacecraft in 1 mission: ~= observatory network ?
+SURVEY = "survey" # data produced by a mission. A mission can produce more than one survey. Surveys are linked to databases.
 # mission contains an instrument host (spacecrafts, ...)
 # Other category: Lander / Rover: on Mars, on a comet, asteroid... (considered same as spacecraft, everything that is not on ground)
 UFO = "unknown" # Unknown type (unrelated to our observation facilities)
