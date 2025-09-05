@@ -11,6 +11,7 @@ from typing import Union
 from data_mapper.entity import Entity
 from data_mapper.scorer.score import Score
 from data_mapper.synonym_set import SynonymSet
+from data_updater.extractor.extractor import Extractor
 from utils.performances import timeall
 from utils import llm_connection
 from sklearn.metrics.pairwise import cosine_similarity
@@ -26,7 +27,9 @@ class LlmEmbeddingScorer(Score):
 
     @timeall
     def compute(entity1: Union[Entity, SynonymSet],
-                entity2: Union[Entity, SynonymSet]) -> float:
+                entity2: Union[Entity, SynonymSet],
+                list1: Extractor = None,
+                list2: Extractor = None) -> float:
         """
         Compute the embeddings of both entities and a cosine
         distance.

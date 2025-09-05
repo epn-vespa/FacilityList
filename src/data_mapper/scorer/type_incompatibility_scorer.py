@@ -51,8 +51,8 @@ class TypeIncompatibilityScorer(Score):
         """
         type1 = entity1.get_values_for("type")
         type2 = entity2.get_values_for("type")
-        confidence1 = entity1.get_values_for("type_confidence")
-        confidence2 = entity2.get_values_for("type_confidence")
+        confidence1 = entity1.get_values_for("type_confidence", unique = True)
+        confidence2 = entity2.get_values_for("type_confidence", unique = True)
         if confidence1 != 1 or confidence2 != 1:
             # The type was determined by a LLM, cannot disambiguate
             # on the type (not enough control)
