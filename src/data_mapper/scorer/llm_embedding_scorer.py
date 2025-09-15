@@ -38,14 +38,10 @@ class LlmEmbeddingScorer(Score):
         entity1 -- reference entity
         entity2 -- compared entity
         """
-        embed1 = llm_connection.LLM().embed(entity1.to_string(exclude = ["url",
-                                                                         "code",
-                                                                         "alt_label"]),
+        embed1 = llm_connection.LLM().embed(entity1.to_string(exclude = ["url"]),
                                             from_cache = True,
                                             cache_key = str(entity1.uri))
-        embed2 = llm_connection.LLM().embed(entity2.to_string(exclude = ["url",
-                                                                         "code",
-                                                                         "alt_label"]),
+        embed2 = llm_connection.LLM().embed(entity2.to_string(exclude = ["url"]),
                                             from_cache = True,
                                             cache_key = str(entity2.uri))
         embed1 = np.array(embed1).reshape(1, -1)

@@ -1174,6 +1174,9 @@ class CandidatePairsMapping():
         ax.grid(True)
 
         score = np.nanargmax(scores)
+        excluded_x = defaultdict(int) # For each entity, how many were already excluded
+        excluded_y = defaultdict(int)
+        MAX_N_NEAREST = 5 # After attempting for the N nearest entities, will remove all CP of this line
         while len(scores) and n_fails_in_a_row < stop_at_n_fails:# and score > threshold:
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
@@ -1229,6 +1232,12 @@ class CandidatePairsMapping():
                 scores[x][y] = np.nan
                 n_fail += 1
                 n_fails_in_a_row += 1
+                excluded_x[x] += 1
+                excluded_y[y] += 1
+                if excluded_x[x] == MAX_N_NEAREST:
+                    scores = np.delete(scores, x, axis = 0)
+                if excluded_y[y] == MAX_N_NEAREST:
+                    scores = np.delete(scores, y, axis = 0)
             else:
                 continue
             ratio = n_success / (n_fail + n_success)
