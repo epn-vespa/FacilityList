@@ -9,13 +9,13 @@ Author:
 """
 
 from typing import Union
-from data_merger.entity import Entity
+from data_mapper.entity import Entity
 from graph import Graph
-from data_merger.scorer.score import Score
+from data_mapper.scorer.score import Score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from data_merger.synonym_set import SynonymSet
+from data_mapper.synonym_set import SynonymSet
 from utils.performances import timeall
 from nltk.corpus import stopwords
 

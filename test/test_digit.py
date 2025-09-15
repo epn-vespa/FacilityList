@@ -3,7 +3,7 @@
 Acronymous test
 """
 import setup_path
-from data_merger.scorer.digit_scorer import DigitScorer
+from data_mapper.scorer.digit_scorer import DigitScorer
 import unittest
 
 

@@ -13,9 +13,9 @@ Author:
 """
 
 from typing import Union
-from data_merger.entity import Entity
-from data_merger.scorer.score import Score
-from data_merger.synonym_set import SynonymSet
+from data_mapper.entity import Entity
+from data_mapper.scorer.score import Score
+from data_mapper.synonym_set import SynonymSet
 from data_updater import entity_types
 from graph import Graph
 
@@ -51,8 +51,8 @@ class TypeIncompatibilityScorer(Score):
         """
         type1 = entity1.get_values_for("type")
         type2 = entity2.get_values_for("type")
-        confidence1 = entity1.get_values_for("type_confidence")
-        confidence2 = entity2.get_values_for("type_confidence")
+        confidence1 = entity1.get_values_for("type_confidence", unique = True)
+        confidence2 = entity2.get_values_for("type_confidence", unique = True)
         if confidence1 != 1 or confidence2 != 1:
             # The type was determined by a LLM, cannot disambiguate
             # on the type (not enough control)

@@ -8,14 +8,14 @@ import setup_path # import first
 import argparse
 
 from collections import Counter
-from data_merger.entity import Entity
-from data_merger.synonym_set import SynonymSet, SynonymSetManager
+from data_mapper.entity import Entity
+from data_mapper.synonym_set import SynonymSet, SynonymSetManager
 from data_updater.extractor.extractor_lists import ExtractorLists
 from data_updater.extractor.wikidata_extractor import WikidataExtractor
 from graph import Graph
 from generate_csv_json import CSVJsonGenerator
 from utils.utils import standardize_uri
-from rdflib import Graph as G, URIRef, BNode, RDF, RDFS, PROV, XSD, Literal, SKOS, DCTERMS
+from rdflib import Graph as G, URIRef, RDF, RDFS, XSD, Literal, SKOS, DCTERMS
 from datetime import timezone
 
 

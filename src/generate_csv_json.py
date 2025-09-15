@@ -14,10 +14,10 @@ from collections import Counter, defaultdict
 import json
 import re
 
-from data_merger.entity import Entity
+from data_mapper.entity import Entity
 from graph import Graph
 from rdflib import URIRef
-from data_merger.synonym_set import SynonymSetManager, SynonymSet
+from data_mapper.synonym_set import SynonymSetManager, SynonymSet
 from data_updater.extractor.extractor_lists import ExtractorLists
 from utils.utils import standardize_uri
 

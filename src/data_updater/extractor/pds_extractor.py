@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from data_updater import entity_types
 from data_updater.extractor.cache import CacheManager
 from data_updater.extractor.extractor import Extractor
+from data_updater.extractor.data_fixer import fix
 from xml.etree import ElementTree as ET
 
 import re
@@ -19,6 +20,8 @@ class PdsExtractor(Extractor):
     # List of documents to scrap
     # URL = "https://pds.nasa.gov/data/pds4/context-pds4/facility/"
     URL = "https://pds.nasa.gov/data/pds4/context-pds4/"
+    # github: https://github.com/NASA-PDS/pds4-context-products/
+    # with query to URI: https://pds.mcp.nasa.gov/api/search/1/products/urn:nasa:pds:context:instrument_host:spacecraft.hst
 
     # URI to save this source as an entity
     URI = "NASA-PDS_list"
@@ -62,8 +65,9 @@ class PdsExtractor(Extractor):
              "mission": entity_types.MISSION,
              "investigation": entity_types.MISSION,
              "facility": entity_types.OBSERVATION_FACILITY,
-             "instrument": entity_types.INSTRUMENT
-             }
+             "instrument": entity_types.INSTRUMENT,
+             "instrument_host": entity_types.SPACECRAFT
+    }
 
     # No need to disambiguate the type with LLM.
     # Useful for merging strategy: when the type is ambiguous,
@@ -97,7 +101,8 @@ class PdsExtractor(Extractor):
         for context_type in PdsExtractor.CONTEXT_TYPES:
             url = PdsExtractor.URL + context_type
 
-            links = self._get_links_pds(url)
+            links = self._get_links_pds(url,
+                                        from_cache = from_cache)
 
             links = [link for link in links
                      if link.endswith(".xml") and not link.startswith("Collection")]
@@ -230,63 +235,41 @@ class PdsExtractor(Extractor):
                 # /!\ do not move this line earlier in the code as
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
+                data["type_confidence"] = 1
 
                 # result[data["label"] + '-' + data["type"]] = data
-                if data["label"] in result:
-                    merge_into(result[data["label"]], data)
+                if data["code"] in result:
+                    merge_into(result[data["code"]], data)
                     # Merge entities with the same label
                 else:
-                    result[data["label"]] = data
+                    result[data["code"]] = data
 
         # If the PDS identifier does not exists in the
         # extracted data, create a new entity with this
         # identifier.
-        pds_missing_ids = dict()
-        for key in result.copy().keys():
-            value = result[key]
+        for code in result.copy().keys():
+            value = result[code]
             if "has_part" in value:
                 for i, part in enumerate(value["has_part"]):
-                    if part in pds_references_by_id:
-                        part_label = pds_references_by_id[part]
-                        value["has_part"][i] = part_label
-                        if part_label not in result:
-                            # Create the missing referenced entity
-                            result[part_label] = {"label": part_label,
-                                                  "code": part}
-                    else:
-                        # Create the entity from the missing id.
-                        if part not in pds_missing_ids:
-                            data = self._create_entity_from_missing_id(part)
-                            if data["label"] == "individual.none":
-                                # Some entities refer to None
-                                value["has_part"][i] = None
-                                continue
-                            pds_missing_ids[part] = data
-                        value["has_part"][i] = pds_missing_ids[part]["label"]
+                    if part not in result:
+                        data = self._create_entity_from_missing_id(part)
+                        if data["label"] == "individual.none":
+                            # Some entities refer to None
+                            value["has_part"][i] = None
+                            continue
+                        result[part] = data#{"label": part_label,
+                                        #code": part}
             if "is_part_of" in value:
                 for i, part in enumerate(value["is_part_of"]):
-                    if part in pds_references_by_id:
-                        part_label = pds_references_by_id[part]
-                        value["is_part_of"][i] = part_label
-                        if not part_label in result:
-                            # Create the missing referenced entity
-                            result[part_label] = {"label": part_label,
-                                                  "code": part}
-                    else:
-                        # Create the entity from the missing id.
-                        if part not in pds_missing_ids:
-                            data = self._create_entity_from_missing_id(part)
-                            if data["label"] == "individual.none":
-                                # Some entities refer to None
-                                value["is_part_of"][i] = None
-                                continue
-                            pds_missing_ids[part] = data
-                        value["is_part_of"][i] = pds_missing_ids[part]["label"]
+                    if part not in result:
+                        data = self._create_entity_from_missing_id(part)
+                        if data["label"] == "individual.none":
+                            # Some entities refer to None
+                            value["is_part_of"][i] = None
+                            continue
+                        result[part] = data
 
-        # If a PDS id is missing, add an entity for this code
-        for key, value in pds_missing_ids.items():
-            result[value["label"]] = value
-
+        fix(result, source = self)
         return result
 
 
@@ -305,12 +288,13 @@ class PdsExtractor(Extractor):
         cat = cut[-2]
         data = {"label": label,
                 "code": identifier,
-                "type": self.TYPES[cat]}
+                "type": self.TYPES.get(cat, "")}
         return data
 
 
     def _get_links_pds(self,
-                       pds_url_f: str) -> list:
+                       pds_url_f: str,
+                       from_cache: bool) -> list:
         """The get_links_pds function processes the provided pds_url
         and extracts the list of xml file links to context products.
 
@@ -319,7 +303,9 @@ class PdsExtractor(Extractor):
         """
 
         # get pds_url_f
-        content = CacheManager.get_page(pds_url_f, list_name = self.CACHE)
+        content = CacheManager.get_page(pds_url_f,
+                                        list_name = self.CACHE,
+                                        from_cache = from_cache)
 
         # parse content with BeautifulSoup
         soup = BeautifulSoup(content, "html.parser")

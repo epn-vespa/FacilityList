@@ -42,18 +42,20 @@ else:
     # OLLAMA_HOST = "http://localhost:11434"
 
     # Open shuttle
-    port = 11435
-    try:
-        OLLAMA_HOST = f"http://localhost:{port}"
-        OLLAMA_MODEL = "deepseek-v3:latest" # "mistral-large:latest" #"llama3.3:latest"
-        OLLAMA_MODEL_NAME = "deepseek-v3:671b-q4_K_M"
-        # curl to this port
-        requests.get(OLLAMA_HOST)
-        print(f"Successfully connected to armstrong's ollama. Using model {OLLAMA_MODEL}.")
-    except:
-        OLLAMA_HOST = "http://localhost:11434"
-        OLLAMA_MODEL = "gemma3:4b"
-        print(f"Unable to redirect armstrong's ollama to port localhost:{port}. Using local ollama instead, with model {OLLAMA_MODEL}.")
+    print(f"Unable to redirect armstrong's ollama to local port. Using local ollama instead.")
+    port = 11434
+    OLLAMA_HOST = f"http://localhost:{port}"
+    OLLAMA_MODEL = "deepseek-r1:8b"
+    OLLAMA_MODEL_NAME = "DeepSeek-R1-0528"
+    #OLLAMA_MODEL = "deepseek-v3:latest" # "mistral-large:latest" #"llama3.3:latest"
+    #OLLAMA_MODEL_NAME = "deepseek-v3:671b-q4_K_M"
+    OLLAMA_MODEL = "gemma3:4b"
+    OLLAMA_MODEL_NAME = "gemma3:4b"
+    OLLAMA_MODEL = "gemma3:27b"
+    OLLAMA_MODEL_NAME = "gemma3:27b"
+    # curl to this port
+    requests.get(OLLAMA_HOST)
+    print(f"Successfully connected to local's ollama. Using model {OLLAMA_MODEL}.")
 OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
 
 

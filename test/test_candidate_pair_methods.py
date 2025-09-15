@@ -3,8 +3,8 @@ import setup_path
 
 from data_updater.extractor.aas_extractor import AasExtractor
 from data_updater.extractor.pds_extractor import PdsExtractor
-from data_merger.candidate_pair import CandidatePairsMapping, CandidatePair
-from data_merger.entity import Entity
+from data_mapper.candidate_pair import CandidatePairsMapping, CandidatePair
+from data_mapper.entity import Entity
 
 
 class TestCandidatePairMethods(unittest.TestCase):

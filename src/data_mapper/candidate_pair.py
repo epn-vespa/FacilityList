@@ -25,14 +25,14 @@ import matplotlib.pyplot as plt
 
 from rdflib import RDF, URIRef
 from tqdm import tqdm
-from data_merger.mapping_graph import MappingGraph
-from data_merger.scorer.cosine_similarity_scorer import CosineSimilarityScorer
+from data_mapper.mapping_graph import MappingGraph
+from data_mapper.scorer.cosine_similarity_scorer import CosineSimilarityScorer
 from graph import Graph
-from data_merger.scorer.score import Score
-from data_merger.scorer.scorer_lists import ScorerLists
-from data_merger.scorer.llm_embedding_scorer import LlmEmbeddingScorer
-from data_merger.synonym_set import SynonymSet, SynonymSetManager
-from data_merger.entity import Entity
+from data_mapper.scorer.score import Score
+from data_mapper.scorer.scorer_lists import ScorerLists
+from data_mapper.scorer.llm_embedding_scorer import LlmEmbeddingScorer
+from data_mapper.synonym_set import SynonymSet, SynonymSetManager
+from data_mapper.entity import Entity
 from data_updater.extractor.extractor import Extractor
 # from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
 
@@ -1062,17 +1062,17 @@ class CandidatePairsMapping():
 
 
 
+    #"All entities are cosmos observation facilities, no matter their name. "
     PROMPT_BASE = "You are an ontology matching tool, able to detect semantical similarities within observation facilities. " + \
         "You have to answer this questions: are those two entities the same ? " + \
-        "All entities are cosmos observation facilities, no matter their name. " + \
         "The entities' name and type can be different but they might still be the same. " + \
         "A satellite that is part of a mission, " + \
         "or telescope that is a part of an observatory, are distinct.\n" + \
         "Only select one choice from below:" + \
         "\nsame\ndistinct\n" + \
         "Reply with this format:\n" + \
-        "**<choice>**\n" + \
-        "<Justification (why do you think it is the good choice)>\n\n" + \
+        "**answer**\n" + \
+        "Justification (why do you think it is the good choice)\n\n" + \
         "Example:\n" + \
         "**same**\n" + \
         "both refer to the same observatory, just with slightly different naming conventions. therefore, they are the same entity.\n" + \
@@ -1104,6 +1104,7 @@ class CandidatePairsMapping():
                 "longitude",
                 "location",
                 "address", # Sometimes the label of an entity is related to its address
+                "modified"
                 ]
 
     LLM_VALIDATION = None
@@ -1173,6 +1174,9 @@ class CandidatePairsMapping():
         ax.grid(True)
 
         score = np.nanargmax(scores)
+        excluded_x = defaultdict(int) # For each entity, how many were already excluded
+        excluded_y = defaultdict(int)
+        MAX_N_NEAREST = 5 # After attempting for the N nearest entities, will remove all CP of this line
         while len(scores) and n_fails_in_a_row < stop_at_n_fails:# and score > threshold:
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
@@ -1228,6 +1232,12 @@ class CandidatePairsMapping():
                 scores[x][y] = np.nan
                 n_fail += 1
                 n_fails_in_a_row += 1
+                excluded_x[x] += 1
+                excluded_y[y] += 1
+                if excluded_x[x] == MAX_N_NEAREST:
+                    scores = np.delete(scores, x, axis = 0)
+                if excluded_y[y] == MAX_N_NEAREST:
+                    scores = np.delete(scores, y, axis = 0)
             else:
                 continue
             ratio = n_success / (n_fail + n_success)
@@ -1347,6 +1357,11 @@ class CandidatePairsMapping():
         scores -- a 2D array of the scores of the candidate pairs
         """
         choice = None
+
+        n_pairs_to_disambiguate = np.sum(np.where(np.isnan(scores), 0, 1))
+        if n_pairs_to_disambiguate == 0:
+            return
+
         while len(scores) and choice != "2":
             left = np.sum(np.where(np.isnan(scores), 0, 1))
             print(f"\n\n\tThere are {left} candidate pairs to review.")
@@ -1441,7 +1456,7 @@ class CandidatePairsMapping():
             val1 = '\n'.join([str(x) for x in member1.get_values_for(key)])
             val2 = '\n'.join([str(x) for x in member2.get_values_for(key)])
             rows.append([key, val1, val2])
-        col_width -= largest_key_len // 2
+        col_width -= largest_key_len // 2 - 1
         res += "*" * largest_key_len + " " + "*" * col_width + " " + "*" * col_width
         for key, val1, val2 in rows:
             if key in ["source"]:
@@ -1451,12 +1466,16 @@ class CandidatePairsMapping():
             # split val1 & val2 to a table
             val1_rows = []
             val2_rows = []
+            val1 = val1.replace('\n', ' ')
             while val1:
-                val1_rows.extend([x[:col_width] for x in val1.split("\n")])
+                # val1_rows.extend([x[:col_width] for x in val1.split("\n")])
+                val1_rows.append(val1[:col_width])
                 val1 = val1[col_width:]
+            val2 = val2.replace('\n', ' ')
             while val2:
                 # val2_rows.extend(val2[:col_width])
-                val2_rows.extend([x[:col_width] for x in val2.split("\n")])
+                # val2_rows.extend([x[:col_width] for x in val2.split("\n")])
+                val2_rows.append(val1[:col_width])
                 val2 = val2[col_width:]
             if len(val1_rows) < len(val2_rows):
                 val1_rows.extend([""] * (len(val2_rows)-len(val1_rows)))
@@ -1464,11 +1483,11 @@ class CandidatePairsMapping():
                 val2_rows.extend([""] * (len(val1_rows)-len(val2_rows)))
             for i, (col1, col2) in enumerate(zip(val1_rows, val2_rows)):
                 if i == 0:
-                    res += key + " " * (largest_key_len - len(key)) + "|"
+                    res += key + " " * (col_width - len(largest_key_len)) + "|"
                 else:
                     print(" " * (largest_key_len), end = "|")
                 res += col1 + " " * (col_width - len(col1)) + "|"
-                res += col2 # \n
+                res += col2 + "\n"
                 if i == 3:
                     break # Only print 3 lines per attr
         return res
@@ -1566,8 +1585,7 @@ class CandidatePairsMapping():
                 #entities2 = sorted(entities2, key = lambda e: e.get_values_for("label", unique = True))
                 entities1 = self._list1_indexes
                 entities2 = self._list2_indexes
-                score_values = score.compute(Graph(),
-                                             entities1,
+                score_values = score.compute(entities1,
                                              entities2,
                                              self.list1,
                                              self.list2)

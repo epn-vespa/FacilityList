@@ -104,12 +104,12 @@ ENV/
 # mac
 .DS_Store
 
-# ttl
-*.ttl
-
-# tsv
-src/*.tsv
-
 # cache
 /cache/
 /data/checkpoint/
+
+# output files
+*.ttl
+*.jpg
+*.png
+src/*.tsv

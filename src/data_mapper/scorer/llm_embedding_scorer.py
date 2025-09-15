@@ -8,9 +8,10 @@ Author:
 """
 
 from typing import Union
-from data_merger.entity import Entity
-from data_merger.scorer.score import Score
-from data_merger.synonym_set import SynonymSet
+from data_mapper.entity import Entity
+from data_mapper.scorer.score import Score
+from data_mapper.synonym_set import SynonymSet
+from data_updater.extractor.extractor import Extractor
 from utils.performances import timeall
 from utils import llm_connection
 from sklearn.metrics.pairwise import cosine_similarity
@@ -26,7 +27,9 @@ class LlmEmbeddingScorer(Score):
 
     @timeall
     def compute(entity1: Union[Entity, SynonymSet],
-                entity2: Union[Entity, SynonymSet]) -> float:
+                entity2: Union[Entity, SynonymSet],
+                list1: Extractor = None,
+                list2: Extractor = None) -> float:
         """
         Compute the embeddings of both entities and a cosine
         distance.
@@ -35,14 +38,10 @@ class LlmEmbeddingScorer(Score):
         entity1 -- reference entity
         entity2 -- compared entity
         """
-        embed1 = llm_connection.LLM().embed(entity1.to_string(exclude = ["url",
-                                                                         "code",
-                                                                         "alt_label"]),
+        embed1 = llm_connection.LLM().embed(entity1.to_string(exclude = ["url"]),
                                             from_cache = True,
                                             cache_key = str(entity1.uri))
-        embed2 = llm_connection.LLM().embed(entity2.to_string(exclude = ["url",
-                                                                         "code",
-                                                                         "alt_label"]),
+        embed2 = llm_connection.LLM().embed(entity2.to_string(exclude = ["url"]),
                                             from_cache = True,
                                             cache_key = str(entity2.uri))
         embed1 = np.array(embed1).reshape(1, -1)

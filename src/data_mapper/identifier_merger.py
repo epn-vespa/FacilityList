@@ -10,9 +10,9 @@ Author:
 
 from tqdm import tqdm
 from graph import Graph
-from data_merger.candidate_pair import CandidatePair, CandidatePairsManager, CandidatePairsMapping
-from data_merger.entity import Entity
-from data_merger.synonym_set import SynonymSet, SynonymSetManager
+from data_mapper.candidate_pair import CandidatePair, CandidatePairsManager, CandidatePairsMapping
+from data_mapper.entity import Entity
+from data_mapper.synonym_set import SynonymSet, SynonymSetManager
 from data_updater.extractor import wikidata_extractor
 
 from rdflib.namespace import SKOS

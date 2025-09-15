@@ -5,7 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from data_merger.scorer import acronym_scorer, date_scorer, digit_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer, identifier_scorer, aperture_scorer
+from data_mapper.scorer import acronym_scorer, date_scorer, digit_scorer, distance_scorer, fuzzy_scorer, cosine_similarity_scorer, label_match_scorer, llm_embedding_scorer, tfidf_scorer, type_incompatibility_scorer, identifier_scorer, aperture_scorer
 
 
 class ScorerLists():
