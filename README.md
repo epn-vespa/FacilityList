@@ -44,13 +44,13 @@ We will publish the result ontology on OntoPortal-Astro or another Ontology shar
 
 ### Example
 ```python update.py -l aas pds -i wikidata.ttl -o all_entities.ttl```
+This will update AAS and PDS data, add them to an ontology called wikidata.ttl and save the output data into all_entities.ttl
 
 ## map_ontologies.py
-Entity matching tool. Will perform external ID linking, then follow a merging strategy configuration file (default: conf/merging_strategy.conf).
-Then, generate a full mapping, compute discriminant criteria, compute other scores on the remaining candidate pairs.
+Entity matching tool. Will perform external ID linking, then follow a mapping strategy configuration file (default: conf/mapping_strategy.conf) to generate a full mapping, compute discriminant criteria, compute other scores on the remaining candidate pairs, perform weighted sum on the scores for each pair to output a global score per candidate pair.
 
-LLM validation uses an LLM to accept/reject candidate pairs. Save the mapped data (data with skos:exactMatch for matched objects) with the synonym sets objects. Save its SSSOM ontology next to it.
-The execution time depends on the scores used in the merging strategy (sentence-cosine-similarity and llm-embedding take longer to encode entities), and on the validation LLM's size.
+LLM validation uses an LLM to accept/reject candidate pairs with the highest global score. Save the mapped data (data with skos:exactMatch for matched objects) with the synonym sets objects. Save its SSSOM ontology next to it.
+The execution time depends on the scores used in the mapping strategy (sentence-cosine-similarity and llm-embedding take longer to encode entities), and on the validation LLM's size.
 The quality of the mapping mostly depends on the LLM used for validation and the instructions given in the prompt, as well as the representation of entities.
 
 ### Usage
@@ -61,7 +61,7 @@ The quality of the mapping mostly depends on the LLM used for validation and the
 | `-i`, `--input-ontologies`  | **(Required)** One or more input ontologies (`.ttl`) to process.        |
 | `-o`, `--output-dir`        | Output directory to save the final merged ontology and the SSSOM mapping ontology. Default is a timestamped folder.                    |
 | `-l`, `--limit`             | (Optional) Limit the number of entities per source to speed up testing. Only the top N entities from each list will be compared (NxN). |
-| `-s`, `--merging-strategy`  | Path to the merging strategy config file. Default is `conf/merging_strategy.conf`.                                                     |
+| `-s`, `--mapping-strategy`  | Path to the mapping strategy config file. Default is `conf/mapping_strategy.conf`.                                                     |
 | `-d`, `--direct-validation` | Skip manual review. Candidate matches will be validated automatically based on scores.                                                 |
 | `--human-validation`        | Enable human-in-the-loop disambiguation after scoring. This disables LLM-based validation.                                             |
 

@@ -1190,8 +1190,11 @@ class CandidatePairsMapping():
             score = scores[x][y]
             if score < 0:
                 break # Stop condition: score is too low
-
+            prev_candidate_pair = best_candidate_pair
             best_candidate_pair = self._mapping[x][y]
+            if not best_candidate_pair:
+                score[x][y] = np.nan
+                continue
             member1 = best_candidate_pair.member1
             member2 = best_candidate_pair.member2
 
