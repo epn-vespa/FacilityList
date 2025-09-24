@@ -534,8 +534,12 @@ def get_location_info(label: Optional[str] = None,
         load_location_infos_from_cache()
     result = None
     saved_in = ""
-    if not isinstance(location, list):
+    if isinstance(location, str):
         location = [location]
+    for l in location:
+        l = l.lower().strip()
+        if l in ["space", "airborne"]:
+            return dict()
     if not isinstance(part_of, list):
         part_of = [part_of]
     if isinstance(latitude, list):
