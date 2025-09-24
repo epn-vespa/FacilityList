@@ -755,7 +755,6 @@ class Graph(G):
                                                          extractor = extractor,
                                                          language = language)
             # Add to the graph
-            print("ICI:", subj_uri, predicate_uri, obj_uri)
             self.graph.add((subj_uri, predicate_uri, obj_uri))
 
         if extractor:
