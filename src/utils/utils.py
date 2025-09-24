@@ -536,10 +536,11 @@ def get_location_info(label: Optional[str] = None,
     saved_in = ""
     if isinstance(location, str):
         location = [location]
-    for l in location:
-        l = l.lower().strip()
-        if l in ["space", "airborne"]:
-            return dict()
+    if location:
+        for l in location:
+            l = l.lower().strip()
+            if l in ["space", "airborne"]:
+                return dict()
     if not isinstance(part_of, list):
         part_of = [part_of]
     if isinstance(latitude, list):
