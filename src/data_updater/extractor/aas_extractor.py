@@ -334,6 +334,19 @@ class AasExtractor(Extractor):
             description = ""
             data["type_confidence"] = 1
             label_l = label.lower()
+            if "location" in data:
+                # Priority to spacecraft & airborne type
+                location = data["location"]
+                if isinstance(location, str):
+                    location = [location]
+                for l in location:
+                    l = l.lower()
+                    if "space" == l:
+                        data["type"] = entity_types.SPACECRAFT
+                        break
+                    if "airborne" == l:
+                        data["type"] = entity_types.AIRBORNE
+                        break
             if ("telescopes" in label_l or
                "twin telescope" in label_l or
                " array" in label_l or
@@ -350,16 +363,8 @@ class AasExtractor(Extractor):
             elif "aperture" in data:
                 data["type"] = entity_types.TELESCOPE
                 continue
-
             if "location" in data:
-                for l in data["location"]:
-                    l = l.lower()
-                    if "space" in l:
-                        data["type"] = entity_types.SPACECRAFT
-                        break
-                    if "airborne" in l:
-                        data["type"] = entity_types.AIRBORNE
-                        break
+                for l in location:
                     if l == "earth":
                         data["type"] = entity_types.GROUND_OBSERVATORY
                         break
