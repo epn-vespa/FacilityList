@@ -250,8 +250,8 @@ class AasExtractor(Extractor):
 
                 location_without_acronym, location_acronym = cut_acronyms(location_without_part_of)
 
-                if location_acronym:
-                    alt_labels_location.update((location_acronym, location))
+                #if location_acronym:
+                alt_labels_location.update((location_acronym, location_without_part_of))
 
                 if location_without_acronym in result:
                     if "has_part" in result[location_without_acronym]:
@@ -271,7 +271,6 @@ class AasExtractor(Extractor):
                     # add the location's part of to the result
                     result[part_of_location] = {"label": part_of_location}
 
-                result[location_without_acronym]["label"] = location
                 alt_labels_location = alt_labels_location - {location_without_acronym}
                 # Location's alt labels
                 if alt_labels_location:
@@ -377,7 +376,11 @@ class AasExtractor(Extractor):
                 data["type"] = cat
                 continue
 
+            data["type"] = entity_types.UFO
+            print(f"Error: some AAS data is not typed: {data["label"]}. Please add a type in gold_categories.json")
+            continue
 
+            """
             description = entity_types.to_string(data, exclude = ("has_part", "is_part_of", "alt_label", "code"))
             data["type_confidence"] = 0
             if "has_part" in data:
@@ -400,7 +403,7 @@ class AasExtractor(Extractor):
                                       from_cache = True,
                                       cache_key = self.NAMESPACE + '#' + data["label"])
             data["type"] = category
-
+            """
         return result
 
 

@@ -108,7 +108,22 @@
     	"Observatoire de Haute-Provence": {
 	        "latitude": 43.9308333,
 	        "longitude": 5.71333333
-	    }
+	    },
+        "US Naval Observatory (USNO) 1.3m Telescope at Naval Obseravatory Flagstaff Station (NOFS)": {
+            "label": "US Naval Observatory (USNO) 1.3m Telescope at Naval Observatory Flagstaff Station (NOFS)",
+            "is_part_of": "Naval Observtory Flagstaff Station"
+        },
+        "Naval Obseravatory Flagstaff Station": {
+            "label": "Naval Observatory Flagstaff Station",
+            "alt_label": ["Naval Observatory Flagstaff Station (NOFS)", "NOFS"]
+        },
+        "Siding Springs Observatory": {
+            "label": "Siding Spring Observatory"
+        },
+        "The bRing experiment (\"Beta Pic b Ring\") twin two-camera project at Siding Springs Observatory": {
+            "label": "The bRing experiment (\"Beta Pic b Ring\") twin two-camera project at Siding Spring Observatory",
+            "is_part_of": "Siding Spring Observatory"
+        }
     },
     "delete": [
         "Atacama",

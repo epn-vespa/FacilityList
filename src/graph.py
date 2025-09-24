@@ -672,7 +672,7 @@ class Graph(G):
         if short_label != label:
             self.graph.add((subj_uri,
                             SKOS.altLabel,
-                            Literal(label, lang = language)))
+                            Literal(short_label, lang = language)))
         return short_label # Do not return an URI
 
 
