@@ -102,9 +102,6 @@
 
             ]
         },
-        "Beijing Astronomical Observatory": {
-            "has_part": ["Chinese Academy of Sciences Meter-wave aperture Synthesis Radio Telescope (MSRT) at Beijing Astronomical Observatory (BAO) in Miyun"]
-        },
     	"Observatoire de Haute-Provence": {
 	        "latitude": 43.9308333,
 	        "longitude": 5.71333333
@@ -135,7 +132,6 @@
         "Cerro Tololo International Observatory",
         "NSF Cerro Tololo Inter-American Observatory",
         "NSF Kitt Peak National Observatory",
-        "La Villa",
-        "Beijing Astronomical Observatory in Miyun"
+        "La Villa"
     ]
 }
