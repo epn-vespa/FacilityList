@@ -136,8 +136,11 @@ class OntoPortal(CSVJsonGenerator):
             data = synset._data
 
             entity = self._graph.OM.OBS[term]
-            type_ = synset.get_values_for("type", unique = True)
-            self._output_graph.add((entity, RDF.type, URIRef(type_)))
+            type_ = synset.get_values_for("type")
+            for t in type_:
+                if "SynonymSet" in t:
+                    continue
+                self._output_graph.add((entity, RDF.type, URIRef(t)))
             self._output_graph.add((entity, SKOS.prefLabel, Literal(pref_label)))
             for property, values in data.items():
                 if property in self.IGNORE_PROPERTIES:
