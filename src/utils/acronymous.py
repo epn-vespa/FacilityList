@@ -99,7 +99,7 @@ def _compute_for(acronym: list[str],
                     return score - malus # found the best path
                 if score - malus > best_score:
                     best_score = score - malus
-    if letter in second_letters:
+    elif letter in second_letters:
         # index of prev letter is remove_letter.
         if (len(second_letters) > removed_letter + 1
             and second_letters[removed_letter + 1] == letter):
@@ -115,7 +115,7 @@ def _compute_for(acronym: list[str],
                 return score # found the best path
             if score > best_score:
                 best_score = score
-    if letter in stopwords_letters:
+    elif letter in stopwords_letters:
         for index, matched in enumerate(stopwords_letters):
             if matched == letter:
                 if (stopwords_letters[index - 1] == '_' and removed_letter != index - 1
@@ -135,7 +135,7 @@ def _compute_for(acronym: list[str],
                 if score > best_score:
                     best_score  = score
 
-    if letter in uppercases_letters:
+    elif letter in uppercases_letters:
         #if (len(uppercases_letters) > removed_letter + 1
         #    and uppercases_letters[removed_letter + 1] == letter): # following another letter
         for index, matched in enumerate(uppercases_letters):
