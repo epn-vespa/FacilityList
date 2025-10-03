@@ -230,6 +230,7 @@ def proba_acronym_of(acronym: str,
     """
     acronym = _clean_acronym(acronym)
     acronym = acronym.strip()
+
     if len(acronym) > len(label):
         return -1
     if ' ' in acronym:
@@ -240,6 +241,9 @@ def proba_acronym_of(acronym: str,
     # Acronym has only uppercases
     #if acronym.upper() != acronym:
     #    return -1
+    uppercase_letters = "".join([c for c in label if c >= 'A' and c <= 'Z'])
+    if acronym == uppercase_letters:
+        return 1
 
     first_letters, second_letters, stopwords_letters, uppercases_letters = _get_matrixes(label)
     score = _compute_for(acronym.lower(),
