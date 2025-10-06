@@ -1177,6 +1177,8 @@ class CandidatePairsMapping():
         excluded_x = defaultdict(int) # For each entity, how many were already excluded
         excluded_y = defaultdict(int)
         MAX_N_NEAREST = 5 # After attempting for the N nearest entities, will remove all CP of this line
+        best_candidate_pair = None
+        prev_candidate_pair = None
         while len(scores) and n_fails_in_a_row < stop_at_n_fails:# and score > threshold:
             print("score =", score, "threshold = ", threshold)
             print("n_success =", n_success, "n_fail =", n_fail)
@@ -1190,7 +1192,8 @@ class CandidatePairsMapping():
             score = scores[x][y]
             if score < 0:
                 break # Stop condition: score is too low
-            prev_candidate_pair = best_candidate_pair
+            if best_candidate_pair:
+                prev_candidate_pair = best_candidate_pair
             best_candidate_pair = self._mapping[x][y]
             if not best_candidate_pair:
                 score[x][y] = np.nan
@@ -1240,7 +1243,7 @@ class CandidatePairsMapping():
                 if excluded_x[x] == MAX_N_NEAREST:
                     scores = np.delete(scores, x, axis = 0)
                 if excluded_y[y] == MAX_N_NEAREST:
-                    scores = np.delete(scores, y, axis = 0)
+                    scores = np.delete(scores, y, axis = 1)
             else:
                 continue
             ratio = n_success / (n_fail + n_success)
