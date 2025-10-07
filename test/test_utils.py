@@ -1,4 +1,3 @@
-
 import setup_path
 from utils.string_utilities import get_aperture
 import unittest
