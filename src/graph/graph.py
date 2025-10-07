@@ -171,7 +171,7 @@ class Graph(G):
                                has_attr: list[str] = [],
                                limit: int = -1,
                                ignore_deprecated: bool = True
-                               ) -> Iterator[URIRef]:
+                               ) -> Iterator[Tuple[URIRef]]:
         """
         Get all the entities that come from a list.
         If an entity is already in a synset, it will return the synset

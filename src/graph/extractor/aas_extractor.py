@@ -18,6 +18,7 @@ from utils.string_utilities import clean_string, cut_location, cut_acronyms, cut
 from utils.dict_utilities import merge_into
 from graph.extractor.cache import CacheManager
 from graph.extractor.extractor import Extractor
+from config import DATA_DIR
 
 class AasExtractor(Extractor):
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
@@ -43,7 +44,7 @@ class AasExtractor(Extractor):
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
 
-    with open("../data/gold_categories.json", "r") as file:
+    with open(DATA_DIR / "gold_categories.json", "r") as file:
         CATEGORIES = json.load(file)
 
     # No need to disambiguate the type with LLM.

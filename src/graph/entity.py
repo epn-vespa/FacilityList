@@ -21,11 +21,6 @@ class Entity:
 
 
 class Entity():
-    """
-    Troubleshooting:
-        if it is a SynonymSet's URI, it should prevent adding it
-        into the entities' dict.
-    """
 
     # Save entities' uri to prevent multi instanciation
     entities = dict()
@@ -57,9 +52,9 @@ class Entity():
                 self._data[property].add((value.value, value.language))
             elif isinstance(value, URIRef):
                 # Entity
-                self._data[property].add((value, None))
+                self._data[property].add((value))
             else:
-                self._data[property].add((str(value), None))
+                self._data[property].add((str(value)))
         if "|" in self.uri:
             raise ValueError("| in uri:", self.uri)
 
@@ -104,7 +99,7 @@ class Entity():
     def get_values_for(self,
                        property: str,
                        unique: bool = False,
-                       language: list[str] = None,
+                       languages: list[str] = None,
                        extend_to_synonyms: bool = True) -> Set:
         """
         Get values of the entity for a property.
@@ -113,7 +108,7 @@ class Entity():
             property: the property name (ex: "label")
             unique: if there was more than one values,
                     return only the first non-None value.
-            language: only get fields labeled with those languages if known.
+            languages: only get fields labeled with those languages if known.
             extend_to_synonyms: will also get the entity's synonyms' features.
         """
         property = Graph().PROPERTIES.convert_attr(property)
@@ -128,7 +123,7 @@ class Entity():
                 syn_values = Entity(syn).get_values_for(property,
                                                         unique = unique,
                                                         extend_to_synonyms = False,
-                                                        language = language)
+                                                        languages = languages)
                 res.update(syn_values)
                 if unique and res:
                     break
@@ -136,16 +131,20 @@ class Entity():
         if unique:
             if type(res) == set:
                 for value, lang in res:
-                    if lang == None or language == None or lang in language:
+                    if lang == None or not languages or lang in languages:
                         return value
             elif type(res) == tuple:
                 value, lang = res
-                if lang == None or language == None or lang in language:
+                if lang == None or not languages or lang in languages:
                     return value
             return None
         res_for_lang = set()
-        for value, lang in res:
-            if lang == None or language == None or lang in language:
+        for value in res:
+            if len(value) == 2:
+                value, lang = value
+            else:
+                lang = None
+            if lang == None or not languages or lang in languages:
                 res_for_lang.add(value)
         return res_for_lang
 
@@ -159,10 +158,10 @@ class Entity():
 
     def add_synonym(self,
                     entity: Entity,
-                    score: float,
-                    score_name: str,
-                    justification: str = "",
-                    human_validation: bool = False,
+                    score_value: float = None,
+                    score_name: str = None,
+                    justification_string: str = "",
+                    is_human_validation: bool = False,
                     no_validation: bool = False,
                     validator_name: str = ""
                     ) -> None:
@@ -173,21 +172,35 @@ class Entity():
 
         Args:
             entity: the new synonym of this entity.
+            score_value: decisive score's value. If none, it will not create any SSSOM mapping.
+            score_name: decisive score's label.
+            justification_string: the justification for this mapping decision.
+            is_human_validation: weither a human decided this mapping.
+            no_validation: weither no validation was done.
+            validator_name: name of the validator (human or AI).
         """
         if entity == self:
             print(f"Warning: adding {self.uri} as a synonym of itself.")
             return
+        elif entity in self.get_synonyms():
+            print(f"Warning: already mapped {self.uri} and {entity.uri}. Ignoring.")
+            return
         properties = Properties()
         for synonym_uri in entity.get_synonyms():
+            if synonym_uri == self.uri:
+                continue
             Graph().add((self.uri, properties.exact_match, synonym_uri))
             Graph().add((synonym_uri, properties.exact_match, self.uri))
             self.data[properties.exact_match].add(synonym_uri)
             Entity(synonym_uri).data[properties.exact_match].add(self.uri)
         for synonym_uri in self.get_synonyms():
+
+            if synonym_uri == entity.uri:
+                continue
             Graph().add((entity.uri, properties.exact_match, synonym_uri))
             Graph().add((synonym_uri, properties.exact_match, entity.uri))
             entity.data[properties.exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[properties.exact_match].add(entity)
+            Entity(synonym_uri).data[properties.exact_match].add(entity.uri)
         Graph().add((self.uri, properties.exact_match, entity.uri))
         Graph().add((entity.uri, properties.exact_match, self.uri))
         entity.data[properties.exact_match].add(self.uri)
@@ -196,10 +209,10 @@ class Entity():
         mapping_graph = MappingGraph()
         mapping_graph.add_mapping(self.uri,
                                   entity.uri,
-                                  score = score,
-                                  decisive_score_name = score_name,
-                                  justification_string = justification,
-                                  is_human_validation = human_validation,
+                                  score_value = score_value,
+                                  score_name = score_name,
+                                  justification_string = justification_string,
+                                  is_human_validation = is_human_validation,
                                   no_validation = no_validation,
                                   validator_name = validator_name)
 
@@ -208,7 +221,7 @@ class Entity():
                   exclude: list[str] = ["code",
                                         "url"],
                   limit: int = 512,
-                  language: list[str] = None) -> str:
+                  languages: list[str] = None) -> str:
         """
         Convert an entity's data dict into its string representation.
         Keys are sorted so that the generated string is always the same.
@@ -221,6 +234,7 @@ class Entity():
             exclude: dict entries to exclude
             limit: maximum string length for each attribute of the entity.
                    -1 for no limit.
+            languages: only get strings if they are in any of the languages.
         """
         res = ""
         label = self.get_values_for("label")
@@ -232,7 +246,7 @@ class Entity():
                 res = label + '. '
         for key, value in sorted(self.data.items()):
             key = Graph().PROPERTIES.get_attr_name(key)
-            value = self.get_values_for(key, language = language)
+            value = self.get_values_for(key, languages = languages)
             if key in exclude:
                 continue
             if key == "label":
