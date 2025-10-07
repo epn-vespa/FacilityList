@@ -10,6 +10,7 @@ Author:
 from collections import defaultdict
 from typing import List, Set, Union
 from rdflib import Literal, URIRef
+from graph.mapping_graph import MappingGraph
 
 from graph.graph import Graph
 from graph.properties import Properties
@@ -28,7 +29,6 @@ class Entity():
 
     # Save entities' uri to prevent multi instanciation
     entities = dict()
-
 
     def __new__(cls,
                 uri: URIRef):
@@ -158,7 +158,14 @@ class Entity():
 
 
     def add_synonym(self,
-                    entity: Entity) -> None:
+                    entity: Entity,
+                    score: float,
+                    score_name: str,
+                    justification: str = "",
+                    human_validation: bool = False,
+                    no_validation: bool = False,
+                    validator_name: str = ""
+                    ) -> None:
         """
         Add a skos:exactMatch relation between an entity and
         all of its synonyms (mutually extending their synonym sets).
@@ -170,20 +177,31 @@ class Entity():
         if entity == self:
             print(f"Warning: adding {self.uri} as a synonym of itself.")
             return
+        properties = Properties()
         for synonym_uri in entity.get_synonyms():
-            Graph().add((self.uri, Properties().exact_match, synonym_uri))
-            Graph().add((synonym_uri, Properties().exact_match, self.uri))
-            self.data[Properties().exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[Properties().exact_match].add(self.uri)
+            Graph().add((self.uri, properties.exact_match, synonym_uri))
+            Graph().add((synonym_uri, properties.exact_match, self.uri))
+            self.data[properties.exact_match].add(synonym_uri)
+            Entity(synonym_uri).data[properties.exact_match].add(self.uri)
         for synonym_uri in self.get_synonyms():
-            Graph().add((entity.uri, Properties().exact_match, synonym_uri))
-            Graph().add((synonym_uri, Properties().exact_match, entity.uri))
-            entity.data[Properties().exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[Properties().exact_match].add(entity)
-        Graph().add((self.uri, Properties().exact_match, entity.uri))
-        Graph().add((entity.uri, Properties().exact_match, self.uri))
-        entity.data[Properties().exact_match].add(self.uri)
-        self.data[Properties().exact_match].add(entity.uri)
+            Graph().add((entity.uri, properties.exact_match, synonym_uri))
+            Graph().add((synonym_uri, properties.exact_match, entity.uri))
+            entity.data[properties.exact_match].add(synonym_uri)
+            Entity(synonym_uri).data[properties.exact_match].add(entity)
+        Graph().add((self.uri, properties.exact_match, entity.uri))
+        Graph().add((entity.uri, properties.exact_match, self.uri))
+        entity.data[properties.exact_match].add(self.uri)
+        self.data[properties.exact_match].add(entity.uri)
+
+        mapping_graph = MappingGraph()
+        mapping_graph.add_mapping(self.uri,
+                                  entity.uri,
+                                  score = score,
+                                  decisive_score_name = score_name,
+                                  justification_string = justification,
+                                  is_human_validation = human_validation,
+                                  no_validation = no_validation,
+                                  validator_name = validator_name)
 
 
     def to_string(self,

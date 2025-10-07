@@ -220,7 +220,7 @@ class Graph(G):
             for extractor in no_equivalent_in:
                 no_equivalent_in_str += f"""
                 FILTER NOT EXISTS {{ ?entity <{self.PROPERTIES.exact_match}> ?entity2 .
-                ?entity2 <{self.PROPERTIES.source}> obs:{extractor} .}}"""
+                ?entity2 <{self.PROPERTIES.source}> obs:{extractor.URI} .}}"""
         limit_str = ""
         if limit >= 0:
             limit_str = f" LIMIT {limit}"
