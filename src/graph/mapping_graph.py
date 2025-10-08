@@ -33,8 +33,9 @@ class MappingGraph():
         "string_match": _SEMAPV.StringMatch,
         "label_match": _SEMAPV.StringMatch,
         "levenshtein_similarity": _SEMAPV.LevenshteinEditDistance,
+        "acronym_probability": _SEMAPV.StringBasedSimilarityMeasure,
         "tfidf_cosine_similarity": _SEMAPV.LexicalSimilarityThresholdMatching,
-        "llm_similarity": _SEMAPV.LexicalSimilarityThresholdMatching
+        "llm_similarity": _SEMAPV.LexicalSimilarityThresholdMatching,
     }
 
     # Singleton graph

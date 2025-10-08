@@ -15,7 +15,7 @@ class Filter(abc.ABC):
     Superclass for filters.
     """
     
-    NAME = "filter"
+    NAME = "Generic filter (superclass)"
 
     @abc.abstractmethod
     def are_compatible(entity1: Entity,
@@ -30,4 +30,4 @@ class Filter(abc.ABC):
             entity1: reference entity or synonym set
             entity2: compared entity or synonym set
         """
-        raise NotImplementedError("This method should be implemented in subclasses.")
+        raise NotImplementedError("This method should be overridden by subclasses.")

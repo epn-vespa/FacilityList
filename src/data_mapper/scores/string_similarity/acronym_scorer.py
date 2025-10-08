@@ -6,7 +6,6 @@ Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
 
-from typing import Union
 from graph.entity import Entity
 from data_mapper.scores.score import Score
 
