@@ -8,7 +8,7 @@ from collections import defaultdict
 import datetime
 import os
 
-from typing import Iterator, List, Tuple, Union
+from typing import Iterator, List, Tuple
 from rdflib import RDFS, Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import SKOS, DCTERMS, OWL
 from graph import entity_types
@@ -40,7 +40,7 @@ class Graph(G):
     _initialized = False
 
     def __new__(cls,
-                filename: Union[str,list[str]] = ""):
+                filename: str | list[str] = ""):
         """
         Instanciate the graph singleton.
         """
@@ -50,7 +50,7 @@ class Graph(G):
 
 
     def __init__(self,
-                 filename: Union[str, list[str]] = ""):
+                 filename: str | list[str] = ""):
         """
         Instanciate the graph singleton.
 
@@ -67,7 +67,7 @@ class Graph(G):
         Graph._PROPERTIES = Properties()
 
         # Bind namespaces
-        self.bind("obs", self.PROPERTIES.OBS)
+        self.bind("obsf", self.PROPERTIES.OBSF)
         self.bind("geo1", self.PROPERTIES.GEO)
         self.bind("wb", self.PROPERTIES.WB)
         self.bind("ivoasem", self.PROPERTIES.IVOASEM)
@@ -84,7 +84,7 @@ class Graph(G):
 
 
     def parse(self,
-              filename: Union[str, list[str]]):
+              filename: str | list[str]):
         """
         Overrides rdflib.Graph's parse to extract the namespaces and
         save them in this object.
@@ -166,8 +166,8 @@ class Graph(G):
 
     def get_entities_from_list(self,
                                source: Extractor,
-                               ent_type: Union[str, Union[list[str], set[str]]] = None,
-                               no_equivalent_in: Union[Extractor, list[Extractor]] = None,
+                               ent_type: str | list[str] | set[str] = None,
+                               no_equivalent_in: Extractor | list[Extractor] = None,
                                has_attr: list[str] = [],
                                limit: int = -1,
                                ignore_deprecated: bool = True
@@ -239,7 +239,7 @@ class Graph(G):
 
 
     def get_graph_semantic_fields(self,
-                                  language: Union[str, list[str]] = None
+                                  language: str | list[str] = None
                                   ) -> List[str]:
         """
         Return all the descriptions in the graph. Use this to generate

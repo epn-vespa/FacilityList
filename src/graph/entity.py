@@ -1,14 +1,13 @@
 """
 Represent and manage entity objects.
 Has methods to get an entity's labels & other attributes from the graph.
-The Entity can be used in a CandidatePair object or a SynonymSet object.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
 from collections import defaultdict
-from typing import List, Set, Union
+from typing import List, Set
 from rdflib import Literal, URIRef
 from graph.mapping_graph import MappingGraph
 
@@ -59,7 +58,8 @@ class Entity():
             raise ValueError("| in uri:", self.uri)
 
 
-    def __eq__(self, entity: Union[Entity, URIRef]):
+    def __eq__(self,
+               entity: Entity | URIRef) -> bool:
         if type(entity) == URIRef:
             return self.uri == entity
         return self.uri == entity.uri
@@ -130,7 +130,10 @@ class Entity():
 
         if unique:
             if type(res) == set:
-                for value, lang in res:
+                for value in res:
+                    lang = None
+                    if len(value) == 2:
+                        value, lang = value
                     if lang == None or not languages or lang in languages:
                         return value
             elif type(res) == tuple:
@@ -140,10 +143,9 @@ class Entity():
             return None
         res_for_lang = set()
         for value in res:
+            lang = None
             if len(value) == 2:
                 value, lang = value
-            else:
-                lang = None
             if lang == None or not languages or lang in languages:
                 res_for_lang.add(value)
         return res_for_lang
@@ -163,7 +165,10 @@ class Entity():
                     justification_string: str = "",
                     is_human_validation: bool = False,
                     no_validation: bool = False,
-                    validator_name: str = ""
+                    validator_name: str = "",
+                    subject_match_field: List[URIRef] | List[str] | URIRef | str = None,
+                    object_match_field: List[URIRef] | List[str] | URIRef | str = None,
+                    match_string: str = None
                     ) -> None:
         """
         Add a skos:exactMatch relation between an entity and
@@ -178,6 +183,9 @@ class Entity():
             is_human_validation: weither a human decided this mapping.
             no_validation: weither no validation was done.
             validator_name: name of the validator (human or AI).
+            subject_match_field: attribute(s) of entity1 that were matched if called by attribute_merger.
+            object_match_field: attribute(s) of entity2 that were matched if called by attribute_merger.
+            match_string: the string that was matched between the two entities if called by attribute_merger.
         """
         if entity == self:
             print(f"Warning: adding {self.uri} as a synonym of itself.")
@@ -209,12 +217,17 @@ class Entity():
         mapping_graph = MappingGraph()
         mapping_graph.add_mapping(self.uri,
                                   entity.uri,
+                                  self.get_values_for("source", unique = True),
+                                  entity.get_values_for("source", unique = True),
                                   score_value = score_value,
                                   score_name = score_name,
                                   justification_string = justification_string,
                                   is_human_validation = is_human_validation,
                                   no_validation = no_validation,
-                                  validator_name = validator_name)
+                                  validator_name = validator_name,
+                                  subject_match_field = subject_match_field,
+                                  object_match_field = object_match_field,
+                                  match_string = match_string)
 
 
     def to_string(self,
