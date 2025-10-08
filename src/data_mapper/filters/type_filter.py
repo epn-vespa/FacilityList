@@ -12,10 +12,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-from typing import Union
-from graph import entity_types
 from graph.entity import Entity
-from graph.synonym_set import SynonymSet
 from data_mapper.filters.filter import Filter
 
 
@@ -23,8 +20,8 @@ class TypeIncompatibilityScorer(Filter):
 
     NAME = "type"
 
-    def are_compatible(entity1: Union[Entity, SynonymSet],
-                       entity2: Union[Entity, SynonymSet]):
+    def are_compatible(entity1: Entity,
+                       entity2: Entity):
         """
         If any type of the entities is identical, then return True.
         Also return True if the type_confidence of any of the entities

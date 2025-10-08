@@ -5,10 +5,7 @@ the values and converting units to meters if necessary.
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-
-from typing import Union
 from graph.entity import Entity
-from graph.synonym_set import SynonymSet
 from data_mapper.filters.filter import Filter
 from utils.performances import timeall
 from utils.string_utilities import convert_to_meters, extract_number
@@ -19,8 +16,8 @@ class ApertureFilter(Filter):
     NAME = "aperture"
 
     @timeall
-    def are_compatible(entity1: Union[Entity, SynonymSet],
-                       entity2: Union[Entity, SynonymSet]) -> float:
+    def are_compatible(entity1: Entity,
+                       entity2: Entity) -> float:
         """
         Check if the two entities have the same aperture.
         They are compatible if one of them do not have any information

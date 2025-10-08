@@ -5,9 +5,10 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import abc
-from typing import Union
 from graph.entity import Entity
-from graph.synonym_set import SynonymSet
+
+# Used to generate mapping strategies
+FILTERING_FIELDS = ["launch_date", "start_date", "end_date", "latitude", "longitude", "type", "aperture"]
 
 class Filter(abc.ABC):
     """
@@ -17,9 +18,8 @@ class Filter(abc.ABC):
     NAME = "filter"
 
     @abc.abstractmethod
-
-    def are_compatible(entity1: Union[Entity, SynonymSet],
-                       entity2: Union[Entity, SynonymSet]) -> bool:
+    def are_compatible(entity1: Entity,
+                       entity2: Entity) -> bool:
         """
         Return True if two entities are compatible according to
         a certain filter.

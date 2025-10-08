@@ -10,7 +10,6 @@ Author:
 
 from typing import Union
 from graph.entity import Entity
-from graph.synonym_set import SynonymSet
 from data_mapper.filters.filter import Filter
 from utils.performances import timeall
 from utils.location_utilities import distance
@@ -22,8 +21,8 @@ class DistanceFilter(Filter):
     NAME = "distance"
 
     @timeall
-    def are_compatible(entity1: Union[Entity, SynonymSet],
-                       entity2: Union[Entity, SynonymSet]) -> float:
+    def are_compatible(entity1: Entity,
+                       entity2: Entity) -> float:
         """
         If the entities are more than 10km away from each other, the can
         not be the same (incompatible). If they do not have geolocation,

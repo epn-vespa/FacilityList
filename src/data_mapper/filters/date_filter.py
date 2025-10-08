@@ -1,6 +1,4 @@
-from typing import Union
 from graph.entity import Entity
-from graph.synonym_set import SynonymSet
 from data_mapper.filters.filter import Filter
 from utils.performances import timeall
 
@@ -11,8 +9,8 @@ class DateFilter(Filter):
     NAME = "date"
 
     @timeall
-    def are_compatible(entity1: Union[Entity, SynonymSet],
-                       entity2: Union[Entity, SynonymSet]) -> float:
+    def are_compatible(entity1: Entity,
+                       entity2: Entity) -> float:
         """
         Check if any of the entity's date are incompatible (launch_date,
         start_date, end_date).
@@ -31,9 +29,9 @@ class DateFilter(Filter):
         return True
 
     @staticmethod
-    def _compare_entity_dates(entity1: Union[Entity, SynonymSet],
-                              entity2: Union[Entity, SynonymSet],
-                              attrs: Union[str, list[str]]) -> bool:
+    def _compare_entity_dates(entity1: Entity,
+                              entity2: Entity,
+                              attrs: str | list[str]) -> bool:
         """
         Compare the year of the dates for a given field in both entities.
         Return True if dates are compatible, False if not.

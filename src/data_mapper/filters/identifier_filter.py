@@ -7,12 +7,8 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-
-
-from typing import Union
 from graph.entity import Entity
 from data_mapper.filters.filter import Filter
-from graph.synonym_set import SynonymSet
 from utils.performances import timeall
 
 
@@ -21,8 +17,8 @@ class IdentifierFilter(Filter):
     NAME = "identifier"
 
     @timeall
-    def are_compatible(entity1: Union[Entity, SynonymSet],
-                       entity2: Union[Entity, SynonymSet]) -> bool:
+    def are_compatible(entity1: Entity,
+                       entity2: Entity) -> bool:
         """
         Check if any of the entity's identifiers are different.
 
@@ -45,9 +41,9 @@ class IdentifierFilter(Filter):
 
 
     @staticmethod
-    def _compare_entity_identifiers(entity1: Union[Entity, SynonymSet],
-                                    entity2: Union[Entity, SynonymSet],
-                                    attrs: Union[str, list[str]]) -> bool:
+    def _compare_entity_identifiers(entity1: Entity,
+                                    entity2: Entity,
+                                    attrs: str | list[str]) -> bool:
         """
         Compare an identifier field in both entities.
         Return True if identifiers are compatible, False if not.
