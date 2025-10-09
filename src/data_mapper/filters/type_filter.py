@@ -8,6 +8,9 @@ the confusion matrix proved that Missions are often mistaken for Spacecrafts,
 Observatory Network for Ground Observatory, Telescopes are also unclear as
 they might belong to a ground observatory or a spacecraft.
 
+The current implementation checks if the types are identical only for entities
+that have a type_confidence of 1. Else, the entities will remain compatible.
+
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """

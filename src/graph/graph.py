@@ -67,7 +67,7 @@ class Graph(G):
         Graph._PROPERTIES = Properties()
 
         # Bind namespaces
-        self.bind("obsf", self.PROPERTIES.OBSF)
+        self.bind("obsf", self.PROPERTIES.OBS)
         self.bind("geo1", self.PROPERTIES.GEO)
         self.bind("wb", self.PROPERTIES.WB)
         self.bind("ivoasem", self.PROPERTIES.IVOASEM)
@@ -203,11 +203,11 @@ class Graph(G):
         ent_type_str = ""
         if ent_type:
             if type(ent_type) == str:
-                ent_type_str += f"?entity a obs:{standardize_uri(ent_type)} ."
+                ent_type_str += f"?entity a obsf:{standardize_uri(ent_type)} ."
             elif type(ent_type) in [list, set, tuple]:
                 ent_type_list = []
                 for et in ent_type:
-                    ent_type_list.append(f"{{ ?entity a obs:{standardize_uri(et)} . }}\n")
+                    ent_type_list.append(f"{{ ?entity a obsf:{standardize_uri(et)} . }}\n")
                 ent_type_str += "\n UNION ".join(ent_type_list)
 
         ignore_deprecated_str = ""
@@ -220,7 +220,7 @@ class Graph(G):
             for extractor in no_equivalent_in:
                 no_equivalent_in_str += f"""
                 FILTER NOT EXISTS {{ ?entity <{self.PROPERTIES.exact_match}> ?entity2 .
-                ?entity2 <{self.PROPERTIES.source}> obs:{extractor.URI} .}}"""
+                ?entity2 <{self.PROPERTIES.source}> obsf:{extractor.URI} .}}"""
         limit_str = ""
         if limit >= 0:
             limit_str = f" LIMIT {limit}"
@@ -228,7 +228,7 @@ class Graph(G):
         SELECT ?entity
         WHERE {{
             {ent_type_str}
-            ?entity <{self.PROPERTIES.source}> obs:{source} .
+            ?entity <{self.PROPERTIES.source}> obsf:{source} .
             {has_attr_str}
             {no_equivalent_in_str}
             {ignore_deprecated_str}

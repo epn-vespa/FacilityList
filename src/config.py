@@ -59,7 +59,7 @@ async def connect_to_ollama():
             print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
             raise EnvironmentError("OLLAMA_HOST not set")
         OLLAMA_MODEL = "deepseek-v3:latest" # 400 GB (~12s)
-        OLLAMA_MODEL_NAME = "DeepSeek-R1-0528"
+        OLLAMA_MODEL_NAME = "DeepSeek-v3:671b"
         CONNECTION_MODE = "armstrong ollama"
     else:
         OLLAMA_HOST = "http://localhost:11435"
@@ -73,8 +73,8 @@ async def connect_to_ollama():
             if not await wait_connection("localhost", 11435, timeout=10):
                 proc.terminate()
                 raise TimeoutError("SSH shuttle connection timeout")
-            OLLAMA_MODEL = "deepseek-r1:8b"
-            OLLAMA_MODEL_NAME = "DeepSeek-R1-0528"
+            OLLAMA_MODEL = "deepseek-v3:latest" # 400 GB (~12s)
+            OLLAMA_MODEL_NAME = "DeepSeek-v3:671b"
             CONNECTION_MODE = "armstrong ollama via tycho shuttle & redirection to local port"
             atexit.register(proc.terminate)
         except Exception as e:
@@ -89,8 +89,8 @@ async def connect_to_ollama():
 
 OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, CONNECTION_MODE = asyncio.run(connect_to_ollama())
 print(f"Connected to {CONNECTION_MODE}. Using model {OLLAMA_MODEL}")
-r = requests.get(OLLAMA_HOST)
-print(r.text)
+#r = requests.get(OLLAMA_HOST)
+#print(r.text)
 
 OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
 
