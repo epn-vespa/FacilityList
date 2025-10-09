@@ -48,6 +48,33 @@ def load_location_infos_from_cache():
         location_infos = json.load(f)
 
 
+# AAS (Space, Airborne), SPASE (Earth, Heliosphere)
+SPACE_LOCATION = ["Earth.Magnetosheath",
+                  "Earth.Magnetosphere",
+                  "Earth.Magnetosphere.Magnetotail",
+                  "Earth.Magnetosphere.Main",
+                  "Earth.Magnetosphere.Polar",
+                  "Earth.Magnetosphere.RadiationBelt",
+                  "Earth.Moon",
+                  "Earth.NearSurface",
+                  "Earth.NearSurface.Atmosphere",
+                  "Earth.NearSurface.AuroralRegion",
+                  "Earth.NearSurface.EquatorialRegion",
+                  "Earth.NearSurface.Ionosphere",
+                  "Earth.NearSurface.Ionosphere.DRegion",
+                  "Earth.NearSurface.Ionosphere.ERegion",
+                  "Earth.NearSurface.Ionosphere.FRegion",
+                  "Earth.NearSurface.Ionosphere.Topside",
+                  "Earth.NearSurface.Mesosphere",
+                  "Earth.NearSurface.Plasmasphere",
+                  "Earth.NearSurface.PolarCap",
+                  "Earth.NearSurface.Stratosphere",
+                  "Earth.NearSurface.Thermosphere",
+                  # "Earth.Surface"
+                  "Space",
+                  "Airborne"]
+
+
 @timeall
 def get_location_info(label: Optional[str] = None,
                       location: Optional[str] = None,
@@ -89,8 +116,8 @@ def get_location_info(label: Optional[str] = None,
         location = [location]
     if location:
         for l in location:
-            l = l.lower().strip()
-            if l in ["space", "airborne"]:
+            l = l.strip()
+            if l in SPACE_LOCATION:
                 return dict()
     if not isinstance(part_of, list):
         part_of = [part_of]

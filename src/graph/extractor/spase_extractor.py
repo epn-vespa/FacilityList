@@ -47,7 +47,7 @@ class SpaseExtractor(Extractor):
     NAMESPACE = "spase"
 
     # Default type used for all unknown types in this resource
-    DEFAULT_TYPE = entity_types.GROUND_OBSERVATORY
+    DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
 
     # List's types.
     # For merging strategies. Prevent merging data from lists
@@ -64,7 +64,7 @@ class SpaseExtractor(Extractor):
     # 1: always known.
     # 0.5: partially known (see individuals)
     # 0: never known.
-    TYPE_KNOWN = 0.5
+    TYPE_KNOWN = 0
 
     # Folders that we want to keep must contain
     KEEP_FOLDER = "Observatory"
@@ -142,7 +142,6 @@ class SpaseExtractor(Extractor):
         to_merge = defaultdict(list) # {"short-id": ["long-id1", "long-id2"]}
 
         for file in files:
-            print("file:", file)
             with open(file, "r") as f:
                 content = f.read()
 
@@ -293,7 +292,9 @@ class SpaseExtractor(Extractor):
 
         # Get types
         for data in result.values():
-            self._get_type(data)
+            data["type"] = self.DEFAULT_TYPE
+            data["type_confidence"] = 0
+            # self._get_type(data)
 
 
         # Merge entities on label
@@ -308,7 +309,7 @@ class SpaseExtractor(Extractor):
             if ll not in result:
                 continue
             for long_label in long_labels[i+1:]:
-                if long_label in result:
+                if long_label in result and ll in result:
                     merge_into(result[ll], result[long_label])
                     del result[long_label]
             if ll in result and short_label != ll:
@@ -374,18 +375,27 @@ class SpaseExtractor(Extractor):
         """
         Add the type of the entity to the data dictionary
         """
-        location_space = [
-            "Earth.Magnetosphere",
-            "Earth.Magnetosphere.Polar",
-            "Earth.Magnetosphere.Magnetotail"
-            "Earth.Magnetosphere.Main",
-            "Earth.Magnetosheath",
-            "Earth.NearSurface",
-            "Earth.NearSurface.AuroralRegion",
-            "Earth.NearSurface.EquatorialRegion",
-            "Earth.NearSurface.Ionosphere",
-            "Earth.NearSurface.PolarCap",
-            "Heliosphere.NearEarth",
+        location_space = ["Earth.Magnetosheath",
+                  "Earth.Magnetosphere",
+                  "Earth.Magnetosphere.Magnetotail",
+                  "Earth.Magnetosphere.Main",
+                  "Earth.Magnetosphere.Polar",
+                  "Earth.Magnetosphere.RadiationBelt",
+                  "Earth.Moon",
+                  "Earth.NearSurface",
+                  "Earth.NearSurface.Atmosphere",
+                  "Earth.NearSurface.AuroralRegion",
+                  "Earth.NearSurface.EquatorialRegion",
+                  "Earth.NearSurface.Ionosphere",
+                  "Earth.NearSurface.Ionosphere.DRegion",
+                  "Earth.NearSurface.Ionosphere.ERegion",
+                  "Earth.NearSurface.Ionosphere.FRegion",
+                  "Earth.NearSurface.Ionosphere.Topside",
+                  "Earth.NearSurface.Mesosphere",
+                  "Earth.NearSurface.Plasmasphere",
+                  "Earth.NearSurface.PolarCap",
+                  "Earth.NearSurface.Stratosphere",
+                  "Earth.NearSurface.Thermosphere",
         ]
         location_ground = [
             "Earth.Surface",
