@@ -37,7 +37,7 @@ from config import DATA_DIR # type: ignore
 class WikidataExtractor(Extractor):
     URL = "https://wikidata.org/wiki/" # + Q123
 
-    # URI to save this source as an entity (obs:wikidata_list)
+    # URI to save this source as an entity (obsf:wikidata_list)
     URI = "wikidata_list"
 
     # URI to save entities from this source

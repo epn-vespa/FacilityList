@@ -193,6 +193,8 @@ class CacheManager():
             else:
                 command = ["git", "clone", url]
                 cwd = str(CACHE_DIR / list_name)
+                if not os.path.exists(cwd):
+                    os.makedirs(cwd, exist_ok = True)
             messages = subprocess.Popen(
                 command,
                 cwd = cwd,
