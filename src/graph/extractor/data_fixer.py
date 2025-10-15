@@ -24,6 +24,13 @@ def fix(result: dict,
     with open (filename, 'r') as file:
         fixes = json.load(file)
 
+        # Add data entries
+        for key in fixes.get("add", []):
+            if key in result:
+                print(f"Error: {key} already in {filename}, can not add it twice. Please delete this entry or move it to the 'update' section.")
+                continue
+            result[key] = fixes["add"][key]
+
         # Rename data entries
         for key, fixed_data in fixes.get("rename", {}).items():
             if key not in result:
