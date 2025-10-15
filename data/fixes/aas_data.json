@@ -120,6 +120,31 @@
         "The bRing experiment (\"Beta Pic b Ring\") twin two-camera project at Siding Springs Observatory": {
             "label": "The bRing experiment (\"Beta Pic b Ring\") twin two-camera project at Siding Spring Observatory",
             "is_part_of": "Siding Spring Observatory"
+        },
+        "South Africa Astronomical Observatory": {
+            "label": "South African Astronomical Observatory"
+        },
+        "South Africa Astronomical Observatory Sutherland site": {
+            "label": "South African Astronomical Observatory Sutherland site",
+            "is_part_of": "South African Astronomical Observatory"
+        },
+        "The bRing experiment (\"Beta Pic b Ring\") twin two-camera project at South Africa Astronomical Observatory": {
+            "label": "The bRing experiment (\"Beta Pic b Ring\") twin two-camera project at South African Astronomical Observatory",
+            "alt_label": ["The bRing experiment (\"Beta Pic b Ring\") twin two-camera project",
+                          "The bRing experiment twin two-camera project at South African Astronomical Observatory"],
+            "is_part_of": "South African Astronomical Observatory"
+        },
+        "Kilodegree Extremely Little Telescope (KELT) at Winer Observatory (KELT-North) and at South Africa Astronomical Observatory (SAAO; KELT-South)": {
+            "label": "Kilodegree Extremely Little Telescope (KELT) at Winer Observatory (KELT-North) and at South African Astronomical Observatory (SAAO; KELT-South)",
+            "alt_label": "Kilodegree Extremely Little Telescope at Winer Observatory and at South African Astronomical Observatory",
+            "is_part_of": ["South African Astronomical Observatory",
+                           "Winer Observatory"]
+        },
+        "1.4m Infrared Survey Facility (IRSF) at South Africa Astronomical Observatory Sutherland site": {
+            "label": "1.4m Infrared Survey Facility (IRSF) at South African Astronomical Observatory Sutherland site",
+            "alt_label": ["1.4m Infrared Survey Facility (IRSF)",
+                          "1.4m Infrared Survey Facility at South African Astronomical Observatory Sutherland site"],
+            "is_part_of": "South African Astronomical Observatory Sutherland site"
         }
     },
     "delete": [
@@ -133,5 +158,10 @@
         "NSF Cerro Tololo Inter-American Observatory",
         "NSF Kitt Peak National Observatory",
         "La Villa"
-    ]
+    ],
+    "add": {
+        "Winer Observatory": {
+            "label": "Winer Observatory"
+        }
+    }
 }
