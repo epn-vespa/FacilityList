@@ -1,62 +1,92 @@
 """
-Compare two entities' aperture's similarity by rounding
-the values and converting units to meters if necessary.
+Compute a score from two entities' digits that are in any of
+their attribute except identifiers.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+
+from numbers import Number
+from typing import Union
 from graph.entity import Entity
-from data_mapper.filters.filter import Filter
+from data_mapper.tools.scores.score import Score
 from utils.performances import timeall
-from utils.string_utilities import convert_to_meters, extract_number
 
-class ApertureFilter(Filter):
+import re
+
+class DigitScorer(Score):
 
 
-    NAME = "aperture"
+    NAME = "digit"
 
     @timeall
-    def are_compatible(entity1: Entity,
-                       entity2: Entity) -> float:
+    def compute(entity1: Entity,
+                entity2: Entity) -> float:
         """
-        Check if the two entities have the same aperture.
-        They are compatible if one of them do not have any information
-        about its aperture.
+        Compute a digit inclusion ratio between two entities' textual and numerical fields.
 
         Args:
             entity1: reference entity
             entity2: compared entity
         """
-        apertures1 = entity1.get_values_for("aperture", unique = False)
-        apertures2 = entity2.get_values_for("aperture", unique = False)
-        if not apertures1 or not apertures2:
-            return True
-        apertures1 = [convert_to_meters(extract_number(a)) for a in apertures1]
-        apertures2 = [convert_to_meters(extract_number(a)) for a in apertures2]
+        identifiers = set()
+        for key, values in entity1._data.items():
+            if "uri" in key.lower() or "id" in key.lower():
+                identifiers.update([str(value) for value in values])
 
-        inclusion_ratio = ApertureFilter._inclusion_ratio(apertures1, apertures2)
-        if inclusion_ratio != 1:
-            # If there is one or more aperture(s) that mismatch
-            return False
-        else:
-            return True
+        for key, values in entity2._data.items():
+            if "uri" in key.lower() or "id" in key.lower():
+                identifiers.update([str(value) for value in values])
+        numbers_e1 = DigitScorer._get_numbers(entity1, identifiers = identifiers)
+        numbers_e2 = DigitScorer._get_numbers(entity2, identifiers = identifiers)
+
+        return DigitScorer._inclusion_ratio(numbers_e1, numbers_e2)
+
+
+    def _get_numbers(entity: Entity,
+                     identifiers: list[str]) -> list:
+        """
+        Return a list of float from the entity.
+
+        Args:
+            entity: Entity to get numbers from
+            identifiers: ignore substrings or numbers that are in identifiers
+        """
+        result = []
+
+        for key, values in entity._data.items():
+            if "id" in key.lower() or "uri" in key.lower():
+                continue # Ignore identifiers
+            for value in values:
+                if isinstance(value, Number):
+                    if str(value) in identifiers:
+                        continue
+                    else:
+                        result.append(float(value))
+                elif type(value) == str:
+                    # True for Literal
+                    for number in re.findall(r"\d+(?:\.\d+)?", value):
+                        result.append(float(number))
+                else:
+                    try:
+                        v = float(value)
+                        result.append(v)
+                    except:
+                        continue
+        return result
 
 
     def compare_numbers(number1: float,
-                        number2: float) -> bool:
+                        number2: float) -> float:
         """
         Compare numbers from left to right. Return a string matching
         ratio until the digits are different.
-
-        Args:
-            number1: the aperture (float) in meters of the first entity.
-            number2: the aperture (float) in meters of the second entity.
         """
         if number1 == number2:
-            return True
+            return 1
         if number1.__trunc__() != number2.__trunc__():
             if round(number1) != round(number2):
-                return False
+                return 0
         number1_str = str(number1)
         number2_str = str(number2)
         len_number1_str = len(number1_str)
@@ -75,13 +105,13 @@ class ApertureFilter(Filter):
                 if i == len_number1_str - 1:
                     # Last number after comma is different. Rounded
                     if round(number1, ndigits = n_after_comma) == round(number2, ndigits = n_after_comma):
-                        return True
+                        return 1
                 return (i - has_comma) / (len_number2_str - has_comma) # digits difference in decimals
             if digit1 == '.':
                 has_comma = True
 
         # No digit divergence
-        return False
+        return 1
 
 
     def _inclusion_ratio(numbers_e1: list[float],
@@ -89,10 +119,6 @@ class ApertureFilter(Filter):
         """
         Check that numbers from the first entity are included into
         the numbers from the other entity. Returns an inclusion ratio.
-
-        Args:
-            numbers_e1: the apertures in meters of the first entity.
-            numbers_e2: the apertures in meters of the second entity.
         """
         # Map every number from e1 to e2
         scores_e1 = 0
@@ -105,7 +131,7 @@ class ApertureFilter(Filter):
         for number_e1 in numbers_e1:
             found = False
             for number_e2 in numbers_e2:
-                score = ApertureFilter.compare_numbers(number_e1, number_e2)
+                score = DigitScorer.compare_numbers(number_e1, number_e2)
                 if score == 1:
                     scores_e1 += 1
                     found = True

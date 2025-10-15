@@ -13,7 +13,7 @@ from rapidfuzz import fuzz
 from unidecode import unidecode
 
 from graph.entity import Entity
-from data_mapper.scores.score import Score
+from data_mapper.tools.scores.score import Score
 from utils.performances import timeall
 
 
@@ -30,10 +30,10 @@ class LevenshteinSimilarityScorer(Score):
         Compute a fuzzy score between the two entities' labels and alt labels.
         Return the highest match between any labels.
 
-        Keyword arguments:
-        graph -- the graph
-        entity1 -- reference entity
-        entity2 -- compared entity
+        Args:
+            graph: the graph
+            entity1: reference entity
+            entity2: compared entity
         """
         highest_score = 0
 

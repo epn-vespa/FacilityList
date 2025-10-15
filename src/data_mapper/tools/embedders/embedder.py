@@ -1,26 +1,27 @@
 """
-Define the superclass Score.
+Define the superclass Embedder.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import abc
+import numpy as np
 
+from typing import List
 from graph.entity import Entity
+from data_mapper.tools.tool import Tool
 
-class Score(abc.ABC):
+class Embedder(Tool):
 
 
-    NAME = "Generic Score (superclass)"
+    NAME = "Generic Embedder (superclass)"
 
 
     @abc.abstractmethod
     def compute(self,
-                entity1: Entity,
-                entity2: Entity) -> float:
+                entities: List[Entity]) -> np.ndarray:
         """
-        Return a score value between 0 and 1.
-        This method is implemented in the different Scorers.
+        Compute the embedding of for a list of entities.
         """
         raise NotImplementedError("This method should be overridden by subclasses.")
 

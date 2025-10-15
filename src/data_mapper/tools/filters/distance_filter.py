@@ -8,7 +8,7 @@ Author:
 """
 
 from graph.entity import Entity
-from data_mapper.filters.filter import Filter
+from data_mapper.tools.filters.filter import Filter
 from utils.performances import timeall
 from utils.location_utilities import distance
 

@@ -262,6 +262,12 @@ def proba_acronym_of(acronym: str,
     return math.pow(score, 4)
 
 
+SUPERSCRIPT_MAP = {
+    '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
+    '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9'
+}
+
+
 def _del_numbers(acronym: str) -> str:
     """
     Get a version of the acronym with multiplied letters (ex: DA2I => DAII)
@@ -270,6 +276,7 @@ def _del_numbers(acronym: str) -> str:
     res = ""
     for letter in acronym:
         if letter.isnumeric():
+            letter = SUPERSCRIPT_MAP.get(letter, letter)
             number = number * 10 + int(letter)
         elif letter.isalpha():
             if number > 0 and number < 10:

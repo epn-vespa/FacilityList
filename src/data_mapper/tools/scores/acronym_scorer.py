@@ -7,7 +7,7 @@ Author:
 """
 
 from graph.entity import Entity
-from data_mapper.scores.score import Score
+from data_mapper.tools.scores.score import Score
 
 from utils.acronymous import proba_acronym_of
 from utils.performances import timeall
@@ -16,7 +16,7 @@ from utils.performances import timeall
 class AcronymScorer(Score):
 
     # Name of the score computed by this class (as in score.py)
-    NAME = "acronym_probability"
+    NAME = "acronym"
 
 
     @timeall
@@ -26,9 +26,9 @@ class AcronymScorer(Score):
         Compute a fuzzy score between the two entities' labels and alt labels.
         Return the highest match between any labels.
 
-        Keyword arguments:
-        entity1 -- reference entity
-        entity2 -- compared entity
+        Args:
+            entity1: reference entity
+            entity2: compared entity
         """
 
         highest_score = 0

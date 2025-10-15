@@ -39,6 +39,9 @@ class Entity():
         self._uri = URIRef(uri)
         self._data = defaultdict(set)
         graph = Graph()
+
+        if not type(uri) is URIRef:
+            raise TypeError(f"Expected URIRef, got {type(uri)}")
         for _, property, value in graph.triples((self.uri, None, None)):
             if isinstance(value, Literal):
                 if not value.language and type(value.value) == str:
@@ -87,6 +90,11 @@ class Entity():
         return f"Entity@{self.uri}"
 
 
+    def __getattr__(self, name):
+        return self.get_values_for(name,
+                                   unique = True)
+
+
     @property
     def data(self) -> dict:
         """
@@ -129,7 +137,7 @@ class Entity():
                     break
 
         if unique:
-            if type(res) == set:
+            if type(res) in [set, list]:
                 for value in res:
                     lang = None
                     if len(value) == 2:

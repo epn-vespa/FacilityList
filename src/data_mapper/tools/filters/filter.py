@@ -5,17 +5,20 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import abc
+
+from data_mapper.tools.tool import Tool
 from graph.entity import Entity
 
 # Used to generate mapping strategies
 FILTERING_FIELDS = ["launch_date", "start_date", "end_date", "latitude", "longitude", "type", "aperture"]
 
-class Filter(abc.ABC):
+class Filter(Tool):
     """
     Superclass for filters.
     """
     
     NAME = "Generic filter (superclass)"
+
 
     @abc.abstractmethod
     def are_compatible(entity1: Entity,
