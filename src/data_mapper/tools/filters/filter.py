@@ -12,6 +12,7 @@ from graph.entity import Entity
 # Used to generate mapping strategies
 FILTERING_FIELDS = ["launch_date", "start_date", "end_date", "latitude", "longitude", "type", "aperture"]
 
+
 class Filter(Tool):
     """
     Superclass for filters.

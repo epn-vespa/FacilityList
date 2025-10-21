@@ -14,7 +14,6 @@ from unidecode import unidecode
 
 from graph.entity import Entity
 from data_mapper.tools.scores.score import Score
-from utils.performances import timeall
 
 
 class LevenshteinSimilarityScorer(Score):
@@ -23,7 +22,6 @@ class LevenshteinSimilarityScorer(Score):
     NAME = "levenshtein_similarity"
 
 
-    @timeall
     def compute(entity1: Entity,
                 entity2: Entity) -> float:
         """

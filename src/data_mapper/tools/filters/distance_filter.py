@@ -20,7 +20,7 @@ class DistanceFilter(Filter):
 
     @timeall
     def are_compatible(entity1: Entity,
-                       entity2: Entity) -> float:
+                       entity2: Entity) -> bool:
         """
         If the entities are more than 10km away from each other, the can
         not be the same (incompatible). If they do not have geolocation,
@@ -43,9 +43,9 @@ class DistanceFilter(Filter):
         if not (lat1 is None or lat2 is None or long1 is None or long2 is None):
             if (lat1 != 0 or long1 != 0) and (lat2 != 0 or long2 != 0):
                 if distance((lat1, long1), (lat2, long2)) > 10:
-                    return -2 # More than 10km away
+                    return False # More than 10km away
                 else:
-                    return -1
+                    return True
                 # return 1 - distance((lat1, long1), (lat2, long2)) / 20004 # perimeter / 2
 
         continent1 = entity1.get_values_for("continent", unique=True)

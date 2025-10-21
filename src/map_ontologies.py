@@ -30,10 +30,11 @@ from graph.extractor.imcce_extractor import ImcceExtractor
 from graph.extractor.nssdc_extractor import NssdcExtractor
 from graph.extractor.pds_extractor import PdsExtractor
 from data_mapper import tools
-from data_mapper.attribute_merger import AttributeMerger
+from data_mapper.attribute_matcher import AttributeMatcher
 from data_mapper.tools.mapping_tools_list import MappingToolsList
 from data_mapper.tools.filters.distance_filter import DistanceFilter
 from data_mapper.hybrid_retriever import HybridRetriever
+from llm.llm_connection import LLMConnection
 
 
 class OntologyMapper():
@@ -63,7 +64,7 @@ class OntologyMapper():
             f"source: {' '.join(input_ontologies)}\n" + \
             f"folder: {output_dir}\n"
         self._strategy = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-    
+
 
     @property
     def strategy(self):
@@ -74,7 +75,7 @@ class OntologyMapper():
         """
         Merge identifiers from ontologies.
         """
-        am = AttributeMerger()
+        am = AttributeMatcher()
 
         if (self._graph.is_available("naif") and
             self._graph.is_available("wikidata")):
@@ -301,25 +302,33 @@ class OntologyMapper():
                     # If types from both lists are known, process types one by one.
                     for on_type in on_types:
                         retriever = HybridRetriever()
+                        retriever.process_lists(extractor1(),
+                                                extractor2(),
+                                                on_types = on_type,
+                                                with_tools = list(tools),
+                                                limit = self._limit,
+                                                ignore_deprecated = True)
                         # Candidates is a list of (entity, score)
-                        candidates = retriever.disambiguate(extractor1(),
-                                                            extractor2(),
-                                                            on_types = on_type,
-                                                            with_tools = list(tools),
-                                                            limit = self._limit,
-                                                            ignore_deprecated = True)
-                        best_candidate, justification = llm_connection.llm_validation(entity1,
-                                                                                    candidates)
-                        if best_candidate:
-                            self._graph.add_mapping(entity1,
-                                                    entity2,
-                                                    score,
-                                                    tools,
-                                                    self._execution_id)
-                            # Del entity2 from retriever index to avoid multiple mapping
-                            retriever.index.remove_ids(np.array([entity2.id], dtype = 'int64'))
+                        for entity1, candidates in retriever.disambiguate(extractor1(),
+                                                                          extractor2(),
+                                                                          on_types = on_type,
+                                                                          with_tools = list(tools),
+                                                                          limit = self._limit,
+                                                                          ignore_deprecated = True):
+
+                            response = LLMConnection.choose_best_candidate_and_justify(entity1, candidates)
+                            best_candidate = None
+                            print(response)
+                            if best_candidate:
+                                self._graph.add_mapping(entity1,
+                                                        entity2,
+                                                        score,
+                                                        tools,
+                                                        self._execution_id)
+                                # Del entity2 from retriever index to avoid multiple mapping
+                                # retriever.index.remove_ids(np.array([entity2.id], dtype = 'int64'))
                         del(retriever)
-                            
+
 
                     self._description += f"mapping: {extractor1.NAMESPACE}, {extractor2.NAMESPACE}, types: {', '.join(on_types)}, tools: {', '.join([s.NAME for s in tools])}\n"
 
@@ -329,7 +338,7 @@ class OntologyMapper():
         self._graph.add_metadata(self._description)
         output_dir = Path(self._output_dir)
         output_dir.mkdir(parents = True, exist_ok = True)
-        output_ontology = output_dir / (self._execution_id + '.ttl')
+        output_ontology = output_dir / 'linked.ttl'
         self._graph.serialize(destination = output_ontology,
                               format = "turtle",
                               encoding = "utf-8")
@@ -351,7 +360,7 @@ def main(input_ontologies: list[str],
 
 
 if __name__ == "__main__":
-    parser = ArgumentParser(prog = "map_ontologies", 
+    parser = ArgumentParser(prog = "map_ontologies",
                             description = "Map entities from different sources based on their embeddings.")
     parser.add_argument("-i",
                         "--input-ontologies",

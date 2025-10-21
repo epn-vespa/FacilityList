@@ -10,7 +10,6 @@ from numbers import Number
 from typing import Union
 from graph.entity import Entity
 from data_mapper.tools.scores.score import Score
-from utils.performances import timeall
 
 import re
 
@@ -19,7 +18,7 @@ class DigitScorer(Score):
 
     NAME = "digit"
 
-    @timeall
+
     def compute(entity1: Entity,
                 entity2: Entity) -> float:
         """

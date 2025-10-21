@@ -141,6 +141,11 @@ def get_location_info(label: Optional[str] = None,
             longitude = None
         else:
             longitude = list(longitude)[0]
+    if longitude:
+        # Always between -180 and 180
+        longitude = float(longitude)
+        if longitude > 180 or longitude < -180:
+            longitude = (float(longitude) % 360 + 540) % 360 - 180
 
     # Remove initial "the" from the label as it performs very bad with geopy
     if label and label.lower().startswith("the "):

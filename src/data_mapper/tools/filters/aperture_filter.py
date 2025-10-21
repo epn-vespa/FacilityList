@@ -7,8 +7,8 @@ Author:
 """
 from graph.entity import Entity
 from data_mapper.tools.filters.filter import Filter
-from utils.performances import timeall
 from utils.string_utilities import convert_to_meters, extract_number
+
 
 class ApertureFilter(Filter):
 
@@ -16,7 +16,6 @@ class ApertureFilter(Filter):
     NAME = "aperture"
 
 
-    @timeall
     def are_compatible(entity1: Entity,
                        entity2: Entity) -> float:
         """

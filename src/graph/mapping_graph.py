@@ -222,7 +222,13 @@ class MappingGraph():
     def serialize(self,
                   output_dir: str,
                   execution_id: str):
+        """
+        Save the ontology into the execution folder and name it mapping.ttl.
+
+        Args:
+            output_dir: the output directory for this execution.
+        """
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
-        path = output_dir / (execution_id + "_mapping.ttl")
+        path = output_dir / "mapping.ttl"
         self._graph.serialize(destination = path, format="ttl")

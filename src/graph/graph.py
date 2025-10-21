@@ -247,14 +247,14 @@ class Graph(G):
         Returns definitions, descriptions & labels to string.
         """
 
-        desc_pred = self.PROPERTIES.convert_attr("description")
-        def_pred = self.PROPERTIES.convert_attr("definition")
-        label_pred = self.PROPERTIES.convert_attr("label")
+        fields = []
+        for string_repr in self.PROPERTIES._STRING_REPR:
+            fields.append(self.PROPERTIES.convert_attr(string_repr))
 
         descr_by_entities = defaultdict(str)
 
         for entity, pred, obj in self.triples((None, None, None)):
-            if pred in [desc_pred, def_pred, label_pred]:
+            if pred in fields:
                 if isinstance(obj, Literal):
                     if obj.language is None or not language or obj.language in language:
                         descr_by_entities[entity] += " " + str(obj)

@@ -132,7 +132,11 @@ class Entity():
                                                         unique = unique,
                                                         extend_to_synonyms = False,
                                                         languages = languages)
-                res.update(syn_values)
+                if unique:
+                    if syn_values is not None:
+                        res.add(syn_values)
+                else:
+                    res.update(syn_values)
                 if unique and res:
                     break
 
@@ -163,7 +167,12 @@ class Entity():
         """
         Get the URIs of the synonyms of this entity.
         """
-        return self.data[Properties().exact_match] # SKOS.exactMatch
+        return self.data[Properties().exact_match]
+
+
+    def has_synonym(self,
+                    entity: Entity) -> bool:
+        return entity in self.get_synonyms()
 
 
     def add_synonym(self,
@@ -241,8 +250,10 @@ class Entity():
     def to_string(self,
                   exclude: list[str] = ["code",
                                         "url"],
+                  include: list[str] = [],
                   limit: int = 512,
-                  languages: list[str] = None) -> str:
+                  languages: list[str] = None,
+                  use_keywords: bool = True) -> str:
         """
         Convert an entity's data dict into its string representation.
         Keys are sorted so that the generated string is always the same.
@@ -253,6 +264,7 @@ class Entity():
         Args:
             data: the entity data dict
             exclude: dict entries to exclude
+            include: dict entries to include (overwrites exclude)
             limit: maximum string length for each attribute of the entity.
                    -1 for no limit.
             languages: only get strings if they are in any of the languages.
@@ -268,7 +280,9 @@ class Entity():
         for key, value in sorted(self.data.items()):
             key = Graph().PROPERTIES.get_attr_name(key)
             value = self.get_values_for(key, languages = languages)
-            if key in exclude:
+            if not include and key in exclude:
+                continue
+            if include and key not in include:
                 continue
             if key == "label":
                 continue
@@ -284,7 +298,10 @@ class Entity():
             values = []
             for v in value:
                 values.append(str(v).rsplit('#')[-1]) # remove namespace
-            res += f" {key}: {', '.join([str(v) for v in values])[:limit]}."
+            if use_keywords:
+                res += f" {key}: {', '.join([str(v) for v in values])[:limit]}."
+            else:
+                res += ' '.join([str(v) for v in values])[:limit]
         return res
 
 

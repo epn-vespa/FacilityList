@@ -11,6 +11,15 @@ class Properties():
     Also stores other namespaces.
     """
 
+    _instances = {}
+
+    def __new__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            instance = super().__new__(cls)
+            cls._instances[cls] = instance
+        return cls._instances[cls]
+
+
     _OBS = Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
@@ -38,12 +47,12 @@ class Properties():
                                  "objtype": URIRef},
         "label": {"pred": SKOS.prefLabel,
                   "objtype": XSD.string},
+        "alt_label": {"pred": SKOS.altLabel,
+                      "objtype": XSD.string},
         "description": {"pred": DCTERMS.description,
                        "objtype": XSD.string},
         "definition": {"pred": SKOS.definition,
                        "objtype": XSD.string},
-        "alt_label": {"pred": SKOS.altLabel,
-                      "objtype": XSD.string},
         "is_part_of": {"pred": DCTERMS.isPartOf,
                        "objtype": URIRef}, # PDS
         "has_part": {"pred": DCTERMS.hasPart,
@@ -102,6 +111,16 @@ class Properties():
     # Do not standardize object's URI to keep the external reference URI.
     _EXT_REF = [
         "waveband", # see "http://http://www.ivoa.net/rdf/messenger#"
+    ]
+
+
+    _STRING_REPR = [
+        "label",
+        "alt_label",
+        "definition",
+        "description",
+        "country",
+        "continent",
     ]
 
 

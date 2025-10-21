@@ -20,7 +20,7 @@ from rdflib import Literal
 from utils.performances import timeall, timeit
 
 
-class AttributeMerger():
+class AttributeMatcher():
 
 
     def __init__(self):

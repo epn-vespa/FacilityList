@@ -6,10 +6,11 @@ Author:
 """
 import re
 
-from typing import Tuple, Union
+from typing import Tuple
 from collections import defaultdict
 from urllib.parse import quote
 from utils.acronymous import proba_acronym_of
+from graph.extractor.extractor import Extractor
 
 
 def standardize_uri(label: str) -> str:
@@ -27,6 +28,18 @@ def standardize_uri(label: str) -> str:
     label = '-'.join([l for l in label if l])
     label = quote(label)
     return label
+
+
+def get_extractor_from_namespace(namespace: str) -> Extractor:
+    """
+    Get the list name from an URI.
+    Example: ".../pds#..." -> "pds"
+
+    Args:
+        namespace: the namespace URI of an entity.
+    """
+    namespace = namespace.split('/')[-1].split('#')[-1].split(':')[-1]
+    return namespace
 
 
 def cut_acronyms(label: str) -> Tuple[str]:
@@ -183,7 +196,7 @@ def extract_number(string: str) -> float:
     return value
 
 
-def convert_to_meters(value: Union[float, str],
+def convert_to_meters(value: float | str,
                       unit: str = "") -> float:
     """
     Convert an unit to meters.

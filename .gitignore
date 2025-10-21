@@ -1,3 +1,6 @@
 .vscode
 *.ttl
 cache/
+
+*__pycache__
+*.swp
