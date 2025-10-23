@@ -1,6 +1,13 @@
-.vscode
-*.ttl
-cache/
+# Output files
+src/**/*.ttl
+src/**/*.csv
+src/**/*.json
 
+# Generated folders
+cache/
+logs/
+
+# IDE generated
 *__pycache__
 *.swp
+*.vscode
