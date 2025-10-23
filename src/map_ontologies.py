@@ -29,7 +29,6 @@ from graph.extractor.iaumpc_extractor import IauMpcExtractor
 from graph.extractor.imcce_extractor import ImcceExtractor
 from graph.extractor.nssdc_extractor import NssdcExtractor
 from graph.extractor.pds_extractor import PdsExtractor
-from data_mapper import tools
 from data_mapper.attribute_matcher import AttributeMatcher
 from data_mapper.tools.mapping_tools_list import MappingToolsList
 from data_mapper.tools.filters.distance_filter import DistanceFilter
@@ -355,7 +354,13 @@ def main(input_ontologies: list[str],
     mapper = OntologyMapper(input_ontologies, output_dir = output_dir)
     mapper.merge_identifiers()
     mapper.parse_strategy(strategy_file)
-    mapper.execute_strategy()
+    import threading
+    from data_mapper.gui import server
+    thread = threading.Thread(target = mapper.execute_strategy, daemon = True)
+    thread.start()
+    print("Serving on http://127.0.0.1:5000")
+    server.app.run(debug = True, use_reloader = False)
+    # mapper.execute_strategy()
     mapper.write()
 
 
@@ -391,4 +396,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(args.input_ontologies,
          args.output_dir,
-         args.strategy_file, )
+         args.strategy_file)

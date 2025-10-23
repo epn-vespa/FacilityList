@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Obs Facilities mapper</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .entity { font-weight: bold; font-size: 1.2em; margin-bottom: 10px; }
+    .candidate { border: 1px solid #ccc; margin: 5px 0; padding: 8px; cursor: pointer; }
+    .candidate:hover { background-color: #eef; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <div id="entity-container"></div>
+  <div id="hiddenDiv" hidden="True">
+    <div id="candidates-container"></div><br>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span>Selected entity:</span>
+      <input id="selected" disabled placeholder="none" style="flex: 1;"/>
+      <button id="clearButton">None of the above (clear)</button>
+    </div><br>
+    <textarea id="justification" placeholder="Justification (not required)" style="width:100%; position: centered;"></textarea><br>
+    <button id="validate">Validate</button>
+  </div>
+
+
+  <script>
+    let prev_data = "";
+    async function fetchState() {
+      const res = await fetch("/get_state");
+      const data = await res.json();
+      updateUI(data);
+    }
+
+    function updateUI(data) {
+      const title = document.getElementById("title");
+      const entityDiv = document.getElementById("entity-container");
+      const candidatesDiv = document.getElementById("candidates-container");
+      const selectedInput = document.getElementById("selected");
+
+      title.innerHTML = `Validation ${data.current+1}/${data.total} of ${data.list1} ${data.list2}`;
+      selectedInput.value = "none";
+
+      if (data.entity) {
+        clearInterval(handle);
+        hiddenDiv.style.display = "Block";
+        let key = "";
+        let value = "";
+        for (const [key_, value_] of Object.entries(data.entity)) {
+          if (key_ === prev_data) {
+            return;
+          }
+          prev_data = key_;
+          key = key_;
+          value = value_;
+        }
+
+        let tableHTML = `<table border="1" cellpadding="4" cellspacing="0">`;
+
+        for (const [key2, value2] of Object.entries(value)) {
+          const displayValue = Array.isArray(value2) ? value2.join(", ") : value2;
+          tableHTML += `<tr><td><strong>${key2}</strong></td><td style="white-space: normal;">${displayValue}</td></tr>`;
+        }
+        tableHTML += `</table>`;
+
+
+        const country = value.country ? value.country[0] : "N/A";
+
+        entityDiv.innerHTML = `<strong>${key}</strong> (${country})
+          <details>
+            <summary><strong>Details</strong></summary>
+            <pre>${tableHTML}</pre>
+          </details>
+        `;
+      }
+      else {
+        entityDiv.innerHTML = "Waiting...";
+      }
+
+      candidatesDiv.innerHTML = "";
+
+      if (data.candidates) {
+        // Object.entries(data.candidates).forEach(([label, info]) => {
+        const sortedCandidates = Object.entries(data.candidates).sort((a, b) => {
+          const scoreA = parseFloat(a[1].score ?? 0);
+          const scoreB = parseFloat(b[1].score ?? 0);
+          return scoreB - scoreA; // tri décroissant (plus haut score d’abord)
+        });
+
+        sortedCandidates.forEach(([label, info]) => {
+          console.log(info);
+          const div = document.createElement("div");
+          div.className = "candidate";
+
+          const country = info.country ? info.country[0] : "N/A";
+
+          let tableHTML = `<table border="1" cellpadding="4" cellspacing="0">`;
+
+          for (const [key, value] of Object.entries(info)) {
+            const displayValue = Array.isArray(value) ? value.join(", ") : value;
+            tableHTML += `<tr><td><strong>${key}</strong></td><td style="white-space: normal;">${displayValue}</td></tr>`;
+          }
+          tableHTML += `</table>`;
+
+          div.innerHTML = `<input type="radio" name="candidate" id="${label}_id" value="${label}"/> <label for="${label}_id"><strong>${label}</strong> (${country})</label>
+            <details>
+              <summary><strong>Details</strong></summary>
+              <pre>${tableHTML}</pre>
+            </details>
+          `;
+
+          // div.onclick = () => validate(label);
+          candidatesDiv.appendChild(div);
+        });
+      }
+
+      async function validate(choice) {
+        entityDiv.innerHTML = "Waiting...";
+        hiddenDiv.style.display = "None";
+        candidatesDiv.innerHTML = "";
+        let justification = document.getElementById("justification").value;
+        await fetch("/validate", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({"choice": choice, "justification": justification})
+        }).then(res => res.json());
+        handle = setInterval(fetchState, 1000);
+      }
+
+      document.getElementById("validate").onclick = () => validate(selectedInput.value);
+
+      const radios = document.querySelectorAll('input[name="candidate"]');
+      document.getElementById("clearButton").onclick = () => {
+        radios.forEach(radio => radio.checked = false);
+        selectedInput.value = "none";
+      };
+
+      radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+          selectedInput.value = radio.checked ? radio.value : "none";
+        });
+      });
+    }
+
+
+    handle = setInterval(fetchState, 1000);
+    fetchState();
+  </script>
+</body>
+</html>

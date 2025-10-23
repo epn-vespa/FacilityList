@@ -64,6 +64,7 @@ async def connect_to_ollama():
     else:
         OLLAMA_HOST = "http://localhost:11435"
         try:
+            # raise Exception # Force local (for test)
             proc = await asyncio.create_subprocess_exec(
                 "ssh", "-L", "localhost:11435:145.238.151.114:11434",
                 f"{USERNAME}@tycho.obspm.fr", "-N",#../setup.sh", USERNAME],
@@ -78,21 +79,25 @@ async def connect_to_ollama():
             CONNECTION_MODE = "armstrong ollama via tycho shuttle & redirection to local port"
             atexit.register(proc.terminate)
         except Exception as e:
+            # https://ceur-ws.org/Vol-3931/paper4.pdf recommands Orca2 for 7b LLMs
             print(f"Shuttle to tycho & armstrong failed with error: {e}")
             # local
             port = 11434
             OLLAMA_HOST = f"http://localhost:{port}"
-            OLLAMA_MODEL = "gemma3:4b"
-            OLLAMA_MODEL_NAME = "gemma3:4b"
+            OLLAMA_MODEL = "orca2:7b"#"gemma3:4b"
+            OLLAMA_MODEL_NAME = "orca2:7b"#"gemma3:4b"
             CONNECTION_MODE = "local ollama"
     return OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, CONNECTION_MODE
 
-OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, CONNECTION_MODE = asyncio.run(connect_to_ollama())
-print(f"Connected to {CONNECTION_MODE}. Using model {OLLAMA_MODEL}")
-#r = requests.get(OLLAMA_HOST)
-#print(r.text)
+OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME = None, None, None
+def configure_ollama():
+    global OLLAMA_HOST
+    global OLLAMA_MODEL
+    global OLLAMA_MODEL_NAME
+    OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, CONNECTION_MODE = asyncio.run(connect_to_ollama())
+    print(f"Connected to {CONNECTION_MODE}. Using model {OLLAMA_MODEL}")
 
-OLLAMA_TEMPERATURE = 0.7 # Higher temperature = less determinist
+OLLAMA_TEMPERATURE = 0 # Higher temperature = less determinist
 
 # LLM computation result files
 LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
