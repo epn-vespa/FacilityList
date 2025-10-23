@@ -12,7 +12,7 @@ from collections import defaultdict
 from graph import entity_types
 from graph.extractor.cache import CacheManager
 from graph.extractor.extractor import Extractor
-from encoder.llm_connection import LLMConnection
+from llm.llm_connection import LLMConnection
 from utils.performances import timeall
 from utils.string_utilities import clean_string, has_cospar_nssdc_id
 from utils.dict_utilities import extract_items, merge_into
@@ -81,6 +81,7 @@ class SpaseExtractor(Extractor):
                       #"Aknowledgement": "",
                       "Latitude": "latitude",
                       "Longitude": "longitude",
+                      "Elevation": "altitude",
                       "StartDate": "start_date",
                       "EndDate": "end_date",
                       "PriorIDs": "prior_id",

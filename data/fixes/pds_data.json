@@ -1,7 +1,14 @@
 {
     "update": {
-        "urn:nasa:pds:context:telescope:kpno-mcmath-pierce-solar.main_1m61": {
-            "longitude": -111.595
-        }
+        "urn:nasa:pds:context:telescope:kpno-mcmath-pierce-solar.main_1m61": {"longitude": -111.595},
+        "urn:nasa:pds:context:telescope:eso-paranal.vlt_melipal_8m2_ut3": {"longitude": -70.40453},
+        "urn:nasa:pds:context:telescope:eso-paranal.vlt_kueyen_8m2_ut2": {"longitude": -70.40483},
+        "urn:nasa:pds:context:telescope:eso-paranal.vlt_antu_8m2_ut1": {"longitude": -70.40508},
+        "urn:nasa:pds:context:telescope:eso-paranal.vlt_yepun_8m2_ut4": {"longitude": -70.40396},
+        "urn:nasa:pds:context:telescope:naoj-hawaii.subaru_8m2": {"longitude": -155.476111},
+        "urn:nasa:pds:context:telescope:paul_wild.dss47_2008": {"longitude": 149.5644},
+        "urn:nasa:pds:context:telescope:irtf-maunakea.3m2": {"longitude": -155.473},
+        "urn:nasa:pds:context:telescope:amos.aeos": {"longitude": -156.257, "latitude": 20.70801},
+        "urn:nasa:pds:context:telescope:gemini-south.8m1": {"longitude": -70.73659}
     }
 }

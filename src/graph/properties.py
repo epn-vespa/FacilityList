@@ -75,6 +75,8 @@ class Properties():
                      "objtype": XSD.float}, # IAU-MPC, SPASE
         "longitude": {"pred": _GEO.longitude,
                       "objtype": XSD.float}, # IAU-MPC, SPASE
+        "altitude": {"pred": _GEO.altitude,
+                      "objtype": XSD.float}, # SPASE
         "start_date": {"pred": DCAT.startDate,
                        "objtype": XSD.dateTime}, # SPASE
         "end_date": {"pred": DCAT.endDate,

@@ -70,7 +70,7 @@ class CacheManager():
         cache_path = CacheManager._get_cache_path(url, list_name, data_str)
         content = ""
         if from_cache and glob.glob(cache_path):
-            with open(cache_path, 'r') as file:
+            with open(cache_path, 'r', encoding='utf-8') as file:
                 content = file.read()
         if not content:
             if not data:
@@ -124,7 +124,7 @@ class CacheManager():
             content: the content of the page.
             cache_path: where to save the cache.
         """
-        with open(cache_path, 'w') as file:
+        with open(cache_path, 'w', encoding='utf-8') as file:
             file.write(content)
 
 
@@ -145,6 +145,7 @@ class CacheManager():
             raise SystemExit(e)
 
         if response.ok:
+            response.encoding = response.apparent_encoding
             return response.text
         else:
             error = f"Request to {url} failed with status code {response.status_code}"
@@ -162,6 +163,7 @@ class CacheManager():
             raise SystemExit(e)
 
         if response.ok:
+            response.encoding = response.apparent_encoding
             return response.text
         else:
             error = f"Request to {url} failed with status code {response.status_code}"

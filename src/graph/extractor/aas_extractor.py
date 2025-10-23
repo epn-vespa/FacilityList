@@ -347,9 +347,9 @@ class AasExtractor(Extractor):
                     if "airborne" == l:
                         data["type"] = entity_types.AIRBORNE
                         break
-            if ("telescopes" in label_l or
-               "twin telescope" in label_l or
-               " array" in label_l or
+            if (#"telescopes" in label_l or
+               # "twin telescope" in label_l or
+               #" array" in label_l or
                "telescope network" in label_l or
                label == "La Palma" in label and "Siding Spring" in label):
                 data["type"] = entity_types.GROUND_OBSERVATORY
@@ -378,6 +378,7 @@ class AasExtractor(Extractor):
                 continue
 
             data["type"] = entity_types.UFO
+            data["type_confidence"] = 0
             print(f"Error: some AAS data is not typed: {data["label"]}. Please add a type in gold_categories.json")
             continue
 

@@ -106,7 +106,7 @@ class IauMpcExtractor(Extractor):
                 longitude = float(longitude)
                 #if longitude > 180:
                 #    longitude -= 360
-                data["longitude"] = longitude # keep a float
+                data["longitude"] = round(longitude, 5)
 
             # latitude
             cosinus = line[10:18].strip() # geocentric
@@ -114,25 +114,28 @@ class IauMpcExtractor(Extractor):
             if sinus and cosinus:
                 sinus = float(sinus)
                 cosinus = float(cosinus)
-                # geocentric latitude
-                # sin and cos are ρsinφ′ and ρcosφ′ρ
-                # φ′= arctan(ρcosφ′ρsinφ′​)
-                # see https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
+                if sinus == 0 and cosinus == 0 and longitude == 0:
+                    data["type"] = entity_types.SPACECRAFT
+                else:
+                    # geocentric latitude
+                    # sin and cos are ρsinφ′ and ρcosφ′ρ
+                    # φ′= arctan(ρcosφ′ρsinφ′​)
+                    # see https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
 
-                # old method was wrong because it computed a geocentric latitude:
-                # latitude_rad = math.atan2(float(sinus), float(cosinus))
-                # latitude_deg = math.degrees(latitude_rad)
-                earth_radius = 6378137 # meters
+                    # old method was wrong because it computed a geocentric latitude:
+                    # l██████▏atitude_rad = math.atan2(float(sinus), float(cosinus))
+                    # latitude_deg = math.degrees(latitude_rad)
+                    earth_radius = 6378137 # meters
 
-                # rho is the earth radius at cos&sin
-                # rho = math.sqrt(math.pow(cosinus, 2) + math.pow(sinus, 2)) * earth_radius
+                    # rho is the earth radius at cos&sin
+                    # rho = math.sqrt(math.pow(cosinus, 2) + math.pow(sinus, 2)) * earth_radius
 
-                el = astropy.coordinates.EarthLocation(earth_radius * cosinus * math.cos(math.radians(longitude)),
-                                                       earth_radius * cosinus * math.sin(math.radians(longitude)),
-                                                       earth_radius * sinus,
-                                                       unit = "m")
-                data["latitude"] = float(el.to_geodetic().lat.deg) # lat.deg => numpy.float64
-                data["type"] = entity_types.GROUND_OBSERVATORY
+                    el = astropy.coordinates.EarthLocation(earth_radius * cosinus * math.cos(math.radians(longitude)),
+                                                        earth_radius * cosinus * math.sin(math.radians(longitude)),
+                                                        earth_radius * sinus,
+                                                        unit = "m")
+                    data["latitude"] = round(float(el.to_geodetic().lat.deg), 5) # lat.deg => numpy.float64
+                    data["type"] = entity_types.GROUND_OBSERVATORY
             else:
                 data["type"] = entity_types.SPACECRAFT
             data["type_confidence"] = 1

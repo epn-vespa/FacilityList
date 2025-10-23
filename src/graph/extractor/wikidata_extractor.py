@@ -110,12 +110,14 @@ class WikidataExtractor(Extractor):
               entity_types.SURVEY: ["wd:Q550089" # Astronomical survey
                                      ],
               entity_types.SPACECRAFT: ["wd:Q40218"], # Spacecraft
-              entity_types.GROUND_OBSERVATORY: [#"wd:Q62832", # Observatory
+              entity_types.GROUND_OBSERVATORY: ["wd:Q62832", # Observatory # To also capture entities like https://www.wikidata.org/wiki/Q571133 which is in AAS
                                                 "wd:Q1254933"], # Astronomical observatory
               entity_types.TELESCOPE: ["wd:Q148578", # Space telescope
                                        "wd:Q4213"], # Telescope
               entity_types.AIRBORNE: [#"wd:Q1414565", # Space plane
-                                      "wd:Q1875651"] # Airborne observatory
+                                      "wd:Q1875651"], # Airborne observatory
+              entity_types.INSTRUMENT: ["wd:Q751997", # Astronomical instrument
+                                        ]
                             }
     _QUERY_TYPES = {k: "UNION".join(f" {{?itemURI wdt:P31/wdt:P279* {v} .}} "
                                     for v in vv ) for k, vv in _TYPES.items()}

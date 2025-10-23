@@ -11,7 +11,7 @@ from graph import entity_types
 
 class Extractor():
     """
-    Class defining an extractor.
+    Superclass defining an extractor.
     """
 
     # Define some default constants to be overlapped by subclasses
@@ -20,6 +20,15 @@ class Extractor():
     TYPE_KNOWN = 1
     POSSIBLE_TYPES = entity_types.ALL_TYPES
     DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
+
+
+    _instances = {}
+
+    def __new__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            instance = super().__new__(cls)
+            cls._instances[cls] = instance
+        return cls._instances[cls]
 
 
     def __repr__(self):
