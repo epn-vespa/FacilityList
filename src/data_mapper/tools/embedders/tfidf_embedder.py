@@ -15,6 +15,7 @@ from typing import List, Set
 from data_mapper.tools.embedders.embedder import Embedder
 from graph.entity import Entity
 from graph.graph import Graph
+from graph.properties import Properties
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -40,7 +41,7 @@ class TfIdfEmbedder(Embedder):
     dt_matrix = None
 
 
-    TO_EXCLUDE = ["code", "url", "source", "location_confidence", "type_confidence"]
+    TO_EXCLUDE = ["code", "url", "ext_ref", "source", "location_confidence", "type_confidence", "modified", "deprecated"]
 
     ON_LANGUAGES = ["en", "ca", "fr", "es"]
     
@@ -58,58 +59,16 @@ class TfIdfEmbedder(Embedder):
             return None # No corpus in the ontology.
         # Compute the embeddings of the documents
         if self.vectorizer is None:
-            stop_words = set()
-            self.add_stopwords(stop_words)
-
-            # TODO test with analyzer == 'char'
-            # & ngram_range == (1, 3)
-            self.vectorizer = TfidfVectorizer(lowercase = True,
-                                              # preprocessor=self._preprocess, # TODO remove the preprocessor
-                                              tokenizer = self._custom_tokenizer,
-                                              strip_accents='unicode',
-                                              stop_words=list(stop_words),
-                                              max_features=1000000)
-            # self.tokenizer = self.vectorizer.build_tokenizer()
-            #graph = Graph()
-            #definitions = graph.get_graph_semantic_fields(language = ["en", "ca", "fr", "es"])
-            entities_str_repr = []
-            for entity in entities:
-                entities_str_repr.append(entity.to_string(exclude = self.TO_EXCLUDE,
-                                                          languages = self.ON_LANGUAGES))
-
-            print(entities_str_repr)
-            if not entities_str_repr:
-                self.no_corpus = True
-                return None # No textual data in the entities.
-
-            self.dt_matrix = self.vectorizer.fit_transform(entities_str_repr).toarray()
-
-            ### DEBUG ###
-            vocab = self.vectorizer.vocabulary_
-            print("vocab=", vocab)
-            index_to_word = {v: k for k, v in self.vectorizer.vocabulary_.items()}
-            row = self.dt_matrix[0]
-            import numpy as np
-
-            row_dense = row.ravel()
-            nonzero = row_dense.nonzero()[0]
-            for i in nonzero:
-                print(index_to_word[i], row_dense[i])
-            print(entities_str_repr[0])
-            print(len(vocab), "mots dans le vocabulaire")
-            print(list(vocab.items())[:50])
-
-            print(self.dt_matrix.shape)
-            ### END DEBUG ###
-            return self.dt_matrix
-        else:
-            entities_str_repr = []
-            if type(entities) == Entity:
-                entities = [entities]
-            for entity in entities:
-                entities_str_repr.append(entity.to_string(exclude = self.TO_EXCLUDE,
-                                                          languages = self.ON_LANGUAGES))
-            return self.vectorizer.transform(entities_str_repr).toarray()
+            self._fit()
+            # return self.dt_matrix
+        entities_str_repr = []
+        if type(entities) == Entity:
+            entities = [entities]
+        for entity in entities:
+            entities_str_repr.append(entity.to_string(include = Properties()._STR_REPR,
+                                                      languages = self.ON_LANGUAGES,
+                                                      use_keywords = False))
+        return self.vectorizer.transform(entities_str_repr).toarray()
 
         """
         repr1 = ' '.join(entity1.get_values_for("definition").
@@ -132,6 +91,35 @@ class TfIdfEmbedder(Embedder):
             sim = 1
         return sim
         """
+
+    def _fit(self) -> None:
+
+        stop_words = set()
+        self.add_stopwords(stop_words)
+
+        self.vectorizer = TfidfVectorizer(lowercase = True,
+                                          # preprocessor=self._preprocess, # TODO remove the preprocessor
+                                          tokenizer = self._custom_tokenizer,
+                                          strip_accents='unicode',
+                                          stop_words=list(stop_words),
+                                          max_features=1000000)
+        # self.tokenizer = self.vectorizer.build_tokenizer()
+        #graph = Graph()
+        #definitions = graph.get_graph_semantic_fields(language = ["en", "ca", "fr", "es"])
+        # entities_str_repr = []
+        #for entity in entities:
+        #    entities_str_repr.append(entity.to_string(exclude = self.TO_EXCLUDE,
+        #                                              languages = self.ON_LANGUAGES,
+        #                                              use_keywords = False))
+
+        semantic_fields = Graph().get_graph_semantic_fields(language = self.ON_LANGUAGES)
+
+        if not semantic_fields:
+            self.no_corpus = True
+            return None # No textual data in the entities.
+
+        self.vectorizer.fit(semantic_fields)
+
 
 
     def _preprocess(self,
@@ -173,10 +161,7 @@ class TfIdfEmbedder(Embedder):
         text = re.sub(r"[^\w\d ]", " ", text) # Only one space
         text = re.sub(self.punct_regex, " ", text) # Remove punctuation
         tokens = re.findall(r'\b[a-zA-Z0-9]{1,5}', text.lower()) # 1 to 5 characters (pseudo-stemmization)
-        print("tokens:", tokens)
         return tokens
-
-
 
     
     def add_stopwords(self,

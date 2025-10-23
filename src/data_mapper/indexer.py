@@ -76,14 +76,14 @@ class Indexer():
             for entity2 in whitelisted_entities:
                 embeddings2 = self.indexes[entity2]
                 similarity = cosine_similarity([embeddings], [embeddings2])
-                entities_by_similarity.append((entity2, similarity))
+                entities_by_similarity.append((entity2, similarity.item()))
         else:
             for entity2 in self.indexes:
                 if entity2 in blacklisted_entities:
                     continue
                 embeddings2 = self.indexes[entity2]
                 similarity = cosine_similarity([embeddings], [embeddings2])
-                entities_by_similarity.append((entity2, similarity))
+                entities_by_similarity.append((entity2, similarity.item()))
 
         return sorted(entities_by_similarity, key = lambda x: x[1], reverse = True)[0:top_k]
 
@@ -93,7 +93,6 @@ class Indexer():
                          entity1: Entity,
                          entity2: Entity,
                          indexer2: Indexer = None,
-                         # entity_types: list[str] = [],
                          extractor2: Extractor = None) -> None:
         """
         /!\\ they should be merged before adding synonyms to each other,
@@ -124,7 +123,7 @@ class Indexer():
             return
         embeddings1 = self.indexes.get(entity1, None)
         embeddings2 = indexer2.indexes.get(entity2, None)
-        if not embeddings1 or not embeddings2:
+        if embeddings1 is None or embeddings2 is None:
             print("returning...")
             return
 

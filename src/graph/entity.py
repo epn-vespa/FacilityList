@@ -9,6 +9,7 @@ Author:
 from collections import defaultdict
 from typing import List, Set
 from rdflib import Literal, URIRef
+from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
 
 from graph.graph import Graph
@@ -125,7 +126,7 @@ class Entity():
         else:
             # No value for this property
             res = set()
-        
+
         if extend_to_synonyms and (not unique or not res):
             for syn in self.get_synonyms():
                 syn_values = Entity(syn).get_values_for(property,
@@ -179,6 +180,7 @@ class Entity():
                     entity: Entity,
                     score_value: float = None,
                     score_name: str = None,
+                    scores: dict = None,
                     justification_string: str = "",
                     is_human_validation: bool = False,
                     no_validation: bool = False,
@@ -196,6 +198,7 @@ class Entity():
             entity: the new synonym of this entity.
             score_value: decisive score's value. If none, it will not create any SSSOM mapping.
             score_name: decisive score's label.
+            scores: dict of {score: value}.
             justification_string: the justification for this mapping decision.
             is_human_validation: weither a human decided this mapping.
             no_validation: weither no validation was done.
@@ -238,6 +241,7 @@ class Entity():
                                   entity.get_values_for("source", unique = True),
                                   score_value = score_value,
                                   score_name = score_name,
+                                  scores = scores,
                                   justification_string = justification_string,
                                   is_human_validation = is_human_validation,
                                   no_validation = no_validation,
@@ -304,6 +308,34 @@ class Entity():
                 res += ' '.join([str(v) for v in values])[:limit]
         return res
 
+
+    def __dict__(self):
+        """
+        Jsonify the entity.
+        """
+        jsonified = dict()
+        for k, v in self._data.items():
+            if not v:
+                continue
+            if type(k) != str:
+                k = Properties().get_attr_name(k)
+            if type(v) == URIRef:
+                v = split_uri(v)[1]
+            elif type(v) == set:
+                v = list(v)
+            if type(v) in [tuple, list]:
+                for i, vv in enumerate(v):
+                    if type(vv) == URIRef:
+                        vv = split_uri(vv)[1]
+                    elif type(vv) == tuple and len(vv) == 2:
+                        # Remove None language
+                        if vv[1] == None:
+                            vv = vv[0]
+                        else:
+                            vv = vv[0] + '@' + vv[1]
+                    v[i] = vv
+            jsonified[k] = v
+        return {self.get_values_for("label", unique = True): jsonified}
 
 if __name__ == "__main__":
     pass

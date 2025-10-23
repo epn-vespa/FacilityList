@@ -6,6 +6,7 @@ Author:
 """
 import abc
 
+from typing import Tuple, Any
 from graph.entity import Entity
 from data_mapper.tools.tool import Tool
 
@@ -31,10 +32,12 @@ class Matcher(Tool):
     @abc.abstractmethod
     def compute(self,
                 entity1: Entity,
-                entity2: Entity) -> float:
+                entity2: Entity) -> Tuple[str, str, Any]:
         """
-        Return a score value between 0 and 1.
         This method is implemented in the different Scorers.
+        Return:
+            If matched, the two fields that matched and the matched value.
+            None otherwise.
         """
         raise NotImplementedError("This method should be overridden by subclasses.")
 

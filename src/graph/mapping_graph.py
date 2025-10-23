@@ -30,12 +30,13 @@ class MappingGraph():
 
     # Score names' mapping types (subclasses of Mapping) (https://www.ebi.ac.uk/ols4/search?)
     MAPPING_PROCESSESSES = {
-        "string_match": _SEMAPV.StringMatch,
-        "label_match": _SEMAPV.StringMatch,
+        "string_match": _SEMAPV.StringEquality,
+        "label_match": _SEMAPV.StringEquality,
         "levenshtein_similarity": _SEMAPV.LevenshteinEditDistance,
         "acronym_probability": _SEMAPV.StringBasedSimilarityMeasure,
-        "tfidf_cosine_similarity": _SEMAPV.LexicalSimilarityThresholdMatching,
-        "llm_similarity": _SEMAPV.LexicalSimilarityThresholdMatching,
+        "tfidf": _SEMAPV.TokenBasedDistance,
+        "global": _SEMAPV.LexicalSimilarityThresholdMatching,
+        "human": _SEMAPV.ManualMappingCuration,
     }
 
     # Singleton graph
@@ -62,7 +63,7 @@ class MappingGraph():
         if filename:
             self._graph.parse(filename)
 
-        self._graph.bind("obs", self._OBS)
+        self._graph.bind("obsf", self._OBS)
         self._graph.bind("sssom", self._SSSOM)
         self._graph.bind("semapv", self._SEMAPV)
         self.initialize_mapping_set(author = USERNAME,
@@ -181,7 +182,7 @@ class MappingGraph():
             else:
                 self._graph.add((mapping_uri, self._SSSOM.similarity_measure, similarity_measures))
         if not no_validation:
-            self._graph.add((mapping_uri, self._SSSOM.justification, justification_source))
+            self._graph.add((mapping_uri, self._SSSOM.mapping_justification, justification_source))
             if validator_name:
                 self._graph.add((mapping_uri, self._SSSOM.reviewer_label, Literal(validator_name, datatype=XSD.string)))
             if justification_string:
@@ -193,7 +194,13 @@ class MappingGraph():
                 self._graph.add((mapping_uri, self._OBS[score_name], Literal(score_value, datatype=XSD.float)))
                 score_type = self.MAPPING_PROCESSESSES.get(score_name, None)
                 if score_type:
-                    self._graph.add((mapping_uri, self._SSSOM.curation_rule, score_type))
+                    pass
+                    # curation_rule is for domain-specific curation (such as filters)
+                    #self._graph.add((mapping_uri, self._SSSOM.curation_rule, score_type))
+        if filters:
+            for filter in filters:
+                if filter:
+                    self._graph.add((mapping_uri, self._SSSOM.curation_rule, filter))
         if subject_match_field:
             if type(subject_match_field) is not list:
                 subject_match_field = [subject_match_field]
