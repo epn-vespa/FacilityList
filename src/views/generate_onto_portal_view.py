@@ -17,6 +17,7 @@ from utils.string_utilities import standardize_uri
 from utils.dict_utilities import merge_into
 from rdflib import Graph as G, URIRef, RDF, RDFS, XSD, Literal, SKOS, DCTERMS
 from datetime import timezone
+from dateutil import parser as dateparser
 
 
 class OntoPortal(CSVJsonGenerator):
@@ -125,9 +126,12 @@ class OntoPortal(CSVJsonGenerator):
                 if property in self.IGNORE_PROPERTIES:
                     continue
                 if property in self._graph.PROPERTIES._MAPPING:
-                    datatype = self._graph.PROPERTIES._MAPPING[property].get("objtype", XSD.string)
+                    datatype = self._graph.PROPERTIES._MAPPING[property].get("objtype", None)
+                elif property in self._graph.PROPERTIES._INVERSE_MAPPING:
+                    key = self._graph.PROPERTIES._INVERSE_MAPPING.get(property)
+                    datatype = self._graph.PROPERTIES._MAPPING[key].get("objtype", None)
                 else:
-                    datatype = XSD.string
+                    datatype = None
                 if not values:
                     continue
                 for value in values:
@@ -135,11 +139,15 @@ class OntoPortal(CSVJsonGenerator):
                         continue
                     if type(value) == URIRef:
                         pass
+                    elif type(value) == Literal:
+                        pass
                     else:
                         if datatype != XSD.string:
                             if datatype == XSD.dateTime:
-                                
-                                dt = parser.isoparse(str(value)).astimezone(timezone.utc)
+                                if type(value) == tuple:
+                                    value = value[0]
+                                # dt = dateparser.isoparse(str(value)).astimezone(timezone.utc)
+                                dt = value.astimezone(timezone.utc)
                                 value = Literal(dt.isoformat(), datatype=XSD.dateTime)
                             elif datatype == URIRef:
                                 pass
@@ -147,9 +155,13 @@ class OntoPortal(CSVJsonGenerator):
                                 value = Literal(value[0], datatype = datatype)
                         else:
                             if type(value) == tuple and len(value) == 2:
-                                value = Literal(value[0], lang = value[1])
+                                lang = value[1]
+                                if lang:
+                                    value = Literal(value[0], lang = value[1])
+                                else:
+                                    value = Literal(value[0], datatype = datatype)
                             else:
-                                value = Literal(value)
+                                value = Literal(value, datatype = datatype)
                             # Restore prefLabel & altLabel
                             if property == SKOS.prefLabel:
                                 if str(value) != pref_label:

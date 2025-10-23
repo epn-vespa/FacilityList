@@ -301,6 +301,34 @@ def clean_string(text: str) -> str:
     return text.strip()
 
 
+def remove_parenthesis(text: str) -> str:
+    """
+    Remove parenthesis and the text inbetween for any text.
+    Use to standardize labels.
+
+    /!\ If a closing parenthesis is missing, will remove
+    the text until the end from the opened parenthesis.
+    Use with care: some in-parenthesis in labels might be relevant
+    (like North, South to specify a site of an observatory for example).
+
+    Args:
+        text: any label. If it has no parenthesis, will return the same text.
+    """
+    if '(' in text:
+        clean_text = text
+        while '(' in clean_text:
+            # Repeat for each parenthesis
+            old_clean_text = clean_text
+            begin = clean_text.find('(')
+            end = clean_text.find(')')
+            clean_text = old_clean_text[0:begin]
+            if end != -1:
+                clean_text += ' ' + old_clean_text[end + 1:]
+        clean_text = re.sub(' +', ' ', clean_text).strip()
+        return clean_text
+    return text
+
+
 def remove_punct(text: str) -> str:
     """
     Remove all punctuation from a string.
