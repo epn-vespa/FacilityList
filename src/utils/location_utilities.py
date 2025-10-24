@@ -13,6 +13,7 @@ import pycountry_convert
 
 from typing import Optional, Tuple
 from utils.performances import timeall
+from utils.string_utilities import remove_parenthesis
 from config import CACHE_DIR
 
 import geopy
@@ -79,6 +80,7 @@ SPACE_LOCATION = ["Earth.Magnetosheath",
 def get_location_info(label: Optional[str] = None,
                       location: Optional[str] = None,
                       address: Optional[str] = None,
+                      country: Optional[str] = None,
                       latitude: Optional[float]  = None,
                       longitude: Optional[float]  = None,
                       part_of: Optional[dict] = None,
@@ -150,12 +152,15 @@ def get_location_info(label: Optional[str] = None,
     # Remove initial "the" from the label as it performs very bad with geopy
     if label and label.lower().startswith("the "):
         label = label[4:].strip()
+    # Remove parenthesis and inside as well
+    label = remove_parenthesis(label)
 
     # Return information if already in the cache
     if from_cache:
         result = _get_location_from_cache(label = label,
                                           location = location,
                                           address = address,
+                                          country = country,
                                           latitude = latitude,
                                           longitude = longitude,
                                           part_of = part_of)
@@ -248,6 +253,17 @@ def get_location_info(label: Optional[str] = None,
             if result:
                 result_dict["location_confidence"] = 0.25
 
+
+        if result is None and country:
+            saved_in = "country/" + str(country)
+            _get_continent_from_country(country, address, result_dict = result_dict, longitude = longitude)
+            result = result_dict.get("continent", None)
+            if result:
+                result_dict["location_confidence"] = 1.0
+                location_infos[saved_in] = result_dict
+                return result_dict
+
+
         if not result:
             # Did not find the location for the provided data.
             location_infos[saved_in] = {}
@@ -259,16 +275,29 @@ def get_location_info(label: Optional[str] = None,
     except geopy.exc.GeocoderUnavailable as e:
         # Retry after 0.5s
         retries -= 1
-        if retries < 0:
-            location_infos[saved_in] = {}
-            return {}
-        print(f"Warning: {e}.\n{retries} retries left for {label}. Retrying...")
-        return get_location_info(label=label,
-                                 location=location,
-                                 address=address,
-                                 latitude=latitude,
-                                 longitude=longitude,
-                                 retries=retries)
+        if retries < 0: # If there is an address, we will try to extract a county and continent from it.
+            if not address:
+                location_infos[saved_in] = {}
+                return {}
+        else:
+            print(f"Warning: {e}.\n{retries} retries left for {label}. Retrying...")
+            return get_location_info(label=label,
+                                     location=location,
+                                     address=address,
+                                     latitude=latitude,
+                                     longitude=longitude,
+                                     retries=retries)
+
+    if not result and (address or country):
+        # Try to get country and continent & add them in the result dict
+        for add in address:
+            country = add.split(',')[-1].strip()
+            if not country:
+                continue
+            _get_continent_from_country(country, "address", address, result_dict, longitude)
+            if "continent" in result_dict:
+                return result_dict
+        return result_dict
 
     # Transform the result into a compatible data dict
     raw = result.raw
@@ -310,7 +339,7 @@ def get_location_info(label: Optional[str] = None,
     # Get address from latitude & longitude
     address = None
     address_str = ""
-    country = None
+    # country = None
     # Continents and countries do not have latitude & longitude.
     if location_type not in ["continent", "country"] and not "address" in raw:
         # get an address for lat & long
@@ -341,6 +370,20 @@ def get_location_info(label: Optional[str] = None,
             country = address_str.split(',')[-1].strip()
 
     # Get the continent from the country
+    _get_continent_from_country(country, location_type, address, result_dict, longitude)
+
+    # Save the result for future calls
+    location_infos[saved_in] = result_dict
+    return result_dict
+
+def _get_continent_from_country(country: str,
+                                location_type,
+                                address,
+                                result_dict,
+                                longitude):
+    """
+    Add the continent to the result dict
+    """
     country_code = None
     if location_type != "continent" and country:
         if address and "country_code" in address:
@@ -352,7 +395,8 @@ def get_location_info(label: Optional[str] = None,
                 # Country name does not exist.
                 country = None
                 country_code = None
-                result_dict["continent"] = "Antarctica"
+                if not address:
+                    result_dict["continent"] = "Antarctica"
         if country:
             result_dict["country"] = country
 
@@ -365,10 +409,6 @@ def get_location_info(label: Optional[str] = None,
                 continent = continent_dict[continent_code]
             # result_dict["continent_code"] = continent_code
             result_dict["continent"] = continent
-
-    # Save the computed result for future calls
-    location_infos[saved_in] = result_dict
-    return result_dict
 
 
 def _get_address(latitude: float,
@@ -422,6 +462,7 @@ def distance(latlong1: Tuple[float],
 def _get_location_from_cache(label: Optional[str] = None,
                              location: Optional[list[str]] = None,
                              address: Optional[str] = None,
+                             country: Optional[str] = None,
                              latitude: Optional[float]  = None,
                              longitude: Optional[float]  = None,
                              part_of: Optional[dict] = None):
@@ -439,6 +480,7 @@ def _get_location_from_cache(label: Optional[str] = None,
     """
     latlong_empty = False
     address_empty = False
+    country_empty = False
     location_empty = False
     part_of_empty = False
     label_empty = False
@@ -514,6 +556,7 @@ def _get_location_from_cache(label: Optional[str] = None,
         location_empty = True
     location_empty = location_empty or only_none
 
+
     if label:
         saved_in = "geocode/" + str(label)
         data = location_infos.get(saved_in, None)
@@ -525,7 +568,18 @@ def _get_location_from_cache(label: Optional[str] = None,
     else:
         label_empty = True
 
+    if country:
+        saved_in = "country/" + str(country)
+        data = location_infos.get(saved_in, None)
+        if data is not None and data:
+            data["location_confidence"] = 1.0
+            return data
+        elif data == {}:
+            country_empty = True
+    else:
+        country_empty = True
+
     # If the cache's data was empty for any of the provided information
-    if latlong_empty and part_of_empty and location_empty and address_empty and label_empty:
+    if latlong_empty and part_of_empty and location_empty and address_empty and label_empty and country_empty:
         return {}
     return data

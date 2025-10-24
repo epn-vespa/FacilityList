@@ -138,13 +138,15 @@ class Updater():
                         for cat in ent_type:
                             if (cat in entity_types.MAY_HAVE_ADDR and (
                                 "latitude" in features and "longitude" in features or
-                                "location" in features # or
+                                "location" in features or
+                                "address" in features # or
                                 #part_of is not None or
                                 )):
                                 location_info = get_location_info(label = features.get("label", None),
                                                                   latitude = features.get("latitude", None),
                                                                   longitude = features.get("longitude", None),
                                                                   address = features.get("address", None),
+                                                                  country = features.get("country", None),
                                                                   location = features.get("location", None),
                                                                   part_of = part_of)
                                 break
@@ -153,7 +155,7 @@ class Updater():
                     # the search by latitude and longitude did not retrieve
                     # anything.
                     for key, value in location_info.items():
-                        if key not in features or features[key] is None:
+                        if key not in features or not features[key]:
                             features[key] = value
 
             # Add triple <subj, pred, obj>

@@ -314,6 +314,8 @@ def remove_parenthesis(text: str) -> str:
     Args:
         text: any label. If it has no parenthesis, will return the same text.
     """
+    if text is None:
+        return text
     if '(' in text:
         clean_text = text
         while '(' in clean_text:

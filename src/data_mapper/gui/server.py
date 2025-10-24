@@ -27,7 +27,6 @@ def update_state(entity,
 
 def wait_for_user_choice():
     choice_data = user_choices.get()
-    print("choice data =", choice_data)
     return choice_data["choice"], choice_data["justification"]
 
 @app.route("/")
