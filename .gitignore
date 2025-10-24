@@ -2,6 +2,7 @@
 src/**/*.ttl
 src/**/*.csv
 src/**/*.json
+data/Wikidata/
 
 # Generated folders
 cache/
