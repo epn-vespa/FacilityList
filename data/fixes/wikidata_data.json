@@ -2,6 +2,13 @@
     "update": {
         "Gamma-Ray Imaging Spectrometer": {
             "type": ["airborne"]
-        }
+        },
+        "Taylor Range Observatory": {"latitude": -27.463275},
+        "Loomberah Observatory": {"latitude": -31.334632},
+        "North Ryde Observatory": {"latitude": -33.804956},
+        "Windsor Observatory": {"latitude": -33.608598},
+        "Boambee Observatory": {"latitude": -30.339159},
+        "Plateau Observatory": {"continent": "Antarctica"},
+        "Argentine Island Magnetic Observatory": {"continent": "Antarctica"}
     }
 }

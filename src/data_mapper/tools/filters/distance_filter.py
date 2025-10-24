@@ -55,6 +55,10 @@ class DistanceFilter(Filter):
             continent1 is not None and continent2 is not None):
             return False
 
+        # FIXME: the country is sometimes United States, sometimes USA (mismatch).
+        # Probably because we need to update the value from the lists with the one
+        # from the location retriever.
+        """
         country1 = entity1.get_values_for("country", unique=True)
         country2 = entity2.get_values_for("country", unique=True)
 
@@ -68,4 +72,5 @@ class DistanceFilter(Filter):
             city1 is not None and city2 is not None):
             return False
 
+        """
         return True

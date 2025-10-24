@@ -17,6 +17,7 @@ Author:
 
 from graph.entity import Entity
 from data_mapper.tools.filters.filter import Filter
+from graph import entity_types
 
 
 class TypeFilter(Filter):
@@ -35,8 +36,8 @@ class TypeFilter(Filter):
             entity1: reference entity
             entity2: compared entity
         """
-        type1 = entity1.get_values_for("type")
-        type2 = entity2.get_values_for("type")
+        types1 = entity1.get_values_for("type")
+        types2 = entity2.get_values_for("type")
         confidence1 = entity1.get_values_for("type_confidence", unique = True)
         confidence2 = entity2.get_values_for("type_confidence", unique = True)
         if confidence1 != 1 or confidence2 != 1:
@@ -44,7 +45,7 @@ class TypeFilter(Filter):
             # on the type (not enough control)
             return True
 
-        if type1.intersection(type2):
+        if entity_types.get_types_intersections(types1, types2):
             return True
         else:
             return False
