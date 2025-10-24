@@ -2,6 +2,11 @@
 Types (superclasses) names in the OBS namespace.
 Those types are mostly used for categorisation purposes and to
 manage lists and entities' compatibility during the merging step.
+
+TODO: attach telescopes & classes to https://www.w3.org/TR/vocab-ssn/
+
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
 """
 
 # Pretty bad classifier:
@@ -11,83 +16,165 @@ manage lists and entities' compatibility during the merging step.
 # Using LLM with Ollama: test gemma3:1b
 # llm_classifier = None
 
-OBSERVATION_FACILITY = "observation facility" # unused for classification
-GROUND_OBSERVATORY = "ground observatory" # contain ground observatory network
-SPACECRAFT = "spacecraft" # = space observatory
-TELESCOPE = "telescope" # Space or Ground. = observation instruments: inside a telescope.
-AIRBORNE = "airborne" # in the atmosphere
-MISSION = "space mission" # More than one spacecraft in 1 mission: ~= observatory network ?
-SURVEY = "survey" # data produced by a mission. A mission can produce more than one survey. Surveys are linked to databases.
-# mission contains an instrument host (spacecrafts, ...)
-# Other category: Lander / Rover: on Mars, on a comet, asteroid... (considered same as spacecraft, everything that is not on ground)
-UFO = "unknown" # Unknown type (unrelated to our observation facilities)
-INSTRUMENT = "instrument" # Not used in ALL_TYPES, only for PDS that makes links to instruments
-# MISC = "miscellaneous"
-ERROR = "error" # LLM error in return format
+class AutoStringMeta(type):
+    def __repr__(cls):
+        return cls._label
+    def __str__(cls):
+        return cls._label
+    def __call__(cls):
+        return cls._label
 
-# Types except ERROR
+class Ufo(metaclass=AutoStringMeta):
+    """
+    Any kind of entity. Use this class for unclassified entities.
+    """
+    _label = "unknown"
+    def __str__(self):
+        return "unknown"
+UFO = Ufo()
+
+class Platform(Ufo):
+    """
+    Platforms can host telescopes and instruments.
+    """
+    _label = "platform"
+PLATFORM = Platform()
+
+class Instrument(Ufo):
+    """
+    An instrument is hosted by an observatory or a spacecraft (platform).
+    But it can also be the component of a telescope.
+    An instrument is not a platform.
+    """
+    _label = "instrument"
+INSTRUMENT = Instrument()
+
+class ObservationFacility(Ufo):
+    """
+    Any kind of observation facility.
+    """
+    _label = "observation facility"
+OBSERVATION_FACILITY = ObservationFacility()
+
+class GroundFacility(ObservationFacility):
+    """
+    Facilities that are on the surface on the earth and have an address,
+    unless they are located in Antarctica or on the ocean.
+    """
+    _label = "ground facility"
+GROUND_FACILITY = GroundFacility()
+
+class SpaceFacility(ObservationFacility):
+    _label = "space facility"
+SPACE_FACILITY = SpaceFacility()
+
+class GroundObservatory(GroundFacility, Platform):
+    """
+    Can be a station, a ground observatory network (composed of plural ground facilities).
+    It usually has an address and can host telescopes.
+    """
+    _label = "ground observatory"
+GROUND_OBSERVATORY = GroundObservatory()
+
+class Telescope(GroundFacility, SpaceFacility, Instrument):
+    """
+    Solar observatories are telescopes.
+    A telescope usually have an aperture.
+    A telescope can be part of an observatory or spacecraft (platform).
+    Some telescopes are confused with instruments, therefore they are subclass of each other.
+    """
+    _label = "telescope"
+TELESCOPE = Telescope()
+
+class Spacecraft(SpaceFacility, Platform):
+    """
+    Landers and Rovers are considered the same as spacecraft
+    """
+    _label = "spacecraft"
+SPACECRAFT = Spacecraft()
+
+class Airborne(SpaceFacility, Platform):
+    """
+    Platform operating on the atmosphere
+    """
+    _label = "airborne"
+AIRBORNE = Airborne()
+
+class Investigation(Spacecraft):
+    """
+    Sometimes there is a confusion between space missions and spacecraft.
+    Therefore, to allow mapping spacecraft with space missions, they are subclass of each other.
+    """
+    _label = "space mission"
+INVESTIGATION = Investigation()
+
+class Survey(ObservationFacility):
+    """
+    Data produced by a mission. A mission can produce more than one survey. Surveys are linked to databases.
+    """
+    _label = "survey"
+SURVEY = Survey()
+
+class Error(Ufo):
+    """
+    LLM error in return format
+    """
+    _label = "error"
+ERROR = Error()
+
+
+# Types that are used in lists and therefore that can be used in mappings
 ALL_TYPES = {
-            OBSERVATION_FACILITY,
-            GROUND_OBSERVATORY,
-            TELESCOPE,
-            SPACECRAFT,
-            AIRBORNE,
-            MISSION,
-            UFO
+            OBSERVATION_FACILITY: ObservationFacility,
+            GROUND_OBSERVATORY: GroundObservatory,
+            TELESCOPE: Telescope,
+            INSTRUMENT: Instrument,
+            SPACECRAFT: Spacecraft,
+            AIRBORNE: Airborne,
+            INVESTIGATION: Investigation,
+            UFO: Ufo
             }
 
 
 # A telescope may have an address if it is located in an observatory.
 # An observatory network may be a telescope array with only one location.
 MAY_HAVE_ADDR = {
-                OBSERVATION_FACILITY,
-                GROUND_OBSERVATORY,
-                TELESCOPE
-                }
+    GROUND_FACILITY,
+    GROUND_OBSERVATORY,
+    TELESCOPE
+    }
 
-NO_ADDR = {
-    MISSION,
-    SPACECRAFT,
-    AIRBORNE
-}
+NO_ADDR = ALL_TYPES.keys() - MAY_HAVE_ADDR
 
 # Types that can not co-exist with GROUND_OBSERVATORY
 SPACE_TYPES = {
     SPACECRAFT,
-    AIRBORNE
+    AIRBORNE,
+    SPACE_FACILITY
 }
 
-
-def to_string(data: dict,
-              exclude: list[str] = ["code",
-                                    "url",]) -> str:
+def get_types_intersections(types1: set[str],
+                            types2: set[str]) -> set[str]:
     """
-    Utility function.
+    Types are compatible with each other even if they are not the same.
 
-    Convert an entity's data dict into its string representation.
-    Keys are sorted so that the generated strings are always the same.
-
-    Exclude entries from the data to ignore values that will not help LLM,
-    such as any URL/URI, codes, etc.
+    This method was made to replace types1.intersection(types2) by
+    a more robust method that would consider mapping a Ground Observatory
+    with a Ground Facility as possible.
 
     Args:
-        data: the entity data dict
-        exclude: dict entries to exclude
-
-    Outputs:
-        A string representation of the entity's data.
+        types1: possible types for the first list
+        types2: possible types for the second list
     """
-    res = data["label"] + '. '
-    for key, value in sorted(data.items()):
-        if key in exclude:
-            continue
-        if key == "label":
-            continue
-        if type(value) not in [list, set, tuple]:
-            value = [value]
-        if key == "alt_label":
-            key = "Also known as"
-        else:
-            key = key.replace('_', ' ').capitalize()
-        res += f"{key}: {', '.join([str(v)[:512] for v in value])}. "
-    return res
+    intersection = set()
+    for type1 in types1:
+        for type2 in types2:
+            if type1 == type2:
+                intersection.add(type1)
+                continue
+            t1_ = ALL_TYPES[type1]
+            t2_ = ALL_TYPES[type2]
+            if issubclass(t1_, t2_) or issubclass(t2_, t1_):
+                intersection.add(type1)
+                intersection.add(type2)
+    return intersection

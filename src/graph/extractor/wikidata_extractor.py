@@ -102,11 +102,11 @@ class WikidataExtractor(Extractor):
     ?itemURI schema:dateModified ?modifiedDate . # get last modification date
     """
 
-    _TYPES = {entity_types.MISSION: ["wd:Q5916", # Spaceflight
-                                     #"wd:Q550089" # Astronomical survey
-                                     #"wd:Q2133344", # Space mission (manned missions)
-                                     #"wd:Q60054001" # Space program (government related: not an obs facility)
-                                     ],
+    _TYPES = {entity_types.INVESTIGATION: ["wd:Q5916", # Spaceflight
+                                            #"wd:Q550089" # Astronomical survey
+                                            #"wd:Q2133344", # Space mission (manned missions)
+                                            #"wd:Q60054001" # Space program (government related: not an obs facility)
+                                          ],
               entity_types.SURVEY: ["wd:Q550089" # Astronomical survey
                                      ],
               entity_types.SPACECRAFT: ["wd:Q40218"], # Spacecraft
@@ -476,8 +476,16 @@ class WikidataExtractor(Extractor):
                                 property = prop["mainsnak"]["datavalue"]["value"]
                                 property_value = property["amount"]
                                 if "unit" in property:
-                                    property_value += " " + self._get_label(property["unit"])
-                                    # do not add the unit as an entity, only get its label
+                                    unit = self._get_label(property["unit"])
+                                    if property_name == "altitude":
+                                    # convert to meters
+                                        if unit == "metre":
+                                            property_value = float(property_value)
+                                        elif unit == "kilometre":
+                                            property_value = float(property_value) * 1000
+                                    else:
+                                        property_value += " " + self._get_label(property["unit"])
+
                             elif datatype == "time":
                                 property_value = prop["mainsnak"]["datavalue"]["value"]["time"]
                             elif datatype == "globe-coordinate":

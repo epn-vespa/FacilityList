@@ -2,6 +2,10 @@
 PdsExtractor scraps the NASA's PDS webpage and stores data into a dictionary.
 The output dictionary is compatible with the ontology mapping (see graph.py).
 
+Data errors:
+    bopps: space mission => could also be a airborne (see label),
+    but it is considered as a telescope + mission by Wikidata.
+
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
@@ -63,8 +67,8 @@ class PdsExtractor(Extractor):
              "spacecraft": entity_types.SPACECRAFT,
              "lander": entity_types.SPACECRAFT,
              "rover": entity_types.SPACECRAFT,
-             "mission": entity_types.MISSION,
-             "investigation": entity_types.MISSION,
+             "mission": entity_types.INVESTIGATION,
+             "investigation": entity_types.INVESTIGATION,
              "facility": entity_types.OBSERVATION_FACILITY,
              "instrument": entity_types.INSTRUMENT,
              "instrument_host": entity_types.SPACECRAFT

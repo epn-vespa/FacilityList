@@ -39,7 +39,7 @@ class AasExtractor(Extractor):
     # For merging strategies. Prevent merging data from lists
     # that do not have types in common
     POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
-                      entity_types.MISSION,
+                      entity_types.INVESTIGATION,
                       entity_types.TELESCOPE,
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
@@ -328,7 +328,7 @@ class AasExtractor(Extractor):
 
         # Add a type to the entities
         for code, data in tqdm(result.items(), desc = f"Classify {self.NAMESPACE}"):
-            choices = [entity_types.TELESCOPE, entity_types.MISSION, entity_types.GROUND_OBSERVATORY]
+            choices = [entity_types.TELESCOPE, entity_types.INVESTIGATION, entity_types.GROUND_OBSERVATORY]
             label = data["label"]# + ' ' + ' '.join(data.get("alt_label", []))
             # label = label.strip()
             description = ""
@@ -358,7 +358,7 @@ class AasExtractor(Extractor):
                 data["type"] = entity_types.TELESCOPE
                 continue
             elif label_l.endswith("mission"):
-                data["type"] = entity_types.MISSION
+                data["type"] = entity_types.INVESTIGATION
                 continue
             elif "aperture" in data:
                 data["type"] = entity_types.TELESCOPE

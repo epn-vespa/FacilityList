@@ -197,8 +197,8 @@ class LLMConnection():
                                 "cosmos observation instrument": TELESCOPE,
                                 "telescope": TELESCOPE,
                                 "space telescope": TELESCOPE,
-                                "space mission": MISSION,
-                                "space investigation": MISSION,
+                                "space mission": INVESTIGATION,
+                                "space investigation": INVESTIGATION,
                                 "unknown": UFO,
                                 "miscellaneous": UFO,
                             }

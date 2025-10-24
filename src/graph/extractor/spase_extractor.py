@@ -53,7 +53,7 @@ class SpaseExtractor(Extractor):
     # For merging strategies. Prevent merging data from lists
     # that do not have types in common
     POSSIBLE_TYPES = {entity_types.GROUND_OBSERVATORY,
-                      entity_types.MISSION,
+                      entity_types.INVESTIGATION,
                       entity_types.TELESCOPE,
                       entity_types.AIRBORNE,
                       entity_types.SPACECRAFT}
@@ -94,7 +94,7 @@ class SpaseExtractor(Extractor):
     # mapping to have typed entities.)
     TYPES_BY_FOLDER = {"ASWS/Ground": entity_types.GROUND_OBSERVATORY,
                        "ASWS/Satellite": entity_types.SPACECRAFT,
-                       "CNES": [entity_types.MISSION, entity_types.SPACECRAFT],
+                       "CNES": [entity_types.INVESTIGATION, entity_types.SPACECRAFT],
                        "ESA": entity_types.SPACECRAFT,
                        "HamSCI": entity_types.GROUND_OBSERVATORY, # OBSERVATORY_NETWORK
                        "ISWI": entity_types.GROUND_OBSERVATORY, # GIRO.json: should be OBSERVATORY NETWORK
@@ -402,19 +402,29 @@ class SpaseExtractor(Extractor):
             "Earth.Surface",
             "Earth"
         ]
+        for l in data["location"]:
+            if l in location_ground:
+                data["type"] = entity_types.GROUND_FACILITY
+            elif l in location_space:
+                data["type"] = entity_types.SPACE_FACILITY
+            else:
+                print("Warning: new unspecified location in spase:", data["location"])
+                print("Please add it to space_extractor")
+                data["type"] = entity_types.ERROR
         data["type_confidence"] = 1
+        """
         choices = None # None choices will disambiguate for all categories.
         if "latitude" in data and "longitude" in data:
-            choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
+            choices = [entity_types.GROUND_OBSERVATORY, entity_types.INVESTIGATION,
                        entity_types.TELESCOPE]
         elif "location" in data:
             for l in data["location"]:
                 if l in location_space:
-                    choices = [entity_types.AIRBORNE, entity_types.MISSION,
+                    choices = [entity_types.AIRBORNE, entity_types.INVESTIGATION,
                                entity_types.SPACECRAFT]
                     break
                 if l in location_ground:
-                    choices = [entity_types.GROUND_OBSERVATORY, entity_types.MISSION,
+                    choices = [entity_types.GROUND_OBSERVATORY, entity_types.INVESTIGATION,
                                entity_types.TELESCOPE]
                     break
 
@@ -430,7 +440,7 @@ class SpaseExtractor(Extractor):
                                                 from_cache = True,
                                                 cache_key = self.NAMESPACE + '#' + data["label"])
         data["type_confidence"] = 0
-
+        """
 
 if __name__ == "__main__":
     pass

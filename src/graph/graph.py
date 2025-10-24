@@ -7,10 +7,12 @@ Author:
 from collections import defaultdict
 import datetime
 import os
+import inspect
+import builtins
 
 from typing import Iterator, List, Tuple
-from rdflib import RDFS, Graph as G, Literal, Namespace, URIRef, XSD
-from rdflib.namespace import SKOS, DCTERMS, OWL
+from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
+from rdflib.namespace import SKOS, DCTERMS, OWL, RDF, RDFS
 from graph import entity_types
 from graph.extractor.extractor_lists import ExtractorLists
 from graph.extractor.extractor import Extractor
@@ -73,12 +75,19 @@ class Graph(G):
         self.bind("ivoasem", self.PROPERTIES.IVOASEM)
 
         # Initialize types
-        obs_facility = standardize_uri(entity_types.OBSERVATION_FACILITY)
-        for t in entity_types.ALL_TYPES - {entity_types.OBSERVATION_FACILITY}:
-            t = standardize_uri(t)
-            self.add((self.OBS[t],
-                      RDFS.subClassOf,
-                      self.OBS[obs_facility]))
+        for name, cls in inspect.getmembers(entity_types, inspect.isclass):
+            if cls == entity_types.AutoStringMeta:
+                continue
+            class_uri = self.OBS[standardize_uri(cls._label)]
+            self.add((class_uri, RDF.type, OWL.Class))
+            if cls.__doc__:
+                self.add((class_uri, RDFS.comment, Literal(inspect.cleandoc(cls.__doc__))))
+            for base in cls.__bases__:
+                if base is object or base is builtins.object:
+                    continue
+                b = base._label
+                base_uri = standardize_uri(base())
+                self.add((class_uri, RDFS.subClassOf, self.OBS[base_uri]))
 
         Graph._initialized = True
 
