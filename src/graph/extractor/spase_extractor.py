@@ -293,9 +293,9 @@ class SpaseExtractor(Extractor):
 
         # Get types
         for data in result.values():
-            data["type"] = self.DEFAULT_TYPE
-            data["type_confidence"] = 0
-            # self._get_type(data)
+            #data["type"] = self.DEFAULT_TYPE
+            #data["type_confidence"] = 0
+            self._get_type(data)
 
 
         # Merge entities on label
@@ -376,41 +376,71 @@ class SpaseExtractor(Extractor):
         """
         Add the type of the entity to the data dictionary
         """
-        location_space = ["Earth.Magnetosheath",
-                  "Earth.Magnetosphere",
-                  "Earth.Magnetosphere.Magnetotail",
-                  "Earth.Magnetosphere.Main",
-                  "Earth.Magnetosphere.Polar",
-                  "Earth.Magnetosphere.RadiationBelt",
-                  "Earth.Moon",
-                  "Earth.NearSurface",
-                  "Earth.NearSurface.Atmosphere",
-                  "Earth.NearSurface.AuroralRegion",
-                  "Earth.NearSurface.EquatorialRegion",
-                  "Earth.NearSurface.Ionosphere",
-                  "Earth.NearSurface.Ionosphere.DRegion",
-                  "Earth.NearSurface.Ionosphere.ERegion",
-                  "Earth.NearSurface.Ionosphere.FRegion",
-                  "Earth.NearSurface.Ionosphere.Topside",
-                  "Earth.NearSurface.Mesosphere",
-                  "Earth.NearSurface.Plasmasphere",
-                  "Earth.NearSurface.PolarCap",
-                  "Earth.NearSurface.Stratosphere",
-                  "Earth.NearSurface.Thermosphere",
+        location_space = [
+            "Asteroid",
+            "Comet",
+            "Earth.Magnetosheath",
+            "Earth.Magnetosphere",
+            "Earth.Magnetosphere.Magnetotail",
+            "Earth.Magnetosphere.Main",
+            "Earth.Magnetosphere.Polar",
+            "Earth.Magnetosphere.RadiationBelt",
+            "Earth.Moon",
+            "Earth.NearSurface",
+            "Earth.NearSurface.Atmosphere",
+            "Earth.NearSurface.AuroralRegion",
+            "Earth.NearSurface.EquatorialRegion",
+            "Earth.NearSurface.Ionosphere",
+            "Earth.NearSurface.Ionosphere.DRegion",
+            "Earth.NearSurface.Ionosphere.ERegion",
+            "Earth.NearSurface.Ionosphere.FRegion",
+            "Earth.NearSurface.Ionosphere.Topside",
+            "Earth.NearSurface.Mesosphere",
+            "Earth.NearSurface.Plasmasphere",
+            "Earth.NearSurface.PolarCap",
+            "Earth.NearSurface.Stratosphere",
+            "Earth.NearSurface.Thermosphere",
+            "Heliosphere",
+            "Heliosphere.Inner",
+            "Heliosphere.NearEarth",
+            "Heliosphere.Outer",
+            "Heliosphere.Remote1AU",
+            "Jupiter",
+            "Jupiter.Magnetosphere",
+            "Jupiter.Magnetosphere.Magnetotail",
+            "Mars",
+            "Mars.Phobos",
+            "Mercury",
+            "Pluto",
+            "Saturn",
+            "Saturn.Magnetosphere",
+            "Sun",
+            "Sun.Chromosphere",
+            "Sun.Corona",
+            "Sun.TransitionRegion",
+            "Venus"
         ]
         location_ground = [
             "Earth.Surface",
             "Earth"
         ]
+        if data.get("location", None) is None:
+            print(data)
+            data["type"] = self.DEFAULT_TYPE
+            data["type_confidence"] = 0
+            return
         for l in data["location"]:
             if l in location_ground:
                 data["type"] = entity_types.GROUND_FACILITY
+                break
             elif l in location_space:
                 data["type"] = entity_types.SPACE_FACILITY
+                break
             else:
+                # Still SPACE_FACILITY because there is a location.
                 print("Warning: new unspecified location in spase:", data["location"])
                 print("Please add it to space_extractor")
-                data["type"] = entity_types.ERROR
+                data["type"] = self.DEFAULT_TYPE
         data["type_confidence"] = 1
         """
         choices = None # None choices will disambiguate for all categories.

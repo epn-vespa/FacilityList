@@ -10,6 +10,7 @@ from typing import Tuple, Any
 from unidecode import unidecode
 from graph.entity import Entity
 from data_mapper.tools.matchers.matcher import Matcher
+from utils.performances import timeall
 
 
 class LabelMatchScorer(Matcher):
@@ -18,6 +19,7 @@ class LabelMatchScorer(Matcher):
     NAME = "label_match"
 
 
+    @timeall
     def compute(self,
                 entity1: Entity,
                 entity2: Entity) -> Tuple[str, str, Any]:

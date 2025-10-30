@@ -428,6 +428,7 @@ class WikidataExtractor(Extractor):
                 "P2956": "NAIF_ID",
                 "P717": "MPC_ID", #P5736: for astronomical body
                 "P527": "has_part",
+                #"P1202": "has_part" # carries scientific instrument
                 "P361": "is_part_of",
                 "P137": "funding_agency", #operator (also in NSSDC extractor, SPASE extractor)
                 #"P17": "country", # can be found using coordinate_location

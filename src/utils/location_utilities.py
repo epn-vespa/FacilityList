@@ -204,11 +204,14 @@ def get_location_info(label: Optional[str] = None,
             for part in part_of:
                 if part is None:
                     continue
-                result = get_location_info(label = part.get("label", None),
-                                           location = part.get("location", None),
-                                           latitude = part.get("latitude", None),
-                                           longitude = part.get("longitude", None),
-                                           address = part.get("address", None))
+                if type(part) == str:
+                    result = get_location_info(label = part)
+                else:
+                    result = get_location_info(label = part.get("label", None),
+                                            location = part.get("location", None),
+                                            latitude = part.get("latitude", None),
+                                            longitude = part.get("longitude", None),
+                                            address = part.get("address", None))
                 if result:
                     return result
                 else:

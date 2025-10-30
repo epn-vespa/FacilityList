@@ -11,7 +11,6 @@ Author:
 """
 import json
 from bs4 import BeautifulSoup
-from tqdm import tqdm
 from graph import entity_types
 from graph.extractor.data_fixer import fix, link_has_part
 from utils.string_utilities import clean_string, cut_location, cut_acronyms, cut_part_of, get_aperture, cut_aka
@@ -327,7 +326,7 @@ class AasExtractor(Extractor):
         link_has_part(result)
 
         # Add a type to the entities
-        for code, data in tqdm(result.items(), desc = f"Classify {self.NAMESPACE}"):
+        for code, data in result.items():
             choices = [entity_types.TELESCOPE, entity_types.INVESTIGATION, entity_types.GROUND_OBSERVATORY]
             label = data["label"]# + ' ' + ' '.join(data.get("alt_label", []))
             # label = label.strip()

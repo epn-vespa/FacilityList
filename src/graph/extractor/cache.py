@@ -80,7 +80,7 @@ class CacheManager():
             if content:
                 CacheManager.save_cache(content, cache_path)
         if not content:
-            print(f"Content could not be download for {url}.")
+            print(f"Content could not be downloaded for {url}.")
         return content
 
 

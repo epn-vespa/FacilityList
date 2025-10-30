@@ -10,7 +10,7 @@ from typing import Tuple
 from collections import defaultdict
 from urllib.parse import quote
 from utils.acronymous import proba_acronym_of
-from graph.extractor.extractor import Extractor
+from rdflib import URIRef
 
 
 def standardize_uri(label: str) -> str:
@@ -30,10 +30,21 @@ def standardize_uri(label: str) -> str:
     return label
 
 
-def get_extractor_from_namespace(namespace: str) -> Extractor:
+def uri_to_str(uri: URIRef) -> str:
+    """
+    Get the string of the entity from its URI by removing '-'
+    and the namespace.
+    """
+    return uri.split('#')[-1].replace('-', ' ')
+
+
+def get_extractor_from_namespace(namespace: str) -> str:
     """
     Get the list name from an URI.
     Example: ".../pds#..." -> "pds"
+
+    Returns:
+        the Extractor's namespace
 
     Args:
         namespace: the namespace URI of an entity.
