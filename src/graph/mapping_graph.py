@@ -57,8 +57,13 @@ class MappingGraph():
     def __init__(self,
                  filename: str = None,
                  strategy: str = ""):
+        """
+        Args:
+            filename: the checkpoint SSSOM ontology path
+        """
         if MappingGraph._initialized:
             return
+
         self._graph = Graph()
         if filename:
             self._graph.parse(filename)
@@ -66,6 +71,7 @@ class MappingGraph():
         self._graph.bind("obsf", self._OBS)
         self._graph.bind("sssom", self._SSSOM)
         self._graph.bind("semapv", self._SEMAPV)
+        # TODO bind aas, pds... namespaces
         self.initialize_mapping_set(author = USERNAME,
                                     strategy = strategy)
         MappingGraph._initialized = True
