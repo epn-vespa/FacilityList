@@ -76,7 +76,7 @@ class Graph(G):
 
         # Initialize types
         for name, cls in inspect.getmembers(entity_types, inspect.isclass):
-            if cls == entity_types.AutoStringMeta:
+            if cls == entity_types.AutoStringMeta or cls == URIRef:
                 continue
             class_uri = self.OBS[standardize_uri(cls._label)]
             self.add((class_uri, RDF.type, OWL.Class))
@@ -85,7 +85,6 @@ class Graph(G):
             for base in cls.__bases__:
                 if base is object or base is builtins.object:
                     continue
-                b = base._label
                 base_uri = standardize_uri(base())
                 self.add((class_uri, RDFS.subClassOf, self.OBS[base_uri]))
 

@@ -16,6 +16,7 @@ from graph.entity import Entity
 
 from rdflib.namespace import SKOS
 from rdflib import Literal
+from tqdm import tqdm
 
 from utils.performances import timeall, timeit
 
@@ -77,9 +78,8 @@ class AttributeMatcher():
                           attr1 = "alt_label",
                           attr2 = "label")
 
-    @timeall
+    @timeit
     def merge_on(self,
-                 # CPM: CandidatePairsMapping,
                  list1: Extractor,
                  list2: Extractor,
                  attr1: str,
@@ -124,7 +124,7 @@ class AttributeMatcher():
         merged = 0
         total_entity1 = 0
 
-        for entity1, in list1_entities:
+        for entity1, in tqdm(list1_entities):
             #if entity1 in already_linked:
             #    continue
             total_entity1 += 1

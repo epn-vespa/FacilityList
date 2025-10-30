@@ -90,12 +90,18 @@ class Updater():
                 if triple[0].startswith(namespace_uri):
                     self.graph.remove(triple)
 
-        for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
+        if extractor:
+            desc = f"Add {extractor.NAMESPACE} entities to ontology"
+        else:
+            desc = ""
+        for identifier, features in tqdm(data.items(), desc = desc):
             # Get complete location information and add them to the features
             # Only for extracted ground entities
             if extractor:
 
-                types = features["type"]
+                types = features.get("type", None)
+                if not types:
+                    continue
                 if type(types) != str:
                     is_space_type = any(x in entity_types.SPACE_TYPES for x in types)
                 else:

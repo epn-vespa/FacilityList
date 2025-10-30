@@ -23,7 +23,9 @@ from graph.extractor.extractor import Extractor
 import faiss # pip3 install faiss-cpu (use faiss-gpu for GPU support)
 from llm.llm_connection import LLMConnection
 
-from config import USERNAME, OLLAMA_MODEL_NAME, configure_ollama
+from config import USERNAME
+import config
+
 
 class HybridRetriever():
 
@@ -393,7 +395,7 @@ class HybridRetriever():
                             justification_string=justification_string,
                             is_human_validation=is_human_validation,
                             no_validation=False,
-                            validator_name=USERNAME if is_human_validation else OLLAMA_MODEL_NAME
+                            validator_name=USERNAME if is_human_validation else config.OLLAMA_MODEL_NAME
                            )
 
 
@@ -426,6 +428,8 @@ class HybridRetriever():
                 self.add_filter(tool) # TODO do not instanciate classes in filters
             elif issubclass(tool, Score):
                 self.add_score(tool)  # TODO same
+            elif issubclass(tool, Matcher):
+                self.add_matcher(tool)
             else:
                 raise ValueError(f"Tool {tool} is not an Embedder, Filter or Score.")
         if not self.embedders:
@@ -546,7 +550,7 @@ class HybridRetriever():
     def process_lists(self,
                       extractor1: Extractor,
                       extractor2: Extractor,
-                      on_types: Set[str] | str = "all",
+                      on_types: Set[str] | str = None,
                       with_tools: List[Type[Tool]] = MappingToolsList.ALL_TOOLS,
                       limit: int = -1,
                       ignore_deprecated = True,
@@ -576,11 +580,16 @@ class HybridRetriever():
                 self.add_matcher(tool)
             else:
                 raise ValueError(f"Tool {tool} is not an Embedder, Filter or Score.")
-        if not self.embedders:
-            raise ValueError("At least one embedder is required.")
+        #if not self.embedders:
+        #    raise ValueError("At least one embedder is required.")
+        # FIXME make it work even without embedders
         g = Graph()
-        if not human_validation:
-            configure_ollama()
+
+        if type(on_types) == str:
+            if on_types == "all":
+                on_types = None
+            else:
+                on_types = [on_types]
 
         # First we find all entities to index them
         uri_entities1 = g.get_entities_from_list(source = extractor1,
@@ -640,20 +649,22 @@ class HybridRetriever():
             all_entities1, all_entities2 = all_entities2, all_entities1
         """
 
-        embeddings1 = self.fit2(all_entities1)
-        indexer1 = Indexer(extractor = extractor1,
-                           embedders = self.embedders,
-                           entity_types = on_types,
-                           entities = all_entities1,
-                           embeddings = embeddings1)
-        embeddings2 = self.fit2(all_entities2)
-        indexer2 = Indexer(extractor = extractor2,
-                           embedders = self.embedders,
-                           entity_types = on_types,
-                           entities = all_entities2,
-                           embeddings = embeddings2)
+        if self.embedders:
+            embeddings1 = self.fit2(all_entities1)
+            indexer1 = Indexer(extractor = extractor1,
+                               embedders = self.embedders,
+                               entity_types = on_types,
+                               entities = all_entities1,
+                               embeddings = embeddings1)
+            embeddings2 = self.fit2(all_entities2)
+            indexer2 = Indexer(extractor = extractor2,
+                               embedders = self.embedders,
+                               entity_types = on_types,
+                               entities = all_entities2,
+                               embeddings = embeddings2)
         for n, entity1 in enumerate(entities1):
-            embeddings = indexer1.get_embeddings(entity1)
+            if self.embedders:
+                embeddings = indexer1.get_embeddings(entity1)
             blacklisted_entities = []
             for entity2 in entities2:
                 if not self.apply_filters(entity1, entity2):
@@ -662,7 +673,8 @@ class HybridRetriever():
                 if matcher is not None:
                     print("Entities matched with", matcher.NAME)
                     # Add synonyms
-                    indexer1.merge_embeddings(entity1, entity2, indexer2)
+                    if self.embedders:
+                        indexer1.merge_embeddings(entity1, entity2, indexer2)
                     entities2.remove(entity2)
                     entity1.add_synonym(entity2,
                                         score_name = matcher.NAME,
@@ -670,6 +682,9 @@ class HybridRetriever():
                                         object_match_field = field2,
                                         match_string = value)
                     continue
+
+            if not self.embedders:
+                continue
 
             print("Blacklisted entities (filtered out):", len(blacklisted_entities))
             nearest = indexer2.search_nearest(embeddings,

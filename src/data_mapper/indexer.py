@@ -46,13 +46,13 @@ class Indexer():
         self.embedders = frozenset(embedders)
         self.entity_types = frozenset(entity_types)
         if extractor in self._registry:
-            if self.embedders in cls._registry[extractor]:
+            if self.embedders in Indexer._registry[extractor]:
                 return
 
         self.indexes = {entity: embedding for entity, embedding in zip(entities, embeddings)}
         self.extractor = extractor
         if extractor:
-            self._registry[entity_types][extractor][self.embedders] = self
+            Indexer._registry[self.entity_types][extractor][self.embedders] = self
 
 
     def search_nearest(self,

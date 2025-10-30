@@ -6,7 +6,8 @@ import atexit
 import json, pickle
 import re
 import requests
-from config import OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE
+from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE
+import config
 from utils.performances import timeall, timeit
 from graph.entity_types import *
 
@@ -75,7 +76,7 @@ class LLMConnection():
             return context_length
 
         response = requests.post(
-                f'{OLLAMA_HOST}/api/show',
+                f'{config.OLLAMA_HOST}/api/show',
                 json = {
                     'model': ollama_model,
                 }
@@ -168,9 +169,9 @@ class LLMConnection():
                 return embeddings # if error, re-compute.
         prompt = "Represent this entity for search: " + text
         response = requests.post(
-            f"{OLLAMA_HOST}/api/embeddings",
+            f"{config.OLLAMA_HOST}/api/embeddings",
             json={
-                "model": OLLAMA_MODEL,
+                "model": config.OLLAMA_MODEL,
                 "prompt": prompt
                 }
         )
@@ -208,8 +209,7 @@ class LLMConnection():
                  text: str,
                  choices: list[str] = None,
                  from_cache: bool = True,
-                 cache_key: str = None,
-                 model: str = OLLAMA_MODEL):
+                 cache_key: str = None):
         """
         Use a LLM to classify a text to one of the categories.
         Return the category's string that can be used as a superclass of the
@@ -262,7 +262,7 @@ class LLMConnection():
             prompt += "University, station and observatory (obs) are ground observation facilities (on earth). "
         if TELESCOPE in possible_categories:
             prompt += "Cosmos observation instruments and telescopes can have a wavelength, a size, a host observatory etc. "
-        if MISSION in possible_categories:
+        if INVESTIGATION in possible_categories:
             prompt += f"Space missions are the observation of a cosmos body or event, often made by a spacecraft, telescope or observatory. "
         if AIRBORNE in possible_categories:
             prompt += "An airborne is a plane or balloon sent into the atmosphere to make cosmos observations. "
@@ -279,12 +279,12 @@ class LLMConnection():
         # Entity representation
         prompt += f"Text to classify: {text}"
 
-        context_length = self.get_llm_context_length(model)
+        context_length = self.get_llm_context_length(config.OLLAMA_MODEL)
         if len(prompt) > context_length:
             prompt = prompt[:context_length]
 
         # Get the category from the LLM
-        cat = self.generate(prompt)
+        cat = self.generate(prompt, config.OLLAMA_MODEL)
         cat = cat.lstrip('-').lstrip()
         cat = cat.split("\n")[0] # Some models (such as Gemma) return more than one category
         if cat in self.categories_by_descriptions:
@@ -303,7 +303,7 @@ class LLMConnection():
     @classmethod
     def generate(self,
                  prompt: str,
-                 model: str = OLLAMA_MODEL) -> str:
+                 model: str) -> str:
 
         """
         Send a simple generate query to the Ollama API.
@@ -313,7 +313,7 @@ class LLMConnection():
             model: the model to use.
         """
         response = requests.post(
-            f'{OLLAMA_HOST}/api/generate',
+            f'{config.OLLAMA_HOST}/api/generate',
             json={
                 'model': model,
                 'prompt': prompt,
@@ -326,7 +326,7 @@ class LLMConnection():
             response = self.remove_tags(response)
             return response
         else:
-            return None
+            raise requests.ConnectionError(response.json()["error"])
 
 
     @classmethod
@@ -372,12 +372,13 @@ class LLMConnection():
                   f"Justification: Both entities share the same label. They do not have any incompatible feature. Their aperture and funding agency match."
         print(prompt)
 
-        response = self.generate(prompt)
+        response = self.generate(prompt,
+                                 model = config.OLLAMA_MODEL)
         """"
         response = requests.post(
             f'{OLLAMA_HOST}/api/generate',
             json={
-                'model': OLLAMA_MODEL,
+                'model': config.OLLAMA_MODEL,
                 'prompt': prompt,
                 'stream': False,
                 'temperature': OLLAMA_TEMPERATURE, # low temperature = more determinist. Default = 0.8

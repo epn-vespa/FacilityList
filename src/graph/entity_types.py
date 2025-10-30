@@ -16,6 +16,9 @@ Author:
 # Using LLM with Ollama: test gemma3:1b
 # llm_classifier = None
 
+from rdflib import URIRef
+from utils.string_utilities import uri_to_str
+
 class AutoStringMeta(type):
     def __repr__(cls):
         return cls._label
@@ -125,6 +128,8 @@ ERROR = Error()
 
 # Types that are used in lists and therefore that can be used in mappings
 ALL_TYPES = {
+            SPACE_FACILITY: SpaceFacility,
+            GROUND_FACILITY: GroundFacility,
             OBSERVATION_FACILITY: ObservationFacility,
             GROUND_OBSERVATORY: GroundObservatory,
             TELESCOPE: Telescope,
@@ -153,8 +158,8 @@ SPACE_TYPES = {
     SPACE_FACILITY
 }
 
-def get_types_intersections(types1: set[str],
-                            types2: set[str]) -> set[str]:
+def get_types_intersections(types1: set[str] | set[URIRef],
+                            types2: set[str] | set[URIRef]) -> set[str]:
     """
     Types are compatible with each other even if they are not the same.
 
@@ -172,6 +177,10 @@ def get_types_intersections(types1: set[str],
             if type1 == type2:
                 intersection.add(type1)
                 continue
+            if type(type1) != str:
+                type1 = uri_to_str(type1)
+            if type(type2) != str:
+                type2 = uri_to_str(type2)
             t1_ = ALL_TYPES[type1]
             t2_ = ALL_TYPES[type2]
             if issubclass(t1_, t2_) or issubclass(t2_, t1_):

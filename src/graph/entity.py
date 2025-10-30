@@ -58,8 +58,6 @@ class Entity():
                 self._data[property].add((value))
             else:
                 self._data[property].add((str(value)))
-        if "|" in self.uri:
-            raise ValueError("| in uri:", self.uri)
 
 
     def __eq__(self,
@@ -128,7 +126,7 @@ class Entity():
             res = set()
 
         if extend_to_synonyms and (not unique or not res):
-            for syn in self.get_synonyms():
+            for syn in self.get_synonyms().copy():
                 syn_values = Entity(syn).get_values_for(property,
                                                         unique = unique,
                                                         extend_to_synonyms = False,
@@ -145,7 +143,7 @@ class Entity():
             if type(res) in [set, list]:
                 for value in res:
                     lang = None
-                    if len(value) == 2:
+                    if type(value) == tuple and len(value) == 2:
                         value, lang = value
                     if lang == None or not languages or lang in languages:
                         return value
@@ -157,8 +155,9 @@ class Entity():
         res_for_lang = set()
         for value in res:
             lang = None
-            if len(value) == 2:
-                value, lang = value
+            if type(value) == tuple:
+                if len(value) == 2:
+                    value, lang = value
             if lang == None or not languages or lang in languages:
                 res_for_lang.add(value)
         return res_for_lang
@@ -334,7 +333,36 @@ class Entity():
                         else:
                             vv = vv[0] + '@' + vv[1]
                     v[i] = vv
-            jsonified[k] = v
+            jsonified[k] = list(set(v)) # No duplicate
+        for synonym in self.get_synonyms():
+            if type(synonym) == URIRef:
+                synonym = Entity(synonym)
+            for k, v in synonym._data.items():
+                if not v:
+                    continue
+                if type(k) != str:
+                    k = Properties().get_attr_name(k)
+                if type(v) == URIRef:
+                    v = split_uri(v)[1]
+                elif type(v) == set:
+                    v = list(v)
+                if type(v) in [tuple, list]:
+                    for i, vv in enumerate(v):
+                        if type(vv) == URIRef:
+                            vv = split_uri(vv)[1]
+                        elif type(vv) == tuple and len(vv) == 2:
+                            # Remove None language
+                            if vv[1] == None:
+                                vv = vv[0]
+                            else:
+                                vv = vv[0] + '@' + vv[1]
+                        v[i] = vv
+                if k in jsonified:
+                    jsonified[k] = set(jsonified[k]) # No duplicate
+                    jsonified[k].update(set(v))
+                    jsonified[k] = list(jsonified[k])
+                else:
+                    jsonified[k] = v
         return {self.get_values_for("label", unique = True): jsonified}
 
 if __name__ == "__main__":

@@ -7,7 +7,6 @@ Author:
 """
 from pathlib import Path
 import os
-import requests
 import atexit
 import asyncio
 
@@ -51,6 +50,17 @@ async def wait_connection(host, port, timeout=4):
 
 # Ollama Configuration
 async def connect_to_ollama():
+    """
+    Selects ollama models to use depending on the device.
+    This function can be modified depending on the models and
+    devices (ssh remote / local) that you are using.
+
+    The function should be called once before LLM calls to prevent
+    connecting to LLM in a non-LLM run (like during an update).
+    """
+    global OLLAMA_HOST
+    global OLLAMA_MODEL
+    global OLLAMA_MODEL_NAME
     if "SSH_CONNECTION" in os.environ or "SSH_CLIENT" in os.environ:
         # tycho
         OLLAMA_HOST = os.environ["OLLAMA_HOST"]
@@ -84,8 +94,8 @@ async def connect_to_ollama():
             # local
             port = 11434
             OLLAMA_HOST = f"http://localhost:{port}"
-            OLLAMA_MODEL = "orca2:7b"#"gemma3:4b"
-            OLLAMA_MODEL_NAME = "orca2:7b"#"gemma3:4b"
+            OLLAMA_MODEL = "gemma3:4b"#"orca2:7b"
+            OLLAMA_MODEL_NAME = "gemma3:4b"#"orca2:7b"
             CONNECTION_MODE = "local ollama"
     return OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, CONNECTION_MODE
 
