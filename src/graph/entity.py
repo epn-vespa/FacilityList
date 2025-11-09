@@ -11,6 +11,7 @@ from typing import List, Set
 from rdflib import Literal, URIRef
 from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
+from graph.extractor.extractor import Extractor
 
 from graph.graph import Graph
 from graph.properties import Properties
@@ -23,6 +24,7 @@ class Entity:
 class Entity():
 
     # Save entities' uri to prevent multi instanciation
+    # {uri: Entity}
     entities = dict()
 
     def __new__(cls,
@@ -186,7 +188,7 @@ class Entity():
                     validator_name: str = "",
                     subject_match_field: List[URIRef] | List[str] | URIRef | str = None,
                     object_match_field: List[URIRef] | List[str] | URIRef | str = None,
-                    match_string: str = None
+                    match_string: str = None,
                     ) -> None:
         """
         Add a skos:exactMatch relation between an entity and
@@ -364,6 +366,77 @@ class Entity():
                 else:
                     jsonified[k] = v
         return {self.get_values_for("label", unique = True): jsonified}
+
+
+    def get_entities_from_list(extractors: Extractor | list[Extractor],
+                               ent_type: str | list[str] | set[str] = {},
+                               no_equivalent_in: Extractor | list[Extractor] = [],
+                               has_attr: list[str] = [],
+                               limit: int = -1,
+                               ignore_deprecated: bool = True) -> list[Entity]:
+        """
+        SPARQL-free fast entity retriever.
+
+        Retrieve all the entities that come from one or more extractors
+        with some filters to refine the research.
+
+        Args:
+            extractors: the source extractor to get entities from
+            no_equivalent_in: the entities from source are not linked with
+                              skos:exactMatch to any entity from this list,
+                              and is not a member of a synonym set with an entity
+                              of the other source.
+            has_attr: only return entities that have has_attr as a relation.
+            limit: limits the amout of results. -1 to get the whole list
+            ignore_deprecated: if True, only entities that are not deprecated
+                             will be returned. Default True.
+        """
+        res = []
+        if not Entity.entities:
+            Entity.load_entities()
+        if isinstance(extractors, Extractor):
+            extractors = [extractors]
+        extractors = [Properties().OBS[extractor.URI.lower()] for extractor in extractors]
+        if type(ent_type) != set:
+            ent_type = set(ent_type)
+        ent_type = [Properties().OBS[et.lower()] for et in ent_type]
+        if isinstance(no_equivalent_in, Extractor):
+            no_equivalent_in = [no_equivalent_in]
+        no_equivalent_in = [Properties().OBS[nei.URI.lower()] for nei in no_equivalent_in]
+        for entity in Entity.entities.values():
+            if limit == len(res):
+                return res
+            if not extractors or any(source in extractors for source in entity.get_values_for("source", unique = False)):
+                if not ent_type or entity.get_values_for("type").intersection(ent_type):
+                    if not has_attr or all(attr in entity._data for attr in has_attr):
+                        if not ignore_deprecated or "deprecated" not in entity._data:
+                            # no_equivalent_in check
+                            equivalents = entity.get_values_for("exact_match")
+                            if not equivalents:
+                                res.append(entity)
+                            else:
+                                compatible = True
+                                for equivalent in equivalents:
+                                    eq = Entity(equivalent)
+                                    if eq.get_values_for("source", unique = True) in no_equivalent_in:
+                                        compatible = False
+                                        break
+                                if compatible:
+                                    res.append(entity)
+        return res
+
+
+    def load_entities():
+        """
+        Load entities from graph and store them as objects
+        in the Entity.entities variable.
+        """
+        # Load all entities from graph
+        graph = Graph()
+        if not Entity.entities:
+            for s, p, o in graph.triples((None, graph.OBS["source"], None)):
+                Entity(s)
+
 
 if __name__ == "__main__":
     pass

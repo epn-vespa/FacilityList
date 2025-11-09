@@ -136,6 +136,7 @@ ALL_TYPES = {
             INSTRUMENT: Instrument,
             SPACECRAFT: Spacecraft,
             AIRBORNE: Airborne,
+            SURVEY: Survey,
             INVESTIGATION: Investigation,
             UFO: Ufo
             }

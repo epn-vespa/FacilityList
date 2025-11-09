@@ -55,8 +55,7 @@ class OntoPortal(CSVJsonGenerator):
         synsets = set() # Store synsets & entities
         # Get authoritative lists
         for extractor in ExtractorLists.AUTHORITATIVE_EXTRACTORS:
-            for entity_uri, in self._graph.get_entities_from_list(extractor()):
-                entity = Entity(uri = entity_uri)
+            for entity in Entity.get_entities_from_list(extractor()):
                 entities_uri = entity.get_synonyms()
                 entities = {Entity(uri) for uri in entities_uri}
                 entities.add(entity)
