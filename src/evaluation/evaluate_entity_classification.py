@@ -9,7 +9,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
-from config import OLLAMA_MODEL
+import config
 from graph.graph import Graph
 from rdflib import URIRef
 from pathlib import Path
@@ -140,7 +140,7 @@ if __name__ == "__main__":
     print(f"---{len(errors)} errors---")
     for error in errors:
         print(error, "\n")
-    print(f"score of the model {OLLAMA_MODEL}:", score)
+    print(f"score of the model {config.OLLAMA_MODEL}:", score)
 
     cm = confusion_matrix(y_true, y_pred, labels=possible_categories)
 
@@ -151,9 +151,9 @@ if __name__ == "__main__":
 
     plt.xlabel("Predicted")
     plt.ylabel("Expected")
-    plt.title(f"Confusion matrix of {OLLAMA_MODEL}. Score = {score}")
+    plt.title(f"Confusion matrix of {config.OLLAMA_MODEL}. Score = {score}")
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
     plt.tight_layout()
-    plt.savefig(f"confusion_matrix_types_{OLLAMA_MODEL}_score_{score}.jpg")
+    plt.savefig(f"confusion_matrix_types_{config.OLLAMA_MODEL}_score_{score}.jpg")
 
