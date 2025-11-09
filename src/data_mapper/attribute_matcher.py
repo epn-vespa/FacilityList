@@ -40,11 +40,10 @@ class AttributeMatcher():
         graph = Graph()
 
         # Loop on each wikidata class
-        wikidata_entities = graph.get_entities_from_list(WikidataExtractor())
+        wikidata_entities = Entity.get_entities_from_list(WikidataExtractor())
         map_remaining = False
 
-        for wikidata_uri, in wikidata_entities:
-            wikidata_entity = Entity(wikidata_uri)
+        for wikidata_entity in wikidata_entities:
             naif_codes = wikidata_entity.get_values_for("NAIF_ID")
             for naif_code in naif_codes:
                 naif_ids = []
@@ -82,8 +81,8 @@ class AttributeMatcher():
     def merge_on(self,
                  list1: Extractor,
                  list2: Extractor,
-                 attr1: str,
-                 attr2: str):
+                 attr1: str | list[str],
+                 attr2: str | list[str]):
         """
         Merge entities from two lists if their attributes (attr1 & attr2)
         are identical. Use this for external identifiers that are not
@@ -100,47 +99,42 @@ class AttributeMatcher():
             map_remaining: whether to generate a mapping for the entities that
                            were not merged after merging on attr1 & attr2.
         """
-        graph = Graph()
+        """graph = Graph()
         list1_entities = graph.get_entities_from_list(list1,
-                                                      no_equivalent_in = list2,
-                                                      has_attr = [attr1])
+                                                      no_equivalent_in = list2)
         list2_entities = graph.get_entities_from_list(list2,
-                                                      no_equivalent_in = list1,
-                                                      has_attr = [attr2])
+                                                      no_equivalent_in = list1)
+        """
+        list1_entities = Entity.get_entities_from_list(list1, no_equivalent_in = list2)
+        list2_entities = Entity.get_entities_from_list(list2, no_equivalent_in = list1)
         list2 = []
 
-
         # Pre-loop to get entity2 and its value for attr2
-        for entity2, in list2_entities:
-            entity2 = Entity(entity2)
-            value2 = entity2.get_values_for(attr2, unique = True)
-            if not value2:
-                continue
-            list2.append((entity2, value2))
+        for entity2 in list2_entities:
+            values2 = entity2.get_values_for(attr2, unique = False)
+            for value in values2:
+                list2.append((entity2, value))
         if len(list2) == 0:
             # Generate mapping for remaining entities
             return
 
-        merged = 0
-        total_entity1 = 0
-
-        for entity1, in tqdm(list1_entities):
+        for entity1 in tqdm(list1_entities):
             #if entity1 in already_linked:
             #    continue
-            total_entity1 += 1
-            entity1 = Entity(entity1)
-            value1 = entity1.get_values_for(attr1, unique = True)
-            if not value1:
-                break
+            values1 = entity1.get_values_for(attr1, unique = False)
+            if not values1:
+                continue
 
-            for entity2, value2 in list2:
-                if value1 == value2:
-                    # Merge entities or synsets
-                    entity1.add_synonym(entity2, no_validation = True,
-                                        score_name = "string_match",
-                                        subject_match_field = attr1,
-                                        object_match_field = attr2)
-                    merged += 1
+            for value1 in values1:
+                for entity2, value2 in list2:
+                    if value1 == value2:
+                        # Merge entities or synsets
+                        entity1.add_synonym(entity2,
+                                            no_validation = True,
+                                            score_name = "string_match",
+                                            subject_match_field = attr1,
+                                            object_match_field = attr2,
+                                            match_string = value1)
 
 if __name__ == "__main__":
     pass

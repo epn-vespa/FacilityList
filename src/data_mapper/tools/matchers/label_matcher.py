@@ -13,7 +13,7 @@ from data_mapper.tools.matchers.matcher import Matcher
 from utils.performances import timeall
 
 
-class LabelMatchScorer(Matcher):
+class LabelMatcher(Matcher):
 
     # Name of the score computed by this class
     NAME = "label_match"

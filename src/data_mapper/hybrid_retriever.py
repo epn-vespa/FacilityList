@@ -6,6 +6,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import numpy as np
+import psutil # battery checks
 from sklearn.decomposition import PCA
 from typing import List, Iterator, Type, Set, Tuple, Any
 
@@ -18,7 +19,6 @@ from data_mapper.tools.mapping_tools_list import MappingToolsList
 from data_mapper.indexer import Indexer
 from data_mapper.gui import server
 from graph.entity import Entity
-from graph.graph import Graph
 from graph.extractor.extractor import Extractor
 import faiss # pip3 install faiss-cpu (use faiss-gpu for GPU support)
 from llm.llm_connection import LLMConnection
@@ -434,22 +434,16 @@ class HybridRetriever():
                 raise ValueError(f"Tool {tool} is not an Embedder, Filter or Score.")
         if not self.embedders:
             raise ValueError("At least one embedder is required.")
-        g = Graph()
-        uri_entities1 = g.get_entities_from_list(source = extractor1,
-                                                 ent_type = on_types,
-                                                 no_equivalent_in = extractor2,
-                                                 limit = limit,
-                                                 ignore_deprecated = ignore_deprecated)
-        uri_entities2 = g.get_entities_from_list(source = extractor2,
-                                                 ent_type = on_types,
-                                                 no_equivalent_in = extractor1,
-                                                 limit = limit,
-                                                 ignore_deprecated = ignore_deprecated)
-        entities1, entities2 = [], []
-        for uri, in uri_entities1:
-            entities1.append(Entity(uri))
-        for uri, in uri_entities2:
-            entities2.append(Entity(uri))
+        entities1 = Entity.get_entities_from_list(extractors = extractor1,
+                                                  ent_type = on_types,
+                                                  no_equivalent_in = extractor2,
+                                                  limit = limit,
+                                                  ignore_deprecated = ignore_deprecated)
+        entities2 = Entity.get_entities_from_list(extractors = extractor2,
+                                                  ent_type = on_types,
+                                                  no_equivalent_in = extractor1,
+                                                  limit = limit,
+                                                  ignore_deprecated = ignore_deprecated)
         
         if not entities1:
             print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
@@ -583,7 +577,6 @@ class HybridRetriever():
         #if not self.embedders:
         #    raise ValueError("At least one embedder is required.")
         # FIXME make it work even without embedders
-        g = Graph()
 
         if type(on_types) == str:
             if on_types == "all":
@@ -592,21 +585,14 @@ class HybridRetriever():
                 on_types = [on_types]
 
         # First we find all entities to index them
-        uri_entities1 = g.get_entities_from_list(source = extractor1,
-                                                 ent_type = on_types,
-                                                 #no_equivalent_in = extractor2,
-                                                 limit = limit,
-                                                 ignore_deprecated = ignore_deprecated)
-        uri_entities2 = g.get_entities_from_list(source = extractor2,
-                                                 ent_type = on_types,
-                                                 #no_equivalent_in = extractor1,
-                                                 limit = limit,
-                                                 ignore_deprecated = ignore_deprecated)
-        all_entities1, all_entities2 = [], []
-        for uri, in uri_entities1:
-            all_entities1.append(Entity(uri))
-        for uri, in uri_entities2:
-            all_entities2.append(Entity(uri))
+        all_entities1 = Entity.get_entities_from_list(extractors = extractor1,
+                                                      ent_type = on_types,
+                                                      limit = limit,
+                                                      ignore_deprecated = ignore_deprecated)
+        all_entities2 = Entity.get_entities_from_list(extractors = extractor2,
+                                                      ent_type = on_types,
+                                                      limit = limit,
+                                                      ignore_deprecated = ignore_deprecated)
         
         if not all_entities1:
             print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
@@ -617,21 +603,16 @@ class HybridRetriever():
 
 
         # Then we get whitelisted entities that can be mapped (using no_equivalent_in)
-        uri_entities1 = g.get_entities_from_list(source = extractor1,
-                                                 ent_type = on_types,
-                                                 no_equivalent_in = extractor2,
-                                                 limit = limit,
-                                                 ignore_deprecated = ignore_deprecated)
-        uri_entities2 = g.get_entities_from_list(source = extractor2,
-                                                 ent_type = on_types,
-                                                 no_equivalent_in = extractor1,
-                                                 limit = limit,
-                                                 ignore_deprecated = ignore_deprecated)
-        entities1, entities2 = [], []
-        for uri, in uri_entities1:
-            entities1.append(Entity(uri))
-        for uri, in uri_entities2:
-            entities2.append(Entity(uri))
+        entities1 = Entity.get_entities_from_list(extractors = extractor1,
+                                                  ent_type = on_types,
+                                                  no_equivalent_in = extractor2,
+                                                  limit = limit,
+                                                  ignore_deprecated = ignore_deprecated)
+        entities2 = Entity.get_entities_from_list(extractors = extractor2,
+                                                  ent_type = on_types,
+                                                  no_equivalent_in = extractor1,
+                                                  limit = limit,
+                                                  ignore_deprecated = ignore_deprecated)
         
         if not entities1:
             print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
@@ -671,7 +652,6 @@ class HybridRetriever():
                     blacklisted_entities.append(entity2)
                 matcher, field1, field2, value = self.apply_matchers(entity1, entity2)
                 if matcher is not None:
-                    print("Entities matched with", matcher.NAME)
                     # Add synonyms
                     if self.embedders:
                         indexer1.merge_embeddings(entity1, entity2, indexer2)
@@ -733,4 +713,10 @@ class HybridRetriever():
             else:
                 llm_response = LLMConnection.choose_best_candidate_and_justify(entity1, [n[0] for n in nearest])
                 print(llm_response)
-                
+
+            # Stop on low battery to save the generated mappings
+            battery = psutil.sensors_battery()
+            if battery.percent < 5:
+                print("\033Low battery. Interrupting and saving mappings and progress.\n" +
+                      "Re-load checkpoint using the output folder as an input.\033[0m")
+                exit()
