@@ -50,6 +50,8 @@ def load_location_infos_from_cache():
 
 
 # AAS (Space, Airborne), SPASE (Earth, Heliosphere)
+# TODO FIXME already done in SPASE. Should already work without SPACE_LOCATION check, checked in update.py.
+# TODO: check in this function instead of update.py (require type argument to the function to be added?)
 SPACE_LOCATION = ["Earth.Magnetosheath",
                   "Earth.Magnetosphere",
                   "Earth.Magnetosphere.Magnetotail",
@@ -109,11 +111,13 @@ def get_location_info(label: Optional[str] = None,
         retries: how many retries left if the first geopy request failed
         from_cache: do not request geopy again. Set to False for debug only
     """
+    ### Step 1: loading, preliminary data casting
     global location_infos
     if location_infos is None:
         load_location_infos_from_cache()
     result = None
     saved_in = ""
+    result_dict = {"location": "Earth"}
     if isinstance(location, str):
         location = [location]
     if location:
@@ -123,6 +127,10 @@ def get_location_info(label: Optional[str] = None,
                 return dict()
     if not isinstance(part_of, list):
         part_of = [part_of]
+    if isinstance(country, set):
+        country = list(country)[0]
+    if isinstance(address, set):
+        address = list(address)[0]
     if isinstance(latitude, list):
         if len(latitude) == 0:
             latitude = None
@@ -149,12 +157,22 @@ def get_location_info(label: Optional[str] = None,
         if longitude > 180 or longitude < -180:
             longitude = (float(longitude) % 360 + 540) % 360 - 180
 
+    if not country:
+        if address:
+            for add in address:
+                country = add.split(',')[-1].strip()
+                _get_continent_from_country(country, "address", add, result_dict, longitude)
+                if "country" in result_dict:
+                    country = result_dict["country"]
+                    break
+
     # Remove initial "the" from the label as it performs very bad with geopy
     if label and label.lower().startswith("the "):
         label = label[4:].strip()
     # Remove parenthesis and inside as well
     label = remove_parenthesis(label)
 
+    ### Step 2: lookup in the cache
     # Return information if already in the cache
     if from_cache:
         result = _get_location_from_cache(label = label,
@@ -167,15 +185,15 @@ def get_location_info(label: Optional[str] = None,
         if result:
             return result
 
+    ### Step 3: go through every parameter and send requests.
     # Get information with geolocator
-    result_dict = {"location": "Earth"}
     try:
         if latitude is not None and longitude is not None:
             if latitude != 0 or longitude != 0:
                 saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
                 result = geolocator.reverse((latitude, longitude),
-                                             exactly_one=True,
-                                             language=language)
+                                            exactly_one=True,
+                                            language=language)
                 if result is None:
                     # No address, in the sea
                     if retries == 0:
@@ -190,7 +208,6 @@ def get_location_info(label: Optional[str] = None,
                                                  retries = retries - 1)
                 else:
                     result_dict["location_confidence"] = 1.0
-
         if result is None and address:
             saved_in = "geocode/" + str(address)
             result = geolocator.geocode(address,
@@ -198,7 +215,6 @@ def get_location_info(label: Optional[str] = None,
                                         language=language)
             if result is not None:
                 result_dict["location_confidence"] = 0.75
-
         # Call get_location_info with part_of
         if result is None and part_of:
             for part in part_of:
@@ -208,10 +224,10 @@ def get_location_info(label: Optional[str] = None,
                     result = get_location_info(label = part)
                 else:
                     result = get_location_info(label = part.get("label", None),
-                                            location = part.get("location", None),
-                                            latitude = part.get("latitude", None),
-                                            longitude = part.get("longitude", None),
-                                            address = part.get("address", None))
+                                               location = part.get("location", None),
+                                               latitude = part.get("latitude", None),
+                                               longitude = part.get("longitude", None),
+                                               address = part.get("address", None))
                 if result:
                     return result
                 else:
@@ -240,32 +256,43 @@ def get_location_info(label: Optional[str] = None,
                                         language=language)
             if result and label not in str(result).split(',')[0] or not result:
                 # the label is not identical to the first part of the address
-                retrieved = False
+                # retrieved = False
                 for keyword in ["antenna", "observatory", "telescope"]:
                     # Some facilities's locations are known by adding
                     # a keyword to the label. It occurs when the label
                     # is shortened (e.g. "La Silla" for "La Silla Observatory")
-                    result = geolocator.geocode(label + " " + keyword,
-                                                exactly_one=True,
-                                                language=language)
-                    if result and label.lower() in str(result).lower():
-                        retrieved = True
-                if not retrieved:
-                    location_infos[saved_in] = {}
-                    return {}
+                    #saved_in2 = f"geocode/{label} {keyword}"
+                    #result = location_infos.get(saved_in2, None)
+                    if result is None:
+                        result = geolocator.geocode(label + " " + keyword,
+                                                    exactly_one=True,
+                                                    language=language)
+                    #location_infos[saved_in2] = location_infos
+                    #if result and label.lower() in str(result).lower():
+                    #    retrieved = True
+                    if result:
+                        break
+                    else:
+                        location_infos[saved_in] = {}
+                #if not retrieved:
+                #    location_infos[saved_in] = {}
+                #    return {}
             if result:
                 result_dict["location_confidence"] = 0.25
 
-
         if result is None and country:
             saved_in = "country/" + str(country)
-            _get_continent_from_country(country, address, result_dict = result_dict, longitude = longitude)
-            result = result_dict.get("continent", None)
-            if result:
+            if "continent" not in result_dict:
+                # Already called this in the attributes preprocessing step
+                _get_continent_from_country(country,
+                                            location_type = "country",
+                                            address = address,
+                                            result_dict = result_dict,
+                                            longitude = longitude)
+            if result_dict.get("continent", None):
                 result_dict["location_confidence"] = 1.0
                 location_infos[saved_in] = result_dict
                 return result_dict
-
 
         if not result:
             # Did not find the location for the provided data.
@@ -297,9 +324,16 @@ def get_location_info(label: Optional[str] = None,
             country = add.split(',')[-1].strip()
             if not country:
                 continue
-            _get_continent_from_country(country, "address", address, result_dict, longitude)
+            if "continent" not in result_dict:
+                _get_continent_from_country(country,
+                                            "address",
+                                            address,
+                                            result_dict,
+                                            longitude)
             if "continent" in result_dict:
+                location_infos[saved_in] = result_dict
                 return result_dict
+        location_infos[saved_in] = result_dict
         return result_dict
 
     # Transform the result into a compatible data dict
@@ -372,20 +406,24 @@ def get_location_info(label: Optional[str] = None,
         if not country:
             country = address_str.split(',')[-1].strip()
 
-    # Get the continent from the country
-    _get_continent_from_country(country, location_type, address, result_dict, longitude)
+    # Get the continent from the country & standardize country name
+    if "continent" not in result_dict:
+        _get_continent_from_country(country, location_type, address, result_dict, longitude)
 
     # Save the result for future calls
     location_infos[saved_in] = result_dict
     return result_dict
 
+
+@timeall
 def _get_continent_from_country(country: str,
                                 location_type,
                                 address,
                                 result_dict,
                                 longitude):
     """
-    Add the continent to the result dict
+    Add the continent to the result dict.
+    Standardize the country name (USA -> United States)
     """
     country_code = None
     if location_type != "continent" and country:
@@ -393,7 +431,9 @@ def _get_continent_from_country(country: str,
             country_code = address["country_code"].upper()
         else:
             try:
-                country_code = pycountry_convert.country_name_to_country_alpha2(country)
+                if type(country) == set:
+                    country = list(country)[0]
+                country_code = pycountry_convert.country_name_to_country_alpha2(country.title())
             except KeyError:
                 # Country name does not exist.
                 country = None
@@ -413,7 +453,15 @@ def _get_continent_from_country(country: str,
             # result_dict["continent_code"] = continent_code
             result_dict["continent"] = continent
 
+            # Get country name from country code (standardize country name)
+            try:
+                country_std = pycountry_convert.country_alpha2_to_country_name(country_code)
+                result_dict["country"] = country_std
+            except:
+                print(f"Warning: pycontry_convert.country_alpha2_to_country_name does not have {country_code}. ")
 
+
+@timeall
 def _get_address(latitude: float,
                  longitude: float,
                  retries: int = 3) -> dict[str]:
