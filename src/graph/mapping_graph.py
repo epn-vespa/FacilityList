@@ -10,10 +10,15 @@ Author:
 """
 from __version__ import __version__
 import uuid
+import pkgutil
+import importlib
+import inspect
 from typing import List
 from rdflib import Graph, URIRef, Namespace, Node, Literal, XSD, RDFS, RDF
 from pathlib import Path
 from graph.properties import Properties
+from graph import extractor
+from graph.extractor.extractor import Extractor
 from config import USERNAME
 
 from datetime import datetime
@@ -173,8 +178,8 @@ class MappingGraph():
         self._graph.add((mapping_uri, RDF.type, self._SSSOM.Mapping))
         self._graph.add((mapping_uri, self._SSSOM.mapping_set_id, self._mapping_set))
         self._graph.add((mapping_uri, self._SSSOM.predicate_id, predicate))
-        self._graph.add((mapping_uri, self._SSSOM.object_id,  entity1))
-        self._graph.add((mapping_uri, self._SSSOM.subject_id, entity2))
+        self._graph.add((mapping_uri, self._SSSOM.subject_id,  entity1))
+        self._graph.add((mapping_uri, self._SSSOM.object_id, entity2))
         self._graph.add((mapping_uri, self._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
         if score_value:
             self._graph.add((mapping_uri, self._SSSOM.similarity_score, Literal(score_value, datatype=XSD.float)))
@@ -232,6 +237,21 @@ class MappingGraph():
         # TODO filters
 
 
+    def bind_namespaces(self) -> None:
+        """
+        Bind the namespaces for sources and into the mapping graph.
+        """
+        for loader, module_name, is_pkg in pkgutil.iter_modules(extractor.__path__):
+            module = importlib.import_module(f"{extractor.__name__}.{module_name}")
+
+            for name, obj in inspect.getmembers(module, inspect.isclass):
+                if obj.__module__ == module.__name__:
+                    if issubclass(obj, Extractor) and obj is not Extractor:
+                        namespace = obj.NAMESPACE
+                        self.bind_namespace(namespace)
+
+
+
     def serialize(self,
                   output_dir: str,
                   execution_id: str):
@@ -241,6 +261,7 @@ class MappingGraph():
         Args:
             output_dir: the output directory for this execution.
         """
+        self.bind_namespaces()
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
         path = output_dir / "mapping.ttl"
