@@ -44,7 +44,7 @@
       selectedInput.value = "none";
 
       if (data.entity) {
-        clearInterval(handle);
+        //clearInterval(handle);
         hiddenDiv.style.display = "Block";
         let key = "";
         let value = "";
@@ -52,6 +52,8 @@
           if (key_ === prev_data) {
             return;
           }
+          clearInterval(handle);
+          notifyUpdate();
           prev_data = key_;
           key = key_;
           value = value_;
@@ -77,6 +79,7 @@
       }
       else {
         entityDiv.innerHTML = "Waiting...";
+
       }
 
       candidatesDiv.innerHTML = "";
@@ -90,7 +93,6 @@
         });
 
         sortedCandidates.forEach(([label, info]) => {
-          console.log(info);
           const div = document.createElement("div");
           div.className = "candidate";
 
@@ -127,6 +129,7 @@
           body: JSON.stringify({"choice": choice, "justification": justification})
         }).then(res => res.json());
         handle = setInterval(fetchState, 1000);
+        fetchState();
       }
 
       document.getElementById("validate").onclick = () => validate(selectedInput.value);
