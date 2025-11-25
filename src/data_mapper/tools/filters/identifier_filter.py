@@ -32,7 +32,7 @@ class IdentifierFilter(Filter):
         identifiers = [["COSPAR_ID", "NSSDCA_ID"], "NAIF_ID"]
 
         for attr in identifiers:
-            if IdentifierFilter._compare_entity_identifiers(
+            if not IdentifierFilter._compare_entity_identifiers(
                 entity1,
                 entity2,
                 attr):

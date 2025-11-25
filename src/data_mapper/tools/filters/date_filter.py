@@ -47,7 +47,6 @@ class DateFilter(Filter):
         for attr in attrs:
             dates1.update(entity1.get_values_for(attr))
             dates2.update(entity2.get_values_for(attr))
-
         # Only compare if both sets have dates
         if dates1 and dates2:
             return DateFilter._compare_years(dates1, dates2)
@@ -89,4 +88,6 @@ class DateFilter(Filter):
                 year = date.year
             years2.add(year)
         # True if not disjoint, False if disjoint.
+        if not years1 or not years2:
+            return True
         return not years1.isdisjoint(years2)
