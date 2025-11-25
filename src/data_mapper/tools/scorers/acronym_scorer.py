@@ -7,13 +7,13 @@ Author:
 """
 
 from graph.entity import Entity
-from data_mapper.tools.scores.score import Score
+from data_mapper.tools.scorers.scorer import Scorer
 
 from utils.acronymous import proba_acronym_of
 from utils.performances import timeall
 
 
-class AcronymScorer(Score):
+class AcronymScorer(Scorer):
 
     # Name of the score computed by this class (as in score.py)
     NAME = "acronym"

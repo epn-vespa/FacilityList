@@ -7,13 +7,12 @@ Author:
 """
 
 from numbers import Number
-from typing import Union
 from graph.entity import Entity
-from data_mapper.tools.scores.score import Score
+from data_mapper.tools.scorers.scorer import Scorer
 
 import re
 
-class DigitScorer(Score):
+class DigitScorer(Scorer):
 
 
     NAME = "digit"

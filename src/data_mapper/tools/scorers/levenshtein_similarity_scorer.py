@@ -13,10 +13,10 @@ from rapidfuzz import fuzz
 from unidecode import unidecode
 
 from graph.entity import Entity
-from data_mapper.tools.scores.score import Score
+from data_mapper.tools.scorers.scorer import Scorer
 
 
-class LevenshteinSimilarityScorer(Score):
+class LevenshteinSimilarityScorer(Scorer):
 
     # Name of the score computed by this class
     NAME = "levenshtein_similarity"

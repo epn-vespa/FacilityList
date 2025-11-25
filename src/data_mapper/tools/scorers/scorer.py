@@ -1,5 +1,5 @@
 """
-Define the superclass Score.
+Define the superclass Scorer.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
@@ -9,15 +9,15 @@ import abc
 from graph.entity import Entity
 from data_mapper.tools.tool import Tool
 
-class Score(Tool):
+class Scorer(Tool):
     """
-    A score is a similarity that can be computed between two entities individually.
+    A score is a similarity value that can be computed between two entities individually.
     The compute method returns a value between 0 and 1 (similarity value).
     """
 
     WEIGHT = 1.0
 
-    NAME = "Generic Score (superclass)"
+    NAME = "Generic Scorer (superclass)"
 
 
     @abc.abstractmethod
