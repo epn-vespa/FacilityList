@@ -45,11 +45,11 @@ class LabelMatcher(Matcher):
                 # Need to ignore labels that are too short and thus likely to be the same
                 # eventhough entities are distinct.
                 continue
+            label1_l = label1.lower()
             for label2 in alt_labels2:
-                label1_l = unidecode(label1).lower()
-                label2_l = unidecode(label2).lower()
+                label2_l = label2.lower()
                 if label1_l == label2_l:
                     field1 = "label" if label1 in labels1 else "alt_label"
                     field2 = "label" if label2 in labels2 else "alt_label"
-                    return field1, field2, label1
+                    return field1, field2, label1_l
         return None, None, None
