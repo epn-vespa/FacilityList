@@ -12,6 +12,7 @@ from collections import defaultdict
 from graph import entity_types
 from graph.extractor.cache import CacheManager
 from graph.extractor.extractor import Extractor
+from graph.extractor import data_fixer
 from llm.llm_connection import LLMConnection
 from utils.performances import timeall
 from utils.string_utilities import clean_string, has_cospar_nssdc_id
@@ -45,6 +46,11 @@ class SpaseExtractor(Extractor):
 
     # URI to save entities from this source
     NAMESPACE = "spase"
+
+    # The Deprecated attribute will not be added
+    # to SPASE when merging old and new versions of entities
+    # together.
+    MULTI_VERSIONING = True
 
     # Default type used for all unknown types in this resource
     DEFAULT_TYPE = entity_types.OBSERVATION_FACILITY
@@ -85,7 +91,8 @@ class SpaseExtractor(Extractor):
                       "StartDate": "start_date",
                       "EndDate": "end_date",
                       "PriorIDs": "prior_id",
-                      "PriorID": "prior_id"}
+                      "PriorID": "prior_id",
+                      "InstrumentType": "instrument_type"}
 
 
 
@@ -319,6 +326,7 @@ class SpaseExtractor(Extractor):
                 if ll in result:
                     del result[ll]
 
+        data_fixer.fix(result, self)
         return result
 
 
@@ -425,9 +433,13 @@ class SpaseExtractor(Extractor):
             "Earth"
         ]
         if data.get("location", None) is None:
-            print(data)
-            data["type"] = self.DEFAULT_TYPE
-            data["type_confidence"] = 0
+            if "NumericalData" in data["code"]:
+                data["type"] = entity_types.SURVEY
+            else:
+                data["type"] = entity_types.INSTRUMENT
+            # TODO elif "Instrument" in data["code"]: else: default type (obs facility) & type_confidence to 0
+            # (right now only one case has nor Instrument neither NumericalData, but it is an instrument so
+            # it will be covered by 'else'.)
             return
         for l in data["location"]:
             if l in location_ground:
