@@ -9,10 +9,11 @@ import numpy as np
 import psutil # battery checks
 from sklearn.decomposition import PCA
 from typing import List, Iterator, Type, Set, Tuple, Any
+from tqdm import tqdm
 
 from data_mapper.tools.embedders.embedder import Embedder
 from data_mapper.tools.filters.filter import Filter
-from data_mapper.tools.scores.score import Score
+from data_mapper.tools.scorers.scorer import Scorer
 from data_mapper.tools.matchers.matcher import Matcher
 from data_mapper.tools.tool import Tool
 from data_mapper.tools.mapping_tools_list import MappingToolsList
@@ -22,6 +23,7 @@ from graph.entity import Entity
 from graph.extractor.extractor import Extractor
 import faiss # pip3 install faiss-cpu (use faiss-gpu for GPU support)
 from llm.llm_connection import LLMConnection
+from data_mapper.validator import strat1
 
 from config import USERNAME
 import config
@@ -38,7 +40,7 @@ class HybridRetriever():
         self.embedders = []
         self.filters = []
         self.matchers = []
-        self.scores = []
+        self.scorers = []
         self.pca = [] # one PCA per embedder
         self.index = None
         self.indexed_entities = []
@@ -74,12 +76,12 @@ class HybridRetriever():
         self.filters.append(filter)
 
 
-    def add_score(self,
-                  score: Type[Score]):
+    def add_scorer(self,
+                   scorer: Type[Scorer]):
         """
-        Add a score to the pipeline.
+        Add a scorer to the pipeline.
         """
-        self.scores.append(score)
+        self.scorers.append(scorer)
 
 
     def add_matcher(self,
@@ -155,7 +157,7 @@ class HybridRetriever():
             if i == len(self.pca):
                 n_components = int(self.BASE_N_COMPONENTS * embedder.WEIGHT)
                 if n_components > min(embeddings.shape):
-                    n_components = min(embeddings.shape) 
+                    n_components = min(embeddings.shape)
                 self.pca.append(PCA(n_components = n_components))
                 embeddings = self.pca[i].fit_transform(embeddings)
             elif i < len(self.pca):
@@ -224,7 +226,6 @@ class HybridRetriever():
     def apply_matchers(self,
                        entity1: Entity,
                        entity2: Entity) -> Tuple[Matcher, float, float, Any]:
-        
         """
         Apply all matchers to two entities. If one matcher returns True,
         the entities are considered the same, unless one filter eliminates
@@ -241,7 +242,6 @@ class HybridRetriever():
         for matcher in self.matchers:
             field1, field2, value = matcher.compute(entity1, entity2)
             if value:
-                print(matcher, field1, field2, value)
                 return matcher, field1, field2, value
         return None, None, None, None
 
@@ -263,16 +263,16 @@ class HybridRetriever():
         return True
 
 
-    def _compute_global_score(self,
-                              entity1: Entity,
-                              entity2: Entity,
-                              prev_score: float = 0,
-                              prev_weight: float = 1) -> float:
+    def _apply_scorers(self,
+                       entity1: Entity,
+                       entity2: Entity,
+                       prev_score: float = 0,
+                       prev_weight: float = 0) -> tuple[float, dict[float]]:
         """
         Compute a global score between two entities by combining
         all the scores. The scores are weighted by their
         weight attribute.
-        
+
         Args:
             entity1: reference entity
             entity2: compared entity
@@ -281,14 +281,17 @@ class HybridRetriever():
         """
         total_weight = prev_weight
         weighted_score = prev_score
-        for score in self.scores:
-            s = score.compute(entity1, entity2)
+        scores_dict = {"cosine_similarity": prev_score}
+        for scorer in self.scorers:
+            s = scorer.compute(entity1, entity2)
+            scores_dict[scorer.NAME] = s
             if s >= 0: # If the score could be computed
-                weighted_score += s * score.WEIGHT
-                total_weight += score.WEIGHT
+                weighted_score += s * scorer.WEIGHT
+                total_weight += scorer.WEIGHT
         if total_weight == 0:
-            return 0 # No score could be computed
-        return weighted_score / total_weight
+            return 0, scores_dict # No score could be computed
+        scores_dict["hybrid"] = weighted_score
+        return weighted_score / total_weight, scores_dict
 
 
     def search(self,
@@ -308,8 +311,6 @@ class HybridRetriever():
             # Eliminate incompatible entities
             allowed_ids = []
             for i, indexed_entity in enumerate(self.indexed_entities):
-                print('entity:', entity)
-                print(indexed_entity)
                 if self.filter(entity, indexed_entity):
                     allowed_ids.append(i)
             if not allowed_ids:
@@ -339,8 +340,6 @@ class HybridRetriever():
                 distances, indices = self.index.search(hybrid_embeddings, search_k, params = params)
             else:
                 distances, indices = [[]], [[]]
-                print(top_k)
-                print(self.index.ntotal)
                 search_kk = search_k # Variable to search for more entities
                 # if all were incompatible.
                 while len(distances[0]) < top_k and search_kk < self.index.ntotal * 2:
@@ -349,19 +348,15 @@ class HybridRetriever():
                         if i == -1:
                             break
                         # Filter manually on allowed ids
-                        print(self.indexed_entities[int(i)])
                         if i not in allowed_ids:
                             ii = np.where(indices[0] == i)[0]
-                            print("indices before:", indices)
                             indices = np.delete(indices, ii, axis = 1)
-                            print("indices after:", indices)
                             distances = np.delete(distances, ii, axis = 1)
                     search_kk *= 2
 
             results = []
             entity_results = []
-        
-            print(len(allowed_ids))
+
             for j in range(top_k): # range(min(top_k, len(indices[0])))
                 entity_results.append((indices[0][j], distances[0][j]))
             results.append(entity_results)
@@ -369,11 +364,11 @@ class HybridRetriever():
             # Re-rank using other scores
             for i, (idx, dist) in enumerate(entity_results):
                 indexed_entity = self.indexed_entities[idx]
-                global_score = self._compute_global_score(entity,
-                                                          indexed_entity,
-                                                          prev_score = dist,
-                                                          prev_weight = sum(self.embedders_weight))
-                results[0][i] = (idx, global_score)
+                global_score, score_dict = self._apply_scorers(entity,
+                                                               indexed_entity,
+                                                               prev_score = dist,
+                                                               prev_weight = sum(self.embedders_weight))
+                results[0][i] = (idx, global_score, score_dict)
             results[0].sort(key = lambda x: x[1], reverse = True)
             yield entity, results[0][:top_k]
 
@@ -421,17 +416,21 @@ class HybridRetriever():
             ignore_deprecated: do not map entities that are deprecated
             human_validation: de-activate LLM validation and let the user validate each mapping
         """
+        self.filters = []
+        self.matchers = []
+        self.embedders = []
+        self.scorers = []
         for tool in with_tools:
             if issubclass(tool, Embedder):
                 self.add_embedder(tool)
             elif issubclass(tool, Filter):
                 self.add_filter(tool) # TODO do not instanciate classes in filters
-            elif issubclass(tool, Score):
+            elif issubclass(tool, Scorer):
                 self.add_score(tool)  # TODO same
             elif issubclass(tool, Matcher):
                 self.add_matcher(tool)
             else:
-                raise ValueError(f"Tool {tool} is not an Embedder, Filter or Score.")
+                raise ValueError(f"Tool {tool} is not an Embedder, Filter or Scorer.")
         if not self.embedders:
             raise ValueError("At least one embedder is required.")
         entities1 = Entity.get_entities_from_list(extractors = extractor1,
@@ -444,7 +443,7 @@ class HybridRetriever():
                                                   no_equivalent_in = extractor1,
                                                   limit = limit,
                                                   ignore_deprecated = ignore_deprecated)
-        
+
         if not entities1:
             print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
             return
@@ -500,7 +499,7 @@ class HybridRetriever():
                                       score_value = score,
                                       score_name = "hybrid",
                                       is_human_validation = human_validation)
-                                        
+
             print("Search done.")
         else:
             for i, (entity1, results) in enumerate(self.search(entities1, search_k = 100, top_k = 15)):
@@ -520,7 +519,11 @@ class HybridRetriever():
 
     def fit2(self,
              entities: list[Entity]) -> np.ndarray:
-        
+        """
+        Reduce dimensions with PCA and the embedders' weight factor.
+        Concatenate embeddings in order to create hybrid embeddings.
+        Normalize embeddings and return.
+        """
         all_embeddings_entity = []
         for i, embedder in enumerate(self.embedders):
             # Create an Embedder instance
@@ -530,7 +533,7 @@ class HybridRetriever():
             if i == len(self.pca):
                 n_components = int(self.BASE_N_COMPONENTS * embedder.WEIGHT)
                 if n_components > min(embeddings.shape):
-                    n_components = min(embeddings.shape) 
+                    n_components = min(embeddings.shape)
                 self.pca.append(PCA(n_components = n_components))
                 embeddings = self.pca[i].fit_transform(embeddings)
             elif i < len(self.pca):
@@ -548,6 +551,7 @@ class HybridRetriever():
                       with_tools: List[Type[Tool]] = MappingToolsList.ALL_TOOLS,
                       limit: int = -1,
                       ignore_deprecated = True,
+                      top_k: int = 10,
                       human_validation: bool = True) -> None:
         """
         Map entities from extractor1 to entities from extractor2 using the
@@ -563,20 +567,23 @@ class HybridRetriever():
             ignore_deprecated: do not map entities that are deprecated
             human_validation: de-activate LLM validation and let the user validate each mapping
         """
+        self.filters = []
+        self.matchers = []
+        self.embedders = []
+        self.scorers = []
         for tool in with_tools:
             if issubclass(tool, Embedder):
                 self.add_embedder(tool)
             elif issubclass(tool, Filter):
                 self.add_filter(tool)
-            elif issubclass(tool, Score):
-                self.add_score(tool)
+            elif issubclass(tool, Scorer):
+                self.add_scorer(tool)
             elif issubclass(tool, Matcher):
                 self.add_matcher(tool)
             else:
-                raise ValueError(f"Tool {tool} is not an Embedder, Filter or Score.")
+                raise ValueError(f"Tool {tool} is not an Embedder, Filter, Matcher or Scorer.")
         #if not self.embedders:
         #    raise ValueError("At least one embedder is required.")
-        # FIXME make it work even without embedders
 
         if type(on_types) == str:
             if on_types == "all":
@@ -593,7 +600,7 @@ class HybridRetriever():
                                                       ent_type = on_types,
                                                       limit = limit,
                                                       ignore_deprecated = ignore_deprecated)
-        
+
         if not all_entities1:
             print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
             return
@@ -601,8 +608,6 @@ class HybridRetriever():
             print(f"Warning: no entities found for {extractor2.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
             return
 
-
-        # Then we get whitelisted entities that can be mapped (using no_equivalent_in)
         entities1 = Entity.get_entities_from_list(extractors = extractor1,
                                                   ent_type = on_types,
                                                   no_equivalent_in = extractor2,
@@ -613,7 +618,7 @@ class HybridRetriever():
                                                   no_equivalent_in = extractor1,
                                                   limit = limit,
                                                   ignore_deprecated = ignore_deprecated)
-        
+
         if not entities1:
             print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
             return
@@ -629,7 +634,6 @@ class HybridRetriever():
             extractor1, extractor2 = extractor2, extractor1
             all_entities1, all_entities2 = all_entities2, all_entities1
         """
-
         if self.embedders:
             embeddings1 = self.fit2(all_entities1)
             indexer1 = Indexer(extractor = extractor1,
@@ -643,13 +647,18 @@ class HybridRetriever():
                                entity_types = on_types,
                                entities = all_entities2,
                                embeddings = embeddings2)
-        for n, entity1 in enumerate(entities1):
+
+        for n, entity1 in tqdm(enumerate(entities1),
+                               total=len(entities1),
+                               desc=extractor1.NAMESPACE + " " + extractor2.NAMESPACE):
+            matched = False
             if self.embedders:
                 embeddings = indexer1.get_embeddings(entity1)
             blacklisted_entities = []
             for entity2 in entities2:
                 if not self.apply_filters(entity1, entity2):
                     blacklisted_entities.append(entity2)
+                    continue
                 matcher, field1, field2, value = self.apply_matchers(entity1, entity2)
                 if matcher is not None:
                     # Add synonyms
@@ -661,24 +670,41 @@ class HybridRetriever():
                                         subject_match_field = field1,
                                         object_match_field = field2,
                                         match_string = value)
+                    matched = True
                     continue
-
-            if not self.embedders:
+            if matched:
+                # Do not repeat for entity1
                 continue
 
-            print("Blacklisted entities (filtered out):", len(blacklisted_entities))
-            nearest = indexer2.search_nearest(embeddings,
-                                              top_k = 10,
-                                              whitelisted_entities = entities2,
-                                              blacklisted_entities = blacklisted_entities)
+            if not self.embedders and not self.scorers:
+                # Only matchers
+                continue
+
+            if self.embedders:
+                ranked = indexer2.search_nearest(embeddings,
+                                                 top_k = top_k,
+                                                 whitelisted_entities = entities2,
+                                                 blacklisted_entities = blacklisted_entities)
+                print("after search_nearest=", len(ranked))
+            else:
+                ranked = [(e, 0) for e in entities2 if e not in blacklisted_entities]
+            print("len(ranked)=", len(ranked), "len(entities2)=", len(entities2))
             #print("Candidates for", entity1)
             #for entity2, similarity in nearest:
             #    print(entity2, similarity)
-            
+            nearest = []
+            for entity2, prev_score in ranked:
+                new_score, score_dict = self._apply_scorers(entity1,
+                                                            entity2,
+                                                            prev_score,
+                                                            prev_weight = sum(self.embedders_weight))
+                nearest.append((entity2, new_score, score_dict))
+
+            nearest = sorted(nearest, key = lambda x: x[1], reverse = True)[0:top_k]
+
             if human_validation:
-                #input("Next:")
                 candidates = dict()
-                for candidate, score in nearest:
+                for candidate, score, score_dict in nearest:
                     candidate_dict = candidate.__dict__()
                     candidate_dict_values = list(candidate_dict.values())[0]
                     candidate_dict_values["score"] = score
@@ -693,14 +719,14 @@ class HybridRetriever():
                 print("user choice:", userchoice)
                 print("justification string:", justification)
                 if userchoice != "none":
-                    entity2, score = [(e, s) for e, s in nearest if e.label == userchoice][0]
+                    entity2, score, scores_dict = [(e, s, d) for e, s, d in nearest if e.label == userchoice][0]
                     print(entity2, score)
                     indexer1.merge_embeddings(entity1, entity2, indexer2)
                     entities2.remove(entity2)
                     entity1.add_synonym(entity2,
                                         score_value = score,
-                                        score_name = "global",
-                                        scores = dict(), # TODO
+                                        score_name = "hybrid",
+                                        scores = scores_dict,
                                         justification_string = justification,
                                         is_human_validation = human_validation,
                                         validator_name = USERNAME
@@ -711,8 +737,33 @@ class HybridRetriever():
                 #    app.run(debug = True, use_reloader = False)
                 #    app.running = True
             else:
-                llm_response = LLMConnection.choose_best_candidate_and_justify(entity1, [n[0] for n in nearest])
-                print(llm_response)
+                # Apply strategy to select significantly near entities
+                indexes = strat1([n[1] for n in nearest])
+                print(indexes)
+                print(type(indexes))
+                if not indexes:
+                    # Too small probability
+                    continue
+                nearest_filtered = [nearest[int(i)] for i in indexes]
+                print("Remaining candidates after strategy application:", len(nearest_filtered))
+                best, justification = LLMConnection.choose_best_candidate_and_justify(entity1, [n[0] for n in nearest_filtered])
+                if best < 0:
+                    continue
+                else:
+                    entity2, score, scores_dict = nearest[best]
+                    print(entity2, score)
+                    indexer1.merge_embeddings(entity1, entity2, indexer2)
+                    entities2.remove(entity2)
+                    entity1.add_synonym(entity2,
+                                        score_value = score,
+                                        score_name = "hybrid",
+                                        scores = scores_dict,
+                                        justification_string = justification,
+                                        is_human_validation = human_validation,
+                                        validator_name = config.OLLAMA_MODEL_NAME
+                                        )
+                    continue
+
 
             # Stop on low battery to save the generated mappings
             battery = psutil.sensors_battery()

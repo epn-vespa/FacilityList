@@ -67,7 +67,6 @@ def merge_into(newer_entity_dict: Dict,
             newer_entity_dict["alt_label"] -= {newer_entity_dict["label"]}
 
 
-
 def extract_items(d: Dict,
                   parent: str = "") -> List[Tuple]:
     """
