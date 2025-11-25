@@ -47,7 +47,7 @@ def timeall(func):
 
 def print_execution_report():
     global times
-    if times is not None and times:
+    if times:
         # Sort on times
         times = sorted(times.items(), key = lambda x: x[1])
         for func_name, time in times:
