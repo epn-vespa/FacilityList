@@ -12,6 +12,7 @@ from rdflib import Literal, URIRef
 from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
 from graph.extractor.extractor import Extractor
+from graph.entity_types import get_types_intersections
 
 from graph.graph import Graph
 from graph.properties import Properties
@@ -179,6 +180,8 @@ class Entity():
 
     def add_synonym(self,
                     entity: Entity,
+                    extractor1: Extractor,
+                    extractor2: Extractor,
                     score_value: float = None,
                     score_name: str = None,
                     scores: dict = None,
@@ -235,11 +238,11 @@ class Entity():
         entity.data[properties.exact_match].add(self.uri)
         self.data[properties.exact_match].add(entity.uri)
 
-        mapping_graph = MappingGraph()
+        mapping_graph = MappingGraph() # Should be already instantiated
         mapping_graph.add_mapping(self.uri,
                                   entity.uri,
-                                  self.get_values_for("source", unique = True),
-                                  entity.get_values_for("source", unique = True),
+                                  entity1_source = mapping_graph._OBS[extractor1.URI],
+                                  entity2_source = mapping_graph._OBS[extractor2.URI],
                                   score_value = score_value,
                                   score_name = score_name,
                                   scores = scores,
@@ -407,7 +410,7 @@ class Entity():
             if limit == len(res):
                 return res
             if not extractors or any(source in extractors for source in entity.get_values_for("source", unique = False)):
-                if not ent_type or entity.get_values_for("type").intersection(ent_type):
+                if not ent_type or get_types_intersections(entity.get_values_for("type"), ent_type):
                     if not has_attr or all(attr in entity._data for attr in has_attr):
                         if not ignore_deprecated or "deprecated" not in entity._data:
                             # no_equivalent_in check

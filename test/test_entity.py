@@ -31,7 +31,9 @@ class TestEntity(unittest.TestCase):
         res = self.graph.get_entities_from_list(self.aas_extractor,
                                                 no_equivalent_in = self.pds_extractor)
         assert len(res) == 1
-        ent1.add_synonym(ent2)
+        ent1.add_synonym(ent2,
+                         extractor1 = self.pds_extractor,
+                         extractor2 = self.aas_extractor)
         assert self.entity1 in ent2.get_synonyms()
         assert self.entity2 in ent1.get_synonyms()
         res = self.graph.get_entities_from_list(self.aas_extractor,
@@ -42,8 +44,12 @@ class TestEntity(unittest.TestCase):
         ent1 = Entity(self.entity1)
         ent2 = Entity(self.entity2)
         ent3 = Entity(self.entity3)
-        ent1.add_synonym(ent2)
-        ent1.add_synonym(ent3)
+        ent1.add_synonym(ent2,
+                         extractor1 = self.pds_extractor,
+                         extractor2 = self.aas_extractor)
+        ent1.add_synonym(ent3,
+                         extractor1 = self.pds_extractor,
+                         extractor2 = self.aas_extractor)
         assert(len(ent1.get_synonyms()) == 2)
         assert(len(ent2.get_synonyms()) == 2)
         assert(len(ent3.get_synonyms()) == 2)
