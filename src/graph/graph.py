@@ -10,6 +10,7 @@ import os
 import inspect
 import builtins
 
+from pathlib import PosixPath
 from typing import Iterator, List, Tuple
 from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
 from rdflib.namespace import SKOS, DCTERMS, OWL, RDF, RDFS
@@ -101,7 +102,7 @@ class Graph(G):
         Args:
             filename: input ontologie(s) to parse.
         """
-        if isinstance(filename, str):
+        if isinstance(filename, str) or isinstance(filename, PosixPath):
             filenames = [filename]
         else:
             filenames = filename

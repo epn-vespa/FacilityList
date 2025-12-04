@@ -22,7 +22,8 @@ class Filter(Tool):
 
 
     @abc.abstractmethod
-    def are_compatible(entity1: Entity,
+    def are_compatible(self,
+                       entity1: Entity,
                        entity2: Entity) -> bool:
         """
         Return True if two entities are compatible according to

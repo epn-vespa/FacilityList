@@ -329,7 +329,8 @@ class VersionManager():
 
 
     def compare_versions(new_data: dict,
-                         extractor):
+                         extractor,
+                         remove_deprecated: bool = False):
         """
         Load, compare and save data dict for version management.
         Add a Deprecated relation on removed entities.
@@ -364,9 +365,13 @@ class VersionManager():
             for uri in added:
                 new_data[uri]["modified"] = VersionManager._TODAY
             for uri in deleted:
-                new_data[uri] = old_data[uri]
-                new_data[uri]["deprecated"] = ":__"
-                # TODO try to use ivoasem:useInstead <#ICRS>
+                if not remove_deprecated:
+                    new_data[uri] = old_data[uri]
+                    new_data[uri]["deprecated"] = ":__"
+                    # TODO try to use ivoasem:useInstead <#ICRS>
+                else:
+                    if uri in new_data:
+                        new_data.pop(uri)
             # Check for updated content
             for uri in updated:
                 for key in set(new_data[uri].keys()).union(old_data[uri].keys()) - {"modified"}:
