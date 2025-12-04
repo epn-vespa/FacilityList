@@ -9,7 +9,8 @@ class DateFilter(Filter):
     NAME = "date"
 
     @timeall
-    def are_compatible(entity1: Entity,
+    def are_compatible(self,
+                       entity1: Entity,
                        entity2: Entity) -> float:
         """
         Check if any of the entity's date are incompatible (launch_date,

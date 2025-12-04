@@ -17,7 +17,8 @@ class IdentifierFilter(Filter):
     NAME = "identifier"
 
     @timeall
-    def are_compatible(entity1: Entity,
+    def are_compatible(self,
+                       entity1: Entity,
                        entity2: Entity) -> bool:
         """
         Check if any of the entity's identifiers are different.

@@ -25,7 +25,8 @@ class TypeFilter(Filter):
     NAME = "type"
 
 
-    def are_compatible(entity1: Entity,
+    def are_compatible(self,
+                       entity1: Entity,
                        entity2: Entity):
         """
         If any type of the entities is identical, then return True.

@@ -18,7 +18,8 @@ class DigitScorer(Scorer):
     NAME = "digit"
 
 
-    def compute(entity1: Entity,
+    def compute(self,
+                entity1: Entity,
                 entity2: Entity) -> float:
         """
         Compute a digit inclusion ratio between two entities' textual and numerical fields.
@@ -123,7 +124,7 @@ class DigitScorer(Scorer):
         numbers_e1 = set(numbers_e1)
         numbers_e2 = set(numbers_e2)
         if len(numbers_e1) == 0 or len(numbers_e2) == 0:
-            return -2
+            return -1
         if len(numbers_e2) < len(numbers_e1):
             numbers_e1, numbers_e2 = numbers_e2, numbers_e1
         for number_e1 in numbers_e1:

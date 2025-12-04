@@ -16,7 +16,8 @@ class ApertureFilter(Filter):
     NAME = "aperture"
 
 
-    def are_compatible(entity1: Entity,
+    def are_compatible(self,
+                       entity1: Entity,
                        entity2: Entity) -> float:
         """
         Check if the two entities have the same aperture.

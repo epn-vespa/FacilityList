@@ -24,6 +24,7 @@ class Embedder(Tool):
 
     NAME = "Generic Embedder (superclass)"
 
+    threshold = lambda score: False
 
     @abc.abstractmethod
     def compute(self,
@@ -61,3 +62,29 @@ class Embedder(Tool):
 
     def __str__(self):
         return self.NAME
+
+
+    def set_threshold(self,
+                      threshold: float,
+                      symbol: str = '>='):
+        if type(threshold) == str:
+            threshold = float(threshold)
+        if symbol == '>=':
+            self.threshold = lambda score: score >= threshold
+        elif symbol == '==':
+            self.threshold = lambda score: score == threshold
+        elif symbol == '>':
+            self.threshold = lambda score: score > threshold
+        elif symbol == '<':
+            self.threshold = lambda score: score < threshold
+        elif symbol == '<=':
+            self.threshold = lambda score: score <= threshold
+
+
+    def apply_threshold(self,
+                        score: float) -> bool:
+        """
+        Method to accept or reject a mapping if a certain threshold
+        is reached.
+        """
+        return self.threshold(score)

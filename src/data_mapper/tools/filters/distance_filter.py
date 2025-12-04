@@ -19,7 +19,8 @@ class DistanceFilter(Filter):
     NAME = "distance"
 
     @timeall
-    def are_compatible(entity1: Entity,
+    def are_compatible(self,
+                       entity1: Entity,
                        entity2: Entity) -> bool:
         """
         If the entities are more than 10km away from each other, the can

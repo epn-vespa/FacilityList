@@ -20,7 +20,8 @@ class AcronymScorer(Scorer):
 
 
     @timeall
-    def compute(entity1: Entity,
+    def compute(self,
+                entity1: Entity,
                 entity2: Entity) -> float:
         """
         Compute a fuzzy score between the two entities' labels and alt labels.
