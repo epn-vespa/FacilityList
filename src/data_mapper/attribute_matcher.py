@@ -55,6 +55,8 @@ class AttributeMatcher():
                     # There is only one NAIF entity with this ID.
                     naif_entity = Entity(naif_ids[0])
                     wikidata_entity.add_synonym(naif_entity,
+                                                extractor1 = WikidataExtractor,
+                                                extractor2 = NaifExtractor,
                                                 no_validation = True,
                                                 subject_match_field="NAIF_ID",
                                                 object_match_field="code",
@@ -79,8 +81,8 @@ class AttributeMatcher():
 
     @timeit
     def merge_on(self,
-                 list1: Extractor,
-                 list2: Extractor,
+                 extractor1: Extractor,
+                 extractor2: Extractor,
                  attr1: str | list[str],
                  attr2: str | list[str]):
         """
@@ -93,20 +95,13 @@ class AttributeMatcher():
             match from list1's attribute value.
 
         Args:
-            CPM: Candidate Pairs Mapping of the two lists
-            attr1: attribute of list1 to compare with attr2
-            attr2: attribute of list2 to compare with attr1
-            map_remaining: whether to generate a mapping for the entities that
-                           were not merged after merging on attr1 & attr2.
+            extractor1: first extractor.
+            extractor2: second extractor.
+            attr1: attribute of the first extractor to match.
+            attr2: attribute of the first extractor to match.
         """
-        """graph = Graph()
-        list1_entities = graph.get_entities_from_list(list1,
-                                                      no_equivalent_in = list2)
-        list2_entities = graph.get_entities_from_list(list2,
-                                                      no_equivalent_in = list1)
-        """
-        list1_entities = Entity.get_entities_from_list(list1, no_equivalent_in = list2)
-        list2_entities = Entity.get_entities_from_list(list2, no_equivalent_in = list1)
+        list1_entities = Entity.get_entities_from_list(extractor1, no_equivalent_in = extractor2)
+        list2_entities = Entity.get_entities_from_list(extractor2, no_equivalent_in = extractor1)
         list2 = []
 
         # Pre-loop to get entity2 and its value for attr2
@@ -130,6 +125,8 @@ class AttributeMatcher():
                     if value1 == value2:
                         # Merge entities or synsets
                         entity1.add_synonym(entity2,
+                                            extractor1 = extractor1,
+                                            extractor2 = extractor2,
                                             no_validation = True,
                                             score_name = "string_match",
                                             subject_match_field = attr1,
