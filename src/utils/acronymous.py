@@ -275,7 +275,7 @@ def _del_numbers(acronym: str) -> str:
     number = 0
     res = ""
     for letter in acronym:
-        if letter.isnumeric():
+        if letter <= '9' and letter >= '0' or letter in SUPERSCRIPT_MAP:
             letter = SUPERSCRIPT_MAP.get(letter, letter)
             number = number * 10 + int(letter)
         elif letter.isalpha():
