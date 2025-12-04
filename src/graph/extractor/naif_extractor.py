@@ -14,6 +14,7 @@ Author:
 from bs4 import BeautifulSoup
 from graph import entity_types
 from graph.extractor.cache import CacheManager
+from graph.extractor.data_fixer import fix
 from graph.extractor.extractor import Extractor
 from rdflib import Graph
 
@@ -107,6 +108,7 @@ class NaifExtractor(Extractor):
         # Delete duplicate identifiers and add alt labels
         # only when they are the same entity (see naif-sc-codes.ttl)
         self._merge_identifiers(result)
+        fix(result, self)
         return result
 
 
