@@ -18,10 +18,8 @@ import re
 import atexit
 import uuid
 
-import config
-from config import USERNAME
 from collections import defaultdict
-from rdflib import URIRef, Literal, XSD, DCTERMS, OWL, RDF, SKOS
+from rdflib import URIRef, Literal, XSD, DCTERMS, OWL, RDF, SKOS, RDFS
 from graph.graph import Graph
 from graph.mapping_graph import MappingGraph
 from graph.extractor import extractor_lists
@@ -45,7 +43,14 @@ class ManualReviewer():
         if not path.is_dir():
             raise FileExistsError(f"Folder {folder} does not exist.")
         self._input_dir = path
-        self._output_dir = path.parent / f"{str(datetime.now().strftime("%Y%m%d-%H%M%S"))}-v{version}"
+        new_file_name = path.name
+        if version > 2:
+            new_file_name = new_file_name.removesuffix(f"-v{version}")
+        self._output_dir = path.parent / f"{new_file_name}-v{version}"
+        while self._output_dir.exists():
+            version += 1
+            self._output_dir = path.parent / f"{new_file_name}-v{version}"
+        print("The new ontology will be saved in:", self._output_dir)
         linked = path / "linked.ttl"
         mapping = path / "mapping.ttl"
         self._linked_input_file = linked
@@ -69,6 +74,7 @@ class ManualReviewer():
 
     def _curate_mapping(self,
                         old_mapping_uri: URIRef,
+                        old_relation: URIRef,
                         new_relation: URIRef,
                         justification: str):
         """
@@ -92,18 +98,59 @@ class ManualReviewer():
             self._mapping.add((new_mapping_uri, property, obj))
             mapping_dict[property].append(obj)
 
+        # Reviewer label update
+        self._mapping.remove((new_mapping_uri, MappingGraph._SSSOM.reviewer_label, None))
         self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.reviewer_label, Literal(self._reviewer)))
+
+        # Mapping date update
+        self._mapping.remove((new_mapping_uri, MappingGraph._SSSOM.mapping_date, None))
         self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
+
+        # Deprecation of previous mapping, link to new mapping and mapping_set_id
         self._mapping.add((old_mapping_uri, OWL.deprecated, Literal(True, datatype = XSD.boolean)))
         self._mapping.add((old_mapping_uri, DCTERMS.isReplacedBy, new_mapping_uri))
         self._mapping.add((new_mapping_uri, DCTERMS.replaces, old_mapping_uri))
         self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.mapping_set_id, self._mapping_set))
 
-        if new_relation == OWL.differentFrom:
-            self.remove_relation(mapping_dict = mapping_dict)
+        # Update justification
+        self._mapping.remove((new_mapping_uri, RDFS.comment, None))
+        if justification:
+            self._mapping.add((new_mapping_uri, RDFS.comment, Literal(justification.strip())))
 
-    def remove_relation(self,
-                        mapping_dict: dict):
+        # Update relations in SSSOM and linked ontologies
+        self._mapping.remove((new_mapping_uri, MappingGraph._SSSOM.predicate_id, None))
+        self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.predicate_id, new_relation))
+        subj_uri = mapping_dict[MappingGraph._SSSOM.subject_id][0]
+        obj_uri = mapping_dict[MappingGraph._SSSOM.object_id][0]
+        if new_relation != SKOS.exactMatch and old_relation == SKOS.exactMatch:
+            self.remove_exact_match(subj_uri = subj_uri, obj_uri = obj_uri, new_relation = new_relation)
+        if new_relation == SKOS.exactMatch:
+            self.add_exact_match(subj_uri = subj_uri, obj_uri = obj_uri, old_relation = old_relation)
+        if {new_relation, old_relation}.intersection({SKOS.broadMatch, SKOS.narrowMatch}):
+            self.change_narrow_broad(subj_uri = subj_uri, obj_uri = obj_uri, old_relation = old_relation, new_relation = new_relation)
+
+    def _validate_mapping(self,
+                          old_mapping_id: URIRef,
+                          justification: str):
+        """
+        Add a reviewer_label to the mapping and a new justification if any.
+        Do not create a new mapping.
+
+        Args:
+            old_mapping_id: the mapping that is being reviewed
+            justification: the new justification string. If empty, ignores
+        """
+        # TODO link old mapping to the new mapping_set_id as well ?
+        self._mapping.add((old_mapping_id, self._mapping._SSSOM.reviewer_label, Literal(self._reviewer)))
+        if justification.strip():
+            self._mapping.add((old_mapping_id, RDFS.comment, Literal(justification)))
+
+
+    def remove_exact_match(self,
+                           #mapping_dict: dict,
+                           subj_uri: URIRef,
+                           obj_uri: URIRef,
+                           new_relation: URIRef):
         """
         Function that removes the exactMatch between the entities
         of the synonym set, keeping the previous validated mappings.
@@ -118,11 +165,11 @@ class ManualReviewer():
         # Change the relation between the two and the related entities too
         # according to the history of mappings
         # 1. Get entities in synset
-        subj_entity = mapping_dict[MappingGraph._SSSOM.subject_id][0]
-        obj_entity = mapping_dict[MappingGraph._SSSOM.object_id][0]
-        synonym_set = {subj_entity}
+        #subj_uri = mapping_dict[MappingGraph._SSSOM.subject_id][0]
+        #obj_uri = mapping_dict[MappingGraph._SSSOM.object_id][0]
+        synonym_set = {subj_uri}
         for syn, in self._linked.query(f"""SELECT ?synonym WHERE {{
-                                        <{subj_entity}> skos:exactMatch ?synonym .
+                                        <{subj_uri}> skos:exactMatch ?synonym .
                                         }}"""):
             synonym_set.add(syn)
         print("synonym_set=")
@@ -130,7 +177,7 @@ class ManualReviewer():
         print("\n")
         # 2. Get history of mappings
         mappings_history = []
-        all_entities_in_synset = {subj_entity, obj_entity}
+        all_entities_in_synset = {subj_uri, obj_uri}
         for syn in synonym_set:
             query = f"""SELECT ?obj WHERE {{
                         ?mapping sssom:subject_id <{syn}> .
@@ -146,13 +193,12 @@ class ManualReviewer():
                 all_entities_in_synset.add(obj)
                 # Remove the exactMatch relation in place
                 self._linked.remove((subj, SKOS.exactMatch, obj))
-                if {subj, obj} == {subj_entity, obj_entity}:
-                    pass
+                if {subj, obj} == {subj_uri, obj_uri}:
+                    mappings_history.append((subj, subj)) # Mapped to itself
+                    mappings_history.append((obj, obj)) # Mapped to itself (no mapping)
                 else:
                     mappings_history.append((subj, obj))
-            print(mappings_history)
-        print("\n")
-        print(mappings_history)
+
         # 3. Re-compute synonym sets' relations (the synonym set should be split into two sets)
         synonym_sets = []
         for subj, obj in mappings_history:
@@ -164,8 +210,28 @@ class ManualReviewer():
                     added = True
             if not added:
                 synonym_sets.append({subj, obj})
-        print("Synonym sets=", synonym_sets)
-        print(len(synonym_sets))
+
+        # Merge synsets if they have common element(s)
+        sets = [s.copy() for s in synonym_sets]
+        merge = True
+        while merge:
+            merge = False
+            new = []
+            while sets:
+                first = sets.pop()
+                to_merge = []
+                for s in sets:
+                    if first & s:  # intersection
+                        first |= s # merge
+                        to_merge.append(s)
+                        merge = True
+                for s in to_merge:
+                    sets.remove(s)
+                new.append(first)
+            sets = new
+
+        synonym_sets = new
+
         assert len(synonym_sets) == 2 # Should have been split in two
         # 3. Remove previous relations of synsets
         for ent in all_entities_in_synset:  
@@ -180,6 +246,54 @@ class ManualReviewer():
                     # add relation
                     self._linked.add((ent1, SKOS.exactMatch, ent2))
                     self._linked.add((ent2, SKOS.exactMatch, ent1))
+        
+        self._linked.add((subj_uri,  new_relation, obj_uri))
+
+
+    def change_narrow_broad(self,
+                            subj_uri: URIRef,
+                            obj_uri: URIRef,
+                            old_relation: URIRef,
+                            new_relation: URIRef):
+        """
+        Removes the narrower|broader relation if any of the relation
+        is narrowMatch or broadMatch, and change the hasPart | isPartOf
+        in the linked ontology.
+        """
+        if old_relation == new_relation:
+            return
+        if old_relation == SKOS.narrowMatch:
+            self._linked.remove((obj_uri, SKOS.narrowMatch, subj_uri))
+            self._linked.remove((obj_uri, DCTERMS.hasPart, subj_uri))
+        elif old_relation == SKOS.broadMatch:
+            self._linked.remove((obj_uri, SKOS.broadMatch, subj_uri))
+            self._linked.remove((obj_uri, DCTERMS.isPartOf, subj_uri))
+        if new_relation == SKOS.narrowMatch:
+            self._linked.add((obj_uri, SKOS.broadMatch, subj_uri))
+            self._linked.add((obj_uri, DCTERMS.isPartOf, subj_uri))
+        elif new_relation == SKOS.broadMatch:
+            self._linked.add((obj_uri, SKOS.narrowMatch, subj_uri))
+            self._linked.add((obj_uri, DCTERMS.hasPart, subj_uri))
+
+
+    def _get_availaible_reviewers(self) -> list[str]:
+        """
+        Get the reviewers' labels to recommand. Run this function if
+        the user provided reviewers not in the mapping ontology.
+        """
+
+        query = f"""
+        PREFIX sssom: <https://w3id.org/sssom/>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+        SELECT DISTINCT ?reviewer WHERE {{
+            ?mapping sssom:creator_label ?reviewer .
+        }}
+        """
+        res = self._mapping.query(query)
+        for reviewer, in res:
+            print("Available reviewers:", reviewer)
+        return list(res)
 
 
     def _get_filters(self):
@@ -208,16 +322,16 @@ class ManualReviewer():
         # Filter lists
         filter_lists = ""
         if self._lists:
-            allowed_sources = '\n'.join(["obsf:" + s + "_list" for s in self._lists])
+            allowed_sources = ' '.join(["obsf:" + s + "_list" for s in self._lists])
             filter_lists = f"""
             ?mapping sssom:subject_source ?subject_source ;
             sssom:object_source ?object_source .
-            ?allowed_sources {{
+            VALUES ?allowed_sources {{
                 {allowed_sources}
             }}
             FILTER (
-                ?subject_source IN (?allowed_sources) ||
-                ?object_source IN (?allowed_sources)
+                ?subject_source = ?allowed_sources ||
+                ?object_source = ?allowed_sources
             )
             """
 
@@ -226,36 +340,20 @@ class ManualReviewer():
         if self._validators:
             allowed_validators = '\n'.join([f"\"{r}\"^^xsd:string" for r in self._validators])
             filter_validators = f"""
-            ?mapping sssom:reviewer_label ?reviewer .
+            {{
+                ?mapping sssom:creator_label ?reviewer .
+            }} UNION {{
+                ?mapping sssom:reviewer_label ?reviewer .
+            }}
 
-            ?allowed_validators {{
+            VALUES ?allowed_validators {{
                 {allowed_validators}
             }}
             FILTER (
-                ?reviewer IN (?allowed_validators)
+                ?reviewer = ?allowed_validators
             )
             """
         return filter_date, filter_lists, filter_validators
-
-
-    def _get_availaible_reviewers(self) -> list[str]:
-        """
-        Get the reviewers' labels to recommand. Run this function if
-        the user provided reviewers not in the mapping ontology.
-        """
-
-        query = f"""
-        PREFIX sssom: <https://w3id.org/sssom/>
-        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-        SELECT DISTINCT ?reviewer WHERE {{
-            ?mapping sssom:reviewer_label ?reviewer .
-        }}
-        """
-        res = self._mapping.query(query)
-        for reviewer, in res:
-            print("Available reviewers:", reviewer)
-        return list(res)
 
 
     def _get_mappings(self):
@@ -267,7 +365,12 @@ class ManualReviewer():
         query = f"""
         SELECT ?mapping WHERE {{
             ?mapping a sssom:Mapping .
-            ?mapping sssom:reviewer_label ?reviewer_lbl .
+
+            {{
+                ?mapping sssom:creator_label ?rl .
+            }} UNION {{
+                ?mapping sssom:reviewer_label ?rl .
+            }}
             {filter_date}
             {filter_lists}
             {filter_reviewers}
@@ -299,20 +402,25 @@ class ManualReviewer():
         Review mappings (main loop)
         """
         atexit.register(self.write)
+        review_later = []
         # Open web service (async)
         for mapping_uri, in self._get_mappings():
             # Get infos and transmit to the web interface
             print(mapping_uri)
             if self._terminal:
-                changed, new_relation, justification = self._terminal_validation(mapping_uri) # TODO
+                changed, old_relation, new_relation, justification = self._terminal_validation(mapping_uri) # TODO
             else:
                 raise NotImplementedError("Not any support for GUI yet. Please use terminal instead.")
             if changed:
                 self._curate_mapping(mapping_uri,
+                                     old_relation,
                                      new_relation,
                                      justification)
+            elif changed is None:
+                review_later.append(mapping_uri)
             else:
-                self._validate_mapping(mapping_uri) # TODO add a reviewer label
+                self._validate_mapping(mapping_uri,
+                                       justification) # TODO add a reviewer label
 
 
     def _terminal_validation(self,
@@ -337,35 +445,38 @@ class ManualReviewer():
                                                   rdfs:comment ?justification .
                                   }}""")
         old_rel = None
-        print(res)
-        for subj, rel, obj, justification in res:
-            old_rel = rel
-            print(subj, rel, obj)
+        for subj, pred, obj, justification in res:
+            print(subj, pred, obj)
             print(justification)
-            changed = input("Modify relation ?\n0 -> No\n1 -> change to owl:differentFrom\n2 -> change to skos:broadMatch (obj part of subj)\n3 -> skos:narrowMatch (subj part of obj)\n >>> ")
-            changed = int(changed)
+            changed = ""
+            while not changed.strip().isdigit():
+                changed = input("Modify relation ?\n0 -> No\n1 -> change to owl:differentFrom\n2 -> change to skos:broadMatch (subj part of obj)\n3 -> change to skos:narrowMatch (obj part of subj)\n 4 -> ignore for now\n >>> ")
+            changed = int(changed.strip())
             match changed:
                 case 0:
-                    new_relation = rel
+                    new_relation = pred
                 case 1:
                     new_relation = OWL.differentFrom
                 case 2:
                     new_relation = SKOS.broadMatch
                 case 3:
                     new_relation = SKOS.narrowMatch
-            new_justification = input("Justification (leave empty to keep previous justification, spaces to get no justification) >>>")
+                case 4:
+                    return None, None, None, None
+            new_justification = input("Justification (leave empty to keep previous justification, spaces to change to an empty justification)\n>>> ")
             if new_justification == "":
                 new_justification = justification
             elif new_justification.strip() == "":
                 new_justification = None
             else:
                 pass
-            return changed, new_relation, new_justification
+            return changed, pred, new_relation, new_justification
         if not old_rel:
             raise ValueError(f"The mapping with id {mapping_uri} does not have a predicate_id property.")
 
 
     def write(self):
+        print(f"Writing ontologies in output folder {self._output_dir}...")
         output_dir = self._output_dir
         output_dir.mkdir(parents = True, exist_ok = True)
         output_ontology = output_dir / 'linked.ttl'
@@ -389,10 +500,6 @@ def main(folder: str,
          terminal: bool):
     mr = ManualReviewer(folder, validators, lists, begin, end, terminal)
     mr.review()
-    #filter_date, filter_lists, filter_reviewers = mr._get_filters()
-    #print(filter_date)
-    #print(filter_lists)
-    #print(filter_reviewers)
 
 
 if __name__ == "__main__":
@@ -435,8 +542,6 @@ if __name__ == "__main__":
                         action = "store_true",
                         default = False,
                         help = "If True, will perform the review in the Terminal instead of opening a GUI.")
-
-
 
     args = parser.parse_args()
     main(args.folder, args.reviewer, args.lists, args.begin, args.end, args.terminal)
