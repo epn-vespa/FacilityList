@@ -20,7 +20,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from utils.performances import timeall
-from nltk.corpus import stopwords
+from utils import stopwords
 
 
 class TfIdfEmbedder(Embedder):
@@ -70,27 +70,6 @@ class TfIdfEmbedder(Embedder):
                                                       use_keywords = False))
         return self.vectorizer.transform(entities_str_repr).toarray()
 
-        """
-        repr1 = ' '.join(entity1.get_values_for("definition").
-                         union(entity1.get_values_for("description")).
-                         union(entity1.get_values_for("label", language = ["en", "ca", "fr", "es"])))
-        repr2 = ' '.join(entity2.get_values_for("definition").
-                         union(entity2.get_values_for("description")).
-                         union(entity2.get_values_for("label", language = ["en", "ca", "fr", "es"])))
-
-        if not repr1 or not repr2:
-            # We need both entities to have a description to compute
-            # a cosine similarity.
-            return -1 # No score could be computed.
-
-        repr1 = TfIdfEmbedder.vectorizer.transform([repr1])
-        repr2 = TfIdfEmbedder.vectorizer.transform([repr2])
-        sim = cosine_similarity(repr1, repr2)
-        sim = float(sim[0][0])
-        if sim > 1:
-            sim = 1
-        return sim
-        """
 
     def _fit(self) -> None:
 
@@ -174,4 +153,4 @@ class TfIdfEmbedder(Embedder):
         """
         languages = ['english', 'french', 'spanish']
         for lang in languages:
-            stop_words = stop_words.union(set(stopwords.words(lang)))
+            stop_words = stop_words.union(stopwords.words(lang))
