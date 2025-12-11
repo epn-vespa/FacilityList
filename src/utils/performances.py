@@ -15,14 +15,17 @@ def timeit(func):
     return wrapper
 
 
-manager = Manager()
-times = manager.dict()
+manager = None
+times = None
 
 def timeall(func):
     """
     Time the total time spent on the call of a method.
     Print it in the end.
     """
+    if not manager:
+        manager = Manager()
+        times = manager.dict()
     def wrapper(*args, **kwargs):
         if hasattr(func, '__self__'):
             class_name = func.__self__.__class__.__name__
