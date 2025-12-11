@@ -50,7 +50,8 @@ class MappingGraph():
 
     def __new__(cls,
                 filename: str = None,
-                strategy: str = ""):
+                strategy: str = "",
+                reviewer: str = ""):
         """
         Instanciate the graph singleton.
         """
@@ -61,7 +62,8 @@ class MappingGraph():
 
     def __init__(self,
                  filename: str = None,
-                 strategy: str = ""):
+                 strategy: str = "",
+                 reviewer: str = None):
         """
         Args:
             filename: the checkpoint SSSOM ontology path
@@ -77,7 +79,7 @@ class MappingGraph():
         self._graph.bind("sssom", self._SSSOM)
         self._graph.bind("semapv", self._SEMAPV)
         # TODO bind aas, pds... namespaces
-        self.initialize_mapping_set(author = USERNAME,
+        self.initialize_mapping_set(author = reviewer,
                                     strategy = strategy)
         MappingGraph._initialized = True
 
@@ -109,9 +111,8 @@ class MappingGraph():
         """
         self._mapping_set = self._OBS[str(uuid.uuid4())]
         self._graph.add((self._mapping_set, RDF.type, self._SSSOM.MappingSet))
-        self._graph.add((self._mapping_set, self._SSSOM.reviewer_label, Literal(author, datatype=XSD.string)))
+        self._graph.add((self._mapping_set, self._SSSOM.creator_label, Literal(author, datatype=XSD.string))) # author_label also exists
         self._graph.add((self._mapping_set, self._SSSOM.mapping_set_description, Literal(strategy, datatype=XSD.string)))
-        #self._graph.add((self._mapping_set, self._SSSOM.mapping_set_id, Literal(str(self._mapping_set).split('#')[-1], datatype=XSD.string)))
         self._graph.add((self._mapping_set, self._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
         self._graph.add((self._mapping_set, self._SSSOM.mapping_tool, Literal("https://doi.org/10.5281/zenodo.17199128", datatype=XSD.anyURI)))
         self._graph.add((self._mapping_set, self._SSSOM.mapping_tool_version, Literal(__version__, datatype=XSD.string)))
@@ -136,7 +137,7 @@ class MappingGraph():
                     match_string: str = None,
                     ) -> None:
         """
-        Add a mapping in the mapping's graph.
+        Add a mapping in the graph.
 
         Args:
             entity1: URIRef of the first entity.
@@ -195,7 +196,7 @@ class MappingGraph():
         if not no_validation:
             self._graph.add((mapping_uri, self._SSSOM.mapping_justification, justification_source))
             if validator_name:
-                self._graph.add((mapping_uri, self._SSSOM.reviewer_label, Literal(validator_name, datatype=XSD.string)))
+                self._graph.add((mapping_uri, self._SSSOM.creator_label, Literal(validator_name, datatype=XSD.string))) # author_label also exists
             if justification_string:
                 self._graph.add((mapping_uri, RDFS.comment, Literal(justification_string, datatype=XSD.string)))
         if scores:
@@ -211,7 +212,7 @@ class MappingGraph():
         if filters:
             for filter in filters:
                 if filter:
-                    self._graph.add((mapping_uri, self._SSSOM.curation_rule, filter))
+                    self._graph.add((mapping_uri, self._SSSOM.curation_rule, Literal(filter.NAME)))
         if subject_match_field:
             if type(subject_match_field) is not list:
                 subject_match_field = [subject_match_field]
@@ -253,8 +254,8 @@ class MappingGraph():
 
 
     def serialize(self,
-                  output_dir: str,
-                  execution_id: str):
+                  output_dir: str):
+                  #execution_id: str):
         """
         Save the ontology into the execution folder and name it mapping.ttl.
 
@@ -266,3 +267,9 @@ class MappingGraph():
         output_dir.mkdir(parents=True, exist_ok=True)
         path = output_dir / "mapping.ttl"
         self._graph.serialize(destination = path, format="ttl")
+
+
+    def __getattr__(self, attr):
+        if hasattr(self._graph, attr):
+            return getattr(self._graph, attr)
+        return None
