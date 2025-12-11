@@ -17,7 +17,6 @@ class Filter(Tool):
     """
     Superclass for filters.
     """
-    
     NAME = "Generic filter (superclass)"
 
 

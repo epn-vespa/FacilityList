@@ -180,7 +180,7 @@ class HybridRetriever():
         """
         total_weight = prev_weight
         weighted_score = prev_score
-        scores_dict = {"cosine_similarity": prev_score}
+        scores_dict = {"cosine_similarity": prev_score} # Cosine similarity of hybrid embeddings
         for scorer in self.scorers:
             s = scorer.compute(entity1, entity2)
             if scorer.apply_threshold(s):
@@ -230,7 +230,8 @@ class HybridRetriever():
                       limit: int = -1,
                       ignore_deprecated = True,
                       top_k: int = 10,
-                      human_validation: bool = True) -> None:
+                      human_validation: bool = True,
+                      allow_broad_narrow: bool = True) -> None:
         """
         Map entities from extractor1 to entities from extractor2 using the
         hybrid retriever. extractor1 and extractor2 might be inversed depending
@@ -250,6 +251,10 @@ class HybridRetriever():
         self.embedders = []
         self.scorers = []
         self.selector = Selector(extractor1, extractor2, on_types)
+        self.selector.set_limit(top_k = 3,
+                                limit_iter = 500,
+                                z_score = 0.385,
+                                max_distinct_in_row = 20)
         for tool in with_tools:
             if isinstance(tool, Embedder):
                 self.add_embedder(tool)
@@ -326,6 +331,9 @@ class HybridRetriever():
                                entity_types = on_types,
                                entities = all_entities2,
                                embeddings = embeddings2)
+        else:
+            indexer1 = None
+            indexer2 = None
         for n, entity1 in tqdm(enumerate(entities1),
                                total=len(entities1),
                                desc=extractor1.NAMESPACE + " " + extractor2.NAMESPACE):
@@ -340,8 +348,13 @@ class HybridRetriever():
                 matcher, field1, field2, value = self.apply_matchers(entity1, entity2)
                 if matcher is not None:
                     # Add synonyms
-                    self.validate_mapping(indexer1, indexer2,
-                                          entity1, entity2, entities2,
+                    self.validate_mapping(indexer1 = indexer1,
+                                          indexer2 = indexer2,
+                                          extractor1 = extractor1,
+                                          extractor2 = extractor2,
+                                          entity1 = entity1,
+                                          entity2 = entity2,
+                                          entities2 = entities2,
                                           score_name = matcher.NAME,
                                           subject_match_field = field1,
                                           object_match_field = field2,
@@ -373,6 +386,7 @@ class HybridRetriever():
                 if scorer is not None:
                     # Validate score (threshold reached)
                     self.validate_mapping(indexer1, indexer2,
+                                          extractor1, extractor2,
                                           entity1, entity2,
                                           entities2, score_value, scores_dict, score_name = scorer.NAME,
                                           justificatoin_string = scorer.threshold_str(),
@@ -405,8 +419,15 @@ class HybridRetriever():
                 if userchoice != "none":
                     entity2, score, scores_dict = [(e, s, d) for e, s, d in nearest if e.label == userchoice][0]
                     print(entity2, score)
-                    self.validate_mapping(indexer1, indexer2, entity1, entity2,
-                                          entities2, score, scores_dict, score_name = "hybrid",
+                    self.validate_mapping(indexer1, indexer2,
+                                          extractor1 = extractor1,
+                                          extractor2 = extractor2,
+                                          entity1 = entity1,
+                                          entity2 = entity2,
+                                          entities2 = entities2,
+                                          score_value = score,
+                                          scores_dict = scores_dict,
+                                          score_name = "hybrid",
                                           justification_string = justification,
                                           is_human_validation = human_validation,
                                           validator_name = USERNAME)
@@ -425,10 +446,15 @@ class HybridRetriever():
             for score, entity1, entity2, scores_dict in self.selector:
                 if entity2 not in entities2:
                     continue
-                same_dist, justification = LLMConnection().validate_same_distinct(entity1, entity2)
-                if same_dist:
+                if allow_broad_narrow:
+                    llmchoice, justification = LLMConnection().validate_same_distinct_narrow_broad(entity1, entity2)
+                else:
+                    llmchoice, justification = LLMConnection().validate_same_distinct(entity1, entity2)
+                if llmchoice == 1: # same
                     self.validate_mapping(indexer1 = indexer1,
                                           indexer2 = indexer2,
+                                          extractor1 = extractor1,
+                                          extractor2 = extractor2,
                                           entity1 = entity1,
                                           entity2 = entity2,
                                           entities2 = entities2,
@@ -439,12 +465,34 @@ class HybridRetriever():
                                           is_human_validation = human_validation,
                                           validator_name = config.OLLAMA_MODEL_NAME)
                     self.selector.remove_entities(entity1, entity2)
+                    self.selector.cut_distinct()
+                elif llmchoice in [2, 3]: # narrow 2, broad 3. Add predicate arg.
+                    self.validate_mapping(indexer1 = indexer1,
+                                          indexer2 = indexer2,
+                                          extractor1 = extractor1,
+                                          extractor2 = extractor2,
+                                          entity1 = entity1,
+                                          entity2 = entity2,
+                                          predicate = "narrow" if llmchoice == 2 else "broad",
+                                          entities2 = entities2,
+                                          score_value = score,
+                                          scores_dict = scores_dict,
+                                          score_name = "hybrid",
+                                          justification_string  = justification,
+                                          is_human_validation = human_validation,
+                                          validator_name = config.OLLAMA_MODEL_NAME)
+                    self.selector.cut_distinct()
+                else:
+                    self.invalidate_mapping()
+                    self.selector.update_distinct()
                 self.check_battery()
 
 
     def validate_mapping(self,
                          indexer1: Indexer,
                          indexer2: Indexer,
+                         extractor1: Extractor,
+                         extractor2: Extractor,
                          entity1: Entity,
                          entity2: Entity,
                          entities2: list[Entity],
@@ -456,23 +504,47 @@ class HybridRetriever():
                          validator_name: str = None,
                          subject_match_field: str = None,
                          object_match_field: str = None,
-                         match_string: str = None):
+                         match_string: str = None,
+                         predicate: str = None):
+        """
+        Args:
+            predicate: "broad" | "narrow" or None if an exactMatch mapping.
+        """
         if self.embedders:
             indexer1.merge_embeddings(entity1, entity2, indexer2)
         entities2.remove(entity2)
-        entity1.add_synonym(entity2,
-                            extractor1 = indexer1.extractor,
-                            extractor2 = indexer2.extractor,
-                            score_value = score_value,
-                            score_name = score_name,
-                            scores = scores_dict,
-                            justification_string = justification_string,
-                            is_human_validation = is_human_validation,
-                            validator_name = validator_name,
-                            subject_match_field = subject_match_field,
-                            object_match_field = object_match_field,
-                            match_string = match_string
-                            )
+        if not predicate:
+            entity1.add_synonym(entity2,
+                                extractor1 = extractor1,
+                                extractor2 = extractor2,
+                                score_value = score_value,
+                                score_name = score_name,
+                                scores = scores_dict,
+                                filters = self.filters,
+                                justification_string = justification_string,
+                                is_human_validation = is_human_validation,
+                                validator_name = validator_name,
+                                subject_match_field = subject_match_field,
+                                object_match_field = object_match_field,
+                                match_string = match_string
+                                )
+        else:
+            entity1.add_broad_narrow_relation(entity2,
+                                              extractor1 = indexer1.extractor,
+                                              extractor2 = indexer2.extractor,
+                                              score_value = score_value,
+                                              score_name = score_name,
+                                              scores = scores_dict,
+                                              justification_string = justification_string,
+                                              is_human_validation = is_human_validation,
+                                              validator_name = validator_name,
+                                              is_broad = predicate == "broad"
+                                              )
+
+
+    def invalidate_mapping(self,) -> None:
+        # TODO
+        print("Classified as distinct entities by LLM. Save somewhere ?")
 
 
     def check_battery(self):

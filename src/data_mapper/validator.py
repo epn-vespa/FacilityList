@@ -49,6 +49,8 @@ def strat1(scores: list[float],
         scores: similarity scores of each entity of the compared list
         top_k: if top_k or more entities are selected, return none instead
     """
+    if len(scores) <= top_k / 2:
+        return scores # If 5 or less scores after blacklisting
     x = np.array(scores)
     indexes = get_high_values_indexes(x)
     indexes = list(indexes)

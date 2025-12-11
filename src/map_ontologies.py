@@ -9,6 +9,7 @@ from __version__ import __version__
 
 import os
 import sys
+import re
 import uuid
 import time
 import atexit
@@ -18,7 +19,8 @@ from argparse import ArgumentParser
 from pathlib import Path
 from collections import defaultdict
 
-from config import OUTPUT_DIR, configure_ollama
+from config import OUTPUT_DIR, configure_ollama, USERNAME
+import config
 from graph import entity_types
 from graph.graph import Graph
 from graph.mapping_graph import MappingGraph
@@ -84,6 +86,7 @@ class OntologyMapper():
             f"source: {' '.join(input_ontologies)}\n" + \
             f"folder: {output_dir}\n"
         self._strategy = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+        self._strategy_str = ""
         self._human_validation = human_validation
 
 
@@ -120,8 +123,8 @@ class OntologyMapper():
             self._graph.is_available("wikidata")):
             # P717. Doublon: P5736
 
-            am.merge_on(list1 = WikidataExtractor(),
-                        list2 = IauMpcExtractor(),
+            am.merge_on(extractor1 = WikidataExtractor(),
+                        extractor2 = IauMpcExtractor(),
                         attr1 = "MPC_ID",
                         attr2 = "code")
             # CPM_wiki_iaumpc.compute_tools()
@@ -131,44 +134,44 @@ class OntologyMapper():
             # P247 (COSPAR ID) Doublon: P8913 (NSSDCA)
             # Some of them appear more than once in wikidata.
 
-            am.merge_on(list1 = WikidataExtractor(),
-                        list2 = NssdcExtractor(),
+            am.merge_on(extractor1 = WikidataExtractor(),
+                        extractor2 = NssdcExtractor(),
                         attr1 = "NSSDCA_ID",
                         attr2 = "code")
-            am.merge_on(list1 = WikidataExtractor(),
-                        list2 = NssdcExtractor(),
+            am.merge_on(extractor1 = WikidataExtractor(),
+                        extractor2 = NssdcExtractor(),
                         attr1 = "COSPAR_ID",
                         attr2 = "code")
             self._description += "merge identifiers: nssdc, wikidata\n"
         if (self._graph.is_available("imcce") and
             self._graph.is_available("wikidata")):
-            am.merge_on(list1 = WikidataExtractor(),
-                        list2 = ImcceExtractor(),
+            am.merge_on(extractor1 = WikidataExtractor(),
+                        extractor2 = ImcceExtractor(),
                         attr1 = "NSSDCA_ID",
                         attr2 = "alt_label")
-            am.merge_on(list1 = WikidataExtractor(),
-                        list2 = ImcceExtractor(),
+            am.merge_on(extractor1 = WikidataExtractor(),
+                        extractor2 = ImcceExtractor(),
                         attr1 = "COSPAR_ID",
                         attr2 = "alt_label")
             self._description += "merge identifiers: imcce, wikidata\n"
         if (self._graph.is_available("imcce") and
             self._graph.is_available("nssdc")):
-            am.merge_on(list1 = NssdcExtractor(),
-                        list2 = ImcceExtractor(),
+            am.merge_on(extractor1 = NssdcExtractor(),
+                        extractor2 = ImcceExtractor(),
                         attr1 = "code",
                         attr2 = "alt_label")
             self._description += "merge identifiers: nssdc, imcce\n"
         if (self._graph.is_available("pds") and
             self._graph.is_available("nssdc")):
-            am.merge_on(list1 = NssdcExtractor(),
-                        list2 = PdsExtractor(),
+            am.merge_on(extractor1 = NssdcExtractor(),
+                        extractor2 = PdsExtractor(),
                         attr1 = "alt_label",
                         attr2 = "code")
             self._description += "merge identifiers: pds, nssdc\n"
         if (self._graph.is_available("naif") and
             self._graph.is_available("pds")):
-            am.merge_on(list1 = NaifExtractor(),
-                        list2 = PdsExtractor(),
+            am.merge_on(extractor1 = NaifExtractor(),
+                        extractor2 = PdsExtractor(),
                         attr1 = "code",
                         attr2 = "NAIF_ID")
             self._description += "merge identifiers: pds, naif\n"
@@ -199,6 +202,9 @@ class OntologyMapper():
         """
         # Re-initialize the strategy
         self._strategy = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+        threshold_regex = r"(.+)(>=|<=|==|<|>)(.+)"
+        with open(strategy_file, 'r') as file:
+            self._strategy_str = file.read()
         with open(strategy_file, 'r') as file:
             for i, line in enumerate(file.readlines()):
                 i = i + 1
@@ -277,9 +283,17 @@ class OntologyMapper():
                 tools_to_compute = set()
                 except_tools = set()
                 for tool in tools:
+                    # threshold
+                    res = re.findall(threshold_regex, tool)
+                    if len(res) == 1:
+                        tool, symbol, threshold_value = res[0][0].strip(), res[0][1].strip(), res[0][2].strip()
+                    else:
+                        symbol = None
+                        threshold_value = None
                     if tool[0] == '-':
                         # Do not compute those tools
                         tool = tool[1:].strip()
+                        
                         if tool not in MappingToolsList.TOOLS_BY_NAMES:
                             raise ValueError(f"Error at line {i} in {strategy_file}: " +
                                              f"{tool} is not a valid tool name.\n" +
@@ -293,7 +307,14 @@ class OntologyMapper():
                                          f"{tool} is not a valid tool name.\n" +
                                          f"Available tool names: {' '.join(MappingToolsList.TOOLS_BY_NAMES.keys())}")
                     else:
-                        tools_to_compute.add(MappingToolsList.TOOLS_BY_NAMES[tool])
+                        if threshold_value:
+                            tool = MappingToolsList.TOOLS_BY_NAMES[tool]()
+                            tool.set_threshold(threshold_value, symbol)
+                            tools_to_compute.add(tool)
+                        else:
+                            # tools_to_compute.add(tool)#
+                            tool = MappingToolsList.TOOLS_BY_NAMES[tool]()
+                            tools_to_compute.add(tool)
                     if DistanceFilter in tools_to_compute:
                         if ((entity_types.GROUND_OBSERVATORY not in extractor1.POSSIBLE_TYPES and
                              entity_types.TELESCOPE not in extractor1.POSSIBLE_TYPES) or
@@ -334,8 +355,14 @@ class OntologyMapper():
                     tools = self.strategy[extractor1][extractor2][on_types]
                     if not extractor1.TYPE_KNOWN == 1 or not extractor2.TYPE_KNOWN == 1:
                         on_types = [on_types] # On all types at once if types are unknown
-                    # If types from both lists are known, process types one by one.
+                        # If types from both lists are known, process types one by one.
+                        on_types_str = None
+                    else:
+                        on_types_str = ', '.join([str(t) for t in on_type])
                     for on_type in on_types:
+                        if not on_types_str:
+                            on_types_str = ', '.join([str(t) for t in on_type])
+                        self._description += f"mapping: {extractor1.NAMESPACE}, {extractor2.NAMESPACE}, types: {on_types_str}, tools: {', '.join([s.NAME for s in tools])}\n"
                         retriever = HybridRetriever()
                         retriever.process_lists(extractor1(),
                                                 extractor2(),
@@ -369,8 +396,6 @@ class OntologyMapper():
 
                         # Save progress for next execution
                         self._progress[extractor1][extractor2][on_type] = tools
-
-                    self._description += f"mapping: {extractor1.NAMESPACE}, {extractor2.NAMESPACE}, types: {', '.join([str(t) for t in on_types])}, tools: {', '.join([s.NAME for s in tools])}\n"
 
 
     def _restore_progress(self):
@@ -410,9 +435,11 @@ class OntologyMapper():
         self._graph.serialize(destination = output_ontology,
                               format = "turtle",
                               encoding = "utf-8")
-        mapping_graph = MappingGraph(self._mapping_input_file)
-        mapping_graph.serialize(output_dir = self._output_dir,
-                                execution_id = self._execution_id)
+        mapping_graph = MappingGraph(self._mapping_input_file,
+                                     strategy = self._strategy_str,
+                                     reviewer = USERNAME if self._human_validation else config.OLLAMA_MODEL_NAME)
+        mapping_graph.serialize(output_dir = self._output_dir)
+                                # execution_id = self._execution_id)
         progress_file = output_dir / 'progress.pkl'
         with open(progress_file, "wb") as file:
             dill.dump(self._progress, file)

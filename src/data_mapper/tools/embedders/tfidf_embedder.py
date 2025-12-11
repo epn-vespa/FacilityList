@@ -44,7 +44,6 @@ class TfIdfEmbedder(Embedder):
     TO_EXCLUDE = ["code", "url", "ext_ref", "source", "location_confidence", "type_confidence", "modified", "deprecated"]
 
     ON_LANGUAGES = ["en", "ca", "fr", "es"]
-    
 
     @timeall
     def compute(self, entities: List[Entity]) -> np.ndarray:
@@ -119,12 +118,11 @@ class TfIdfEmbedder(Embedder):
         text = re.sub(r"[^\w\W\d ]", " ", text)
         text = re.sub(r" +", " ", text)
         return text
-    
+
 
     punct_regex = re.compile("[" + re.escape(string.punctuation) + "]")
     def _custom_tokenizer(self,
                           text: str) -> str:
-        
         """
         Tokenizer for the tfidf vectorizer
         - Lowercase
@@ -142,7 +140,7 @@ class TfIdfEmbedder(Embedder):
         tokens = re.findall(r'\b[a-zA-Z0-9]{1,5}', text.lower()) # 1 to 5 characters (pseudo-stemmization)
         return tokens
 
-    
+
     def add_stopwords(self,
                       stop_words: Set[str]) -> List[str]:
         """

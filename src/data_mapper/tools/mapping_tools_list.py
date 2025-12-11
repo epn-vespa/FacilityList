@@ -38,7 +38,7 @@ class MappingToolsList():
     SCORER_TOOLS = []
     for loader, module_name, is_pkg in pkgutil.iter_modules(scorers.__path__):
         module = importlib.import_module(f"{scorers.__name__}.{module_name}")
-        
+
         for name, obj in inspect.getmembers(module, inspect.isclass):
             if obj.__module__ == module.__name__:
                 if issubclass(obj, Scorer) and obj is not Scorer:

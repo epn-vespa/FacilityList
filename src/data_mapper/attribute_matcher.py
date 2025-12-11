@@ -18,7 +18,7 @@ from rdflib.namespace import SKOS
 from rdflib import Literal
 from tqdm import tqdm
 
-from utils.performances import timeall, timeit
+from utils.performances import timeit
 
 
 class AttributeMatcher():
@@ -69,13 +69,13 @@ class AttributeMatcher():
                         naif_entity = Entity(naif_id)
 
         if map_remaining:
-            self.merge_on(list1 = WikidataExtractor(),
-                          list2 = NaifExtractor(),
+            self.merge_on(extractor1 = WikidataExtractor(),
+                          extractor2 = NaifExtractor(),
                           attr1 = "label",
                           attr2 = "label")
 
-            self.merge_on(list1 = WikidataExtractor(),
-                          list2 = NaifExtractor(),
+            self.merge_on(extractor1 = WikidataExtractor(),
+                          extractor2 = NaifExtractor(),
                           attr1 = "alt_label",
                           attr2 = "label")
 
