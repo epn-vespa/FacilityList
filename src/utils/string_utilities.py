@@ -317,7 +317,7 @@ def remove_parenthesis(text: str) -> str:
     Remove parenthesis and the text inbetween for any text.
     Use to standardize labels.
 
-    /!\ If a closing parenthesis is missing, will remove
+    /!\\ If a closing parenthesis is missing, will remove
     the text until the end from the opened parenthesis.
     Use with care: some in-parenthesis in labels might be relevant
     (like North, South to specify a site of an observatory for example).
@@ -382,7 +382,7 @@ def has_cospar_nssdc_id(text: str) -> Tuple[bool, list[str], list[str]]:
     Args:
         text: string that may contain an NSSDC or COSPAR id.
     """
-    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{4,5}\b"
+    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}\b"
     cospar_ids = re.findall(pattern, text)
     if not cospar_ids:
         return False, None, None
