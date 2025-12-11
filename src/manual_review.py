@@ -9,7 +9,6 @@ too (isPartOf, hasPart).
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-import setup_path # import first
 from __version__ import __version__
 import argparse
 import pathlib
@@ -21,9 +20,11 @@ import uuid
 from collections import defaultdict
 from rdflib import URIRef, Literal, XSD, DCTERMS, OWL, RDF, SKOS, RDFS
 from graph.graph import Graph
+from graph.entity import Entity
 from graph.mapping_graph import MappingGraph
 from graph.extractor import extractor_lists
 from datetime import datetime
+from data_mapper.gui import manual_review_server
 
 class ManualReviewer():
 
@@ -249,6 +250,20 @@ class ManualReviewer():
         
         self._linked.add((subj_uri,  new_relation, obj_uri))
 
+    def add_exact_match(self,
+                        subj_uri: URIRef,
+                        obj_uri: URIRef):
+        """
+        The two entities are the same.
+        """
+        self._linked.remove((obj_uri, None, subj_uri))
+        self._linked.remove((subj_uri, None, obj_uri))
+        self._linked.add((subj_uri, SKOS.exactMatch, obj_uri))
+        self._linked.add((obj_uri, SKOS.exactMatch, subj_uri))
+        for syn1 in Entity(subj_uri).get_synonyms():
+            for syn2 in Entity(obj_uri).get_synonyms():
+                self._linked.add((syn1, SKOS.exactMatch, syn2))
+                self._linked.add((syn2, SKOS.exactMatch, syn1))
 
     def change_narrow_broad(self,
                             subj_uri: URIRef,
@@ -262,16 +277,24 @@ class ManualReviewer():
         """
         if old_relation == new_relation:
             return
-        if old_relation == SKOS.narrowMatch:
+        if old_relation == SKOS.broadMatch:
+            self._linked.remove((subj_uri, SKOS.broadMatch, obj_uri))
+            self._linked.remove((subj_uri, DCTERMS.isPartOf, obj_uri))
             self._linked.remove((obj_uri, SKOS.narrowMatch, subj_uri))
             self._linked.remove((obj_uri, DCTERMS.hasPart, subj_uri))
-        elif old_relation == SKOS.broadMatch:
+        elif old_relation == SKOS.narrowMatch:
+            self._linked.remove((subj_uri, SKOS.narrowMatch, obj_uri))
+            self._linked.remove((subj_uri, DCTERMS.hasPart, obj_uri))
             self._linked.remove((obj_uri, SKOS.broadMatch, subj_uri))
             self._linked.remove((obj_uri, DCTERMS.isPartOf, subj_uri))
         if new_relation == SKOS.narrowMatch:
+            self._linked.add((subj_uri, SKOS.narrowMatch, obj_uri))
+            self._linked.add((subj_uri, DCTERMS.hasPart, obj_uri))
             self._linked.add((obj_uri, SKOS.broadMatch, subj_uri))
             self._linked.add((obj_uri, DCTERMS.isPartOf, subj_uri))
         elif new_relation == SKOS.broadMatch:
+            self._linked.add((subj_uri, SKOS.broadMatch, obj_uri))
+            self._linked.add((subj_uri, DCTERMS.isPartOf, obj_uri))
             self._linked.add((obj_uri, SKOS.narrowMatch, subj_uri))
             self._linked.add((obj_uri, DCTERMS.hasPart, subj_uri))
 
@@ -404,13 +427,16 @@ class ManualReviewer():
         atexit.register(self.write)
         review_later = []
         # Open web service (async)
-        for mapping_uri, in self._get_mappings():
+        mappings = self._get_mappings()
+        total = len(mappings)
+        for i, (mapping_uri,) in enumerate(mappings):
             # Get infos and transmit to the web interface
             print(mapping_uri)
             if self._terminal:
                 changed, old_relation, new_relation, justification = self._terminal_validation(mapping_uri) # TODO
             else:
-                raise NotImplementedError("Not any support for GUI yet. Please use terminal instead.")
+                changed, old_relation, new_relation, justification = self._gui_validation(mapping_uri, current = i, total = total)
+                # raise NotImplementedError("Not any support for GUI yet. Please use terminal instead.")
             if changed:
                 self._curate_mapping(mapping_uri,
                                      old_relation,
@@ -444,7 +470,7 @@ class ManualReviewer():
                                                   sssom:object_id ?obj ;
                                                   rdfs:comment ?justification .
                                   }}""")
-        old_rel = None
+        #old_rel = None
         for subj, pred, obj, justification in res:
             print(subj, pred, obj)
             print(justification)
@@ -471,8 +497,64 @@ class ManualReviewer():
             else:
                 pass
             return changed, pred, new_relation, new_justification
-        if not old_rel:
-            raise ValueError(f"The mapping with id {mapping_uri} does not have a predicate_id property.")
+        #if not old_rel:
+        #    raise ValueError(f"The mapping with id {mapping_uri} does not have a predicate_id property.")
+
+
+    def _gui_validation(self,
+                        mapping_uri,
+                        current: int,
+                        total: int):
+        print("gui validation start")
+        query = f"""SELECT ?subj ?rel ?obj ?justification ?score ?creator_label ?creation_date ?subject_source ?object_source WHERE {{
+                <{mapping_uri}> sssom:subject_id ?subj ;
+                                sssom:predicate_id ?rel ;
+                                sssom:object_id ?obj ;
+                                rdfs:comment ?justification ;
+                                obsf:hybrid ?score ;
+                                sssom:creator_label ?creator_label ;
+                                sssom:mapping_date ?creation_date ;
+                                sssom:subject_source ?subject_source ;
+                                sssom:object_source ?object_source .
+                }}"""
+        print("query =", query)
+        res = self._mapping.query(query)
+        #old_rel = None
+        print("res:", len(res))
+        for subj, pred, obj, justification, score, creator, creation_date, subject_source, object_source in res:
+            manual_review_server.update_state(subject = Entity(subj).__dict__(False),
+                                              predicate = str(pred).split("#")[-1].removesuffix("_list"),
+                                              object = Entity(obj).__dict__(False),
+                                              justification = str(justification),
+                                              score = float(score),
+                                              creation_date = str(creation_date),
+                                              creator = str(creator),
+                                              list1 = str(subject_source).split("#")[-1],
+                                              list2 = str(object_source).split("#")[-1],
+                                              total = total,
+                                              current = current)
+
+            with manual_review_server.app.app_context():
+                new_relation, new_justification = manual_review_server.wait_for_user_choice()
+            match new_relation:
+                case "exactMatch":
+                    new_relation = SKOS.exactMatch
+                case "differentFrom":
+                    new_relation = OWL.differentFrom
+                case "broadMatch":
+                    new_relation = SKOS.broadMatch
+                case "narrowMatch":
+                    new_relation = SKOS.narrowMatch
+            if new_justification == "":
+                new_justification = justification
+            elif new_justification.strip() == "":
+                new_justification = None
+            else:
+                pass
+            changed = pred != new_relation
+            return changed, pred, new_relation, new_justification
+        #if not old_rel:
+        #    raise ValueError(f"The mapping with id {mapping_uri} does not have a predicate_id property.")
 
 
     def write(self):
@@ -498,8 +580,18 @@ def main(folder: str,
          begin: str,
          end: str,
          terminal: bool):
+    
     mr = ManualReviewer(folder, validators, lists, begin, end, terminal)
-    mr.review()
+    if not terminal:
+        # Open the server & web browser client for manual disambiguation
+        import threading
+        from data_mapper.gui import manual_review_server
+        thread = threading.Thread(target = mr.review, daemon = True)
+        thread.start()
+        print("Serving on http://127.0.0.1:5000")
+        manual_review_server.app.run(debug = True, use_reloader = False)
+    else:
+        mr.review()
 
 
 if __name__ == "__main__":
