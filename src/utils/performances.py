@@ -23,6 +23,7 @@ def timeall(func):
     Time the total time spent on the call of a method.
     Print it in the end.
     """
+    """
     global manager
     global times
     if not manager:
@@ -48,6 +49,7 @@ def timeall(func):
 
         return result
     return wrapper
+    """
 
 
 def print_execution_report():
