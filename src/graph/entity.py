@@ -8,7 +8,7 @@ Author:
 
 from collections import defaultdict
 from typing import List, Set
-from rdflib import Literal, URIRef
+from rdflib import Literal, URIRef, SKOS, DCTERMS
 from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
 from graph.extractor.extractor import Extractor
@@ -185,6 +185,7 @@ class Entity():
                     score_value: float = None,
                     score_name: str = None,
                     scores: dict = None,
+                    filters: list = None,
                     justification_string: str = "",
                     is_human_validation: bool = False,
                     no_validation: bool = False,
@@ -200,9 +201,12 @@ class Entity():
 
         Args:
             entity: the new synonym of this entity.
+            extractor1: the source extractor of this entity.
+            extractor2: the source extractor of the synonym entity.
             score_value: decisive score's value. If none, it will not create any SSSOM mapping.
             score_name: decisive score's label.
             scores: dict of {score: value}.
+            filters: list of Filters.
             justification_string: the justification for this mapping decision.
             is_human_validation: weither a human decided this mapping.
             no_validation: weither no validation was done.
@@ -217,35 +221,48 @@ class Entity():
         elif entity in self.get_synonyms():
             print(f"Warning: already mapped {self.uri} and {entity.uri}. Ignoring.")
             return
+        uri1 = self.uri
+        for synonym_uri in self.get_synonyms():
+            if extractor1.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
+                uri1 = synonym_uri
+                break
+        uri2 = entity.uri
+        for synonym_uri in entity.get_synonyms():
+            if extractor2.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
+                uri2 = synonym_uri
+                break
         properties = Properties()
         for synonym_uri in entity.get_synonyms():
             if synonym_uri == self.uri:
                 continue
-            Graph().add((self.uri, properties.exact_match, synonym_uri))
-            Graph().add((synonym_uri, properties.exact_match, self.uri))
+            Graph().add((uri1, properties.exact_match, synonym_uri))
+            Graph().add((synonym_uri, properties.exact_match, uri1))
             self.data[properties.exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[properties.exact_match].add(self.uri)
+            Entity(synonym_uri).data[properties.exact_match].add(uri1)
         for synonym_uri in self.get_synonyms():
 
-            if synonym_uri == entity.uri:
+            if synonym_uri == uri2:
                 continue
-            Graph().add((entity.uri, properties.exact_match, synonym_uri))
-            Graph().add((synonym_uri, properties.exact_match, entity.uri))
+            Graph().add((uri2, properties.exact_match, synonym_uri))
+            Graph().add((synonym_uri, properties.exact_match, uri2))
             entity.data[properties.exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[properties.exact_match].add(entity.uri)
-        Graph().add((self.uri, properties.exact_match, entity.uri))
-        Graph().add((entity.uri, properties.exact_match, self.uri))
-        entity.data[properties.exact_match].add(self.uri)
-        self.data[properties.exact_match].add(entity.uri)
+            Entity(synonym_uri).data[properties.exact_match].add(uri2)
+        Graph().add((uri1, properties.exact_match, uri2))
+        Graph().add((uri2, properties.exact_match, uri1))
+        entity.data[properties.exact_match].add(uri1)
+        self.data[properties.exact_match].add(uri2)
 
         mapping_graph = MappingGraph() # Should be already instantiated
-        mapping_graph.add_mapping(self.uri,
-                                  entity.uri,
+        # URIs to be used
+
+        mapping_graph.add_mapping(uri1,
+                                  uri2,
                                   entity1_source = mapping_graph._OBS[extractor1.URI],
                                   entity2_source = mapping_graph._OBS[extractor2.URI],
                                   score_value = score_value,
                                   score_name = score_name,
                                   scores = scores,
+                                  filters = filters,
                                   justification_string = justification_string,
                                   is_human_validation = is_human_validation,
                                   no_validation = no_validation,
@@ -253,6 +270,81 @@ class Entity():
                                   subject_match_field = subject_match_field,
                                   object_match_field = object_match_field,
                                   match_string = match_string)
+
+
+    def add_broad_narrow_relation(self,
+                                  entity: URIRef,
+                                  extractor1: Extractor,
+                                  extractor2: Extractor,
+                                  score_value: float = None,
+                                  score_name: str = None,
+                                  scores: dict = None,
+                                  filters = None,
+                                  justification_string: str = "",
+                                  is_human_validation: bool = False,
+                                  no_validation: bool = False,
+                                  validator_name: str = "",
+                                  is_broad: bool = False) -> None:
+        """
+        Add broad or narrow relation type between the two entities.
+
+        Args:
+            entity: the new synonym of this entity.
+            extractor1: the source extractor of this entity.
+            extractor2: the source extractor of the synonym entity.
+            score_value: decisive score's value. If none, it will not create any SSSOM mapping.
+            score_name: decisive score's label.
+            scores: dict of {score: value}.
+            filters: list of Filters.
+            justification_string: the justification for this mapping decision.
+            is_human_validation: weither a human decided this mapping.
+            no_validation: weither no validation was done.
+            validator_name: name of the validator (human or AI).
+            is_broad: if True, add broad relation (isPartOf),
+                      else add narrow relation (hasPart)
+        """
+        mapping_graph = MappingGraph()
+        # URIs to be used
+        uri1 = self.uri
+        for synonym_uri in self.get_synonyms():
+            if extractor1.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
+                uri1 = synonym_uri
+                break
+        uri2 = entity.uri
+        for synonym_uri in entity.get_synonyms():
+            if extractor2.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
+                uri2 = synonym_uri
+                break
+        graph = Graph()
+        properties = Properties()
+        if is_broad:
+            graph.add((uri1, DCTERMS.isPartOf, uri2))
+            graph.add((uri2, DCTERMS.hasPart, uri1))
+            graph.add((uri1, SKOS.broadMatch, uri2))
+            graph.add((uri2, SKOS.narrowMatch, uri1))
+            entity.data[properties.has_part].add(uri1)
+            self.data[properties.is_part_of].add(uri2)
+        else:
+            graph.add((uri1, DCTERMS.hasPart, uri2))
+            graph.add((uri2, DCTERMS.isPartOf, uri1))
+            graph.add((uri1, SKOS.narrowMatch, uri2))
+            graph.add((uri2, SKOS.broadMatch, uri1))
+            entity.data[properties.is_part_of].add(uri1)
+            self.data[properties.has_part].add(uri2)
+        predicate = SKOS.broadMatch if is_broad else SKOS.narrowMatch
+        mapping_graph.add_mapping(entity1 = uri1,
+                                  entity2 = uri2,
+                                  entity1_source = mapping_graph._OBS[extractor1.URI],
+                                  entity2_source = mapping_graph._OBS[extractor2.URI],
+                                  score_value = score_value,
+                                  score_name = score_name,
+                                  scores = scores,
+                                  filters = filters,
+                                  justification_string = justification_string,
+                                  is_human_validation = is_human_validation,
+                                  no_validation = no_validation,
+                                  validator_name = validator_name,
+                                  predicate = predicate)
 
 
     def to_string(self,
@@ -279,12 +371,20 @@ class Entity():
         """
         res = ""
         label = self.get_values_for("label")
+        alt_labels = self.get_values_for("alt_label")
         if label:
             if type(label) == set:
-                res = ', '.join(label)
+                #res = ', '.join(label)
+                label = list(label)
+                if len(label) > 1:
+                    alt_labels.update(label[1:])
+                res += "Main label: " + label[0]
                 res += '. '
             else:
                 res = label + '. '
+        if alt_labels:
+            key = "Also known as: "
+            res += key + ', '.join(alt_labels) + '. '
         for key, value in sorted(self.data.items()):
             key = Graph().PROPERTIES.get_attr_name(key)
             value = self.get_values_for(key, languages = languages)
@@ -295,7 +395,7 @@ class Entity():
             if key == "label":
                 continue
             if key == "alt_label":
-                key = "Also known as"
+                continue
                 # Only keep ten alt labels
                 #res += f" {key}: {', '.join(sorted(value, key = lambda x: 1/len(x))[:10])}"
                 #continue
@@ -313,7 +413,7 @@ class Entity():
         return res
 
 
-    def __dict__(self):
+    def __dict__(self, extend_to_synonyms: bool = True):
         """
         Jsonify the entity.
         """
@@ -339,35 +439,36 @@ class Entity():
                             vv = vv[0] + '@' + vv[1]
                     v[i] = vv
             jsonified[k] = list(set(v)) # No duplicate
-        for synonym in self.get_synonyms():
-            if type(synonym) == URIRef:
-                synonym = Entity(synonym)
-            for k, v in synonym._data.items():
-                if not v:
-                    continue
-                if type(k) != str:
-                    k = Properties().get_attr_name(k)
-                if type(v) == URIRef:
-                    v = split_uri(v)[1]
-                elif type(v) == set:
-                    v = list(v)
-                if type(v) in [tuple, list]:
-                    for i, vv in enumerate(v):
-                        if type(vv) == URIRef:
-                            vv = split_uri(vv)[1]
-                        elif type(vv) == tuple and len(vv) == 2:
-                            # Remove None language
-                            if vv[1] == None:
-                                vv = vv[0]
-                            else:
-                                vv = vv[0] + '@' + vv[1]
-                        v[i] = vv
-                if k in jsonified:
-                    jsonified[k] = set(jsonified[k]) # No duplicate
-                    jsonified[k].update(set(v))
-                    jsonified[k] = list(jsonified[k])
-                else:
-                    jsonified[k] = v
+        if extend_to_synonyms:
+            for synonym in self.get_synonyms():
+                if type(synonym) == URIRef:
+                    synonym = Entity(synonym)
+                for k, v in synonym._data.items():
+                    if not v:
+                        continue
+                    if type(k) != str:
+                        k = Properties().get_attr_name(k)
+                    if type(v) == URIRef:
+                        v = split_uri(v)[1]
+                    elif type(v) == set:
+                        v = list(v)
+                    if type(v) in [tuple, list]:
+                        for i, vv in enumerate(v):
+                            if type(vv) == URIRef:
+                                vv = split_uri(vv)[1]
+                            elif type(vv) == tuple and len(vv) == 2:
+                                # Remove None language
+                                if vv[1] == None:
+                                    vv = vv[0]
+                                else:
+                                    vv = vv[0] + '@' + vv[1]
+                            v[i] = vv
+                    if k in jsonified:
+                        jsonified[k] = set(jsonified[k]) # No duplicate
+                        jsonified[k].update(set(v))
+                        jsonified[k] = list(jsonified[k])
+                    else:
+                        jsonified[k] = v
         return {self.get_values_for("label", unique = True): jsonified}
 
 

@@ -20,7 +20,7 @@ class ImcceExtractor(Extractor):
     URL = "https://api.ssodnet.imcce.fr/quaero/1/sso/search?"
 
     # URI to save this source as an entity
-    URI = "IMCCE_list"
+    URI = "imcce_list"
 
     # URI to save entities from this source
     NAMESPACE = "imcce"
@@ -107,6 +107,7 @@ class ImcceExtractor(Extractor):
                                 data["launch_date"] = launch_date
                                 data["COSPAR_ID"] = cospar_id
                                 data["NSSDCA_ID"] = cospar_id
+                            continue
                    
                 if key in self.ATTRS:
                     data[self.ATTRS[key]] = value

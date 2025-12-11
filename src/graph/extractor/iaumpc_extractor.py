@@ -26,7 +26,7 @@ class IauMpcExtractor(Extractor):
     # https://www.minorplanetcenter.net/iau/lists/ObsCodesF.html
 
     # URI to save this source as an entity
-    URI = "IAU-MPC_list"
+    URI = "iau-mpc_list"
 
     # URI to save entities from this source
     NAMESPACE = "iaumpc"

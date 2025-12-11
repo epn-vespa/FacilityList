@@ -25,7 +25,7 @@ class NaifExtractor(Extractor):
     URL = "https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/req/naif_ids.html"
 
     # URI to save this source as an entity
-    URI = "NAIF_list"
+    URI = "naif_list"
 
     # URI to save entities from this source
     NAMESPACE = "naif"

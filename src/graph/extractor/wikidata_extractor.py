@@ -21,11 +21,11 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from graph import entity_types
 from graph.extractor.cache import VersionManager, CacheManager
 from graph.extractor.extractor import Extractor
+from graph.extractor.data_fixer import fix
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from datetime import UTC, datetime
 from bs4 import BeautifulSoup
-from graph.extractor.data_fixer import fix
 from utils.string_utilities import has_cospar_nssdc_id
 
 import certifi

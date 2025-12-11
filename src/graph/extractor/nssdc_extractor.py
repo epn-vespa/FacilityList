@@ -21,7 +21,7 @@ class NssdcExtractor(Extractor):
     URL = "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/query"
 
     # URI to save this source as an entity
-    URI = "NSSDC_list"
+    URI = "nssdc_list"
 
     # URI to save entities from this source
     NAMESPACE = "nssdc"

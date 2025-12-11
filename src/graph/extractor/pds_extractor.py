@@ -74,6 +74,8 @@ class PdsExtractor(Extractor):
              "instrument_host": entity_types.SPACECRAFT
     }
 
+    NAME_CONTAINS = {"airborne": entity_types.AIRBORNE}
+
     # No need to disambiguate the type with LLM.
     # Useful for merging strategy: when the type is ambiguous,
     # it is recommanded to not discriminate on types.
@@ -190,6 +192,9 @@ class PdsExtractor(Extractor):
                             _, tag_text = get_aperture(tag_text)
                              # get_aperture returns a set
                             tag_text = list(tag_text)[0]
+                    #elif tag_str == "country":
+                    #    if tag_text == "USA":
+                    #        tag_text = "United States"
                     if tag_str == "label":
                         data["label"] = tag_text
                     elif tag_str in data:
@@ -241,6 +246,13 @@ class PdsExtractor(Extractor):
                 # it overwrites the page's type
                 data["type"] = PdsExtractor.TYPES[cat]
                 data["type_confidence"] = 1
+                label = data["label"]
+                if data["type"] == entity_types.GROUND_OBSERVATORY:
+                    # Only refresh certain types that are "generic" in PDS
+                    for name, new_cat in PdsExtractor.NAME_CONTAINS.items():
+                        if name in label.lower():
+                            data["type"] = new_cat
+                            break
 
                 # result[data["label"] + '-' + data["type"]] = data
                 if data["code"] in result:

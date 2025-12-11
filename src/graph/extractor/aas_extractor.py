@@ -23,7 +23,7 @@ class AasExtractor(Extractor):
     URL = "https://journals.aas.org/author-resources/aastex-package-for-manuscript-preparation/facility-keywords/"
     # "https://journals.aas.org/facility-keywords/"
 
-    URI = "AAS_list"
+    URI = "aas_list"
 
     # URI to save entities from this source
     NAMESPACE = "aas"
@@ -352,16 +352,12 @@ class AasExtractor(Extractor):
                "telescope network" in label_l or
                label == "La Palma" in label and "Siding Spring" in label):
                 data["type"] = entity_types.GROUND_OBSERVATORY
-                continue
-            elif "telescope" in label_l or "interferometer" in label_l or "experiment" in label_l:
+            if "telescope" in label_l or "interferometer" in label_l or "experiment" in label_l:
                 data["type"] = entity_types.TELESCOPE
-                continue
-            elif label_l.endswith("mission"):
+            if "aperture" in data:
+                data["type"] = entity_types.TELESCOPE
+            if label_l.endswith("mission") or label_l.endswith("missions"):
                 data["type"] = entity_types.INVESTIGATION
-                continue
-            elif "aperture" in data:
-                data["type"] = entity_types.TELESCOPE
-                continue
             if "location" in data:
                 for l in location:
                     if l == "earth":

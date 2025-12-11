@@ -39,7 +39,7 @@ class SpaseExtractor(Extractor):
     GIT_REPO = "hpde.io"
 
     # URI to save this source as an entity
-    URI = "SPASE_list"
+    URI = "spase_list"
 
     # Folder name to save cache/ and data/
     CACHE = "SPASE/"
