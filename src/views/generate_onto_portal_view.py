@@ -81,14 +81,13 @@ class OntoPortal(CSVJsonGenerator):
                 alt_labels = synonym.get_values_for("alt_label", languages = "en")
                 all_labels.extend(alt_labels)
                 source = synonym.get_values_for("source", unique = True)
-                if source == WikidataExtractor.URI:
+                if source.split('#')[-1] == WikidataExtractor.URI:
                     pref_label = label
                 identifiers.update(synonym.get_values_for("code"))
                 identifiers.update(synonym.get_values_for("MPC_ID"))
                 identifiers.update(synonym.get_values_for("NAIF_ID"))
                 identifiers.update(synonym.get_values_for("NSSDCA_ID"))
                 identifiers.update(synonym.get_values_for("COSPAR_ID"))
-
             # Get the shortest label from the most represented labels
             if not pref_label:
                 if not set(all_labels).issubset(identifiers):
