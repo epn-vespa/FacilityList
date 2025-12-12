@@ -2,13 +2,12 @@ astropy==7.0.1
 pyvo==1.6.1
 requests==2.32.3
 beautifulsoup4==4.13.3
-fuzzywuzzy==0.18.0
 tqdm==4.66.4
 lxml==5.3.1
 SPARQLWrapper==2.0.0
 soupsieve==2.5
 pip==24.0
-numpy==2.0.0
+numpy
 PyYAML==6.0.1
 packaging==24.1
 certifi>=2024.6.2
