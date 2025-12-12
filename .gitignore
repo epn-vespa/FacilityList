@@ -3,6 +3,7 @@ src/**/*.ttl
 src/**/*.csv
 src/**/*.json
 data/Wikidata/
+data/checkpoint/
 *.pkl
 
 # Generated folders

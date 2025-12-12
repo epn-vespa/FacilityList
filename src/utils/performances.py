@@ -1,6 +1,6 @@
 import atexit
 import time
-from multiprocessing import Manager
+from collections import defaultdict
 
 
 def timeit(func):
@@ -15,20 +15,14 @@ def timeit(func):
     return wrapper
 
 
-manager = None
-times = None
+times = defaultdict(int)
 
 def timeall(func):
     """
     Time the total time spent on the call of a method.
     Print it in the end.
     """
-    """
-    global manager
     global times
-    if not manager:
-        manager = Manager()
-        times = manager.dict()
     def wrapper(*args, **kwargs):
         if hasattr(func, '__self__'):
             class_name = func.__self__.__class__.__name__
@@ -43,13 +37,10 @@ def timeall(func):
         result = func(*args, **kwargs)
         end = time.perf_counter()
         elapsed = end - start
-        if key not in times:
-            times[key] = 0
         times[key] += elapsed
 
         return result
     return wrapper
-    """
 
 
 def print_execution_report():
