@@ -247,7 +247,7 @@ def main(lists: List[str],
          input_ontology: str = "",
          output_ontology: str = "output.ttl",
          from_cache: bool = True,
-         remove_deprecated: bool = False):
+         remove_deprecated: bool = True):
     updater = Updater(input_ontology,
                       output_ontology,
                       lists)
@@ -265,7 +265,7 @@ def main(lists: List[str],
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract(from_cache = from_cache)
-        rd = remove_deprecated and hasattr(extractor, "MULTI_VERSIONING") and extractor.MULTI_VERSIONING
+        rd = remove_deprecated or hasattr(extractor, "MULTI_VERSIONING") and extractor.MULTI_VERSIONING
         VersionManager.compare_versions(data, extractor, remove_deprecated = rd)
         updater.add_entities(data, extractor = extractor)
 
@@ -312,7 +312,7 @@ if __name__ == "__main__":
                         "--keep-deprecated",
                         dest = "keep_deprecated",
                         action = "store_true",
-                        help = "If set, will add deprecated entities to the updated ontology.")
+                        help = "If set, will keep deprecated entities to the updated ontology.")
 
     parser.add_argument("-v",
                         "--version",
