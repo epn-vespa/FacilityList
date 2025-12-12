@@ -14,7 +14,7 @@
 <body>
   <h1 id="title"></h1>
   <div id="waiting-div"></div>
-  <div id="hiddenDiv" hidden="True">
+  <div id="hidden-div" hidden="True">
     <div id="metadata-container" hidden="True"><p><span id="creator"></span> created this mapping on <span id="creation-date"></span></p><br><span id="old-justification"></span></p></div> <!--Div to put the mapping's metadata (creator, creation time, lists)-->
     <div id="subject-container"></div>
     <div id="predicate-container"></div>
@@ -44,6 +44,7 @@
 
     function updateUI(data) {
       const title = document.getElementById("title");
+      const hiddenDiv = document.getElementById("hidden-div");
       const waitingDiv = document.getElementById("waiting-div");
       const subjectDiv = document.getElementById("subject-container");
       const predicateDiv = document.getElementById("predicate-container");
@@ -73,7 +74,6 @@
 
       if (data.subject) {
         //clearInterval(handle);
-        hiddenDiv.style.display = "Block";
         let key = "";
         let value = "";
         for (const [key_, value_] of Object.entries(data.subject)) {
@@ -104,10 +104,12 @@
           </details>
         `;
         waitingDiv.innerHTML = "";
+        hiddenDiv.style.display = "Block";
       }
       else {
         waitingDiv.innerHTML = "Waiting...";
         subjectDiv.innerHTML = "";
+        hiddenDiv.style.display = "None";
       }
 
       if (data.object) {
@@ -166,8 +168,8 @@
         predicateDiv.innerHTML = "";
         objectDiv.innerHTML = "";
         hiddenDiv.style.display = "None";
+        var justification = justificationDiv.value;
         justificationDiv.value = "";
-        let justification = justificationDiv.value;
         await fetch("/validate", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
@@ -193,7 +195,6 @@
 
       document.getElementById("clearButton").onclick = () => {
         restore_radio_status();
-        
       };
 
       radios.forEach(radio => {

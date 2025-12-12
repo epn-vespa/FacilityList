@@ -144,7 +144,7 @@ class ManualReviewer():
         # TODO link old mapping to the new mapping_set_id as well ?
         self._mapping.add((old_mapping_id, self._mapping._SSSOM.reviewer_label, Literal(self._reviewer)))
         if justification.strip():
-            self._mapping.add((old_mapping_id, RDFS.comment, Literal(justification)))
+            self._mapping.add((old_mapping_id, RDFS.comment, Literal(justification + f" ({self._reviewer})")))
 
 
     def remove_exact_match(self,
@@ -161,7 +161,7 @@ class ManualReviewer():
             Mapping 3: e3 ≅ e4
             Delete mapping 1: e1 ≅ e2, e2 ≅ e3, e2 ≅ e4 will be removed.
             Delete mapping 2: e1 ≅ e3, e1 ≅ e4, e2 ≅ e3 will be removed.
-            Delete mapping 3: e1 ≅ e4, e2 ≅ e4, e2 ≅ e4 will be removed. 
+            Delete mapping 3: e1 ≅ e4, e2 ≅ e4, e2 ≅ e4 will be removed.
         """
         # Change the relation between the two and the related entities too
         # according to the history of mappings
@@ -173,9 +173,6 @@ class ManualReviewer():
                                         <{subj_uri}> skos:exactMatch ?synonym .
                                         }}"""):
             synonym_set.add(syn)
-        print("synonym_set=")
-        print(synonym_set)
-        print("\n")
         # 2. Get history of mappings
         mappings_history = []
         all_entities_in_synset = {subj_uri, obj_uri}
@@ -186,10 +183,8 @@ class ManualReviewer():
                         ?mapping sssom:predicate_id skos:exactMatch .
                         }}
                         """
-            print(query)
             for obj, in self._mapping.query(query):
                 subj = syn
-                print(subj, obj)
                 all_entities_in_synset.add(subj)
                 all_entities_in_synset.add(obj)
                 # Remove the exactMatch relation in place
@@ -235,7 +230,7 @@ class ManualReviewer():
 
         assert len(synonym_sets) == 2 # Should have been split in two
         # 3. Remove previous relations of synsets
-        for ent in all_entities_in_synset:  
+        for ent in all_entities_in_synset:
             self._linked.remove((ent, SKOS.exactMatch, None))
         # 4. Re-create the relations
         for ent1 in all_entities_in_synset:
@@ -247,7 +242,6 @@ class ManualReviewer():
                     # add relation
                     self._linked.add((ent1, SKOS.exactMatch, ent2))
                     self._linked.add((ent2, SKOS.exactMatch, ent1))
-        
         self._linked.add((subj_uri,  new_relation, obj_uri))
 
     def add_exact_match(self,
@@ -402,7 +396,6 @@ class ManualReviewer():
             }}
         }}
         """
-        print(query)
         return self._mapping.query(query)
 
 
@@ -431,7 +424,6 @@ class ManualReviewer():
         total = len(mappings)
         for i, (mapping_uri,) in enumerate(mappings):
             # Get infos and transmit to the web interface
-            print(mapping_uri)
             if self._terminal:
                 changed, old_relation, new_relation, justification = self._terminal_validation(mapping_uri) # TODO
             else:
@@ -443,10 +435,10 @@ class ManualReviewer():
                                      new_relation,
                                      justification)
             elif changed is None:
-                review_later.append(mapping_uri)
+                review_later.append(mapping_uri) # TODO support for review later in the web interface
             else:
                 self._validate_mapping(mapping_uri,
-                                       justification) # TODO add a reviewer label
+                                       justification)
 
 
     def _terminal_validation(self,
@@ -505,7 +497,6 @@ class ManualReviewer():
                         mapping_uri,
                         current: int,
                         total: int):
-        print("gui validation start")
         query = f"""SELECT ?subj ?rel ?obj ?justification ?score ?creator_label ?creation_date ?subject_source ?object_source WHERE {{
                 <{mapping_uri}> sssom:subject_id ?subj ;
                                 sssom:predicate_id ?rel ;
@@ -517,10 +508,8 @@ class ManualReviewer():
                                 sssom:subject_source ?subject_source ;
                                 sssom:object_source ?object_source .
                 }}"""
-        print("query =", query)
         res = self._mapping.query(query)
         #old_rel = None
-        print("res:", len(res))
         for subj, pred, obj, justification, score, creator, creation_date, subject_source, object_source in res:
             manual_review_server.update_state(subject = Entity(subj).__dict__(False),
                                               predicate = str(pred).split("#")[-1].removesuffix("_list"),
@@ -565,7 +554,7 @@ class ManualReviewer():
         self._linked.serialize(destination = output_ontology,
                                format = "turtle",
                                encoding = "utf-8")
-        
+
         self._mapping.serialize(output_dir = self._output_dir)
                                 # execution_id = None)
         progress_file = self._input_dir / "progress.pkl"
@@ -580,7 +569,7 @@ def main(folder: str,
          begin: str,
          end: str,
          terminal: bool):
-    
+
     mr = ManualReviewer(folder, validators, lists, begin, end, terminal)
     if not terminal:
         # Open the server & web browser client for manual disambiguation
