@@ -330,7 +330,7 @@ class VersionManager():
 
     def compare_versions(new_data: dict,
                          extractor,
-                         remove_deprecated: bool = False):
+                         remove_deprecated: bool = True):
         """
         Load, compare and save data dict for version management.
         Add a Deprecated relation on removed entities.

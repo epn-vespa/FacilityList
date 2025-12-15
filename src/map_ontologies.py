@@ -346,7 +346,6 @@ class OntologyMapper():
         """
         Execute the mapping strategy.
         """
-        # execute the strategy
         atexit.register(self.write)
         for extractor1 in self.strategy.keys():
             for extractor2 in self.strategy[extractor1].keys():
@@ -356,12 +355,11 @@ class OntologyMapper():
                     if not extractor1.TYPE_KNOWN == 1 or not extractor2.TYPE_KNOWN == 1:
                         on_types = [on_types] # On all types at once if types are unknown
                         # If types from both lists are known, process types one by one.
-                        on_types_str = None
-                    else:
-                        on_types_str = ', '.join([str(t) for t in on_type])
                     for on_type in on_types:
-                        if not on_types_str:
+                        if type(on_type) == frozenset:
                             on_types_str = ', '.join([str(t) for t in on_type])
+                        else:
+                            on_types_str = str(on_type)
                         self._description += f"mapping: {extractor1.NAMESPACE}, {extractor2.NAMESPACE}, types: {on_types_str}, tools: {', '.join([s.NAME for s in tools])}\n"
                         retriever = HybridRetriever()
                         retriever.process_lists(extractor1(),
@@ -371,27 +369,6 @@ class OntologyMapper():
                                                 limit = self._limit,
                                                 ignore_deprecated = True,
                                                 human_validation = self._human_validation)
-                        # Candidates is a list of (entity, score)
-                        """
-                        for entity1, candidates in retriever.disambiguate(extractor1(),
-                                                                          extractor2(),
-                                                                          on_types = on_type,
-                                                                          with_tools = list(tools),
-                                                                          limit = self._limit,
-                                                                          ignore_deprecated = True):
-
-                            response = LLMConnection.choose_best_candidate_and_justify(entity1, candidates)
-                            best_candidate = None
-                            print(response)
-                            if best_candidate:
-                                self._graph.add_mapping(entity1,
-                                                        entity2,
-                                                        score,
-                                                        tools,
-                                                        self._execution_id)
-                                # Del entity2 from retriever index to avoid multiple mapping
-                                # retriever.index.remove_ids(np.array([entity2.id], dtype = 'int64'))
-                        """
                         del(retriever)
 
                         # Save progress for next execution
