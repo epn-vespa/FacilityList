@@ -21,7 +21,7 @@ We select a limited set of properties and include them into the raw extraction f
 Update Content
 ==============
 
-Run `update_query()` to retrieve the lastest entities from Wikidata. This creates a new
+Run `update_query()` to retrieve the latest entities from Wikidata. This creates a new
 control file (with current date). This file is also synced with the exclusion list.
 
 Run `collect_metadata()` to collect the metadata from wikidata records using the
