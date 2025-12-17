@@ -10,6 +10,7 @@ import json
 import atexit
 import time
 import pycountry_convert
+import re
 
 from typing import Optional, Tuple
 from utils.performances import timeall
@@ -49,6 +50,85 @@ def load_location_infos_from_cache():
         location_infos = json.load(f)
 
 
+STATES = {'AL' : 'Alabama',
+          'AK' : 'Alaska',
+          'AZ' : 'Arizona',
+          'AR' : 'Arkansas',
+          'CA' : 'California',
+          'CO' : 'Colorado',
+          'CT' : 'Connecticut',
+          'DE' : 'Delaware',
+          'FL' : 'Florida',
+          'GA' : 'Georgia',
+          'HI' : 'Hawaii',
+          'ID' : 'Idaho',
+          'IL' : 'Illinois',
+          'IN' : 'Indiana',
+          'IA' : 'Iowa',
+          'KS' : 'Kansas',
+          'KY' : 'Kentucky',
+          'LA' : 'Louisiana',
+          'ME' : 'Maine',
+          'MD' : 'Maryland',
+          'MA' : 'Massachusetts',
+          'MI' : 'Michigan',
+          'MN' : 'Minnesota',
+          'MS' : 'Mississippi',
+          'MO' : 'Missouri',
+          'MT' : 'Montana',
+          'NE' : 'Nebraska',
+          'NV' : 'Nevada',
+          'NH' : 'New Hampshire',
+          'NJ' : 'New Jersey',
+          'NM' : 'New Mexico',
+          'NY' : 'New York',
+          'NC' : 'North Carolina',
+          'ND' : 'North Dakota',
+          'OH' : 'Ohio',
+          'OK' : 'Oklahoma',
+          'OR' : 'Oregon',
+          'PA' : 'Pennsylvania',
+          'RI' : 'Rhode Island',
+          'SC' : 'South Carolina',
+          'SD' : 'South Dakota',
+          'TN' : 'Tennessee',
+          'TX' : 'Texas',
+          'UT' : 'Utah',
+          'VT' : 'Vermont',
+          'VA' : 'Virginia',
+          'WA' : 'Washington',
+          'WV' : 'West Virginia',
+          'WI' : 'Wisconsin',
+          'WY' : 'Wyoming',
+          'DC' : 'District of Columbia',
+          'AS' : 'American Samoa',
+          'GU' : 'Guam',
+          'MP' : 'Northern Mariana Islands',
+          'PR' : 'Puerto Rico',
+          'UM' : 'United States Minor Outlying Islands',
+          'VI' : 'Virgin Islands', # , U.S.
+}
+
+def get_state(label: str = "",
+              location: str = ""):
+    """
+    Extract the state name from the address or label.
+    Use for entities located in the United States.
+    """
+    regex_state = f"\b({'|'.join(STATES.values())})\b"
+    regex_state = re.compile(regex_state, flags = re.DOTALL)
+    state1 = re.findall(regex_state, str(label))
+    state2 = re.findall(regex_state, str(location))
+    if state1 and state2:
+        if state1 != state2:
+            return None
+    elif state1:
+        return state1
+    elif state2:
+        return state2
+    return None
+
+
 # AAS (Space, Airborne), SPASE (Earth, Heliosphere)
 # TODO FIXME already done in SPASE. Should already work without SPACE_LOCATION check, checked in update.py.
 # TODO: check in this function instead of update.py (require type argument to the function to be added?)
@@ -85,7 +165,7 @@ def get_location_info(label: Optional[str] = None,
                       country: Optional[str] = None,
                       latitude: Optional[float]  = None,
                       longitude: Optional[float]  = None,
-                      part_of: Optional[dict] = None,
+                      #part_of: Optional[dict] = None,
                       language: str = "en",
                       retries: int = 2,
                       from_cache = True) -> dict:
@@ -125,8 +205,8 @@ def get_location_info(label: Optional[str] = None,
             l = l.strip()
             if l in SPACE_LOCATION:
                 return dict()
-    if not isinstance(part_of, list):
-        part_of = [part_of]
+    #if not isinstance(part_of, list):
+    #    part_of = [part_of]
     if isinstance(country, set):
         country = list(country)[0]
     if isinstance(address, set):
@@ -161,7 +241,15 @@ def get_location_info(label: Optional[str] = None,
         if address:
             for add in address:
                 country = add.split(',')[-1].strip()
-                _get_continent_from_country(country, "address", add, result_dict, longitude)
+                _get_continent_from_country(country,
+                                            "address",
+                                            add,
+                                            result_dict,
+                                            longitude)
+                _get_state_from_address(result_dict,
+                                        address,
+                                        label,
+                                        location)
                 if "country" in result_dict:
                     country = result_dict["country"]
                     break
@@ -180,8 +268,8 @@ def get_location_info(label: Optional[str] = None,
                                           address = address,
                                           country = country,
                                           latitude = latitude,
-                                          longitude = longitude,
-                                          part_of = part_of)
+                                          longitude = longitude)
+                                          #part_of = part_of)
         if result:
             return result
 
@@ -216,6 +304,7 @@ def get_location_info(label: Optional[str] = None,
             if result is not None:
                 result_dict["location_confidence"] = 0.75
         # Call get_location_info with part_of
+        """
         if result is None and part_of:
             for part in part_of:
                 if part is None:
@@ -232,7 +321,7 @@ def get_location_info(label: Optional[str] = None,
                     return result
                 else:
                     result = None
-
+        """
         if result is None and location:
             for loc in location: # Can have more than one location
                 if loc is None or loc.lower().startswith("earth"):
@@ -289,6 +378,10 @@ def get_location_info(label: Optional[str] = None,
                                             address = address,
                                             result_dict = result_dict,
                                             longitude = longitude)
+                _get_state_from_address(result_dict,
+                                        address,
+                                        label,
+                                        location)
             if result_dict.get("continent", None):
                 result_dict["location_confidence"] = 1.0
                 location_infos[saved_in] = result_dict
@@ -330,6 +423,10 @@ def get_location_info(label: Optional[str] = None,
                                             address,
                                             result_dict,
                                             longitude)
+                _get_state_from_address(result_dict,
+                                        address,
+                                        label,
+                                        location)
             if "continent" in result_dict:
                 location_infos[saved_in] = result_dict
                 return result_dict
@@ -408,7 +505,15 @@ def get_location_info(label: Optional[str] = None,
 
     # Get the continent from the country & standardize country name
     if "continent" not in result_dict:
-        _get_continent_from_country(country, location_type, address, result_dict, longitude)
+        _get_continent_from_country(country,
+                                    location_type,
+                                    address,
+                                    result_dict,
+                                    longitude)
+        _get_state_from_address(result_dict,
+                                address,
+                                label,
+                                location)
 
     # Save the result for future calls
     location_infos[saved_in] = result_dict
@@ -424,6 +529,7 @@ def _get_continent_from_country(country: str,
     """
     Add the continent to the result dict.
     Standardize the country name (USA -> United States)
+    Also get the state if in the USA.
     """
     country_code = None
     if location_type != "continent" and country:
@@ -459,6 +565,21 @@ def _get_continent_from_country(country: str,
                 result_dict["country"] = country_std
             except:
                 print(f"Warning: pycontry_convert.country_alpha2_to_country_name does not have {country_code}. ")
+
+
+def _get_state_from_address(result_dict,
+                            address,
+                            label,
+                            location):
+        # Get the State
+        country = result_dict.get("country", None)
+        if country == "United States":
+            if address and "state" in address:
+                result_dict["state"] = address["state"]
+            else:
+                state = get_state(label = label, location = location)
+                if state:
+                    result_dict["state"] = state
 
 
 @timeall
@@ -515,8 +636,8 @@ def _get_location_from_cache(label: Optional[str] = None,
                              address: Optional[str] = None,
                              country: Optional[str] = None,
                              latitude: Optional[float]  = None,
-                             longitude: Optional[float]  = None,
-                             part_of: Optional[dict] = None):
+                             longitude: Optional[float]  = None):
+                             #part_of: Optional[dict] = None):
     """
     If any information exists in the cache for any of the non-empty
     parameter, returns the location information dict.
@@ -533,7 +654,7 @@ def _get_location_from_cache(label: Optional[str] = None,
     address_empty = False
     country_empty = False
     location_empty = False
-    part_of_empty = False
+    #part_of_empty = False
     label_empty = False
 
     if (latitude is not None and longitude is not None and
@@ -561,6 +682,7 @@ def _get_location_from_cache(label: Optional[str] = None,
         address_empty = True
 
     only_none = True
+    """
     if part_of:
         if type(part_of) == dict:
             part_of = [part_of]
@@ -582,6 +704,7 @@ def _get_location_from_cache(label: Optional[str] = None,
     else:
         part_of_empty = True
     part_of_empty = part_of_empty or only_none
+    """
 
     only_none = True
     if location:
@@ -631,6 +754,6 @@ def _get_location_from_cache(label: Optional[str] = None,
         country_empty = True
 
     # If the cache's data was empty for any of the provided information
-    if latlong_empty and part_of_empty and location_empty and address_empty and label_empty and country_empty:
+    if latlong_empty and location_empty and address_empty and label_empty and country_empty: # and part_of_empty:
         return {}
     return data
