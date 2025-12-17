@@ -16,7 +16,8 @@ from graph.extractor import data_fixer
 from llm.llm_connection import LLMConnection
 from utils.performances import timeall
 from utils.string_utilities import clean_string, has_cospar_nssdc_id
-from utils.dict_utilities import extract_items, merge_into
+from utils.dict_utilities import extract_items, merge_into, UnionFind
+from utils.location_utilities import distance
 import json
 import re
 import os
@@ -326,7 +327,13 @@ class SpaseExtractor(Extractor):
                 if ll in result:
                     del result[ll]
 
+        # TODO: Merge on == lat+long, merge on label startsWith... (for IAGA wdc)
+
         data_fixer.fix(result, self)
+
+        # Merge duplicate entities
+        self.self_merge(result)
+
         return result
 
 
@@ -454,35 +461,58 @@ class SpaseExtractor(Extractor):
                 print("Please add it to space_extractor")
                 data["type"] = self.DEFAULT_TYPE
         data["type_confidence"] = 1
-        """
-        choices = None # None choices will disambiguate for all categories.
-        if "latitude" in data and "longitude" in data:
-            choices = [entity_types.GROUND_OBSERVATORY, entity_types.INVESTIGATION,
-                       entity_types.TELESCOPE]
-        elif "location" in data:
-            for l in data["location"]:
-                if l in location_space:
-                    choices = [entity_types.AIRBORNE, entity_types.INVESTIGATION,
-                               entity_types.SPACECRAFT]
-                    break
-                if l in location_ground:
-                    choices = [entity_types.GROUND_OBSERVATORY, entity_types.INVESTIGATION,
-                               entity_types.TELESCOPE]
-                    break
 
-        repr = entity_types.to_string(data, exclude = ["start_date",
-                                                       "end_date",
-                                                       "code",
-                                                       "end_date",
-                                                       "url",
-                                                       "uri",
-                                                       "prior_id"])
-        data["type"] = LLMConnection().classify(repr,
-                                                choices = choices,
-                                                from_cache = True,
-                                                cache_key = self.NAMESPACE + '#' + data["label"])
-        data["type_confidence"] = 0
-        """
+
+    def self_merge(self,
+                   result: dict):
+        uf = UnionFind()
+        groups = defaultdict(set)
+        for label1, data1 in result.items():
+            for label2, data2 in result.items():
+                if label1 >= label2:
+                    continue
+                # Filters
+                word1 = label1.replace('-', ' ').split(' ')[0]
+                word2 = label2.replace('-', ' ').split(' ')[0]
+                if word1 != word2:
+                    continue
+                if "NSSDCA_ID" in data1 and "NSSDCA_ID" in data2:
+                    if data1["NSSDCA_ID"] != data2["NSSDCA_ID"]:
+                        continue
+                if "latitude" in data1 and "latitude" in data2 and "longitude" in data1 and "longitude" in data2:
+                    latitude1 = data1["latitude"]
+                    longitude1 = data1["longitude"]
+                    latitude2 = data2["latitude"]
+                    longitude2 = data2["longitude"]
+                    if type(latitude1) == list:
+                        latitude1 = latitude1[0]
+                        longitude1 = longitude1[0]
+                    if type(latitude2) == list:
+                        latitude2 = latitude2[0]
+                        longitude2 = longitude2[0]
+                    dist = distance((latitude1, longitude1), (latitude2, longitude2))
+                    if dist < 0.3:
+                        uf.union(label1, label2)
+                elif "start_date" in data1 and "start_date" in data2:
+                    if data1["start_date"] == data2["start_date"]:
+                        if label1.lower().replace('-', ' ') == label2.lower().replace('-', ' '): # Only if equal alphanum values
+                            uf.union(label1, label2)
+
+        for label in result:
+            groups[uf.find(label)].add(label)
+        for synset in groups.values():
+            if len(synset) <= 1:
+                continue
+
+            # keep the longest label
+            synset = sorted(synset, key=len, reverse=True)
+            longest = synset[0]
+            data1 = result[longest]
+
+            for label2 in synset[1:]:
+                merge_into(data1, result[label2])
+                del result[label2]
+
 
 if __name__ == "__main__":
     pass
