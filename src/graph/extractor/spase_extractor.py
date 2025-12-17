@@ -147,7 +147,7 @@ class SpaseExtractor(Extractor):
         # when there are the same.
         data_by_prior_id = dict()
 
-        # Same entities with different sources
+        # Same entities with different sources (only for the 210MM cases)
         to_merge = defaultdict(list) # {"short-id": ["long-id1", "long-id2"]}
 
         for file in files:
@@ -327,12 +327,36 @@ class SpaseExtractor(Extractor):
                 if ll in result:
                     del result[ll]
 
-        # TODO: Merge on == lat+long, merge on label startsWith... (for IAGA wdc)
-
         data_fixer.fix(result, self)
 
         # Merge duplicate entities
-        self.self_merge(result)
+        new_references = self.self_merge(result)
+
+        # Restore hasPart & isPartOf references with the new references
+        for label, data in result.items():
+            parts = data.get("has_part", [])
+            for i, part in parts:
+                if part in new_references:
+                    parts[i] = new_references[part]
+            parts = data.get("is_part_of", [])
+            for i, part in enumerate(parts):
+                if part in new_references:
+                    parts[i] = new_references[part]
+
+        # Set the inverse relations of hasPart & isPartOf
+        for label, data in result.items():
+            parts = data.get("has_part", [])
+            for part in parts:
+                if "is_part_of" in result[part]:
+                    result[part]["is_part_of"].append(label)
+                else:
+                    result[part]["is_part_of"] = [label]
+            parts = data.get("is_part_of", [])
+            for part in parts:
+                if "has_part" in result[part]:
+                    result[part]["has_part"].append(label)
+                else:
+                    result[part]["has_part"] = [label]
 
         return result
 
@@ -464,7 +488,15 @@ class SpaseExtractor(Extractor):
 
 
     def self_merge(self,
-                   result: dict):
+                   result: dict) -> dict:
+        """
+        Merge spase entities that are the same but come from
+        different catalogs.
+
+        Returns:
+            the old label with the new label to use instead
+        """
+        replacement_labels = dict()
         uf = UnionFind()
         groups = defaultdict(set)
         for label1, data1 in result.items():
@@ -500,6 +532,11 @@ class SpaseExtractor(Extractor):
 
         for label in result:
             groups[uf.find(label)].add(label)
+            # Also merge on alt labels
+            for alt_label in result[label].get("alt_label", []):
+                if alt_label in result:
+                    # groups[uf.find(label)].add(alt_label)
+                    uf.union(label, alt_label)
         for synset in groups.values():
             if len(synset) <= 1:
                 continue
@@ -512,6 +549,8 @@ class SpaseExtractor(Extractor):
             for label2 in synset[1:]:
                 merge_into(data1, result[label2])
                 del result[label2]
+                replacement_labels[label2] = longest
+        return replacement_labels
 
 
 if __name__ == "__main__":
