@@ -148,6 +148,33 @@
         },
         "NASA Extreme UltraViolet Explorer (EUVE) Ssatellite Mission": {
             "label": "NASA Extreme UltraViolet Explorer (EUVE) Satellite Mission"
+        },
+        "Brigham Young University (BYU) 0.91m Telescope at West Mountain Observtory": {
+            "label": "Brigham Young University (BYU) 0.91m Telescope at West Mountain Observatory",
+            "alt_label": ["Brigham Young University (BYU) 0.91m Telescope",
+                          "Brigham Young University 0.91m Telescope at West Mountain Observatory"],
+            "is_part_of": ["West Mountain Observatory"]
+        },
+        "West Mountain Observtory": {
+            "label": "West Mountain Observatory",
+            "has_part": "Brigham Young University (BYU) 0.91m Telescope at West Mountain Observatory"
+        },
+        "New Jersey Institute of Technology (NJIT) Owens Valley Solar Array (OVSA) at Owens Valley Radio Observtory (OVRO)": {
+            "label": "New Jersey Institute of Technology (NJIT) Owens Valley Solar Array (OVSA) at Owens Valley Radio Observatory (OVRO)",
+            "alt_label": ["New Jersey Institute of Technology (NJIT) Owens Valley Solar Array (OVSA)",
+                          "New Jersey Institute of Technology Owens Valley Solar Array at Owens Valley Radio Observatory"],
+            "is_part_of": ["Owens Valley Radio Observatory"]
+        },
+        "Owens Valley Radio Observtory": {
+            "label": "Owens Valley Radio Observatory",
+            "has_part": ["New Jersey Institute of Technology (NJIT) Owens Valley Solar Array (OVSA) at Owens Valley Radio Observatory (OVRO)",
+                         "California Institute of Technology Caltech 40m Telescope at Owens Valley Radio Observatory (OVRO)"]
+        },
+        "California Institute of Technology Caltech 40m Telescope at Owens Valley Radio Observtory (OVRO)": {
+            "label": "California Institute of Technology Caltech 40m Telescope at Owens Valley Radio Observatory (OVRO)",
+            "alt_label": ["California Institute of Technology Caltech 40m Telescope",
+                          "California Institute of Technology Caltech 40m Telescope at Owens Valley Radio Observatory"],
+            "is_part_of": "Owens Valley Radio Observatory"
         }
     },
     "delete": [
