@@ -26,7 +26,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from datetime import UTC, datetime
 from bs4 import BeautifulSoup
-from utils.string_utilities import has_cospar_nssdc_id
+from utils.string_utilities import has_cospar_nssdc_id, get_aperture
 
 import certifi
 import urllib
@@ -440,6 +440,8 @@ class WikidataExtractor(Extractor):
                 "P619": "launch_date", # UTC date of spacecraft launch
                 "P1427": "launch_place", # start point
                 "P856": "url", # official website
+                "P131": "state", # located in the administrative territorial entity
+                "P17": "country", # country
                 #"P397": "orbites", # parent astronomical body
                 #"P1096": "orbital_eccentricity", # orbital eccentricity
                 #"P2045": "orbital_inclination", # orbital inclination
@@ -448,7 +450,9 @@ class WikidataExtractor(Extractor):
                 #"P2243": "apoapsis",
                 #"P2244": "periapsis",
                 #"P2151": "focal length",
-                #"P2067": "mass",
+                "P2386": "aperture", # diameter
+                "P2067": "mass",
+                #"P2144": "frequency", # frequency
             }
 
             for property_id in property_items.keys():
@@ -479,14 +483,14 @@ class WikidataExtractor(Extractor):
                                 if "unit" in property:
                                     unit = self._get_label(property["unit"])
                                     if property_name == "altitude":
-                                    # convert to meters
+                                        # convert to meters
                                         if unit == "metre":
                                             property_value = float(property_value)
                                         elif unit == "kilometre":
                                             property_value = float(property_value) * 1000
                                     else:
-                                        property_value += " " + self._get_label(property["unit"])
-
+                                        property_value += " " + unit
+                                        new_lbl, property_value = get_aperture(str(property_value)) # Convert to meters
                             elif datatype == "time":
                                 property_value = prop["mainsnak"]["datavalue"]["value"]["time"]
                             elif datatype == "globe-coordinate":
@@ -579,7 +583,6 @@ class WikidataExtractor(Extractor):
         # if anything else isPartOf => ground obs
         # or if there are lat/long, then ground obs, else mission.
         return label
-
 
 
     def _get_controls(self,
