@@ -1,4 +1,8 @@
+from collections import defaultdict, Counter
 from typing import List, Dict, Tuple
+from graph.properties import Properties
+from rdflib import URIRef, XSD
+from datetime import datetime, timezone
 
 
 def merge_into(newer_entity_dict: Dict,
@@ -17,6 +21,7 @@ def merge_into(newer_entity_dict: Dict,
     for key, values in prior_entity_dict.copy().items():
         if key == "prior_id":
             continue
+        # Label
         if key == "label":
             if not isinstance(values, set):
                 values = {values}
@@ -30,14 +35,13 @@ def merge_into(newer_entity_dict: Dict,
                 newer_entity_dict["alt_label"] = values
         elif key in newer_entity_dict:
             merge_into = newer_entity_dict[key]
+            if isinstance(merge_into, set):
+                merge_into = list(merge_into)
+            elif not isinstance(merge_into, list):
+                merge_into = [merge_into]
             if not isinstance(values, list) and not isinstance(values, set):
                 values = [values]
             for value in values:
-                if isinstance(merge_into, set):
-                    merge_into.add(value)
-                    continue
-                elif not isinstance(merge_into, list):
-                    merge_into = [merge_into]
                 if value not in merge_into:
                     if key in ["latitude", "longitude"]:
                         # Keep the most precise value
@@ -58,6 +62,11 @@ def merge_into(newer_entity_dict: Dict,
                         elif value != old_value:
                             # Keep both
                             merge_into = [value, old_value]
+                    elif key in ["address", "location_confidence", "state", "country", "continent"]:
+                        if newer_entity_dict["location_confidence"] > prior_entity_dict["location_confidence"]:
+                            merge_into = [value]
+                        else:
+                            merge_into = [old_value]
                     else:
                         merge_into.append(value)
             newer_entity_dict[key] = merge_into
@@ -67,6 +76,8 @@ def merge_into(newer_entity_dict: Dict,
             # Prevent label to be in alt_label.
             if type(newer_entity_dict["alt_label"]) == str:
                 newer_entity_dict["alt_label"] = {newer_entity_dict["alt_label"]}
+            elif type(newer_entity_dict["alt_label"]) == list:
+                newer_entity_dict["alt_label"] = set(newer_entity_dict["alt_label"])
             newer_entity_dict["alt_label"] -= {newer_entity_dict["label"]}
 
 
@@ -75,7 +86,6 @@ def extract_items(d: Dict,
     """
     Flatten a recursive dictionary to a list of (key, value).
     This is necessary to create triplets from for json format.
-    /!\ Do not extract properties that belong to the broader entity. (FIXME)
 
     Args:
         d: a recursive dictionary.
@@ -166,3 +176,307 @@ class UnionFind:
             # Same rank: choose one root and increase its rank
             self.parent[ry] = rx
             self.rank[rx] += 1
+
+
+properties = Properties()
+def majority_voting_merge(dicts: list[dict]) -> dict:
+    """
+    Merge dictionaries' values on their keys. Use it to merge
+    synonym sets' values in views generation.
+
+    Args:
+        dicts: synonym set dictionaries.
+
+    Latitude/longitude:
+        1. Keep the ones with location confidence == 1
+        2. Majority voting (with rounding)
+        3. Keep the most precise one
+    Float values:
+        1. Majority voting (with rounding)
+        2. Keep the most precise one
+    Label:
+        1. Wikidata label if wikidata list
+        2. Else, do a majority voting
+        3. Keep all labels as alt labels
+    Location-related values (except latitude / longitude):
+        1. Keep the ones with location confidence == 1
+        2. Keep the one that come from the entity that we kept latitude/longitude from
+    String values:
+        1. Keep all of them in the first place
+        2. Reificate them (RDF-star ? blank nodes ?) to keep their provenance
+        2. Later (in another function), summarize them
+    Datetime values:
+        1. Keep the most precise of each year
+    Remove:
+        - Source information (aas_list etc)
+        - Type confidence
+        - Location confidence
+    """
+    result_dict = defaultdict(list)
+    all_keys = set()
+    for d in dicts:
+        all_keys.update(d.keys())
+    lists_with_reliable_location = None
+    location_info_by_source = defaultdict(lambda: defaultdict(list))
+
+    wikidata_preflabel = None
+    all_labels = []
+    except_labels = set()
+
+    for key in all_keys:
+        key_uri = properties.convert_attr(key)
+        key_type = properties.get_type(key)
+        values = _get_values_from_dicts(dicts, key) # dict of values by source {aas: {"alt_label": {"alt_label1", "alt_label2"]}}}
+        values_f = flatten(values.values()) # All values as a list of values, without source
+        if not values_f:
+            continue
+        if type(key) != str:
+            key = properties.get_attr_name(key)
+        if not key_type:
+            for v in values_f:
+                if v:
+                    if type(v) == tuple:
+                        key_type = type(v[0])
+                    else:
+                        key_type = type(v)
+                    break
+        if not values:
+            continue
+        #if key in ["latitude", "longitude"]:
+        #    pass
+        elif key == "label":
+            if properties.OBS["wikidata_list"] in values and key == "label":
+                wikidata_preflabel = list(values[properties.OBS["wikidata_list"]])[0]
+            all_labels.extend(values_f)
+        elif key == "pref_label":
+            all_labels.extend(values_f)
+        elif key in ["COSPAR_ID", "NSSDCA_ID", "NAIF_ID", "code"]:
+            #for value in values_f:
+            except_labels.update(values_f)
+            # keep all
+            result_dict[key_uri] = values_f
+        elif key in ["city", "country", "continent", "state", "address", "latitude", "longitude"]:
+            for source, v in values.items():
+                location_info_by_source[source][key].extend(v)
+        elif key == "location_confidence":
+            sort_by_loc_conf = [(k, v) for k, v in sorted(values.items(), key = lambda item: item[1], reverse = True)]
+            if sort_by_loc_conf:
+                best_location_confidence = sort_by_loc_conf[0][1]
+            lists_with_reliable_location = [lst for lst, loc in sort_by_loc_conf if loc == best_location_confidence]
+        elif key in ["type_confidence"]:
+            # Ignore
+            pass
+        elif key in [properties.convert_attr("modified"), "modified"]:
+            values = _keep_most_recent_date(values_f)
+        elif key_type in [XSD.float, float]:
+            # best_value = _majority_vote_rounding([list(v)[0] for v in values.values()])
+            best_value = _majority_vote_rounding(values_f)
+            result_dict[key_uri] = best_value
+        elif key_type in [str, XSD.string]:
+            # Add everything
+            result_dict[key_uri].extend(values_f)#values.values())
+        elif key_type == URIRef:
+            # Add everything
+            result_dict[key_uri].extend(values_f)#values.values())
+        elif key_type == XSD.dateTime: # DCAT.startDate, DCAT.endDate, OBSF.launch_date
+            values = _majority_vote_date(values_f)#values.values())
+            result_dict[key_uri].extend(values)
+    # Set location from the location with the highest location confidence
+    if lists_with_reliable_location:
+        # select locations
+        for l in lists_with_reliable_location:
+            location_dict = location_info_by_source[l]
+            for k, v in location_dict.items():
+                result_dict[k].extend(v)
+        if "latitude" in result_dict:
+            # majority voting latitude
+            lat = _majority_vote_rounding(result_dict["latitude"])
+            result_dict["latitude"] = lat
+        if "longitude" in result_dict:
+            long = _majority_vote_rounding(result_dict["longitude"])
+            result_dict["longitude"] = long
+        for key in ["city", "country", "continent", "state", "address"]:
+            values = result_dict.get(key, None)
+            if values:
+                value = _majority_vote_exact(values)
+                result_dict[key_uri] = value
+
+    # Pref label
+    if wikidata_preflabel:
+        pref_label = wikidata_preflabel
+    else:
+        # Remove codes, IDs... from alt labels
+        all_labels_2 = [l for l in all_labels if l not in except_labels]
+        if all_labels_2:
+            all_labels = all_labels_2 # else it means that all the labels were identifiers/codes
+        pref_label = _majority_vote_exact(all_labels)
+        # TODO change the pref label selection method to get a more standardized label (without acronym, telescome name... and not keep the longest label with most votes)
+    all_labels = set(all_labels) - {pref_label}
+    result_dict[properties.convert_attr("label")] = pref_label
+    result_dict[properties.convert_attr("alt_label")] = all_labels
+    return result_dict
+
+def _get_values_from_dicts(dicts: list[dict],
+                           key: str) -> dict:
+    """
+    Get all values that correspond to a certain key from
+    a collection of dictionaries.
+
+    Args:
+        dicts: list of dictionaries of data
+        key: key to extract data from
+    """
+    values = dict()
+    for d in dicts:
+        source = d.get(properties.convert_attr("source"), d.get("source"))
+        if source and type(source) == set:
+            source = list(source)[0]
+        value = d.get(key, None)
+        if value:
+            if type(value) not in (list, set): # no tuple (tuple is for val, lang)
+                value = [value]
+            values[source] = value
+    return values
+
+
+def _majority_vote_exact(values: list):
+    """
+    Keep the value that has the most occurrence (1st criteria)
+    and that is the longest after str conversion (2nd criteria).
+
+    Args:
+        values: list of values
+    """
+    if len(values) == 1:
+        return values[0]
+    counts = Counter(values)
+    if not counts:
+        return None
+    max_count = max(counts.values())
+    most_common = [v for v, c in counts.items() if c == max_count]
+
+    # Longest value in this cluster
+    best_value = max(most_common, key=lambda v: len(str(v)))
+
+    return best_value
+
+
+def _majority_vote_rounding(values: list[float]):
+    """
+    Create clusters by rounding and return the
+    value with the most decimals
+    """
+    if not values:
+        return None
+    if len(values) == 1:
+        return values[0]
+    clusters = []
+    for v in values:
+        if type(v) == tuple:
+            # val, lang
+            v = v[0]
+        if v is None:
+            continue
+        len_v = len(str(v).split('.')[-1])
+        added = False
+        for c in clusters:
+            for v2 in c:
+                len_v2 = len(str(v2).split('.')[-1])
+                if len_v > len_v2:
+                    if round(v, len_v2) == round(v2, len_v2):
+                        c.append(v)
+                        added = True
+                        break
+                else:
+                    if round(v, len_v) == round(v2, len_v):
+                        c.append(v)
+                        added = True
+                        break
+            if added:
+                break
+        if not added:
+            clusters.append([v])
+    if not clusters:
+        return None
+    # Choose the cluster with the most values
+    lengths = [len(c) for c in clusters]
+    best_cluster = clusters[lengths.index(max(lengths))]
+    # Longest value in this cluster
+    longest = -1
+    best_value = None
+    for value in best_cluster:
+        length = len(str(value))
+        if length > longest:
+            longest = length
+            best_value = value
+    return best_value
+
+
+def _majority_vote_date(values: list) -> list:
+    """
+    Get dates that are the most represented (group by year) and
+    that are the most precise (have month and day different from 01/01)
+
+    Args:
+        values: list of URIRef or iso format date
+    """
+    if len(values) == 1:
+        return values
+    count_by_year = defaultdict(int)
+    dates_by_year = defaultdict(list)
+    for dates in values:
+        if type(dates) not in (list, set, tuple):
+            dates = [dates]
+        for date in dates:
+            if not date:
+                continue
+            date_iso = datetime.fromisoformat(date)
+            count_by_year[date_iso.year] += 1
+            dates_by_year[date_iso.year].append(date)
+    if not count_by_year:
+        return values
+
+    sorted_counts = sorted(count_by_year.items(), key = lambda x: x[1], reverse = True)
+    max_count = sorted_counts[0][1]
+
+    # All years that share the maximum vote count
+    best_years = [year for year, count in sorted_counts if count == max_count]
+
+    # Collect precise dates if available, otherwise Jan 1 of the year
+    precise_dates = []
+    other_dates = []
+    for year in best_years:
+        dates = dates_by_year.get(year)
+        for date in dates:
+            date_iso = datetime.fromisoformat(date)
+            if date_iso.month != 1 and date_iso.day != 1:
+                precise_dates.append(date)
+            else:
+                other_dates.append(date)
+
+    if precise_dates:
+        return set(precise_dates)
+    else:
+        return set(other_dates)
+
+
+def _keep_most_recent_date(values: list):
+    """
+    For last modified values
+    """
+    #if type(values[0]) == str:
+    #    values = [datetime.fromisoformat(d) for d in values]
+    def normalize(dt: datetime) -> datetime:
+        if dt.tzinfo is None:
+            return dt.replace(tzinfo = timezone.utc)
+        return dt.astimezone(timezone.utc)
+
+    normalized = [normalize(dt) for dt in values]
+    return max(normalized)
+
+
+def flatten(values: list) -> list:
+    res = []
+    for v in values:
+        res.extend(v)
+    return res
