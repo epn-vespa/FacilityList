@@ -368,6 +368,8 @@ class Entity():
             limit: maximum string length for each attribute of the entity.
                    -1 for no limit.
             languages: only get strings if they are in any of the languages.
+            use_keywords: weither to add keywords before the content or only
+                          keep the content.
         """
         res = ""
         label = self.get_values_for("label")

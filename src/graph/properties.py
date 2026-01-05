@@ -1,6 +1,13 @@
+"""
+Define attribute mapping and conversion methods
+from string to URI with types.
 
+Author:
+    Liza Fretel (liza.fretel@obspm.fr)
+"""
+from typing import Any
 from rdflib import Namespace, URIRef
-from rdflib.namespace import RDF, RDFS, OWL, XSD, DCAT, DCTERMS, SKOS, FOAF, SDO
+from rdflib.namespace import RDF, OWL, XSD, DCAT, DCTERMS, SKOS, FOAF, SDO
 
 
 class Properties():
@@ -69,6 +76,8 @@ class Properties():
                   "objtype": XSD.string}, #IAU-MPC
         "country": {"pred": SDO.addressCountry,
                     "objtype": XSD.string},# PDS
+        "state": {"pred": SDO.State,
+                  "objtype": XSD.string},
         "continent": {"pred": SDO.Continent,
                       "objtype": XSD.string},
         "latitude": {"pred": _GEO.latitude,
@@ -211,3 +220,19 @@ class Properties():
             # Not in the mapping. Probably an OBS.
             res = attr[attr.rfind('#') + 1:]
         return res
+
+    def get_type(
+            self,
+            attr: str | URIRef) -> Any:
+        """
+        Get the XSD.datatype that the property's object should have.
+
+        Args:
+            attr: the str or URIRef of the property
+        """
+        if type(attr) == URIRef:
+            attr = self.get_attr_name(attr)
+        if attr in self._MAPPING:
+            return self._MAPPING[attr].get("objtype", None)
+        else:
+            return None

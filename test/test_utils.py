@@ -1,7 +1,6 @@
 import setup_path
 from utils.string_utilities import get_aperture
 from utils.dict_utilities import majority_voting_merge
-from rdflib import DCAT, XSD, Literal
 from graph.properties import Properties
 from datetime import datetime
 import unittest
