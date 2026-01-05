@@ -539,6 +539,8 @@ def _get_continent_from_country(country: str,
             try:
                 if type(country) == set:
                     country = list(country)[0]
+                elif type(country) == list:
+                    country = country[0]
                 country_code = pycountry_convert.country_name_to_country_alpha2(country.title())
             except KeyError:
                 # Country name does not exist.
@@ -554,8 +556,11 @@ def _get_continent_from_country(country: str,
             if country_code == "RU": # Russia
                 continent = "Europe" if longitude < 59 else "Asia"
             else:
-                continent_code = pycountry_convert.country_alpha2_to_continent_code(country_code)
-                continent = continent_dict[continent_code]
+                if country_code == "AQ":
+                    continent = "Antarctica"
+                else:
+                    continent_code = pycountry_convert.country_alpha2_to_continent_code(country_code)
+                    continent = continent_dict[continent_code]
             # result_dict["continent_code"] = continent_code
             result_dict["continent"] = continent
 
