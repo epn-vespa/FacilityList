@@ -24,8 +24,8 @@ class LabelMatcher(Matcher):
                 entity1: Entity,
                 entity2: Entity) -> Tuple[str, str, Any]:
         """
-        Return True if any of the labels match. Labels that are shorter than
-        5 characters are not taken into account.
+        Return the labels or alt label values if any of the labels match.
+        Labels that are shorter than 5 characters are not taken into account.
 
         Args:
             entity1: reference entity

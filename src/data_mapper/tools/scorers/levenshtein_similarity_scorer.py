@@ -7,7 +7,6 @@ or an edit-distance. We use the Levenshtein distance here.
 Author:
     Liza Fretel (liza.fretel@obsmp.fr)
 """
-
 # from fuzzywuzzy import fuzz as wuzz
 from rapidfuzz import fuzz
 from unidecode import unidecode
@@ -29,7 +28,6 @@ class LevenshteinSimilarityScorer(Scorer):
         Return the highest match between any labels.
 
         Args:
-            graph: the graph
             entity1: reference entity
             entity2: compared entity
         """
