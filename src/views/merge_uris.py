@@ -85,6 +85,8 @@ class MergeURIs():
             term = standardize_uri(data[SKOS.prefLabel])
             entity = self._graph.PROPERTIES.OBS[term]
             for property, values in data.items():
+                # convert to str
+                property = self._graph.PROPERTIES.get_attr_name(property)
                 if property in self.IGNORE_PROPERTIES:
                     continue
                 if not values:
@@ -111,7 +113,7 @@ class MergeURIs():
                                 dt = value.astimezone(timezone.utc)
                                 value = Literal(dt.isoformat(), datatype=XSD.dateTime)
                             elif datatype == URIRef:
-                                pass
+                                value = properties.OBS[value]
                             else:
                                 value = Literal(value, datatype = datatype)
                         else:
@@ -129,7 +131,7 @@ class MergeURIs():
 
     def write_ttl(self):
         """
-        Write the output ontology
+        Write the output ontology. Before that, complete the basic triples.
         """
         # Add triples
         # basic classes

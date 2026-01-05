@@ -183,6 +183,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
     """
     Merge dictionaries' values on their keys. Use it to merge
     synonym sets' values in views generation.
+    /!\\ keys must be strings, not URIs, elsewise this will generate errors.
 
     Args:
         dicts: synonym set dictionaries.
@@ -216,6 +217,9 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
     all_keys = set()
     for d in dicts:
         all_keys.update(d.keys())
+    for key in all_keys:
+        if type(key) != str:
+            key = properties.get_attr_name(key)
     lists_with_reliable_location = None
     location_info_by_source = defaultdict(lambda: defaultdict(list))
 
@@ -272,7 +276,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
             # best_value = _majority_vote_rounding([list(v)[0] for v in values.values()])
             best_value = _majority_vote_rounding(values_f)
             result_dict[key_uri] = best_value
-        elif key_type in [str, XSD.string]:
+        elif key_type in [XSD.string, str]:
             # Add everything
             result_dict[key_uri].extend(values_f)#values.values())
         elif key_type == URIRef:
@@ -287,19 +291,20 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
         for l in lists_with_reliable_location:
             location_dict = location_info_by_source[l]
             for k, v in location_dict.items():
+                k = properties.convert_attr(k)
                 result_dict[k].extend(v)
-        if "latitude" in result_dict:
+        if properties.latitude in result_dict:
             # majority voting latitude
-            lat = _majority_vote_rounding(result_dict["latitude"])
-            result_dict["latitude"] = lat
-        if "longitude" in result_dict:
-            long = _majority_vote_rounding(result_dict["longitude"])
-            result_dict["longitude"] = long
-        for key in ["city", "country", "continent", "state", "address"]:
+            lat = _majority_vote_rounding(result_dict[properties.latitude])
+            result_dict[properties.latitude] = lat
+        if properties.longitude in result_dict:
+            long = _majority_vote_rounding(result_dict[properties.longitude])
+            result_dict[properties.longitude] = long
+        for key in [properties.city, properties.country, properties.continent, properties.state, properties.address]:
             values = result_dict.get(key, None)
             if values:
                 value = _majority_vote_exact(values)
-                result_dict[key_uri] = value
+                result_dict[key] = value
 
     # Pref label
     if wikidata_preflabel:
@@ -315,6 +320,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
     result_dict[properties.convert_attr("label")] = pref_label
     result_dict[properties.convert_attr("alt_label")] = all_labels
     return result_dict
+
 
 def _get_values_from_dicts(dicts: list[dict],
                            key: str) -> dict:
@@ -430,9 +436,12 @@ def _majority_vote_date(values: list) -> list:
         for date in dates:
             if not date:
                 continue
-            date_iso = datetime.fromisoformat(date)
+            if type(date) == str:
+                date_iso = datetime.fromisoformat(date)
+            else:
+                date_iso = date
             count_by_year[date_iso.year] += 1
-            dates_by_year[date_iso.year].append(date)
+            dates_by_year[date_iso.year].append(date_iso)
     if not count_by_year:
         return values
 
@@ -448,7 +457,10 @@ def _majority_vote_date(values: list) -> list:
     for year in best_years:
         dates = dates_by_year.get(year)
         for date in dates:
-            date_iso = datetime.fromisoformat(date)
+            if type(date) == str:
+                date_iso = datetime.fromisoformat(date)
+            else:
+                date_iso = date
             if date_iso.month != 1 and date_iso.day != 1:
                 precise_dates.append(date)
             else:
