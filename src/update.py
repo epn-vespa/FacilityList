@@ -113,6 +113,7 @@ class Updater():
                     # we will try to get location information
                     location_info = dict()
                     ent_type = features.get("type", None)
+                    """
                     part_of = None
                     if ent_type is not None and "is_part_of" in features:
                         # If the entity is part of another entity, we will check
@@ -137,7 +138,7 @@ class Updater():
                         elif type(features["is_part_of"]) == str:
                             # Wikidata
                             part_of = features["is_part_of"]
-
+                    """
                     if type(ent_type) == str:
                         ent_type = {ent_type}
                     if ent_type is not None:
@@ -154,7 +155,8 @@ class Updater():
                                                                   address = features.get("address", None),
                                                                   country = features.get("country", None),
                                                                   location = features.get("location", None),
-                                                                  part_of = part_of)
+                                                                  #part_of = part_of,
+                                                                  from_cache = True)
                                 break
                     # Retrieved information are country, continent, address.
                     # We also set location to Earth or Space, and Ocean if
@@ -162,7 +164,7 @@ class Updater():
                     # anything.
                     for key, value in location_info.items():
                         if key == "country":
-                            features[key] = value
+                            features[key] = value # Replace USA by United States
                         if key not in features or not features[key]:
                             features[key] = value
 
