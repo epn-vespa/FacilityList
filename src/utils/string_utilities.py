@@ -150,15 +150,19 @@ def get_aperture(label: str) -> Tuple[str, set[str]]:
     """
     Get the aperture of the facility from the label (in AAS & SPASE).
     Return label without apertures and apertures string converted to meters.
+    Can also be used to convert a string (value + unit) to meters.
 
     Troubleshooting:
         MM (or mm) is not for millimeter but for magnometer (see SPASE).
 
     Args:
         label: the label to extract the size from.
+
+    Returns:
+        A tuple with: the cleaned label, the converted value(s) (if more than one value detected)
     """
     aperture_lst = []
-    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|m|km|centimeter|meter|kilometer|CM|M|KM| ?inche?s?)\b", label.lower())
+    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|centimeter|centimetre|kilometer|kilometre|meter|metre| ?inche?s?)\b", label.lower())
     if apertures:
         for s in apertures:
             aperture_lst.append(''.join(s))
@@ -176,9 +180,11 @@ def get_aperture(label: str) -> Tuple[str, set[str]]:
             inches[round(value, ndigits = 1)].add(round(value, ndigits=2))
             inches[round(value, ndigits = 0)].add(round(value, ndigits=2))
             inches[value.__trunc__()].add(round(value, ndigits=2))
-        elif aperture.endswith("cm"):
+        elif aperture.endswith("cm") or "centi" in aperture:
             value = convert_to_meters(value, "cm")
             ms.add(value)
+        elif aperture.endswith("km") or "kilo" in aperture:
+            value = convert_to_meters(value, "km")
         else:
             ms.add(round(value, ndigits = 2))
         result.add(round(value, ndigits = 2))
@@ -226,6 +232,8 @@ def convert_to_meters(value: float | str,
         return value_float * 0.0254
     elif unit.lower() == "cm":
         return value_float / 100
+    elif unit.lower() == "km":
+        return value_float * 1000
     return value_float # Could not convert
 
 
