@@ -327,6 +327,7 @@ class SpaseExtractor(Extractor):
                 if ll in result:
                     del result[ll]
 
+        # Fix original data before merge
         data_fixer.fix(result, self)
 
         # Merge duplicate entities

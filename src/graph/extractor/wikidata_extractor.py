@@ -488,9 +488,13 @@ class WikidataExtractor(Extractor):
                                             property_value = float(property_value)
                                         elif unit == "kilometre":
                                             property_value = float(property_value) * 1000
+                                    elif property_name == "aperture":
+                                        property_value += " " + unit
+                                        _, new_property_value = get_aperture(str(property_value)) # Convert to meters
+                                        if new_property_value:
+                                            property_value = new_property_value
                                     else:
                                         property_value += " " + unit
-                                        _, property_value = get_aperture(str(property_value)) # Convert to meters
                             elif datatype == "time":
                                 property_value = prop["mainsnak"]["datavalue"]["value"]["time"]
                             elif datatype == "globe-coordinate":

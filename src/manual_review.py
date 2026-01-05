@@ -144,7 +144,7 @@ class ManualReviewer():
         # TODO link old mapping to the new mapping_set_id as well ?
         self._mapping.add((old_mapping_id, self._mapping._SSSOM.reviewer_label, Literal(self._reviewer)))
         if justification.strip():
-            self._mapping.add((old_mapping_id, RDFS.comment, Literal(justification + f" ({self._reviewer})")))
+            self._mapping.add((old_mapping_id, RDFS.comment, Literal(justification)))
 
 
     def remove_exact_match(self,
@@ -429,6 +429,8 @@ class ManualReviewer():
             else:
                 changed, old_relation, new_relation, justification = self._gui_validation(mapping_uri, current = i, total = total)
                 # raise NotImplementedError("Not any support for GUI yet. Please use terminal instead.")
+            if justification.strip():
+                justification = justification.strip() + f" ({self._reviewer})"
             if changed:
                 self._curate_mapping(mapping_uri,
                                      old_relation,
@@ -535,9 +537,9 @@ class ManualReviewer():
                 case "narrowMatch":
                     new_relation = SKOS.narrowMatch
             if new_justification == "":
-                new_justification = justification
+                pass
             elif new_justification.strip() == "":
-                new_justification = None
+                new_justification = ""
             else:
                 pass
             changed = pred != new_relation
