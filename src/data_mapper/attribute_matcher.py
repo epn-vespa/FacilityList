@@ -122,6 +122,11 @@ class AttributeMatcher():
 
             for value1 in values1:
                 for entity2, value2 in list2:
+                    if type(value1) == str:
+                        # Mars Global Surveyor vs MARS GLOBAL SURVEYOR (Naif-Wikidata)
+                        value1 = value1.strip().lower()
+                    if type(value2) == str:
+                        value2 = value2.strip().lower()
                     if value1 == value2:
                         # Merge entities or synsets
                         entity1.add_synonym(entity2,
@@ -132,6 +137,7 @@ class AttributeMatcher():
                                             subject_match_field = attr1,
                                             object_match_field = attr2,
                                             match_string = value1)
+
 
 if __name__ == "__main__":
     pass
