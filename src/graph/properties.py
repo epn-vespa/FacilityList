@@ -135,6 +135,31 @@ class Properties():
     ]
 
 
+    _IDENTIFIERS = [
+        "NAIF_ID",
+        "MCP_ID",
+        "COSPAR_ID",
+        "NSSDC_ID",
+        "NORAD_ID",
+        "code",
+    ]
+
+
+    _LINKS = [
+        "url",
+        "uri",
+        "ext_ref"
+    ]
+
+
+    _METADATA = [
+        "modified",
+        "deprecated",
+        "location_confidence",
+        "type_confidence"
+    ]
+
+
     def __init__(self):
         pass
 
