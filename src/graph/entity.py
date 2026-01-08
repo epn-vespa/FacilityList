@@ -18,6 +18,9 @@ from graph.graph import Graph
 from graph.properties import Properties
 from utils.string_utilities import cut_language_from_string
 
+properties = Properties()
+
+
 class Entity:
     pass
 
@@ -110,7 +113,8 @@ class Entity():
                        property: str,
                        unique: bool = False,
                        languages: list[str] = None,
-                       extend_to_synonyms: bool = True) -> Set:
+                       extend_to_synonyms: bool = True,
+                       return_language: bool = False) -> Set:
         """
         Get values of the entity for a property.
 
@@ -120,8 +124,9 @@ class Entity():
                     return only the first non-None value.
             languages: only get fields labeled with those languages if known.
             extend_to_synonyms: will also get the entity's synonyms' features.
+            return_languages: transform the result to a tuple of (value, lang).
         """
-        property = Graph().PROPERTIES.convert_attr(property)
+        property = Properties().convert_attr(property)
         if property in self._data:
             res = self.data[property]
         else:
@@ -133,7 +138,8 @@ class Entity():
                 syn_values = Entity(syn).get_values_for(property,
                                                         unique = unique,
                                                         extend_to_synonyms = False,
-                                                        languages = languages)
+                                                        languages = languages,
+                                                        return_language = return_language)
                 if unique:
                     if syn_values is not None:
                         res.add(syn_values)
@@ -149,10 +155,14 @@ class Entity():
                     if type(value) == tuple and len(value) == 2:
                         value, lang = value
                     if lang == None or not languages or lang in languages:
+                        if return_language:
+                            return value, lang
                         return value
             elif type(res) == tuple:
                 value, lang = res
                 if lang == None or not languages or lang in languages:
+                    if return_language:
+                        return value, lang
                     return value
             return None
         res_for_lang = set()
@@ -162,7 +172,10 @@ class Entity():
                 if len(value) == 2:
                     value, lang = value
             if lang == None or not languages or lang in languages:
-                res_for_lang.add(value)
+                if return_language:
+                    res_for_lang.add((value, lang))
+                else:
+                    res_for_lang.add(value)
         return res_for_lang
 
 
@@ -231,7 +244,6 @@ class Entity():
             if extractor2.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
                 uri2 = synonym_uri
                 break
-        properties = Properties()
         for synonym_uri in entity.get_synonyms():
             if synonym_uri == self.uri:
                 continue
@@ -316,7 +328,6 @@ class Entity():
                 uri2 = synonym_uri
                 break
         graph = Graph()
-        properties = Properties()
         if is_broad:
             graph.add((uri1, DCTERMS.isPartOf, uri2))
             graph.add((uri2, DCTERMS.hasPart, uri1))
@@ -388,7 +399,7 @@ class Entity():
             key = "Also known as: "
             res += key + ', '.join(alt_labels) + '. '
         for key, value in sorted(self.data.items()):
-            key = Graph().PROPERTIES.get_attr_name(key)
+            key = properties.get_attr_name(key)
             value = self.get_values_for(key, languages = languages)
             if not include and key in exclude:
                 continue
@@ -424,7 +435,7 @@ class Entity():
             if not v:
                 continue
             if type(k) != str:
-                k = Properties().get_attr_name(k)
+                k = properties.get_attr_name(k)
             if type(v) == URIRef:
                 v = split_uri(v)[1]
             elif type(v) == set:

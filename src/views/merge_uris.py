@@ -9,17 +9,15 @@ import argparse
 import json
 import re
 
-from collections import Counter, defaultdict
+from collections import defaultdict
 from graph.graph import Graph
 from graph.properties import Properties
 from graph.entity import Entity
 from graph.extractor.extractor_lists import ExtractorLists
-from views.generate_csv_json_views import CSVJsonGenerator
 from utils.string_utilities import standardize_uri
-from utils.dict_utilities import merge_into, majority_voting_merge
+from utils.dict_utilities import majority_voting_merge
 from rdflib import Graph as G, URIRef, RDFS, RDF, XSD, Literal, SKOS, OWL
 from datetime import timezone
-from dateutil import parser as dateparser
 
 
 class MergeURIs():
@@ -88,32 +86,46 @@ class MergeURIs():
         properties = Properties()
         synsets = self.get_synsets()
         term_by_synonym_uri = dict()
+        all_terms = []
 
         for synset in synsets:
             synset_dicts = []
+            all_uris_in_synset = []
             for s in synset:
+                all_uris_in_synset.append(s.uri)
                 d = dict()
                 for key in s._data:
-                    d[key] = s.get_values_for(key, extend_to_synonyms = False)
+                    return_language = False
+                    if key in [SKOS.altLabel, SKOS.prefLabel]:
+                        return_language = True
+                    d[key] = s.get_values_for(key,
+                                              extend_to_synonyms = False,
+                                              return_language = return_language)
                 synset_dicts.append(d)
             # synset_dicts = [s._data for s in synset]
             data = majority_voting_merge(synset_dicts)
-            uri = data[SKOS.prefLabel]
-            term = standardize_uri(uri)
-            term_by_synonym_uri[uri] = term
+            pref_label = data[SKOS.prefLabel]
+            if type(pref_label) == tuple and len(pref_label) == 2:
+                pref_label = pref_label[0]
+            term = standardize_uri(pref_label)
+            #while term in all_terms:
+            #    term += "-1"
+            #all_terms.append(term)
+            for uri in all_uris_in_synset:
+                term_by_synonym_uri[str(uri)] = term
             entity = self._graph.PROPERTIES.OBS[term]
             for property, values in data.items():
-                # convert to str
-                property = self._graph.PROPERTIES.get_attr_name(property)
                 if property in self.IGNORE_PROPERTIES:
                     continue
+                # convert to str
+                property = self._graph.PROPERTIES.get_attr_name(property)
                 if not values:
                     continue
                 if property in self._graph.PROPERTIES._MAPPING:
                     datatype = self._graph.PROPERTIES._MAPPING[property].get("objtype", None)
                 else:
                     datatype = XSD.string
-                if type(values) not in (set, tuple, list):
+                if type(values) not in (set, list):
                     values = [values]
                 for value in values:
                     if not value:
@@ -146,6 +158,16 @@ class MergeURIs():
                     property = properties.convert_attr(property)
                     self._output_graph.add((entity, property, value))
         self._term_by_synonym_uri = term_by_synonym_uri
+        self._fix_internal_link()
+
+
+    def _fix_internal_link(self):
+        properties = ["has_part", "is_part_of"]
+        for attr in properties:
+            for old_obj, new_obj in self._term_by_synonym_uri.items():
+                for subj, pred, _ in self._output_graph.triples((None, Properties().convert_attr(attr), URIRef(old_obj))):
+                    self._output_graph.remove((subj, pred, old_obj))
+                    self._output_graph.add((subj, pred, Properties().OBS[new_obj]))
 
 
     def _to_string(self,
@@ -162,7 +184,9 @@ class MergeURIs():
             relation_str: if set, use this as a relation
         """
         res = ""
-        value_set = entity.get_values_for(relation, languages = "en")
+        value_set = entity.get_values_for(relation,
+                                          languages = "en",
+                                          return_language = False)
         if self._graph.PROPERTIES._MAPPING[relation].get("objtype") == URIRef:
             return ""
         relation = self._IVOA_RELATIONS[relation]
@@ -192,15 +216,12 @@ class MergeURIs():
                     #"has_part",
                     ]
             for relation in internal_relations:
-                parts = entity.get_values_for(relation)
-                print("parts=", parts)
+                parts = entity.get_values_for(relation,
+                                              return_language = False)
                 for part in parts:
                     # Only keep parts that will be in the CSV
                     part = str(part)
-                    print("part=", part)
                     part_of = self._term_by_synonym_uri.get(part, None)
-                    print("part of found?:", part_of)
-                    print("not found from:", self._term_by_synonym_uri)
                     if part_of:
                         #    res_csv_str += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
                         values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({part_of}) "
@@ -213,14 +234,12 @@ class MergeURIs():
             for relation in more_relations:
                 if relation.startswith('skos:broader'):
                     broader = re.findall(r'\((.+)\)', relation)[0]
-                    print("found broader:", relation, broader)
                     children_by_broader[broader].append(term)
                     # Remove broader from more_relations
                     values["more_relations"] = values["more_relations"].replace(relation, "") # Remove this broader relation
                     break
         res_csv = []
         already_in = set()
-        print("children by broader=", children_by_broader)
         for broader in children_by_broader.copy().keys():
             if broader in already_in:
                 continue
@@ -233,6 +252,7 @@ class MergeURIs():
 
 
     def _get_recursive(self, children_by_broader, broader, res_csv: list, already_in: set, level: int = 1):
+        # broader = self._term_by_synonym_uri[broader]
         entity = self._res_csv.pop(broader)
         entity["level"] = level
         entity["term"] = broader
@@ -259,6 +279,7 @@ class MergeURIs():
 
         with open(self._output_ontology, 'w') as file:
             file.write(self._output_graph.serialize())
+            print(f"Ontology saved in {self._output_ontology}")
 
 
     def generate_json_csv(self):
@@ -280,7 +301,7 @@ class MergeURIs():
                 continue
             term = standardize_uri(str(pref_label))
             if term in res_json:
-                print("Duplicate term:", term)
+                print("Duplicate term:", term) # TODO also modify the term (same as in the other function)
                 # TODO use the type in the term / other information
             else:
                 res_json[term].append(str(pref_label))
@@ -291,6 +312,7 @@ class MergeURIs():
             alt_labels = entity.get_values_for("alt_label",
                                                unique = False,
                                                languages = None, # List of languages for alt labels to keep in both formats
+                                               return_language = False
                                                )
             for alt_label in alt_labels:
                 if str(alt_label) in res_json[term]:
