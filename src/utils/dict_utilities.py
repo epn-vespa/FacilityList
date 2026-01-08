@@ -252,7 +252,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
             if properties.OBS["wikidata_list"] in values and key == "label":
                 wikidata_preflabel = list(values[properties.OBS["wikidata_list"]])[0]
             all_labels.extend(values_f)
-        elif key == "pref_label":
+        elif key == "alt_label":
             all_labels.extend(values_f)
         elif key in ["COSPAR_ID", "NSSDCA_ID", "NAIF_ID", "code"]:
             #for value in values_f:
@@ -311,7 +311,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
         pref_label = wikidata_preflabel
     else:
         # Remove codes, IDs... from alt labels
-        all_labels_2 = [l for l in all_labels if l not in except_labels]
+        all_labels_2 = [l for l in all_labels if l not in except_labels and (type(l) != tuple or l[0] not in except_labels)]
         if all_labels_2:
             all_labels = all_labels_2 # else it means that all the labels were identifiers/codes
         pref_label = _majority_vote_exact(all_labels)
@@ -349,20 +349,46 @@ def _majority_vote_exact(values: list):
     """
     Keep the value that has the most occurrence (1st criteria)
     and that is the longest after str conversion (2nd criteria).
+    For labels (alt labels), keep languages.
 
     Args:
         values: list of values
     """
     if len(values) == 1:
         return values[0]
+    if len(values) == 0:
+        return None
+    # Get rid of languages (and keep English labels only for labels with languages)
+    values_with_lang = values.copy()
+    values = []
+    only_english_values = []
+    for v in values_with_lang:
+        if type(v) == tuple and len(v) == 2 and type(v[0]) == str:
+            if v[1] == None or v[1][:2] in ["en", "ca"]: # ca is for Catalan but seems to be used for Canadian (en-ca) in WD too
+                only_english_values.append(v[0])
+            values.append(v[0])
+        else:
+            values.append(v)
+    #if only_english_values:
+    #    values = only_english_values # Keep English value if they exist
     counts = Counter(values)
     if not counts:
         return None
     max_count = max(counts.values())
     most_common = [v for v, c in counts.items() if c == max_count]
 
+    if len(most_common) > 0 and only_english_values:
+        # choose the ones in the English labels
+        most_common_en = [v for v in most_common if v in only_english_values]
+        if most_common_en:
+            most_common = most_common_en
+        else:
+            # No most common found in English; return with only English
+            best_value = _majority_vote_exact(only_english_values)
+            return best_value
+
     # Longest value in this cluster
-    best_value = max(most_common, key=lambda v: len(str(v)))
+    best_value = max(most_common, key = lambda v: len(str(v)))
 
     return best_value
 
@@ -488,6 +514,9 @@ def _keep_most_recent_date(values: list):
 
 
 def flatten(values: list) -> list:
+    """
+    Get the values only from a dict of {list: value}.
+    """
     res = []
     for v in values:
         res.extend(v)
