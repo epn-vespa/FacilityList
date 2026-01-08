@@ -75,6 +75,8 @@ class Updater():
                      extractor: Extractor = None,
                      cat: str = "ufo"):
         """
+        /!\\ Important: data dict's entries must contain a type key,
+        elsewise the entry with no type will be ignored.
         Add the data from the dict to the ontology. The dictionary should be
         like {"uri1": {"label":"a", "code":"b", ...}}.
         Removes old entities from the same extractor before adding new ones.

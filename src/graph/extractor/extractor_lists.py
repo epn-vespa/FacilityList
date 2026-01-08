@@ -4,29 +4,37 @@ List the available extractors and categorize them.
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+import pkgutil
+import importlib
+import inspect
 
-
-from graph.extractor.aas_extractor import AasExtractor
-from graph.extractor.iaumpc_extractor import IauMpcExtractor
+from graph import extractor
 from graph.extractor.imcce_extractor import ImcceExtractor
-from graph.extractor.naif_extractor import NaifExtractor
 from graph.extractor.nssdc_extractor import NssdcExtractor
-from graph.extractor.pds_extractor import PdsExtractor
-from graph.extractor.spase_extractor import SpaseExtractor
 from graph.extractor.wikidata_extractor import WikidataExtractor
+from graph.extractor.n2yo_extractor import N2yoExtractor
 
 
 
 class ExtractorLists():
 
-    AVAILABLE_EXTRACTORS = [AasExtractor,
-                            IauMpcExtractor,
-                            ImcceExtractor,
-                            NaifExtractor,
-                            NssdcExtractor,
-                            PdsExtractor,
-                            SpaseExtractor,
-                            WikidataExtractor]
+
+    @staticmethod
+    def _load_extractors():
+        extractors = []
+
+        for module_info in pkgutil.iter_modules(extractor.__path__):
+            module_name = module_info.name
+
+            module = importlib.import_module(f"graph.extractor.{module_name}")
+
+            for name, obj in inspect.getmembers(module, inspect.isclass):
+                if name.endswith("Extractor"):
+                    extractors.append(obj)
+
+        return extractors
+
+    AVAILABLE_EXTRACTORS = _load_extractors.__func__()
     
     AVAILABLE_NAMESPACES = [e.NAMESPACE for e in AVAILABLE_EXTRACTORS]
 
@@ -34,6 +42,7 @@ class ExtractorLists():
 
     NON_AUTHORITATIVE_EXTRACTORS = [ImcceExtractor,
                                     NssdcExtractor,
-                                    WikidataExtractor]
+                                    WikidataExtractor,
+                                    N2yoExtractor]
 
     AUTHORITATIVE_EXTRACTORS = set(AVAILABLE_EXTRACTORS) - set(NON_AUTHORITATIVE_EXTRACTORS)
