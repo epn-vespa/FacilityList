@@ -10,7 +10,6 @@ Author:
 
 from graph.extractor.extractor import Extractor
 from graph.graph import Graph
-from graph.extractor.wikidata_extractor import WikidataExtractor
 from graph.extractor.naif_extractor import NaifExtractor
 from graph.entity import Entity
 
@@ -29,22 +28,21 @@ class AttributeMatcher():
 
 
     @timeit
-    def merge_wikidata_naif(self) -> None:
+    def merge_to_naif(self,
+                      extractor: Extractor) -> None:
         """
-        Merge Wikidata and NAIF entities if both namespaces
+        Merge Wikidata (or PDS) with NAIF entities if both namespaces
         exist using the NAIF_ID relation of Wikidata.
-
-        Wikidata-NAIF is a resolved mapping and no NAIF entity should be unpaired
-        after running this function.
         """
         graph = Graph()
 
         # Loop on each wikidata class
-        wikidata_entities = Entity.get_entities_from_list(WikidataExtractor())
+        entities = Entity.get_entities_from_list(extractor,
+                                                 no_equivalent_in = NaifExtractor())
         map_remaining = False
 
-        for wikidata_entity in wikidata_entities:
-            naif_codes = wikidata_entity.get_values_for("NAIF_ID")
+        for entity in entities:
+            naif_codes = entity.get_values_for("NAIF_ID")
             for naif_code in naif_codes:
                 naif_ids = []
                 for naif_id, _, _ in graph.triples((None,
@@ -54,13 +52,13 @@ class AttributeMatcher():
                 if len(naif_ids) == 1:
                     # There is only one NAIF entity with this ID.
                     naif_entity = Entity(naif_ids[0])
-                    wikidata_entity.add_synonym(naif_entity,
-                                                extractor1 = WikidataExtractor,
-                                                extractor2 = NaifExtractor,
-                                                no_validation = True,
-                                                subject_match_field="NAIF_ID",
-                                                object_match_field="code",
-                                                match_string = str(naif_code))
+                    entity.add_synonym(naif_entity,
+                                       extractor1 = extractor,
+                                       extractor2 = NaifExtractor,
+                                       no_validation = True,
+                                       subject_match_field="NAIF_ID",
+                                       object_match_field="code",
+                                       match_string = str(naif_code))
                 elif len(naif_ids) > 1:
                     # Ambiguous NAIF identifier.
                     # need further disambiguation with CandidatePair.
@@ -69,12 +67,12 @@ class AttributeMatcher():
                         naif_entity = Entity(naif_id)
 
         if map_remaining:
-            self.merge_on(extractor1 = WikidataExtractor(),
+            self.merge_on(extractor1 = extractor,
                           extractor2 = NaifExtractor(),
                           attr1 = "label",
                           attr2 = "label")
 
-            self.merge_on(extractor1 = WikidataExtractor(),
+            self.merge_on(extractor1 = extractor,
                           extractor2 = NaifExtractor(),
                           attr1 = "alt_label",
                           attr2 = "label")

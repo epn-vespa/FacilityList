@@ -25,10 +25,10 @@ from graph import entity_types
 from graph.graph import Graph
 from graph.mapping_graph import MappingGraph
 from graph.extractor.extractor_lists import ExtractorLists
-from graph.extractor.naif_extractor import NaifExtractor
 from graph.extractor.wikidata_extractor import WikidataExtractor
 from graph.extractor.iaumpc_extractor import IauMpcExtractor
 from graph.extractor.imcce_extractor import ImcceExtractor
+from graph.extractor.n2yo_extractor import N2yoExtractor
 from graph.extractor.nssdc_extractor import NssdcExtractor
 from graph.extractor.pds_extractor import PdsExtractor
 from data_mapper.attribute_matcher import AttributeMatcher
@@ -115,7 +115,7 @@ class OntologyMapper():
             #                                      NaifExtractor)
 
             # merge wiki naif if the namespaces are available.
-            am.merge_wikidata_naif()
+            am.merge_to_naif(WikidataExtractor())
 
             self._description += "merge identifiers: naif, wikidata\n"
             # del(CPM_wiki_naif)
@@ -170,11 +170,22 @@ class OntologyMapper():
             self._description += "merge identifiers: pds, nssdc\n"
         if (self._graph.is_available("naif") and
             self._graph.is_available("pds")):
+            """
             am.merge_on(extractor1 = NaifExtractor(),
                         extractor2 = PdsExtractor(),
                         attr1 = "code",
-                        attr2 = "NAIF_ID")
+                        attr2 = "NAIF_ID") # TODO BUG duplicate naif ids, PDS is mapped with both. Do as Wikidata with double verification
             self._description += "merge identifiers: pds, naif\n"
+            """
+            am.merge_to_naif(PdsExtractor())
+        if (self._graph.is_available("n2yo") and
+            self._graph.is_available("nssdc")):
+            am.merge_on(extractor1 = N2yoExtractor,
+                        extractor2 = NssdcExtractor,
+                        attr1 = "NSSDCA_ID",
+                        attr2 = "code")
+            self._description += "merge identifiers: n2yo, nssdc\n"
+
         del(am)
 
 
