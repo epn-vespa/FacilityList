@@ -273,24 +273,24 @@ class ManualReviewer():
             return
         if old_relation == SKOS.broadMatch:
             self._linked.remove((subj_uri, SKOS.broadMatch, obj_uri))
-            self._linked.remove((subj_uri, DCTERMS.isPartOf, obj_uri))
+            #self._linked.remove((subj_uri, DCTERMS.isPartOf, obj_uri))
             self._linked.remove((obj_uri, SKOS.narrowMatch, subj_uri))
-            self._linked.remove((obj_uri, DCTERMS.hasPart, subj_uri))
+            #self._linked.remove((obj_uri, DCTERMS.hasPart, subj_uri))
         elif old_relation == SKOS.narrowMatch:
             self._linked.remove((subj_uri, SKOS.narrowMatch, obj_uri))
-            self._linked.remove((subj_uri, DCTERMS.hasPart, obj_uri))
+            #self._linked.remove((subj_uri, DCTERMS.hasPart, obj_uri))
             self._linked.remove((obj_uri, SKOS.broadMatch, subj_uri))
-            self._linked.remove((obj_uri, DCTERMS.isPartOf, subj_uri))
+            #self._linked.remove((obj_uri, DCTERMS.isPartOf, subj_uri))
         if new_relation == SKOS.narrowMatch:
-            self._linked.add((subj_uri, SKOS.narrowMatch, obj_uri))
+            #self._linked.add((subj_uri, SKOS.narrowMatch, obj_uri))
             self._linked.add((subj_uri, DCTERMS.hasPart, obj_uri))
-            self._linked.add((obj_uri, SKOS.broadMatch, subj_uri))
+            #self._linked.add((obj_uri, SKOS.broadMatch, subj_uri))
             self._linked.add((obj_uri, DCTERMS.isPartOf, subj_uri))
         elif new_relation == SKOS.broadMatch:
             self._linked.add((subj_uri, SKOS.broadMatch, obj_uri))
-            self._linked.add((subj_uri, DCTERMS.isPartOf, obj_uri))
+            #self._linked.add((subj_uri, DCTERMS.isPartOf, obj_uri))
             self._linked.add((obj_uri, SKOS.narrowMatch, subj_uri))
-            self._linked.add((obj_uri, DCTERMS.hasPart, subj_uri))
+            #self._linked.add((obj_uri, DCTERMS.hasPart, subj_uri))
 
 
     def _get_availaible_reviewers(self) -> list[str]:

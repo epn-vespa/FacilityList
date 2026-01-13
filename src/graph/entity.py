@@ -329,15 +329,15 @@ class Entity():
                 break
         graph = Graph()
         if is_broad:
-            graph.add((uri1, DCTERMS.isPartOf, uri2))
-            graph.add((uri2, DCTERMS.hasPart, uri1))
+            #graph.add((uri1, DCTERMS.isPartOf, uri2))
+            #graph.add((uri2, DCTERMS.hasPart, uri1))
             graph.add((uri1, SKOS.broadMatch, uri2))
             graph.add((uri2, SKOS.narrowMatch, uri1))
             entity.data[properties.has_part].add(uri1)
             self.data[properties.is_part_of].add(uri2)
         else:
-            graph.add((uri1, DCTERMS.hasPart, uri2))
-            graph.add((uri2, DCTERMS.isPartOf, uri1))
+            #graph.add((uri1, DCTERMS.hasPart, uri2))
+            #graph.add((uri2, DCTERMS.isPartOf, uri1))
             graph.add((uri1, SKOS.narrowMatch, uri2))
             graph.add((uri2, SKOS.broadMatch, uri1))
             entity.data[properties.is_part_of].add(uri1)
