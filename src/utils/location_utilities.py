@@ -520,7 +520,6 @@ def get_location_info(label: Optional[str] = None,
     return result_dict
 
 
-@timeall
 def _get_continent_from_country(country: str,
                                 location_type,
                                 address,

@@ -19,12 +19,14 @@ def merge_into(newer_entity_dict: Dict,
         prior_entity_dict: the prior entity dict to merge into the newer
     """
     for key, values in prior_entity_dict.copy().items():
-        if key == "prior_id":
-            continue
+        #if key == "prior_id":
+        #    continue
         # Label
         if key == "label":
-            if not isinstance(values, set):
+            if isinstance(values, str):
                 values = {values}
+            else:
+                values = set(values)
             if "alt_label" in newer_entity_dict:
                  # Keep the old label as an alternate label of the new entity
                 if type(newer_entity_dict["alt_label"]) == list:
@@ -36,39 +38,16 @@ def merge_into(newer_entity_dict: Dict,
         elif key in newer_entity_dict:
             merge_into = newer_entity_dict[key]
             if isinstance(merge_into, set):
-                merge_into = list(merge_into)
-            elif not isinstance(merge_into, list):
-                merge_into = [merge_into]
-            if not isinstance(values, list) and not isinstance(values, set):
-                values = [values]
+                pass
+            elif isinstance(merge_into, list):
+                merge_into = set(merge_into)
+            else:
+                merge_into = {merge_into}
+            if type(values) not in (list, set):
+                values = {values}
             for value in values:
                 if value not in merge_into:
-                    if key in ["latitude", "longitude"]:
-                        # Keep the most precise value
-                        old_value = newer_entity_dict[key]
-                        if isinstance(old_value, list):
-                            old_value = old_value[0]
-                        if (len(str(value)) > len(str(old_value)) and
-                            str(value).startswith(str(old_value))):
-                            merge_into = [value]
-                        elif (len(str(old_value)) > len(str(value)) and
-                              str(old_value).startswith(str(value))):
-                            merge_into = [old_value]
-                        elif len(str(value)) == len(str(old_value)):
-                            if value != old_value:
-                                merge_into = [value, old_value] # Keep both
-                            else:
-                                merge_into = [old_value]
-                        elif value != old_value:
-                            # Keep both
-                            merge_into = [value, old_value]
-                    elif key in ["address", "location_confidence", "state", "country", "continent"]:
-                        if newer_entity_dict["location_confidence"] > prior_entity_dict["location_confidence"]:
-                            merge_into = [value]
-                        else:
-                            merge_into = [old_value]
-                    else:
-                        merge_into.append(value)
+                    merge_into.add(value)
             newer_entity_dict[key] = merge_into
         else:
             newer_entity_dict[key] = values
@@ -79,28 +58,6 @@ def merge_into(newer_entity_dict: Dict,
             elif type(newer_entity_dict["alt_label"]) == list:
                 newer_entity_dict["alt_label"] = set(newer_entity_dict["alt_label"])
             newer_entity_dict["alt_label"] -= {newer_entity_dict["label"]}
-
-
-def extract_items(d: Dict,
-                  parent: str = "") -> List[Tuple]:
-    """
-    Flatten a recursive dictionary to a list of (key, value).
-    This is necessary to create triplets from for json format.
-
-    Args:
-        d: a recursive dictionary.
-        parent: the parent XML div type.
-    """
-    result = []
-    for key, value in d.items():
-        if isinstance(value, dict):
-            result.extend(extract_items(value, parent = key))
-        else:
-            if parent == "InformationURL" and key != "URL":
-                # SPASE: ignore every side information about the url.
-                continue
-            result.append((key, value))
-    return result
 
 
 class UnionFind:
@@ -123,6 +80,7 @@ class UnionFind:
         # rank[x] = an upper bound on the height of the tree rooted at x.
         # Used only to decide which root becomes the parent during union.
         self.rank = {}
+
 
     def find(self, x):
         """
@@ -179,7 +137,8 @@ class UnionFind:
 
 
 properties = Properties()
-def majority_voting_merge(dicts: list[dict]) -> dict:
+def majority_voting_merge(dicts: list[dict],
+                          str_keys: bool = False) -> dict:
     """
     Merge dictionaries' values on their keys. Use it to merge
     synonym sets' values in views generation.
@@ -187,6 +146,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
 
     Args:
         dicts: synonym set dictionaries.
+        str_keys: keep new keys as strings and not rdflib Node.
 
     Latitude/longitude:
         1. Keep the ones with location confidence == 1
@@ -213,13 +173,14 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
         - Type confidence
         - Location confidence
     """
+    if not str_keys:
+        conv_attr = lambda x: properties.convert_attr(x)
+    else:
+        conv_attr = lambda x: properties.get_attr_name(x)
     result_dict = defaultdict(list)
     all_keys = set()
     for d in dicts:
         all_keys.update(d.keys())
-    for key in all_keys:
-        if type(key) != str:
-            key = properties.get_attr_name(key)
     lists_with_reliable_location = None
     location_info_by_source = defaultdict(lambda: defaultdict(list))
 
@@ -249,7 +210,7 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
         #if key in ["latitude", "longitude"]:
         #    pass
         elif key == "label":
-            if properties.OBS["wikidata_list"] in values and key == "label":
+            if properties.OBS["wikidata_list"] in values:
                 wikidata_preflabel = list(values[properties.OBS["wikidata_list"]])[0]
             all_labels.extend(values_f)
         elif key == "alt_label":
@@ -291,16 +252,22 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
         for l in lists_with_reliable_location:
             location_dict = location_info_by_source[l]
             for k, v in location_dict.items():
-                k = properties.convert_attr(k)
+                # k = properties.convert_attr(k)
                 result_dict[k].extend(v)
         if properties.latitude in result_dict:
             # majority voting latitude
             lat = _majority_vote_rounding(result_dict[properties.latitude])
             result_dict[properties.latitude] = lat
+        elif "latitude" in result_dict:
+            lat = _majority_vote_rounding(result_dict["latitude"])
+            result_dict["latitude"] = lat
         if properties.longitude in result_dict:
             long = _majority_vote_rounding(result_dict[properties.longitude])
             result_dict[properties.longitude] = long
-        for key in [properties.city, properties.country, properties.continent, properties.state, properties.address]:
+        elif "longitude" in result_dict:
+            long = _majority_vote_rounding(result_dict["longitude"])
+            result_dict["longitude"] = long
+        for key in ["city", "country", "continent", "state", "address", properties.city, properties.country, properties.continent, properties.state, properties.address]:
             values = result_dict.get(key, None)
             if values:
                 value = _majority_vote_exact(values)
@@ -317,8 +284,8 @@ def majority_voting_merge(dicts: list[dict]) -> dict:
         pref_label = _majority_vote_exact(all_labels)
         # TODO change the pref label selection method to get a more standardized label (without acronym, telescome name... and not keep the longest label with most votes)
     all_labels = set(all_labels) - {pref_label}
-    result_dict[properties.convert_attr("label")] = pref_label
-    result_dict[properties.convert_attr("alt_label")] = all_labels
+    result_dict[conv_attr("label")] = pref_label
+    result_dict[conv_attr("alt_label")] = all_labels
     return result_dict
 
 
@@ -387,8 +354,9 @@ def _majority_vote_exact(values: list):
             best_value = _majority_vote_exact(only_english_values)
             return best_value
 
-    # Longest value in this cluster
-    best_value = max(most_common, key = lambda v: len(str(v)))
+    # Longest value in this cluster.
+    # If equality, keep the biggest string (2nd sorting criteria)
+    best_value = max(most_common, key = lambda v: (len(str(v)), v))
 
     return best_value
 
@@ -441,6 +409,9 @@ def _majority_vote_rounding(values: list[float]):
         if length > longest:
             longest = length
             best_value = value
+        elif length == longest:
+            if value > best_value:
+                best_value = value # to keep the function deterministic
     return best_value
 
 

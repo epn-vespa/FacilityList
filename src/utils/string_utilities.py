@@ -162,7 +162,7 @@ def get_aperture(label: str) -> Tuple[str, set[str]]:
         A tuple with: the cleaned label, the converted value(s) (if more than one value detected)
     """
     aperture_lst = []
-    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|centimeter|centimetre|kilometer|kilometre|meter|metre| ?inche?s?)\b", label.lower())
+    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|millimeter|millimetre|centimeter|centimetre|kilometer|kilometre|meter|metre|inche?s?|foot|feet)\b", label.lower())
     if apertures:
         for s in apertures:
             aperture_lst.append(''.join(s))
@@ -180,10 +180,16 @@ def get_aperture(label: str) -> Tuple[str, set[str]]:
             inches[round(value, ndigits = 1)].add(round(value, ndigits=2))
             inches[round(value, ndigits = 0)].add(round(value, ndigits=2))
             inches[value.__trunc__()].add(round(value, ndigits=2))
-        elif aperture.endswith("cm") or "centi" in aperture:
+        elif aperture.endswith("foot") or aperture.endswith("feet"):
+            value = convert_to_meters(value, "foot")
+            ms.add(value)
+        elif "millim" in aperture:
+            value = convert_to_meters(value, "mm")
+            ms.add(value)
+        elif aperture.endswith("cm") or "centim" in aperture:
             value = convert_to_meters(value, "cm")
             ms.add(value)
-        elif aperture.endswith("km") or "kilo" in aperture:
+        elif aperture.endswith("km") or "kilom" in aperture:
             value = convert_to_meters(value, "km")
         else:
             ms.add(round(value, ndigits = 2))
@@ -230,6 +236,10 @@ def convert_to_meters(value: float | str,
         value_float = value
     if unit.lower() in ["inch", "inches"]:
         return value_float * 0.0254
+    elif unit.lower() in ["foot", "feet"]:
+        return value_float * 0.3048
+    elif unit.lower() == "mm":
+        return value_float / 1000
     elif unit.lower() == "cm":
         return value_float / 100
     elif unit.lower() == "km":
@@ -390,7 +400,7 @@ def has_cospar_nssdc_id(text: str) -> Tuple[bool, list[str], list[str]]:
     Args:
         text: string that may contain an NSSDC or COSPAR id.
     """
-    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}\b"
+    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}(-[A-Z0-9]{1,3})?\b"
     cospar_ids = re.findall(pattern, text)
     if not cospar_ids:
         return False, None, None
