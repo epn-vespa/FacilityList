@@ -1,4 +1,6 @@
 {
     "update": {
-        "Golmud": {"latitude": 36.4, "longitude": 94.9}}
+        "/SMWG/Observatory/IAGA/Golmud": {"latitude": 36.4, "longitude": 94.9},
+        "/SMWG/Instrument/CALLISTO/spectrometer": {"is_part_of": ["spase://SMWG/Observatory/E-CALLISTO"]}
+    }
 }
