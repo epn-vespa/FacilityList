@@ -41,9 +41,11 @@ def update_state(subject,
     current_state["total"] = total
     current_state["current"] = current
 
+
 def wait_for_user_choice():
     choice_data = user_choices.get()
     return choice_data["choice"], choice_data["justification"]
+
 
 @app.route("/")
 def index():

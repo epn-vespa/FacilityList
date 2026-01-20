@@ -287,7 +287,7 @@ if __name__ == "__main__":
                         nargs = '*',
                         type = str,
                         required = False,
-                        help = "Name of the lists to extract. 'all' will" + ""
+                        help = "Name of the lists to extract. 'all' will" +
                         "extract from all of the lists.")
     parser.add_argument("-i",
                         "--input-ontology",

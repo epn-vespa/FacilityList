@@ -441,6 +441,7 @@ class ManualReviewer():
             else:
                 self._validate_mapping(mapping_uri,
                                        justification)
+        exit() # Interrupt daemon thread
 
 
     def _terminal_validation(self,
