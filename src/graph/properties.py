@@ -28,6 +28,8 @@ class Properties():
 
 
     _OBS = Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
+    _OBSF = Namespace("https://www.ivoa.net/rdf/facility#")
+    _OBSI = Namespace("https://www.ivoa.net/rdf/instrument#")
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
     _IVOASEM = Namespace("http://www.ivoa.net/rdf/ivoasem#")
@@ -172,6 +174,16 @@ class Properties():
     @property
     def OBS(self):
         return Properties._OBS
+
+
+    @property
+    def OBSF(self):
+        return Properties._OBSF
+
+
+    @property
+    def OBSI(self):
+        return Properties._OBSI
 
 
     @property
