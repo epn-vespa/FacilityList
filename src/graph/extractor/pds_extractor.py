@@ -156,14 +156,18 @@ class PdsExtractor(Extractor):
                     reference_type = internal_reference.find("reference_type")
                     if reference_type.text in [
                             "investigation_to_instrument_host",
+                            "instrument_host_to_instrument",
                             "investigation_to_instrument",
                             "facility_to_telescope"]:
                         has_part.append(lid_reference.text)
                     elif reference_type.text in [
                             "instrument_host_to_investigation",
+                            "instrument_to_instrument_host",
                             "instrument_to_investigation",
                             "telescope_to_facility"]:
                         is_part_of.append(lid_reference.text)
+                    elif reference_type.text.endswith("to_destination"):
+                        data["destination"] = lid_reference.text
                 if has_part:
                     data["has_part"] = has_part
                 if is_part_of:
@@ -285,7 +289,24 @@ class PdsExtractor(Extractor):
                             value["is_part_of"][i] = None
                             continue
                         result[part] = data
-
+        # Make hasPart / isPartOf reciprocal
+        for code, data in result.items():
+            if "has_part" in data:
+                for i, part in enumerate(data["has_part"]):
+                    if part is None:
+                        continue
+                    if "is_part_of" not in result[part]:
+                        result[part]["is_part_of"] = [code]
+                    else:
+                        result[part]["is_part_of"].append(code)
+            if "is_part_of" in data:
+                for i, part in enumerate(data["is_part_of"]):
+                    if part is None:
+                        continue
+                    if "has_part" not in result[part]:
+                        result[part]["has_part"] = [code]
+                    else:
+                        result[part]["has_part"].append(code)
         fix(result, source = self)
         return result
 
