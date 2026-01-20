@@ -11,6 +11,7 @@ def fix(result: dict,
     """
     Fix a result dict (after retrieving the whole data dicts for
     the source). Some entities can be deleted, renamed or updated.
+    Lists are transformed into sets of values.
 
     Note: better to call it before classifying entities with LLM
     if there are data to be deleted.
@@ -25,11 +26,11 @@ def fix(result: dict,
         fixes = json.load(file)
 
         # Add data entries
-        for key in fixes.get("add", []):
+        for key in fixes.get("add", {}):
             if key in result:
                 print(f"Error: {key} already in {filename}, can not add it twice. Please delete this entry or move it to the 'update' section.")
                 continue
-            result[key] = fixes["add"][key]
+            result[key] = conv(fixes["add"][key])
 
         # Rename data entries
         for key, fixed_data in fixes.get("rename", {}).items():
@@ -47,7 +48,7 @@ def fix(result: dict,
             source_data = result[key]
             new_key = key
             for attr, new_value in fixed_data.items():
-                source_data[attr] = new_value
+                source_data[attr] = conv(new_value)
                 if attr == "label":
                     # fix label
                     new_key = new_value
@@ -65,6 +66,15 @@ def fix(result: dict,
                 print(f"Warning: {key} not in {filename}, cannot be deleted. Perhaps the resource label changed ?")
                 continue
             del result[key]
+
+
+def conv(value) -> set:
+    """
+    Transform a list to a set
+    """
+    if type(value) in (list, tuple):
+        return set(value)
+    return value
 
 
 def link_has_part(result: dict):
