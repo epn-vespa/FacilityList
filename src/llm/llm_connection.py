@@ -7,7 +7,7 @@ import json
 import pickle
 import re
 import requests
-from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE
+from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE, PROMPT_SAME_DISTINCT
 import config
 from utils.performances import timeall, timeit
 from graph.entity_types import *
@@ -320,6 +320,7 @@ class LLMConnection():
                 'prompt': prompt,
                 'stream': False,
                 'temperature': OLLAMA_TEMPERATURE, # low temperature = more determinist. Default = 0.8
+                'num_predict': 200,
             }
         )
         if response.ok:
@@ -431,27 +432,16 @@ class LLMConnection():
             entity1: first entity
             entity2: compared entity
         """
-        to_exclude = ["code", "url", "ext_ref", "uri", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
-        prompt = "Say weither those two entities are the same, distinct.\n" \
-        "Templates:\n" \
-        "response: distinct. justification: voyager I is the first of the two voyager mission. one refer to the first mission, the other to both missions, so they are distinct entities.\n" + \
-        "response: same. justification: both entities refer to the same infrastructure that were built on year 2013. They do not have any conflictual feature, so they are the same entity.\n" + \
-        "resonse: distinct. justification: both entities are located on different continent. Moreover, one of them seems to be part of a NASA program while the other is from a JAXA program.\n" + \
-        "response: distinct. justification: even though the first entity (APOLLO 1) seems to be part of the second entity (APOLLO program), they are distinct entities as APOLLO 1 is described to be the first of three APOLLO missions. therefore, they are related but distinct entities.\n" + \
-        "response: distinct. justification: entity1 is a telescope that is located at the observatory described in entity2. therefore, they are related but distinct entities.\n" + \
-        "response: same. justification: DEEP SPACE 1, VIKING 2 ORBITER (labels of entity1), are two different names for ds1 (entity2).\n" + \
-        "\nEntity 1: " + entity1.to_string(exclude = to_exclude) + \
-        "\nEntity 2: " + entity2.to_string(exclude = to_exclude)
-        #, is part of or has part and justify.\n" \
-        #"response: is part of. justification: it is stated that the first entity is part of the ESA Southern observatory, while the second entity seems to refer to the ESA Southern observatory. Both entities' location match.\n" + \
-        #"response: has part. justification: the first entity is a broader entity of the second entity. It is stated that the UR spacecraft (2nd entity) is a part of the UR investigation (1st entity).\n" + \
+        to_exclude = ["code", "url", "ext_ref", "uri", "type", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
+        prompt = PROMPT_SAME_DISTINCT
+        prompt += "\nEntity 1: " + entity1.to_string(exclude = to_exclude, limit = 200)
+        prompt += "\nEntity 2: " + entity2.to_string(exclude = to_exclude, limit = 200)
         prompt1 = prompt
         regex = r"response:\s*(.*)\s*justification:\s*(.*)"
         retries = 3
         total_retries = 0
         while retries > 0:
             try:
-                print("PROMPT", prompt1)
                 response = self.generate(prompt1,
                                          model = config.OLLAMA_MODEL)
                 is_same, justification = re.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
@@ -461,11 +451,14 @@ class LLMConnection():
                     is_same = False
                 else:
                     raise ValueError(f"The LLM's response was neither same nor distinct.")
+                print(entity1.label)
+                print(entity2.label)
                 print(is_same, justification)
                 return is_same, justification
             except:
                 if retries == 0:
                     raise ValueError(f"The provided answer by {config.OLLAMA_MODEL} was not correct after {total_retries} retries.")
+                print("\tresponse was malformated:", response, "retrying.")
                 prompt1 = prompt + "This is the answer you provided:\n" + response + "\n" + \
                 "Reformulate it to fit this format:\n" + "\n" + \
                 "response: same|distinct\njustification: ..."
@@ -494,17 +487,20 @@ class LLMConnection():
             entity1: first entity
             entity2: compared entity
         """
-        to_exclude = ["code", "url", "uri", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
+        to_exclude = ["code", "url", "uri", "ext_ref", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
+        languages = ["en", "fr", "ca", "es", "de"]
         prompt = "Say weither those two entities are the same, distinct, broad, narrow.\n" \
         "Templates:\n" \
         "response: narrow. justification: voyager I (entity2) is the first of the two voyager mission (entity1). entity1 refers to both missions, while entity2 to one of them, so entity2 is a narrow entity of entity1.\n" + \
         "response: same. justification: both entities refer to the same infrastructure that were built on year 2013. They do not have any conflictual feature, so they are the same entity.\n" + \
         "resonse: distinct. justification: both entities are located on different continent. Moreover, one of them seems to be part of a NASA program while the other is from a JAXA program.\n" + \
+        "resonse: distinct. justification: the first entity is part of a NASA program while the other is from a JAXA program.\n" + \
+        "response: distinct. justification: Mauna Kea and Mauna Loa observatories are distinct observatories. The second entity is an infrastructure that is part of the Mauna Loa observatory. Therefore, it is not related to the Mauna Kea observatory.\n" \
         "response: broad. justification:the first entity (APOLLO 1) seems to be part of the second entity (APOLLO program) as APOLLO 1 is described to be the first of three APOLLO missions. therefore, entity2 is the broader entity of entity1.\n" + \
         "response: distinct. justification: entity1 is a telescope that is located at the observatory described in entity2. therefore, they are related but distinct entities.\n" + \
         "response: same. justification: DEEP SPACE 1, VIKING 2 ORBITER (labels of entity1), are two different names for ds1 (entity2).\n" + \
-        "\nEntity 1: " + entity1.to_string(exclude = to_exclude) + \
-        "\nEntity 2: " + entity2.to_string(exclude = to_exclude)
+        "\nEntity 1: " + entity1.to_string(exclude = to_exclude, languages = languages) + \
+        "\nEntity 2: " + entity2.to_string(exclude = to_exclude, languages = languages)
 
         prompt1 = prompt
         regex = r"response:\s*(.*)\s*justification:\s*(.*)"
@@ -512,7 +508,6 @@ class LLMConnection():
         total_retries = 0
         while retries > 0:
             try:
-                print("PROMPT", prompt1)
                 response = self.generate(prompt1,
                                          model = config.OLLAMA_MODEL)
                 relation, justification = re.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
