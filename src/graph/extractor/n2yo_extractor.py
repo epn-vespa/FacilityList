@@ -56,7 +56,9 @@ class N2yoExtractor(Extractor):
                       "NORAD ID": "NORAD_ID",
                       "Int'l Code": "NSSDCA_ID",
                       "Launch date": "launch_date",
-                      "Period": "satellite_period" # minutes
+                      "Period": "revolution_period", # minutes
+                      "Source": "funding_agency",
+                      "Launch site": "launch_place"
     }
 
     def __init__(self):
@@ -128,8 +130,10 @@ class N2yoExtractor(Extractor):
                     elif attr == "launch_date":
                         dt = datetime.strptime(value, "%B %d, %Y")
                         value = dt.date().isoformat()
-                    elif attr == "satellite_period":
+                    elif attr == "revolution_period":
                         value += "min"
+                    elif attr == "NORAD_ID":
+                        self._get_more_details(value, data)
                     data[attr] = value
                 if to_merge_with:
                     # They have the same NSSDCA_ID.
@@ -142,3 +146,28 @@ class N2yoExtractor(Extractor):
             if empty:
                 break
         return results
+
+    def _get_more_details(self,
+                          norad_id,
+                          data: dict) -> dict:
+        params = {'s': norad_id}
+        url = "https://www.n2yo.com/satellite/"
+        content = CacheManager.get_page(url,
+                                        params = params,
+                                        data_str = "s" + norad_id,
+                                        list_name = self.CACHE)
+        soup = BeautifulSoup(content, "html.parser")
+        infodiv = soup.find("div", id = "satinfo")
+        for line in infodiv.text.split("\n"):
+            line = line.strip()
+            if ':' in line:
+                first_colon = line.find(':')
+                attr, value = line[:first_colon], line[first_colon:]
+                attr = attr.strip()
+                value = value.strip()
+                attr = self.FACILITY_ATTRS.get(attr, None)
+                if not attr:
+                    continue
+                if attr in data:
+                    continue
+                data[attr] = value

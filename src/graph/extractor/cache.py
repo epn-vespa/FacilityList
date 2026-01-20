@@ -343,6 +343,8 @@ class VersionManager():
             new_data: the newly extracted data dictionary
             extractor: the extractor used to extract the new_data dict
         """
+        if not new_data:
+            return
         # First download
         filename = VersionManager.VERSION_MANAGER / (extractor.NAMESPACE + ".pkl")
         old_data = None

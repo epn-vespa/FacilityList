@@ -9,11 +9,11 @@ import importlib
 import inspect
 
 from graph import extractor
+from graph.extractor.extractor import Extractor
 from graph.extractor.imcce_extractor import ImcceExtractor
 from graph.extractor.nssdc_extractor import NssdcExtractor
 from graph.extractor.wikidata_extractor import WikidataExtractor
 from graph.extractor.n2yo_extractor import N2yoExtractor
-
 
 
 class ExtractorLists():
@@ -29,7 +29,9 @@ class ExtractorLists():
             module = importlib.import_module(f"graph.extractor.{module_name}")
 
             for name, obj in inspect.getmembers(module, inspect.isclass):
-                if name.endswith("Extractor"):
+                if (issubclass(obj, Extractor)
+                    and obj.__module__ == module.__name__
+                    and obj is not Extractor):
                     extractors.append(obj)
 
         return extractors
