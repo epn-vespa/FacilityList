@@ -231,7 +231,7 @@ class HybridRetriever():
                       ignore_deprecated = True,
                       top_k: int = 10,
                       human_validation: bool = True,
-                      allow_broad_narrow: bool = True) -> None:
+                      allow_broad_narrow: bool = False) -> None:
         """
         Map entities from extractor1 to entities from extractor2 using the
         hybrid retriever. extractor1 and extractor2 might be inversed depending
@@ -254,7 +254,7 @@ class HybridRetriever():
         self.selector.set_limit(top_k = 3,
                                 limit_iter = 500,
                                 z_score = 0.385,
-                                max_distinct_in_row = 20)
+                                max_distinct_streak = 10)
         for tool in with_tools:
             if isinstance(tool, Embedder):
                 self.add_embedder(tool)
@@ -304,10 +304,10 @@ class HybridRetriever():
                                                   ignore_deprecated = ignore_deprecated)
 
         if not entities1:
-            print(f"Warning: no entities found for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
+            print(f"Warning: no entities to map for {extractor1.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
             return
         if not entities2:
-            print(f"Warning: no entities found for {extractor2.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
+            print(f"Warning: no entities to map for {extractor2.NAMESPACE} with types {', '.join(on_types)}. Ignoring.")
             return
 
 
@@ -439,11 +439,12 @@ class HybridRetriever():
             else:
                 for entity2, score, score_dict in nearest:
                     self.selector.add_score(entity1, entity2, score, score_dict)
-        with open(extractor1.NAMESPACE + '-' + extractor2.NAMESPACE + '.csv', 'w') as f:
-            f.write(str(self.selector))
+        #with open(extractor1.NAMESPACE + '-' + extractor2.NAMESPACE + '.csv', 'w') as f:
+        #    f.write(str(self.selector))
         if not human_validation:
             # Validate from highest to lowest score
             for score, entity1, entity2, scores_dict in self.selector:
+                # TODO use a dynamic allow_broad_narrow, depending on the entities' type.
                 if entity2 not in entities2:
                     continue
                 if allow_broad_narrow:
@@ -465,7 +466,7 @@ class HybridRetriever():
                                           is_human_validation = human_validation,
                                           validator_name = config.OLLAMA_MODEL_NAME)
                     self.selector.remove_entities(entity1, entity2)
-                    self.selector.cut_distinct()
+                    self.selector.cut_distinct_streak()
                 elif llmchoice in [2, 3]: # narrow 2, broad 3. Add predicate arg.
                     self.validate_mapping(indexer1 = indexer1,
                                           indexer2 = indexer2,
@@ -481,10 +482,10 @@ class HybridRetriever():
                                           justification_string  = justification,
                                           is_human_validation = human_validation,
                                           validator_name = config.OLLAMA_MODEL_NAME)
-                    self.selector.cut_distinct()
+                    self.selector.cut_distinct_streak()
                 else:
                     self.invalidate_mapping()
-                    self.selector.update_distinct()
+                    self.selector.update_distinct_streak()
                 self.check_battery()
 
 

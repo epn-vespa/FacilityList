@@ -94,8 +94,8 @@ async def connect_to_ollama():
             # local
             port = 11434
             OLLAMA_HOST = f"http://localhost:{port}"
-            OLLAMA_MODEL = "gemma3:4b"#"orca2:7b"
-            OLLAMA_MODEL_NAME = "gemma3:4b"#"orca2:7b"
+            OLLAMA_MODEL = "gemma3:4b"#"gemma3:12b"#"orca2:7b"#"ministral-3:14b"
+            OLLAMA_MODEL_NAME = "gemma3:4b"#"gemma3:12b"#"orca2:7b"#"ministral-3:14b"
             CONNECTION_MODE = "local ollama"
     return OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, CONNECTION_MODE
 
@@ -108,6 +108,7 @@ def configure_ollama():
     print(f"Connected to {CONNECTION_MODE}. Using model {OLLAMA_MODEL}")
 
 OLLAMA_TEMPERATURE = 0 # Higher temperature = less determinist
+ALLOW_BROAD_NARROW_MATCH = False # This will add difficulty to the classification (same, distinct, narrow, broad)
 
 # LLM computation result files
 LLM_CATEGORIES_FILE = CACHE_DIR / "llm_categories.json"
@@ -119,3 +120,14 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface" ) # Must import before transformers
 SENTENCE_TRANSFORMERS_MODEL = "UniverseTBD/astrollama"
+
+PROMPT_SAME_DISTINCT = """Say weither those entities are the same or distinct. Justify.
+Examples:
+response: same. justification: DEEP SPACE 1 is a different name for VIKING 2 ORBITER.
+response: same. justification: same place, same year of construction.
+response: distinct. justification: entity 1 is a telescope that is part of entity 2.
+response: distinct. justification: Mauna Kea and Mauna Loa are different observatories.
+response: distinct. justification: entity 1 is in Chile while entity 2 is in the USA.
+response: distinct. justification: Voyager II is part of the Voyager program.
+response: distinct. justification: entity 1 is a program funded by NASA, entity 2 is a program funded by JAXA.
+"""

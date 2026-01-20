@@ -40,6 +40,7 @@ class Selector():
         cls.all_selectors[extractor1][extractor2][entity_types_str] = selector
         return selector
 
+
     def __init__(self,
                  extractor1: Extractor,
                  extractor2: Extractor,
@@ -68,10 +69,10 @@ class Selector():
 
 
     def set_limit(self,
-                  top_k: int = 5,
+                  top_k: int = 3,
                   limit_iter: int = -1,
                   z_score: float = -1,
-                  max_distinct_in_row: int = 15):
+                  max_distinct_streak: int = 15):
         """
         Set stopping conditions.
 
@@ -79,21 +80,21 @@ class Selector():
             top_k: how many times an entity from the first list can be selected.
             limit_iter: interrupt after n iterations.
             z_score: 0.385 ~= 65%, 1.96 ~= 95 % (if lists use many filters, a lower z_score is better)
-            max_distinct_in_row: to make it effective, must call update_distinct() and cut_distinct().
+            max_distinct_streak: to make it effective, must call update_distinct_streak() and cut_distinct_streak().
         """
         self._top_k = top_k
         self._limit_iter = limit_iter
         self._z_score = z_score
-        self._max_distinct_in_row = max_distinct_in_row
-        self._distinct_in_row = 0
+        self._max_distinct_streak = max_distinct_streak
+        self._distinct_streak = 0
 
 
-    def update_distinct(self):
-        self._distinct_in_row += 1
+    def update_distinct_streak(self):
+        self._distinct_streak += 1
 
 
-    def cut_distinct(self):
-        self._distinct_in_row = 0
+    def cut_distinct_streak(self):
+        self._distinct_streak = 0
 
 
     def __iter__(self) -> Iterable:
@@ -102,7 +103,7 @@ class Selector():
         """
         s = sorted(self._mappings.keys(), reverse = True)
         if s:
-            mean = sum(s) / len(s)
+            mean = sum(s) / len(s) # TODO FIXME use mappings values' length as the length indicator
             std = math.sqrt(sum((x - mean)**2 for x in s) / len(s))
             threshold = mean + self._z_score * std
             end = False
@@ -112,12 +113,11 @@ class Selector():
             if score < threshold:
                 print(f"Threshold reached. Current score: {score}, threshold: {threshold}")
                 break
-            for raw in self._mappings[score]:
-                if self._distinct_in_row >= self._max_distinct_in_row:
+            for entity1, entity2, score_dict in self._mappings[score]:
+                if self._distinct_streak >= self._max_distinct_streak:
                     print("Got distinct too many times in a row. Interrupting...")
                     end = True
                     break
-                entity1, entity2, score_dict = raw
                 if entity1 in self._ignore or entity2 in self._ignore:
                     # Can not modify self._mappings while iterating over it
                     # so we use _ignore to jump over mappings including
@@ -130,8 +130,8 @@ class Selector():
                     # already tried for entity2 more than top_k times
                     continue
                 if self._limit_iter > 0 and iter_n >= self._limit_iter:
-                    end = True
                     print(f"Reached iteration limit: {iter_n}. Interrupting...")
+                    end = True
                     break
                 tries_count[entity1] += 1
                 tries_count[entity2] += 1
@@ -147,7 +147,7 @@ class Selector():
         most probable candidate pairs.
         """
         res = ""
-        to_exclude = ["code", "url", "uri", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "type", "latitude", "longitude", "has_part", "is_part_of"]
+        to_exclude = ["code", "url", "uri", "ext_ref", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "type", "latitude", "longitude", "has_part", "is_part_of"]
         for score, entity1, entity2, _ in self:
             res += f" ,\"{score}\",\"" + entity1.to_string(exclude = to_exclude) + "\",\"" + entity2.to_string(exclude = to_exclude) + "\"\n"
         return res
