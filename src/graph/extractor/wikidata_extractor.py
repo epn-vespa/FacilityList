@@ -103,9 +103,9 @@ class WikidataExtractor(Extractor):
     """
 
     _TYPES = {entity_types.INVESTIGATION: ["wd:Q5916", # Spaceflight
-                                            #"wd:Q550089" # Astronomical survey
                                             #"wd:Q2133344", # Space mission (manned missions)
                                             #"wd:Q60054001" # Space program (government related: not an obs facility)
+                                            #"wd:Q13226541" # Human spaceflight program (ex: Soyuz programme)
                                           ],
               entity_types.SURVEY: ["wd:Q550089" # Astronomical survey
                                      ],
@@ -323,7 +323,7 @@ class WikidataExtractor(Extractor):
 
 
     def _get_results(self,
-                    query: str) -> dict:
+                     query: str) -> dict:
         """
         Send a request to the enpoint url.
 
@@ -492,7 +492,7 @@ class WikidataExtractor(Extractor):
                                         property_value += " " + unit
                                         _, new_property_value = get_aperture(str(property_value)) # Convert to meters
                                         if new_property_value:
-                                            property_value = new_property_value
+                                            property_value = list(new_property_value)[0]
                                     else:
                                         property_value += " " + unit
                             elif datatype == "time":
@@ -664,7 +664,7 @@ class WikidataExtractor(Extractor):
     def _get_wikipedia_intro(self,
                              data: dict) -> str:
         """
-        Get the Wikidata's first paragraph that describes an entity.
+        Get the Wikipedia's first paragraph that describes an entity.
         Save it in the data's description.
 
         Args:
