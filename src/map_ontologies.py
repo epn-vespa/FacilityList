@@ -180,8 +180,8 @@ class OntologyMapper():
             am.merge_to_naif(PdsExtractor())
         if (self._graph.is_available("n2yo") and
             self._graph.is_available("nssdc")):
-            am.merge_on(extractor1 = N2yoExtractor,
-                        extractor2 = NssdcExtractor,
+            am.merge_on(extractor1 = N2yoExtractor(),
+                        extractor2 = NssdcExtractor(),
                         attr1 = "NSSDCA_ID",
                         attr2 = "code")
             self._description += "merge identifiers: n2yo, nssdc\n"

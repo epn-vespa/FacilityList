@@ -43,22 +43,28 @@ class Graph(G):
     _initialized = False
 
     def __new__(cls,
-                filename: str | list[str] = ""):
+                filename: str | list[str] = "",
+                replace: bool = False):
         """
         Instanciate the graph singleton.
         """
+        if replace and Graph._initialized:
+            cls._GRAPH = None
+            cls._initialized = False
         if cls._GRAPH is None:
             cls._GRAPH = super(Graph, cls).__new__(cls)
         return cls._GRAPH
 
 
     def __init__(self,
-                 filename: str | list[str] = ""):
+                 filename: str | list[str] = "",
+                 replace: bool = False):
         """
         Instanciate the graph singleton.
 
         Args:
             filename: the input ontology's filename or filenames for a merge.
+            replace: if True, will remove the graph in place.
         """
         if Graph._initialized:
             return
@@ -75,7 +81,7 @@ class Graph(G):
         self.bind("wb", self.PROPERTIES.WB)
         self.bind("ivoasem", self.PROPERTIES.IVOASEM)
 
-        # Initialize types
+        # Initialize entity types
         for name, cls in inspect.getmembers(entity_types, inspect.isclass):
             if cls == entity_types.AutoStringMeta or cls == URIRef:
                 continue
@@ -117,6 +123,14 @@ class Graph(G):
                 raise FileNotFoundError(f"File {filename} does not exist.")
 
         self._available_namespaces = input_ontology_namespaces
+
+
+    def reset(self):
+        """
+        Remove the Graph in place. Allow to parse a new Graph.
+        """
+        self._GRAPH = None
+        self._initialized = False
 
 
     def __getattr__(self, attr):
