@@ -5,7 +5,6 @@ and a JSON file of synonyms (Name Resolver).
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-import setup_path
 import argparse
 import re
 import json
@@ -141,12 +140,20 @@ class CsvJson():
         return res
 
 
-    def generate_json_csv(self):
+    def generate_json_csv(self,
+                          allowed_ext_ref: list = []) -> list:
+        """
+        Returns the list of generated terms.
+
+        Args:
+            allowed_ext_ref: if more than one output file is generated,
+            they can reference each other. In this case, we may want to
+            inform each other about the terms.
+        """
+        self._input_graph = Graph(self._input_file, replace = True)
+        # self._input_graph.parse(self._input_file)
         res_json = defaultdict(list)
         res_csv = dict()
-        Graph().reset()
-        self._input_graph = Graph()
-        self._input_graph.parse(self._input_file)
         res = self._input_graph.triples((None, RDF.type, None))
 
         for uri, _, _ in res:
@@ -157,10 +164,12 @@ class CsvJson():
             if not pref_label:
                 continue
             term = standardize_uri(str(pref_label))
+
             if term in res_json:
                 pass
                 #print("Duplicate term:", term) # TODO also modify the term (same as in the other function)
                 # TODO use the type in the term / other information
+                # Problem: most entities (URI) has several types!
             else:
                 res_json[term].append(str(pref_label))
 
@@ -199,39 +208,10 @@ class CsvJson():
 
         self._res_json = res_json
         self._res_csv = res_csv
-
         self._sort_csv()
-        """
-        children_by_broader = self._children_by_broader()
-        res_csv = []
-        already_in = set()
-        for broader in children_by_broader.copy().keys():
-            if broader in already_in:
-                continue
-            self._get_recursive(children_by_broader, broader, res_csv, already_in)
-        for term, entity in self._res_csv.items():
-            entity["term"] = term
-            entity["level"] = 1
-            res_csv.append(entity)
-        self._res_csv = res_csv
-        """
-    ## No need for this func (it is in sort_csv) (children_by_broader)
-    """
-    def _children_by_broader(self) -> dict:
-        children_by_broader = defaultdict(list)
+        allowed_ext_ref.extend(res_json.keys()) # TODO apres manger l'utiliser dans l'input de l'autre appel
+        return allowed_ext_ref
 
-        # First, we feed the children & broader dicts
-        for term, values in self._res_csv.items():
-            more_relations = values["more_relations"].split(' ')
-            for relation in more_relations:
-                if relation.startswith('skos:broader'):
-                    broader = re.findall(r'\((.+)\)', relation)[0]
-                    children_by_broader[broader].append(term)
-                    # Remove broader from more_relations
-                    values["more_relations"] = values["more_relations"].replace(relation, "") # Remove this broader relation
-                    break
-        return children_by_broader
-    """
 
     def write_json(self):
         """
@@ -274,7 +254,7 @@ def main(input_ontology: str,
     CJ = CsvJson(input_ontology,
                  output_csv,
                  output_json)
-    CJ.generate_json_csv()
+    CJ.generate_json_csv([])
     CJ.write_json()
     CJ.write_csv()
 

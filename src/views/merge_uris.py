@@ -4,7 +4,6 @@ Generate a public ontology from the output of disambiguation.
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-import setup_path
 import argparse
 
 from graph.graph import Graph
@@ -152,7 +151,6 @@ class MergeURIs():
             for old_obj, new_obj in self._term_by_synonym_uri.items():
                 old_obj = URIRef(old_obj)
                 for subj, pred, _ in self._output_graph.triples((None, attr, old_obj)):
-                    #print("!!!!found!", subj, pred, old_obj, "with new obj:", new_obj)
                     self._output_graph.remove((subj, pred, old_obj))
                     self._output_graph.add((subj, pred, Properties().OBS[new_obj]))
             # Remove Wikidata links (for WD hasPart/isPartOf that was not linked to any authoritative list)

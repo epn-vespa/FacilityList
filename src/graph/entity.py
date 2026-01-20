@@ -179,6 +179,47 @@ class Entity():
         return res_for_lang
 
 
+    def remove_values(self,
+                      attr: str,
+                      values: list = [],
+                      languages: list = []):
+        """
+        Remove all values for attr, or remove only the specified values
+        for this attr if specified.
+        """
+        if attr not in self._data:
+            return
+        if not values:
+            del self._data[attr]
+        else:
+            v = self._data[attr]
+            if type(v) not in (list, set):
+                if type(v) == tuple:
+                    # language
+                    vv = v[0]
+                    lang = v[1]
+                    if lang and languages and lang not in languages:
+                        return # ignore this language
+                else:
+                    vv = v
+                for val in values:
+                    if vv == val:
+                        del self._data[attr]
+            else:
+                for vv in v:
+                    if type(vv) == tuple:
+                        # language
+                        vvv = vv[0]
+                        lang = vv[1]
+                        if lang and languages and lang not in languages:
+                            continue # ignore this language
+                    else:
+                        vvv = vv
+                    for val in values:
+                        if vvv == val:
+                            v.remove(vv)
+
+
     def get_synonyms(self) -> List[URIRef]:
         """
         Get the URIs of the synonyms of this entity.
@@ -397,7 +438,7 @@ class Entity():
                 res = label + '. '
         if alt_labels:
             key = "Also known as: "
-            res += key + ', '.join(alt_labels) + '. '
+            res += key + ', '.join(alt_labels)[:limit] + '. '
         for key, value in sorted(self.data.items()):
             key = properties.get_attr_name(key)
             value = self.get_values_for(key, languages = languages)

@@ -10,10 +10,9 @@ Split the instruments from an ontology.
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-import setup_path
 import argparse
 
-from rdflib import Graph as G, RDFS, RDF
+from rdflib import Graph as G, RDFS, RDF, URIRef, Namespace
 from graph.graph import Graph
 from graph.properties import Properties
 
@@ -23,12 +22,11 @@ def split_instruments(input_file: str):
     """
     Set instruments and observation facilities apart in distinct ontologies.
     """
-    graph = Graph()
+    graph = Graph(input_file, replace = True)
     facilities_file = input_file.removesuffix(".ttl") + "_facilities.ttl"
     instruments_file = input_file.removesuffix(".ttl") + "_instruments.ttl"
     output_facilities = G()
     output_instruments = G()
-    graph.parse(input_file)
     output_facilities.parse(input_file)
 
     for instrument_uri, _, _ in graph.triples((None, RDF.type, graph.PROPERTIES.OBS["instrument"])):
@@ -47,10 +45,27 @@ def split_instruments(input_file: str):
             output_instruments.add((s, p, o))
 
     # Bind namespaces to instruments output ontology
-    output_instruments.bind("obsf", properties.OBS)
+    output_instruments.bind("obs", properties.OBS)
+    output_instruments.bind("obsi", properties.OBSI)
+    output_instruments.bind("obsf", properties.OBSF)
     output_instruments.bind("geo1", properties.GEO)
     output_instruments.bind("wb", properties.WB)
     output_instruments.bind("ivoasem", properties.IVOASEM)
+
+    output_facilities.bind("obsf", properties.OBSF)
+    output_facilities.bind("obsi", properties.OBSI)
+
+    changes = change_namespace(output_facilities,
+                               properties.OBS,
+                               properties.OBSF)
+    changes = change_namespace(output_instruments,
+                               properties.OBS,
+                               properties.OBSI,
+                               changes = changes)
+    update_object_namespaces(output_facilities,
+                             changes = changes)
+    update_object_namespaces(output_instruments,
+                             changes = changes)
 
 
     with open(facilities_file, 'w') as file:
@@ -62,6 +77,47 @@ def split_instruments(input_file: str):
         print(f"Instruments ontology saved in {instruments_file}")
 
     return facilities_file, instruments_file
+
+
+def change_namespace(graph: Graph,
+                     old_ns: Namespace = properties.OBS,
+                     new_ns: Namespace = properties.OBSF,
+                     changes: dict = dict()):
+    """
+    Replace a Namespace in a graph.
+
+    Args:
+        graph: the Graph to update with new namespaces
+        new_ns: the main Namespace of subjects
+        changes: dictionary to save changes (old->new) of URIs for
+                 updating cross-links between more than one graphs
+    """
+    old_ns = properties.OBS
+    for s, p, o in graph.triples((None, None, None)):
+        s2 = s
+        if isinstance(s, URIRef) and str(s).startswith(str(old_ns)):
+            s2 = URIRef(str(s).replace(str(old_ns), str(new_ns), 1))
+            graph.remove((s, p, o))
+            graph.add((s2, p, o))
+            changes[s] = s2
+    return changes
+
+
+def update_object_namespaces(graph: Graph,
+                             changes: dict):
+    """
+    Take the changes that were made in URIs of subjects
+    to update the objects as well.
+
+    Args:
+        graph: graph to update
+        changes: dict of changes (new terms by previous terms)
+    """
+    for s, p, o in graph.triples((None, None, None)):
+        if o in changes:
+            o2 = changes[o]
+            graph.remove((s, p, o))
+            graph.add((s, p, o2))
 
 
 if __name__ == "__main__":
