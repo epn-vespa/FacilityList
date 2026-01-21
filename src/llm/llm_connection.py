@@ -6,9 +6,11 @@ import atexit
 import json
 import pickle
 import re
+import os
 import requests
-from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE, PROMPT_SAME_DISTINCT
 import config
+from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE, PROMPT_SAME_DISTINCT, CACHE_DIR
+from collections import defaultdict
 from utils.performances import timeall, timeit
 from graph.entity_types import *
 
@@ -304,7 +306,8 @@ class LLMConnection():
     @classmethod
     def generate(self,
                  prompt: str,
-                 model: str) -> str:
+                 model: str,
+                 num_predict: int = 256) -> str:
 
         """
         Send a simple generate query to the Ollama API.
@@ -312,6 +315,7 @@ class LLMConnection():
         Args:
             prompt: the prompt to send to the LLM.
             model: the model to use.
+            num_predict: maximum length of the predicted message.
         """
         response = requests.post(
             f'{config.OLLAMA_HOST}/api/generate',
@@ -320,7 +324,7 @@ class LLMConnection():
                 'prompt': prompt,
                 'stream': False,
                 'temperature': OLLAMA_TEMPERATURE, # low temperature = more determinist. Default = 0.8
-                'num_predict': 200,
+                'num_predict': num_predict,
             }
         )
         if response.ok:
@@ -416,11 +420,27 @@ class LLMConnection():
         """
         return response
 
+    loaded = False
+    cache_same_disinct = defaultdict(lambda: defaultdict(tuple[bool, str]))
+    def _load_cache_same_distinct(self):
+        path = CACHE_DIR / "LLM"
+        if os.path.exists(path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json"):
+            json.load(path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json")
+        atexit.register(self._save_cache_same_distinct)
+        loaded = True
+
+    def _save_cache_same_distinct(self):
+        path = CACHE_DIR / "LLM"
+        path.mdkir(parents = True, exist_ok = True)
+        json.dump(self.cache_same_disinct,
+                  path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json")
+
 
     @timeall
     def validate_same_distinct(self,
                                entity1,
-                               entity2) -> tuple[bool, str]:
+                               entity2,
+                               from_cache: bool = True) -> tuple[bool, str]:
         """
         Let the LLM validate or invalidate a candidate pair.
 
@@ -431,7 +451,19 @@ class LLMConnection():
         Args:
             entity1: first entity
             entity2: compared entity
+            from_cache: save LLMs responses into a cache.
+                        Use responses from previous calls.
         """
+        if from_cache:
+            if not self.loaded:
+                self._load_cache_same_distinct()
+            if entity1.uri in self.cache_same_disinct:
+                if entity2.uri in self.cache_same_disinct[entity1.uri]:
+                    return self.cache_same_disinct[entity1.uri][entity2.uri]
+            elif entity2.uri in self.cache_same_distinct:
+                if entity1.uri in self.cache_same_distinct[entity2.uri]:
+                    return self.cache_same_distinct[entity2.uri][entity1.uri]
+
         to_exclude = ["code", "url", "ext_ref", "uri", "type", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
         prompt = PROMPT_SAME_DISTINCT
         prompt += "\nEntity 1: " + entity1.to_string(exclude = to_exclude, limit = 200)
@@ -454,6 +486,8 @@ class LLMConnection():
                 print(entity1.label)
                 print(entity2.label)
                 print(is_same, justification)
+                if from_cache:
+                    self.cache_same_disinct[entity1.uri][entity2.uri] = (is_same, justification)
                 return is_same, justification
             except:
                 if retries == 0:
