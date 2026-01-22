@@ -217,6 +217,8 @@ class SpaseExtractor(Extractor):
         data_fixer.fix(result, self)
         self._self_merge(result)
         self._restore_self_ref(result)
+        self._self_merge_instruments(result)
+        self._restore_self_ref_part(result)
         return result
 
 
@@ -364,11 +366,31 @@ class SpaseExtractor(Extractor):
         reached = 0
         items = sorted(result.items())
         for uri1, data1 in items:
-            for uri2, data2 in result.items():
+            for uri2, data2 in items:
                 if uri1 >= uri2:
                     continue
                 # Filter on type
                 if data1.get("type") != data2.get("type"):
+                    continue
+                if data1.get("type") == entity_types.INSTRUMENT:
+                    continue
+
+                # Prevent two objects from the same folder to match
+                urls1 = data1.get("url", [])
+                urls2 = data2.get("url", [])
+                if type(urls1) == str:
+                    urls1 = [urls1]
+                if type(urls2) == str:
+                    urls2 = [urls2]
+                interrupt = False
+                for url1 in urls1:
+                    for url2 in urls2:
+                        if url1.split('/')[7] == url2.split('/')[7]:
+                            interrupt = True
+                            break
+                    if interrupt:
+                        break
+                if interrupt:
                     continue
 
                 # Merge on identifiers
@@ -380,18 +402,24 @@ class SpaseExtractor(Extractor):
                         v1.extend(data1[attr])
                     if attr in data2:
                         v2.extend(data2[attr])
-                if any(v in v2 for v in v1):
+                if any(v in v2 and v for v in v1):
                     uf.union(uri1, uri2)
                     continue
 
-                label1 = data1["label"]
+                label1 = data1["label"] # Problem: Cluster 1, 2, 3 and 4 have the same prefLabel. Solution: use the longest label as pref label
                 label2 = data2["label"]
+                nums1 = [l for l in label1 if l in "0123456789"]
+                nums2 = [l for l in label2 if l in "0123456789"]
+                if nums1 != nums2:
+                    # Prevent Cluster, Cluster 1 and Cluster 2 to map together
+                    continue
+
                 # Merge on first words
                 word1 = label1.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
                 word2 = label2.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
+
                 # Filter out incompatible entries
-                # if they have the same id, they match
-                if word1 != word2:
+                if word1 != word2 or not word1:
                     continue
                 if "NSSDCA_ID" in data1 and "NSSDCA_ID" in data2:
                     if data1["NSSDCA_ID"] != data2["NSSDCA_ID"]:
@@ -414,12 +442,16 @@ class SpaseExtractor(Extractor):
                     dist = distance((latitude1, longitude1), (latitude2, longitude2))
                     if dist < 0.3:
                         uf.union(uri1, uri2)
-                elif "start_date" in data1 and "start_date" in data2:
-                    if data1["start_date"] == data2["start_date"]:
-                        uf.union(uri1, uri2)
                 elif "launch_date" in data1 and "launch_date" in data2:
                     if data1["launch_date"] == data2["launch_date"]:
                         uf.union(uri1, uri2)
+                elif "start_date" in data1 and "start_date" in data2:
+                    if data1["start_date"] == data2["start_date"]:
+                        uf.union(uri1, uri2)
+                else:
+                    if label1.lower() == label2.lower():
+                        uf.union(uri1, uri2)
+                        continue
 
         for label in result:
             groups[uf.find(label)].add(label)
@@ -447,6 +479,71 @@ class SpaseExtractor(Extractor):
                 replacement_labels[label2] = longest
         # TODO now do an UnionFind for ids & prior ids
         return replacement_labels
+
+
+    def _self_merge_instruments(self,
+                                result: dict):
+        """
+        Merge instruments that have the same host and
+        the same label. Call after merging facilities
+        and restoring refs.
+
+        Args:
+            result: the result dict
+        """
+        uf = UnionFind()
+        all_instruments = set()
+        for _, data in result.items():
+            # has_part
+            has_part = data.get("has_part", [])
+            if len(has_part) <= 1:
+                continue
+            for instrument1 in has_part:
+                for instrument2 in has_part:
+                    if instrument1 >= instrument2:
+                        continue
+                    data1 = result[instrument1]
+                    data2 = result[instrument2]
+                    # If same identifier / prior id / NSSDCA ID
+                    to_check = ["NSSDCA_ID", "prior_id", "code"]
+                    v1 = []
+                    v2 = []
+                    for attr in to_check:
+                        if attr in data1:
+                            v1.extend(data1[attr])
+                        if attr in data2:
+                            v2.extend(data2[attr])
+                    if any(v in v2 and v for v in v1):
+                        uf.union(instrument1, instrument2)
+                        all_instruments.update([instrument1, instrument2])
+                        continue
+                    # If same label
+                    label1 = data1["label"]
+                    label2 = data2["label"]
+                    if label1.lower() == label2.lower():
+                        uf.union(instrument1, instrument2)
+                        all_instruments.update([instrument1, instrument2])
+                        continue
+                    # If same filename
+                    urls1 = data1["url"]
+                    urls2 = data2["url"]
+                    if type(urls1) == str:
+                        urls1 = [urls1]
+                    if type(urls2) == str:
+                        urls2  = [urls2]
+                    urls1 = [f1.split('/')[-1] for f1 in urls1]
+                    urls2 = [f2.split('/')[-1] for f2 in urls2]
+                    if any (url1 in urls2 and url1 for url1 in urls1):
+                        uf.union(instrument1, instrument2)
+                        all_instruments.update([instrument1, instrument2])
+                        continue
+        for instrument2 in all_instruments:
+            instrument1 = uf.find(instrument2)
+            if instrument1 == instrument2:
+                continue
+            data1 = result[instrument1]
+            data2 = result[instrument2]
+            del result[instrument2]
 
 
     def _restore_self_ref(self,
@@ -491,6 +588,19 @@ class SpaseExtractor(Extractor):
                     result[part]["has_part"].add(key)
                 else:
                     result[part]["has_part"] = {key}
+
+
+    def _restore_self_ref_part(self,
+                               result: dict):
+        """
+        Remove narrowers that are not referenced in the
+        result dict.
+        """
+        for _, data in result.items():
+            parts = data.get("has_part", [])
+            for part in parts.copy():
+                if part not in result:
+                    parts.remove(part)
 
 
 def extract_items(d: dict,
