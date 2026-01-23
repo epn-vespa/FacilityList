@@ -13,7 +13,7 @@ from graph import entity_types
 from graph.extractor.cache import CacheManager
 from graph.extractor.extractor import Extractor
 from graph.extractor import data_fixer
-from utils.string_utilities import clean_string, has_cospar_nssdc_id, standardize_uri
+from utils.string_utilities import clean_string, has_cospar_nssdc_id, standardize_uri, cut_acronyms
 from utils.dict_utilities import merge_into, UnionFind, majority_voting_merge
 from utils.location_utilities import distance
 import json
@@ -148,7 +148,7 @@ class SpaseExtractor(Extractor):
                     values = {values}
                 for value in values:
                     value = clean_string(value)
-                    if value == "None":
+                    if value == "None" or value == "-":
                         continue
                     elif "PriorID" in rel:
                         if "\n" in value or len(value) > 150:
@@ -176,6 +176,7 @@ class SpaseExtractor(Extractor):
                     if key == "label":
                         assert len(values) == 1
                         label = value
+                        assert "label" not in data
                         data[key] = value
                     elif key == "alt_label":
                         ok, nssdc_id, launch_date = has_cospar_nssdc_id(value)
@@ -202,7 +203,7 @@ class SpaseExtractor(Extractor):
 
             # url
             href = self.URL + "/tree/master" + file.split(self.GIT_REPO)[1]
-            data["url"] = href
+            data["url"] = {href}
 
             # type
             self._get_type(data)
@@ -363,10 +364,9 @@ class SpaseExtractor(Extractor):
         replacement_labels = dict()
         uf = UnionFind()
         groups = defaultdict(set)
-        reached = 0
-        items = sorted(result.items())
-        for uri1, data1 in items:
-            for uri2, data2 in items:
+        # items = sorted(result.items())
+        for uri1, data1 in result.items():
+            for uri2, data2 in result.items():
                 if uri1 >= uri2:
                     continue
                 # Filter on type
@@ -376,6 +376,7 @@ class SpaseExtractor(Extractor):
                     continue
 
                 # Prevent two objects from the same folder to match
+                """
                 urls1 = data1.get("url", [])
                 urls2 = data2.get("url", [])
                 if type(urls1) == str:
@@ -392,6 +393,7 @@ class SpaseExtractor(Extractor):
                         break
                 if interrupt:
                     continue
+                """
 
                 # Merge on identifiers
                 to_check = ["NSSDCA_ID", "prior_id", "code"]
@@ -402,7 +404,7 @@ class SpaseExtractor(Extractor):
                         v1.extend(data1[attr])
                     if attr in data2:
                         v2.extend(data2[attr])
-                if any(v in v2 and v for v in v1):
+                if set(v1) & set(v2):
                     uf.union(uri1, uri2)
                     continue
 
@@ -438,9 +440,8 @@ class SpaseExtractor(Extractor):
                         assert len(latitude2) == 1
                         latitude2 = list(latitude2)[0]
                         longitude2 = list(longitude2)[0]
-                    reached += 1
                     dist = distance((latitude1, longitude1), (latitude2, longitude2))
-                    if dist < 0.3:
+                    if dist < 3.0:
                         uf.union(uri1, uri2)
                 elif "launch_date" in data1 and "launch_date" in data2:
                     if data1["launch_date"] == data2["launch_date"]:
@@ -449,16 +450,26 @@ class SpaseExtractor(Extractor):
                     if data1["start_date"] == data2["start_date"]:
                         uf.union(uri1, uri2)
                 else:
-                    if label1.lower() == label2.lower():
+                    alt_labels1 = data1.get("alt_label", set())
+                    alt_labels2 = data2.get("alt_label", set())
+                    label1, acr1 = cut_acronyms(label1)
+                    label2, acr2 = cut_acronyms(label2)
+                    alt_labels1.add(label1)
+                    alt_labels2.add(label2)
+                    if alt_labels1 & alt_labels2:
                         uf.union(uri1, uri2)
                         continue
+                    """
+                    if label1.lower() == label2.lower():# or acr1 == acr2:
+                        uf.union(uri1, uri2)
+                        continue
+                    """
 
-        for label in result:
-            groups[uf.find(label)].add(label)
+        for uri in result: # TODO replace this loop by using only those that merged ?
+            groups[uf.find(uri)].add(uri)
         for synset in groups.values():
             if len(synset) <= 1:
                 continue
-
             # keep the longest label
             synset = sorted(synset, key=lambda x: (len(x), x), reverse=True)
             # longest = synset[0]
@@ -474,7 +485,8 @@ class SpaseExtractor(Extractor):
             for label2 in synset:
                 if label2 == longest:
                     continue
-                merge_into(data1, result[label2])
+                data2 = result[label2]
+                merge_into(data1, data2)
                 del result[label2]
                 replacement_labels[label2] = longest
         # TODO now do an UnionFind for ids & prior ids
@@ -493,9 +505,9 @@ class SpaseExtractor(Extractor):
         """
         uf = UnionFind()
         all_instruments = set()
-        for _, data in result.items():
+        for _, data in sorted(result.items()):
             # has_part
-            has_part = data.get("has_part", [])
+            has_part = sorted(data.get("has_part", []))
             if len(has_part) <= 1:
                 continue
             for instrument1 in has_part:
@@ -504,6 +516,33 @@ class SpaseExtractor(Extractor):
                         continue
                     data1 = result[instrument1]
                     data2 = result[instrument2]
+
+                    if data1["type"] != entity_types.INSTRUMENT:
+                        continue
+                    if data2["type"] != entity_types.INSTRUMENT:
+                        continue
+
+                    # If same label
+                    label1 = data1["label"]
+                    label2 = data2["label"]
+                    if label1.lower() == label2.lower():
+                        uf.union(instrument1, instrument2)
+                        all_instruments.update([instrument1, instrument2])
+                        continue
+
+                    # If same filename
+                    urls1 = data1["url"]
+                    urls2 = data2["url"]
+                    if type(urls1) == str:
+                        urls1 = [urls1]
+                    if type(urls2) == str:
+                        urls2  = [urls2]
+                    urls1 = [f1.split('/')[-1] for f1 in urls1 if f1]
+                    urls2 = [f2.split('/')[-1] for f2 in urls2 if f2]
+                    if set(urls1) & set(urls2):
+                        uf.union(instrument1, instrument2)
+                        all_instruments.update([instrument1, instrument2])
+                        continue
                     # If same identifier / prior id / NSSDCA ID
                     to_check = ["NSSDCA_ID", "prior_id", "code"]
                     v1 = []
@@ -513,27 +552,7 @@ class SpaseExtractor(Extractor):
                             v1.extend(data1[attr])
                         if attr in data2:
                             v2.extend(data2[attr])
-                    if any(v in v2 and v for v in v1):
-                        uf.union(instrument1, instrument2)
-                        all_instruments.update([instrument1, instrument2])
-                        continue
-                    # If same label
-                    label1 = data1["label"]
-                    label2 = data2["label"]
-                    if label1.lower() == label2.lower():
-                        uf.union(instrument1, instrument2)
-                        all_instruments.update([instrument1, instrument2])
-                        continue
-                    # If same filename
-                    urls1 = data1["url"]
-                    urls2 = data2["url"]
-                    if type(urls1) == str:
-                        urls1 = [urls1]
-                    if type(urls2) == str:
-                        urls2  = [urls2]
-                    urls1 = [f1.split('/')[-1] for f1 in urls1]
-                    urls2 = [f2.split('/')[-1] for f2 in urls2]
-                    if any (url1 in urls2 and url1 for url1 in urls1):
+                    if set(v1) & set(v2):
                         uf.union(instrument1, instrument2)
                         all_instruments.update([instrument1, instrument2])
                         continue
@@ -543,6 +562,7 @@ class SpaseExtractor(Extractor):
                 continue
             data1 = result[instrument1]
             data2 = result[instrument2]
+            merge_into(data1, data2)
             del result[instrument2]
 
 

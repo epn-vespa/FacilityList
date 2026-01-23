@@ -21,17 +21,17 @@ def merge_into(newer_entity_dict: Dict,
     for key, values in prior_entity_dict.copy().items():
         #if key == "prior_id":
         #    continue
+        if type(values) != set:
+            if type(values) == list:
+                values = set(values)
+            else:
+                values = {values}
         # Label
         if key == "label":
-            if isinstance(values, str):
-                values = {values}
-            else:
-                values = set(values)
             if "alt_label" in newer_entity_dict:
                  # Keep the old label as an alternate label of the new entity
                 if type(newer_entity_dict["alt_label"]) == list:
                     newer_entity_dict["alt_label"] = set(newer_entity_dict["alt_label"])
-                # set
                 newer_entity_dict["alt_label"].update(values)
             else:
                 newer_entity_dict["alt_label"] = values
@@ -43,8 +43,6 @@ def merge_into(newer_entity_dict: Dict,
                 merge_into = set(merge_into)
             else:
                 merge_into = {merge_into}
-            if type(values) not in (list, set):
-                values = {values}
             for value in values:
                 if value not in merge_into:
                     merge_into.add(value)
@@ -58,6 +56,7 @@ def merge_into(newer_entity_dict: Dict,
             elif type(newer_entity_dict["alt_label"]) == list:
                 newer_entity_dict["alt_label"] = set(newer_entity_dict["alt_label"])
             newer_entity_dict["alt_label"] -= {newer_entity_dict["label"]}
+        # TODO do the same for id and prior_id
 
 
 class UnionFind:
