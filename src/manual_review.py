@@ -126,7 +126,7 @@ class ManualReviewer():
         if new_relation != SKOS.exactMatch and old_relation == SKOS.exactMatch:
             self.remove_exact_match(subj_uri = subj_uri, obj_uri = obj_uri, new_relation = new_relation)
         if new_relation == SKOS.exactMatch:
-            self.add_exact_match(subj_uri = subj_uri, obj_uri = obj_uri, old_relation = old_relation)
+            self.add_exact_match(subj_uri = subj_uri, obj_uri = obj_uri)
         if {new_relation, old_relation}.intersection({SKOS.broadMatch, SKOS.narrowMatch}):
             self.change_narrow_broad(subj_uri = subj_uri, obj_uri = obj_uri, old_relation = old_relation, new_relation = new_relation)
 
@@ -373,7 +373,7 @@ class ManualReviewer():
         return filter_date, filter_lists, filter_validators
 
 
-    def _get_mappings(self):
+    def _get_mappings(self) -> set[URIRef]:
         """
         Get all mappings to review.
         """
@@ -396,7 +396,7 @@ class ManualReviewer():
             }}
         }}
         """
-        return self._mapping.query(query)
+        return set(self._mapping.query(query))
 
 
     def _initialize_mapping_set(self,
@@ -441,7 +441,8 @@ class ManualReviewer():
             else:
                 self._validate_mapping(mapping_uri,
                                        justification)
-        exit() # Interrupt daemon thread
+        self.write()
+        print("Review done. Please interrupt this program (Ctrl+C).")
 
 
     def _terminal_validation(self,
@@ -504,15 +505,16 @@ class ManualReviewer():
                 <{mapping_uri}> sssom:subject_id ?subj ;
                                 sssom:predicate_id ?rel ;
                                 sssom:object_id ?obj ;
-                                rdfs:comment ?justification ;
                                 obsf:hybrid ?score ;
                                 sssom:creator_label ?creator_label ;
                                 sssom:mapping_date ?creation_date ;
                                 sssom:subject_source ?subject_source ;
                                 sssom:object_source ?object_source .
+                OPTIONAL {{
+                        <{mapping_uri}>  rdfs:comment ?justification ;
+                    }}
                 }}"""
         res = self._mapping.query(query)
-        #old_rel = None
         for subj, pred, obj, justification, score, creator, creation_date, subject_source, object_source in res:
             manual_review_server.update_state(subject = Entity(subj).__dict__(False),
                                               predicate = str(pred).split("#")[-1].removesuffix("_list"),
@@ -578,10 +580,10 @@ def main(folder: str,
         # Open the server & web browser client for manual disambiguation
         import threading
         from data_mapper.gui import manual_review_server
-        thread = threading.Thread(target = mr.review, daemon = True)
+        thread = threading.Thread(target = mr.review)
         thread.start()
         print("Serving on http://127.0.0.1:5000")
-        manual_review_server.app.run(debug = True, use_reloader = False)
+        manual_review_server.app.run(debug = False, use_reloader = False)
     else:
         mr.review()
 
