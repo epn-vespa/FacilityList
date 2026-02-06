@@ -13,7 +13,7 @@ from graph import entity_types
 from graph.extractor.cache import CacheManager
 from graph.extractor.extractor import Extractor
 from graph.extractor import data_fixer
-from utils.string_utilities import clean_string, has_cospar_nssdc_id, standardize_uri, cut_acronyms
+from utils.string_utilities import clean_string, has_cospar_nssdc_id, standardize_uri, cut_acronyms, get_suffix_number
 from utils.dict_utilities import merge_into, UnionFind, majority_voting_merge
 from utils.location_utilities import distance
 import json
@@ -220,6 +220,7 @@ class SpaseExtractor(Extractor):
         self._restore_self_ref(result)
         self._self_merge_instruments(result)
         self._restore_self_ref_part(result)
+        self._remove_reflexive_parts(result)
         return result
 
 
@@ -361,18 +362,27 @@ class SpaseExtractor(Extractor):
         Returns:
             the old label with the new label to use instead
         """
+        reached = 0
         replacement_labels = dict()
         uf = UnionFind()
         groups = defaultdict(set)
-        # items = sorted(result.items())
-        for uri1, data1 in result.items():
-            for uri2, data2 in result.items():
+        items = sorted(result.items()) # Make sure to always get the same uris
+        for uri1, data1 in items:
+            if data1.get("type") == entity_types.INSTRUMENT:
+                continue
+            label1 = data1["label"]
+            labels1 = data1.get("alt_label", set())
+            labels1.add(label1)
+            first_words1 = {label.replace('-', ' ').split(' ')[0] for label in labels1 if label}
+
+            # description1 = data1.get("description", "")
+            num1 = get_suffix_number(uri1)
+            # word1 = label1.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
+            for uri2, data2 in items:
                 if uri1 >= uri2:
                     continue
                 # Filter on type
                 if data1.get("type") != data2.get("type"):
-                    continue
-                if data1.get("type") == entity_types.INSTRUMENT:
                     continue
 
                 # Prevent two objects from the same folder to match
@@ -408,26 +418,38 @@ class SpaseExtractor(Extractor):
                     uf.union(uri1, uri2)
                     continue
 
-                label1 = data1["label"] # Problem: Cluster 1, 2, 3 and 4 have the same prefLabel. Solution: use the longest label as pref label
-                label2 = data2["label"]
-                nums1 = [l for l in label1 if l in "0123456789"]
-                nums2 = [l for l in label2 if l in "0123456789"]
-                if nums1 != nums2:
+                # Solution: use the longest label as pref label
+                num2 = get_suffix_number(uri2)
+                if num1 != num2:
                     # Prevent Cluster, Cluster 1 and Cluster 2 to map together
+                    # Problem: Cluster-Rumba is the same as Cluster 1.
+                    # Same for SWARM, SWARM-A, SWARM-B, SWARM-C
                     continue
+                #nums1 = [l for l in label1 if l in "0123456789"]
+                #nums2 = [l for l in label2 if l in "0123456789"]
+                #if nums1 != nums2:
+                 #   continue
 
+                label2 = data2["label"]
+                labels2 = data2.get("alt_label", set())
+                labels2.add(label2)
+                first_words2 = {label.replace('-', ' ').split(' ')[0] for label in labels2 if label}
                 # Merge on first words
-                word1 = label1.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
-                word2 = label2.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
-
+                # word2 = label2.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
                 # Filter out incompatible entries
-                if word1 != word2 or not word1:
+                #if (word1 != word2 or not word1):# and description1 != description2:
+                #    continue
+                if not first_words1 & first_words2:
                     continue
                 if "NSSDCA_ID" in data1 and "NSSDCA_ID" in data2:
                     if data1["NSSDCA_ID"] != data2["NSSDCA_ID"]:
                         continue
+                if uri1.split('/')[-1] == uri2.split('/')[-1]:
+                    uf.union(uri1, uri2)
+                    continue
                 if "latitude" in data1 and "latitude" in data2 and "longitude" in data1 and "longitude" in data2:
                     # Not reached the same amount of time !
+                    reached += 1
                     latitude1 = data1["latitude"]
                     longitude1 = data1["longitude"]
                     latitude2 = data2["latitude"]
@@ -443,11 +465,11 @@ class SpaseExtractor(Extractor):
                     dist = distance((latitude1, longitude1), (latitude2, longitude2))
                     if dist < 3.0:
                         uf.union(uri1, uri2)
-                elif "launch_date" in data1 and "launch_date" in data2:
-                    if data1["launch_date"] == data2["launch_date"]:
-                        uf.union(uri1, uri2)
                 elif "start_date" in data1 and "start_date" in data2:
                     if data1["start_date"] == data2["start_date"]:
+                        uf.union(uri1, uri2)
+                elif "launch_date" in data1 and "launch_date" in data2:
+                    if data1["launch_date"] == data2["launch_date"]:
                         uf.union(uri1, uri2)
                 else:
                     alt_labels1 = data1.get("alt_label", set())
@@ -456,6 +478,8 @@ class SpaseExtractor(Extractor):
                     label2, acr2 = cut_acronyms(label2)
                     alt_labels1.add(label1)
                     alt_labels2.add(label2)
+                    alt_labels1 = {l.replace('-', ' ').lower() for l in alt_labels1}
+                    alt_labels2 = {l.replace('-', ' ').lower() for l in alt_labels2}
                     if alt_labels1 & alt_labels2:
                         uf.union(uri1, uri2)
                         continue
@@ -508,24 +532,31 @@ class SpaseExtractor(Extractor):
         for _, data in sorted(result.items()):
             # has_part
             has_part = sorted(data.get("has_part", []))
+            # SWARM -> SWARM-A, SWARM-B, SWARM-C (bug)
             if len(has_part) <= 1:
                 continue
             for instrument1 in has_part:
+                data1 = result[instrument1]
+                if data1["type"] != entity_types.INSTRUMENT:
+                    continue
                 for instrument2 in has_part:
                     if instrument1 >= instrument2:
                         continue
-                    data1 = result[instrument1]
                     data2 = result[instrument2]
 
-                    if data1["type"] != entity_types.INSTRUMENT:
-                        continue
                     if data2["type"] != entity_types.INSTRUMENT:
                         continue
 
                     # If same label
+                    alt_labels1 = data1.get("alt_label", set())
+                    alt_labels2 = data2.get("alt_label", set())
+                    # TODO try to use alt labels here (as in _self_merge)
                     label1 = data1["label"]
                     label2 = data2["label"]
-                    if label1.lower() == label2.lower():
+                    alt_labels1.add(label1)
+                    alt_labels2.add(label2)
+                    # if label1.lower() == label2.lower():
+                    if alt_labels1 & alt_labels2:
                         uf.union(instrument1, instrument2)
                         all_instruments.update([instrument1, instrument2])
                         continue
@@ -544,6 +575,7 @@ class SpaseExtractor(Extractor):
                         all_instruments.update([instrument1, instrument2])
                         continue
                     # If same identifier / prior id / NSSDCA ID
+                    """
                     to_check = ["NSSDCA_ID", "prior_id", "code"]
                     v1 = []
                     v2 = []
@@ -556,6 +588,7 @@ class SpaseExtractor(Extractor):
                         uf.union(instrument1, instrument2)
                         all_instruments.update([instrument1, instrument2])
                         continue
+                    """
         for instrument2 in all_instruments:
             instrument1 = uf.find(instrument2)
             if instrument1 == instrument2:
@@ -599,7 +632,7 @@ class SpaseExtractor(Extractor):
                     part = new_by_old[part.replace("/CDPP/", "/CDPP-Archive/")]
                 new_has_part.add(part)
             data["has_part"] = new_has_part
-    
+
         # Create reciprocal relation (SPASE only has is_part_of relation)
         for key, data in result.items():
             is_part_of = data.get("is_part_of", set())
@@ -621,6 +654,26 @@ class SpaseExtractor(Extractor):
             for part in parts.copy():
                 if part not in result:
                     parts.remove(part)
+
+
+    def _remove_reflexive_parts(self,
+                                result):
+        """
+        Sometimes, because some SPASE entities were
+        considered different by the data providers,
+        and part of each other, but we consider them the same,
+        it results as some of the entities to be part of themselves,
+        in which case we remove this relation to itself.
+        """
+        for key, data in result.items():
+            parts = data.get("is_part_of", [])
+            for part in parts.copy():
+                if part == key:
+                    parts.remove(key)
+            parts = data.get("has_part", [])
+            for part in parts.copy():
+                if part == key:
+                    parts.remove(key)
 
 
 def extract_items(d: dict,
