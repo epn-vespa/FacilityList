@@ -17,6 +17,7 @@ import ssl
 import sys
 import re
 
+from __version__ import __version__
 from SPARQLWrapper import SPARQLWrapper, JSON
 from graph import entity_types
 from graph.extractor.cache import VersionManager, CacheManager
@@ -71,9 +72,10 @@ class WikidataExtractor(Extractor):
     # File to save the controls for wikidata entities
     _CONTROL_FILE = "wikidata_entities_control_file_latest.json"
 
-    # We should update this per user:
-    _USER_AGENT = "semantics@ivoa.net - PADC/Observatoire de Paris - Python/%s.%s" % (
-        sys.version_info[0], sys.version_info[1])
+    #_USER_AGENT = "semantics@ivoa.net - PADC/Observatoire de Paris - Python/%s.%s" % (
+    #    sys.version_info[0], sys.version_info[1])
+    _USER_AGENT = (f"FacilityList/{__version__} bot (https://observatoiredeparis.psl.eu/; semantics@ivoa.net) Python/{sys.version_info[0]}.{sys.version_info[1]}")
+
 
     _QUERY_PREFIX = """
     PREFIX schema: <http://schema.org/>
@@ -335,9 +337,31 @@ class WikidataExtractor(Extractor):
         sparql.setQuery(query)
         sparql.setReturnFormat(JSON) # TODO another format ?
         # Use certifi certificates
-        context = ssl.create_default_context(cafile = certifi.where())
-        sparql.urlopener = lambda request: urllib.request.urlopen(request, context = context)
+        ##context = ssl.create_default_context(cafile = certifi.where())
+        ##sparql.urlopener = lambda request: urllib.request.urlopen(request, context = context)
         return sparql.query().convert()
+
+    def _get_results_requests(self, query: str) -> dict:
+        """
+        Send a SPARQL query to Wikidata using requests instead of SPARQLWrapper.
+        """
+        import requests
+        endpoint = self._ENDPOINT_URL  # https://query.wikidata.org/sparql
+
+        headers = {
+            "User-Agent": self._USER_AGENT,   # OBLIGATOIRE pour Wikidata
+            "Accept": "application/sparql-results+json",
+        }
+
+        params = {
+            "query": query,
+            "format": "json",
+        }
+
+        resp = requests.get(endpoint, headers=headers, params=params, timeout=60)
+        resp.raise_for_status()  # lèvera une HTTPError si 403/429/5xx
+
+        return resp.json()
 
 
     def _apply_exclusions(self,
