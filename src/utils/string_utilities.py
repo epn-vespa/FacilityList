@@ -5,6 +5,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import re
+import roman
 
 from typing import Tuple
 from collections import defaultdict
@@ -400,7 +401,7 @@ def has_cospar_nssdc_id(text: str) -> Tuple[bool, list[str], list[str]]:
     Args:
         text: string that may contain an NSSDC or COSPAR id.
     """
-    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}(-[A-Z0-9]{1,3})?\b"
+    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}(?:-[A-Z0-9]{1,3})?\b"
     cospar_ids = re.findall(pattern, text)
     if not cospar_ids:
         return False, None, None
@@ -432,6 +433,55 @@ def get_datetime_from_iso(datetime_str: str) -> str:
         datetime_str += "T00:00:00"
 
     return datetime_str
+
+
+def get_suffix_number(label: str):
+    """
+    Returns the number corresponding to the suffix of a label.
+    Ex: II -> 2, C -> 3, 2 -> 2
+
+    Returns 0 if there is no suffix that is a number.
+    """
+    label = label.replace('-', ' ').replace('/', ' ').replace('.', ' ')
+    # fronteir between letters and numbers (ex: Voyager2)
+    label = re.sub(r"(?<=[A-Za-z])(?=\d)", ' ', label)
+    # Ex: ThemisD => isolate D
+    label = re.sub(r"(?<=[a-z])(?=[A-Z])", ' ', label)
+
+    # suffix = label.split()[-1].strip()
+    label_split = label.split()
+    # Test for every number in the label
+    for suffix in label_split[::-1]:
+        suffix = suffix.strip()
+        try:
+            number = int(suffix)
+            return number
+        except:
+            pass
+        suffix = suffix.upper()
+        if len(suffix) == 1 and suffix >= 'A' and suffix <= 'L':
+            # Limit arbitrarily set to L
+            number = ord(suffix) - ord('A') + 1
+            return number
+
+        # Roman number
+        try:
+            number = roman.fromRoman(suffix)
+            if number <= 100:
+                return number
+        except:
+            pass
+        # Clusters 1 to 4
+        if suffix.lower() == "rumba":
+            return 1
+        elif suffix.lower() == "salsa":
+            return 2
+        elif suffix.lower() == "samba":
+            return 3
+        elif suffix.lower() == "tango":
+            return 4
+    return 0
+
 
 if __name__ == "__main__":
     pass
