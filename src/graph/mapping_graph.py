@@ -23,10 +23,11 @@ from config import USERNAME
 
 from datetime import datetime
 
+properties = Properties()
 
 class MappingGraph():
 
-    _OBS = Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
+    _OBS = properties.OBS # Namespace("https://voparis-ns.obspm.fr/rdf/obsfacilities#")
 
     _SSSOM = Namespace("https://w3id.org/sssom/")
 
@@ -131,7 +132,7 @@ class MappingGraph():
                     is_human_validation: bool = False,
                     no_validation: bool = False,
                     validator_name: str = "",
-                    predicate: Node = Properties().exact_match,
+                    predicate: Node = properties.exact_match,
                     subject_match_field: List[URIRef] | List[str] | URIRef | str = None,
                     object_match_field: List[URIRef] | List[str] | URIRef | str = None,
                     match_string: str = None,
@@ -220,7 +221,7 @@ class MappingGraph():
                 if type(field) is URIRef:
                     self._graph.add((mapping_uri, self._SSSOM.subject_match_field, field))
                 else:
-                    self._graph.add((mapping_uri, self._SSSOM.subject_match_field, Properties().convert_attr(field)))
+                    self._graph.add((mapping_uri, self._SSSOM.subject_match_field, properties.convert_attr(field)))
         if object_match_field:
             if type(object_match_field) is not list:
                 object_match_field = [object_match_field]
@@ -230,7 +231,7 @@ class MappingGraph():
                 if type(field) is URIRef:
                     self._graph.add((mapping_uri, self._SSSOM.object_match_field, field))
                 else:
-                    self._graph.add((mapping_uri, self._SSSOM.object_match_field, Properties().convert_attr(field)))
+                    self._graph.add((mapping_uri, self._SSSOM.object_match_field, properties.convert_attr(field)))
         if match_string:
             self._graph.add((mapping_uri, self._SSSOM.match_string, Literal(match_string, datatype=XSD.string)))
         self._graph.add((mapping_uri, self._SSSOM.subject_source, entity1_source))
