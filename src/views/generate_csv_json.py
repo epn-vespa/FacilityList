@@ -74,6 +74,7 @@ class CsvJson():
             for relation in more_relations:
                 if relation.startswith('skos:broader'):
                     broader = re.findall(r'\((.+)\)', relation)[0]
+                    # broader = broader.split('#')[-1]
                     if broader not in self._res_csv:
                         print("BUG: BROADER NOT IN RES_CSV:", broader)
                     else:
@@ -84,7 +85,9 @@ class CsvJson():
         res_csv = []
         already_in = set()
 
-        for broader in children_by_broader.copy().keys():
+        # keys that are in no values
+        roots = self._find_roots(children_by_broader)
+        for broader in roots:# children_by_broader.copy().keys():
             broader = broader.split("#")[-1]
             if broader in already_in:
                 continue
@@ -97,7 +100,23 @@ class CsvJson():
         self._res_csv = res_csv
 
 
+    def _find_roots(self, children_by_broader):
+        roots = []
+        for broader in children_by_broader.keys():
+            is_root = True
+            for children in children_by_broader.values():
+                if broader in children:
+                    is_root = False
+                    break
+            if is_root:
+                roots.append(broader)
+        return roots
+
+
     def _get_recursive(self, children_by_broader, broader, res_csv: list, already_in: set, level: int = 1):
+        """
+        Finds the level of the entities recursively
+        """
         # broader = self._term_by_synonym_uri[broader]
         entity = self._res_csv.pop(broader)
         entity["level"] = level
@@ -141,9 +160,8 @@ class CsvJson():
 
 
     def generate_json_csv(self,
-                          allowed_ext_ref: list = []) -> list:
+                          allowed_ext_ref: list = []):
         """
-        Returns the list of generated terms.
 
         Args:
             allowed_ext_ref: if more than one output file is generated,
