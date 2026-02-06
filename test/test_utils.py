@@ -1,5 +1,5 @@
 import setup_path
-from utils.string_utilities import get_aperture
+from utils.string_utilities import get_aperture, has_cospar_nssdc_id
 from utils.dict_utilities import majority_voting_merge
 from graph.properties import Properties
 from datetime import datetime
@@ -16,6 +16,17 @@ class TestDigitScorer(unittest.TestCase):
         for string, expected in test:
             _, res = get_aperture(string)
             assert(res == expected)
+
+
+    def test_has_cospar_nssdc_id(self):
+        ok, nssdc, year = has_cospar_nssdc_id("2007-004C")
+        assert ok == True
+        assert nssdc == ["2007-004C"]
+        assert str(year[0]).startswith("2007")
+        ok, nssdc, year = has_cospar_nssdc_id("2007-004C-12C")
+        assert ok == True
+        assert nssdc == ["2007-004C-12C"]
+        assert str(year[0]).startswith("2007")
 
 
     def test_majority_voting_merge(self):
