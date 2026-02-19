@@ -276,24 +276,15 @@ class Entity():
             print(f"Warning: already mapped {self.uri} and {entity.uri}. Ignoring.")
             return
         uri1 = self.uri
-        for synonym_uri in self.get_synonyms():
-            if extractor1.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
-                uri1 = synonym_uri
-                break
         uri2 = entity.uri
         for synonym_uri in entity.get_synonyms():
-            if extractor2.NAMESPACE == synonym_uri.split('#')[0].split('/')[-1]:
-                uri2 = synonym_uri
-                break
-        for synonym_uri in entity.get_synonyms():
-            if synonym_uri == self.uri:
+            if synonym_uri == uri1:
                 continue
             Graph().add((uri1, properties.exact_match, synonym_uri))
             Graph().add((synonym_uri, properties.exact_match, uri1))
             self.data[properties.exact_match].add(synonym_uri)
             Entity(synonym_uri).data[properties.exact_match].add(uri1)
         for synonym_uri in self.get_synonyms():
-
             if synonym_uri == uri2:
                 continue
             Graph().add((uri2, properties.exact_match, synonym_uri))
