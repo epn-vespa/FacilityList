@@ -103,6 +103,7 @@ class OntologyMapper():
         This step is ignored if the run was loaded from a checkpoint
         and the checkpoint's progress is not empty.
         """
+        atexit.register(self.write)
         if self._progress:
             return
         am = AttributeMatcher()
@@ -185,8 +186,8 @@ class OntologyMapper():
                         attr1 = "NSSDCA_ID",
                         attr2 = "code")
             self._description += "merge identifiers: n2yo, nssdc\n"
-
         del(am)
+        atexit.unregister(self.write)
 
 
     def parse_strategy(self,

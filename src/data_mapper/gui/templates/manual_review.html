@@ -67,6 +67,7 @@
         for (const [key_, value_] of Object.entries(data.object))
           {if (key_ === prev_obj) {
             same_obj = true;
+            break;
           }
           prev_obj = key_;
         }
