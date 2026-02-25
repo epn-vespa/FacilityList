@@ -423,11 +423,13 @@ class LLMConnection():
     loaded = False
     cache_same_disinct = defaultdict(lambda: defaultdict(tuple[bool, str]))
     def _load_cache_same_distinct(self):
+        if self.loaded:
+            return
         path = CACHE_DIR / "LLM"
         if os.path.exists(path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json"):
             json.load(path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json")
         atexit.register(self._save_cache_same_distinct)
-        loaded = True
+        self.loaded = True
 
     def _save_cache_same_distinct(self):
         path = CACHE_DIR / "LLM"
@@ -454,6 +456,7 @@ class LLMConnection():
             from_cache: save LLMs responses into a cache.
                         Use responses from previous calls.
         """
+        """
         if from_cache:
             if not self.loaded:
                 self._load_cache_same_distinct()
@@ -463,7 +466,7 @@ class LLMConnection():
             elif entity2.uri in self.cache_same_distinct:
                 if entity1.uri in self.cache_same_distinct[entity2.uri]:
                     return self.cache_same_distinct[entity2.uri][entity1.uri]
-
+        """
         to_exclude = ["code", "url", "ext_ref", "uri", "type", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
         prompt = PROMPT_SAME_DISTINCT
         prompt += "\nEntity 1: " + entity1.to_string(exclude = to_exclude, limit = 200)
@@ -471,6 +474,10 @@ class LLMConnection():
         prompt1 = prompt
         regex = r"response:\s*(.*)\s*justification:\s*(.*)"
         retries = 3
+        if from_cache:
+            cache_key = ' '.join(sorted(entity1.uri, entity2.uri))
+            if cache_key in self.cache_same_distinct:
+                return self.cache_same_disinct[cache_key]
         total_retries = 0
         while retries > 0:
             try:
@@ -487,7 +494,7 @@ class LLMConnection():
                 print(entity2.label)
                 print(is_same, justification)
                 if from_cache:
-                    self.cache_same_disinct[entity1.uri][entity2.uri] = (is_same, justification)
+                    self.cache_same_disinct[cache_key] = (is_same, justification)
                 return is_same, justification
             except:
                 if retries == 0:
