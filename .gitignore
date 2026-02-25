@@ -1,12 +1,18 @@
 # Output files
 src/**/*.ttl
 src/**/*.csv
+src/**/*.tsv
 src/**/*.json
 data/Wikidata/
 data/checkpoint/
 *.pkl
 *.jpg
+*.ttl
 
+# Ignore for visibility
+*.conf
+*.txt
+!conf/default_strategy.conf
 
 # Generated folders
 cache/
