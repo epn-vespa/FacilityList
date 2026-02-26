@@ -475,7 +475,7 @@ class LLMConnection():
         regex = r"response:\s*(.*)\s*justification:\s*(.*)"
         retries = 3
         if from_cache:
-            cache_key = ' '.join(sorted(entity1.uri, entity2.uri))
+            cache_key = ' '.join(sorted([entity1.uri, entity2.uri]))
             if cache_key in self.cache_same_distinct:
                 return self.cache_same_disinct[cache_key]
         total_retries = 0
