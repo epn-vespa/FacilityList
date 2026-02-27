@@ -551,7 +551,7 @@ class HybridRetriever():
     def check_battery(self):
         # Stop on low battery to save the generated mappings
         battery = psutil.sensors_battery()
-        if battery.percent < 5:
+        if battery and battery.percent < 5:
             print("\033Low battery. Interrupting and saving mappings and progress.\n" +
                     "Re-load checkpoint using the output folder as an input.\033[0m")
             exit()
