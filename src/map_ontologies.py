@@ -396,23 +396,28 @@ class OntologyMapper():
         if not progress:
             return
         for list1, lists2 in progress.copy().items():
-            if list1 in self._strategy:
-                for list2 in lists2.copy():
-                    if list2 in self._strategy[list1]:
-                        on_types = progress[list1][list2]
-                        for on_type in on_types.copy():
-                            if on_type in self._strategy[list1][list2]:
-                                self._strategy[list1][list2].pop(on_type)
-                                if len(self._strategy[list1][list2]) == 0:
-                                    self._strategy[list1].pop(list2)
-                            else:
-                                print(f"Warning: strategy changed since last run (different types for {list1},{list2}).")
-                        if len(self._strategy[list1]) == 0:
-                            self._strategy.pop(list1)
-                    else:
-                        print(f"Warning: strategy changed since last run (removed {list1},{list2}).")
-            else:
+            if list1 not in self._strategy:
                 print(f"Warning: strategy changed since last run (removed {list1}).")
+                continue
+            for list2 in lists2.copy():
+                if list2 not in lists2:
+                    print(f"Warning: strategy changed since last run (removed {list1},{list2}).")
+                    continue
+                on_types = progress[list1][list2]
+                processed_types = set(on_types)
+                keys_to_remove = []
+                for key in self._strategy[list1][list2]:
+                    if key.issubset(processed_types):
+                        keys_to_remove.append(key)
+                for key in keys_to_remove:
+                    self._strategy[list1][list2].pop(key)
+                    if len(self._strategy[list1][list2]) == 0:
+                        self._strategy[list1].pop(list2)
+                    else:
+                        print(f"Warning: strategy changed since last run (different types for {list1},{list2}).")
+                if len(self._strategy[list1]) == 0:
+                    self._strategy.pop(list1)
+                    break
 
 
     def write(self):
