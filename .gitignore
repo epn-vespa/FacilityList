@@ -8,10 +8,12 @@ data/checkpoint/
 *.pkl
 *.jpg
 *.ttl
+*.out
 
 # Ignore for visibility
 *.conf
 *.txt
+*.slurm
 !conf/default_strategy.conf
 
 # Generated folders
