@@ -24,9 +24,9 @@ def main(input_ontology: str,
     output_merged = str(output_merged)
     merge_uris.main(input_ontology,
                     output_merged)
-    output_obsf, output_instr = split_instruments.split_instruments(output_merged)
+    output_obsf, output_obsi = split_instruments.split_instruments(output_merged)
     generate_csv_json.main(output_obsf)
-    generate_csv_json.main(output_instr)
+    generate_csv_json.main(output_obsi)
 
 
 if __name__ == "__main__":

@@ -75,13 +75,12 @@ class CsvJson():
                 if relation.startswith('skos:broader'):
                     broader = re.findall(r'\((.+)\)', relation)[0]
                     # broader = broader.split('#')[-1]
-                    if broader not in self._res_csv:
-                        print("BUG: BROADER NOT IN RES_CSV:", broader)
-                    else:
+                    if broader in self._res_csv:
+                        # Broader entity is from the same list.
                         children_by_broader[broader].append(term)
                         # Remove broader from more_relations
                         values["more_relations"] = values["more_relations"].replace(relation, "") # Remove this broader relation
-                        break
+                        break # Only the first one for the structural hierarchy
         res_csv = []
         already_in = set()
 
