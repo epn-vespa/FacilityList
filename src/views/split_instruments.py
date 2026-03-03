@@ -52,7 +52,8 @@ def split_instruments(input_file: str):
     output_instruments.bind("wb", properties.WB)
     output_instruments.bind("ivoasem", properties.IVOASEM)
 
-    output_facilities.bind("obsf", properties.OBSF)
+    output_facilities.bind("obs", properties.OBS)
+    output_facilities.bind("obsf", properties.OBSF, replace = True)
     output_facilities.bind("obsi", properties.OBSI)
 
     changes = change_namespace(output_facilities,
@@ -95,11 +96,19 @@ def change_namespace(graph: Graph,
     old_ns = properties.OBS
     for s, p, o in graph.triples((None, None, None)):
         s2 = s
+        o2 = o
+        p2 = p
         if isinstance(s, URIRef) and str(s).startswith(str(old_ns)):
             s2 = URIRef(str(s).replace(str(old_ns), str(new_ns), 1))
-            graph.remove((s, p, o))
-            graph.add((s2, p, o))
             changes[s] = s2
+        if isinstance(p, URIRef) and str(p).startswith(str(old_ns)):
+            p2 = URIRef(str(p).replace(str(old_ns), str(new_ns), 1))
+            changes[p] = p2
+        if isinstance(o, URIRef) and str(o).startswith(str(old_ns)):
+            o2 = URIRef(str(o).replace(str(old_ns), str(new_ns), 1))
+            changes[o] = o2
+        graph.remove((s, p, o))
+        graph.add((s2, p2, o2))
     return changes
 
 
