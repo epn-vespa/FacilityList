@@ -20,8 +20,17 @@ from config import CACHE_DIR
 import geopy
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
+from geopy.extra.rate_limiter import RateLimiter
 geolocator = Nominatim(user_agent="obspm.fr")
 
+reverse = RateLimiter(
+    geolocator.reverse,
+    min_delay_seconds=1  # 1 request per second
+)
+geocode = RateLimiter(
+    geolocator.geocode,
+    min_delay_seconds=1  # 1 request per second
+)
 
 
 # Prevent computing location info multiple times
@@ -279,9 +288,9 @@ def get_location_info(label: Optional[str] = None,
         if latitude is not None and longitude is not None:
             if latitude != 0 or longitude != 0:
                 saved_in = "latlong/" + str(latitude) + '/' + str(longitude)
-                result = geolocator.reverse((latitude, longitude),
-                                            exactly_one=True,
-                                            language=language)
+                result = reverse((latitude, longitude),
+                                  exactly_one=True,
+                                  language=language) # Geolocator's reverse + rate limiter
                 if result is None:
                     # No address, in the sea
                     if retries == 0:
@@ -298,9 +307,9 @@ def get_location_info(label: Optional[str] = None,
                     result_dict["location_confidence"] = 1.0
         if result is None and address:
             saved_in = "geocode/" + str(address)
-            result = geolocator.geocode(address,
-                                        exactly_one=True,
-                                        language=language)
+            result = geocode(address,
+                             exactly_one=True,
+                             language=language)
             if result is not None:
                 result_dict["location_confidence"] = 0.75
         # Call get_location_info with part_of
@@ -329,9 +338,9 @@ def get_location_info(label: Optional[str] = None,
                 if result is not None:
                     break
                 saved_in = "geocode/" + str(loc)
-                result = geolocator.geocode(loc,
-                                            exactly_one=True,
-                                            language=language)
+                result = geocode(loc,
+                                 exactly_one=True,
+                                 language=language)
                 if result is None:
                     # This place does not exist
                     location_infos[saved_in] = {}
@@ -340,9 +349,9 @@ def get_location_info(label: Optional[str] = None,
 
         if result is None and label:
             saved_in = "geocode/" + str(label)
-            result = geolocator.geocode(label,
-                                        exactly_one=True,
-                                        language=language)
+            result = geocode(label,
+                             exactly_one=True,
+                             language=language)
             if result and label not in str(result).split(',')[0] or not result:
                 # the label is not identical to the first part of the address
                 # retrieved = False
@@ -353,9 +362,9 @@ def get_location_info(label: Optional[str] = None,
                     #saved_in2 = f"geocode/{label} {keyword}"
                     #result = location_infos.get(saved_in2, None)
                     if result is None:
-                        result = geolocator.geocode(label + " " + keyword,
-                                                    exactly_one=True,
-                                                    language=language)
+                        result = geocode(label + " " + keyword,
+                                         exactly_one=True,
+                                         language=language)
                     #location_infos[saved_in2] = location_infos
                     #if result and label.lower() in str(result).lower():
                     #    retrieved = True
@@ -595,9 +604,9 @@ def _get_address(latitude: float,
     Use it to get an address (with country name).
     """
     try:
-        result = geolocator.reverse((latitude, longitude),
-                                    exactly_one=True,
-                                    language="en")
+        result = reverse((latitude, longitude),
+                         exactly_one = True,
+                         language = "en") # Geolocator's reverse + rate limiter
     except Exception as e:
         # Retry after 0.5s
         retries -= 1
