@@ -10,7 +10,6 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 
-
 import json
 import os
 import ssl
@@ -28,9 +27,7 @@ from tqdm import tqdm
 from datetime import UTC, datetime
 from bs4 import BeautifulSoup
 from utils.string_utilities import has_cospar_nssdc_id, get_aperture
-
-import certifi
-import urllib
+from utils.dict_utilities import merge_into
 
 from config import DATA_DIR # type: ignore
 
@@ -82,6 +79,8 @@ class WikidataExtractor(Extractor):
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX prov: <http://www.w3.org/ns/prov#>
     """
 
     _SELECT_COUNT = """
@@ -121,9 +120,56 @@ class WikidataExtractor(Extractor):
               entity_types.INSTRUMENT: ["wd:Q751997", # Astronomical instrument
                                         ]
                             }
+
     _QUERY_TYPES = {k: "UNION".join(f" {{?itemURI wdt:P31/wdt:P279* {v} .}} "
                                     for v in vv ) for k, vv in _TYPES.items()}
 
+    # Special query to get more instruments on platforms (all instruments are not Astronomical instrument, some are only labels)
+    #_QUERY_INSTRUMENTS = " ?s p:P1202+ ?itemURI { " + "} UNION {".join(f" ?s wdt:P31/wdt:P279* {v} . "
+    #                                      for v in sum(_TYPES.values(), [])) + "} UNION {?s wdt:P31/wdt:P279* wd:Q21211206 . } }"
+
+    # Every entity that is embarked on a platform
+    #_QUERY_INSTRUMENTS = """
+    #    ?s wdt:P31/wdt:P279* ?type .
+    #    VALUES ?type {
+    #    """ + "\n".join(f"{v}" for v in sum(_TYPES.values(), [])) + """
+    #        wd:Q21211206
+    #    }
+    #    ?s p:P1202+ ?itemURI .
+    #"""
+
+    #_QUERY_INSTRUMENT_STATEMENTS = """
+    #    OPTIONAL { ?itemURI ps:P1202 ?instrument . }
+    #    OPTIONAL { ?itemURI pq:P1932 ?objectNamedAs . } }
+    #"""
+
+
+    ### Query 1 Instruments
+    _QUERY_INSTRUMENTS_BASE = """
+        SELECT DISTINCT ?host ?itemURI ?property ?value ?refURL ?quotation ?modifiedDate ?itemLabel
+        WHERE {
+        ?host wdt:P31/wdt:P279* ?type .
+        VALUES ?type {
+        """ + "\n".join(f"{v}" for v in sum(_TYPES.values(), [])) + """
+            wd:Q21211206
+        }
+    """
+
+    _QUERY_INSTRUMENTS_STATEMENTS = """
+    ?host p:P1202+ ?itemURI .
+    ?itemURI ?property ?value .
+    FILTER ( ?property NOT IN (wikibase:rank, rdf:type))
+    OPTIONAL {
+      ?value pr:P854 ?refURL .
+      ?value pr:P1683 ?quotation . # additional context text for the entity
+    } }
+    """
+    _QUERY_INSTRUMENTS_CONTROL = """
+    ?host wdt:P1202 ?itemURI .
+    ?itemURI rdfs:label ?itemLabel .
+    FILTER (lang(?itemLabel) = "en")
+    ?itemURI schema:dateModified ?modifiedDate . }
+    """
 
     _MINUS = """
     # Filter out unwanted classes:
@@ -204,6 +250,9 @@ class WikidataExtractor(Extractor):
     # Query to get control pages (by type)
     _QUERY_CONTROL = lambda type: WikidataExtractor._QUERY_PREFIX + WikidataExtractor._SELECT_MAIN_SIMPLE + WikidataExtractor._WHERE_SIMPLE + WikidataExtractor._QUERY_TYPES[type] + WikidataExtractor._MINUS
 
+    #_QUERY_INSTRUMENTS_CONTROL = _QUERY_PREFIX + _SELECT_MAIN_SIMPLE + _WHERE_SIMPLE + _QUERY_INSTRUMENTS + _QUERY_INSTRUMENT_STATEMENTS
+
+    #_QUERY_INSTRUMENTS_ON_PLATFORM = lambda x: f"""SELECT ?instrument WHERE {{{x} p:P1202+ ?instrument . }}"""
 
     def __init__(self):
         pass
@@ -226,6 +275,7 @@ class WikidataExtractor(Extractor):
         # Divide query by type
         controls_by_types = dict()
 
+
         for ent_type in self._TYPES.keys():
             controls = self._get_controls(ent_type)
 
@@ -236,6 +286,9 @@ class WikidataExtractor(Extractor):
 
             print(f"Found {len(controls["results"])} entities for {ent_type}.")
 
+        # Instruments that are only statements
+        result = self._get_non_referenced_instruments(from_cache = from_cache)
+
         for ent_type, controls in controls_by_types.items():
             # Get newer versions' Wikidata URIs
             latest = VersionManager.get_newer_keys(prev_version_file = self._CONTROL_FILE,
@@ -244,7 +297,6 @@ class WikidataExtractor(Extractor):
             print(f"Ready to update {len(latest)} entities for {ent_type}.")
             for wikidata_uri in tqdm(latest):
                 data = self._extract_entity(wikidata_uri,
-                                            result,
                                             from_cache = from_cache)
                 if data:
                     # Downloaded page successfully.
@@ -280,8 +332,7 @@ class WikidataExtractor(Extractor):
             """
             for wikidata_uri in tqdm(older):
                 data = self._extract_entity(wikidata_uri,
-                                            result,
-                                            True)
+                                            from_cache = True)
                 result[data["label"]] = data
             return result
             """
@@ -293,8 +344,7 @@ class WikidataExtractor(Extractor):
             with ThreadPoolExecutor() as executor:
                 futures = {executor.submit(self._extract_entity,
                                            wikidata_uri,
-                                           result,
-                                           True):
+                                           from_cache = True):
                         wikidata_uri for wikidata_uri in older}
                 for future in tqdm(as_completed(futures), total = len(futures)):
                     data = future.result()
@@ -316,7 +366,10 @@ class WikidataExtractor(Extractor):
                             if any([t in entity_types.SPACE_TYPES for t in data["type"]]):
                                 if entity_types.GROUND_OBSERVATORY in data["type"]:
                                     data["type"].remove(entity_types.GROUND_OBSERVATORY)
-                    result[data["label"]] = data
+                    if data["label"] not in result:
+                        result[data["label"]] = data
+                    else:
+                        merge_into(result[data["label"]], data)
 
         # Fix errors in source
         fix(result, self)
@@ -340,6 +393,7 @@ class WikidataExtractor(Extractor):
         ##context = ssl.create_default_context(cafile = certifi.where())
         ##sparql.urlopener = lambda request: urllib.request.urlopen(request, context = context)
         return sparql.query().convert()
+
 
     def _get_results_requests(self, query: str) -> dict:
         """
@@ -387,8 +441,7 @@ class WikidataExtractor(Extractor):
 
 
     def _properties_to_dict(self,
-                            entity_response: str,
-                            result: dict) -> dict:
+                            entity_response: str) -> dict:
         """
         Transform the response of a request for a Wikidata entity
         into a dictionary compatible with the ontology merger.
@@ -399,7 +452,6 @@ class WikidataExtractor(Extractor):
 
         Args:
             entity_response: json string of the wikidata response of an entity
-            result: dictionary of all data.
         """
         if not entity_response:
             return dict()
@@ -473,7 +525,7 @@ class WikidataExtractor(Extractor):
                 #"P2233": "semimajor_axis_of_orbit", # semi-major axis of an orbit
                 #"P2243": "apoapsis",
                 #"P2244": "periapsis",
-                #"P2151": "focal length",
+                "P2151": "focal_length",
                 "P2386": "aperture", # diameter
                 "P2067": "mass",
                 #"P2144": "frequency", # frequency
@@ -572,6 +624,8 @@ class WikidataExtractor(Extractor):
             content = CacheManager.get_page(wikidata_url_json,
                                             list_name = self.CACHE,
                                             from_cache = True)
+            if not content:
+                return None
             entities = json.loads(content)
 
             entities = entities["entities"]
@@ -633,13 +687,22 @@ class WikidataExtractor(Extractor):
             "results": dict()
         }
 
+        if ent_type != entity_types.INSTRUMENT:
+            return control_data
+
         query_control = WikidataExtractor._QUERY_CONTROL(ent_type)
         try:
-            query_result = self._get_results(query_control)
+            result = self._get_results(query_control)
+            if ent_type == entity_types.INSTRUMENT:
+                query_instruments = self._QUERY_PREFIX + self._QUERY_INSTRUMENTS_BASE + self._QUERY_INSTRUMENTS_CONTROL
+                results_instruments = self._get_results(query_instruments)
         except Exception as e:
             raise(e)
 
-        bindings = query_result["results"]["bindings"]
+        bindings = result["results"]["bindings"]
+
+        if ent_type == entity_types.INSTRUMENT:
+            bindings.extend(results_instruments["results"]["bindings"])
 
         for binding in bindings:
             item_uri, item_label, modified_date = [binding[k]["value"]
@@ -651,14 +714,95 @@ class WikidataExtractor(Extractor):
                 ("modified_date", modified_date),
                 ])
 
+
         control_data["results_count"] = len(bindings)
 
         return control_data
 
 
+    def _get_non_referenced_instruments(self,
+                                        from_cache: bool) -> dict:
+        """
+        Return a dictionary with the informations regarding
+        an instrument on a platform that is not a Wikidata entity
+        (only a label and other additional informations)
+
+        Args:
+            from_cache: whether to retrieve entities from cache
+        """
+        result = dict()
+        query = self._QUERY_PREFIX + self._QUERY_INSTRUMENTS_BASE + self._QUERY_INSTRUMENTS_STATEMENTS
+        response = self._get_results(query)
+        bindings = response["results"]["bindings"]
+        property_ids = {
+            "P176": "manufacturer",
+            "P527": "has_part",
+            "P580": "start_date",
+            "P582": "end_date",
+            "P854": "url", # reference URL
+            "P1114": "quantity", # How many instances}
+            "P1534": "end_cause",
+            "P1552": "has_characteristics",
+            "P1810": "alt_label", # subject named as (is it for the host ?)
+            "P1813": "alt_label", # short name
+            "P1932": "label", # object named as
+            "P2067": "mass",
+            "P2151": "focal_length",
+            "P2386": "aperture", # diameter
+            "P2561": "label", # name
+            # "P4036": "field_of_view",
+            "P1202": "source_type|uri", # This instrument is an instance of this class if the entity has no "is_part_of" in it; else it is the URI of the instance.
+            "P1683": "definition",
+            "P8324": "funding_agency", # funder ~= P137 (operator)
+        }
+        entity_prefix = "http://www.wikidata.org/entity/"
+        for binding in bindings:
+            data = dict()
+            uri = binding["itemURI"]["value"]
+            host = binding["host"]["value"]
+            value = binding["value"]["value"]
+            value_type = binding["value"]["type"]
+            host_label = self._get_label(host) ###
+            data = {"is_part_of": host_label,
+                    "type": entity_types.INSTRUMENT}
+            property = binding["property"]["value"]
+            property = property_ids.get(property.split("/")[-1], None)
+            if property == "source_type|uri":
+                if value.startswith(entity_prefix):
+                    entity_dict = self._extract_entity(value.split("/")[-1], from_cache = from_cache)
+                    if entity_dict:
+                        if "is_part_of" in entity_dict:
+                            # Instance of an instrument
+                            if host_label in entity_dict["is_part_of"]:
+                                merge_into(data, entity_dict)
+                            else:
+                                data["source_type"] = entity_dict["label"]
+                                data["label"] = entity_dict["label"] + " on " + host_label
+                        else:
+                            # Type of the instrument
+                            data["source_type"] = entity_dict["label"]
+                            data["label"] = entity_dict["label"] + " on " + host_label
+            elif property:
+                if value.startswith(entity_prefix):
+                    value = self._get_label(value)
+                    data[property] = value
+            if uri not in result:
+                result[uri] = data
+            else:
+                merge_into(result[uri], data)
+
+        def serialize_sets(obj):
+            if isinstance(obj, set):
+                return list(obj)
+
+            return obj
+        with open("res_instruments.json", "w") as file:
+            json.dump(result, file, indent = 2, default = serialize_sets)
+        return result
+
+
     def _extract_entity(self,
                         wikidata_uri: str,
-                        result: dict,
                         from_cache: bool) -> dict:
         """
         Connect to the https://www.wikidata.org/wiki/Special:EntityData endpoint
@@ -667,7 +811,6 @@ class WikidataExtractor(Extractor):
 
         Args:
             wikidata_uri: Wikidata URI (Qxxxxxxx) to retrieve
-            result: the result dictionary
             from_cache: whether to retrieve entities from cache
         """
         wikidata_item = wikidata_uri.split('/')[-1]
@@ -682,7 +825,7 @@ class WikidataExtractor(Extractor):
         # there is no new version to download.
         # Select the wikidata properties to keep and organize
         # them in the data dict.
-        return self._properties_to_dict(content, result)
+        return self._properties_to_dict(content)
 
 
     def _get_wikipedia_intro(self,

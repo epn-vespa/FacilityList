@@ -28,7 +28,10 @@ def merge_into(newer_entity_dict: Dict,
                 values = {values}
         # Label
         if key == "label":
-            if "alt_label" in newer_entity_dict:
+            if not newer_entity_dict.get("label", None) and prior_entity_dict.get("label", None):
+                # prior dict has a label but not the newer dict. Transfer this label
+                newer_entity_dict["label"] = prior_entity_dict["label"]
+            elif "alt_label" in newer_entity_dict:
                  # Keep the old label as an alternate label of the new entity
                 if type(newer_entity_dict["alt_label"]) == list:
                     newer_entity_dict["alt_label"] = set(newer_entity_dict["alt_label"])
