@@ -687,9 +687,6 @@ class WikidataExtractor(Extractor):
             "results": dict()
         }
 
-        if ent_type != entity_types.INSTRUMENT:
-            return control_data
-
         query_control = WikidataExtractor._QUERY_CONTROL(ent_type)
         try:
             result = self._get_results(query_control)
