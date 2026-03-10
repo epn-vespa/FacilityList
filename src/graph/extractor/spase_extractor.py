@@ -373,7 +373,7 @@ class SpaseExtractor(Extractor):
             label1 = data1["label"]
             labels1 = data1.get("alt_label", set())
             labels1.add(label1)
-            first_words1 = {label.replace('-', ' ').split(' ')[0] for label in labels1 if label}
+            first_words1 = {label.replace('-', ' ').replace('.', ' ').split(' ')[0] for label in labels1 if label}
 
             # description1 = data1.get("description", "")
             num1 = get_suffix_number(uri1)
@@ -425,15 +425,10 @@ class SpaseExtractor(Extractor):
                     # Problem: Cluster-Rumba is the same as Cluster 1.
                     # Same for SWARM, SWARM-A, SWARM-B, SWARM-C
                     continue
-                #nums1 = [l for l in label1 if l in "0123456789"]
-                #nums2 = [l for l in label2 if l in "0123456789"]
-                #if nums1 != nums2:
-                 #   continue
-
                 label2 = data2["label"]
                 labels2 = data2.get("alt_label", set())
                 labels2.add(label2)
-                first_words2 = {label.replace('-', ' ').split(' ')[0] for label in labels2 if label}
+                first_words2 = {label.replace('-', ' ').replace('.', ' ').split(' ')[0] for label in labels2 if label}
                 # Merge on first words
                 # word2 = label2.replace('-', ' ').split(' ')[0].lower() # .replace('/', ' ')
                 # Filter out incompatible entries
@@ -463,33 +458,36 @@ class SpaseExtractor(Extractor):
                         latitude2 = list(latitude2)[0]
                         longitude2 = list(longitude2)[0]
                     dist = distance((latitude1, longitude1), (latitude2, longitude2))
-                    if dist < 3.0:
+                    if dist < 4.0: # change from 4.0 to 30.0 for Fort.Rae & FRA. Better: fix in data_fixer for this case only.
                         uf.union(uri1, uri2)
+                        continue
                 elif "start_date" in data1 and "start_date" in data2:
                     if data1["start_date"] == data2["start_date"]:
                         uf.union(uri1, uri2)
+                        continue
                 elif "launch_date" in data1 and "launch_date" in data2:
                     if data1["launch_date"] == data2["launch_date"]:
                         uf.union(uri1, uri2)
-                else:
-                    alt_labels1 = data1.get("alt_label", set())
-                    alt_labels2 = data2.get("alt_label", set())
-                    label1, acr1 = cut_acronyms(label1)
-                    label2, acr2 = cut_acronyms(label2)
-                    alt_labels1.add(label1)
-                    alt_labels2.add(label2)
-                    alt_labels1 = {l.replace('-', ' ').lower() for l in alt_labels1}
-                    alt_labels2 = {l.replace('-', ' ').lower() for l in alt_labels2}
-                    if alt_labels1 & alt_labels2:
-                        uf.union(uri1, uri2)
                         continue
-                    """
-                    if label1.lower() == label2.lower():# or acr1 == acr2:
-                        uf.union(uri1, uri2)
-                        continue
-                    """
+                alt_labels1 = data1.get("alt_label", set())
+                alt_labels2 = data2.get("alt_label", set())
+                label1, acr1 = cut_acronyms(label1)
+                label2, acr2 = cut_acronyms(label2)
+                alt_labels1.add(label1)
+                alt_labels2.add(label2)
+                alt_labels1 = {l.replace('-', ' ').lower() for l in alt_labels1}
+                alt_labels2 = {l.replace('-', ' ').lower() for l in alt_labels2}
+                if any(l.startswith("iaga") for l in alt_labels1):
+                    for label in alt_labels1.copy():
+                        alt_labels1.add(label + " geomagnetic observatory")
+                if any(l.startswith("iaga") for l in alt_labels2):
+                    for label in alt_labels2.copy():
+                        alt_labels2.add(label + " geomagnetic observatory")
+                if alt_labels1 & alt_labels2:
+                    uf.union(uri1, uri2)
+                    continue
 
-        for uri in result: # TODO replace this loop by using only those that merged ?
+        for uri in result:
             groups[uf.find(uri)].add(uri)
         for synset in groups.values():
             if len(synset) <= 1:
