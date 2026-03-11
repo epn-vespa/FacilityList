@@ -10,6 +10,7 @@ from graph.graph import Graph
 from graph.properties import Properties
 from graph.entity import Entity
 from graph.extractor.extractor_lists import ExtractorLists
+from views import post_process
 from utils.string_utilities import standardize_uri
 from utils.dict_utilities import majority_voting_merge
 from rdflib import Graph as G, URIRef, RDFS, XSD, Literal, SKOS, OWL, DCTERMS
@@ -43,7 +44,7 @@ class MergeURIs():
                                   #SKOS.altLabel,
                                   properties.OBS["label"],
                                   properties.OBS["type_confidence"],
-                                  properties.OBS["location_confidence"],
+                                  # properties.OBS["location_confidence"], # Needed for the post processing
                                   properties.OBS["deprecated"],
                                  ]
 
@@ -186,6 +187,10 @@ def main(input_ontology,
     merger = MergeURIs(input_ontology,
                        output_ontology)
     merger.to_synonym_list()
+    Graph()._graph = merger._output_graph # Replace graph
+    output_graph = Graph()
+    post_processor = post_process.PostProcess(output_graph)
+    post_processor()
     merger.write_ttl()
 
 

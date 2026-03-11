@@ -11,7 +11,6 @@ import requests
 import config
 from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE, PROMPT_SAME_DISTINCT, CACHE_DIR
 from collections import defaultdict
-from utils.performances import timeall, timeit
 from graph.entity_types import *
 
 
@@ -21,51 +20,23 @@ class LLMConnection():
     It enables sending generate, classify and embed requests to the LLM.
     """
 
-
     #_instance = None
     _initialized = False
 
     # Singleton
     def __new__(cls, *args, **kwds):
         #if not cls._instance and not cls._initialized:
-        if not hasattr(cls, '_instance'):
-            cls._instance = super(LLMConnection, cls).__new__(cls)
-        return cls._instance
+        cls._context_length = dict()
+        cls._llm_categories = dict()
+        cls._llm_embeddings = dict()
+        cls._initialized = True
+
+        return cls # ._instance
 
 
-    def __init__(self):
-        if not self._initialized:
-            self._context_length = dict()
-            self._llm_categories = dict()
-            self._llm_embeddings = dict()
-            self._initialized = True
-
-
-    @property
-    def llm_categories(self) -> dict:
-        return self._llm_categories
-
-
-    @llm_categories.setter
-    def llm_categories(self,
-                       categories: dict):
-        self._llm_categories = categories
-
-
-    @property
-    def llm_embeddings(self) -> dict:
-        return self._llm_embeddings
-
-
-    @llm_embeddings.setter
-    def llm_embeddings(self,
-                       embeddings: dict):
-        self._llm_embeddings = embeddings
-
-
-
-    def get_llm_context_length(self,
-                               ollama_model: str) -> int:
+    @classmethod
+    def _get_llm_context_length(cls,
+                                ollama_model: str) -> int:
         """
         Get the context length of a model. A context length is the prompt's
         maximal length.
@@ -74,7 +45,7 @@ class LLMConnection():
             ollama_model: the model name.
         """
 
-        context_length = self._context_length.get(ollama_model, 0)
+        context_length = cls._context_length.get(ollama_model, 0)
         if context_length:
             return context_length
 
@@ -88,7 +59,7 @@ class LLMConnection():
             infos = response.json()['model_info']
             architecture = infos['general.architecture']
             context_length = infos[architecture + '.context_length']
-            self._context_length[ollama_model] = context_length
+            cls._context_length[ollama_model] = context_length
         except KeyError:
             print(response.json()['error'])
             print("To download an Ollama model, use 'ollama pull [model_name]'.")
@@ -96,61 +67,63 @@ class LLMConnection():
         return context_length
 
 
-    def _save_llm_categories_in_cache(self):
+    @classmethod
+    def _save_llm_categories_in_cache(cls):
         """
         Save the LLM categories in a json file in the cache folder.
         """
-        if self.llm_categories:
+        if cls._llm_categories:
             if not LLM_CATEGORIES_FILE.parent.exists():
                 LLM_CATEGORIES_FILE.parent.mkdir(parents = True, exist_ok = True)
-            # path = str(path / "llm_categories.json")
-            print(f"dumping {len(self.llm_categories)} LLM categories in {str(LLM_CATEGORIES_FILE)}.")
+            print(f"dumping {len(cls._llm_categories)} LLM categories in {str(LLM_CATEGORIES_FILE)}.")
             with open(LLM_CATEGORIES_FILE, "w", encoding = "utf-8") as f:
-                json.dump(self.llm_categories, f, indent=" ")
+                json.dump(cls._llm_categories, f, indent = 2)
 
 
-    def _load_llm_categories_from_cache(self):
+    @classmethod
+    def _load_llm_categories_from_cache(cls):
         """
         Load the LLM categories from a json file in the cache folder.
         """
-        atexit.register(self._save_llm_categories_in_cache)
+        atexit.register(cls._save_llm_categories_in_cache)
         if not LLM_CATEGORIES_FILE.exists():
             return
         with open(LLM_CATEGORIES_FILE, "r", encoding = "utf-8") as f:
             try:
-                self.llm_categories = json.load(f)
+                cls._llm_categories = json.load(f)
             except:
-                self.llm_categories = dict()
+                cls._llm_categories = dict()
 
 
-    def _save_llm_embeddings_in_cache(self):
+    @classmethod
+    def _save_llm_embeddings_in_cache(cls):
         """
         Dump the LLM embeddings in a pickle file in the cache folder.
         """
-        if self.llm_embeddings:
+        if cls._llm_embeddings:
             LLM_EMBEDDINGS_FILE.parent.mkdir(parents = True, exist_ok = True)
-            print(f"dumping {len(self.llm_embeddings)} LLM embeddings in {str(LLM_EMBEDDINGS_FILE)}.")
+            print(f"dumping {len(cls._llm_embeddings)} LLM embeddings in {str(LLM_EMBEDDINGS_FILE)}.")
             with open(LLM_EMBEDDINGS_FILE, "w") as f:
-                pickle.dump(self.llm_embeddings, f)
+                pickle.dump(cls._llm_embeddings, f)
 
 
-    @timeit
-    def _load_llm_embeddings_from_cache(self):
+    @classmethod
+    def _load_llm_embeddings_from_cache(cls):
         """
         Load the LLM embeddings from a pickle file in the cache folder.
         """
-        atexit.register(self._save_llm_embeddings_in_cache)
+        atexit.register(cls._save_llm_embeddings_in_cache)
         if not LLM_EMBEDDINGS_FILE.exists():
             return
         with open(LLM_EMBEDDINGS_FILE, "r") as f:
             try:
-                self.llm_embeddings = pickle.load(f)
+                cls._llm_embeddings = pickle.load(f)
             except:
-                self.llm_embeddings = dict()
+                cls._llm_embeddings = dict()
 
 
-    @timeall
-    def embed(self,
+    @classmethod
+    def embed(cls,
               text: str,
               from_cache: bool = False,
               cache_key: str = ""):
@@ -164,10 +137,10 @@ class LLMConnection():
         """
         if from_cache and not cache_key:
             raise ValueError("Provided from_cache but not cache_key.")
-        if (from_cache and not self.llm_embeddings):
-            self._load_llm_embeddings_from_cache()
-        if (from_cache and self.llm_embeddings):
-            embeddings = self.llm_embeddings.get(cache_key, None)
+        if (from_cache and not cls._llm_embeddings):
+            cls._load_llm_embeddings_from_cache()
+        if (from_cache and cls._llm_embeddings):
+            embeddings = cls._llm_embeddings.get(cache_key, None)
             if embeddings:
                 return embeddings # if error, re-compute.
         prompt = "Represent this entity for search: " + text
@@ -180,35 +153,35 @@ class LLMConnection():
         )
         if response.ok:
             embeddings = response.json()["embedding"]
-            self.llm_embeddings[cache_key] = embeddings
+            cls._llm_embeddings[cache_key] = embeddings
             return embeddings
         else:
-            self.llm_embeddings[cache_key] = None
+            cls._llm_embeddings[cache_key] = None
             print(f"Ollama error: {response.text}.\nReturn None for prompt \"{prompt}\"")
             return None
 
  
     # Labels used to classify entities with the model to project's labels
-    categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
-                                "research institute": GROUND_OBSERVATORY,
-                                "university": GROUND_OBSERVATORY,
-                                "ground station": GROUND_OBSERVATORY,
-                                "spacecraft": SPACECRAFT,
-                                "space probe": SPACECRAFT,
-                                "airborne": AIRBORNE,
-                                "space plane": AIRBORNE,
-                                "balloon": AIRBORNE,
-                                "cosmos observation instrument": TELESCOPE,
-                                "telescope": TELESCOPE,
-                                "space telescope": TELESCOPE,
-                                "space mission": INVESTIGATION,
-                                "space investigation": INVESTIGATION,
-                                "unknown": UFO,
-                                "miscellaneous": UFO,
-                            }
+    _categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
+                                   "research institute": GROUND_OBSERVATORY,
+                                   "university": GROUND_OBSERVATORY,
+                                   "ground station": GROUND_OBSERVATORY,
+                                   "spacecraft": SPACECRAFT,
+                                   "space probe": SPACECRAFT,
+                                   "airborne": AIRBORNE,
+                                   "space plane": AIRBORNE,
+                                   "balloon": AIRBORNE,
+                                   "cosmos observation instrument": TELESCOPE,
+                                   "telescope": TELESCOPE,
+                                   "space telescope": TELESCOPE,
+                                   "space mission": INVESTIGATION,
+                                   "space investigation": INVESTIGATION,
+                                   "unknown": UFO,
+                                   "miscellaneous": UFO,
+                                  }
 
-    @timeall
-    def classify(self,
+    @classmethod
+    def classify(cls,
                  text: str,
                  choices: list[str] = None,
                  from_cache: bool = True,
@@ -235,23 +208,23 @@ class LLMConnection():
             cache_key: key of the entity in the cache dict. List name + uri.
         """
         if from_cache and not cache_key:
-            raise ValueError(f"Provided from_cache but not cache_key to function {self.classify.__name__}.")
+            raise ValueError(f"Provided from_cache but not cache_key to function {cls.classify.__name__}.")
 
-        if from_cache and not self.llm_categories:
-            self._load_llm_categories_from_cache()
+        if from_cache and not cls._llm_categories:
+            cls._load_llm_categories_from_cache()
 
-        if (from_cache and self.llm_categories and
-            cache_key and cache_key in self.llm_categories):
-            category = self.llm_categories[cache_key]
+        if (from_cache and cls._llm_categories and
+            cache_key and cache_key in cls._llm_categories):
+            category = cls._llm_categories[cache_key]
             if category != ERROR:
                 return category # if error, re-compute.
 
         if not choices:
-            choices = self.categories_by_descriptions.values()
+            choices = cls._categories_by_descriptions.values()
 
         possible_categories = set()
         llm_choices = set()
-        for key, value in self.categories_by_descriptions.items():
+        for key, value in cls._categories_by_descriptions.items():
             if value in choices:
                 possible_categories.add(value)
                 llm_choices.add(key)
@@ -282,32 +255,61 @@ class LLMConnection():
         # Entity representation
         prompt += f"Text to classify: {text}"
 
-        context_length = self.get_llm_context_length(config.OLLAMA_MODEL)
+        context_length = cls._get_llm_context_length(config.OLLAMA_MODEL)
         if len(prompt) > context_length:
             prompt = prompt[:context_length]
 
         # Get the category from the LLM
-        cat = self.generate(prompt, config.OLLAMA_MODEL)
+        cat = cls.generate(prompt, config.OLLAMA_MODEL, from_cache = from_cache, cache_key = cache_key)
         cat = cat.lstrip('-').lstrip()
         cat = cat.split("\n")[0] # Some models (such as Gemma) return more than one category
-        if cat in self.categories_by_descriptions:
-            cat = self.categories_by_descriptions[cat]
+        if cat in cls._categories_by_descriptions:
+            cat = cls._categories_by_descriptions[cat]
         else:
             print(f"Error: the Ollama model did not return an category from :\n" +
-                f"{','.join(self.categories_by_descriptions.keys())}.\n" +
+                f"{','.join(cls._categories_by_descriptions.keys())}.\n" +
                 f"It returned {cat} instead.\n " +
                 f"Return {UFO} for prompt \"{prompt}\"")
-            self.llm_categories[cache_key] = ERROR
+            cls._llm_categories[cache_key] = ERROR
             return UFO
-        self.llm_categories[cache_key] = cat
+        cls._llm_categories[cache_key] = cat
         return cat
 
 
+
+    _generation_cache_loaded = False
+    _generation_cache = dict()
+    _BACKUP_EVERY = 10
+    _backup_countdown = _BACKUP_EVERY
     @classmethod
-    def generate(self,
+    def _load_generation_cache(cls,
+                              model: str):
+        # FIXME if we change model, it will stay loaded in the same cache file
+        if cls._generation_cache_loaded:
+            return
+        cls._generation_cache_filename = CACHE_DIR / f"{model}-generate.json"
+        if cls._generation_cache_filename.exists():
+            with open(cls._generation_cache_filename, "r") as file:
+                cls._generation_cache = json.load(file)
+        else:
+            cls._generation_cache = dict()
+        cls._generation_cache_loaded = True
+        atexit.register(cls._save_generation_cache)
+
+
+    @classmethod
+    def _save_generation_cache(cls):
+        with open(cls._generation_cache_filename, "w") as file:
+            json.dump(cls._generation_cache, file, indent = 2)
+
+
+    @classmethod
+    def generate(cls,
                  prompt: str,
                  model: str,
-                 num_predict: int = 256) -> str:
+                 num_predict: int = 256,
+                 from_cache: bool = False,
+                 cache_key: str = None) -> str:
 
         """
         Send a simple generate query to the Ollama API.
@@ -316,7 +318,17 @@ class LLMConnection():
             prompt: the prompt to send to the LLM.
             model: the model to use.
             num_predict: maximum length of the predicted message.
+            from_cache: if True, also use a cache_key.
+            cache_key: identifier to use to retrieve the response in later runs.
         """
+        if from_cache:
+            if not cache_key:
+                raise ValueError("from_cache provided but no cache_key.")
+            cls._load_generation_cache(model)
+            response = cls._generation_cache.get(cache_key, None)
+            if response:
+                return response
+
         response = requests.post(
             f'{config.OLLAMA_HOST}/api/generate',
             json={
@@ -328,15 +340,21 @@ class LLMConnection():
             }
         )
         if response.ok:
-            response = response.json()['response'].strip().lower()
-            response = self.remove_tags(response)
+            response = response.json()['response'].strip()
+            response = cls.remove_tags(response)
+            if from_cache:
+                cls._generation_cache[cache_key] = response
+                cls._backup_countdown -= 1
+                if cls._backup_countdown == 0:
+                    cls._save_generation_cache()
+                    cls._backup_countdown = cls._BACKUP_EVERY
             return response
         else:
             raise requests.ConnectionError(response.json()["error"])
 
 
     @classmethod
-    def remove_tags(self,
+    def remove_tags(cls,
                     response: str):
         """
         Tags are markers of the model's thought process and should not
@@ -350,7 +368,7 @@ class LLMConnection():
 
 
     @classmethod
-    def choose_best_candidate_and_justify(self,
+    def choose_best_candidate_and_justify(cls,
                                           entity,
                                           candidates: list) -> tuple[int, str]:
         """
@@ -386,8 +404,8 @@ class LLMConnection():
         prompt = prompt0
         while not res and not justification:
             try:
-                response = self.generate(prompt,
-                                         model = config.OLLAMA_MODEL)
+                response = cls.generate(prompt,
+                                        model = config.OLLAMA_MODEL)
                 best, justification = re.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
                 best = int(best)
                 print(best, justification)
@@ -413,33 +431,36 @@ class LLMConnection():
         )
         if response.ok:
             response = response.json()['response'].strip()
-            response = self.remove_tags(response)
+            response = cls.remove_tags(response)
             return response
         else:
             return None
         """
         return response
 
-    loaded = False
-    cache_same_disinct = defaultdict(lambda: defaultdict(tuple[bool, str]))
-    def _load_cache_same_distinct(self):
-        if self.loaded:
+    _cache_same_distinct_loaded = False
+    _cache_same_distinct = defaultdict(lambda: defaultdict(tuple[bool, str]))
+    @classmethod
+    def _load_cache_same_distinct(cls):
+        if cls._cache_same_distinct_loaded:
             return
-        path = CACHE_DIR / "LLM"
-        if os.path.exists(path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json"):
-            json.load(path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json")
-        atexit.register(self._save_cache_same_distinct)
-        self.loaded = True
+        path = CACHE_DIR / f"same_distinct{config.OLLAMA_MODEL_NAME}.json"
+        if os.path.exists(path):
+            with open(path, "r") as file:
+                cls._cache_same_distinct = json.load(file)
+        atexit.register(cls._save_cache_same_distinct)
+        cls._loaded = True
 
-    def _save_cache_same_distinct(self):
-        path = CACHE_DIR / "LLM"
-        path.mdkir(parents = True, exist_ok = True)
-        json.dump(self.cache_same_disinct,
-                  path / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json")
+    @classmethod
+    def _save_cache_same_distinct(cls):
+        CACHE_DIR.mkdir(parents = True, exist_ok = True)
+        path = CACHE_DIR / f"same_distinct{config.OLLAMA_MODEL_NAME}.json"
+        with open(path, "w") as file:
+            json.dump(cls._cache_same_distinct, file, indent = 2)
 
 
-    @timeall
-    def validate_same_distinct(self,
+    @classmethod
+    def validate_same_distinct(cls,
                                entity1,
                                entity2,
                                from_cache: bool = True) -> tuple[bool, str]:
@@ -458,48 +479,64 @@ class LLMConnection():
         """
         """
         if from_cache:
-            if not self.loaded:
-                self._load_cache_same_distinct()
-            if entity1.uri in self.cache_same_disinct:
-                if entity2.uri in self.cache_same_disinct[entity1.uri]:
-                    return self.cache_same_disinct[entity1.uri][entity2.uri]
-            elif entity2.uri in self.cache_same_distinct:
-                if entity1.uri in self.cache_same_distinct[entity2.uri]:
-                    return self.cache_same_distinct[entity2.uri][entity1.uri]
+            if not cls._cache_same_distinct_loaded:
+                cls._load_cache_same_distinct()
+            if entity1.uri in cls._cache_same_distinct:
+                if entity2.uri in cls._cache_same_distinct[entity1.uri]:
+                    return cls._cache_same_distinct[entity1.uri][entity2.uri]
+            elif entity2.uri in cls._cache_same_distinct:
+                if entity1.uri in cls._cache_same_distinct[entity2.uri]:
+                    return cls._cache_same_distinct[entity2.uri][entity1.uri]
         """
         to_exclude = ["code", "url", "ext_ref", "uri", "type", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
         prompt = PROMPT_SAME_DISTINCT
         prompt += "\nEntity 1: " + entity1.to_string(exclude = to_exclude, limit = 200)
         prompt += "\nEntity 2: " + entity2.to_string(exclude = to_exclude, limit = 200)
         prompt1 = prompt
-        regex = r"response:\s*(.*)\s*justification:\s*(.*)"
         retries = 3
         if from_cache:
             cache_key = ' '.join(sorted([entity1.uri, entity2.uri]))
-            if cache_key in self.cache_same_distinct:
-                return self.cache_same_disinct[cache_key]
+            if cache_key in cls._cache_same_distinct:
+                return cls._cache_same_distinct[cache_key]
         total_retries = 0
+        regex = r"(response:)?[\s\n]*(.*)[\s\n]*justification:[\s\n]*(.*)"
+        regex = r".*[\s\n]*(same|distinct).*?justification[\s\n\*:]*(.*)"
         while retries > 0:
-            try:
-                response = self.generate(prompt1,
-                                         model = config.OLLAMA_MODEL)
-                is_same, justification = re.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
-                if "same" in is_same.lower() and not "distinct" in is_same.lower():
-                    is_same = True
-                elif "distinct" in is_same.lower() and not "same" in is_same.lower():
-                    is_same = False
-                else:
-                    raise ValueError(f"The LLM's response was neither same nor distinct.")
-                print(entity1.label)
-                print(entity2.label)
-                print(is_same, justification)
-                if from_cache:
-                    self.cache_same_disinct[cache_key] = (is_same, justification)
-                return is_same, justification
+            # try:
+            response = cls.generate(prompt1,
+                                    model = config.OLLAMA_MODEL)
+            print("response:")
+            print("-----")
+            print(response)
+            print("-----")
+            res_parsed = re.findall(regex, response, re.DOTALL | re.IGNORECASE)
+            print(entity1.label)
+            print(entity2.label)
+            print("-----res parsed---")
+            print(res_parsed)
+            print("---------")
+            is_same, justification = res_parsed[0] #.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
+            if "same" in is_same.lower() and not "distinct" in is_same.lower():
+                is_same = True
+            elif "distinct" in is_same.lower() and not "same" in is_same.lower():
+                is_same = False
+            else:
+                raise ValueError(f"The LLM's response was neither same nor distinct.")
+            if from_cache:
+                cls._cache_same_distinct[cache_key] = [is_same, justification]
+                cls._backup_countdown -= 1
+                if cls._backup_countdown == 0:
+                    print("BACKUP NOW")
+                    cls._save_cache_same_distinct()
+                    cls._backup_countdown = cls._BACKUP_EVERY
+                    print("BACKUP DONE")
+            return is_same, justification
+            """
             except:
                 if retries == 0:
                     raise ValueError(f"The provided answer by {config.OLLAMA_MODEL} was not correct after {total_retries} retries.")
                 print("\tresponse was malformated:", response, "retrying.")
+                print("______________")
                 prompt1 = prompt + "This is the answer you provided:\n" + response + "\n" + \
                 "Reformulate it to fit this format:\n" + "\n" + \
                 "response: same|distinct\njustification: ..."
@@ -508,10 +545,11 @@ class LLMConnection():
                 print(f"Malformated LLM response. Retry {retries}.")
                 retries -= 1
                 total_retries += 1
+            """
 
 
-    @timeall
-    def validate_same_distinct_narrow_broad(self,
+    @classmethod
+    def validate_same_distinct_narrow_broad(cls,
                                             entity1,
                                             entity2) -> tuple[int, str]:
         """
@@ -531,7 +569,7 @@ class LLMConnection():
         to_exclude = ["code", "url", "uri", "ext_ref", "type_confidence", "location_confidence", "modified", "deprecated", "source", "exact_match", "latitude", "longitude", "has_part", "is_part_of", "prior_id"]
         languages = ["en", "fr", "ca", "es", "de"]
         prompt = "Say weither those two entities are the same, distinct, broad, narrow.\n" \
-        "Templates:\n" \
+        "Examples:\n" \
         "response: narrow. justification: voyager I (entity2) is the first of the two voyager mission (entity1). entity1 refers to both missions, while entity2 to one of them, so entity2 is a narrow entity of entity1.\n" + \
         "response: same. justification: both entities refer to the same infrastructure that were built on year 2013. They do not have any conflictual feature, so they are the same entity.\n" + \
         "resonse: distinct. justification: both entities are located on different continent. Moreover, one of them seems to be part of a NASA program while the other is from a JAXA program.\n" + \
@@ -547,10 +585,13 @@ class LLMConnection():
         regex = r"response:\s*(.*)\s*justification:\s*(.*)"
         retries = 3
         total_retries = 0
+        cache_key = '|'.join(sorted([entity1.uri, entity2.uri]))
         while retries > 0:
             try:
-                response = self.generate(prompt1,
-                                         model = config.OLLAMA_MODEL)
+                response = cls.generate(prompt1,
+                                        model = config.OLLAMA_MODEL,
+                                        from_cache = True,
+                                        cache_key = cache_key)
                 relation, justification = re.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
                 relation = relation.lower()
                 if "same" in relation:
@@ -575,3 +616,11 @@ class LLMConnection():
                 print(f"Malformated LLM response. Retry {retries}.")
                 retries -= 1
                 total_retries += 1
+
+
+    # TODO remove this unused func
+    def clean_response(response: str):
+        """
+        LLMs add '*' making the response impossible to parse
+        """
+        return response.replace("*", "").replace("\n", "")
