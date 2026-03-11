@@ -9,6 +9,7 @@ data/checkpoint/
 *.jpg
 *.ttl
 *.out
+*.png
 
 # Ignore for visibility
 *.conf
