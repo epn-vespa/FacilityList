@@ -11,7 +11,6 @@ Author:
 """
 import argparse
 from views import merge_uris, split_instruments, generate_csv_json
-from graph.graph import Graph
 from pathlib import Path
 
 

@@ -68,6 +68,9 @@ class GroundFacility(ObservationFacility):
 GROUND_FACILITY = GroundFacility()
 
 class SpaceFacility(ObservationFacility):
+    """
+    Facilities that are not on the earth surface.
+    """
     _label = "space facility"
 SPACE_FACILITY = SpaceFacility()
 
@@ -117,13 +120,6 @@ class Survey(ObservationFacility):
     """
     _label = "survey"
 SURVEY = Survey()
-
-class Error(Ufo):
-    """
-    LLM error in return format
-    """
-    _label = "error"
-ERROR = Error()
 
 
 # Types that are used in lists and therefore that can be used in mappings
