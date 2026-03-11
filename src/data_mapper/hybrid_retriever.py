@@ -254,7 +254,7 @@ class HybridRetriever():
         self.selector.set_limit(top_k = 3,
                                 limit_iter = 500,
                                 z_score = 0.385,
-                                max_distinct_streak = 10)
+                                max_distinct_streak = 30)
         for tool in with_tools:
             if isinstance(tool, Embedder):
                 self.add_embedder(tool)

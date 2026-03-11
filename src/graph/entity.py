@@ -7,8 +7,7 @@ Author:
 """
 
 from collections import defaultdict
-from typing import List, Set
-from rdflib import Literal, URIRef, SKOS, DCTERMS
+from rdflib import Literal, URIRef, SKOS
 from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
 from graph.extractor.extractor import Extractor
@@ -114,7 +113,7 @@ class Entity():
                        unique: bool = False,
                        languages: list[str] = None,
                        extend_to_synonyms: bool = True,
-                       return_language: bool = False) -> Set:
+                       return_language: bool = False) -> set[tuple[str, str]] | set[str]:
         """
         Get values of the entity for a property.
 
@@ -220,7 +219,7 @@ class Entity():
                             v.remove(vv)
 
 
-    def get_synonyms(self) -> List[URIRef]:
+    def get_synonyms(self) -> list[URIRef]:
         """
         Get the URIs of the synonyms of this entity.
         """
@@ -244,8 +243,8 @@ class Entity():
                     is_human_validation: bool = False,
                     no_validation: bool = False,
                     validator_name: str = "",
-                    subject_match_field: List[URIRef] | List[str] | URIRef | str = None,
-                    object_match_field: List[URIRef] | List[str] | URIRef | str = None,
+                    subject_match_field: list[URIRef] | list[str] | URIRef | str = None,
+                    object_match_field: list[URIRef] | list[str] | URIRef | str = None,
                     match_string: str = None,
                     ) -> None:
         """

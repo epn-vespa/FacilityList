@@ -7,7 +7,6 @@ Author:
 """
 from pathlib import Path
 import os
-import atexit
 import asyncio
 
 # directories
@@ -69,7 +68,7 @@ async def connect_to_ollama():
             # tycho91
             OLLAMA_MODEL = "phi4:latest" # 14B
             OLLAMA_MODEL_NAME = "phi4:14b"
-            SUMMARIZE_MODEL = "phi4:latest"
+            SUMMARIZE_MODEL = "mistral-large:latest"#"mistral-large:latest"
             CONNECTION_MODE = "tycho91 ollama"
         else:
             # Shuttle to Armstrong from another tycho
@@ -121,7 +120,8 @@ response: same. justification: same place, same year of construction.
 response: distinct. justification: entity 1 is a telescope that is part of entity 2.
 response: distinct. justification: Mauna Kea and Mauna Loa are different observatories.
 response: distinct. justification: entity 1 is in Chile while entity 2 is in the USA.
-response: distinct. justification: Voyager II is part of the Voyager program.
+response: distinct. justification: entity 2 (Voyager II) is part of entity 1 (VOYAGER) program so they are distinct entity.
 response: distinct. justification: entity 1 is a program funded by NASA, entity 2 is a program funded by JAXA.
+Always provide a response AND a justification.
 """
 
