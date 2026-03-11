@@ -12,7 +12,7 @@ Arguments:
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
-import setup_path # Import first
+from __version__ import __version__
 
 import atexit
 from rdflib import Namespace
@@ -22,23 +22,20 @@ import os
 import sys
 
 from tqdm import tqdm
-from graph import Graph
-from data_updater import entity_types
-from data_updater.extractor.cache import VersionManager
-from data_updater.extractor.extractor import Extractor
-from data_updater.extractor.extractor_lists import ExtractorLists
-from data_updater.extractor.aas_extractor import AasExtractor
-from data_updater.extractor.iaumpc_extractor import IauMpcExtractor
-from data_updater.extractor.imcce_extractor import ImcceExtractor
-from data_updater.extractor.naif_extractor import NaifExtractor
-from data_updater.extractor.nssdc_extractor import NssdcExtractor
-from data_updater.extractor.pds_extractor import PdsExtractor
-from data_updater.extractor.spase_extractor import SpaseExtractor
-from data_updater.extractor.wikidata_extractor import WikidataExtractor
-
-from config import CACHE_DIR # type: ignore
-
-from utils.utils import get_location_info
+from graph.graph import Graph
+from graph import entity_types
+from graph.extractor.cache import VersionManager
+from graph.extractor.extractor import Extractor
+from graph.extractor.extractor_lists import ExtractorLists
+from graph.extractor.aas_extractor import AasExtractor
+from graph.extractor.iaumpc_extractor import IauMpcExtractor
+from graph.extractor.imcce_extractor import ImcceExtractor
+from graph.extractor.naif_extractor import NaifExtractor
+from graph.extractor.nssdc_extractor import NssdcExtractor
+from graph.extractor.pds_extractor import PdsExtractor
+from graph.extractor.spase_extractor import SpaseExtractor
+from graph.extractor.wikidata_extractor import WikidataExtractor
+from utils.location_utilities import get_location_info
 
 
 class Updater():
@@ -73,31 +70,40 @@ class Updater():
         return self._output_ontology
 
 
-    def update(self,
-               data: dict,
-               extractor: Extractor = None,
-               cat: str = "ufo"):
+    def add_entities(self,
+                     data: dict,
+                     extractor: Extractor = None,
+                     cat: str = "ufo"):
         """
-        Add the data from the dict to the Ontology.
+        /!\\ Important: data dict's entries must contain a type key,
+        elsewise the entry with no type will be ignored.
+        Add the data from the dict to the ontology. The dictionary should be
+        like {"uri1": {"label":"a", "code":"b", ...}}.
+        Removes old entities from the same extractor before adding new ones.
 
-        Keyword arguments:
-        data -- a dictionary like {"uri1": {"uri":"a", "label":"b"}}
-        source -- the class of the extractor of the source (ex: AasExtractor)
-        not already in the dictionary's features.
+        Args:
+            data: a dictionary like {"uri1": {"uri":"a", "label":"b"}}
+            source: the class of the extractor of the source (ex: AasExtractor)
         """
         # Remove the old entities for the extractor in order to update the source.
         if extractor:
-            namespace_uri = Namespace(str(self.graph.OM.OBS)[:-1] + "/" + extractor.NAMESPACE + "#")
+            namespace_uri = Namespace(str(self.graph.PROPERTIES.OBS)[:-1] + "/" + extractor.NAMESPACE + "#")
             for triple in self.graph:
                 if triple[0].startswith(namespace_uri):
                     self.graph.remove(triple)
 
-        for identifier, features in tqdm(data.items(), desc = f"Add entities to ontology"):
+        if extractor:
+            desc = f"Add {extractor.NAMESPACE} entities to ontology"
+        else:
+            desc = ""
+        for identifier, features in tqdm(data.items(), desc = desc):
             # Get complete location information and add them to the features
             # Only for extracted ground entities
             if extractor:
 
-                types = features["type"]
+                types = features.get("type", None)
+                if not types:
+                    continue
                 if type(types) != str:
                     is_space_type = any(x in entity_types.SPACE_TYPES for x in types)
                 else:
@@ -105,10 +111,16 @@ class Updater():
                 if("type_confidence" in features and
                               (features["type_confidence"] != 1 or
                                not is_space_type)):
+                    # If the type is not certain or if it is not a space type,
+                    # we will try to get location information
                     location_info = dict()
                     ent_type = features.get("type", None)
+                    """
                     part_of = None
                     if ent_type is not None and "is_part_of" in features:
+                        # If the entity is part of another entity, we will check
+                        # if the parent entity has a location (part_of will be
+                        # passed to get_location_info)
                         if type(features["is_part_of"]) == list:
                             part_of_uri = None
                             for p in features["is_part_of"]:
@@ -128,29 +140,34 @@ class Updater():
                         elif type(features["is_part_of"]) == str:
                             # Wikidata
                             part_of = features["is_part_of"]
-
+                    """
                     if type(ent_type) == str:
                         ent_type = {ent_type}
                     if ent_type is not None:
                         for cat in ent_type:
-                            if (# cat == entity_types.GROUND_OBSERVATORY or
-                                cat in entity_types.MAY_HAVE_ADDR and (
+                            if (cat in entity_types.MAY_HAVE_ADDR and (
                                 "latitude" in features and "longitude" in features or
-                                "location" in features # or
+                                "location" in features or
+                                "address" in features # or
                                 #part_of is not None or
                                 )):
-
                                 location_info = get_location_info(label = features.get("label", None),
-                                                                latitude = features.get("latitude", None),
-                                                                longitude = features.get("longitude", None),
-                                                                address = features.get("address", None),
-                                                                location = features.get("location", None),
-                                                                part_of = part_of)
+                                                                  latitude = features.get("latitude", None),
+                                                                  longitude = features.get("longitude", None),
+                                                                  address = features.get("address", None),
+                                                                  country = features.get("country", None),
+                                                                  location = features.get("location", None),
+                                                                  #part_of = part_of,
+                                                                  from_cache = True)
                                 break
-                    # Retrieved information include country, continent. We also set location to
-                    # Earth or Space.
+                    # Retrieved information are country, continent, address.
+                    # We also set location to Earth or Space, and Ocean if
+                    # the search by latitude and longitude did not retrieve
+                    # anything.
                     for key, value in location_info.items():
-                        if key not in features or features[key] is None:
+                        if key == "country":
+                            features[key] = value # Replace USA by United States
+                        if key not in features or not features[key]:
                             features[key] = value
 
             # Add triple <subj, pred, obj>
@@ -174,7 +191,7 @@ class Updater():
 
     def init_graph(self):
         """
-        Create the basic classes (like the list of sources of the project)
+        Create the basic community properties and sources.
         """
         # Labels
         A = "celestial astronomy"
@@ -215,11 +232,8 @@ class Updater():
                                  "community": [A, H, P, O],
                                  "is_authoritative_for": [A, H, P, O]}} # Not authoritative
 
-        # TODO add other sources (can have more than one community)
-        # every time we create an extraction script for the source.
-
-        self.update(COMMUNITIES, cat = "community")
-        self.update(SOURCES, cat = "facility list")
+        self.add_entities(COMMUNITIES, cat = "community")
+        self.add_entities(SOURCES, cat = "facility list")
 
 
     def write(self):
@@ -236,7 +250,8 @@ class Updater():
 def main(lists: List[str],
          input_ontology: str = "",
          output_ontology: str = "output.ttl",
-         from_cache: bool = True):
+         from_cache: bool = True,
+         remove_deprecated: bool = True):
     updater = Updater(input_ontology,
                       output_ontology,
                       lists)
@@ -254,15 +269,15 @@ def main(lists: List[str],
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract(from_cache = from_cache)
-        VersionManager.compare_versions(data, extractor)
-        updater.update(data, extractor = extractor)
+        rd = remove_deprecated or hasattr(extractor, "MULTI_VERSIONING") and extractor.MULTI_VERSIONING
+        VersionManager.compare_versions(data, extractor, remove_deprecated = rd)
+        updater.add_entities(data, extractor = extractor)
 
 
 if __name__ == "__main__":
     parser = ArgumentParser(
         prog = "update.py",
-        description = "Download data from different lists and merge them into\
-              an output ontology.")
+        description = "Download data from different lists and merge them into an output ontology.")
 
     parser.add_argument("-l",
                         "--lists",
@@ -272,7 +287,7 @@ if __name__ == "__main__":
                         nargs = '*',
                         type = str,
                         required = False,
-                        help = "Name of the lists to extract. 'all' will" + ""
+                        help = "Name of the lists to extract. 'all' will" +
                         "extract from all of the lists.")
     parser.add_argument("-i",
                         "--input-ontology",
@@ -295,9 +310,20 @@ if __name__ == "__main__":
                         dest = "no_cache",
                         action = "store_true",
                         help = "If set, will download cache again and compare versions.")
+    parser.add_argument("-d",
+                        "--keep-deprecated",
+                        dest = "keep_deprecated",
+                        action = "store_true",
+                        help = "If set, will keep deprecated entities to the updated ontology.")
+    parser.add_argument("-v",
+                        "--version",
+                        action="version",
+                        version=f"%(prog)s {__version__}",
+                        help="Print the current version.")
 
     args = parser.parse_args()
     main(args.lists,
          args.input_ontology,
          args.output_ontology,
-         not args.no_cache)
+         not args.no_cache,
+         not args.keep_deprecated)

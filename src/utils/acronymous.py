@@ -19,12 +19,12 @@ def _compute_for(acronym: list[str],
     [' ', ' ', ' ', ' ', 'a', 'n', 'd', ' ', ' ', ' ', ' ']
     [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-    Keyword arguments:
-    first_letters --  first letters of each word (except in stopwords)
-    second_letters -- second letters of each word (except in stopwords)
-    stopwords_letters -- stopwords letters
-    uppercases_letters -- uppercases that are not in 1st or 2nd and not in a stopword
-    removed_letter -- the index of the previously removed letter
+    Args:
+        first_letters:  first letters of each word (except in stopwords)
+        second_letters: second letters of each word (except in stopwords)
+        stopwords_letters: stopwords letters
+        uppercases_letters: uppercases that are not in 1st or 2nd and not in a stopword
+        removed_letter: the index of the previously removed letter
     """
     if len(acronym) == 0:
         # return the proportion of first letters used.
@@ -99,7 +99,7 @@ def _compute_for(acronym: list[str],
                     return score - malus # found the best path
                 if score - malus > best_score:
                     best_score = score - malus
-    if letter in second_letters:
+    elif letter in second_letters:
         # index of prev letter is remove_letter.
         if (len(second_letters) > removed_letter + 1
             and second_letters[removed_letter + 1] == letter):
@@ -115,7 +115,7 @@ def _compute_for(acronym: list[str],
                 return score # found the best path
             if score > best_score:
                 best_score = score
-    if letter in stopwords_letters:
+    elif letter in stopwords_letters:
         for index, matched in enumerate(stopwords_letters):
             if matched == letter:
                 if (stopwords_letters[index - 1] == '_' and removed_letter != index - 1
@@ -135,7 +135,7 @@ def _compute_for(acronym: list[str],
                 if score > best_score:
                     best_score  = score
 
-    if letter in uppercases_letters:
+    elif letter in uppercases_letters:
         #if (len(uppercases_letters) > removed_letter + 1
         #    and uppercases_letters[removed_letter + 1] == letter): # following another letter
         for index, matched in enumerate(uppercases_letters):
@@ -163,8 +163,8 @@ def _get_matrixes(label):
     - a matrix containing the stopwords' letters,
     - a matrix containing other letters in the label that are uppercase.
 
-    Keyword arguments:
-    label -- the label without the acronym
+    Args:
+        label: the label without the acronym
     """
 
     # Create matrixes of letters that are likely to be in the acronym
@@ -224,12 +224,13 @@ def proba_acronym_of(acronym: str,
     If "acronym" cannot be the label's acronym (e.g. it is too long),
     then return -1.
 
-    Keyword arguments:
-    acronym -- acronym to compute probability from
-    label -- the label without the acronym
+    Args:
+        acronym: acronym to compute probability from
+        label: the label without the acronym
     """
     acronym = _clean_acronym(acronym)
     acronym = acronym.strip()
+
     if len(acronym) > len(label):
         return -1
     if ' ' in acronym:
@@ -240,6 +241,9 @@ def proba_acronym_of(acronym: str,
     # Acronym has only uppercases
     #if acronym.upper() != acronym:
     #    return -1
+    uppercase_letters = "".join([c for c in label if c >= 'A' and c <= 'Z'])
+    if acronym == uppercase_letters:
+        return 1
 
     first_letters, second_letters, stopwords_letters, uppercases_letters = _get_matrixes(label)
     score = _compute_for(acronym.lower(),
@@ -258,6 +262,12 @@ def proba_acronym_of(acronym: str,
     return math.pow(score, 4)
 
 
+SUPERSCRIPT_MAP = {
+    '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
+    '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9'
+}
+
+
 def _del_numbers(acronym: str) -> str:
     """
     Get a version of the acronym with multiplied letters (ex: DA2I => DAII)
@@ -265,7 +275,8 @@ def _del_numbers(acronym: str) -> str:
     number = 0
     res = ""
     for letter in acronym:
-        if letter.isnumeric():
+        if letter <= '9' and letter >= '0' or letter in SUPERSCRIPT_MAP:
+            letter = SUPERSCRIPT_MAP.get(letter, letter)
             number = number * 10 + int(letter)
         elif letter.isalpha():
             if number > 0 and number < 10:

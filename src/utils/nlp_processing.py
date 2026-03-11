@@ -1,16 +1,7 @@
 
 import re
-from nltk.corpus import stopwords
-import nltk
-from nltk import WhitespaceTokenizer
-from nltk.tokenize import word_tokenize
-tokenizer = WhitespaceTokenizer()
+from utils import stopwords
 
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    print("Downloading nltk stopwords...")
-    nltk.download('stopwords')
 
 # Load stopwords
 LANGUAGES = ["english", "french", "spanish", "italian", "russian", "arabic"]
@@ -19,10 +10,11 @@ for lang in LANGUAGES:
     stop_words = stop_words.union(stopwords.words(lang))
 
 def tokenize(string: str) -> list[str]:
-    return word_tokenize(string)
+    # return word_tokenize(string)
+    return re.findall(r"[^\b ]+", string)
 
 def del_stopwords(string: str) -> str:
-    tokens = tokenizer.span_tokenize(string)
+    tokens = tokenize(string)
     for start, end in list(tokens)[::-1]:
         if string[start:end] in stop_words:
             string = string[:start] + string[end:]
