@@ -31,13 +31,11 @@ def _compute_for(acronym: list[str],
         return 1 - len([x for x in first_letters if x not in " _"]) / len(first_letters)
 
     # Debug
-    """
     print(f"----state {acronym}----")
     print(first_letters)
     print(second_letters)
     print(stopwords_letters)
     print(uppercases_letters)
-    """
 
     letter = acronym[0]
     if letter == 'x':
@@ -115,6 +113,24 @@ def _compute_for(acronym: list[str],
                 return score # found the best path
             if score > best_score:
                 best_score = score
+
+    elif letter in uppercases_letters:
+        #if (len(uppercases_letters) > removed_letter + 1
+        #    and uppercases_letters[removed_letter + 1] == letter): # following another letter
+        for index, matched in enumerate(uppercases_letters):
+                if matched == letter:
+                    uppercases_letters_copy = uppercases_letters.copy()
+                    uppercases_letters_copy[index] = '_'
+                    score = _compute_for(acronym[1:],
+                                        first_letters,
+                                        second_letters,
+                                        stopwords_letters,
+                                        uppercases_letters_copy,
+                                        removed_letter = index)
+                    if score == 1:
+                        return score # found the best path
+                    if score > best_score:
+                        best_score = score
     elif letter in stopwords_letters:
         for index, matched in enumerate(stopwords_letters):
             if matched == letter:
@@ -134,24 +150,6 @@ def _compute_for(acronym: list[str],
                     return score # found the best path
                 if score > best_score:
                     best_score  = score
-
-    elif letter in uppercases_letters:
-        #if (len(uppercases_letters) > removed_letter + 1
-        #    and uppercases_letters[removed_letter + 1] == letter): # following another letter
-        for index, matched in enumerate(uppercases_letters):
-                if matched == letter:
-                    uppercases_letters_copy = uppercases_letters.copy()
-                    uppercases_letters_copy[index] = '_'
-                    score = _compute_for(acronym[1:],
-                                        first_letters,
-                                        second_letters,
-                                        stopwords_letters,
-                                        uppercases_letters_copy,
-                                        removed_letter = index)
-                    if score == 1:
-                        return score # found the best path
-                    if score > best_score:
-                        best_score = score
     return best_score
 
 
@@ -177,10 +175,16 @@ def _get_matrixes(label):
         state = 'out'
         for letter in word:
             if word.lower() in stop_words:
-                first_letters.append(' ')
-                second_letters.append(' ')
-                stopwords_letters.append(letter.lower()) # keep only first letter of stopwords
-                uppercases_letters.append(' ')
+                if letter.isupper():
+                    first_letters.append(' ')
+                    second_letters.append(' ')
+                    stopwords_letters.append(' ')
+                    uppercases_letters.append(letter.lower()) # keep uppercases > stopwords
+                else:
+                    first_letters.append(' ')
+                    second_letters.append(' ')
+                    stopwords_letters.append(letter.lower()) # keep only first letter of stopwords
+                    uppercases_letters.append(' ')
             elif state == 'out':
                 first_letters.append(letter.lower()) # keep first letter
                 second_letters.append(' ')
