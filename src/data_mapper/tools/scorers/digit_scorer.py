@@ -9,8 +9,11 @@ Author:
 from numbers import Number
 from graph.entity import Entity
 from data_mapper.tools.scorers.scorer import Scorer
+from graph.properties import Properties
 
 import re
+
+properties = Properties()
 
 class DigitScorer(Scorer):
 
@@ -45,7 +48,8 @@ class DigitScorer(Scorer):
     def _get_numbers(entity: Entity,
                      identifiers: list[str]) -> list:
         """
-        Return a list of float from the entity.
+        Return a list of float from the entity's textual representation fields
+        (definition, description, label, alt labels...)
 
         Args:
             entity: Entity to get numbers from
@@ -54,8 +58,10 @@ class DigitScorer(Scorer):
         result = []
 
         for key, values in entity._data.items():
-            if "id" in key.lower() or "uri" in key.lower():
-                continue # Ignore identifiers
+            if key in properties._IDENTIFIERS or key in properties._LINKS:
+                continue # Ignore identifiers & links
+            #if key not in properties._STRING_REPR:
+            #    continue
             for value in values:
                 if isinstance(value, Number):
                     if str(value) in identifiers:
