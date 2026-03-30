@@ -59,7 +59,8 @@ class PdsExtractor(Extractor):
     CONTEXT_TYPES = {"telescope": ["all"],
                      "facility": ["observatory"],
                      "instrument_host": ["lander", "rover", "spacecraft"],
-                     "investigation": ["mission"]}
+                     "investigation": ["mission"],
+                     "instrument": ["all"]}
 
     # Convert type of the entities
     TYPES = {"telescope": entity_types.TELESCOPE,

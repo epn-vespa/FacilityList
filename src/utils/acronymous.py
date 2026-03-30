@@ -31,11 +31,13 @@ def _compute_for(acronym: list[str],
         return 1 - len([x for x in first_letters if x not in " _"]) / len(first_letters)
 
     # Debug
+    """
     print(f"----state {acronym}----")
     print(first_letters)
     print(second_letters)
     print(stopwords_letters)
     print(uppercases_letters)
+    """
 
     letter = acronym[0]
     if letter == 'x':
