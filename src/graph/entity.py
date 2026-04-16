@@ -395,7 +395,8 @@ class Entity():
                   include: list[str] = [],
                   limit: int = 512,
                   languages: list[str] = None,
-                  use_keywords: bool = True) -> str:
+                  use_keywords: bool = True,
+                  get_label_of_uris: bool = False) -> str:
         """
         Convert an entity's data dict into its string representation.
         Keys are sorted so that the generated string is always the same.
@@ -412,6 +413,8 @@ class Entity():
             languages: only get strings if they are in any of the languages.
             use_keywords: weither to add keywords before the content or only
                           keep the content.
+            get_label_of_uris: use labels instead of URIs for entities known
+                               in this graph (self ref) ex: has_part.
         """
         res = ""
         label = self.get_values_for("label")
@@ -432,7 +435,7 @@ class Entity():
         for key, value in sorted(self.data.items()):
             key = properties.get_attr_name(key)
             value = self.get_values_for(key, languages = languages)
-            if not include and key in exclude:
+            if not include and key in exclude :
                 continue
             if include and key not in include:
                 continue
@@ -445,13 +448,15 @@ class Entity():
                 #continue
             if type(value) not in [list, set, tuple]:
                 value = [value]
-            else:
-                key = key.replace('_', ' ').capitalize()
             values = []
             for v in value:
+                if get_label_of_uris and key in properties._SELF_REF:
+                    ref_entity = Entity(v)
+                    v = ref_entity.label
                 values.append(str(v).rsplit('#')[-1]) # remove namespace
             if use_keywords:
-                res += f" {key}: {', '.join([str(v) for v in values])[:limit]}."
+                key_str = key.replace('_', ' ').capitalize()
+                res += f" {key_str}: {', '.join([str(v) for v in values])[:limit]}."
             else:
                 res += ' '.join([str(v) for v in values])[:limit]
         return res
