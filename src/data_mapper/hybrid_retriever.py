@@ -179,7 +179,7 @@ class HybridRetriever():
             prev_weight: the weight of all embeddings
         """
         total_weight = prev_weight
-        weighted_score = prev_score
+        weighted_score = prev_score * prev_weight
         scores_dict = {"cosine_similarity": prev_score} # Cosine similarity of hybrid embeddings
         for scorer in self.scorers:
             s = scorer.compute(entity1, entity2)
@@ -484,7 +484,16 @@ class HybridRetriever():
                                           validator_name = config.OLLAMA_MODEL_NAME)
                     self.selector.cut_distinct_streak()
                 else:
-                    self.invalidate_mapping()
+                    self.invalidate_mapping(entity1 = entity1,
+                                            entity2 = entity2,
+                                            extractor1 = extractor1,
+                                            extractor2 = extractor2,
+                                            score_value= score,
+                                            score_name = "hybrid",
+                                            scores = scores_dict,
+                                            justification_string = justification,
+                                            validator_name = config.OLLAMA_MODEL_NAME,
+                                           )
                     self.selector.update_distinct_streak()
                 self.check_battery()
 
@@ -543,9 +552,39 @@ class HybridRetriever():
                                               )
 
 
-    def invalidate_mapping(self,) -> None:
-        # TODO
-        print("Classified as distinct entities by LLM. Save somewhere ?")
+    def invalidate_mapping(self,
+                           entity1: URIRef,
+                           entity2: URIRef,
+                           extractor1: Extractor,
+                           extractor2: Extractor,
+                           score_value: float,
+                           score_name: str,
+                           scores: dict = None,
+                           justification_string: str = "",
+                           is_human_validation: bool = False,
+                           no_validation: bool = False,
+                           validator_name: str = "",
+                          ) -> None:
+        """
+        Add a distinct relation but only in the SSSOM ontology. Use to keep
+        track of negative decisions by the LLM.
+        """
+        print("Classified as distinct entities by LLM. Saved in mapping graph.")
+        mapping_graph = MappingGraph()
+        mapping_graph.add_mapping(entity1,
+                                  entity2,
+                                  entity1_source = mapping_graph._OBS[extractor1.URI],
+                                  entity2_source = mapping_graph._OBS[extractor2.URI],
+                                  score_value = score_value,
+                                  score_name = score_name,
+                                  scores = scores,
+                                  filters = self.filters,
+                                  justification_string = justification_string,
+                                  is_human_validation = is_human_validation,
+                                  no_validation = no_validation,
+                                  validator_name = validator_name,
+                                  predicate = properties.distinct,
+                                 )
 
 
     def check_battery(self):
