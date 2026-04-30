@@ -308,7 +308,7 @@ class LLMConnection():
                  prompt: str,
                  model: str,
                  num_predict: int = 256,
-                 from_cache: bool = False,
+                 from_cache: bool = True,
                  cache_key: str = None) -> str:
 
         """
@@ -501,37 +501,70 @@ class LLMConnection():
         total_retries = 0
         regex = r"(response:)?[\s\n]*(.*)[\s\n]*justification:[\s\n]*(.*)"
         regex = r".*[\s\n]*(same|distinct).*?justification[\s\n\*:]*(.*)"
+        """
+        response = cls.generate(prompt1,
+                                model = config.OLLAMA_MODEL,
+                                from_cache = from_cache,
+                                cache_key = cache_key)
+        print("response:")
+        print("-----")
+        print(response)
+        print("-----")
+        res_parsed = re.findall(regex, response, re.DOTALL | re.IGNORECASE)
+        print(entity1.label)
+        print(entity2.label)
+        print("-----res parsed---")
+        print(res_parsed)
+        print("---------")
+        is_same, justification = res_parsed[0] #.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
+        if "same" in is_same.lower() and not "distinct" in is_same.lower():
+            is_same = True
+        elif "distinct" in is_same.lower() and not "same" in is_same.lower():
+            is_same = False
+        else:
+            raise ValueError(f"The LLM's response was neither same nor distinct.")
+        if from_cache:
+            cls._cache_same_distinct[cache_key] = [is_same, justification]
+            cls._backup_countdown -= 1
+            if cls._backup_countdown == 0:
+                print("BACKUP NOW")
+                cls._save_cache_same_distinct()
+                cls._backup_countdown = cls._BACKUP_EVERY
+                print("BACKUP DONE")
+        return is_same, justification
+        """
         while retries > 0:
-            # try:
-            response = cls.generate(prompt1,
-                                    model = config.OLLAMA_MODEL)
-            print("response:")
-            print("-----")
-            print(response)
-            print("-----")
-            res_parsed = re.findall(regex, response, re.DOTALL | re.IGNORECASE)
-            print(entity1.label)
-            print(entity2.label)
-            print("-----res parsed---")
-            print(res_parsed)
-            print("---------")
-            is_same, justification = res_parsed[0] #.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
-            if "same" in is_same.lower() and not "distinct" in is_same.lower():
-                is_same = True
-            elif "distinct" in is_same.lower() and not "same" in is_same.lower():
-                is_same = False
-            else:
-                raise ValueError(f"The LLM's response was neither same nor distinct.")
-            if from_cache:
-                cls._cache_same_distinct[cache_key] = [is_same, justification]
-                cls._backup_countdown -= 1
-                if cls._backup_countdown == 0:
-                    print("BACKUP NOW")
-                    cls._save_cache_same_distinct()
-                    cls._backup_countdown = cls._BACKUP_EVERY
-                    print("BACKUP DONE")
-            return is_same, justification
-            """
+            try:
+                response = cls.generate(prompt1,
+                                        model = config.OLLAMA_MODEL,
+                                        from_cache = from_cache,
+                                        cache_key = cache_key)
+                print("response:")
+                print("-----")
+                print(response)
+                print("-----")
+                res_parsed = re.findall(regex, response, re.DOTALL | re.IGNORECASE)
+                print(entity1.label)
+                print(entity2.label)
+                print("-----res parsed---")
+                print(res_parsed)
+                print("---------")
+                is_same, justification = res_parsed[0] #.findall(regex, response, re.DOTALL | re.IGNORECASE)[0]
+                if "same" in is_same.lower() and not "distinct" in is_same.lower():
+                    is_same = True
+                elif "distinct" in is_same.lower() and not "same" in is_same.lower():
+                    is_same = False
+                else:
+                    raise ValueError(f"The LLM's response was neither same nor distinct.")
+                if from_cache:
+                    cls._cache_same_distinct[cache_key] = [is_same, justification]
+                    cls._backup_countdown -= 1
+                    if cls._backup_countdown == 0:
+                        print("BACKUP NOW")
+                        cls._save_cache_same_distinct()
+                        cls._backup_countdown = cls._BACKUP_EVERY
+                        print("BACKUP DONE")
+                return is_same, justification
             except:
                 if retries == 0:
                     raise ValueError(f"The provided answer by {config.OLLAMA_MODEL} was not correct after {total_retries} retries.")
@@ -545,7 +578,6 @@ class LLMConnection():
                 print(f"Malformated LLM response. Retry {retries}.")
                 retries -= 1
                 total_retries += 1
-            """
 
 
     @classmethod

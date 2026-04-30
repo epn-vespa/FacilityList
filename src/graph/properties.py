@@ -44,6 +44,8 @@ class Properties():
                 "objtype": XSD.string}, # for ontological external resources
         "exact_match": {"pred": SKOS.exactMatch,
                         "objtype": URIRef}, # for internal resources that are the same.
+        "distinct": {"pred": OWL.differentFrom,
+                     "objtype": URIRef}, # for internal resources that are different.
         "url": {"pred": SDO.url,
                 "objtype": XSD.string}, # facility-list, PDS, SPASE
         "ext_ref": {"pred": FOAF.page,
