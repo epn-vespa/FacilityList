@@ -66,9 +66,9 @@ async def connect_to_ollama():
         OLLAMA_HOST = os.environ["OLLAMA_HOST"]
         if "127.0.0.1" in OLLAMA_HOST or "localhost" in OLLAMA_HOST:
             # tycho91
-            OLLAMA_MODEL = "phi4:latest" # 14B
-            OLLAMA_MODEL_NAME = "phi4:14b"
-            SUMMARIZE_MODEL = "mistral-large:latest"#"mistral-large:latest"
+            OLLAMA_MODEL = "mistral-large:latest" # "phi4:latest" # 14B
+            OLLAMA_MODEL_NAME = "mistral-large:latest"  # "phi4:14b"
+            SUMMARIZE_MODEL = "mistral-large:latest" # "phi4:latest"
             CONNECTION_MODE = "tycho91 ollama"
         else:
             # Shuttle to Armstrong from another tycho
@@ -122,6 +122,9 @@ response: distinct. justification: Mauna Kea and Mauna Loa are different observa
 response: distinct. justification: entity 1 is in Chile while entity 2 is in the USA.
 response: distinct. justification: entity 2 (Voyager II) is part of entity 1 (VOYAGER) program so they are distinct entity.
 response: distinct. justification: entity 1 is a program funded by NASA, entity 2 is a program funded by JAXA.
-Always provide a response AND a justification.
+response: distinct. Justification: Entity 1 refers to a specific mission (SM4) undertaken using entity 2 (Space Shuttle Atlantis) so they are not exactly the same entity.
+response: distinct. justification: The Europa Imaging System Wide-Angle Camera (EIS WAC) is a component of the broader Europa Imaging System. Entity 1 refers to a specific part of Entity 2, so they are not the same entity.
+response: same. justification: Addis Ababa Geomagnetic Observatory (AAE) and Addis Ababa Magnetic Observatory are the same entity because a Geomagnetic and a Magnetic observatory are the same things.
+Always provide a response AND a justification. Warning: they must be of the same type and exactly the same. Even if related to the same mission, two instruments are different.
 """
 
