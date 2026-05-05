@@ -34,6 +34,7 @@ class ManualReviewer():
                  lists: list[str],
                  begin: str,
                  end: str,
+                 offset: int = 0,
                  terminal: bool = False):
         version = 2
         new_version = re.findall(r"v([0-9]+)", folder, flags = re.DOTALL)
@@ -69,6 +70,7 @@ class ManualReviewer():
         if end:
             end = datetime.strptime(end, format = "%Y-%m-%d %H:%M:%S")
         self._end = end
+        self._offset = offset # start at this entity
         self._terminal = terminal
         self._initialize_mapping_set(self._reviewer)
 
@@ -373,7 +375,7 @@ class ManualReviewer():
         return filter_date, filter_lists, filter_validators
 
 
-    def _get_mappings(self) -> set[URIRef]:
+    def _get_mappings(self) -> list[URIRef]:
         """
         Get all mappings to review.
         """
@@ -382,7 +384,8 @@ class ManualReviewer():
         query = f"""
         SELECT ?mapping WHERE {{
             ?mapping a sssom:Mapping .
-
+            ?mapping sssom:subject_id ?subj .
+            ?mapping sssom:object_id ?obj .
             {{
                 ?mapping sssom:creator_label ?rl .
             }} UNION {{
@@ -395,8 +398,9 @@ class ManualReviewer():
                 ?mapping owl:deprecated true .
             }}
         }}
+        ORDER BY ?subj ?obj
         """
-        return set(self._mapping.query(query))
+        return list(self._mapping.query(query))
 
 
     def _initialize_mapping_set(self,
@@ -422,13 +426,20 @@ class ManualReviewer():
         # Open web service (async)
         mappings = self._get_mappings()
         total = len(mappings)
-        for i, (mapping_uri,) in enumerate(mappings):
+        # TODO allow navigation (i's dynamic update)
+        i = self._offset
+        #for i, (mapping_uri,) in enumerate(mappings):
+        while i < len(mappings):
+            mapping_uri = mappings[i][0]
+            navigation = -1 # No change
             # Get infos and transmit to the web interface
             if self._terminal:
                 changed, old_relation, new_relation, justification = self._terminal_validation(mapping_uri) # TODO
             else:
-                changed, old_relation, new_relation, justification = self._gui_validation(mapping_uri, current = i, total = total)
-                # raise NotImplementedError("Not any support for GUI yet. Please use terminal instead.")
+                changed, old_relation, new_relation, justification, navigation = self._gui_validation(mapping_uri, current = i, total = total)
+            if navigation >= 0: # Navigate
+                i = navigation
+                continue
             if justification.strip():
                 justification = justification.strip() + f" ({self._reviewer})"
             if changed:
@@ -441,6 +452,7 @@ class ManualReviewer():
             else:
                 self._validate_mapping(mapping_uri,
                                        justification)
+            i += 1
         self.write()
         print("Review done. Please interrupt this program (Ctrl+C).")
 
@@ -468,8 +480,6 @@ class ManualReviewer():
                                   }}""")
         #old_rel = None
         for subj, pred, obj, justification in res:
-            print(subj, pred, obj)
-            print(justification)
             changed = ""
             while not changed.strip().isdigit():
                 changed = input("Modify relation ?\n0 -> No\n1 -> change to owl:differentFrom\n2 -> change to skos:broadMatch (subj part of obj)\n3 -> change to skos:narrowMatch (obj part of subj)\n 4 -> ignore for now\n >>> ")
@@ -529,7 +539,9 @@ class ManualReviewer():
                                               current = current)
 
             with manual_review_server.app.app_context():
-                new_relation, new_justification = manual_review_server.wait_for_user_choice()
+                new_relation, new_justification, navigation = manual_review_server.wait_for_user_choice()
+                if navigation != "" and int(navigation) >= 0 and int(navigation) < total:
+                    return False, pred, "", "", int(navigation)
             match new_relation:
                 case "exactMatch":
                     new_relation = SKOS.exactMatch
@@ -546,7 +558,7 @@ class ManualReviewer():
             else:
                 pass
             changed = pred != new_relation
-            return changed, pred, new_relation, new_justification
+            return changed, pred, new_relation, new_justification, -1
         #if not old_rel:
         #    raise ValueError(f"The mapping with id {mapping_uri} does not have a predicate_id property.")
 
@@ -573,9 +585,10 @@ def main(folder: str,
          lists: list[str],
          begin: str,
          end: str,
+         offset: int,
          terminal: bool):
 
-    mr = ManualReviewer(folder, validators, lists, begin, end, terminal)
+    mr = ManualReviewer(folder, validators, lists, begin, end, offset, terminal)
     if not terminal:
         # Open the server & web browser client for manual disambiguation
         import threading
@@ -623,6 +636,13 @@ if __name__ == "__main__":
                         type = str,
                         help = "End date (only review mappings created before this datetime). Format: yyyy-mm-dd hh-mm-ss")
 
+    parser.add_argument("-o",
+                        "--offset",
+                        required = False,
+                        type = int,
+                        default = 0,
+                        help = "Restart at this mapping to process the review by steps.")
+
     parser.add_argument("-t",
                         "--terminal",
                         action = "store_true",
@@ -630,4 +650,4 @@ if __name__ == "__main__":
                         help = "If True, will perform the review in the Terminal instead of opening a GUI.")
 
     args = parser.parse_args()
-    main(args.folder, args.reviewer, args.lists, args.begin, args.end, args.terminal)
+    main(args.folder, args.reviewer, args.lists, args.begin, args.end, args.offset, args.terminal)

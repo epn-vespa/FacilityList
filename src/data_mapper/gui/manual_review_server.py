@@ -44,7 +44,7 @@ def update_state(subject,
 
 def wait_for_user_choice():
     choice_data = user_choices.get()
-    return choice_data["choice"], choice_data["justification"]
+    return choice_data["choice"], choice_data["justification"], choice_data["navigation"]
 
 
 @app.route("/")
@@ -62,10 +62,12 @@ def validate():
     data = request.get_json()
     choice = data.get("choice")
     justification = data.get("justification", "")
+    navigation = data.get("navigation", -1)
 
     user_choices.put({
         "choice": choice,
-        "justification": justification
+        "justification": justification,
+        "navigation": navigation
     })
 
     return jsonify({"status": "ok"})

@@ -15,6 +15,8 @@
   <h1 id="title"></h1>
   <div id="waiting-div"></div>
   <div id="hidden-div" hidden="True">
+    <button id="undo">&#8617;</button>
+    <p>Navigate to mapping n°</p><input id="navigate" value="" type="number"/> <button id="navigation-btn">GO</button>
     <div id="metadata-container" hidden="True"><p><span id="creator"></span> created this mapping on <span id="creation-date"></span></p><br><span id="old-justification"></span></p></div> <!--Div to put the mapping's metadata (creator, creation time, lists)-->
     <div id="subject-container"></div>
     <div id="predicate-container"></div>
@@ -43,6 +45,7 @@
     }
 
     function updateUI(data) {
+
       const title = document.getElementById("title");
       const hiddenDiv = document.getElementById("hidden-div");
       const waitingDiv = document.getElementById("waiting-div");
@@ -57,9 +60,32 @@
       const creationDateDiv = document.getElementById("creation-date");
       const oldJustificationDiv = document.getElementById("old-justification");
       const metadataDiv = document.getElementById("metadata-container");
+      const navigationDiv = document.getElementById("navigate");
+      const undoBtn = document.getElementById("undo");
+      const navigationBtn = document.getElementById("navigation-btn");
+
 
       title.innerHTML = `Validation ${data.current+1}/${data.total} of ${data.list1} ${data.list2}`;
-      selectedInput.value = "none";
+      if (data.current+1 == data.total) {
+        hiddenDiv.style.display = "None";
+        waitingDiv.innerHTML = "Review done. Please go back to your terminal and wait for the next instruction. The updated mappings are being saved in an output folder."
+        waitingDiv.style.display = "Block";
+      }
+
+      undoBtn.onclick = () => {
+        if (data.current >= 1) {
+          navigate(data.current - 1);
+          data.current = data.current - 1;
+        }
+      };
+
+      navigationBtn.onclick = () => {
+        const navigate_to = navigationDiv.value - 1;
+        if (navigate_to >= 0 && navigate_to < data.total) {
+          navigate(navigate_to);
+        }
+      };
+
 
       // Get key_ of object (if same, do not update)
       let same_obj = false;
@@ -170,11 +196,29 @@
         objectDiv.innerHTML = "";
         hiddenDiv.style.display = "None";
         var justification = justificationDiv.value;
+        navigationDiv.value = "";
         justificationDiv.value = "";
         await fetch("/validate", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({"choice": choice, "justification": justification})
+          body: JSON.stringify({"choice": choice, "justification": justification, "navigation": -1})
+        }).then(res => res.json());
+        handle = setInterval(fetchState, 1000);
+        fetchState();
+      }
+
+      async function navigate(page) {
+        waitingDiv.innerHTML = "Waiting...";
+        subjectDiv.innerHTML = "";
+        predicateDiv.innerHTML = "";
+        objectDiv.innerHTML = "";
+        hiddenDiv.style.display = "None";
+        navigationDiv.value = "";
+        justificationDiv.value = "";
+        await fetch("/validate", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({"choice": "", "justification": "", "navigation": page})
         }).then(res => res.json());
         handle = setInterval(fetchState, 1000);
         fetchState();
