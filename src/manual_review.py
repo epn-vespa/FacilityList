@@ -47,7 +47,7 @@ class ManualReviewer():
         self._input_dir = path
         new_file_name = path.name
         if version > 2:
-            new_file_name = new_file_name.removesuffix(f"-v{version}")
+            new_file_name = new_file_name.removesuffix(f"-v{version-1}")
         self._output_dir = path.parent / f"{new_file_name}-v{version}"
         while self._output_dir.exists():
             version += 1
