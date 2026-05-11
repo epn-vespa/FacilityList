@@ -5,7 +5,9 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 import os
+import signal
 from config import TMP_DIR
+
 
 def clear_tmp():
     import shutil
@@ -15,3 +17,10 @@ def clear_tmp():
             os.remove(file_path)
         else:
             shutil.rmtree(file_path)
+
+class IgnoreCtrlC:
+    def __enter__(self):
+        self.old_handler = signal.signal(signal.SIGINT, signal.SIG_IGN)
+
+    def __exit__(self, exc_type, exc, tb):
+        signal.signal(signal.SIGINT, self.old_handler)

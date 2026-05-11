@@ -25,6 +25,7 @@ from graph.mapping_graph import MappingGraph
 from graph.extractor import extractor_lists
 from datetime import datetime
 from data_mapper.gui import manual_review_server
+from utils.utils import IgnoreCtrlC
 
 class ManualReviewer():
 
@@ -431,10 +432,9 @@ class ManualReviewer():
         #for i, (mapping_uri,) in enumerate(mappings):
         while i < len(mappings):
             mapping_uri = mappings[i][0]
-            navigation = -1 # No change
             # Get infos and transmit to the web interface
             if self._terminal:
-                changed, old_relation, new_relation, justification = self._terminal_validation(mapping_uri) # TODO
+                changed, old_relation, new_relation, justification, navigation = self._terminal_validation(mapping_uri) # TODO
             else:
                 changed, old_relation, new_relation, justification, navigation = self._gui_validation(mapping_uri, current = i, total = total)
             if navigation >= 0: # Navigate
@@ -564,20 +564,21 @@ class ManualReviewer():
 
 
     def write(self):
-        print(f"Writing ontologies in output folder {self._output_dir}...")
-        output_dir = self._output_dir
-        output_dir.mkdir(parents = True, exist_ok = True)
-        output_ontology = output_dir / 'linked.ttl'
-        self._linked.serialize(destination = output_ontology,
-                               format = "turtle",
-                               encoding = "utf-8")
+        with IgnoreCtrlC():
+            print(f"Writing ontologies in output folder {self._output_dir}...")
+            output_dir = self._output_dir
+            output_dir.mkdir(parents = True, exist_ok = True)
+            output_ontology = output_dir / 'linked.ttl'
+            self._linked.serialize(destination = output_ontology,
+                                format = "turtle",
+                                encoding = "utf-8")
 
-        self._mapping.serialize(output_dir = self._output_dir)
-                                # execution_id = None)
-        progress_file = self._input_dir / "progress.pkl"
-        progress_file
-        shutil.copy2(progress_file, output_dir / "progress.pkl")
-        atexit.unregister(self.write)
+            self._mapping.serialize(output_dir = self._output_dir)
+                                    # execution_id = None)
+            progress_file = self._input_dir / "progress.pkl"
+            if progress_file.exists(): # Not necessary (progress is for the automatic mapping)
+                shutil.copy2(progress_file, output_dir / "progress.pkl")
+            atexit.unregister(self.write)
 
 
 def main(folder: str,

@@ -38,6 +38,8 @@
   <script>
     let prev_subj = "";
     let prev_obj = "";
+    let current = -1;
+
     async function fetchState() {
       const res = await fetch("/get_state");
       const data = await res.json();
@@ -67,6 +69,7 @@
 
       title.innerHTML = `Validation ${data.current+1}/${data.total} of ${data.list1} ${data.list2}`;
       if (data.current+1 == data.total) {
+        clearInterval(handle);
         hiddenDiv.style.display = "None";
         waitingDiv.innerHTML = "Review done. Please go back to your terminal and wait for the next instruction. The updated mappings are being saved in an output folder."
         waitingDiv.style.display = "Block";
@@ -75,17 +78,23 @@
       undoBtn.onclick = () => {
         if (data.current >= 1) {
           navigate(data.current - 1);
-          data.current = data.current - 1;
         }
       };
 
       navigationBtn.onclick = () => {
         const navigate_to = navigationDiv.value - 1;
-        if (navigate_to >= 0 && navigate_to < data.total) {
+        if (navigate_to >= 0 && navigate_to < data.total && navigate_to !== current) {
           navigate(navigate_to);
         }
       };
 
+
+      if (data.current) {
+        if (data.current === current) {
+          return;
+        }
+        current = data.current;
+      }
 
       // Get key_ of object (if same, do not update)
       let same_obj = false;
@@ -105,7 +114,7 @@
         let value = "";
         for (const [key_, value_] of Object.entries(data.subject)) {
           if (key_ === prev_subj && same_obj == true) {
-            return;
+            // return
           }
           clearInterval(handle);
           prev_subj = key_;
