@@ -12,12 +12,13 @@ from collections import defaultdict
 from urllib.parse import quote
 from utils.acronymous import proba_acronym_of
 from rdflib import URIRef
+from unidecode import unidecode
 
 
 def standardize_uri(label: str) -> str:
     """
     Creates a valid uri string from a label using lowercase and hyphens
-    between words.
+    between words. Also, remove special characters with unidecode (ø -> o etc)
 
     Args:
         label: the label of the entity.
@@ -27,6 +28,7 @@ def standardize_uri(label: str) -> str:
     label = re.sub(r"\s+", ' ', label) # Remove multiple spaces
     label = label.split(' ')
     label = '-'.join([l for l in label if l])
+    label = unidecode(label) # Remove special characters
     label = quote(label)
     return label
 

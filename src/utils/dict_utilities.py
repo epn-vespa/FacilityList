@@ -363,11 +363,16 @@ def _majority_vote_exact(values: list):
     return best_value
 
 
-def _majority_vote_rounding(values: list[float]):
+def _majority_vote_rounding(values: list[float | str]):
     """
     Create clusters by rounding and return the
-    value with the most decimals
+    value with the most decimals.
+
+    Args:
+        values: list of numbers. If they are str, they will be converted to floats first.
     """
+    if type(values) != list:
+        values = list(values)
     if not values:
         return None
     if len(values) == 1:
@@ -379,6 +384,10 @@ def _majority_vote_rounding(values: list[float]):
             v = v[0]
         if v is None:
             continue
+        if type(v) == str:
+            # String support
+            v_num = [s for s in v if s.isdigit() or s == '.']
+            v = float(''.join(v_num))
         len_v = len(str(v).split('.')[-1])
         added = False
         for c in clusters:
