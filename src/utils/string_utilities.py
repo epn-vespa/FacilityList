@@ -19,12 +19,13 @@ def standardize_uri(label: str) -> str:
     """
     Creates a valid uri string from a label using lowercase and hyphens
     between words. Also, remove special characters with unidecode (ø -> o etc)
+    and remove punctuation.
 
     Args:
         label: the label of the entity.
     """
     label = label.lower()
-    label = re.sub(r"[^\w\s\.]", ' ', label)
+    label = re.sub(r"[^\w\s]", ' ', label) # Remove non-word characters (punct etc)
     label = re.sub(r"\s+", ' ', label) # Remove multiple spaces
     label = label.split(' ')
     label = '-'.join([l for l in label if l])
