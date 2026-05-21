@@ -304,17 +304,21 @@ class Graph(G):
             language: the language of the XSD.string of the object if any
             extractor: the extractor used to extract the data
         """
-        if type(pred) != str:
+        if type(pred) != str and type(obj) in (URIRef, Literal):
             return pred, obj
+        if type(pred) == str:
+            pred_str = pred
+        else:
+            pred_str = Properties().get_attr_name(pred)
 
-        pred_objtype = Properties._MAPPING.get(pred, None)
+        # Get pred_uri from pred_str, and get pred_objtype
+        pred_objtype = Properties._MAPPING.get(pred_str, None)
         if pred_objtype is None:
             # The predicate is not mapped, use the OBS namespace
             # and create the predicate.
             pred_uri = self.PROPERTIES.OBS[pred]
             obj_uri = Literal(obj, lang = language)
             return pred_uri, obj_uri
-
         pred_uri = pred_objtype["pred"]
         objtype = pred_objtype["objtype"]
 
@@ -332,18 +336,17 @@ class Graph(G):
             objtype = None
 
         # Get and save alt labels
-        if extractor and pred != "type":
+        if extractor and pred_str != "type":
             namespace_obj = self.get_namespace(extractor.NAMESPACE)
         else:
             # Non-extracted data & OBS types.
             namespace_obj = self.PROPERTIES.OBS
 
-        if pred == "label":
+        if pred_str == "label":
             self.get_label_and_save_alt_labels(subj_uri,
                                                obj,
                                                extractor = extractor,
                                                language = language)
-
         # Convert obj to obj_uri using datatype
         if objtype != URIRef:
             if objtype == XSD.dateTime:
@@ -354,21 +357,21 @@ class Graph(G):
         else:
             # objtype is URIRef
             if extractor:
-                if pred == "type":
+                if pred_str == "type":
                     if (hasattr(extractor, "IS_ONTOLOGICAL")
                         and extractor.IS_ONTOLOGICAL):
                         # The object's namespace is the source's namespace
                         pass
                     else:
                         namespace_obj = self.PROPERTIES.OBS
-                elif pred == "waveband":
+                elif pred_str == "waveband":
                     # waveband is in IVOA vocabulary so it has its own ns
                     namespace_obj = self.PROPERTIES.WB
             else:
                 namespace_obj = self.PROPERTIES.OBS
 
             # standardize obj_uri
-            obj_uri = standardize_uri(obj)
+            obj_uri = standardize_uri(str(obj))
             obj_uri = namespace_obj[obj_uri]
 
         return pred_uri, obj_uri
@@ -505,6 +508,9 @@ class Graph(G):
 
         for obj in objs:
             # Ignore None and empty obj
+            if hasattr(obj, "_uri"):
+                obj_uri = obj._uri
+                continue
             language = None
             if obj is None or obj == "":
                 continue
@@ -519,7 +525,6 @@ class Graph(G):
                 obj,
                 language = language,
                 extractor = extractor)
-
             # Add to the graph
             self.graph.add((subj_uri, predicate_uri, obj_uri))
 
