@@ -56,6 +56,8 @@ class Properties():
                    "objtype": URIRef},
         "is_authoritative_for": {"pred": _OBS.isAuthoritativeFor,
                                  "objtype": URIRef},
+        "primary_community": {"pred": _OBS.primaryCommunity,
+                              "objtype": URIRef},
         "label": {"pred": SKOS.prefLabel,
                   "objtype": XSD.string},
         "alt_label": {"pred": SKOS.altLabel,

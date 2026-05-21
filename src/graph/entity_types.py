@@ -16,6 +16,7 @@ Author:
 # Using LLM with Ollama: test gemma3:1b
 # llm_classifier = None
 
+from typing import Type
 from rdflib import URIRef
 from utils.string_utilities import uri_to_str
 
@@ -155,6 +156,12 @@ SPACE_TYPES = {
     SPACE_FACILITY
 }
 
+HAS_NO_BROADER = {GroundObservatory,
+                  Investigation,
+                  Airborne,
+                  Spacecraft,
+                  GroundFacility}
+
 def get_types_intersections(types1: set[str] | set[URIRef],
                             types2: set[str] | set[URIRef]) -> set[str]:
     """
@@ -184,3 +191,7 @@ def get_types_intersections(types1: set[str] | set[URIRef],
                 intersection.add(type1)
                 intersection.add(type2)
     return intersection
+
+def uri_to_type(uri: URIRef) -> Type:
+    key = str(uri).split('#')[-1]
+    return ALL_TYPES[key]
