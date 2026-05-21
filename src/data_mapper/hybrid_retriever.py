@@ -22,12 +22,16 @@ from data_mapper.selector import Selector
 from data_mapper.gui import server
 from graph.entity import Entity
 from graph.extractor.extractor import Extractor
+from graph.mapping_graph import MappingGraph
+from graph.properties import Properties
 # import faiss # pip3 install faiss-cpu (use faiss-gpu for GPU support)
 from llm.llm_connection import LLMConnection
 from data_mapper.validator import strat1
 
 from config import USERNAME
 import config
+
+properties = Properties()
 
 
 class HybridRetriever():
@@ -553,8 +557,8 @@ class HybridRetriever():
 
 
     def invalidate_mapping(self,
-                           entity1: URIRef,
-                           entity2: URIRef,
+                           entity1: Entity,
+                           entity2: Entity,
                            extractor1: Extractor,
                            extractor2: Extractor,
                            score_value: float,
@@ -571,8 +575,8 @@ class HybridRetriever():
         """
         print("Classified as distinct entities by LLM. Saved in mapping graph.")
         mapping_graph = MappingGraph()
-        mapping_graph.add_mapping(entity1,
-                                  entity2,
+        mapping_graph.add_mapping(entity1.uri,
+                                  entity2.uri,
                                   entity1_source = mapping_graph._OBS[extractor1.URI],
                                   entity2_source = mapping_graph._OBS[extractor2.URI],
                                   score_value = score_value,
