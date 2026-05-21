@@ -28,8 +28,10 @@ class BroaderFilter(Filter):
         broaders2 = entity2.get_values_for("is_part_of")
         if not broaders1 or not broaders2:
             return True
-        broaders1.update(broaders1[0].get_synonyms())
-        broaders2.update(broaders2[0].get_synonyms())
+        for broader in broaders1.copy():
+            broaders1.update(Entity(broader).get_synonyms())
+        for broader in broaders2.copy():
+            broaders2.update(Entity(broader).get_synonyms())
         if broaders1.intersection(broaders2):
             return True
         return False
