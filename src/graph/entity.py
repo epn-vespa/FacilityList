@@ -32,6 +32,7 @@ class Entity():
 
     def __new__(cls,
                 uri: URIRef):
+        assert type(uri) == URIRef
         if uri in cls.entities:
             return cls.entities[uri]
         else:
@@ -107,6 +108,20 @@ class Entity():
         """
         return self._data
 
+    @data.setter
+    def data(self, d: dict) -> None:
+        """
+        This setter convert the dict's keys to Graph node properties, and
+        the dict's values to sets.
+        """
+        for k, v in d.copy().items():
+            del d[k]
+            k = properties.convert_attr(k)
+            if type(v) != set:
+                v = {v}
+            d[k] = v
+        self._data = d
+
 
     def get_values_for(self,
                        property: str,
@@ -126,8 +141,10 @@ class Entity():
             return_languages: transform the result to a tuple of (value, lang).
         """
         property = Properties().convert_attr(property)
-        if property in self._data:
+        if property in self.data:
             res = self.data[property]
+        elif URIRef(property) in self.data:
+            res = self.data.get(URIRef(property))
         else:
             # No value for this property
             res = set()
@@ -223,7 +240,7 @@ class Entity():
         """
         Get the URIs of the synonyms of this entity.
         """
-        return self.data[Properties().exact_match]
+        return self.data.get(Properties().exact_match, [])
 
 
     def has_synonym(self,
