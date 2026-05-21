@@ -15,14 +15,16 @@ from pathlib import Path
 
 
 def main(input_ontology: str,
-         output_merged: str):
+         output_merged: str,
+         community_views: list[str]):
     output_merged_folder = Path(input_ontology)
     output_merged = output_merged_folder.parent / output_merged
     if output_merged.exists():
         raise FileExistsError(f"{output_merged} already exists. Please use another output filename.")
     output_merged = str(output_merged)
     merge_uris.main(input_ontology,
-                    output_merged)
+                    output_merged,
+                    community_views)
     output_obsf, output_obsi = split_instruments.split_instruments(output_merged)
     generate_csv_json.main(output_obsf)
     generate_csv_json.main(output_obsi)
@@ -44,6 +46,16 @@ if __name__ == "__main__":
                         required = False,
                         default = "merged.ttl",
                         help = "Base output ontology filename that will contain all merged entities (intermediate step to merge synonym sets before generating views). Note that the views will be generated next to the original ontologies.")
+
+    from update import Updater
+    parser.add_argument("-c",
+                        "--community-views",
+                        dest = "community_views",
+                        type = str,
+                        nargs = "*",
+                        choices = set(Updater.SOURCE_BY_PRIMARY_COMMUNITY),
+                        help = "Consider lists for which the primary community (or alliance) is amongst this list as authoritative, and ignore synonym sets (or lonely entities) that did not match with any entity in these lists.")
     args = parser.parse_args()
     main(args.input_ontology,
-         args.output_ontology)
+         args.output_ontology,
+         args.community_views)

@@ -15,6 +15,7 @@ from utils.string_utilities import standardize_uri
 from utils.dict_utilities import majority_voting_merge
 from rdflib import Graph as G, URIRef, RDFS, XSD, Literal, SKOS, OWL, DCTERMS
 from datetime import timezone
+from update import Updater
 
 properties = Properties()
 
@@ -23,11 +24,13 @@ class MergeURIs():
 
     def __init__(self,
                  input_ontologies: list[str],
-                 output_ontology: str):
+                 output_ontology: str,
+                 community_views: list[str]):
 
         self._graph = Graph(input_ontologies)
         self._output_ontology = output_ontology
         self._output_graph = G() # rdflib's Graph
+        self._community_views = community_views
 
         # Bind namespaces
         for prefix, namespace in self._graph.namespaces():
@@ -55,8 +58,16 @@ class MergeURIs():
         if they are from an authoritative list)
         """
         synsets = set() # Store synsets & entities
+
         # Get authoritative lists
-        for extractor in ExtractorLists.AUTHORITATIVE_EXTRACTORS:
+        authoritative_extractors = []
+
+        for community in self._community_views:
+            authoritative_extractors.extend(Updater.SOURCE_BY_PRIMARY_COMMUNITY[community])
+
+        if not authoritative_extractors:
+            authoritative_extractors = ExtractorLists.AUTHORITATIVE_EXTRACTORS
+        for extractor in authoritative_extractors:
             for entity in Entity.get_entities_from_list(extractor()):
                 entities_uri = entity.get_synonyms()
                 entities = {Entity(uri) for uri in entities_uri}
@@ -157,10 +168,10 @@ class MergeURIs():
             # Remove Wikidata links (for WD hasPart/isPartOf that was not linked to any authoritative list)
             for subj, pred, obj in self._output_graph.triples((None, attr, None)):
                 if "wikidata#" in str(obj):
-                    print("removing:", obj)
+                    # print("removing:", obj)
                     self._output_graph.remove((subj, pred, obj))
                 if "wikidata#" in str(subj):
-                    print("removing:", subj)
+                    # print("removing:", subj)
                     self._output_graph.remove((subj, pred, obj))
 
 
@@ -183,9 +194,15 @@ class MergeURIs():
 
 
 def main(input_ontology,
-         output_ontology):
+         output_ontology,
+         community_views: list[str]):
+    """
+    Args:
+        community_views: list of communities that should be considered as authoritative for this extraction. Values: IHDEA, IVOA, IPDA, OGC.
+    """
     merger = MergeURIs(input_ontology,
-                       output_ontology)
+                       output_ontology,
+                       community_views)
     merger.to_synonym_list()
     Graph()._graph = merger._output_graph # Replace graph
     output_graph = Graph()
