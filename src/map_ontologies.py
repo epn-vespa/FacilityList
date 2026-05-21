@@ -385,6 +385,7 @@ class OntologyMapper():
 
                         # Save progress for next execution
                         self._progress[extractor1][extractor2][on_type] = tools
+                        self.write()
 
 
     def _restore_progress(self):
@@ -413,8 +414,10 @@ class OntologyMapper():
                     self._strategy[list1][list2].pop(key)
                     if len(self._strategy[list1][list2]) == 0:
                         self._strategy[list1].pop(list2)
-                    else:
-                        print(f"Warning: strategy changed since last run (different types for {list1},{list2}).")
+                    #else:
+                    #    print(f"Warning: strategy changed since last run (different types for {list1},{list2}).")
+                if list2 in self._strategy[list1]: # self._strategy[list1][list2] != 0:
+                    print(f"Warning: strategy changed since last run (different types for {list1},{list2}).")
                 if len(self._strategy[list1]) == 0:
                     self._strategy.pop(list1)
                     break
