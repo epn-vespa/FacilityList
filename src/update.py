@@ -15,13 +15,15 @@ Author:
 from __version__ import __version__
 
 import atexit
-from rdflib import Namespace
-from typing import List
-from argparse import ArgumentParser
 import os
 import sys
 
+from rdflib import Namespace
+from typing import List
+from argparse import ArgumentParser
+from collections import defaultdict
 from tqdm import tqdm
+
 from graph.graph import Graph
 from graph import entity_types
 from graph.extractor.cache import VersionManager
@@ -35,6 +37,7 @@ from graph.extractor.nssdc_extractor import NssdcExtractor
 from graph.extractor.pds_extractor import PdsExtractor
 from graph.extractor.spase_extractor import SpaseExtractor
 from graph.extractor.wikidata_extractor import WikidataExtractor
+from graph.extractor.n2yo_extractor import N2yoExtractor
 from utils.location_utilities import get_location_info
 
 
@@ -186,54 +189,70 @@ class Updater():
                         cat = extractor.DEFAULT_TYPE
                     self.graph.add((subj, "type", cat),
                                     extractor = extractor)
-            # Create the OBS uri
 
+
+    # Labels
+    A = "celestial astronomy"
+    H = "heliophysics"
+    G = "geology"
+    P = "planetary sciences"
+    O = "other, generic"
+
+    COMMUNITIES = {
+            A: {"label": A, "alliance": "IVOA"},
+            H: {"label": H, "alliance": "IHDEA"},
+            G: {"label": G, "alliance": "OGC"},
+            P: {"label": P, "alliance": "IPDA"},
+            O: {"label": O}}
+
+
+    SOURCES_BY_EXTRACTOR = {
+        AasExtractor: {"url": AasExtractor.URL,
+                       "community": [A],
+                       "is_authoritative_for": [A],
+                       "primary_community": A},
+        IauMpcExtractor: {"url": IauMpcExtractor.URL,
+                          "community": [A, P],
+                          "is_authoritative_for": [A, P],
+                          "primary_community": A},
+        ImcceExtractor: {"url": ImcceExtractor.URL,
+                         "community": [A, H, P],
+                         #"is_authoritative_for": [A, H, P]  # Not authoritative (10k entities extracted)
+                        },
+        NaifExtractor: {"url": NaifExtractor.URL,
+                        "community": [A, H, P],
+                        "is_authoritative_for": [H, P],
+                        "primary_community": P},
+        PdsExtractor: {"url": PdsExtractor.URL,
+                       "community": [H, P, G],
+                       "is_authoritative_for": [P],
+                       "primary_community": P},
+        SpaseExtractor: {"url": SpaseExtractor.URL,
+                         "community": [H, P],
+                         "is_autoritative_for": [H],
+                         "primary_community": H},
+        WikidataExtractor: {"url": WikidataExtractor.URL,
+                            "community": [A, H, G, P, O]},  # Not authoritative
+        NssdcExtractor: {"url": NssdcExtractor.URL,
+                         "community": [A, H, P, O],
+                         "is_authoritative_for": [A, H, P, O]},
+        N2yoExtractor: {"url": N2yoExtractor}}
+
+    # Used in updated ontology generation (self.init_graph)
+    SOURCES = {source.URI: v for (source, v) in SOURCES_BY_EXTRACTOR.items()}
+
+    # Used in views generation
+    SOURCE_BY_PRIMARY_COMMUNITY = defaultdict(list)
+    for source, v in SOURCES_BY_EXTRACTOR.items():
+        if "primary_community" in v:
+            SOURCE_BY_PRIMARY_COMMUNITY[v["primary_community"]].append(source)
 
     def init_graph(self):
         """
         Create the basic community properties and sources.
         """
-        # Labels
-        A = "celestial astronomy"
-        H = "heliophysics"
-        G = "geology"
-        P = "planetary sciences"
-        O = "other, generic"
-
-        COMMUNITIES = {
-                A: {"label": A, "alliance": "IVOA"},
-                H: {"label": H, "alliance": "IHDEA"},
-                G: {"label": G, "alliance": "OGC"},
-                P: {"label": P, "alliance": "IPDA"},
-                O: {"label": O}}
-
-        SOURCES = {
-            AasExtractor.URI: {"url": AasExtractor.URL,
-                               "community": A,
-                               "is_authoritative_for": A},
-            IauMpcExtractor.URI: {"url": IauMpcExtractor.URL,
-                                  "community": [A, P],
-                                  "is_authoritative_for": [A, P]},
-            ImcceExtractor.URI: {"url": ImcceExtractor.URL,
-                                 "community": [A, H, P],
-                                 "is_authoritative_for": [A, H, P]},
-            NaifExtractor.URI: {"url": NaifExtractor.URL,
-                                "community": [A, H, P],
-                                "is_authoritative_for": [H, P]},
-            PdsExtractor.URI: {"url": PdsExtractor.URL,
-                               "community": [H, P, G],
-                               "is_authoritative_for": [P]},
-            SpaseExtractor.URI: {"url": SpaseExtractor.URL,
-                                 "community": [H, P],
-                                 "is_autoritative_for": [H]},
-            WikidataExtractor.URI: {"url": WikidataExtractor.URL,
-                                    "community": [A, H, G, P, O]},
-            NssdcExtractor.URI: {"url": NssdcExtractor.URL,
-                                 "community": [A, H, P, O],
-                                 "is_authoritative_for": [A, H, P, O]}} # Not authoritative
-
-        self.add_entities(COMMUNITIES, cat = "community")
-        self.add_entities(SOURCES, cat = "facility list")
+        self.add_entities(self.COMMUNITIES, cat = "community")
+        self.add_entities(self.SOURCES, cat = "facility list")
 
 
     def write(self):
