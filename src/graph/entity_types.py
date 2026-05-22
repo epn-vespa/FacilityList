@@ -83,10 +83,10 @@ class GroundObservatory(GroundFacility, Platform):
     _label = "ground observatory"
 GROUND_OBSERVATORY = GroundObservatory()
 
-class Telescope(GroundFacility, SpaceFacility, Instrument):
+class Telescope(GroundFacility, SpaceFacility, Instrument, Platform):
     """
     Solar observatories are telescopes.
-    A telescope usually have an aperture.
+    A telescope usually has an aperture.
     A telescope can be part of an observatory or spacecraft (platform).
     Some telescopes are confused with instruments, therefore they are subclass of each other.
     """
@@ -193,5 +193,5 @@ def get_types_intersections(types1: set[str] | set[URIRef],
     return intersection
 
 def uri_to_type(uri: URIRef) -> Type:
-    key = str(uri).split('#')[-1]
+    key = str(uri).split('#')[-1].replace('-', ' ')
     return ALL_TYPES[key]
