@@ -122,11 +122,13 @@ class PostProcess():
                            entity_uri,
                            llm_generated_label,
                            warning_type,
-                           warning_message):
+                           warning_message,
+                           recommanded_action):
         if type(entity_uri) == Entity:
             entity_uri = str(entity_uri.uri)
         self.label_warnings[entity_uri][warning_type] = {"message": warning_message,
-                                                         "llm_generated_label": llm_generated_label
+                                                         "llm_generated_label": llm_generated_label,
+                                                         "recommanded_action": recommanded_action
                                                         }
 
     def _save_label_warnings(self):
@@ -146,13 +148,15 @@ class PostProcess():
                 self._add_label_warning(entity,
                                         label,
                                         warning_type = "missing_country",
-                                        warning_message = f"Observatory's country ({c}) not found in label.")
+                                        warning_message = f"Observatory's country ({c}) not found in label.",
+                                        recommanded_action = f"add ',{c}")
                 return [label + ", " + country]
         if not ', ' in label:
             self._add_label_warning(entity,
                                     label,
                                     warning_type = "missing_country",
-                                    warning_message = f"Observatory (ground ?) with no country.")
+                                    warning_message = f"Observatory (ground ?) with no country.",
+                                    recommanded_action = f"Check this entity's country and add it to its metadata and label.")
 
 
     def _check_telescope_format(self, entity: Entity,
@@ -172,39 +176,25 @@ class PostProcess():
                 self._add_label_warning(entity,
                                         label,
                                         warning_type = "aperture_format",
-                                        warning_message = f"Aperture should be expressed in m with no space (ex: 4.33m), not {n}. Please convert it.")
+                                        warning_message = f"Aperture should be expressed in m with no space (ex: 4.33m), not {n}. Please convert it.",
+                                        recommanded_action = f"Convert {n} to meters in the label (and aperture if not in meter).")
                 return []
             if entity.aperture:
                 warning_message = f"Telescope's label does not start with the aperture."
+            aperture = entity.get_values_for("aperture", unique = True)
+            if aperture:
+                recommanded_action = f"Add {aperture}m in front of the entity's label (check whether this value is in meters)"
+            else:
+                recommanded_action = f"Check why this telescope has no aperture."
             self._add_label_warning(entity,
                                     label,
-                                    warning_type = "missing_aperture",
-                                    warning_message = f"Telescope without aperture.")
+                                    warning_type = "aperture_missing",
+                                    warning_message = f"Telescope without aperture.",
+                                    recommanded_action = recommanded_action)
 
         self._check_broader(entity,
                             label,
                             entity_type)
-
-
-    """
-    def _check_instrument(self,
-                          entity: Entity,
-                          label: str):
-        self._check_broader(entity, label, [entity_types.Instrument])
-        broaders = entity.get_values_for("is_part_of", extend_to_synonyms=True)
-
-        for broader in broaders:
-            if type(broader) == entity_types.Telescope:
-                self._check_telescope_format(broader,
-                                             label,
-                                             broader.get_values_for("type"),
-                                             called_from_narrower = True)
-            if not " on " + broader.label in label:
-                self._add_label_warning(entity,
-                                        label,
-                                        warning_type = "broader_mismatch",
-                                        warning_message = f"Broader's label ({broader.label}) is not in the instrument's label with 'on'.")
-    """
 
 
     def _check_broader(self,
@@ -225,12 +215,13 @@ class PostProcess():
         if broaders:
             matched_platform = False
             has_platform_as_broader = False
+            broader_str = ""
             for broader in broaders:
                 broader_types = broader.get_values_for("type", extend_to_synonyms = True)
                 for broader_type in broader_types:
                     if type(broader_type) == URIRef:
                         broader_type = entity_types.uri_to_type(broader_type)
-                    if any (t == entity_types.Platform for t in broader.get_values_for("type")):
+                    if issubclass(broader_type, entity_types.Platform):
                         # Ignore mission
                         if entity_types.INVESTIGATION in broader.get_values_for("type"):
                             continue
@@ -247,39 +238,20 @@ class PostProcess():
 
             if has_platform_as_broader and not matched_platform:
                 # Observatory not referenced in the label of narrower entity
-                self._add_label_warning(entity, label, warning_type = "broader_ref_missing", warning_message = "This entity seems to be located on a broader entity, but it is missing.")
-        else:
-            if not entity_types.HAS_NO_BROADER.intersection(entity_type):
-                # The entity should have a broader, but it does not have any.
-                self._add_label_warning(entity, label, warning_type = "orphan_entity", warning_message = f"This entity seems to be an orphan (no broader), but its type ({entity_type}) indicates that it might be part of a broader entity.")
-
-
-
-        # Check that the entity's broader label is in the entity.
-        # /!\ not working for spacecraft that are part of an investigations.
-        for b in broaders:
-            broader_label = b.label
-            broader_type = b.get_values_for("type")
-            if broader_label not in label:
                 self._add_label_warning(entity,
                                         label,
                                         warning_type = "broader_missing",
-                                        warning_message = f"Broader entity ({broader_label}) is not in the label.")
-            preposition = set()
-            for b_type in broader_type:
-                if type(b_type) == URIRef:
-                    b_type = entity_types.uri_to_type(b_type)
-                if issubclass(b_type, entity_types.GroundFacility):
-                    preposition.add(" at ")
-                if issubclass(b_type, entity_types.SpaceFacility):
-                    preposition.add(" on ")
-            broader_regex = "(" + "|".join(preposition) + ")"
-            broader_format_ok = re.findall(re.compile(broader_regex), label)
-            if not broader_format_ok:
+                                        warning_message = "This entity seems to be located on a broader entity, but it is missing in the label.",
+                                        recommanded_action = f"Add 'at/on {broader.label}' in the label.")
+        else:
+            if not entity_types.HAS_NO_BROADER.intersection(entity_type):
+                # The entity should have a broader, but it does not have any.
                 self._add_label_warning(entity,
                                         label,
-                                        warning_type = "broader_format",
-                                        warning_message = f"Broader format should be ' at ' (ground observatory) or ' on ' (telescope, spacecraft)")
+                                        warning_type = "orphan_entity",
+                                        warning_message = f"This entity seems to be an orphan (no broader), but its type ({entity_type}) indicates that it might be part of a broader entity.",
+                                        recommanded_action = f"Check that this is correct.")
+
 
     def _check_country(self,
                        entity: Entity,
@@ -295,16 +267,42 @@ class PostProcess():
             if not label.endswith(", " + country):
                 for ent_type in entity_type:
                     if issubclass(ent_type, entity_types.GroundFacility):
-                        self._add_label_warning(entity, label, warning_type = "country_missing", warning_message = f"Country ({country}) is known but does not exist in the label")
+                        self._add_label_warning(entity,
+                                                label,
+                                                warning_type = "country_missing",
+                                                warning_message = f"Country ({country}) is known but does not exist in the label",
+                                                recommanded_action = f"Add ', {country}'")
                         country_str = ", " + country
                         break
             elif not country in country_match:
-                self._add_label_warning(entity, label, warning_type = "country_mismatch", warning_message = f"Country in the entity's metadata ({country}) does not match the label's country ({country_match})")
+                self._add_label_warning(entity,
+                                        label,
+                                        warning_type = "country_mismatch",
+                                        warning_message = f"Country in the entity's metadata ({country}) does not match the label's country ({country_match})",
+                                        recommanded_action = f"Replace {country_match} by ', {country}'")
         if not country_match:
             for ent_type in entity_type:
                 if issubclass(ent_type, entity_types.GroundFacility) and ent_type in entity_types.HAS_NO_BROADER:
-                    self._add_label_warning(entity, label, warning_type = "country_missing", warning_message = f"Country not in the entity, therefore it could not be added to the entity's label.")
+                    self._add_label_warning(entity,
+                                            label,
+                                            warning_type = "country_missing",
+                                            warning_message = f"Country not in the entity, therefore it could not be added to the entity's label.",
+                                            recommanded_action = f"Check for the entity's country if it is a ground observatory and add it to its label and metadata.")
 
+    AGENCIES = [
+                "US Department of Defense", "DOD",
+                "Canadian Space Agency", "CSA",
+                "National Aeronautics and Space Administration", "NASA",
+                "Japan Aerospace Exploration Agency", "JAXA",
+                "Italian Space Agency", "ASI",
+                "European Space Agency", "ESA",
+                "National Astronomical Observatory of Japan", "NAOJ",
+                "Institute of Space and Astronautical Science", "ISAS",
+                "French Space Agency", "CNES",
+                "German Aerospace Center", "DLR",
+                "US Department of Energy", "DOE",
+                "US National Science Foundation", "NSF"
+               ]
     def _check_acronyms(self,
                         entity: Entity,
                         label: str):
@@ -316,40 +314,52 @@ class PostProcess():
             label: the LLM generated label for this entity
         """
         upper_word = ""
-        for l in label:
+        for l in label + ' ':
             if l.isalpha() and l.upper() == l:
                 upper_word += l
             else:
-                if len(upper_word) > 1 and len(upper_word) < 5:
-                    self._add_label_warning(entity, label, warning_type = "acronym_detected", warning_message = f"An acronym may be in this entity label: {upper_word}. Ignore if this acronym should not be extended.")
+                if len(upper_word) > 1 and len(upper_word) < 6:
+                    if upper_word not in self.AGENCIES:
+                        self._add_label_warning(entity,
+                                                label,
+                                                warning_type = "acronym_detected",
+                                                warning_message = f"An acronym remains this entity's label: {upper_word}.",
+                                                recommanded_action = f"Expand the acronym or ignore if this acronym should not be expanded.")
                 upper_word = ""
 
 
     def _check_agencies(self,
-                        uri: URIRef,
+                        entity: Entity,
                         label: str):
         """
         Check whether the agency name (acronym or extended label) appears
         in the label.
         """
-        agencies = [
-                    "US Department of Defense", "DOD",
-                    "Canadian Space Agency", "CSA",
-                    "National Aeronautics and Space Administration", "NASA",
-                    "Japan Aerospace Exploration Agency", "JAXA",
-                    "Italian Space Agency", "ASI",
-                    "European Space Agency", "ESA",
-                    "National Astronomical Observatory of Japan", "NAOJ",
-                    "Institute of Space and Astronautical Science", "ISAS",
-                    "French Space Agency", "CNES",
-                    "German Aerospace Center", "DLR",
-                    "US Department of Energy", "DOE",
-                    "US National Science Foundation", "NSF"
-                   ]
-        agency_regex = r"\b(" + '|'.join(agencies) + ")\b"
+        agency_regex = r"\b(" + '|'.join(self.AGENCIES) + r")\b"
         agencies = re.findall(agency_regex, label)
-        if agencies:
-            print(agencies)
+
+        broader = entity.broader
+        if broader:
+            broader_label = broader.label
+        else:
+            broader_label = ""
+        for agency in agencies:
+            # if in broader, ignore
+            index = self.AGENCIES.index(agency)
+            if index % 2 == 0:
+                index += 1
+            else:
+                index -= 1
+            agency_alt_name = self.AGENCIES[index]
+            if agency in broader_label or agency_alt_name in broader_label:
+                pass
+            else:
+                self._add_label_warning(entity,
+                                        label,
+                                        warning_type = "agency_in_label",
+                                        warning_message = f"Agency name should preferably not be in the label: {agency}, unless it is necessary.",
+                                        recommanded_action = f"Remove {agency} from the label, unless it will create ambiguity with another entity's label.")
+            
 
 
     def _check_llm_label(self,
@@ -366,108 +376,6 @@ class PostProcess():
             int: all status
             str: a new recommanded label following the rules (when possible)
         """
-
-        """
-        error_status = []
-        # Error status that can still recommand a label: 1
-        # Error status that make a label recommandation impossible: 2
-        recommanded_label = llm_generated_label
-
-        country_str = ""
-        apeture_str = ""
-        broader_str = ""
-
-        if type(uri) == URIRef:
-            entity = Entity(uri)
-        elif type(uri) == Entity:
-            entity = uri
-        else:
-            raise TypeError(f"uri should be an instance of URIRef or Entity. Got {type(uri)} ({uri})")
-        entity_type = entity.get_values_for("type")
-        print(entity_type)
-        print(entity_types.ALL_TYPES)
-        entity_type = [entity_types.ALL_TYPES[str(t)] for t in entity_type]
-
-        aperture = entity.get_values_for("aperture")
-        if aperture:
-            matched = False
-            for ap in aperture:
-                if llm_generated_label.startswith(ap):
-                    matched = True
-            no_meter = re.findall(r"\d\b?(cm|inch|mm|km)", llm_generated_label)
-            if no_meter:
-                for unit in no_meter:
-                    error_status.append(2)
-                    self._add_label_warning(uri, llm_generated_label, warning_type = "malformated_aperture", warning_message = f"Aperture should be converted to meters. Ex: 2.42m. Got {unit}")
-            if not matched:
-                print("Not matched")
-                error_status.append(1)
-                self._add_label_warning(uri, llm_generated_label, warning_type = "aperture_known", warning_message = "Missing aperture while known")
-                best_aperture = _majority_vote_rounding(aperture)
-                best_aperture = str(best_aperture) + "m"
-                recommanded_label = best_aperture + " " + recommanded_label
-        else:
-            if entity_types.Telescope in entity_type:
-                error_status.append(2)
-                self._add_label_warning(uri, llm_generated_label, warning_type = "aperture_unknown", warning_message = "Found a telescope with no aperture in its metadata")
-        broaders = entity.get_values_for("is_part_of", extend_to_synonyms=True)
-
-        if broaders:
-            matched_platform = False
-            has_platform_as_broader = False
-            matched_broader_country = False
-            for broader in broaders:
-                broader = Entity(broader)
-                if any (entity_types.ALL_TYPES[t] in entity_types.Platform for t in broader.get_values_for("type")):
-                    # Ignore mission
-                    if entity_types.INVESTIGATION in broader.get_values_for("type"):
-                        continue
-                    #if entity_types.GROUND_OBSERVATORY in broader.get_values_for("type"):
-                    has_platform_as_broader = True
-                    if " at " + broader.label in llm_generated_label: # and not matched_platform:
-                        matched_platform = True
-                        broader_str = " at " + broader.label
-                        break
-                    elif " on " + broader.label in llm_generated_label:
-                        matched_platform = True
-                        broader_str = " on " + broader.label
-                        break
-                    # + verify that there is country
-                    #if ", " + broader.country in llm_generated_label and not matched_broader_country:
-                    #    matched_broader_country = True
-                        # Problem: Spain for Iaga
-
-            if has_platform_as_broader and not matched_platform:
-                # Observatory not referenced in the label of narrower entity
-                self._add_label_warning(uri, llm_generated_label, warning_type = "broader_ref_missing", warning_message = "This entity seems to be located on a broader entity, but it is missing.")
-        else:
-            print(entity._data)
-            if not entity_types.HAS_NO_BROADER.intersection(entity_type):
-                # The entity should have a broader, but it does not have any.
-                self._add_label_warning(uri, llm_generated_label, warning_type = "orphan_entity", warning_message = f"This entity seems to be an orphan (no broader), but its type ({entity_type}) indicates that it might be part of a broader entity.")
-
-        matched_country = False
-        country_match = re.findall(r", [A-Za-z]+( [A-Za-z]+){0,3}$", llm_generated_label)
-        if country_match:
-            matched_country = True
-        country = entity.country
-        if country:
-            if not llm_generated_label.endswith(", " + country):
-                for ent_type in entity_type:
-                    if issubclass(ent_type, entity_types.GroundFacility):
-                        self._add_label_warning(uri, llm_generated_label, warning_type = "country_missing", warning_message = f"Country ({country}) is known but does not exist in the label")
-                        country_str = ", " + country
-                        break
-            elif not country in country_match:
-                self._add_label_warning(uri, llm_generated_label, warning_type = "country_mismatch", warning_message = f"Country in the entity's metadata ({country}) does not match the label's country ({country_match})")
-        if not country_match:
-            for ent_type in entity_type:
-                if issubclass(ent_type, entity_types.GroundFacility) and ent_type in entity_types.HAS_NO_BROADER:
-                    self._add_label_warning(uri, llm_generated_label, warning_type = "country_missing", warning_message = f"Country not in the entity, therefore it could not be added to the entity's label.")
-
-        return error_status, recommanded_label
-        """
-
         if type(uri) == URIRef:
             entity = Entity(uri)
         elif type(uri) == Entity:
@@ -477,7 +385,6 @@ class PostProcess():
 
         # Verify that for every kind of entity, there are no acronyms
         self._check_agencies(entity, llm_generated_label)
-        return
         self._check_acronyms(entity, llm_generated_label)
 
         entity_type = entity.get_values_for("type", extend_to_synonyms = True)
@@ -638,6 +545,7 @@ Entity:
         print("new label=", label)
         self._graph.remove((uri, SKOS.prefLabel, None))
         self._graph.add((uri, SKOS.prefLabel, Literal(new_label)))
+        self._check_llm_label(uri, label)
 
 
     def _gen_definition(self, uri: URIRef) -> str:
