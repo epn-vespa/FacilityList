@@ -388,7 +388,7 @@ class PostProcess():
         self._check_acronyms(entity, llm_generated_label)
 
         entity_type = entity.get_values_for("type", extend_to_synonyms = True)
-        entity_type = [entity_types.ALL_TYPES[str(t)] for t in entity_type]
+        entity_type = [entity_types.uri_to_type(t) for t in entity_type]
 
         if entity_types.Telescope in entity_type:
             # Telescope
