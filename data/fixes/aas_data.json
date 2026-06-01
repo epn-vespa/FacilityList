@@ -175,6 +175,15 @@
             "alt_label": ["California Institute of Technology Caltech 40m Telescope",
                           "California Institute of Technology Caltech 40m Telescope at Owens Valley Radio Observatory"],
             "is_part_of": "Owens Valley Radio Observatory"
+        },
+        "Arizona Radio Observatory (ARO) 12m Telescope at Kitt Peak National Observatory (KPNO)": {
+            "alt_label": ["Arizona Radio Observatory (ARO) 12m Telescope",
+                          "Arizona Radio Observatory 12m Telescope at Kitt Peak National Observatory",
+                          "National Radio Astronomy Observatory 12m Telescope at Kitt Peak National Observatory",
+                          "National Radio Astronomy Observatory (NRAO) 12m Telescope",
+                          "National Radio Astronomy Observatory (NRAO) 12m Telescope at Kitt Peak National Observatory (KPNO)"],
+            "notation": ["ARO:12m",
+                         "NRAO:12m"]
         }
     },
     "delete": [
@@ -187,7 +196,8 @@
         "Cerro Tololo International Observatory",
         "NSF Cerro Tololo Inter-American Observatory",
         "NSF Kitt Peak National Observatory",
-        "La Villa"
+        "La Villa",
+        "National Radio Astronomy Observatory (NRAO) 12m Telescope at Kitt Peak National Observatory (KPNO)"
     ],
     "add": {
         "Winer Observatory": {
