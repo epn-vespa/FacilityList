@@ -17,7 +17,7 @@ from graph.properties import Properties
 from llm.llm_connection import LLMConnection
 from graph import entity_types
 from collections import defaultdict
-from utils.dict_utilities import _majority_vote_rounding
+from utils.dict_utilities import _majority_vote_rounding, majority_voting_merge
 from utils.performances import timeall
 import config
 import json
@@ -44,7 +44,6 @@ class PostProcess():
         for uri, _, broader in self._graph.triples((None, properties.is_part_of, None)):
             #if uri in done:
             #    continue
-            print("broader=", broader, "uri=", uri)
             uri_by_broader[broader].append(uri)
             #yield uri
         for uri, _, _ in self._graph.triples((None, properties.type, None)):
@@ -85,6 +84,7 @@ class PostProcess():
         for uri in all_uri:
             yield uri
 
+    uris_by_label = dict()
 
     @timeall
     def __call__(self):
@@ -96,7 +96,6 @@ class PostProcess():
             self._remove_attrs(uri) # Remove attrs that are generated automatically to prevent generating errors
             self._gen_label(uri) # Must call before _gen_definition
             self._gen_definition(uri)
-            i += 1
         print("total generated labels:", i)
 
 
@@ -133,7 +132,7 @@ class PostProcess():
 
     def _save_label_warnings(self):
         with open(config.CACHE_DIR / "labels_warning.json", "w") as file:
-            json.dump(self.label_warnings, file)
+            json.dump(self.label_warnings, file, indent = 2)
 
 
     def _check_observatory_format(self, entity: Entity,
@@ -211,6 +210,7 @@ class PostProcess():
             entity_type: list of the entity's types
         """
         broaders = entity.get_values_for("is_part_of", extend_to_synonyms=True)
+        broaders = [Entity(broader) if type(broader) != Entity else broader for broader in broaders]
 
         if broaders:
             matched_platform = False
@@ -257,13 +257,16 @@ class PostProcess():
                        entity: Entity,
                        label: str,
                        entity_type: list):
-        
         matched_country = False
-        country_match = re.findall(r", [A-Za-z]+( [A-Za-z]+){0,3}$", label)
+        country_match = re.findall(r", ([A-Za-z]+(?: [A-Za-z]+){0,3})$", label)
         if country_match:
             matched_country = True
         country = entity.country
         if country:
+            if ',' in country:
+                country = country.split(',')[0].strip() # Taiwan, Province of China & Korea, Republic of & Bolivia, Plurinational State of & Venezuela, Bolivarian Republic of
+                if country == "Korea":
+                    country = "South Korea"
             if not label.endswith(", " + country):
                 for ent_type in entity_type:
                     if issubclass(ent_type, entity_types.GroundFacility):
@@ -272,7 +275,6 @@ class PostProcess():
                                                 warning_type = "country_missing",
                                                 warning_message = f"Country ({country}) is known but does not exist in the label",
                                                 recommanded_action = f"Add ', {country}'")
-                        country_str = ", " + country
                         break
             elif not country in country_match:
                 self._add_label_warning(entity,
@@ -359,7 +361,6 @@ class PostProcess():
                                         warning_type = "agency_in_label",
                                         warning_message = f"Agency name should preferably not be in the label: {agency}, unless it is necessary.",
                                         recommanded_action = f"Remove {agency} from the label, unless it will create ambiguity with another entity's label.")
-            
 
 
     def _check_llm_label(self,
@@ -382,6 +383,19 @@ class PostProcess():
             entity = uri
         else:
             raise TypeError(f"uri should be an instance of URIRef or Entity. Got {type(uri)} ({uri})")
+
+
+        if llm_generated_label in self.uris_by_label:
+            uri2 = self.uris_by_label[llm_generated_label]
+            self._add_label_warning(entity_uri = uri,
+                                    llm_generated_label = llm_generated_label,
+                                    warning_type = "duplicate_label",
+                                    warning_message = f"Duplicate label between '{uri}' and '{uri2}.",# They will be merged into '{uri2}' at this step.",
+                                    recommanded_action = "Verify that both entities are the same.")
+            # majority_voting_merge(dicts = [Entity(uri2).data, Entity(uri).data])
+            # TODO merge them in further steps, and change their reference to the new URI in other entities too.
+        else:
+            self.uris_by_label[llm_generated_label] = uri
 
         # Verify that for every kind of entity, there are no acronyms
         self._check_agencies(entity, llm_generated_label)
@@ -429,7 +443,7 @@ class PostProcess():
         return set(self.label_warnings.get(str(entity.uri), {}))
 
 
-    def _gen_label(self, uri: URIRef):
+    def _gen_label(self, uri: URIRef) -> str:
         """
         Generate a label for the entity based on its attributes.
 
@@ -546,6 +560,7 @@ Entity:
         self._graph.remove((uri, SKOS.prefLabel, None))
         self._graph.add((uri, SKOS.prefLabel, Literal(new_label)))
         self._check_llm_label(uri, label)
+        i += 1
 
 
     def _gen_definition(self, uri: URIRef) -> str:
