@@ -44,6 +44,15 @@ class TestLabelStandardization(unittest.TestCase):
     agency.data = {p.label: "ESA telescope",
                    p.type: entity_types.Telescope}
 
+    composed_country1 = Entity(URIRef("composed_country1"))
+    composed_country1.data = {p.label: "Some Observatory, United States",
+                           p.type: entity_types.GroundObservatory,
+                           p.country: "United States"}
+
+    composed_country2 = Entity(URIRef("composed_country2"))
+    composed_country2.data = {p.label: "Some Observatory, Venezuela, Bolivarian Republic of",
+                              p.country: "Venezuela, Bolivarian Republic of"}
+
     pp = post_process.PostProcess(graph = None)
 
 
@@ -54,7 +63,14 @@ class TestLabelStandardization(unittest.TestCase):
                 for v in vv:
                     graph.add((arg.uri, k, v))
         return graph
-    graph = graph(telescope, space_instrument, observatory, obs_telescope, )
+    graph = graph(telescope,
+                  space_instrument,
+                  ground_instrument,
+                  observatory,
+                  obs_telescope,
+                  agency,
+                  composed_country1,
+                  composed_country2)
 
 
     def print_label_warnings(self):
@@ -114,6 +130,20 @@ class TestLabelStandardization(unittest.TestCase):
         pp._check_llm_label(self.agency, "0.77m ESA Telescope")
         warnings = pp.label_warnings["agency"]
         assert "agency_in_label" in warnings
+
+    def test_composed_country1(self):
+        # Country in two or more words
+        pp = self.pp
+        pp._check_llm_label(self.composed_country1, "Some Observatory, United States")
+        warnings = pp.label_warnings["composed_country1"]
+        assert not set(warnings)
+
+    def test_composed_country2(self):
+        # Country with comma. Should include the country before the comma only except for Korea, Republic of => South Korea
+        pp = self.pp
+        pp._check_llm_label(self.composed_country2, "Some Observatory, Venezuela")
+        warnings = pp.label_warnings["composed_country1"]
+        assert not set(warnings)
 
 
 if __name__ == "__main__":
