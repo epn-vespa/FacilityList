@@ -236,6 +236,21 @@ class Entity():
                             v.remove(vv)
 
 
+    def remove_value(self,
+                     attr: str,
+                     value):
+        """
+        Remove one value in the specified attribute.
+
+        Args:
+            attr: the entity's attribute
+            value: the value within this attribute
+        """
+        values = self.get_values_for(attr)
+        if value in values:
+            values.remove(value)
+
+
     def get_synonyms(self) -> list[URIRef]:
         """
         Get the URIs of the synonyms of this entity.

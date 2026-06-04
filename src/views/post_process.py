@@ -10,15 +10,16 @@ using search through papers to keep the description homogeneous in length)
 reificating them by source of reference (IAUMPC, NSSDC, Wikidata...)
 """
 from argparse import ArgumentParser
-from rdflib import RDF, URIRef, Literal, SKOS, DCTERMS
+from rdflib import URIRef, Literal, SKOS, DCTERMS
 from graph.graph import Graph
 from graph.entity import Entity
 from graph.properties import Properties
 from llm.llm_connection import LLMConnection
 from graph import entity_types
 from collections import defaultdict
-from utils.dict_utilities import _majority_vote_rounding, majority_voting_merge
+from utils.dict_utilities import majority_voting_merge
 from utils.performances import timeall
+from utils.string_utilities import standardize_uri
 import config
 import json
 import atexit
@@ -93,13 +94,17 @@ class PostProcess():
         i = 0
         for uri in self.__iter__():
             print("processing URI:", uri)
-            self._remove_attrs(uri) # Remove attrs that are generated automatically to prevent generating errors
+            self._remove_attrs_before_gen(uri) # Remove attrs that are generated automatically to prevent generating errors
             self._gen_label(uri) # Must call before _gen_definition
             self._gen_definition(uri)
+            self._remove_attrs_after_gen(uri)
+            self._remove_out_of_scope_references(uri)
+            i += 1
         print("total generated labels:", i)
+        self.replace_uri()
 
 
-    def _remove_attrs(self, uri: URIRef):
+    def _remove_attrs_before_gen(self, uri: URIRef):
         """
         Remove unwanted attributes:
         - location_confidence
@@ -114,6 +119,31 @@ class PostProcess():
                 entity.remove_values("country")
                 entity.remove_values("state")
                 entity.remove_values("continent")
+
+
+    def _remove_attrs_after_gen(self, uri: URIRef):
+        entity = Entity(uri)
+        TO_REMOVE = ["address",
+                     "source_type",
+                     "location_confidence",
+                     "type_confidence",]
+        for attr in TO_REMOVE:
+            entity.remove_values(attr)
+
+
+    def _remove_out_of_scope_references(self,
+                                        uri: URIRef):
+        """
+        Remove values hasPart & isPartOf for referenced entities that are not included in this view (community view)
+        """
+        entity = Entity(uri)
+        for attr in properties.SELF_REF:
+            for value in entity.get_values_for(attr).copy():
+                if str(value).startswith(str(properties.OBS)[:-1]):
+                    # Old namespace
+                    entity.remove_value(attr, value)
+                    print("removed:", value)
+
 
     label_warnings = defaultdict(dict)
 
@@ -130,8 +160,8 @@ class PostProcess():
                                                          "recommanded_action": recommanded_action
                                                         }
 
-    def _save_label_warnings(self):
-        with open(config.CACHE_DIR / "labels_warning.json", "w") as file:
+    def _save_label_warnings(self, filename = config.CACHE_DIR / "labels_warning.json"):
+        with open(filename, "w") as file:
             json.dump(self.label_warnings, file, indent = 2)
 
 
@@ -560,7 +590,6 @@ Entity:
         self._graph.remove((uri, SKOS.prefLabel, None))
         self._graph.add((uri, SKOS.prefLabel, Literal(new_label)))
         self._check_llm_label(uri, label)
-        i += 1
 
 
     def _gen_definition(self, uri: URIRef) -> str:
@@ -607,6 +636,34 @@ Entity to define and summarize: {entity_str}"""
         self._graph.remove((uri, SKOS.definition, None))
         self._graph.remove((uri, DCTERMS.description, None))
         self._graph.add((uri, SKOS.definition, Literal(definition)))
+
+
+    def replace_uri(self):
+        """
+        Replace URIs by newly generated labels.
+        """
+        uri_by_label = dict()
+        replaced = dict() # To replace self links
+        for uri, _, label in self._graph.triples((None, SKOS.prefLabel, None)):
+            label = standardize_uri(label)
+            label = properties.OBS[label] # Use the old namespace at that point (obsf)
+            if label not in uri_by_label:
+                uri_by_label[label] = uri
+            else:
+                uri2 = uri_by_label[label]
+                print(f"Warning: merging {uri} into {uri2} as they have the same label: {label}.")
+                majority_voting_merge(Entity(uri2).data, Entity(uri).data)
+                self._graph.remove((uri, None, None))
+            replaced[uri] = label
+        for subj, pred, obj in self._graph.triples((None, None, None)):
+            new_subj, new_obj = subj, obj
+            if subj in replaced:
+                new_subj = replaced[subj]
+            if obj in replaced:
+                new_obj = replaced[obj]
+            if new_subj != subj or new_obj != obj:
+                self._graph.remove((subj, pred, obj))
+                self._graph.add((new_subj, pred, new_obj))
 
 
 def main(input_graph: str):

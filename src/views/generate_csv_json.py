@@ -24,7 +24,7 @@ class CsvJson():
             "is_part_of": "skos:broader",
             # "url": "owl:equivalentClass",
             "uri": "skos:sameAs",
-            # "alt_label": "skos:altLabel",
+            "alt_label": "skos:altLabel",
             }
 
 

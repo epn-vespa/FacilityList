@@ -270,7 +270,7 @@ class LLMConnection():
                 f"{','.join(cls._categories_by_descriptions.keys())}.\n" +
                 f"It returned {cat} instead.\n " +
                 f"Return {UFO} for prompt \"{prompt}\"")
-            cls._llm_categories[cache_key] = ERROR
+            cls._llm_categories[cache_key] = UFO
             return UFO
         cls._llm_categories[cache_key] = cat
         return cat
@@ -283,7 +283,7 @@ class LLMConnection():
     _backup_countdown = _BACKUP_EVERY
     @classmethod
     def _load_generation_cache(cls,
-                              model: str):
+                               model: str):
         # FIXME if we change model, it will stay loaded in the same cache file
         if cls._generation_cache_loaded:
             return
