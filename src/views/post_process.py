@@ -302,17 +302,12 @@ class PostProcess():
                     if issubclass(ent_type, entity_types.GroundFacility):
                         self._add_label_warning(entity,
                                                 label,
-                                                warning_type = "country_missing",
-                                                warning_message = f"Country ({country}) is known but does not exist in the label",
-                                                recommanded_action = f"Add ', {country}'")
+                                                warning_type = "country_mismatch",
+                                                warning_message = f"Country ({country}) in the entity's metadata does not match the label's country ({','.join(country_match)}) or is malformated",
+                                                recommanded_action = f"Make sure to end the entity by ', {country}'")
                         break
-            elif not country in country_match:
-                self._add_label_warning(entity,
-                                        label,
-                                        warning_type = "country_mismatch",
-                                        warning_message = f"Country in the entity's metadata ({country}) does not match the label's country ({country_match})",
-                                        recommanded_action = f"Replace {country_match} by ', {country}'")
-        if not country_match:
+        else: # if not country_match:
+            # No country in entity
             for ent_type in entity_type:
                 if issubclass(ent_type, entity_types.GroundFacility) and ent_type in entity_types.HAS_NO_BROADER:
                     self._add_label_warning(entity,
@@ -652,7 +647,7 @@ Entity to define and summarize: {entity_str}"""
             else:
                 uri2 = uri_by_label[label]
                 print(f"Warning: merging {uri} into {uri2} as they have the same label: {label}.")
-                majority_voting_merge(Entity(uri2).data, Entity(uri).data)
+                majority_voting_merge([Entity(uri2).data, Entity(uri).data])
                 self._graph.remove((uri, None, None))
             replaced[uri] = label
         for subj, pred, obj in self._graph.triples((None, None, None)):
