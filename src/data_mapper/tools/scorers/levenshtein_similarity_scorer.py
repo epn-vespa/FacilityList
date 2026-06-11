@@ -35,8 +35,10 @@ class LevenshteinSimilarityScorer(Scorer):
 
         labels1 = entity1.get_values_for("label")
         labels1.update(entity1.get_values_for("alt_label"))
+        labels1.update(entity1.get_values_for("code"))
         labels2 = entity2.get_values_for("label")
         labels2.update(entity2.get_values_for("alt_label"))
+        labels2.update(entity2.get_values_for("code"))
         for label1 in labels1:
             for label2 in labels2:
                 """

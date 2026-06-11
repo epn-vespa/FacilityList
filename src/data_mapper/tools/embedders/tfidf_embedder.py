@@ -40,8 +40,15 @@ class TfIdfEmbedder(Embedder):
     # Document-term matrix
     dt_matrix = None
 
-
-    TO_EXCLUDE = ["code", "url", "ext_ref", "source", "location_confidence", "type_confidence", "modified", "deprecated"]
+    TO_EXCLUDE = ["url",
+                  "ext_ref",
+                  "source",
+                  "location_confidence",
+                  "type_confidence",
+                  "modified",
+                  "deprecated",
+                  #"code", # ex of semantically rich code: NEOSSat (AAS)
+                  ]
 
     ON_LANGUAGES = ["en", "ca", "fr", "es"]
 

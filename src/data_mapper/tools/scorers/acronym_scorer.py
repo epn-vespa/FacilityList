@@ -36,8 +36,10 @@ class AcronymScorer(Scorer):
 
         labels1 = entity1.get_values_for("alt_label")
         labels1.update(entity1.get_values_for("label"))
+        labels1.update(entity1.get_values_for("code"))
         labels2 = entity2.get_values_for("alt_label")
         labels2.update(entity2.get_values_for("label"))
+        labels2.update(entity2.get_values_for("code"))
 
         highest_score, score = -1, -1
         for label1 in labels1:
