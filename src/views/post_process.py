@@ -52,29 +52,24 @@ class PostProcess():
             #if uri in done:
             #    continue
             #done.add(uri)
-        print(uri_by_broader)
         broader_uris = uri_by_broader.keys() - sum(uri_by_broader.values(), [])
-        print(len(broader_uris))
 
         narrower_level = defaultdict(lambda: defaultdict(list)) # {1: {broader: [narrowers1] of the next level},
                                                  #  2: {narrower1: [narrowers2], narrower1: [narrowers2]}}
-        print("broader_uris=", broader_uris)
         for uri in broader_uris:
             narrower_level[1][uri] = uri_by_broader[uri]
             if uri in all_uri:
                 yield uri
                 all_uri.remove(uri)
-        print("narrower level=", narrower_level)
 
         depth = 0
         while len(all_uri) > 0 and depth < 10:
-            print("loop", depth)
             depth += 1
 
             if not narrower_level[depth]:
-                print("Stop at depth", depth)
                 break
             for _, uris in narrower_level[depth].items():
+                # Labels should be generated after their broader's label.
                 for uri in uris:
                     narrower_level[depth + 1][uri] = uri_by_broader[uri]
                     if uri in all_uri:
@@ -92,15 +87,15 @@ class PostProcess():
         config.configure_ollama()
         atexit.register(self._save_label_warnings)
         i = 0
+        in_scope = set()
         for uri in self.__iter__():
-            print("processing URI:", uri)
             self._remove_attrs_before_gen(uri) # Remove attrs that are generated automatically to prevent generating errors
             self._gen_label(uri) # Must call before _gen_definition
             self._gen_definition(uri)
             self._remove_attrs_after_gen(uri)
-            self._remove_out_of_scope_references(uri)
+            in_scope.add(uri)
             i += 1
-        print("total generated labels:", i)
+        self._remove_out_of_scope_references(in_scope)
         self.replace_uri()
 
 
@@ -126,23 +121,42 @@ class PostProcess():
         TO_REMOVE = ["address",
                      "source_type",
                      "location_confidence",
-                     "type_confidence",]
+                     "type_confidence",
+                     "continent_code",
+                     #"source",
+                     "discipline",
+                     #"funding_agency",
+                     #"waveband",
+                     #"observed_object",
+                     #"code", #ext id of resources
+                     ]
         for attr in TO_REMOVE:
             entity.remove_values(attr)
 
 
     def _remove_out_of_scope_references(self,
-                                        uri: URIRef):
+                                        in_scope: set):
         """
         Remove values hasPart & isPartOf for referenced entities that are not included in this view (community view)
+
+        Attrs:
+            in_scope: entities that are in scope
         """
-        entity = Entity(uri)
-        for attr in properties.SELF_REF:
-            for value in entity.get_values_for(attr).copy():
-                if str(value).startswith(str(properties.OBS)[:-1]):
-                    # Old namespace
-                    entity.remove_value(attr, value)
-                    print("removed:", value)
+        relations = [properties.has_part, properties.is_part_of]
+        for relation in relations:
+            relation = properties.convert_attr(relation)
+            for uri1, _, uri2 in self._graph.triples((None, relation, None)):
+                # if str(uri1).startswith(str(properties.OBS)[:-1]) or
+                if str(uri2).startswith(str(properties.OBS)[:-1]) and uri2 not in in_scope:
+                    self._graph.remove((uri1, relation, uri2))
+
+                    #for uri in (uri1, uri2):
+                    entity = Entity(uri1)
+                    for value in entity.get_values_for(relation).copy():
+                        # if str(value).startswith(str(properties.OBS)[:-1]):
+                        if value == uri2:
+                            # Old namespace
+                            entity.remove_value(relation, value)
 
 
     label_warnings = defaultdict(dict)
@@ -173,7 +187,6 @@ class PostProcess():
         country = entity.country
         for c in country:
             if not label.endswith(f", {c}"):
-                print("Error no country match", c, label)
                 self._add_label_warning(entity,
                                         label,
                                         warning_type = "missing_country",
@@ -580,8 +593,6 @@ Entity:
             if len(old_label) == 2:
                 old_label, lang = old_label
                 self._graph.add((uri, SKOS.altLabel, Literal(old_label, lang = lang)))
-            print("old_label=", old_label, "lang=", lang)
-        print("new label=", label)
         self._graph.remove((uri, SKOS.prefLabel, None))
         self._graph.add((uri, SKOS.prefLabel, Literal(new_label)))
         self._check_llm_label(uri, label)
@@ -626,7 +637,7 @@ Entity to define and summarize: {entity_str}"""
                                               model = config.SUMMARIZE_MODEL,
                                               num_predict = 100,
                                               from_cache = True,
-                                              cache_key = entity.uri + ":definition")
+                                              cache_key = str(entity.uri) + ":definition")
         self._graph.add((uri, SKOS.definition, Literal(definition)))
         self._graph.remove((uri, SKOS.definition, None))
         self._graph.remove((uri, DCTERMS.description, None))
