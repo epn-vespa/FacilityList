@@ -76,9 +76,9 @@ async def connect_to_ollama():
                 print("OLLAMA_HOST is not set. Please add to your ~/.bashrc:")
                 print("export OLLAMA_HOST=\"http://{armstrong_IPV4}:11434\"")
                 raise EnvironmentError("OLLAMA_HOST not set")
-            OLLAMA_MODEL = "deepseek-v3:latest" # 400 GB (~12s)
-            OLLAMA_MODEL_NAME = "DeepSeek-v3:671b"
-            SUMMARIZE_MODEL = "deepseek-v3:latest"
+            OLLAMA_MODEL = "mistral-large:latest"#"deepseek-v3:latest" # 400 GB (~12s)
+            OLLAMA_MODEL_NAME = "mistral-large:latest"#"DeepSeek-v3:671b"
+            SUMMARIZE_MODEL = "mistral-large:latest"#"deepseek-v3:latest"
             CONNECTION_MODE = "armstrong ollama"
     else:
         # local

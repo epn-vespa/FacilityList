@@ -8,14 +8,12 @@ Author:
 from argparse import ArgumentParser
 from views.post_process import PostProcess
 from graph.graph import Graph
-from graph.entity import Entity
 
 
 def main(input_ontology: str,
          output_file: str):
     graph = Graph(input_ontology)
     pp = PostProcess(graph)
-    print("OK")
     for uri, _, label in graph.triples((None, graph.PROPERTIES.label, None)):
         pp._check_llm_label(uri, label)
 
