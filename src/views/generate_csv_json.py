@@ -12,7 +12,7 @@ from collections import defaultdict
 from graph.graph import Graph
 from graph.entity import Entity
 from graph.properties import Properties
-from rdflib import RDFS, RDF, SKOS, URIRef
+from rdflib import RDFS, RDF, SKOS, URIRef, XSD
 from utils.string_utilities import standardize_uri
 
 properties = Properties()
@@ -23,7 +23,7 @@ class CsvJson():
     _IVOA_RELATIONS = {
             "is_part_of": "skos:broader",
             # "url": "owl:equivalentClass",
-            "uri": "skos:sameAs",
+            "uri": "skos:exactMatch",
             "alt_label": "skos:altLabel",
             }
 
@@ -51,20 +51,20 @@ class CsvJson():
 
             # Finally, get relations that are internal references
             entity = values["entity"] # From synset, get internal relations
-            internal_relations = [
-                    "is_part_of",
-                    #"has_part",
-                    ]
-            for relation in internal_relations:
+            for relation in self._IVOA_RELATIONS:
                 parts = entity.get_values_for(relation,
                                               return_language = False)
                 for part in parts:
                     # Only keep parts that will be in the CSV
-                    part = str(part).split("#")[-1]
-                    if part:
-                        if part not in self._res_csv:
-                            part = "obsf#" + part.split("#")[-1] # External link to the OBSF IVOA vocabulary
-                        values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({part}) "
+                    if properties.get_type(relation) == XSD.string:
+                        part = part.split("#")[-1]
+                        values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}(\"{part}\") "
+                    else:
+                        part = str(part).split("#")[-1]
+                        if part:
+                            if part not in self._res_csv:
+                                part = "obsf#" + part.split("#")[-1] # External link to the OBSF IVOA vocabulary
+                            values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({part}) "
 
         children_by_broader = defaultdict(list)
 
@@ -216,7 +216,7 @@ class CsvJson():
                       "uri"]
             for field in fields:
                 more_relations += self._to_string(entity, relation = field)
-            
+
             res_csv[term] = {"level": None,
                              "label": str(pref_label),
                              "description": description,
