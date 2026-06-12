@@ -216,7 +216,7 @@ class LLMConnection():
         if (from_cache and cls._llm_categories and
             cache_key and cache_key in cls._llm_categories):
             category = cls._llm_categories[cache_key]
-            if category != ERROR:
+            if category != UFO:
                 return category # if error, re-compute.
 
         if not choices:
@@ -304,6 +304,19 @@ class LLMConnection():
 
 
     @classmethod
+    def _add_to_generation_cache(cls,
+                                 cache_key: str,
+                                 response: str):
+        if cache_key in cls._generation_cache:
+            return
+        cls._generation_cache[cache_key] = response
+        cls._backup_countdown -= 1
+        if cls._backup_countdown == 0:
+            cls._save_generation_cache()
+            cls._backup_countdown = cls._BACKUP_EVERY
+
+
+    @classmethod
     def generate(cls,
                  prompt: str,
                  model: str,
@@ -343,11 +356,7 @@ class LLMConnection():
             response = response.json()['response'].strip()
             response = cls.remove_tags(response)
             if from_cache:
-                cls._generation_cache[cache_key] = response
-                cls._backup_countdown -= 1
-                if cls._backup_countdown == 0:
-                    cls._save_generation_cache()
-                    cls._backup_countdown = cls._BACKUP_EVERY
+                cls._add_to_generation_cache(cache_key, response)
             return response
         else:
             raise requests.ConnectionError(response.json()["error"])
@@ -560,10 +569,8 @@ class LLMConnection():
                     cls._cache_same_distinct[cache_key] = [is_same, justification]
                     cls._backup_countdown -= 1
                     if cls._backup_countdown == 0:
-                        print("BACKUP NOW")
                         cls._save_cache_same_distinct()
                         cls._backup_countdown = cls._BACKUP_EVERY
-                        print("BACKUP DONE")
                 return is_same, justification
             except:
                 if retries == 0:
