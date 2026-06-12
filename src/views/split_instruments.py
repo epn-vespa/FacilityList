@@ -30,12 +30,15 @@ def split_instruments(input_file: str):
     output_facilities.parse(input_file)
 
     for instrument_uri, _, _ in graph.triples((None, RDF.type, graph.PROPERTIES.OBS["instrument"])):
+        # Check that it has only one type (instrument), else it is a facility
+        res = graph.triples((instrument_uri, RDF.type, None))
+        if len(set(res)) > 1:
+            # Remove Instrument type for no ambiguity
+            graph.remove((instrument_uri, RDF.type, graph.PROPERTIES.OBS["instrument"]))
+            continue
         for subj, pred, obj in graph.triples((instrument_uri, None, None)):
             output_instruments.add((subj, pred, obj))
-            # Get other types
-            res = list(graph.triples((instrument_uri, pred, None)))
-            if len(res) == 1: # Only instrument. Split it from the observation facilities ontology.
-                output_facilities.remove((subj, pred, obj))
+            output_facilities.remove((subj, pred, obj))
     # Add classes hierarchy to ouput_instruments
     for s, p, o in graph.triples((None, RDFS.subClassOf, None)):
         output_instruments.add((s, p, o))
