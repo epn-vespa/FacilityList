@@ -12,6 +12,7 @@ import config
 from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE, PROMPT_SAME_DISTINCT, CACHE_DIR
 from collections import defaultdict
 from graph.entity_types import *
+from graph.properties import Properties
 
 
 class LLMConnection():
@@ -314,6 +315,123 @@ class LLMConnection():
         if cls._backup_countdown == 0:
             cls._save_generation_cache()
             cls._backup_countdown = cls._BACKUP_EVERY
+
+
+    @classmethod
+    def generate_label_for_synset(cls,
+                                  synset: list[URIRef],
+                                  merged_data: dict,
+                                  from_cache: bool = True) -> str:
+        """
+        This will save one label per synonym set, refering to the
+        synonym set with every URI from their original lists in the cache.
+        """
+
+        label = ""
+        if from_cache:
+            cls._load_generation_cache(config.OLLAMA_MODEL_NAME)
+            for uri in synset:
+                label = cls._generation_cache.get(str(uri), None)
+                if label:
+                    break
+
+        entity_str = ""
+        for attr, values in merged_data.items():
+            if attr in Properties._IGNORE_FOR_LLM_INPUT:
+                continue
+            if type(values) not in [list, tuple, set]:
+                values = [values]
+            entity_str += f"{attr}: {', '.join(str(v) for v in values)}"
+        if not label:
+            prompt = """Output format:
+[aperture OR waveband if known] Full Entity Name [at/on Host Entity][, Country]
+
+Rules:
+
+1. Always expand acronyms if their meaning is known.
+2. Do not keep acronyms in the final label if the full name is known.
+3. If the meaning of an acronym is unknown, keep the acronym.
+4. Use:
+   - "on" if the entity is an instrument on a telescope or spacecraft.
+   - "at" if the entity is located in an observatory.
+   - "part of" if the entity is part of a mission or investigation.
+5. If the entity is an observatory named only by a city (example: Madrid),
+   output: "[City] Observatory".
+6. If two entities are combined, join them with "and" and use their full names.
+7. If an observatory belongs to a university, ignore the university name
+   unless it is part of the observatory name.
+8. Add aperture (example: 3.6m) or waveband (example: infrared) only if known.
+9. If a telescope is named only by its aperture (example: "3.6m", "1.5 m"),
+   output: "[aperture] Telescope".
+   If an observatory is known, output: "[aperture] Telescope at [Observatory]".
+10. If the country of the observatory or telescope is known with certainty,
+   append ", Country" at the end of the label. If it is a base on Antarctica,
+   append ", Antarctica" instead.
+   Do not guess the country. If the country is unknown, do not add it.
+
+Output only the label. Do not add explanations.
+
+Examples:
+
+Input:
+Vysokaya Dubrava Magnetometer
+is part of: V.dubr.-ground-observatory
+location: Russia
+
+Output:
+Magnetometer at Vysokaya Dubrava Observatory, Russia
+
+Input:
+NICMOS instrument on Hubble Space Telescope
+alt label: Near Infrared Camera and Multi-Object Spectrometer
+
+Output:
+Near Infrared Camera and Multi-Object Spectrometer on Hubble Space Telescope
+
+Input:
+Bernard Lyot Telescope
+Aperture: 3.6m
+Country: France
+is part of: Midi-Pyrénées Observatory
+
+Output:
+3.6m Bernard Lyot Telescope at Midi-Pyrénées Observatory, France
+
+Input:
+Madrid
+Country: Spain
+
+Output:
+Madrid Observatory, Spain
+
+Input:
+1.80m
+is part of: La Silla Observatory
+
+Output:
+1.80m Telescope at La Silla Observatory
+
+Input:
+NASA's James Webb Telescope
+
+Output:
+James Webb Telescope
+
+Entity:
+{entity_str}
+"""
+            # TODO test
+            label = merged_data[Properties().convert_attr("label")]
+            """
+            label = cls.generate(prompt,
+                                 model = config.OLLAMA_MODEL,
+                                 from_cache = False)
+            """
+        if from_cache:
+            # Update cache
+            for uri in synset:
+                cls._add_to_generation_cache(str(uri), str(label))
+        return label
 
 
     @classmethod
