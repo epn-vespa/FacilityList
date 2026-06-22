@@ -15,7 +15,7 @@ from graph.extractor.extractor import Extractor
 from graph.entity_types import get_types_intersections
 
 from graph.graph import Graph
-from graph.value import Value
+from graph.value import Value, ValueSet
 from graph.properties import Properties
 from utils.string_utilities import cut_language_from_string
 
@@ -46,7 +46,7 @@ class Entity():
     def __init__(self,
                  uri: URIRef):
         self._uri = URIRef(uri)
-        self._data = defaultdict(set)
+        self._data = defaultdict(ValueSet)
         graph = Graph()
 
         if not type(uri) is URIRef:
@@ -84,8 +84,8 @@ class Entity():
                         for _, _, prov in graph.triples((uri, properties.provenance, None)):
                             provs.add(prov)
                         self._data[property].add(Value(value = value_str,
-                                                        language = lang,
-                                                        provenance = provs))
+                                                       language = lang,
+                                                       provenance = provs))
                     else:
                         self._data[property].add(Value(value = value_str,
                                                        language = lang))
@@ -148,8 +148,8 @@ class Entity():
         for k, v in d.copy().items():
             del d[k]
             k = properties.convert_attr(k)
-            if type(v) != set:
-                v = {v}
+            if not isinstance(v, ValueSet):
+                v = ValueSet(v)
             d[k] = v
         self._data = d
 
@@ -160,7 +160,7 @@ class Entity():
                        languages: list[str] = None,
                        extend_to_synonyms: bool = True,
                        extractors: list[str | URIRef] = [],
-                       return_raw_value: bool = True) -> set[Value]:
+                       return_raw_value: bool = True) -> ValueSet[Value]:
         """
         Get values of the entity for a property.
 
@@ -180,7 +180,7 @@ class Entity():
             res = self.data.get(URIRef(property))
         else:
             # No value for this property
-            res = set()
+            res = ValueSet()
 
         if extend_to_synonyms and (not unique or not res):
             for syn in self.get_synonyms():
@@ -199,13 +199,13 @@ class Entity():
                     break
 
         if unique:
-            if type(res) in [set, list, tuple]:
+            if type(res) in [set, list, tuple, ValueSet]:
                 for value in sorted(res):
                     if return_raw_value and type(value) == Value:
                         value = value.value
                     return value
             return None
-        res_for_lang = set()
+        res_for_lang = ValueSet()
         for value in res:
             lang = None
             #if type(value) == tuple:
@@ -468,7 +468,7 @@ class Entity():
         label = self.get_values_for("label")
         alt_labels = self.get_values_for("alt_label")
         if label:
-            if type(label) == set:
+            if isinstance(label, set):
                 #res = ', '.join(label)
                 label = list(label)
                 if len(label) > 1:
@@ -494,7 +494,7 @@ class Entity():
                 # Only keep ten alt labels
                 #res += f" {key}: {', '.join(sorted(value, key = lambda x: 1/len(x))[:10])}"
                 #continue
-            if type(value) not in [list, set, tuple]:
+            if type(value) not in [list, set, tuple, ValueSet]:
                 value = [value]
             values = []
             for v in value:
@@ -533,7 +533,7 @@ class Entity():
                 k = properties.get_attr_name(k)
             if type(v) == URIRef:
                 v = split_uri(v)[1]
-            elif type(v) == set:
+            elif isinstance(v, set):
                 v = list(v)
             if type(v) in [tuple, list]:
                 for i, vv in enumerate(v):
@@ -554,7 +554,7 @@ class Entity():
                             vv = vv[0] + '@' + vv[1]
                     """
                     v[i] = vv_str
-            jsonified[k] = list(set(v)) # No duplicate
+            jsonified[k] = list(ValueSet(v)) # No duplicate
         if extend_to_synonyms:
             for synonym in self.get_synonyms():
                 if type(synonym) == URIRef:
@@ -564,9 +564,9 @@ class Entity():
                         continue
                     if type(k) != str:
                         k = Properties().get_attr_name(k)
-                    if type(v) == URIRef:
+                    if isinstance(v, URIRef):
                         v = split_uri(v)[1]
-                    elif type(v) == set:
+                    elif isinstance(v, set):
                         v = list(v)
                     if type(v) in [tuple, list]:
                         for i, vv in enumerate(v):

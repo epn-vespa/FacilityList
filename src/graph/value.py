@@ -118,12 +118,12 @@ class Value():
 
 
     def __eq__(self, value):
-        if hasattr(value, "value"):
-            value = value.value
         if hasattr(value, "provenance"):
             provenance = value.provenance
         else:
             provenance = self.provenance
+        if hasattr(value, "value"):
+            value = value.value
         return self.value == value and self.provenance == provenance
 
 
@@ -137,3 +137,23 @@ class Value():
 
     def __repr__(self):
         return f"Value@{str(self)}"
+
+
+class ValueSet(set):
+    """
+    Special set for Value that will merge provenances if two identical
+    Value are added.
+    """
+    def __init__(self, iterable=()):
+        super().__init__()
+        for v in iterable:
+            self.add(v)
+
+    def add(self, new_value):
+        if type(new_value) == Value:
+            for existing in self:
+                # TODO does it work if existing is not an instance of Value?
+                if existing.value == new_value.value:
+                    existing.provenance.update(new_value.provenance)
+                    return
+        super().add(new_value)
