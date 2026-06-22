@@ -71,14 +71,24 @@ class Entity():
                     value_str, lang = cut_language_from_string(value.value)
                 for _, _, prov in graph.triples((value, properties.provenance, None)):
                     self._data[property].add(Value(value = value,
-                                                    language = lang,
-                                                    datatype = properties.get_type(property),
-                                                    provenance = prov,
-                                                    uri = uri))
+                                                   language = lang,
+                                                   datatype = properties.get_type(property),
+                                                   provenance = prov,
+                                                   uri = uri))
                     found_prov = True
                 if not found_prov:
-                    self._data[property].add(Value(value = value_str,
-                                                    language = lang))
+                    if property in properties._KEEP_PROVENANCE:
+                        added = False
+                        # get provenance of this entity
+                        provs = set()
+                        for _, _, prov in graph.triples((uri, properties.provenance, None)):
+                            provs.add(prov)
+                        self._data[property].add(Value(value = value_str,
+                                                        language = lang,
+                                                        provenance = provs))
+                    else:
+                        self._data[property].add(Value(value = value_str,
+                                                       language = lang))
             elif isinstance(value, URIRef):
                     self._data[property].add(value) # URIRef #(Value(value = value,
                                              #       datatype = URIRef)))
@@ -500,15 +510,15 @@ class Entity():
         return res
 
 
-    def add_source_to_label(self,
-                            label: str | Literal,
-                            source: URIRef):
+    def add_source_to_attributes(self):
         """
-        Add a source to an entity of this label.
+        Add source to Value objects that are in properties._KEEP_PROVENANCE.
         """
-        for alt_label in self.get_values_for("alt_label", return_raw_value = False):
-            if str(label) == str(alt_label.value):
-                alt_label.provenance.add(source)
+        for attr, values in self._data.items():
+            attr = properties.get_attr_name(attr)
+            if attr in properties._KEEP_PROVENANCE:
+                for value in values:
+                    value.provenance = self.source
 
 
     def __dict__(self, extend_to_synonyms: bool = True):
