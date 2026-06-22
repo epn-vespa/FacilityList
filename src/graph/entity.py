@@ -7,13 +7,15 @@ Author:
 """
 
 from collections import defaultdict
-from rdflib import Literal, URIRef, SKOS
+from typing import Any
+from rdflib import Literal, URIRef, SKOS, BNode
 from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
 from graph.extractor.extractor import Extractor
 from graph.entity_types import get_types_intersections
 
 from graph.graph import Graph
+from graph.value import Value
 from graph.properties import Properties
 from utils.string_utilities import cut_language_from_string
 
@@ -56,14 +58,32 @@ class Entity():
                     # languages with '-' are not returned by rdflib's Literal
                     value_str, lang = cut_language_from_string(value.value)
                     if lang:
-                        self._data[property].add((value_str, lang))
+                        self._data[property].add(Value(value_str, lang))
                         continue
-                self._data[property].add((value.value, value.language))
-            elif isinstance(value, URIRef):
+                self._data[property].add(Value(value.value, value.language, value.datatype))
+            elif isinstance(value, BNode):
                 # Entity
-                self._data[property].add((value))
+                uri = value # BNode
+                found_prov = False
+                lang = None
+                for _, _, value in graph.triples((uri, properties.label, None)):
+                    # get value (as a Literal)
+                    value_str, lang = cut_language_from_string(value.value)
+                for _, _, prov in graph.triples((value, properties.provenance, None)):
+                    self._data[property].add(Value(value = value,
+                                                    language = lang,
+                                                    datatype = properties.get_type(property),
+                                                    provenance = prov,
+                                                    uri = uri))
+                    found_prov = True
+                if not found_prov:
+                    self._data[property].add(Value(value = value_str,
+                                                    language = lang))
+            elif isinstance(value, URIRef):
+                    self._data[property].add(value) # URIRef #(Value(value = value,
+                                             #       datatype = URIRef)))
             else:
-                self._data[property].add((str(value)))
+                self._data[property].add(Value(str(value)))
 
 
     def __eq__(self,
@@ -108,6 +128,7 @@ class Entity():
         """
         return self._data
 
+
     @data.setter
     def data(self, d: dict) -> None:
         """
@@ -128,7 +149,8 @@ class Entity():
                        unique: bool = False,
                        languages: list[str] = None,
                        extend_to_synonyms: bool = True,
-                       return_language: bool = False) -> set[tuple[str, str]] | set[str]:
+                       extractors: list[str | URIRef] = [],
+                       return_raw_value: bool = True) -> set[Value]:
         """
         Get values of the entity for a property.
 
@@ -138,7 +160,8 @@ class Entity():
                     return only the first non-None value.
             languages: only get fields labeled with those languages if known.
             extend_to_synonyms: will also get the entity's synonyms' features.
-            return_languages: transform the result to a tuple of (value, lang).
+            extractors: return only values from this extractor. (TODO)
+            return_raw_value: if True, return str, int etc else return the Value object.
         """
         property = Properties().convert_attr(property)
         if property in self.data:
@@ -150,12 +173,13 @@ class Entity():
             res = set()
 
         if extend_to_synonyms and (not unique or not res):
-            for syn in self.get_synonyms().copy():
+            for syn in self.get_synonyms():
                 syn_values = Entity(syn).get_values_for(property,
                                                         unique = unique,
                                                         extend_to_synonyms = False,
                                                         languages = languages,
-                                                        return_language = return_language)
+                                                        extractors = extractors,
+                                                        return_raw_value = return_raw_value)
                 if unique:
                     if syn_values is not None:
                         res.add(syn_values)
@@ -165,75 +189,57 @@ class Entity():
                     break
 
         if unique:
-            if type(res) in [set, list]:
-                for value in res:
-                    lang = None
-                    if type(value) == tuple and len(value) == 2:
-                        value, lang = value
-                    if lang == None or not languages or lang in languages:
-                        if return_language:
-                            return value, lang
-                        return value
-            elif type(res) == tuple:
-                value, lang = res
-                if lang == None or not languages or lang in languages:
-                    if return_language:
-                        return value, lang
+            if type(res) in [set, list, tuple]:
+                for value in sorted(res):
+                    if return_raw_value and type(value) == Value:
+                        value = value.value
                     return value
             return None
         res_for_lang = set()
         for value in res:
             lang = None
-            if type(value) == tuple:
-                if len(value) == 2:
-                    value, lang = value
+            #if type(value) == tuple:
+            #    if len(value) == 2:
+            #        value, lang = value
+            if hasattr(value, "language"):
+                lang = value.language
             if lang == None or not languages or lang in languages:
-                if return_language:
-                    res_for_lang.add((value, lang))
-                else:
-                    res_for_lang.add(value)
+                # TODO also add a filter for extractors (provenance)
+                if return_raw_value and type(value) == Value:
+                    value = value.value
+                res_for_lang.add(value)
+
         return res_for_lang
 
 
     def remove_values(self,
                       attr: str,
-                      values: list = [],
-                      languages: list = []):
+                      values: list[Value | Any] = [],
+                      languages: list = [],
+                      extractors: list[URIRef | str] = [] # TODO
+                     ):
         """
         Remove all values for attr, or remove only the specified values
         for this attr if specified.
+
+        Args:
+            attr: attribute to remove
+            values: values to remove. If none is set, will remove all values for attr.
+            languages: remove values with languages.
+            extractors: remove values with the provenance of a certain extractor.
         """
         if attr not in self._data:
             return
-        if not values:
+        if not values and not languages and not extractors:
             del self._data[attr]
         else:
             v = self._data[attr]
-            if type(v) not in (list, set):
-                if type(v) == tuple:
-                    # language
-                    vv = v[0]
-                    lang = v[1]
-                    if lang and languages and lang not in languages:
-                        return # ignore this language
-                else:
-                    vv = v
-                for val in values:
-                    if vv == val:
-                        del self._data[attr]
-            else:
-                for vv in v:
-                    if type(vv) == tuple:
-                        # language
-                        vvv = vv[0]
-                        lang = vv[1]
-                        if lang and languages and lang not in languages:
-                            continue # ignore this language
-                    else:
-                        vvv = vv
-                    for val in values:
-                        if vvv == val:
-                            v.remove(vv)
+            for val in values:
+                if not languages or val.language in languages:
+                    if not extractors or val.provenance in extractors:
+                        for vv in v.copy():
+                            if vv == val:
+                                self._data[attr].remove(vv)
 
 
     def remove_value(self,
@@ -488,10 +494,21 @@ class Entity():
                 values.append(str(v).rsplit('#')[-1]) # remove namespace
             if use_keywords:
                 key_str = key.replace('_', ' ').capitalize()
-                res += f" {key_str}: {', '.join([str(v) for v in values])[:limit]}."
+                res += f" {key_str}: {', '.join([str(v) for v in sorted(values)])[:limit]}."
             else:
-                res += ' '.join([str(v) for v in values])[:limit]
+                res += ' '.join([str(v) for v in sorted(values)])[:limit]
         return res
+
+
+    def add_source_to_label(self,
+                            label: str | Literal,
+                            source: URIRef):
+        """
+        Add a source to an entity of this label.
+        """
+        for alt_label in self.get_values_for("alt_label", return_raw_value = False):
+            if str(label) == str(alt_label.value):
+                alt_label.provenance.add(source)
 
 
     def __dict__(self, extend_to_synonyms: bool = True):
@@ -511,14 +528,22 @@ class Entity():
             if type(v) in [tuple, list]:
                 for i, vv in enumerate(v):
                     if type(vv) == URIRef:
-                        vv = split_uri(vv)[1]
+                        vv_str = split_uri(vv)[1]
+                    elif type(vv) == Value:
+                        vv_str = vv.value
+                        if vv.language:
+                            vv_str += '@' + vv.language
+                    else:
+                        vv_str = str(vv)
+                    """
                     elif type(vv) == tuple and len(vv) == 2:
                         # Remove None language
                         if vv[1] == None:
                             vv = vv[0]
                         else:
                             vv = vv[0] + '@' + vv[1]
-                    v[i] = vv
+                    """
+                    v[i] = vv_str
             jsonified[k] = list(set(v)) # No duplicate
         if extend_to_synonyms:
             for synonym in self.get_synonyms():
@@ -536,14 +561,22 @@ class Entity():
                     if type(v) in [tuple, list]:
                         for i, vv in enumerate(v):
                             if type(vv) == URIRef:
-                                vv = split_uri(vv)[1]
+                                vv_str = split_uri(vv)[1]
+                            elif type(vv) == Value:
+                                vv_str = vv.value
+                                if vv.language:
+                                    vv_str += '@' + vv.language
+                            else:
+                                vv_str = str(vv)
+                            """
                             elif type(vv) == tuple and len(vv) == 2:
                                 # Remove None language
                                 if vv[1] == None:
                                     vv = vv[0]
                                 else:
                                     vv = vv[0] + '@' + vv[1]
-                            v[i] = vv
+                            """
+                            v[i] = vv_str
                     if k in jsonified:
                         jsonified[k] = set(jsonified[k]) # No duplicate
                         jsonified[k].update(set(v))
@@ -619,7 +652,7 @@ class Entity():
         # Load all entities from graph
         graph = Graph()
         if not Entity.entities:
-            for s, p, o in graph.triples((None, graph.OBS["source"], None)):
+            for s, p, o in graph.triples((None, properties.source, None)):
                 Entity(s)
 
 

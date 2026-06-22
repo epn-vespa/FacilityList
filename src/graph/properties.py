@@ -6,8 +6,8 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 from typing import Any
-from rdflib import Namespace, URIRef
-from rdflib.namespace import RDF, OWL, XSD, DCAT, DCTERMS, SKOS, FOAF, SDO
+from rdflib import Namespace, URIRef, Node
+from rdflib.namespace import RDF, OWL, XSD, DCAT, DCTERMS, SKOS, FOAF, SDO, PROV
 
 
 class Properties():
@@ -33,6 +33,7 @@ class Properties():
     _GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
     _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
     _IVOASEM = Namespace("http://www.ivoa.net/rdf/ivoasem#")
+    _SKOSXL = Namespace("http://www.w3.org/2008/05/skos-xl#")
 
 
     # Mapping from dictionary keys to ontology properties.
@@ -46,21 +47,23 @@ class Properties():
                         "objtype": URIRef}, # for internal resources that are the same.
         "distinct": {"pred": OWL.differentFrom,
                      "objtype": URIRef}, # for internal resources that are different.
+        "broad_match": {"pred": SKOS.broadMatch,
+                        "objtype": URIRef},
+        "narrow_match": {"pred": SKOS.narrowMatch,
+                         "objtype": URIRef},
         "url": {"pred": SDO.url,
                 "objtype": XSD.string}, # facility-list, PDS, SPASE
         "ext_ref": {"pred": FOAF.page,
                     "objtype": XSD.string}, #SDO.about, # RDFS.seeAlso, # for corpus pages (wikipedia etc)
         "type": {"pred": RDF.type,
                  "objtype": URIRef},
-        "source": {"pred": _OBS.source,
-                   "objtype": URIRef},
         "is_authoritative_for": {"pred": _OBS.isAuthoritativeFor,
                                  "objtype": URIRef},
         "primary_community": {"pred": _OBS.primaryCommunity,
                               "objtype": URIRef},
         "label": {"pred": SKOS.prefLabel,
                   "objtype": XSD.string},
-        "alt_label": {"pred": SKOS.altLabel,
+        "alt_label": {"pred": SKOS.altLabel, # skosxl:altLabel -> URI XL-Label
                       "objtype": XSD.string},
         "description": {"pred": DCTERMS.description,
                        "objtype": XSD.string},
@@ -72,8 +75,8 @@ class Properties():
                      "objtype": URIRef}, # PDS
         "community": {"pred": _OBS.community,
                       "objtype": URIRef},
-        "waveband": {"pred": _OBS.waveband,
-                     "objtype": URIRef}, # AAS. Reference to IVOA's Messengers
+        "waveband": {"pred": _OBS.waveband, # http://www.ivoa.net/xml/VODataService/v1.2#waveband
+                     "objtype": URIRef}, # range: https://www.ivoa.net/rdf/messenger#
         "location": {"pred": _GEO.location,
                      "objtype": XSD.string}, # AAS, IAU-MPC, SPASE
         "address": {"pred": SDO.address,
@@ -104,6 +107,12 @@ class Properties():
                                 "objtype": XSD.float},
         "type_confidence": {"pred": _OBS.type_confidence,
                             "objtype": XSD.float},
+        "provenance": {"pred": PROV.wasInformedBy,
+                       "objtype": URIRef},
+        "source": {"pred": PROV.wasInformedBy, #_OBS.source, #DCTERMS.source
+                   "objtype": URIRef},
+        "literal_form": {"pred": _SKOSXL.literalForm,
+                         "objtype": XSD.string},
         "modified": {"pred": DCTERMS.modified,
                      "objtype": XSD.dateTime},
         "deprecated": {"pred": _IVOASEM.Deprecated,
@@ -121,6 +130,8 @@ class Properties():
         "type",
         "is_part_of",
         "has_part",
+        "broad_match",
+        "narrow_match",
         "community", # community of the list's source (see merge.py)
         "is_authoritative_for", # this source is authoritative for the specified communities
     ]
@@ -138,6 +149,22 @@ class Properties():
         "description",
         "country",
         "continent",
+    ]
+
+
+    _IGNORE_FOR_LLM_INPUT = [
+        "continent_code",
+        "location_confidence",
+        "type_confidence",
+        "exact_match",
+        "broad_match",
+        "narrow_match",
+        "distinct"
+        "ext_ref",
+        "url",
+        "provenance",
+        "modified",
+        "deprecated",
     ]
 
 
@@ -163,6 +190,12 @@ class Properties():
         "deprecated",
         "location_confidence",
         "type_confidence"
+    ]
+
+
+    # Relations that use bnode to add provenance (see graph.value)
+    _BNODE = [
+        "alt_label",
     ]
 
 
@@ -203,6 +236,11 @@ class Properties():
     @property
     def IVOASEM(self):
         return Properties._IVOASEM
+
+
+    @property
+    def SKOSXL(self):
+        return Properties._SKOSXL
 
 
     @property

@@ -320,6 +320,7 @@ def clean_string(text: str) -> str:
     """
     Removes all \n, \t and double spaces from a string.
     Remove final '.'
+    Fix parenthesis balance (useful for some cut_aka of AAS).
 
     Args:
         string: the string to clean
@@ -331,6 +332,15 @@ def clean_string(text: str) -> str:
     text = re.sub(r" +", " ", text).strip()
     if text and text[-1] == '.':
         text = text[:-1]
+    opening = text.count('(')
+    closing = text.count(')')
+    if opening > closing:
+        text += ')'
+        # add closing ')'
+    elif closing > opening:
+        # Remove last ')'
+        idx = text.rfind(')')
+        text = text[:idx] + text[idx+1:]
     return text.strip()
 
 

@@ -18,7 +18,7 @@ import atexit
 import os
 import sys
 
-from rdflib import Namespace
+from rdflib import Namespace, PROV, URIRef
 from typing import List
 from argparse import ArgumentParser
 from collections import defaultdict
@@ -76,7 +76,7 @@ class Updater():
     def add_entities(self,
                      data: dict,
                      extractor: Extractor = None,
-                     cat: str = "ufo"):
+                     cat: str | URIRef = "ufo"):
         """
         /!\\ Important: data dict's entries must contain a type key,
         elsewise the entry with no type will be ignored.
@@ -236,7 +236,7 @@ class Updater():
         NssdcExtractor: {"url": NssdcExtractor.URL,
                          "community": [A, H, P, O],
                          "is_authoritative_for": [A, H, P, O]},
-        N2yoExtractor: {"url": N2yoExtractor}}
+        N2yoExtractor: {"url": N2yoExtractor.URL}}
 
     # Used in updated ontology generation (self.init_graph)
     SOURCES = {source.URI: v for (source, v) in SOURCES_BY_EXTRACTOR.items()}
@@ -252,7 +252,7 @@ class Updater():
         Create the basic community properties and sources.
         """
         self.add_entities(self.COMMUNITIES, cat = "community")
-        self.add_entities(self.SOURCES, cat = "facility list")
+        self.add_entities(self.SOURCES, cat = PROV.Entity)
 
 
     def write(self):
