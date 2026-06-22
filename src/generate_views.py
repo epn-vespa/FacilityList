@@ -53,6 +53,7 @@ if __name__ == "__main__":
                         dest = "community_views",
                         type = str,
                         nargs = "*",
+                        default = set(Updater.SOURCE_BY_PRIMARY_COMMUNITY),
                         choices = set(Updater.SOURCE_BY_PRIMARY_COMMUNITY),
                         help = "Consider lists for which the primary community (or alliance) is amongst this list as authoritative, and ignore synonym sets (or lonely entities) that did not match with any entity in these lists.")
     args = parser.parse_args()

@@ -61,6 +61,17 @@ class Value():
         return self._provenance
 
 
+    @provenance.setter
+    def provenance(self, provenance: URIRef | set[URIRef]):
+        if type(provenance) not in [set, list, tuple]:
+            provenance = {provenance}
+
+        for prov in provenance:
+            if type(prov) != URIRef:
+                prov = properties.OBS[prov]
+            self._provenance.add(prov)
+
+
     @property
     def uri(self):
         return self._get_value_node()
