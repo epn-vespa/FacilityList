@@ -119,10 +119,10 @@ class AttributeMatcher():
                 continue
 
             for value1 in values1:
+                if type(value1) == str:
+                    # Mars Global Surveyor vs MARS GLOBAL SURVEYOR (Naif-Wikidata)
+                    value1 = value1.strip().lower()
                 for entity2, value2 in list2:
-                    if type(value1) == str:
-                        # Mars Global Surveyor vs MARS GLOBAL SURVEYOR (Naif-Wikidata)
-                        value1 = value1.strip().lower()
                     if type(value2) == str:
                         value2 = value2.strip().lower()
                     if value1 == value2:

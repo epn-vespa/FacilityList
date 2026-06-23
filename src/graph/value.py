@@ -99,9 +99,6 @@ class Value():
             # Maybe add entity's URI in the URI of the BNode ? Or use an actual BNode ?
             # uri = properties.OBS["skosxl-" + str(self) + '-' +  str(self.provenance).split('#')[-1]]
             uri = self._uri
-            if "Calern Observatory" in str(uri) or "Calern Observatory" in str(self.get_literal()):
-                print("uri=", uri, type(uri))
-                print(str(self.get_literal()), type(self.get_literal()))
             graph.add((uri, properties.SKOSXL.literalForm, self.get_literal()))
             graph.add((uri, RDF.type, properties.SKOSXL.Label))
             for provenance in self.provenance:
@@ -157,3 +154,16 @@ class ValueSet(set):
                     existing.provenance.update(new_value.provenance)
                     return
         super().add(new_value)
+
+
+    def __len__(self):
+        """
+        Count provenances
+        """
+        length = 0
+        for v in self:
+            if type(v) == Value and v.provenance:
+                length += len(v.provenance)
+            else:
+                length += 1
+        return length

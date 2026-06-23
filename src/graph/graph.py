@@ -13,10 +13,11 @@ import builtins
 from pathlib import PosixPath
 from typing import Iterator, List, Tuple
 from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
-from rdflib.namespace import SKOS, DCTERMS, OWL, RDF, RDFS
+from rdflib.namespace import SKOS, DCTERMS, OWL, RDF, RDFS, PROV
 from graph import entity_types
 from graph.extractor.extractor_lists import ExtractorLists
 from graph.extractor.extractor import Extractor
+from graph.value import Value, ValueSet
 from graph.properties import Properties
 from utils.string_utilities import standardize_uri, cut_acronyms, get_datetime_from_iso, cut_language_from_string
 from config import USERNAME
@@ -80,6 +81,7 @@ class Graph(G):
         self.bind("geo1", self.PROPERTIES.GEO)
         self.bind("wb", self.PROPERTIES.WB)
         self.bind("ivoasem", self.PROPERTIES.IVOASEM)
+        self.bind("skosxl", self.SKOSXL)
 
         # Initialize entity types
         for name, cls in inspect.getmembers(entity_types, inspect.isclass):
@@ -171,6 +173,11 @@ class Graph(G):
 
 
     @property
+    def SKOSXL(self):
+        return Properties._SKOSXL
+
+
+    @property
     def available_namespaces(self):
         return self._available_namespaces
 
@@ -242,8 +249,11 @@ class Graph(G):
                 no_equivalent_in = [no_equivalent_in]
             for extractor in no_equivalent_in:
                 no_equivalent_in_str += f"""
-                FILTER NOT EXISTS {{ ?entity <{self.PROPERTIES.exact_match}> ?entity2 .
-                ?entity2 <{self.PROPERTIES.source}> obsf:{extractor.URI} .}}"""
+                FILTER NOT EXISTS {{
+                    ?entity <{self.PROPERTIES.exact_match}> ?entity2 .
+                    ?entity <{self.PROPERTIES.broad_match}> ?entity2 .
+                    ?entity <{self.PROPERTIES.narrow_match}> ?entity2 .
+                    ?entity2 <{self.PROPERTIES.source}> obsf:{extractor.URI} .}}"""
         limit_str = ""
         if limit >= 0:
             limit_str = f" LIMIT {limit}"
@@ -347,8 +357,13 @@ class Graph(G):
                                                obj,
                                                extractor = extractor,
                                                language = language)
+        if type(obj) in [URIRef, Literal]:
+            return pred_uri, obj
+
         # Convert obj to obj_uri using datatype
-        if objtype != URIRef:
+        #if objtype in self.PROPERTIES._BNODE:
+        #    obj = Value(obj, language, objtype, provenance = extractor.NAMESPACE).get_value_node()
+        elif objtype != URIRef:
             if objtype == XSD.dateTime:
                 obj = get_datetime_from_iso(obj)
             obj_uri = Literal(obj,
@@ -418,6 +433,9 @@ class Graph(G):
             label: the label of the entity
             namespace: the namespace of the label
             language: the language of the label if any
+
+        Returns:
+            The label with no alternate label nor acronym (short label).
         """
         acronym_of_location = False
         if hasattr(extractor, "LOCATION_DELIMITER"):
@@ -444,8 +462,7 @@ class Graph(G):
         return short_label # Do not return an URI
 
 
-    def add(
-            self,
+    def add(self,
             params: Tuple[str, str, str],
             extractor: Extractor = None):
         """
@@ -501,11 +518,13 @@ class Graph(G):
                             + f"Got a {type(predicate)}.")
 
         # Convert object(s) into a list
-        if type(obj) in (list, tuple, set):
+        if type(obj) in (list, tuple, set, ValueSet):
             objs = list(obj) # convert to list
         else:
             objs = [obj]
 
+        objs_by_value = defaultdict(list[Literal])
+        obj_uri = None
         for obj in objs:
             # Ignore None and empty obj
             if hasattr(obj, "_uri"):
@@ -518,7 +537,20 @@ class Graph(G):
             if type(obj) == str:
                 # language tag example: @en
                 obj, language = cut_language_from_string(obj)
+            elif type(obj) == Value:
+                # reification: create the BNode's URI. FIXME it may not be unique! (ex: magnetometers).
+                # Maybe add entity's URI in the URI of the BNode ? Or use an actual BNode ?
+                # uri = properties.OBS["skosxl-" + str(self) + '-' +  str(self.provenance).split('#')[-1]]
+                obj_uri = obj.get_value_node()
+                if obj.provenance:
+                    self.graph.add((obj_uri, self.PROPERTIES.SKOSXL.literalForm, obj.get_literal()))
+                    self.graph.add((obj_uri, RDF.type, self.PROPERTIES.SKOSXL.Label))
+                    self.graph.add((obj_uri, PROV.wasInformedBy, obj.provenance))
+            elif type(obj) == URIRef:
+                obj_uri = obj
             # Change object type for certain predicates
+            if obj_uri:
+                obj = obj_uri
             predicate_uri, obj_uri = self.convert_pred_and_obj(
                 subj_uri,
                 predicate,
@@ -530,7 +562,7 @@ class Graph(G):
 
         if extractor:
             source_uri = self.PROPERTIES.OBS[standardize_uri(extractor.URI)]
-            self.graph.add((subj_uri, self.PROPERTIES.OBS["source"], source_uri))
+            self.graph.add((subj_uri, self.PROPERTIES.source, source_uri))
 
 
     def add_metadata(self,

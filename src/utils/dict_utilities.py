@@ -1,12 +1,12 @@
 from collections import defaultdict, Counter
-from typing import List, Dict, Tuple
 from graph.properties import Properties
+from graph.value import Value, ValueSet
 from rdflib import URIRef, XSD
 from datetime import datetime, timezone
 
 
-def merge_into(newer_entity_dict: Dict,
-               prior_entity_dict: Dict):
+def merge_into(newer_entity_dict: dict,
+               prior_entity_dict: dict):
     """
     Merge data from the prior dict into the newer dict.
     Only keep the most precise latitude & longitude.
@@ -21,11 +21,11 @@ def merge_into(newer_entity_dict: Dict,
     for key, values in prior_entity_dict.copy().items():
         #if key == "prior_id":
         #    continue
-        if type(values) != set:
+        if not isinstance(values, set):
             if type(values) == list:
-                values = set(values)
+                values = ValueSet(values)
             else:
-                values = {values}
+                values = ValueSet({values})
         # Label
         if key == "label":
             if not newer_entity_dict.get("label", None) and prior_entity_dict.get("label", None):
@@ -34,7 +34,7 @@ def merge_into(newer_entity_dict: Dict,
             elif "alt_label" in newer_entity_dict:
                  # Keep the old label as an alternate label of the new entity
                 if type(newer_entity_dict["alt_label"]) == list:
-                    newer_entity_dict["alt_label"] = set(newer_entity_dict["alt_label"])
+                    newer_entity_dict["alt_label"] = ValueSet(newer_entity_dict["alt_label"])
                 newer_entity_dict["alt_label"].update(values)
             else:
                 newer_entity_dict["alt_label"] = values
@@ -43,9 +43,9 @@ def merge_into(newer_entity_dict: Dict,
             if isinstance(merge_into, set):
                 pass
             elif isinstance(merge_into, list):
-                merge_into = set(merge_into)
+                merge_into = ValueSet(merge_into)
             else:
-                merge_into = {merge_into}
+                merge_into = ValueSet({merge_into})
             for value in values:
                 if value not in merge_into:
                     merge_into.add(value)
@@ -175,6 +175,8 @@ def majority_voting_merge(dicts: list[dict],
         - Type confidence
         - Location confidence
     """
+    #if len(dicts) == 1:
+    #    return dicts[0]
     if not str_keys:
         conv_attr = lambda x: properties.convert_attr(x)
     else:
@@ -187,7 +189,7 @@ def majority_voting_merge(dicts: list[dict],
     location_info_by_source = defaultdict(lambda: defaultdict(list))
 
     wikidata_preflabel = None
-    all_labels = []
+    all_labels = ValueSet()
     except_labels = set()
 
     for key in all_keys:
@@ -214,9 +216,9 @@ def majority_voting_merge(dicts: list[dict],
         elif key == "label":
             if properties.OBS["wikidata_list"] in values:
                 wikidata_preflabel = list(values[properties.OBS["wikidata_list"]])[0]
-            all_labels.extend(values_f)
+            all_labels.update(values_f)
         elif key == "alt_label":
-            all_labels.extend(values_f)
+            all_labels.update(values_f)
         elif key in ["COSPAR_ID", "NSSDCA_ID", "NAIF_ID", "code"]:
             #for value in values_f:
             except_labels.update(values_f)
@@ -269,25 +271,27 @@ def majority_voting_merge(dicts: list[dict],
         elif "longitude" in result_dict:
             long = _majority_vote_rounding(result_dict["longitude"])
             result_dict["longitude"] = long
-        for key in ["city", "country", "continent", "state", "address", properties.city, properties.country, properties.continent, properties.state, properties.address]:
+        for key in ["city", "country", "continent", "state", "address",
+                    properties.city, properties.country, properties.continent, properties.state, properties.address]:
             values = result_dict.get(key, None)
             if values:
                 value = _majority_vote_exact(values)
                 result_dict[key] = value
 
-    # Pref label
+    # Pref label (TODO add a prefLabel selection strategy)
     if wikidata_preflabel:
         pref_label = wikidata_preflabel
     else:
         # Remove codes, IDs... from alt labels
         all_labels_2 = [l for l in all_labels if l not in except_labels and (type(l) != tuple or l[0] not in except_labels)]
-        if all_labels_2:
-            all_labels = all_labels_2 # else it means that all the labels were identifiers/codes
-        pref_label = _majority_vote_exact(all_labels)
+        if not all_labels_2:
+            all_labels_2 = all_labels # else it means that all the labels were identifiers/codes
+        pref_label = _majority_vote_exact(all_labels_2)
         # TODO change the pref label selection method to get a more standardized label (without acronym, telescome name... and not keep the longest label with most votes)
-    all_labels = set(all_labels) - {pref_label}
+    # all_labels = set(all_labels) - {pref_label}
+    # Keep all alt_labels for now.
     result_dict[conv_attr("label")] = pref_label
-    result_dict[conv_attr("alt_label")] = all_labels
+    result_dict[conv_attr("alt_label")] = ValueSet(all_labels)
     return result_dict
 
 
@@ -303,12 +307,12 @@ def _get_values_from_dicts(dicts: list[dict],
     """
     values = dict()
     for d in dicts:
-        source = d.get(properties.convert_attr("source"), d.get("source"))
-        if source and type(source) == set:
+        source = d.get(properties.source, d.get("source"))
+        if source and isinstance(source, set):
             source = list(source)[0]
         value = d.get(key, None)
         if value:
-            if type(value) not in (list, set): # no tuple (tuple is for val, lang)
+            if type(value) not in (list, set, ValueSet): # no tuple (tuple is for val, lang)
                 value = [value]
             values[source] = value
     return values
@@ -330,16 +334,25 @@ def _majority_vote_exact(values: list):
     # Get rid of languages (and keep English labels only for labels with languages)
     values_with_lang = values.copy()
     values = []
+    all_values = []
     only_english_values = []
     for v in values_with_lang:
+        """
         if type(v) == tuple and len(v) == 2 and type(v[0]) == str:
             if v[1] == None or v[1][:2] in ["en", "ca"]: # ca is for Catalan but seems to be used for Canadian (en-ca) in WD too
                 only_english_values.append(v[0])
             values.append(v[0])
         else:
             values.append(v)
-    #if only_english_values:
-    #    values = only_english_values # Keep English value if they exist
+        """
+        if type(v) == Value:
+            if v.language in ["en", "ca", None]: # ca is for Catalan but seems to be used for Canadian (en-ca) in WD too
+                only_english_values.append(v)
+            all_values.append(v)
+        else:
+            values.append(v)
+    if only_english_values:
+        values = only_english_values # Keep English value if they exist
     counts = Counter(values)
     if not counts:
         return None
@@ -359,7 +372,6 @@ def _majority_vote_exact(values: list):
     # Longest value in this cluster.
     # If equality, keep the biggest string (2nd sorting criteria)
     best_value = max(most_common, key = lambda v: (len(str(v)), v))
-
     return best_value
 
 
@@ -378,13 +390,17 @@ def _majority_vote_rounding(values: list[float | str]):
     if len(values) == 1:
         return values[0]
     clusters = []
-    for v in values:
+    for value in values:
+        """
         if type(v) == tuple:
             # val, lang
             v = v[0]
+        """
         if v is None:
             continue
-        if type(v) == str:
+        if type(value) == Value:
+            v = value.value
+        if type(value) == str:
             # String support
             v_num = [s for s in v if s.isdigit() or s == '.']
             v = float(''.join(v_num))

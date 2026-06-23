@@ -10,7 +10,7 @@ import argparse
 from graph.graph import Graph
 from graph.properties import Properties
 from graph.entity import Entity
-from graph.value import Value
+from graph.value import Value, ValueSet
 from graph.extractor.extractor_lists import ExtractorLists
 from views import post_process
 from utils.string_utilities import standardize_uri
@@ -104,7 +104,7 @@ class MergeURIs():
                                               return_raw_value = not is_label)
                 synset_dicts.append(d)
             # synset_dicts = [s._data for s in synset]
-            data = majority_voting_merge(synset_dicts) # TODO merge the labels that are the same, adding more provenances.
+            data = majority_voting_merge(synset_dicts) # TODO verify that provenances are merged correctly
 
             old_pref_label = data.get(properties.label)
             pref_label = LLMConnection.generate_label_for_synset(synset = synset,
@@ -131,7 +131,7 @@ class MergeURIs():
                     datatype = properties._MAPPING[property].get("objtype", None)
                 else:
                     datatype = XSD.string
-                if type(values) not in (set, list):
+                if type(values) not in (set, tuple, list, ValueSet):
                     values = [values]
                 for value in values:
                     if not value:

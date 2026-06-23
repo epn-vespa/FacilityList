@@ -165,6 +165,7 @@ class Properties():
         "provenance",
         "modified",
         "deprecated",
+        "source"
     ]
 
 
@@ -194,8 +195,10 @@ class Properties():
 
 
     # Relations that use bnode to add provenance (see graph.value)
-    _BNODE = [
+    _KEEP_PROVENANCE = [
         "alt_label",
+        "label",
+        "code"
     ]
 
 
