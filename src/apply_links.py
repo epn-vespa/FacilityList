@@ -83,10 +83,10 @@ def main(input_ontology_path: str,
         elif "spase#" in str(s):
             s = find_spase_entity(s, input_graph)
             if not s:
-                print(f"Warning: URI not found in {input_ontology_path}:", s)
+                # print(f"Warning: URI not found in {input_ontology_path}:", s)
                 continue
         else:
-            print(f"Warning: URI not found in {input_ontology_path}:", s)
+            # print(f"Warning: URI not found in {input_ontology_path}:", s)
             continue
 
         if o in all_uris:
@@ -94,10 +94,10 @@ def main(input_ontology_path: str,
         elif "spase#" in str(o):
             o = find_spase_entity(o, input_graph)
             if not o:
-                print(f"Warning: URI not found in {input_ontology_path}:", o)
+                # print(f"Warning: URI not found in {input_ontology_path}:", o)
                 continue
         else:
-            print(f"Warning: URI not found in {input_ontology_path}:", o)
+            # print(f"Warning: URI not found in {input_ontology_path}:", o)
             continue
         input_graph.add((s, p, o))
         if p == SKOS.exactMatch:
@@ -171,6 +171,8 @@ def find_spase_entity(uri: URIRef,
                 all_entities_spase_by_label[alt_label].add(entity)
     uri_str = str(uri).split('#')[-1]
     new_uri = all_entities_spase_by_label.get(uri_str)
+    if not new_uri:
+        return None
     new_by_old_spase[uri] = list(new_uri)[0]
     return list(new_uri)[0]
 
@@ -216,7 +218,7 @@ if __name__ == "__main__":
                         "threshold mappings.")
     args = parser.parse_args()
     main(args.input_ontology_path,
-         # args.mapping_ontology,
+         # args.mapping_ontology, # TODO
          args.input_sssom_ontology_path,
          args.output_ontology_path,
          args.llm_manual_only)
