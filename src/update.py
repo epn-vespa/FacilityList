@@ -38,6 +38,7 @@ from graph.extractor.pds_extractor import PdsExtractor
 from graph.extractor.spase_extractor import SpaseExtractor
 from graph.extractor.wikidata_extractor import WikidataExtractor
 from graph.extractor.n2yo_extractor import N2yoExtractor
+from graph.entity import Entity
 from utils.location_utilities import get_location_info
 
 
@@ -288,8 +289,12 @@ def main(lists: List[str],
     for Extractor in extractors:
         extractor = Extractor()
         data = extractor.extract(from_cache = from_cache)
+        old_entities = updater.graph.get_entities_from_list(extractor)
+        old_data = dict()
+        for entity, in old_entities:
+            old_data[entity] = Entity(entity).data
         rd = remove_deprecated or hasattr(extractor, "MULTI_VERSIONING") and extractor.MULTI_VERSIONING
-        VersionManager.compare_versions(data, extractor, remove_deprecated = rd)
+        VersionManager.compare_versions(data, extractor, remove_deprecated = rd, input_graph_values = old_data)
         updater.add_entities(data, extractor = extractor)
 
 

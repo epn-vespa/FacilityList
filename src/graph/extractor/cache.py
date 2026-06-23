@@ -230,6 +230,7 @@ class VersionManager():
         """
         Get a list of keys which are newer compared to the last version date
         of the version file and necessitate to be refreshed.
+        Used in Wikidata extractor.
 
         Args:
             prev_version_file: json file containing previous versions of uris
@@ -270,6 +271,7 @@ class VersionManager():
                 list_name: str):
         """
         Replace URIs that are in new_version dict into last_version_file.
+        Used in Wikidata extractor.
 
         Args:
             last_version_file: the json file containing last versions for each uri
@@ -330,7 +332,8 @@ class VersionManager():
 
     def compare_versions(new_data: dict,
                          extractor,
-                         remove_deprecated: bool = True):
+                         remove_deprecated: bool = True,
+                         input_graph_values: dict = dict()):
         """
         Load, compare and save data dict for version management.
         Add a Deprecated relation on removed entities.
@@ -348,6 +351,10 @@ class VersionManager():
         # First download
         filename = VersionManager.VERSION_MANAGER / (extractor.NAMESPACE + ".pkl")
         old_data = None
+
+        if input_graph_values:
+            old_data = input_graph_values
+
         if os.path.exists(filename):
             try:
                 with open(filename, 'rb') as file:
@@ -366,6 +373,7 @@ class VersionManager():
             updated = set(new_data.keys()).intersection(old_data.keys())
             for uri in added:
                 new_data[uri]["modified"] = VersionManager._TODAY
+                # Change with created?
             for uri in deleted:
                 if not remove_deprecated:
                     new_data[uri] = old_data[uri]
@@ -382,8 +390,13 @@ class VersionManager():
                         old_data[uri][key] != new_data[uri][key])):
                         new_data[uri]["modified"] = VersionManager._TODAY
                         break # modified
+            for uri in new_data.keys():
+                if not new_data[uri].get("modified"):
+                    # No difference, keep old modified date or set to today's date
+                    new_data[uri]["modified"] = old_data[uri].get("modified", VersionManager._TODAY)
         with open(filename, 'wb') as file:
             pickle.dump(new_data, file) # Replace version
+
 
 if __name__ == "__main__":
     pass
