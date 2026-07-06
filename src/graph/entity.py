@@ -639,18 +639,20 @@ class Entity():
                     if not has_attr or all(attr in entity._data for attr in has_attr):
                         if not ignore_deprecated or "deprecated" not in entity._data:
                             # no_equivalent_in check
-                            equivalents = entity.get_values_for("exact_match")
+                            equivalents = entity.get_values_for("exact_match", extend_to_synonyms = False)
+                            equivalents.update(entity.get_values_for("broad_match", extend_to_synonyms = False))
+                            equivalents.update(entity.get_values_for("narrow_match", extend_to_synonyms = False))
                             if not equivalents:
                                 res.append(entity)
                             else:
-                                compatible = True
                                 for equivalent in equivalents:
                                     eq = Entity(equivalent)
                                     if eq.get_values_for("source", unique = True) in no_equivalent_in:
-                                        compatible = False
+                                        print("got eq:", equivalent)
                                         break
-                                if compatible:
+                                else:
                                     res.append(entity)
+
         return res
 
 
