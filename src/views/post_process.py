@@ -14,6 +14,7 @@ from rdflib import URIRef, Literal, SKOS, DCTERMS
 from graph.graph import Graph
 from graph.entity import Entity
 from graph.properties import Properties
+from graph.value import Value
 from llm.llm_connection import LLMConnection
 from graph import entity_types
 from collections import defaultdict
@@ -48,6 +49,8 @@ class PostProcess():
             uri_by_broader[broader].append(uri)
             #yield uri
         for uri, _, _ in self._graph.triples((None, properties.type, None)):
+            if type(uri) != URIRef:
+                continue # ignore BNode
             all_uri.add(uri)
             #if uri in done:
             #    continue
@@ -90,8 +93,11 @@ class PostProcess():
         in_scope = set()
         for uri in self.__iter__():
             self._remove_attrs_before_gen(uri) # Remove attrs that are generated automatically to prevent generating errors
-            self._gen_label(uri) # Must call before _gen_definition
-            self._gen_definition(uri)
+            # self._gen_label(uri) # Must call before _gen_definition
+            # TODO _gen_label is already done in the merge_uris step. Remove from post_process.py
+            label = Entity(uri).get_values_for("label")
+            # self._check_llm_label(uri, label) # TODO re-set this
+            # self._gen_definition(uri) # TODO re-set this
             self._remove_attrs_after_gen(uri)
             in_scope.add(uri)
             i += 1
@@ -587,9 +593,12 @@ Entity:
                                          from_cache = True,
                                          cache_key = str(entity.uri) + ":label")
         new_label = label.split("\n")[0].strip()
-        old_labels = entity.get_values_for("label", return_language = True)
+        old_labels = entity.get_values_for("label",
+                                           return_raw_value = False) # Return Value objects
         for old_label in old_labels:
-            lang = None
+            #lang = None
+            if type(old_label) == Value:
+                lang = old_label.language
             if len(old_label) == 2:
                 old_label, lang = old_label
                 self._graph.add((uri, SKOS.altLabel, Literal(old_label, lang = lang)))

@@ -52,19 +52,19 @@ class CsvJson():
             # Finally, get relations that are internal references
             entity = values["entity"] # From synset, get internal relations
             for relation in self._IVOA_RELATIONS:
-                parts = entity.get_values_for(relation,
-                                              return_language = False)
+                parts = entity.get_values_for(relation)
                 for part in parts:
                     # Only keep parts that will be in the CSV
                     if properties.get_type(relation) == XSD.string:
                         part = part.split("#")[-1]
-                        values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}(\"{part}\") "
+                        values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}(\"{str(part)}\") "
                     else:
                         part = str(part).split("#")[-1]
+
                         if part:
                             if part not in self._res_csv:
                                 part = "obsf#" + part.split("#")[-1] # External link to the OBSF IVOA vocabulary
-                            values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({part}) "
+                            values["more_relations"] += f"{self._IVOA_RELATIONS[relation]}({str(part)}) "
 
         children_by_broader = defaultdict(list)
 
@@ -140,12 +140,10 @@ class CsvJson():
         Args:
             entity: the entity for this row
             relation: get values for this predicate
-            relation_str: if set, use this as a relation
         """
         res = ""
         value_set = entity.get_values_for(relation,
-                                          languages = "en",
-                                          return_language = False)
+                                          languages = "en")
         if properties._MAPPING[relation].get("objtype") == URIRef:
             return ""
         relation = self._IVOA_RELATIONS[relation]
@@ -196,8 +194,7 @@ class CsvJson():
             alt_labels = entity.get_values_for("alt_label",
                                                unique = False,
                                                languages = None, # List of languages for alt labels to keep in both formats
-                                               return_language = False
-                                               )
+                                              )
             for alt_label in alt_labels:
                 if str(alt_label) in res_json[term]:
                     continue # Make it behave like a set
@@ -212,7 +209,7 @@ class CsvJson():
             description = description.replace("\n", "")[:500]
 
             more_relations = ""
-            fields = [#"alt_label",
+            fields = [#"alt_label", #TODO See if it has to be added here too
                       "uri"]
             for field in fields:
                 more_relations += self._to_string(entity, relation = field)
