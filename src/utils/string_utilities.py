@@ -431,6 +431,7 @@ def get_datetime_from_iso(datetime_str: str) -> str:
         month 00 day 00 -> 1st of January
         & remove '+' sign
     Also complete the incomplete ISO dates (only year, year-month).
+    Convert month labels.
 
     Args:
         datetime_str: the ISO datetime string
@@ -444,6 +445,27 @@ def get_datetime_from_iso(datetime_str: str) -> str:
         datetime_str += "-01T00:00:00"
     elif re.match(r"^\d\d\d\d-\d\d-\d\d$", datetime_str):
         datetime_str += "T00:00:00"
+    else:
+        months = ("jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec").split('|')
+        for month in re.findall(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)", datetime_str.lower()):
+            month_int = months.index(month) + 1
+            month_str = str(month_int)
+            year_str = ""
+            day_str = "01"
+            if len(month_str) == 1:
+                month_str = '0' + month_str
+            years = re.findall(r"\b\d\d\d\d\b", datetime_str)
+            days = re.findall(r"\b\d\d?\b", datetime_str)
+            for year in years:
+                year_str = year
+            for day in days:
+                day_str = day
+                if len(day) == 1:
+                    day = '0' + day
+            if not year_str:
+                return datetime_str
+            datetime_str = year_str + '-' + month_str + '-' + day_str + "T00:00:00"
+            return datetime_str
 
     return datetime_str
 
@@ -495,6 +517,38 @@ def get_suffix_number(label: str):
             return 4
     return 0
 
+
+def extract_time(label: str) -> list[str, str]:
+    """
+    Custom function for IAU-MPC labels that contain date information.
+    They are between parenthesis and use trigger words or YYYY-YYYY format.
+    Returns:
+        The start date and end date contained in the label.
+    """
+    start_keywords = ["since", "after", "from", "aft."]
+    stop_keywords = ["bef.", "before", "until"]
+    r_start = f"\\({'|'.join(s for s in start_keywords)} (.*)\\)"
+    r_stop = f"\\({'|'.join(s for s in stop_keywords)} (.*)\\)"
+
+    res = [None, None]
+
+    for v in re.findall(r"\b(\d\d\d\d-\d\d\d\d)\b", label):
+        start, stop = v.split('-')
+        start = get_datetime_from_iso(start)
+        stop = get_datetime_from_iso(stop)
+        res = [start, stop]
+        break
+    else:
+        for start in re.findall(re.compile(r_start), label):
+            start = get_datetime_from_iso(start)
+            res[0] = start
+            break
+
+        for stop in re.findall(re.compile(r_stop), label):
+            stop = get_datetime_from_iso(stop)
+            res[1] = stop
+            break
+    return res
 
 if __name__ == "__main__":
     pass

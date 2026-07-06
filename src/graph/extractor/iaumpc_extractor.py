@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 from graph import entity_types
 from graph.extractor.cache import CacheManager
 from graph.extractor.extractor import Extractor
-from utils.string_utilities import cut_location
+from utils.string_utilities import cut_location, extract_time
 import math
 
 
@@ -145,6 +145,13 @@ class IauMpcExtractor(Extractor):
 
             # label
             data["label"] = obs_name
+
+            # Start & stop dates
+            start, stop = extract_time(obs_name)
+            if start:
+                data["start_date"] = start
+            if stop:
+                data["end_date"] = stop
 
             # Internal references
             if obs_id:
