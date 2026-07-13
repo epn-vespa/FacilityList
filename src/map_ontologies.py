@@ -18,6 +18,7 @@ import dill
 from argparse import ArgumentParser
 from pathlib import Path
 from collections import defaultdict
+from datetime import datetime, timezone
 
 from config import OUTPUT_DIR, configure_ollama, USERNAME
 import config
@@ -44,12 +45,14 @@ class OntologyMapper():
                  input_ontologies: list[str],
                  output_dir: str = "",
                  human_validation: bool = False,
-                 limit: int = -1):
+                 limit: int = -1,
+                 modified_after = None):
         """
         Args:
             input_ontologies: list of ontologies to be merged
             output_dir: folder to save the output turtle files
             limit: maximum entities per list (for debug)
+            modified_after: only map entities that were modified after a certain datetime
         """
         self._mapping_input_file = None
         restored = False
@@ -88,6 +91,7 @@ class OntologyMapper():
         self._strategy = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
         self._strategy_str = ""
         self._human_validation = human_validation
+        self._modified_after = modified_after
 
 
     @property
@@ -380,7 +384,8 @@ class OntologyMapper():
                                                 with_tools = list(tools),
                                                 limit = self._limit,
                                                 ignore_deprecated = True,
-                                                human_validation = self._human_validation)
+                                                human_validation = self._human_validation,
+                                                modified_after = self._modified_after)
                         del(retriever)
 
                         # Save progress for next execution
@@ -446,12 +451,31 @@ class OntologyMapper():
 def main(input_ontologies: list[str],
          output_dir: str,
          strategy_file: str,
-         human_validation: bool):
+         human_validation: bool,
+         modified_after: str = None):
+    """
+    Args:
+        input_ontologies: all ontologies that contain entities to map
+        output_dir: where to store the linked and mapping ontologies
+        strategy_file: which mapping strategy to use
+        human_validation: whether ask a human to validate or AI
+        modified_after: isoformat date. If set, ignore pairs of entities that were both
+                        modified before this date and map entities that were modified after
+    """
 
+    if modified_after and type(modified_after) == str:
+        if re.match(r"\d\d\d\d-\d\d-\d\d", modified_after):
+            modified_after += "T00:00:00+00:00"
+        elif re.match(r"\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d"):
+            modified_after += "+00:00"
+        elif not re.match(r"\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dT\d\d:\d\d"):
+            raise ValueError(modified_after, "is not a valid date format. Please use one of these formats: YYYY-MM-DD, YYYY-MM-DDThh:mm:ss, YYYY-MM-DDThh:mm:ss+tt:tt")
+        modified_after = datetime.fromisoformat(modified_after).replace(tzinfo=timezone.utc)
 
     mapper = OntologyMapper(input_ontologies,
                             output_dir = output_dir,
-                            human_validation = human_validation)
+                            human_validation = human_validation,
+                            modified_after = modified_after)
     mapper.parse_strategy(strategy_file)
     mapper.merge_identifiers()
     if not human_validation:
@@ -502,8 +526,17 @@ if __name__ == "__main__":
                         action="version",
                         version=f"%(prog)s {__version__}",
                         help="Print the current version.")
+    parser.add_argument("-a",
+                        "--modified-after",
+                        dest="modified_after",
+                        required=False,
+                        type=str,
+                        default=None,
+                        help="Only map entities that were modified after this date. " \
+                             "Accepted formats: YYYY-MM-DD, YYYY-MM-DDThh:mm:ss, YYYY-MM-DDThh:mm:ss+tt:tt")
     args = parser.parse_args()
     main(args.input_ontologies,
          args.output_dir,
          args.strategy_file,
-         args.human_validation)
+         args.human_validation,
+         args.modified_after)

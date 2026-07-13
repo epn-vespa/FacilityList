@@ -117,8 +117,8 @@ class WikidataExtractor(Extractor):
                                        "wd:Q4213"], # Telescope
               entity_types.AIRBORNE: [#"wd:Q1414565", # Space plane
                                       "wd:Q1875651"], # Airborne observatory
-              entity_types.INSTRUMENT: ["wd:Q751997", # Astronomical instrument
-                                        ]
+              #entity_types.INSTRUMENT: ["wd:Q751997", # Astronomical instrument
+              #                          ]
                             }
 
     _QUERY_TYPES = {k: "UNION".join(f" {{?itemURI wdt:P31/wdt:P279* {v} .}} "
@@ -493,7 +493,7 @@ class WikidataExtractor(Extractor):
             # English wikipedia page
             sitelinks = value['sitelinks']
             if 'enwiki' in sitelinks:
-                data["ext_ref"] = sitelinks['enwiki']['url']
+                data["ext_ref"] = sitelinks["enwiki"].get("url", None)
 
             # Other properties
             property_items = value["claims"]

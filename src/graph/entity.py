@@ -8,6 +8,7 @@ Author:
 
 from collections import defaultdict
 from typing import Any
+from datetime import date
 from rdflib import Literal, URIRef, SKOS, BNode
 from rdflib.namespace import split_uri
 from graph.mapping_graph import MappingGraph
@@ -648,7 +649,6 @@ class Entity():
                                 for equivalent in equivalents:
                                     eq = Entity(equivalent)
                                     if eq.get_values_for("source", unique = True) in no_equivalent_in:
-                                        print("got eq:", equivalent)
                                         break
                                 else:
                                     res.append(entity)

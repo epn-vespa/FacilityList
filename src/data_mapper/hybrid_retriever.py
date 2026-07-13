@@ -5,6 +5,8 @@ refine the retrieval results with other scores (weighted).
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
+from datetime import timezone
+
 import numpy as np
 import psutil # battery checks
 from sklearn.decomposition import PCA
@@ -27,6 +29,7 @@ from graph.properties import Properties
 # import faiss # pip3 install faiss-cpu (use faiss-gpu for GPU support)
 from llm.llm_connection import LLMConnection
 from data_mapper.validator import strat1
+
 
 from config import USERNAME
 import config
@@ -235,7 +238,8 @@ class HybridRetriever():
                       ignore_deprecated = True,
                       top_k: int = 10,
                       human_validation: bool = True,
-                      allow_broad_narrow: bool = False) -> None:
+                      allow_broad_narrow: bool = False,
+                      modified_after = None) -> None:
         """
         Map entities from extractor1 to entities from extractor2 using the
         hybrid retriever. extractor1 and extractor2 might be inversed depending
@@ -249,6 +253,7 @@ class HybridRetriever():
             limit: limit the number of entities to map from list2
             ignore_deprecated: do not map entities that are deprecated
             human_validation: de-activate LLM validation and let the user validate each mapping
+            modified_after: only map entities modified after a certain datetime
         """
         self.filters = []
         self.matchers = []
@@ -346,6 +351,10 @@ class HybridRetriever():
                 embeddings = indexer1.get_embeddings(entity1)
             blacklisted_entities = []
             for entity2 in entities2:
+                if (modified_after and
+                    entity1.modified.replace(tzinfo=timezone.utc) < modified_after and
+                    entity2.modified.replace(tzinfo=timezone.utc) < modified_after):
+                    continue # Do not map entities that were both modified before the last modification date
                 if not self.apply_filters(entity1, entity2):
                     blacklisted_entities.append(entity2)
                     continue
@@ -363,7 +372,7 @@ class HybridRetriever():
                                           subject_match_field = field1,
                                           object_match_field = field2,
                                           match_string = value
-                                          )
+                                         )
                     matched = True
                     break
             if matched:
