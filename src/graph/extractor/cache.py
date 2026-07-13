@@ -68,6 +68,8 @@ class CacheManager():
                     as the url of the page may not change.
         """
         cache_path = CacheManager._get_cache_path(url, list_name, data_str)
+        if not cache_path:
+            return ""
         content = ""
         if from_cache and glob.glob(cache_path):
             with open(cache_path, 'r', encoding='utf-8') as file:
@@ -97,6 +99,8 @@ class CacheManager():
             data_str: a string to save the response in a specific cache file
                       as the url of the page may not change.
         """
+        if not url:
+            return ""
         # Create folder CACHE
         (CACHE_DIR / list_name).mkdir(parents = True,
                                       exist_ok = True)
