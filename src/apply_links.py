@@ -9,6 +9,7 @@ Author:
 """
 import pathlib
 import os
+import shutil
 from argparse import ArgumentParser
 from collections import defaultdict
 from rdflib import Graph, Namespace, RDF, SKOS, URIRef
@@ -18,15 +19,144 @@ from utils.string_utilities import standardize_uri
 SSSOM = Namespace("https://w3id.org/sssom/")
 
 
-def main(input_ontology_path: str,
+def main(from_folder: str,
+         to_folder: str):
+    """
+    Copy mappings from the from_folder to the to_folder
+    Args:
+        from_folder: folder containing the previous version's files (linked.ttl, mapping.ttl) to apply mappings from
+        to_folder: folder containing the latest version's files (updated.ttl) to apply mappings to
+    """
+    from_folder = pathlib.Path(from_folder)
+    to_folder = pathlib.Path(to_folder)
+    assert from_folder.is_dir()
+    assert to_folder.is_dir()
+    from_linked = from_folder / "linked.ttl"
+    from_mapping = from_folder / "mapping.ttl"
+    to_mapping = to_folder / "mapping.ttl" # update to_mapping if exists, else copy it from from_mapping
+    to_updated = to_folder / "updated.ttl"
+    if not to_updated.exists():
+        raise FileNotFoundError(f"The file to apply mappings to ({to_updated}) does not exist. Perhaps it was named differently?")
+
+    to_updated_graph = Graph()
+    to_updated_graph.parse(to_updated)
+    if from_linked.exists():
+        apply_from_linked(from_linked, to_updated_graph)
+    elif from_mapping.exists():
+        apply_from_mapping(from_mapping, to_mapping, to_updated_graph)
+    else:
+        raise FileNotFoundError(f"Neither {from_linked} and {from_mapping} exist, can not apply mappings from the folder {from_folder}.")
+
+    # Transfer mappings from from_folder/mapping.ttl to to_folder/mapping.ttl and save the new to_folder/mapping.ttl
+    if to_mapping.exists():
+        from_mapping_graph = Graph()
+        from_mapping_graph.parse(from_mapping)
+        to_mapping_graph = Graph()
+        to_mapping_graph.parse(to_mapping)
+        for s, p, o in from_mapping_graph.triples():
+            to_mapping_graph.add((s, p, o))
+        to_mapping_graph.serialize(to_mapping)
+        print("New mapping saved in:", to_mapping)
+    else:
+        shutil.copy2(from_mapping, to_mapping)
+
+    # Serialization
+    to_linked = to_folder / "linked.ttl"
+    to_updated_graph.serialize(to_linked)
+    print("New linked ontology saved in:", to_linked)
+
+
+
+def apply_from_linked(from_linked: pathlib.Path,
+                      to_graph: Graph):
+    """
+    Copy exactMatch, narrowMatch and broadMatch to the to_updated ontology.
+    """
+    from_graph = Graph()
+    from_graph.parse(from_linked)
+
+    all_uris = set()
+    for s, _, _, in to_graph:
+        all_uris.add(s)
+
+    rels = [SKOS.exactMatch, SKOS.broadMatch, SKOS.narrowMatch]
+
+    for rel in rels:
+        for s, p, o in from_graph.triples((None, rel, None)):
+            if s not in all_uris or o not in all_uris:
+            # Spase URI is different from the source ontology one
+                if "spase#" in str(s):
+                    s = find_spase_entity(s, from_graph)
+                if "spase#" in str(o):
+                    o = find_spase_entity(o,  from_graph)
+                if s not in all_uris or o not in all_uris:
+                    continue
+            # Reset relation
+            to_graph.remove((s, None, o))
+            to_graph.remove((o, None, s))
+            to_graph.add((s, p, o))
+            if p == SKOS.exactMatch:
+                to_graph.add((o, p, s))
+            elif p == SKOS.broadMatch:
+                to_graph.add((o, SKOS.narrowMatch, s))
+            elif p == SKOS.narrowMatch:
+                to_graph.add((o, SKOS.broadMatch, s))
+
+
+def apply_from_mapping(from_mapping: pathlib.Path,
+                       to_graph: Graph):
+    """
+    Copy exactMatch, narrowMatch and broadMatch to the to_updated ontology.
+    """
+    from_graph = Graph()
+    from_graph.parse(from_mapping)
+    all_uris = set()
+    for s, _, _, in to_graph:
+        all_uris.add(s)
+
+    query = f"""
+    SELECT ?s ?p ?o WHERE {{
+        ?mapping a sssom:Mapping .
+        ?mapping sssom:subject_id ?s .
+        ?mapping sssom:predicate_id ?p .
+        ?mapping sssom:object_id ?o .
+        FILTER NOT EXISTS {{
+            ?mapping owl:deprecated true .
+        }}
+    }}
+    """
+    rels = [SKOS.exactMatch, SKOS.broadMatch, SKOS.narrowMatch]
+    for s, p, o in from_graph.query(query):
+        if s not in all_uris or o not in all_uris:
+            if "spase#" in str(s):
+                s = find_spase_entity(s)
+            if "spase#" in str(o):
+                o = find_spase_entity(o)
+            if s not in all_uris or o not in all_uris:
+                continue
+        # Reset relation
+        to_graph.remove((s, None, o))
+        to_graph.remove((o, None, s))
+        to_graph.add((s, p, o))
+        if p == SKOS.exactMatch:
+            to_graph.add((o, p, s))
+        elif p == SKOS.broadMatch:
+            to_graph.add((o, SKOS.narrowMatch, s))
+        elif p == SKOS.narrowMatch:
+            to_graph.add((o, SKOS.broadMatch, s))
+
+
+def main_old(input_ontology_path: str,
          # mapping_ontology: str,
          input_sssom_ontology_path: str,
+         linked_ontology_path: str,
          output_ontology_path: str,
          llm_manual_only: bool):
     """
     Args:
         input_ontology_path: path of an ontology containing the entities' information
         input_sssom_ontology_path: path of the SSSOM ontology containing the mappings to apply
+        linked_ontology_path: path of the previous version's linked ontology
         output_ontology_path: path to the output ontology
     """
 
@@ -34,6 +164,7 @@ def main(input_ontology_path: str,
     input_graph = Graph()
     sssom_graph = Graph()
     mapping_graph = Graph()
+    linked_graph = Graph()
     input_ontology_path = pathlib.Path(input_ontology_path)
     if input_ontology_path.is_dir():
         input_folder = input_ontology_path
@@ -41,9 +172,10 @@ def main(input_ontology_path: str,
         output_folder = pathlib.Path(output_folder)
         os.makedirs(output_folder, exist_ok = True)
         output_ontology_path = output_folder / "linked.ttl"
-        input_ontology_path = input_folder / "linked.ttl"
+        input_ontology_path = input_folder / "updated.ttl"
         mapping_ontology = input_folder / "mapping.ttl"
         mapping_graph.parse(mapping_ontology)
+        linked_graph.parse(input_folder / "linked.ttl")
 
     else:
         if not output_ontology_path:
@@ -67,6 +199,7 @@ def main(input_ontology_path: str,
         FILTER NOT EXISTS {{
             ?mapping owl:deprecated true .
         }}
+        {manual_only_str}
     }}
     """
     #for mapping, _, _ in sssom_graph.triples((None, RDF.type, _SSSOM.Mapping)):
@@ -150,10 +283,11 @@ def main(input_ontology_path: str,
 all_entities_spase_by_label = defaultdict(set)
 new_by_old_spase = dict()
 
+
 def find_spase_entity(uri: URIRef,
                       graph: Graph) -> URIRef:
     """
-    Old SPASE uris => new spase uris (to use a mapping
+    Old SPASE uris => new SPASE uris (to use a mapping
     done with the old version of SPASE extractor)
 
     Args:
@@ -180,7 +314,10 @@ def find_spase_entity(uri: URIRef,
 if __name__ == "__main__":
     parser = ArgumentParser(prog = "apply_links.py",
                             description = "Apply links from an SSSOM ontology" \
+                                          "or a linked ontology" \
                                           "to map an updated ontology.")
+
+    """
     parser.add_argument("-i",
                         "--input-ontology",
                         dest = "input_ontology_path",
@@ -201,6 +338,12 @@ if __name__ == "__main__":
                         required = True,
                         type = str,
                         help = "The SSSOM ontology to apply mappings from.")
+    parser.add_argument("-l",
+                        "--linked-ontology",
+                        dest = "linked_ontology_path",
+                        required = False,
+                        type = str,
+                        help = "The linked ontology to apply mappings from.")
     parser.add_argument("-o",
                         "--output-ontology",
                         dest = "output_ontology_path",
@@ -208,7 +351,7 @@ if __name__ == "__main__":
                         type = str,
                         default = "",
                         help = "Output ontology path.")
-    parser.add_argument("-l",
+    parser.add_argument("-m",
                         "--llm-manual-only",
                         dest = "llm_manual_only",
                         required = False,
@@ -221,4 +364,26 @@ if __name__ == "__main__":
          # args.mapping_ontology, # TODO
          args.input_sssom_ontology_path,
          args.output_ontology_path,
+         args.linked_ontology_path,
          args.llm_manual_only)
+    """
+
+    parser.add_argument("-f",
+                        "--from-folder",
+                        dest = "from_folder",
+                        required = True,
+                        help = "Folder to apply mappings from. Will use linked.ttl by default, mapping.ttl elsewise."
+                       )
+
+
+    parser.add_argument("-t",
+                        "--to-folder",
+                        dest = "to_folder",
+                        required = True,
+                        help = "Folder containing an updated.ttl ontology, on which links will be applied."
+                       )
+
+    args = parser.parse_args()
+
+    main(args.from_folder,
+         args.to_folder)
