@@ -774,11 +774,15 @@ class WikidataExtractor(Extractor):
                                 merge_into(data, entity_dict)
                             else:
                                 data["source_type"] = entity_dict["label"]
-                                data["label"] = entity_dict["label"] + " on " + host_label
+                                data["label"] = entity_dict["label"]
+                                if host_label:
+                                    data["label"] += " on " + host_label
                         else:
                             # Type of the instrument
                             data["source_type"] = entity_dict["label"]
-                            data["label"] = entity_dict["label"] + " on " + host_label
+                            data["label"] = entity_dict["label"]
+                            if host_label:
+                                data["label"] += " on " + host_label
             elif property:
                 if value.startswith(entity_prefix):
                     value = self._get_label(value)
