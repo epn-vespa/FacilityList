@@ -27,6 +27,8 @@ class TfIdfEmbedder(Embedder):
     """
     Only for one list of entities at a time.
     """
+    _instance = None
+    _initialized = False
 
     # Name of the score computed by this class (as in score.py)
     NAME = "tfidf"
@@ -51,6 +53,22 @@ class TfIdfEmbedder(Embedder):
                   ]
 
     ON_LANGUAGES = ["en", "ca", "fr", "es"]
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+    def __init__(self):
+        if self._initialized:
+            return
+
+        self.vectorizer = None
+        self.dt_matrix = None
+        self.no_corpus = False
+
+        self._initialized = True
+
 
     @timeall
     def compute(self, entities: List[Entity]) -> np.ndarray:
@@ -78,6 +96,9 @@ class TfIdfEmbedder(Embedder):
 
 
     def _fit(self) -> None:
+        # Prevent running _fit twice
+        if self.vectorizer is not None:
+            return
 
         stop_words = set()
         self.add_stopwords(stop_words)
@@ -87,7 +108,7 @@ class TfIdfEmbedder(Embedder):
                                           tokenizer = self._custom_tokenizer,
                                           strip_accents='unicode',
                                           stop_words=list(stop_words),
-                                          max_features=1000000)
+                                          max_features=2000000)
         # self.tokenizer = self.vectorizer.build_tokenizer()
         #graph = Graph()
         #definitions = graph.get_graph_semantic_fields(language = ["en", "ca", "fr", "es"])
@@ -103,7 +124,7 @@ class TfIdfEmbedder(Embedder):
             self.no_corpus = True
             return None # No textual data in the entities.
 
-        self.vectorizer.fit(semantic_fields)
+        self.dt_matrix = self.vectorizer.fit(semantic_fields)
 
 
 
@@ -144,7 +165,7 @@ class TfIdfEmbedder(Embedder):
         text = re.sub(r'(?<=\d)(?=[a-zA-Z])', ' ', text) # Same
         text = re.sub(r"[^\w\d ]", " ", text) # Only one space
         text = re.sub(self.punct_regex, " ", text) # Remove punctuation
-        tokens = re.findall(r'\b[a-zA-Z0-9]{1,5}', text.lower()) # 1 to 5 characters (pseudo-stemmization)
+        tokens = re.findall(r'\b[a-zA-Z0-9-]{1,5}', text.lower()) # 1 to 5 characters (pseudo-stemmization)
         return tokens
 
 
@@ -159,3 +180,68 @@ class TfIdfEmbedder(Embedder):
         languages = ['english', 'french', 'spanish']
         for lang in languages:
             stop_words = stop_words.union(stopwords.words(lang))
+
+
+    def analyze_text(self,
+                    text: str,
+                    sort: bool = True) -> list[dict]:
+        """
+        Analyze a text with the fitted TF-IDF model.
+
+        Returns a list of dictionaries sorted by tf-idf containing:
+            terms: terms from the text
+            tfidf: float
+            idf: float
+            tf: float
+
+        Args:
+            text: the text to extract tokens from
+            sort: whether to sort the result by descending scores
+        """
+        if self.no_corpus:
+            return []
+
+        mapping = self._token_to_original(text)
+
+        if self.vectorizer is None:
+            self._fit()
+
+        vec = self.vectorizer.transform([text])
+        tfidf = vec.toarray()[0]
+        feature_names = self.vectorizer.get_feature_names_out()
+        results = []
+
+        for idx in np.nonzero(tfidf)[0]:
+            token = feature_names[idx]
+            if token in mapping:
+                results.append({
+                    # "token": token,
+                    "terms": sorted(mapping[token]), # original terms from the string
+                    "tfidf": float(tfidf[idx]),
+                    "idf": float(self.vectorizer.idf_[idx]),
+                    "tf": float(tfidf[idx] / self.vectorizer.idf_[idx])
+                })
+        if sort:
+            results.sort(key=lambda x: x["tfidf"], reverse=True)
+
+        return results
+
+
+    def _token_to_original(self, text: str) -> dict[str, set[str]]:
+        """
+        Map each internal TF-IDF token to the original words found in the text.
+        """
+
+        text = re.sub(r'(?<=[a-zA-Z])(?=\d)', ' ', text)
+        text = re.sub(r'(?<=\d)(?=[a-zA-Z])', ' ', text)
+        text = re.sub(r"[^\w\d ]", " ", text)
+
+        words = re.findall(r"\b[a-zA-Z0-9-]+\b", text)
+
+        mapping = {}
+
+        for word in words:
+            token = word[:5].lower()
+            mapping.setdefault(token, set()).add(word)
+
+        return mapping
