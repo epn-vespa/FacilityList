@@ -8,22 +8,26 @@ Author:
 import argparse
 import json
 import atexit
+from collections import defaultdict
+from uuid import uuid1
 
 from graph.graph import Graph
 from graph.properties import Properties
 from graph.entity import Entity
 from graph.value import Value, ValueSet
 from graph.extractor.extractor_lists import ExtractorLists
+from graph.extractor.aas_extractor import AasExtractor
 from views import post_process
 from utils.string_utilities import standardize_uri
+from utils.string_utilities import find_acronyms
 from utils.dict_utilities import majority_voting_merge
 from config import TERM_LABEL_DEF_FILE
-from rdflib import Graph as G, URIRef, RDFS, XSD, Literal, SKOS, OWL, PROV
+from rdflib import Graph as G, URIRef, RDFS, XSD, SKOS, OWL, PROV, RDF, Literal
 from datetime import timezone
 from update import Updater
 from llm.llm_connection import LLMConnection
-from collections import defaultdict
-from uuid import uuid1
+from data_mapper.tools.embedders.tfidf_embedder import TfIdfEmbedder # To get rare words (term generation)
+
 
 properties = Properties()
 
@@ -43,6 +47,11 @@ class MergeURIs():
         # Bind namespaces
         for prefix, namespace in self._graph.namespaces():
             self._output_graph.bind(prefix, namespace)
+
+        # Add provenance objects
+        for prov, _, _ in self._graph.triples((None, RDF.type, PROV.Entity)):
+            for _, pred, obj in self._graph.triples((prov, None, None)):
+                self._output_graph.add((prov, pred, obj))
 
 
         self.IGNORE_PROPERTIES = [# RDF.type, # Added manually
@@ -117,14 +126,17 @@ class MergeURIs():
             # pref label
             old_pref_label = data.get(properties.label)
             old_definition = data.get(properties.definition)
-            term, pref_label, definition  = self._get_term_label_def(synset_dicts)
+            term, pref_label, definition  = self._get_term_label_def(synset, synset_dicts, data, None)
 
             data[properties.alt_label].add(old_pref_label)
             data[properties.label] = pref_label
-            data[properties.description].update(old_definition) # FIXME check that the type is correct (expected bug)
+            if type(old_definition) not in [list, set, tuple]:
+                old_definition = [old_definition]
+            data[properties.description].extend(old_definition)
+            data[properties.definition] = definition
 
             # definition
-            # TODO use the one from post_processing
+            # TODO use the function from post_processing
 
             # term
             # term = standardize_uri(str(pref_label)) # TODO replace this by a better term generation strategy
@@ -132,10 +144,11 @@ class MergeURIs():
             #    term += "-bis"
             #all_terms.append(term)
 
+            entity = properties.OBS[standardize_uri(term)]
             for uri in all_uris_in_synset:
-                term_by_synonym_uri[uri] = term
-                term_by_synonym_uri[pref_label] = term
-            entity = properties.OBS[term]
+                term_by_synonym_uri[uri] = entity
+                term_by_synonym_uri[pref_label] = entity
+
             for property, values in data.items():
                 if property in self.IGNORE_PROPERTIES:
                     continue
@@ -147,6 +160,7 @@ class MergeURIs():
                     datatype = properties._MAPPING[property].get("objtype", None)
                 else:
                     datatype = XSD.string
+                property = properties.convert_attr(property)
                 if type(values) not in (set, tuple, list, ValueSet):
                     values = [values]
                 for value in values:
@@ -172,7 +186,6 @@ class MergeURIs():
                             value = Literal(value, datatype = XSD.string)
                     else:
                         value = value.get_value_node(self._output_graph)
-                    property = properties.convert_attr(property)
                     self._output_graph.add((entity, property, value))
         self._term_by_synonym_uri = term_by_synonym_uri
         self._fix_internal_link()
@@ -188,12 +201,38 @@ class MergeURIs():
 
 
     def _save_term_label_def(self):
-        with open(TERM_LABEL_DEF_FILE, "r") as file:
-            json.dump(self._term_label_def_dict)
+        """
+        Save the sorted dict on keys so that it is gitable.
+        """
+        s = sorted(self._term_label_def_dict)
+        res = "{"
+        for key in s:
+            value = self._term_label_def_dict[key]
+            value_str = ""
+            if type(value) == dict:
+                for key2 in sorted(value):
+                    value2 = str(value[key2]).replace('"', '\\"').replace("\n", "\\n")
+                    if type(value2) == list:
+                        value2_str = sorted(value2)
+                        value2_str = "[\"" + '",\n    "'.join(value2_str) + "]\""
+                    else:
+                        value2_str = '"' + str(value2) + '"'
+                    value_str += f"\n  \"{key2}\": {value2_str},"
+                value_str = value_str[:-1] + "\n"
+                value_str = "{" + value_str + "},\n"
+            else:
+                value_str = '"' + value + '",\n'
+            value_str = value_str[:-2] # remove final ','
+            res += f"\"{key}\":{value_str},\n"
+        res = res[:-2] # remove last space & ,
+        res += "\n}"
+
+        with open(TERM_LABEL_DEF_FILE, "w") as file:
+            file.write(res)
 
 
     def _get_term_label_def(self,
-                            synset_member_uris: list[str],
+                            synset_entities: list[Entity],
                             synset_dicts: list[dict],
                             data: dict,
                             all_terms: list[str]) -> tuple[str, str, str]:
@@ -216,11 +255,12 @@ class MergeURIs():
             all_terms: history of all generated terms
         """
         if not self._term_label_def_dict:
-            self._load_synset_file()
+            self._load_term_label_def()
 
+        synset_member_uris = [s.uri for s in synset_entities]
         term, pref_label, definition = "", "", ""
         for syn_uri in synset_member_uris:
-            synset_id = self._term_label_def_dict.get(syn_uri, None)
+            synset_id = self._term_label_def_dict.get(str(syn_uri), None)
             if synset_id:
                 break
         values = self._term_label_def_dict.get(synset_id, dict())
@@ -239,19 +279,29 @@ class MergeURIs():
                                                                       merged_data = data,
                                                                       from_cache = True)
             method_str += "definition:LLM "
+        if not term:
+            term = self._generate_term(synset = synset_entities)
+            #print(terms_elements)
+            #term = self._select_best_term(terms_elements, synset = synset_member_uris)
+            #term = terms_elements[0]
+            method_str += "term:AUTO "
 
         if not synset_id:
             synset_id = str(uuid1())
         for syn_uri in synset_member_uris:
-            self._term_label_def_dict[syn_uri] = synset_id
-            self._term_label_def_dict[synset_id] = {"term": term,
-                                                    "label": pref_label,
-                                                    "definition": definition,
-                                                    "method": method_str.strip()}
+            self._term_label_def_dict[str(syn_uri)] = synset_id
+            self._term_label_def_dict[str(synset_id)] = {"term": term,
+                                                         "label": pref_label,
+                                                         "definition": definition,
+                                                         "method": method_str.strip()}
         return term, pref_label, definition
 
 
     def _fix_internal_link(self):
+        """
+        Replace synonym sets' URIs by the term.
+        Remove links to entities that are not in this run's communities. # TODO
+        """
         attrs = [properties.has_part, properties.is_part_of]
         for attr in attrs:
             for old_obj, new_obj in self._term_by_synonym_uri.items():
@@ -265,6 +315,56 @@ class MergeURIs():
                 if "wikidata#" in str(subj):
                     self._output_graph.remove((subj, pred, obj))
             # TODO do this for every list that is not in community here (instead of in post process)
+
+
+    def _generate_term(self,
+                       synset: list[Entity]) -> list[str]:
+        """
+        Generate a term based on the entities' labels, codes & descriptions
+
+        Args:
+            synset: list of entities in the synonym set.
+        """
+        aas_code = []
+        apertures = []
+        acronyms = []
+        rare_words = []
+        all_labels = set()
+        for entity in synset:
+            #entity = Entity(uri = URIRef(uri))
+            #  if AAS
+            if str(entity.source).endswith(AasExtractor.URI):
+                aas_code = entity.get_values_for("code", unique = False, extend_to_synonyms = False)
+            apertures.extend(entity.get_values_for("aperture"))
+            all_labels.update(entity.get_values_for("label", languages=["en", "ca"], extend_to_synonyms=False))
+            all_labels.update(entity.get_values_for("alt_label", languages=["en", "ca"], extend_to_synonyms=False))
+            #all_codes = set()
+            #for code_relation in properties._IDENTIFIERS:
+            #    all_codes.update(entity.get_values_for(code_relation))
+            tokens_in_labels = set()
+            for label in all_labels:
+                for token in label.split(" "):
+                    token = token.strip()
+                    tokens_in_labels.update(token.split(','))
+        if apertures:
+            for i, acronym in enumerate(acronyms):
+                for c in acronym:
+                    if c.isdigit():
+                        break
+                else:
+                    acronyms[i] = apertures[0] + '-' + acronym
+
+        acronyms.extend(find_acronyms(all_labels, None))#, all_codes))
+        all_labels_ascii = [l for l in all_labels if l.ascii()]
+        rare_words = self.get_discriminant_tokens(all_labels_ascii, top_k = 3)
+
+        concat = list(aas_code) + acronyms + apertures + rare_words
+        if len(concat) > 0:
+            return concat[0]
+        elif len(all_labels_ascii) > 0:
+            return sorted(all_labels_ascii, key = lambda x: len(x))[0]
+        else:
+            return all_labels[0]
 
 
     def _check_terms_unicity(self,
@@ -300,6 +400,28 @@ class MergeURIs():
             print(f"Ontology saved in {self._output_ontology}")
 
 
+    def get_discriminant_tokens(self,
+                                string: str | list[str],
+                                top_k: int = 3) -> list[str]:
+        """
+        Return the top-3 discriminant tokens from any string.
+        This leverages the Tf-idf embedder.
+
+        Args:
+            string: any string
+            top_k: only return top-k tokens
+        """
+        if type(string) != str:
+            string = ' '.join(string)
+        tfidf_scores = TfIdfEmbedder().analyze_text(string)
+        res = []
+        for scores in tfidf_scores:
+            res.append(scores["terms"][0])
+            if len(res) >= top_k:
+                return res[:top_k]
+        return res
+
+
 def main(input_ontology,
          output_ontology,
          community_views: list[str] = []):
@@ -312,6 +434,7 @@ def main(input_ontology,
                        community_views)
     merger.to_synonym_list()
     Graph()._graph = merger._output_graph # Replace graph
+    # FIXME the problem maybe comes from the post_processing or the Graph() re-building?
     output_graph = Graph()
     post_processor = post_process.PostProcess(output_graph)
     post_processor()
@@ -342,6 +465,7 @@ if __name__ == "__main__":
                         type = str,
                         nargs = "*",
                         choices = set(Updater.SOURCE_BY_PRIMARY_COMMUNITY),
+                        default = [],
                         help = "Consider lists for which the primary community (or alliance) is amongst this list as authoritative, and ignore synonym sets (or lonely entities) that did not match with any entity in these lists.")
 
     args = parser.parse_args()
