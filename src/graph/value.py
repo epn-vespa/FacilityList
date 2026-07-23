@@ -37,7 +37,7 @@ class Value():
             self._provenance.add(p)
         if provenance:
             if not uri:
-                uri = BNode(_prefix = properties.OBS)
+                uri = BNode()
             self._uri = uri
 
 
@@ -70,6 +70,11 @@ class Value():
             if type(prov) != URIRef:
                 prov = properties.OBS[prov]
             self._provenance.add(prov)
+
+        if self._provenance:
+            if not self._uri:
+                uri = BNode()
+                self._uri = uri
 
 
     @property
@@ -136,6 +141,10 @@ class Value():
         return f"Value@{str(self)}"
 
 
+    def __getattr__(self, attr):
+        return getattr(self.value, attr)
+
+
 class ValueSet(set):
     """
     Special set for Value that will merge provenances if two identical
@@ -154,6 +163,16 @@ class ValueSet(set):
                     existing.provenance.update(new_value.provenance)
                     return
         super().add(new_value)
+
+
+    def to_list(self):
+        """
+        Convert the set to a list of raw values (no provenance information).
+        """
+        values = []
+        for v in self:
+            values.append(v)
+        return values
 
 
     def __len__(self):
