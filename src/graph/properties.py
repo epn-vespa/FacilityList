@@ -263,7 +263,7 @@ class Properties():
 
     def convert_attr(
             self,
-            attr: str):
+            attr: str) -> URIRef:
             """
             Convert an attribute to a URIRef predicate accordingly to the mapping.
             For example, if attribute is "definition", returns SKOS.definition.

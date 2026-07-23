@@ -11,8 +11,8 @@ import inspect
 import builtins
 
 from pathlib import PosixPath
-from typing import Iterator, List, Tuple
-from rdflib import Graph as G, Literal, Namespace, URIRef, XSD
+from typing import Iterator, List
+from rdflib import Graph as G, Literal, Namespace, URIRef, XSD, Node
 from rdflib.namespace import SKOS, DCTERMS, OWL, RDF, RDFS, PROV
 from graph import entity_types
 from graph.extractor.extractor_lists import ExtractorLists
@@ -201,7 +201,7 @@ class Graph(G):
                                has_attr: list[str] = [],
                                limit: int = -1,
                                ignore_deprecated: bool = True
-                               ) -> Iterator[Tuple[URIRef]]:
+                               ) -> Iterator[tuple[URIRef]]:
         """
         Get all the entities that come from a list.
         If an entity is already in a synset, it will return the synset
@@ -300,9 +300,9 @@ class Graph(G):
             self,
             subj_uri: URIRef,
             pred: str,
-            obj: str,
+            obj: str | URIRef,
             language: str,
-            extractor: Extractor) -> Tuple:
+            extractor: Extractor) -> tuple:
         """
         Convert a predicate and an object accordingly to the mapping.
         For example, for "definition", predicate becomes SKOS.definition,
@@ -314,12 +314,19 @@ class Graph(G):
             language: the language of the XSD.string of the object if any
             extractor: the extractor used to extract the data
         """
-        if type(pred) != str and type(obj) in (URIRef, Literal):
+        if type(pred) != str and isinstance(obj, Node):
             return pred, obj
         if type(pred) == str:
             pred_str = pred
         else:
             pred_str = Properties().get_attr_name(pred)
+
+        # If obj is an URIRef, ignore the mapping
+        if type(obj) == URIRef:
+            objtype = URIRef
+            pred_objtype = Properties._MAPPING.get(pred_str, None)
+            pred_uri = pred_objtype["pred"]
+            return pred_uri, obj
 
         # Get pred_uri from pred_str, and get pred_objtype
         pred_objtype = Properties._MAPPING.get(pred_str, None)
@@ -463,7 +470,7 @@ class Graph(G):
 
 
     def add(self,
-            params: Tuple[str, str, str],
+            params: tuple[object, object, object],
             extractor: Extractor = None):
         """
         Add a RDF triple to the graph.
@@ -523,13 +530,12 @@ class Graph(G):
         else:
             objs = [obj]
 
-        objs_by_value = defaultdict(list[Literal])
         obj_uri = None
         for obj in objs:
             # Ignore None and empty obj
-            if hasattr(obj, "_uri"):
+            if hasattr(obj, "_uri") and type(obj) != Value:
                 obj_uri = obj._uri
-                continue
+                continue # TODO it seems unnecessary
             language = None
             if obj is None or obj == "":
                 continue
@@ -538,14 +544,13 @@ class Graph(G):
                 # language tag example: @en
                 obj, language = cut_language_from_string(obj)
             elif type(obj) == Value:
-                # reification: create the BNode's URI. FIXME it may not be unique! (ex: magnetometers).
-                # Maybe add entity's URI in the URI of the BNode ? Or use an actual BNode ?
-                # uri = properties.OBS["skosxl-" + str(self) + '-' +  str(self.provenance).split('#')[-1]]
                 obj_uri = obj.get_value_node()
                 if obj.provenance:
                     self.graph.add((obj_uri, self.PROPERTIES.SKOSXL.literalForm, obj.get_literal()))
                     self.graph.add((obj_uri, RDF.type, self.PROPERTIES.SKOSXL.Label))
                     self.graph.add((obj_uri, PROV.wasInformedBy, obj.provenance))
+                self.graph.add((subj_uri, predicate_uri, obj_uri))
+                continue
             elif type(obj) == URIRef:
                 obj_uri = obj
             # Change object type for certain predicates
