@@ -49,6 +49,7 @@ class Entity():
         self._uri = URIRef(uri)
         self._data = defaultdict(ValueSet)
         graph = Graph()
+        provenances = False
 
         if not type(uri) is URIRef:
             raise TypeError(f"Expected URIRef, got {type(uri)}")
@@ -63,36 +64,27 @@ class Entity():
                         continue
                 self._data[property].add(Value(value.value, value.language, value.datatype))
             elif isinstance(value, BNode):
-                # Entity
-                uri = value # BNode
-                found_prov = False
                 lang = None
-                for _, _, value in graph.triples((uri, properties.label, None)):
-                    # get value (as a Literal)
-                    value_str, lang = cut_language_from_string(value.value)
+                provenances = []
                 for _, _, prov in graph.triples((value, properties.provenance, None)):
-                    self._data[property].add(Value(value = value,
-                                                   language = lang,
-                                                   datatype = properties.get_type(property),
-                                                   provenance = prov,
-                                                   uri = uri))
-                    found_prov = True
-                if not found_prov:
-                    if property in properties._KEEP_PROVENANCE:
-                        added = False
-                        # get provenance of this entity
-                        provs = set()
-                        for _, _, prov in graph.triples((uri, properties.provenance, None)):
-                            provs.add(prov)
+                    provenances.append(prov)
+                for _, _, literal_form in graph.triples((value, properties.SKOSXL.literalForm, None)):
+                    value_str, lang = cut_language_from_string(literal_form.value)
+                    if provenances:
                         self._data[property].add(Value(value = value_str,
                                                        language = lang,
-                                                       provenance = provs))
+                                                       datatype = properties.get_type(property),
+                                                       provenance = provenances,
+                                                       uri = uri))
+                    elif property in properties._KEEP_PROVENANCE:
+                            self._data[property].add(Value(value = value_str,
+                                                           language = lang,
+                                                           provenance = None))
                     else:
                         self._data[property].add(Value(value = value_str,
                                                        language = lang))
             elif isinstance(value, URIRef):
-                    self._data[property].add(value) # URIRef #(Value(value = value,
-                                             #       datatype = URIRef)))
+                    self._data[property].add(value)
             else:
                 self._data[property].add(Value(str(value)))
 
@@ -128,7 +120,9 @@ class Entity():
 
     def __getattr__(self, name):
         return self.get_values_for(name,
-                                   unique = True)
+                                   unique = True,
+                                   extend_to_synonyms = False,
+                                   return_raw_value = True)
 
 
     @property
@@ -156,7 +150,7 @@ class Entity():
 
 
     def get_values_for(self,
-                       property: str,
+                       property: str | URIRef,
                        unique: bool = False,
                        languages: list[str] = None,
                        extend_to_synonyms: bool = True,
@@ -219,7 +213,6 @@ class Entity():
                 if return_raw_value and type(value) == Value:
                     value = value.value
                 res_for_lang.add(value)
-
         return res_for_lang
 
 
@@ -514,12 +507,18 @@ class Entity():
     def add_source_to_attributes(self):
         """
         Add source to Value objects that are in properties._KEEP_PROVENANCE.
+        Convert to Value type before adding provenance.
         """
         for attr, values in self._data.items():
             attr = properties.get_attr_name(attr)
             if attr in properties._KEEP_PROVENANCE:
-                for value in values:
-                    value.provenance = self.source
+                for i, value in enumerate(values):
+                    if type(value) != Value:
+                        value = Value(value = value,
+                                      provenance = self.source)
+                        values[i] = value
+                    else:
+                        value.provenance = self.source
 
 
     def __dict__(self, extend_to_synonyms: bool = True):
@@ -662,8 +661,8 @@ class Entity():
         in the Entity.entities variable.
         """
         # Load all entities from graph
-        graph = Graph()
         if not Entity.entities:
+            graph = Graph()
             for s, p, o in graph.triples((None, properties.source, None)):
                 Entity(s)
 
