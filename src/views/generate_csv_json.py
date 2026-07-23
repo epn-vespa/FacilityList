@@ -9,10 +9,11 @@ import argparse
 import re
 import json
 from collections import defaultdict
+from rdflib import RDFS, RDF, SKOS, URIRef, XSD
 from graph.graph import Graph
 from graph.entity import Entity
 from graph.properties import Properties
-from rdflib import RDFS, RDF, SKOS, URIRef, XSD
+from graph.value import Value
 from utils.string_utilities import standardize_uri
 
 properties = Properties()
@@ -143,7 +144,7 @@ class CsvJson():
         """
         res = ""
         value_set = entity.get_values_for(relation,
-                                          languages = "en")
+                                          languages = ["en", "ca"])
         if properties._MAPPING[relation].get("objtype") == URIRef:
             return ""
         relation = self._IVOA_RELATIONS[relation]
@@ -169,16 +170,20 @@ class CsvJson():
         # self._input_graph.parse(self._input_file)
         res_json = defaultdict(list)
         res_csv = dict()
-        res = self._input_graph.triples((None, RDF.type, None))
 
-        for uri, _, _ in res:
+        all_uris = set()
+        for uri, _, _ in self._input_graph.triples((None, RDF.type, None)):
+            all_uris.add(uri)
+
+        for uri in all_uris:
             res_labels = self._input_graph.triples((uri, SKOS.prefLabel, None))
             pref_label = None
             for _, _, pref_label in res_labels:
                 break
             if not pref_label:
                 continue
-            term = standardize_uri(str(pref_label))
+            # term = standardize_uri(str(pref_label)) # TODO replace with term from the file
+            term = uri.split('#')[-1].split('/')[-1]
 
             if term in res_json:
                 pass
@@ -195,6 +200,7 @@ class CsvJson():
                                                unique = False,
                                                languages = None, # List of languages for alt labels to keep in both formats
                                               )
+
             for alt_label in alt_labels:
                 if str(alt_label) in res_json[term]:
                     continue # Make it behave like a set
@@ -223,7 +229,7 @@ class CsvJson():
         self._res_json = res_json
         self._res_csv = res_csv
         self._sort_csv()
-        allowed_ext_ref.extend(res_json.keys()) # TODO apres manger l'utiliser dans l'input de l'autre appel
+        allowed_ext_ref.extend(res_json.keys()) # TODO use this in the input of the other function
         return allowed_ext_ref
 
 

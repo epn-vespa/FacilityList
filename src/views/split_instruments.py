@@ -12,7 +12,7 @@ Author:
 """
 import argparse
 
-from rdflib import Graph as G, RDFS, RDF, URIRef, Namespace
+from rdflib import Graph as G, RDFS, RDF, PROV, URIRef, Namespace, BNode
 from graph.graph import Graph
 from graph.properties import Properties
 
@@ -39,13 +39,20 @@ def split_instruments(input_file: str):
         for subj, pred, obj in graph.triples((instrument_uri, None, None)):
             output_instruments.add((subj, pred, obj))
             output_facilities.remove((subj, pred, obj))
+            if type(obj) == BNode:
+                for obj, pred2, obj2 in graph.triples((obj, None, None)):
+                    output_instruments.add((obj, pred2, obj2))
+                    output_facilities.remove((obj, pred2, obj2))
+
     # Add classes hierarchy to ouput_instruments
     for s, p, o in graph.triples((None, RDFS.subClassOf, None)):
         output_instruments.add((s, p, o))
     # source lists
-    for s, _, _ in graph.triples((None, None, graph.PROPERTIES.OBS["facility-list"])):
-        for _, p, o in graph.triples((s, None, None)):
-            output_instruments.add((s, p, o))
+    # Add provenance objects
+    for prov, _, _ in graph.triples((None, RDF.type, PROV.Entity)):
+        for _, pred, obj in graph.triples((prov, None, None)):
+            output_instruments.add((prov, pred, obj))
+            output_facilities.add((prov, pred, obj))
 
     # Bind namespaces to instruments output ontology
     output_instruments.bind("obs", properties.OBS)

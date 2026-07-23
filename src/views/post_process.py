@@ -10,7 +10,7 @@ using search through papers to keep the description homogeneous in length)
 reificating them by source of reference (IAUMPC, NSSDC, Wikidata...)
 """
 from argparse import ArgumentParser
-from rdflib import URIRef, Literal, SKOS, DCTERMS
+from rdflib import URIRef, Literal, SKOS, DCTERMS, BNode
 from graph.graph import Graph
 from graph.entity import Entity
 from graph.properties import Properties
@@ -102,7 +102,7 @@ class PostProcess():
             in_scope.add(uri)
             i += 1
         self._remove_out_of_scope_references(in_scope)
-        self.replace_uri()
+        # self.replace_uri() # TODO remove the function as it is not useful anymore
 
 
     def _remove_attrs_before_gen(self, uri: URIRef):
@@ -135,9 +135,13 @@ class PostProcess():
                      #"waveband",
                      #"observed_object",
                      #"code", #ext id of resources
+                     #"instrument_type",
                      ]
         for attr in TO_REMOVE:
             entity.remove_values(attr)
+        for pred in TO_REMOVE:
+            pred = properties.convert_attr(pred)
+            self._graph.remove((uri, pred, None))
 
 
     def _remove_out_of_scope_references(self,
@@ -668,7 +672,7 @@ Entity to define and summarize: {entity_str}"""
                 uri2 = uri_by_label[label]
                 print(f"Warning: merging {uri} into {uri2} as they have the same label: {label}.")
                 majority_voting_merge([Entity(uri2).data, Entity(uri).data])
-                self._graph.remove((uri, None, None))
+                self._graph.remove((uri, None, None)) # FIXME see if this is necessary ?
             replaced[uri] = label
         for subj, pred, obj in self._graph.triples((None, None, None)):
             new_subj, new_obj = subj, obj
