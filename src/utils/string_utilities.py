@@ -7,12 +7,11 @@ Author:
 import re
 import roman
 
-from typing import Tuple
 from collections import defaultdict
 from urllib.parse import quote
-from utils.acronymous import proba_acronym_of
 from rdflib import URIRef
 from unidecode import unidecode
+from utils.acronymous import proba_acronym_of
 
 
 def standardize_uri(label: str) -> str:
@@ -57,7 +56,7 @@ def get_extractor_from_namespace(namespace: str) -> str:
     return namespace
 
 
-def cut_acronyms(label: str) -> Tuple[str]:
+def cut_acronyms(label: str) -> tuple[str]:
     """
     Acronyms are alternate names that are between parentheses.
     Returns:
@@ -97,7 +96,7 @@ def cut_acronyms(label: str) -> Tuple[str]:
     return clean_string(full_name_without_acronyms), acronym_str
 
 
-def cut_aka(label: str) -> Tuple[str]:
+def cut_aka(label: str) -> tuple[str]:
     """
     Delete stopwords like 'aka' from the label.
     Return the label without the aka and its aka.
@@ -150,7 +149,7 @@ def cut_aka(label: str) -> Tuple[str]:
     return label, ""
 
 
-def get_aperture(label: str) -> Tuple[str, set[str]]:
+def get_aperture(label: str) -> tuple[str, set[str]]:
     """
     Get the aperture of the facility from the label (in AAS & SPASE).
     Return label without apertures and apertures string converted to meters.
@@ -291,7 +290,7 @@ def cut_part_of(label: str):
 
 
 def cut_location(label: str,
-                 delimiter: str) -> Tuple[str]:
+                 delimiter: str) -> tuple[str]:
     """
     Get the location of an entity by splitting it on a
     certain delimiter and add new alternate labels.
@@ -386,7 +385,7 @@ def remove_punct(text: str) -> str:
     return text
 
 
-def cut_language_from_string(text: str) -> Tuple[str, str]:
+def cut_language_from_string(text: str) -> tuple[str, str]:
     """
     Cut the language tag on '@' if there is a language tag.
     Returns the text without language tag and the language tag.
@@ -405,7 +404,7 @@ def cut_language_from_string(text: str) -> Tuple[str, str]:
     return text, lang
 
 
-def has_cospar_nssdc_id(text: str) -> Tuple[bool, list[str], list[str]]:
+def has_cospar_nssdc_id(text: str) -> tuple[bool, list[str], list[str]]:
     """
     Return True if the provided label contains a COSPAR id
     or NSSDC id, return the matched NSSDC id and
@@ -470,7 +469,7 @@ def get_datetime_from_iso(datetime_str: str) -> str:
     return datetime_str
 
 
-def get_suffix_number(label: str):
+def get_suffix_number(label: str) -> int:
     """
     Returns the number corresponding to the suffix of a label.
     Ex: II -> 2, C -> 3, 2 -> 2
@@ -549,6 +548,47 @@ def extract_time(label: str) -> list[str, str]:
             res[1] = stop
             break
     return res
+
+
+def find_acronyms(all_labels: set[str],
+                  text: set[str] = {},
+                  all_codes: set[str] = {}):
+    """
+    Return the strings that look like acronyms of one of the labels.
+    TODO: if the entity is an instrument, we should also get its
+    broader's acronym.
+
+    Args:
+        pref_label: the pref_label
+        alt_labels: the alt_label to compare
+    """
+    additional_labels = []
+    all_words = [re.findall(r"[^ ]+", l) for l in all_labels]
+    for words in all_words:
+        additional_labels.extend(words)
+    for label in all_labels:
+        label_wo, acronym =  cut_acronyms(label)
+        if acronym:
+            additional_labels.extend([label_wo, acronym])
+    all_labels = all_labels.union(all_codes).union(additional_labels)
+
+    best_score = -2
+    acronyms_by_score = []
+    for label1 in all_labels:
+        label1 = label1.strip()
+        if " " in label1:
+            # Labels do not have space
+            continue
+        for label2 in all_labels:
+            label2 = label2.strip()
+            if len(label1) < len(label2):
+                proba_acronym = proba_acronym_of(label1, label2)
+                acronyms_by_score.append((proba_acronym, label1))
+                if proba_acronym > best_score:
+                    best_score = proba_acronym
+                    best_acronym = label1
+    return [acronym for score, acronym in sorted(acronyms_by_score)]
+
 
 if __name__ == "__main__":
     pass

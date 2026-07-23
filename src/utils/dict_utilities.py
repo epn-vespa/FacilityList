@@ -396,7 +396,8 @@ def _majority_vote_rounding(values: list[float | str]):
             # val, lang
             v = v[0]
         """
-        if v is None:
+        v = None
+        if value is None:
             continue
         if type(value) == Value:
             v = value.value
@@ -404,6 +405,8 @@ def _majority_vote_rounding(values: list[float | str]):
             # String support
             v_num = [s for s in v if s.isdigit() or s == '.']
             v = float(''.join(v_num))
+        if not v:
+            v = value
         len_v = len(str(v).split('.')[-1])
         added = False
         for c in clusters:
