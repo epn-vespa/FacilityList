@@ -402,14 +402,19 @@ class HybridRetriever():
                                           extractor1, extractor2,
                                           entity1, entity2,
                                           entities2, score_value, scores_dict, score_name = scorer.NAME,
-                                          justificatoin_string = scorer.threshold_str(),
+                                          justification_string = scorer.threshold_str(),
                                           is_human_validation = human_validation,
                                           validator_name = "threshold",
                                           subject_match_field = None, # TODO keep track of this
                                           object_match_field = None, # TODO
                                           match_string = None # TODO
                                           )
+                    matched = True
+                    break
                 nearest.append((entity2, new_score, score_dict))
+
+            if matched:
+                continue
 
             nearest = sorted(nearest, key = lambda x: x[1], reverse = True)[0:top_k]
 
@@ -445,10 +450,6 @@ class HybridRetriever():
                                           is_human_validation = human_validation,
                                           validator_name = USERNAME)
                     continue
-                    # Add entity
-                #if not app.running:
-                #    app.run(debug = True, use_reloader = False)
-                #    app.running = True
             else:
                 for entity2, score, score_dict in nearest:
                     self.selector.add_score(entity1, entity2, score, score_dict)
@@ -478,8 +479,6 @@ class HybridRetriever():
                                           justification_string  = justification,
                                           is_human_validation = human_validation,
                                           validator_name = config.OLLAMA_MODEL_NAME)
-                    self.selector.remove_entities(entity1, entity2)
-                    self.selector.cut_distinct_streak()
                 elif llmchoice in [2, 3]: # narrow 2, broad 3. Add predicate arg.
                     self.validate_mapping(indexer1 = indexer1,
                                           indexer2 = indexer2,
@@ -495,7 +494,6 @@ class HybridRetriever():
                                           justification_string  = justification,
                                           is_human_validation = human_validation,
                                           validator_name = config.OLLAMA_MODEL_NAME)
-                    self.selector.cut_distinct_streak()
                 else:
                     self.invalidate_mapping(entity1 = entity1,
                                             entity2 = entity2,
@@ -507,7 +505,6 @@ class HybridRetriever():
                                             justification_string = justification,
                                             validator_name = config.OLLAMA_MODEL_NAME,
                                            )
-                    self.selector.update_distinct_streak()
                 self.check_battery()
 
 
@@ -530,13 +527,18 @@ class HybridRetriever():
                          match_string: str = None,
                          predicate: str = None):
         """
+        Add a mapping to the graph, the mapping graph as well as in the Entities' data.
+
         Args:
             predicate: "broad" | "narrow" or None if an exactMatch mapping.
         """
-        if self.embedders:
-            indexer1.merge_embeddings(entity1, entity2, indexer2)
-        entities2.remove(entity2)
-        if not predicate:
+        self.selector.cut_distinct_streak()
+        if not predicate or predicate == "exact_match":
+            # exact match
+            if self.embedders:
+                indexer1.merge_embeddings(entity1, entity2, indexer2)
+            entities2.remove(entity2)
+            self.selector.remove_entities(entity1, entity2)
             entity1.add_synonym(entity2,
                                 extractor1 = extractor1,
                                 extractor2 = extractor2,
@@ -550,7 +552,7 @@ class HybridRetriever():
                                 subject_match_field = subject_match_field,
                                 object_match_field = object_match_field,
                                 match_string = match_string
-                                )
+                               )
         else:
             entity1.add_broad_narrow_relation(entity2,
                                               extractor1 = indexer1.extractor,
@@ -582,6 +584,7 @@ class HybridRetriever():
         Add a distinct relation but only in the SSSOM ontology. Use to keep
         track of negative decisions by the LLM.
         """
+        self.selector.update_distinct_streak()
         print("Classified as distinct entities by LLM. Saved in mapping graph.")
         mapping_graph = MappingGraph()
         mapping_graph.add_mapping(entity1.uri,
