@@ -36,7 +36,9 @@ def main(from_folder: str,
     to_mapping = to_folder / "mapping.ttl" # update to_mapping if exists, else copy it from from_mapping
     to_updated = to_folder / "updated.ttl"
     if not to_updated.exists():
-        raise FileNotFoundError(f"The file to apply mappings to ({to_updated}) does not exist. Perhaps it was named differently?")
+        # No update performed
+        shutil.copy(from_linked, to_updated)
+        # raise FileNotFoundError(f"The file to apply mappings to ({to_updated}) does not exist. Perhaps it was named differently?")
 
     to_updated_graph = Graph()
     to_updated_graph.parse(to_updated)
@@ -53,7 +55,7 @@ def main(from_folder: str,
         from_mapping_graph.parse(from_mapping)
         to_mapping_graph = Graph()
         to_mapping_graph.parse(to_mapping)
-        for s, p, o in from_mapping_graph.triples():
+        for s, p, o in from_mapping_graph.triples((None, None, None)):
             to_mapping_graph.add((s, p, o))
         to_mapping_graph.serialize(to_mapping)
         print("New mapping saved in:", to_mapping)
@@ -64,6 +66,7 @@ def main(from_folder: str,
     to_linked = to_folder / "linked.ttl"
     to_updated_graph.serialize(to_linked)
     print("New linked ontology saved in:", to_linked)
+    return to_linked
 
 
 
@@ -76,20 +79,20 @@ def apply_from_linked(from_linked: pathlib.Path,
     from_graph.parse(from_linked)
 
     all_uris = set()
-    for s, _, _, in to_graph:
+    for s, _, _, in to_graph.triples((None, None, None)):
         all_uris.add(s)
 
     rels = [SKOS.exactMatch, SKOS.broadMatch, SKOS.narrowMatch]
 
     for rel in rels:
         for s, p, o in from_graph.triples((None, rel, None)):
-            if s not in all_uris or o not in all_uris:
+            if o not in all_uris:
             # Spase URI is different from the source ontology one
                 if "spase#" in str(s):
                     s = find_spase_entity(s, from_graph)
                 if "spase#" in str(o):
-                    o = find_spase_entity(o,  from_graph)
-                if s not in all_uris or o not in all_uris:
+                    o = find_spase_entity(o, from_graph)
+                if o not in all_uris:
                     continue
             # Reset relation
             to_graph.remove((s, None, o))
