@@ -19,6 +19,7 @@ from graph.graph import Graph
 from graph.value import Value, ValueSet
 from graph.properties import Properties
 from utils.string_utilities import cut_language_from_string
+from utils.performances import CachedMethod
 
 properties = Properties()
 
@@ -46,8 +47,9 @@ class Entity():
 
     def __init__(self,
                  uri: URIRef):
-        self._uri = URIRef(uri)
+        self._uri = uri
         self._data = defaultdict(ValueSet)
+        self._values_cache = dict()
         graph = Graph()
         provenances = False
 
@@ -140,6 +142,7 @@ class Entity():
         This setter convert the dict's keys to Graph node properties, and
         the dict's values to sets.
         """
+        self.empty_values_cache()
         for k, v in d.copy().items():
             del d[k]
             k = properties.convert_attr(k)
@@ -149,8 +152,30 @@ class Entity():
         self._data = d
 
 
+    def empty_values_cache(self) -> None:
+        # self._values_cache = dict()
+        type(self).get_values_for.clear(self)
+
+
+    def add_to_data(self,
+                    attr: str | URIRef,
+                    value: Value | set) -> None:
+        """
+        Add a value to the data dict
+
+        Args:
+            attr: the attribute
+            value: the value or set of values
+        """
+        self.empty_values_cache()
+        if isinstance(value, set):
+            self.data[attr].update(value)
+        self.data[attr].add(value)
+
+
+    @CachedMethod
     def get_values_for(self,
-                       property: str | URIRef,
+                       property: str | URIRef | list,
                        unique: bool = False,
                        languages: list[str] = None,
                        extend_to_synonyms: bool = True,
@@ -158,6 +183,8 @@ class Entity():
                        return_raw_value: bool = True) -> ValueSet[Value]:
         """
         Get values of the entity for a property.
+        If the entity did not get a new exact_match value, it will
+        return a cached value in order to prevent repeated calls.
 
         Args:
             property: the property name (ex: "label")
@@ -170,15 +197,17 @@ class Entity():
         """
         property = Properties().convert_attr(property)
         if property in self.data:
-            res = self.data[property]
-        elif URIRef(property) in self.data:
-            res = self.data.get(URIRef(property))
+            res = ValueSet(self.data[property]) # Copy
+        #elif URIRef(property) in self.data:
+        #    # FIXME remove
+        #    res = ValueSet(self.data.get(URIRef(property))) # Copy
         else:
             # No value for this property
             res = ValueSet()
 
         if extend_to_synonyms and (not unique or not res):
             for syn in self.get_synonyms():
+
                 syn_values = Entity(syn).get_values_for(property,
                                                         unique = unique,
                                                         extend_to_synonyms = False,
@@ -243,7 +272,8 @@ class Entity():
                     if not extractors or val.provenance in extractors:
                         for vv in v.copy():
                             if vv == val:
-                                self._data[attr].remove(vv)
+                                self.data[attr].remove(vv)
+        self.empty_values_cache()
 
 
     def remove_value(self,
@@ -261,11 +291,11 @@ class Entity():
             values.remove(value)
 
 
-    def get_synonyms(self) -> list[URIRef]:
+    def get_synonyms(self) -> ValueSet[URIRef]:
         """
         Get the URIs of the synonyms of this entity.
         """
-        return self.data.get(Properties().exact_match, [])
+        return ValueSet(self.data.get(Properties().exact_match, set())) # Copy
 
 
     def has_synonym(self,
@@ -323,19 +353,25 @@ class Entity():
                 continue
             Graph().add((uri1, properties.exact_match, synonym_uri))
             Graph().add((synonym_uri, properties.exact_match, uri1))
-            self.data[properties.exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[properties.exact_match].add(uri1)
+            # self.data[properties.exact_match].add(synonym_uri)
+            self.add_to_data(properties.exact_match, synonym_uri)
+            # Entity(synonym_uri).data[properties.exact_match].add(uri1)
+            Entity(synonym_uri).add_to_data(properties.exact_match, uri1)
         for synonym_uri in self.get_synonyms():
             if synonym_uri == uri2:
                 continue
             Graph().add((uri2, properties.exact_match, synonym_uri))
             Graph().add((synonym_uri, properties.exact_match, uri2))
-            entity.data[properties.exact_match].add(synonym_uri)
-            Entity(synonym_uri).data[properties.exact_match].add(uri2)
+            # entity.data[properties.exact_match].add(synonym_uri)
+            entity.add_to_data(properties.exact_match, synonym_uri)
+            # Entity(synonym_uri).data[properties.exact_match].add(uri2)
+            Entity(synonym_uri).add_to_data(properties.exact_match, uri2)
         Graph().add((uri1, properties.exact_match, uri2))
         Graph().add((uri2, properties.exact_match, uri1))
-        entity.data[properties.exact_match].add(uri1)
-        self.data[properties.exact_match].add(uri2)
+        # entity.data[properties.exact_match].add(uri1)
+        entity.add_to_data(properties.exact_match, uri1)
+        # self.data[properties.exact_match].add(uri2)
+        self.add_to_data(properties.exact_match, uri2)
 
         mapping_graph = MappingGraph() # Should be already instantiated
         # URIs to be used
@@ -406,15 +442,19 @@ class Entity():
             #graph.add((uri2, DCTERMS.hasPart, uri1))
             graph.add((uri1, SKOS.broadMatch, uri2))
             graph.add((uri2, SKOS.narrowMatch, uri1))
-            entity.data[properties.has_part].add(uri1)
-            self.data[properties.is_part_of].add(uri2)
+            #entity.data[properties.has_part].add(uri1)
+            #self.data[properties.is_part_of].add(uri2)
+            entity.add_to_data(properties.has_part, uri1)
+            self.add_to_data(properties.is_part_of, uri2)
         else:
             #graph.add((uri1, DCTERMS.hasPart, uri2))
             #graph.add((uri2, DCTERMS.isPartOf, uri1))
             graph.add((uri1, SKOS.narrowMatch, uri2))
             graph.add((uri2, SKOS.broadMatch, uri1))
-            entity.data[properties.is_part_of].add(uri1)
-            self.data[properties.has_part].add(uri2)
+            #entity.data[properties.is_part_of].add(uri1)
+            #self.data[properties.has_part].add(uri2)
+            entity.add_to_data(properties.is_part_of, uri1)
+            self.add_to_data(properties.has_part, uri2)
         predicate = SKOS.broadMatch if is_broad else SKOS.narrowMatch
         mapping_graph.add_mapping(entity1 = uri1,
                                   entity2 = uri2,
@@ -631,10 +671,14 @@ class Entity():
         if isinstance(no_equivalent_in, Extractor):
             no_equivalent_in = [no_equivalent_in]
         no_equivalent_in = [Properties().OBS[nei.URI.lower()] for nei in no_equivalent_in]
-        for entity in Entity.entities.values():
+        for entity in Entity.entities.values():# .copy():
             if limit == len(res):
                 return res
+            cop = set(Entity.entities.values()).copy()
+            # FIXME 2 and 2.0 augments the size of entities.values !
             if not extractors or any(source in extractors for source in entity.get_values_for("source", unique = False)):
+                cop2 = set(Entity.entities.values()).copy()
+                diff = set(cop2).difference(cop)
                 if not ent_type or get_types_intersections(entity.get_values_for("type"), ent_type):
                     if not has_attr or all(attr in entity._data for attr in has_attr):
                         if not ignore_deprecated or "deprecated" not in entity._data:
@@ -642,10 +686,12 @@ class Entity():
                             equivalents = entity.get_values_for("exact_match", extend_to_synonyms = False)
                             equivalents.update(entity.get_values_for("broad_match", extend_to_synonyms = False))
                             equivalents.update(entity.get_values_for("narrow_match", extend_to_synonyms = False))
+
                             if not equivalents:
                                 res.append(entity)
                             else:
                                 for equivalent in equivalents:
+                                    # FIXME assert that eq is in entity.Entities.values()
                                     eq = Entity(equivalent)
                                     if eq.get_values_for("source", unique = True) in no_equivalent_in:
                                         break
@@ -663,7 +709,7 @@ class Entity():
         # Load all entities from graph
         if not Entity.entities:
             graph = Graph()
-            for s, p, o in graph.triples((None, properties.source, None)):
+            for s, _, _ in graph.triples((None, properties.source, None)):
                 Entity(s)
 
 
