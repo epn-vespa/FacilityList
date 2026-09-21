@@ -87,22 +87,54 @@ class PostProcess():
 
     @timeall
     def __call__(self):
-        config.configure_ollama()
         atexit.register(self._save_label_warnings)
         i = 0
         in_scope = set()
         for uri in self.__iter__():
             self._remove_attrs_before_gen(uri) # Remove attrs that are generated automatically to prevent generating errors
             # self._gen_label(uri) # Must call before _gen_definition
-            # TODO _gen_label is already done in the merge_uris step. Remove from post_process.py
             label = Entity(uri).get_values_for("label")
             # self._check_llm_label(uri, label) # TODO re-set this
             # self._gen_definition(uri) # TODO re-set this
             self._remove_attrs_after_gen(uri)
             in_scope.add(uri)
+            self._check_and_fix_metadata(uri)
             i += 1
         self._remove_out_of_scope_references(in_scope)
         # self.replace_uri() # TODO remove the function as it is not useful anymore
+
+
+    def _check_and_fix_metadata(self,
+                                uri: URIRef):
+        """
+        Check that apertures and other metadata are coherent
+        with the entity's type. Else, remove it or move it.
+        """
+        entity = Entity(uri)
+        aperture = entity.aperture
+        narrowers = entity.has_part
+        ent_type = entity.type
+        if not aperture:
+            return
+        if not narrowers:
+            return
+        if any(t in entity_types.Instrument for t in ent_type):
+            return
+        if len(narrowers) == 1:
+            # Move to this narrower
+            pass # TODO
+        else:
+            # Move to the right narrower
+            instruments_by_apertures = dict()
+            for narrower_uri in narrowers:
+                narrower = Entity(narrower_uri)
+                type_narrower = narrower.type
+                if len(type_narrower) == 1 and list(type_narrower)[0] == entity_types.Instrument:
+                    # is an instrument
+                    for a in narrower.aperture:
+                        instruments_by_apertures[a] = narrower_uri
+            # Move apertures & all to the right instruments
+            # TODO
 
 
     def _remove_attrs_before_gen(self, uri: URIRef):
@@ -660,6 +692,7 @@ Entity to define and summarize: {entity_str}"""
     def replace_uri(self):
         """
         Replace URIs by newly generated labels.
+        TODO remove this unused function
         """
         uri_by_label = dict()
         replaced = dict() # To replace self links
