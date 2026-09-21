@@ -99,6 +99,8 @@ def configure_ollama():
     OLLAMA_HOST, OLLAMA_MODEL, OLLAMA_MODEL_NAME, SUMMARIZE_MODEL, CONNECTION_MODE = asyncio.run(connect_to_ollama())
     print(f"Connected to {CONNECTION_MODE}. Using model {OLLAMA_MODEL}")
 
+configure_ollama()
+
 OLLAMA_TEMPERATURE = 0 # Higher temperature = less determinist
 ALLOW_BROAD_NARROW_MATCH = False # This will add difficulty to the classification (same, distinct, narrow, broad)
 
@@ -128,3 +130,4 @@ response: same. justification: Addis Ababa Geomagnetic Observatory (AAE) and Add
 Always provide a response AND a justification. Warning: they must be of the same type and exactly the same. Even if related to the same mission, two instruments are different.
 """
 
+TERM_LABEL_DEF_FILE = DATA_DIR / "std-IVOA-term_label_def-FINAL.json"

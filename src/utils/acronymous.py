@@ -3,6 +3,8 @@ import math
 
 from utils.nlp_processing import stop_words
 
+WORDS_EXP = re.compile(r"[\w\d]+")
+
 def _compute_for(acronym: list[str],
                  first_letters: list[str],
                  second_letters: list[str],
@@ -172,7 +174,7 @@ def _get_matrixes(label):
     second_letters = []
     stopwords_letters = []
     uppercases_letters = []
-    words = re.findall(r"[\w\d]+", label)
+    words = re.findall(WORDS_EXP, label)
     for word in words:
         state = 'out'
         for letter in word:
