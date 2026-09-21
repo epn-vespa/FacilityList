@@ -42,6 +42,8 @@ class MergeURIs():
         self._graph = Graph(input_ontologies)
         self._output_ontology = output_ontology
         self._output_graph = G() # rdflib's Graph
+        if not community_views:
+            community_views = list(Updater.SOURCE_BY_PRIMARY_COMMUNITY)
         self._community_views = community_views
 
         # Bind namespaces
@@ -52,6 +54,8 @@ class MergeURIs():
         for prov, _, _ in self._graph.triples((None, RDF.type, PROV.Entity)):
             for _, pred, obj in self._graph.triples((prov, None, None)):
                 self._output_graph.add((prov, pred, obj))
+
+        self.backup_count = 0
 
 
         self.IGNORE_PROPERTIES = [# RDF.type, # Added manually
@@ -224,13 +228,15 @@ class MergeURIs():
                 value_str = '"' + value + '",\n'
             value_str = value_str[:-2] # remove final ','
             res += f"\"{key}\":{value_str},\n"
-        res = res[:-2] # remove last space & ,
+        if len(res) > 2: # prevent removing first '{' in case of empty dict
+            res = res[:-2] # remove last space & ,
         res += "\n}"
 
         with open(TERM_LABEL_DEF_FILE, "w") as file:
             file.write(res)
 
 
+    BACKUP_EVERY = 10
     def _get_term_label_def(self,
                             synset_entities: list[Entity],
                             synset_dicts: list[dict],
@@ -280,11 +286,12 @@ class MergeURIs():
                                                                       from_cache = True)
             method_str += "definition:LLM "
         if not term:
-            term = self._generate_term(synset = synset_entities)
-            #print(terms_elements)
-            #term = self._select_best_term(terms_elements, synset = synset_member_uris)
-            #term = terms_elements[0]
+            # term = self._generate_term(synset = synset_entities) # Without LLM (works not too bad for certain cases)
+            term = LLMConnection.generate_term_for_synset(synset = synset_member_uris,
+                                                          merged_data = data,
+                                                          from_cache = True)
             method_str += "term:AUTO "
+            self.backup_count += 1
 
         if not synset_id:
             synset_id = str(uuid1())
@@ -294,6 +301,8 @@ class MergeURIs():
                                                          "label": pref_label,
                                                          "definition": definition,
                                                          "method": method_str.strip()}
+        if self.backup_count % self.BACKUP_EVERY == 0:
+            self._save_term_label_def()
         return term, pref_label, definition
 
 
@@ -355,7 +364,7 @@ class MergeURIs():
                     acronyms[i] = apertures[0] + '-' + acronym
 
         acronyms.extend(find_acronyms(all_labels, None))#, all_codes))
-        all_labels_ascii = [l for l in all_labels if l.ascii()]
+        all_labels_ascii = [l for l in all_labels if l.isascii()]
         rare_words = self.get_discriminant_tokens(all_labels_ascii, top_k = 3)
 
         concat = list(aas_code) + acronyms + apertures + rare_words

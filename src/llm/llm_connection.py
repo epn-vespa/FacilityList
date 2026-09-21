@@ -13,7 +13,7 @@ from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE,
 from collections import defaultdict
 from graph.entity_types import *
 from graph.properties import Properties
-
+properties = Properties()
 
 class LLMConnection():
     """
@@ -161,7 +161,7 @@ class LLMConnection():
             print(f"Ollama error: {response.text}.\nReturn None for prompt \"{prompt}\"")
             return None
 
- 
+
     # Labels used to classify entities with the model to project's labels
     _categories_by_descriptions = {"ground observatory": GROUND_OBSERVATORY,
                                    "research institute": GROUND_OBSERVATORY,
@@ -331,19 +331,20 @@ class LLMConnection():
         if from_cache:
             cls._load_generation_cache(config.OLLAMA_MODEL_NAME)
             for uri in synset:
-                label = cls._generation_cache.get(str(uri), None)
+                label = cls._generation_cache.get(str(uri) + ":label", None)
                 if label:
                     break
 
-        entity_str = ""
-        for attr, values in merged_data.items():
-            if attr in Properties._IGNORE_FOR_LLM_INPUT:
-                continue
-            if type(values) not in [list, tuple, set]:
-                values = [values]
-            entity_str += f"{attr}: {', '.join(str(v) for v in values)}"
         if not label:
-            prompt = """Output format:
+            entity_str = ""
+            for attr, values in merged_data.items():
+                attr = properties.get_attr_name(attr)
+                if attr in properties._IGNORE_FOR_LLM_INPUT:
+                    continue
+                if type(values) not in [list, tuple, set]:
+                    values = [values]
+                entity_str += f"{attr}: {', '.join(str(v) for v in values)}"
+            prompt = f"""Output format:
 [aperture OR waveband if known] Full Entity Name [at/on Host Entity][, Country]
 
 Rules:
@@ -421,18 +422,123 @@ Entity:
 {entity_str}
 """
             # TODO test
-            label = merged_data[Properties().convert_attr("label")]
-            """
+            #label = merged_data[properties.label]
             label = cls.generate(prompt,
                                  model = config.OLLAMA_MODEL,
                                  from_cache = False)
-            """
-        if from_cache:
-            # Update cache
-            for uri in synset:
-                cls._add_to_generation_cache(str(uri), str(label))
+
+            if from_cache:
+                # Update cache
+                for uri in synset:
+                    cls._add_to_generation_cache(str(uri) + ":label", str(label))
         return label
 
+
+    @classmethod
+    def generate_definition_for_synset(cls,
+                                       synset: list[URIRef],
+                                       merged_data: dict,
+                                       from_cache: bool = True) -> str:
+        """
+        This will save one label per synonym set, refering to the
+        synonym set with every URI from their original lists in the cache.
+        """
+
+        definition = ""
+        if from_cache:
+            cls._load_generation_cache(config.OLLAMA_MODEL_NAME)
+            for uri in synset:
+                definition = cls._generation_cache.get(str(uri) + ":definition", None)
+                if definition:
+                    break
+
+        if not definition:
+            entity_str = ""
+            for attr, values in merged_data.items():
+                attr = properties.get_attr_name(attr)
+                if attr in properties._IGNORE_FOR_LLM_INPUT:
+                    continue
+                if type(values) not in [list, tuple, set]:
+                    values = [values]
+                entity_str += f"{attr}: {', '.join(str(v) for v in values)}"
+            prompt = f"""Generate a short definition (1-2 sentences) for the following entity.
+
+Entity:
+{entity_str}
+"""
+            # TODO use cls.generate instead
+            # definition = merged_data[properties.definition]
+            definition = cls.generate(prompt,
+                                      model = config.OLLAMA_MODEL,
+                                      from_cache = False)
+            if from_cache:
+                # Update cache
+                for uri in synset:
+                    cls._add_to_generation_cache(str(uri) + ":definition", str(definition))
+        return definition
+
+
+
+
+    @classmethod
+    def generate_term_for_synset(cls,
+                                 synset: list[URIRef],
+                                 merged_data: dict,
+                                 from_cache: bool = True) -> str:
+        """
+        Generate a term for a synset.
+
+        Args:
+            synset: the list of entities
+            merged_data: the data dictionary of all entities
+            from_cache: whether to load the previously generated term for this synset
+        """
+
+        term = ""
+        if from_cache:
+            cls._load_generation_cache(config.OLLAMA_MODEL_NAME)
+            for uri in synset:
+                term = cls._generation_cache.get(str(uri) + ":term", None)
+                if term:
+                    break
+
+        if not term:
+            entity_str = ""
+            for attr, values in merged_data.items():
+                if attr in properties._IGNORE_FOR_LLM_INPUT:
+                    continue
+                if attr == properties.has_part:
+                    continue
+                if type(values) not in [list, tuple, set]:
+                    values = [values]
+                entity_str += f"{attr}: {', '.join(str(v) for v in values)}"
+            prompt = f"""Generate a term (very short label, max 15 characters) for the following entity.
+            Use the entity's acronym when known. Do not include institution name in it.
+            Use aperture if it is a telescope or an instrument with an aperture.
+            If it is a spacecraft, a mission or observatory, do not use aperture.
+            For an observatory related to a city, only use the city name, no need to
+            add "Observatory" in the term. If an explicit code is known, ex: IAGA:AIF,
+            return it. Do not explain, only return the string.
+
+            Examples:
+                 Entity:
+                    aperture: 2.4m
+                    is part of: Arecibo observatory
+
+                 output: "2.4m arecibo"
+
+Entity:
+{entity_str}
+"""
+            # TODO use cls.generate instead
+            term = cls.generate(prompt,
+                                model = config.OLLAMA_MODEL,
+                                from_cache = False)
+            if from_cache:
+                # Update cache
+                for uri in synset:
+                    cls._add_to_generation_cache(str(uri) + ":term", str(term))
+        return term
 
     @classmethod
     def generate(cls,
@@ -441,7 +547,6 @@ Entity:
                  num_predict: int = 256,
                  from_cache: bool = True,
                  cache_key: str = None) -> str:
-
         """
         Send a simple generate query to the Ollama API.
 
@@ -571,7 +676,7 @@ Entity:
     def _load_cache_same_distinct(cls):
         if cls._cache_same_distinct_loaded:
             return
-        path = CACHE_DIR / f"same_distinct{config.OLLAMA_MODEL_NAME}.json"
+        path = CACHE_DIR / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json"
         if os.path.exists(path):
             with open(path, "r") as file:
                 cls._cache_same_distinct = json.load(file)
@@ -581,7 +686,7 @@ Entity:
     @classmethod
     def _save_cache_same_distinct(cls):
         CACHE_DIR.mkdir(parents = True, exist_ok = True)
-        path = CACHE_DIR / f"same_distinct{config.OLLAMA_MODEL_NAME}.json"
+        path = CACHE_DIR / f"same_distinct_{config.OLLAMA_MODEL_NAME}.json"
         with open(path, "w") as file:
             json.dump(cls._cache_same_distinct, file, indent = 2)
 
