@@ -12,13 +12,15 @@ Author:
 """
 import argparse
 
-from rdflib import Graph as G, RDFS, RDF, PROV, URIRef, Namespace, BNode
+from rdflib import Graph as G, RDFS, RDF, PROV, OWL, URIRef, Namespace, BNode, Literal
 from graph.graph import Graph
 from graph.properties import Properties
 
 properties = Properties()
 
-def split_instruments(input_file: str):
+def split_instruments(input_file: str,
+                      facility_version: str = "0.0.1",
+                      instrument_version: str = "0.0.1"):
     """
     Set instruments and observation facilities apart in distinct ontologies.
     """
@@ -77,6 +79,12 @@ def split_instruments(input_file: str):
                              changes = changes)
     update_object_namespaces(output_instruments,
                              changes = changes)
+
+    # Add ontology version
+    output_facilities.add((graph.PROPERTIES.OBSF, RDF.type, OWL.Ontology))
+    output_facilities.add((graph.PROPERTIES.OBSF, OWL.versionInfo, Literal(facility_version)))
+    output_instruments.add((graph.PROPERTIES.OBSI, RDF.type, OWL.Ontology))
+    output_instruments.add((graph.PROPERTIES.OBSI, OWL.versionInfo, Literal(instrument_version)))
 
 
     with open(facilities_file, 'w') as file:
