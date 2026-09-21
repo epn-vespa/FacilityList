@@ -12,7 +12,43 @@ from urllib.parse import quote
 from rdflib import URIRef
 from unidecode import unidecode
 from utils.acronymous import proba_acronym_of
+from utils.performances import timeall
 
+from functools import lru_cache
+
+# Pre-compile regular expressions to accelerate run
+AKA_stopwords = '|'.join(["aka",
+                          "a.k.a.",
+                          "also known as",
+                          "formerly the",
+                          "formerly"])
+NON_WORD_SPACE_DOT_UNDERSCORE_PERCENT = re.compile(r"[^\w\s\._%]")
+NON_SPACE_WORDS = re.compile(r"[^ ]+")
+NON_WORD_SPACE_DOT = re.compile(r"[^\w\s\.]")
+SPACES = re.compile(r"\s+")
+LINE_JUMPS = re.compile(r"\n+")
+SPACES_NO_LINE_JUMP = re.compile(r"[ \t\r]+")
+NON_ALPHA_NUM = re.compile(r"[^a-zA-Z0-9 ]+")
+PARENTHESIS_CONTENT = re.compile(r"\([^(]+?\)")
+PARENTHESIS_SPACES = re.compile(r"\(\s+")
+APERTURE_UNITS = re.compile(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|millimeter|millimetre|centimeter|centimetre|kilometer|kilometre|meter|metre|inche?s?|foot|feet)\b")
+INT_FLOAT_NUMBERS = re.compile(r"(\d+)([\.\,]\d+)?")
+LANG_AT = re.compile(r"@[^ @]+$")
+COSPAR_ID_EXP = re.compile(r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}(?:-[A-Z0-9]{1,3})?\b")
+AKA_EXP = re.compile(f"\\b({AKA_stopwords})\\b")
+sYYYYe = re.compile(r"^\d\d\d\d$")
+sYYYY_MMe = re.compile(r"^\d\d\d\d-\d\d$")
+sYYYY_MM_DDe = re.compile(r"^\d\d\d\d-\d\d-\d\d$")
+bYYYYb = re.compile(r"\b\d\d\d\d\b")
+bYYYY_MM_DD_hh_mm_sse = re.compile(r"^\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d$")
+ISO_FORMAT_DATE = re.compile(r"^\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dT\d\d:\d\d$")
+bDDb = re.compile(r"\b\d\d?\b")
+MONTHS_EXP = re.compile(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)")
+MONTHS_LIST = "jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec".split('|')
+LETTER_NUMBER_FRONTIER = re.compile(r"(?<=[A-Za-z])(?=\d)")
+MIN_MAJ_FRONTIER = re.compile(r"(?<=[a-z])(?=[A-Z])")
+TIME_EXP = re.compile(r"\b(\d\d\d\d-\d\d\d\d)\b")
+URL_EXP = re.compile(r"https?://[^\b]+")
 
 def standardize_uri(label: str) -> str:
     """
@@ -24,8 +60,8 @@ def standardize_uri(label: str) -> str:
         label: the label of the entity.
     """
     label = label.lower()
-    label = re.sub(r"[^\w\s]", ' ', label) # Remove non-word characters (punct etc)
-    label = re.sub(r"\s+", ' ', label) # Remove multiple spaces
+    label = re.sub(NON_WORD_SPACE_DOT_UNDERSCORE_PERCENT, ' ', label) # Remove non-word characters (punct etc)
+    label = re.sub(SPACES, ' ', label) # Remove multiple spaces
     label = label.split(' ')
     label = '-'.join([l for l in label if l])
     label = unidecode(label) # Remove special characters
@@ -58,17 +94,18 @@ def get_extractor_from_namespace(namespace: str) -> str:
 
 def cut_acronyms(label: str) -> tuple[str]:
     """
-    Acronyms are alternate names that are between parentheses.
+    Acronyms are alternate names that are between parenthesis (in AAS).
+
     Returns:
         (name without acronyms, last acronym*)
         *if the last acronym is at the end of the label.
 
     Args:
-        label: a label containing acronyms between parentheses.
+        label: a label containing acronyms between parenthesis.
     """
     label = label.strip()
     # label, acronym_aka = cut_aka(label)
-    acronyms = list(re.finditer(r"\([^(]+?\)", label))
+    acronyms = list(re.finditer(PARENTHESIS_CONTENT, label))
     if not acronyms:
         return label, ""
     full_name_without_acronyms = ""
@@ -104,15 +141,8 @@ def cut_aka(label: str) -> tuple[str]:
     Args:
         label:the label to delete akas and get the alternate name from.
     """
-    stopwords = '|'.join(["aka",
-                          "a.k.a.",
-                          "also known as",
-                          "formerly the",
-                          "formerly"])
-    exp = re.compile(f"\\b({stopwords})\\b")
-
     alt_label = "" # Alt label for the whole entity
-    for match in re.finditer(exp, label.lower()):
+    for match in re.finditer(AKA_EXP, label.lower()):
         start_index = match.start()
         end_index = match.end()
         if label[start_index-1] != '(': # The aka is not between ()
@@ -135,9 +165,9 @@ def cut_aka(label: str) -> tuple[str]:
                 alt_label = label[end_index:-1]
                 label = label[:start_index-1]
 
-    label = re.sub(exp, "", label)
-    label = re.sub(r" +", " ", label)
-    label = re.sub(r"\( ", "(", label)
+    label = re.sub(AKA_EXP, "", label)
+    label = re.sub(SPACES, " ", label)
+    label = re.sub(PARENTHESIS_SPACES, "(", label)
     label = clean_string(label)
 
     # If the altLabel is in the location of the entity
@@ -165,7 +195,7 @@ def get_aperture(label: str) -> tuple[str, set[str]]:
         A tuple with: the cleaned label, the converted value(s) (if more than one value detected)
     """
     aperture_lst = []
-    apertures = re.findall(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|millimeter|millimetre|centimeter|centimetre|kilometer|kilometre|meter|metre|inche?s?|foot|feet)\b", label.lower())
+    apertures = re.findall(APERTURE_UNITS, label.lower())
     if apertures:
         for s in apertures:
             aperture_lst.append(''.join(s))
@@ -217,7 +247,7 @@ def extract_number(string: str) -> float:
     Args:
         string: extract number from this string
     """
-    value = re.findall(r"(\d+)([\.\,]\d+)?", string)
+    value = re.findall(INT_FLOAT_NUMBERS, string)
     value = float(''.join(value[0]))
     return value
 
@@ -324,11 +354,8 @@ def clean_string(text: str) -> str:
     Args:
         string: the string to clean
     """
-    text = text.replace("\r", " ")
-    text = re.sub(r"\t", " ", text)
-    text = re.sub(r"\n+", "\n", text)
-    text = re.sub(r"\r", " ", text)
-    text = re.sub(r" +", " ", text).strip()
+    text = re.sub(SPACES_NO_LINE_JUMP, " ", text)
+    text = re.sub(LINE_JUMPS, "\n", text).strip()
     if text and text[-1] == '.':
         text = text[:-1]
     opening = text.count('(')
@@ -381,7 +408,7 @@ def remove_punct(text: str) -> str:
     Args:
         text: the text to remove punctuation from
     """
-    text = re.sub(r"[^a-zA-Z0-9 ]+", ' ', text)
+    text = re.sub(NON_ALPHA_NUM, ' ', text)
     return text
 
 
@@ -395,7 +422,7 @@ def cut_language_from_string(text: str) -> tuple[str, str]:
     Args:
         text: will be split on '@' into a text and its language
     """
-    lang = re.findall(r"@[^ @]+$", text)
+    lang = re.findall(LANG_AT, text)
     if lang:
         lang = lang[0][1:] # remove @
         text = text[:-len(lang) - 1]
@@ -413,8 +440,7 @@ def has_cospar_nssdc_id(text: str) -> tuple[bool, list[str], list[str]]:
     Args:
         text: string that may contain an NSSDC or COSPAR id.
     """
-    pattern = r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}(?:-[A-Z0-9]{1,3})?\b"
-    cospar_ids = re.findall(pattern, text)
+    cospar_ids = re.findall(COSPAR_ID_EXP, text)
     if not cospar_ids:
         return False, None, None
     launch_dates = []
@@ -438,23 +464,22 @@ def get_datetime_from_iso(datetime_str: str) -> str:
     if datetime_str.startswith('+'): # datetime module
         datetime_str = datetime_str[1:]
     datetime_str = datetime_str.replace("-00T", "-01T").replace("-00-", "-01-")
-    if re.match(r"^\d\d\d\d$", datetime_str):
+    if re.match(sYYYYe, datetime_str):
         datetime_str += "-01-01T00:00:00"
-    elif re.match(r"^\d\d\d\d-\d\d$", datetime_str):
+    elif re.match(sYYYY_MMe, datetime_str):
         datetime_str += "-01T00:00:00"
-    elif re.match(r"^\d\d\d\d-\d\d-\d\d$", datetime_str):
+    elif re.match(sYYYY_MM_DDe, datetime_str):
         datetime_str += "T00:00:00"
     else:
-        months = ("jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec").split('|')
-        for month in re.findall(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)", datetime_str.lower()):
-            month_int = months.index(month) + 1
+        for month in re.findall(MONTHS_EXP, datetime_str.lower()):
+            month_int = MONTHS_LIST.index(month) + 1
             month_str = str(month_int)
             year_str = ""
             day_str = "01"
             if len(month_str) == 1:
                 month_str = '0' + month_str
-            years = re.findall(r"\b\d\d\d\d\b", datetime_str)
-            days = re.findall(r"\b\d\d?\b", datetime_str)
+            years = re.findall(bYYYYb, datetime_str)
+            days = re.findall(bDDb, datetime_str)
             for year in years:
                 year_str = year
             for day in days:
@@ -469,6 +494,7 @@ def get_datetime_from_iso(datetime_str: str) -> str:
     return datetime_str
 
 
+@lru_cache(maxsize=50000)
 def get_suffix_number(label: str) -> int:
     """
     Returns the number corresponding to the suffix of a label.
@@ -477,10 +503,10 @@ def get_suffix_number(label: str) -> int:
     Returns 0 if there is no suffix that is a number.
     """
     label = label.replace('-', ' ').replace('/', ' ').replace('.', ' ')
-    # fronteir between letters and numbers (ex: Voyager2)
-    label = re.sub(r"(?<=[A-Za-z])(?=\d)", ' ', label)
+    # frontier between letters and numbers (ex: Voyager2)
+    label = re.sub(LETTER_NUMBER_FRONTIER, ' ', label)
     # Ex: ThemisD => isolate D
-    label = re.sub(r"(?<=[a-z])(?=[A-Z])", ' ', label)
+    label = re.sub(MIN_MAJ_FRONTIER, ' ', label)
 
     # suffix = label.split()[-1].strip()
     label_split = label.split()
@@ -531,7 +557,7 @@ def extract_time(label: str) -> list[str, str]:
 
     res = [None, None]
 
-    for v in re.findall(r"\b(\d\d\d\d-\d\d\d\d)\b", label):
+    for v in re.findall(TIME_EXP, label):
         start, stop = v.split('-')
         start = get_datetime_from_iso(start)
         stop = get_datetime_from_iso(stop)
@@ -563,7 +589,7 @@ def find_acronyms(all_labels: set[str],
         alt_labels: the alt_label to compare
     """
     additional_labels = []
-    all_words = [re.findall(r"[^ ]+", l) for l in all_labels]
+    all_words = [re.findall(NON_SPACE_WORDS, l) for l in all_labels]
     for words in all_words:
         additional_labels.extend(words)
     for label in all_labels:

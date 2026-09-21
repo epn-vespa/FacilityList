@@ -1,6 +1,6 @@
 """
-Map ontologies with a HNSW (Hierarchical Navigable Small Worlds) approach.
-Does not need a mapping strategy: the strategy is determined automatically.
+Map sub-ontologies from different sources
+following a strategy file.
 
 Author:
     Liza Fretel (liza.fretel@obspm.fr)
@@ -36,6 +36,7 @@ from data_mapper.attribute_matcher import AttributeMatcher
 from data_mapper.tools.mapping_tools_list import MappingToolsList
 from data_mapper.tools.filters.distance_filter import DistanceFilter
 from data_mapper.hybrid_retriever import HybridRetriever
+from utils.string_utilities import sYYYY_MM_DDe, bYYYY_MM_DD_hh_mm_sse, ISO_FORMAT_DATE
 
 
 class OntologyMapper():
@@ -56,6 +57,7 @@ class OntologyMapper():
         """
         self._mapping_input_file = None
         restored = False
+        valid_input_files = []
         for input_ontology in input_ontologies:
             # Try to restore the progress from a folder
             if os.path.isdir(input_ontology):
@@ -64,8 +66,12 @@ class OntologyMapper():
                 input_ontology = Path(input_ontology)
                 linked = input_ontology / "linked.ttl"
                 mapping = input_ontology / "mapping.ttl"
+                updated = input_ontology / "updated.ttl"
                 progress = input_ontology / "progress.pkl"
-                self._graph = Graph([linked])
+                if os.path.exists(linked):
+                    valid_input_files.append(linked)
+                elif os.path.exists(updated):
+                    valid_input_files.append(updated)
                 if os.path.exists(mapping):
                     self._mapping_input_file = mapping
                 if os.path.exists(progress):
@@ -74,14 +80,20 @@ class OntologyMapper():
                     restored = True
                 else:
                     print(f"Warning: the checkpoint folder might be malformated (no progress.pkl file in {input_ontology}). Starting strategy from scratch...")
+            else:
+                if os.path.exists(input_ontology):
+                    valid_input_files.append(input_ontology)
+        if len(valid_input_files) == 0:
+            raise FileNotFoundError(f"None of the input files exist: {', '.join(input_ontologies)}")
+        self._graph = Graph(valid_input_files, replace = True)
         if not restored:
-            # Instanciate the Graph from unlinked turtle file(s).
-            self._graph = Graph(input_ontologies)
             self._progress = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
         if not output_dir:
             output_dir = time.strftime("%Y%m%d-%H%M%S")
-        self._output_dir = OUTPUT_DIR / output_dir
+            self._output_dir = OUTPUT_DIR / output_dir
+        else:
+            self._output_dir = output_dir
         self._execution_id = str(uuid.uuid4())
         self._limit = limit
         self._description = f"script: {os.path.basename(sys.argv[0])}\n" + \
@@ -218,7 +230,7 @@ class OntologyMapper():
         """
         # Re-initialize the strategy
         self._strategy = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-        threshold_regex = r"(.+)(>=|<=|==|<|>)(.+)"
+        threshold_regex = re.compile(r"(.+)(>=|<=|==|<|>)(.+)")
         with open(strategy_file, 'r') as file:
             self._strategy_str = file.read()
         with open(strategy_file, 'r') as file:
@@ -464,13 +476,14 @@ def main(input_ontologies: list[str],
     """
 
     if modified_after and type(modified_after) == str:
-        if re.match(r"\d\d\d\d-\d\d-\d\d", modified_after):
+        if re.match(sYYYY_MM_DDe, modified_after):
             modified_after += "T00:00:00+00:00"
-        elif re.match(r"\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d"):
+        elif re.match(bYYYY_MM_DD_hh_mm_sse):
             modified_after += "+00:00"
-        elif not re.match(r"\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dT\d\d:\d\d"):
+        elif not re.match(ISO_FORMAT_DATE):
             raise ValueError(modified_after, "is not a valid date format. Please use one of these formats: YYYY-MM-DD, YYYY-MM-DDThh:mm:ss, YYYY-MM-DDThh:mm:ss+tt:tt")
         modified_after = datetime.fromisoformat(modified_after).replace(tzinfo=timezone.utc)
+
 
     mapper = OntologyMapper(input_ontologies,
                             output_dir = output_dir,
@@ -479,7 +492,7 @@ def main(input_ontologies: list[str],
     mapper.parse_strategy(strategy_file)
     mapper.merge_identifiers()
     if not human_validation:
-        configure_ollama()
+        # configure_ollama()
         mapper.execute_strategy()
     else:
         # Open the server & web browser client for manual disambiguation

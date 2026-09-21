@@ -15,6 +15,8 @@ import re
 
 properties = Properties()
 
+NUMBER_EXP = re.compile(r"\d+(?:\.\d+)?")
+
 class DigitScorer(Scorer):
 
 
@@ -70,7 +72,7 @@ class DigitScorer(Scorer):
                         result.append(float(value))
                 elif type(value) == str:
                     # True for Literal
-                    for number in re.findall(r"\d+(?:\.\d+)?", value):
+                    for number in re.findall(NUMBER_EXP, value):
                         result.append(float(number))
                 else:
                     try:
