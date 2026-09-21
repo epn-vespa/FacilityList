@@ -33,7 +33,8 @@ class LabelMatcher(Matcher):
         """
 
         labels1 = entity1.get_values_for("label")
-        alt_labels1 = entity1.get_values_for("alt_label")#, languages = ["en"])
+        alt_labels1 = entity1.get_values_for("alt_label")#, languages = ["en"]) # /!\ Not restricting to languages = ["en"] has caused troubles with Wikidata: https://www.wikidata.org/wiki/Q664667's alt label Helios 2 is incorrect.
+
         alt_labels1.update(labels1)
         labels2 = entity2.get_values_for("label")
         alt_labels2 = entity2.get_values_for("alt_label")#, languages = ["en"])

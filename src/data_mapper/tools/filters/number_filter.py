@@ -31,14 +31,17 @@ class NumberFilter(Filter):
         labels2 = entity2.get_values_for("label")
         labels1.update(entity1.get_values_for("alt_label"))
         labels2.update(entity2.get_values_for("alt_label"))
-        numbers1 = {get_suffix_number(label) for label in labels1} - {None}
-        numbers2 = {get_suffix_number(label) for label in labels2} - {None}
-        if numbers1 == {0} and numbers2 == {0}:
-            return True
-        if 0 in numbers1:
-            numbers1.remove(0)
-        if 0 in numbers2:
-            numbers2.remove(0)
-        if numbers1 & numbers2:
-            return True
-        return False
+
+        numbers1 = set()
+
+        for label in labels1:
+            n = get_suffix_number(label)
+            if n:
+                numbers1.add(n)
+
+        for label in labels2:
+            n = get_suffix_number(label)
+            if n and n in numbers1:
+                return True
+
+        return not numbers1

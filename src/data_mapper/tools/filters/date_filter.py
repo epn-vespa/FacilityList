@@ -8,6 +8,9 @@ class DateFilter(Filter):
     # Name of the score computed by this class (as in score.py)
     NAME = "date"
 
+    # Relevant date fields to check
+    _DATE_ATTRS = ("launch_date", "start_date", "end_date")
+
     @timeall
     def are_compatible(self,
                        entity1: Entity,
@@ -20,19 +23,18 @@ class DateFilter(Filter):
             entity1: reference entity
             entity2: compared entity
         """
-        # Check all relevant date fields
-        date_attrs = ["launch_date", "start_date", "end_date"]
-        for attr in date_attrs:
+        for attr in DateFilter._DATE_ATTRS:
             if not DateFilter._compare_entity_dates(entity1,
                                                     entity2,
                                                     attr):
                 return False
         return True
 
+
     @staticmethod
     def _compare_entity_dates(entity1: Entity,
                               entity2: Entity,
-                              attrs: str | list[str]) -> bool:
+                              attr: str) -> bool:
         """
         Compare the year of the dates for a given field in both entities.
         Return True if dates are compatible, False if not.
@@ -41,13 +43,8 @@ class DateFilter(Filter):
             entity1: reference entity
             entity2: compared entity
         """
-        dates1 = set()
-        dates2 = set()
-        if type(attrs) == str:
-            attrs = [attrs]
-        for attr in attrs:
-            dates1.update(entity1.get_values_for(attr))
-            dates2.update(entity2.get_values_for(attr))
+        dates1 = entity1.get_values_for(attr)
+        dates2 = entity2.get_values_for(attr)
         # Only compare if both sets have dates
         if dates1 and dates2:
             return DateFilter._compare_years(dates1, dates2)
