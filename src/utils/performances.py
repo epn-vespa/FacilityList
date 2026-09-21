@@ -1,6 +1,9 @@
 import atexit
 import time
 from collections import defaultdict
+from functools import wraps
+from weakref import WeakKeyDictionary
+
 
 
 def timeit(func):
@@ -52,3 +55,75 @@ def print_execution_report():
             print(f"{func_name}\t\t{time}")
 
 atexit.register(print_execution_report)
+
+
+def make_hashable(obj):
+    """
+    Recursively transform lists, dicts & sets into tuples in an object/
+
+    Args:
+        obj: an object of any type
+    Returns:
+        the object converted with only tuples and frozenset
+    """
+    if isinstance(obj, list):
+        return tuple(make_hashable(x) for x in obj)
+
+    if isinstance(obj, dict):
+        return tuple(
+            sorted(
+                (make_hashable(k), make_hashable(v))
+                for k, v in obj.items()
+            )
+        )
+
+    if isinstance(obj, tuple):
+        return tuple(make_hashable(x) for x in obj)
+
+    if isinstance(obj, set):
+        return frozenset(make_hashable(x) for x in obj)
+
+    return obj
+
+
+class CachedMethod:
+    """
+    Wrapper to set on object methods to accelerate them if they
+    are called a lot of times with the exact same arguments.
+
+    Similar to functools.cache, but allows to remove the whole cache
+    and is dependant on an instance.
+    """
+    def __init__(self, func):
+        self.func = func
+        # self.cache_name = f"_cache_{func.__name__}"
+        self.cache = WeakKeyDictionary()
+
+    def __get__(self, instance, owner):
+        if instance is None:
+            return self
+
+        @wraps(self.func)
+        def wrapper(*args: tuple,
+                    **kwargs: dict):
+            """
+            cache = instance.__dict__.setdefault(
+                "_method_cache",
+                {}
+            )"""
+            instance_cache = self.cache.setdefault(instance, {})
+            # method_cache = cache.setdefault(self.name, {})
+            # tuples can be keys of dicts.
+            key = make_hashable((args, kwargs))
+            if key not in instance_cache:
+                instance_cache[key] = self.func(instance, *args, **kwargs)
+            return instance_cache[key]
+        return wrapper
+
+
+    def clear(self, instance):
+        """
+        Clear the cache (to trigger when the arguments point to objects
+        that will change the output of the cached method)
+        """
+        self.cache.pop(instance, None)
