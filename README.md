@@ -11,6 +11,7 @@ Supported lists:
 | AAS           | HTML   |
 | IAU-MPC       | HTML   |
 | IMCCE/Quaero  | JSON   |
+| N2YO          | HTML   |
 | NAIF          | HTML   |
 | NASA/PDS      | XML    |
 | NSSDC         | HTML   |
@@ -18,7 +19,9 @@ Supported lists:
 | WikiData      | RDF    |
 
 Types of facilities:
-_Spacecraft_, _Observatories_, _Telescopes_, _Investigations_, _Airborne platforms_.
+_Spacecraft_, _Observatory_, _Telescope_, _Investigation_, _Airborne_.
+Types of instruments:
+_Instrument_ 
 
 
 ## update.py
@@ -36,11 +39,13 @@ We will publish the result ontology on OntoPortal-Astro or another Ontology shar
 ```python update.py [options]```
 
 | Option                    | Description                                                                                                                                                                             |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-l`, `--lists`           | Name(s) of the lists to extract data from. Default is `all`. Available options: `all` or specific list names from `ExtractorLists.EXTRACTORS_BY_NAMES`. Multiple lists can be provided. |
-| `-i`, `--input-ontology`  | Optional input ontology file (`.ttl`). Data from this ontology will be merged with newly extracted data. Useful for running the script in multiple steps.                               |
-| `-o`, `--output-ontology` | Output ontology file name. Default is `output.ttl`.                                                                                                                                     |
-| `-c`, `--no-cache`        | If set, disables caching and forces re-download and version comparison.                                                                                                                 |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `-l`, `--lists`           | (Optional) Name(s) of the lists to extract data from. Default is `all`. Available options: `all` or specific list names from `ExtractorLists.EXTRACTORS_BY_NAMES`. Multiple lists can be provided. |
+| `-i`, `--input-ontology`  | (Optional) Input ontology file (`.ttl`). Data from this ontology will be merged with newly extracted data. Useful for running the script in multiple steps. |
+| `-o`, `--output-ontology` | (Optional) Output ontology file name. Default is `output.ttl`. |
+| `-c`, `--no-cache`        | If set, disables caching and forces re-download and version comparison. |
+| `-d`, `--keep-deprecated` | If set, will keep deprecated entities to the updated ontology. |
+| ̀ -v`, `--version`         | Print the version of this tool and exit |
 
 ### Example
 ```python update.py -l aas pds -i wikidata.ttl -o all_entities.ttl```
@@ -58,12 +63,11 @@ The quality of the mapping mostly depends on the LLM used for validation and the
 
 | Option                      | Description                                                                                                                            |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `-i`, `--input-ontologies`  | **(Required)** One or more input ontologies (`.ttl`) to process.        |
+| `-i`, `--input-ontologies`  | **(Required)** One or more input ontologies (`.ttl`) to process.                                                                       |
 | `-o`, `--output-dir`        | Output directory to save the final merged ontology and the SSSOM mapping ontology. Default is a timestamped folder.                    |
 | `-l`, `--limit`             | (Optional) Limit the number of entities per source to speed up testing. Only the top N entities from each list will be compared (NxN). |
-| `-s`, `--mapping-strategy`  | Path to the mapping strategy config file. Default is `conf/mapping_strategy.conf`.                                                     |
-| `-d`, `--direct-validation` | Skip manual review. Candidate matches will be validated automatically based on scores.                                                 |
-| `--human-validation`        | Enable human-in-the-loop disambiguation after scoring. This disables LLM-based validation.                                             |
+| `-s`, `--mapping-strategy`  | (Optional) Path to the mapping strategy config file. Default is `conf/mapping_strategy.conf`.                                          |
+| `--human-validation`        | Enable human-in-the-loop disambiguation after scoring. This disables LLM-based validation. Recommended for mapping short lists only.   |
 
 Input ontologies can be already processed ontologies with validated pairs. In this case, it will try to map only unmapped entities, ignoring entities that are already paired with an entity from the target list.
 
@@ -75,9 +79,20 @@ Annotation files can be found in the data/evaluation folder, while the SSSOM ont
 ### Usage
 ```ipython evaluate_sssom.py -t annotations.tsv -s SSSOM_ontology.ttl```
 
+## Shortcomings
+Once a mapping is done, it is difficult to undo it.
+What would be needed to remove it:
+- remove the exactMatch link from the mapped.ttl file
+- remove the Mappings objects involving the entity to unmap from mapping.ttl file
+- from the LLM cache, remove the entity's generated strings: term, definition, label...etc that were generated from this mapping
+- from the LLM cache, also remove the mapping validation response (or set it to false)
+- from the data/std-IVOA json file, remove the entity's connection to the mapping identifier
+- remove the mapping identifier's information (label, term, definition) if they are not relevant to the remaining entities in the synonym set
+A code that does all of those actions, given one entity URI (list_uri#entity_uri) would be appreciated.
 
 ## Acknowledgments
 
 This activity is a joint effort of the EPN-VESPA, IVOA and IPDA projects.
 
 This work has also been supported by: the Europlanet 2020 Research Infrastructure project, which received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 654208; the Europlanet 2024 Research Infrastructure project, which received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 871149; the FAIR-IMPACT project, which received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement no 101057344; and OPAL cascading grant from the the OSCARS project, which received funding from the European Commission's Horizon Europe Research and Innovation programme under grant agreement no 101129751.
+

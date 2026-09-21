@@ -18,6 +18,7 @@ import atexit
 import os
 import sys
 
+from pathlib import Path
 from rdflib import Namespace, PROV, URIRef
 from typing import List
 from argparse import ArgumentParser
@@ -54,7 +55,8 @@ class Updater():
         output_ontology -- filename of the output ontology
         lists -- lists to extract
         """
-        self._graph = Graph(ontology_file)
+        self._graph = Graph(ontology_file,
+                            replace = True)
         if not ontology_file:
             self.init_graph() # Create basic classes
         self._output_ontology = output_ontology
@@ -261,6 +263,8 @@ class Updater():
         Serialize the updated graph into the output ontology file.
         """
         self.graph.add_metadata(description = self._description)
+        output_path = Path(self.output_ontology)
+        output_path.parents[0].mkdir(parents = True, exist_ok = True)
         with open(self.output_ontology, 'wb') as file:
             file.write(self.graph.serialize(format = "turtle",
                                             encoding = "utf-8"))
@@ -328,7 +332,7 @@ if __name__ == "__main__":
                         default = "output.ttl",
                         type = str,
                         required = False,
-                        help = "Output ontology file to save the merged data.")
+                        help = "Output ontology file to save the updated lists.")
     parser.add_argument("-c",
                         "--no-cache",
                         dest = "no_cache",
