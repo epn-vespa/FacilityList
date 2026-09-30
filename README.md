@@ -79,17 +79,6 @@ Annotation files can be found in the data/evaluation folder, while the SSSOM ont
 ### Usage
 ```ipython evaluate_sssom.py -t annotations.tsv -s SSSOM_ontology.ttl```
 
-## Shortcomings
-Once a mapping is done, it is difficult to undo it.
-What would be needed to remove it:
-- remove the exactMatch link from the mapped.ttl file
-- remove the Mappings objects involving the entity to unmap from mapping.ttl file
-- from the LLM cache, remove the entity's generated strings: term, definition, label...etc that were generated from this mapping
-- from the LLM cache, also remove the mapping validation response (or set it to false)
-- from the data/std-IVOA json file, remove the entity's connection to the mapping identifier
-- remove the mapping identifier's information (label, term, definition) if they are not relevant to the remaining entities in the synonym set
-A code that does all of those actions, given one entity URI (list_uri#entity_uri) would be appreciated.
-
 ## Acknowledgments
 
 This activity is a joint effort of the EPN-VESPA, IVOA and IPDA projects.
