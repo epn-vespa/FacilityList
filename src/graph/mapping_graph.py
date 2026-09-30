@@ -66,6 +66,8 @@ class MappingGraph():
                  strategy: str = "",
                  reviewer: str = None):
         """
+        If filename is set, the mapping graph loads mappings from this file.
+
         Args:
             filename: the checkpoint SSSOM ontology path
         """
@@ -162,8 +164,8 @@ class MappingGraph():
         assert type(entity2) is URIRef
         assert type(entity1_source) is URIRef
         assert type(entity2_source) is URIRef
-        self.bind_namespace(entity1.n3().rsplit('#', 1)[0] + '#')
-        self.bind_namespace(entity2.n3().rsplit('#', 1)[0] + '#')
+        self.bind_namespace(str(entity1).split('#')[0] + '#') # entity1.n3()
+        self.bind_namespace(str(entity2).split('#')[0] + '#') # entity2.n3()
         if not score_value and scores and score_name in scores:
             decisive_score_value = scores[score_name]
         else:
@@ -251,7 +253,6 @@ class MappingGraph():
                     if issubclass(obj, Extractor) and obj is not Extractor:
                         namespace = obj.NAMESPACE
                         self.bind_namespace(namespace)
-
 
 
     def serialize(self,
