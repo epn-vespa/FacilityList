@@ -241,7 +241,8 @@ class MergeURIs():
                             synset_entities: list[Entity],
                             synset_dicts: list[dict],
                             data: dict,
-                            all_terms: list[str]) -> tuple[str, str, str]:
+                            all_terms: list[str],
+                            re_generate: bool = True) -> tuple[str, str, str]:
         """
         Find a potential term for a synonym set by
         finding acronyms, aperture (m), and checking whether
@@ -259,6 +260,7 @@ class MergeURIs():
             synset_uris: URIs of source (as in linked.ttl)
             data: merged dict
             all_terms: history of all generated terms
+            re_generate: if True, will re-generate terms that are missing in the term_label_def dict, independently of the LLM cache.
         """
         if not self._term_label_def_dict:
             self._load_term_label_def()
@@ -277,24 +279,30 @@ class MergeURIs():
         if not pref_label:
             pref_label = LLMConnection.generate_label_for_synset(synset = synset_member_uris,
                                                                  merged_data = data,
-                                                                 from_cache = True)
+                                                                 from_cache = not re_generate)
             method_str += "label:LLM "
 
         if not definition:
             definition = LLMConnection.generate_definition_for_synset(synset = synset_member_uris,
                                                                       merged_data = data,
-                                                                      from_cache = True)
+                                                                      from_cache = not re_generate)
             method_str += "definition:LLM "
         if not term:
             # term = self._generate_term(synset = synset_entities) # Without LLM (works not too bad for certain cases)
             term = LLMConnection.generate_term_for_synset(synset = synset_member_uris,
                                                           merged_data = data,
-                                                          from_cache = True)
-            method_str += "term:AUTO "
+                                                          from_cache = not re_generate)
+            method_str += "term:LLM "
             self.backup_count += 1
 
         if not synset_id:
             synset_id = str(uuid1())
+
+        # Clean before re-saving.
+        term = LLMConnection.clean_response(term)
+        term = LLMConnection.clean_term(term)
+        definition = LLMConnection.clean_response(definition)
+        label = LLMConnection.clean_response(label, only_keep_first_line = True)
         for syn_uri in synset_member_uris:
             self._term_label_def_dict[str(syn_uri)] = synset_id
             self._term_label_def_dict[str(synset_id)] = {"term": term,

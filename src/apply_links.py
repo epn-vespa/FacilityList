@@ -15,9 +15,8 @@ from collections import defaultdict
 from rdflib import Graph, Namespace, RDF, SKOS, URIRef
 from utils.dict_utilities import UnionFind
 from utils.string_utilities import standardize_uri
-
-SSSOM = Namespace("https://w3id.org/sssom/")
-
+from graph.properties import Properties
+SSSOM = Properties().SSSOM
 
 def main(from_folder: str,
          to_folder: str):

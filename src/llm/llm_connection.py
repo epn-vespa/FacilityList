@@ -13,6 +13,7 @@ from config import OLLAMA_TEMPERATURE, LLM_CATEGORIES_FILE, LLM_EMBEDDINGS_FILE,
 from collections import defaultdict
 from graph.entity_types import *
 from graph.properties import Properties
+from utils import string_utilities
 properties = Properties()
 
 class LLMConnection():
@@ -378,14 +379,12 @@ Input:
 Vysokaya Dubrava Magnetometer
 is part of: V.dubr.-ground-observatory
 location: Russia
-
 Output:
 Magnetometer at Vysokaya Dubrava Observatory, Russia
 
 Input:
 NICMOS instrument on Hubble Space Telescope
 alt label: Near Infrared Camera and Multi-Object Spectrometer
-
 Output:
 Near Infrared Camera and Multi-Object Spectrometer on Hubble Space Telescope
 
@@ -394,32 +393,30 @@ Bernard Lyot Telescope
 Aperture: 3.6m
 Country: France
 is part of: Midi-Pyrénées Observatory
-
 Output:
 3.6m Bernard Lyot Telescope at Midi-Pyrénées Observatory, France
 
 Input:
 Madrid
 Country: Spain
-
 Output:
 Madrid Observatory, Spain
 
 Input:
 1.80m
 is part of: La Silla Observatory
-
 Output:
 1.80m Telescope at La Silla Observatory
 
 Input:
 NASA's James Webb Telescope
-
 Output:
 James Webb Telescope
 
 Entity:
 {entity_str}
+
+Only output the label. Keep one of the given labels if it is relevant.
 """
             # TODO test
             #label = merged_data[properties.label]
@@ -431,6 +428,7 @@ Entity:
                 # Update cache
                 for uri in synset:
                     cls._add_to_generation_cache(str(uri) + ":label", str(label))
+        label = LLMConnection.clean_response(label, only_keep_first_line = True)
         return label
 
 
@@ -462,6 +460,7 @@ Entity:
                     values = [values]
                 entity_str += f"{attr}: {', '.join(str(v) for v in values)}"
             prompt = f"""Generate a short definition (1-2 sentences) for the following entity.
+Re-use definitions and descriptions if there is any, else make up one from the other attributes.
 
 Entity:
 {entity_str}
@@ -475,6 +474,7 @@ Entity:
                 # Update cache
                 for uri in synset:
                     cls._add_to_generation_cache(str(uri) + ":definition", str(definition))
+        definition = LLMConnection.clean_response()
         return definition
 
 
@@ -505,9 +505,10 @@ Entity:
         if not term:
             entity_str = ""
             for attr, values in merged_data.items():
+                attr = properties.get_attr_name(attr)
                 if attr in properties._IGNORE_FOR_LLM_INPUT:
                     continue
-                if attr == properties.has_part:
+                if attr == "has_part":
                     continue
                 if type(values) not in [list, tuple, set]:
                     values = [values]
@@ -538,6 +539,8 @@ Entity:
                 # Update cache
                 for uri in synset:
                     cls._add_to_generation_cache(str(uri) + ":term", str(term))
+        term = LLMConnection.clean_response(term, only_keep_first_line = True)
+        term = LLMConnection.clean_term(term)
         return term
 
     @classmethod
@@ -880,9 +883,45 @@ Entity:
                 total_retries += 1
 
 
-    # TODO remove this unused func
-    def clean_response(response: str):
+    @classmethod
+    def clean_response(response: str,
+                       only_keep_first_line: bool = False,
+                       remove_line_jumps: bool = False):
         """
-        LLMs add '*' making the response impossible to parse
+        Clean LLM response.
+        This method was made regarding mistral-large:latest model's generated strings.
         """
-        return response.replace("*", "").replace("\n", "")
+        response = response.replace("*", "")
+        response = response.replace("`̀`` ", "").replace("")
+        quotes_count = response.count("\"")
+        if quotes_count % 2 == 0:
+            response = response.replace("\"", "")
+        else: # For cases with \" representing an inch, keep it
+            while quotes_count > 1:
+                left = response.find("\"")
+                right =  response.rfind("\"")
+                if left != right:
+                    response = response[0:left] + response[left+1:right] + response[right+1:]
+                    quotes_count -= 2
+                else:
+                    break
+            response = response.replace("\"", "inches")
+        response = response.remove("plaintext")
+        response = response.strip()
+        response = re.sub(r"Definition:", "", flags=re.IGNORECASE)
+        response = re.sub(r"Entity:", "", flags=re.IGNORECASE)
+        if only_keep_first_line:
+            response = response.strip()
+            response = response.split("\n")[0]
+        if remove_line_jumps:
+            response = response.replace("\n", " ")
+        response = re.sub(string_utilities.SPACES_NO_LINE_JUMP, " ", response)
+        response = response.strip()
+        return response
+
+
+    @classmethod
+    def clean_term(response: str):
+        response = response.replace("urn:nasa:pds:context:instrument:", "") # remove PDS prefix
+        response = response.replace("spase://SMWG/Instrument/") # remose SPASE prefix
+        return response
