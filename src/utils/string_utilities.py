@@ -31,7 +31,7 @@ SPACES_NO_LINE_JUMP = re.compile(r"[ \t\r]+")
 NON_ALPHA_NUM = re.compile(r"[^a-zA-Z0-9 ]+")
 PARENTHESIS_CONTENT = re.compile(r"\([^(]+?\)")
 PARENTHESIS_SPACES = re.compile(r"\(\s+")
-APERTURE_UNITS = re.compile(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|millimeter|millimetre|centimeter|centimetre|kilometer|kilometre|meter|metre|inche?s?|foot|feet)\b")
+APERTURE_UNITS = re.compile(r"(\d+)([\.\,]\d+)?( )?(-)?(cm|km|m|millimeter|millimetre|centimeter|centimetre|kilometer|kilometre|meter|metre|inche?s?|\"|foot|feet)\b")
 INT_FLOAT_NUMBERS = re.compile(r"(\d+)([\.\,]\d+)?")
 LANG_AT = re.compile(r"@[^ @]+$")
 COSPAR_ID_EXP = re.compile(r"\b(?:19|20)[0-9][0-9]-[A-Z0-9]{1,5}(?:-[A-Z0-9]{1,3})?\b")
@@ -208,7 +208,7 @@ def get_aperture(label: str) -> tuple[str, set[str]]:
         label = re.sub(aperture, "", label).strip()
         aperture = aperture.lower()
         value = extract_number(aperture)
-        if aperture.endswith("inch") or aperture.endswith("inches"):
+        if aperture.endswith("inch") or aperture.endswith("inches") or aperture.endswith("\""):
             value = convert_to_meters(value, "inch")
             inches[round(value, ndigits = 1)].add(round(value, ndigits=2))
             inches[round(value, ndigits = 0)].add(round(value, ndigits=2))
