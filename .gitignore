@@ -20,6 +20,7 @@ data/checkpoint/
 # Generated folders
 cache/
 logs/
+src/output/
 
 # IDE generated
 *__pycache__
