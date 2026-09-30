@@ -12,11 +12,14 @@ Author:
 import argparse
 from views import merge_uris, split_instruments, generate_csv_json
 from pathlib import Path
+from rdflib import Graph, OWL
 
 
 def main(input_ontology: str,
          output_merged: str,
-         community_views: list[str]):
+         community_views: list[str] = [],
+         previous_output_facilities: Path = None,
+         previous_output_instruments: Path = None):
     output_merged_folder = Path(input_ontology)
     output_merged = output_merged_folder.parent / output_merged
     if output_merged.exists():
@@ -25,7 +28,25 @@ def main(input_ontology: str,
     merge_uris.main(input_ontology,
                     output_merged,
                     community_views)
-    output_obsf, output_obsi = split_instruments.split_instruments(output_merged)
+    facility_version, instrument_version = "0.0.0", "0.0.0"
+    if previous_output_facilities and previous_output_facilities.exists():
+        graph = Graph()
+        graph.parse(previous_output_facilities)
+        for _, _, version in graph.triples(None, OWL.versionInfo, None):
+            facility_version = str(version)
+    facility_version = facility_version.rsplit('.')
+    facility_version[-1] = str(int(facility_version[-1]) + 1)
+    facility_version = '.'.join(facility_version)
+    if previous_output_instruments and previous_output_instruments.exists():
+        graph = Graph()
+        graph.parse(previous_output_instruments)
+        for _, _, version in graph.triples(None, OWL.versionInfo, None):
+            instrument_version = str(version)
+    instrument_version = instrument_version.rsplit('.')
+    instrument_version[-1] = str(int(instrument_version[-1]) + 1)
+    instrument_version = '.'.join(instrument_version)
+
+    output_obsf, output_obsi = split_instruments.split_instruments(output_merged, facility_version, instrument_version)
     generate_csv_json.main(output_obsf)
     generate_csv_json.main(output_obsi)
 
