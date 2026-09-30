@@ -6,7 +6,7 @@ Author:
     Liza Fretel (liza.fretel@obspm.fr)
 """
 from typing import Any
-from rdflib import Namespace, URIRef, Node
+from rdflib import Namespace, URIRef
 from rdflib.namespace import RDF, OWL, XSD, DCAT, DCTERMS, SKOS, FOAF, SDO, PROV
 
 
@@ -34,6 +34,7 @@ class Properties():
     _WB = Namespace("http://www.ivoa.net/rdf/messenger#")
     _IVOASEM = Namespace("http://www.ivoa.net/rdf/ivoasem#")
     _SKOSXL = Namespace("http://www.w3.org/2008/05/skos-xl#")
+    _SSSOM = Namespace("https://w3id.org/sssom/")
 
 
     # Mapping from dictionary keys to ontology properties.
@@ -259,6 +260,11 @@ class Properties():
     @property
     def SELF_REF(self):
         return self._SELF_REF
+
+
+    @property
+    def SSSOM(self):
+        return self._SSSOM
 
 
     def convert_attr(
