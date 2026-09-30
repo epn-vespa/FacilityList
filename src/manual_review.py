@@ -26,6 +26,8 @@ from graph.extractor import extractor_lists
 from datetime import datetime
 from data_mapper.gui import manual_review_server
 from utils.utils import IgnoreCtrlC
+from graph.properties import Properties
+properties = Properties()
 
 class ManualReviewer():
 
@@ -103,18 +105,18 @@ class ManualReviewer():
             mapping_dict[property].append(obj)
 
         # Reviewer label update
-        self._mapping.remove((new_mapping_uri, MappingGraph._SSSOM.reviewer_label, None))
-        self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.reviewer_label, Literal(self._reviewer)))
+        self._mapping.remove((new_mapping_uri, properties.SSSOM.reviewer_label, None))
+        self._mapping.add((new_mapping_uri, properties.SSSOM.reviewer_label, Literal(self._reviewer)))
 
         # Mapping date update
-        self._mapping.remove((new_mapping_uri, MappingGraph._SSSOM.mapping_date, None))
-        self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
+        self._mapping.remove((new_mapping_uri, properties.SSSOM.mapping_date, None))
+        self._mapping.add((new_mapping_uri, properties.SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
 
         # Deprecation of previous mapping, link to new mapping and mapping_set_id
         self._mapping.add((old_mapping_uri, OWL.deprecated, Literal(True, datatype = XSD.boolean)))
         self._mapping.add((old_mapping_uri, DCTERMS.isReplacedBy, new_mapping_uri))
         self._mapping.add((new_mapping_uri, DCTERMS.replaces, old_mapping_uri))
-        self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.mapping_set_id, self._mapping_set))
+        self._mapping.add((new_mapping_uri, properties.SSSOM.mapping_set_id, self._mapping_set))
 
         # Update justification
         self._mapping.remove((new_mapping_uri, RDFS.comment, None))
@@ -122,10 +124,10 @@ class ManualReviewer():
             self._mapping.add((new_mapping_uri, RDFS.comment, Literal(justification.strip())))
 
         # Update relations in SSSOM and linked ontologies
-        self._mapping.remove((new_mapping_uri, MappingGraph._SSSOM.predicate_id, None))
-        self._mapping.add((new_mapping_uri, MappingGraph._SSSOM.predicate_id, new_relation))
-        subj_uri = mapping_dict[MappingGraph._SSSOM.subject_id][0]
-        obj_uri = mapping_dict[MappingGraph._SSSOM.object_id][0]
+        self._mapping.remove((new_mapping_uri, properties.SSSOM.predicate_id, None))
+        self._mapping.add((new_mapping_uri, properties.SSSOM.predicate_id, new_relation))
+        subj_uri = mapping_dict[properties.SSSOM.subject_id][0]
+        obj_uri = mapping_dict[properties.SSSOM.object_id][0]
         if new_relation != SKOS.exactMatch and old_relation == SKOS.exactMatch:
             self.remove_exact_match(subj_uri = subj_uri, obj_uri = obj_uri, new_relation = new_relation)
         if new_relation == SKOS.exactMatch:
@@ -169,8 +171,8 @@ class ManualReviewer():
         # Change the relation between the two and the related entities too
         # according to the history of mappings
         # 1. Get entities in synset
-        #subj_uri = mapping_dict[MappingGraph._SSSOM.subject_id][0]
-        #obj_uri = mapping_dict[MappingGraph._SSSOM.object_id][0]
+        #subj_uri = mapping_dict[properties.SSSOM.subject_id][0]
+        #obj_uri = mapping_dict[properties.SSSOM.object_id][0]
         synonym_set = {subj_uri}
         for syn, in self._linked.query(f"""SELECT ?synonym WHERE {{
                                         <{subj_uri}> skos:exactMatch ?synonym .
@@ -410,12 +412,12 @@ class ManualReviewer():
         Create the mapping set for this review.
         """
         self._mapping_set = MappingGraph._OBS[str(uuid.uuid4())]
-        self._mapping.add((self._mapping_set, RDF.type, MappingGraph._SSSOM.MappingSet))
-        self._mapping.add((self._mapping_set, MappingGraph._SSSOM.creator_label, Literal(author, datatype=XSD.string)))
-        self._mapping.add((self._mapping_set, MappingGraph._SSSOM.mapping_set_description, Literal(f"Review of mappings in {self._input_dir} by {self._reviewer}", datatype=XSD.string)))
-        self._mapping.add((self._mapping_set, MappingGraph._SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
-        self._mapping.add((self._mapping_set, MappingGraph._SSSOM.mapping_tool, Literal("https://doi.org/10.5281/zenodo.17199128", datatype=XSD.anyURI)))
-        self._mapping.add((self._mapping_set, MappingGraph._SSSOM.mapping_tool_version, Literal(__version__, datatype=XSD.string)))
+        self._mapping.add((self._mapping_set, RDF.type, properties.SSSOM.MappingSet))
+        self._mapping.add((self._mapping_set, properties.SSSOM.creator_label, Literal(author, datatype=XSD.string)))
+        self._mapping.add((self._mapping_set, properties.SSSOM.mapping_set_description, Literal(f"Review of mappings in {self._input_dir} by {self._reviewer}", datatype=XSD.string)))
+        self._mapping.add((self._mapping_set, properties.SSSOM.mapping_date, Literal(datetime.now(), datatype=XSD.dateTimeStamp)))
+        self._mapping.add((self._mapping_set, properties.SSSOM.mapping_tool, Literal("https://doi.org/10.5281/zenodo.17199128", datatype=XSD.anyURI)))
+        self._mapping.add((self._mapping_set, properties.SSSOM.mapping_tool_version, Literal(__version__, datatype=XSD.string)))
 
 
     def review(self):
