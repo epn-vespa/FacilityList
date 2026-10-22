@@ -308,8 +308,9 @@ class LLMConnection():
     @classmethod
     def _add_to_generation_cache(cls,
                                  cache_key: str,
-                                 response: str):
-        if cache_key in cls._generation_cache:
+                                 response: str,
+                                 force_rewrite: bool = True):
+        if not force_rewrite and cache_key in cls._generation_cache:
             return
         cls._generation_cache[cache_key] = response
         cls._backup_countdown -= 1
@@ -322,10 +323,17 @@ class LLMConnection():
     def generate_label_for_synset(cls,
                                   synset: list[URIRef],
                                   merged_data: dict,
-                                  from_cache: bool = True) -> str:
+                                  from_cache: bool = True,
+                                  replace_cache: bool = True) -> str:
         """
         This will save one label per synonym set, refering to the
         synonym set with every URI from their original lists in the cache.
+
+        Args:
+            synset: the list of URIs that belong to the synonym set.
+            merged_data: the data dictionary that was merged from the members of the synonym set.
+            from_cache: if True, will try to load a saved LLM output and not re-generate it.
+            replace_cache: if from_cache is False, it will still write the response to cache and replace it.
         """
 
         label = ""
@@ -424,10 +432,10 @@ Only output the label. Keep one of the given labels if it is relevant.
                                  model = config.OLLAMA_MODEL,
                                  from_cache = False)
 
-            if from_cache:
+            if from_cache or replace_cache:
                 # Update cache
                 for uri in synset:
-                    cls._add_to_generation_cache(str(uri) + ":label", str(label))
+                    cls._add_to_generation_cache(str(uri) + ":label", str(label), force_rewrite = replace_cache)
         label = LLMConnection.clean_response(label, only_keep_first_line = True)
         return label
 
@@ -436,10 +444,17 @@ Only output the label. Keep one of the given labels if it is relevant.
     def generate_definition_for_synset(cls,
                                        synset: list[URIRef],
                                        merged_data: dict,
-                                       from_cache: bool = True) -> str:
+                                       from_cache: bool = True,
+                                       replace_cache: bool = True) -> str:
         """
-        This will save one label per synonym set, refering to the
+        This will save one definition per synonym set, refering to the
         synonym set with every URI from their original lists in the cache.
+
+        Args:
+            synset: the list of URIs that belong to the synonym set.
+            merged_data: the data dictionary that was merged from the members of the synonym set.
+            from_cache: if True, will try to load a saved LLM output and not re-generate it.
+            replace_cache: if from_cache is False, it will still write the response to cache and replace it.
         """
 
         definition = ""
@@ -470,10 +485,10 @@ Entity:
             definition = cls.generate(prompt,
                                       model = config.OLLAMA_MODEL,
                                       from_cache = False)
-            if from_cache:
+            if from_cache or replace_cache:
                 # Update cache
                 for uri in synset:
-                    cls._add_to_generation_cache(str(uri) + ":definition", str(definition))
+                    cls._add_to_generation_cache(str(uri) + ":definition", str(definition), force_rewrite = replace_cache)
         definition = LLMConnection.clean_response()
         return definition
 
@@ -484,14 +499,16 @@ Entity:
     def generate_term_for_synset(cls,
                                  synset: list[URIRef],
                                  merged_data: dict,
-                                 from_cache: bool = True) -> str:
+                                 from_cache: bool = True,
+                                 replace_cache: bool = True) -> str:
         """
         Generate a term for a synset.
 
         Args:
-            synset: the list of entities
-            merged_data: the data dictionary of all entities
-            from_cache: whether to load the previously generated term for this synset
+            synset: the list of URIs that belong to the synonym set.
+            merged_data: the data dictionary that was merged from the members of the synonym set.
+            from_cache: if True, will try to load a saved LLM output and not re-generate it.
+            replace_cache: if from_cache is False, it will still write the response to cache and replace it.
         """
 
         term = ""
@@ -535,10 +552,10 @@ Entity:
             term = cls.generate(prompt,
                                 model = config.OLLAMA_MODEL,
                                 from_cache = False)
-            if from_cache:
+            if from_cache or replace_cache:
                 # Update cache
                 for uri in synset:
-                    cls._add_to_generation_cache(str(uri) + ":term", str(term))
+                    cls._add_to_generation_cache(str(uri) + ":term", str(term), force_rewrite = replace_cache)
         term = LLMConnection.clean_response(term, only_keep_first_line = True)
         term = LLMConnection.clean_term(term)
         return term
@@ -884,7 +901,8 @@ Entity:
 
 
     @classmethod
-    def clean_response(response: str,
+    def clean_response(cls,
+                       response: str,
                        only_keep_first_line: bool = False,
                        remove_line_jumps: bool = False):
         """
@@ -906,7 +924,7 @@ Entity:
                 else:
                     break
             response = response.replace("\"", "inches")
-        response = response.remove("plaintext")
+        response = response.replace("plaintext", "")
         response = response.strip()
         response = re.sub(r"Definition:", "", flags=re.IGNORECASE)
         response = re.sub(r"Entity:", "", flags=re.IGNORECASE)
@@ -921,7 +939,7 @@ Entity:
 
 
     @classmethod
-    def clean_term(response: str):
+    def clean_term(cls, response: str):
         response = response.replace("urn:nasa:pds:context:instrument:", "") # remove PDS prefix
-        response = response.replace("spase://SMWG/Instrument/") # remose SPASE prefix
+        response = response.replace("spase://SMWG/Instrument/", "") # remove SPASE prefix
         return response
