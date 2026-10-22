@@ -309,8 +309,8 @@ class LLMConnection():
     def _add_to_generation_cache(cls,
                                  cache_key: str,
                                  response: str,
-                                 force_rewrite: bool = True):
-        if not force_rewrite and cache_key in cls._generation_cache:
+                                 force_overwrite: bool = True):
+        if not force_overwrite and cache_key in cls._generation_cache:
             return
         cls._generation_cache[cache_key] = response
         cls._backup_countdown -= 1
@@ -435,7 +435,7 @@ Only output the label. Keep one of the given labels if it is relevant.
             if from_cache or replace_cache:
                 # Update cache
                 for uri in synset:
-                    cls._add_to_generation_cache(str(uri) + ":label", str(label), force_rewrite = replace_cache)
+                    cls._add_to_generation_cache(str(uri) + ":label", str(label), force_overwrite = replace_cache)
         label = LLMConnection.clean_response(label, only_keep_first_line = True)
         return label
 
@@ -488,7 +488,7 @@ Entity:
             if from_cache or replace_cache:
                 # Update cache
                 for uri in synset:
-                    cls._add_to_generation_cache(str(uri) + ":definition", str(definition), force_rewrite = replace_cache)
+                    cls._add_to_generation_cache(str(uri) + ":definition", str(definition), force_overwrite = replace_cache)
         definition = LLMConnection.clean_response()
         return definition
 
@@ -555,7 +555,7 @@ Entity:
             if from_cache or replace_cache:
                 # Update cache
                 for uri in synset:
-                    cls._add_to_generation_cache(str(uri) + ":term", str(term), force_rewrite = replace_cache)
+                    cls._add_to_generation_cache(str(uri) + ":term", str(term), force_overwrite = replace_cache)
         term = LLMConnection.clean_response(term, only_keep_first_line = True)
         term = LLMConnection.clean_term(term)
         return term
@@ -585,14 +585,17 @@ Entity:
             if response:
                 return response
 
+        options = {
+                'temperature': OLLAMA_TEMPERATURE,
+                'num_predict': num_predict
+            }
         response = requests.post(
             f'{config.OLLAMA_HOST}/api/generate',
             json={
                 'model': model,
                 'prompt': prompt,
                 'stream': False,
-                'temperature': OLLAMA_TEMPERATURE, # low temperature = more determinist. Default = 0.8
-                'num_predict': num_predict,
+                'options': options
             }
         )
         if response.ok:
