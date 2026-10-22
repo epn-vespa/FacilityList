@@ -10,6 +10,7 @@ import json
 import atexit
 from collections import defaultdict
 from uuid import uuid1
+from tqdm import tqdm
 
 from graph.graph import Graph
 from graph.properties import Properties
@@ -105,7 +106,7 @@ class MergeURIs():
         synsets = self.get_synsets()
         term_by_synonym_uri = dict()
 
-        for synset in synsets:
+        for synset in tqdm(synsets, description = "Iterating over synsets"):
             synset_dicts = []
             all_uris_in_synset = []
             labels_by_source = defaultdict(set)
@@ -132,15 +133,15 @@ class MergeURIs():
             old_definition = data.get(properties.definition)
             term, pref_label, definition  = self._get_term_label_def(synset, synset_dicts, data, None)
 
-            data[properties.alt_label].add(old_pref_label)
+            if properties.alt_label != old_pref_label:
+                data[properties.alt_label].add(old_pref_label)
             data[properties.label] = pref_label
+            data[properties.alt_label].remove(pref_label)
             if type(old_definition) not in [list, set, tuple]:
                 old_definition = [old_definition]
             data[properties.description].extend(old_definition)
             data[properties.definition] = definition
 
-            # definition
-            # TODO use the function from post_processing
 
             # term
             # term = standardize_uri(str(pref_label)) # TODO replace this by a better term generation strategy
@@ -279,19 +280,22 @@ class MergeURIs():
         if not pref_label:
             pref_label = LLMConnection.generate_label_for_synset(synset = synset_member_uris,
                                                                  merged_data = data,
-                                                                 from_cache = not re_generate)
+                                                                 from_cache = not re_generate,
+                                                                 replace_cache = True)
             method_str += "label:LLM "
 
         if not definition:
             definition = LLMConnection.generate_definition_for_synset(synset = synset_member_uris,
                                                                       merged_data = data,
-                                                                      from_cache = not re_generate)
+                                                                      from_cache = not re_generate,
+                                                                      replace_cahce = True)
             method_str += "definition:LLM "
         if not term:
             # term = self._generate_term(synset = synset_entities) # Without LLM (works not too bad for certain cases)
             term = LLMConnection.generate_term_for_synset(synset = synset_member_uris,
                                                           merged_data = data,
-                                                          from_cache = not re_generate)
+                                                          from_cache = not re_generate,
+                                                          replace_cache = True)
             method_str += "term:LLM "
             self.backup_count += 1
 
