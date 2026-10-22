@@ -33,8 +33,10 @@ class TestEntity(unittest.TestCase):
                 ("Deep Space Station 43", "DSS-43", 1),
                 ("Deep Space Station 43", "DSS-42", 0),
                 ("Venus Express", "VEX", 1),
-                ("1.3m Balloon Observations Of Millimetric Extragalactic Radiation ANd Geophysics", "BOOMERANG", 1)
-                ("Balloon Observations Of Millimetric Extragalactic Radiation ANd Geophysics", "BOOMERANGE", 1)
+                ("1.3m Balloon Observations Of Millimetric Extragalactic Radiation ANd Geophysics", "BOOMERANG", 1),
+                ("Balloon Observations Of Millimetric Extragalactic Radiation ANd Geophysics", "BOOMERANGE", 1),
+                ("Scott_Base", "SBA", 1),
+                ("Scott.Base", "SBA", 1),
         ]
         for label, acronym, proba in test:
             __test__(label, acronym, proba)

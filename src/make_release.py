@@ -27,7 +27,7 @@ import update
 import apply_links
 import map_ontologies
 import generate_views
-from config import OUTPUT_DIR
+from config import OUTPUT_DIR, TERM_LABEL_DEF_FILE
 import config
 
 from datetime import date, datetime
@@ -76,21 +76,25 @@ def main(input_folder: str,
         input_updated_ontology_file = None
     """
     if not skip_update:
+        print("Updating the data from sources...")
         update.main(lists,
                     input_updated,
                     output_updated,
                     from_cache = True,
                     remove_deprecated = False)
+        print("Data updated.")
     else:
-        output_updated = input_updated # TODO remove this if we call update
+        output_updated = input_updated
     """
     Step 2. use apply_links to the newly updated ontology
     to merge the old mappings.ttl in the new folder.
     """
     if not first_release:
         print("input_folder=", input_folder)
+        print("Re-applying links from the checkpoint folder's mapping file...")
         output_updated = apply_links.main(from_folder = input_folder,
                                           to_folder = output_folder)
+        print("Links were re-applied successfully")
     """
     Step 3. (re-)map ontologies: only entities that were modified after this update.
     """
@@ -99,27 +103,31 @@ def main(input_folder: str,
             modified_after = None
         else:
             modified_after = now
+        print(f"Mapping the ontologies using the strategy {strategy_file} (this will take long as it will call LLMs for disambiguation)...")
         map_ontologies.main([str(output_updated)], # Awaits a list of strings
                             output_dir = output_folder,
                             strategy_file = strategy_file,
                             human_validation = False,
                             modified_after = modified_after)
+        print("Mapping done")
 
     # Here some manual intervention on mappings can be performed using manual_review.py
     """
     Step 4. generate outputs
     """
     # Generate labels & pref labels for synonym sets
+    print("Generating output views for OntoPortal-Astro (.ttl), IVOA (.csv) and name resolver (.json)... (this will take long if some labels, terms and definitions need to be generated)...")
     generate_views.main(input_ontology = output_linked,
                         output_merged = "merged.ttl",
                         community_views = [],
                         previous_output_facilities = input_folder / "facilities.ttl",
                         previous_output_instruments = input_folder / "instruments.ttl")
+    print(f"Output generation done. The data is ready for reviewing. Please, modify {TERM_LABEL_DEF_FILE} if you need to fix some generated strings (term, label, def).")
 
 
 if __name__ == "__main__":
     parser = ArgumentParser(prog="make_release",
-                            description="Create a new release from a previous one.")
+                            description="Create a new release from a previous one or from scratch.")
     parser.add_argument("-f",
                         "--folder",
                         type = str,
