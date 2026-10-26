@@ -106,7 +106,7 @@ class MergeURIs():
         synsets = self.get_synsets()
         term_by_synonym_uri = dict()
 
-        for synset in tqdm(synsets, description = "Iterating over synsets"):
+        for synset in tqdm(synsets, desc = "Iterating over synsets"):
             synset_dicts = []
             all_uris_in_synset = []
             labels_by_source = defaultdict(set)
