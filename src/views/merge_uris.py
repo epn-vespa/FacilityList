@@ -22,7 +22,7 @@ from views import post_process
 from utils.string_utilities import standardize_uri
 from utils.string_utilities import find_acronyms
 from utils.dict_utilities import majority_voting_merge
-from config import TERM_LABEL_DEF_FILE
+from config import TERM_LABEL_DEF_FILE, OLLAMA_MODEL_NAME
 from rdflib import Graph as G, URIRef, RDFS, XSD, SKOS, OWL, PROV, RDF, Literal
 from datetime import timezone
 from update import Updater
@@ -136,7 +136,8 @@ class MergeURIs():
             if properties.alt_label != old_pref_label:
                 data[properties.alt_label].add(old_pref_label)
             data[properties.label] = pref_label
-            data[properties.alt_label].remove(pref_label)
+            if pref_label in data[properties.alt_label]:
+                data[properties.alt_label].remove(pref_label)
             if type(old_definition) not in [list, set, tuple]:
                 old_definition = [old_definition]
             data[properties.description].extend(old_definition)
@@ -209,32 +210,8 @@ class MergeURIs():
         """
         Save the sorted dict on keys so that it is gitable.
         """
-        s = sorted(self._term_label_def_dict)
-        res = "{"
-        for key in s:
-            value = self._term_label_def_dict[key]
-            value_str = ""
-            if type(value) == dict:
-                for key2 in sorted(value):
-                    value2 = str(value[key2]).replace('"', '\\"').replace("\n", "\\n")
-                    if type(value2) == list:
-                        value2_str = sorted(value2)
-                        value2_str = "[\"" + '",\n    "'.join(value2_str) + "]\""
-                    else:
-                        value2_str = '"' + str(value2) + '"'
-                    value_str += f"\n  \"{key2}\": {value2_str},"
-                value_str = value_str[:-1] + "\n"
-                value_str = "{" + value_str + "},\n"
-            else:
-                value_str = '"' + value + '",\n'
-            value_str = value_str[:-2] # remove final ','
-            res += f"\"{key}\":{value_str},\n"
-        if len(res) > 2: # prevent removing first '{' in case of empty dict
-            res = res[:-2] # remove last space & ,
-        res += "\n}"
-
         with open(TERM_LABEL_DEF_FILE, "w") as file:
-            file.write(res)
+            json.dump(self._term_label_def_dict, file, indent=2, sort_keys=True, ensure_ascii=False)
 
 
     BACKUP_EVERY = 10
@@ -276,37 +253,36 @@ class MergeURIs():
         term = values.get("term", "")
         pref_label = values.get("label", "")
         definition = values.get("definition", "")
-        method_str = values.get("method_str", "")
+        method_str = values.get("method", "")
         if not pref_label:
             pref_label = LLMConnection.generate_label_for_synset(synset = synset_member_uris,
                                                                  merged_data = data,
                                                                  from_cache = not re_generate,
                                                                  replace_cache = True)
-            method_str += "label:LLM "
+            pref_label = LLMConnection.clean_response(pref_label, only_keep_first_line = True)
+            method_str += f"label:LLM ({OLLAMA_MODEL_NAME}) "
 
         if not definition:
             definition = LLMConnection.generate_definition_for_synset(synset = synset_member_uris,
                                                                       merged_data = data,
                                                                       from_cache = not re_generate,
-                                                                      replace_cahce = True)
-            method_str += "definition:LLM "
+                                                                      replace_cache = True)
+            definition = LLMConnection.clean_response(definition)
+            method_str += f"definition:LLM ({OLLAMA_MODEL_NAME}) "
         if not term:
             # term = self._generate_term(synset = synset_entities) # Without LLM (works not too bad for certain cases)
             term = LLMConnection.generate_term_for_synset(synset = synset_member_uris,
                                                           merged_data = data,
                                                           from_cache = not re_generate,
                                                           replace_cache = True)
+            term = LLMConnection.clean_response(term)
+            term = LLMConnection.clean_term(term)
             method_str += "term:LLM "
             self.backup_count += 1
 
         if not synset_id:
             synset_id = str(uuid1())
 
-        # Clean before re-saving.
-        term = LLMConnection.clean_response(term)
-        term = LLMConnection.clean_term(term)
-        definition = LLMConnection.clean_response(definition)
-        label = LLMConnection.clean_response(label, only_keep_first_line = True)
         for syn_uri in synset_member_uris:
             self._term_label_def_dict[str(syn_uri)] = synset_id
             self._term_label_def_dict[str(synset_id)] = {"term": term,
