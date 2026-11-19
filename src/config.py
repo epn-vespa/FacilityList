@@ -115,7 +115,7 @@ os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface" ) # Must import before tra
 SENTENCE_TRANSFORMERS_MODEL = "adsabs/astroBERT" #"UniverseTBD/astrollama"
 ENCODER_MAX_LENGTH = 512
 
-PROMPT_SAME_DISTINCT = """Say weither those entities are the same or distinct. Justify.
+PROMPT_SAME_DISTINCT = """Say whether those entities are the same or distinct. Justify.
 Examples:
 response: same. justification: DEEP SPACE 1 is a different name for VIKING 2 ORBITER.
 response: same. justification: same place, same year of construction.
